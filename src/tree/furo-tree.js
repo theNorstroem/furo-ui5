@@ -60,8 +60,9 @@ export class FuroTree extends FBP(LitElement) {
      *
      * @type {*|string|string}
      */
-    // eslint-disable-next-line wc/no-constructor-attributes
+
     this.treeItemComponent =
+      // eslint-disable-next-line wc/no-constructor-attributes
       this.getAttribute('tree-item-component') || 'furo-tree-item';
     this._treeItemTepmplate = html([
       [
