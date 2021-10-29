@@ -18,23 +18,27 @@
   "license": "MIT",
   "main": "src/furo-catalog.js",
   "scripts": {
-    "analyze": "../../node_modules/.bin/cem analyze --globs \"src/**/*.js\" --exclude **/furo-catalog.js --litelement",
-    "start": "../../node_modules/.bin/web-dev-server --app-index demos/index.html --open",
-    "lint": "../../node_modules/.bin/eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
-    "format": "../../node_modules/.bin/eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
-    "test": "../../node_modules/.bin/web-test-runner  --coverage",
-    "test:watch": "../../node_modules/.bin/web-test-runner  --watch"
+    "analyze": "cem analyze --globs \"src/**/*.js\" --exclude **/furo-catalog.js --litelement",
+    "start": "web-dev-server --app-index demos/index.html --open",
+    "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "test": "web-test-runner  --coverage",
+    "test:watch": "web-test-runner  --watch"
   },
   "dependencies": {
-    "@furo/fbp": "6.0.0-alpha",
-    "@furo/framework": "2.0.0-alpha",
-    "@furo/layout": "2.0.0-alpha",
+    "@furo/fbp": "6.0.0-alpha.0",
+    "@furo/framework": "2.0.0-alpha.0",
+    "@furo/layout": "2.0.0-alpha.0",
+    "@furo/data": "2.0.0-alpha.0",
+    "@furo/util": "2.0.0-alpha.0",
     "@ui5/webcomponents": "0.33.0",
     "@ui5/webcomponents-base": "0.33.0",
     "@ui5/webcomponents-fiori": "0.33.0",
     "@ui5/webcomponents-icons": "0.33.0",
     "lit": "^2.0.0",
-    "markdown-it": "^9.0.1"
+    "markdown-it": "^9.0.1",
+    "apexcharts": "^3.29.0",
+    "signature_pad": "3.0.0-beta.4"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.5.3",

@@ -97,7 +97,10 @@ export class CellFuroProperty extends FBP(LitElement) {
      * if the data is already available, create the renderName according the @type information.
      * If NOT, register event listener and create the component as soon as the @type information is available.
      */
-    if (this._field instanceof FieldNode && this._field._spec.type === 'furo.Property') {
+    if (
+      this._field instanceof FieldNode &&
+      this._field._spec.type === 'furo.Property'
+    ) {
       this._waitForType(this._field);
     }
   }
@@ -168,9 +171,7 @@ export class CellFuroProperty extends FBP(LitElement) {
    */
   render() {
     // language=HTML
-    return html`
-      ${this.noDataText}
-    `;
+    return html` ${this.noDataText} `;
   }
 }
 

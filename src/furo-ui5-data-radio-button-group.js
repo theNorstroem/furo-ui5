@@ -147,7 +147,7 @@ export class FuroUi5DataRadioButtonGroup extends FieldNodeAdapter(HTMLElement) {
       // eslint-disable-next-line no-console
       console.warn(
         'Invalid param in function bindOptions. Param is not of type RepeaterNode',
-        repeaterNode,
+        repeaterNode
       );
       return false;
     }
@@ -309,19 +309,23 @@ export class FuroUi5DataRadioButtonGroup extends FieldNodeAdapter(HTMLElement) {
     let newValue = '';
     let selectedOption = {};
 
-    if (this._optionList && this._optionList.repeats && this._optionList.repeats.length) {
+    if (
+      this._optionList &&
+      this._optionList.repeats &&
+      this._optionList.repeats.length
+    ) {
       selectedOption = this._optionList.repeats.find(
         obj =>
           FuroUi5DataRadioButtonGroup.getValueByPath(
             obj,
-            this._privilegedAttributes['id-field-path'],
-          )._value === e.target.dataset.id,
+            this._privilegedAttributes['id-field-path']
+          )._value === e.target.dataset.id
       );
 
       if (selectedOption) {
         newValue = FuroUi5DataRadioButtonGroup.getValueByPath(
           selectedOption,
-          this._privilegedAttributes['value-field-path'],
+          this._privilegedAttributes['value-field-path']
         )._value;
       }
     } else {
@@ -369,11 +373,17 @@ export class FuroUi5DataRadioButtonGroup extends FieldNodeAdapter(HTMLElement) {
      *  * @fires {String} field-value-changed - Fires the field value when it changes.
      * @type {Event}
      */
-    const customEvent = new Event('value-changed', { composed: true, bubbles: true });
+    const customEvent = new Event('value-changed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = selectedOption;
     this.dispatchEvent(customEvent);
 
-    const customSelectEvent = new Event('item-selected', { composed: true, bubbles: true });
+    const customSelectEvent = new Event('item-selected', {
+      composed: true,
+      bubbles: true,
+    });
     customSelectEvent.detail = selectedOption;
     this.dispatchEvent(customSelectEvent);
   }
@@ -393,13 +403,13 @@ export class FuroUi5DataRadioButtonGroup extends FieldNodeAdapter(HTMLElement) {
           'data-id',
           FuroUi5DataRadioButtonGroup.getValueByPath(
             item,
-            this._privilegedAttributes['id-field-path'],
-          ),
+            this._privilegedAttributes['id-field-path']
+          )
         );
 
         optionItem.text = FuroUi5DataRadioButtonGroup.getValueByPath(
           item,
-          this._privilegedAttributes['display-field-path'],
+          this._privilegedAttributes['display-field-path']
         )._value;
 
         if (this._privilegedAttributes.readonly !== null) {
@@ -421,13 +431,13 @@ export class FuroUi5DataRadioButtonGroup extends FieldNodeAdapter(HTMLElement) {
           'data-id',
           FuroUi5DataRadioButtonGroup.getValueByPath(
             item,
-            this._privilegedAttributes['id-field-path'],
-          ),
+            this._privilegedAttributes['id-field-path']
+          )
         );
 
         optionItem.text = FuroUi5DataRadioButtonGroup.getValueByPath(
           item,
-          this._privilegedAttributes['display-field-path'],
+          this._privilegedAttributes['display-field-path']
         );
 
         if (this._privilegedAttributes.readonly !== null) {
@@ -457,9 +467,12 @@ export class FuroUi5DataRadioButtonGroup extends FieldNodeAdapter(HTMLElement) {
         detail: optionNodeList,
         bubbles: true,
         composed: true,
-      }),
+      })
     );
   }
 }
 
-window.customElements.define('furo-ui5-data-radio-button-group', FuroUi5DataRadioButtonGroup);
+window.customElements.define(
+  'furo-ui5-data-radio-button-group',
+  FuroUi5DataRadioButtonGroup
+);

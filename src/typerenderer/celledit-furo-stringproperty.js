@@ -6,4 +6,7 @@ class CelleditFuroStringproperty extends CelleditString {
   }
 }
 
-window.customElements.define('celledit-furo-stringproperty', CelleditFuroStringproperty);
+window.customElements.define(
+  'celledit-furo-stringproperty',
+  CelleditFuroStringproperty
+);

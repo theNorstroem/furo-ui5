@@ -65,7 +65,11 @@ class CelleditGoolgeProtobufAny extends LitElement {
         this.defaultElement = undefined;
       }
 
-      if (field['@type'] && field['@type']._value !== undefined && this._typeResolved === false) {
+      if (
+        field['@type'] &&
+        field['@type']._value !== undefined &&
+        this._typeResolved === false
+      ) {
         this._typeResolved = true;
         this.renderName = `celledit-${this._field['@type']._value
           .replace(/.*\//, '')
@@ -75,7 +79,11 @@ class CelleditGoolgeProtobufAny extends LitElement {
         this._createContreteType();
       }
     };
-    if (field['@type'] && field['@type']._value !== undefined && this._typeResolved === false) {
+    if (
+      field['@type'] &&
+      field['@type']._value !== undefined &&
+      this._typeResolved === false
+    ) {
       anyTypeHandler();
     } else {
       field.addEventListener('field-value-changed', anyTypeHandler);
@@ -113,9 +121,12 @@ class CelleditGoolgeProtobufAny extends LitElement {
     // eslint-disable-next-line no-console
     console.warn(
       `No type specific renderer ${this.renderName} found. Check your imports.`,
-      this._field._spec.type,
+      this._field._spec.type
     );
   }
 }
 
-window.customElements.define('celledit-google-protobuf-any', CelleditGoolgeProtobufAny);
+window.customElements.define(
+  'celledit-google-protobuf-any',
+  CelleditGoolgeProtobufAny
+);

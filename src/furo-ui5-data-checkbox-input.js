@@ -50,7 +50,9 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  * @customElement
  * @demo demo-furo-ui5-data-checkbox-input Basic usage (scalar , fat, wrapper values)
  */
-export class FuroUi5DataCheckboxInput extends FieldNodeAdapter(CheckBox.default) {
+export class FuroUi5DataCheckboxInput extends FieldNodeAdapter(
+  CheckBox.default
+) {
   constructor() {
     super();
 
@@ -161,7 +163,10 @@ export class FuroUi5DataCheckboxInput extends FieldNodeAdapter(CheckBox.default)
       this.setFnaFieldValue(this.checked);
     }
 
-    const customEvent = new Event('field-value-changed', { composed: true, bubbles: true });
+    const customEvent = new Event('field-value-changed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this.checked;
     this.dispatchEvent(customEvent);
   }
@@ -304,7 +309,10 @@ export class FuroUi5DataCheckboxInput extends FieldNodeAdapter(CheckBox.default)
    */
   onFnaLabelChanged(text) {
     this._attributesFromFNA.label = text;
-    if (this._privilegedAttributes.text === null && this._attributesFromFAT.label === undefined) {
+    if (
+      this._privilegedAttributes.text === null &&
+      this._attributesFromFAT.label === undefined
+    ) {
       this.text = text;
     }
   }
@@ -338,4 +346,7 @@ export class FuroUi5DataCheckboxInput extends FieldNodeAdapter(CheckBox.default)
   }
 }
 
-window.customElements.define('furo-ui5-data-checkbox-input', FuroUi5DataCheckboxInput);
+window.customElements.define(
+  'furo-ui5-data-checkbox-input',
+  FuroUi5DataCheckboxInput
+);

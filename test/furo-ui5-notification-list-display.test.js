@@ -1,6 +1,6 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind'; // for testing with wires and hooks
 
@@ -44,85 +44,22 @@ describe('furo-ui5-notification-list-display', () => {
             description:
               'The id should be ISO Alpha-2 code as described in the ISO 3166 international standard',
           },
-          { field: 'area', description: 'Please set a value for the field area.' },
+          {
+            field: 'area',
+            description: 'Please set a value for the field area.',
+          },
         ],
       },
     ],
   };
-  const notificationsMessage = [
-    {
-      id: 1,
-      display_name: '',
-      heading: 'heading 1',
-      message_priority: 'High',
-      category: 'warning',
-      category_priority: 'High',
-      actions: [
-        {
-          icon: 'accept',
-          command: 'accept',
-          text: 'accept',
-        },
-        {
-          icon: 'message-error',
-          command: 'reject',
-          text: 'Reject',
-        },
-      ],
-      message:
-        'Markdown | Less | Pretty\n--- | --- | ---\n*Still* | `renders` | **nicely**\n1 | 2 | 3',
-    },
-    {
-      id: 2,
-      display_name: '',
-      heading: 'heading 2',
-      message_priority: 'High',
-      category: 'warning',
-      category_priority: 'High',
-      actions: [
-        {
-          icon: 'accept',
-          command: 'accept',
-          text: 'accept',
-        },
-        {
-          icon: 'message-error',
-          command: 'reject',
-          text: 'Reject',
-        },
-      ],
-      message:
-        'Markdown | Less | Pretty\n--- | --- | ---\n*Still* | `renders` | **nicely**\n1 | 2 | 3',
-    },
-    {
-      id: 3,
-      display_name: '',
-      heading: 'heading 3',
-      message_priority: 'Low',
-      category: 'warning',
-      category_priority: 'High',
-      actions: [
-        {
-          icon: 'accept',
-          command: 'accept',
-          text: 'accept',
-        },
-        {
-          icon: 'message-error',
-          command: 'reject',
-          text: 'Reject',
-        },
-      ],
-      message:
-        'Markdown | Less | Pretty\n--- | --- | ---\n*Still* | `renders` | **nicely**\n1 | 2 | 3',
-    },
-  ];
 
   beforeEach(async () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-notification-list-display show-close></furo-ui5-notification-list-display>
+          <furo-ui5-notification-list-display
+            show-close
+          ></furo-ui5-notification-list-display>
           <furo-ui5-notification></furo-ui5-notification>
           <div></div>
         </template>
@@ -139,7 +76,10 @@ describe('furo-ui5-notification-list-display', () => {
 
   it('should be a furo-ui5-notification-list', done => {
     // keep this test on top, so you can recognize a wrong asignment
-    assert.equal(notificationList.nodeName.toLowerCase(), 'furo-ui5-notification-list-display');
+    assert.equal(
+      notificationList.nodeName.toLowerCase(),
+      'furo-ui5-notification-list-display'
+    );
     done();
   });
 
@@ -149,7 +89,9 @@ describe('furo-ui5-notification-list-display', () => {
   it('should handle grpc error objects', done => {
     notification.parseGrpcStatus(grpcMessage);
     setTimeout(() => {
-      const items = notificationList.shadowRoot.querySelectorAll('ui5-li-notification');
+      const items = notificationList.shadowRoot.querySelectorAll(
+        'ui5-li-notification'
+      );
 
       assert.equal(items.length, 6);
 

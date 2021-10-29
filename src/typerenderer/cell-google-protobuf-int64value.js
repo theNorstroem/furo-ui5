@@ -14,4 +14,7 @@ import { CellInt64 } from './cell-int64.js';
  */
 class CellGoolgeProtobufIn64value extends CellInt64 {}
 
-window.customElements.define('cell-google-protobuf-int64value', CellGoolgeProtobufIn64value);
+window.customElements.define(
+  'cell-google-protobuf-int64value',
+  CellGoolgeProtobufIn64value
+);

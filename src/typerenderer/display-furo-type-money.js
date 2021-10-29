@@ -21,11 +21,16 @@ import { DisplayGoogleTypeMoney } from './display-google-type-money.js';
  */
 class DisplayFuroTypeMoney extends DisplayGoogleTypeMoney {
   _formatDisplay() {
-    this._valueObject.amount = DisplayGoogleTypeMoney._convertTypeToNumber(this._field);
+    this._valueObject.amount = DisplayGoogleTypeMoney._convertTypeToNumber(
+      this._field
+    );
 
     if (this._field.display_name._value) {
       this._displayValue = this._field.display_name._value;
-    } else if (this._valueObject.amount !== Number.NaN && this._field.currency_code._value.length) {
+    } else if (
+      !Number.isNaN(this._valueObject.amount) &&
+      this._field.currency_code._value.length
+    ) {
       this._displayValue = new Intl.NumberFormat(Env.locale, {
         style: 'currency',
         currency: this._field.currency_code._value,

@@ -92,7 +92,9 @@ class DisplayGoogleProtobufTimestamp extends LitElement {
   }
 
   _formatDisplay() {
-    this._displayValue = DisplayGoogleProtobufTimestamp._convertDateToString(this._field._value);
+    this._displayValue = DisplayGoogleProtobufTimestamp._convertDateToString(
+      this._field._value
+    );
     this.requestUpdate();
   }
 
@@ -108,4 +110,7 @@ class DisplayGoogleProtobufTimestamp extends LitElement {
   }
 }
 
-window.customElements.define('display-google-protobuf-timestamp', DisplayGoogleProtobufTimestamp);
+window.customElements.define(
+  'display-google-protobuf-timestamp',
+  DisplayGoogleProtobufTimestamp
+);

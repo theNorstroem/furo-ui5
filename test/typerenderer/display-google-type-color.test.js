@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-google-type-color.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-google-type-color.js';
 
 describe('display-google-type-color', () => {
   let host;
@@ -16,7 +16,10 @@ describe('display-google-type-color', () => {
       <test-bind>
         <template>
           <display-google-type-color></display-google-type-color>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -39,7 +42,4 @@ describe('display-google-type-color', () => {
       done();
     }
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

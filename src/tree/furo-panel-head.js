@@ -53,36 +53,33 @@ class FuroPanelHead extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: block;
+        position: relative;
+        margin-bottom: var(--spacing-s);
+      }
 
-      css`
-        :host {
-          display: block;
-          position: relative;
-          margin-bottom: var(--spacing-s);
-        }
+      :host([hidden]) {
+        display: none;
+      }
 
-        :host([hidden]) {
-          display: none;
-        }
+      h1 {
+        margin: 0;
+        margin-top: var(--spacing-xs);
+        letter-spacing: 0;
+        font-weight: 200;
+        font-size: 32px;
+      }
 
-        h1 {
-          margin: 0;
-          margin-top: var(--spacing-xs);
-          letter-spacing: 0;
-          font-weight: 200;
-          font-size: 32px;
-        }
-
-        p.secondary {
-          margin: 0;
-          font-size: 14px;
-          letter-spacing: 0.1px;
-          color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
-          line-height: 20px;
-        }
-      `
-    );
+      p.secondary {
+        margin: 0;
+        font-size: 14px;
+        letter-spacing: 0.1px;
+        color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
+        line-height: 20px;
+      }
+    `;
   }
 
   /**

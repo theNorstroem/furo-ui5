@@ -13,5 +13,5 @@ class CelleditGoolgeProtobufUin32value extends CelleditInt32 {}
 
 window.customElements.define(
   'celledit-google-protobuf-uint32value',
-  CelleditGoolgeProtobufUin32value,
+  CelleditGoolgeProtobufUin32value
 );

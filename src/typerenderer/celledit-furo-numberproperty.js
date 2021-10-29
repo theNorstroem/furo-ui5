@@ -15,4 +15,7 @@ class CelleditFuroNumberproperty extends CelleditInt32 {
   }
 }
 
-window.customElements.define('celledit-furo-numberproperty', CelleditFuroNumberproperty);
+window.customElements.define(
+  'celledit-furo-numberproperty',
+  CelleditFuroNumberproperty
+);

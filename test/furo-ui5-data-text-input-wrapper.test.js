@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
@@ -104,9 +103,6 @@ describe('furo-ui5-data-text-input-wrapper', () => {
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(input));
-
   it('should have the basic attributes of the fieldNode set (wrapper)', done => {
     setTimeout(() => {
       assert.equal(input._state.disabled, false, 'check disabled');
@@ -118,7 +114,11 @@ describe('furo-ui5-data-text-input-wrapper', () => {
       assert.equal(input._state.value, '', 'check value');
       assert.equal(input._state.valueState, 'None', 'check valueState');
       assert.equal(input._state.name, '', 'check name');
-      assert.equal(input._state.showSuggestions, false, 'check showSuggestions');
+      assert.equal(
+        input._state.showSuggestions,
+        false,
+        'check showSuggestions'
+      );
       assert.equal(input._state.maxlength, undefined, 'check maxlength');
       done();
     }, 16);
@@ -127,7 +127,10 @@ describe('furo-ui5-data-text-input-wrapper', () => {
   it('should update the value of the bound fieldNode (wrapper)', done => {
     dao.data.data.wrapper_string.addEventListener('field-value-changed', () => {
       assert.equal(input._state.value, 'New String value changed');
-      assert.equal(dao.data.data.wrapper_string._value, 'New String value changed');
+      assert.equal(
+        dao.data.data.wrapper_string._value,
+        'New String value changed'
+      );
       done();
     });
 
@@ -136,7 +139,7 @@ describe('furo-ui5-data-text-input-wrapper', () => {
       new CustomEvent('input', {
         bubbles: true,
         detail: 'New String value changed',
-      }),
+      })
     );
   });
 
@@ -157,10 +160,18 @@ describe('furo-ui5-data-text-input-wrapper', () => {
         assert.equal(input._state.readonly, false, 'check readonly');
         assert.equal(input._state.required, false, 'check required');
         assert.equal(input._state.type, 'Text', 'check type');
-        assert.equal(input._state.value, 'this is a google wrapper string', 'check value');
+        assert.equal(
+          input._state.value,
+          'this is a google wrapper string',
+          'check value'
+        );
         assert.equal(input._state.valueState, 'None', 'check valueState');
         assert.equal(input._state.name, '', 'check name');
-        assert.equal(input._state.showSuggestions, false, 'check showSuggestions');
+        assert.equal(
+          input._state.showSuggestions,
+          false,
+          'check showSuggestions'
+        );
         assert.equal(input.isWrapper(), true, 'check fieldFormat');
         done();
       }, 10);

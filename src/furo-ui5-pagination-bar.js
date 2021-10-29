@@ -42,30 +42,28 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
 
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        width: 100%;
+        display: block;
+        padding: var(--spacing-xs)
+          var(--furo-ui5-pagination-bar-padding-right, var(--spacing, 24px))
+          var(--spacing-xs) 0;
+        box-sizing: border-box;
+        background-color: var(
+          --furo-ui5-pagination-bar-background-color,
+          var(--surface-light, #fff)
+        );
+      }
 
-      css`
-        :host {
-          width: 100%;
-          display: block;
-          padding: var(--spacing-xs)
-            var(--furo-ui5-pagination-bar-padding-right, var(--spacing, 24px)) var(--spacing-xs) 0;
-          box-sizing: border-box;
-          background-color: var(
-            --furo-ui5-pagination-bar-background-color,
-            var(--surface-light, #fff)
-          );
-        }
+      :host([hidden]) {
+        display: none;
+      }
 
-        :host([hidden]) {
-          display: none;
-        }
-
-        span {
-          line-height: 36px;
-        }
-      `
-    );
+      span {
+        line-height: 36px;
+      }
+    `;
   }
 
   /**
@@ -129,7 +127,7 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
         detail: hts,
         bubbles: true,
         composed: true,
-      }),
+      })
     );
   }
 
@@ -221,11 +219,7 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
           icon="sys-prev-page"
           ?disabled="${!this.prev}"
         ></ui5-button>
-        ${this.currentPage
-          ? html`
-              <span>${this.currentPage}</span>
-            `
-          : html``}
+        ${this.currentPage ? html` <span>${this.currentPage}</span> ` : html``}
         <ui5-button
           title="${i18n.t('sys_next_page')}"
           design="Transparent"

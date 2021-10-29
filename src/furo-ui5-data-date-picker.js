@@ -46,7 +46,9 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  * @customElement
  * @demo demo-furo-ui5-data-date-picker Basic Usage
  */
-export class FuroUi5DataDatePicker extends FieldNodeAdapter(DatePicker.default) {
+export class FuroUi5DataDatePicker extends FieldNodeAdapter(
+  DatePicker.default
+) {
   constructor() {
     super();
 
@@ -131,14 +133,17 @@ export class FuroUi5DataDatePicker extends FieldNodeAdapter(DatePicker.default) 
                 .padStart(2, '0')}-${this.dateValue
                 .getDate()
                 .toString()
-                .padStart(2, '0')}`,
+                .padStart(2, '0')}`
             );
           } else {
             this.setFnaFieldValue('');
           }
       }
 
-      const customEvent = new Event('value-changed', { composed: true, bubbles: true });
+      const customEvent = new Event('value-changed', {
+        composed: true,
+        bubbles: true,
+      });
       customEvent.detail = this.dateValue;
       this.dispatchEvent(customEvent);
     });
@@ -161,7 +166,9 @@ export class FuroUi5DataDatePicker extends FieldNodeAdapter(DatePicker.default) 
       case 'furo.type.Date':
       case 'google.type.Date':
         if (value.month && value.day) {
-          this.value = this.formatValue(new Date(value.year, value.month - 1, value.day));
+          this.value = this.formatValue(
+            new Date(value.year, value.month - 1, value.day)
+          );
         } else {
           this.value = '';
         }
@@ -172,7 +179,9 @@ export class FuroUi5DataDatePicker extends FieldNodeAdapter(DatePicker.default) 
           this.value = '';
         } else {
           const parts = value.match(/\d+/g);
-          this.value = this.formatValue(new Date(parts[0], parts[1] - 1, parts[2]));
+          this.value = this.formatValue(
+            new Date(parts[0], parts[1] - 1, parts[2])
+          );
         }
     }
   }
@@ -253,7 +262,10 @@ export class FuroUi5DataDatePicker extends FieldNodeAdapter(DatePicker.default) 
    * @private
    */
   _resetValueStateMessage() {
-    this._setValueStateMessage(this._previousValueState.state, this._previousValueState.message);
+    this._setValueStateMessage(
+      this._previousValueState.state,
+      this._previousValueState.message
+    );
   }
 
   /**
@@ -306,7 +318,9 @@ export class FuroUi5DataDatePicker extends FieldNodeAdapter(DatePicker.default) 
       this._constraintsFromFNA.min = constraints.min;
       if (this._privilegedAttributes.minDate === null) {
         const parts = constraints.min.is.match(/\d+/g);
-        this.minDate = this.formatValue(new Date(parts[0], parts[1] - 1, parts[2]));
+        this.minDate = this.formatValue(
+          new Date(parts[0], parts[1] - 1, parts[2])
+        );
       }
     }
 
@@ -314,10 +328,15 @@ export class FuroUi5DataDatePicker extends FieldNodeAdapter(DatePicker.default) 
       this._constraintsFromFNA.max = constraints.max;
       if (this._privilegedAttributes.maxDate === null) {
         const parts = constraints.max.is.match(/\d+/g);
-        this.maxDate = this.formatValue(new Date(parts[0], parts[1] - 1, parts[2]));
+        this.maxDate = this.formatValue(
+          new Date(parts[0], parts[1] - 1, parts[2])
+        );
       }
     }
   }
 }
 
-window.customElements.define('furo-ui5-data-date-picker', FuroUi5DataDatePicker);
+window.customElements.define(
+  'furo-ui5-data-date-picker',
+  FuroUi5DataDatePicker
+);

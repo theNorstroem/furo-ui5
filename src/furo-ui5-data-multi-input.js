@@ -13,7 +13,9 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  * @customElement
  * @demo demo-furo-ui5-data-multi-input Basic usage (recommended for repeated strings)
  */
-export class FuroUi5DataMultiInput extends FieldNodeAdapter(MultiInput.default) {
+export class FuroUi5DataMultiInput extends FieldNodeAdapter(
+  MultiInput.default
+) {
   constructor() {
     super();
 
@@ -74,7 +76,9 @@ export class FuroUi5DataMultiInput extends FieldNodeAdapter(MultiInput.default) 
 
     this.addEventListener('token-delete', event => {
       if (!this.readonly && !this.disabled) {
-        this.tmpValue = this.tmpValue.filter(item => item !== event.detail.token.text);
+        this.tmpValue = this.tmpValue.filter(
+          item => item !== event.detail.token.text
+        );
         this._updateItems(this.tmpValue);
         this.setFnaFieldValue(this.tmpValue);
         this._triggerValueChangedEvent(this.tmpValue);
@@ -200,7 +204,10 @@ export class FuroUi5DataMultiInput extends FieldNodeAdapter(MultiInput.default) 
    * @private
    */
   _resetValueStateMessage() {
-    this._setValueStateMessage(this._previousValueState.state, this._previousValueState.message);
+    this._setValueStateMessage(
+      this._previousValueState.state,
+      this._previousValueState.message
+    );
   }
 
   /**
@@ -258,7 +265,10 @@ export class FuroUi5DataMultiInput extends FieldNodeAdapter(MultiInput.default) 
      * the event detail is the value of the repeated string
      * @type {Event}
      */
-    const customEvent = new Event('value-changed', { composed: true, bubbles: true });
+    const customEvent = new Event('value-changed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = val;
     this.dispatchEvent(customEvent);
   }
@@ -267,4 +277,7 @@ export class FuroUi5DataMultiInput extends FieldNodeAdapter(MultiInput.default) 
     this.innerHTML = '';
   }
 }
-window.customElements.define('furo-ui5-data-multi-input', FuroUi5DataMultiInput);
+window.customElements.define(
+  'furo-ui5-data-multi-input',
+  FuroUi5DataMultiInput
+);

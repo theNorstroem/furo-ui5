@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-google-protobuf-timestamp.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-google-protobuf-timestamp.js';
 import { Env } from '@furo/framework';
 
 describe('display-google-protobuf-timestamp', () => {
@@ -19,7 +19,10 @@ describe('display-google-protobuf-timestamp', () => {
           <display-google-protobuf-timestamp
             ƒ-bind-data="--dao(*.google_timestamp)"
           ></display-google-protobuf-timestamp>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -33,7 +36,10 @@ describe('display-google-protobuf-timestamp', () => {
 
   it('should be a display-google-protobuf-timestamp element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(display.nodeName.toLowerCase(), 'display-google-protobuf-timestamp');
+    assert.equal(
+      display.nodeName.toLowerCase(),
+      'display-google-protobuf-timestamp'
+    );
     done();
   });
 
@@ -53,7 +59,4 @@ describe('display-google-protobuf-timestamp', () => {
       done();
     }, 110);
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

@@ -95,7 +95,10 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
    * the event `message-strip-closed` will be sent with payload when the MessageStrip is closed
    */
   _close() {
-    const customEvent = new Event('message-strip-closed', { composed: true, bubbles: true });
+    const customEvent = new Event('message-strip-closed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this.payload;
     this.dispatchEvent(customEvent);
   }
@@ -125,7 +128,7 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
     this.showInformation(msg);
     // eslint-disable-next-line no-console
     console.warn(
-      'Deprecated. Instead, use the explicit show functions such as showInformation, showError, showSuccess or showWarning.',
+      'Deprecated. Instead, use the explicit show functions such as showInformation, showError, showSuccess or showWarning.'
     );
   }
 
@@ -236,7 +239,7 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
       messages = messages.concat(
         rpcStatus.details
           .filter(det => det['@type'].includes('LocalizedMessage'))
-          .map(det => this._md.renderInline(det.message)),
+          .map(det => this._md.renderInline(det.message))
       );
 
       this.displayMessage = messages.join('</br>');

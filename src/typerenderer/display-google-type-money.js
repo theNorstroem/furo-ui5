@@ -101,10 +101,18 @@ export class DisplayGoogleTypeMoney extends LitElement {
    */
   static _convertTypeToNumber(fieldNode) {
     let numberStr = '';
-    if (fieldNode.units && fieldNode.units._value && fieldNode.units._value > 0) {
+    if (
+      fieldNode.units &&
+      fieldNode.units._value &&
+      fieldNode.units._value > 0
+    ) {
       numberStr = fieldNode.units._value;
     }
-    if (fieldNode.nanos && fieldNode.nanos._value && fieldNode.nanos._value > 0) {
+    if (
+      fieldNode.nanos &&
+      fieldNode.nanos._value &&
+      fieldNode.nanos._value > 0
+    ) {
       numberStr += `.${fieldNode.nanos._value}`;
     }
     if (numberStr > 0) {
@@ -114,9 +122,11 @@ export class DisplayGoogleTypeMoney extends LitElement {
   }
 
   _formatDisplay() {
-    this._valueObject.amount = DisplayGoogleTypeMoney._convertTypeToNumber(this._field);
+    this._valueObject.amount = DisplayGoogleTypeMoney._convertTypeToNumber(
+      this._field
+    );
     if (
-      this._valueObject.amount !== Number.NaN &&
+      !Number.isNaN(this._valueObject.amount) &&
       this._field.currency_code &&
       this._field.currency_code._value &&
       this._field.currency_code._value.length
@@ -144,4 +154,7 @@ export class DisplayGoogleTypeMoney extends LitElement {
   }
 }
 
-window.customElements.define('display-google-type-money', DisplayGoogleTypeMoney);
+window.customElements.define(
+  'display-google-type-money',
+  DisplayGoogleTypeMoney
+);

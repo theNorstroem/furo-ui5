@@ -49,7 +49,9 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  * @customElement
  * @demo demo-furo-ui5-data-time-picker Basic Usage
  */
-export class FuroUi5DataTimePicker extends FieldNodeAdapter(TimePicker.default) {
+export class FuroUi5DataTimePicker extends FieldNodeAdapter(
+  TimePicker.default
+) {
   /**
    * Constructor of the element
    */
@@ -108,7 +110,12 @@ export class FuroUi5DataTimePicker extends FieldNodeAdapter(TimePicker.default) 
     switch (type) {
       case 'google.type.TimeOfDay':
         if (e.value !== '' && e.valid) {
-          const timeOfDay = { hours: null, minutes: null, seconds: null, nanos: null };
+          const timeOfDay = {
+            hours: null,
+            minutes: null,
+            seconds: null,
+            nanos: null,
+          };
           timeOfDay.hours = this.dateValue.getHours();
           timeOfDay.minutes = this.dateValue.getMinutes();
           timeOfDay.seconds = this.dateValue.getSeconds();
@@ -133,7 +140,10 @@ export class FuroUi5DataTimePicker extends FieldNodeAdapter(TimePicker.default) 
      * Payload: {Time}
      * @type {Event}
      */
-    const customEvent = new Event('value-changed', { composed: true, bubbles: true });
+    const customEvent = new Event('value-changed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this.dateValue;
     this.dispatchEvent(customEvent);
   }
@@ -155,11 +165,26 @@ export class FuroUi5DataTimePicker extends FieldNodeAdapter(TimePicker.default) 
     const type = this.getDataType();
     switch (type) {
       case 'google.type.TimeOfDay':
-        if (value === null || value === undefined || value.hours === null || value.hours === 0) {
+        if (
+          value === null ||
+          value === undefined ||
+          value.hours === null ||
+          value.hours === 0
+        ) {
           this.value = '';
         } else {
           this.value = this.formatValue(
-            new Date(Date.UTC(0, 0, 0, value.hours - 1, value.minutes, value.seconds, value.nanos)),
+            new Date(
+              Date.UTC(
+                0,
+                0,
+                0,
+                value.hours - 1,
+                value.minutes,
+                value.seconds,
+                value.nanos
+              )
+            )
           );
         }
         break;
@@ -241,7 +266,10 @@ export class FuroUi5DataTimePicker extends FieldNodeAdapter(TimePicker.default) 
    * @private
    */
   _resetValueStateMessage() {
-    this._setValueStateMessage(this._previousValueState.state, this._previousValueState.message);
+    this._setValueStateMessage(
+      this._previousValueState.state,
+      this._previousValueState.message
+    );
   }
 
   /**
@@ -293,16 +321,23 @@ export class FuroUi5DataTimePicker extends FieldNodeAdapter(TimePicker.default) 
     if (constraints.min !== undefined) {
       this._constraintsFromFNA.min = constraints.min;
       if (this._privilegedAttributes.minDate === null) {
-        this.minDate = new Date(`${new Date().toDateString()} ${constraints.min.is}`);
+        this.minDate = new Date(
+          `${new Date().toDateString()} ${constraints.min.is}`
+        );
       }
     }
 
     if (constraints.max !== undefined) {
       this._constraintsFromFNA.max = constraints.max;
       if (this._privilegedAttributes.maxDate === null) {
-        this.maxDate = new Date(`${new Date().toDateString()} ${constraints.max.is}`);
+        this.maxDate = new Date(
+          `${new Date().toDateString()} ${constraints.max.is}`
+        );
       }
     }
   }
 }
-window.customElements.define('furo-ui5-data-time-picker', FuroUi5DataTimePicker);
+window.customElements.define(
+  'furo-ui5-data-time-picker',
+  FuroUi5DataTimePicker
+);

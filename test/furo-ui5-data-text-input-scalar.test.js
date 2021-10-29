@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 import '../src/furo-catalog.js';
 import '../src/lib/ui5-icons.js';
@@ -76,9 +75,6 @@ describe('furo-ui5-data-text-input-scalar', () => {
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(input));
-
   it('should have the basic attributes of the fieldNode set', done => {
     setTimeout(() => {
       assert.equal(input._state.disabled, false, 'check disabled');
@@ -90,7 +86,11 @@ describe('furo-ui5-data-text-input-scalar', () => {
       assert.equal(input._state.value, 'Default Description', 'check value');
       assert.equal(input._state.valueState, 'None', 'check valueState');
       assert.equal(input._state.name, '', 'check name');
-      assert.equal(input._state.showSuggestions, false, 'check showSuggestions');
+      assert.equal(
+        input._state.showSuggestions,
+        false,
+        'check showSuggestions'
+      );
       assert.equal(input._state.maxlength, undefined, 'check maxlength');
       done();
     }, 16);
@@ -104,7 +104,7 @@ describe('furo-ui5-data-text-input-scalar', () => {
         assert.equal(dao.data.data.description._value, 'New description set');
         done();
       },
-      { once: true },
+      { once: true }
     );
 
     input.value = 'New description set';
@@ -112,7 +112,7 @@ describe('furo-ui5-data-text-input-scalar', () => {
       new CustomEvent('input', {
         bubbles: true,
         detail: 'New description set',
-      }),
+      })
     );
   });
 
@@ -140,17 +140,25 @@ describe('furo-ui5-data-text-input-scalar', () => {
         assert.equal(input._state.readonly, false, 'check readonly');
         assert.equal(input._state.required, true, 'check required');
         assert.equal(input._state.type, 'Text', 'check type');
-        assert.equal(input._state.value, 'Description from record', 'check value');
+        assert.equal(
+          input._state.value,
+          'Description from record',
+          'check value'
+        );
         assert.equal(input._state.valueState, 'None', 'check valueState');
         assert.equal(input._state.name, '', 'check name');
-        assert.equal(input._state.showSuggestions, false, 'check showSuggestions');
+        assert.equal(
+          input._state.showSuggestions,
+          false,
+          'check showSuggestions'
+        );
         assert.equal(input._state.maxlength, undefined, 'check maxlength');
         assert.equal(input.isFat(), false, 'check fieldFormat');
 
         assert.equal(
           input.shadowRoot.querySelector('input').value,
           'Description from record',
-          'check input value',
+          'check input value'
         );
         done();
       }, 100);

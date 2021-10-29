@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 import '@furo/data';
 
 describe('furo-ui5-button-bar', () => {
@@ -38,12 +38,24 @@ describe('furo-ui5-button-bar', () => {
               label="reload"
               @-click="-^self-req"
             ></furo-ui5-button>
-            <furo-ui5-button label="always visible" @-click=""></furo-ui5-button>
-            <furo-ui5-button label="hide if pristine" hide-pristine @-click=""></furo-ui5-button>
-            <furo-ui5-button label="hide if invalid" hide-not-valid @-click=""></furo-ui5-button>
+            <furo-ui5-button
+              label="always visible"
+              @-click=""
+            ></furo-ui5-button>
+            <furo-ui5-button
+              label="hide if pristine"
+              hide-pristine
+              @-click=""
+            ></furo-ui5-button>
+            <furo-ui5-button
+              label="hide if invalid"
+              hide-not-valid
+              @-click=""
+            ></furo-ui5-button>
           </furo-ui5-button-bar>
 
-          <furo-deep-link service="TaskService" @-hts-out="--hts"> </furo-deep-link>
+          <furo-deep-link service="TaskService" @-hts-out="--hts">
+          </furo-deep-link>
           <furo-entity-agent
             service="TaskService"
             ƒ-hts-in="--hts"
@@ -92,7 +104,10 @@ describe('furo-ui5-button-bar', () => {
     agent.loadOnHtsIn = true;
 
     agent.addEventListener('response', () => {
-      assert.equal(element._entity.data.description._value, 'Apply new documentation structure');
+      assert.equal(
+        element._entity.data.description._value,
+        'Apply new documentation structure'
+      );
       done();
     });
     qp.qpIn({ tsk: 1 });
@@ -103,7 +118,8 @@ describe('furo-ui5-button-bar', () => {
 
     agent.addEventListener('response', () => {
       let count = 0;
-      const slotted = element.shadowRoot.firstElementChild.children[0].assignedElements();
+      const slotted =
+        element.shadowRoot.firstElementChild.children[0].assignedElements();
       slotted.forEach(e => {
         if (e.getAttribute('hidden') !== '') {
           count += 1;
@@ -123,7 +139,8 @@ describe('furo-ui5-button-bar', () => {
       element.disableAll();
 
       let count = 0;
-      const slotted = element.shadowRoot.firstElementChild.children[0].assignedElements();
+      const slotted =
+        element.shadowRoot.firstElementChild.children[0].assignedElements();
       slotted.forEach(e => {
         if (e.getAttribute('disabled') !== null) {
           count += 1;
@@ -143,7 +160,8 @@ describe('furo-ui5-button-bar', () => {
       element.enableAll();
 
       let count = 0;
-      const slotted = element.shadowRoot.firstElementChild.children[0].assignedElements();
+      const slotted =
+        element.shadowRoot.firstElementChild.children[0].assignedElements();
       slotted.forEach(e => {
         if (e.getAttribute('disabled') !== null) {
           count += 1;
@@ -161,7 +179,8 @@ describe('furo-ui5-button-bar', () => {
     agent.addEventListener('response', () => {
       let cntDisabled = 0;
       let cntHidden = 0;
-      const slotted = element.shadowRoot.firstElementChild.children[0].assignedElements();
+      const slotted =
+        element.shadowRoot.firstElementChild.children[0].assignedElements();
       slotted.forEach(e => {
         if (e.getAttribute('disabled') !== null) {
           cntDisabled += 1;
@@ -183,7 +202,8 @@ describe('furo-ui5-button-bar', () => {
     agent.addEventListener('response', () => {
       dao.data._isValid = false;
       element._updateElements(dao.data);
-      const slotted = element.shadowRoot.firstElementChild.children[0].assignedElements()[4];
+      const slotted =
+        element.shadowRoot.firstElementChild.children[0].assignedElements()[4];
       assert.equal(slotted.getAttribute('hidden'), '');
       done();
     });

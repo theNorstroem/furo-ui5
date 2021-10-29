@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-google-type-money.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-google-type-money.js';
 import { Env } from '@furo/framework';
 
 describe('display-google-type-money', () => {
@@ -19,7 +19,10 @@ describe('display-google-type-money', () => {
           <display-google-type-money
             ƒ-bind-data="--dao(*.furo_data_money_input)"
           ></display-google-type-money>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -48,14 +51,13 @@ describe('display-google-type-money', () => {
 
   it('should show template according to the value of the data', done => {
     Env.locale = 'de';
-    dao.injectRaw({ furo_data_money_input: { units: 12, nanos: 44, currency_code: 'CHF' } });
+    dao.injectRaw({
+      furo_data_money_input: { units: 12, nanos: 44, currency_code: 'CHF' },
+    });
     setTimeout(() => {
       assert.equal(display._displayValue, '12,44 CHF');
 
       done();
     }, 110);
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

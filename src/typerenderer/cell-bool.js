@@ -79,13 +79,9 @@ export class CellBool extends LitElement {
     let tmpl = '';
     if (this._field) {
       if (!this._field._value || this._field._value === 'false') {
-        tmpl = html`
-          <ui5-icon name="border"></ui5-icon>
-        `;
+        tmpl = html` <ui5-icon name="border"></ui5-icon> `;
       } else {
-        tmpl = html`
-          <ui5-icon name="accept"></ui5-icon>
-        `;
+        tmpl = html` <ui5-icon name="accept"></ui5-icon> `;
       }
     }
     return tmpl;
@@ -98,9 +94,7 @@ export class CellBool extends LitElement {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._getTemplate()}
-    `;
+    return html` ${this._getTemplate()} `;
   }
 }
 

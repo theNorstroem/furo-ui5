@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
@@ -126,9 +125,6 @@ describe('furo-ui5-data-checkbox-input-scalar', () => {
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(input));
-
   it('should have the basic attributes of the fieldNode set', done => {
     setTimeout(() => {
       assert.equal(input._state.disabled, false, 'check disabled');
@@ -145,7 +141,11 @@ describe('furo-ui5-data-checkbox-input-scalar', () => {
   it('should have set the value of the injected data', done => {
     setTimeout(() => {
       input.__fieldNode.addEventListener('new-data-injected', () => {
-        assert.equal(dao.data.data.furo_data_checkbox_input._value, true, 'dao check checked');
+        assert.equal(
+          dao.data.data.furo_data_checkbox_input._value,
+          true,
+          'dao check checked'
+        );
         done();
       });
 
@@ -156,7 +156,11 @@ describe('furo-ui5-data-checkbox-input-scalar', () => {
   it('should update the fieldNode', done => {
     setTimeout(() => {
       input.__fieldNode.addEventListener('field-value-changed', () => {
-        assert.equal(dao.data.data.furo_data_checkbox_input._value, true, 'dao check checked');
+        assert.equal(
+          dao.data.data.furo_data_checkbox_input._value,
+          true,
+          'dao check checked'
+        );
         done();
       });
 

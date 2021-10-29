@@ -37,14 +37,24 @@ export class Ui5ReferenceSearchItem extends StandardListItem.default {
 
   preselect() {
     this.setAttribute('selected', '');
-    this.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    this.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'start',
+    });
   }
 
   select() {
-    const customEvent = new Event('item-selected', { composed: true, bubbles: true });
+    const customEvent = new Event('item-selected', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this._item.data;
     this.dispatchEvent(customEvent);
   }
 }
 
-window.customElements.define('ui5-reference-search-item', Ui5ReferenceSearchItem);
+window.customElements.define(
+  'ui5-reference-search-item',
+  Ui5ReferenceSearchItem
+);

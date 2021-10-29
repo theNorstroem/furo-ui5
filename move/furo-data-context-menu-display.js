@@ -4,8 +4,8 @@ import { FBP } from '@furo/fbp';
 import '@furo/fbp/src/flow-repeat';
 import '@furo/util/src/furo-navigation-pad';
 import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode.js';
-import '@furo/data-ui/src/lib/furo-data-context-menu-item.js';
-import '@furo/data-ui/src/lib/furo-data-context-submenu.js';
+import './lib/furo-data-context-menu-item.js';
+import './lib/furo-data-context-submenu.js';
 
 export class FuroDataContextMenuDisplay extends FBP(LitElement) {
   /**
@@ -45,7 +45,11 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
          * if next item has a leading separator push before, otherwise push after loop
          */
         let pushed = false;
-        if (item.leading_divider._value && items[i + 1] && items[i + 1].leading_divider._value) {
+        if (
+          item.leading_divider._value &&
+          items[i + 1] &&
+          items[i + 1].leading_divider._value
+        ) {
           stage.push(item);
           pushed = true;
         }
@@ -133,7 +137,10 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
       }
 
       // listener is de registred in hideMenu()
-      this._children.addEventListener('this-repeated-field-changed', this._repeatsChanged);
+      this._children.addEventListener(
+        'this-repeated-field-changed',
+        this._repeatsChanged
+      );
       this._repeatsChanged();
 
       this.setAttribute('backdrop', '');
@@ -151,11 +158,22 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
 
       // find the ideal position and direction
       const initiatorCoordinates = {
-        left: { x: initiatorCR.left, y: (initiatorCR.top + initiatorCR.bottom) / 2 },
-        right: { x: initiatorCR.right, y: (initiatorCR.top + initiatorCR.bottom) / 2 },
+        left: {
+          x: initiatorCR.left,
+          y: (initiatorCR.top + initiatorCR.bottom) / 2,
+        },
+        right: {
+          x: initiatorCR.right,
+          y: (initiatorCR.top + initiatorCR.bottom) / 2,
+        },
       };
-      if (initiatorCoordinates.left.x > thisCR.width - initiatorCoordinates.right.x) {
-        menucontainer.style.right = `${thisCR.width - initiatorCoordinates.left.x}px`;
+      if (
+        initiatorCoordinates.left.x >
+        thisCR.width - initiatorCoordinates.right.x
+      ) {
+        menucontainer.style.right = `${
+          thisCR.width - initiatorCoordinates.left.x
+        }px`;
         menucontainer.style.top = `${initiatorCoordinates.left.y}px`;
       } else {
         menucontainer.style.removeProperty('right');
@@ -168,7 +186,9 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
       if (initiatorCoordinates.right.y * 2.5 > thisCR.height) {
         // we are in the under half of the screen
         menucontainer.style.removeProperty('top');
-        menucontainer.style.bottom = `${thisCR.height - initiatorCoordinates.right.y}px`;
+        menucontainer.style.bottom = `${
+          thisCR.height - initiatorCoordinates.right.y
+        }px`;
         onUpperSide = false;
       }
 
@@ -179,7 +199,8 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
       setTimeout(() => {
         const menucontainerCr = menucontainer.getBoundingClientRect();
 
-        let maxHeight = thisCR.height - initiatorCoordinates.left.y - this.borderDistance;
+        let maxHeight =
+          thisCR.height - initiatorCoordinates.left.y - this.borderDistance;
         if (!onUpperSide) {
           maxHeight = initiatorCoordinates.left.y - this.borderDistance;
         }
@@ -236,12 +257,17 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
     this.requestUpdate();
 
     // remove all submenus
-    this.shadowRoot.querySelectorAll('furo-data-context-submenu').forEach(sub => {
-      sub.remove();
-    });
+    this.shadowRoot
+      .querySelectorAll('furo-data-context-submenu')
+      .forEach(sub => {
+        sub.remove();
+      });
 
     // unregister the event listener from open-furo-data-menu-requested
-    this._children.removeEventListener('this-repeated-field-changed', this._repeatsChanged);
+    this._children.removeEventListener(
+      'this-repeated-field-changed',
+      this._repeatsChanged
+    );
 
     this.menuObject.onClose();
   }
@@ -319,7 +345,8 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
         outline: none;
         position: absolute;
         display: none;
-        transition: opacity 0.03s linear, transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+        transition: opacity 0.03s linear,
+          transform 0.12s cubic-bezier(0, 0, 0.2, 1),
           -webkit-transform 0.12s cubic-bezier(0, 0, 0.2, 1);
         opacity: 0;
         background-color: var(--surface);
@@ -327,8 +354,8 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
         box-sizing: border-box;
         border-radius: 4px;
         padding: 6px 0;
-        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
-          0 3px 14px 2px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+          0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
       }
 
       #menu[start] {
@@ -387,7 +414,11 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
         @-mousefocus="--mousefocus"
       >
         <!-- the wires --itemSelected and --itemDeSelected means focus, they come from flow-repeat -->
-        <flow-repeat id="repeater" ƒ-inject-items="--menuObject" ƒ-select="--mousefocus">
+        <flow-repeat
+          id="repeater"
+          ƒ-inject-items="--menuObject"
+          ƒ-select="--mousefocus"
+        >
           <template>
             <div>
               <furo-data-context-menu-item
@@ -406,4 +437,7 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('furo-data-context-menu-display', FuroDataContextMenuDisplay);
+window.customElements.define(
+  'furo-data-context-menu-display',
+  FuroDataContextMenuDisplay
+);

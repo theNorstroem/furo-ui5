@@ -16,5 +16,5 @@ class DisplayGoolgeProtobufUin32value extends DisplayUint32 {}
 
 window.customElements.define(
   'display-google-protobuf-uint32value',
-  DisplayGoolgeProtobufUin32value,
+  DisplayGoolgeProtobufUin32value
 );

@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-furo-fat-int64.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-furo-fat-int64.js';
 
 describe('display-furo-fat-int64', () => {
   let host;
@@ -15,7 +15,9 @@ describe('display-furo-fat-int64', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <display-furo-fat-int64 ƒ-bind-data="--dao(*.fat_int64)"></display-furo-fat-int64>
+          <display-furo-fat-int64
+            ƒ-bind-data="--dao(*.fat_int64)"
+          ></display-furo-fat-int64>
           <furo-data-object
             type="universaltest.Universaltest"
             @-object-ready="--dao"
@@ -48,12 +50,17 @@ describe('display-furo-fat-int64', () => {
     dao.injectRaw({ fat_int64: { value: 33 } });
 
     setTimeout(() => {
-      assert.equal(display._field.value._value, 33, 'check if the fat.int64 value is assigned');
-      assert.equal(display._displayValue, '33', 'check if the fat.int64 value is formatted');
+      assert.equal(
+        display._field.value._value,
+        33,
+        'check if the fat.int64 value is assigned'
+      );
+      assert.equal(
+        display._displayValue,
+        '33',
+        'check if the fat.int64 value is formatted'
+      );
       done();
     }, 0);
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

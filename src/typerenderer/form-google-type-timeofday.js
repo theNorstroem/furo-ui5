@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataTimePickerLabeled } from '@furo/ui5/src/furo-ui5-data-time-picker-labeled.js';
+import { FuroUi5DataTimePickerLabeled } from '../furo-ui5-data-time-picker-labeled.js';
 
 /**
  * `form-google-type-timeofday` is a `form` context renderer.
@@ -11,4 +11,7 @@ import { FuroUi5DataTimePickerLabeled } from '@furo/ui5/src/furo-ui5-data-time-p
  */
 class FormGoogleTypeTimeofday extends FuroUi5DataTimePickerLabeled {}
 
-window.customElements.define('form-google-type-timeofday', FormGoogleTypeTimeofday);
+window.customElements.define(
+  'form-google-type-timeofday',
+  FormGoogleTypeTimeofday
+);

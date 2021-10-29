@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-google-type-timeofday.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-google-type-timeofday.js';
 import { Env } from '@furo/framework';
 
 describe('display-google-type-timeofday', () => {
@@ -19,7 +19,10 @@ describe('display-google-type-timeofday', () => {
           <display-google-type-timeofday
             ƒ-bind-data="--dao(*.google_timeofday)"
           ></display-google-type-timeofday>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -33,7 +36,10 @@ describe('display-google-type-timeofday', () => {
 
   it('should be a display-google-type-timeofday element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(display.nodeName.toLowerCase(), 'display-google-type-timeofday');
+    assert.equal(
+      display.nodeName.toLowerCase(),
+      'display-google-type-timeofday'
+    );
     done();
   });
 
@@ -48,14 +54,13 @@ describe('display-google-type-timeofday', () => {
 
   it('should show template according to the value of the data', done => {
     Env.locale = 'de';
-    dao.injectRaw({ google_timeofday: { hours: 13, minutes: 23, seconds: 45 } });
+    dao.injectRaw({
+      google_timeofday: { hours: 13, minutes: 23, seconds: 45 },
+    });
     setTimeout(() => {
       assert.equal(display._displayValue, '13:23:45');
 
       done();
     }, 110);
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

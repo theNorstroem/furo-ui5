@@ -88,7 +88,9 @@ export class DisplayGoogleTypeDate extends LitElement {
   }
 
   _formatDisplay() {
-    const displayValue = DisplayGoogleTypeDate._convertDateToString(this._field);
+    const displayValue = DisplayGoogleTypeDate._convertDateToString(
+      this._field
+    );
     if (displayValue !== 'N/A') {
       this._displayValue = displayValue;
       this.requestUpdate();
@@ -104,12 +106,25 @@ export class DisplayGoogleTypeDate extends LitElement {
    * @private
    */
   static _convertDateToString(fieldNode) {
-    if (!fieldNode || !fieldNode.year._value || !fieldNode.month._value || !fieldNode.day._value) {
+    if (
+      !fieldNode ||
+      !fieldNode.year._value ||
+      !fieldNode.month._value ||
+      !fieldNode.day._value
+    ) {
       return 'N/A';
     }
 
     const date = new Date(
-      Date.UTC(fieldNode.year._value, fieldNode.month._value - 1, fieldNode.day._value, 0, 0, 0, 0),
+      Date.UTC(
+        fieldNode.year._value,
+        fieldNode.month._value - 1,
+        fieldNode.day._value,
+        0,
+        0,
+        0,
+        0
+      )
     );
 
     return new Intl.DateTimeFormat([Env.locale, 'de-CH'], {

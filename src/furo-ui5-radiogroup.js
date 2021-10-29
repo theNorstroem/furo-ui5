@@ -51,9 +51,7 @@ export class FuroUi5Radiogroup extends FBP(LitElement) {
    */
   render() {
     // language=HTML
-    return html`
-      <slot></slot>
-    `;
+    return html` <slot></slot> `;
   }
 }
 

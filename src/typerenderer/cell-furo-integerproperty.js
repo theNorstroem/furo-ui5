@@ -20,7 +20,9 @@ export class CellFuroIntegerproperty extends CellInt32 {
    * @private
    */
   _formatCell() {
-    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._field.data);
+    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(
+      this._field.data
+    );
     if (displayValue !== 'NaN') {
       this._displayValue = displayValue;
       this.requestUpdate();
@@ -28,4 +30,7 @@ export class CellFuroIntegerproperty extends CellInt32 {
   }
 }
 
-window.customElements.define('cell-furo-integerproperty', CellFuroIntegerproperty);
+window.customElements.define(
+  'cell-furo-integerproperty',
+  CellFuroIntegerproperty
+);

@@ -190,7 +190,10 @@ export class FuroUi5DataNumberInput extends FieldNodeAdapter(Input.default) {
       this.setFnaFieldValue(value === '' ? 0 : value);
     }
 
-    const customEvent = new Event('field-value-changed', { composed: true, bubbles: true });
+    const customEvent = new Event('field-value-changed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this.value;
     this.dispatchEvent(customEvent);
   }
@@ -269,11 +272,14 @@ export class FuroUi5DataNumberInput extends FieldNodeAdapter(Input.default) {
       };
       this._setValueStateMessage(
         fatAttributes['value-state'],
-        fatAttributes['value-state-message'],
+        fatAttributes['value-state-message']
       );
     } else {
       // remove state if fat does not have state, even it is set in the html
-      this._previousValueState = { state: 'None', message: fatAttributes['value-state-message'] };
+      this._previousValueState = {
+        state: 'None',
+        message: fatAttributes['value-state-message'],
+      };
       this._setValueStateMessage('None', fatAttributes['value-state-message']);
     }
 
@@ -288,7 +294,10 @@ export class FuroUi5DataNumberInput extends FieldNodeAdapter(Input.default) {
     }
 
     // icon
-    if (this._privilegedAttributes.icon === null && fatAttributes.icon !== undefined) {
+    if (
+      this._privilegedAttributes.icon === null &&
+      fatAttributes.icon !== undefined
+    ) {
       this._setIcon(fatAttributes.icon);
     }
   }
@@ -524,7 +533,10 @@ export class FuroUi5DataNumberInput extends FieldNodeAdapter(Input.default) {
    * @private
    */
   _resetValueStateMessage() {
-    this._setValueStateMessage(this._previousValueState.state, this._previousValueState.message);
+    this._setValueStateMessage(
+      this._previousValueState.state,
+      this._previousValueState.message
+    );
   }
 
   /**
@@ -545,4 +557,7 @@ export class FuroUi5DataNumberInput extends FieldNodeAdapter(Input.default) {
   }
 }
 
-window.customElements.define('furo-ui5-data-number-input', FuroUi5DataNumberInput);
+window.customElements.define(
+  'furo-ui5-data-number-input',
+  FuroUi5DataNumberInput
+);

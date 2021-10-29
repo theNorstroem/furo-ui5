@@ -14,4 +14,7 @@ import { DisplayInt64 } from './display-int64.js';
  */
 class DisplayGoolgeProtobufIn64value extends DisplayInt64 {}
 
-window.customElements.define('display-google-protobuf-int64value', DisplayGoolgeProtobufIn64value);
+window.customElements.define(
+  'display-google-protobuf-int64value',
+  DisplayGoolgeProtobufIn64value
+);

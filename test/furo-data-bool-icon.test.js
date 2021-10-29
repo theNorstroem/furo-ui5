@@ -1,10 +1,9 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-import '../../furo-data-input';
+import { assert } from '@esm-bundle/chai';
+
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 import '@furo/data/src/furo-data-object.js';
 import '@furo/data/src/furo-entity-agent';
 import '@furo/data/src/furo-deep-link';
@@ -28,7 +27,10 @@ describe('furo-data-bool-icon', () => {
             @-object-ready="--entity"
             ƒ-inject-raw="--response"
           ></furo-data-object>
-          <furo-deep-link service="ExperimentService" @-hts-out="--hts"></furo-deep-link>
+          <furo-deep-link
+            service="ExperimentService"
+            @-hts-out="--hts"
+          ></furo-deep-link>
           <furo-entity-agent
             service="ExperimentService"
             ƒ-hts-in="--hts"
@@ -57,12 +59,7 @@ describe('furo-data-bool-icon', () => {
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(dataBoolIcon));
-
   it('should receive value with bind', done => {
-    console.log('those tests are base on the mockdata/experiment/1/get.json');
-
     host._FBPAddWireHook('--hts', () => {
       entityObject.addEventListener(
         'data-changed',
@@ -70,7 +67,7 @@ describe('furo-data-bool-icon', () => {
           assert.equal(dataBoolIcon._ocSymbol, dataBoolIcon.__symbolfalse);
           done();
         },
-        { once: true },
+        { once: true }
       );
     });
     deeplink.qpIn({ exp: 1 });

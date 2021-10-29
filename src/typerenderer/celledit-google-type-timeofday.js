@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataTimePicker } from '@furo/ui5/src/furo-ui5-data-time-picker.js';
+import { FuroUi5DataTimePicker } from '../furo-ui5-data-time-picker.js';
 
 /**
  * `celledit-google-type-timeofday` is a `celledit` context renderer.
@@ -11,4 +11,7 @@ import { FuroUi5DataTimePicker } from '@furo/ui5/src/furo-ui5-data-time-picker.j
  */
 class CelleditGoogleTypeTimeofday extends FuroUi5DataTimePicker {}
 
-window.customElements.define('celledit-google-type-timeofday', CelleditGoogleTypeTimeofday);
+window.customElements.define(
+  'celledit-google-type-timeofday',
+  CelleditGoogleTypeTimeofday
+);

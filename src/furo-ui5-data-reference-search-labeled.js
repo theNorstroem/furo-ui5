@@ -80,13 +80,19 @@ export class FuroUi5DataReferenceSearchLabeled extends FBP(LitElement) {
        * By default this goes to *data.id*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
        */
-      extendedValueFieldPath: { type: String, attribute: 'extended-value-field-path' },
+      extendedValueFieldPath: {
+        type: String,
+        attribute: 'extended-value-field-path',
+      },
       /**
        * Path to response value item of the exteded search which is used for the display.
        * By default this goes to *data.display_name*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
        */
-      extendedDisplayFieldPath: { type: String, attribute: 'extended-display-field-path' },
+      extendedDisplayFieldPath: {
+        type: String,
+        attribute: 'extended-display-field-path',
+      },
       /**
        * Overrides the hint text from the **specs**.
        * Use with caution, normally the specs defines this value.
@@ -154,7 +160,12 @@ export class FuroUi5DataReferenceSearchLabeled extends FBP(LitElement) {
     // language=HTML
     return html`
       <furo-ui5-form-field-container>
-        <ui5-label label slot="label" for="Input" show-colon ?required=${this.required}
+        <ui5-label
+          label
+          slot="label"
+          for="Input"
+          show-colon
+          ?required=${this.required}
           >${this.label}
         </ui5-label>
         <furo-ui5-data-reference-search
@@ -181,22 +192,19 @@ export class FuroUi5DataReferenceSearchLabeled extends FBP(LitElement) {
 
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: block;
+      }
 
-      css`
-        :host {
-          display: block;
-        }
-
-        :host([hidden]) {
-          display: none;
-        }
-      `
-    );
+      :host([hidden]) {
+        display: none;
+      }
+    `;
   }
 }
 
 window.customElements.define(
   'furo-ui5-data-reference-search-labeled',
-  FuroUi5DataReferenceSearchLabeled,
+  FuroUi5DataReferenceSearchLabeled
 );

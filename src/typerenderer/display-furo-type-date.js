@@ -20,10 +20,15 @@ import { DisplayGoogleTypeDate } from './display-google-type-date.js';
  */
 class DisplayFuroTypeDate extends DisplayGoogleTypeDate {
   _formatDisplay() {
-    if (this._field.display_name._value && this._field.display_name._value.length) {
+    if (
+      this._field.display_name._value &&
+      this._field.display_name._value.length
+    ) {
       this._displayValue = this._field.display_name._value;
     } else {
-      const displayValue = DisplayGoogleTypeDate._convertDateToString(this._field);
+      const displayValue = DisplayGoogleTypeDate._convertDateToString(
+        this._field
+      );
       if (displayValue !== 'N/A') {
         this._displayValue = displayValue;
       }

@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-furo-property-repeated.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-furo-property-repeated.js';
 
 describe('display-furo-property-repeats-labeled', () => {
   let host;
@@ -18,7 +18,10 @@ describe('display-furo-property-repeats-labeled', () => {
           <display-furo-property-repeats-labeled
             ƒ-bind-data="--dao(*.data.type_property)"
           ></display-furo-property-repeats-labeled>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -32,10 +35,10 @@ describe('display-furo-property-repeats-labeled', () => {
 
   it('should be a display-furo-property-repeats-labeled element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(display.nodeName.toLowerCase(), 'display-furo-property-repeats-labeled');
+    assert.equal(
+      display.nodeName.toLowerCase(),
+      'display-furo-property-repeats-labeled'
+    );
     done();
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

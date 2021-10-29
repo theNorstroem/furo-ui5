@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-google-protobuf-stringvalue.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-google-protobuf-stringvalue.js';
 
 describe('display-google-protobuf-stringvalue', () => {
   let host;
@@ -18,7 +18,10 @@ describe('display-google-protobuf-stringvalue', () => {
           <display-google-protobuf-stringvalue
             ƒ-bind-data="--dao(*.single_type_property)"
           ></display-google-protobuf-stringvalue>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -32,10 +35,10 @@ describe('display-google-protobuf-stringvalue', () => {
 
   it('should be a display-google-protobuf-stringvalue element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(display.nodeName.toLowerCase(), 'display-google-protobuf-stringvalue');
+    assert.equal(
+      display.nodeName.toLowerCase(),
+      'display-google-protobuf-stringvalue'
+    );
     done();
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

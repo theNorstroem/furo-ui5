@@ -22,14 +22,11 @@ export class DisplayFuroStringproperty extends DisplayString {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._field
-        ? html`
-            ${this._field.data._value}
-          `
-        : html``}
-    `;
+    return html` ${this._field ? html` ${this._field.data._value} ` : html``} `;
   }
 }
 
-window.customElements.define('display-furo-stringproperty', DisplayFuroStringproperty);
+window.customElements.define(
+  'display-furo-stringproperty',
+  DisplayFuroStringproperty
+);

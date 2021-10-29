@@ -1,6 +1,6 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind'; // for testing with wires and hooks
 
@@ -44,7 +44,10 @@ describe('furo-ui5-notification', () => {
             description:
               'The id should be ISO Alpha-2 code as described in the ISO 3166 international standard',
           },
-          { field: 'area', description: 'Please set a value for the field area.' },
+          {
+            field: 'area',
+            description: 'Please set a value for the field area.',
+          },
         ],
       },
     ],
@@ -122,7 +125,9 @@ describe('furo-ui5-notification', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-notification-list-display show-close></furo-ui5-notification-list-display>
+          <furo-ui5-notification-list-display
+            show-close
+          ></furo-ui5-notification-list-display>
           <furo-ui5-notification></furo-ui5-notification>
           <div></div>
         </template>
@@ -143,14 +148,13 @@ describe('furo-ui5-notification', () => {
     done();
   });
 
-  // axeReport a11y tests
-  it('a11y', () => axeReport(notification));
-
   it('should handle grpc error objects', done => {
     notification.parseGrpcStatus(grpcMessage);
 
     setTimeout(() => {
-      const items = notificationList.shadowRoot.querySelectorAll('ui5-li-notification');
+      const items = notificationList.shadowRoot.querySelectorAll(
+        'ui5-li-notification'
+      );
 
       assert.equal(items.length, 6);
 

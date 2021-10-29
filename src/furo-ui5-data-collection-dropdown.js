@@ -33,7 +33,7 @@ export class FuroUi5DataCollectionDropdown extends Select.default {
     // eslint-disable-next-line no-console
     console.warn(
       'furo-ui5-data-collection-dropdown is deprecated since 2021-06-18. ' +
-        'Please switch to furo-ui5-data-select before 2021-Q4.',
+        'Please switch to furo-ui5-data-select before 2021-Q4.'
     );
 
     /**
@@ -124,7 +124,7 @@ export class FuroUi5DataCollectionDropdown extends Select.default {
       this.updateLock = true;
 
       const selectedObj = this._dropdownList.find(
-        obj => obj.id === val.detail.selectedOption.dataset.id,
+        obj => obj.id === val.detail.selectedOption.dataset.id
       );
 
       if (selectedObj && this.binder.fieldNode) {
@@ -133,10 +133,11 @@ export class FuroUi5DataCollectionDropdown extends Select.default {
         // the _fieldNodeToUpdate and the _fieldDisplayNodeToUpdate are the same by scalar type. in this case
         // there is no need to update the display value
         if (this._fieldNodeToUpdate !== this._fieldDisplayNodeToUpdate) {
-          this._fieldDisplayNodeToUpdate._value = CollectionDropdownHelper.findDisplayNameByValue(
-            this,
-            selectedObj.id,
-          );
+          this._fieldDisplayNodeToUpdate._value =
+            CollectionDropdownHelper.findDisplayNameByValue(
+              this,
+              selectedObj.id
+            );
         }
 
         this.binder.addLabel('modified');
@@ -322,12 +323,13 @@ export class FuroUi5DataCollectionDropdown extends Select.default {
       if (this.valueSubField && this.valueSubField !== 'null') {
         this._fieldNodeToUpdate = CollectionDropdownHelper.getValueByPath(
           this.binder.fieldNode,
-          this.valueSubField,
+          this.valueSubField
         );
-        this._fieldDisplayNodeToUpdate = CollectionDropdownHelper.getValueByPath(
-          this.binder.fieldNode,
-          this.displaySubField,
-        );
+        this._fieldDisplayNodeToUpdate =
+          CollectionDropdownHelper.getValueByPath(
+            this.binder.fieldNode,
+            this.displaySubField
+          );
       } else {
         this._fieldNodeToUpdate = this.binder.fieldNode;
       }
@@ -339,7 +341,10 @@ export class FuroUi5DataCollectionDropdown extends Select.default {
 
       // update meta and constraints when they change
       this.binder.fieldNode.addEventListener('this-metas-changed', () => {
-        if (this.binder.fieldNode._meta && this.binder.fieldNode._meta.options) {
+        if (
+          this.binder.fieldNode._meta &&
+          this.binder.fieldNode._meta.options
+        ) {
           this._buildListWithMetaOptions(this.binder.fieldNode._meta.options);
         }
       });
@@ -351,7 +356,8 @@ export class FuroUi5DataCollectionDropdown extends Select.default {
       this.binder.fieldNode.addEventListener('field-value-changed', e => {
         if (
           this.binder.fieldFormat === 'scalar' ||
-          (this.binder.fieldFormat === 'complex' && this.valueSubField === e.detail._name)
+          (this.binder.fieldFormat === 'complex' &&
+            this.valueSubField === e.detail._name)
         ) {
           CollectionDropdownHelper.updateField(this);
         }
@@ -389,4 +395,7 @@ export class FuroUi5DataCollectionDropdown extends Select.default {
   }
 }
 
-window.customElements.define('furo-ui5-data-collection-dropdown', FuroUi5DataCollectionDropdown);
+window.customElements.define(
+  'furo-ui5-data-collection-dropdown',
+  FuroUi5DataCollectionDropdown
+);

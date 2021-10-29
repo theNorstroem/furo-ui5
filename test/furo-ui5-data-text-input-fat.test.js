@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
@@ -103,9 +102,6 @@ describe('furo-ui5-data-text-input-fat', () => {
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(input));
-
   it('should have the basic attributes of the fieldNode set (fat)', done => {
     setTimeout(() => {
       assert.equal(input._state.disabled, false, 'check disabled');
@@ -117,7 +113,11 @@ describe('furo-ui5-data-text-input-fat', () => {
       assert.equal(input._state.value, '', 'check value');
       assert.equal(input._state.valueState, 'None', 'check valueState');
       assert.equal(input._state.name, '', 'check name');
-      assert.equal(input._state.showSuggestions, false, 'check showSuggestions');
+      assert.equal(
+        input._state.showSuggestions,
+        false,
+        'check showSuggestions'
+      );
       assert.equal(input._state.maxlength, undefined, 'check maxlength');
       done();
     }, 16);
@@ -128,10 +128,13 @@ describe('furo-ui5-data-text-input-fat', () => {
       'field-value-changed',
       () => {
         assert.equal(input._state.value, 'New FAT String value changed');
-        assert.equal(dao.data.data.fat_string.value._value, 'New FAT String value changed');
+        assert.equal(
+          dao.data.data.fat_string.value._value,
+          'New FAT String value changed'
+        );
         done();
       },
-      { once: true },
+      { once: true }
     );
 
     input.value = 'New FAT String value changed';
@@ -139,12 +142,13 @@ describe('furo-ui5-data-text-input-fat', () => {
       new CustomEvent('input', {
         bubbles: true,
         detail: 'New FAT String value changed',
-      }),
+      })
     );
   });
 
   it('an update of a fat value on the data object should be synchronized with the input field (fat)', done => {
-    dao.data.data.fat_string.value._value = 'Set data in the inner input element';
+    dao.data.data.fat_string.value._value =
+      'Set data in the inner input element';
     setTimeout(() => {
       assert.equal(input.value, 'Set data in the inner input element');
       done();
@@ -160,16 +164,24 @@ describe('furo-ui5-data-text-input-fat', () => {
         assert.equal(input._state.readonly, false, 'check readonly');
         assert.equal(input._state.required, true, 'check required');
         assert.equal(input._state.type, 'Text', 'check type');
-        assert.equal(input._state.value, 'fat string from record', 'check value');
+        assert.equal(
+          input._state.value,
+          'fat string from record',
+          'check value'
+        );
         assert.equal(input._state.valueState, 'Error', 'check valueState');
         assert.equal(input._state.name, '', 'check name');
         assert.equal(
           input._previousValueState.message,
           'Your fat string is valid',
-          'check valueStateMessage content',
+          'check valueStateMessage content'
         );
         assert.equal(input.isFat(), true, 'check fieldFormat');
-        assert.equal(input.querySelector('ui5-icon')._state.name, 'thumb-up', 'check icon');
+        assert.equal(
+          input.querySelector('ui5-icon')._state.name,
+          'thumb-up',
+          'check icon'
+        );
 
         done();
       }, 10);

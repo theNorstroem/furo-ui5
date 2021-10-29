@@ -1,6 +1,6 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind'; // for testing with wires and hooks
 
@@ -31,7 +31,10 @@ describe('furo-ui5-message-strip', () => {
             description:
               'The id should be ISO Alpha-2 code as described in the ISO 3166 international standard',
           },
-          { field: 'area', description: 'Please set a value for the field area.' },
+          {
+            field: 'area',
+            description: 'Please set a value for the field area.',
+          },
         ],
       },
     ],
@@ -53,7 +56,8 @@ describe('furo-ui5-message-strip', () => {
     `);
     await testbind.updateComplete;
     host = testbind._host;
-    [, messageStripDisplay, messageStrip, element] = testbind.parentNode.children;
+    [, messageStripDisplay, messageStrip, element] =
+      testbind.parentNode.children;
     await host.updateComplete;
     await element.updateComplete;
     await messageStrip.updateComplete;
@@ -66,13 +70,11 @@ describe('furo-ui5-message-strip', () => {
     done();
   });
 
-  // axeReport a11y tests
-  it('a11y', () => axeReport(messageStrip));
-
   it('should show information message', done => {
     messageStrip.showInformation('Information message');
     setTimeout(() => {
-      const items = messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
+      const items =
+        messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
 
       assert.equal(items.length, 1);
 
@@ -83,7 +85,8 @@ describe('furo-ui5-message-strip', () => {
   it('should show warning message', done => {
     messageStrip.showWarning('Warning message');
     setTimeout(() => {
-      const items = messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
+      const items =
+        messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
 
       assert.equal(items.length, 1);
 
@@ -94,7 +97,8 @@ describe('furo-ui5-message-strip', () => {
   it('should show Success message', done => {
     messageStrip.showSuccess('Success message');
     setTimeout(() => {
-      const items = messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
+      const items =
+        messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
 
       assert.equal(items.length, 1);
 
@@ -105,7 +109,8 @@ describe('furo-ui5-message-strip', () => {
   it('should show error message', done => {
     messageStrip.showError('Error message');
     setTimeout(() => {
-      const items = messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
+      const items =
+        messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
 
       assert.equal(items.length, 1);
 
@@ -116,7 +121,8 @@ describe('furo-ui5-message-strip', () => {
   it('should handle grpc error objects', done => {
     messageStrip.showGrpcLocalizedMessage(grpcStatus);
     setTimeout(() => {
-      const items = messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
+      const items =
+        messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
 
       assert.equal(items.length, 1);
 
@@ -132,7 +138,9 @@ describe('furo-ui5-message-strip', () => {
     });
 
     setTimeout(() => {
-      messageStripDisplay.shadowRoot.children[0].shadowRoot.querySelector('ui5-button').click();
+      messageStripDisplay.shadowRoot.children[0].shadowRoot
+        .querySelector('ui5-button')
+        .click();
     }, 0);
   });
 });

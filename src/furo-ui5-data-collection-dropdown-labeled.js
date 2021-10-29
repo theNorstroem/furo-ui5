@@ -84,34 +84,43 @@ export class FuroUi5DataCollectionDropdownLabeled extends FBP(LitElement) {
        * If you bind a scalar, you dont need this attribute.
        * @property value-sub-field
        */
-      valueSubField: { type: String, attribute: 'value-sub-field', reflect: true },
+      valueSubField: {
+        type: String,
+        attribute: 'value-sub-field',
+        reflect: true,
+      },
       /**
        * if you bind a complex type, declare here the field which gets updated of display_name by selecting an item.
        *
        * If you bind a scalar, you dont need this attribute.
        * @property display-sub-field
        */
-      displaySubField: { type: String, attribute: 'display-sub-field', reflect: true },
+      displaySubField: {
+        type: String,
+        attribute: 'display-sub-field',
+        reflect: true,
+      },
       /**
        * set this attribute to autoSelectFirst the first item in the list, if no item is set in the bounded fieldNode
        * @type {boolean}
        */
-      autoSelectFirst: { type: Boolean, attribute: 'auto-select-first', reflect: true },
+      autoSelectFirst: {
+        type: Boolean,
+        attribute: 'auto-select-first',
+        reflect: true,
+      },
     };
   }
 
   static get styles() {
-    return (
-
-      css`
-        :host {
-          display: block;
-        }
-        :host([hidden]) {
-          display: none;
-        }
-      `
-    );
+    return css`
+      :host {
+        display: block;
+      }
+      :host([hidden]) {
+        display: none;
+      }
+    `;
   }
 
   /**
@@ -138,7 +147,12 @@ export class FuroUi5DataCollectionDropdownLabeled extends FBP(LitElement) {
     // language=HTML
     return html`
       <furo-ui5-form-field-container>
-        <ui5-label label slot="label" for="Input" show-colon ?required=${this.required}
+        <ui5-label
+          label
+          slot="label"
+          for="Input"
+          show-colon
+          ?required=${this.required}
           >${this.label}</ui5-label
         >
         <furo-ui5-data-collection-dropdown
@@ -161,5 +175,5 @@ export class FuroUi5DataCollectionDropdownLabeled extends FBP(LitElement) {
 
 window.customElements.define(
   'furo-ui5-data-collection-dropdown-labeled',
-  FuroUi5DataCollectionDropdownLabeled,
+  FuroUi5DataCollectionDropdownLabeled
 );

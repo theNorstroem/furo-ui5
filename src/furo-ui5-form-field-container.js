@@ -141,81 +141,85 @@ export class FuroUi5FormFieldContainer extends FBP(LitElement) {
 
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: block;
+      }
 
-      css`
-        :host {
-          display: block;
-        }
+      :host([hidden]) {
+        display: none;
+      }
 
-        :host([hidden]) {
-          display: none;
-        }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-row-gap: var(--furo-ui5-form-field-container-grid-row-gap, 0);
+        grid-column-gap: var(
+          --furo-ui5-form-field-container-grid-column-gap,
+          1em
+        );
+      }
 
-        .container {
-          display: grid;
-          grid-template-columns: repeat(12, 1fr);
-          grid-row-gap: var(--furo-ui5-form-field-container-grid-row-gap, 0);
-          grid-column-gap: var(--furo-ui5-form-field-container-grid-column-gap, 1em);
-        }
+      ::slotted(*[content]) {
+        grid-column: span 8;
+        width: 100%;
+      }
 
-        ::slotted(*[content]) {
-          grid-column: span 8;
-          width: 100%;
-        }
+      ::slotted(*[label]) {
+        grid-column: span 4;
+        place-self: start
+          var(--furo-ui5-form-field-container-label-justify, end);
+        padding-top: 0.5rem;
+      }
 
-        ::slotted(*[label]) {
-          grid-column: span 4;
-          place-self: start var(--furo-ui5-form-field-container-label-justify, end);
-          padding-top: 0.5rem;
-        }
+      :host([disabled]) ::slotted(*[content]) {
+        opacity: var(--_ui5_input_disabled_opacity);
+      }
 
-        :host([disabled]) ::slotted(*[content]) {
-          opacity: var(--_ui5_input_disabled_opacity);
-        }
+      ::slotted(*[content][data-size*='size-s']) {
+        grid-column: span 12;
+        width: 100%;
+      }
 
-        ::slotted(*[content][data-size*='size-s']) {
-          grid-column: span 12;
-          width: 100%;
-        }
+      ::slotted(*[label][data-size*='size-s']) {
+        padding-top: 0;
+        grid-column: span 12;
+        justify-self: start;
+      }
 
-        ::slotted(*[label][data-size*='size-s']) {
-          padding-top: 0;
-          grid-column: span 12;
-          justify-self: start;
-        }
+      ::slotted(*[content][data-size*='size-m']) {
+        grid-column: span 9;
+        width: 100%;
+      }
 
-        ::slotted(*[content][data-size*='size-m']) {
-          grid-column: span 9;
-          width: 100%;
-        }
+      ::slotted(*[label][data-size*='size-m']) {
+        grid-column: span 3;
+        place-self: start
+          var(--furo-ui5-form-field-container-label-justify, end);
+      }
 
-        ::slotted(*[label][data-size*='size-m']) {
-          grid-column: span 3;
-          place-self: start var(--furo-ui5-form-field-container-label-justify, end);
-        }
+      ::slotted(*[content][data-size*='size-l']) {
+        grid-column: span 8;
+        width: 100%;
+      }
 
-        ::slotted(*[content][data-size*='size-l']) {
-          grid-column: span 8;
-          width: 100%;
-        }
+      ::slotted(*[label][data-size*='size-l']) {
+        grid-column: span 4;
+        place-self: start
+          var(--furo-ui5-form-field-container-label-justify, end);
+      }
 
-        ::slotted(*[label][data-size*='size-l']) {
-          grid-column: span 4;
-          place-self: start var(--furo-ui5-form-field-container-label-justify, end);
-        }
+      ::slotted(*[content][data-size*='size-xl']) {
+        grid-column: span 8;
+        width: 100%;
+      }
 
-        ::slotted(*[content][data-size*='size-xl']) {
-          grid-column: span 8;
-          width: 100%;
-        }
-
-        ::slotted(*[label][data-size*='size-xl']) {
-          grid-column: span 4;
-          place-self: start var(--furo-ui5-form-field-container-label-justify, end);
-        }
-      `
-    );
+      ::slotted(*[label][data-size*='size-xl']) {
+        grid-column: span 4;
+        place-self: start
+          var(--furo-ui5-form-field-container-label-justify, end);
+      }
+    `;
   }
 
   /**
@@ -233,4 +237,7 @@ export class FuroUi5FormFieldContainer extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('furo-ui5-form-field-container', FuroUi5FormFieldContainer);
+window.customElements.define(
+  'furo-ui5-form-field-container',
+  FuroUi5FormFieldContainer
+);

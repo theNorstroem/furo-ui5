@@ -13,5 +13,5 @@ class CelleditGoogleProtobufUint64value extends CelleditInt32 {}
 
 window.customElements.define(
   'celledit-google-protobuf-uint64value',
-  CelleditGoogleProtobufUint64value,
+  CelleditGoogleProtobufUint64value
 );

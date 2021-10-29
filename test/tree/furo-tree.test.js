@@ -1,12 +1,11 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-import '../src/furo-catalog.js';
+import { assert } from '@esm-bundle/chai';
+import '../../src/tree/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind'; // for testing with wires and hooks
 import '@furo/data/src/furo-data-object.js';
 import './helper/produce-data.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import '../initEnv.js';
 
 describe('furo-tree', () => {
   let tree;
@@ -55,9 +54,6 @@ describe('furo-tree', () => {
     assert.equal(dataprocuder.nodeName.toLowerCase(), 'produce-data');
     done();
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(tree));
 
   it('tree should be exandable', done => {
     tree.addEventListener('nodes-expanded', () => {

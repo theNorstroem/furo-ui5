@@ -146,7 +146,7 @@ export class FuroUi5DataProperty extends FBP(LitElement) {
           () => {
             this._createPropComponent(propertyField);
           },
-          { once: true },
+          { once: true }
         );
       }
     }
@@ -208,7 +208,7 @@ export class FuroUi5DataProperty extends FBP(LitElement) {
 
         this._createdProp = this.parentNode.insertBefore(e, this);
         propertyField.data.dispatchNodeEvent(
-          new NodeEvent('this-metas-changed', propertyField.data, false),
+          new NodeEvent('this-metas-changed', propertyField.data, false)
         );
         this._property_created = true;
       } else {
@@ -229,14 +229,11 @@ export class FuroUi5DataProperty extends FBP(LitElement) {
 
   static get styles() {
     // language=CSS
-    return (
-
-      css`
-        :host {
-          display: none;
-        }
-      `
-    );
+    return css`
+      :host {
+        display: none;
+      }
+    `;
   }
 }
 

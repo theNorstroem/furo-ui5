@@ -59,7 +59,9 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  * @customElement
  * @demo demo-furo-ui5-data-radio-button Basic usage (scalar , fat, wrapper values)
  */
-export class FuroUi5DataRadioButton extends FieldNodeAdapter(RadioButton.default) {
+export class FuroUi5DataRadioButton extends FieldNodeAdapter(
+  RadioButton.default
+) {
   constructor() {
     super();
 
@@ -139,7 +141,10 @@ export class FuroUi5DataRadioButton extends FieldNodeAdapter(RadioButton.default
       this.setFnaFieldValue(this.checked);
     }
 
-    const customEvent = new Event('field-value-changed', { composed: true, bubbles: true });
+    const customEvent = new Event('field-value-changed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this.checked;
     this.dispatchEvent(customEvent);
   }
@@ -275,7 +280,10 @@ export class FuroUi5DataRadioButton extends FieldNodeAdapter(RadioButton.default
    */
   onFnaLabelChanged(text) {
     this._attributesFromFNA.label = text;
-    if (this._privilegedAttributes.text === null && this._attributesFromFAT.label === undefined) {
+    if (
+      this._privilegedAttributes.text === null &&
+      this._attributesFromFAT.label === undefined
+    ) {
       this.innerText = text;
     }
   }
@@ -295,4 +303,7 @@ export class FuroUi5DataRadioButton extends FieldNodeAdapter(RadioButton.default
     }
   }
 }
-window.customElements.define('furo-ui5-data-radio-button', FuroUi5DataRadioButton);
+window.customElements.define(
+  'furo-ui5-data-radio-button',
+  FuroUi5DataRadioButton
+);

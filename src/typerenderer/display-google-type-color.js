@@ -54,7 +54,9 @@ class DisplayGoolgeTypeColor extends LitElement {
     if (this._field) {
       if (this._field._spec.type !== 'google.type.color') {
         // eslint-disable-next-line no-console
-        console.warn('Invalid fieldNode in bindData. Please bind a google.type.color field.');
+        console.warn(
+          'Invalid fieldNode in bindData. Please bind a google.type.color field.'
+        );
         return;
       }
       this._updateValue();
@@ -105,4 +107,7 @@ class DisplayGoolgeTypeColor extends LitElement {
   }
 }
 
-window.customElements.define('display-google-type-color', DisplayGoolgeTypeColor);
+window.customElements.define(
+  'display-google-type-color',
+  DisplayGoolgeTypeColor
+);

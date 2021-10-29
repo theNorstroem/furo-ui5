@@ -1,10 +1,11 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
+
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-string.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-string.js';
 
 describe('display-string', () => {
   let host;
@@ -15,8 +16,13 @@ describe('display-string', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <display-string ƒ-bind-data="--dao(*.furo_data_text_input)"></display-string>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <display-string
+            ƒ-bind-data="--dao(*.furo_data_text_input)"
+          ></display-string>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -38,7 +44,4 @@ describe('display-string', () => {
     assert.equal(display._field._value, '');
     done();
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

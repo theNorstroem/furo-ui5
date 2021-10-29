@@ -89,7 +89,10 @@ class CellFuroFatString extends LitElement {
      */
     Object.keys(this._field.attributes).forEach(key => {
       if (!key.startsWith('_') && key !== 'label') {
-        this.setAttribute(this._field.attributes[key]._name, this._field.attributes[key]._value);
+        this.setAttribute(
+          this._field.attributes[key]._name,
+          this._field.attributes[key]._value
+        );
       }
     });
   }
@@ -110,9 +113,7 @@ class CellFuroFatString extends LitElement {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._displayValue}
-    `;
+    return html` ${this._displayValue} `;
   }
 }
 

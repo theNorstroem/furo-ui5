@@ -1,4 +1,4 @@
-import { FuroSignPad } from '@furo/input/src/furo-sign-pad';
+import { FuroSignPad } from './furo-sign-pad.js';
 
 /**
  * `furo-data-sign-pad`

@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 describe('furo-ui5-data-property', () => {
   let dataProperty;
@@ -27,7 +27,10 @@ describe('furo-ui5-data-property', () => {
             @-object-ready="--entity"
             ƒ-inject-raw="--response(*.data)"
           ></furo-data-object>
-          <furo-deep-link service="ExperimentService" @-hts-out="--hts"></furo-deep-link>
+          <furo-deep-link
+            service="ExperimentService"
+            @-hts-out="--hts"
+          ></furo-deep-link>
           <furo-entity-agent
             service="ExperimentService"
             ƒ-hts-in="--hts"
@@ -45,14 +48,8 @@ describe('furo-ui5-data-property', () => {
     `);
     await testbind.updateComplete;
     host = testbind._host;
-    [
-      ,
-      dataProperty,
-      entityObject,
-      deeplink,
-      entityAgent,
-      dataProperty2,
-    ] = testbind.parentNode.children;
+    [, dataProperty, entityObject, deeplink, entityAgent, dataProperty2] =
+      testbind.parentNode.children;
     await host.updateComplete;
 
     await dataProperty.updateComplete;
@@ -71,8 +68,7 @@ describe('furo-ui5-data-property', () => {
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(dataProperty));
+  // dataProperty));
 
   it('should bind data to single Property', done => {
     entityObject.addEventListener('data-injected', () => {
@@ -85,7 +81,10 @@ describe('furo-ui5-data-property', () => {
   it('should display properties with furo ui5 data components', done => {
     entityObject.addEventListener('data-injected', () => {
       setTimeout(() => {
-        assert.equal(dataProperty2.querySelectorAll('furo-ui5-data-property').length, 12);
+        assert.equal(
+          dataProperty2.querySelectorAll('furo-ui5-data-property').length,
+          12
+        );
         done();
       }, 100);
     });

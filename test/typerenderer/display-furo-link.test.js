@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-furo-link.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-furo-link.js';
 
 describe('display-furo-link', () => {
   let host;
@@ -15,8 +15,13 @@ describe('display-furo-link', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <display-furo-link ƒ-bind-data="--dao(*.owner.link)"></display-furo-link>
-          <furo-data-object type="task.Task" @-object-ready="--dao"></furo-data-object>
+          <display-furo-link
+            ƒ-bind-data="--dao(*.owner.link)"
+          ></display-furo-link>
+          <furo-data-object
+            type="task.Task"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -48,7 +53,4 @@ describe('display-furo-link', () => {
       done();
     }, 0);
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

@@ -142,7 +142,10 @@ export class FuroUi5Card extends FBP(LitElement) {
     if (this._field.secondary_text !== undefined) {
       this.subheading = this._field.secondary_text._value;
     }
-    if (this._field.icon !== undefined && this._field.icon._value !== undefined) {
+    if (
+      this._field.icon !== undefined &&
+      this._field.icon._value !== undefined
+    ) {
       this.icon = this._field.icon._value;
     }
   }
@@ -152,57 +155,54 @@ export class FuroUi5Card extends FBP(LitElement) {
    * @returns {CSSResult}
    */
   static get styles() {
-    return (
+    return css`
+      :host {
+        display: block;
+        opacity: 1;
+        transition: opacity ease-in-out 120ms;
+      }
 
-      css`
-        :host {
-          display: block;
-          opacity: 1;
-          transition: opacity ease-in-out 120ms;
-        }
+      :host([hidden]) {
+        display: none;
+      }
 
-        :host([hidden]) {
-          display: none;
-        }
+      :host([transparent]) {
+        opacity: 0;
+      }
 
-        :host([transparent]) {
-          opacity: 0;
-        }
+      ui5-card {
+        height: 100%;
+      }
 
-        ui5-card {
-          height: 100%;
-        }
+      :host([design='Positive']) ui5-icon {
+        color: var(--sapPositiveColor);
+      }
 
-        :host([design='Positive']) ui5-icon {
-          color: var(--sapPositiveColor);
-        }
+      :host([design='Negative']) ui5-icon {
+        color: var(--sapNegativeColor);
+      }
 
-        :host([design='Negative']) ui5-icon {
-          color: var(--sapNegativeColor);
-        }
+      :host([design='Critical']) ui5-icon {
+        color: var(--sapCriticalColor);
+      }
 
-        :host([design='Critical']) ui5-icon {
-          color: var(--sapCriticalColor);
-        }
+      :host([design='Neutral']) ui5-icon {
+        color: var(--sapNeutralColor);
+      }
 
-        :host([design='Neutral']) ui5-icon {
-          color: var(--sapNeutralColor);
-        }
+      ::slotted([slot='content']) {
+        padding: var(--_ui5_card_content_padding);
+      }
 
-        ::slotted([slot='content']) {
-          padding: var(--_ui5_card_content_padding);
-        }
+      :host([no-content-padding]) ::slotted([slot='content']) {
+        padding: 0;
+      }
 
-        :host([no-content-padding]) ::slotted([slot='content']) {
-          padding: 0;
-        }
-
-        /* this is used to make the card height from the consumer of the card (i.e. z-grid) */
-        .content {
-          height: var(--furo-ui5-cardContentHeight, initial);
-        }
-      `
-    );
+      /* this is used to make the card height from the consumer of the card (i.e. z-grid) */
+      .content {
+        height: var(--furo-ui5-cardContentHeight, initial);
+      }
+    `;
   }
 
   /**
@@ -234,11 +234,19 @@ export class FuroUi5Card extends FBP(LitElement) {
        * Defines if the ui5-card header would be interactive, e.g gets hover effect, gets focused and header-click event is fired, when it is pressed.
        *
        */
-      headerInteractive: { type: Boolean, reflect: true, attribute: 'header-interactive' },
+      headerInteractive: {
+        type: Boolean,
+        reflect: true,
+        attribute: 'header-interactive',
+      },
       /**
        * Shows the content slot area with no padding
        */
-      noContentPadding: { type: Boolean, reflect: true, attribute: 'no-content-padding' },
+      noContentPadding: {
+        type: Boolean,
+        reflect: true,
+        attribute: 'no-content-padding',
+      },
     };
   }
 
@@ -258,9 +266,7 @@ export class FuroUi5Card extends FBP(LitElement) {
           status="${this.status}"
         >
           ${this.icon.length
-            ? html`
-                <ui5-icon name="${this.icon}" slot="avatar"></ui5-icon>
-              `
+            ? html` <ui5-icon name="${this.icon}" slot="avatar"></ui5-icon> `
             : html``}
           ${this.status !== ''
             ? html``

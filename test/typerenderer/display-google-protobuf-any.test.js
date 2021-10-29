@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-google-protobuf-any.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-google-protobuf-any.js';
 import { Env } from '@furo/framework';
 
 describe('display-google-protobuf-any', () => {
@@ -19,7 +19,10 @@ describe('display-google-protobuf-any', () => {
           <display-google-protobuf-any
             ƒ-bind-data="--dao(*.the_any_type)"
           ></display-google-protobuf-any>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -48,7 +51,10 @@ describe('display-google-protobuf-any', () => {
     Env.locale = 'de';
     dao.addEventListener('data-injected', () => {
       setTimeout(() => {
-        assert.equal(display._field['@type']._value, 'type.googleapis.com/google.type.Money');
+        assert.equal(
+          display._field['@type']._value,
+          'type.googleapis.com/google.type.Money'
+        );
         assert.equal(display._field.units._value, '1000');
         assert.equal(display._field.nanos._value, '55000000');
         assert.equal(display._field.currency_code._value, 'EUR');
@@ -70,7 +76,10 @@ describe('display-google-protobuf-any', () => {
     Env.locale = 'de';
     dao.addEventListener('data-injected', () => {
       setTimeout(() => {
-        assert.equal(display._field['@type']._value, 'type.googleapis.com/google.type.Date');
+        assert.equal(
+          display._field['@type']._value,
+          'type.googleapis.com/google.type.Date'
+        );
         assert.equal(display._field.day._value, '1');
         assert.equal(display._field.month._value, '12');
         assert.equal(display._field.year._value, '2025');
@@ -86,7 +95,4 @@ describe('display-google-protobuf-any', () => {
       },
     });
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

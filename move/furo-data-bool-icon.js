@@ -93,19 +93,16 @@ class FuroDataBoolIcon extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: inline-block;
+        width: 16px;
+      }
 
-      css`
-        :host {
-          display: inline-block;
-          width: 16px;
-        }
-
-        :host([hidden]) {
-          display: none;
-        }
-      `
-    );
+      :host([hidden]) {
+        display: none;
+      }
+    `;
   }
 
   /**
@@ -133,7 +130,9 @@ class FuroDataBoolIcon extends FBP(LitElement) {
   }
 
   _updateSymbol() {
-    this._ocSymbol = this.binder.fieldNode._value ? this.symboltrue : this.symbolfalse;
+    this._ocSymbol = this.binder.fieldNode._value
+      ? this.symboltrue
+      : this.symbolfalse;
     this.requestUpdate();
   }
 
@@ -143,9 +142,7 @@ class FuroDataBoolIcon extends FBP(LitElement) {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._ocSymbol}
-    `;
+    return html` ${this._ocSymbol} `;
   }
 }
 

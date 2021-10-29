@@ -50,7 +50,9 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  * @customElement
  * @demo demo-furo-ui5-data-toggle-button Basic usage (scalar , fat, wrapper values)
  */
-export class FuroUi5DataToggleButton extends FieldNodeAdapter(ToggleButton.default) {
+export class FuroUi5DataToggleButton extends FieldNodeAdapter(
+  ToggleButton.default
+) {
   constructor() {
     super();
 
@@ -130,7 +132,10 @@ export class FuroUi5DataToggleButton extends FieldNodeAdapter(ToggleButton.defau
       this.setFnaFieldValue(this.pressed);
     }
 
-    const customEvent = new Event('field-value-changed', { composed: true, bubbles: true });
+    const customEvent = new Event('field-value-changed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this.pressed;
     this.dispatchEvent(customEvent);
   }
@@ -266,7 +271,10 @@ export class FuroUi5DataToggleButton extends FieldNodeAdapter(ToggleButton.defau
    */
   onFnaLabelChanged(text) {
     this._attributesFromFNA.label = text;
-    if (this._privilegedAttributes.text === null && this._attributesFromFAT.label === undefined) {
+    if (
+      this._privilegedAttributes.text === null &&
+      this._attributesFromFAT.label === undefined
+    ) {
       this.innerText = text;
     }
   }
@@ -286,4 +294,7 @@ export class FuroUi5DataToggleButton extends FieldNodeAdapter(ToggleButton.defau
     }
   }
 }
-window.customElements.define('furo-ui5-data-toggle-button', FuroUi5DataToggleButton);
+window.customElements.define(
+  'furo-ui5-data-toggle-button',
+  FuroUi5DataToggleButton
+);

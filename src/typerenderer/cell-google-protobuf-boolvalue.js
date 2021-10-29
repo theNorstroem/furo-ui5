@@ -14,4 +14,7 @@ import { CellBool } from './cell-bool.js';
  */
 class CellGoolgeProtobufBoolvalue extends CellBool {}
 
-window.customElements.define('cell-google-protobuf-boolvalue', CellGoolgeProtobufBoolvalue);
+window.customElements.define(
+  'cell-google-protobuf-boolvalue',
+  CellGoolgeProtobufBoolvalue
+);

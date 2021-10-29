@@ -77,7 +77,10 @@ class FuroPanelCoordinatorTabItem extends FBP(LitElement) {
     this.selected = fieldNode._isSelected;
 
     this.field.addEventListener('this-node-selected', this._select);
-    this.field.addEventListener('tree-node-unselection-requested', this._deselect);
+    this.field.addEventListener(
+      'tree-node-unselection-requested',
+      this._deselect
+    );
     this.field.addEventListener('modified', this._inedit);
     this.field.addEventListener('cleared', this._clear);
     this.field.addEventListener('has-error', this._error);
@@ -88,7 +91,10 @@ class FuroPanelCoordinatorTabItem extends FBP(LitElement) {
   _removeListeners() {
     if (this.field) {
       this.field.removeEventListener('this-node-selected', this._select);
-      this.field.removeEventListener('tree-node-unselection-requested', this._deselect);
+      this.field.removeEventListener(
+        'tree-node-unselection-requested',
+        this._deselect
+      );
       this.field.removeEventListener('modified', this._inedit);
       this.field.removeEventListener('cleared', this._clear);
       this.field.removeEventListener('has-error', this._error);
@@ -136,55 +142,52 @@ class FuroPanelCoordinatorTabItem extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 38px;
+        border-bottom: 2px solid var(--surface, #fafafa);
+        transition: all 0.5s;
+        cursor: pointer;
+        position: relative;
+        min-width: 136px;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        color: var(--on-surface);
+        text-transform: uppercase;
+      }
 
-      css`
-        :host {
-          display: inline-block;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 38px;
-          border-bottom: 2px solid var(--surface, #fafafa);
-          transition: all 0.5s;
-          cursor: pointer;
-          position: relative;
-          min-width: 136px;
-          font-family: 'Roboto', 'Noto', sans-serif;
-          color: var(--on-surface);
-          text-transform: uppercase;
-        }
+      :host([inedit]) {
+        font-style: italic;
+      }
 
-        :host([inedit]) {
-          font-style: italic;
-        }
+      :host([haserror]) {
+        color: var(--error, red);
+      }
 
-        :host([haserror]) {
-          color: var(--error, red);
-        }
+      :host([hidden]) {
+        display: none;
+      }
 
-        :host([hidden]) {
-          display: none;
-        }
+      .label {
+        padding: 0 var(--furo-button-padding, var(--spacing-s, 16px));
+        text-align: center;
+      }
 
-        .label {
-          padding: 0 var(--furo-button-padding, var(--spacing-s, 16px));
-          text-align: center;
-        }
+      .close {
+        color: var(--separator);
+      }
 
-        .close {
-          color: var(--separator);
-        }
+      .close:hover {
+        color: var(--primary);
+      }
 
-        .close:hover {
-          color: var(--primary);
-        }
-
-        furo-icon {
-          margin-bottom: 2px;
-          margin-right: var(--spacing-s);
-        }
-      `
-    );
+      furo-icon {
+        margin-bottom: 2px;
+        margin-right: var(--spacing-s);
+      }
+    `;
   }
 
   /**
@@ -210,4 +213,7 @@ class FuroPanelCoordinatorTabItem extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('furo-panel-coordinator-tab-item', FuroPanelCoordinatorTabItem);
+window.customElements.define(
+  'furo-panel-coordinator-tab-item',
+  FuroPanelCoordinatorTabItem
+);

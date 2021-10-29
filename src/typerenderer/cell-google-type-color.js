@@ -55,7 +55,9 @@ class CellGoolgeTypeColor extends LitElement {
     if (this._field) {
       if (this._field._spec.type !== 'google.type.color') {
         // eslint-disable-next-line no-console
-        console.warn('Invalid fieldNode in bindData. Please bind a google.type.color field.');
+        console.warn(
+          'Invalid fieldNode in bindData. Please bind a google.type.color field.'
+        );
         return;
       }
       this._updateValue();
@@ -101,9 +103,7 @@ class CellGoolgeTypeColor extends LitElement {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._getTemplate()}
-    `;
+    return html` ${this._getTemplate()} `;
   }
 }
 

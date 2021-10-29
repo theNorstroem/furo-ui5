@@ -1,7 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
 
-
 import 'markdown-it/dist/markdown-it.js';
 import '@ui5/webcomponents-fiori/dist/NotificationListItem.js';
 import '@ui5/webcomponents-fiori/dist/NotificationAction.js';
@@ -99,14 +98,11 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
-
-      css`
-        :host {
-          display: block;
-        }
-      `
-    );
+    return css`
+      :host {
+        display: block;
+      }
+    `;
   }
 
   /**
@@ -121,35 +117,40 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
      * the payload message in the event detail should be a grpc status message or a collection of notifications.
      * https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto.
      */
-    this.parentNode.addEventListener('open-furo-ui5-notification-requested', e => {
-      e.stopPropagation();
-      this.target = e.detail;
+    this.parentNode.addEventListener(
+      'open-furo-ui5-notification-requested',
+      e => {
+        e.stopPropagation();
+        this.target = e.detail;
 
-      if (e.detail._type === 'grpc') {
-        this.parseGrpcStatus(e.detail);
-      } else if (e.detail.payload && Array.isArray(e.detail.payload)) {
-        e.detail.payload.forEach(n => {
-          this.parseNotificationMessage(n);
-        });
+        if (e.detail._type === 'grpc') {
+          this.parseGrpcStatus(e.detail);
+        } else if (e.detail.payload && Array.isArray(e.detail.payload)) {
+          e.detail.payload.forEach(n => {
+            this.parseNotificationMessage(n);
+          });
+        }
       }
-    });
+    );
 
     /**
      * listening the `item-close` event from ui5-li-notification element. when the close button is clicked, close the notification and
      * call the _close function on the target element (furo-ui5-notification).
      */
-    this.shadowRoot.getElementById('ui5-list').addEventListener('item-close', e => {
-      e.detail.item.target._close(e.detail.item.message);
-      e.detail.item.remove();
-      // update notification counter
-      if (e.detail.item.nodeName === 'UI5-LI-NOTIFICATION-GROUP') {
-        this._notificationCount -= e.detail.item.childElementCount;
-      } else {
-        // eslint-disable-next-line no-plusplus
-        --this._notificationCount;
-      }
-      this._dispatchNotificationCounterUpdates(this._notificationCount);
-    });
+    this.shadowRoot
+      .getElementById('ui5-list')
+      .addEventListener('item-close', e => {
+        e.detail.item.target._close(e.detail.item.message);
+        e.detail.item.remove();
+        // update notification counter
+        if (e.detail.item.nodeName === 'UI5-LI-NOTIFICATION-GROUP') {
+          this._notificationCount -= e.detail.item.childElementCount;
+        } else {
+          // eslint-disable-next-line no-plusplus
+          --this._notificationCount;
+        }
+        this._dispatchNotificationCounterUpdates(this._notificationCount);
+      });
 
     /**
      * listening the `click` event on the action buttons. when the action button is clicked, close the notification and
@@ -158,7 +159,10 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
     this.shadowRoot.getElementById('ui5-list').addEventListener('click', e => {
       const action = e.target.getAttribute('action');
       if (action) {
-        e.target.notification.target._customAction(action, e.target.notification.message);
+        e.target.notification.target._customAction(
+          action,
+          e.target.notification.message
+        );
         e.target.notification.remove();
       }
     });
@@ -178,24 +182,26 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
       this.multilineText = this.multilineText.concat(
         status.details
           .filter(det => det['@type'].includes('LocalizedMessage'))
-          .map(det => det.message),
+          .map(det => det.message)
       );
 
       // @type: "type.googleapis.com/google.rpc.BadRequest"
       this.localizedMsg = [];
       this.localizedMsg = status.details.filter(det =>
-        det['@type'].includes('google.rpc.LocalizedMessage'),
+        det['@type'].includes('google.rpc.LocalizedMessage')
       );
 
       // @type: "type.googleapis.com/google.rpc.BadRequest"
       this.badRequests = [];
       this.badRequests = status.details.filter(det =>
-        det['@type'].includes('google.rpc.BadRequest'),
+        det['@type'].includes('google.rpc.BadRequest')
       );
 
       // @type: "type.googleapis.com/google.rpc.Help"
       this.help = [];
-      this.help = status.details.filter(det => det['@type'].includes('google.rpc.Help'));
+      this.help = status.details.filter(det =>
+        det['@type'].includes('google.rpc.Help')
+      );
 
       // @TODO: implement the other error types from https://github.com/googleapis/googleapis/blob/master/google/rpc/error_details.proto
       // RequestInfo, ResourceInfo, PreconditionFailure
@@ -282,7 +288,7 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
         detail: VALUE.toString(),
         bubbles: true,
         composed: true,
-      }),
+      })
     );
   }
 
@@ -443,4 +449,7 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
   }
 }
 
-customElements.define('furo-ui5-notification-list-display', FuroUi5NotificationListDisplay);
+customElements.define(
+  'furo-ui5-notification-list-display',
+  FuroUi5NotificationListDisplay
+);

@@ -24,9 +24,7 @@ class CellFuroFatBool extends CellBool {
     let tmpl = '';
     if (this._field) {
       if (!this._field.value._value || this._field.value._value === 'false') {
-        tmpl = html`
-          <ui5-icon name="border"></ui5-icon>
-        `;
+        tmpl = html` <ui5-icon name="border"></ui5-icon> `;
       } else {
         tmpl = html`
           <ui5-icon name="accept" value-state="Success"></ui5-icon>
@@ -44,9 +42,7 @@ class CellFuroFatBool extends CellBool {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._getTemplate()}
-    `;
+    return html` ${this._getTemplate()} `;
   }
 }
 

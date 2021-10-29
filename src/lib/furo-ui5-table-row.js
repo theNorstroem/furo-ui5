@@ -59,7 +59,9 @@ export class FuroUi5TableRow extends TableRow.default {
        * @event multiselect-change
        * Fired when selection was changed in multiselect mode
        */
-      this.dispatchEvent(new Event('ui5-selection-requested', { composed: true, bubbles: true }));
+      this.dispatchEvent(
+        new Event('ui5-selection-requested', { composed: true, bubbles: true })
+      );
     }
 
     /**
@@ -70,7 +72,7 @@ export class FuroUi5TableRow extends TableRow.default {
         detail: this._data._value,
         bubbles: true,
         composed: true,
-      }),
+      })
     );
   }
 
@@ -85,7 +87,7 @@ export class FuroUi5TableRow extends TableRow.default {
         new CustomEvent('arrow-down-on-last-row', {
           bubbles: true,
           composed: true,
-        }),
+        })
       );
     }
   }
@@ -99,7 +101,7 @@ export class FuroUi5TableRow extends TableRow.default {
         new CustomEvent('arrow-up-on-first-row', {
           bubbles: true,
           composed: true,
-        }),
+        })
       );
     }
   }

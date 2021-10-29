@@ -215,7 +215,10 @@ class FuroDataChartBinder extends LitElement {
 
   _dataPointSelection(e, context, config) {
     if (config.dataPointIndex !== undefined) {
-      const customEvent = new Event('data-point-clicked', { composed: true, bubbles: true });
+      const customEvent = new Event('data-point-clicked', {
+        composed: true,
+        bubbles: true,
+      });
       customEvent.detail = this.repeater.repeats[config.dataPointIndex];
       this.dispatchEvent(customEvent);
     }
@@ -302,8 +305,8 @@ class FuroDataChartBinder extends LitElement {
                   0,
                   0,
                   0,
-                  0,
-                ),
+                  0
+                )
               );
               v.x = date.getTime();
             } else {
@@ -322,8 +325,8 @@ class FuroDataChartBinder extends LitElement {
                     0,
                     0,
                     0,
-                    0,
-                  ),
+                    0
+                  )
                 );
                 v.y = date.getTime();
               } else {
@@ -349,8 +352,8 @@ class FuroDataChartBinder extends LitElement {
                       0,
                       0,
                       0,
-                      0,
-                    ),
+                      0
+                    )
                   );
                   v.y.push(date.getTime());
                 } else {
@@ -366,7 +369,10 @@ class FuroDataChartBinder extends LitElement {
         });
     }
 
-    const customEvent = new Event('data-updated', { composed: true, bubbles: true });
+    const customEvent = new Event('data-updated', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this;
     this.dispatchEvent(customEvent);
   }

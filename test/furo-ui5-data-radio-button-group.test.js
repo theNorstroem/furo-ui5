@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
@@ -15,13 +14,6 @@ describe('furo-ui5-data-radio-button-group', () => {
   let radioGroup;
   let dao;
   let daoCollection;
-
-  function keydown(TargetElement, key) {
-    const customEvent = new Event('keydown', { composed: true, bubbles: true });
-    customEvent.code = key; // Deprecated, prefer .key instead.
-    customEvent.key = key;
-    TargetElement.dispatchEvent(customEvent);
-  }
 
   const testData = {
     entities: [
@@ -120,15 +112,21 @@ describe('furo-ui5-data-radio-button-group', () => {
           <furo-ui5-data-radio-button-group
             ƒ-bind-data="--entity(*.sex)"
           ></furo-ui5-data-radio-button-group>
-          <furo-ui5-data-text-input ƒ-bind-data="--entity(*.sex)"></furo-ui5-data-text-input>
-          <furo-data-object type="person.Person" @-object-ready="--entity"></furo-data-object>
+          <furo-ui5-data-text-input
+            ƒ-bind-data="--entity(*.sex)"
+          ></furo-ui5-data-text-input>
+          <furo-data-object
+            type="person.Person"
+            @-object-ready="--entity"
+          ></furo-data-object>
           <furo-data-object type="person.PersonCollection"></furo-data-object>
         </template>
       </test-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;
-    [, buttonGrp, radioGroup, dao, daoCollection] = testbind.parentNode.children;
+    [, buttonGrp, radioGroup, dao, daoCollection] =
+      testbind.parentNode.children;
     await host.updateComplete;
     await buttonGrp.updateComplete;
     await radioGroup.updateComplete;
@@ -138,7 +136,10 @@ describe('furo-ui5-data-radio-button-group', () => {
 
   it('should be a furo-ui5-data-radio-button-group element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(buttonGrp.nodeName.toLowerCase(), 'furo-ui5-data-radio-button-group');
+    assert.equal(
+      buttonGrp.nodeName.toLowerCase(),
+      'furo-ui5-data-radio-button-group'
+    );
     done();
   });
 

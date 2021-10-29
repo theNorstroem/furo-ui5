@@ -370,7 +370,10 @@ class FuroChartDisplay extends FBP(LitElement) {
     // fill initial data (workaround, because we update the data later)
     this._fillInitialData();
 
-    this.chart = new ApexCharts(this.shadowRoot.getElementById('c'), this.options);
+    this.chart = new ApexCharts(
+      this.shadowRoot.getElementById('c'),
+      this.options
+    );
 
     this.chart.render();
   }
@@ -389,13 +392,21 @@ class FuroChartDisplay extends FBP(LitElement) {
     this.apexOptions.chart.events.dataPointSelection = (e, context, config) => {
       // notify click
       // The last parameter config contains additional information like `seriesIndex` and `dataPointIndex` for cartesian charts
-      this.dataSourceComponents[config.seriesIndex]._dataPointSelection(e, context, config);
+      this.dataSourceComponents[config.seriesIndex]._dataPointSelection(
+        e,
+        context,
+        config
+      );
     };
 
     this.apexOptions.chart.events.markerClick = (e, context, config) => {
       // notify click
       // The last parameter config contains additional information like `seriesIndex` and `dataPointIndex` for cartesian charts
-      this.dataSourceComponents[config.seriesIndex]._dataPointSelection(e, context, config);
+      this.dataSourceComponents[config.seriesIndex]._dataPointSelection(
+        e,
+        context,
+        config
+      );
     };
 
     this._registerDataSourceComponents(this.dataSourceComponents);
@@ -609,7 +620,8 @@ class FuroChartDisplay extends FBP(LitElement) {
         align-items: center;
       }
 
-      .apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+      .apexcharts-tooltip-series-group.apexcharts-active
+        .apexcharts-tooltip-marker {
         opacity: 1;
       }
 
@@ -933,8 +945,12 @@ class FuroChartDisplay extends FBP(LitElement) {
         fill: #008ffb;
       }
 
-      .apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
-      .apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+      .apexcharts-theme-light
+        .apexcharts-selection-icon:not(.apexcharts-selected):hover
+        svg,
+      .apexcharts-theme-light
+        .apexcharts-zoom-icon:not(.apexcharts-selected):hover
+        svg,
       .apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
       .apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
       .apexcharts-theme-light .apexcharts-reset-icon:hover svg,
@@ -1075,8 +1091,12 @@ class FuroChartDisplay extends FBP(LitElement) {
         opacity: 0;
       }
 
-      .apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
-      .apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+      .apexcharts-area-series
+        .apexcharts-series-markers
+        .apexcharts-marker.no-pointer-events,
+      .apexcharts-line-series
+        .apexcharts-series-markers
+        .apexcharts-marker.no-pointer-events,
       .apexcharts-radar-series path,
       .apexcharts-radar-series polygon {
         pointer-events: none;

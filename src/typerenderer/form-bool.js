@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataCheckboxInputLabeled } from '@furo/ui5/src/furo-ui5-data-checkbox-input-labeled.js';
+import { FuroUi5DataCheckboxInputLabeled } from '../furo-ui5-data-checkbox-input-labeled.js';
 
 /**
  * `form-bool` is a `form` context renderer.

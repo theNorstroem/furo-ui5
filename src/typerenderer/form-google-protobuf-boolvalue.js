@@ -12,4 +12,7 @@ import { FormBool } from './form-bool.js';
 
 class FormGoogleProtobufBoolvalue extends FormBool {}
 
-window.customElements.define('form-google-protobuf-boolvalue', FormGoogleProtobufBoolvalue);
+window.customElements.define(
+  'form-google-protobuf-boolvalue',
+  FormGoogleProtobufBoolvalue
+);

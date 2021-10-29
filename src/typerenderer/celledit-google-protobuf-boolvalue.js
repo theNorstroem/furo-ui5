@@ -12,4 +12,7 @@ import { CelleditBool } from './celledit-bool.js';
 
 class CelleditGoogleProtobufBoolvalue extends CelleditBool {}
 
-window.customElements.define('celledit-google-protobuf-boolvalue', CelleditGoogleProtobufBoolvalue);
+window.customElements.define(
+  'celledit-google-protobuf-boolvalue',
+  CelleditGoogleProtobufBoolvalue
+);

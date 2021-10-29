@@ -67,10 +67,13 @@ export class FuroUi5Notification extends LitElement {
    * @param p {Object} payload
    */
   _requestGroupDisplay() {
-    const customEvent = new Event('open-furo-ui5-notification-group-requested', {
-      composed: true,
-      bubbles: true,
-    });
+    const customEvent = new Event(
+      'open-furo-ui5-notification-group-requested',
+      {
+        composed: true,
+        bubbles: true,
+      }
+    );
     customEvent.detail = this;
     this.dispatchEvent(customEvent);
   }
@@ -82,7 +85,10 @@ export class FuroUi5Notification extends LitElement {
    * @private
    */
   _close(message) {
-    const customEvent = new Event('notification-closed', { composed: true, bubbles: true });
+    const customEvent = new Event('notification-closed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = message || this.payload;
     this.dispatchEvent(customEvent);
   }
@@ -95,14 +101,20 @@ export class FuroUi5Notification extends LitElement {
    * @private
    */
   _customAction(command, message) {
-    const customEvent = new Event('notification-custom-action', { composed: true, bubbles: true });
+    const customEvent = new Event('notification-custom-action', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = message;
     this.dispatchEvent(customEvent);
 
-    const customActionEvent = new Event(`notification-custom-action-${command}`, {
-      bubbles: true,
-      composed: true,
-    });
+    const customActionEvent = new Event(
+      `notification-custom-action-${command}`,
+      {
+        bubbles: true,
+        composed: true,
+      }
+    );
     customActionEvent.detail = message;
     this.dispatchEvent(customActionEvent);
 

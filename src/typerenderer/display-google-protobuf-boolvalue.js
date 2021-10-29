@@ -14,4 +14,7 @@ import { DisplayBool } from './display-bool.js';
  */
 class DisplayGoolgeProtobufBoolvalue extends DisplayBool {}
 
-window.customElements.define('display-google-protobuf-boolvalue', DisplayGoolgeProtobufBoolvalue);
+window.customElements.define(
+  'display-google-protobuf-boolvalue',
+  DisplayGoolgeProtobufBoolvalue
+);

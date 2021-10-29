@@ -50,7 +50,9 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  * @customElement
  * @demo demo-furo-ui5-data-date-time-picker Basic Usage
  */
-export class FuroUi5DataDateTimePicker extends FieldNodeAdapter(DateTimePicker.default) {
+export class FuroUi5DataDateTimePicker extends FieldNodeAdapter(
+  DateTimePicker.default
+) {
   constructor() {
     super();
     this.formatPattern = ''; // needed to avoid cldr errors
@@ -121,7 +123,10 @@ export class FuroUi5DataDateTimePicker extends FieldNodeAdapter(DateTimePicker.d
        * Payload: {Date}
        * @type {Event}
        */
-      const customEvent = new Event('value-changed', { composed: true, bubbles: true });
+      const customEvent = new Event('value-changed', {
+        composed: true,
+        bubbles: true,
+      });
       customEvent.detail = this.dateValue;
       this.dispatchEvent(customEvent);
     });
@@ -220,7 +225,10 @@ export class FuroUi5DataDateTimePicker extends FieldNodeAdapter(DateTimePicker.d
    * @private
    */
   _resetValueStateMessage() {
-    this._setValueStateMessage(this._previousValueState.state, this._previousValueState.message);
+    this._setValueStateMessage(
+      this._previousValueState.state,
+      this._previousValueState.message
+    );
   }
 
   /**
@@ -295,4 +303,7 @@ export class FuroUi5DataDateTimePicker extends FieldNodeAdapter(DateTimePicker.d
   }
 }
 
-window.customElements.define('furo-ui5-data-date-time-picker', FuroUi5DataDateTimePicker);
+window.customElements.define(
+  'furo-ui5-data-date-time-picker',
+  FuroUi5DataDateTimePicker
+);

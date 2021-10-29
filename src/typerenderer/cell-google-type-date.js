@@ -109,12 +109,25 @@ export class CellGoogleTypeDate extends LitElement {
    * @private
    */
   static _convertDateToString(fieldNode) {
-    if (!fieldNode || !fieldNode.year._value || !fieldNode.month._value || !fieldNode.day._value) {
+    if (
+      !fieldNode ||
+      !fieldNode.year._value ||
+      !fieldNode.month._value ||
+      !fieldNode.day._value
+    ) {
       return 'N/A';
     }
 
     const date = new Date(
-      Date.UTC(fieldNode.year._value, fieldNode.month._value - 1, fieldNode.day._value, 0, 0, 0, 0),
+      Date.UTC(
+        fieldNode.year._value,
+        fieldNode.month._value - 1,
+        fieldNode.day._value,
+        0,
+        0,
+        0,
+        0
+      )
     );
 
     return new Intl.DateTimeFormat([Env.locale, 'de-CH'], {
@@ -131,9 +144,7 @@ export class CellGoogleTypeDate extends LitElement {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._displayValue}
-    `;
+    return html` ${this._displayValue} `;
   }
 }
 

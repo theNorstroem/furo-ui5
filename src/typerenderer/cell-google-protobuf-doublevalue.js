@@ -14,4 +14,7 @@ import { CellDouble } from './cell-double.js';
  */
 class CellGoogleProtobufDoublevalue extends CellDouble {}
 
-window.customElements.define('cell-google-protobuf-doublevalue', CellGoogleProtobufDoublevalue);
+window.customElements.define(
+  'cell-google-protobuf-doublevalue',
+  CellGoogleProtobufDoublevalue
+);

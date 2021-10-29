@@ -60,7 +60,8 @@ class DisplayFuroLink extends LitElement {
     return html`
       ${this._field
         ? html`
-            [${this._field.rel._value}][this._field.method._value][${this._field.href._value}]
+            [${this._field.rel._value}][this._field.method._value][${this._field
+              .href._value}]
           `
         : html``}
     `;

@@ -86,7 +86,9 @@ export class CellDouble extends LitElement {
    * @private
    */
   _formatCell() {
-    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._field);
+    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(
+      this._field
+    );
     if (displayValue !== 'NaN') {
       this._displayValue = displayValue;
       this.requestUpdate();
@@ -100,9 +102,7 @@ export class CellDouble extends LitElement {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._displayValue}
-    `;
+    return html` ${this._displayValue} `;
   }
 }
 

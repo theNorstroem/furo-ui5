@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-furo-fat-float.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-furo-fat-float.js';
 import { Env } from '@furo/framework';
 
 describe('display-furo-fat-float', () => {
@@ -16,7 +16,9 @@ describe('display-furo-fat-float', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <display-furo-fat-float ƒ-bind-data="--dao(*.fat_float)"></display-furo-fat-float>
+          <display-furo-fat-float
+            ƒ-bind-data="--dao(*.fat_float)"
+          ></display-furo-fat-float>
           <furo-data-object
             type="universaltest.Universaltest"
             @-object-ready="--dao"
@@ -47,19 +49,22 @@ describe('display-furo-fat-float', () => {
 
   it('should show template according to the value of the data', done => {
     Env.locale = 'de';
-    dao.injectRaw({ fat_float: { value: 12.21111111, labels: [], attributes: [] } });
+    dao.injectRaw({
+      fat_float: { value: 12.21111111, labels: [], attributes: [] },
+    });
 
     setTimeout(() => {
       assert.equal(
         display._field.value._value,
         12.21111111,
-        'check if the fat.float value is assigned',
+        'check if the fat.float value is assigned'
       );
-      assert.equal(display._displayValue, '12,211', 'check if the fat.float value is formatted');
+      assert.equal(
+        display._displayValue,
+        '12,211',
+        'check if the fat.float value is formatted'
+      );
       done();
     }, 10);
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

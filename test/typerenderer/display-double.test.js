@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-double.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-double.js';
 import { Env } from '@furo/framework';
 
 describe('display-double', () => {
@@ -17,7 +17,10 @@ describe('display-double', () => {
       <test-bind>
         <template>
           <display-double ƒ-bind-data="--dao(*.double)"></display-double>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -47,12 +50,17 @@ describe('display-double', () => {
     dao.injectRaw({ double: 12.21111111 });
 
     setTimeout(() => {
-      assert.equal(display._field._value, 12.21111111, 'check if the double value is assigned');
-      assert.equal(display._displayValue, '12,211', 'check if the double value is formatted');
+      assert.equal(
+        display._field._value,
+        12.21111111,
+        'check if the double value is assigned'
+      );
+      assert.equal(
+        display._displayValue,
+        '12,211',
+        'check if the double value is formatted'
+      );
       done();
     }, 0);
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

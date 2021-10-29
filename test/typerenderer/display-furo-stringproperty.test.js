@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-furo-stringproperty.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-furo-stringproperty.js';
 
 describe('display-furo-stringproperty', () => {
   let host;
@@ -16,7 +16,10 @@ describe('display-furo-stringproperty', () => {
       <test-bind>
         <template>
           <display-furo-stringproperty></display-furo-stringproperty>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -33,7 +36,4 @@ describe('display-furo-stringproperty', () => {
     assert.equal(display.nodeName.toLowerCase(), 'display-furo-stringproperty');
     done();
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

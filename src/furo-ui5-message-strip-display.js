@@ -42,12 +42,15 @@ export class FuroUi5MessageStripDisplay extends FBP(LitElement) {
      * the message in the event detail should be GRPC status.
      * https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto.
      */
-    this.parentNode.addEventListener('open-furo-ui5-message-strip-requested', e => {
-      e.stopPropagation();
-      this.target = e.detail;
+    this.parentNode.addEventListener(
+      'open-furo-ui5-message-strip-requested',
+      e => {
+        e.stopPropagation();
+        this.target = e.detail;
 
-      this.show(e.detail);
-    });
+        this.show(e.detail);
+      }
+    );
 
     /**
      * listening the 'close' event from messageStrip. when the close button is clicked, close the messageStrip
@@ -74,7 +77,10 @@ export class FuroUi5MessageStripDisplay extends FBP(LitElement) {
    */
   show(source) {
     const messagestrip = document.createElement('ui5-messagestrip');
-    messagestrip.setAttribute('design', source.type ? source.type : 'Information');
+    messagestrip.setAttribute(
+      'design',
+      source.type ? source.type : 'Information'
+    );
 
     if (source.noCloseButton) {
       messagestrip.setAttribute('no-close-button', true);
@@ -91,7 +97,9 @@ export class FuroUi5MessageStripDisplay extends FBP(LitElement) {
     messagestrip.target = source;
     messagestrip.innerHTML = source.displayMessage;
 
-    const i = this._messageStrips.push(this.shadowRoot.appendChild(messagestrip));
+    const i = this._messageStrips.push(
+      this.shadowRoot.appendChild(messagestrip)
+    );
     const to = source.getAttribute('timeout');
     if (to !== null) {
       setTimeout(() => {
@@ -107,19 +115,19 @@ export class FuroUi5MessageStripDisplay extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: block;
+      }
 
-      css`
-        :host {
-          display: block;
-        }
-
-        ui5-messagestrip {
-          margin-bottom: 0.6875rem;
-        }
-      `
-    );
+      ui5-messagestrip {
+        margin-bottom: 0.6875rem;
+      }
+    `;
   }
 }
 
-customElements.define('furo-ui5-message-strip-display', FuroUi5MessageStripDisplay);
+customElements.define(
+  'furo-ui5-message-strip-display',
+  FuroUi5MessageStripDisplay
+);

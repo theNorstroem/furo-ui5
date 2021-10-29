@@ -114,7 +114,9 @@ import './furo-ui5-dialog.js';
  * @customElement furo-ui5-data-reference-search
  * @demo demo-furo-ui5-data-reference-search Basic Usage
  */
-export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
+export class FuroUi5DataReferenceSearch extends FBP(
+  FieldNodeAdapter(LitElement)
+) {
   constructor() {
     super();
 
@@ -187,17 +189,20 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
     if (typeof val.link === 'object' && val.link.service !== null) {
       this._FBPTriggerWire('--detectedService', val.link.service);
       this._FBPTriggerWire('--hts', val.link);
-    } else if (Env.api.specs[this.__fieldNode._spec.type].fields?.link?.meta?.default) {
+    } else if (
+      Env.api.specs[this.__fieldNode._spec.type].fields?.link?.meta?.default
+    ) {
       // todo: check if the defaults from the field itself (not the defaults from the used type) are given
       // try the defaults from the ref type
 
       this._FBPTriggerWire(
         '--detectedService',
-        Env.api.specs[this.__fieldNode._spec.type].fields.link.meta.default.service,
+        Env.api.specs[this.__fieldNode._spec.type].fields.link.meta.default
+          .service
       );
       this._FBPTriggerWire(
         '--hts',
-        Env.api.specs[this.__fieldNode._spec.type].fields.link.meta.default,
+        Env.api.specs[this.__fieldNode._spec.type].fields.link.meta.default
       );
     }
   }
@@ -263,13 +268,19 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
        * By default this goes to *data.id*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
        */
-      extendedValueFieldPath: { type: String, attribute: 'extended-value-field-path' },
+      extendedValueFieldPath: {
+        type: String,
+        attribute: 'extended-value-field-path',
+      },
       /**
        * Path to response value item of the exteded search which is used for the display.
        * By default this goes to *data.display_name*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
        */
-      extendedDisplayFieldPath: { type: String, attribute: 'extended-display-field-path' },
+      extendedDisplayFieldPath: {
+        type: String,
+        attribute: 'extended-display-field-path',
+      },
       /**
        * Set the service. This is only needed when you do not use a bind or bind a scalar value.
        */
@@ -412,7 +423,9 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
 
       this._dialog = this.shadowRoot.getElementById('dialog');
       this._hasExtendedSearcher = true;
-      this._valueHelperComponent = document.createElement(this.extendedSearcher);
+      this._valueHelperComponent = document.createElement(
+        this.extendedSearcher
+      );
       this._valueHelperComponent.style.height = '100%';
 
       /**
@@ -423,7 +436,9 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
         this._valueHelperComponent.focus();
         // trigger the search method if it is available
         if (this._valueHelperComponent.search !== undefined) {
-          this._valueHelperComponent.search(this._searchTerm || this.value.display_name);
+          this._valueHelperComponent.search(
+            this._searchTerm || this.value.display_name
+          );
         }
       });
       this._FBPAddWireHook('|--htsIn', hts => {
@@ -471,8 +486,12 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
       if (entities && entities.length > 0) {
         this._hasCollection = true;
         this._searchResultItems = entities.map(e => ({
-          id: this.valueFieldPath.split('.').reduce((acc, part) => acc && acc[part], e),
-          display: this.displayFieldPath.split('.').reduce((acc, part) => acc && acc[part], e),
+          id: this.valueFieldPath
+            .split('.')
+            .reduce((acc, part) => acc && acc[part], e),
+          display: this.displayFieldPath
+            .split('.')
+            .reduce((acc, part) => acc && acc[part], e),
           data: e,
         }));
 
@@ -532,10 +551,14 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
         const currentIndex = this._searchResultItems.length - 1;
         this._searchResultItems = this._searchResultItems.concat(
           entities.map(e => ({
-            id: this.valueFieldPath.split('.').reduce((acc, part) => acc && acc[part], e),
-            display: this.displayFieldPath.split('.').reduce((acc, part) => acc && acc[part], e),
+            id: this.valueFieldPath
+              .split('.')
+              .reduce((acc, part) => acc && acc[part], e),
+            display: this.displayFieldPath
+              .split('.')
+              .reduce((acc, part) => acc && acc[part], e),
             data: e,
-          })),
+          }))
         );
         this._FBPTriggerWire('--resultList', this._searchResultItems);
         this._FBPTriggerWire('--listOpened', currentIndex);
@@ -588,7 +611,9 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
      * Update the fieldnode when an item from the list was selected
      */
     this._FBPAddWireHook('--itemSelected', item => {
-      this.value.id = this.valueFieldPath.split('.').reduce((acc, part) => acc && acc[part], item);
+      this.value.id = this.valueFieldPath
+        .split('.')
+        .reduce((acc, part) => acc && acc[part], item);
       this.value.display_name = this.displayFieldPath
         .split('.')
         .reduce((acc, part) => acc && acc[part], item);
@@ -847,7 +872,10 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
    * @private
    */
   _resetValueStateMessage() {
-    this._setValueStateMessage(this._previousValueState.state, this._previousValueState.message);
+    this._setValueStateMessage(
+      this._previousValueState.state,
+      this._previousValueState.message
+    );
   }
 
   /**
@@ -915,61 +943,58 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: inline-block;
+        position: relative;
+      }
 
-      css`
-        :host {
-          display: inline-block;
-          position: relative;
-        }
+      .list {
+        position: absolute;
+        overflow: auto;
+        box-shadow: rgba(0, 0, 0, 0.42) 0 0 0 1px;
+        z-index: 1;
+        display: none;
+        background-color: var(
+          --furo-data-reference-search-list-background,
+          var(--surface, #ffffff)
+        );
+      }
 
-        .list {
-          position: absolute;
-          overflow: auto;
-          box-shadow: rgba(0, 0, 0, 0.42) 0 0 0 1px;
-          z-index: 1;
-          display: none;
-          background-color: var(
-            --furo-data-reference-search-list-background,
-            var(--surface, #ffffff)
-          );
-        }
+      :host([show-list]) .list {
+        display: block;
+      }
 
-        :host([show-list]) .list {
-          display: block;
-        }
+      ui5-input,
+      ui5-list {
+        width: inherit;
+      }
 
-        ui5-input,
-        ui5-list {
-          width: inherit;
-        }
+      ui5-busy-indicator {
+        position: absolute;
+        left: 50%;
+        top: 15px;
+        width: 24px;
+      }
 
-        ui5-busy-indicator {
-          position: absolute;
-          left: 50%;
-          top: 15px;
-          width: 24px;
-        }
+      ui5-icon {
+        color: var(--sapContent_IconColor);
+        cursor: pointer;
+        outline: none;
+        padding: var(--_ui5_input_icon_padding);
+        border-left: 1px solid transparent;
+        min-width: 1rem;
+        min-height: 1rem;
+      }
 
-        ui5-icon {
-          color: var(--sapContent_IconColor);
-          cursor: pointer;
-          outline: none;
-          padding: var(--_ui5_input_icon_padding);
-          border-left: 1px solid transparent;
-          min-width: 1rem;
-          min-height: 1rem;
-        }
+      :host([readonly]) ui5-icon {
+        display: none;
+      }
 
-        :host([readonly]) ui5-icon {
-          display: none;
-        }
-
-        ui5-icon:hover {
-          background: var(--sapButton_Hover_Background);
-        }
-      `
-    );
+      ui5-icon:hover {
+        background: var(--sapButton_Hover_Background);
+      }
+    `;
   }
 
   /**
@@ -997,7 +1022,10 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
           @-click="^^search-icon-clicked,--expandIconClicked"
         ></ui5-icon>
       </ui5-input>
-      <ui5-busy-indicator size="Small" ?active="${this.busy}"></ui5-busy-indicator>
+      <ui5-busy-indicator
+        size="Small"
+        ?active="${this.busy}"
+      ></ui5-busy-indicator>
       <ui5-list
         mode="SingleSelect"
         class="list"
@@ -1068,4 +1096,7 @@ export class FuroUi5DataReferenceSearch extends FBP(FieldNodeAdapter(LitElement)
   }
 }
 
-window.customElements.define('furo-ui5-data-reference-search', FuroUi5DataReferenceSearch);
+window.customElements.define(
+  'furo-ui5-data-reference-search',
+  FuroUi5DataReferenceSearch
+);

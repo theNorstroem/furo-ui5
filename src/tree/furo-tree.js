@@ -61,7 +61,8 @@ export class FuroTree extends FBP(LitElement) {
      * @type {*|string|string}
      */
     // eslint-disable-next-line wc/no-constructor-attributes
-    this.treeItemComponent = this.getAttribute('tree-item-component') || 'furo-tree-item';
+    this.treeItemComponent =
+      this.getAttribute('tree-item-component') || 'furo-tree-item';
     this._treeItemTepmplate = html([
       [
         '<template><tr><td><',
@@ -155,9 +156,13 @@ export class FuroTree extends FBP(LitElement) {
   }
 
   _updateSearchmatchAttributesOnItems() {
-    this._rootNode.broadcastEvent(new NodeEvent('search-didnt-match', this._rootNode, true));
+    this._rootNode.broadcastEvent(
+      new NodeEvent('search-didnt-match', this._rootNode, true)
+    );
     this._foundSearchItems.forEach(node => {
-      node.dispatchNodeEvent(new NodeEvent('search-matched', this._rootNode, false));
+      node.dispatchNodeEvent(
+        new NodeEvent('search-matched', this._rootNode, false)
+      );
     });
   }
 
@@ -182,7 +187,10 @@ export class FuroTree extends FBP(LitElement) {
     let prev;
     if (this._searchIsActive) {
       for (let i = 0; i < this._foundSearchItems.length; i += 1) {
-        if (this._foundSearchItems[i].__flatTreeIndex >= this._focusedField.__flatTreeIndex) {
+        if (
+          this._foundSearchItems[i].__flatTreeIndex >=
+          this._focusedField.__flatTreeIndex
+        ) {
           prev = this._foundSearchItems[i - 1];
           break;
         }
@@ -235,7 +243,10 @@ export class FuroTree extends FBP(LitElement) {
          * Fire event, when qp is set, because the selectItem will not fire
          */
         if (this.qp) {
-          const customEvent = new Event('node-selected', { composed: true, bubbles: true });
+          const customEvent = new Event('node-selected', {
+            composed: true,
+            bubbles: true,
+          });
           customEvent.detail = this._selectedField;
           this.dispatchEvent(customEvent);
         }
@@ -395,7 +406,10 @@ export class FuroTree extends FBP(LitElement) {
 
     if (this._searchIsActive) {
       for (let i = this._foundSearchItems.length - 1; i >= 0; i -= 1) {
-        if (this._foundSearchItems[i].__flatTreeIndex <= this._focusedField.__flatTreeIndex) {
+        if (
+          this._foundSearchItems[i].__flatTreeIndex <=
+          this._focusedField.__flatTreeIndex
+        ) {
           next = this._foundSearchItems[i + 1];
           break;
         }
@@ -509,126 +523,126 @@ export class FuroTree extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: block;
+        box-sizing: border-box;
+        height: 100%;
+        outline: none;
+        position: relative;
+        background: var(--surface, white);
+        color: var(--on-surface, #333333);
+      }
 
-      css`
-        :host {
-          display: block;
-          box-sizing: border-box;
-          height: 100%;
-          outline: none;
-          position: relative;
-          background: var(--surface, white);
-          color: var(--on-surface, #333333);
-        }
+      .tablewrapper {
+        overflow: auto;
+      }
 
-        .tablewrapper {
-          overflow: auto;
-        }
+      :host([hidden]) {
+        display: none;
+      }
 
-        :host([hidden]) {
-          display: none;
-        }
+      td {
+        padding: 0;
+      }
 
-        td {
-          padding: 0;
-        }
+      table {
+        border-spacing: 0;
+        min-width: 100%;
+        padding: var(--spacing-xs) 8px;
+        box-sizing: border-box;
+      }
 
-        table {
-          border-spacing: 0;
-          min-width: 100%;
-          padding: var(--spacing-xs) 8px;
-          box-sizing: border-box;
-        }
+      /* remove border on first group label if it is the first element */
+      tr:first-child *[is-group-label] {
+        border-top: none;
+      }
 
-        /* remove border on first group label if it is the first element */
-        tr:first-child *[is-group-label] {
-          border-top: none;
-        }
+      /* focus, :host(:focus) td > *[focused]  is for mouse navigation */
+      td > *:hover,
+      :host([focused]) td > *[focused] {
+        background-color: rgba(var(--primary-rgb), var(--state-hover));
+        color: var(--primary);
+      }
 
-        /* focus, :host(:focus) td > *[focused]  is for mouse navigation */
-        td > *:hover,
-        :host([focused]) td > *[focused] {
-          background-color: rgba(var(--primary-rgb), var(--state-hover));
-          color: var(--primary);
-        }
+      /* focus, :host(:focus) td > *[focused]  is for mouse navigation */
+      :host([focused]) td > *[focused] {
+        background-color: rgba(var(--primary-rgb), var(--state-focus));
+        color: var(--primary);
+      }
 
-        /* focus, :host(:focus) td > *[focused]  is for mouse navigation */
-        :host([focused]) td > *[focused] {
-          background-color: rgba(var(--primary-rgb), var(--state-focus));
-          color: var(--primary);
-        }
+      /* selected */
+      td > *[selected],
+      :host(:not([focused])) td > *[selected] {
+        background-color: rgba(var(--primary-rgb), var(--state-selected));
+        color: var(--primary);
+      }
 
-        /* selected */
-        td > *[selected],
-        :host(:not([focused])) td > *[selected] {
-          background-color: rgba(var(--primary-rgb), var(--state-selected));
-          color: var(--primary);
-        }
+      /* selected focus  */
+      :host([focused]) td > *[selected] {
+        background-color: rgba(var(--primary-rgb), var(--state-selected-focus));
+        color: var(--primary);
+      }
 
-        /* selected focus  */
-        :host([focused]) td > *[selected] {
-          background-color: rgba(var(--primary-rgb), var(--state-selected-focus));
-          color: var(--primary);
-        }
+      /* selected focus  */
+      td:hover > *[selected][focused] {
+        background-color: rgba(
+          var(--primary-rgb),
+          var(--state-selected-focused-hover)
+        );
+        color: var(--primary);
+      }
 
-        /* selected focus  */
-        td:hover > *[selected][focused] {
-          background-color: rgba(var(--primary-rgb), var(--state-selected-focused-hover));
-          color: var(--primary);
-        }
+      /* selected focus */
+      :host([focused]) td > *[selected][focused] {
+        background-color: rgba(var(--primary-rgb), var(--state-selected-focus));
+        color: var(--primary);
+      }
 
-        /* selected focus */
-        :host([focused]) td > *[selected][focused] {
-          background-color: rgba(var(--primary-rgb), var(--state-selected-focus));
-          color: var(--primary);
-        }
+      /* remove the background color on header node */
+      :host([no-bg-on-header]) td furo-tree-item[selected][isheader],
+      :host([no-bg-on-header]) td furo-tree-item[selected][focused][isheader],
+      :host([no-bg-on-header]) td furo-tree-item[focused][isheader] {
+        background-color: unset;
+      }
 
-        /* remove the background color on header node */
-        :host([no-bg-on-header]) td furo-tree-item[selected][isheader],
-        :host([no-bg-on-header]) td furo-tree-item[selected][focused][isheader],
-        :host([no-bg-on-header]) td furo-tree-item[focused][isheader] {
-          background-color: unset;
+      @keyframes border-pulsate {
+        0% {
+          border-color: var(--primary, #57a9ff);
         }
+        50% {
+          border-color: var(--surface, #999999);
+        }
+        100% {
+          border-color: var(--primary, #57a9ff);
+        }
+      }
 
-        @keyframes border-pulsate {
-          0% {
-            border-color: var(--primary, #57a9ff);
-          }
-          50% {
-            border-color: var(--surface, #999999);
-          }
-          100% {
-            border-color: var(--primary, #57a9ff);
-          }
-        }
+      .title {
+        font-size: 20px;
+        height: 40px;
+        line-height: 56px;
+        padding-left: var(--spacing-s, 16px);
+      }
 
-        .title {
-          font-size: 20px;
-          height: 40px;
-          line-height: 56px;
-          padding-left: var(--spacing-s, 16px);
-        }
+      .secondary {
+        font-size: 14px;
+        height: 24px;
+        letter-spacing: 0.1px;
+        padding-left: var(--spacing-s, 16px);
+        color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
+        line-height: 20px;
+      }
 
-        .secondary {
-          font-size: 14px;
-          height: 24px;
-          letter-spacing: 0.1px;
-          padding-left: var(--spacing-s, 16px);
-          color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
-          line-height: 20px;
-        }
+      .head {
+        height: 64px;
+        cursor: pointer;
+      }
 
-        .head {
-          height: 64px;
-          cursor: pointer;
-        }
-
-        :host([noheader]) .head {
-          display: none;
-        }
-      `
-    );
+      :host([noheader]) .head {
+        display: none;
+      }
+    `;
   }
 
   /**
@@ -665,10 +679,13 @@ export class FuroTree extends FBP(LitElement) {
       this._rootNode = treeNode.root;
     }
     this._rootNode.children.clearListOnNewData = true;
-    this._rootNode.children.addEventListener('this-repeated-field-changed', () => {
-      this._setTitle(this._rootNode);
-      this._init();
-    });
+    this._rootNode.children.addEventListener(
+      'this-repeated-field-changed',
+      () => {
+        this._setTitle(this._rootNode);
+        this._init();
+      }
+    );
 
     this._setTitle(this._rootNode);
     this._init();
@@ -698,7 +715,9 @@ export class FuroTree extends FBP(LitElement) {
     this._buildFlatTree(this._rootNode);
 
     // set visible on root node
-    this._rootNode.children.broadcastEvent(new NodeEvent('ancestor-visible', this._rootNode));
+    this._rootNode.children.broadcastEvent(
+      new NodeEvent('ancestor-visible', this._rootNode)
+    );
 
     if (!this.__listenersInitialized) {
       this._initFocusAndSelectEvents();
@@ -730,15 +749,24 @@ export class FuroTree extends FBP(LitElement) {
 
       // only dispatch when the element contains a name
       if (this._focusedField.display_name._value != null) {
-        const customEvent = new Event('node-focused', { composed: true, bubbles: true });
+        const customEvent = new Event('node-focused', {
+          composed: true,
+          bubbles: true,
+        });
         customEvent.detail = this._focusedField;
         this.dispatchEvent(customEvent);
         if (this._focusedField.isBranch()) {
-          const branchFocusedEvent = new Event('branch-focused', { composed: true, bubbles: true });
+          const branchFocusedEvent = new Event('branch-focused', {
+            composed: true,
+            bubbles: true,
+          });
           branchFocusedEvent.detail = this._focusedField;
           this.dispatchEvent(branchFocusedEvent);
         } else {
-          const leafFocusedEvent = new Event('leaf-focused', { composed: true, bubbles: true });
+          const leafFocusedEvent = new Event('leaf-focused', {
+            composed: true,
+            bubbles: true,
+          });
           leafFocusedEvent.detail = this._focusedField;
           this.dispatchEvent(leafFocusedEvent);
         }
@@ -749,15 +777,23 @@ export class FuroTree extends FBP(LitElement) {
     this._rootNode.addEventListener('tree-node-selected', e => {
       //---
       // broadcast deselect
-      this._rootNode.broadcastEvent(new NodeEvent('tree-node-unselection-requested'));
+      this._rootNode.broadcastEvent(
+        new NodeEvent('tree-node-unselection-requested')
+      );
       this._selectedField = e.target;
 
       if (!this.qp) {
-        const customEvent = new Event('node-selected', { composed: true, bubbles: true });
+        const customEvent = new Event('node-selected', {
+          composed: true,
+          bubbles: true,
+        });
         customEvent.detail = this._selectedField;
         this.dispatchEvent(customEvent);
       } else if (this.__lastQP !== this._selectedField.id._value) {
-        const customEvent = new Event('qp-change-requested', { composed: true, bubbles: true });
+        const customEvent = new Event('qp-change-requested', {
+          composed: true,
+          bubbles: true,
+        });
         const qp = {};
         this.__lastQP = this._selectedField.id._value;
         qp[this.qp] = this._selectedField.id._value;
@@ -766,11 +802,17 @@ export class FuroTree extends FBP(LitElement) {
       }
 
       if (this._selectedField.isBranch()) {
-        const customEvent = new Event('branch-selected', { composed: true, bubbles: true });
+        const customEvent = new Event('branch-selected', {
+          composed: true,
+          bubbles: true,
+        });
         customEvent.detail = this._selectedField;
         this.dispatchEvent(customEvent);
       } else {
-        const customEvent = new Event('leaf-selected', { composed: true, bubbles: true });
+        const customEvent = new Event('leaf-selected', {
+          composed: true,
+          bubbles: true,
+        });
         customEvent.detail = this._selectedField;
         this.dispatchEvent(customEvent);
       }
@@ -806,7 +848,10 @@ export class FuroTree extends FBP(LitElement) {
 
       // open field if entity contains a field open with true
       if (!node.open) {
-        node.addChildProperty('open', new FieldNode(node, { type: 'bool' }, 'open'));
+        node.addChildProperty(
+          'open',
+          new FieldNode(node, { type: 'bool' }, 'open')
+        );
         node.open._value = false;
       }
 
@@ -840,12 +885,18 @@ export class FuroTree extends FBP(LitElement) {
       node.toggleOpenClose = () => {
         node.open._value = !node.open._value;
         if (node.open._value) {
-          const customEvent = new Event('node-opened', { composed: true, bubbles: false });
+          const customEvent = new Event('node-opened', {
+            composed: true,
+            bubbles: false,
+          });
           setTimeout(() => {
             this.dispatchEvent(customEvent);
           }, 0);
         } else {
-          const customEvent = new Event('node-closed', { composed: true, bubbles: false });
+          const customEvent = new Event('node-closed', {
+            composed: true,
+            bubbles: false,
+          });
           setTimeout(() => {
             this.dispatchEvent(customEvent);
           }, 0);
@@ -865,10 +916,14 @@ export class FuroTree extends FBP(LitElement) {
         node.triggerFocus();
 
         node.dispatchNodeEvent(new NodeEvent('tree-node-selected', node, true));
-        node.dispatchNodeEvent(new NodeEvent('this-node-selected', node, false));
+        node.dispatchNodeEvent(
+          new NodeEvent('this-node-selected', node, false)
+        );
 
         // used to open the paths upwards from the selected node
-        node.__parentNode.dispatchNodeEvent(new NodeEvent('descendant-selected', this, true));
+        node.__parentNode.dispatchNodeEvent(
+          new NodeEvent('descendant-selected', this, true)
+        );
       };
 
       // if a descendant was selected, we ensure to open the path
@@ -881,7 +936,10 @@ export class FuroTree extends FBP(LitElement) {
         const event = new NodeEvent('recursive-expand-requested', node);
         node.broadcastEvent(event);
 
-        const customEvent = new Event('nodes-expanded', { composed: true, bubbles: false });
+        const customEvent = new Event('nodes-expanded', {
+          composed: true,
+          bubbles: false,
+        });
         setTimeout(() => {
           this.dispatchEvent(customEvent);
         }, 0);
@@ -898,9 +956,14 @@ export class FuroTree extends FBP(LitElement) {
 
       // collapse recursive
       node.collapseRecursive = () => {
-        node.broadcastEvent(new NodeEvent('recursive-collapse-requested', node));
+        node.broadcastEvent(
+          new NodeEvent('recursive-collapse-requested', node)
+        );
 
-        const customEvent = new Event('nodes-collapsed', { composed: true, bubbles: false });
+        const customEvent = new Event('nodes-collapsed', {
+          composed: true,
+          bubbles: false,
+        });
         setTimeout(() => {
           this.dispatchEvent(customEvent);
         }, 0);
@@ -917,7 +980,7 @@ export class FuroTree extends FBP(LitElement) {
 
     this._FBPTriggerWire(
       '--treeChanged',
-      this._flatTree.filter(node => !node._isHidden),
+      this._flatTree.filter(node => !node._isHidden)
     );
   }
 

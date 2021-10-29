@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataMoneyInput } from '@furo/ui5/src/furo-ui5-data-money-input.js';
+import { FuroUi5DataMoneyInput } from '../furo-ui5-data-money-input.js';
 
 /**
  * `celledit-google-type-money` is a `celledit` context renderer.
@@ -11,4 +11,7 @@ import { FuroUi5DataMoneyInput } from '@furo/ui5/src/furo-ui5-data-money-input.j
  */
 class CelleditGoogleTypeMoney extends FuroUi5DataMoneyInput {}
 
-window.customElements.define('celledit-google-type-money', CelleditGoogleTypeMoney);
+window.customElements.define(
+  'celledit-google-type-money',
+  CelleditGoogleTypeMoney
+);

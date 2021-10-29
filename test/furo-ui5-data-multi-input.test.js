@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
@@ -126,13 +125,14 @@ describe('furo-ui5-data-multi-input', () => {
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(input));
-
   it('should update value after inject response', done => {
     if (dao.injectRaw(testRecordMeta)) {
       setTimeout(() => {
-        assert.equal(input.querySelectorAll('ui5-token').length, 3, 'check items');
+        assert.equal(
+          input.querySelectorAll('ui5-token').length,
+          3,
+          'check items'
+        );
         done();
       }, 16);
     }

@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 describe('furo-ui5-data-number-input', () => {
   let dataNumberInput;
@@ -39,7 +39,10 @@ describe('furo-ui5-data-number-input', () => {
             ƒ-inject-raw="--response"
           ></furo-data-object>
 
-          <furo-deep-link service="ExperimentService" @-hts-out="--hts"></furo-deep-link>
+          <furo-deep-link
+            service="ExperimentService"
+            @-hts-out="--hts"
+          ></furo-deep-link>
           <furo-entity-agent
             service="ExperimentService"
             ƒ-hts-in="--hts"
@@ -71,17 +74,25 @@ describe('furo-ui5-data-number-input', () => {
 
   it('should be a furo-ui5-data-number-input', done => {
     // keep this test on top, so you can recognize a wrong asignment
-    assert.equal(dataNumberInput.nodeName.toLowerCase(), 'furo-ui5-data-number-input');
-    assert.equal(secondNumberInput.nodeName.toLowerCase(), 'furo-ui5-data-number-input');
-    assert.equal(invalidNumberInput.nodeName.toLowerCase(), 'furo-ui5-data-number-input');
+    assert.equal(
+      dataNumberInput.nodeName.toLowerCase(),
+      'furo-ui5-data-number-input'
+    );
+    assert.equal(
+      secondNumberInput.nodeName.toLowerCase(),
+      'furo-ui5-data-number-input'
+    );
+    assert.equal(
+      invalidNumberInput.nodeName.toLowerCase(),
+      'furo-ui5-data-number-input'
+    );
     assert.equal(dataObject.nodeName.toLowerCase(), 'furo-data-object');
     assert.equal(deeplink.nodeName.toLowerCase(), 'furo-deep-link');
 
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(dataNumberInput));
+  // dataNumberInput));
 
   it('should log invalid bindings', done => {
     setTimeout(() => {

@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
 
 import '../src/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
+import { assert } from '@esm-bundle/chai';
 
 describe('furo-ui5-pagination-bar', () => {
   let host;
@@ -113,7 +113,10 @@ describe('furo-ui5-pagination-bar', () => {
 
   it('should be a furo-ui5-pagination-bar', done => {
     // keep this test on top, so you can recognize a wrong asignment
-    assert.equal(paginationBar.nodeName.toLowerCase(), 'furo-ui5-pagination-bar');
+    assert.equal(
+      paginationBar.nodeName.toLowerCase(),
+      'furo-ui5-pagination-bar'
+    );
     done();
   });
 

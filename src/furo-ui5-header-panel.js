@@ -192,120 +192,127 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: block;
+        position: relative;
+      }
 
-      css`
-        :host {
-          display: block;
-          position: relative;
-        }
+      :host([hidden]) {
+        display: none;
+      }
 
-        :host([hidden]) {
-          display: none;
-        }
+      :host([collapsed]) .collapser-button {
+        transform: rotate(180deg);
+      }
 
-        :host([collapsed]) .collapser-button {
-          transform: rotate(180deg);
-        }
+      ui5-panel {
+        padding: var(--spacing, 24px) var(--spacing, 24px) 0
+          var(--spacing, 24px);
+        background: var(--sapGroup_ContentBackground, white);
+        min-height: 5rem;
+        box-sizing: border-box;
+        border-bottom: none;
+      }
 
-        ui5-panel {
-          padding: var(--spacing, 24px) var(--spacing, 24px) 0 var(--spacing, 24px);
-          background: var(--sapGroup_ContentBackground, white);
-          min-height: 5rem;
-          box-sizing: border-box;
-          border-bottom: none;
-        }
+      .header {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
 
-        .header {
-          width: 100%;
-          margin-bottom: 0.5rem;
-        }
+      .content {
+        display: inline-block;
+        width: 100%;
+      }
 
-        .content {
-          display: inline-block;
-          width: 100%;
-        }
+      .wrapper {
+        display: flex;
+      }
 
-        .wrapper {
-          display: flex;
-        }
+      .action {
+        display: inline-block;
+        float: right;
+        margin-top: -26px;
+      }
 
-        .action {
-          display: inline-block;
-          float: right;
-          margin-top: -26px;
-        }
+      .header .ui5-panel-header-button-root {
+        display: none;
+      }
 
-        .header .ui5-panel-header-button-root {
-          display: none;
-        }
+      ui5-avatar {
+        color: var(
+          --furo-ui5-header-panel-icon-color,
+          var(--ui5-avatar-initials-color, #fffff)
+        );
+        background-color: var(
+          --furo-ui5-header-panel-icon-background-color,
+          var(--ui5-avatar-accent6, #354a5f)
+        );
+        margin-right: var(--spacing-xs);
+      }
 
-        ui5-avatar {
-          color: var(--furo-ui5-header-panel-icon-color, var(--ui5-avatar-initials-color, #fffff));
-          background-color: var(
-            --furo-ui5-header-panel-icon-background-color,
-            var(--ui5-avatar-accent6, #354a5f)
-          );
-          margin-right: var(--spacing-xs);
-        }
+      :host([fixed]) .splitter_bar {
+        display: none;
+      }
 
-        :host([fixed]) .splitter_bar {
-          display: none;
-        }
+      .splitter_bar {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background: var(--sapGroup_ContentBackground, white);
+        border-bottom: 1px solid var(--sapGroup_TitleBorderColor);
+        position: absolute;
+        bottom: 0;
+      }
 
-        .splitter_bar {
-          width: 100%;
-          display: flex;
-          text-align: center;
-          justify-content: center;
-          align-items: center;
-          background: var(--sapGroup_ContentBackground, white);
-          border-bottom: 1px solid var(--sapGroup_TitleBorderColor);
-          position: absolute;
-          bottom: 0;
-        }
+      .collapser-button {
+        width: 1rem;
+        height: 1rem;
+        min-width: 1rem;
+        will-change: transform;
+        overflow: visible;
+        cursor: pointer;
+        color: var(--primary-dark);
+      }
 
-        .collapser-button {
-          width: 1rem;
-          height: 1rem;
-          min-width: 1rem;
-          will-change: transform;
-          overflow: visible;
-          cursor: pointer;
-          color: var(--primary-dark);
-        }
+      .splitter {
+        width: 6rem;
+        height: 1rem;
+        background-size: 100% 0.0625rem;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
 
-        .splitter {
-          width: 6rem;
-          height: 1rem;
-          background-size: 100% 0.0625rem;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
+      .splitter.after {
+        background-image: linear-gradient(
+          to right,
+          var(
+            --furo-ui5-header-panel-splitter-start-color,
+            var(--primary-dark, #0854a0)
+          ),
+          var(
+            --furo-ui5-header-panel-splitter-end-rgba-color,
+            rgba(var(--primary-rgb, 8, 84, 160), 0)
+          )
+        );
+      }
 
-        .splitter.after {
-          background-image: linear-gradient(
-            to right,
-            var(--furo-ui5-header-panel-splitter-start-color, var(--primary-dark, #0854a0)),
-            var(
-              --furo-ui5-header-panel-splitter-end-rgba-color,
-              rgba(var(--primary-rgb, 8, 84, 160), 0)
-            )
-          );
-        }
-
-        .splitter.before {
-          background-image: linear-gradient(
-            to left,
-            var(--furo-ui5-header-panel-splitter-start-color, var(--primary-dark, #0854a0)),
-            var(
-              --furo-ui5-header-panel-splitter-end-rgba-color,
-              rgba(var(--primary-rgb, 8, 84, 160), 0)
-            )
-          );
-        }
-      `
-    );
+      .splitter.before {
+        background-image: linear-gradient(
+          to left,
+          var(
+            --furo-ui5-header-panel-splitter-start-color,
+            var(--primary-dark, #0854a0)
+          ),
+          var(
+            --furo-ui5-header-panel-splitter-end-rgba-color,
+            rgba(var(--primary-rgb, 8, 84, 160), 0)
+          )
+        );
+      }
+    `;
   }
 
   /**

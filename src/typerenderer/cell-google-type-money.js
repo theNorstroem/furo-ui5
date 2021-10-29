@@ -102,10 +102,18 @@ export class CellGoogleTypeMoney extends LitElement {
    */
   static _convertTypeToNumber(fieldNode) {
     let numberStr = '';
-    if (fieldNode.units && fieldNode.units._value && fieldNode.units._value > 0) {
+    if (
+      fieldNode.units &&
+      fieldNode.units._value &&
+      fieldNode.units._value > 0
+    ) {
       numberStr = fieldNode.units._value;
     }
-    if (fieldNode.nanos && fieldNode.nanos._value && fieldNode.nanos._value > 0) {
+    if (
+      fieldNode.nanos &&
+      fieldNode.nanos._value &&
+      fieldNode.nanos._value > 0
+    ) {
       numberStr += `.${fieldNode.nanos._value}`;
     }
     if (numberStr > 0) {
@@ -119,9 +127,11 @@ export class CellGoogleTypeMoney extends LitElement {
    * @private
    */
   _formatCell() {
-    this._valueObject.amount = CellGoogleTypeMoney._convertTypeToNumber(this._field);
+    this._valueObject.amount = CellGoogleTypeMoney._convertTypeToNumber(
+      this._field
+    );
     if (
-      this._valueObject.amount !== Number.NaN &&
+      !Number.isNaN(this._valueObject.amount) &&
       this._field.currency_code &&
       this._field.currency_code._value &&
       this._field.currency_code._value.length
@@ -144,9 +154,7 @@ export class CellGoogleTypeMoney extends LitElement {
    */
   render() {
     // language=HTML
-    return html`
-      <span>${this._displayValue}</span>
-    `;
+    return html` <span>${this._displayValue}</span> `;
   }
 }
 

@@ -16,5 +16,5 @@ class DisplayGoogleProtobufDoublevalue extends DisplayDouble {}
 
 window.customElements.define(
   'display-google-protobuf-doublevalue',
-  DisplayGoogleProtobufDoublevalue,
+  DisplayGoogleProtobufDoublevalue
 );

@@ -16,7 +16,9 @@ import { DisplayInt32 } from './display-int32.js';
  */
 export class DisplayFuroIntegerproperty extends DisplayInt32 {
   _formatDisplay() {
-    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._field.data);
+    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(
+      this._field.data
+    );
     if (displayValue !== 'NaN') {
       this._displayValue = displayValue;
       this.requestUpdate();
@@ -24,4 +26,7 @@ export class DisplayFuroIntegerproperty extends DisplayInt32 {
   }
 }
 
-window.customElements.define('display-furo-integerproperty', DisplayFuroIntegerproperty);
+window.customElements.define(
+  'display-furo-integerproperty',
+  DisplayFuroIntegerproperty
+);

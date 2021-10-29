@@ -83,9 +83,7 @@ class CellFuroReference extends LitElement {
    */
   render() {
     // language=HTML
-    return html`
-      <ui5-link href="" wrap>${this._displayValue}</ui5-link>
-    `;
+    return html` <ui5-link href="" wrap>${this._displayValue}</ui5-link> `;
   }
 }
 

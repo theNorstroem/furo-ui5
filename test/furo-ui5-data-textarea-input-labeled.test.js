@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
@@ -65,7 +64,10 @@ describe('furo-ui5-data-textarea-input-labeled', () => {
           <furo-ui5-data-textarea-input-labeled
             ƒ-bind-data="--entity(*.data.description)"
           ></furo-ui5-data-textarea-input-labeled>
-          <furo-data-object type="task.TaskEntity" @-object-ready="--entity"></furo-data-object>
+          <furo-data-object
+            type="task.TaskEntity"
+            @-object-ready="--entity"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -79,7 +81,10 @@ describe('furo-ui5-data-textarea-input-labeled', () => {
 
   it('should be a furo-ui5-data-textarea-input-labeled element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-data-textarea-input-labeled');
+    assert.equal(
+      input.nodeName.toLowerCase(),
+      'furo-ui5-data-textarea-input-labeled'
+    );
     done();
   });
 
@@ -96,12 +101,18 @@ describe('furo-ui5-data-textarea-input-labeled', () => {
     setTimeout(() => {
       if (dao.injectRaw(testRecordMeta)) {
         setTimeout(() => {
-          const inputElement = input.shadowRoot.querySelector('furo-ui5-data-textarea-input');
-          assert.equal(input.label, 'Description set from response', 'check label text');
+          const inputElement = input.shadowRoot.querySelector(
+            'furo-ui5-data-textarea-input'
+          );
+          assert.equal(
+            input.label,
+            'Description set from response',
+            'check label text'
+          );
           assert.equal(
             inputElement.value,
             'Apply new documentation structure',
-            'check input value',
+            'check input value'
           );
           done();
         }, 32);
@@ -113,7 +124,11 @@ describe('furo-ui5-data-textarea-input-labeled', () => {
     input.setAttribute('disabled', '');
     setTimeout(() => {
       const component = input.shadowRoot.getElementById('Input');
-      assert.equal(component.getAttribute('disabled'), '', 'check attribute disabled ');
+      assert.equal(
+        component.getAttribute('disabled'),
+        '',
+        'check attribute disabled '
+      );
       done();
     }, 0);
   });

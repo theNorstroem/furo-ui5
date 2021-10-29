@@ -147,7 +147,10 @@ export class FuroSignPad extends FBP(LitElement) {
   encodeImage() {
     this.image = this.canvas.toDataURL(this.type, this.encodingOptions);
     this._setEmpty(this.signaturePad.isEmpty());
-    const customEvent = new Event('sign-updated', { composed: true, bubbles: true });
+    const customEvent = new Event('sign-updated', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this.image;
     this.dispatchEvent(customEvent);
     return this.image;

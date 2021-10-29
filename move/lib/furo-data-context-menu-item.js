@@ -42,7 +42,10 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
       this._mouseFocus = true;
       // do not reopen when submenu exist
 
-      const customEvent = new Event('mousefocus', { composed: true, bubbles: true });
+      const customEvent = new Event('mousefocus', {
+        composed: true,
+        bubbles: true,
+      });
       customEvent.detail = this._index;
       this.dispatchEvent(customEvent);
     });
@@ -67,7 +70,10 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
    * @private
    */
   _openSub(byKeyboard) {
-    const customEvent = new Event('opensub-requested', { composed: true, bubbles: true });
+    const customEvent = new Event('opensub-requested', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = { menu: this.menuitem, initiator: this };
     customEvent.byKeyboard = byKeyboard;
     this.dispatchEvent(customEvent);
@@ -89,7 +95,10 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
    * @private
    */
   _selectItem() {
-    const customEvent = new Event('item-selected', { composed: true, bubbles: true });
+    const customEvent = new Event('item-selected', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this.menuitem;
     this.dispatchEvent(customEvent);
   }
@@ -230,7 +239,10 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
     // language=HTML
     return html`
       <furo-horizontal-flex @click="${this._mouseSelect}"
-        ><furo-icon ?hidden="${this.menuitem._noicon}" icon="${this.menuitem.icon}"></furo-icon>
+        ><furo-icon
+          ?hidden="${this.menuitem._noicon}"
+          icon="${this.menuitem.icon}"
+        ></furo-icon>
         <div flex class="name">${this.menuitem.display_name}</div>
         <div class="command">${this.menuitem.command}</div>
 
@@ -245,4 +257,7 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('furo-data-context-menu-item', FuroDataContextMenuItem);
+window.customElements.define(
+  'furo-data-context-menu-item',
+  FuroDataContextMenuItem
+);

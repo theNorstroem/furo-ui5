@@ -15,4 +15,7 @@ import { CellFloat } from './cell-float.js';
  */
 class CellGoolgeProtobufFloatvalue extends CellFloat {}
 
-window.customElements.define('cell-google-protobuf-floatvalue', CellGoolgeProtobufFloatvalue);
+window.customElements.define(
+  'cell-google-protobuf-floatvalue',
+  CellGoolgeProtobufFloatvalue
+);

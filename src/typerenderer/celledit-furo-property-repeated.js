@@ -65,7 +65,10 @@ export class CelleditFuroPropertyRepeated extends FBP(LitElement) {
      * if the data is already available, create the renderName according the @type information.
      * If NOT, register event listener and create the component as soon as the @type information is available.
      */
-    if (this._field instanceof RepeaterNode && this._field._spec.type === 'furo.Property') {
+    if (
+      this._field instanceof RepeaterNode &&
+      this._field._spec.type === 'furo.Property'
+    ) {
       // we want a fresh list on every update of the list, because the types and order of the list items can change
       // eslint-disable-next-line no-param-reassign
       this._field.clearListOnNewData = true;
@@ -108,10 +111,11 @@ export class CelleditFuroPropertyRepeated extends FBP(LitElement) {
    */
   render() {
     // language=HTML
-    return html`
-      ${this.noDataText}
-    `;
+    return html` ${this.noDataText} `;
   }
 }
 
-window.customElements.define('celledit-furo-property-repeated', CelleditFuroPropertyRepeated);
+window.customElements.define(
+  'celledit-furo-property-repeated',
+  CelleditFuroPropertyRepeated
+);

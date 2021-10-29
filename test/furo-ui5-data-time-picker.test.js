@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
@@ -72,12 +71,14 @@ describe('furo-ui5-data-time-picker', () => {
 
   it('should be a furo-ui5-data-time-picker element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(timepicker.nodeName.toLowerCase(), 'furo-ui5-data-time-picker');
+    assert.equal(
+      timepicker.nodeName.toLowerCase(),
+      'furo-ui5-data-time-picker'
+    );
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(timepicker));
+  // timepicker));
 
   it('should have the basic attributes of the fieldNode ', done => {
     setTimeout(() => {

@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-furo-integerproperty.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-furo-integerproperty.js';
 
 describe('display-furo-integerproperty', () => {
   let host;
@@ -51,21 +51,24 @@ describe('display-furo-integerproperty', () => {
 
   it('should be a display-furo-integerproperty element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(display.nodeName.toLowerCase(), 'display-furo-integerproperty');
+    assert.equal(
+      display.nodeName.toLowerCase(),
+      'display-furo-integerproperty'
+    );
     done();
   });
 
   it('should accept a fieldNode of type furo.integerproperty', done => {
-    dao.data.type_property.addEventListener('this-repeated-field-changed', () => {
-      setTimeout(() => {
-        assert.equal(display._displayValue, '342');
-        done();
-      }, 16);
-    });
+    dao.data.type_property.addEventListener(
+      'this-repeated-field-changed',
+      () => {
+        setTimeout(() => {
+          assert.equal(display._displayValue, '342');
+          done();
+        }, 16);
+      }
+    );
     dao.data.type_property.add(testData);
     display.bindData(dao.data.type_property.repeats[0].data);
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

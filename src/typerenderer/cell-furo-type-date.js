@@ -24,7 +24,10 @@ class CellFuroTypeDate extends CellGoogleTypeDate {
    * @private
    */
   _formatCell() {
-    if (this._field.display_name._value && this._field.display_name._value.length) {
+    if (
+      this._field.display_name._value &&
+      this._field.display_name._value.length
+    ) {
       this._displayValue = this._field.display_name._value;
     } else {
       const displayValue = CellGoogleTypeDate._convertDateToString(this._field);

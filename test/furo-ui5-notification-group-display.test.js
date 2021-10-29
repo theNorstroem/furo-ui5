@@ -1,6 +1,6 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind'; // for testing with wires and hooks
 
@@ -94,7 +94,8 @@ describe('furo-ui5-notification-group-display', () => {
     `);
     await testbind.updateComplete;
     host = testbind._host;
-    [, notificationGroupDisplay, notification, element] = testbind.parentNode.children;
+    [, notificationGroupDisplay, notification, element] =
+      testbind.parentNode.children;
     await host.updateComplete;
     await element.updateComplete;
     await notification.updateComplete;
@@ -105,7 +106,7 @@ describe('furo-ui5-notification-group-display', () => {
     // keep this test on top, so you can recognize a wrong asignment
     assert.equal(
       notificationGroupDisplay.nodeName.toLowerCase(),
-      'furo-ui5-notification-group-display',
+      'furo-ui5-notification-group-display'
     );
     done();
   });
@@ -114,10 +115,13 @@ describe('furo-ui5-notification-group-display', () => {
   // it('a11y', () => axeReport(notificationGroupDisplay));
 
   it('should listening open-furo-ui5-notification-group-requested event ', done => {
-    const customEvent = new Event('open-furo-ui5-notification-group-requested', {
-      bubbles: true,
-      composed: true,
-    });
+    const customEvent = new Event(
+      'open-furo-ui5-notification-group-requested',
+      {
+        bubbles: true,
+        composed: true,
+      }
+    );
 
     customEvent.detail = {
       payload: notificationsMessage,
@@ -125,7 +129,8 @@ describe('furo-ui5-notification-group-display', () => {
     notification.dispatchEvent(customEvent);
 
     setTimeout(() => {
-      const items = notificationGroupDisplay.shadowRoot.querySelectorAll('table');
+      const items =
+        notificationGroupDisplay.shadowRoot.querySelectorAll('table');
       assert.equal(items.length, 3);
       done();
     }, 0);

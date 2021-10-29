@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
@@ -116,14 +115,23 @@ describe('furo-ui5-data-segmented-button-bind', () => {
             display-field-path="data.display_name"
             ƒ-bind-data="--entity(*.owner.id)"
           >
-            <ui5-segmented-button-item data-id="A">Option A</ui5-segmented-button-item>
+            <ui5-segmented-button-item data-id="A"
+              >Option A</ui5-segmented-button-item
+            >
             <ui5-segmented-button-item data-id="B"
               >Option B with a very long text</ui5-segmented-button-item
             >
-            <ui5-segmented-button-item data-id="C">Option C</ui5-segmented-button-item>
+            <ui5-segmented-button-item data-id="C"
+              >Option C</ui5-segmented-button-item
+            >
           </furo-ui5-data-segmented-button>
-          <furo-ui5-data-text-input ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-data-text-input>
-          <furo-data-object type="task.Task" @-object-ready="--entity"></furo-data-object>
+          <furo-ui5-data-text-input
+            ƒ-bind-data="--entity(*.owner.id)"
+          ></furo-ui5-data-text-input>
+          <furo-data-object
+            type="task.Task"
+            @-object-ready="--entity"
+          ></furo-data-object>
           <furo-data-object
             type="person.PersonCollection"
             @-object-ready="--collection"
@@ -144,13 +152,19 @@ describe('furo-ui5-data-segmented-button-bind', () => {
 
   it('should be a furo-ui5-data-segmented-button element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(segmentedButton.nodeName.toLowerCase(), 'furo-ui5-data-segmented-button');
+    assert.equal(
+      segmentedButton.nodeName.toLowerCase(),
+      'furo-ui5-data-segmented-button'
+    );
     done();
   });
 
   it('should have options from markup', done => {
     setTimeout(() => {
-      assert.equal(segmentedButton.querySelectorAll('ui5-segmented-button-item').length, 3);
+      assert.equal(
+        segmentedButton.querySelectorAll('ui5-segmented-button-item').length,
+        3
+      );
       done();
     }, 16);
   });
@@ -160,7 +174,10 @@ describe('furo-ui5-data-segmented-button-bind', () => {
     daoRepeater.injectRaw(testData);
 
     setTimeout(() => {
-      assert.equal(segmentedButton.querySelectorAll('ui5-segmented-button-item').length, 4);
+      assert.equal(
+        segmentedButton.querySelectorAll('ui5-segmented-button-item').length,
+        4
+      );
       done();
     }, 16);
   });

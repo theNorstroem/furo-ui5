@@ -11,4 +11,7 @@ import { FormInt32 } from './form-int32.js';
  */
 class FormGoogleProtobufDoublevalue extends FormInt32 {}
 
-window.customElements.define('form-google-protobuf-doublevalue', FormGoogleProtobufDoublevalue);
+window.customElements.define(
+  'form-google-protobuf-doublevalue',
+  FormGoogleProtobufDoublevalue
+);

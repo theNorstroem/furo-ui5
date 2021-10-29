@@ -32,18 +32,15 @@ class FuroMiniTabs extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: block;
+      }
 
-      css`
-        :host {
-          display: block;
-        }
-
-        :host([hidden]) {
-          display: none;
-        }
-      `
-    );
+      :host([hidden]) {
+        display: none;
+      }
+    `;
   }
 
   /**
@@ -54,9 +51,7 @@ class FuroMiniTabs extends FBP(LitElement) {
     // language=HTML
     return html`
       <flow-repeat ƒ-inject-items="--itemsInjected">
-        <template>
-          jkj
-        </template>
+        <template> jkj </template>
       </flow-repeat>
     `;
   }

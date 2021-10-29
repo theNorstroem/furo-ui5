@@ -64,7 +64,11 @@ class DisplayGoolgeProtobufAny extends LitElement {
         this.defaultElement = undefined;
       }
 
-      if (field['@type'] && field['@type']._value !== undefined && this._typeResolved === false) {
+      if (
+        field['@type'] &&
+        field['@type']._value !== undefined &&
+        this._typeResolved === false
+      ) {
         this._typeResolved = true;
         this.renderName = `display-${this._field['@type']._value
           .replace(/.*\//, '')
@@ -74,7 +78,11 @@ class DisplayGoolgeProtobufAny extends LitElement {
         this._createContreteType();
       }
     };
-    if (field['@type'] && field['@type']._value !== undefined && this._typeResolved === false) {
+    if (
+      field['@type'] &&
+      field['@type']._value !== undefined &&
+      this._typeResolved === false
+    ) {
       anyTypeHandler();
     } else {
       field.addEventListener('field-value-changed', anyTypeHandler);
@@ -114,9 +122,12 @@ class DisplayGoolgeProtobufAny extends LitElement {
     // eslint-disable-next-line no-console
     console.warn(
       `No type specific renderer ${this.renderName} found. Check your imports.`,
-      this._field._spec.type,
+      this._field._spec.type
     );
   }
 }
 
-window.customElements.define('display-google-protobuf-any', DisplayGoolgeProtobufAny);
+window.customElements.define(
+  'display-google-protobuf-any',
+  DisplayGoolgeProtobufAny
+);

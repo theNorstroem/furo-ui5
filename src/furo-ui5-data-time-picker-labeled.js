@@ -67,17 +67,14 @@ export class FuroUi5DataTimePickerLabeled extends FBP(LitElement) {
 
   static get styles() {
     // language=CSS
-    return (
-
-      css`
-        :host {
-          display: block;
-        }
-        :host([hidden]) {
-          display: none;
-        }
-      `
-    );
+    return css`
+      :host {
+        display: block;
+      }
+      :host([hidden]) {
+        display: none;
+      }
+    `;
   }
 
   /**
@@ -96,7 +93,12 @@ export class FuroUi5DataTimePickerLabeled extends FBP(LitElement) {
     // language=HTML
     return html`
       <furo-ui5-form-field-container>
-        <ui5-label label slot="label" for="Input" show-colon ?required=${this.required}
+        <ui5-label
+          label
+          slot="label"
+          for="Input"
+          show-colon
+          ?required=${this.required}
           >${this.label}</ui5-label
         >
         <furo-ui5-data-time-picker
@@ -111,4 +113,7 @@ export class FuroUi5DataTimePickerLabeled extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('furo-ui5-data-time-picker-labeled', FuroUi5DataTimePickerLabeled);
+window.customElements.define(
+  'furo-ui5-data-time-picker-labeled',
+  FuroUi5DataTimePickerLabeled
+);

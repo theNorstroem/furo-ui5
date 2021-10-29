@@ -1,11 +1,11 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
+
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-
+import './initEnv.js';
+import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
 
 describe('furo-ui5-radiogroup', () => {
@@ -27,7 +27,10 @@ describe('furo-ui5-radiogroup', () => {
               ƒ-bind-data="--data(*.furo_data_bool_icon)"
             ></furo-ui5-data-radio-button>
           </furo-ui5-radiogroup>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--data"></furo-data-object>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--data"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);

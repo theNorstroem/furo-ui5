@@ -14,4 +14,7 @@ import { CellInt32 } from './cell-int32.js';
  */
 class CellGoolgeProtobufIn32value extends CellInt32 {}
 
-window.customElements.define('cell-google-protobuf-int32value', CellGoolgeProtobufIn32value);
+window.customElements.define(
+  'cell-google-protobuf-int32value',
+  CellGoolgeProtobufIn32value
+);

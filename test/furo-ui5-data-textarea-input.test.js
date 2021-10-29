@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
@@ -146,9 +145,6 @@ describe('furo-ui5-data-textarea-input', () => {
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(input));
-
   it('should have the basic attributes of the fieldNode set', done => {
     setTimeout(() => {
       assert.equal(input._state.disabled, false, 'check disabled');
@@ -156,7 +152,11 @@ describe('furo-ui5-data-textarea-input', () => {
       assert.equal(input._state.growing, false, 'check growing');
       assert.equal(input._state.placeholder, '', 'check placeholder');
       assert.equal(input._state.valueState, 'None', 'check valueState');
-      assert.equal(input._state.valueStateMessage.length, 1, 'check valueStateMessage');
+      assert.equal(
+        input._state.valueStateMessage.length,
+        1,
+        'check valueStateMessage'
+      );
       assert.equal(input._state.name, '', 'check name');
       done();
     }, 0);
@@ -168,12 +168,16 @@ describe('furo-ui5-data-textarea-input', () => {
       new CustomEvent('input', {
         bubbles: true,
         detail: 'new text set',
-      }),
+      })
     );
 
     setTimeout(() => {
       assert.equal(input._state.value, 'new text set', 'check internal text');
-      assert.equal(dao.data.data.furo_data_textarea_input._value, 'new text set', 'check dao');
+      assert.equal(
+        dao.data.data.furo_data_textarea_input._value,
+        'new text set',
+        'check dao'
+      );
       done();
     }, 16);
   });
@@ -184,9 +188,13 @@ describe('furo-ui5-data-textarea-input', () => {
         assert.equal(
           dao.data.data.furo_data_textarea_input._value,
           'hallo , this is textarea input',
-          'check dao',
+          'check dao'
         );
-        assert.equal(input.value, 'hallo , this is textarea input', 'check input value');
+        assert.equal(
+          input.value,
+          'hallo , this is textarea input',
+          'check input value'
+        );
         done();
       }, 16);
     }
@@ -198,12 +206,16 @@ describe('furo-ui5-data-textarea-input', () => {
         assert.equal(inputFat._state.disabled, false, 'check disabled');
         assert.equal(inputFat._state.readonly, false, 'check readonly');
         assert.equal(inputFat._state.required, false, 'check required');
-        assert.equal(inputFat._state.value, 'fat string from record', 'check value');
+        assert.equal(
+          inputFat._state.value,
+          'fat string from record',
+          'check value'
+        );
         assert.equal(inputFat._state.valueState, 'Error', 'check valueState');
         assert.equal(
           inputFat._valueStateElement.innerText,
           'Your fat string is valid',
-          'check valueStateMessage content',
+          'check valueStateMessage content'
         );
         done();
       }, 30);

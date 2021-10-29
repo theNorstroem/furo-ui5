@@ -44,19 +44,26 @@ export class FuroUi5DataPropertylistDisplay extends LitElement {
    */
   bindData(fieldNode) {
     // check if we have a RepeaterNode of type furo.Property
-    if (!(fieldNode instanceof RepeaterNode && fieldNode._spec.type === 'furo.Property')) {
+    if (
+      !(
+        fieldNode instanceof RepeaterNode &&
+        fieldNode._spec.type === 'furo.Property'
+      )
+    ) {
       // eslint-disable-next-line no-console
       console.warn(
         'Invalid binding ',
         fieldNode,
         'is not a RepeaterNode of type furo.Property',
         this,
-        this.parentNode,
+        this.parentNode
       );
       return false;
     }
 
-    const displayProxyElement = document.createElement('display-furo-property-repeats-labeled');
+    const displayProxyElement = document.createElement(
+      'display-furo-property-repeats-labeled'
+    );
     displayProxyElement.bindData(fieldNode);
     this.parentNode.insertBefore(displayProxyElement, this);
 
@@ -64,4 +71,7 @@ export class FuroUi5DataPropertylistDisplay extends LitElement {
   }
 }
 
-window.customElements.define('furo-ui5-data-propertylist-display', FuroUi5DataPropertylistDisplay);
+window.customElements.define(
+  'furo-ui5-data-propertylist-display',
+  FuroUi5DataPropertylistDisplay
+);

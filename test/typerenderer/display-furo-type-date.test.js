@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-furo-type-date.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-furo-type-date.js';
 import { Env } from '@furo/framework';
 
 describe('display-furo-type-date', () => {
@@ -16,8 +16,13 @@ describe('display-furo-type-date', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <display-furo-type-date ƒ-bind-data="--dao(*.furo_type_date)"></display-furo-type-date>
-          <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
+          <display-furo-type-date
+            ƒ-bind-data="--dao(*.furo_type_date)"
+          ></display-furo-type-date>
+          <furo-data-object
+            type="experiment.Experiment"
+            @-object-ready="--dao"
+          ></furo-data-object>
         </template>
       </test-bind>
     `);
@@ -58,7 +63,12 @@ describe('display-furo-type-date', () => {
   it('should show display_name when it exists ', done => {
     Env.locale = 'de';
     dao.injectRaw({
-      furo_type_date: { year: '2000', day: '12', month: '11', display_name: '10.10.2000' },
+      furo_type_date: {
+        year: '2000',
+        day: '12',
+        month: '11',
+        display_name: '10.10.2000',
+      },
     });
     setTimeout(() => {
       assert.equal(display._displayValue, '10.10.2000');
@@ -66,7 +76,4 @@ describe('display-furo-type-date', () => {
       done();
     }, 110);
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

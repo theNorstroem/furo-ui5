@@ -14,4 +14,7 @@ import { CellUint32 } from './cell-uint32.js';
  */
 class CellGoolgeProtobufUin32value extends CellUint32 {}
 
-window.customElements.define('cell-google-protobuf-uint32value', CellGoolgeProtobufUin32value);
+window.customElements.define(
+  'cell-google-protobuf-uint32value',
+  CellGoolgeProtobufUin32value
+);

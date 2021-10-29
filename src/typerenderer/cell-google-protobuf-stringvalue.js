@@ -100,13 +100,12 @@ class CellGoogleProtobufStringvalue extends LitElement {
   render() {
     // language=HTML
     return html`
-      ${this._displayValue
-        ? html`
-            ${this._displayValue}
-          `
-        : html``}
+      ${this._displayValue ? html` ${this._displayValue} ` : html``}
     `;
   }
 }
 
-window.customElements.define('cell-google-protobuf-stringvalue', CellGoogleProtobufStringvalue);
+window.customElements.define(
+  'cell-google-protobuf-stringvalue',
+  CellGoogleProtobufStringvalue
+);

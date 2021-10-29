@@ -23,13 +23,12 @@ export class CellFuroStringoptionproperty extends CellFuroStringproperty {
   render() {
     // language=HTML
     return html`
-      ${this._field
-        ? html`
-            ${this._field.display_name}
-          `
-        : html``}
+      ${this._field ? html` ${this._field.display_name} ` : html``}
     `;
   }
 }
 
-window.customElements.define('cell-furo-stringoptionproperty', CellFuroStringoptionproperty);
+window.customElements.define(
+  'cell-furo-stringoptionproperty',
+  CellFuroStringoptionproperty
+);

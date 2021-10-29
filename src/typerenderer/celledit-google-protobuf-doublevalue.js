@@ -13,5 +13,5 @@ class CelleditGoogleProtobufDoublevalue extends CelleditInt32 {}
 
 window.customElements.define(
   'celledit-google-protobuf-doublevalue',
-  CelleditGoogleProtobufDoublevalue,
+  CelleditGoogleProtobufDoublevalue
 );

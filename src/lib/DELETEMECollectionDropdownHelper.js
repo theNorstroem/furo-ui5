@@ -36,7 +36,10 @@ export class CollectionDropdownHelper {
    */
   static notifiySelectedItem(caller, obj) {
     if (obj) {
-      const customEvent = new Event('item-selected', { composed: true, bubbles: true });
+      const customEvent = new Event('item-selected', {
+        composed: true,
+        bubbles: true,
+      });
       customEvent.detail = obj._original;
       caller.dispatchEvent(customEvent);
     }
@@ -61,7 +64,10 @@ export class CollectionDropdownHelper {
       let size = caller._injectedDropdownList.length;
       // eslint-disable-next-line no-plusplus
       while (size-- && !caller._valueFoundInList) {
-        if (caller._fieldNodeToUpdate._value === caller._injectedDropdownList[size].id) {
+        if (
+          caller._fieldNodeToUpdate._value ===
+          caller._injectedDropdownList[size].id
+        ) {
           caller._valueFoundInList = true;
         }
       }
@@ -189,7 +195,7 @@ export class CollectionDropdownHelper {
         detail: caller._injectedDropdownList,
         bubbles: true,
         composed: true,
-      }),
+      })
     );
   }
 
@@ -200,7 +206,9 @@ export class CollectionDropdownHelper {
     }
     const arrValue = [];
 
-    const arrSubfieldChains = caller.subField.length ? caller.subField.split('.') : [];
+    const arrSubfieldChains = caller.subField.length
+      ? caller.subField.split('.')
+      : [];
 
     if (Array.isArray(collection)) {
       collection.forEach(element => {
@@ -226,12 +234,17 @@ export class CollectionDropdownHelper {
   static setOptionItems(caller) {
     if (
       caller._dropdownList &&
-      (caller.autoSelectFirst || caller._optionNeedToBeRendered || caller._fieldNodeToUpdate._value)
+      (caller.autoSelectFirst ||
+        caller._optionNeedToBeRendered ||
+        caller._fieldNodeToUpdate._value)
     ) {
       // convert array list to id, label structure
       if (typeof caller._dropdownList[0] === 'string') {
         // eslint-disable-next-line no-param-reassign
-        caller._dropdownList = caller._dropdownList.map(item => ({ id: item, label: item }));
+        caller._dropdownList = caller._dropdownList.map(item => ({
+          id: item,
+          label: item,
+        }));
       }
 
       let arr;
@@ -239,7 +252,8 @@ export class CollectionDropdownHelper {
         arr = caller._dropdownList.map(e => ({
           id: e.id,
           label: e.label,
-          selected: caller._fieldNodeToUpdate._value === e.id.toString() || false,
+          selected:
+            caller._fieldNodeToUpdate._value === e.id.toString() || false,
         }));
       } else {
         arr = caller._dropdownList.map(e => {

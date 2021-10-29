@@ -169,7 +169,7 @@ export class FuroUi5DataSelect extends FieldNodeAdapter(Select.default) {
       // eslint-disable-next-line no-console
       console.warn(
         'Invalid param in function bindOptions. Param is not of type RepeaterNode',
-        repeaterNode,
+        repeaterNode
       );
       return false;
     }
@@ -370,11 +370,14 @@ export class FuroUi5DataSelect extends FieldNodeAdapter(Select.default) {
       };
       this._setValueStateMessage(
         fatAttributes['value-state'],
-        fatAttributes['value-state-message'],
+        fatAttributes['value-state-message']
       );
     } else {
       // remove state if fat does not have state, even it is set in the html
-      this._previousValueState = { state: 'None', message: fatAttributes['value-state-message'] };
+      this._previousValueState = {
+        state: 'None',
+        message: fatAttributes['value-state-message'],
+      };
       this._setValueStateMessage('None', fatAttributes['value-state-message']);
     }
   }
@@ -399,7 +402,10 @@ export class FuroUi5DataSelect extends FieldNodeAdapter(Select.default) {
    * @private
    */
   _resetValueStateMessage() {
-    this._setValueStateMessage(this._previousValueState.state, this._previousValueState.message);
+    this._setValueStateMessage(
+      this._previousValueState.state,
+      this._previousValueState.message
+    );
   }
 
   /**
@@ -415,12 +421,15 @@ export class FuroUi5DataSelect extends FieldNodeAdapter(Select.default) {
         const optionItem = document.createElement('ui5-option');
         optionItem.setAttribute(
           'data-id',
-          FuroUi5DataSelect.getValueByPath(item, this._privilegedAttributes['id-field-path']),
+          FuroUi5DataSelect.getValueByPath(
+            item,
+            this._privilegedAttributes['id-field-path']
+          )
         );
 
         optionItem.innerText = FuroUi5DataSelect.getValueByPath(
           item,
-          this._privilegedAttributes['display-field-path'],
+          this._privilegedAttributes['display-field-path']
         )._value;
         optionNodeList.push(optionItem);
       });
@@ -431,7 +440,10 @@ export class FuroUi5DataSelect extends FieldNodeAdapter(Select.default) {
         const optionItem = document.createElement('ui5-option');
         optionItem.setAttribute(
           'data-id',
-          FuroUi5DataSelect.getValueByPath(item, this._privilegedAttributes['id-field-path']),
+          FuroUi5DataSelect.getValueByPath(
+            item,
+            this._privilegedAttributes['id-field-path']
+          )
         );
         if (item.disabled === true) {
           optionItem.setAttribute('disabled', 'true');
@@ -443,7 +455,7 @@ export class FuroUi5DataSelect extends FieldNodeAdapter(Select.default) {
 
         optionItem.innerText = FuroUi5DataSelect.getValueByPath(
           item,
-          this._privilegedAttributes['display-field-path'],
+          this._privilegedAttributes['display-field-path']
         );
         optionNodeList.push(optionItem);
       });
@@ -477,7 +489,7 @@ export class FuroUi5DataSelect extends FieldNodeAdapter(Select.default) {
         detail: optionNodeList,
         bubbles: true,
         composed: true,
-      }),
+      })
     );
   }
 
@@ -508,20 +520,23 @@ export class FuroUi5DataSelect extends FieldNodeAdapter(Select.default) {
     if (this._optionList && this._optionList.repeats) {
       selectedOption = this._optionList.repeats.find(
         obj =>
-          FuroUi5DataSelect.getValueByPath(obj, this._privilegedAttributes['id-field-path'])
-            ._value === e.detail.selectedOption.dataset.id,
+          FuroUi5DataSelect.getValueByPath(
+            obj,
+            this._privilegedAttributes['id-field-path']
+          )._value === e.detail.selectedOption.dataset.id
       );
 
       if (selectedOption) {
         newValue = FuroUi5DataSelect.getValueByPath(
           selectedOption,
-          this._privilegedAttributes['value-field-path'],
+          this._privilegedAttributes['value-field-path']
         )._value;
       }
     } else {
       // if there is no active option binding
       // The id of the attribute data-id will be set available. Fallback is: innerText of the option element.
-      newValue = e.detail.selectedOption.dataset.id || e.detail.selectedOption.innerText;
+      newValue =
+        e.detail.selectedOption.dataset.id || e.detail.selectedOption.innerText;
       selectedOption = e.detail.selectedOption;
     }
 
@@ -567,11 +582,17 @@ export class FuroUi5DataSelect extends FieldNodeAdapter(Select.default) {
       }
     }
 
-    const customEvent = new Event('value-changed', { composed: true, bubbles: true });
+    const customEvent = new Event('value-changed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = selectedOption;
     this.dispatchEvent(customEvent);
 
-    const customSelectEvent = new Event('item-selected', { composed: true, bubbles: true });
+    const customSelectEvent = new Event('item-selected', {
+      composed: true,
+      bubbles: true,
+    });
     customSelectEvent.detail = selectedOption;
     this.dispatchEvent(customSelectEvent);
   }

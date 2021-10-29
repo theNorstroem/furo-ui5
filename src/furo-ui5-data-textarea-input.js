@@ -54,7 +54,9 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  *
  * @demo demo-furo-ui5-data-textarea-input Basic usage (scalar , fat, wrapper values)
  */
-export class FuroUi5DataTextareaInput extends FieldNodeAdapter(TextArea.default) {
+export class FuroUi5DataTextareaInput extends FieldNodeAdapter(
+  TextArea.default
+) {
   constructor() {
     super();
     this.value = '';
@@ -197,7 +199,10 @@ export class FuroUi5DataTextareaInput extends FieldNodeAdapter(TextArea.default)
       this.setFnaFieldValue(value === '' ? '' : value);
     }
 
-    const customEvent = new Event('field-value-changed', { composed: true, bubbles: true });
+    const customEvent = new Event('field-value-changed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = this.value;
     this.dispatchEvent(customEvent);
   }
@@ -276,11 +281,14 @@ export class FuroUi5DataTextareaInput extends FieldNodeAdapter(TextArea.default)
       };
       this._setValueStateMessage(
         fatAttributes['value-state'],
-        fatAttributes['value-state-message'],
+        fatAttributes['value-state-message']
       );
     } else {
       // remove state if fat does not have state, even it is set in the html
-      this._previousValueState = { state: 'None', message: fatAttributes['value-state-message'] };
+      this._previousValueState = {
+        state: 'None',
+        message: fatAttributes['value-state-message'],
+      };
       this._setValueStateMessage('None', fatAttributes['value-state-message']);
     }
 
@@ -288,7 +296,10 @@ export class FuroUi5DataTextareaInput extends FieldNodeAdapter(TextArea.default)
     if (this._privilegedAttributes.maxlength === null) {
       if (fatAttributes.max !== undefined) {
         this.maxlength = parseInt(fatAttributes.max, 10);
-      } else if (this._constraintsFromFNA.max !== undefined && this._constraintsFromFNA.max.is) {
+      } else if (
+        this._constraintsFromFNA.max !== undefined &&
+        this._constraintsFromFNA.max.is
+      ) {
         this.maxlength = parseInt(this._constraintsFromFNA.max.is, 10);
       }
     }
@@ -444,8 +455,14 @@ export class FuroUi5DataTextareaInput extends FieldNodeAdapter(TextArea.default)
    * @private
    */
   _resetValueStateMessage() {
-    this._setValueStateMessage(this._previousValueState.state, this._previousValueState.message);
+    this._setValueStateMessage(
+      this._previousValueState.state,
+      this._previousValueState.message
+    );
   }
 }
 
-window.customElements.define('furo-ui5-data-textarea-input', FuroUi5DataTextareaInput);
+window.customElements.define(
+  'furo-ui5-data-textarea-input',
+  FuroUi5DataTextareaInput
+);

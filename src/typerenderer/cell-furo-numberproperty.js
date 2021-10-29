@@ -15,4 +15,7 @@ import { CellFuroIntegerproperty } from './cell-furo-integerproperty.js';
  */
 export class CellFuroNumberproperty extends CellFuroIntegerproperty {}
 
-window.customElements.define('cell-furo-numberproperty', CellFuroNumberproperty);
+window.customElements.define(
+  'cell-furo-numberproperty',
+  CellFuroNumberproperty
+);

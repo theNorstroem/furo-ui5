@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 import '@furo/data/src/furo-data-object.js';
 import '@furo/data/src/furo-entity-agent.js';
 import '@furo/data/src/furo-deep-link.js';
@@ -30,7 +30,10 @@ describe('furo-ui5-data-money-input', () => {
             ƒ-inject-raw="--response"
           ></furo-data-object>
 
-          <furo-deep-link service="ExperimentService" @-hts-out="--hts"></furo-deep-link>
+          <furo-deep-link
+            service="ExperimentService"
+            @-hts-out="--hts"
+          ></furo-deep-link>
           <furo-entity-agent
             service="ExperimentService"
             ƒ-hts-in="--hts"
@@ -44,7 +47,8 @@ describe('furo-ui5-data-money-input', () => {
     `);
     await testbind.updateComplete;
     host = testbind._host;
-    [, dataInput, entityObject, deeplink, entityAgent] = testbind.parentNode.children;
+    [, dataInput, entityObject, deeplink, entityAgent] =
+      testbind.parentNode.children;
     await host.updateComplete;
     await dataInput.updateComplete;
     await entityObject.updateComplete;
@@ -61,8 +65,7 @@ describe('furo-ui5-data-money-input', () => {
     done();
   });
 
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(dataInput));
+  // dataInput));
 
   it('should receive value with bind', done => {
     entityObject.addEventListener('data-injected', () => {
@@ -123,7 +126,7 @@ describe('furo-ui5-data-money-input', () => {
             done();
           }, 0);
         },
-        { once: true },
+        { once: true }
       );
     });
     deeplink.qpIn({ exp: 1 });

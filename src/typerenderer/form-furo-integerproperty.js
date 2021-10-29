@@ -14,4 +14,7 @@ class FormFuroIntegerproperty extends FormInt32 {
   }
 }
 
-window.customElements.define('form-furo-integerproperty', FormFuroIntegerproperty);
+window.customElements.define(
+  'form-furo-integerproperty',
+  FormFuroIntegerproperty
+);

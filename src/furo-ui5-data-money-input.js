@@ -4,7 +4,6 @@ import './furo-ui5-form-field-container.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 
-
 import '@ui5/webcomponents/dist/Input.js';
 import './furo-ui5-data-text-input.js';
 import { FieldNode } from '@furo/data/src/lib/FieldNode';
@@ -74,9 +73,17 @@ export class FuroUi5DataMoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
    */
   bindData(fieldNode) {
     // check if we have a FieldNode or RepeaterNode
-    if (!(fieldNode instanceof FieldNode || fieldNode instanceof RepeaterNode)) {
+    if (
+      !(fieldNode instanceof FieldNode || fieldNode instanceof RepeaterNode)
+    ) {
       // eslint-disable-next-line no-console
-      console.warn('Invalid binding ', fieldNode, 'is not a FieldNode', this, this.parentNode);
+      console.warn(
+        'Invalid binding ',
+        fieldNode,
+        'is not a FieldNode',
+        this,
+        this.parentNode
+      );
       return false;
     }
 
@@ -97,10 +104,22 @@ export class FuroUi5DataMoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
     }
 
     // add the main event listeners
-    fieldNode.addEventListener('field-value-changed', this.__fieldValueChangedHandler);
-    fieldNode.addEventListener('field-became-valid', this.__fieldBecamesValidHandler);
-    fieldNode.addEventListener('field-became-invalid', this.__fieldBecamesInvalidHandler);
-    fieldNode.addEventListener('this-metas-changed', this.__fieldMetasChangedHandler);
+    fieldNode.addEventListener(
+      'field-value-changed',
+      this.__fieldValueChangedHandler
+    );
+    fieldNode.addEventListener(
+      'field-became-valid',
+      this.__fieldBecamesValidHandler
+    );
+    fieldNode.addEventListener(
+      'field-became-invalid',
+      this.__fieldBecamesInvalidHandler
+    );
+    fieldNode.addEventListener(
+      'this-metas-changed',
+      this.__fieldMetasChangedHandler
+    );
 
     // this is for easier debugging with the inspector
     this.__fieldNode = fieldNode;
@@ -178,14 +197,25 @@ export class FuroUi5DataMoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
 
       let value = {};
       if (e.composedPath()[0].nodeName === 'UI5-INPUT') {
-        value = this._convertDataToMoneyObj('', e.composedPath()[0].value, this._tmpValue);
+        value = this._convertDataToMoneyObj(
+          '',
+          e.composedPath()[0].value,
+          this._tmpValue
+        );
         this.setFnaFieldValue(value);
       } else {
-        value = this._convertDataToMoneyObj(e.composedPath()[0].value, '', this._tmpValue);
+        value = this._convertDataToMoneyObj(
+          e.composedPath()[0].value,
+          '',
+          this._tmpValue
+        );
         this.setFnaFieldValue(value);
       }
 
-      const customEvent = new Event('value-changed', { composed: true, bubbles: true });
+      const customEvent = new Event('value-changed', {
+        composed: true,
+        bubbles: true,
+      });
       customEvent.detail = value;
       this.dispatchEvent(customEvent);
     });
@@ -427,24 +457,21 @@ export class FuroUi5DataMoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      #currency {
+        width: 100px;
+        min-width: 100px;
+        margin-left: var(--spacing-xs);
+      }
 
-      css`
-        #currency {
-          width: 100px;
-          min-width: 100px;
-          margin-left: var(--spacing-xs);
-        }
+      #amount {
+        width: calc(100% - var(--spacing-xs) - 100px);
+      }
 
-        #amount {
-          width: calc(100% - var(--spacing-xs) - 100px);
-        }
-
-        :host {
-          width: 190px;
-        }
-      `
-    );
+      :host {
+        width: 190px;
+      }
+    `;
   }
 
   /**
@@ -478,4 +505,7 @@ export class FuroUi5DataMoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 }
 
-window.customElements.define('furo-ui5-data-money-input', FuroUi5DataMoneyInput);
+window.customElements.define(
+  'furo-ui5-data-money-input',
+  FuroUi5DataMoneyInput
+);

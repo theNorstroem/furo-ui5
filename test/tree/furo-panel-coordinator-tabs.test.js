@@ -1,7 +1,6 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
-import '../src/furo-catalog.js';
+import { assert } from '@esm-bundle/chai';
+import '../../src/tree/furo-catalog.js';
 import '@furo/fbp/src/testhelper/test-bind'; // for testing with wires and hooks
 
 describe('furo-panel-coordinator-tabs', () => {
@@ -28,7 +27,4 @@ describe('furo-panel-coordinator-tabs', () => {
     assert.equal(element.nodeName.toLowerCase(), 'furo-panel-coordinator-tabs');
     done();
   });
-
-  // axeReport a11y tests
-  it('a11y', () => axeReport(element));
 });

@@ -17,5 +17,5 @@ class DisplayGoogleProtobufStringvalue extends DisplayString {}
 
 window.customElements.define(
   'display-google-protobuf-stringvalue',
-  DisplayGoogleProtobufStringvalue,
+  DisplayGoogleProtobufStringvalue
 );

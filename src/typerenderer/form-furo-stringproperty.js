@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataTextInputLabeled } from '@furo/ui5/src/furo-ui5-data-text-input-labeled.js';
+import { FuroUi5DataTextInputLabeled } from '../furo-ui5-data-text-input-labeled.js';
 
 export class FormFuroStringproperty extends FuroUi5DataTextInputLabeled {
   bindData(fieldNode) {
@@ -7,4 +7,7 @@ export class FormFuroStringproperty extends FuroUi5DataTextInputLabeled {
   }
 }
 
-window.customElements.define('form-furo-stringproperty', FormFuroStringproperty);
+window.customElements.define(
+  'form-furo-stringproperty',
+  FormFuroStringproperty
+);

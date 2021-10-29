@@ -15,7 +15,10 @@ class FuroUi5Dialog extends Dialog {
   show() {
     // only register once
     if (!this._furoDialogRegistered) {
-      const customEvent = new Event('register-furo-ui5-dialog', { composed: true, bubbles: true });
+      const customEvent = new Event('register-furo-ui5-dialog', {
+        composed: true,
+        bubbles: true,
+      });
       customEvent.detail = this;
       this.dispatchEvent(customEvent);
       this._furoDialogRegistered = true;

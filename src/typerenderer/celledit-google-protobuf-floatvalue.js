@@ -13,5 +13,5 @@ class CelleditGoolgeProtobufFloatvalue extends CelleditInt32 {}
 
 window.customElements.define(
   'celledit-google-protobuf-floatvalue',
-  CelleditGoolgeProtobufFloatvalue,
+  CelleditGoolgeProtobufFloatvalue
 );

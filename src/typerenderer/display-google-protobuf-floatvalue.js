@@ -15,4 +15,7 @@ import { DisplayFloat } from './display-float.js';
  */
 class DisplayGoolgeProtobufFloatvalue extends DisplayFloat {}
 
-window.customElements.define('display-google-protobuf-floatvalue', DisplayGoolgeProtobufFloatvalue);
+window.customElements.define(
+  'display-google-protobuf-floatvalue',
+  DisplayGoolgeProtobufFloatvalue
+);

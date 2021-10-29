@@ -18,7 +18,9 @@ class CellFuroFatFloat extends CellFloat {
    * @private
    */
   _formatCell() {
-    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._field.value._value);
+    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(
+      this._field.value._value
+    );
     if (displayValue !== 'NaN') {
       this._displayValue = displayValue;
       this.requestUpdate();

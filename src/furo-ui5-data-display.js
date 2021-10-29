@@ -98,7 +98,9 @@ export class FuroUi5DataDisplay extends FBP(LitElement) {
       }
     };
 
-    if (!(fieldNode instanceof FieldNode || fieldNode instanceof RepeaterNode)) {
+    if (
+      !(fieldNode instanceof FieldNode || fieldNode instanceof RepeaterNode)
+    ) {
       // eslint-disable-next-line no-console
       console.warn('Invalid fieldNode in bindData', this);
       return;
@@ -107,7 +109,10 @@ export class FuroUi5DataDisplay extends FBP(LitElement) {
     if (fieldNode._meta && fieldNode._meta.label) {
       this.label = fieldNode._meta.label;
     }
-    fieldNode.addEventListener('this-metas-changed', this.__fieldMetasChangedHandler);
+    fieldNode.addEventListener(
+      'this-metas-changed',
+      this.__fieldMetasChangedHandler
+    );
 
     this._FBPTriggerWire('--data', fieldNode);
   }
@@ -120,7 +125,9 @@ export class FuroUi5DataDisplay extends FBP(LitElement) {
     // language=HTML
     return html`
       <furo-ui5-form-field-container ?disabled=${this.disabled}>
-        <ui5-label label slot="label" for="Input" show-colon>${this.label}</ui5-label>
+        <ui5-label label slot="label" for="Input" show-colon
+          >${this.label}</ui5-label
+        >
         <furo-type-renderer
           content
           context="${this.context}"

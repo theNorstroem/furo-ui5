@@ -35,7 +35,9 @@ import '@ui5/webcomponents/dist/SegmentedButtonItem.js';
  * @demo demo-furo-ui5-data-segmented-button Basic Usage
  * @appliesMixin FBP
  */
-export class FuroUi5DataSegmentedButton extends FieldNodeAdapter(SegmentedButton.default) {
+export class FuroUi5DataSegmentedButton extends FieldNodeAdapter(
+  SegmentedButton.default
+) {
   constructor() {
     super();
 
@@ -142,7 +144,7 @@ export class FuroUi5DataSegmentedButton extends FieldNodeAdapter(SegmentedButton
       // eslint-disable-next-line no-console
       console.warn(
         'Invalid param in function bindOptions. Param is not of type RepeaterNode',
-        repeaterNode,
+        repeaterNode
       );
       return false;
     }
@@ -310,19 +312,23 @@ export class FuroUi5DataSegmentedButton extends FieldNodeAdapter(SegmentedButton
       elem.pressed = elem.getAttribute('data-id') === e.target.dataset.id;
     });
 
-    if (this._optionList && this._optionList.repeats && this._optionList.repeats.length) {
+    if (
+      this._optionList &&
+      this._optionList.repeats &&
+      this._optionList.repeats.length
+    ) {
       selectedOption = this._optionList.repeats.find(
         obj =>
           FuroUi5DataSegmentedButton.getValueByPath(
             obj,
-            this._privilegedAttributes['id-field-path'],
-          )._value === e.target.dataset.id,
+            this._privilegedAttributes['id-field-path']
+          )._value === e.target.dataset.id
       );
 
       if (selectedOption) {
         newValue = FuroUi5DataSegmentedButton.getValueByPath(
           selectedOption,
-          this._privilegedAttributes['id-field-path'],
+          this._privilegedAttributes['id-field-path']
         )._value;
       }
     } else {
@@ -373,11 +379,17 @@ export class FuroUi5DataSegmentedButton extends FieldNodeAdapter(SegmentedButton
      *  * @fires {String} field-value-changed - Fires the field value when it changes.
      * @type {Event}
      */
-    const customEvent = new Event('value-changed', { composed: true, bubbles: true });
+    const customEvent = new Event('value-changed', {
+      composed: true,
+      bubbles: true,
+    });
     customEvent.detail = selectedOption;
     this.dispatchEvent(customEvent);
 
-    const customSelectEvent = new Event('item-selected', { composed: true, bubbles: true });
+    const customSelectEvent = new Event('item-selected', {
+      composed: true,
+      bubbles: true,
+    });
     customSelectEvent.detail = selectedOption;
     this.dispatchEvent(customSelectEvent);
   }
@@ -397,13 +409,13 @@ export class FuroUi5DataSegmentedButton extends FieldNodeAdapter(SegmentedButton
           'data-id',
           FuroUi5DataSegmentedButton.getValueByPath(
             item,
-            this._privilegedAttributes['id-field-path'],
-          ),
+            this._privilegedAttributes['id-field-path']
+          )
         );
 
         const DISPLAY_TEXT = FuroUi5DataSegmentedButton.getValueByPath(
           item,
-          this._privilegedAttributes['display-field-path'],
+          this._privilegedAttributes['display-field-path']
         )._value;
         optionItem.innerText = DISPLAY_TEXT;
         optionItem.value = DISPLAY_TEXT;
@@ -426,13 +438,13 @@ export class FuroUi5DataSegmentedButton extends FieldNodeAdapter(SegmentedButton
           'data-id',
           FuroUi5DataSegmentedButton.getValueByPath(
             item,
-            this._privilegedAttributes['id-field-path'],
-          ),
+            this._privilegedAttributes['id-field-path']
+          )
         );
 
         const DISPLAY_TEXT = FuroUi5DataSegmentedButton.getValueByPath(
           item,
-          this._privilegedAttributes['display-field-path'],
+          this._privilegedAttributes['display-field-path']
         );
 
         optionItem.innerText = DISPLAY_TEXT;
@@ -469,9 +481,12 @@ export class FuroUi5DataSegmentedButton extends FieldNodeAdapter(SegmentedButton
         detail: optionNodeList,
         bubbles: true,
         composed: true,
-      }),
+      })
     );
   }
 }
 
-window.customElements.define('furo-ui5-data-segmented-button', FuroUi5DataSegmentedButton);
+window.customElements.define(
+  'furo-ui5-data-segmented-button',
+  FuroUi5DataSegmentedButton
+);

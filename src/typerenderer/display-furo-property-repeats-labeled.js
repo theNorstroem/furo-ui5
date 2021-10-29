@@ -79,5 +79,5 @@ export class DisplayFuroPropertyRepeatsLabeled extends DisplayFuroPropertyRepeat
 
 window.customElements.define(
   'display-furo-property-repeats-labeled',
-  DisplayFuroPropertyRepeatsLabeled,
+  DisplayFuroPropertyRepeatsLabeled
 );

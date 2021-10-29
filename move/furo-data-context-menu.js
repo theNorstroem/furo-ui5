@@ -92,13 +92,20 @@ export class FuroDataContextMenu extends FBP(LitElement) {
         context,
         menu: this._menuNode,
         selectCallback: item => {
-          const selectEvent = new Event('menu-item-selected', { composed: true, bubbles: true });
-          selectEvent.detail = { context: this._context, menuitem: item.detail };
+          const selectEvent = new Event('menu-item-selected', {
+            composed: true,
+            bubbles: true,
+          });
+          selectEvent.detail = {
+            context: this._context,
+            menuitem: item.detail,
+          };
           this.dispatchEvent(selectEvent);
         },
         onClose: () => {
           // focus the childnode
-          const slottContents = this.shadowRoot.firstElementChild.assignedElements();
+          const slottContents =
+            this.shadowRoot.firstElementChild.assignedElements();
           if (slottContents.length > 0) {
             setTimeout(() => {
               slottContents[0].focus();

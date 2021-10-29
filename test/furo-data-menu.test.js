@@ -1,11 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-
+import { assert } from '@esm-bundle/chai';
 
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
-import { Samplectxmenudata } from '@furo/data-ui/test/samplectxmenudata.js';
+import { Samplectxmenudata } from './samplectxmenudata.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 import '@furo/data';
 
 describe('furo-data-menu', () => {
@@ -17,7 +16,9 @@ describe('furo-data-menu', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind style="height: 800px;width: 800px; display: block; position: relative">
+      <test-bind
+        style="height: 800px;width: 800px; display: block; position: relative"
+      >
         <template>
           <furo-data-context-menu
             condensed
@@ -52,7 +53,10 @@ describe('furo-data-menu', () => {
     assert.equal(menu.nodeName.toLowerCase(), 'furo-data-context-menu');
     assert.equal(dataobject.nodeName.toLowerCase(), 'furo-data-object');
     assert.equal(trigger.nodeName.toLowerCase(), 'furo-icon-button');
-    assert.equal(display.nodeName.toLowerCase(), 'furo-data-context-menu-display');
+    assert.equal(
+      display.nodeName.toLowerCase(),
+      'furo-data-context-menu-display'
+    );
     done();
   });
 
@@ -80,7 +84,9 @@ describe('furo-data-menu', () => {
       display.triggerNavigation('ArrowRight');
 
       setTimeout(() => {
-        const submenu = display.shadowRoot.querySelector('furo-data-context-submenu');
+        const submenu = display.shadowRoot.querySelector(
+          'furo-data-context-submenu'
+        );
         submenu.triggerNavigation('ArrowDown');
         submenu.triggerNavigation('ArrowDown');
         submenu.triggerNavigation('ArrowRight');
@@ -110,7 +116,9 @@ describe('furo-data-menu', () => {
       display.triggerNavigation('ArrowRight');
 
       setTimeout(() => {
-        const submenu = display.shadowRoot.querySelector('furo-data-context-submenu');
+        const submenu = display.shadowRoot.querySelector(
+          'furo-data-context-submenu'
+        );
         submenu.triggerNavigation('ArrowDown');
         submenu.triggerNavigation('ArrowRight');
         setTimeout(() => {

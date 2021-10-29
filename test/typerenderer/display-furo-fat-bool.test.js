@@ -1,10 +1,10 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
-import { axeReport } from 'pwa-helpers/axe-report.js';
+
+import { assert } from '@esm-bundle/chai';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
-import '../src/display-furo-fat-bool.js';
+import '../initEnv.js';
+import '../../src/typerenderer/display-furo-fat-bool.js';
 
 describe('display-furo-fat-bool', () => {
   let host;
@@ -15,7 +15,9 @@ describe('display-furo-fat-bool', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <display-furo-fat-bool ƒ-bind-data="--dao(*.fat_bool)"></display-furo-fat-bool>
+          <display-furo-fat-bool
+            ƒ-bind-data="--dao(*.fat_bool)"
+          ></display-furo-fat-bool>
           <furo-data-object
             type="universaltest.Universaltest"
             @-object-ready="--dao"
@@ -50,7 +52,7 @@ describe('display-furo-fat-bool', () => {
       assert.equal(
         display.shadowRoot.querySelector('ui5-icon').getAttribute('name'),
         'accept',
-        'check if template is right',
+        'check if template is right'
       );
       done();
     }, 0);
@@ -64,12 +66,9 @@ describe('display-furo-fat-bool', () => {
       assert.equal(
         display.shadowRoot.querySelector('ui5-icon').getAttribute('name'),
         'border',
-        'check if template is right',
+        'check if template is right'
       );
       done();
     }, 0);
   });
-
-  // axeReport a11y tests
-  xit('a11y', () => axeReport(display));
 });

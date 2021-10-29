@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataDatePickerLabeled } from '@furo/ui5/src/furo-ui5-data-date-picker-labeled.js';
+import { FuroUi5DataDatePickerLabeled } from '../furo-ui5-data-date-picker-labeled.js';
 
 /**
  * `form-google-type-date` is a `form` context renderer.

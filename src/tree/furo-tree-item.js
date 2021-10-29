@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
 import '@furo/layout/src/furo-horizontal-flex';
-import '@furo/ui5/move/furo-data-bool-icon';
+import '../../move/furo-data-bool-icon.js';
 import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
 
 /**
@@ -80,7 +80,11 @@ export class FuroTreeItem extends FBP(LitElement) {
       haserror: { type: Boolean, reflect: true },
       selected: { type: Boolean, reflect: true },
       noicon: { type: Boolean },
-      isGroupLabel: { type: Boolean, reflect: true, attribute: 'is-group-label' },
+      isGroupLabel: {
+        type: Boolean,
+        reflect: true,
+        attribute: 'is-group-label',
+      },
     };
   }
 
@@ -93,7 +97,7 @@ export class FuroTreeItem extends FBP(LitElement) {
       let tmpArr = [];
       this.fieldNode.__childNodes
         .filter(
-          field => typeof field._value === 'string', // maybe change to fields-to-index list
+          field => typeof field._value === 'string' // maybe change to fields-to-index list
         )
         .forEach(field => {
           tmpArr = tmpArr.concat(field._value.toLowerCase().split(/\W+/));
@@ -171,11 +175,11 @@ export class FuroTreeItem extends FBP(LitElement) {
       e.cancelBubble = true;
       if (e.detail._value === false) {
         e.detail.__parentNode.children.broadcastEvent(
-          new NodeEvent('ancestor-invisible', e.detail.__parentNode),
+          new NodeEvent('ancestor-invisible', e.detail.__parentNode)
         );
       } else {
         e.detail.__parentNode.children.broadcastEvent(
-          new NodeEvent('ancestor-visible', e.detail.__parentNode),
+          new NodeEvent('ancestor-visible', e.detail.__parentNode)
         );
       }
     });
@@ -278,210 +282,207 @@ export class FuroTreeItem extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: block;
+        line-height: 48px;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-weight: 400;
+        user-select: none;
+        padding-left: var(--spacing-xs, 16px);
+        border-radius: 4px;
+        position: relative;
+        margin-bottom: var(--spacing-xxs, 4px);
+        transition: color 0.2s, background-color 0.2s;
+      }
 
-      css`
-        :host {
-          display: block;
-          line-height: 48px;
-          box-sizing: border-box;
-          cursor: pointer;
-          font-weight: 400;
-          user-select: none;
-          padding-left: var(--spacing-xs, 16px);
-          border-radius: 4px;
-          position: relative;
-          margin-bottom: var(--spacing-xxs, 4px);
-          transition: color 0.2s, background-color 0.2s;
-        }
+      :host([hidden]) {
+        display: none;
+      }
 
-        :host([hidden]) {
-          display: none;
-        }
+      :host([inedit]) {
+        font-style: italic;
+      }
 
-        :host([inedit]) {
-          font-style: italic;
-        }
+      :host([haserror]),
+      :host([selected][haserror]) {
+        color: var(--error, red);
+      }
 
-        :host([haserror]),
-        :host([selected][haserror]) {
-          color: var(--error, red);
-        }
+      :host([haserror]) furo-icon {
+        animation: error-pulse 3s infinite;
+      }
 
-        :host([haserror]) furo-icon {
-          animation: error-pulse 3s infinite;
-        }
+      .label {
+        white-space: nowrap;
+        font-size: 16px;
+        letter-spacing: 0.15px;
+        margin-left: 8px;
+        font-weight: 400;
+      }
 
-        .label {
-          white-space: nowrap;
-          font-size: 16px;
-          letter-spacing: 0.15px;
-          margin-left: 8px;
-          font-weight: 400;
-        }
+      .desc {
+        font-size: smaller;
+        line-height: 39px;
+        white-space: nowrap;
+      }
 
-        .desc {
-          font-size: smaller;
-          line-height: 39px;
-          white-space: nowrap;
-        }
+      .oc {
+        color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
+        width: 12px;
+        box-sizing: border-box;
+        padding-left: 4px;
+        font-size: 8px;
+      }
 
-        .oc {
-          color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
-          width: 12px;
-          box-sizing: border-box;
-          padding-left: 4px;
-          font-size: 8px;
-        }
+      :host([selected]) .oc {
+        color: rgba(var(--primary-rgb), var(--medium-emphasis-primary));
+      }
 
-        :host([selected]) .oc {
-          color: rgba(var(--primary-rgb), var(--medium-emphasis-primary));
-        }
+      :host([searchmatch]) {
+        color: rgba(var(--primary-rgb), var(--medium-emphasis-primary));
+      }
 
-        :host([searchmatch]) {
-          color: rgba(var(--primary-rgb), var(--medium-emphasis-primary));
-        }
+      furo-icon[error] {
+        animation: error-pulse 2s infinite;
+      }
 
-        furo-icon[error] {
-          animation: error-pulse 2s infinite;
-        }
+      furo-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 4px;
+      }
 
-        furo-icon {
-          width: 20px;
-          height: 20px;
-          margin-right: 4px;
+      @keyframes error-pulse {
+        0% {
+          fill: var(--on-primary, #46150f);
         }
+        12% {
+          fill: var(--error, #fc4d34);
+        }
+        24% {
+          fill: var(--on-primary, #46150f);
+        }
+        36% {
+          fill: var(--error, #fc4d34);
+        }
+        48% {
+          fill: var(--on-primary, #46150f);
+        }
+      }
 
-        @keyframes error-pulse {
-          0% {
-            fill: var(--on-primary, #46150f);
-          }
-          12% {
-            fill: var(--error, #fc4d34);
-          }
-          24% {
-            fill: var(--on-primary, #46150f);
-          }
-          36% {
-            fill: var(--error, #fc4d34);
-          }
-          48% {
-            fill: var(--on-primary, #46150f);
-          }
-        }
+      :host([isheader]) {
+        height: 64px;
+        margin: 0;
+      }
 
-        :host([isheader]) {
-          height: 64px;
-          margin: 0;
-        }
+      :host([isheader]) furo-icon {
+        margin-bottom: 4px;
+      }
 
-        :host([isheader]) furo-icon {
-          margin-bottom: 4px;
-        }
+      :host([isheader]) .oc {
+        display: none;
+      }
 
-        :host([isheader]) .oc {
-          display: none;
-        }
+      :host([isheader]) .desc {
+        font-size: 14px;
+        height: 24px;
+        letter-spacing: 0.1px;
+        color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
+        line-height: 20px;
+        display: block;
+        position: absolute;
+        text-overflow: ellipsis;
+        /* Required for text-overflow to do anything */
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        top: 32px;
+        box-sizing: border-box;
+      }
 
-        :host([isheader]) .desc {
-          font-size: 14px;
-          height: 24px;
-          letter-spacing: 0.1px;
-          color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
-          line-height: 20px;
-          display: block;
-          position: absolute;
-          text-overflow: ellipsis;
-          /* Required for text-overflow to do anything */
-          white-space: nowrap;
-          overflow: hidden;
-          width: 100%;
-          top: 32px;
-          box-sizing: border-box;
-        }
+      :host([isheader]) .label {
+        font-weight: unset;
+        position: relative;
+        font-size: 20px;
+        height: 32px;
+        line-height: 40px;
+        margin: 0;
+        display: block;
+        letter-spacing: 0.15px;
+      }
 
-        :host([isheader]) .label {
-          font-weight: unset;
-          position: relative;
-          font-size: 20px;
-          height: 32px;
-          line-height: 40px;
-          margin: 0;
-          display: block;
-          letter-spacing: 0.15px;
-        }
+      :host([is-group-label]) {
+        border-top: 1px solid var(--separator, #cdcdcd);
+        margin-top: var(--spacing-xs);
+        padding-top: var(--spacing-xxs);
+        border-radius: 0;
+      }
 
-        :host([is-group-label]) {
-          border-top: 1px solid var(--separator, #cdcdcd);
-          margin-top: var(--spacing-xs);
-          padding-top: var(--spacing-xxs);
-          border-radius: 0;
-        }
+      :host([is-group-label]) .label {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: normal;
+        letter-spacing: 0.1px;
+        color: var(
+          --group-label-color,
+          rgba(var(--on-surface-rgb), var(--medium-emphasis-surface))
+        );
+      }
 
-        :host([is-group-label]) .label {
-          font-size: 14px;
-          line-height: 20px;
-          font-weight: normal;
-          letter-spacing: 0.1px;
-          color: var(
-            --group-label-color,
-            rgba(var(--on-surface-rgb), var(--medium-emphasis-surface))
-          );
-        }
+      .indentation-0 .indentation {
+        width: var(--tree-indentation-0, 0);
+      }
 
-        .indentation-0 .indentation {
-          width: var(--tree-indentation-0, 0);
-        }
+      .indentation-1 .indentation {
+        width: var(--tree-indentation-1, 16px);
+      }
 
-        .indentation-1 .indentation {
-          width: var(--tree-indentation-1, 16px);
-        }
+      .indentation-2 .indentation {
+        width: var(--tree-indentation-2, 32px);
+      }
 
-        .indentation-2 .indentation {
-          width: var(--tree-indentation-2, 32px);
-        }
+      .indentation-3 .indentation {
+        width: var(--tree-indentation-3, 48px);
+      }
 
-        .indentation-3 .indentation {
-          width: var(--tree-indentation-3, 48px);
-        }
+      .indentation-4 .indentation {
+        width: var(--tree-indentation-4, 56px);
+      }
 
-        .indentation-4 .indentation {
-          width: var(--tree-indentation-4, 56px);
-        }
+      .indentation-5 .indentation {
+        width: var(--tree-indentation-5, 64px);
+      }
 
-        .indentation-5 .indentation {
-          width: var(--tree-indentation-5, 64px);
-        }
+      .indentation-6 .indentation {
+        width: var(--tree-indentation-6, 72px);
+      }
 
-        .indentation-6 .indentation {
-          width: var(--tree-indentation-6, 72px);
-        }
+      .indentation-7 .indentation {
+        width: var(--tree-indentation-7, 80px);
+      }
 
-        .indentation-7 .indentation {
-          width: var(--tree-indentation-7, 80px);
-        }
+      .indentation-8 .indentation {
+        width: var(--tree-indentation-8, 88px);
+      }
 
-        .indentation-8 .indentation {
-          width: var(--tree-indentation-8, 88px);
-        }
+      .indentation-9 .indentation {
+        width: var(--tree-indentation-9, 92px);
+      }
 
-        .indentation-9 .indentation {
-          width: var(--tree-indentation-9, 92px);
-        }
+      .indentation-10 .indentation {
+        width: var(--tree-indentation-10, 96px);
+      }
 
-        .indentation-10 .indentation {
-          width: var(--tree-indentation-10, 96px);
-        }
+      .indentation-11 .indentation {
+        width: var(--tree-indentation-11, 100px);
+      }
 
-        .indentation-11 .indentation {
-          width: var(--tree-indentation-11, 100px);
-        }
-
-        .indentation-12 .indentation {
-          width: var(--tree-indentation-12, 104px);
-        }
-      `
-    );
+      .indentation-12 .indentation {
+        width: var(--tree-indentation-12, 104px);
+      }
+    `;
   }
 
   /**
@@ -491,7 +492,10 @@ export class FuroTreeItem extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <furo-horizontal-flex class="indentation-${this.indentation}" @-dblclick="--dblclicked">
+      <furo-horizontal-flex
+        class="indentation-${this.indentation}"
+        @-dblclick="--dblclicked"
+      >
         <div class="indentation" @-click="--labelClicked"></div>
         <div class="oc">
           <furo-data-bool-icon
@@ -506,7 +510,8 @@ export class FuroTreeItem extends FBP(LitElement) {
             icon="${this.fieldNode.icon}"
             ?error="${this.fieldNode.has_error._value}"
           ></furo-icon>
-          ${this.fieldNode.display_name} <span class="desc">${this.fieldNode.secondary_text}</span>
+          ${this.fieldNode.display_name}
+          <span class="desc">${this.fieldNode.secondary_text}</span>
         </div>
         <furo-ripple noink ƒ-trigger="--labelClicked"></furo-ripple>
       </furo-horizontal-flex>

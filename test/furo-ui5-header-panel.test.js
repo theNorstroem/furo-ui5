@@ -1,10 +1,11 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
+
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 import '@furo/data/src/furo-data-object.js';
 import '../src/furo-catalog.js';
+import { assert } from '@esm-bundle/chai';
 
 describe('furo-ui5-header-panel', () => {
   let host;
@@ -15,7 +16,9 @@ describe('furo-ui5-header-panel', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-header-panel ƒ-bind-nav-node="--Navnode"></furo-ui5-header-panel>
+          <furo-ui5-header-panel
+            ƒ-bind-nav-node="--Navnode"
+          ></furo-ui5-header-panel>
           <furo-data-object
             type="tree.Navigationnode"
             @-object-ready="--Navnode"

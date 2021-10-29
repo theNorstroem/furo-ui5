@@ -23,13 +23,12 @@ export class DisplayFuroStringoptionproperty extends DisplayFuroStringproperty {
   render() {
     // language=HTML
     return html`
-      ${this._field
-        ? html`
-            ${this._field.display_name}
-          `
-        : html``}
+      ${this._field ? html` ${this._field.display_name} ` : html``}
     `;
   }
 }
 
-window.customElements.define('display-furo-stringoptionproperty', DisplayFuroStringoptionproperty);
+window.customElements.define(
+  'display-furo-stringoptionproperty',
+  DisplayFuroStringoptionproperty
+);

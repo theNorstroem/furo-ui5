@@ -7,7 +7,7 @@ import '@furo/fbp/src/flow-repeat.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-type-renderer.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/ui5/src/furo-ui5-data-display.js';
+import './furo-ui5-data-display.js';
 
 import '@ui5/webcomponents/dist/Table.js';
 import '@ui5/webcomponents/dist/TableColumn.js';
@@ -50,22 +50,27 @@ export class FuroUi5DataTable extends FBP(LitElement) {
     /**
      * Listen to selection change from the table and build up a list with data items.
      */
-    this.shadowRoot.querySelector('ui5-table').addEventListener('selectionChange', e => {
-      const affectedItems = [];
-      e.detail.selectedRows.forEach(r => {
-        if (r._data) {
-          affectedItems.push(r._data._value);
-        }
+    this.shadowRoot
+      .querySelector('ui5-table')
+      .addEventListener('selectionChange', e => {
+        const affectedItems = [];
+        e.detail.selectedRows.forEach(r => {
+          if (r._data) {
+            affectedItems.push(r._data._value);
+          }
+        });
+        /**
+         * @event rows-selected
+         * Fired when the row selection in MultiSelect mode was changed
+         * detail payload: Array with the selected items
+         */
+        const customEvent = new Event('rows-selected', {
+          composed: true,
+          bubbles: true,
+        });
+        customEvent.detail = affectedItems;
+        this.dispatchEvent(customEvent);
       });
-      /**
-       * @event rows-selected
-       * Fired when the row selection in MultiSelect mode was changed
-       * detail payload: Array with the selected items
-       */
-      const customEvent = new Event('rows-selected', { composed: true, bubbles: true });
-      customEvent.detail = affectedItems;
-      this.dispatchEvent(customEvent);
-    });
   }
 
   /**
@@ -75,7 +80,9 @@ export class FuroUi5DataTable extends FBP(LitElement) {
   bindData(data) {
     if (!data._isRepeater) {
       // eslint-disable-next-line no-console
-      console.warn('Invalid fieldNode in bindData. please bind a repeated field.');
+      console.warn(
+        'Invalid fieldNode in bindData. please bind a repeated field.'
+      );
       return;
     }
 
@@ -120,7 +127,7 @@ export class FuroUi5DataTable extends FBP(LitElement) {
         detail: this,
         bubbles: true,
         composed: true,
-      }),
+      })
     );
   }
 
@@ -237,12 +244,21 @@ export class FuroUi5DataTable extends FBP(LitElement) {
       const parts = this._split(path);
       if (parts.length > 1) {
         if (field.fields && field.fields[parts[0]]) {
-          return this._getSpecFieldFromPath(field.fields[parts[0]], parts.slice(1).join('.'));
+          return this._getSpecFieldFromPath(
+            field.fields[parts[0]],
+            parts.slice(1).join('.')
+          );
         }
         if (!field[parts[0]]) {
-          return this._getSpecFieldFromPath(this._specs[field.type], parts.join('.'));
+          return this._getSpecFieldFromPath(
+            this._specs[field.type],
+            parts.join('.')
+          );
         }
-        return this._getSpecFieldFromPath(field[parts[0]], parts.slice(1).join('.'));
+        return this._getSpecFieldFromPath(
+          field[parts[0]],
+          parts.slice(1).join('.')
+        );
       }
       const part = parts[0];
 
@@ -256,7 +272,7 @@ export class FuroUi5DataTable extends FBP(LitElement) {
     }
     // eslint-disable-next-line no-console
     console.warn(
-      `Invalid subfield '${path}' in the field-path. please set a correct field-path in cloumn.`,
+      `Invalid subfield '${path}' in the field-path. please set a correct field-path in cloumn.`
     );
   }
 
@@ -281,28 +297,23 @@ export class FuroUi5DataTable extends FBP(LitElement) {
    * @returns {CSSResult}
    */
   static get styles() {
-    return (
+    return css`
+      :host {
+        display: block;
+        overflow: auto;
+        font-variant-numeric: lining-nums tabular-nums;
+      }
 
-      css`
-        :host {
-          display: block;
-          overflow: auto;
-          font-variant-numeric: lining-nums tabular-nums;
-        }
+      :host([hidden]) {
+        display: none;
+      }
 
-
-        :host([hidden]) {
-          display: none;
-        }
-
-
-        .no-data {
-          height: 3rem;
-          text-align: center;
-          line-height: 3rem;
-        }
-      `
-    );
+      .no-data {
+        height: 3rem;
+        text-align: center;
+        line-height: 3rem;
+      }
+    `;
   }
 
   /**
@@ -366,9 +377,7 @@ export class FuroUi5DataTable extends FBP(LitElement) {
       </ui5-table>
       <slot></slot>
       ${this._showNoData
-        ? html`
-            <div class="no-data">${this.noDataText}</div>
-          `
+        ? html` <div class="no-data">${this.noDataText}</div> `
         : html``}
     `;
   }

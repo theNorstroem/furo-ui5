@@ -97,7 +97,9 @@ class CellGoogleProtobufTimestamp extends LitElement {
    * @private
    */
   _formatCell() {
-    this._displayValue = CellGoogleProtobufTimestamp._convertDateToString(this._field._value);
+    this._displayValue = CellGoogleProtobufTimestamp._convertDateToString(
+      this._field._value
+    );
     this.requestUpdate();
   }
 
@@ -108,10 +110,11 @@ class CellGoogleProtobufTimestamp extends LitElement {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._displayValue}
-    `;
+    return html` ${this._displayValue} `;
   }
 }
 
-window.customElements.define('cell-google-protobuf-timestamp', CellGoogleProtobufTimestamp);
+window.customElements.define(
+  'cell-google-protobuf-timestamp',
+  CellGoogleProtobufTimestamp
+);

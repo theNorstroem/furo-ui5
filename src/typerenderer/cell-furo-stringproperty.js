@@ -22,14 +22,11 @@ export class CellFuroStringproperty extends CellString {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._field
-        ? html`
-            ${this._field.data._value}
-          `
-        : html``}
-    `;
+    return html` ${this._field ? html` ${this._field.data._value} ` : html``} `;
   }
 }
 
-window.customElements.define('cell-furo-stringproperty', CellFuroStringproperty);
+window.customElements.define(
+  'cell-furo-stringproperty',
+  CellFuroStringproperty
+);

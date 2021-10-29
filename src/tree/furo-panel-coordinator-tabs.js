@@ -108,7 +108,9 @@ class FuroPanelCoordinatorTabs extends FBP(LitElement) {
     this._tabs[this._focusIndex]._isSelected = false;
 
     const oldFocusIndex = this._focusIndex;
-    this._tabs[this._focusIndex].dispatchNodeEvent(new NodeEvent('close-requested', this, false));
+    this._tabs[this._focusIndex].dispatchNodeEvent(
+      new NodeEvent('close-requested', this, false)
+    );
     this._focusIndex = oldFocusIndex;
   }
 
@@ -218,78 +220,79 @@ class FuroPanelCoordinatorTabs extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
+    return css`
+      :host {
+        display: block;
+        outline: none;
+        position: relative;
+        padding-left: var(--spacing-s, 24px);
+      }
 
-      css`
-        :host {
-          display: block;
-          outline: none;
-          position: relative;
-          padding-left: var(--spacing-s, 24px);
-        }
+      furo-panel-coordinator-tab-item[selected] {
+        border-bottom: 2px solid var(--primary, #686868);
+        color: var(--primary, #686868);
+      }
 
-        furo-panel-coordinator-tab-item[selected] {
-          border-bottom: 2px solid var(--primary, #686868);
-          color: var(--primary, #686868);
-        }
+      :host([focused]) furo-panel-coordinator-tab-item[selected][haserror] {
+        border-bottom: 2px solid var(--error, red);
+      }
 
-        :host([focused]) furo-panel-coordinator-tab-item[selected][haserror] {
-          border-bottom: 2px solid var(--error, red);
-        }
+      /* mouse hover */
+      furo-panel-coordinator-tab-item:hover {
+        background-color: rgba(var(--primary-rgb), var(--state-hover));
+        border-bottom: 2px solid transparent;
+        color: var(--primary, #686868);
+      }
 
-        /* mouse hover */
-        furo-panel-coordinator-tab-item:hover {
-          background-color: rgba(var(--primary-rgb), var(--state-hover));
-          border-bottom: 2px solid transparent;
-          color: var(--primary, #686868);
-        }
+      furo-panel-coordinator-tab-item[selected]:hover {
+        border-bottom: 2px solid var(--primary, #686868);
+      }
 
-        furo-panel-coordinator-tab-item[selected]:hover {
-          border-bottom: 2px solid var(--primary, #686868);
-        }
+      /* focus, :host(:focus) furo-panel-coordinator-tab-item[focused]  is for mouse navigation */
+      :host([focused]) furo-panel-coordinator-tab-item[focused] {
+        background-color: rgba(var(--primary-rgb), var(--state-focus));
+        border-bottom: 2px solid transparent;
+        color: var(--primary, #686868);
+      }
 
-        /* focus, :host(:focus) furo-panel-coordinator-tab-item[focused]  is for mouse navigation */
-        :host([focused]) furo-panel-coordinator-tab-item[focused] {
-          background-color: rgba(var(--primary-rgb), var(--state-focus));
-          border-bottom: 2px solid transparent;
-          color: var(--primary, #686868);
-        }
+      /* selected */
+      :host([focused]) furo-panel-coordinator-tab-item[selected] {
+        background-color: rgba(var(--primary-rgb), var(--state-selected));
+        border-bottom: 2px solid var(--primary, #686868);
+        color: var(--primary, #686868);
+      }
 
-        /* selected */
-        :host([focused]) furo-panel-coordinator-tab-item[selected] {
-          background-color: rgba(var(--primary-rgb), var(--state-selected));
-          border-bottom: 2px solid var(--primary, #686868);
-          color: var(--primary, #686868);
-        }
+      /* selected focus  */
+      :host([focused]) furo-panel-coordinator-tab-item[selected][focused] {
+        background-color: rgba(var(--primary-rgb), var(--state-selected-focus));
+        border-bottom: 2px solid var(--primary, #686868);
+      }
 
-        /* selected focus  */
-        :host([focused]) furo-panel-coordinator-tab-item[selected][focused] {
-          background-color: rgba(var(--primary-rgb), var(--state-selected-focus));
-          border-bottom: 2px solid var(--primary, #686868);
-        }
+      /* selected focus hovered  */
+      :host([focused])
+        furo-panel-coordinator-tab-item[selected][focused]:hover {
+        background-color: rgba(
+          var(--primary-rgb),
+          var(--state-selected-focused-hover)
+        );
+        border-bottom: 2px solid var(--primary, #686868);
+      }
 
-        /* selected focus hovered  */
-        :host([focused]) furo-panel-coordinator-tab-item[selected][focused]:hover {
-          background-color: rgba(var(--primary-rgb), var(--state-selected-focused-hover));
-          border-bottom: 2px solid var(--primary, #686868);
-        }
+      /* selected focus */
+      :host([focused]) furo-panel-coordinator-tab-item[selected][focused] {
+        background-color: rgba(var(--primary-rgb), var(--state-selected-focus));
+        border-bottom: 2px solid var(--primary, #686868);
+        color: var(--primary);
+      }
 
-        /* selected focus */
-        :host([focused]) furo-panel-coordinator-tab-item[selected][focused] {
-          background-color: rgba(var(--primary-rgb), var(--state-selected-focus));
-          border-bottom: 2px solid var(--primary, #686868);
-          color: var(--primary);
-        }
+      furo-panel-coordinator-tab-item {
+        margin: 0;
+      }
 
-        furo-panel-coordinator-tab-item {
-          margin: 0;
-        }
-
-        :host([hidden]) {
-          display: none;
-        }
-      `
-    );
+      :host([hidden]) {
+        display: none;
+      }
+    `;
   }
 
   /**
@@ -301,11 +304,16 @@ class FuroPanelCoordinatorTabs extends FBP(LitElement) {
     return html`
       <flow-repeat ƒ-inject-items="--itemsInjected" identity-path="id._value">
         <template>
-          <furo-panel-coordinator-tab-item ƒ-bind-data="--init"></furo-panel-coordinator-tab-item>
+          <furo-panel-coordinator-tab-item
+            ƒ-bind-data="--init"
+          ></furo-panel-coordinator-tab-item>
         </template>
       </flow-repeat>
     `;
   }
 }
 
-window.customElements.define('furo-panel-coordinator-tabs', FuroPanelCoordinatorTabs);
+window.customElements.define(
+  'furo-panel-coordinator-tabs',
+  FuroPanelCoordinatorTabs
+);

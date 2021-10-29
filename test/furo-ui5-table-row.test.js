@@ -1,10 +1,11 @@
 import { fixture, html } from '@open-wc/testing';
-import 'axe-core/axe.min.js';
+
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@furo/testhelper/initEnv.js';
+import './initEnv.js';
 import '@furo/data/src/furo-data-object.js';
 import '../src/furo-catalog.js';
+import { assert } from '@esm-bundle/chai';
 
 describe('furo-ui5-data-table', () => {
   let host;

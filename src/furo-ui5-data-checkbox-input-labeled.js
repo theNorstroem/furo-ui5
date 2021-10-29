@@ -71,17 +71,14 @@ export class FuroUi5DataCheckboxInputLabeled extends FBP(LitElement) {
 
   static get styles() {
     // language=CSS
-    return (
-
-      css`
-        :host {
-          display: block;
-        }
-        :host([hidden]) {
-          display: none;
-        }
-      `
-    );
+    return css`
+      :host {
+        display: block;
+      }
+      :host([hidden]) {
+        display: none;
+      }
+    `;
   }
 
   /**
@@ -95,7 +92,10 @@ export class FuroUi5DataCheckboxInputLabeled extends FBP(LitElement) {
       this._FBPTriggerWire('--placeholder', fieldNode._meta.placeholder || '');
     });
 
-    this._FBPTriggerWire('--placeholder', this.placeholder || fieldNode._meta.placeholder || '');
+    this._FBPTriggerWire(
+      '--placeholder',
+      this.placeholder || fieldNode._meta.placeholder || ''
+    );
   }
 
   /**
@@ -106,7 +106,12 @@ export class FuroUi5DataCheckboxInputLabeled extends FBP(LitElement) {
     // language=HTML
     return html`
       <furo-ui5-form-field-container>
-        <ui5-label label slot="label" for="Input" show-colon ?required=${this.required}
+        <ui5-label
+          label
+          slot="label"
+          for="Input"
+          show-colon
+          ?required=${this.required}
           >${this.label}</ui5-label
         >
         <furo-ui5-data-checkbox-input
@@ -125,5 +130,5 @@ export class FuroUi5DataCheckboxInputLabeled extends FBP(LitElement) {
 
 window.customElements.define(
   'furo-ui5-data-checkbox-input-labeled',
-  FuroUi5DataCheckboxInputLabeled,
+  FuroUi5DataCheckboxInputLabeled
 );

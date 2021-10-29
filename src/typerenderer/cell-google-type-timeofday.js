@@ -62,7 +62,9 @@ class CellGoogleTypeTimeofday extends LitElement {
     if (this._field) {
       if (this._field._spec.type !== 'google.type.TimeOfDay') {
         // eslint-disable-next-line no-console
-        console.warn('Invalid fieldNode in bindData. please bind a google.type.TimeOfDay field.');
+        console.warn(
+          'Invalid fieldNode in bindData. please bind a google.type.TimeOfDay field.'
+        );
         return;
       }
       this._field.addEventListener('field-value-changed', () => {
@@ -82,7 +84,7 @@ class CellGoogleTypeTimeofday extends LitElement {
    */
   static _convertDayTimeToString(fieldNode) {
     const date = new Date(
-      `2000-01-01 ${fieldNode.hours._value}:${fieldNode.minutes._value}:${fieldNode.seconds._value}`,
+      `2000-01-01 ${fieldNode.hours._value}:${fieldNode.minutes._value}:${fieldNode.seconds._value}`
     );
 
     // eslint-disable-next-line eqeqeq
@@ -102,7 +104,9 @@ class CellGoogleTypeTimeofday extends LitElement {
    * @private
    */
   _formatCell() {
-    this._displayValue = CellGoogleTypeTimeofday._convertDayTimeToString(this._field);
+    this._displayValue = CellGoogleTypeTimeofday._convertDayTimeToString(
+      this._field
+    );
     this.requestUpdate();
   }
 
@@ -113,10 +117,11 @@ class CellGoogleTypeTimeofday extends LitElement {
    */
   render() {
     // language=HTML
-    return html`
-      ${this._displayValue}
-    `;
+    return html` ${this._displayValue} `;
   }
 }
 
-window.customElements.define('cell-google-type-timeofday', CellGoogleTypeTimeofday);
+window.customElements.define(
+  'cell-google-type-timeofday',
+  CellGoogleTypeTimeofday
+);

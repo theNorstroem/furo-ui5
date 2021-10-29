@@ -6,7 +6,6 @@ import '@ui5/webcomponents-fiori/dist/NotificationListItem.js';
 import '@ui5/webcomponents-fiori/dist/NotificationAction.js';
 import '@ui5/webcomponents/dist/List.js';
 
-
 /**
  * `furo-ui5-notification-group`
  * Lit element
@@ -37,23 +36,28 @@ export class FuroUi5NotificationGroupDisplay extends FBP(LitElement) {
      * the payload message in the event detail should be a grpc status message or a collection of notifications.
      * https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto.
      */
-    this.parentNode.addEventListener('open-furo-ui5-notification-group-requested', e => {
-      e.stopPropagation();
-      this.target = e.detail;
+    this.parentNode.addEventListener(
+      'open-furo-ui5-notification-group-requested',
+      e => {
+        e.stopPropagation();
+        this.target = e.detail;
 
-      if (e.detail.payload && Array.isArray(e.detail.payload)) {
-        this._groupNotifications(e.detail.payload);
+        if (e.detail.payload && Array.isArray(e.detail.payload)) {
+          this._groupNotifications(e.detail.payload);
+        }
       }
-    });
+    );
 
     /**
      * listening the `item-close` event from notification-list-item. when the close button is clicked, close the notification and
      * call the _close function on the target element (furo-ui5-notification).
      */
-    this.shadowRoot.getElementById('ui5-list').addEventListener('item-close', e => {
-      e.detail.item.target._close(e.detail.item.message);
-      e.detail.item.remove();
-    });
+    this.shadowRoot
+      .getElementById('ui5-list')
+      .addEventListener('item-close', e => {
+        e.detail.item.target._close(e.detail.item.message);
+        e.detail.item.remove();
+      });
 
     /**
      * listening the `click` event on the action buttons. when the action button is clicked, close the notification and
@@ -62,7 +66,10 @@ export class FuroUi5NotificationGroupDisplay extends FBP(LitElement) {
     this.shadowRoot.getElementById('ui5-list').addEventListener('click', e => {
       const action = e.target.getAttribute('action');
       if (action) {
-        e.target.notification.target._customAction(action, e.target.notification.message);
+        e.target.notification.target._customAction(
+          action,
+          e.target.notification.message
+        );
         e.target.notification.remove();
       }
     });
@@ -123,7 +130,9 @@ export class FuroUi5NotificationGroupDisplay extends FBP(LitElement) {
     });
 
     Object.keys(groups).forEach(key => {
-      const notificationGroup = document.createElement('ui5-li-notification-group');
+      const notificationGroup = document.createElement(
+        'ui5-li-notification-group'
+      );
       let categoryPriority;
       groups[key].forEach(n => {
         if (!categoryPriority) {
@@ -226,14 +235,11 @@ export class FuroUi5NotificationGroupDisplay extends FBP(LitElement) {
    */
   static get styles() {
     // language=CSS
-    return (
-
-      css`
-        :host {
-          display: block;
-        }
-      `
-    );
+    return css`
+      :host {
+        display: block;
+      }
+    `;
   }
 
   /**
@@ -247,4 +253,7 @@ export class FuroUi5NotificationGroupDisplay extends FBP(LitElement) {
   }
 }
 
-customElements.define('furo-ui5-notification-group-display', FuroUi5NotificationGroupDisplay);
+customElements.define(
+  'furo-ui5-notification-group-display',
+  FuroUi5NotificationGroupDisplay
+);

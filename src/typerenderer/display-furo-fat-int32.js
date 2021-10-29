@@ -20,7 +20,9 @@ import { DisplayInt32 } from './display-int32.js';
 export class DisplayFuroFatInt32 extends DisplayInt32 {
   _formatDisplay() {
     if (this._field.value._value !== null) {
-      const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._field.value._value);
+      const displayValue = new Intl.NumberFormat(Env.locale, {}).format(
+        this._field.value._value
+      );
       if (displayValue !== 'NaN') {
         this._displayValue = displayValue;
         this.requestUpdate();
