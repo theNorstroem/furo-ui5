@@ -6,7 +6,7 @@ export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
     exportConditions: ['browser', 'development'],
   },
   preserveSymlinks: true,
-  rootDir: '../../',
+
   plugins: [
   ],
 

@@ -6,7 +6,7 @@ export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
   /** Test files to run */
   preserveSymlinks: true,
   // in a monorepo you need to set set the root dir to resolve modules
-  rootDir: '../../',
+
   files:'test/**/*.test.js',
   /** Resolve bare module imports */
   nodeResolve: {
