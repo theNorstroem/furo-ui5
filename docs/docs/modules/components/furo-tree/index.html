@@ -1,0 +1,4718 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="tree navigation menu">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-tree" />
+<meta property="og:description" content="tree navigation menu" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://web-components.furo.pro/docs/modules/components/furo-tree/" />
+<meta property="article:modified_time" content="2021-11-03T17:04:45+01:00" />
+<title>furo-tree | フロー Furo UI5</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.7cbeda5f5cf4bb341c4dc7a91bf266e549dd2b748df7ae06315d6dbf1a9ec98d.css" integrity="sha256-fL7aX1z0uzQcTcepG/Jm5UndK3SN964GMV1tvxqeyY0=">
+<script defer src="/en.search.min.8e2ebb3d67001d6438a2e1c308527e5420d1752934fe67b4a8d74a8ce7e4cbaa.js" integrity="sha256-ji67PWcAHWQ4ouHDCFJ&#43;VCDRdSk0/me0qNdKjOfky6o="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+  <link href="/main.css" rel="stylesheet"/>
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー Furo UI5</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-64d0ac0e8a385a6091d238dd382da7cf" class="toggle"  />
+    <label for="section-64d0ac0e8a385a6091d238dd382da7cf" class="flex justify-between">
+      <a href="http://web-components.furo.pro/docs/guides/" class="">Guides</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/guides/gettingstarted/" class="">Getting started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/guides/init/" class="">Init</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/guides/styling/" class="">Work with style vars</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c131070b1e715f28624af5fdfd93165a" class="toggle" checked />
+    <label for="section-c131070b1e715f28624af5fdfd93165a" class="flex justify-between">
+      <a href="http://web-components.furo.pro/docs/modules/" class="">Modules</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be85351562e0cd2cd2733ec326180dff" class="toggle" checked />
+    <label for="section-be85351562e0cd2cd2733ec326180dff" class="flex justify-between">
+      <a href="http://web-components.furo.pro/docs/modules/components/" class="">components</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-chart-display/" class="">furo-chart-display</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-data-chart-binder/" class="">furo-data-chart-binder</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-mini-tabs/" class="">furo-mini-tabs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-panel-coordinator-tab-item/" class="">furo-panel-coordinator-tab-item</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-panel-coordinator-tabs/" class="">furo-panel-coordinator-tabs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-panel-head/" class="">furo-panel-head</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-tree/" class=" active">furo-tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-tree-item/" class="">furo-tree-item</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-busyindicator/" class="">furo-ui5-busyindicator</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-button/" class="">furo-ui5-button</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-card/" class="">furo-ui5-card</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-checkbox-input/" class="">furo-ui5-data-checkbox-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-checkbox-input-labeled/" class="">furo-ui5-data-checkbox-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-collection-dropdown/" class="">furo-ui5-data-collection-dropdown</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-collection-dropdown-labeled/" class="">furo-ui5-data-collection-dropdown-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-date-picker/" class="">furo-ui5-data-date-picker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-date-picker-labeled/" class="">furo-ui5-data-date-picker-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-date-time-picker/" class="">furo-ui5-data-date-time-picker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-date-time-picker-labeled/" class="">furo-ui5-data-date-time-picker-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-display/" class="">furo-ui5-data-display</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-money-input/" class="">furo-ui5-data-money-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-money-input-labeled/" class="">furo-ui5-data-money-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-multi-input/" class="">furo-ui5-data-multi-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-multi-input-labeled/" class="">furo-ui5-data-multi-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-number-input/" class="">furo-ui5-data-number-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-number-input-labeled/" class="">furo-ui5-data-number-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-password-input/" class="">furo-ui5-data-password-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-password-input-labeled/" class="">furo-ui5-data-password-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-property/" class="">furo-ui5-data-property</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-propertylist-display/" class="">furo-ui5-data-propertylist-display</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-radio-button/" class="">furo-ui5-data-radio-button</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-radio-button-group/" class="">furo-ui5-data-radio-button-group</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-reference-search/" class="">furo-ui5-data-reference-search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-reference-search-labeled/" class="">furo-ui5-data-reference-search-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-segmented-button/" class="">furo-ui5-data-segmented-button</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-select/" class="">furo-ui5-data-select</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-select-labeled/" class="">furo-ui5-data-select-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-table/" class="">furo-ui5-data-table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-text-input/" class="">furo-ui5-data-text-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-text-input-labeled/" class="">furo-ui5-data-text-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-textarea-input/" class="">furo-ui5-data-textarea-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-textarea-input-labeled/" class="">furo-ui5-data-textarea-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-time-picker/" class="">furo-ui5-data-time-picker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-time-picker-labeled/" class="">furo-ui5-data-time-picker-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-data-toggle-button/" class="">furo-ui5-data-toggle-button</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-dialog/" class="">furo-ui5-dialog</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-dialog-display/" class="">furo-ui5-dialog-display</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-form-field-container/" class="">furo-ui5-form-field-container</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-header-panel/" class="">furo-ui5-header-panel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-message-strip/" class="">furo-ui5-message-strip</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-message-strip-display/" class="">furo-ui5-message-strip-display</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-notification/" class="">furo-ui5-notification</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-notification-group-display/" class="">furo-ui5-notification-group-display</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-notification-list-display/" class="">furo-ui5-notification-list-display</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-pagination-bar/" class="">furo-ui5-pagination-bar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-radiogroup/" class="">furo-ui5-radiogroup</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/furo-ui5-table-row/" class="">furo-ui5-table-row</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/ui5-reference-search-item/" class="">ui5-reference-search-item</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/CollectionDropdownHelper/" class="">CollectionDropdownHelper</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/spec/" class="">spec</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/components/Ui5LabelDataBinding/" class="">Ui5LabelDataBinding</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6c72e66d5967afc10bd1f6c6be02ed3f" class="toggle"  />
+    <label for="section-6c72e66d5967afc10bd1f6c6be02ed3f" class="flex justify-between">
+      <a href="http://web-components.furo.pro/docs/modules/typerenderer/" class="">typerenderer</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-bool/" class="">cell-bool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-double/" class="">cell-double</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-float/" class="">cell-float</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-fat-bool/" class="">cell-furo-fat-bool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-fat-double/" class="">cell-furo-fat-double</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-fat-float/" class="">cell-furo-fat-float</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-fat-int32/" class="">cell-furo-fat-int32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-fat-int64/" class="">cell-furo-fat-int64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-fat-string/" class="">cell-furo-fat-string</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-fat-uint32/" class="">cell-furo-fat-uint32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-fat-uint64/" class="">cell-furo-fat-uint64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-integerproperty/" class="">cell-furo-integerproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-link/" class="">cell-furo-link</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-numberproperty/" class="">cell-furo-numberproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-property/" class="">cell-furo-property</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-property-repeated/" class="">cell-furo-property-repeated</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-reference/" class="">cell-furo-reference</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-stringoptionproperty/" class="">cell-furo-stringoptionproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-stringproperty/" class="">cell-furo-stringproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-type-date/" class="">cell-furo-type-date</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-furo-type-money/" class="">cell-furo-type-money</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-protobuf-any/" class="">cell-google-protobuf-any</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-protobuf-boolvalue/" class="">cell-google-protobuf-boolvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-protobuf-doublevalue/" class="">cell-google-protobuf-doublevalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-protobuf-floatvalue/" class="">cell-google-protobuf-floatvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-protobuf-int32value/" class="">cell-google-protobuf-int32value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-protobuf-int64value/" class="">cell-google-protobuf-int64value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-protobuf-stringvalue/" class="">cell-google-protobuf-stringvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-protobuf-timestamp/" class="">cell-google-protobuf-timestamp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-protobuf-uint32value/" class="">cell-google-protobuf-uint32value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-protobuf-uint64value/" class="">cell-google-protobuf-uint64value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-type-color/" class="">cell-google-type-color</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-type-date/" class="">cell-google-type-date</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-type-money/" class="">cell-google-type-money</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-google-type-timeofday/" class="">cell-google-type-timeofday</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-int32/" class="">cell-int32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-int64/" class="">cell-int64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-string/" class="">cell-string</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-uint32/" class="">cell-uint32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/cell-uint64/" class="">cell-uint64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-bool/" class="">celledit-bool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-double/" class="">celledit-double</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-float/" class="">celledit-float</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-fat-bool/" class="">celledit-furo-fat-bool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-fat-double/" class="">celledit-furo-fat-double</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-fat-float/" class="">celledit-furo-fat-float</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-fat-int32/" class="">celledit-furo-fat-int32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-fat-int64/" class="">celledit-furo-fat-int64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-fat-string/" class="">celledit-furo-fat-string</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-fat-uint32/" class="">celledit-furo-fat-uint32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-fat-uint64/" class="">celledit-furo-fat-uint64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-integerproperty/" class="">celledit-furo-integerproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-link/" class="">celledit-furo-link</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-numberproperty/" class="">celledit-furo-numberproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-property/" class="">celledit-furo-property</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-property-repeated/" class="">celledit-furo-property-repeated</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-reference/" class="">celledit-furo-reference</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-stringoptionproperty/" class="">celledit-furo-stringoptionproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-stringproperty/" class="">celledit-furo-stringproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-type-date/" class="">celledit-furo-type-date</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-furo-type-money/" class="">celledit-furo-type-money</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-protobuf-any/" class="">celledit-google-protobuf-any</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-protobuf-boolvalue/" class="">celledit-google-protobuf-boolvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-protobuf-doublevalue/" class="">celledit-google-protobuf-doublevalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-protobuf-floatvalue/" class="">celledit-google-protobuf-floatvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-protobuf-int32value/" class="">celledit-google-protobuf-int32value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-protobuf-int64value/" class="">celledit-google-protobuf-int64value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-protobuf-stringvalue/" class="">celledit-google-protobuf-stringvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-protobuf-timestamp/" class="">celledit-google-protobuf-timestamp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-protobuf-uint32value/" class="">celledit-google-protobuf-uint32value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-protobuf-uint64value/" class="">celledit-google-protobuf-uint64value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-type-date/" class="">celledit-google-type-date</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-type-money/" class="">celledit-google-type-money</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-google-type-timeofday/" class="">celledit-google-type-timeofday</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-int32/" class="">celledit-int32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-int64/" class="">celledit-int64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-string/" class="">celledit-string</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-uint32/" class="">celledit-uint32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/celledit-uint64/" class="">celledit-uint64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-bool/" class="">display-bool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-double/" class="">display-double</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-float/" class="">display-float</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-fat-bool/" class="">display-furo-fat-bool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-fat-double/" class="">display-furo-fat-double</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-fat-float/" class="">display-furo-fat-float</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-fat-int32/" class="">display-furo-fat-int32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-fat-int64/" class="">display-furo-fat-int64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-fat-string/" class="">display-furo-fat-string</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-fat-uint32/" class="">display-furo-fat-uint32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-fat-uint64/" class="">display-furo-fat-uint64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-integerproperty/" class="">display-furo-integerproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-link/" class="">display-furo-link</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-numberproperty/" class="">display-furo-numberproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-property/" class="">display-furo-property</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-property-repeated/" class="">display-furo-property-repeated</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-property-repeats-labeled/" class="">display-furo-property-repeats-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-reference/" class="">display-furo-reference</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-stringoptionproperty/" class="">display-furo-stringoptionproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-stringproperty/" class="">display-furo-stringproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-type-date/" class="">display-furo-type-date</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-furo-type-money/" class="">display-furo-type-money</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-protobuf-any/" class="">display-google-protobuf-any</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-protobuf-boolvalue/" class="">display-google-protobuf-boolvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-protobuf-doublevalue/" class="">display-google-protobuf-doublevalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-protobuf-floatvalue/" class="">display-google-protobuf-floatvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-protobuf-int32value/" class="">display-google-protobuf-int32value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-protobuf-int64value/" class="">display-google-protobuf-int64value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-protobuf-stringvalue/" class="">display-google-protobuf-stringvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-protobuf-timestamp/" class="">display-google-protobuf-timestamp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-protobuf-uint32value/" class="">display-google-protobuf-uint32value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-protobuf-uint64value/" class="">display-google-protobuf-uint64value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-type-color/" class="">display-google-type-color</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-type-date/" class="">display-google-type-date</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-type-money/" class="">display-google-type-money</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-google-type-timeofday/" class="">display-google-type-timeofday</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-int32/" class="">display-int32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-int64/" class="">display-int64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-string/" class="">display-string</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-uint32/" class="">display-uint32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/display-uint64/" class="">display-uint64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-bool/" class="">form-bool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-double/" class="">form-double</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-float/" class="">form-float</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-fat-bool/" class="">form-furo-fat-bool</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-fat-double/" class="">form-furo-fat-double</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-fat-float/" class="">form-furo-fat-float</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-fat-int32/" class="">form-furo-fat-int32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-fat-int64/" class="">form-furo-fat-int64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-fat-string/" class="">form-furo-fat-string</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-fat-uint32/" class="">form-furo-fat-uint32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-fat-uint64/" class="">form-furo-fat-uint64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-integerproperty/" class="">form-furo-integerproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-numberproperty/" class="">form-furo-numberproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-reference/" class="">form-furo-reference</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-stringoptionproperty/" class="">form-furo-stringoptionproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-stringproperty/" class="">form-furo-stringproperty</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-type-date/" class="">form-furo-type-date</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-furo-type-money/" class="">form-furo-type-money</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-google-protobuf-boolvalue/" class="">form-google-protobuf-boolvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-google-protobuf-doublevalue/" class="">form-google-protobuf-doublevalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-google-protobuf-floatvalue/" class="">form-google-protobuf-floatvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-google-protobuf-int32value/" class="">form-google-protobuf-int32value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-google-protobuf-int64value/" class="">form-google-protobuf-int64value</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-google-protobuf-stringvalue/" class="">form-google-protobuf-stringvalue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-google-protobuf-timestamp/" class="">form-google-protobuf-timestamp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-google-type-date/" class="">form-google-type-date</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-google-type-money/" class="">form-google-type-money</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-google-type-timeofday/" class="">form-google-type-timeofday</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-int32/" class="">form-int32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-int64/" class="">form-int64</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-string/" class="">form-string</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-uint32/" class="">form-uint32</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/modules/typerenderer/form-uint64/" class="">form-uint64</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://web-components.furo.pro/docs/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>furo-tree</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#attributes-and-properties">Attributes and Properties</a>
+      <ul>
+        <li><a href="#tabindex"><strong>tabindex</strong></a></li>
+        <li><a href="#_searchterm"><strong>_searchTerm</strong></a></li>
+        <li><a href="#expanddepth"><strong>expandDepth</strong></a></li>
+        <li><a href="#_searchisactive"><strong>_searchIsActive</strong></a></li>
+        <li><a href="#treeitemcomponent"><strong>treeItemComponent</strong></a></li>
+        <li><a href="#_treeitemtepmplate"><strong>_treeItemTepmplate</strong></a></li>
+        <li><a href="#depth"><strong>depth</strong></a></li>
+        <li><a href="#qp"><strong>qp</strong></a></li>
+        <li><a href="#rootasheader"><strong>rootAsHeader</strong></a></li>
+        <li><a href="#hiderootnode"><strong>hideRootNode</strong></a></li>
+        <li><a href="#headertext"><strong>headerText</strong></a></li>
+        <li><a href="#secondarytext"><strong>secondaryText</strong></a></li>
+        <li><a href="#nobgonhead"><strong>nobgonhead</strong></a></li>
+        <li><a href="#focused"><strong>focused</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#events">Events</a>
+      <ul>
+        <li><a href="#node-focused"><strong>node-focused</strong></a></li>
+        <li><a href="#branch-focused"><strong>branch-focused</strong></a></li>
+        <li><a href="#leaf-focused"><strong>leaf-focused</strong></a></li>
+        <li><a href="#node-selected"><strong>node-selected</strong></a></li>
+        <li><a href="#qp-change-requested"><strong>qp-change-requested</strong></a></li>
+        <li><a href="#branch-selected"><strong>branch-selected</strong></a></li>
+        <li><a href="#leaf-selected"><strong>leaf-selected</strong></a></li>
+        <li><a href="#node-opened"><strong>node-opened</strong></a></li>
+        <li><a href="#node-closed"><strong>node-closed</strong></a></li>
+        <li><a href="#nodes-expanded"><strong>nodes-expanded</strong></a></li>
+        <li><a href="#nodes-collapsed"><strong>nodes-collapsed</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#methods">Methods</a>
+      <ul>
+        <li><a href="#collapsefocused"><strong>collapseFocused</strong></a></li>
+        <li><a href="#expandfocused"><strong>expandFocused</strong></a></li>
+        <li><a href="#expandfocusedrecursive"><strong>expandFocusedRecursive</strong></a></li>
+        <li><a href="#collapsefocusedrecursive"><strong>collapseFocusedRecursive</strong></a></li>
+        <li><a href="#selectfocused"><strong>selectFocused</strong></a></li>
+        <li><a href="#search"><strong>search</strong></a></li>
+        <li><a href="#searchopentree"><strong>searchOpenTree</strong></a></li>
+        <li><a href="#_resetsearch"><strong>_resetSearch</strong></a></li>
+        <li><a href="#_updatesearchmatchattributesonitems"><strong>_updateSearchmatchAttributesOnItems</strong></a></li>
+        <li><a href="#focusparent"><strong>focusParent</strong></a></li>
+        <li><a href="#focusprevious"><strong>focusPrevious</strong></a></li>
+        <li><a href="#qpin"><strong>qpIn</strong></a></li>
+        <li><a href="#locationin"><strong>locationIn</strong></a></li>
+        <li><a href="#selectbyid"><strong>selectById</strong></a></li>
+        <li><a href="#selectprev"><strong>selectPrev</strong></a></li>
+        <li><a href="#expandnoderecursive"><strong>expandNodeRecursive</strong></a></li>
+        <li><a href="#expandall"><strong>expandAll</strong></a></li>
+        <li><a href="#collapseall"><strong>collapseAll</strong></a></li>
+        <li><a href="#collapsenoderecursive"><strong>collapseNodeRecursive</strong></a></li>
+        <li><a href="#toggle"><strong>toggle</strong></a></li>
+        <li><a href="#addsubnode"><strong>addSubNode</strong></a></li>
+        <li><a href="#deletenode"><strong>deleteNode</strong></a></li>
+        <li><a href="#selectnext"><strong>selectNext</strong></a></li>
+        <li><a href="#triggernavigation"><strong>triggerNavigation</strong></a></li>
+        <li><a href="#focusfirst"><strong>focusFirst</strong></a></li>
+        <li><a href="#focuslast"><strong>focusLast</strong></a></li>
+        <li><a href="#focusnext"><strong>focusNext</strong></a></li>
+        <li><a href="#focus"><strong>focus</strong></a></li>
+        <li><a href="#binddata"><strong>bindData</strong></a></li>
+        <li><a href="#_settitle"><strong>_setTitle</strong></a></li>
+        <li><a href="#focusselected"><strong>focusSelected</strong></a></li>
+        <li><a href="#_init"><strong>_init</strong></a></li>
+        <li><a href="#_initfocusandselectevents"><strong>_initFocusAndSelectEvents</strong></a></li>
+        <li><a href="#_buildflattree"><strong>_buildFlatTree</strong></a></li>
+        <li><a href="#_parsetreerecursive"><strong>_parseTreeRecursive</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#styling">Styling</a></li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="furo-tree">
+  furo-tree
+  <a class="anchor" href="#furo-tree">#</a>
+</h1>
+<p><strong>@furo/components</strong> <small>v1.0.0-alpha.2</small>
+<br><code>import '@furo/components/src/furo-tree.js';</code><small>
+<br>exports <em>FuroTree</em> js
+<br>exports <code>&lt;furo-tree&gt;</code> custom-element-definition
+<br>superclass <em>LitElement</em>
+<br> mixes <em>FBP</em></small></p>
+<p><strong>tree navigation menu</strong></p>
+<p><code>furo-tree</code>
+renders a tree structure</p>
+<h2 id="attributes-and-properties">
+  Attributes and Properties
+  <a class="anchor" href="#attributes-and-properties">#</a>
+</h2>
+<h3 id="tabindex">
+  <strong>tabindex</strong>
+  <a class="anchor" href="#tabindex">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">tabindex</span> <small><strong>reflects</strong></small>
+<small><code>number</code> default: <strong>0</strong></small></p>
+<p>Sets the tabindex
+<br><br></p>
+<h3 id="_searchterm">
+  <strong>_searchTerm</strong>
+  <a class="anchor" href="#_searchterm">#</a>
+</h3>
+<p>default: <strong>''</strong></small></p>
+<p><br><br></p>
+<h3 id="expanddepth">
+  <strong>expandDepth</strong>
+  <a class="anchor" href="#expanddepth">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">expand-depth</span>
+<small><code>number</code> default: <strong>2</strong></small></p>
+<p>Sets the maximal expand level relative from the current node.</p>
+<p>Expanding is a expensive operation.
+<br><br></p>
+<h3 id="_searchisactive">
+  <strong>_searchIsActive</strong>
+  <a class="anchor" href="#_searchisactive">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">searching</span> <small><strong>reflects</strong></small>
+<small><code>boolean</code> default: <strong>false</strong></small></p>
+<p>indicator for searching. Maybe you want style your item depending on this attribute
+<br><br></p>
+<h3 id="treeitemcomponent">
+  <strong>treeItemComponent</strong>
+  <a class="anchor" href="#treeitemcomponent">#</a>
+</h3>
+</small>
+<p>If you want to use a custom component for the tree-item, set this attribute.
+The default item component is <strong>furo-tree-item</strong>.
+<br><br></p>
+<h3 id="_treeitemtepmplate">
+  <strong>_treeItemTepmplate</strong>
+  <a class="anchor" href="#_treeitemtepmplate">#</a>
+</h3>
+</small>
+<p><br><br></p>
+<h3 id="depth">
+  <strong>depth</strong>
+  <a class="anchor" href="#depth">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">depth</span>
+</small></p>
+<p>Maximal depth for the tree. Default is infinite.
+<br><br></p>
+<h3 id="qp">
+  <strong>qp</strong>
+  <a class="anchor" href="#qp">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">qp</span>
+</small></p>
+<p>Query param to watch. If you set this attribute, the node-selected event will only be fired on <code>ƒ-qp-in</code> or <code>ƒ-select-by-id</code>.
+If you select an item the <code>qp-change-request</code> will be fired.
+<br><br></p>
+<h3 id="rootasheader">
+  <strong>rootAsHeader</strong>
+  <a class="anchor" href="#rootasheader">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">root-as-header</span>
+</small></p>
+<p>Set this flag if you do not want a header-text section.
+<br><br></p>
+<h3 id="hiderootnode">
+  <strong>hideRootNode</strong>
+  <a class="anchor" href="#hiderootnode">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">hide-root-node</span>
+</small></p>
+<p>Set this flag if you do not want to see the root node
+<br><br></p>
+<h3 id="headertext">
+  <strong>headerText</strong>
+  <a class="anchor" href="#headertext">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-text</span>
+</small></p>
+<p>Override display name from root object
+<br><br></p>
+<h3 id="secondarytext">
+  <strong>secondaryText</strong>
+  <a class="anchor" href="#secondarytext">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">secondary-text</span>
+</small></p>
+<p>Override description from root object.
+<br><br></p>
+<h3 id="nobgonhead">
+  <strong>nobgonhead</strong>
+  <a class="anchor" href="#nobgonhead">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-bg-on-header</span>
+</small></p>
+<p>disables the background color on focus, selected, &hellip; on header node</p>
+<p>Works only with <code>root-as-header</code> enabled
+<br><br></p>
+<h3 id="focused">
+  <strong>focused</strong>
+  <a class="anchor" href="#focused">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">focused</span> <small><strong>reflects</strong></small>
+</small></p>
+<p>indicates that the element is focused
+<br><br></p>
+<h2 id="events">
+  Events
+  <a class="anchor" href="#events">#</a>
+</h2>
+<h3 id="node-focused">
+  <strong>node-focused</strong>
+  <a class="anchor" href="#node-focused">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-focused</span>
+→ <small><code>focused field</code></small></p>
+<p>Fired when
+<br><br></p>
+<h3 id="branch-focused">
+  <strong>branch-focused</strong>
+  <a class="anchor" href="#branch-focused">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-branch-focused</span>
+→ <small><code>focused field</code></small></p>
+<p>Fired when
+<br><br></p>
+<h3 id="leaf-focused">
+  <strong>leaf-focused</strong>
+  <a class="anchor" href="#leaf-focused">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-leaf-focused</span>
+→ <small>``</small></p>
+<p>Fired when
+<br><br></p>
+<h3 id="node-selected">
+  <strong>node-selected</strong>
+  <a class="anchor" href="#node-selected">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-selected</span>
+→ <small><code>selected field</code></small></p>
+<p>Fired when the item gets selected, does not fire when you work with query params
+<br><br></p>
+<h3 id="qp-change-requested">
+  <strong>qp-change-requested</strong>
+  <a class="anchor" href="#qp-change-requested">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-qp-change-requested</span>
+→ <small><code>Object {&amp;#34;this.qp&amp;#34;: this._selectedField.id._value}</code></small></p>
+<p>Fired when qp mode is enabled. Nodes are only selectable with qpIn or selectById
+<br><br></p>
+<h3 id="branch-selected">
+  <strong>branch-selected</strong>
+  <a class="anchor" href="#branch-selected">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-branch-selected</span>
+→ <small><code>selected field</code></small></p>
+<p>Fired when
+<br><br></p>
+<h3 id="leaf-selected">
+  <strong>leaf-selected</strong>
+  <a class="anchor" href="#leaf-selected">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-leaf-selected</span>
+→ <small><code>selected field</code></small></p>
+<p>Fired when
+<br><br></p>
+<h3 id="node-opened">
+  <strong>node-opened</strong>
+  <a class="anchor" href="#node-opened">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-opened</span>
+→ <small>``</small></p>
+<p>Fired when a node is opened
+<br><br></p>
+<h3 id="node-closed">
+  <strong>node-closed</strong>
+  <a class="anchor" href="#node-closed">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-closed</span>
+→ <small>``</small></p>
+<p>Fired when a node is closed
+<br><br></p>
+<h3 id="nodes-expanded">
+  <strong>nodes-expanded</strong>
+  <a class="anchor" href="#nodes-expanded">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-nodes-expanded</span>
+→ <small>``</small></p>
+<p>Fired when nodes are expanded recursive
+<br><br></p>
+<h3 id="nodes-collapsed">
+  <strong>nodes-collapsed</strong>
+  <a class="anchor" href="#nodes-collapsed">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-nodes-collapsed</span>
+→ <small>``</small></p>
+<p>Fired when nodes are collapsed recursive.
+<br><br></p>
+<h2 id="methods">
+  Methods
+  <a class="anchor" href="#methods">#</a>
+</h2>
+<h3 id="collapsefocused">
+  <strong>collapseFocused</strong>
+  <a class="anchor" href="#collapsefocused">#</a>
+</h3>
+<p><small><strong>collapseFocused</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-focused</span></p>
+<p>collapses the focused element. If it is closed the parent will be focused.</p>
+<p><br><br></p>
+<h3 id="expandfocused">
+  <strong>expandFocused</strong>
+  <a class="anchor" href="#expandfocused">#</a>
+</h3>
+<p><small><strong>expandFocused</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-focused</span></p>
+<p>expands the focused node, if it is opened the first child will be focused</p>
+<p><br><br></p>
+<h3 id="expandfocusedrecursive">
+  <strong>expandFocusedRecursive</strong>
+  <a class="anchor" href="#expandfocusedrecursive">#</a>
+</h3>
+<p><small><strong>expandFocusedRecursive</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-focused-recursive</span></p>
+<p>expands the focused node recursive</p>
+<p><br><br></p>
+<h3 id="collapsefocusedrecursive">
+  <strong>collapseFocusedRecursive</strong>
+  <a class="anchor" href="#collapsefocusedrecursive">#</a>
+</h3>
+<p><small><strong>collapseFocusedRecursive</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-focused-recursive</span></p>
+<p>collapses the focused node recursive</p>
+<p><br><br></p>
+<h3 id="selectfocused">
+  <strong>selectFocused</strong>
+  <a class="anchor" href="#selectfocused">#</a>
+</h3>
+<p><small><strong>selectFocused</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-focused</span></p>
+<p>selects the focused element.</p>
+<p><br><br></p>
+<h3 id="search">
+  <strong>search</strong>
+  <a class="anchor" href="#search">#</a>
+</h3>
+<p><small><strong>search</strong>(<em>term</em> `` ) ⟹ <code>[]</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-search</span></p>
+<p>Search in the visible nodes</p>
+<ul>
+<li><small>term </small>
+<br><br></li>
+</ul>
+<h3 id="searchopentree">
+  <strong>searchOpenTree</strong>
+  <a class="anchor" href="#searchopentree">#</a>
+</h3>
+<p><small><strong>searchOpenTree</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-search-open-tree</span></p>
+<p><br><br></p>
+<h3 id="_resetsearch">
+  <strong>_resetSearch</strong>
+  <a class="anchor" href="#_resetsearch">#</a>
+</h3>
+<p><small><strong>_resetSearch</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;reset-search</span></p>
+<p><br><br></p>
+<h3 id="_updatesearchmatchattributesonitems">
+  <strong>_updateSearchmatchAttributesOnItems</strong>
+  <a class="anchor" href="#_updatesearchmatchattributesonitems">#</a>
+</h3>
+<p><small><strong>_updateSearchmatchAttributesOnItems</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;update-searchmatch-attributes-on-items</span></p>
+<p><br><br></p>
+<h3 id="focusparent">
+  <strong>focusParent</strong>
+  <a class="anchor" href="#focusparent">#</a>
+</h3>
+<p><small><strong>focusParent</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-parent</span></p>
+<p>Focuses the parent tree node without selecting it.</p>
+<p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
+<p><br><br></p>
+<h3 id="focusprevious">
+  <strong>focusPrevious</strong>
+  <a class="anchor" href="#focusprevious">#</a>
+</h3>
+<p><small><strong>focusPrevious</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-previous</span></p>
+<p>focus the previous visible node.</p>
+<p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
+<p><br><br></p>
+<h3 id="qpin">
+  <strong>qpIn</strong>
+  <a class="anchor" href="#qpin">#</a>
+</h3>
+<p><small><strong>qpIn</strong>(<em>qpObject</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-qp-in</span></p>
+<ul>
+<li><small>qpObject </small>
+<br><br></li>
+</ul>
+<h3 id="locationin">
+  <strong>locationIn</strong>
+  <a class="anchor" href="#locationin">#</a>
+</h3>
+<p><small><strong>locationIn</strong>(<em>locationObject</em> `` ) ⟹ <code>*|boolean</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-location-in</span></p>
+<p>Inject a location object, which contains a query param property to select the current node.</p>
+<ul>
+<li><small>locationObject </small>
+<br><br></li>
+</ul>
+<h3 id="selectbyid">
+  <strong>selectById</strong>
+  <a class="anchor" href="#selectbyid">#</a>
+</h3>
+<p><small><strong>selectById</strong>(<em>nodeID</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-by-id</span></p>
+<ul>
+<li><small>nodeID </small>
+<br><br></li>
+</ul>
+<h3 id="selectprev">
+  <strong>selectPrev</strong>
+  <a class="anchor" href="#selectprev">#</a>
+</h3>
+<p><small><strong>selectPrev</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-prev</span></p>
+<p>select the previous visible item</p>
+<p><br><br></p>
+<h3 id="expandnoderecursive">
+  <strong>expandNodeRecursive</strong>
+  <a class="anchor" href="#expandnoderecursive">#</a>
+</h3>
+<p><small><strong>expandNodeRecursive</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-node-recursive</span></p>
+<p>expands the currently selected node recursive</p>
+<p><br><br></p>
+<h3 id="expandall">
+  <strong>expandAll</strong>
+  <a class="anchor" href="#expandall">#</a>
+</h3>
+<p><small><strong>expandAll</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-all</span></p>
+<p><br><br></p>
+<h3 id="collapseall">
+  <strong>collapseAll</strong>
+  <a class="anchor" href="#collapseall">#</a>
+</h3>
+<p><small><strong>collapseAll</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-all</span></p>
+<p><br><br></p>
+<h3 id="collapsenoderecursive">
+  <strong>collapseNodeRecursive</strong>
+  <a class="anchor" href="#collapsenoderecursive">#</a>
+</h3>
+<p><small><strong>collapseNodeRecursive</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-node-recursive</span></p>
+<p>expands the currently selected node recursive</p>
+<p><br><br></p>
+<h3 id="toggle">
+  <strong>toggle</strong>
+  <a class="anchor" href="#toggle">#</a>
+</h3>
+<p><small><strong>toggle</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-toggle</span></p>
+<p>toggles the currently selected node</p>
+<p><br><br></p>
+<h3 id="addsubnode">
+  <strong>addSubNode</strong>
+  <a class="anchor" href="#addsubnode">#</a>
+</h3>
+<p><small><strong>addSubNode</strong>(<em>rawNode</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-add-sub-node</span></p>
+<ul>
+<li><small>rawNode </small>
+<br><br></li>
+</ul>
+<h3 id="deletenode">
+  <strong>deleteNode</strong>
+  <a class="anchor" href="#deletenode">#</a>
+</h3>
+<p><small><strong>deleteNode</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-delete-node</span></p>
+<p><br><br></p>
+<h3 id="selectnext">
+  <strong>selectNext</strong>
+  <a class="anchor" href="#selectnext">#</a>
+</h3>
+<p><small><strong>selectNext</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-next</span></p>
+<p>select the next visible item</p>
+<p><br><br></p>
+<h3 id="triggernavigation">
+  <strong>triggerNavigation</strong>
+  <a class="anchor" href="#triggernavigation">#</a>
+</h3>
+<p><small><strong>triggerNavigation</strong>(<em>key</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-trigger-navigation</span></p>
+<ul>
+<li><small>key </small>
+<br><br></li>
+</ul>
+<h3 id="focusfirst">
+  <strong>focusFirst</strong>
+  <a class="anchor" href="#focusfirst">#</a>
+</h3>
+<p><small><strong>focusFirst</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-first</span></p>
+<p>Focuses the first node in the tree without selecting it.</p>
+<p>Use selectFocused to select the focused node.</p>
+<p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
+<p><br><br></p>
+<h3 id="focuslast">
+  <strong>focusLast</strong>
+  <a class="anchor" href="#focuslast">#</a>
+</h3>
+<p><small><strong>focusLast</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-last</span></p>
+<p>Focuses the last node in the tree without selecting it.</p>
+<p>Use selectFocused to select the focused node.</p>
+<p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
+<p><br><br></p>
+<h3 id="focusnext">
+  <strong>focusNext</strong>
+  <a class="anchor" href="#focusnext">#</a>
+</h3>
+<p><small><strong>focusNext</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-next</span></p>
+<p>focuses the next visible tree node.</p>
+<p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
+<p><br><br></p>
+<h3 id="focus">
+  <strong>focus</strong>
+  <a class="anchor" href="#focus">#</a>
+</h3>
+<p><small><strong>focus</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span></p>
+<p>focuses the tree itself. You can use this in combination with keyboard navigation (furo-navigation-pad)</p>
+<p><br><br></p>
+<h3 id="binddata">
+  <strong>bindData</strong>
+  <a class="anchor" href="#binddata">#</a>
+</h3>
+<p><small><strong>bindData</strong>(<em>treeNode</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span></p>
+<p>Binds a FieldNode with a tree signature.</p>
+<p>A sample and usable signature can be found in ./specs/</p>
+<ul>
+<li><small>treeNode </small>
+<br><br></li>
+</ul>
+<h3 id="_settitle">
+  <strong>_setTitle</strong>
+  <a class="anchor" href="#_settitle">#</a>
+</h3>
+<p><small><strong>_setTitle</strong>(<em>treeNode</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;set-title</span></p>
+<ul>
+<li><small>treeNode </small>
+<br><br></li>
+</ul>
+<h3 id="focusselected">
+  <strong>focusSelected</strong>
+  <a class="anchor" href="#focusselected">#</a>
+</h3>
+<p><small><strong>focusSelected</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-selected</span></p>
+<p>Focuses the currently selected tree item.</p>
+<p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
+<p><br><br></p>
+<h3 id="_init">
+  <strong>_init</strong>
+  <a class="anchor" href="#_init">#</a>
+</h3>
+<p><small><strong>_init</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;init</span></p>
+<p><br><br></p>
+<h3 id="_initfocusandselectevents">
+  <strong>_initFocusAndSelectEvents</strong>
+  <a class="anchor" href="#_initfocusandselectevents">#</a>
+</h3>
+<p><small><strong>_initFocusAndSelectEvents</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;init-focus-and-select-events</span></p>
+<p><br><br></p>
+<h3 id="_buildflattree">
+  <strong>_buildFlatTree</strong>
+  <a class="anchor" href="#_buildflattree">#</a>
+</h3>
+<p><small><strong>_buildFlatTree</strong>(<em>tree</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;build-flat-tree</span></p>
+<ul>
+<li><small>tree </small>
+<br><br></li>
+</ul>
+<h3 id="_parsetreerecursive">
+  <strong>_parseTreeRecursive</strong>
+  <a class="anchor" href="#_parsetreerecursive">#</a>
+</h3>
+<p><small><strong>_parseTreeRecursive</strong>(<em>tree</em> <code>*level*</code> <em>maxdepth</em> `` ) ⟹ <code>void</code></small></p>
+<p><small><code> </code> `` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;parse-tree-recursive</span></p>
+<ul>
+<li><small>tree </small></li>
+<li><small>level </small></li>
+<li><small>maxdepth </small>
+<br><br></li>
+</ul>
+<h2 id="styling">
+  Styling
+  <a class="anchor" href="#styling">#</a>
+</h2>
+<p>The following custom properties  available for styling:</p>
+<table>
+<thead>
+<tr>
+<th>Custom property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--surface</code></td>
+<td>background color <hr> <small>default: <code>white</code></small> <small>fallback: <code>N/A</code></small></td>
+</tr>
+<tr>
+<td><code>--on-surface</code></td>
+<td>foreground color <hr> <small>default: <code>#333333</code></small> <small>fallback: <code>N/A</code></small></td>
+</tr>
+</tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/d7c10a139670cf5ba5491917a0a5e49b5f9ebc4b" title='Last modified by veith | November 3, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>November 3, 2021</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#attributes-and-properties">Attributes and Properties</a>
+      <ul>
+        <li><a href="#tabindex"><strong>tabindex</strong></a></li>
+        <li><a href="#_searchterm"><strong>_searchTerm</strong></a></li>
+        <li><a href="#expanddepth"><strong>expandDepth</strong></a></li>
+        <li><a href="#_searchisactive"><strong>_searchIsActive</strong></a></li>
+        <li><a href="#treeitemcomponent"><strong>treeItemComponent</strong></a></li>
+        <li><a href="#_treeitemtepmplate"><strong>_treeItemTepmplate</strong></a></li>
+        <li><a href="#depth"><strong>depth</strong></a></li>
+        <li><a href="#qp"><strong>qp</strong></a></li>
+        <li><a href="#rootasheader"><strong>rootAsHeader</strong></a></li>
+        <li><a href="#hiderootnode"><strong>hideRootNode</strong></a></li>
+        <li><a href="#headertext"><strong>headerText</strong></a></li>
+        <li><a href="#secondarytext"><strong>secondaryText</strong></a></li>
+        <li><a href="#nobgonhead"><strong>nobgonhead</strong></a></li>
+        <li><a href="#focused"><strong>focused</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#events">Events</a>
+      <ul>
+        <li><a href="#node-focused"><strong>node-focused</strong></a></li>
+        <li><a href="#branch-focused"><strong>branch-focused</strong></a></li>
+        <li><a href="#leaf-focused"><strong>leaf-focused</strong></a></li>
+        <li><a href="#node-selected"><strong>node-selected</strong></a></li>
+        <li><a href="#qp-change-requested"><strong>qp-change-requested</strong></a></li>
+        <li><a href="#branch-selected"><strong>branch-selected</strong></a></li>
+        <li><a href="#leaf-selected"><strong>leaf-selected</strong></a></li>
+        <li><a href="#node-opened"><strong>node-opened</strong></a></li>
+        <li><a href="#node-closed"><strong>node-closed</strong></a></li>
+        <li><a href="#nodes-expanded"><strong>nodes-expanded</strong></a></li>
+        <li><a href="#nodes-collapsed"><strong>nodes-collapsed</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#methods">Methods</a>
+      <ul>
+        <li><a href="#collapsefocused"><strong>collapseFocused</strong></a></li>
+        <li><a href="#expandfocused"><strong>expandFocused</strong></a></li>
+        <li><a href="#expandfocusedrecursive"><strong>expandFocusedRecursive</strong></a></li>
+        <li><a href="#collapsefocusedrecursive"><strong>collapseFocusedRecursive</strong></a></li>
+        <li><a href="#selectfocused"><strong>selectFocused</strong></a></li>
+        <li><a href="#search"><strong>search</strong></a></li>
+        <li><a href="#searchopentree"><strong>searchOpenTree</strong></a></li>
+        <li><a href="#_resetsearch"><strong>_resetSearch</strong></a></li>
+        <li><a href="#_updatesearchmatchattributesonitems"><strong>_updateSearchmatchAttributesOnItems</strong></a></li>
+        <li><a href="#focusparent"><strong>focusParent</strong></a></li>
+        <li><a href="#focusprevious"><strong>focusPrevious</strong></a></li>
+        <li><a href="#qpin"><strong>qpIn</strong></a></li>
+        <li><a href="#locationin"><strong>locationIn</strong></a></li>
+        <li><a href="#selectbyid"><strong>selectById</strong></a></li>
+        <li><a href="#selectprev"><strong>selectPrev</strong></a></li>
+        <li><a href="#expandnoderecursive"><strong>expandNodeRecursive</strong></a></li>
+        <li><a href="#expandall"><strong>expandAll</strong></a></li>
+        <li><a href="#collapseall"><strong>collapseAll</strong></a></li>
+        <li><a href="#collapsenoderecursive"><strong>collapseNodeRecursive</strong></a></li>
+        <li><a href="#toggle"><strong>toggle</strong></a></li>
+        <li><a href="#addsubnode"><strong>addSubNode</strong></a></li>
+        <li><a href="#deletenode"><strong>deleteNode</strong></a></li>
+        <li><a href="#selectnext"><strong>selectNext</strong></a></li>
+        <li><a href="#triggernavigation"><strong>triggerNavigation</strong></a></li>
+        <li><a href="#focusfirst"><strong>focusFirst</strong></a></li>
+        <li><a href="#focuslast"><strong>focusLast</strong></a></li>
+        <li><a href="#focusnext"><strong>focusNext</strong></a></li>
+        <li><a href="#focus"><strong>focus</strong></a></li>
+        <li><a href="#binddata"><strong>bindData</strong></a></li>
+        <li><a href="#_settitle"><strong>_setTitle</strong></a></li>
+        <li><a href="#focusselected"><strong>focusSelected</strong></a></li>
+        <li><a href="#_init"><strong>_init</strong></a></li>
+        <li><a href="#_initfocusandselectevents"><strong>_initFocusAndSelectEvents</strong></a></li>
+        <li><a href="#_buildflattree"><strong>_buildFlatTree</strong></a></li>
+        <li><a href="#_parsetreerecursive"><strong>_parseTreeRecursive</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#styling">Styling</a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.5.12/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.5.12/dist/furo-fbp.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

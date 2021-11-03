@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guides on フロー Furo UI5</title>
+    <link>http://web-components.furo.pro/docs/guides/</link>
+    <description>Recent content in Guides on フロー Furo UI5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://web-components.furo.pro/docs/guides/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting started</title>
+      <link>http://web-components.furo.pro/docs/guides/gettingstarted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://web-components.furo.pro/docs/guides/gettingstarted/</guid>
+      <description>Getting Started #   define your specs init &amp;hellip;  </description>
+    </item>
+    
+    <item>
+      <title>Init</title>
+      <link>http://web-components.furo.pro/docs/guides/init/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://web-components.furo.pro/docs/guides/init/</guid>
+      <description>Environment #  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  // -- initialize application env, theme, api and icons  import {Init, i18n, Env, Iconset} from &amp;#34;@furo/framework/src/furo.js&amp;#34; import {Theme} from &amp;#34;@furo/framework/src/theme.js&amp;#34; import {Services, Types} from &amp;#34;@furo/spec-restapi/api/src/api_spec.js //Attention: Styling is defined in main-stage import {Themeset} from &amp;#34;./my_fancy_theme&amp;#34; import {Translations} from &amp;#34;./translations&amp;#34;; // import custom demo svg icons which are defined in demo-icons.</description>
+    </item>
+    
+    <item>
+      <title>Work with style vars</title>
+      <link>http://web-components.furo.pro/docs/guides/styling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://web-components.furo.pro/docs/guides/styling/</guid>
+      <description>Styling #  We differ theming and styling. Themes are in regular a rewrite of the components css and can contain style vars. We do not use mixins as long they are not &amp;lsquo;standard&amp;rsquo;. Styling is used to set style vars like &amp;ndash;primary. They give you the possibility to configure your themes in a simple way. Components which are using theming, give you full control over the css.
+ The color system supports 12 categories of color that can be applied to components, text, icons, and surfaces.</description>
+    </item>
+    
+  </channel>
+</rss>
