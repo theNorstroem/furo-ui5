@@ -1,7 +1,7 @@
 export default {
   plugins: [
     {
-      name: 'furo',
+      name: 'ui5',
       // Runs for all modules in a project, before continuing to the analyzePhase
       collectPhase({js, node, context}){},
       // Runs for each module

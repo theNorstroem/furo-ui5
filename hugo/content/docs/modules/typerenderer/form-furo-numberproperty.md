@@ -1,0 +1,50 @@
+---
+title: form-furo-numberproperty
+description: form renderer for furo.Integerproperty
+weight: 50
+---
+
+# form-furo-numberproperty
+**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+<br>`import '@furo/typerenderer/src/form-furo-numberproperty.js';`<small>
+<br>exports `<form-furo-numberproperty>` custom-element-definition
+<br>extends */src/typerenderer/form-int32.js*
+<br>superclass *FormInt32*</small>
+
+{{% api "_form-furo-numberproperty-head.md" %}}
+
+**form renderer for furo.Integerproperty**
+
+`form-furo-integerproperty` is a `form` context renderer.
+
+It uses furo-ui5-data-number-input as the renderer
+
+{{% api "_form-furo-numberproperty-description.md" %}}
+
+
+## Attributes and Properties
+{{% api "_form-furo-numberproperty-properties.md" %}}
+
+
+
+
+## Methods
+{{% api "_form-furo-numberproperty-methods.md" %}}
+
+
+### **bindData**
+<small>**bindData**(*fieldNode* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+
+
+
+- <small>fieldNode </small>
+<br><br>
+
+
+
+
+{{% api "_form-furo-numberproperty-footer.md" %}}
+{{% api "_form-furo-numberproperty-scripts.md" %}}
