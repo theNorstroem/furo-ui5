@@ -9008,48 +9008,6 @@
               "description": "the event `message-strip-closed` will be sent with payload when the MessageStrip is closed"
             },
             {
-              "kind": "field",
-              "name": "noCloseButton",
-              "parameters": [
-                {
-                  "name": "b"
-                }
-              ],
-              "description": "Defines whether the MessageStrip renders close icon.",
-              "privacy": "public",
-              "attribute": "no-close-button",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "noIcon",
-              "parameters": [
-                {
-                  "name": "b"
-                }
-              ],
-              "description": "Defines whether the MessageStrip will show an icon in the beginning. You can directly provide an icon with the icon slot. Otherwise, the default icon for the type will be used.",
-              "privacy": "public",
-              "attribute": "no-icon",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "parameters": [
-                {
-                  "name": "msg"
-                }
-              ],
-              "description": "Compatibility function to avoid breaking change"
-            },
-            {
               "kind": "method",
               "name": "showInformation",
               "parameters": [

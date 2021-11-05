@@ -41,23 +41,6 @@ https://experience.sap.com/fiori-design-web/message-strip/
 
 
 
-### **noCloseButton**
-
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-close-button</span>
-<small>`boolean` default: **false**</small>
-
-Defines whether the MessageStrip renders close icon.
-<br><br>
-
-### **noIcon**
-
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-icon</span>
-<small>`boolean` default: **false**</small>
-
-Defines whether the MessageStrip will show an icon in the beginning. You can directly provide an icon with the icon slot. Otherwise, the default icon for the type will be used.
-<br><br>
-
-
 
 
 
@@ -136,19 +119,6 @@ the text message of the message strip
 
 the event `message-strip-closed` will be sent with payload when the MessageStrip is closed
 
-<br><br>
-
-
-
-### **show**
-<small>**show**(*msg* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-show</span>
-
-Compatibility function to avoid breaking change
-
-- <small>msg </small>
 <br><br>
 
 ### **showInformation**

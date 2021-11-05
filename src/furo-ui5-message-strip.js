@@ -104,35 +104,6 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
   }
 
   /**
-   * Defines whether the MessageStrip renders close icon.
-   * @param b
-   */
-  noCloseButton(b) {
-    this.noCloseButton = b;
-  }
-
-  /**
-   * Defines whether the MessageStrip will show an icon in the beginning.
-   * @param b
-   */
-  noIcon(b) {
-    this.noIcon = b;
-  }
-
-  /**
-   * Compatibility function to avoid breaking change
-   * @deprecated
-   * @param msg
-   */
-  show(msg) {
-    this.showInformation(msg);
-    // eslint-disable-next-line no-console
-    console.warn(
-      'Deprecated. Instead, use the explicit show functions such as showInformation, showError, showSuccess or showWarning.'
-    );
-  }
-
-  /**
    * shows an information message
    * if the param msg is empty, the attribute message is used.
    * @param msg

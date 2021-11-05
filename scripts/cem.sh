@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-moduleDir=`pwd`/hugo/content/docs/modules
+moduleDir=`pwd`/hugo/content/docs
 injectsDir=`pwd`/hugo/content/docs/redactional
 
 
