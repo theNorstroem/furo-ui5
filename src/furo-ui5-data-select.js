@@ -18,7 +18,7 @@ import '@ui5/webcomponents/dist/Option.js';
  *
  * @fires {optionNodeList} options-updated - Fired  after the option list was rebuilt.
  * @fires {selectedOption} item-selected - Fired when the item of the dropdown list is selected.
- * @fires {selectedOption} field-value-changed - Fires the field value when it changes.
+ * @fires {selectedOption} value-changed - Fires the field value when it changes.
  *
  * @summary data select field
  * @customElement

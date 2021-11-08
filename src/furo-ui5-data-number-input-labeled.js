@@ -11,7 +11,7 @@ import './furo-ui5-data-number-input.js';
  * The furo-ui5-data-number-input-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
  *
- * @fires {Number} field-value-changed - Fires the field value when it changes.
+ * @fires {Number} value-changed - Fires the field value when it changes.
  *
  * @summary labeled input field
  * @customElement

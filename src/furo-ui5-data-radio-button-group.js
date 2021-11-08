@@ -371,7 +371,7 @@ export class FuroUi5DataRadioButtonGroup extends FieldNodeAdapter(HTMLElement) {
 
     /**
      * Fired when the value has changed
-     *  * @fires {String} field-value-changed - Fires the field value when it changes.
+     *  * @fires {String} value-changed - Fires the field value when it changes.
      * @type {Event}
      */
     this.dispatchEvent(Events.buildChangeEvent(selectedOption));
