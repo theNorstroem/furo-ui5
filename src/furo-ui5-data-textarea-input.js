@@ -1,5 +1,6 @@
 import * as TextArea from '@ui5/webcomponents/dist/TextArea.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
+import { Events } from './lib/Events.js';
 
 /**
  * The 'furo-ui5-data-textarea-input' component allows the user to enter and edit texts with data binding.
@@ -199,12 +200,7 @@ export class FuroUi5DataTextareaInput extends FieldNodeAdapter(
       this.setFnaFieldValue(value === '' ? '' : value);
     }
 
-    const customEvent = new Event('field-value-changed', {
-      composed: true,
-      bubbles: true,
-    });
-    customEvent.detail = this.value;
-    this.dispatchEvent(customEvent);
+    this.dispatchEvent(Events.buildChangeEvent(this.value));
   }
 
   /**

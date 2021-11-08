@@ -1,6 +1,7 @@
 import * as Select from '@ui5/webcomponents/dist/Select.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode.js';
+import { Events } from './lib/Events.js';
 
 import '@ui5/webcomponents/dist/Option.js';
 
@@ -582,12 +583,7 @@ export class FuroUi5DataSelect extends FieldNodeAdapter(Select.default) {
       }
     }
 
-    const customEvent = new Event('value-changed', {
-      composed: true,
-      bubbles: true,
-    });
-    customEvent.detail = selectedOption;
-    this.dispatchEvent(customEvent);
+    this.dispatchEvent(Events.buildChangeEvent(selectedOption));
 
     const customSelectEvent = new Event('item-selected', {
       composed: true,

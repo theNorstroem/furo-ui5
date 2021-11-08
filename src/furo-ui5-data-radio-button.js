@@ -1,6 +1,7 @@
 import * as RadioButton from '@ui5/webcomponents/dist/RadioButton.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
+import { Events } from './lib/Events.js';
 
 /**
  * The 'furo-ui5-data-radio-button' component allows the user to switch true and false for Bool with data binding.
@@ -53,7 +54,7 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  *
  * @fires {} select -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).
- * @fires {Boolean} field-value-changed - Fired when value changed
+ * @fires {Boolean} value-changed - Fired when value changed
  *
  * @summary boolean toggle button
  * @customElement
@@ -141,12 +142,7 @@ export class FuroUi5DataRadioButton extends FieldNodeAdapter(
       this.setFnaFieldValue(this.checked);
     }
 
-    const customEvent = new Event('field-value-changed', {
-      composed: true,
-      bubbles: true,
-    });
-    customEvent.detail = this.checked;
-    this.dispatchEvent(customEvent);
+    this.dispatchEvent(Events.buildChangeEvent(this.checked));
   }
 
   /**

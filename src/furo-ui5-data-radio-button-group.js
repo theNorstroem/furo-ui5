@@ -1,6 +1,7 @@
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode.js';
 import '@ui5/webcomponents/dist/RadioButton.js';
+import { Events } from './lib/Events.js';
 
 /**
  * `furo-ui5-data-radio-button-group`
@@ -373,12 +374,7 @@ export class FuroUi5DataRadioButtonGroup extends FieldNodeAdapter(HTMLElement) {
      *  * @fires {String} field-value-changed - Fires the field value when it changes.
      * @type {Event}
      */
-    const customEvent = new Event('value-changed', {
-      composed: true,
-      bubbles: true,
-    });
-    customEvent.detail = selectedOption;
-    this.dispatchEvent(customEvent);
+    this.dispatchEvent(Events.buildChangeEvent(selectedOption));
 
     const customSelectEvent = new Event('item-selected', {
       composed: true,

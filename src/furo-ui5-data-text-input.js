@@ -2,6 +2,7 @@ import * as Input from '@ui5/webcomponents/dist/Input.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@ui5/webcomponents/dist/features/InputSuggestions.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
+import { Events } from './lib/Events.js';
 
 /**
  * The 'furo-ui5-data-text-input' component allows the user to enter and edit texts with data binding.
@@ -195,12 +196,7 @@ export class FuroUi5DataTextInput extends FieldNodeAdapter(Input.default) {
       this.setFnaFieldValue(value === '' ? '' : value);
     }
 
-    const customEvent = new Event('field-value-changed', {
-      composed: true,
-      bubbles: true,
-    });
-    customEvent.detail = this.value;
-    this.dispatchEvent(customEvent);
+    this.dispatchEvent(Events.buildChangeEvent(this.value));
   }
 
   /**
