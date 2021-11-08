@@ -1124,15 +1124,6 @@
               "attribute": "readonly"
             }
           ],
-          "events": [
-            {
-              "type": {
-                "text": "Boolean"
-              },
-              "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
-            }
-          ],
           "attributes": [
             {
               "name": "label",
@@ -1953,7 +1944,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes in ISO 8601 format.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "attributes": [
@@ -2276,7 +2267,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes in ISO 8601 format.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "attributes": [
@@ -2479,7 +2470,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes in ISO 8601 format.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             },
             {
               "description": "Fired when the input operation has finished by pressing Enter or on focusout.",
@@ -2711,7 +2702,7 @@
                 "text": "google.type.Money"
               },
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "attributes": [
@@ -3116,7 +3107,7 @@
           "events": [
             {
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "attributes": [
@@ -3498,7 +3489,7 @@
                 "text": "Number"
               },
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "attributes": [
@@ -3840,7 +3831,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "mixins": [
@@ -3966,7 +3957,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "attributes": [
@@ -4327,7 +4318,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             },
             {
               "type": {
@@ -4978,7 +4969,7 @@
                 "text": "Boolean"
               },
               "description": "Fired when value changed",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "mixins": [
@@ -6331,7 +6322,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "attributes": [
@@ -6723,7 +6714,7 @@
                 "text": "selectedOption"
               },
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "mixins": [
@@ -7104,7 +7095,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "attributes": [
@@ -7459,7 +7450,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "mixins": [
@@ -7903,7 +7894,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "mixins": [
@@ -8007,7 +7998,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes in ISO 8601 format.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "attributes": [
@@ -8225,7 +8216,7 @@
                 "text": "String"
               },
               "description": "Fires the field value when it changes in ISO 8601 format.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             },
             {
               "description": "Fired when the input operation has finished by pressing Enter or on focusout.",
@@ -8437,7 +8428,7 @@
                 "text": "Boolean"
               },
               "description": "Fires the value of pressed when value changed.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "mixins": [
@@ -9505,7 +9496,7 @@
                 "text": "Number"
               },
               "description": "Fires a notification counter changed. Use this event to show the amount of notifications to the user.",
-              "name": "field-value-changed"
+              "name": "value-changed"
             }
           ],
           "attributes": [
@@ -10255,6 +10246,45 @@
           "declaration": {
             "name": "CollectionDropdownHelper",
             "module": "src/lib/DELETEMECollectionDropdownHelper.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/lib/Events.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Events",
+          "members": [
+            {
+              "kind": "method",
+              "name": "buildChangeEvent",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "detail"
+                }
+              ],
+              "description": "Creates an universal `value-changed` event\nAll extended ui5 components should use this builder function to create\nthe change event",
+              "return": {
+                "type": {
+                  "text": "Event"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Events",
+          "declaration": {
+            "name": "Events",
+            "module": "src/lib/Events.js"
           }
         }
       ]

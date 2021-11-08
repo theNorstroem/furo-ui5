@@ -15,7 +15,7 @@ import './furo-ui5-data-password-input.js';
  *
  * @slot {HTMLElement} icon - defines the icon to be displayed in the input element.
  *
- * @fires {String} field-value-changed - Fires the field value when it changes.
+ * @fires {String} value-changed - Fires the field value when it changes.
  *
  * @summary labeled input field
  * @customElement

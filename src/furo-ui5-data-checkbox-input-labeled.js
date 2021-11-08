@@ -12,8 +12,6 @@ import './furo-ui5-data-checkbox-input.js';
  * The furo-ui5-data-checkbox-input-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
  *
- * @fires {Boolean} field-value-changed - Fires the field value when it changes.
- *
  * @summary labeled input field
  * @customElement
  * @demo demo-furo-ui5-data-checkbox-input-labeled Basic Usage

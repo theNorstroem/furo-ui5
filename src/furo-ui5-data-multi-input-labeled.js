@@ -11,7 +11,7 @@ import './furo-ui5-data-multi-input.js';
  * The furo-ui5-data-multi-input-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
  *
- * @fires field-value-changed - Fires the field value when it changes.
+ * @fires value-changed - Fires the field value when it changes.
  *
  * @summary labeled textarea field
  * @customElement

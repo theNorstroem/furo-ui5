@@ -1,7 +1,7 @@
 import * as ToggleButton from '@ui5/webcomponents/dist/ToggleButton.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
-
+import { Events } from './lib/Events.js';
 /**
  * The 'furo-ui5-data-toggle-button' component allows the user to switch true and false for Bool with data binding.
  *
@@ -44,7 +44,7 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  *
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
- * @fires {Boolean} field-value-changed - Fires the value of pressed when value changed.
+ * @fires {Boolean} value-changed - Fires the value of pressed when value changed.
  *
  * @summary boolean toggle button
  * @customElement
@@ -132,12 +132,7 @@ export class FuroUi5DataToggleButton extends FieldNodeAdapter(
       this.setFnaFieldValue(this.pressed);
     }
 
-    const customEvent = new Event('field-value-changed', {
-      composed: true,
-      bubbles: true,
-    });
-    customEvent.detail = this.pressed;
-    this.dispatchEvent(customEvent);
+    this.dispatchEvent(Events.buildChangeEvent(this.pressed));
   }
 
   /**

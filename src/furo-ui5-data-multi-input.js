@@ -3,7 +3,7 @@ import * as MultiInput from '@ui5/webcomponents/dist/MultiInput.js';
 import '@ui5/webcomponents/dist/Token.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
-
+import { Events } from './lib/Events.js';
 /**
  * `furo-ui5-data-multi-input`
  *
@@ -265,12 +265,7 @@ export class FuroUi5DataMultiInput extends FieldNodeAdapter(
      * the event detail is the value of the repeated string
      * @type {Event}
      */
-    const customEvent = new Event('value-changed', {
-      composed: true,
-      bubbles: true,
-    });
-    customEvent.detail = val;
-    this.dispatchEvent(customEvent);
+    this.dispatchEvent(Events.buildChangeEvent(val));
   }
 
   _removeAllItems() {
