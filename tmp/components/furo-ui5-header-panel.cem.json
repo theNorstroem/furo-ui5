@@ -1,0 +1,249 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-ui5-header-panel.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`furo-ui5-header-panel`\n A bindable **header** panel.\n\n **Info**: This component is intended to use as a header panel, if you need panels in your view, consider to use\n a ui5-panel directly. That is also the reason that the api does not match with ui5-panel.\n\n This component is a container which has a header and a content area and is used for grouping and displaying information.\n It can be collapsed to save space on the screen.",
+      "name": "FuroUi5HeaderPanel",
+      "cssProperties": [
+        {
+          "type": {
+            "text": "#ffffff"
+          },
+          "description": "Color of the icon",
+          "name": "--furo-ui5-header-panel-icon-color",
+          "default": "--ui5-avatar-initials-color"
+        },
+        {
+          "type": {
+            "text": "#354a5f"
+          },
+          "description": "background Color of the icon",
+          "name": "--furo-ui5-header-panel-icon-background-color",
+          "default": "--ui5-avatar-accent6"
+        },
+        {
+          "type": {
+            "text": "#354a5f"
+          },
+          "description": "the gradient-start hex-Color of the splitter",
+          "name": "--furo-ui5-header-panel-splitter-start-color",
+          "default": "--primary-dark"
+        },
+        {
+          "type": {
+            "text": "rgba(8, 84, 16, 0)"
+          },
+          "description": "the gradient-end rgba-Color of the splitter",
+          "name": "--furo-ui5-header-panel-splitter-end-rgba-color",
+          "default": "--primary-rgb"
+        }
+      ],
+      "slots": [
+        {
+          "type": {
+            "text": "HTMLElement [0..n]"
+          },
+          "description": "defines an action, displayed in the right most part of the header panel.",
+          "name": "action"
+        },
+        {
+          "type": {
+            "text": "HTMLElement [0..n]"
+          },
+          "description": "defines the content of the panel ### Styling The following custom properties and mixins are available for styling:",
+          "name": ""
+        }
+      ],
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindHeaderText",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Bind any **scalar** field to set the title of the panel."
+        },
+        {
+          "kind": "method",
+          "name": "bindSecondaryText",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Bind any **scalar** field to set the secondaryText of the panel."
+        },
+        {
+          "kind": "method",
+          "name": "bindNavNode",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "bind a furo.navigation.Navigationnode field"
+        },
+        {
+          "kind": "method",
+          "name": "bindIcon",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Bind any **scalar** field to set the title of the panel.\nDo not forget to import the icon you will use in your component."
+        },
+        {
+          "kind": "method",
+          "name": "toggleCollapse",
+          "description": "toggles the collapse state"
+        },
+        {
+          "kind": "method",
+          "name": "_setNavNodeSignatureValues",
+          "parameters": [
+            {
+              "name": "fieldNode"
+            }
+          ],
+          "description": "update attributes according to the value of furo.navigation.Navigationnode signature",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "_FBPReady",
+          "description": "flow is ready lifecycle method",
+          "privacy": "private"
+        },
+        {
+          "kind": "field",
+          "name": "icon",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "icon",
+          "attribute": "icon"
+        },
+        {
+          "kind": "field",
+          "name": "iconSize",
+          "type": {
+            "text": "string"
+          },
+          "default": "'S'",
+          "privacy": "public",
+          "description": "size of the icon. Available options are: XS S M L XL. Default is S.",
+          "attribute": "icon-size"
+        },
+        {
+          "kind": "field",
+          "name": "headerText",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "Header Text",
+          "attribute": "header-text"
+        },
+        {
+          "kind": "field",
+          "name": "secondaryText",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "sub title",
+          "attribute": "secondary-text"
+        },
+        {
+          "kind": "field",
+          "name": "collapsed",
+          "type": {
+            "text": "boolean"
+          },
+          "default": "false",
+          "privacy": "public",
+          "attribute": "collapsed",
+          "reflects": true
+        }
+      ],
+      "attributes": [
+        {
+          "name": "header-text",
+          "description": "Header Text",
+          "fieldName": "headerText"
+        },
+        {
+          "name": "secondary-text",
+          "description": "sub title",
+          "fieldName": "secondaryText"
+        },
+        {
+          "name": "icon",
+          "description": "icon",
+          "fieldName": "icon"
+        },
+        {
+          "name": "icon-size",
+          "description": "size of the icon. Available options are: XS S M L XL. Default is S.",
+          "fieldName": "iconSize"
+        },
+        {
+          "name": "collapsed",
+          "fieldName": "collapsed"
+        }
+      ],
+      "mixins": [
+        {
+          "name": "FBP",
+          "package": "@furo/fbp"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "summary": "A bindable header panel",
+      "tagName": "furo-ui5-header-panel",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FuroUi5HeaderPanel",
+      "declaration": {
+        "name": "FuroUi5HeaderPanel",
+        "module": "src/furo-ui5-header-panel.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-ui5-header-panel",
+      "declaration": {
+        "name": "FuroUi5HeaderPanel",
+        "module": "src/furo-ui5-header-panel.js"
+      }
+    }
+  ]
+}

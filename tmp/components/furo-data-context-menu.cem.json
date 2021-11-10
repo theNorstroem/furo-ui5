@@ -1,0 +1,158 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-data-context-menu.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`furo-data-context-menu`\n A  [material design](https://material.io/components/menus/) context menu or menu element.\n\n You have to put a `furo-data-context-menu-display` element in one of the parent elements of the element where you use the `furo-data-context-menu`.\n The app-shell is a good place for that.\n\n```html\n <furo-data-context-menu condensed position=\"below\" ƒ-trigger=\"--menuClkd\" ƒ-bind-data=\"--menuObject\" @-menu-item-selected=\"--menuItem\">\n     <furo-icon-button icon=\"menu\" @-click=\"--menuClkd\"></furo-icon-button>\n </furo-data-context-menu>\n```",
+      "name": "FuroDataContextMenu",
+      "slots": [
+        {
+          "type": {
+            "text": "HTMLElement"
+          },
+          "description": "default slot to add an individual context menu opener component (e.g. furo-icon-button).",
+          "name": ""
+        }
+      ],
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "menu"
+            },
+            {
+              "description": "|| RepeaterNode}",
+              "name": "",
+              "type": {
+                "text": "Fieldnode"
+              }
+            }
+          ],
+          "description": "Bind your menu object with the signature of menu.Menuitem or [menu.Menuitem]."
+        },
+        {
+          "kind": "method",
+          "name": "setContext",
+          "parameters": [
+            {
+              "name": "ctx",
+              "description": "Can be anything, will be returned at the menu-item-selected method",
+              "type": {
+                "text": "*"
+              }
+            }
+          ],
+          "description": "Sets the context. Use this if you want to set a Object as context"
+        },
+        {
+          "kind": "method",
+          "name": "trigger",
+          "parameters": [
+            {
+              "name": "byKeyboard"
+            }
+          ],
+          "description": "Triggers the context menu. Set by keyboard to true to focus the first element for keyboard navigation"
+        },
+        {
+          "kind": "method",
+          "name": "triggerContext",
+          "parameters": [
+            {
+              "name": "context",
+              "type": {
+                "text": "Object"
+              }
+            },
+            {
+              "name": "byKeyboard"
+            }
+          ],
+          "description": "triggers the menu with context"
+        },
+        {
+          "kind": "method",
+          "name": "_FBPReady",
+          "description": "flow is ready lifecycle method",
+          "privacy": "private"
+        },
+        {
+          "kind": "field",
+          "name": "_context",
+          "privacy": "public",
+          "description": "Use this to set a string value as context.",
+          "attribute": "context"
+        },
+        {
+          "kind": "field",
+          "name": "condensed",
+          "privacy": "public",
+          "description": "set this for condensed mode.",
+          "attribute": "condensed"
+        }
+      ],
+      "events": [
+        {
+          "type": {
+            "text": "{context, menuitem}"
+          },
+          "description": " Fired when context menu was triggered",
+          "name": "open-furo-data-menu-requested"
+        },
+        {
+          "type": {
+            "text": "{context, menuitem}"
+          },
+          "description": " Fired when a menu item is selected",
+          "name": "menu-item-selected"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "context",
+          "description": "Use this to set a string value as context.",
+          "fieldName": "_context"
+        },
+        {
+          "name": "condensed",
+          "description": "set this for condensed mode.",
+          "fieldName": "condensed"
+        }
+      ],
+      "mixins": [
+        {
+          "name": "FBP",
+          "package": "@furo/fbp"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "summary": "a context menu",
+      "tagName": "furo-data-context-menu",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FuroDataContextMenu",
+      "declaration": {
+        "name": "FuroDataContextMenu",
+        "module": "src/furo-data-context-menu.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-data-context-menu",
+      "declaration": {
+        "name": "FuroDataContextMenu",
+        "module": "src/furo-data-context-menu.js"
+      }
+    }
+  ]
+}

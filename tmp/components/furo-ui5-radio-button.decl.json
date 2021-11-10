@@ -1,0 +1,184 @@
+{
+  "kind": "class",
+  "description": "The 'furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.\n\nIt supports all features from the [SAP ui5 toggleButton element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).\n\nYou can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.\n\n```html\n <furo-ui5-radio-button\n    ƒ-bind-data=\"--daoCountry(*.data.classified_as_risk_area)\"\n ></furo-ui5-radio-button>\n```\n```html\n <furo-ui5-radio-group>\n   <furo-ui5-radio-button name=\"group\"\n      ƒ-bind-data=\"--daoCountry(*.data.classified_as_risk_area)\"\n   ></furo-ui5-radio-button>\n   <furo-ui5-radio-button name=\"group\"\n      ƒ-bind-data=\"--daoCountry(*.data.classified_as_high_risk_area)\"\n   ></furo-ui5-radio-button>\n </furo-ui5-radio-group>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n| meta \t| fat \t| html \t|\n|------\t|-----\t|------\t|\n| 1    \t| 10  \t| 100  \t|\n\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"icon\":\"\"** set the icon\n - **\"design\":\"\"** set the design\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
+  "name": "FuroUi5RadioButton",
+  "members": [
+    {
+      "kind": "method",
+      "name": "readAttributes",
+      "description": "Reads the attributes which are set on the component dom."
+    },
+    {
+      "kind": "method",
+      "name": "_updateFNA",
+      "description": "Handler function for the toggleButton changes.",
+      "return": {
+        "type": {
+          "text": "(function(): void)|*"
+        }
+      },
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "onFnaFieldValueChanged",
+      "parameters": [
+        {
+          "name": "val"
+        }
+      ],
+      "description": "overwrite onFnaFieldValueChanged"
+    },
+    {
+      "kind": "method",
+      "name": "_updateLabelsFromFat",
+      "parameters": [
+        {
+          "name": "fatLabels"
+        }
+      ],
+      "description": "labels are map <string,bool>, we handle every boolean attribute with the labels",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_updateAttributesFromFat",
+      "parameters": [
+        {
+          "name": "fatAttributes"
+        }
+      ],
+      "description": "sync input attributes according to fat attributes",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "onFnaFieldNodeBecameInvalid",
+      "description": "overwrite onFnaFieldNodeBecameInvalid function"
+    },
+    {
+      "kind": "method",
+      "name": "onFnaFieldNodeBecameValid",
+      "description": "overwrite onFnaFieldNodeBecameValid function",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_setDesign",
+      "parameters": [
+        {
+          "name": "design"
+        }
+      ],
+      "description": "Updates the design",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_resetDesign",
+      "description": "reset to previous value state",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "onFnaLabelChanged",
+      "parameters": [
+        {
+          "name": "text"
+        },
+        {
+          "name": "placeholder"
+        }
+      ],
+      "description": "overwrite onFnaLabelChanged function\nlabel is mapped to text"
+    },
+    {
+      "kind": "method",
+      "name": "onFnaReadonlyChanged",
+      "parameters": [
+        {
+          "name": "readonly"
+        }
+      ],
+      "description": "overwrite onFnaReadonlyChanged function",
+      "privacy": "private"
+    },
+    {
+      "kind": "field",
+      "name": "_previousDesign",
+      "type": {
+        "text": "string"
+      },
+      "default": "'Default'"
+    },
+    {
+      "kind": "field",
+      "name": "_attributesFromFNA",
+      "type": {
+        "text": "object"
+      },
+      "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      label: undefined,\n    }"
+    },
+    {
+      "kind": "field",
+      "name": "_constraintsFromFNA",
+      "type": {
+        "text": "object"
+      },
+      "default": "{}"
+    },
+    {
+      "kind": "field",
+      "name": "_attributesFromFAT",
+      "type": {
+        "text": "object"
+      },
+      "default": "{\n      label: undefined,\n      icon: undefined,\n      design: undefined,\n    }"
+    },
+    {
+      "kind": "field",
+      "name": "_labelsFromFAT",
+      "type": {
+        "text": "object"
+      },
+      "default": "{\n      readonly: undefined,\n      disabled: undefined,\n    }"
+    },
+    {
+      "kind": "field",
+      "name": "_privilegedAttributes",
+      "type": {
+        "text": "object"
+      },
+      "default": "{\n      readonly: null,\n      disabled: null,\n      text: null,\n      icon: null,\n      design: null,\n    }"
+    }
+  ],
+  "events": [
+    {
+      "description": " Fired when the input operation has finished by pressing Enter or on focusout.",
+      "name": "select"
+    },
+    {
+      "description": " All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).",
+      "name": "xxxx"
+    },
+    {
+      "type": {
+        "text": "Boolean"
+      },
+      "description": "Fired when value changed",
+      "name": "value-changed"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "FieldNodeAdapter",
+      "package": "@furo/data/src/lib/FieldNodeAdapter.js"
+    }
+  ],
+  "superclass": {
+    "module": "src/furo-ui5-radio-button.js"
+  },
+  "summary": "boolean toggle button",
+  "tagName": "furo-ui5-radio-button",
+  "customElement": true
+}

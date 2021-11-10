@@ -1,0 +1,36 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-furo-fat-int64.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`form-furo-fat-int64` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+      "name": "FormFuroFatInt64",
+      "superclass": {
+        "name": "FormInt32",
+        "module": "/src/typerenderer/form-int32.js"
+      },
+      "summary": "form renderer for furo.fat.Int64",
+      "tagName": "form-furo-fat-int64",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FormFuroFatInt64",
+      "declaration": {
+        "name": "FormFuroFatInt64",
+        "module": "src/typerenderer/form-furo-fat-int64.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "form-furo-fat-int64",
+      "declaration": {
+        "name": "FormFuroFatInt64",
+        "module": "src/typerenderer/form-furo-fat-int64.js"
+      }
+    }
+  ]
+}

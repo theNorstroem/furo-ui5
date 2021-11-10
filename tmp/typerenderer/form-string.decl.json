@@ -1,0 +1,22 @@
+{
+  "kind": "class",
+  "description": "",
+  "name": "FormString",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode"
+        }
+      ]
+    }
+  ],
+  "superclass": {
+    "name": "FuroUi5TextInputLabeled",
+    "module": "/src/furo-ui5-text-input-labeled.js"
+  },
+  "tagName": "form-string",
+  "customElement": true
+}

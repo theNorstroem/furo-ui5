@@ -1,0 +1,35 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-uint64.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "FormUint64",
+      "superclass": {
+        "name": "FormInt32",
+        "module": "/src/typerenderer/form-int32.js"
+      },
+      "tagName": "form-uint64",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FormUint64",
+      "declaration": {
+        "name": "FormUint64",
+        "module": "src/typerenderer/form-uint64.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "form-uint64",
+      "declaration": {
+        "name": "FormUint64",
+        "module": "src/typerenderer/form-uint64.js"
+      }
+    }
+  ]
+}

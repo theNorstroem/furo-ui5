@@ -1,0 +1,50 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/display-string.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`display-string`\nThe display-string component displays a FieldNode of type `string` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "DisplayString",
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "tagName": "display-string",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "DisplayString",
+      "declaration": {
+        "name": "DisplayString",
+        "module": "src/typerenderer/display-string.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "display-string",
+      "declaration": {
+        "name": "DisplayString",
+        "module": "src/typerenderer/display-string.js"
+      }
+    }
+  ]
+}

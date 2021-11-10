@@ -1,0 +1,26 @@
+{
+  "kind": "class",
+  "description": "`display-string`\nThe display-string component displays a FieldNode of type `string` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "DisplayString",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "tagName": "display-string",
+  "customElement": true
+}

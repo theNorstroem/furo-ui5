@@ -1,0 +1,36 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-furo-fat-int32.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`celledit-furo-fat-int32` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+      "name": "CelleditFuroFatInt32",
+      "superclass": {
+        "name": "CelleditInt32",
+        "module": "/src/typerenderer/celledit-int32.js"
+      },
+      "summary": "celledit renderer for furo.fat.Int32",
+      "tagName": "celledit-furo-fat-int32",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "CelleditFuroFatInt32",
+      "declaration": {
+        "name": "CelleditFuroFatInt32",
+        "module": "src/typerenderer/celledit-furo-fat-int32.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-furo-fat-int32",
+      "declaration": {
+        "name": "CelleditFuroFatInt32",
+        "module": "src/typerenderer/celledit-furo-fat-int32.js"
+      }
+    }
+  ]
+}

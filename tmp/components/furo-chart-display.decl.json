@@ -1,0 +1,343 @@
+{
+  "kind": "class",
+  "description": "`furo-chart-display`\n Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).\n\n Use `furo-data-chart-binder` to connect your data.\n\n ```html\n <furo-chart-display chart-type=\"bar\">\n    <furo-data-chart-binder\n        ƒ-bind-data=\"--projectDAO(*.entities)\"\n        data-field=\"data.cost_limit.units\"\n        category-field=\"data.description\"\n    ></furo-data-chart-binder>\n </furo-chart-display>\n ```",
+  "name": "FuroChartDisplay",
+  "members": [
+    {
+      "kind": "field",
+      "name": "sparkline",
+      "privacy": "public",
+      "description": "Hides all elements of the chart other than the primary graphic.\nUse this to visualize data in very small areas.",
+      "attribute": "sparkline"
+    },
+    {
+      "kind": "field",
+      "name": "xaxisTitle",
+      "privacy": "public",
+      "description": "Give the x-axis a title which will be displayed below the axis labels by default.",
+      "attribute": "xaxis-title"
+    },
+    {
+      "kind": "field",
+      "name": "xaxisDatetime",
+      "privacy": "public",
+      "description": "Set this to true if you have datetime, google.type.date or timestamp data on the x-axis",
+      "attribute": "xaxis-datetime"
+    },
+    {
+      "kind": "field",
+      "name": "zebra",
+      "privacy": "public",
+      "description": "set zebra color like zebra=\"#f3f4f5, #fff\" to get stripes",
+      "attribute": "zebra"
+    },
+    {
+      "kind": "field",
+      "name": "noDataText",
+      "privacy": "public",
+      "description": "Set the text to display, if no data is given.\n\nIf this option is not set, the default is **No data.**",
+      "attribute": "no-data-text"
+    },
+    {
+      "kind": "field",
+      "name": "legend",
+      "privacy": "public",
+      "description": "Enables the legend on bottom left with offset 0:0",
+      "attribute": "legend"
+    },
+    {
+      "kind": "field",
+      "name": "dataLabels",
+      "privacy": "public",
+      "description": "Enable labels with data on every item.",
+      "attribute": "data-labels"
+    },
+    {
+      "kind": "field",
+      "name": "tooltip",
+      "privacy": "public",
+      "description": "show a tooltip on mouseover",
+      "attribute": "tooltip"
+    },
+    {
+      "kind": "field",
+      "name": "legendAlign",
+      "privacy": "public",
+      "description": "Aligns the legend to `left` `center` `right`\n\ndefault is **left**",
+      "attribute": "legend-align"
+    },
+    {
+      "kind": "field",
+      "name": "legendPosition",
+      "privacy": "public",
+      "description": "Set the position of the legend to `top`, `right`, `bottom`, `left`\n\nDefault is **bottom**",
+      "attribute": "legend-position"
+    },
+    {
+      "kind": "field",
+      "name": "legendOffsetX",
+      "privacy": "public",
+      "description": "Moves the legend in the **x** direction for n pixels from `legend-position`",
+      "attribute": "legend-offset-x"
+    },
+    {
+      "kind": "field",
+      "name": "legendOffsetY",
+      "privacy": "public",
+      "description": "Moves the legend in the **y** direction for n pixels from `legend-position`",
+      "attribute": "legend-offset-y"
+    },
+    {
+      "kind": "field",
+      "name": "toolbar",
+      "privacy": "public",
+      "description": "Enables the toolbar",
+      "attribute": "toolbar"
+    },
+    {
+      "kind": "field",
+      "name": "toolbarDownload",
+      "privacy": "public",
+      "description": "Enables the download option in the toolbar (svg,csv,png)",
+      "attribute": "toolbar-download"
+    },
+    {
+      "kind": "field",
+      "name": "plotHorizontal",
+      "privacy": "public",
+      "description": "Enable this to draw the bars horizontally",
+      "attribute": "plot-horizontal"
+    },
+    {
+      "kind": "field",
+      "name": "grid",
+      "privacy": "public",
+      "description": "Draw the horizontal grid lines",
+      "attribute": "grid"
+    },
+    {
+      "kind": "field",
+      "name": "chartType",
+      "privacy": "public",
+      "description": "\nline, area, bar are mixable\n\nradar, scatter, heatmap\n\npie donut polarArea radialBar can only consume 1 data series",
+      "attribute": "chart-type"
+    },
+    {
+      "kind": "field",
+      "name": "stacked",
+      "privacy": "public",
+      "description": "WORK IN PROGRESS\nStacked bar charts are not mixable",
+      "attribute": "stacked"
+    },
+    {
+      "kind": "field",
+      "name": "titleText",
+      "privacy": "public",
+      "description": "Set the title.",
+      "attribute": "title-text"
+    },
+    {
+      "kind": "field",
+      "name": "titleAlign",
+      "privacy": "public",
+      "description": "Aligns the title. Possible values are 'left', 'center', 'right'\n\nDefault is **left**",
+      "attribute": "title-align"
+    },
+    {
+      "kind": "field",
+      "name": "titleOffsetX",
+      "privacy": "public",
+      "description": "Moves the title for n pixels on the x-axis from the alignment direction",
+      "attribute": "title-offset-x"
+    },
+    {
+      "kind": "field",
+      "name": "titleOffsetY",
+      "privacy": "public",
+      "description": "Moves the title for n pixels on the y-axis from the alignment direction",
+      "attribute": "title-offset-y"
+    },
+    {
+      "kind": "field",
+      "name": "fixedHeight",
+      "privacy": "public",
+      "description": "Set a fixed height for the plot. Default is auto, this can be useful if you need to control the heights",
+      "attribute": "fixed-height"
+    },
+    {
+      "kind": "method",
+      "name": "_initChart",
+      "parameters": [
+        {
+          "name": "apexOptions"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "_FBPReady",
+      "description": "flow is ready lifecycle method",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_registerDataSourceComponents",
+      "parameters": [
+        {
+          "name": "dataSources"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "_fillInitialData"
+    },
+    {
+      "kind": "field",
+      "name": "apexOptions",
+      "type": {
+        "text": "object"
+      },
+      "default": "{\n      series: [],\n      yaxis: [],\n      // belize qualitative color palete\n      colors: [\n        '#5899DA',\n        '#E8743B',\n        '#19A979',\n        '#ED4A7B',\n        '#945ECF',\n        '#13A4B4',\n        '#525DF4',\n        '#BF399E',\n        '#6C8893',\n        '#EE6868',\n        '#2F6497',\n      ],\n      noData: {\n        text: 'No data.',\n        align: 'center',\n        verticalAlign: 'middle',\n        offsetX: 0,\n        offsetY: 0,\n        style: {\n          color: undefined,\n          fontSize: '14px',\n          fontFamily: undefined,\n        },\n      },\n      chart: {\n        // height: 550,\n        type: 'line',\n        stacked: false,\n        events: {},\n        toolbar: {\n          show: false, // disable by default\n          tools: {\n            download: false,\n            selection: true,\n            zoom: true,\n            zoomin: true,\n            zoomout: true,\n            pan: true,\n            reset: true,\n          },\n        },\n        sparkline: {\n          enabled: false,\n        },\n      },\n      grid: {\n        show: false, // https://apexcharts.com/docs/options/grid/\n        // zebra\n        // row: {\n        //  colors: [\"#f3f4f5\", \"#fff\"],\n        // }\n      },\n      dataLabels: {\n        enabled: false,\n      },\n\n      title: {\n        // text: 'XYZ - Analysis',\n        align: 'left',\n        // offsetX: 70,\n      },\n      stroke: {},\n\n      tooltip: {\n        enabled: false,\n        fixed: {\n          enabled: false,\n          position: 'topLeft', // topRight, topLeft, bottomRight, bottomLeft\n          offsetY: 30,\n          offsetX: 160,\n        },\n      },\n      legend: {\n        show: false,\n        position: 'bottom',\n        horizontalAlign: 'left',\n        offsetX: 0,\n        offsetY: 0,\n        formatter: (seriesName, opts) => {\n          if (\n            opts.w.config.yaxis[opts.seriesIndex] &&\n            opts.w.config.yaxis[opts.seriesIndex].legendLabel\n          ) {\n            return [opts.w.config.yaxis[opts.seriesIndex].legendLabel];\n          }\n          return [seriesName];\n        },\n      },\n      plotOptions: {},\n      xaxis: {\n        // type: \"datetime\",\n\n        // tickAmount: 6,\n        title: {\n          text: undefined,\n        },\n      },\n    }"
+    }
+  ],
+  "events": [
+    {
+      "type": {
+        "text": "Fieldnode"
+      },
+      "description": " Fired when a marker for this data source was clicked. Note: the event is fired from the furo-data-chart-binder",
+      "name": "data-point-clicked"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "chart-type",
+      "description": "\nline, area, bar are mixable\n\nradar, scatter, heatmap\n\npie donut polarArea radialBar can only consume 1 data series",
+      "fieldName": "chartType"
+    },
+    {
+      "name": "title-text",
+      "description": "Set the title.",
+      "fieldName": "titleText"
+    },
+    {
+      "name": "title-align",
+      "description": "Aligns the title. Possible values are 'left', 'center', 'right'\n\nDefault is **left**",
+      "fieldName": "titleAlign"
+    },
+    {
+      "name": "title-offset-x",
+      "description": "Moves the title for n pixels on the x-axis from the alignment direction",
+      "fieldName": "titleOffsetX"
+    },
+    {
+      "name": "title-offset-y",
+      "description": "Moves the title for n pixels on the y-axis from the alignment direction",
+      "fieldName": "titleOffsetY"
+    },
+    {
+      "name": "no-data-text",
+      "description": "Set the text to display, if no data is given.\n\nIf this option is not set, the default is **No data.**",
+      "fieldName": "noDataText"
+    },
+    {
+      "name": "stacked",
+      "description": "WORK IN PROGRESS\nStacked bar charts are not mixable",
+      "fieldName": "stacked"
+    },
+    {
+      "name": "data-labels",
+      "description": "Enable labels with data on every item.",
+      "fieldName": "dataLabels"
+    },
+    {
+      "name": "fixed-height",
+      "description": "Set a fixed height for the plot. Default is auto, this can be useful if you need to control the heights",
+      "fieldName": "fixedHeight"
+    },
+    {
+      "name": "tooltip",
+      "description": "show a tooltip on mouseover",
+      "fieldName": "tooltip"
+    },
+    {
+      "name": "legend",
+      "description": "Enables the legend on bottom left with offset 0:0",
+      "fieldName": "legend"
+    },
+    {
+      "name": "grid",
+      "description": "Draw the horizontal grid lines",
+      "fieldName": "grid"
+    },
+    {
+      "name": "legend-align",
+      "description": "Aligns the legend to `left` `center` `right`\n\ndefault is **left**",
+      "fieldName": "legendAlign"
+    },
+    {
+      "name": "legend-position",
+      "description": "Set the position of the legend to `top`, `right`, `bottom`, `left`\n\nDefault is **bottom**",
+      "fieldName": "legendPosition"
+    },
+    {
+      "name": "legend-offset-x",
+      "description": "Moves the legend in the **x** direction for n pixels from `legend-position`",
+      "fieldName": "legendOffsetX"
+    },
+    {
+      "name": "legend-offset-y",
+      "description": "Moves the legend in the **y** direction for n pixels from `legend-position`",
+      "fieldName": "legendOffsetY"
+    },
+    {
+      "name": "toolbar",
+      "description": "Enables the toolbar",
+      "fieldName": "toolbar"
+    },
+    {
+      "name": "toolbar-download",
+      "description": "Enables the download option in the toolbar (svg,csv,png)",
+      "fieldName": "toolbarDownload"
+    },
+    {
+      "name": "plot-horizontal",
+      "description": "Enable this to draw the bars horizontally",
+      "fieldName": "plotHorizontal"
+    },
+    {
+      "name": "sparkline",
+      "description": "Hides all elements of the chart other than the primary graphic.\nUse this to visualize data in very small areas.",
+      "fieldName": "sparkline"
+    },
+    {
+      "name": "zebra",
+      "description": "set zebra color like zebra=\"#f3f4f5, #fff\" to get stripes",
+      "fieldName": "zebra"
+    },
+    {
+      "name": "xaxis-title",
+      "description": "Give the x-axis a title which will be displayed below the axis labels by default.",
+      "fieldName": "xaxisTitle"
+    },
+    {
+      "name": "xaxis-datetime",
+      "description": "Set this to true if you have datetime, google.type.date or timestamp data on the x-axis",
+      "fieldName": "xaxisDatetime"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "FBP",
+      "package": "@furo/fbp"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "summary": "Display charts with data objects",
+  "tagName": "furo-chart-display",
+  "customElement": true
+}

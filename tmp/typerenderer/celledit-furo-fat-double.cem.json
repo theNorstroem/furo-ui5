@@ -1,0 +1,28 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-furo-fat-double.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`celledit-furo-fat-double` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+      "name": "CelleditFuroFatDouble",
+      "superclass": {
+        "name": "CelleditInt32",
+        "module": "/src/typerenderer/celledit-int32.js"
+      },
+      "summary": "celledit renderer for furo.fat.Double",
+      "tagName": "celledit-furo-fat-double",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-furo-fat-double",
+      "declaration": {
+        "name": "CelleditFuroFatDouble",
+        "module": "src/typerenderer/celledit-furo-fat-double.js"
+      }
+    }
+  ]
+}

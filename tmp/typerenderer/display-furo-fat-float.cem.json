@@ -1,0 +1,67 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/display-furo-fat-float.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`display-furo-fat-float`\nThe display-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "DisplayFuroFatFloat",
+      "members": [
+        {
+          "kind": "method",
+          "name": "_formatDisplay",
+          "inheritedFrom": {
+            "name": "DisplayFloat",
+            "module": "src/typerenderer/display-float.js"
+          }
+        },
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component",
+          "inheritedFrom": {
+            "name": "DisplayFloat",
+            "module": "src/typerenderer/display-float.js"
+          }
+        },
+        {
+          "kind": "field",
+          "name": "_displayValue",
+          "type": {
+            "text": "string"
+          },
+          "privacy": "private",
+          "default": "''",
+          "inheritedFrom": {
+            "name": "DisplayFloat",
+            "module": "src/typerenderer/display-float.js"
+          }
+        }
+      ],
+      "superclass": {
+        "name": "DisplayFloat",
+        "module": "/src/typerenderer/display-float.js"
+      },
+      "tagName": "display-furo-fat-float",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "display-furo-fat-float",
+      "declaration": {
+        "name": "DisplayFuroFatFloat",
+        "module": "src/typerenderer/display-furo-fat-float.js"
+      }
+    }
+  ]
+}

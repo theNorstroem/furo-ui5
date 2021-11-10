@@ -1,0 +1,12 @@
+{
+  "kind": "class",
+  "description": "`form-furo-fat-uint64` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+  "name": "FormFuroFatUint64",
+  "superclass": {
+    "name": "FormInt32",
+    "module": "/src/typerenderer/form-int32.js"
+  },
+  "summary": "form renderer for furo.fat.Uint64",
+  "tagName": "form-furo-fat-uint64",
+  "customElement": true
+}

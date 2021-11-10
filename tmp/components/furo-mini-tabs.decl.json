@@ -1,0 +1,35 @@
+{
+  "kind": "class",
+  "description": "`furo-mini-tabs`\nTabs",
+  "name": "FuroMiniTabs",
+  "members": [
+    {
+      "kind": "method",
+      "name": "injectItems",
+      "parameters": [
+        {
+          "name": "nodeArray"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "_FBPReady",
+      "description": "flow is ready lifecycle method",
+      "privacy": "private"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "FBP",
+      "package": "@furo/fbp"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "summary": "todo shortdescription",
+  "tagName": "furo-mini-tabs",
+  "customElement": true
+}

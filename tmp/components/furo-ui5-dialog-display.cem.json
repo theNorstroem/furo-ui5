@@ -1,0 +1,28 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-ui5-dialog-display.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`furo-ui5-dialog-display` will catch furo-ui5-dialog elements, to display it in the dom of the parent element.\n\nThe first furo-ui5-dialog-display will catch the furo-ui5-dialog register request from a underlying furo-ui5-dialog.",
+      "name": "FuroUi5DialogDisplay",
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "summary": "Display position for a dialog",
+      "tagName": "furo-ui5-dialog-display",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-ui5-dialog-display",
+      "declaration": {
+        "name": "FuroUi5DialogDisplay",
+        "module": "src/furo-ui5-dialog-display.js"
+      }
+    }
+  ]
+}

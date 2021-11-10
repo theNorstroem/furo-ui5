@@ -1,0 +1,35 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-float.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "FormFloat",
+      "superclass": {
+        "name": "FormInt32",
+        "module": "/src/typerenderer/form-int32.js"
+      },
+      "tagName": "form-float",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FormFloat",
+      "declaration": {
+        "name": "FormFloat",
+        "module": "src/typerenderer/form-float.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "form-float",
+      "declaration": {
+        "name": "FormFloat",
+        "module": "src/typerenderer/form-float.js"
+      }
+    }
+  ]
+}

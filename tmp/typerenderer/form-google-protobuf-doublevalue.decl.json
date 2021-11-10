@@ -1,0 +1,12 @@
+{
+  "kind": "class",
+  "description": "`form-google-protobuf-doublevalue` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+  "name": "FormGoogleProtobufDoublevalue",
+  "superclass": {
+    "name": "FormInt32",
+    "module": "/src/typerenderer/form-int32.js"
+  },
+  "summary": "form renderer for google.protobuf.Double",
+  "tagName": "form-google-protobuf-doublevalue",
+  "customElement": true
+}

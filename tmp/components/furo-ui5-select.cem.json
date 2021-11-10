@@ -1,0 +1,354 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-ui5-select.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define\nthe available options by using the ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.\n\n```\n<furo-ui5-select\n   ƒ-bind-data=\"--entity(*.data.description)\"\n   ƒ-bind-options=\"--collection(*.entities)\">\n</furo-ui5-select>\n```",
+      "name": "FuroUi5Select",
+      "members": [
+        {
+          "kind": "method",
+          "name": "readAttributes",
+          "description": "Reads the attributes which are set on the component dom.\nthose attributes can be set. `value-state`, `required`,`readonly`,`disabled`, `value-field-path`, `display-field-path`\nUse this after manual or scripted update of the attributes."
+        },
+        {
+          "kind": "method",
+          "name": "bindOptions",
+          "parameters": [
+            {
+              "name": "repeaterNode"
+            }
+          ],
+          "description": "Here a RepeaterNode can be connected to the component as an option list."
+        },
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "overwrite bindData of FieldNodeAdapter",
+          "return": {
+            "type": {
+              "text": "boolean"
+            }
+          }
+        },
+        {
+          "kind": "method",
+          "name": "onFnaFieldValueChanged",
+          "parameters": [
+            {
+              "name": "val"
+            }
+          ],
+          "description": "overwrite onFnaFieldValueChanged",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "onFnaReadonlyChanged",
+          "parameters": [
+            {
+              "name": "readonly"
+            }
+          ],
+          "description": "overwrite onFnaReadonlyChanged function",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "onFnaOptionsChanged",
+          "parameters": [
+            {
+              "name": "options"
+            }
+          ],
+          "description": "overwrite onFnaOptionsChanged function",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "onFnaConstraintsChanged",
+          "parameters": [
+            {
+              "name": "constraints"
+            }
+          ],
+          "description": "overwrite onFnaConstraintsChanged function",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "onFnaFieldNodeBecameInvalid",
+          "parameters": [
+            {
+              "name": "validity"
+            }
+          ],
+          "description": "overwrite onFnaFieldNodeBecameInvalid function",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "onFnaFieldNodeBecameValid",
+          "description": "overwrite onFnaFieldNodeBecameValid function",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "selectOptionById",
+          "parameters": [
+            {
+              "name": "id"
+            }
+          ],
+          "description": "Selects an option by id"
+        },
+        {
+          "kind": "method",
+          "name": "_updateLabelsFromFat",
+          "parameters": [
+            {
+              "name": "fatLabels"
+            }
+          ],
+          "description": "labels are map <string,bool>, we handle every boolean attribute with the labels",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "_updateAttributesFromFat",
+          "parameters": [
+            {
+              "name": "fatAttributes"
+            }
+          ],
+          "description": "sync input attributes according to fat attributes",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "_setValueStateMessage",
+          "parameters": [
+            {
+              "name": "valueState"
+            },
+            {
+              "name": "message"
+            }
+          ],
+          "description": "update the value state and the value state message on demand",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "_resetValueStateMessage",
+          "description": "reset to previous value state",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "_updateOptions",
+          "parameters": [
+            {
+              "name": "list"
+            }
+          ],
+          "description": "Maps and updates array of option",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "getValueByPath",
+          "static": true,
+          "parameters": [
+            {
+              "name": "obj"
+            },
+            {
+              "name": "path"
+            }
+          ],
+          "description": "Let you get an attribute value by path",
+          "return": {
+            "type": {
+              "text": ""
+            }
+          },
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "_updateFNA",
+          "parameters": [
+            {
+              "name": "e"
+            }
+          ],
+          "description": "Handler function for the select value changes.\nThis is done to be able to remove the event-listeners as a protection for multiple calls",
+          "return": {
+            "type": {
+              "text": "(function(): void)|*"
+            }
+          },
+          "privacy": "private"
+        },
+        {
+          "kind": "field",
+          "name": "activeFieldBinding",
+          "type": {
+            "text": "boolean"
+          },
+          "description": "Flag to indicate if a field is attached\nDefault: false",
+          "default": "false"
+        },
+        {
+          "kind": "field",
+          "name": "idFieldPath",
+          "type": {
+            "text": "string"
+          },
+          "description": "Defines the field path that is used from the injected RepeaterNode to identify the option items.\nPoint-separated path to the field\nE.g. data.partner.ulid\ndefault: id",
+          "default": "'id'"
+        },
+        {
+          "kind": "field",
+          "name": "displayFieldPath",
+          "type": {
+            "text": "string"
+          },
+          "description": "Defines the field path that is used from the injected RepeaterNode to display the option items.\nPoint-separated path to the field\nE.g. data.partner.display_name\ndefault: display_name",
+          "default": "'display_name'"
+        },
+        {
+          "kind": "field",
+          "name": "valueFieldPath",
+          "type": {
+            "text": "string"
+          },
+          "description": "Defines the field path that is used to update the bound component if the user has selected an option.\nPoint-separated path to the field\nMust be set if a data binding is specified.\ndefault: id",
+          "default": "'id'"
+        },
+        {
+          "kind": "field",
+          "name": "_optionList",
+          "type": {
+            "text": "*[]"
+          },
+          "description": "Internal RepeaterNode\nDefines the ui5-select options.\nNote: Only one selected option is allowed. If more than one option is defined as selected, the last one would be considered as the selected one.",
+          "privacy": "private",
+          "default": "[]"
+        },
+        {
+          "kind": "field",
+          "name": "_previousValueState",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ state: 'None', message: '' }"
+        },
+        {
+          "kind": "field",
+          "name": "_attributesFromFNA",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n      readonly: undefined,\n    }"
+        },
+        {
+          "kind": "field",
+          "name": "_constraintsFromFNA",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n      required: undefined,\n    }"
+        },
+        {
+          "kind": "field",
+          "name": "_labelsFromFAT",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n    }"
+        },
+        {
+          "kind": "field",
+          "name": "_attributesFromFAT",
+          "type": {
+            "text": "object"
+          },
+          "default": "{}"
+        },
+        {
+          "kind": "field",
+          "name": "_privilegedAttributes",
+          "type": {
+            "text": "object"
+          },
+          "description": "a list of privileged attributes. when those attributes are set in furo-ui5-select components initially.\nthey can not be modified later via response or spec\nnull is used because getAttribute returns null or value",
+          "default": "{\n      readonly: null,\n      required: null,\n      disabled: null,\n      'id-field-path': 'id',\n      'value-field-path': 'id',\n      'display-field-path': 'display_name',\n    }"
+        }
+      ],
+      "events": [
+        {
+          "name": "options-updated",
+          "type": {
+            "text": "optionNodeList"
+          },
+          "description": "Fired  after the option list was rebuilt."
+        },
+        {
+          "type": {
+            "text": "selectedOption"
+          },
+          "description": "Fired when the item of the dropdown list is selected.",
+          "name": "item-selected"
+        },
+        {
+          "type": {
+            "text": "selectedOption"
+          },
+          "description": "Fires the field value when it changes.",
+          "name": "value-changed"
+        }
+      ],
+      "mixins": [
+        {
+          "name": "FieldNodeAdapter",
+          "package": "@furo/data/src/lib/FieldNodeAdapter.js"
+        }
+      ],
+      "superclass": {
+        "module": "src/furo-ui5-select.js"
+      },
+      "summary": "data select field",
+      "tagName": "furo-ui5-select",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FuroUi5Select",
+      "declaration": {
+        "name": "FuroUi5Select",
+        "module": "src/furo-ui5-select.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-ui5-select",
+      "declaration": {
+        "name": "FuroUi5Select",
+        "module": "src/furo-ui5-select.js"
+      }
+    }
+  ]
+}

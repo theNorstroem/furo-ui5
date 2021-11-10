@@ -1,0 +1,11 @@
+{
+  "kind": "class",
+  "description": "",
+  "name": "FormInt64",
+  "superclass": {
+    "name": "FormInt32",
+    "module": "/src/typerenderer/form-int32.js"
+  },
+  "tagName": "form-int64",
+  "customElement": true
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "class",
+  "description": "`reference-search-item`\nRepeated item to display the search result set",
+  "name": "Ui5ReferenceSearchItem",
+  "members": [
+    {
+      "kind": "method",
+      "name": "injectItem",
+      "parameters": [
+        {
+          "name": "item"
+        }
+      ],
+      "description": "Inject of the item\ndata of inner text of the element is defined with the attribute\ndisplay-field (default value: display_name)"
+    },
+    {
+      "kind": "method",
+      "name": "deselect"
+    },
+    {
+      "kind": "method",
+      "name": "preselect"
+    },
+    {
+      "kind": "method",
+      "name": "select"
+    },
+    {
+      "kind": "field",
+      "name": "_item",
+      "type": {
+        "text": "object"
+      },
+      "default": "{}"
+    },
+    {
+      "kind": "field",
+      "name": "displayField",
+      "type": {
+        "text": "string"
+      },
+      "default": "'display_name'"
+    }
+  ],
+  "events": [
+    {
+      "type": {
+        "text": "item"
+      },
+      "description": " Fired when item is selected",
+      "name": "item-selected"
+    }
+  ],
+  "superclass": {
+    "module": "src/ui5-reference-search-item.js"
+  },
+  "summary": "representation of a result item",
+  "tagName": "ui5-reference-search-item",
+  "customElement": true
+}

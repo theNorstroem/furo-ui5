@@ -1,0 +1,39 @@
+{
+  "kind": "class",
+  "description": "`cell-float`\nThe cell-float component displays a FieldNode of type `float` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "CellFloat",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component"
+    },
+    {
+      "kind": "method",
+      "name": "_formatCell",
+      "privacy": "private"
+    },
+    {
+      "kind": "field",
+      "name": "_displayValue",
+      "type": {
+        "text": "string"
+      },
+      "default": "''"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "tagName": "cell-float",
+  "customElement": true
+}

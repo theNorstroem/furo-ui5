@@ -1,0 +1,35 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-int32.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "CelleditInt32",
+      "superclass": {
+        "name": "FuroUi5NumberInput",
+        "module": "/src/furo-ui5-number-input.js"
+      },
+      "tagName": "celledit-int32",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "CelleditInt32",
+      "declaration": {
+        "name": "CelleditInt32",
+        "module": "src/typerenderer/celledit-int32.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-int32",
+      "declaration": {
+        "name": "CelleditInt32",
+        "module": "src/typerenderer/celledit-int32.js"
+      }
+    }
+  ]
+}

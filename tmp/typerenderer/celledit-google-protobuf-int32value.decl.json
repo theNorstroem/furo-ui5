@@ -1,0 +1,12 @@
+{
+  "kind": "class",
+  "description": "`celledit-google-protobuf-int32value` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+  "name": "CelleditGoolgeProtobufIn32value",
+  "superclass": {
+    "name": "CelleditInt32",
+    "module": "/src/typerenderer/celledit-int32.js"
+  },
+  "summary": "celledit renderer for google.protobuf.Int32value",
+  "tagName": "celledit-google-protobuf-int32value",
+  "customElement": true
+}

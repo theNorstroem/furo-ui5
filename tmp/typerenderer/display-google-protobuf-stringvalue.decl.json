@@ -1,0 +1,30 @@
+{
+  "kind": "class",
+  "description": "`display-google-protobuf-stringvalue`\nThe display-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.Stringvalue` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "DisplayGoogleProtobufStringvalue",
+  "superclass": {
+    "name": "DisplayString",
+    "module": "/src/typerenderer/display-string.js"
+  },
+  "tagName": "display-google-protobuf-stringvalue",
+  "customElement": true,
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component",
+      "inheritedFrom": {
+        "name": "DisplayString",
+        "module": "src/typerenderer/display-string.js"
+      }
+    }
+  ]
+}

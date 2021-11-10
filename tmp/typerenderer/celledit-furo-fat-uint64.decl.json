@@ -1,0 +1,12 @@
+{
+  "kind": "class",
+  "description": "`celledit-furo-fat-uint64` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+  "name": "CelleditFuroFatUint64",
+  "superclass": {
+    "name": "CelleditInt32",
+    "module": "/src/typerenderer/celledit-int32.js"
+  },
+  "summary": "celledit renderer for furo.fat.Uint64",
+  "tagName": "celledit-furo-fat-uint64",
+  "customElement": true
+}

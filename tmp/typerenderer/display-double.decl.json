@@ -1,0 +1,39 @@
+{
+  "kind": "class",
+  "description": "`display-double`\nThe display-double component displays a FieldNode of type `double` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "DisplayDouble",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component"
+    },
+    {
+      "kind": "method",
+      "name": "_formatDisplay"
+    },
+    {
+      "kind": "field",
+      "name": "_displayValue",
+      "type": {
+        "text": "string"
+      },
+      "privacy": "private",
+      "default": "''"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "tagName": "display-double",
+  "customElement": true
+}

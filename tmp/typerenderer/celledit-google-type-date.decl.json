@@ -1,0 +1,12 @@
+{
+  "kind": "class",
+  "description": "`celledit-google-type-date` is a `celledit` context renderer.\n\nIt uses furo-ui5-date-picker as the renderer",
+  "name": "CelleditGoogleTypeDate",
+  "superclass": {
+    "name": "FuroUi5DatePicker",
+    "module": "/src/furo-ui5-date-picker.js"
+  },
+  "summary": "celledit renderer for google.type.Date",
+  "tagName": "celledit-google-type-date",
+  "customElement": true
+}

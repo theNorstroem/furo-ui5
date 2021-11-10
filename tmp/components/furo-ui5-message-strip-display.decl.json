@@ -1,0 +1,60 @@
+{
+  "kind": "class",
+  "description": "`furo-ui5-message-strip-display`\n\n The furo-ui5-message-strip-display is the render component for the furo-ui5-message-strip component.\n The display component can be controlled by several furo-ui5-message-strip components.\n\n```\n <furo-ui5-message-strip-display></furo-ui5-message-strip-display>\n\n <furo-ui5-message-strip ƒ-show-information=\"--wire\"></furo-ui5-message-strip>\n <furo-ui5-message-strip ƒ-show-warning=\"--wire\" message=\"Static warning message\"></furo-ui5-message-strip>\n ```",
+  "name": "FuroUi5MessageStripDisplay",
+  "members": [
+    {
+      "kind": "method",
+      "name": "_FBPReady",
+      "description": "flow is ready lifecycle method",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "clearAll",
+      "description": "Removes all strips"
+    },
+    {
+      "kind": "method",
+      "name": "show",
+      "parameters": [
+        {
+          "name": "source"
+        },
+        {
+          "name": "text"
+        }
+      ],
+      "description": "show notification list item."
+    },
+    {
+      "kind": "field",
+      "name": "headerText",
+      "type": {
+        "text": "string"
+      },
+      "default": "''"
+    },
+    {
+      "kind": "field",
+      "name": "_messageStrips",
+      "type": {
+        "text": "array"
+      },
+      "default": "[]"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "FBP",
+      "package": "@furo/fbp"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "summary": "furo ui5 message strip",
+  "tagName": "furo-ui5-message-strip-display",
+  "customElement": true
+}

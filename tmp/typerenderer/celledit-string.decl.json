@@ -1,0 +1,11 @@
+{
+  "kind": "class",
+  "description": "",
+  "name": "CelleditString",
+  "superclass": {
+    "name": "FuroUi5TextInput",
+    "module": "/src/furo-ui5-text-input.js"
+  },
+  "tagName": "celledit-string",
+  "customElement": true
+}

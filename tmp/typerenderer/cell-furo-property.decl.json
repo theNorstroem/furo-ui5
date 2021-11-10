@@ -1,0 +1,78 @@
+{
+  "kind": "class",
+  "description": "`cell-furo-property`\nThe cell-furo-property component displays a FieldNode of type `furo.Property` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "CellFuroProperty",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component\nthe cell-furo-property is a simple proxy element to show\nthe initial state if no data is available."
+    },
+    {
+      "kind": "method",
+      "name": "_waitForType",
+      "parameters": [
+        {
+          "name": "field",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "furo.Property wait for @type information\nregisters event listener and creates the component as soon as the @type information is available.",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_createConcreteType",
+      "description": "Creates the concrete type specific renderer",
+      "privacy": "private"
+    },
+    {
+      "kind": "field",
+      "name": "noDataText",
+      "type": {
+        "text": "string"
+      },
+      "default": "''",
+      "privacy": "public",
+      "description": "Defines the empty state display\nWith a furo.Property type, the effective type is only known when the data is transmitted.\nDefault: ''",
+      "attribute": "noDataText"
+    },
+    {
+      "kind": "field",
+      "name": "_typeResolved",
+      "type": {
+        "text": "boolean"
+      },
+      "default": "false"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "noDataText",
+      "description": "Defines the empty state display\nWith a furo.Property type, the effective type is only known when the data is transmitted.\nDefault: ''",
+      "fieldName": "noDataText"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "FBP",
+      "package": "@furo/fbp/src/fbp.js"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "tagName": "cell-furo-property",
+  "customElement": true
+}

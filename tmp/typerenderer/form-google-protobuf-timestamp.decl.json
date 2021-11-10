@@ -1,0 +1,11 @@
+{
+  "kind": "class",
+  "description": "",
+  "name": "FormGoogleProtobufTimestamp",
+  "superclass": {
+    "name": "FuroUi5DateTimePickerLabeled",
+    "module": "/src/furo-ui5-date-time-picker-labeled.js"
+  },
+  "tagName": "form-google-protobuf-timestamp",
+  "customElement": true
+}

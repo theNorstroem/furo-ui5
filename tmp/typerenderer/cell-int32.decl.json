@@ -1,0 +1,40 @@
+{
+  "kind": "class",
+  "description": "`cell-int32`\nThe cell-int32 component displays a FieldNode of type `int32` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "CellInt32",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component"
+    },
+    {
+      "kind": "method",
+      "name": "_formatCell",
+      "privacy": "private"
+    },
+    {
+      "kind": "field",
+      "name": "_displayValue",
+      "type": {
+        "text": "string"
+      },
+      "privacy": "private",
+      "default": "''"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "tagName": "cell-int32",
+  "customElement": true
+}

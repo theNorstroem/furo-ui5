@@ -1,0 +1,67 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/cell-furo-fat-float.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`cell-furo-fat-float`\nThe cell-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "CellFuroFatFloat",
+      "members": [
+        {
+          "kind": "method",
+          "name": "_formatCell",
+          "privacy": "private",
+          "inheritedFrom": {
+            "name": "CellFloat",
+            "module": "src/typerenderer/cell-float.js"
+          }
+        },
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component",
+          "inheritedFrom": {
+            "name": "CellFloat",
+            "module": "src/typerenderer/cell-float.js"
+          }
+        },
+        {
+          "kind": "field",
+          "name": "_displayValue",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "inheritedFrom": {
+            "name": "CellFloat",
+            "module": "src/typerenderer/cell-float.js"
+          }
+        }
+      ],
+      "superclass": {
+        "name": "CellFloat",
+        "module": "/src/typerenderer/cell-float.js"
+      },
+      "tagName": "cell-furo-fat-float",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "cell-furo-fat-float",
+      "declaration": {
+        "name": "CellFuroFatFloat",
+        "module": "src/typerenderer/cell-furo-fat-float.js"
+      }
+    }
+  ]
+}

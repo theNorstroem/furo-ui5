@@ -1,0 +1,121 @@
+{
+  "kind": "class",
+  "description": "Tab navigation for the open panels in a panel-coordinator.\n\n\n```html\n <!-- inject the tabs from panelCoordinator and connect the keyboard navigation -->\n <furo-panel-coordinator-tabs ƒ-inject-tabs=\"--panelChanges\" ƒ-trigger-navigation=\"--navpadPanelTabs\" >\n   <!-- add keyboard navigation -->\n   <furo-navigation-pad @-navigated=\"--navpadPanelTabs\"></furo-navigation-pad>\n </furo-panel-coordinator-tabs>\n <furo-pages flex default=\"default\">\n   <furo-panel-coordinator ƒ-show-page=\"--nodeSelected\"  @-panels-changed=\"--panelChanges\"></furo-panel-coordinator>\n```",
+  "name": "FuroPanelCoordinatorTabs",
+  "members": [
+    {
+      "kind": "method",
+      "name": "triggerNavigation",
+      "parameters": [
+        {
+          "name": "key"
+        }
+      ],
+      "description": "Connect your navigation pad.\n\nDefault mappings are:\n- Enter => selectFocused\n- ArroLeft => focusPrevious\n- ArroRight => focusNext\n- Home => focusFirst\n- End => focusLast\n- Escape => closeFocused\n\nTo disable a function, just add the `ignored-keys` to furo-navigation-tabs."
+    },
+    {
+      "kind": "method",
+      "name": "closeFocused",
+      "description": "Closes the focused tab."
+    },
+    {
+      "kind": "method",
+      "name": "focusNext",
+      "description": "Focuses the next tab. If you are on the last tab, the frist tab will be selected"
+    },
+    {
+      "kind": "method",
+      "name": "focusFirst",
+      "description": "Focuses the first tab."
+    },
+    {
+      "kind": "method",
+      "name": "focusLast",
+      "description": "Focuses the last tab."
+    },
+    {
+      "kind": "method",
+      "name": "selectFocused",
+      "description": "Select the focused tab."
+    },
+    {
+      "kind": "method",
+      "name": "focusPrevious",
+      "description": "Focuses the previous tab."
+    },
+    {
+      "kind": "method",
+      "name": "injectTabs",
+      "parameters": [
+        {
+          "name": "nodeArray"
+        }
+      ],
+      "description": "Inject data from a navigationnode"
+    },
+    {
+      "kind": "method",
+      "name": "_FBPReady",
+      "description": "flow is ready lifecycle method",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "focus",
+      "description": "focuses the element itself. The \"focused\" tab will get the focus"
+    },
+    {
+      "kind": "field",
+      "name": "tabindex",
+      "type": {
+        "text": "number"
+      },
+      "default": "0",
+      "privacy": "public",
+      "description": "Sets the tabindex",
+      "attribute": "tabindex",
+      "reflects": true
+    },
+    {
+      "kind": "field",
+      "name": "_focusIndex",
+      "type": {
+        "text": "number"
+      },
+      "default": "0"
+    },
+    {
+      "kind": "field",
+      "name": "focused",
+      "privacy": "public",
+      "description": "indicates that the element is focused",
+      "attribute": "focused",
+      "reflects": true
+    }
+  ],
+  "attributes": [
+    {
+      "name": "tabindex",
+      "description": "Sets the tabindex",
+      "fieldName": "tabindex"
+    },
+    {
+      "name": "focused",
+      "description": "indicates that the element is focused",
+      "fieldName": "focused"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "FBP",
+      "package": "@furo/fbp"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "summary": "tab navigation for panel-coordinator",
+  "tagName": "furo-panel-coordinator-tabs",
+  "customElement": true
+}

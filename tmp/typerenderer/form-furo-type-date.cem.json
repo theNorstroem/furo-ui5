@@ -1,0 +1,27 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-furo-type-date.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "FormFuroTypeDate",
+      "superclass": {
+        "name": "FuroUi5DatePickerLabeled",
+        "module": "/src/furo-ui5-date-picker-labeled.js"
+      },
+      "tagName": "form-furo-type-date",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "form-furo-type-date",
+      "declaration": {
+        "name": "FormFuroTypeDate",
+        "module": "src/typerenderer/form-furo-type-date.js"
+      }
+    }
+  ]
+}

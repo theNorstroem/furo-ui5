@@ -1,0 +1,27 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-google-protobuf-timestamp.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "CelleditGoogleProtobufTimestamp",
+      "superclass": {
+        "name": "FuroUi5DateTimePicker",
+        "module": "/src/furo-ui5-date-time-picker.js"
+      },
+      "tagName": "celledit-google-protobuf-timestamp",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-google-protobuf-timestamp",
+      "declaration": {
+        "name": "CelleditGoogleProtobufTimestamp",
+        "module": "src/typerenderer/celledit-google-protobuf-timestamp.js"
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/display-furo-numberproperty.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`display-furo-numberproperty`\nThe display-furo-numberrproperty component displays a FieldNode of type `furo.Numberproperty` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "DisplayFuroNumberproperty",
+      "superclass": {
+        "name": "DisplayFuroIntegerproperty",
+        "module": "/src/typerenderer/display-furo-integerproperty.js"
+      },
+      "tagName": "display-furo-numberproperty",
+      "customElement": true,
+      "members": [
+        {
+          "kind": "method",
+          "name": "_formatDisplay",
+          "inheritedFrom": {
+            "name": "DisplayInt32",
+            "module": "src/typerenderer/display-int32.js"
+          }
+        },
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component",
+          "inheritedFrom": {
+            "name": "DisplayInt32",
+            "module": "src/typerenderer/display-int32.js"
+          }
+        },
+        {
+          "kind": "field",
+          "name": "_displayValue",
+          "type": {
+            "text": "string"
+          },
+          "privacy": "private",
+          "default": "''",
+          "inheritedFrom": {
+            "name": "DisplayInt32",
+            "module": "src/typerenderer/display-int32.js"
+          }
+        }
+      ]
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "DisplayFuroNumberproperty",
+      "declaration": {
+        "name": "DisplayFuroNumberproperty",
+        "module": "src/typerenderer/display-furo-numberproperty.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "display-furo-numberproperty",
+      "declaration": {
+        "name": "DisplayFuroNumberproperty",
+        "module": "src/typerenderer/display-furo-numberproperty.js"
+      }
+    }
+  ]
+}

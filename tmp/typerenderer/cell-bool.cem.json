@@ -1,0 +1,62 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/cell-bool.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`cell-bool`\nThe cell-bool component displays a FieldNode of type `bool` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "CellBool",
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "description": "of type bool, furo.fat.Bool, google.wrapper.BoolValue",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component"
+        },
+        {
+          "kind": "method",
+          "name": "_getTemplate",
+          "description": "Template logic",
+          "return": {
+            "type": {
+              "text": "*"
+            }
+          },
+          "privacy": "private"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "tagName": "cell-bool",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "CellBool",
+      "declaration": {
+        "name": "CellBool",
+        "module": "src/typerenderer/cell-bool.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "cell-bool",
+      "declaration": {
+        "name": "CellBool",
+        "module": "src/typerenderer/cell-bool.js"
+      }
+    }
+  ]
+}

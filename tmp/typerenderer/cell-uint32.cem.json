@@ -1,0 +1,76 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/cell-uint32.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`cell-uint32`\nThe cell-uint32 component displays a FieldNode of type `uint64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "CellUint32",
+      "superclass": {
+        "name": "CellInt32",
+        "module": "/src/typerenderer/cell-int32.js"
+      },
+      "tagName": "cell-uint32",
+      "customElement": true,
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component",
+          "inheritedFrom": {
+            "name": "CellInt32",
+            "module": "src/typerenderer/cell-int32.js"
+          }
+        },
+        {
+          "kind": "method",
+          "name": "_formatCell",
+          "privacy": "private",
+          "inheritedFrom": {
+            "name": "CellInt32",
+            "module": "src/typerenderer/cell-int32.js"
+          }
+        },
+        {
+          "kind": "field",
+          "name": "_displayValue",
+          "type": {
+            "text": "string"
+          },
+          "privacy": "private",
+          "default": "''",
+          "inheritedFrom": {
+            "name": "CellInt32",
+            "module": "src/typerenderer/cell-int32.js"
+          }
+        }
+      ]
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "CellUint32",
+      "declaration": {
+        "name": "CellUint32",
+        "module": "src/typerenderer/cell-uint32.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "cell-uint32",
+      "declaration": {
+        "name": "CellUint32",
+        "module": "src/typerenderer/cell-uint32.js"
+      }
+    }
+  ]
+}

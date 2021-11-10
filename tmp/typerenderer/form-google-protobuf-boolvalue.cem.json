@@ -1,0 +1,28 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-google-protobuf-boolvalue.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`form-google-protobuf-boolvalue` is a `form` context renderer.\n\nIt uses furo-ui5-checkbox-input as the renderer",
+      "name": "FormGoogleProtobufBoolvalue",
+      "superclass": {
+        "name": "FormBool",
+        "module": "/src/typerenderer/form-bool.js"
+      },
+      "summary": "form renderer for bool",
+      "tagName": "form-google-protobuf-boolvalue",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "form-google-protobuf-boolvalue",
+      "declaration": {
+        "name": "FormGoogleProtobufBoolvalue",
+        "module": "src/typerenderer/form-google-protobuf-boolvalue.js"
+      }
+    }
+  ]
+}

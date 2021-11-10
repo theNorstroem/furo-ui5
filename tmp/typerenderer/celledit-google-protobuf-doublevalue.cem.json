@@ -1,0 +1,28 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-google-protobuf-doublevalue.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`celledit-google-protobuf-doublevalue` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+      "name": "CelleditGoogleProtobufDoublevalue",
+      "superclass": {
+        "name": "CelleditInt32",
+        "module": "/src/typerenderer/celledit-int32.js"
+      },
+      "summary": "celledit renderer for google.protobuf.Double",
+      "tagName": "celledit-google-protobuf-doublevalue",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-google-protobuf-doublevalue",
+      "declaration": {
+        "name": "CelleditGoogleProtobufDoublevalue",
+        "module": "src/typerenderer/celledit-google-protobuf-doublevalue.js"
+      }
+    }
+  ]
+}

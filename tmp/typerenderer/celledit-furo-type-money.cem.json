@@ -1,0 +1,27 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-furo-type-money.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "CelleditFuroTypeMoney",
+      "superclass": {
+        "name": "FuroUi5MoneyInput",
+        "module": "/src/furo-ui5-money-input.js"
+      },
+      "tagName": "celledit-furo-type-money",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-furo-type-money",
+      "declaration": {
+        "name": "CelleditFuroTypeMoney",
+        "module": "src/typerenderer/celledit-furo-type-money.js"
+      }
+    }
+  ]
+}

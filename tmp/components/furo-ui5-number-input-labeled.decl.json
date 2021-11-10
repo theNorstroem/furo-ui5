@@ -1,0 +1,130 @@
+{
+  "kind": "class",
+  "description": "`furo-ui5-number-input-labeled`\nThe furo-ui5-number-input-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.",
+  "name": "FuroUi5NumberInputLabeled",
+  "members": [
+    {
+      "kind": "method",
+      "name": "focus",
+      "parameters": [
+        {
+          "name": "options",
+          "description": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus",
+          "type": {
+            "text": "Object"
+          }
+        }
+      ],
+      "description": "Focuses the underlying ui5 input element"
+    },
+    {
+      "kind": "method",
+      "name": "_FBPReady",
+      "description": "flow is ready lifecycle method",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Orchestrates the data field connection to the inside"
+    },
+    {
+      "kind": "field",
+      "name": "label",
+      "type": {
+        "text": "string"
+      },
+      "default": "''",
+      "privacy": "public",
+      "description": "the label for the data-number-input",
+      "attribute": "label"
+    },
+    {
+      "kind": "field",
+      "name": "icon",
+      "type": {
+        "text": "string"
+      },
+      "default": "''",
+      "privacy": "public",
+      "attribute": "icon"
+    },
+    {
+      "kind": "field",
+      "name": "required",
+      "privacy": "public",
+      "description": "A Boolean attribute which, if present, means this field is required and marked with *.",
+      "attribute": "required"
+    },
+    {
+      "kind": "field",
+      "name": "disabled",
+      "privacy": "public",
+      "description": "A Boolean attribute which, if present, means this field cannot be edited by the user and\nappears in disabled state.",
+      "attribute": "disabled"
+    },
+    {
+      "kind": "field",
+      "name": "readonly",
+      "privacy": "public",
+      "description": "A Boolean attribute which, if present, means this field is readonly.",
+      "attribute": "readonly"
+    }
+  ],
+  "events": [
+    {
+      "type": {
+        "text": "Number"
+      },
+      "description": "Fires the field value when it changes.",
+      "name": "value-changed"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "label",
+      "description": "the label for the data-number-input",
+      "fieldName": "label"
+    },
+    {
+      "name": "required",
+      "description": "A Boolean attribute which, if present, means this field is required and marked with *.",
+      "fieldName": "required"
+    },
+    {
+      "name": "disabled",
+      "description": "A Boolean attribute which, if present, means this field cannot be edited by the user and\nappears in disabled state.",
+      "fieldName": "disabled"
+    },
+    {
+      "name": "readonly",
+      "description": "A Boolean attribute which, if present, means this field is readonly.",
+      "fieldName": "readonly"
+    },
+    {
+      "name": "icon",
+      "fieldName": "icon"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "FBP",
+      "package": "@furo/fbp/src/fbp.js"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "summary": "labeled input field",
+  "tagName": "furo-ui5-number-input-labeled",
+  "customElement": true
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-int32.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "FormInt32",
+      "superclass": {
+        "name": "FuroUi5NumberInputLabeled",
+        "module": "/src/furo-ui5-number-input-labeled.js"
+      },
+      "tagName": "form-int32",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FormInt32",
+      "declaration": {
+        "name": "FormInt32",
+        "module": "src/typerenderer/form-int32.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "form-int32",
+      "declaration": {
+        "name": "FormInt32",
+        "module": "src/typerenderer/form-int32.js"
+      }
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "kind": "class",
+  "description": "`furo-data-money-input`\nBinds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields\n <sample-furo-data-money-input></sample-furo-data-money-input>\n\n you can set currencies dropdown with options in meta or set options attribute as json in element or set currencies as string in element. the three\n ways have priority : currencies > options as attribute > options in meta. When no currencies is setted. Default currency will be `CHF`\n\n <furo-ui5-money-input autofocus ƒ-bind-data=\"--entity(*.furo_data_money_input)\" options='{\"list\": [ \"CHF\",\"EUR\",\"USD\" ]}'></furo-data-money-input>\n <furo-ui5-money-input autofocus ƒ-bind-data=\"--entity(*.furo_data_money_input)\" options='{\"list\": [ {\"id\":\"CHF\",\"label\":\"Schweiz\"},{\"id\":\"EUR\",\"label\":\"Europa\", \"selected\": true}'></furo-data-money-input>\n <furo-ui5-money-input autofocus ƒ-bind-data=\"--entity(*.furo_data_money_input)\" currencies=\"CHF,EUR,USD\"></furo-data-money-input>\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **required: true** , set the element to required\n\nTags: money input",
+  "name": "FuroUi5MoneyInput",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a fieldNode. Make sure the type of your field is accepted by the implemented component."
+    },
+    {
+      "kind": "method",
+      "name": "readAttributes",
+      "description": "Reads the attributes which are set on the component dom.\nAttributes that can be se are   `required`,`readonly`,`disabled` ,\nUse this after manual or scripted update of the attributes."
+    },
+    {
+      "kind": "method",
+      "name": "onFnaReadonlyChanged",
+      "parameters": [
+        {
+          "name": "readonly"
+        }
+      ],
+      "description": "overwrite onFnaReadonlyChanged function",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "onFnaConstraintsChanged",
+      "parameters": [
+        {
+          "name": "constraints"
+        }
+      ],
+      "description": "overwrite onFnaConstraintsChanged function",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_FBPReady",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_convertDataToMoneyObj",
+      "parameters": [
+        {
+          "name": "currency"
+        },
+        {
+          "name": "amount"
+        },
+        {
+          "name": "obj"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "_updateField",
+      "parameters": [
+        {
+          "name": "value"
+        }
+      ],
+      "description": "update amount field\nOne issue with number inputs is that their step size is 1 by default.\nIf you try to enter a number with a decimal (such as \"1.0\"), it will be considered invalid.\nIf you want to enter a value that requires decimals, you'll need to reflect this in the step value\n(e.g. step=\"0.01\" to allow decimals to two decimal places).",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "onFnaFieldValueChanged",
+      "parameters": [
+        {
+          "name": "value"
+        }
+      ],
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "onFnaFieldNodeBecameInvalid",
+      "parameters": [
+        {
+          "name": "validity"
+        }
+      ],
+      "description": "overwrite onFnaFieldNodeBecameInvalid function",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "onFnaFieldNodeBecameValid",
+      "description": "overwrite onFnaFieldNodeBecameValid function",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_getElements"
+    },
+    {
+      "kind": "field",
+      "name": "options",
+      "description": "the option object defines the currencies dropdown\n'{\"list\": [ \"chf\",\"eur\",\"usd\" ]}'\n'{\"list\": [ {\"id\":\"CHF\",\"label\":\"Schweiz\"},{\"id\":\"EUR\",\"label\":\"Europa\", \"selected\": true}'",
+      "parameters": [
+        {
+          "name": "options"
+        }
+      ],
+      "privacy": "public",
+      "attribute": "options"
+    },
+    {
+      "kind": "method",
+      "name": "setOptions",
+      "parameters": [
+        {
+          "name": "options"
+        }
+      ],
+      "description": "set options for currencies dropdown"
+    },
+    {
+      "kind": "field",
+      "name": "currencies",
+      "description": "the string list of currencies for the dropdown. e.g. \"CHF,EUR,USD\"",
+      "parameters": [
+        {
+          "name": "c"
+        }
+      ],
+      "privacy": "public",
+      "attribute": "currencies"
+    },
+    {
+      "kind": "method",
+      "name": "injectEntities",
+      "parameters": [
+        {
+          "name": "entities"
+        }
+      ],
+      "description": "inject the currency entities for dropdown"
+    },
+    {
+      "kind": "method",
+      "name": "updateSuggestions"
+    },
+    {
+      "kind": "field",
+      "name": "_previousValueState",
+      "type": {
+        "text": "object"
+      },
+      "default": "{ state: 'None', message: '' }"
+    },
+    {
+      "kind": "field",
+      "name": "_attributesFromFNA",
+      "type": {
+        "text": "object"
+      },
+      "default": "{\n      readonly: undefined,\n    }"
+    },
+    {
+      "kind": "field",
+      "name": "_constraintsFromFNA",
+      "type": {
+        "text": "object"
+      },
+      "default": "{\n      required: undefined,\n    }"
+    },
+    {
+      "kind": "field",
+      "name": "_privilegedAttributes",
+      "type": {
+        "text": "object"
+      },
+      "default": "{\n      readonly: null,\n      required: null,\n      disabled: null,\n    }"
+    },
+    {
+      "kind": "field",
+      "name": "disabled",
+      "privacy": "public",
+      "description": "A Boolean attribute which, if present, means this field cannot be edited by the user.",
+      "attribute": "disabled"
+    },
+    {
+      "kind": "field",
+      "name": "readonly",
+      "privacy": "public",
+      "description": "A Boolean attribute which, if present, means this field is readonly.",
+      "attribute": "readonly"
+    }
+  ],
+  "events": [
+    {
+      "type": {
+        "text": "Money"
+      },
+      "description": " Fired when the input operation has finished by pressing Enter or on focusout.",
+      "name": "value-changed"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "currencies",
+      "description": "the string list of currencies for the dropdown. e.g. \"CHF,EUR,USD\"",
+      "fieldName": "currencies"
+    },
+    {
+      "name": "options",
+      "description": "the option object defines the currencies dropdown\n'{\"list\": [ \"chf\",\"eur\",\"usd\" ]}'\n'{\"list\": [ {\"id\":\"CHF\",\"label\":\"Schweiz\"},{\"id\":\"EUR\",\"label\":\"Europa\", \"selected\": true}'",
+      "fieldName": "options"
+    },
+    {
+      "name": "disabled",
+      "description": "A Boolean attribute which, if present, means this field cannot be edited by the user.",
+      "fieldName": "disabled"
+    },
+    {
+      "name": "readonly",
+      "description": "A Boolean attribute which, if present, means this field is readonly.",
+      "fieldName": "readonly"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "FBP",
+      "package": "@furo/fbp/src/fbp.js"
+    },
+    {
+      "name": "FieldNodeAdapter",
+      "package": "@furo/data/src/lib/FieldNodeAdapter.js"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "summary": "Binds a entityObject field google.type.Money to a number-input and currency dropdown fields",
+  "tagName": "furo-ui5-money-input",
+  "customElement": true
+}

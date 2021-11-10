@@ -1,0 +1,22 @@
+{
+  "kind": "class",
+  "description": "",
+  "name": "FormFuroStringoptionproperty",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode"
+        }
+      ]
+    }
+  ],
+  "superclass": {
+    "name": "FuroUi5SelectLabeled",
+    "module": "/src/furo-ui5-select-labeled.js"
+  },
+  "tagName": "form-furo-stringoptionproperty",
+  "customElement": true
+}

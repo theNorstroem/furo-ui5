@@ -1,0 +1,36 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-float.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`celledit-float` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+      "name": "CelleditFloat",
+      "superclass": {
+        "name": "CelleditInt32",
+        "module": "/src/typerenderer/celledit-int32.js"
+      },
+      "summary": "celledit renderer for float",
+      "tagName": "celledit-float",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "CelleditFloat",
+      "declaration": {
+        "name": "CelleditFloat",
+        "module": "src/typerenderer/celledit-float.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-float",
+      "declaration": {
+        "name": "CelleditFloat",
+        "module": "src/typerenderer/celledit-float.js"
+      }
+    }
+  ]
+}

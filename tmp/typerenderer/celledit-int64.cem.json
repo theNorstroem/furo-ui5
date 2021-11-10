@@ -1,0 +1,35 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-int64.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "CelleditInt64",
+      "superclass": {
+        "name": "CelleditInt32",
+        "module": "/src/typerenderer/celledit-int32.js"
+      },
+      "tagName": "celledit-int64",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "CelleditInt64",
+      "declaration": {
+        "name": "CelleditInt64",
+        "module": "src/typerenderer/celledit-int64.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-int64",
+      "declaration": {
+        "name": "CelleditInt64",
+        "module": "src/typerenderer/celledit-int64.js"
+      }
+    }
+  ]
+}

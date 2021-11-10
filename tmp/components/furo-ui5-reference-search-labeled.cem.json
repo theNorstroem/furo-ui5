@@ -1,0 +1,295 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-ui5-reference-search-labeled.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`furo-ui5-reference-search-labeled`\nThe furo-ui5-reference-search-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.",
+      "name": "FuroUi5ReferenceSearchLabeled",
+      "members": [
+        {
+          "kind": "method",
+          "name": "focus",
+          "parameters": [
+            {
+              "name": "options",
+              "description": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus",
+              "type": {
+                "text": "Object"
+              }
+            }
+          ],
+          "description": "Focuses the underlying ui5 input element"
+        },
+        {
+          "kind": "method",
+          "name": "_FBPReady",
+          "description": "flow is ready lifecycle method",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Orchestrates the data field connection to the inside"
+        },
+        {
+          "kind": "method",
+          "name": "setFilter",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ],
+          "description": "sets the filter to the inner furo-ui5-reference-search"
+        },
+        {
+          "kind": "field",
+          "name": "service",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "the service name",
+          "attribute": "service"
+        },
+        {
+          "kind": "field",
+          "name": "label",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "the label for the data-reference-search",
+          "attribute": "label"
+        },
+        {
+          "kind": "field",
+          "name": "extendedSearcher",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "Define the extended searcher. Do not forget to import the searcher you want to use.",
+          "attribute": "extended-searcher"
+        },
+        {
+          "kind": "field",
+          "name": "disableSearchList",
+          "type": {
+            "text": "boolean"
+          },
+          "default": "false",
+          "privacy": "public",
+          "description": "A Boolean attribute which, if present, means this field can not be searched.\n\nThis is very useful when you want enforce the usage of the extended search",
+          "attribute": "disable-search-list"
+        },
+        {
+          "kind": "field",
+          "name": "icon",
+          "type": {
+            "text": "string"
+          },
+          "default": "'search'",
+          "privacy": "public",
+          "description": "Use this attribute to set a custom icon for your searcher",
+          "attribute": "icon"
+        },
+        {
+          "kind": "field",
+          "name": "searchResponsePath",
+          "type": {
+            "text": "string"
+          },
+          "default": "'entities'",
+          "privacy": "public",
+          "description": "Path to the node in the response value which contains the array with the selection items.\nBy default this goes to *entitites*",
+          "attribute": "search-response-path"
+        },
+        {
+          "kind": "field",
+          "name": "valueFieldPath",
+          "type": {
+            "text": "string"
+          },
+          "default": "'data.id'",
+          "privacy": "public",
+          "description": "Path to response value item which is used for the id.\nBy default this goes to *data.id*",
+          "attribute": "value-field-path"
+        },
+        {
+          "kind": "field",
+          "name": "displayFieldPath",
+          "type": {
+            "text": "string"
+          },
+          "default": "'data.display_name'",
+          "privacy": "public",
+          "description": "Path to selection value node which is used for the display.\nBy default this goes to *data.display_name*",
+          "attribute": "display-field-path"
+        },
+        {
+          "kind": "field",
+          "name": "extendedValueFieldPath",
+          "type": {
+            "text": "string"
+          },
+          "default": "'data.id'",
+          "privacy": "public",
+          "description": "Path to response value item of the exteded search which is used for the id.\nBy default this goes to *data.id*.\nOnly needed when your extended searcher does not have the id, display_name signature in the response.",
+          "attribute": "extended-value-field-path"
+        },
+        {
+          "kind": "field",
+          "name": "extendedDisplayFieldPath",
+          "type": {
+            "text": "string"
+          },
+          "default": "'data.display_name'",
+          "privacy": "public",
+          "description": "Path to response value item of the exteded search which is used for the display.\nBy default this goes to *data.display_name*.\nOnly needed when your extended searcher does not have the id, display_name signature in the response.",
+          "attribute": "extended-display-field-path"
+        },
+        {
+          "kind": "field",
+          "name": "placeholder",
+          "privacy": "public",
+          "description": "Overrides the hint text from the **specs**.\nUse with caution, normally the specs defines this value.",
+          "attribute": "placeholder"
+        },
+        {
+          "kind": "field",
+          "name": "disabled",
+          "privacy": "public",
+          "description": "A Boolean attribute which, if present, means this field cannot be edited by the user.",
+          "attribute": "disabled"
+        },
+        {
+          "kind": "field",
+          "name": "readonly",
+          "privacy": "public",
+          "attribute": "readonly"
+        },
+        {
+          "kind": "field",
+          "name": "required",
+          "privacy": "public",
+          "description": "A Boolean attribute which, if present, means this field is required and marked with *.",
+          "attribute": "required"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "service",
+          "description": "the service name",
+          "fieldName": "service"
+        },
+        {
+          "name": "label",
+          "description": "the label for the data-reference-search",
+          "fieldName": "label"
+        },
+        {
+          "name": "value-field-path",
+          "description": "Path to response value item which is used for the id.\nBy default this goes to *data.id*",
+          "fieldName": "valueFieldPath"
+        },
+        {
+          "name": "display-field-path",
+          "description": "Path to selection value node which is used for the display.\nBy default this goes to *data.display_name*",
+          "fieldName": "displayFieldPath"
+        },
+        {
+          "name": "search-response-path",
+          "description": "Path to the node in the response value which contains the array with the selection items.\nBy default this goes to *entitites*",
+          "fieldName": "searchResponsePath"
+        },
+        {
+          "name": "extended-value-field-path",
+          "description": "Path to response value item of the exteded search which is used for the id.\nBy default this goes to *data.id*.\nOnly needed when your extended searcher does not have the id, display_name signature in the response.",
+          "fieldName": "extendedValueFieldPath"
+        },
+        {
+          "name": "extended-display-field-path",
+          "description": "Path to response value item of the exteded search which is used for the display.\nBy default this goes to *data.display_name*.\nOnly needed when your extended searcher does not have the id, display_name signature in the response.",
+          "fieldName": "extendedDisplayFieldPath"
+        },
+        {
+          "name": "placeholder",
+          "description": "Overrides the hint text from the **specs**.\nUse with caution, normally the specs defines this value.",
+          "fieldName": "placeholder"
+        },
+        {
+          "name": "icon",
+          "description": "Use this attribute to set a custom icon for your searcher",
+          "fieldName": "icon"
+        },
+        {
+          "name": "disable-search-list",
+          "description": "A Boolean attribute which, if present, means this field can not be searched.\n\nThis is very useful when you want enforce the usage of the extended search",
+          "fieldName": "disableSearchList"
+        },
+        {
+          "name": "disabled",
+          "description": "A Boolean attribute which, if present, means this field cannot be edited by the user.",
+          "fieldName": "disabled"
+        },
+        {
+          "name": "readonly",
+          "fieldName": "readonly"
+        },
+        {
+          "name": "required",
+          "description": "A Boolean attribute which, if present, means this field is required and marked with *.",
+          "fieldName": "required"
+        },
+        {
+          "name": "extended-searcher",
+          "description": "Define the extended searcher. Do not forget to import the searcher you want to use.",
+          "fieldName": "extendedSearcher"
+        }
+      ],
+      "mixins": [
+        {
+          "name": "FBP",
+          "package": "@furo/fbp/src/fbp.js"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "summary": "labeled input field",
+      "tagName": "furo-ui5-reference-search-labeled",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FuroUi5ReferenceSearchLabeled",
+      "declaration": {
+        "name": "FuroUi5ReferenceSearchLabeled",
+        "module": "src/furo-ui5-reference-search-labeled.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-ui5-reference-search-labeled",
+      "declaration": {
+        "name": "FuroUi5ReferenceSearchLabeled",
+        "module": "src/furo-ui5-reference-search-labeled.js"
+      }
+    }
+  ]
+}

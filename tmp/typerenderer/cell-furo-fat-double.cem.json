@@ -1,0 +1,68 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/cell-furo-fat-double.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`cell-furo-fat-double`\nThe cell-furo-fat-double component displays a FieldNode of type `furo.fat.Double` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "CellFuroFatDouble",
+      "members": [
+        {
+          "kind": "method",
+          "name": "_formatCell",
+          "privacy": "private",
+          "inheritedFrom": {
+            "name": "CellDouble",
+            "module": "src/typerenderer/cell-double.js"
+          }
+        },
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component",
+          "inheritedFrom": {
+            "name": "CellDouble",
+            "module": "src/typerenderer/cell-double.js"
+          }
+        },
+        {
+          "kind": "field",
+          "name": "_displayValue",
+          "type": {
+            "text": "string"
+          },
+          "privacy": "private",
+          "default": "''",
+          "inheritedFrom": {
+            "name": "CellDouble",
+            "module": "src/typerenderer/cell-double.js"
+          }
+        }
+      ],
+      "superclass": {
+        "name": "CellDouble",
+        "module": "/src/typerenderer/cell-double.js"
+      },
+      "tagName": "cell-furo-fat-double",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "cell-furo-fat-double",
+      "declaration": {
+        "name": "CellFuroFatDouble",
+        "module": "src/typerenderer/cell-furo-fat-double.js"
+      }
+    }
+  ]
+}

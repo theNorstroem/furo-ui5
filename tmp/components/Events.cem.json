@@ -1,0 +1,39 @@
+{
+  "kind": "javascript-module",
+  "path": "src/lib/Events.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "Events",
+      "members": [
+        {
+          "kind": "method",
+          "name": "buildChangeEvent",
+          "static": true,
+          "parameters": [
+            {
+              "name": "detail"
+            }
+          ],
+          "description": "Creates an universal `value-changed` event\nAll extended ui5 components should use this builder function to create\nthe change event",
+          "return": {
+            "type": {
+              "text": "Event"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "Events",
+      "declaration": {
+        "name": "Events",
+        "module": "src/lib/Events.js"
+      }
+    }
+  ]
+}

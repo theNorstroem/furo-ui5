@@ -1,0 +1,30 @@
+{
+  "kind": "class",
+  "description": "`display-furo-stringproperty`\nThe display-furo-stringproperty component displays a FieldNode of type `furo.Stringproperty` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "DisplayFuroStringproperty",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component",
+      "inheritedFrom": {
+        "name": "DisplayString",
+        "module": "src/typerenderer/display-string.js"
+      }
+    }
+  ],
+  "superclass": {
+    "name": "DisplayString",
+    "module": "/src/typerenderer/display-string.js"
+  },
+  "tagName": "display-furo-stringproperty",
+  "customElement": true
+}

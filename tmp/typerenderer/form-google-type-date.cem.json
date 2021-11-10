@@ -1,0 +1,28 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-google-type-date.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`form-google-type-date` is a `form` context renderer.\n\nIt uses furo-ui5-date-picker as the renderer",
+      "name": "FormGoogleTypeDate",
+      "superclass": {
+        "name": "FuroUi5DatePickerLabeled",
+        "module": "/src/furo-ui5-date-picker-labeled.js"
+      },
+      "summary": "form renderer for google.type.Date",
+      "tagName": "form-google-type-date",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "form-google-type-date",
+      "declaration": {
+        "name": "FormGoogleTypeDate",
+        "module": "src/typerenderer/form-google-type-date.js"
+      }
+    }
+  ]
+}

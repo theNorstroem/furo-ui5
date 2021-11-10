@@ -1,0 +1,76 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/cell-furo-integerproperty.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`cell-furo-integerproperty`\nThe cell-furo-integerproperty component displays a FieldNode of type `furo.Integerproperty` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "CellFuroIntegerproperty",
+      "members": [
+        {
+          "kind": "method",
+          "name": "_formatCell",
+          "privacy": "private",
+          "inheritedFrom": {
+            "name": "CellInt32",
+            "module": "src/typerenderer/cell-int32.js"
+          }
+        },
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component",
+          "inheritedFrom": {
+            "name": "CellInt32",
+            "module": "src/typerenderer/cell-int32.js"
+          }
+        },
+        {
+          "kind": "field",
+          "name": "_displayValue",
+          "type": {
+            "text": "string"
+          },
+          "privacy": "private",
+          "default": "''",
+          "inheritedFrom": {
+            "name": "CellInt32",
+            "module": "src/typerenderer/cell-int32.js"
+          }
+        }
+      ],
+      "superclass": {
+        "name": "CellInt32",
+        "module": "/src/typerenderer/cell-int32.js"
+      },
+      "tagName": "cell-furo-integerproperty",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "CellFuroIntegerproperty",
+      "declaration": {
+        "name": "CellFuroIntegerproperty",
+        "module": "src/typerenderer/cell-furo-integerproperty.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "cell-furo-integerproperty",
+      "declaration": {
+        "name": "CellFuroIntegerproperty",
+        "module": "src/typerenderer/cell-furo-integerproperty.js"
+      }
+    }
+  ]
+}

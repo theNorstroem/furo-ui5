@@ -1,0 +1,388 @@
+{
+  "decl": {
+    "kind": "class",
+    "description": "`furo-data-context-menu-item` is a helper component for `furo-data-context-menu`.\n\nUse [`furo-data-context-menu`](?t=FuroDataContextMenu) to show a context menu.",
+    "name": "FuroDataContextMenuItem",
+    "members": [
+      {
+        "kind": "method",
+        "name": "_FBPReady",
+        "description": "flow is ready lifecycle method",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "bindData",
+        "parameters": [
+          {
+            "name": "menuNode"
+          }
+        ]
+      },
+      {
+        "kind": "method",
+        "name": "_openSub",
+        "parameters": [
+          {
+            "name": "byKeyboard",
+            "description": "Boolean"
+          }
+        ],
+        "description": "send event to open the submenu",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "_closeSub",
+        "description": "The submenu item was set from the _openSub() event response",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "_selectItem",
+        "description": "Select the item, furo-data-context-menu callback will be called",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "select",
+        "parameters": [
+          {
+            "name": "key"
+          }
+        ],
+        "description": "selects the item if it does not have child elements"
+      },
+      {
+        "kind": "method",
+        "name": "_mouseSelect",
+        "description": "Open the item if it have children",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "index",
+        "parameters": [
+          {
+            "name": "i"
+          }
+        ],
+        "description": "store the index for mouseover focus"
+      },
+      {
+        "kind": "method",
+        "name": "setFocused",
+        "description": "mark item as focused"
+      },
+      {
+        "kind": "method",
+        "name": "unsetFocused",
+        "description": "mark item as unfocused"
+      },
+      {
+        "kind": "field",
+        "name": "focused",
+        "privacy": "public",
+        "description": "focused state",
+        "attribute": "focused",
+        "reflects": true
+      }
+    ],
+    "events": [
+      {
+        "type": {
+          "text": "index"
+        },
+        "description": " Fired when hovered with mouse",
+        "name": "mousefocus"
+      },
+      {
+        "type": {
+          "text": "menu: this.menuitem, initiator: this"
+        },
+        "description": " Fired when submenu should be opened",
+        "name": "opensub-requested"
+      },
+      {
+        "type": {
+          "text": "item"
+        },
+        "description": " Fired when item was selected",
+        "name": "item-selected"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "focused",
+        "description": "focused state",
+        "fieldName": "focused"
+      }
+    ],
+    "mixins": [
+      {
+        "name": "FBP",
+        "package": "@furo/fbp"
+      }
+    ],
+    "superclass": {
+      "name": "LitElement",
+      "package": "lit"
+    },
+    "summary": "helper",
+    "tagName": "furo-data-context-menu-item",
+    "customElement": true
+  },
+  "component": "furo-data-context-menu-item",
+  "module": "components",
+  "pkg": {
+    "name": "@furo/ui5",
+    "description": "SAP UI5 Web Components data bindings for furo",
+    "version": "1.0.0-alpha.2",
+    "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
+    "repository": "git@github.com:eclipse/eclipsefuro-web.git",
+    "author": {
+      "name": "",
+      "email": "",
+      "url": ""
+    },
+    "keywords": [
+      "web-components",
+      "flow based programming",
+      "flowbased",
+      "flow"
+    ],
+    "license": "MIT",
+    "main": "src/furo-catalog.js",
+    "scripts": {
+      "analyze": "cem analyze --globs \"src/**/*.js\" --exclude **/furo-catalog.js --litelement",
+      "start": "web-dev-server --app-index demos --open",
+      "lint": "eslint --ext .js,.html . --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*' --ignore-path .gitignore && prettier \"**/*.js\" --check  --ignore-path .prettierignore",
+      "format": "eslint --ext .js,.html . --fix --ignore-path .prettierignore && prettier \"**/*.js\" --write --ignore-path .prettierignore",
+      "test": "web-test-runner  --coverage",
+      "test:watch": "web-test-runner  --watch",
+      "docs:start": "cd hugo && hugo serve",
+      "docs:generate": "npm run analyze:components && npm run analyze:typerenderer && ./scripts/cem.sh",
+      "docs:publish": "./scripts/publishDocs.sh",
+      "analyze:components": "cem analyze --globs \"src/**/*.js\" --exclude **/typerenderer/* --litelement --outdir tmp/components",
+      "analyze:typerenderer": "cem analyze --globs \"src/typerenderer/*.js\" --exclude --litelement --outdir tmp/typerenderer"
+    },
+    "peerDependencies": {
+      "@furo/fbp": "^6.0.0-rc.0",
+      "@furo/framework": "^2.0.0-rc.0",
+      "@furo/layout": "^2.0.0-rc.0",
+      "@furo/data": "^2.0.0-rc.0",
+      "@furo/util": "^2.0.0-rc.0",
+      "@ui5/webcomponents": "0.33.0",
+      "@ui5/webcomponents-base": "0.33.0",
+      "@ui5/webcomponents-fiori": "0.33.0",
+      "@ui5/webcomponents-icons": "0.33.0",
+      "lit": "^2.0.2"
+    },
+    "dependencies": {
+      "markdown-it": "^9.0.1",
+      "apexcharts": "^3.29.0",
+      "signature_pad": "3.0.0-beta.4"
+    },
+    "devDependencies": {
+      "@custom-elements-manifest/analyzer": "^0.5.3",
+      "@open-wc/eslint-config": "^4.3.0",
+      "@open-wc/testing": "next",
+      "@web/dev-server": "^0.1.25",
+      "@web/test-runner": "^0.13.20",
+      "@esm-bundle/chai": "^4.3.4-fix.0",
+      "eslint": "^7.32.0",
+      "eslint-config-prettier": "^8.3.0",
+      "husky": "^4.3.8",
+      "lerna": "^3.22.1",
+      "lint-staged": "^10.5.4",
+      "lit-html": "2.0.0-rc.3",
+      "prettier": "^2.4.1"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "engines": {
+      "node": ">=10.0"
+    },
+    "customElements": "tmp/typerenderer/custom-elements.json",
+    "eslintConfig": {
+      "extends": [
+        "@open-wc",
+        "prettier"
+      ]
+    },
+    "prettier": {
+      "singleQuote": true,
+      "arrowParens": "avoid"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.js": [
+        "eslint --fix --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*'",
+        "prettier --write",
+        "git add"
+      ]
+    }
+  },
+  "cem": {
+    "kind": "javascript-module",
+    "path": "src/lib/furo-data-context-menu-item.js",
+    "declarations": [
+      {
+        "kind": "class",
+        "description": "`furo-data-context-menu-item` is a helper component for `furo-data-context-menu`.\n\nUse [`furo-data-context-menu`](?t=FuroDataContextMenu) to show a context menu.",
+        "name": "FuroDataContextMenuItem",
+        "members": [
+          {
+            "kind": "method",
+            "name": "_FBPReady",
+            "description": "flow is ready lifecycle method",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "bindData",
+            "parameters": [
+              {
+                "name": "menuNode"
+              }
+            ]
+          },
+          {
+            "kind": "method",
+            "name": "_openSub",
+            "parameters": [
+              {
+                "name": "byKeyboard",
+                "description": "Boolean"
+              }
+            ],
+            "description": "send event to open the submenu",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "_closeSub",
+            "description": "The submenu item was set from the _openSub() event response",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "_selectItem",
+            "description": "Select the item, furo-data-context-menu callback will be called",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "select",
+            "parameters": [
+              {
+                "name": "key"
+              }
+            ],
+            "description": "selects the item if it does not have child elements"
+          },
+          {
+            "kind": "method",
+            "name": "_mouseSelect",
+            "description": "Open the item if it have children",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "index",
+            "parameters": [
+              {
+                "name": "i"
+              }
+            ],
+            "description": "store the index for mouseover focus"
+          },
+          {
+            "kind": "method",
+            "name": "setFocused",
+            "description": "mark item as focused"
+          },
+          {
+            "kind": "method",
+            "name": "unsetFocused",
+            "description": "mark item as unfocused"
+          },
+          {
+            "kind": "field",
+            "name": "focused",
+            "privacy": "public",
+            "description": "focused state",
+            "attribute": "focused",
+            "reflects": true
+          }
+        ],
+        "events": [
+          {
+            "type": {
+              "text": "index"
+            },
+            "description": " Fired when hovered with mouse",
+            "name": "mousefocus"
+          },
+          {
+            "type": {
+              "text": "menu: this.menuitem, initiator: this"
+            },
+            "description": " Fired when submenu should be opened",
+            "name": "opensub-requested"
+          },
+          {
+            "type": {
+              "text": "item"
+            },
+            "description": " Fired when item was selected",
+            "name": "item-selected"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "focused",
+            "description": "focused state",
+            "fieldName": "focused"
+          }
+        ],
+        "mixins": [
+          {
+            "name": "FBP",
+            "package": "@furo/fbp"
+          }
+        ],
+        "superclass": {
+          "name": "LitElement",
+          "package": "lit"
+        },
+        "summary": "helper",
+        "tagName": "furo-data-context-menu-item",
+        "customElement": true
+      }
+    ],
+    "exports": [
+      {
+        "kind": "js",
+        "name": "FuroDataContextMenuItem",
+        "declaration": {
+          "name": "FuroDataContextMenuItem",
+          "module": "src/lib/furo-data-context-menu-item.js"
+        }
+      },
+      {
+        "kind": "custom-element-definition",
+        "name": "furo-data-context-menu-item",
+        "declaration": {
+          "name": "FuroDataContextMenuItem",
+          "module": "src/lib/furo-data-context-menu-item.js"
+        }
+      }
+    ]
+  }
+}

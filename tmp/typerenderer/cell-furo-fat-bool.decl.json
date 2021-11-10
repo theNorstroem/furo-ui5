@@ -1,0 +1,46 @@
+{
+  "kind": "class",
+  "description": "`cell-furo-fat-bool`\nThe cell-furo-fat-bool component displays a FieldNode of type `furo.fat.bool` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "CellFuroFatBool",
+  "members": [
+    {
+      "kind": "method",
+      "name": "_getTemplate",
+      "description": "Template logic",
+      "return": {
+        "type": {
+          "text": "*"
+        }
+      },
+      "privacy": "private",
+      "inheritedFrom": {
+        "name": "CellBool",
+        "module": "src/typerenderer/cell-bool.js"
+      }
+    },
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "description": "of type bool, furo.fat.Bool, google.wrapper.BoolValue",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component",
+      "inheritedFrom": {
+        "name": "CellBool",
+        "module": "src/typerenderer/cell-bool.js"
+      }
+    }
+  ],
+  "superclass": {
+    "name": "CellBool",
+    "module": "/src/typerenderer/cell-bool.js"
+  },
+  "tagName": "cell-furo-fat-bool",
+  "customElement": true
+}

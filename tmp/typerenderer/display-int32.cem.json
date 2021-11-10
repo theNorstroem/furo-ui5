@@ -1,0 +1,63 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/display-int32.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`display-int32`\nThe display-int32 component displays a FieldNode of type `int32` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "DisplayInt32",
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component"
+        },
+        {
+          "kind": "method",
+          "name": "_formatDisplay"
+        },
+        {
+          "kind": "field",
+          "name": "_displayValue",
+          "type": {
+            "text": "string"
+          },
+          "privacy": "private",
+          "default": "''"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "tagName": "display-int32",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "DisplayInt32",
+      "declaration": {
+        "name": "DisplayInt32",
+        "module": "src/typerenderer/display-int32.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "display-int32",
+      "declaration": {
+        "name": "DisplayInt32",
+        "module": "src/typerenderer/display-int32.js"
+      }
+    }
+  ]
+}

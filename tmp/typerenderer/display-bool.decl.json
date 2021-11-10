@@ -1,0 +1,37 @@
+{
+  "kind": "class",
+  "description": "`display-bool`\nThe display-bool component displays a FieldNode of type `bool` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "DisplayBool",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component"
+    },
+    {
+      "kind": "method",
+      "name": "_getTemplate",
+      "description": "Template logic",
+      "return": {
+        "type": {
+          "text": "*"
+        }
+      },
+      "privacy": "private"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "tagName": "display-bool",
+  "customElement": true
+}

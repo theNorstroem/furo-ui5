@@ -1,0 +1,12 @@
+{
+  "kind": "class",
+  "description": "`form-furo-fat-float` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+  "name": "FormFuroFatFloat",
+  "superclass": {
+    "name": "FormInt32",
+    "module": "/src/typerenderer/form-int32.js"
+  },
+  "summary": "form renderer for furo.fat.Float",
+  "tagName": "form-furo-fat-float",
+  "customElement": true
+}

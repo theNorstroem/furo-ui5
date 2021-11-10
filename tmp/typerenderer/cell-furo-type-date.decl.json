@@ -1,0 +1,76 @@
+{
+  "kind": "class",
+  "description": "`cell-furo-type-date`\nThe cell-furo-type-date component displays a FieldNode of type `furo.type.Date` in read only mode.\n\nif the field `display_name` is set, the component will use that value for the display.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "CellFuroTypeDate",
+  "members": [
+    {
+      "kind": "method",
+      "name": "_formatCell",
+      "privacy": "private",
+      "inheritedFrom": {
+        "name": "CellGoogleTypeDate",
+        "module": "src/typerenderer/cell-google-type-date.js"
+      }
+    },
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component",
+      "inheritedFrom": {
+        "name": "CellGoogleTypeDate",
+        "module": "src/typerenderer/cell-google-type-date.js"
+      }
+    },
+    {
+      "kind": "method",
+      "name": "_convertDateToString",
+      "static": true,
+      "parameters": [
+        {
+          "name": "fieldNode"
+        },
+        {
+          "name": "date"
+        }
+      ],
+      "description": "convert date object to String according to Intl DateTimeFormat\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat\nExample output: locale de-CH 31.12.2021",
+      "return": {
+        "type": {
+          "text": "string"
+        }
+      },
+      "privacy": "private",
+      "inheritedFrom": {
+        "name": "CellGoogleTypeDate",
+        "module": "src/typerenderer/cell-google-type-date.js"
+      }
+    },
+    {
+      "kind": "field",
+      "name": "_displayValue",
+      "type": {
+        "text": "string"
+      },
+      "privacy": "private",
+      "default": "''",
+      "inheritedFrom": {
+        "name": "CellGoogleTypeDate",
+        "module": "src/typerenderer/cell-google-type-date.js"
+      }
+    }
+  ],
+  "superclass": {
+    "name": "CellGoogleTypeDate",
+    "module": "/src/typerenderer/cell-google-type-date.js"
+  },
+  "tagName": "cell-furo-type-date",
+  "customElement": true
+}

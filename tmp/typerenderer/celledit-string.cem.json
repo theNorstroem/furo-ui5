@@ -1,0 +1,35 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-string.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "CelleditString",
+      "superclass": {
+        "name": "FuroUi5TextInput",
+        "module": "/src/furo-ui5-text-input.js"
+      },
+      "tagName": "celledit-string",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "CelleditString",
+      "declaration": {
+        "name": "CelleditString",
+        "module": "src/typerenderer/celledit-string.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-string",
+      "declaration": {
+        "name": "CelleditString",
+        "module": "src/typerenderer/celledit-string.js"
+      }
+    }
+  ]
+}

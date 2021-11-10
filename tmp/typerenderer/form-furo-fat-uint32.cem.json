@@ -1,0 +1,28 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-furo-fat-uint32.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`form-furo-fat-uint32` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+      "name": "FormFuroFatUint32",
+      "superclass": {
+        "name": "FormInt32",
+        "module": "/src/typerenderer/form-int32.js"
+      },
+      "summary": "form renderer for furo.fat.Uint32",
+      "tagName": "form-furo-fat-uint32",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "form-furo-fat-uint32",
+      "declaration": {
+        "name": "FormFuroFatUint32",
+        "module": "src/typerenderer/form-furo-fat-uint32.js"
+      }
+    }
+  ]
+}

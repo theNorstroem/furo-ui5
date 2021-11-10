@@ -1,0 +1,54 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/display-furo-stringoptionproperty.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`display-furo-stringoptionproperty`\nThe display-furo-numberrproperty component displays a FieldNode of type `furo.Stringoptionproperty` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "DisplayFuroStringoptionproperty",
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component",
+          "inheritedFrom": {
+            "name": "DisplayString",
+            "module": "src/typerenderer/display-string.js"
+          }
+        }
+      ],
+      "superclass": {
+        "name": "DisplayFuroStringproperty",
+        "module": "/src/typerenderer/display-furo-stringproperty.js"
+      },
+      "tagName": "display-furo-stringoptionproperty",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "DisplayFuroStringoptionproperty",
+      "declaration": {
+        "name": "DisplayFuroStringoptionproperty",
+        "module": "src/typerenderer/display-furo-stringoptionproperty.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "display-furo-stringoptionproperty",
+      "declaration": {
+        "name": "DisplayFuroStringoptionproperty",
+        "module": "src/typerenderer/display-furo-stringoptionproperty.js"
+      }
+    }
+  ]
+}

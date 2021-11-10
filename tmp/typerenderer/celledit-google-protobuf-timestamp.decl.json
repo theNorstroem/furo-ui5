@@ -1,0 +1,11 @@
+{
+  "kind": "class",
+  "description": "",
+  "name": "CelleditGoogleProtobufTimestamp",
+  "superclass": {
+    "name": "FuroUi5DateTimePicker",
+    "module": "/src/furo-ui5-date-time-picker.js"
+  },
+  "tagName": "celledit-google-protobuf-timestamp",
+  "customElement": true
+}

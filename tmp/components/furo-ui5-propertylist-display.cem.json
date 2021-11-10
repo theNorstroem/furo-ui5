@@ -1,0 +1,55 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-ui5-propertylist-display.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`furo-ui5-propertylist-display` allows the user to show repeated properties (furo.Property) in a readonly mode.\nFor all other types you can use furo-ui5-typerenderer-labeled.\n\nThe type information of the property is used for the display of the individual attributes.\nE.g.\n```\n[\n {\n   \"code\": \"c0a7f550-0fbe-4046-8fa9-60c86327b6b1\",\n   \"data\": {\n      \"@type\": \"type.googleapis.com/furo.StringProperty\",\n     \"data\": \"01032020\"\n   },\n   \"flags\": [],\n   \"display_name\": \"Vertragsbeginn\",\n   \"id\": \"246d79a0-0a15-43c5-b18f-ac8a4a449df1\",\n   \"meta\": {}\n }\n]\n```\n\nYou can bind the furo.Property type (single and repeated).\n\n```html\n <furo-ui5-propertylist-display\n    ƒ-bind-data=\"--daoCountry(*.data.additional_data)\"\n ></furo-ui5-propertylist-display>\n```",
+      "name": "FuroUi5PropertylistDisplay",
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a RepeaterNode of type furo.Property.",
+          "return": {
+            "type": {
+              "text": "boolean"
+            }
+          }
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "tagName": "furo-ui5-propertylist-display",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FuroUi5PropertylistDisplay",
+      "declaration": {
+        "name": "FuroUi5PropertylistDisplay",
+        "module": "src/furo-ui5-propertylist-display.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-ui5-propertylist-display",
+      "declaration": {
+        "name": "FuroUi5PropertylistDisplay",
+        "module": "src/furo-ui5-propertylist-display.js"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-furo-reference.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "FormFuroReference",
+      "superclass": {
+        "name": "FuroUi5ReferenceSearchLabeled",
+        "module": "/src/furo-ui5-reference-search-labeled.js"
+      },
+      "tagName": "form-furo-reference",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "form-furo-reference",
+      "declaration": {
+        "name": "FormFuroReference",
+        "module": "src/typerenderer/form-furo-reference.js"
+      }
+    }
+  ]
+}

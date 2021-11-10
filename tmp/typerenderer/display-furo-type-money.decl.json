@@ -1,0 +1,87 @@
+{
+  "kind": "class",
+  "description": "`display-furo-type-money`\nThe display-furo-type-money component displays a FieldNode of type `furo.type.Money` in read only mode.\n\nif the field `display_name` is set, the component will use that value for the display.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "DisplayFuroTypeMoney",
+  "members": [
+    {
+      "kind": "method",
+      "name": "_formatDisplay",
+      "inheritedFrom": {
+        "name": "DisplayGoogleTypeMoney",
+        "module": "src/typerenderer/display-google-type-money.js"
+      }
+    },
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component",
+      "inheritedFrom": {
+        "name": "DisplayGoogleTypeMoney",
+        "module": "src/typerenderer/display-google-type-money.js"
+      }
+    },
+    {
+      "kind": "method",
+      "name": "_convertTypeToNumber",
+      "static": true,
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "return": {
+        "type": {
+          "text": "number"
+        }
+      },
+      "privacy": "private",
+      "inheritedFrom": {
+        "name": "DisplayGoogleTypeMoney",
+        "module": "src/typerenderer/display-google-type-money.js"
+      }
+    },
+    {
+      "kind": "field",
+      "name": "_displayValue",
+      "type": {
+        "text": "string"
+      },
+      "privacy": "private",
+      "default": "''",
+      "inheritedFrom": {
+        "name": "DisplayGoogleTypeMoney",
+        "module": "src/typerenderer/display-google-type-money.js"
+      }
+    },
+    {
+      "kind": "field",
+      "name": "_valueObject",
+      "type": {
+        "text": "{amount: number}"
+      },
+      "privacy": "private",
+      "default": "{ amount: Number.NaN }",
+      "inheritedFrom": {
+        "name": "DisplayGoogleTypeMoney",
+        "module": "src/typerenderer/display-google-type-money.js"
+      }
+    }
+  ],
+  "superclass": {
+    "name": "DisplayGoogleTypeMoney",
+    "module": "/src/typerenderer/display-google-type-money.js"
+  },
+  "tagName": "display-furo-type-money",
+  "customElement": true
+}

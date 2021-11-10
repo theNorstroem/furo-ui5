@@ -1,0 +1,79 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/cell-google-protobuf-timestamp.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`cell-google-protobuf-timestamp`\nThe cell-google-protobuf-timestamp component displays a FieldNode of type `google.prtobuf.Timestamp` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "CellGoogleProtobufTimestamp",
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component"
+        },
+        {
+          "kind": "method",
+          "name": "_convertDateToString",
+          "static": true,
+          "parameters": [
+            {
+              "name": "fieldValue"
+            },
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "convert date object to String according to Intl DateTimeFormat\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat\nExample output: locale de-CH 15.01.2017, 02:30:15",
+          "return": {
+            "type": {
+              "text": "string"
+            }
+          },
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "_formatCell",
+          "privacy": "private"
+        },
+        {
+          "kind": "field",
+          "name": "_displayValue",
+          "type": {
+            "text": "string"
+          },
+          "privacy": "private",
+          "default": "''"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "tagName": "cell-google-protobuf-timestamp",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "cell-google-protobuf-timestamp",
+      "declaration": {
+        "name": "CellGoogleProtobufTimestamp",
+        "module": "src/typerenderer/cell-google-protobuf-timestamp.js"
+      }
+    }
+  ]
+}

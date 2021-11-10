@@ -1,0 +1,216 @@
+{
+  "decl": {
+    "kind": "class",
+    "description": "`display-google-protobuf-floatvalue`\nThe display-google-protobuf-floatvalue component displays a FieldNode of type `google.protobuf.FloatValue` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+    "name": "DisplayGoolgeProtobufFloatvalue",
+    "superclass": {
+      "name": "DisplayFloat",
+      "module": "/src/typerenderer/display-float.js"
+    },
+    "tagName": "display-google-protobuf-floatvalue",
+    "customElement": true,
+    "members": [
+      {
+        "kind": "method",
+        "name": "bindData",
+        "parameters": [
+          {
+            "name": "fieldNode",
+            "type": {
+              "text": "FieldNode"
+            }
+          }
+        ],
+        "description": "Binds a field node to the component",
+        "inheritedFrom": {
+          "name": "DisplayFloat",
+          "module": "src/typerenderer/display-float.js"
+        }
+      },
+      {
+        "kind": "method",
+        "name": "_formatDisplay",
+        "inheritedFrom": {
+          "name": "DisplayFloat",
+          "module": "src/typerenderer/display-float.js"
+        }
+      },
+      {
+        "kind": "field",
+        "name": "_displayValue",
+        "type": {
+          "text": "string"
+        },
+        "privacy": "private",
+        "default": "''",
+        "inheritedFrom": {
+          "name": "DisplayFloat",
+          "module": "src/typerenderer/display-float.js"
+        }
+      }
+    ]
+  },
+  "component": "display-google-protobuf-floatvalue",
+  "module": "typerenderer",
+  "pkg": {
+    "name": "@furo/ui5",
+    "description": "SAP UI5 Web Components data bindings for furo",
+    "version": "1.0.0-alpha.2",
+    "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
+    "repository": "git@github.com:eclipse/eclipsefuro-web.git",
+    "author": {
+      "name": "",
+      "email": "",
+      "url": ""
+    },
+    "keywords": [
+      "web-components",
+      "flow based programming",
+      "flowbased",
+      "flow"
+    ],
+    "license": "MIT",
+    "main": "src/furo-catalog.js",
+    "scripts": {
+      "analyze": "cem analyze --globs \"src/**/*.js\" --exclude **/furo-catalog.js --litelement",
+      "start": "web-dev-server --app-index demos --open",
+      "lint": "eslint --ext .js,.html . --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*' --ignore-path .gitignore && prettier \"**/*.js\" --check  --ignore-path .prettierignore",
+      "format": "eslint --ext .js,.html . --fix --ignore-path .prettierignore && prettier \"**/*.js\" --write --ignore-path .prettierignore",
+      "test": "web-test-runner  --coverage",
+      "test:watch": "web-test-runner  --watch",
+      "docs:start": "cd hugo && hugo serve",
+      "docs:generate": "npm run analyze:components && npm run analyze:typerenderer && ./scripts/cem.sh",
+      "docs:publish": "./scripts/publishDocs.sh",
+      "analyze:components": "cem analyze --globs \"src/**/*.js\" --exclude **/typerenderer/* --litelement --outdir tmp/components",
+      "analyze:typerenderer": "cem analyze --globs \"src/typerenderer/*.js\" --exclude --litelement --outdir tmp/typerenderer"
+    },
+    "peerDependencies": {
+      "@furo/fbp": "^6.0.0-rc.0",
+      "@furo/framework": "^2.0.0-rc.0",
+      "@furo/layout": "^2.0.0-rc.0",
+      "@furo/data": "^2.0.0-rc.0",
+      "@furo/util": "^2.0.0-rc.0",
+      "@ui5/webcomponents": "0.33.0",
+      "@ui5/webcomponents-base": "0.33.0",
+      "@ui5/webcomponents-fiori": "0.33.0",
+      "@ui5/webcomponents-icons": "0.33.0",
+      "lit": "^2.0.2"
+    },
+    "dependencies": {
+      "markdown-it": "^9.0.1",
+      "apexcharts": "^3.29.0",
+      "signature_pad": "3.0.0-beta.4"
+    },
+    "devDependencies": {
+      "@custom-elements-manifest/analyzer": "^0.5.3",
+      "@open-wc/eslint-config": "^4.3.0",
+      "@open-wc/testing": "next",
+      "@web/dev-server": "^0.1.25",
+      "@web/test-runner": "^0.13.20",
+      "@esm-bundle/chai": "^4.3.4-fix.0",
+      "eslint": "^7.32.0",
+      "eslint-config-prettier": "^8.3.0",
+      "husky": "^4.3.8",
+      "lerna": "^3.22.1",
+      "lint-staged": "^10.5.4",
+      "lit-html": "2.0.0-rc.3",
+      "prettier": "^2.4.1"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "engines": {
+      "node": ">=10.0"
+    },
+    "customElements": "tmp/typerenderer/custom-elements.json",
+    "eslintConfig": {
+      "extends": [
+        "@open-wc",
+        "prettier"
+      ]
+    },
+    "prettier": {
+      "singleQuote": true,
+      "arrowParens": "avoid"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.js": [
+        "eslint --fix --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*'",
+        "prettier --write",
+        "git add"
+      ]
+    }
+  },
+  "cem": {
+    "kind": "javascript-module",
+    "path": "src/typerenderer/display-google-protobuf-floatvalue.js",
+    "declarations": [
+      {
+        "kind": "class",
+        "description": "`display-google-protobuf-floatvalue`\nThe display-google-protobuf-floatvalue component displays a FieldNode of type `google.protobuf.FloatValue` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+        "name": "DisplayGoolgeProtobufFloatvalue",
+        "superclass": {
+          "name": "DisplayFloat",
+          "module": "/src/typerenderer/display-float.js"
+        },
+        "tagName": "display-google-protobuf-floatvalue",
+        "customElement": true,
+        "members": [
+          {
+            "kind": "method",
+            "name": "bindData",
+            "parameters": [
+              {
+                "name": "fieldNode",
+                "type": {
+                  "text": "FieldNode"
+                }
+              }
+            ],
+            "description": "Binds a field node to the component",
+            "inheritedFrom": {
+              "name": "DisplayFloat",
+              "module": "src/typerenderer/display-float.js"
+            }
+          },
+          {
+            "kind": "method",
+            "name": "_formatDisplay",
+            "inheritedFrom": {
+              "name": "DisplayFloat",
+              "module": "src/typerenderer/display-float.js"
+            }
+          },
+          {
+            "kind": "field",
+            "name": "_displayValue",
+            "type": {
+              "text": "string"
+            },
+            "privacy": "private",
+            "default": "''",
+            "inheritedFrom": {
+              "name": "DisplayFloat",
+              "module": "src/typerenderer/display-float.js"
+            }
+          }
+        ]
+      }
+    ],
+    "exports": [
+      {
+        "kind": "custom-element-definition",
+        "name": "display-google-protobuf-floatvalue",
+        "declaration": {
+          "name": "DisplayGoolgeProtobufFloatvalue",
+          "module": "src/typerenderer/display-google-protobuf-floatvalue.js"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-google-type-money.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`celledit-google-type-money` is a `celledit` context renderer.\n\nIt uses furo-ui5-money-input as the renderer",
+      "name": "CelleditGoogleTypeMoney",
+      "superclass": {
+        "name": "FuroUi5MoneyInput",
+        "module": "/src/furo-ui5-money-input.js"
+      },
+      "summary": "celledit renderer for google.type.Money",
+      "tagName": "celledit-google-type-money",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-google-type-money",
+      "declaration": {
+        "name": "CelleditGoogleTypeMoney",
+        "module": "src/typerenderer/celledit-google-type-money.js"
+      }
+    }
+  ]
+}

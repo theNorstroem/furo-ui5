@@ -1,0 +1,38 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-google-protobuf-stringvalue.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "FormGoogleProtobufStringvalue",
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode"
+            }
+          ]
+        }
+      ],
+      "superclass": {
+        "name": "FuroUi5TextInputLabeled",
+        "module": "/src/furo-ui5-text-input-labeled.js"
+      },
+      "tagName": "form-google-protobuf-stringvalue",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "form-google-protobuf-stringvalue",
+      "declaration": {
+        "name": "FormGoogleProtobufStringvalue",
+        "module": "src/typerenderer/form-google-protobuf-stringvalue.js"
+      }
+    }
+  ]
+}

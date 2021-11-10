@@ -1,0 +1,27 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-furo-reference.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "",
+      "name": "CelleditFuroReference",
+      "superclass": {
+        "name": "FuroUi5ReferenceSearch",
+        "module": "/src/furo-ui5-reference-search.js"
+      },
+      "tagName": "celledit-furo-reference",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-furo-reference",
+      "declaration": {
+        "name": "CelleditFuroReference",
+        "module": "src/typerenderer/celledit-furo-reference.js"
+      }
+    }
+  ]
+}

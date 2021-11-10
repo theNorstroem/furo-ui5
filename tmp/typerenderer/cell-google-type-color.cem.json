@@ -1,0 +1,83 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/cell-google-type-color.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`cell-google-type-color`\nThe cell-google-type-color component displays a FieldNode of type `google.type.Color` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "CellGoolgeTypeColor",
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component"
+        },
+        {
+          "kind": "method",
+          "name": "_updateValue",
+          "description": "update value properties rgb",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "_getTemplate",
+          "description": "Template logic",
+          "return": {
+            "type": {
+              "text": "*"
+            }
+          },
+          "privacy": "private"
+        },
+        {
+          "kind": "field",
+          "name": "_red",
+          "type": {
+            "text": "string"
+          },
+          "default": "''"
+        },
+        {
+          "kind": "field",
+          "name": "_green",
+          "type": {
+            "text": "string"
+          },
+          "default": "''"
+        },
+        {
+          "kind": "field",
+          "name": "_blue",
+          "type": {
+            "text": "string"
+          },
+          "default": "''"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "tagName": "cell-google-type-color",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "cell-google-type-color",
+      "declaration": {
+        "name": "CellGoolgeTypeColor",
+        "module": "src/typerenderer/cell-google-type-color.js"
+      }
+    }
+  ]
+}

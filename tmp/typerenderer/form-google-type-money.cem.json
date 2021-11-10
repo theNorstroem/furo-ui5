@@ -1,0 +1,28 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/form-google-type-money.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`form-google-type-money` is a `form` context renderer.\n\nIt uses furo-ui5-money-input as the renderer",
+      "name": "FormGoogleTypeMoney",
+      "superclass": {
+        "name": "FuroUi5MoneyInputLabeled",
+        "module": "/src/furo-ui5-money-input-labeled.js"
+      },
+      "summary": "form renderer for google.type.Money",
+      "tagName": "form-google-type-money",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "form-google-type-money",
+      "declaration": {
+        "name": "FormGoogleTypeMoney",
+        "module": "src/typerenderer/form-google-type-money.js"
+      }
+    }
+  ]
+}

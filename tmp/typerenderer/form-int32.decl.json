@@ -1,0 +1,11 @@
+{
+  "kind": "class",
+  "description": "",
+  "name": "FormInt32",
+  "superclass": {
+    "name": "FuroUi5NumberInputLabeled",
+    "module": "/src/furo-ui5-number-input-labeled.js"
+  },
+  "tagName": "form-int32",
+  "customElement": true
+}

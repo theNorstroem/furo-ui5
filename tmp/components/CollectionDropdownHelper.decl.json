@@ -1,0 +1,167 @@
+{
+  "kind": "class",
+  "description": "Helper class for furo-data-collection-dropdown and furo-ui5-collection-dropdown",
+  "name": "CollectionDropdownHelper",
+  "members": [
+    {
+      "kind": "method",
+      "name": "triggerSetOptionItem",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "getValueByPath",
+      "static": true,
+      "parameters": [
+        {
+          "name": "obj"
+        },
+        {
+          "name": "path"
+        }
+      ],
+      "description": "Let you get an attribute value by path",
+      "return": {
+        "type": {
+          "text": "T"
+        }
+      },
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "notifiySelectedItem",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        },
+        {
+          "name": "obj"
+        }
+      ],
+      "description": "Triggers the item selected event"
+    },
+    {
+      "kind": "method",
+      "name": "findDisplayNameByValue",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        },
+        {
+          "name": "val"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "listHasDataObjectValue",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "initDropdownItemWithoutCollectionInjection",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "updateField",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "mapDataToList",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        },
+        {
+          "name": "list"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "setItemSelectedViaSelectedMark",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        },
+        {
+          "name": "list"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "injectList",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        },
+        {
+          "name": "list"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "mapInputToInnerStruct",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        },
+        {
+          "name": "collection"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "setOptionItems",
+      "static": true,
+      "parameters": [
+        {
+          "name": "caller"
+        }
+      ],
+      "description": "set option items",
+      "privacy": "private"
+    }
+  ],
+  "events": [
+    {
+      "type": {
+        "text": "option list"
+      },
+      "description": "Is fired when a new list is applied",
+      "name": "options-injected"
+    }
+  ]
+}

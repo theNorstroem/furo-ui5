@@ -1,0 +1,185 @@
+{
+  "kind": "javascript-module",
+  "path": "src/tree/furo-panel-coordinator-tab-item.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`furo-mini-tab-item`\ntodo Describe your element",
+      "name": "FuroPanelCoordinatorTabItem",
+      "cssProperties": [
+        {
+          "type": {
+            "text": "#fafafa"
+          },
+          "description": "Border bottom color",
+          "name": "--surface",
+          "default": "N/A"
+        },
+        {
+          "type": {
+            "text": "N/A"
+          },
+          "description": "foreground color",
+          "name": "--on-surface",
+          "default": "N/A"
+        },
+        {
+          "type": {
+            "text": "red"
+          },
+          "description": "error color",
+          "name": "--error",
+          "default": "N/A"
+        },
+        {
+          "type": {
+            "text": "16px"
+          },
+          "description": "label padding, 0 var(--furo-button-padding, var(--spacing-s, 16px))",
+          "name": "--furo-button-padding",
+          "default": "--spacing-s"
+        }
+      ],
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode"
+            }
+          ]
+        },
+        {
+          "kind": "method",
+          "name": "_removeListeners"
+        },
+        {
+          "kind": "method",
+          "name": "_FBPReady",
+          "description": "flow is ready lifecycle method",
+          "privacy": "private"
+        },
+        {
+          "kind": "field",
+          "name": "selected",
+          "type": {
+            "text": "boolean"
+          },
+          "default": "false",
+          "privacy": "public",
+          "description": "Description",
+          "attribute": "selected",
+          "reflects": true
+        },
+        {
+          "kind": "field",
+          "name": "hovered",
+          "type": {
+            "text": "boolean"
+          },
+          "default": "false"
+        },
+        {
+          "kind": "field",
+          "name": "inedit",
+          "type": {
+            "text": "boolean"
+          },
+          "default": "false",
+          "privacy": "public",
+          "attribute": "inedit",
+          "reflects": true
+        },
+        {
+          "kind": "field",
+          "name": "haserror",
+          "type": {
+            "text": "boolean"
+          },
+          "default": "false",
+          "privacy": "public",
+          "attribute": "haserror",
+          "reflects": true
+        },
+        {
+          "kind": "field",
+          "name": "_select"
+        },
+        {
+          "kind": "field",
+          "name": "_deselect"
+        },
+        {
+          "kind": "field",
+          "name": "_error"
+        },
+        {
+          "kind": "field",
+          "name": "_inedit"
+        },
+        {
+          "kind": "field",
+          "name": "_focus"
+        },
+        {
+          "kind": "field",
+          "name": "_unfocus"
+        },
+        {
+          "kind": "field",
+          "name": "_clear"
+        },
+        {
+          "kind": "field",
+          "name": "focused",
+          "privacy": "public",
+          "attribute": "focused",
+          "reflects": true
+        }
+      ],
+      "attributes": [
+        {
+          "name": "selected",
+          "description": "Description",
+          "fieldName": "selected"
+        },
+        {
+          "name": "haserror",
+          "fieldName": "haserror"
+        },
+        {
+          "name": "inedit",
+          "fieldName": "inedit"
+        },
+        {
+          "name": "focused",
+          "fieldName": "focused"
+        }
+      ],
+      "mixins": [
+        {
+          "name": "FBP",
+          "package": "@furo/fbp"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "summary": "todo shortdescription",
+      "tagName": "furo-panel-coordinator-tab-item",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-panel-coordinator-tab-item",
+      "declaration": {
+        "name": "FuroPanelCoordinatorTabItem",
+        "module": "src/tree/furo-panel-coordinator-tab-item.js"
+      }
+    }
+  ]
+}

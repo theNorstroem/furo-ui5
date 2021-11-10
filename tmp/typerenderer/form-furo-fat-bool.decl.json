@@ -1,0 +1,12 @@
+{
+  "kind": "class",
+  "description": "`form-furo-fat-bool` is a `form` context renderer.\n\nIt uses furo-ui5-checkbox-input as the renderer",
+  "name": "FormFuroFatBool",
+  "superclass": {
+    "name": "FormBool",
+    "module": "/src/typerenderer/form-bool.js"
+  },
+  "summary": "form renderer for bool",
+  "tagName": "form-furo-fat-bool",
+  "customElement": true
+}

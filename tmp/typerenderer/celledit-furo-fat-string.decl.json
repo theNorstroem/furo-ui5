@@ -1,0 +1,11 @@
+{
+  "kind": "class",
+  "description": "",
+  "name": "CelleditFuroFatString",
+  "superclass": {
+    "name": "CelleditString",
+    "module": "/src/typerenderer/celledit-string.js"
+  },
+  "tagName": "celledit-furo-fat-string",
+  "customElement": true
+}

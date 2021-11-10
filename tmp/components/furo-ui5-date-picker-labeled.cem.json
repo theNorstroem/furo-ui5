@@ -1,0 +1,127 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-ui5-date-picker-labeled.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`furo-ui5-date-picker-labeled`\nThe furo-ui5-date-picker-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.",
+      "name": "FuroUi5DatePickerLabeled",
+      "members": [
+        {
+          "kind": "method",
+          "name": "_FBPReady",
+          "description": "flow is ready lifecycle method",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Orchestrates the data field connection to the inside"
+        },
+        {
+          "kind": "field",
+          "name": "label",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "the label for the data-date-picker",
+          "attribute": "label"
+        },
+        {
+          "kind": "field",
+          "name": "required",
+          "privacy": "public",
+          "description": "A Boolean attribute which, if present, means this field is required and marked with *.",
+          "attribute": "required"
+        },
+        {
+          "kind": "field",
+          "name": "disabled",
+          "privacy": "public",
+          "description": "A Boolean attribute which, if present, means this field cannot be edited by the user.",
+          "attribute": "disabled",
+          "reflects": true
+        },
+        {
+          "kind": "field",
+          "name": "readonly",
+          "privacy": "public",
+          "description": "A Boolean attribute which, if present, means this field is readonly.",
+          "attribute": "readonly"
+        }
+      ],
+      "events": [
+        {
+          "type": {
+            "text": "String"
+          },
+          "description": "Fires the field value when it changes in ISO 8601 format.",
+          "name": "value-changed"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "label",
+          "description": "the label for the data-date-picker",
+          "fieldName": "label"
+        },
+        {
+          "name": "required",
+          "description": "A Boolean attribute which, if present, means this field is required and marked with *.",
+          "fieldName": "required"
+        },
+        {
+          "name": "disabled",
+          "description": "A Boolean attribute which, if present, means this field cannot be edited by the user.",
+          "fieldName": "disabled"
+        },
+        {
+          "name": "readonly",
+          "description": "A Boolean attribute which, if present, means this field is readonly.",
+          "fieldName": "readonly"
+        }
+      ],
+      "mixins": [
+        {
+          "name": "FBP",
+          "package": "@furo/fbp/src/fbp.js"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "summary": "labeled input field",
+      "tagName": "furo-ui5-date-picker-labeled",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FuroUi5DatePickerLabeled",
+      "declaration": {
+        "name": "FuroUi5DatePickerLabeled",
+        "module": "src/furo-ui5-date-picker-labeled.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-ui5-date-picker-labeled",
+      "declaration": {
+        "name": "FuroUi5DatePickerLabeled",
+        "module": "src/furo-ui5-date-picker-labeled.js"
+      }
+    }
+  ]
+}

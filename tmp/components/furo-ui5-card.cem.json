@@ -1,0 +1,228 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-ui5-card.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`furo-ui5-card`\nis a bindable card that represents information in the form of a tile with separate header and content areas.\n\n```html\n <furo-ui5-card\n   heading=\"Title\"\n   subheading=\"Secondary text\"\n   icon=\"card\"\n >\n     <div slot=\"action\"><furo-ui5-button>Action</furo-ui5-button></div>\n     <div slot=\"content\">content goes here</div>\n </furo-ui5-card>\n```\n## How To Use Semantic Colors\nYou can use semantic colors to visualize the status or state. Set the attribute design=\"\" with the following values:\n- Positive (--sapPositiveColor)\n- Negative (--sapNegativeColor)\n- Critical (--sapCriticalColor)\n- Neutral (--sapCriticalColor)\n\n* ```html\n <furo-ui5-card\n   design=\"Positive\"\n   icon=\"card\"\n >\n     <div slot=\"content\">content goes here</div>\n </furo-ui5-card>\n```",
+      "name": "FuroUi5Card",
+      "slots": [
+        {
+          "type": {
+            "text": "HTMLElement [0..n]"
+          },
+          "description": "defines an action, displayed in the right most part of the header. Note: If status is set, the status text will be displayed, you can either have action, or status.",
+          "name": "action"
+        },
+        {
+          "type": {
+            "text": "HTMLElement [0..n]"
+          },
+          "description": "defines the content of the card",
+          "name": "content"
+        }
+      ],
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindHeading",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Bind any **scalar** field to set the title of the panel."
+        },
+        {
+          "kind": "method",
+          "name": "bindIcon",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Bind any **scalar** field to set the title of the panel.\nDo not forget to import the icon you will use in your component."
+        },
+        {
+          "kind": "method",
+          "name": "bindSubheading",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Bind any **scalar** field to set the subtitle of the panel."
+        },
+        {
+          "kind": "method",
+          "name": "bindNavNode",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "bind a field with the signature of furo.navigation.Navigationnode\n\nUsed fields are:\n- display_name\n- secondary_text\n- icon"
+        },
+        {
+          "kind": "method",
+          "name": "_setNavNodeSignatureValues",
+          "description": "update attributes according to the value of furo.navigation.Navigationnode signature",
+          "privacy": "private"
+        },
+        {
+          "kind": "field",
+          "name": "icon",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "Defines the visual representation in the header of the card. Supports images and icons.\nhttps://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html",
+          "attribute": "icon",
+          "reflects": true
+        },
+        {
+          "kind": "field",
+          "name": "heading",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "Defines the title displayed in the ui5-card header.",
+          "attribute": "heading"
+        },
+        {
+          "kind": "field",
+          "name": "subheading",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "Defines the subheading displayed in the ui5-card header.",
+          "attribute": "subheading"
+        },
+        {
+          "kind": "field",
+          "name": "status",
+          "type": {
+            "text": "string"
+          },
+          "default": "''",
+          "privacy": "public",
+          "description": "Defines the status text displayed in the card header (upper right).\n\nBy enabling the status, actions are not visible.",
+          "attribute": "status"
+        },
+        {
+          "kind": "field",
+          "name": "headerInteractive",
+          "type": {
+            "text": "boolean"
+          },
+          "default": "false",
+          "privacy": "public",
+          "description": "Defines if the ui5-card header would be interactive, e.g gets hover effect, gets focused and header-click event is fired, when it is pressed.",
+          "attribute": "header-interactive",
+          "reflects": true
+        },
+        {
+          "kind": "field",
+          "name": "noContentPadding",
+          "type": {
+            "text": "boolean"
+          },
+          "default": "false",
+          "privacy": "public",
+          "description": "Shows the content slot area with no padding",
+          "attribute": "no-content-padding",
+          "reflects": true
+        }
+      ],
+      "events": [
+        {
+          "description": "Fired when the card head is clicked. The header-interactive attribute must be set.",
+          "name": "header-clicked"
+        },
+        {
+          "description": "Fired when interactive header was clicked.",
+          "name": "header-click"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "heading",
+          "description": "Defines the title displayed in the ui5-card header.",
+          "fieldName": "heading"
+        },
+        {
+          "name": "subheading",
+          "description": "Defines the subheading displayed in the ui5-card header.",
+          "fieldName": "subheading"
+        },
+        {
+          "name": "icon",
+          "description": "Defines the visual representation in the header of the card. Supports images and icons.\nhttps://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html",
+          "fieldName": "icon"
+        },
+        {
+          "name": "status",
+          "description": "Defines the status text displayed in the card header (upper right).\n\nBy enabling the status, actions are not visible.",
+          "fieldName": "status"
+        },
+        {
+          "name": "header-interactive",
+          "description": "Defines if the ui5-card header would be interactive, e.g gets hover effect, gets focused and header-click event is fired, when it is pressed.",
+          "fieldName": "headerInteractive"
+        },
+        {
+          "name": "no-content-padding",
+          "description": "Shows the content slot area with no padding",
+          "fieldName": "noContentPadding"
+        }
+      ],
+      "mixins": [
+        {
+          "name": "FBP",
+          "package": "@furo/fbp"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "tagName": "furo-ui5-card",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FuroUi5Card",
+      "declaration": {
+        "name": "FuroUi5Card",
+        "module": "src/furo-ui5-card.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-ui5-card",
+      "declaration": {
+        "name": "FuroUi5Card",
+        "module": "src/furo-ui5-card.js"
+      }
+    }
+  ]
+}

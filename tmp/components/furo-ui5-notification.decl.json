@@ -1,0 +1,173 @@
+{
+  "kind": "class",
+  "description": "`furo-ui5-notification`\nLit element\n\n furo-ui5-notification should be used together witch furo-ui5-notification-list-display or furo-ui5-notification-group-display. you can place those two components into different places.\n best place the furo-ui5-notification-list(or group)-display on the main site. then you only need one furo-ui5-notification-list(or group)-display. it can work with n furo-ui5-notification.",
+  "name": "FuroUi5Notification",
+  "members": [
+    {
+      "kind": "method",
+      "name": "_requestListDisplay",
+      "description": "request to display the notifications",
+      "parameters": [
+        {
+          "description": "payload",
+          "name": "p",
+          "type": {
+            "text": "Object"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "_requestGroupDisplay",
+      "description": "request to display the notifications in group",
+      "parameters": [
+        {
+          "description": "payload",
+          "name": "p",
+          "type": {
+            "text": "Object"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "_close",
+      "parameters": [
+        {
+          "name": "message"
+        }
+      ],
+      "description": "trigger event when notification is closed",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_customAction",
+      "parameters": [
+        {
+          "name": "command"
+        },
+        {
+          "name": "message"
+        }
+      ],
+      "description": "trigger events when notification actions are triggered",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "parseGrpcStatus",
+      "parameters": [
+        {
+          "name": "status"
+        },
+        {
+          "name": "s"
+        }
+      ],
+      "description": "inject a grpc status object\nparse grpc status object and set the label according to the LocalizedMessage in status.\nhttps://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto ."
+    },
+    {
+      "kind": "method",
+      "name": "injectNotificationCollection",
+      "parameters": [
+        {
+          "name": "c"
+        }
+      ],
+      "description": "inject an array of notification messages.\nthe notification message should be an array of the following object signature:\n{\n \"id\": 1,\n \"display_name\": \"\",\n \"heading\": \"heading 1\",\n \"message_priority\": \"High\",\n \"category\": \"warning\",\n \"category_priority\": \"High\",\n \"actions\": [\n   {\n     \"icon\":\"accept\",\n     \"command\":\"accept\",\n     \"text\": \"accept\"\n   },\n   {\n     \"icon\":\"message-error\",\n     \"command\":\"reject\",\n     \"text\": \"Reject\"\n   }\n ],\n \"message\": \"Markdown | Less | Pretty\\n--- | --- | ---\\n*Still* | `renders` | **nicely**\\n1 | 2 | 3\"\n}"
+    },
+    {
+      "kind": "field",
+      "name": "dismissButtonText",
+      "type": {
+        "text": "string"
+      },
+      "default": "'dismiss'"
+    },
+    {
+      "kind": "field",
+      "name": "text",
+      "privacy": "public",
+      "description": "banner text content. Use *word* to mark as strong. Use \\n to insert a line break.\n\n*HTML tags will be stripped out.*",
+      "attribute": "text"
+    },
+    {
+      "kind": "field",
+      "name": "payload",
+      "privacy": "public",
+      "description": "payload. can be a GRPC error or a notification message collection.",
+      "attribute": "payload"
+    },
+    {
+      "kind": "field",
+      "name": "_type",
+      "privacy": "public",
+      "description": "type of the notification. `grpc` or `notification`",
+      "attribute": "_type"
+    }
+  ],
+  "events": [
+    {
+      "type": {
+        "text": "{Object}  this"
+      },
+      "description": " Fired when value open banner is requested",
+      "name": "open-furo-ui5-notification-requested"
+    },
+    {
+      "type": {
+        "text": "{Object}  this"
+      },
+      "description": " Fired when value open banner is requested",
+      "name": "open-furo-ui5-notification-group-requested"
+    },
+    {
+      "type": {
+        "text": "{Object}  payload"
+      },
+      "description": " Fired when notification is closed.",
+      "name": "notification-closed."
+    },
+    {
+      "type": {
+        "text": "{Object}  payload"
+      },
+      "description": " Fired when notification custom action is triggered. this is a general action event.",
+      "name": "notification-custom-action"
+    },
+    {
+      "type": {
+        "text": "{Object}  payload"
+      },
+      "description": " Fired when notification custom action is triggered.",
+      "name": "notification-custom-action-`commandName`"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "text",
+      "description": "banner text content. Use *word* to mark as strong. Use \\n to insert a line break.\n\n*HTML tags will be stripped out.*",
+      "fieldName": "text"
+    },
+    {
+      "name": "payload",
+      "description": "payload. can be a GRPC error or a notification message collection.",
+      "fieldName": "payload"
+    },
+    {
+      "name": "_type",
+      "description": "type of the notification. `grpc` or `notification`",
+      "fieldName": "_type"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "summary": "a banner",
+  "tagName": "furo-ui5-notification",
+  "customElement": true
+}

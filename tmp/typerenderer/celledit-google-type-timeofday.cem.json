@@ -1,0 +1,28 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/celledit-google-type-timeofday.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`celledit-google-type-timeofday` is a `celledit` context renderer.\n\nIt uses furo-ui5-time-picker as the renderer",
+      "name": "CelleditGoogleTypeTimeofday",
+      "superclass": {
+        "name": "FuroUi5TimePicker",
+        "module": "/src/furo-ui5-time-picker.js"
+      },
+      "summary": "celledit renderer for google.type.TimeOfDay",
+      "tagName": "celledit-google-type-timeofday",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "celledit-google-type-timeofday",
+      "declaration": {
+        "name": "CelleditGoogleTypeTimeofday",
+        "module": "src/typerenderer/celledit-google-type-timeofday.js"
+      }
+    }
+  ]
+}

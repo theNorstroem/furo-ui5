@@ -1,0 +1,229 @@
+{
+  "kind": "class",
+  "description": "# DEPRECATED switch to `furo-ui5-select`\n\nThe furo-ui5-collection-dropdown component represents a drop-down list. The items inside define the available\noptions by using the furo-ui5-collection-dropdown component.\n\nKeyboard Handling\nThe furo-ui5-collection-dropdown provides advanced keyboard handling. If the furo-ui5-collection-dropdown\nis focused, you can open or close the drop-down by pressing F4, ALT+UP or ALT+DOWN keys. Once the drop-down is\nopened, you can use the UP and DOWN arrow keys to navigate through the available options and select one\nby pressing the Space or Enter keys.\n\n### auto-select-first\nset this attribute to auto select the first item in the list, if no item is set in the bounded fieldNode.",
+  "name": "FuroUi5CollectionDropdown",
+  "members": [
+    {
+      "kind": "method",
+      "name": "_initBinder",
+      "description": "inits the universalFieldNodeBinder.\nSet the mapped attributes and labels.",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "addItems",
+      "parameters": [
+        {
+          "name": "options"
+        }
+      ],
+      "description": "Adds the option components to the default slot"
+    },
+    {
+      "kind": "method",
+      "name": "_requestUpdate",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "description": "a Field object",
+          "type": {
+            "text": "Object|FieldNode"
+          }
+        }
+      ],
+      "description": "Bind a entity field to the range-input. You can use the entity even when no data was received.\nWhen you use `@-object-ready` from a `furo-data-object` which emits a EntityNode, just bind the field with `--entity(*.fields.fieldname)`"
+    },
+    {
+      "kind": "method",
+      "name": "setValue",
+      "parameters": [
+        {
+          "name": "val"
+        }
+      ],
+      "description": "Sets the value for the field. This will update the fieldNode."
+    },
+    {
+      "kind": "method",
+      "name": "_buildListWithMetaOptions",
+      "parameters": [
+        {
+          "name": "options"
+        },
+        {
+          "description": "of options with id and display_name",
+          "name": "list",
+          "type": {
+            "text": "options"
+          }
+        }
+      ],
+      "description": "Build the dropdown list with given options from meta",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "injectEntities",
+      "parameters": [
+        {
+          "name": "entities",
+          "description": "of type *Entities",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Inject the array of a collection"
+    },
+    {
+      "kind": "field",
+      "name": "subField",
+      "type": {
+        "text": "string"
+      },
+      "description": "If you inject an array with complex objects, declare here the path where display_name and value_field are located.\n\nThis is only needed if display_name and value_field are not located in the root of the object.",
+      "default": "'data'"
+    },
+    {
+      "kind": "field",
+      "name": "displayField",
+      "type": {
+        "text": "string"
+      },
+      "description": "The name of the field from the injected collection that contains the label for the dropdown array.",
+      "default": "'display_name'"
+    },
+    {
+      "kind": "field",
+      "name": "valueField",
+      "type": {
+        "text": "string"
+      },
+      "description": "declare here the name of the field from the injected collection.  by selecting an item from dropdown the defined\nvalueSubField of bounded complex type or the value by scalar type will be updated according to the value of this field.",
+      "default": "'id'"
+    },
+    {
+      "kind": "field",
+      "name": "valueSubField",
+      "description": "if you bind a complex type, you must declare here the field which gets updated of value by selecting an item. e.g. value-sub-field = \"id\"\n\nIf you bind a scalar, you dont need this attribute.",
+      "type": {
+        "text": "string"
+      },
+      "default": "undefined"
+    },
+    {
+      "kind": "field",
+      "name": "displaySubField",
+      "type": {
+        "text": "string"
+      },
+      "description": "if you bind a complex type, declare here the field which gets updated of display_name by selecting an item.\n\nIf you bind a scalar, you dont need this attribute.",
+      "default": "'display_name'"
+    },
+    {
+      "kind": "field",
+      "name": "autoSelectFirst",
+      "type": {
+        "text": "boolean"
+      },
+      "description": "set this attribute to autoSelectFirst the first item in the list, if no item is set in the bounded fieldNode",
+      "default": "false"
+    },
+    {
+      "kind": "field",
+      "name": "_fieldNodeToUpdate",
+      "type": {
+        "text": "{}"
+      },
+      "privacy": "private",
+      "default": "{}"
+    },
+    {
+      "kind": "field",
+      "name": "_fieldDisplayNodeToUpdate",
+      "type": {
+        "text": "{}"
+      },
+      "privacy": "private",
+      "default": "{}"
+    },
+    {
+      "kind": "field",
+      "name": "_dropdownList",
+      "type": {
+        "text": "*[]"
+      },
+      "privacy": "private",
+      "default": "[]"
+    },
+    {
+      "kind": "field",
+      "name": "_pseudoDropdownList",
+      "type": {
+        "text": "*[]"
+      },
+      "description": "generated one element dropdown, which has only the data of the bounded DO",
+      "privacy": "private",
+      "default": "[]"
+    },
+    {
+      "kind": "field",
+      "name": "_injectedDropdownList",
+      "type": {
+        "text": "*[]"
+      },
+      "description": "injected dropdown elements which from a collection of response or in spec defined options",
+      "privacy": "private",
+      "default": "[]"
+    },
+    {
+      "kind": "field",
+      "name": "_valueFoundInList",
+      "type": {
+        "text": "boolean"
+      },
+      "privacy": "private",
+      "default": "true"
+    }
+  ],
+  "events": [
+    {
+      "type": {
+        "text": "{*} the original injected data (e.g. entity with link) of the selected item"
+      },
+      "description": " Fired when the item of dropdown list is selected. **bubbles**",
+      "name": "item-selected"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "value-field"
+    },
+    {
+      "name": "display-field"
+    },
+    {
+      "name": "sub-field"
+    },
+    {
+      "name": "value-sub-field"
+    },
+    {
+      "name": "display-sub-field"
+    },
+    {
+      "name": "auto-select-first"
+    }
+  ],
+  "superclass": {
+    "module": "src/furo-ui5-collection-dropdown.js"
+  },
+  "summary": "data collection dropdown",
+  "tagName": "furo-ui5-collection-dropdown",
+  "customElement": true
+}

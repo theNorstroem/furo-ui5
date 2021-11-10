@@ -1,0 +1,54 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/cell-furo-stringoptionproperty.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`cell-furo-stringoptionproperty`\nThe cell-furo-numberrproperty component displays a FieldNode of type `furo.Stringoptionproperty` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "CellFuroStringoptionproperty",
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component",
+          "inheritedFrom": {
+            "name": "CellString",
+            "module": "src/typerenderer/cell-string.js"
+          }
+        }
+      ],
+      "superclass": {
+        "name": "CellFuroStringproperty",
+        "module": "/src/typerenderer/cell-furo-stringproperty.js"
+      },
+      "tagName": "cell-furo-stringoptionproperty",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "CellFuroStringoptionproperty",
+      "declaration": {
+        "name": "CellFuroStringoptionproperty",
+        "module": "src/typerenderer/cell-furo-stringoptionproperty.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "cell-furo-stringoptionproperty",
+      "declaration": {
+        "name": "CellFuroStringoptionproperty",
+        "module": "src/typerenderer/cell-furo-stringoptionproperty.js"
+      }
+    }
+  ]
+}

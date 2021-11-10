@@ -1,0 +1,12 @@
+{
+  "kind": "class",
+  "description": "`celledit-furo-fat-float` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
+  "name": "CelleditFuroFatFloat",
+  "superclass": {
+    "name": "CelleditInt32",
+    "module": "/src/typerenderer/celledit-int32.js"
+  },
+  "summary": "celledit renderer for furo.fat.Float",
+  "tagName": "celledit-furo-fat-float",
+  "customElement": true
+}

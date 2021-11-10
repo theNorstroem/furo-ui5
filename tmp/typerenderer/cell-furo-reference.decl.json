@@ -1,0 +1,46 @@
+{
+  "kind": "class",
+  "description": "`cell-furo-reference`\nThe cell-furo-reference component displays a FieldNode of type `furo.Reference` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+  "name": "CellFuroReference",
+  "members": [
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "fieldNode",
+          "type": {
+            "text": "FieldNode"
+          }
+        }
+      ],
+      "description": "Binds a field node to the component"
+    },
+    {
+      "kind": "method",
+      "name": "_formatCell",
+      "description": "Template logic",
+      "return": {
+        "type": {
+          "text": "*"
+        }
+      },
+      "privacy": "private"
+    },
+    {
+      "kind": "field",
+      "name": "_displayValue",
+      "type": {
+        "text": "string"
+      },
+      "privacy": "private",
+      "default": "''"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "tagName": "cell-furo-reference",
+  "customElement": true
+}

@@ -1,0 +1,67 @@
+{
+  "kind": "javascript-module",
+  "path": "src/typerenderer/display-google-protobuf-int64value.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`display-google-protobuf-boolvalue`\nThe display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+      "name": "DisplayGoolgeProtobufIn64value",
+      "superclass": {
+        "name": "DisplayInt64",
+        "module": "/src/typerenderer/display-int64.js"
+      },
+      "tagName": "display-google-protobuf-int64value",
+      "customElement": true,
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component",
+          "inheritedFrom": {
+            "name": "DisplayInt64",
+            "module": "src/typerenderer/display-int64.js"
+          }
+        },
+        {
+          "kind": "method",
+          "name": "_formatDisplay",
+          "inheritedFrom": {
+            "name": "DisplayInt64",
+            "module": "src/typerenderer/display-int64.js"
+          }
+        },
+        {
+          "kind": "field",
+          "name": "_displayValue",
+          "type": {
+            "text": "string"
+          },
+          "privacy": "private",
+          "default": "''",
+          "inheritedFrom": {
+            "name": "DisplayInt64",
+            "module": "src/typerenderer/display-int64.js"
+          }
+        }
+      ]
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "display-google-protobuf-int64value",
+      "declaration": {
+        "name": "DisplayGoolgeProtobufIn64value",
+        "module": "src/typerenderer/display-google-protobuf-int64value.js"
+      }
+    }
+  ]
+}

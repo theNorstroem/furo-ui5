@@ -1,0 +1,660 @@
+{
+  "decl": {
+    "kind": "class",
+    "description": "`furo-tree-item`\ntodo Describe your element",
+    "name": "FuroTreeItem",
+    "cssProperties": [
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 1",
+        "name": "--tree-indentation-1",
+        "default": "16px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 2",
+        "name": "--tree-indentation-2",
+        "default": "32px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 3",
+        "name": "--tree-indentation-3",
+        "default": "48px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 4",
+        "name": "--tree-indentation-4",
+        "default": "56px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 5",
+        "name": "--tree-indentation-5",
+        "default": "64px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 6",
+        "name": "--tree-indentation-6",
+        "default": "72px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 7",
+        "name": "--tree-indentation-7",
+        "default": "80px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 8",
+        "name": "--tree-indentation-8",
+        "default": "88px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 9",
+        "name": "--tree-indentation-9",
+        "default": "92px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 10",
+        "name": "--tree-indentation-10",
+        "default": "96px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 11",
+        "name": "--tree-indentation-11",
+        "default": "100px"
+      },
+      {
+        "type": {
+          "text": "N/A"
+        },
+        "description": "tree indention level 12",
+        "name": "--tree-indentation-12",
+        "default": "104px"
+      }
+    ],
+    "members": [
+      {
+        "kind": "method",
+        "name": "search",
+        "parameters": [
+          {
+            "name": "event"
+          }
+        ]
+      },
+      {
+        "kind": "method",
+        "name": "_updateItem"
+      },
+      {
+        "kind": "method",
+        "name": "bindData",
+        "parameters": [
+          {
+            "name": "fieldNode"
+          }
+        ]
+      },
+      {
+        "kind": "method",
+        "name": "_FBPReady",
+        "description": "flow is ready lifecycle method",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "__addSearchListeners",
+        "description": "add listeners for search matches and non matches",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "__addNodeSelectedListener"
+      },
+      {
+        "kind": "method",
+        "name": "__addNodeFocusedListener",
+        "description": "bring the focused element in the visible part of the screen (scroll)",
+        "privacy": "private"
+      },
+      {
+        "kind": "field",
+        "name": "hidden",
+        "type": {
+          "text": "boolean"
+        },
+        "default": "true",
+        "privacy": "public",
+        "description": "Description",
+        "attribute": "hidden",
+        "reflects": true
+      },
+      {
+        "kind": "field",
+        "name": "isGroupLabel",
+        "type": {
+          "text": "boolean"
+        },
+        "default": "false",
+        "privacy": "public",
+        "attribute": "is-group-label",
+        "reflects": true
+      },
+      {
+        "kind": "field",
+        "name": "indentation",
+        "type": {
+          "text": "number"
+        },
+        "default": "0"
+      },
+      {
+        "kind": "field",
+        "name": "focused",
+        "privacy": "public",
+        "attribute": "focused",
+        "reflects": true
+      },
+      {
+        "kind": "field",
+        "name": "searchmatch",
+        "privacy": "public",
+        "attribute": "searchmatch",
+        "reflects": true
+      },
+      {
+        "kind": "field",
+        "name": "inedit",
+        "privacy": "public",
+        "attribute": "inedit",
+        "reflects": true
+      },
+      {
+        "kind": "field",
+        "name": "haserror",
+        "privacy": "public",
+        "attribute": "haserror",
+        "reflects": true
+      },
+      {
+        "kind": "field",
+        "name": "selected",
+        "privacy": "public",
+        "attribute": "selected",
+        "reflects": true
+      },
+      {
+        "kind": "field",
+        "name": "noicon",
+        "privacy": "public",
+        "attribute": "noicon"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "hidden",
+        "description": "Description",
+        "fieldName": "hidden"
+      },
+      {
+        "name": "focused",
+        "fieldName": "focused"
+      },
+      {
+        "name": "searchmatch",
+        "fieldName": "searchmatch"
+      },
+      {
+        "name": "inedit",
+        "fieldName": "inedit"
+      },
+      {
+        "name": "haserror",
+        "fieldName": "haserror"
+      },
+      {
+        "name": "selected",
+        "fieldName": "selected"
+      },
+      {
+        "name": "noicon",
+        "fieldName": "noicon"
+      },
+      {
+        "name": "is-group-label",
+        "fieldName": "isGroupLabel"
+      }
+    ],
+    "mixins": [
+      {
+        "name": "FBP",
+        "package": "@furo/fbp"
+      }
+    ],
+    "superclass": {
+      "name": "LitElement",
+      "package": "lit"
+    },
+    "summary": "todo shortdescription",
+    "tagName": "furo-tree-item",
+    "customElement": true
+  },
+  "component": "furo-tree-item",
+  "module": "components",
+  "pkg": {
+    "name": "@furo/ui5",
+    "description": "SAP UI5 Web Components data bindings for furo",
+    "version": "1.0.0-alpha.2",
+    "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
+    "repository": "git@github.com:eclipse/eclipsefuro-web.git",
+    "author": {
+      "name": "",
+      "email": "",
+      "url": ""
+    },
+    "keywords": [
+      "web-components",
+      "flow based programming",
+      "flowbased",
+      "flow"
+    ],
+    "license": "MIT",
+    "main": "src/furo-catalog.js",
+    "scripts": {
+      "analyze": "cem analyze --globs \"src/**/*.js\" --exclude **/furo-catalog.js --litelement",
+      "start": "web-dev-server --app-index demos --open",
+      "lint": "eslint --ext .js,.html . --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*' --ignore-path .gitignore && prettier \"**/*.js\" --check  --ignore-path .prettierignore",
+      "format": "eslint --ext .js,.html . --fix --ignore-path .prettierignore && prettier \"**/*.js\" --write --ignore-path .prettierignore",
+      "test": "web-test-runner  --coverage",
+      "test:watch": "web-test-runner  --watch",
+      "docs:start": "cd hugo && hugo serve",
+      "docs:generate": "npm run analyze:components && npm run analyze:typerenderer && ./scripts/cem.sh",
+      "docs:publish": "./scripts/publishDocs.sh",
+      "analyze:components": "cem analyze --globs \"src/**/*.js\" --exclude **/typerenderer/* --litelement --outdir tmp/components",
+      "analyze:typerenderer": "cem analyze --globs \"src/typerenderer/*.js\" --exclude --litelement --outdir tmp/typerenderer"
+    },
+    "peerDependencies": {
+      "@furo/fbp": "^6.0.0-rc.0",
+      "@furo/framework": "^2.0.0-rc.0",
+      "@furo/layout": "^2.0.0-rc.0",
+      "@furo/data": "^2.0.0-rc.0",
+      "@furo/util": "^2.0.0-rc.0",
+      "@ui5/webcomponents": "0.33.0",
+      "@ui5/webcomponents-base": "0.33.0",
+      "@ui5/webcomponents-fiori": "0.33.0",
+      "@ui5/webcomponents-icons": "0.33.0",
+      "lit": "^2.0.2"
+    },
+    "dependencies": {
+      "markdown-it": "^9.0.1",
+      "apexcharts": "^3.29.0",
+      "signature_pad": "3.0.0-beta.4"
+    },
+    "devDependencies": {
+      "@custom-elements-manifest/analyzer": "^0.5.3",
+      "@open-wc/eslint-config": "^4.3.0",
+      "@open-wc/testing": "next",
+      "@web/dev-server": "^0.1.25",
+      "@web/test-runner": "^0.13.20",
+      "@esm-bundle/chai": "^4.3.4-fix.0",
+      "eslint": "^7.32.0",
+      "eslint-config-prettier": "^8.3.0",
+      "husky": "^4.3.8",
+      "lerna": "^3.22.1",
+      "lint-staged": "^10.5.4",
+      "lit-html": "2.0.0-rc.3",
+      "prettier": "^2.4.1"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "engines": {
+      "node": ">=10.0"
+    },
+    "customElements": "tmp/typerenderer/custom-elements.json",
+    "eslintConfig": {
+      "extends": [
+        "@open-wc",
+        "prettier"
+      ]
+    },
+    "prettier": {
+      "singleQuote": true,
+      "arrowParens": "avoid"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.js": [
+        "eslint --fix --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*'",
+        "prettier --write",
+        "git add"
+      ]
+    }
+  },
+  "cem": {
+    "kind": "javascript-module",
+    "path": "src/tree/furo-tree-item.js",
+    "declarations": [
+      {
+        "kind": "class",
+        "description": "`furo-tree-item`\ntodo Describe your element",
+        "name": "FuroTreeItem",
+        "cssProperties": [
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 1",
+            "name": "--tree-indentation-1",
+            "default": "16px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 2",
+            "name": "--tree-indentation-2",
+            "default": "32px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 3",
+            "name": "--tree-indentation-3",
+            "default": "48px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 4",
+            "name": "--tree-indentation-4",
+            "default": "56px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 5",
+            "name": "--tree-indentation-5",
+            "default": "64px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 6",
+            "name": "--tree-indentation-6",
+            "default": "72px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 7",
+            "name": "--tree-indentation-7",
+            "default": "80px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 8",
+            "name": "--tree-indentation-8",
+            "default": "88px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 9",
+            "name": "--tree-indentation-9",
+            "default": "92px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 10",
+            "name": "--tree-indentation-10",
+            "default": "96px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 11",
+            "name": "--tree-indentation-11",
+            "default": "100px"
+          },
+          {
+            "type": {
+              "text": "N/A"
+            },
+            "description": "tree indention level 12",
+            "name": "--tree-indentation-12",
+            "default": "104px"
+          }
+        ],
+        "members": [
+          {
+            "kind": "method",
+            "name": "search",
+            "parameters": [
+              {
+                "name": "event"
+              }
+            ]
+          },
+          {
+            "kind": "method",
+            "name": "_updateItem"
+          },
+          {
+            "kind": "method",
+            "name": "bindData",
+            "parameters": [
+              {
+                "name": "fieldNode"
+              }
+            ]
+          },
+          {
+            "kind": "method",
+            "name": "_FBPReady",
+            "description": "flow is ready lifecycle method",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "__addSearchListeners",
+            "description": "add listeners for search matches and non matches",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "__addNodeSelectedListener"
+          },
+          {
+            "kind": "method",
+            "name": "__addNodeFocusedListener",
+            "description": "bring the focused element in the visible part of the screen (scroll)",
+            "privacy": "private"
+          },
+          {
+            "kind": "field",
+            "name": "hidden",
+            "type": {
+              "text": "boolean"
+            },
+            "default": "true",
+            "privacy": "public",
+            "description": "Description",
+            "attribute": "hidden",
+            "reflects": true
+          },
+          {
+            "kind": "field",
+            "name": "isGroupLabel",
+            "type": {
+              "text": "boolean"
+            },
+            "default": "false",
+            "privacy": "public",
+            "attribute": "is-group-label",
+            "reflects": true
+          },
+          {
+            "kind": "field",
+            "name": "indentation",
+            "type": {
+              "text": "number"
+            },
+            "default": "0"
+          },
+          {
+            "kind": "field",
+            "name": "focused",
+            "privacy": "public",
+            "attribute": "focused",
+            "reflects": true
+          },
+          {
+            "kind": "field",
+            "name": "searchmatch",
+            "privacy": "public",
+            "attribute": "searchmatch",
+            "reflects": true
+          },
+          {
+            "kind": "field",
+            "name": "inedit",
+            "privacy": "public",
+            "attribute": "inedit",
+            "reflects": true
+          },
+          {
+            "kind": "field",
+            "name": "haserror",
+            "privacy": "public",
+            "attribute": "haserror",
+            "reflects": true
+          },
+          {
+            "kind": "field",
+            "name": "selected",
+            "privacy": "public",
+            "attribute": "selected",
+            "reflects": true
+          },
+          {
+            "kind": "field",
+            "name": "noicon",
+            "privacy": "public",
+            "attribute": "noicon"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "hidden",
+            "description": "Description",
+            "fieldName": "hidden"
+          },
+          {
+            "name": "focused",
+            "fieldName": "focused"
+          },
+          {
+            "name": "searchmatch",
+            "fieldName": "searchmatch"
+          },
+          {
+            "name": "inedit",
+            "fieldName": "inedit"
+          },
+          {
+            "name": "haserror",
+            "fieldName": "haserror"
+          },
+          {
+            "name": "selected",
+            "fieldName": "selected"
+          },
+          {
+            "name": "noicon",
+            "fieldName": "noicon"
+          },
+          {
+            "name": "is-group-label",
+            "fieldName": "isGroupLabel"
+          }
+        ],
+        "mixins": [
+          {
+            "name": "FBP",
+            "package": "@furo/fbp"
+          }
+        ],
+        "superclass": {
+          "name": "LitElement",
+          "package": "lit"
+        },
+        "summary": "todo shortdescription",
+        "tagName": "furo-tree-item",
+        "customElement": true
+      }
+    ],
+    "exports": [
+      {
+        "kind": "js",
+        "name": "FuroTreeItem",
+        "declaration": {
+          "name": "FuroTreeItem",
+          "module": "src/tree/furo-tree-item.js"
+        }
+      },
+      {
+        "kind": "custom-element-definition",
+        "name": "furo-tree-item",
+        "declaration": {
+          "name": "FuroTreeItem",
+          "module": "src/tree/furo-tree-item.js"
+        }
+      }
+    ]
+  }
+}
