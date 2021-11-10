@@ -13,7 +13,7 @@ import './furo-ui5-text-input.js';
  *
  * @slot {HTMLElement} icon - defines the icon to be displayed in the input element.
  *
- * @fires {String} field-value-changed - Fires the field value when it changes.
+ * @fires {String} value-changed - Fires the field value when it changes.
  *
  * @slot {HTMLElement} icon - Defines the icon to be displayed in the input.
  * @summary labeled input field

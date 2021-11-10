@@ -11,7 +11,7 @@ import './furo-ui5-money-input.js';
  * The furo-ui5-money-input-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
  *
- * @fires {google.type.Money} field-value-changed - Fires the field value when it changes.
+ * @fires {google.type.Money} value-changed - Fires the field value when it changes.
  *
  * @summary labeled input field
  * @customElement

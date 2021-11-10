@@ -1,6 +1,7 @@
 import * as Select from '@ui5/webcomponents/dist/Select.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode.js';
+import { Events } from './lib/Events.js';
 
 import '@ui5/webcomponents/dist/Option.js';
 
@@ -17,7 +18,7 @@ import '@ui5/webcomponents/dist/Option.js';
  *
  * @fires {optionNodeList} options-updated - Fired  after the option list was rebuilt.
  * @fires {selectedOption} item-selected - Fired when the item of the dropdown list is selected.
- * @fires {selectedOption} field-value-changed - Fires the field value when it changes.
+ * @fires {selectedOption} value-changed - Fires the field value when it changes.
  *
  * @summary data select field
  * @customElement
@@ -582,12 +583,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
       }
     }
 
-    const customEvent = new Event('value-changed', {
-      composed: true,
-      bubbles: true,
-    });
-    customEvent.detail = selectedOption;
-    this.dispatchEvent(customEvent);
+    this.dispatchEvent(Events.buildChangeEvent(selectedOption));
 
     const customSelectEvent = new Event('item-selected', {
       composed: true,

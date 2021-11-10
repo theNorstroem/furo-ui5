@@ -8,7 +8,7 @@ import '@ui5/webcomponents/dist/Input.js';
 import './furo-ui5-text-input.js';
 import { FieldNode } from '@furo/data/src/lib/FieldNode';
 import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
-
+import { Events } from './lib/Events.js';
 /**
  * `furo-data-money-input`
  * Binds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields
@@ -212,12 +212,7 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
         this.setFnaFieldValue(value);
       }
 
-      const customEvent = new Event('value-changed', {
-        composed: true,
-        bubbles: true,
-      });
-      customEvent.detail = value;
-      this.dispatchEvent(customEvent);
+      this.dispatchEvent(Events.buildChangeEvent(value));
     });
   }
 

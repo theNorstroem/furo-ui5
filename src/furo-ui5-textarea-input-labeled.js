@@ -20,7 +20,7 @@ export class FuroUi5TextareaInputLabeled extends FBP(LitElement) {
   /**
    * Fired when the input value changed.
    * the event detail is the value of the input field
-   *  * @fires {String} field-value-changed - Fires the field value when it changes.
+   *  * @fires {String} value-changed - Fires the field value when it changes.
    */
 
   constructor() {

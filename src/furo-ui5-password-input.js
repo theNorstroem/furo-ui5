@@ -2,7 +2,7 @@ import * as Input from '@ui5/webcomponents/dist/Input.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@ui5/webcomponents/dist/features/InputSuggestions.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
-
+import { Events } from './lib/Events.js';
 /**
  * The 'furo-ui5-password-input' component allows the user to enter and edit password with data binding.
  *
@@ -46,7 +46,7 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  * @fires {`text`} change -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {} input -  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
  * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
- * @fires {String} field-value-changed - Fires the field value when it changes.
+ * @fires {String} value-changed - Fires the field value when it changes.
  * @fires {MouseEvent} icon-clicked - Fired when icon is clicked
  * @fires {void} password-showed - Fired when the password is showed, after calling the show method.
  * @fires {void} password-hidden - Fired when the password is hidden, after calling the hide() method.
@@ -195,12 +195,7 @@ export class FuroUi5PasswordInput extends FieldNodeAdapter(Input.default) {
       this.setFnaFieldValue(value === '' ? '' : value);
     }
 
-    const customEvent = new Event('field-value-changed', {
-      composed: true,
-      bubbles: true,
-    });
-    customEvent.detail = this.value;
-    this.dispatchEvent(customEvent);
+    this.dispatchEvent(Events.buildChangeEvent(this.value));
   }
 
   /**
