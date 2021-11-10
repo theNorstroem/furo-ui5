@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-textarea-input-labeled', () => {
+describe('furo-ui5-textarea-input-labeled', () => {
   let host;
   let input;
   let dao;
@@ -61,9 +61,9 @@ describe('furo-ui5-data-textarea-input-labeled', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-textarea-input-labeled
+          <furo-ui5-textarea-input-labeled
             ƒ-bind-data="--entity(*.data.description)"
-          ></furo-ui5-data-textarea-input-labeled>
+          ></furo-ui5-textarea-input-labeled>
           <furo-data-object
             type="task.TaskEntity"
             @-object-ready="--entity"
@@ -79,11 +79,11 @@ describe('furo-ui5-data-textarea-input-labeled', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-textarea-input-labeled element', done => {
+  it('should be a furo-ui5-textarea-input-labeled element', done => {
     // keep this test on top, so you can recognize a wrong assignment
     assert.equal(
       input.nodeName.toLowerCase(),
-      'furo-ui5-data-textarea-input-labeled'
+      'furo-ui5-textarea-input-labeled'
     );
     done();
   });
@@ -102,7 +102,7 @@ describe('furo-ui5-data-textarea-input-labeled', () => {
       if (dao.injectRaw(testRecordMeta)) {
         setTimeout(() => {
           const inputElement = input.shadowRoot.querySelector(
-            'furo-ui5-data-textarea-input'
+            'furo-ui5-textarea-input'
           );
           assert.equal(
             input.label,

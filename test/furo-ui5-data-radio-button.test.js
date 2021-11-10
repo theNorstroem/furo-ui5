@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-radio-button', () => {
+describe('furo-ui5-radio-button', () => {
   let host;
   let radio;
   let dao;
@@ -17,9 +17,9 @@ describe('furo-ui5-data-radio-button', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-radio-button
+          <furo-ui5-radio-button
             ƒ-bind-data="--data(*.furo_data_checkbox_input)"
-          ></furo-ui5-data-radio-button>
+          ></furo-ui5-radio-button>
           <furo-data-object
             type="experiment.Experiment"
             @-object-ready="--data"
@@ -35,9 +35,9 @@ describe('furo-ui5-data-radio-button', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-radio-button element', done => {
+  it('should be a furo-ui5-radio-button element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(radio.nodeName.toLowerCase(), 'furo-ui5-data-radio-button');
+    assert.equal(radio.nodeName.toLowerCase(), 'furo-ui5-radio-button');
     done();
   });
 });

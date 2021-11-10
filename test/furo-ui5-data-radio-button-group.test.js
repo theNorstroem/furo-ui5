@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-radio-button-group', () => {
+describe('furo-ui5-radio-button-group', () => {
   let host;
   let buttonGrp;
   let radioGroup;
@@ -109,12 +109,12 @@ describe('furo-ui5-data-radio-button-group', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-radio-button-group
+          <furo-ui5-radio-button-group
             ƒ-bind-data="--entity(*.sex)"
-          ></furo-ui5-data-radio-button-group>
-          <furo-ui5-data-text-input
+          ></furo-ui5-radio-button-group>
+          <furo-ui5-text-input
             ƒ-bind-data="--entity(*.sex)"
-          ></furo-ui5-data-text-input>
+          ></furo-ui5-text-input>
           <furo-data-object
             type="person.Person"
             @-object-ready="--entity"
@@ -134,11 +134,11 @@ describe('furo-ui5-data-radio-button-group', () => {
     await daoCollection.updateComplete;
   });
 
-  it('should be a furo-ui5-data-radio-button-group element', done => {
+  it('should be a furo-ui5-radio-button-group element', done => {
     // keep this test on top, so you can recognize a wrong assignment
     assert.equal(
       buttonGrp.nodeName.toLowerCase(),
-      'furo-ui5-data-radio-button-group'
+      'furo-ui5-radio-button-group'
     );
     done();
   });

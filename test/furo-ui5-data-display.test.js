@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-display', () => {
+describe('furo-ui5-display', () => {
   let host;
   let display;
   let dao;
@@ -17,7 +17,7 @@ describe('furo-ui5-data-display', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-display></furo-ui5-data-display>
+          <furo-ui5-display></furo-ui5-display>
           <furo-data-object></furo-data-object>
         </template>
       </test-bind>
@@ -30,9 +30,9 @@ describe('furo-ui5-data-display', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-display element', done => {
+  it('should be a furo-ui5-display element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(display.nodeName.toLowerCase(), 'furo-ui5-data-display');
+    assert.equal(display.nodeName.toLowerCase(), 'furo-ui5-display');
     done();
   });
 

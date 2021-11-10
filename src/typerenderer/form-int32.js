@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataNumberInputLabeled } from '../furo-ui5-data-number-input-labeled.js';
+import { FuroUi5NumberInputLabeled } from '../furo-ui5-number-input-labeled.js';
 
-export class FormInt32 extends FuroUi5DataNumberInputLabeled {
+export class FormInt32 extends FuroUi5NumberInputLabeled {
   connectedCallback() {
     super.connectedCallback();
     this.style.width = '100%';

@@ -1,15 +1,15 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataCheckboxInput } from '../furo-ui5-data-checkbox-input.js';
+import { FuroUi5CheckboxInput } from '../furo-ui5-checkbox-input.js';
 
 /**
  * `celledit-bool` is a `celledit` context renderer.
  *
- * It uses furo-ui5-data-checkbox-input as the renderer
+ * It uses furo-ui5-checkbox-input as the renderer
  *
  * @summary celledit renderer for bool
  * @customElement celledit-bool
  */
-export class CelleditBool extends FuroUi5DataCheckboxInput {
+export class CelleditBool extends FuroUi5CheckboxInput {
   connectedCallback() {
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();

@@ -18,14 +18,14 @@ describe('furo-ui5-radiogroup', () => {
       <test-bind>
         <template>
           <furo-ui5-radiogroup>
-            <furo-ui5-data-radio-button
+            <furo-ui5-radio-button
               name="Group1"
               ƒ-bind-data="--data(*.furo_data_checkbox_input)"
-            ></furo-ui5-data-radio-button>
-            <furo-ui5-data-radio-button
+            ></furo-ui5-radio-button>
+            <furo-ui5-radio-button
               name="Group1"
               ƒ-bind-data="--data(*.furo_data_bool_icon)"
-            ></furo-ui5-data-radio-button>
+            ></furo-ui5-radio-button>
           </furo-ui5-radiogroup>
           <furo-data-object
             type="experiment.Experiment"
@@ -42,7 +42,7 @@ describe('furo-ui5-radiogroup', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-radiogroup element', done => {
+  it('should be a furo-ui5-radiogroup element', done => {
     // keep this test on top, so you can recognize a wrong assignment
     assert.equal(radiogroup.nodeName.toLowerCase(), 'furo-ui5-radiogroup');
     done();

@@ -6,7 +6,7 @@ import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and ho
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 
-describe('furo-ui5-data-reference-search', () => {
+describe('furo-ui5-reference-search', () => {
   let host;
   let referenceSearch;
   let entityObject;
@@ -15,11 +15,11 @@ describe('furo-ui5-data-reference-search', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-reference-search
+          <furo-ui5-reference-search
             ƒ-bind-data="--entityReady(*.owner)"
             placeholder="this is a placeholder"
           >
-          </furo-ui5-data-reference-search>
+          </furo-ui5-reference-search>
 
           <furo-data-object type="task.Task" @-object-ready="--entityReady">
           </furo-data-object>
@@ -34,11 +34,11 @@ describe('furo-ui5-data-reference-search', () => {
     await entityObject.updateComplete;
   });
 
-  it('should be a furo-ui5-data-reference-search', done => {
+  it('should be a furo-ui5-reference-search', done => {
     // keep this test on top, so you can recognize a wrong asignment
     assert.equal(
       referenceSearch.nodeName.toLowerCase(),
-      'furo-ui5-data-reference-search'
+      'furo-ui5-reference-search'
     );
     assert.equal(entityObject.nodeName.toLowerCase(), 'furo-data-object');
 

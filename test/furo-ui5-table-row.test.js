@@ -7,7 +7,7 @@ import '@furo/data/src/furo-data-object.js';
 import '../src/furo-catalog.js';
 import { assert } from '@esm-bundle/chai';
 
-describe('furo-ui5-data-table', () => {
+describe('furo-ui5-table', () => {
   let host;
   let tablerow;
 

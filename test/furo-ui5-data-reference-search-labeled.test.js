@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-reference-search-labeled-test', () => {
+describe('furo-ui5-reference-search-labeled-test', () => {
   let host;
   let input;
   let dao;
@@ -17,9 +17,9 @@ describe('furo-ui5-data-reference-search-labeled-test', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-reference-search-labeled
+          <furo-ui5-reference-search-labeled
             ƒ-bind-data="--entity(*.owner)"
-          ></furo-ui5-data-reference-search-labeled>
+          ></furo-ui5-reference-search-labeled>
           <furo-data-object
             type="task.Task"
             @-object-ready="--entity"
@@ -35,11 +35,11 @@ describe('furo-ui5-data-reference-search-labeled-test', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-reference-search-labeled element', done => {
+  it('should be a furo-ui5-reference-search-labeled element', done => {
     // keep this test on top, so you can recognize a wrong assignment
     assert.equal(
       input.nodeName.toLowerCase(),
-      'furo-ui5-data-reference-search-labeled'
+      'furo-ui5-reference-search-labeled'
     );
     done();
   });

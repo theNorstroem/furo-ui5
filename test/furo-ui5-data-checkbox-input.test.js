@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-checkbox-input-scalar', () => {
+describe('furo-ui5-checkbox-input-scalar', () => {
   let host;
   let input;
   let dao;
@@ -101,9 +101,9 @@ describe('furo-ui5-data-checkbox-input-scalar', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-checkbox-input
+          <furo-ui5-checkbox-input
             ƒ-bind-data="--entity(*.data.furo_data_checkbox_input)"
-          ></furo-ui5-data-checkbox-input>
+          ></furo-ui5-checkbox-input>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--entity"
@@ -119,9 +119,9 @@ describe('furo-ui5-data-checkbox-input-scalar', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-checkbox-input element', done => {
+  it('should be a furo-ui5-checkbox-input element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-data-checkbox-input');
+    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-checkbox-input');
     done();
   });
 

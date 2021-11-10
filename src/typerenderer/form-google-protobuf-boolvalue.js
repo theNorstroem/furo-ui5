@@ -4,7 +4,7 @@ import { FormBool } from './form-bool.js';
 /**
  * `form-google-protobuf-boolvalue` is a `form` context renderer.
  *
- * It uses furo-ui5-data-checkbox-input as the renderer
+ * It uses furo-ui5-checkbox-input as the renderer
  *
  * @summary form renderer for bool
  * @customElement form-google-protobuf-boolvalue

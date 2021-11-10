@@ -1,6 +1,6 @@
-import { FuroUi5DataTextInputLabeled } from '../furo-ui5-data-text-input-labeled.js';
+import { FuroUi5TextInputLabeled } from '../furo-ui5-text-input-labeled.js';
 
-class FormGoogleProtobufStringvalue extends FuroUi5DataTextInputLabeled {
+class FormGoogleProtobufStringvalue extends FuroUi5TextInputLabeled {
   bindData(fieldNode) {
     super.bindData(fieldNode);
   }

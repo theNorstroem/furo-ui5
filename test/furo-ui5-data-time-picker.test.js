@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-time-picker', () => {
+describe('furo-ui5-time-picker', () => {
   let host;
   let timepicker;
   let timepicker2;
@@ -47,12 +47,12 @@ describe('furo-ui5-data-time-picker', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-time-picker
+          <furo-ui5-time-picker
             ƒ-bind-data="--entity(*.data.google_timeofday)"
-          ></furo-ui5-data-time-picker>
-          <furo-ui5-data-time-picker
+          ></furo-ui5-time-picker>
+          <furo-ui5-time-picker
             ƒ-bind-data="--entity(*.data.furo_data_time_input)"
-          ></furo-ui5-data-time-picker>
+          ></furo-ui5-time-picker>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--entity"
@@ -69,12 +69,9 @@ describe('furo-ui5-data-time-picker', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-time-picker element', done => {
+  it('should be a furo-ui5-time-picker element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(
-      timepicker.nodeName.toLowerCase(),
-      'furo-ui5-data-time-picker'
-    );
+    assert.equal(timepicker.nodeName.toLowerCase(), 'furo-ui5-time-picker');
     done();
   });
 

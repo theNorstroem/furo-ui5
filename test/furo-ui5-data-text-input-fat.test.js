@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-text-input-fat', () => {
+describe('furo-ui5-text-input-fat', () => {
   let host;
   let input;
   let dao;
@@ -78,9 +78,9 @@ describe('furo-ui5-data-text-input-fat', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-text-input
+          <furo-ui5-text-input
             ƒ-bind-data="--entity(*.data.fat_string)"
-          ></furo-ui5-data-text-input>
+          ></furo-ui5-text-input>
           <furo-data-object
             type="universaltest.UniversaltestEntity"
             @-object-ready="--entity"
@@ -96,9 +96,9 @@ describe('furo-ui5-data-text-input-fat', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-text-input element (fat)', done => {
+  it('should be a furo-ui5-text-input element (fat)', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-data-text-input');
+    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-text-input');
     done();
   });
 

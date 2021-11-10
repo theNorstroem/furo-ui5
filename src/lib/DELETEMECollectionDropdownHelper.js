@@ -1,5 +1,5 @@
 /**
- * Helper class for furo-data-collection-dropdown and furo-ui5-data-collection-dropdown
+ * Helper class for furo-data-collection-dropdown and furo-ui5-collection-dropdown
  *
  * @fires {option list} options-injected  - Is fired when a new list is applied
  */

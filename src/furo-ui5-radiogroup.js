@@ -2,13 +2,13 @@ import { LitElement, html } from 'lit';
 import { FBP } from '@furo/fbp';
 /**
  * `furo-ui5-radiogroup`
- * The furo-ui5-radiogroup enables users to create a radio group with n size of furo-ui5-data-radio-buttons inside.
+ * The furo-ui5-radiogroup enables users to create a radio group with n size of furo-ui5-radio-buttons inside.
  * Use the components if you want to combine several bool fields into one radiogroup.
  * Only one value can be true.
  *
  * @summary radio group
  * @customElement
- * @demo demo-furo-ui5-data-radio-button Sample of radio group
+ * @demo demo-furo-ui5-radio-button Sample of radio group
  * @appliesMixin FBP
  */
 export class FuroUi5Radiogroup extends FBP(LitElement) {
@@ -25,7 +25,7 @@ export class FuroUi5Radiogroup extends FBP(LitElement) {
       // eslint-disable-next-line no-plusplus
       while (size--) {
         if (
-          this.children[size].nodeName === 'FURO-UI5-DATA-RADIO-BUTTON' &&
+          this.children[size].nodeName === 'furo-ui5-RADIO-BUTTON' &&
           this.children[size].__fieldNode._name !== e.target.__fieldNode._name
         ) {
           if (this.children[size].isFat()) {

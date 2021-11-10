@@ -6,7 +6,7 @@ import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and ho
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 
-describe('furo-ui5-data-number-input', () => {
+describe('furo-ui5-number-input', () => {
   let dataNumberInput;
   let host;
   let dataObject;
@@ -18,20 +18,20 @@ describe('furo-ui5-data-number-input', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-number-input
+          <furo-ui5-number-input
             ƒ-bind-data="--entityReady(*.data.furo_data_number_input)"
-          ></furo-ui5-data-number-input>
-          <furo-ui5-data-number-input
+          ></furo-ui5-number-input>
+          <furo-ui5-number-input
             hint="FromTPL"
             label="FromTPL"
             ƒ-bind-data="--entityReady(*.data.furo_data_number_input)"
             required
             readonly
             @-value-changed="--textChanged"
-          ></furo-ui5-data-number-input>
-          <furo-ui5-data-number-input
+          ></furo-ui5-number-input>
+          <furo-ui5-number-input
             ƒ-bind-data="--entity(*.invalidBinding)"
-          ></furo-ui5-data-number-input>
+          ></furo-ui5-number-input>
 
           <furo-data-object
             type="experiment.ExperimentEntity"
@@ -72,19 +72,19 @@ describe('furo-ui5-data-number-input', () => {
     await deeplink.updateComplete;
   });
 
-  it('should be a furo-ui5-data-number-input', done => {
+  it('should be a furo-ui5-number-input', done => {
     // keep this test on top, so you can recognize a wrong asignment
     assert.equal(
       dataNumberInput.nodeName.toLowerCase(),
-      'furo-ui5-data-number-input'
+      'furo-ui5-number-input'
     );
     assert.equal(
       secondNumberInput.nodeName.toLowerCase(),
-      'furo-ui5-data-number-input'
+      'furo-ui5-number-input'
     );
     assert.equal(
       invalidNumberInput.nodeName.toLowerCase(),
-      'furo-ui5-data-number-input'
+      'furo-ui5-number-input'
     );
     assert.equal(dataObject.nodeName.toLowerCase(), 'furo-data-object');
     assert.equal(deeplink.nodeName.toLowerCase(), 'furo-deep-link');

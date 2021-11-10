@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-toggle-button', () => {
+describe('furo-ui5-toggle-button', () => {
   let host;
   let btn;
   let dao;
@@ -17,9 +17,9 @@ describe('furo-ui5-data-toggle-button', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-toggle-button
+          <furo-ui5-toggle-button
             ƒ-bind-data="--entity(*.data.furo_data_checkbox_input)"
-          ></furo-ui5-data-toggle-button>
+          ></furo-ui5-toggle-button>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--entity"
@@ -35,9 +35,9 @@ describe('furo-ui5-data-toggle-button', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-toggle-button element', done => {
+  it('should be a furo-ui5-toggle-button element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(btn.nodeName.toLowerCase(), 'furo-ui5-data-toggle-button');
+    assert.equal(btn.nodeName.toLowerCase(), 'furo-ui5-toggle-button');
     done();
   });
 });

@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataDatePickerLabeled } from '../furo-ui5-data-date-picker-labeled.js';
+import { FuroUi5DatePickerLabeled } from '../furo-ui5-date-picker-labeled.js';
 
-class FormFuroTypeDate extends FuroUi5DataDatePickerLabeled {}
+class FormFuroTypeDate extends FuroUi5DatePickerLabeled {}
 
 window.customElements.define('form-furo-type-date', FormFuroTypeDate);

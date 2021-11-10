@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataSelect } from '../furo-ui5-data-select.js';
+import { FuroUi5Select } from '../furo-ui5-select.js';
 
-class CelleditFuroStringoptionproperty extends FuroUi5DataSelect {
+class CelleditFuroStringoptionproperty extends FuroUi5Select {
   bindData(fieldNode) {
     super.bindData(fieldNode);
   }

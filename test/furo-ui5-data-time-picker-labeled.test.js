@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-time-picker-labeled', () => {
+describe('furo-ui5-time-picker-labeled', () => {
   let host;
   let input;
   let dao;
@@ -17,9 +17,9 @@ describe('furo-ui5-data-time-picker-labeled', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-time-picker-labeled
+          <furo-ui5-time-picker-labeled
             ƒ-bind-data="--entity(*.data.google_timeofday)"
-          ></furo-ui5-data-time-picker-labeled>
+          ></furo-ui5-time-picker-labeled>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--entity"
@@ -35,12 +35,9 @@ describe('furo-ui5-data-time-picker-labeled', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-time-picker-labeled element', done => {
+  it('should be a furo-ui5-time-picker-labeled element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(
-      input.nodeName.toLowerCase(),
-      'furo-ui5-data-time-picker-labeled'
-    );
+    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-time-picker-labeled');
     done();
   });
 
@@ -56,9 +53,7 @@ describe('furo-ui5-data-time-picker-labeled', () => {
   it('should support attribute disabled ', done => {
     input.setAttribute('disabled', '');
     setTimeout(() => {
-      const component = input.shadowRoot.querySelector(
-        'furo-ui5-data-time-picker'
-      );
+      const component = input.shadowRoot.querySelector('furo-ui5-time-picker');
       assert.equal(component.disabled, true, 'check attribute disabled ');
       done();
     }, 0);

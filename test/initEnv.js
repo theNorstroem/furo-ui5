@@ -1,6 +1,6 @@
 import { Init, i18n, Env } from '@furo/framework/src/furo.js';
 import { Translations } from './translations.js';
-import { Services, Types } from './data_environment.js';
+import { Services, Types } from '../furo-specs/dist/env.js';
 
 Init.registerApiServices(Services);
 Init.registerApiTypes(Types);

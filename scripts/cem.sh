@@ -1,76 +1,81 @@
 #!/usr/bin/env bash
 set -e
-moduleDir=`pwd`/hugo/content/docs
-injectsDir=`pwd`/hugo/content/docs/redactional
+moduleDir=$(pwd)/hugo/content/docs
+injectsDir=$(pwd)/hugo/content/docs/redactional
 
+cwd=$(pwd)
 
-
-cwd=`pwd`
-
-
-startDir=`pwd`
+startDir=$(pwd)
 
 modules="components typerenderer"
-
 
 collection=$(cat $startDir/package.json | jq .version)
 echo $collection
 
 for module in $modules; do
- echo $module
- # copy our manifest to the target
+  COMPONENTINDEX=0
+  echo $module
+  cd $startDir/tmp/$module
+  pwd
+  # copy our manifest to the target
 
- mkdir -p $moduleDir/$module
- mkdir -p $injectsDir/$module
+  mkdir -p $moduleDir/$module
+  mkdir -p $injectsDir/$module
 
-touch $injectsDir/$module/"_"$module"-head.md"
-touch $injectsDir/$module/"_"$module"-description.md"
-touch $injectsDir/$module/"_"$module"-footer.md"
+  touch $injectsDir/$module/"_"$module"-head.md"
+  touch $injectsDir/$module/"_"$module"-description.md"
+  touch $injectsDir/$module/"_"$module"-footer.md"
 
- ## loop custom-elements.json
-  for row in $(cat tmp/$module/custom-elements.json | jq -r '.modules[] | @base64'); do
+
+  # _module-inside.md
+  simple-generator -d custom-elements.json -t $cwd/scripts/templates/module.components.md.tpl >$moduleDir/$module/_$module-inside.md
+
+echo $collection
+  # _module.md
+  echo '{"collection":'$collection', "module":"'$module'"}' | jq . > index.base.json
+  jq -s '. | {"collection": .[2].collection, "module": .[2].module, "pkg": .[0], "cem": .[1]}' $startDir/package.json custom-elements.json index.base.json > big.json
+  simple-generator -d big.json -t $cwd/scripts/templates/_index.md.tpl > $moduleDir/$module/_index.md
+
+  ## loop custom-elements.json
+  for row in $(cat custom-elements.json | jq -r '.modules[] | @base64'); do
     _jq() {
-     echo ${row} | base64 --decode | jq -r ${1}
+      echo ${row} | base64 --decode | jq -r ${1}
     }
-  component=$(_jq '.declarations[0].tagName')
-  # echo $component
+    component=$(_jq '.declarations[0].tagName')
 
-
-    if [ "$component" == "null" ]
-    then
+    if [ "$component" == "null" ]; then
       name=$(_jq '.declarations[0].name')
 
-      if [ "$name" == "null" ]
-      then
-         echo "************************ not class and not component"
+      if [ "$name" == "null" ]; then
+        echo "************************ not class and not component"
       else
+        echo "************************ CLASS *************************"
 
         path=$(_jq '.path')
-        echo $path
-        echo '{"path":"'$path'", "component":"'$name'", "module":"'$module'", "pkg": '$(cat package.json)', "cem": '$(_jq '.')', "decl": '$(_jq '.declarations[0]')'}' | simple-generator -t $cwd/scripts/templates/class.md.tpl > $moduleDir/$module/$name.md
+        echo '{"path":"'$path'","module":"'$module'", "name":"'$name'"}' | jq . > $name.base.json
+        jq --argjson COMPONENTINDEX $COMPONENTINDEX -s '. | .[0].modules[$COMPONENTINDEX].declarations[0]' custom-elements.json >$name.decl.json
+        jq --argjson COMPONENTINDEX $COMPONENTINDEX -s '. | .[0].modules[$COMPONENTINDEX]' custom-elements.json >$name.cem.json
+        jq -s '. | {"decl": .[3] , "path": .[2].path,"name": .[2].name, "module": .[2].module, "pkg": .[0], "cem": .[1] }' $startDir/package.json $name.cem.json $name.base.json $name.decl.json >$name.json
+        simple-generator -d $name.json -t $cwd/scripts/templates/class.md.tpl >$moduleDir/$module/$name.md
+
       fi
 
     else
-          echo $component
-          mkdir -p $injectsDir/$module/$component
-          touch $injectsDir/$module/$component/"_"$component"-head.md"
-          # touch $injectsDir/$module/$component/"_"$component"-description.md"
-          # touch $injectsDir/$module/$component/"_"$component"-styling.md"
-          # touch $injectsDir/$module/$component/"_"$component"-properties.md"
-          # touch $injectsDir/$module/$component/"_"$component"-methods.md"
-          # touch $injectsDir/$module/$component/"_"$component"-events.md"
-          # touch $injectsDir/$module/$component/"_"$component"-slots.md"
-          # touch $injectsDir/$module/$component/"_"$component"-footer.md"
-          touch $injectsDir/$module/$component/"_"$component"-scripts.md"
-          # generate the component documentation itself
-          echo '{"component":"'$component'", "module":"'$module'", "pkg": '$(cat package.json)', "cem": '$(_jq '.')', "decl": '$(_jq '.declarations[0]')'}' | simple-generator -t $cwd/scripts/templates/component.md.tpl > $moduleDir/$module/$component.md
+      echo $COMPONENTINDEX $component
+      mkdir -p $injectsDir/$module/$component
+      touch $injectsDir/$module/$component/"_"$component"-head.md"
+      touch $injectsDir/$module/$component/"_"$component"-scripts.md"
+      # generate the component documentation itself
+      echo '{"module":"'$module'", "component":"'$component'"}' | jq . > $component.base.json
+
+      jq --argjson COMPONENTINDEX $COMPONENTINDEX -s '. | .[0].modules[$COMPONENTINDEX].declarations[0]' custom-elements.json >$component.decl.json
+      jq --argjson COMPONENTINDEX $COMPONENTINDEX -s '. | .[0].modules[$COMPONENTINDEX]' custom-elements.json >$component.cem.json
+      jq -s '. | {"decl": .[3] , "component": .[2].component, "module": .[2].module, "pkg": .[0], "cem": .[1] }' $startDir/package.json $component.cem.json $component.base.json $component.decl.json >$component.json
+      simple-generator -d $component.json -t $cwd/scripts/templates/component.md.tpl >$moduleDir/$module/$component.md
+
     fi
+    COMPONENTINDEX=$((COMPONENTINDEX + 1))
   done
 
- # _module-inside.md
-  cat tmp/$module/custom-elements.json | simple-generator -t $cwd/scripts/templates/module.components.md.tpl > $moduleDir/$module/_$module-inside.md
-
- # _module.md
- echo '{"module":"'$module'", "collection":'$collection', "pkg": '$(cat package.json)', "cem": '$(cat tmp/$module/custom-elements.json)' }' | simple-generator -t $cwd/scripts/templates/_index.md.tpl > $moduleDir/$module/_index.md
 
 done

@@ -9,7 +9,7 @@ import './initEnv.js';
 import '../src/furo-catalog.js';
 import '../src/lib/ui5-icons.js';
 
-describe('furo-ui5-data-text-input-scalar', () => {
+describe('furo-ui5-text-input-scalar', () => {
   let host;
   let input;
   let dao;
@@ -50,10 +50,10 @@ describe('furo-ui5-data-text-input-scalar', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-text-input
+          <furo-ui5-text-input
             icon="filter"
             ƒ-bind-data="--entity(*.data.description)"
-          ></furo-ui5-data-text-input>
+          ></furo-ui5-text-input>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--entity"
@@ -69,9 +69,9 @@ describe('furo-ui5-data-text-input-scalar', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-text-input element', done => {
+  it('should be a furo-ui5-text-input element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-data-text-input');
+    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-text-input');
     done();
   });
 

@@ -6,7 +6,7 @@ import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and ho
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 
-describe('furo-ui5-data-property', () => {
+describe('furo-ui5-property', () => {
   let dataProperty;
   let host;
   let entityObject;
@@ -19,9 +19,9 @@ describe('furo-ui5-data-property', () => {
       <test-bind>
         <template>
           <!-- single Property -->
-          <furo-ui5-data-property
+          <furo-ui5-property
             ƒ-bind-data="--entity(*.single_type_property)"
-          ></furo-ui5-data-property>
+          ></furo-ui5-property>
           <furo-data-object
             type="experiment.Experiment"
             @-object-ready="--entity"
@@ -39,9 +39,9 @@ describe('furo-ui5-data-property', () => {
           >
           </furo-entity-agent>
           <div>
-            <furo-ui5-data-property
+            <furo-ui5-property
               ƒ-bind-data="--entity(*.type_property)"
-            ></furo-ui5-data-property>
+            ></furo-ui5-property>
           </div>
         </template>
       </test-bind>
@@ -59,9 +59,9 @@ describe('furo-ui5-data-property', () => {
     await dataProperty2.updateComplete;
   });
 
-  it('should be a furo-ui5-data-property', done => {
+  it('should be a furo-ui5-property', done => {
     // keep this test on top, so you can recognize a wrong asignment
-    assert.equal(dataProperty.nodeName.toLowerCase(), 'furo-ui5-data-property');
+    assert.equal(dataProperty.nodeName.toLowerCase(), 'furo-ui5-property');
     assert.equal(entityAgent.nodeName.toLowerCase(), 'furo-entity-agent');
     assert.equal(entityObject.nodeName.toLowerCase(), 'furo-data-object');
     assert.equal(deeplink.nodeName.toLowerCase(), 'furo-deep-link');
@@ -82,7 +82,7 @@ describe('furo-ui5-data-property', () => {
     entityObject.addEventListener('data-injected', () => {
       setTimeout(() => {
         assert.equal(
-          dataProperty2.querySelectorAll('furo-ui5-data-property').length,
+          dataProperty2.querySelectorAll('furo-ui5-property').length,
           12
         );
         done();

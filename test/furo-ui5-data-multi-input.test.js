@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-multi-input', () => {
+describe('furo-ui5-multi-input', () => {
   let host;
   let input;
   let dao;
@@ -101,9 +101,9 @@ describe('furo-ui5-data-multi-input', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-multi-input
+          <furo-ui5-multi-input
             ƒ-bind-data="--entity(*.data.repstring)"
-          ></furo-ui5-data-multi-input>
+          ></furo-ui5-multi-input>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--entity"
@@ -119,9 +119,9 @@ describe('furo-ui5-data-multi-input', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-multi-input element', done => {
+  it('should be a furo-ui5-multi-input element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-data-multi-input');
+    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-multi-input');
     done();
   });
 

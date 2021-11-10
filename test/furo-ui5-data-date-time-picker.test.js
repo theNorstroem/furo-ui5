@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-date-time-picker', () => {
+describe('furo-ui5-date-time-picker', () => {
   let host;
   let datepicker;
   let datepicker2;
@@ -41,12 +41,12 @@ describe('furo-ui5-data-date-time-picker', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-date-time-picker
+          <furo-ui5-date-time-picker
             ƒ-bind-data="--entity(*.data.google_timestamp)"
-          ></furo-ui5-data-date-time-picker>
-          <furo-ui5-data-date-time-picker
+          ></furo-ui5-date-time-picker>
+          <furo-ui5-date-time-picker
             ƒ-bind-data="--entity(*.data.google_timestamp)"
-          ></furo-ui5-data-date-time-picker>
+          ></furo-ui5-date-time-picker>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--entity"
@@ -63,11 +63,11 @@ describe('furo-ui5-data-date-time-picker', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-date-time-picker element', done => {
+  it('should be a furo-ui5-date-time-picker element', done => {
     // keep this test on top, so you can recognize a wrong assignment
     assert.equal(
       datepicker.nodeName.toLowerCase(),
-      'furo-ui5-data-date-time-picker'
+      'furo-ui5-date-time-picker'
     );
     done();
   });

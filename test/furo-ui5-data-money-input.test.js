@@ -9,7 +9,7 @@ import '@furo/data/src/furo-data-object.js';
 import '@furo/data/src/furo-entity-agent.js';
 import '@furo/data/src/furo-deep-link.js';
 
-describe('furo-ui5-data-money-input', () => {
+describe('furo-ui5-money-input', () => {
   let dataInput;
   let host;
   let entityObject;
@@ -20,9 +20,9 @@ describe('furo-ui5-data-money-input', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-money-input
+          <furo-ui5-money-input
             ƒ-bind-data="--entity(*.data.furo_data_money_input)"
-          ></furo-ui5-data-money-input>
+          ></furo-ui5-money-input>
 
           <furo-data-object
             type="experiment.ExperimentEntity"
@@ -56,9 +56,9 @@ describe('furo-ui5-data-money-input', () => {
     await entityAgent.updateComplete;
   });
 
-  it('should be a furo-ui5-data-money-input', done => {
+  it('should be a furo-ui5-money-input', done => {
     // keep this test on top, so you can recognize a wrong asignment
-    assert.equal(dataInput.nodeName.toLowerCase(), 'furo-ui5-data-money-input');
+    assert.equal(dataInput.nodeName.toLowerCase(), 'furo-ui5-money-input');
     assert.equal(entityObject.nodeName.toLowerCase(), 'furo-data-object');
     assert.equal(deeplink.nodeName.toLowerCase(), 'furo-deep-link');
     assert.equal(entityAgent.nodeName.toLowerCase(), 'furo-entity-agent');

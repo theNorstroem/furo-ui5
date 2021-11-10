@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-select', () => {
+describe('furo-ui5-select', () => {
   let host;
   let input;
   let dao;
@@ -108,7 +108,7 @@ describe('furo-ui5-data-select', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-select
+          <furo-ui5-select
             ƒ-bind-data="--dao(*.data.description)"
             ƒ-bind-options="--collection(*.entities)"
           >
@@ -121,7 +121,7 @@ describe('furo-ui5-data-select', () => {
               data-id attribute, the selected value is the innerText of the
               option.
             </div>
-          </furo-ui5-data-select>
+          </furo-ui5-select>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--dao"
@@ -142,9 +142,9 @@ describe('furo-ui5-data-select', () => {
     await daoCollection.updateComplete;
   });
 
-  it('should be a furo-ui5-data-select element', done => {
+  it('should be a furo-ui5-select element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-data-select');
+    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-select');
     done();
   });
 

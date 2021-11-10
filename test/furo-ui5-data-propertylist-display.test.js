@@ -17,8 +17,7 @@ describe('furo-ui5-propertylist-display', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-propertylist-display>
-          </furo-ui5-data-propertylist-display>
+          <furo-ui5-propertylist-display> </furo-ui5-propertylist-display>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--dao"
@@ -34,12 +33,12 @@ describe('furo-ui5-propertylist-display', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-propertylist-display element', done => {
+  it('should be a furo-ui5-propertylist-display element', done => {
     // keep this test on top, so you can recognize a wrong assignment
     setTimeout(() => {
       assert.equal(
         display.nodeName.toLowerCase(),
-        'furo-ui5-data-propertylist-display'
+        'furo-ui5-propertylist-display'
       );
       done();
     }, 0);

@@ -7,6 +7,7 @@ import './initEnv.js';
 import '@furo/data/src/furo-data-object.js';
 import '@furo/data/src/furo-entity-agent';
 import '@furo/data/src/furo-deep-link';
+import '../src/furo-data-bool-icon.js';
 
 describe('furo-data-bool-icon', () => {
   let host;

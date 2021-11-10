@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-checkbox-input-labeled', () => {
+describe('furo-ui5-checkbox-input-labeled', () => {
   let host;
   let input;
   let dao;
@@ -39,9 +39,9 @@ describe('furo-ui5-data-checkbox-input-labeled', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-checkbox-input-labeled
+          <furo-ui5-checkbox-input-labeled
             ƒ-bind-data="--entity(*.data.furo_data_checkbox_input)"
-          ></furo-ui5-data-checkbox-input-labeled>
+          ></furo-ui5-checkbox-input-labeled>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--entity"
@@ -57,11 +57,11 @@ describe('furo-ui5-data-checkbox-input-labeled', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-data-checkbox-input-labeled element', done => {
+  it('should be a furo-ui5-checkbox-input-labeled element', done => {
     // keep this test on top, so you can recognize a wrong assignment
     assert.equal(
       input.nodeName.toLowerCase(),
-      'furo-ui5-data-checkbox-input-labeled'
+      'furo-ui5-checkbox-input-labeled'
     );
     done();
   });
@@ -94,7 +94,7 @@ describe('furo-ui5-data-checkbox-input-labeled', () => {
     input.setAttribute('disabled', '');
     setTimeout(() => {
       const checkbox = input.shadowRoot.querySelector(
-        'furo-ui5-data-checkbox-input'
+        'furo-ui5-checkbox-input'
       );
       assert.equal(checkbox.disabled, true, 'check attribute disabled ');
       done();

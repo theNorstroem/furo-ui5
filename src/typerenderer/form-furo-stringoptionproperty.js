@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FuroUi5DataSelectLabeled } from '../furo-ui5-data-select-labeled.js';
+import { FuroUi5SelectLabeled } from '../furo-ui5-select-labeled.js';
 
-class FormFuroStringoptionproperty extends FuroUi5DataSelectLabeled {
+class FormFuroStringoptionproperty extends FuroUi5SelectLabeled {
   bindData(fieldNode) {
     super.bindData(fieldNode);
   }

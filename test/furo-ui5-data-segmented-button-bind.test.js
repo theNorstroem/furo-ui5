@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-segmented-button-bind', () => {
+describe('furo-ui5-segmented-button-bind', () => {
   let host;
   let segmentedButton;
   let input;
@@ -109,7 +109,7 @@ describe('furo-ui5-data-segmented-button-bind', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-segmented-button
+          <furo-ui5-segmented-button
             value-field-path="data.id"
             id-field-path="data.id"
             display-field-path="data.display_name"
@@ -124,10 +124,10 @@ describe('furo-ui5-data-segmented-button-bind', () => {
             <ui5-segmented-button-item data-id="C"
               >Option C</ui5-segmented-button-item
             >
-          </furo-ui5-data-segmented-button>
-          <furo-ui5-data-text-input
+          </furo-ui5-segmented-button>
+          <furo-ui5-text-input
             ƒ-bind-data="--entity(*.owner.id)"
-          ></furo-ui5-data-text-input>
+          ></furo-ui5-text-input>
           <furo-data-object
             type="task.Task"
             @-object-ready="--entity"
@@ -150,11 +150,11 @@ describe('furo-ui5-data-segmented-button-bind', () => {
     await daoRepeater.updateComplete;
   });
 
-  it('should be a furo-ui5-data-segmented-button element', done => {
+  it('should be a furo-ui5-segmented-button element', done => {
     // keep this test on top, so you can recognize a wrong assignment
     assert.equal(
       segmentedButton.nodeName.toLowerCase(),
-      'furo-ui5-data-segmented-button'
+      'furo-ui5-segmented-button'
     );
     done();
   });

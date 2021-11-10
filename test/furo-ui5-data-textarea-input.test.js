@@ -8,7 +8,7 @@ import './initEnv.js';
 
 import '../src/furo-catalog.js';
 
-describe('furo-ui5-data-textarea-input', () => {
+describe('furo-ui5-textarea-input', () => {
   let host;
   let input;
   let dao;
@@ -112,16 +112,16 @@ describe('furo-ui5-data-textarea-input', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-data-textarea-input
+          <furo-ui5-textarea-input
             ƒ-bind-data="--entity(*.data.furo_data_textarea_input)"
-          ></furo-ui5-data-textarea-input>
+          ></furo-ui5-textarea-input>
           <furo-data-object
             type="experiment.ExperimentEntity"
             @-object-ready="--entity"
           ></furo-data-object>
-          <furo-ui5-data-textarea-input
+          <furo-ui5-textarea-input
             ƒ-bind-data="--entityU(*.data.fat_string)"
-          ></furo-ui5-data-textarea-input>
+          ></furo-ui5-textarea-input>
           <furo-data-object
             type="universaltest.UniversaltestEntity"
             @-object-ready="--entityU"
@@ -139,9 +139,9 @@ describe('furo-ui5-data-textarea-input', () => {
     await daoFat.updateComplete;
   });
 
-  it('should be a furo-ui5-data-textarea-input element', done => {
+  it('should be a furo-ui5-textarea-input element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-data-textarea-input');
+    assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-textarea-input');
     done();
   });
 

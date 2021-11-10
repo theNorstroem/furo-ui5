@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
 import '@furo/layout/src/furo-horizontal-flex';
-import '../../move/furo-data-bool-icon.js';
+import '../furo-data-bool-icon.js';
 import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
 
 /**
