@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
 import '@furo/layout/src/furo-horizontal-flex';
-import '../furo-data-bool-icon.js';
+import '../furo-ui5-bool-icon.js';
 import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
 
 /**
@@ -498,11 +498,11 @@ export class FuroTreeItem extends FBP(LitElement) {
       >
         <div class="indentation" @-click="--labelClicked"></div>
         <div class="oc">
-          <furo-data-bool-icon
+          <furo-ui5-bool-icon
             ?hidden="${!this.fieldNode.children.repeats.length}"
             ƒ-toggle="--dblclicked"
             ƒ-bind-data="--fieldOpen"
-          ></furo-data-bool-icon>
+          ></furo-ui5-bool-icon>
         </div>
         <div flex class="label" @-click="--labelClicked">
           <furo-icon

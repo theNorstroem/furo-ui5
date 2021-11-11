@@ -6,8 +6,6 @@ import './furo-ui5-button-bar.js';
 import './furo-ui5-card.js';
 import './furo-ui5-checkbox-input.js';
 import './furo-ui5-checkbox-input-labeled.js';
-import './furo-ui5-collection-dropdown.js';
-import './furo-ui5-collection-dropdown-labeled.js';
 import './furo-ui5-date-picker.js';
 import './furo-ui5-date-picker-labeled.js';
 import './furo-ui5-date-time-picker.js';

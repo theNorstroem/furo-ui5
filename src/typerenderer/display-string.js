@@ -60,9 +60,10 @@ export class DisplayString extends LitElement {
     this._field = fieldNode;
     if (this._field) {
       this._field.addEventListener('field-value-changed', () => {
+        this._text = this._field._value;
         this.requestUpdate();
       });
-
+      this._text = this._field._value;
       this.requestUpdate();
     }
   }
@@ -75,7 +76,7 @@ export class DisplayString extends LitElement {
   render() {
     // language=HTML
     // prettier-ignore
-    return html`${this._field ? html`${this._field._value}` : html``}`;
+    return html`${this._text}`;
   }
 }
 

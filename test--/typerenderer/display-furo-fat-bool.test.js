@@ -40,8 +40,20 @@ describe('display-furo-fat-bool', () => {
   });
 
   it('should bind data', done => {
-    assert.equal(display._field.value._value, null);
-    done();
+    setTimeout(() => {
+      assert.equal(display._field.value._value, null);
+      done();
+    }, 16);
+  });
+
+  it('should update on changed field', done => {
+    dao.data.fat_bool.value._value = false;
+    dao.data.fat_bool.value._value = true;
+
+    setTimeout(() => {
+      assert.equal(display._field.value._value, true);
+      done();
+    }, 16);
   });
 
   it('should show template according to the value of the data', done => {

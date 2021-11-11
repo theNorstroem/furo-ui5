@@ -7,7 +7,7 @@ import './initEnv.js';
 import '@furo/data/src/furo-data-object.js';
 import '@furo/data/src/furo-entity-agent';
 import '@furo/data/src/furo-deep-link';
-import '../src/furo-data-bool-icon.js';
+import '../src/furo-ui5-bool-icon.js';
 
 describe('furo-data-bool-icon', () => {
   let host;
@@ -19,9 +19,9 @@ describe('furo-data-bool-icon', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-data-bool-icon
+          <furo-ui5-bool-icon
             ƒ-bind-data="--entity(*.data.furo_data_bool_icon)"
-          ></furo-data-bool-icon>
+          ></furo-ui5-bool-icon>
 
           <furo-data-object
             type="experiment.ExperimentEntity"
@@ -54,7 +54,7 @@ describe('furo-data-bool-icon', () => {
 
   it('should be a furo-data-bool-icon', done => {
     // keep this test on top, so you can recognize a wrong asignment
-    assert.equal(dataBoolIcon.nodeName.toLowerCase(), 'furo-data-bool-icon');
+    assert.equal(dataBoolIcon.nodeName.toLowerCase(), 'furo-ui5-bool-icon');
     assert.equal(entityObject.nodeName.toLowerCase(), 'furo-data-object');
     assert.equal(deeplink.nodeName.toLowerCase(), 'furo-deep-link');
     done();
@@ -65,12 +65,21 @@ describe('furo-data-bool-icon', () => {
       entityObject.addEventListener(
         'data-changed',
         () => {
-          assert.equal(dataBoolIcon._ocSymbol, dataBoolIcon.__symbolfalse);
+          assert.equal(dataBoolIcon._ocSymbol, '▶');
           done();
         },
         { once: true }
       );
     });
     deeplink.qpIn({ exp: 1 });
+  });
+
+  it('should display the true symbol', done => {
+    entityObject.data.data.furo_data_bool_icon._value = true;
+    setTimeout(() => {
+      assert.equal(dataBoolIcon._ocSymbol, '▼');
+
+      done();
+    }, 16);
   });
 });

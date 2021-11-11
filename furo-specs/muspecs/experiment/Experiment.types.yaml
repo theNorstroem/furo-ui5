@@ -13,7 +13,7 @@
     furo_data_password_input: 'string:11 #field for furo-data-password-input for testing'
     furo_data_search_input: 'string:12 #field for furo-search-input for testing'
     furo_data_date_input: 'string:13 #field for furo-data-date-input for testing'
-    furo_data_bool_icon: 'bool:14 #field for furo-data-bool-icon for testing'
+    furo_data_bool_icon: 'bool:14 #field for furo-ui5-bool-icon for testing'
     the_any_type: 'google.protobuf.Any:15 #field for testing any'
     type_with_options: 'string:16 #field for testing static options'
     type_property: '[] furo.Property:17 #field for testing property'

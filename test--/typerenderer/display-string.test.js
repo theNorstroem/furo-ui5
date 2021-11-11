@@ -6,6 +6,7 @@ import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and ho
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '../initEnv.js';
 import '../../src/typerenderer/display-string.js';
+import '@furo/data/src/furo-data-object.js';
 
 describe('display-string', () => {
   let host;
@@ -40,8 +41,13 @@ describe('display-string', () => {
     done();
   });
 
-  it('should bind data', done => {
-    assert.equal(display._field._value, '');
-    done();
+  it('should update on changed field', done => {
+    dao.data.furo_data_text_input._value = 'before';
+    dao.data.furo_data_text_input._value = 'xxx';
+
+    setTimeout(() => {
+      assert.equal(display._text, 'xxx');
+      done();
+    }, 16);
   });
 });
