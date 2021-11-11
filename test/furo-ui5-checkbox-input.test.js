@@ -130,7 +130,7 @@ describe('furo-ui5-checkbox-input-scalar', () => {
       assert.equal(input._state.disabled, false, 'check disabled');
       assert.equal(input._state.readonly, false, 'check readonly');
       assert.equal(input._state.checked, false, 'check checked');
-      assert.equal(input._state.text, 'checkbox_input**', 'check text');
+      assert.equal(input._state.text, 'checkbox_input', 'check text');
       assert.equal(input._state.valueState, 'None', 'check valueState');
       assert.equal(input._state.name, '', 'check name');
       assert.equal(input._state.ariaLabel, undefined, 'check ariaLabel');
