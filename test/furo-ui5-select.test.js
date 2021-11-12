@@ -150,11 +150,10 @@ describe('furo-ui5-select', () => {
 
   it('should bind a field node', done => {
     daoCollection.injectRaw(options);
-
     setTimeout(() => {
       assert.equal(input.activeFieldBinding, true);
       done();
-    }, 0);
+    }, 16);
   });
 
   it('should detect a field value change event', done => {

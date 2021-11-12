@@ -58,7 +58,7 @@ describe('furo-ui5-select-labeled', () => {
     setTimeout(() => {
       assert.equal(
         input.shadowRoot.querySelector('ui5-label').innerText,
-        'Description**'
+        'Description'
       );
       done();
     }, 0);
