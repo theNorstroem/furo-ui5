@@ -47,7 +47,7 @@ import { Events } from './lib/Events.js';
  * @fires {} input -  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
  * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
  *
- * @fires {String} value-changed - Fires the field value when it changes.
+ * @fires {`string`} value-changed - Fires the field value when it changes.
  *
  * @summary data number input field
  * @customElement
@@ -58,7 +58,7 @@ import { Events } from './lib/Events.js';
 export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
   constructor() {
     super();
-    // used to restore the state after a invalidation -> validation change.
+    // used to restore the state after a invalidation -> validation change
     this._previousValueState = { state: 'None', message: '' };
 
     this._attributesFromFNA = {
@@ -92,14 +92,6 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
     };
 
     this.addEventListener('input', this._updateFNA);
-
-    // changed is fired when the input operation has finished by pressing Enter or on focusout.
-    this.addEventListener('change', () => {
-      // set 0 for skalar type on blur if value was ""
-      if (!this.isFat() && !this.isWrapper() && this.value === '') {
-        this.value = 0;
-      }
-    });
   }
 
   /**
@@ -345,15 +337,22 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
   onFnaFieldValueChanged(val) {
     if (this.isFat()) {
       this._tmpFAT = val;
-      this.value = val.value || '';
+      if (val.value === null || val.value === undefined) {
+        this.value = '';
+      } else {
+        this.value = val.value;
+      }
+
       // set empty value when label empty was given
       if (this._tmpFAT.labels && this._tmpFAT.labels.empty) {
         this.value = null;
       }
       this._updateAttributesFromFat(this._tmpFAT.attributes);
       this._updateLabelsFromFat(this._tmpFAT.labels);
+    } else if (val === null || val === undefined) {
+      this.value = '';
     } else {
-      this.value = val || 0;
+      this.value = val;
     }
   }
 
