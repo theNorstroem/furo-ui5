@@ -88,7 +88,7 @@ describe('furo-ui5-multi-input-labeled', () => {
   it('should have a label component inside', done => {
     setTimeout(() => {
       const label = input.shadowRoot.querySelector('ui5-label');
-      assert.equal(label.innerText, 'Description**', 'check label text');
+      assert.equal(label.innerText, 'Description', 'check label text');
 
       done();
     }, 16);
@@ -98,7 +98,7 @@ describe('furo-ui5-multi-input-labeled', () => {
     setTimeout(() => {
       if (dao.injectRaw(testRecordMeta)) {
         setTimeout(() => {
-          assert.equal(input.label, 'Description**', 'check label text');
+          assert.equal(input.label, 'Description', 'check label text');
           done();
         }, 32);
       }
