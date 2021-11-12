@@ -66,7 +66,7 @@ describe('furo-ui5-number-input-labeled', () => {
   it('should have a label component inside', done => {
     setTimeout(() => {
       const label = input.shadowRoot.querySelector('ui5-label');
-      assert.equal(label.innerText, 'number-input**', 'check label text');
+      assert.equal(label.innerText, 'number-input', 'check label text');
 
       done();
     }, 16);
