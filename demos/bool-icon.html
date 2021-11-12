@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../src/furo-catalog.js';
+    import '@furo/data/src/furo-catalog.js';
+
+
+    render(
+      html`
+
+        <furo-ui5-bool-icon></furo-ui5-bool-icon>
+
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
