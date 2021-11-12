@@ -1,4 +1,6 @@
 import { fixture, html } from '@open-wc/testing';
+import { registerLocaleDataLoader } from '@ui5/webcomponents-base/dist/asset-registries/LocaleData.js';
+import { setLanguage } from '@ui5/webcomponents-base/dist/config/Language.js';
 
 import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
@@ -6,7 +8,13 @@ import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and ho
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 
-import '../src/furo-catalog.js';
+import '../src/furo-ui5-time-picker-labeled.js';
+
+import '@ui5/webcomponents-icons/dist/AllIcons.js';
+// eslint-disable-next-line import/no-unresolved, import/no-absolute-path
+registerLocaleDataLoader('en', () =>
+  import('/assets/cldr/en.js').then(cldr => cldr.default())
+);
 
 describe('furo-ui5-time-picker-labeled', () => {
   let host;
@@ -14,6 +22,7 @@ describe('furo-ui5-time-picker-labeled', () => {
   let dao;
 
   beforeEach(async () => {
+    await setLanguage('en');
     const testbind = await fixture(html`
       <test-bind>
         <template>
@@ -44,7 +53,7 @@ describe('furo-ui5-time-picker-labeled', () => {
   it('should have a label component inside', done => {
     setTimeout(() => {
       const label = input.shadowRoot.querySelector('ui5-label');
-      assert.equal(label.innerText, 'google TimeOfDay**', 'check label text');
+      assert.equal(label.innerText, 'google TimeOfDay', 'check label text');
 
       done();
     }, 16);

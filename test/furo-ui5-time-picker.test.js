@@ -1,12 +1,20 @@
 import { fixture, html } from '@open-wc/testing';
+import { registerLocaleDataLoader } from '@ui5/webcomponents-base/dist/asset-registries/LocaleData.js';
+import { setLanguage } from '@ui5/webcomponents-base/dist/config/Language.js';
 
+import '@ui5/webcomponents-icons/dist/AllIcons.js';
 import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
+
 import './initEnv.js';
 
-import '../src/furo-catalog.js';
+import '../src/furo-ui5-time-picker.js';
+// eslint-disable-next-line import/no-unresolved, import/no-absolute-path
+registerLocaleDataLoader('en', () =>
+  import('/assets/cldr/en.js').then(cldr => cldr.default())
+);
 
 describe('furo-ui5-time-picker', () => {
   let host;
@@ -44,6 +52,8 @@ describe('furo-ui5-time-picker', () => {
     },
   };
   beforeEach(async () => {
+    await setLanguage('en');
+
     const testbind = await fixture(html`
       <test-bind>
         <template>
