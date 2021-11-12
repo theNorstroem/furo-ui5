@@ -22,7 +22,12 @@ import SignaturePad from 'signature_pad/dist/signature_pad.js';
  * @demo demo-furo-sign-pad-img with injected image
  * @appliesMixin FBP
  */
-export class FuroSignPad extends FBP(LitElement) {
+export class FuroUi5SignPad extends FBP(LitElement) {
+  constructor() {
+    super();
+    this.field = {}; // ensure that field is available
+  }
+
   /**
    * flow is ready lifecycle method
    * @private
@@ -104,14 +109,14 @@ export class FuroSignPad extends FBP(LitElement) {
   }
 
   /**
-  unlock() {
+   unlock() {
     this.signaturePad.on();
   }
 
-  lock() {
+   lock() {
     this.signaturePad.off();
   }
-  */
+   */
 
   _setEmpty(b) {
     this.empty = b;
@@ -127,6 +132,9 @@ export class FuroSignPad extends FBP(LitElement) {
   clear() {
     this.signaturePad.clear();
     this.encodeImage();
+
+    // super.clear();
+    this.field._value = '';
   }
 
   setImage(encodedImage) {
@@ -153,7 +161,9 @@ export class FuroSignPad extends FBP(LitElement) {
     });
     customEvent.detail = this.image;
     this.dispatchEvent(customEvent);
-    return this.image;
+
+    this.field._value = this.image;
+    return this.field._value;
   }
 
   _onBegin() {
@@ -202,6 +212,22 @@ export class FuroSignPad extends FBP(LitElement) {
       this.encodeImage();
     }
   }
+
+  /**
+   * bind a entity field
+   * @param entityField
+   */
+  bindData(entityField) {
+    this.field = entityField;
+    if (this.field._value) {
+      this.setImage(this.field._value);
+    }
+    // update drawing on changes from outside
+    this.field.addEventListener('this-field-value-changed', () => {
+      this.signaturePad.clear();
+      this.setImage(this.field._value);
+    });
+  }
 }
 
-window.customElements.define('furo-sign-pad', FuroSignPad);
+window.customElements.define('furo-ui5-sign-pad', FuroUi5SignPad);

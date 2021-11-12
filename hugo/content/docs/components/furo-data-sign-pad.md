@@ -6,8 +6,8 @@ weight: 50
 
 # furo-data-sign-pad
 **@furo/components** <small>v1.0.0-alpha.2</small>
-<br>`import '@furo/components/src/furo-data-sign-pad.js';`<small>
-<br>exports *FuroDataSignPad* js
+<br>`import '@furo/components/src/furo-ui5-sign-pad.js';`<small>
+<br>exports *FuroUi5SignPad* js
 <br>exports `<furo-data-sign-pad>` custom-element-definition
 <br>extends */src/furo-sign-pad.js*
 <br>superclass *FuroSignPad*</small>

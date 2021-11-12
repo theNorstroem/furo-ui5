@@ -2189,7 +2189,7 @@ Depth of the submenu Methods #  init #  init(e *display* byKeyboard `` ) ⟹ voi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>http://web-components.furo.pro/docs/components/furo-data-sign-pad/</guid>
-      <description>furo-data-sign-pad #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-data-sign-pad.js&#39;; exports FuroDataSignPad js exports &amp;lt;furo-data-sign-pad&amp;gt; custom-element-definition extends /src/furo-sign-pad.js superclass FuroSignPad
+      <description>furo-data-sign-pad #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-sign-pad.js&#39;; exports FuroUi5SignPad js exports &amp;lt;furo-data-sign-pad&amp;gt; custom-element-definition extends /src/furo-sign-pad.js superclass FuroSignPad
 Bind a entityObject.field to a sign-pad input
 furo-data-sign-pad Describe your element
 Attributes and Properties #  field #  default: {}
