@@ -58,7 +58,7 @@ import { Events } from './lib/Events.js';
 export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
   constructor() {
     super();
-    // used to restore the state after a invalidation -> validation change
+    // used to restore the state after a invalidation -> validation change.
     this._previousValueState = { state: 'None', message: '' };
 
     this._attributesFromFNA = {
