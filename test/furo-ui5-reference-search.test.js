@@ -1,7 +1,8 @@
 import { fixture, html } from '@open-wc/testing';
 
 import { assert } from '@esm-bundle/chai';
-import '../src/furo-catalog.js';
+import '../src/furo-ui5-reference-search.js';
+
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
@@ -49,8 +50,9 @@ describe('furo-ui5-reference-search', () => {
 
   it('should set placeholder  ', done => {
     setTimeout(() => {
+      const i = referenceSearch.shadowRoot.getElementById('input');
       assert.equal(
-        referenceSearch.shadowRoot.getElementById('input')._state.placeholder,
+        i.getAttribute('placeholder'),
         'this is a placeholder',
         'placeholder check'
       );
@@ -62,7 +64,7 @@ describe('furo-ui5-reference-search', () => {
     setTimeout(() => {
       assert.equal(
         referenceSearch.__fieldNode._meta.label,
-        'person.label**',
+        'person.label',
         'binding check'
       );
       done();

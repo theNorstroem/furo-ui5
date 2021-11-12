@@ -3,7 +3,7 @@ import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Env } from '@furo/framework';
-
+import '@furo/data/src/furo-collection-agent.js';
 import '@furo/fbp/src/flow-repeat.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/util/src/furo-de-bounce.js';

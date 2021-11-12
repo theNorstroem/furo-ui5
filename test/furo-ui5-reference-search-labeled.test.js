@@ -6,7 +6,7 @@ import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and ho
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 
-import '../src/furo-catalog.js';
+import '../src/furo-ui5-reference-search-labeled.js';
 
 describe('furo-ui5-reference-search-labeled-test', () => {
   let host;
@@ -47,7 +47,7 @@ describe('furo-ui5-reference-search-labeled-test', () => {
   it('should have a label component inside', done => {
     setTimeout(() => {
       const label = input.shadowRoot.querySelector('ui5-label');
-      assert.equal(label.innerText, 'person.label**', 'check label text');
+      assert.equal(label.innerText, 'person.label', 'check label text');
 
       done();
     }, 16);

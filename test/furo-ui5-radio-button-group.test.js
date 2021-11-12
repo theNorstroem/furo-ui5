@@ -159,11 +159,15 @@ describe('furo-ui5-radio-button-group', () => {
   });
 
   it('should have an options binding', done => {
-    buttonGrp.addEventListener('options-updated', () => {
-      const buttons = buttonGrp.querySelectorAll('ui5-radio-button');
-      assert.equal(buttons.length, 4);
-      done();
-    });
+    buttonGrp.addEventListener(
+      'options-updated',
+      () => {
+        const buttons = buttonGrp.querySelectorAll('ui5-radio-button');
+        assert.equal(buttons.length, 4);
+        done();
+      },
+      { once: true }
+    );
 
     daoCollection.addEventListener('data-injected', () => {
       buttonGrp.bindOptions(daoCollection.data.entities);
