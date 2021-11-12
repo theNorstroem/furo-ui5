@@ -164,7 +164,7 @@ describe('furo-ui5-textarea-input', () => {
 
   it('should update the fieldNode', done => {
     input.value = 'new text set';
-    input.dispatchEvent(
+    input._updateFNA(
       new CustomEvent('input', {
         bubbles: true,
         detail: 'new text set',
