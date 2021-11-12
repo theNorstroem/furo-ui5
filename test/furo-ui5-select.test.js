@@ -149,6 +149,7 @@ describe('furo-ui5-select', () => {
   });
 
   it('should bind a field node', done => {
+    input._privilegedAttributes['id-field-path'] = 'data.id';
     daoCollection.injectRaw(options);
     setTimeout(() => {
       assert.equal(input.activeFieldBinding, true);
@@ -157,7 +158,6 @@ describe('furo-ui5-select', () => {
   });
 
   it('should detect a field value change event', done => {
-    input._privilegedAttributes['id-field-path'] = 'data.id';
     input._privilegedAttributes['id-field-path'] = 'data.id';
     input._privilegedAttributes['display-field-path'] = 'data.display_name';
 
