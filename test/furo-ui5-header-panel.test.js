@@ -6,6 +6,7 @@ import './initEnv.js';
 import '@furo/data/src/furo-data-object.js';
 import '../src/furo-catalog.js';
 import { assert } from '@esm-bundle/chai';
+import '@ui5/webcomponents-icons/dist/AllIcons.js';
 
 describe('furo-ui5-header-panel', () => {
   let host;

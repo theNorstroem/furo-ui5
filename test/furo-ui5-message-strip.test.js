@@ -74,7 +74,7 @@ describe('furo-ui5-message-strip', () => {
     messageStrip.showInformation('Information message');
     setTimeout(() => {
       const items =
-        messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
+        messageStripDisplay.shadowRoot.querySelectorAll('ui5-message-strip');
 
       assert.equal(items.length, 1);
 
@@ -86,7 +86,7 @@ describe('furo-ui5-message-strip', () => {
     messageStrip.showWarning('Warning message');
     setTimeout(() => {
       const items =
-        messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
+        messageStripDisplay.shadowRoot.querySelectorAll('ui5-message-strip');
 
       assert.equal(items.length, 1);
 
@@ -98,7 +98,7 @@ describe('furo-ui5-message-strip', () => {
     messageStrip.showSuccess('Success message');
     setTimeout(() => {
       const items =
-        messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
+        messageStripDisplay.shadowRoot.querySelectorAll('ui5-message-strip');
 
       assert.equal(items.length, 1);
 
@@ -110,7 +110,7 @@ describe('furo-ui5-message-strip', () => {
     messageStrip.showError('Error message');
     setTimeout(() => {
       const items =
-        messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
+        messageStripDisplay.shadowRoot.querySelectorAll('ui5-message-strip');
 
       assert.equal(items.length, 1);
 
@@ -122,7 +122,7 @@ describe('furo-ui5-message-strip', () => {
     messageStrip.showGrpcLocalizedMessage(grpcStatus);
     setTimeout(() => {
       const items =
-        messageStripDisplay.shadowRoot.querySelectorAll('ui5-messagestrip');
+        messageStripDisplay.shadowRoot.querySelectorAll('ui5-message-strip');
 
       assert.equal(items.length, 1);
 

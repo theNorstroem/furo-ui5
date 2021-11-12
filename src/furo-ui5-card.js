@@ -66,7 +66,7 @@ export class FuroUi5Card extends FBP(LitElement) {
   bindHeading(fieldNode) {
     if (fieldNode === undefined) {
       // eslint-disable-next-line no-console
-      console.warn('Invalid fieldNode in bindData', this);
+      console.warn('Invalid fieldNode in bindHeading', this);
       return;
     }
     this.heading = fieldNode._value;
@@ -121,7 +121,7 @@ export class FuroUi5Card extends FBP(LitElement) {
   bindNavNode(fieldNode) {
     if (fieldNode === undefined || fieldNode.display_name === undefined) {
       // eslint-disable-next-line no-console
-      console.warn('Invalid fieldNode in bindData', this);
+      console.warn('Invalid fieldNode in bindNavNode', this);
       return;
     }
 

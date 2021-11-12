@@ -76,7 +76,7 @@ export class FuroUi5MessageStripDisplay extends FBP(LitElement) {
    * @param text
    */
   show(source) {
-    const messagestrip = document.createElement('ui5-messagestrip');
+    const messagestrip = document.createElement('ui5-message-strip');
     messagestrip.setAttribute(
       'design',
       source.type ? source.type : 'Information'
@@ -120,7 +120,7 @@ export class FuroUi5MessageStripDisplay extends FBP(LitElement) {
         display: block;
       }
 
-      ui5-messagestrip {
+      ui5-message-strip {
         margin-bottom: 0.6875rem;
       }
     `;

@@ -3,6 +3,7 @@ import { fixture, html } from '@open-wc/testing';
 import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
+import '@ui5/webcomponents-icons/dist/AllIcons.js';
 import '@furo/data/src/furo-data-object.js';
 import '../src/furo-catalog.js';
 import { assert } from '@esm-bundle/chai';
@@ -60,6 +61,7 @@ describe('furo-ui5-card', () => {
     assert.equal(card.subheading, 'subtitle');
     done();
   });
+
   it('invalid binding should do nothing ', done => {
     card.bindHeading(undefined);
     card.bindIcon(undefined);
