@@ -10,8 +10,9 @@ import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and ho
 import './initEnv.js';
 
 import '../src/furo-catalog.js';
-// eslint-disable-next-line import/no-unresolved, import/no-absolute-path
+
 registerLocaleDataLoader('en', () =>
+  // eslint-disable-next-line import/no-unresolved, import/no-absolute-path
   import('/assets/cldr/en.js').then(cldr => cldr.default())
 );
 

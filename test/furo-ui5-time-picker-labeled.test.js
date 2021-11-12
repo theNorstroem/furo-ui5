@@ -11,8 +11,9 @@ import './initEnv.js';
 import '../src/furo-ui5-time-picker-labeled.js';
 
 import '@ui5/webcomponents-icons/dist/AllIcons.js';
-// eslint-disable-next-line import/no-unresolved, import/no-absolute-path
+
 registerLocaleDataLoader('en', () =>
+  // eslint-disable-next-line import/no-unresolved, import/no-absolute-path
   import('/assets/cldr/en.js').then(cldr => cldr.default())
 );
 
