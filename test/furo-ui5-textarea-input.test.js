@@ -179,7 +179,7 @@ describe('furo-ui5-textarea-input', () => {
         'check dao'
       );
       done();
-    }, 16);
+    }, 32);
   });
 
   it('should update value after inject response', done => {

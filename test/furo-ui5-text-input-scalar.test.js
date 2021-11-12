@@ -6,67 +6,40 @@ import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and ho
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 
-import '../src/furo-catalog.js';
+import '../src/furo-ui5-text-input.js';
 
-describe('furo-ui5-text-input-fat', () => {
+import '../src/lib/ui5-icons.js';
+
+describe('furo-ui5-text-input-scalar', () => {
   let host;
   let input;
   let dao;
 
   const testRecordMeta = {
     data: {
-      id: '1',
-      scalar_string: 'this is a scalar string',
-      wrapper_string: {
-        value: 'this is a google wrapper string',
-      },
-      fat_string: {
-        value: 'fat string from record',
-        labels: ['cozy'],
-        attributes: {
-          'value-state': 'Error',
-          'value-state-message': 'Your fat string is valid',
-          icon: 'thumb-up',
-        },
-      },
-      scalar_int32: 14,
-      wrapper_int32: {
-        value: 14,
-      },
-      fat_int32: {
-        value: 14,
-        labels: '',
-        attributes: {
-          'value-state': 'Information',
-        },
-      },
-      fat_bool: {
-        value: true,
-        'value-state': 'Information',
-      },
-      wrapper_bool: {
-        value: true,
-      },
+      description: 'Description from record',
     },
-    links: [],
+    links: [
+      {
+        href: '/mockdata/experiments/1/get-less-props.json',
+        method: 'GET',
+        rel: 'self',
+        type: 'experiment.ExperimentEntity',
+        service: 'ExperimentService',
+      },
+    ],
     meta: {
       fields: {
-        'data.wrapper_string': {
+        'data.description': {
           meta: {
-            label: 'wrapper string label set via response meta',
-            readonly: true,
-          },
-        },
-        'data.fat_string': {
-          meta: {
-            label: 'fat string label set via response meta',
-            default: 'new',
+            label: 'My description',
             readonly: false,
+            hint: 'Please enter a description',
           },
           constraints: {
             required: {
               is: 'true',
-              message: 'Bitte ausfüllen!',
+              message: 'Please fill in!',
             },
           },
         },
@@ -79,10 +52,11 @@ describe('furo-ui5-text-input-fat', () => {
       <test-bind>
         <template>
           <furo-ui5-text-input
-            ƒ-bind-data="--entity(*.data.fat_string)"
+            icon="filter"
+            ƒ-bind-data="--entity(*.data.description)"
           ></furo-ui5-text-input>
           <furo-data-object
-            type="universaltest.UniversaltestEntity"
+            type="experiment.ExperimentEntity"
             @-object-ready="--entity"
           ></furo-data-object>
         </template>
@@ -96,13 +70,13 @@ describe('furo-ui5-text-input-fat', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-text-input element (fat)', done => {
+  it('should be a furo-ui5-text-input element', done => {
     // keep this test on top, so you can recognize a wrong assignment
     assert.equal(input.nodeName.toLowerCase(), 'furo-ui5-text-input');
     done();
   });
 
-  it('should have the basic attributes of the fieldNode set (fat)', done => {
+  it('should have the basic attributes of the fieldNode set', done => {
     setTimeout(() => {
       assert.equal(input._state.disabled, false, 'check disabled');
       assert.equal(input._state.highlight, false, 'check highlight');
@@ -110,7 +84,7 @@ describe('furo-ui5-text-input-fat', () => {
       assert.equal(input._state.readonly, false, 'check readonly');
       assert.equal(input._state.required, false, 'check required');
       assert.equal(input._state.type, 'Text', 'check type');
-      assert.equal(input._state.value, '', 'check value');
+      assert.equal(input._state.value, 'Default Description', 'check value');
       assert.equal(input._state.valueState, 'None', 'check valueState');
       assert.equal(input._state.name, '', 'check name');
       assert.equal(
@@ -123,39 +97,42 @@ describe('furo-ui5-text-input-fat', () => {
     }, 16);
   });
 
-  it('should update the value of the bound fieldNode (fat)', done => {
-    dao.data.data.fat_string.addEventListener(
+  it('should update the value of the bound fieldNode', done => {
+    dao.data.data.description.addEventListener(
       'field-value-changed',
       () => {
-        assert.equal(input._state.value, 'New FAT String value changed');
-        assert.equal(
-          dao.data.data.fat_string.value._value,
-          'New FAT String value changed'
-        );
+        assert.equal(input._state.value, 'New description set');
+        assert.equal(dao.data.data.description._value, 'New description set');
         done();
       },
       { once: true }
     );
 
-    input.value = 'New FAT String value changed';
+    input.value = 'New description set';
     input.dispatchEvent(
       new CustomEvent('input', {
         bubbles: true,
-        detail: 'New FAT String value changed',
+        detail: 'New description set',
       })
     );
   });
 
-  it('an update of a fat value on the data object should be synchronized with the input field (fat)', done => {
-    dao.data.data.fat_string.value._value =
-      'Set data in the inner input element';
+  it('an update of a scalar value on the data object should be synchronized with the input field', done => {
+    dao.data.data.description._value = 'Set data in the inner input element';
     setTimeout(() => {
       assert.equal(input.value, 'Set data in the inner input element');
       done();
     });
   });
 
-  it('should apply meta and constraints to the bound field (fat)', done => {
+  it('should set ui5 icon to the component', done => {
+    const icon = input.querySelector('ui5-icon');
+    assert.equal(icon.name, 'filter');
+    assert.equal(icon.slot, 'icon');
+    done();
+  });
+
+  it('should show the value in the input field and apply meta and constraints after data injected', done => {
     dao.addEventListener('data-injected', () => {
       setTimeout(() => {
         assert.equal(input._state.disabled, false, 'check disabled');
@@ -166,27 +143,27 @@ describe('furo-ui5-text-input-fat', () => {
         assert.equal(input._state.type, 'Text', 'check type');
         assert.equal(
           input._state.value,
-          'fat string from record',
+          'Description from record',
           'check value'
         );
-        assert.equal(input._state.valueState, 'Error', 'check valueState');
+        assert.equal(input._state.valueState, 'None', 'check valueState');
         assert.equal(input._state.name, '', 'check name');
         assert.equal(
-          input._previousValueState.message,
-          'Your fat string is valid',
-          'check valueStateMessage content'
+          input._state.showSuggestions,
+          false,
+          'check showSuggestions'
         );
-        assert.equal(input.isFat(), true, 'check fieldFormat');
+        assert.equal(input._state.maxlength, undefined, 'check maxlength');
+        assert.equal(input.isFat(), false, 'check fieldFormat');
+
         assert.equal(
-          input.querySelector('ui5-icon')._state.name,
-          'thumb-up',
-          'check icon'
+          input.shadowRoot.querySelector('input').value,
+          'Description from record',
+          'check input value'
         );
-
         done();
-      }, 10);
+      }, 100);
     });
-
     dao.injectRaw(testRecordMeta);
   });
 });
