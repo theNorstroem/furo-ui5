@@ -6,6 +6,12 @@ dist
 .idea
 .DS_Store
 test
+hugo
+docs
+tmp
+furo-specs
+mockdata
+test--
 .editorconfig
 .gitignore
 .npmignore
