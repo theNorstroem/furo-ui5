@@ -6,7 +6,7 @@ import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and ho
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 
-import '../src/furo-catalog.js';
+import '../src/furo-ui5-typerenderer-labeled.js';
 
 describe('furo-ui5-display', () => {
   let host;
@@ -17,7 +17,7 @@ describe('furo-ui5-display', () => {
     const testbind = await fixture(html`
       <test-bind>
         <template>
-          <furo-ui5-display></furo-ui5-display>
+          <furo-ui5-typerenderer-labeled></furo-ui5-typerenderer-labeled>
           <furo-data-object></furo-data-object>
         </template>
       </test-bind>
@@ -32,14 +32,17 @@ describe('furo-ui5-display', () => {
 
   it('should be a furo-ui5-display element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(display.nodeName.toLowerCase(), 'furo-ui5-display');
+    assert.equal(
+      display.nodeName.toLowerCase(),
+      'furo-ui5-typerenderer-labeled'
+    );
     done();
   });
 
   it('should bind a field node', done => {
     dao.type = 'experiment.Experiment';
     display.bindData(dao.data.display_name);
-    assert.equal(display.label, 'experiment**');
+    assert.equal(display.label, 'experiment');
     done();
   });
 });

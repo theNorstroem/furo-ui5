@@ -165,7 +165,7 @@ describe('furo-ui5-password-input', () => {
     setTimeout(() => {
       assert.equal(input._state.value, 'Set data in the inner input element');
       done();
-    }, 0);
+    }, 32);
   });
 
   it('should set ui5 icon to the component', done => {
