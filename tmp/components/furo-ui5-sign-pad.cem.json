@@ -1,0 +1,193 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-ui5-sign-pad.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`furo-sign-pad`\n Simple pad to sign or draw something\n\n### Sample\n <furo-demo-snippet>\n  <template>\n   <furo-sign-pad @-sign-updated=\"--signed\"></furo-sign-pad>\n    <img ƒ-.src=\"--signed\" alt=\"\" width=\"150px\">\n  </template>\n </furo-demo-snippet>",
+      "name": "FuroUi5SignPad",
+      "members": [
+        {
+          "kind": "method",
+          "name": "_FBPReady",
+          "description": "flow is ready lifecycle method",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "resize"
+        },
+        {
+          "kind": "method",
+          "name": "_setEmpty",
+          "parameters": [
+            {
+              "name": "b"
+            }
+          ],
+          "description": "unlock() {\n this.signaturePad.on();\n}\n\nlock() {\n this.signaturePad.off();\n}"
+        },
+        {
+          "kind": "method",
+          "name": "_setActive",
+          "parameters": [
+            {
+              "name": "b"
+            }
+          ]
+        },
+        {
+          "kind": "method",
+          "name": "clear",
+          "description": "Clears the image"
+        },
+        {
+          "kind": "method",
+          "name": "setImage",
+          "parameters": [
+            {
+              "name": "encodedImage"
+            }
+          ]
+        },
+        {
+          "kind": "method",
+          "name": "encodeImage",
+          "description": "Encodes the image using the type and encodingOptions (quality) defined.\nThe encoded image is available in the `image` property."
+        },
+        {
+          "kind": "method",
+          "name": "_onBegin"
+        },
+        {
+          "kind": "method",
+          "name": "_onEnd"
+        },
+        {
+          "kind": "method",
+          "name": "_dotSizeChanged",
+          "parameters": [
+            {
+              "name": "newValue"
+            }
+          ]
+        },
+        {
+          "kind": "method",
+          "name": "_minWidthChanged",
+          "parameters": [
+            {
+              "name": "newValue"
+            }
+          ]
+        },
+        {
+          "kind": "method",
+          "name": "_maxWidthChanged",
+          "parameters": [
+            {
+              "name": "newValue"
+            }
+          ]
+        },
+        {
+          "kind": "method",
+          "name": "_backgroundColorChanged",
+          "parameters": [
+            {
+              "name": "newValue"
+            }
+          ]
+        },
+        {
+          "kind": "method",
+          "name": "_penColorChanged",
+          "parameters": [
+            {
+              "name": "newValue"
+            }
+          ]
+        },
+        {
+          "kind": "method",
+          "name": "_velocityFilterWeightChanged",
+          "parameters": [
+            {
+              "name": "newValue"
+            }
+          ]
+        },
+        {
+          "kind": "method",
+          "name": "_onEncodingChanged",
+          "parameters": [
+            {
+              "name": "type"
+            },
+            {
+              "name": "encoderOptions"
+            }
+          ]
+        },
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "entityField"
+            }
+          ],
+          "description": "bind a entity field"
+        },
+        {
+          "kind": "field",
+          "name": "field",
+          "type": {
+            "text": "object"
+          },
+          "default": "{}"
+        }
+      ],
+      "events": [
+        {
+          "type": {
+            "text": "Base64"
+          },
+          "description": "Fired when sign gets new painting, with base encoded image.",
+          "name": "sign-updated"
+        }
+      ],
+      "mixins": [
+        {
+          "name": "FBP",
+          "package": "@furo/fbp"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "summary": "draw or sign",
+      "tagName": "furo-ui5-sign-pad",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FuroUi5SignPad",
+      "declaration": {
+        "name": "FuroUi5SignPad",
+        "module": "src/furo-ui5-sign-pad.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-ui5-sign-pad",
+      "declaration": {
+        "name": "FuroUi5SignPad",
+        "module": "src/furo-ui5-sign-pad.js"
+      }
+    }
+  ]
+}

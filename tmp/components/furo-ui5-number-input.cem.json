@@ -274,7 +274,7 @@
         },
         {
           "type": {
-            "text": "String"
+            "text": "`string`"
           },
           "description": "Fires the field value when it changes.",
           "name": "value-changed"

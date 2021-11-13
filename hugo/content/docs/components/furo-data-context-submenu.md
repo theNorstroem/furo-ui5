@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-data-context-submenu
-**@furo/components** <small>v1.0.0-alpha.2</small>
+**@furo/components** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/components/src/furo-data-context-submenu.js';`<small>
 <br>exports *FuroDataContextSubmenu* js
 <br>exports `<furo-data-context-submenu>` custom-element-definition

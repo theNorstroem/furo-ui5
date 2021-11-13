@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-chart-display
-**@furo/components** <small>v1.0.0-alpha.2</small>
+**@furo/components** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/components/src/furo-chart-display.js';`<small>
 <br>exports `<furo-chart-display>` custom-element-definition
 <br>superclass *LitElement*

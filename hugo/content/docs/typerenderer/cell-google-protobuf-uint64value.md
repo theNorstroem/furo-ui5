@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-google-protobuf-uint64value
-**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/typerenderer/src/cell-google-protobuf-uint64value.js';`<small>
 <br>exports `<cell-google-protobuf-uint64value>` custom-element-definition
 <br>extends */src/typerenderer/cell-uint64.js*

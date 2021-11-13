@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-google-protobuf-stringvalue
-**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/typerenderer/src/form-google-protobuf-stringvalue.js';`<small>
 <br>exports `<form-google-protobuf-stringvalue>` custom-element-definition
 <br>extends */src/furo-ui5-text-input-labeled.js*

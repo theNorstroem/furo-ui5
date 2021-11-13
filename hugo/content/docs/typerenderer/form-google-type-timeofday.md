@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-google-type-timeofday
-**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/typerenderer/src/form-google-type-timeofday.js';`<small>
 <br>exports `<form-google-type-timeofday>` custom-element-definition
 <br>extends */src/furo-ui5-time-picker-labeled.js*

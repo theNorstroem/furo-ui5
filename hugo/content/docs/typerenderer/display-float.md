@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-float
-**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/typerenderer/src/display-float.js';`<small>
 <br>exports *DisplayFloat* js
 <br>exports `<display-float>` custom-element-definition

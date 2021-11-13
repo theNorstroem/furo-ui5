@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-data-context-menu
-**@furo/components** <small>v1.0.0-alpha.2</small>
+**@furo/components** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/components/src/furo-data-context-menu.js';`<small>
 <br>exports *FuroDataContextMenu* js
 <br>exports `<furo-data-context-menu>` custom-element-definition

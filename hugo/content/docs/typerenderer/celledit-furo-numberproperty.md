@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-numberproperty
-**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-numberproperty.js';`<small>
 <br>exports `<celledit-furo-numberproperty>` custom-element-definition
 <br>extends */src/typerenderer/celledit-int32.js*

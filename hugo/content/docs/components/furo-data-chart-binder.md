@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-data-chart-binder
-**@furo/components** <small>v1.0.0-alpha.2</small>
+**@furo/components** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/components/src/furo-data-chart-binder.js';`<small>
 <br>exports `<furo-data-chart-binder>` custom-element-definition
 <br>superclass *LitElement*</small>

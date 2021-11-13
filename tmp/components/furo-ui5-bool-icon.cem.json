@@ -1,0 +1,100 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-ui5-bool-icon.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "`furo-ui5-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.",
+      "name": "FuroDataBoolIcon",
+      "members": [
+        {
+          "kind": "method",
+          "name": "bindData",
+          "parameters": [
+            {
+              "name": "fieldNode",
+              "type": {
+                "text": "FieldNode"
+              }
+            }
+          ],
+          "description": "Binds a field node to the component"
+        },
+        {
+          "kind": "field",
+          "name": "symboltrue",
+          "type": {
+            "text": "string"
+          },
+          "default": "'▼'",
+          "privacy": "public",
+          "description": "Defines the symbol for the true state",
+          "attribute": "symboltrue"
+        },
+        {
+          "kind": "field",
+          "name": "symbolfalse",
+          "type": {
+            "text": "string"
+          },
+          "default": "'▶'",
+          "privacy": "public",
+          "description": "Defines the symbol for the false state",
+          "attribute": "symbolfalse"
+        },
+        {
+          "kind": "field",
+          "name": "field",
+          "type": {
+            "text": "object"
+          },
+          "default": "{}"
+        },
+        {
+          "kind": "field",
+          "name": "_ocSymbol",
+          "description": "open close symbol",
+          "type": {
+            "text": "string"
+          },
+          "privacy": "private"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "symboltrue",
+          "description": "Defines the symbol for the true state",
+          "fieldName": "symboltrue"
+        },
+        {
+          "name": "symbolfalse",
+          "description": "Defines the symbol for the false state",
+          "fieldName": "symbolfalse"
+        }
+      ],
+      "mixins": [
+        {
+          "name": "FBP",
+          "package": "@furo/fbp"
+        }
+      ],
+      "superclass": {
+        "name": "LitElement",
+        "package": "lit"
+      },
+      "summary": "Displays a icon/symbol for a boolean value",
+      "tagName": "furo-ui5-bool-icon",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-ui5-bool-icon",
+      "declaration": {
+        "name": "FuroDataBoolIcon",
+        "module": "src/furo-ui5-bool-icon.js"
+      }
+    }
+  ]
+}

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-property-repeated
-**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-property-repeated.js';`<small>
 <br>exports *CelleditFuroPropertyRepeated* js
 <br>exports `<celledit-furo-property-repeated>` custom-element-definition

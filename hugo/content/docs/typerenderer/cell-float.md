@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-float
-**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/typerenderer/src/cell-float.js';`<small>
 <br>exports *CellFloat* js
 <br>exports `<cell-float>` custom-element-definition

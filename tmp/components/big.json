@@ -1,10 +1,10 @@
 {
-  "collection": "1.0.0-alpha.2",
+  "collection": "1.0.0-alpha.4",
   "module": "components",
   "pkg": {
     "name": "@furo/ui5",
     "description": "SAP UI5 Web Components data bindings for furo",
-    "version": "1.0.0-alpha.2",
+    "version": "1.0.0-alpha.4",
     "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
     "repository": "git@github.com:eclipse/eclipsefuro-web.git",
     "author": {
@@ -34,16 +34,16 @@
       "analyze:typerenderer": "cem analyze --globs \"src/typerenderer/*.js\" --exclude --litelement --outdir tmp/typerenderer"
     },
     "peerDependencies": {
-      "@furo/fbp": "^6.0.0-rc.0",
-      "@furo/framework": "^2.0.0-rc.0",
-      "@furo/layout": "^2.0.0-rc.0",
-      "@furo/data": "^2.0.0-rc.0",
-      "@furo/util": "^2.0.0-rc.0",
-      "@ui5/webcomponents": "0.33.0",
-      "@ui5/webcomponents-base": "0.33.0",
-      "@ui5/webcomponents-fiori": "0.33.0",
-      "@ui5/webcomponents-icons": "0.33.0",
-      "lit": "^2.0.2"
+      "@furo/fbp": "^6.0.0-rc.3",
+      "@furo/framework": "^2.0.0-rc.3",
+      "@furo/layout": "^2.0.0-rc.3",
+      "@furo/data": "^2.0.0-rc.3",
+      "@furo/util": "^2.0.0-rc.3",
+      "@ui5/webcomponents": "^1.0.1",
+      "@ui5/webcomponents-base": "^1.0.1",
+      "@ui5/webcomponents-fiori": "^1.0.1",
+      "@ui5/webcomponents-icons": "^1.0.1",
+      "lit": "^2.0.1"
     },
     "dependencies": {
       "markdown-it": "^9.0.1",
@@ -51,18 +51,18 @@
       "signature_pad": "3.0.0-beta.4"
     },
     "devDependencies": {
-      "@custom-elements-manifest/analyzer": "^0.5.3",
-      "@open-wc/eslint-config": "^4.3.0",
-      "@open-wc/testing": "next",
-      "@web/dev-server": "^0.1.25",
-      "@web/test-runner": "^0.13.20",
+      "lit-html": "2.0.1",
+      "@custom-elements-manifest/analyzer": "^0.5.7",
+      "@open-wc/eslint-config": "^7.0.0",
+      "@open-wc/testing": "^3.0.3",
+      "@web/dev-server": "^0.1.28",
+      "@web/test-runner": "^0.13.21",
       "@esm-bundle/chai": "^4.3.4-fix.0",
-      "eslint": "^7.32.0",
+      "eslint": "^8.2.0",
       "eslint-config-prettier": "^8.3.0",
-      "husky": "^4.3.8",
-      "lerna": "^3.22.1",
-      "lint-staged": "^10.5.4",
-      "lit-html": "2.0.0-rc.3",
+      "husky": "^7.0.4",
+      "lerna": "^4.0.0",
+      "lint-staged": "^11.2.6",
       "prettier": "^2.4.1"
     },
     "publishConfig": {
@@ -89,7 +89,7 @@
     },
     "lint-staged": {
       "*.js": [
-        "eslint --fix --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*'",
+        "eslint --fix --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*' --ignore-pattern 'test--/*'",
         "prettier --write",
         "git add"
       ]
@@ -460,122 +460,6 @@
             "declaration": {
               "name": "FuroChartDisplay",
               "module": "src/furo-chart-display.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/furo-data-bool-icon.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-data-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.",
-            "name": "FuroDataBoolIcon",
-            "members": [
-              {
-                "kind": "method",
-                "name": "_initBinder",
-                "description": "inits the universalFieldNodeBinder.\nSet the mapped attributes and labels.",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "toggle",
-                "description": "Toggles the icon."
-              },
-              {
-                "kind": "method",
-                "name": "bindData",
-                "parameters": [
-                  {
-                    "name": "d",
-                    "description": "of type bool",
-                    "type": {
-                      "text": "FieldNode"
-                    }
-                  }
-                ],
-                "description": "Bind a fieldNode."
-              },
-              {
-                "kind": "method",
-                "name": "_updateSymbol"
-              },
-              {
-                "kind": "field",
-                "name": "symboltrue",
-                "type": {
-                  "text": "string"
-                },
-                "default": "'▼'",
-                "privacy": "public",
-                "description": "Defines the symbol for the true state",
-                "attribute": "symboltrue"
-              },
-              {
-                "kind": "field",
-                "name": "symbolfalse",
-                "type": {
-                  "text": "string"
-                },
-                "default": "'▶'",
-                "privacy": "public",
-                "description": "Defines the symbol for the false state",
-                "attribute": "symbolfalse"
-              },
-              {
-                "kind": "field",
-                "name": "field",
-                "type": {
-                  "text": "object"
-                },
-                "default": "{}"
-              },
-              {
-                "kind": "field",
-                "name": "_ocSymbol",
-                "description": "open close symbol",
-                "type": {
-                  "text": "string"
-                },
-                "privacy": "private"
-              }
-            ],
-            "attributes": [
-              {
-                "name": "symboltrue",
-                "description": "Defines the symbol for the true state",
-                "fieldName": "symboltrue"
-              },
-              {
-                "name": "symbolfalse",
-                "description": "Defines the symbol for the false state",
-                "fieldName": "symbolfalse"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "summary": "Displays a icon/symbol for a boolean value",
-            "tagName": "furo-data-bool-icon",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-data-bool-icon",
-            "declaration": {
-              "name": "FuroDataBoolIcon",
-              "module": "src/furo-data-bool-icon.js"
             }
           }
         ]
@@ -1181,40 +1065,47 @@
       },
       {
         "kind": "javascript-module",
-        "path": "src/furo-data-sign-pad.js",
+        "path": "src/furo-ui5-bool-icon.js",
         "declarations": [
           {
             "kind": "class",
-            "description": "`furo-data-sign-pad`\nDescribe your element",
-            "name": "FuroDataSignPad",
+            "description": "`furo-ui5-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.",
+            "name": "FuroDataBoolIcon",
             "members": [
               {
                 "kind": "method",
                 "name": "bindData",
                 "parameters": [
                   {
-                    "name": "entityField"
+                    "name": "fieldNode",
+                    "type": {
+                      "text": "FieldNode"
+                    }
                   }
                 ],
-                "description": "bind a entity field"
+                "description": "Binds a field node to the component"
               },
               {
-                "kind": "method",
-                "name": "clear",
-                "description": "Clears the image",
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
+                "kind": "field",
+                "name": "symboltrue",
+                "type": {
+                  "text": "string"
+                },
+                "default": "'▼'",
+                "privacy": "public",
+                "description": "Defines the symbol for the true state",
+                "attribute": "symboltrue"
               },
               {
-                "kind": "method",
-                "name": "encodeImage",
-                "description": "update field._value  on new drawing",
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
+                "kind": "field",
+                "name": "symbolfalse",
+                "type": {
+                  "text": "string"
+                },
+                "default": "'▶'",
+                "privacy": "public",
+                "description": "Defines the symbol for the false state",
+                "attribute": "symbolfalse"
               },
               {
                 "kind": "field",
@@ -1225,354 +1116,25 @@
                 "default": "{}"
               },
               {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private",
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "resize",
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_setEmpty",
-                "parameters": [
-                  {
-                    "name": "b"
-                  }
-                ],
-                "description": "unlock() {\n  this.signaturePad.on();\n}\n\nlock() {\n  this.signaturePad.off();\n}",
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_setActive",
-                "parameters": [
-                  {
-                    "name": "b"
-                  }
-                ],
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "setImage",
-                "parameters": [
-                  {
-                    "name": "encodedImage"
-                  }
-                ],
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_onBegin",
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_onEnd",
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_dotSizeChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ],
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_minWidthChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ],
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_maxWidthChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ],
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_backgroundColorChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ],
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_penColorChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ],
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_velocityFilterWeightChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ],
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              },
-              {
-                "kind": "method",
-                "name": "_onEncodingChanged",
-                "parameters": [
-                  {
-                    "name": "type"
-                  },
-                  {
-                    "name": "encoderOptions"
-                  }
-                ],
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              }
-            ],
-            "superclass": {
-              "name": "FuroSignPad",
-              "module": "/src/furo-sign-pad.js"
-            },
-            "summary": "Bind a entityObject.field to a sign-pad input",
-            "tagName": "furo-data-sign-pad",
-            "customElement": true,
-            "events": [
-              {
+                "kind": "field",
+                "name": "_ocSymbol",
+                "description": "open close symbol",
                 "type": {
-                  "text": "Base64"
+                  "text": "string"
                 },
-                "description": "Fired when sign gets new painting, with base encoded image.",
-                "name": "sign-updated",
-                "inheritedFrom": {
-                  "name": "FuroSignPad",
-                  "module": "src/furo-sign-pad.js"
-                }
-              }
-            ]
-          }
-        ],
-        "exports": [
-          {
-            "kind": "js",
-            "name": "FuroDataSignPad",
-            "declaration": {
-              "name": "FuroDataSignPad",
-              "module": "src/furo-data-sign-pad.js"
-            }
-          },
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-data-sign-pad",
-            "declaration": {
-              "name": "FuroDataSignPad",
-              "module": "src/furo-data-sign-pad.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/furo-sign-pad.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-sign-pad`\n Simple pad to sign or draw something\n\n### Sample\n <furo-demo-snippet>\n  <template>\n   <furo-sign-pad @-sign-updated=\"--signed\"></furo-sign-pad>\n    <img ƒ-.src=\"--signed\" alt=\"\" width=\"150px\">\n  </template>\n </furo-demo-snippet>",
-            "name": "FuroSignPad",
-            "members": [
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
                 "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "resize"
-              },
-              {
-                "kind": "method",
-                "name": "_setEmpty",
-                "parameters": [
-                  {
-                    "name": "b"
-                  }
-                ],
-                "description": "unlock() {\n  this.signaturePad.on();\n}\n\nlock() {\n  this.signaturePad.off();\n}"
-              },
-              {
-                "kind": "method",
-                "name": "_setActive",
-                "parameters": [
-                  {
-                    "name": "b"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "clear",
-                "description": "Clears the image"
-              },
-              {
-                "kind": "method",
-                "name": "setImage",
-                "parameters": [
-                  {
-                    "name": "encodedImage"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "encodeImage",
-                "description": "Encodes the image using the type and encodingOptions (quality) defined.\nThe encoded image is available in the `image` property."
-              },
-              {
-                "kind": "method",
-                "name": "_onBegin"
-              },
-              {
-                "kind": "method",
-                "name": "_onEnd"
-              },
-              {
-                "kind": "method",
-                "name": "_dotSizeChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_minWidthChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_maxWidthChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_backgroundColorChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_penColorChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_velocityFilterWeightChanged",
-                "parameters": [
-                  {
-                    "name": "newValue"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_onEncodingChanged",
-                "parameters": [
-                  {
-                    "name": "type"
-                  },
-                  {
-                    "name": "encoderOptions"
-                  }
-                ]
               }
             ],
-            "events": [
+            "attributes": [
               {
-                "type": {
-                  "text": "Base64"
-                },
-                "description": "Fired when sign gets new painting, with base encoded image.",
-                "name": "sign-updated"
+                "name": "symboltrue",
+                "description": "Defines the symbol for the true state",
+                "fieldName": "symboltrue"
+              },
+              {
+                "name": "symbolfalse",
+                "description": "Defines the symbol for the false state",
+                "fieldName": "symbolfalse"
               }
             ],
             "mixins": [
@@ -1585,26 +1147,18 @@
               "name": "LitElement",
               "package": "lit"
             },
-            "summary": "draw or sign",
-            "tagName": "furo-sign-pad",
+            "summary": "Displays a icon/symbol for a boolean value",
+            "tagName": "furo-ui5-bool-icon",
             "customElement": true
           }
         ],
         "exports": [
           {
-            "kind": "js",
-            "name": "FuroSignPad",
-            "declaration": {
-              "name": "FuroSignPad",
-              "module": "src/furo-sign-pad.js"
-            }
-          },
-          {
             "kind": "custom-element-definition",
-            "name": "furo-sign-pad",
+            "name": "furo-ui5-bool-icon",
             "declaration": {
-              "name": "FuroSignPad",
-              "module": "src/furo-sign-pad.js"
+              "name": "FuroDataBoolIcon",
+              "module": "src/furo-ui5-bool-icon.js"
             }
           }
         ]
@@ -2281,488 +1835,6 @@
             "declaration": {
               "name": "FuroUi5CheckboxInput",
               "module": "src/furo-ui5-checkbox-input.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/furo-ui5-collection-dropdown-labeled.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-ui5-collection-dropdown-labeled`\nThe furo-ui5-collection-dropdown-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.",
-            "name": "FuroUi5CollectionDropdownLabeled",
-            "members": [
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "bindData",
-                "parameters": [
-                  {
-                    "name": "fieldNode",
-                    "type": {
-                      "text": "FieldNode"
-                    }
-                  }
-                ],
-                "description": "Orchestrates the data field connection to the inside"
-              },
-              {
-                "kind": "method",
-                "name": "injectEntities",
-                "parameters": [
-                  {
-                    "name": "entities"
-                  }
-                ],
-                "description": "Inject the array of a collection"
-              },
-              {
-                "kind": "field",
-                "name": "label",
-                "type": {
-                  "text": "string"
-                },
-                "default": "''",
-                "privacy": "public",
-                "description": "the label for the data-collection-dropdown",
-                "attribute": "label"
-              },
-              {
-                "kind": "field",
-                "name": "subField",
-                "type": {
-                  "text": "string"
-                },
-                "default": "'data'",
-                "privacy": "public",
-                "description": "If you inject an array with complex objects, declare here the path where display_name and value_field are located.\n\nThis is only needed if display_name and value_field are not located in the root of the object.",
-                "attribute": "sub-field",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "displayField",
-                "type": {
-                  "text": "string"
-                },
-                "default": "'display_name'",
-                "privacy": "public",
-                "description": "The name of the field from the injected collection that contains the label for the dropdown array.",
-                "attribute": "display-field",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "valueField",
-                "type": {
-                  "text": "string"
-                },
-                "default": "'id'",
-                "privacy": "public",
-                "description": "if you bind a complex type, declare here the field which gets updated of display_name by selecting an item.\nIf you bind a scalar, you dont need this attribute.",
-                "attribute": "value-field",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "valueSubField",
-                "type": {
-                  "text": "null"
-                },
-                "default": "null",
-                "privacy": "public",
-                "description": "if you bind a complex type, declare here the field which gets updated of value by selecting an item.\n\nIf you bind a scalar, you dont need this attribute.",
-                "attribute": "value-sub-field",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "displaySubField",
-                "type": {
-                  "text": "string"
-                },
-                "default": "'display_name'",
-                "privacy": "public",
-                "description": "if you bind a complex type, declare here the field which gets updated of display_name by selecting an item.\n\nIf you bind a scalar, you dont need this attribute.",
-                "attribute": "display-sub-field",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "autoSelectFirst",
-                "type": {
-                  "text": "boolean"
-                },
-                "default": "false",
-                "privacy": "public",
-                "description": "set this attribute to autoSelectFirst the first item in the list, if no item is set in the bounded fieldNode",
-                "attribute": "auto-select-first",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "disabled",
-                "privacy": "public",
-                "description": "A Boolean attribute which, if present, means this field cannot be edited by the user.",
-                "attribute": "disabled"
-              },
-              {
-                "kind": "field",
-                "name": "required",
-                "privacy": "public",
-                "description": "A Boolean attribute which, if present, means this field is required and marked with *.",
-                "attribute": "required"
-              }
-            ],
-            "events": [
-              {
-                "type": {
-                  "text": "{*} the value from the value-field. By default the value field is \"id\""
-                },
-                "description": " Fired when value has changed from the component inside. **bubbles**",
-                "name": "value-changed"
-              }
-            ],
-            "attributes": [
-              {
-                "name": "label",
-                "description": "the label for the data-collection-dropdown",
-                "fieldName": "label"
-              },
-              {
-                "name": "disabled",
-                "description": "A Boolean attribute which, if present, means this field cannot be edited by the user.",
-                "fieldName": "disabled"
-              },
-              {
-                "name": "required",
-                "description": "A Boolean attribute which, if present, means this field is required and marked with *.",
-                "fieldName": "required"
-              },
-              {
-                "name": "sub-field",
-                "description": "If you inject an array with complex objects, declare here the path where display_name and value_field are located.\n\nThis is only needed if display_name and value_field are not located in the root of the object.",
-                "fieldName": "subField"
-              },
-              {
-                "name": "display-field",
-                "description": "The name of the field from the injected collection that contains the label for the dropdown array.",
-                "fieldName": "displayField"
-              },
-              {
-                "name": "value-field",
-                "description": "if you bind a complex type, declare here the field which gets updated of display_name by selecting an item.\nIf you bind a scalar, you dont need this attribute.",
-                "fieldName": "valueField"
-              },
-              {
-                "name": "value-sub-field",
-                "description": "if you bind a complex type, declare here the field which gets updated of value by selecting an item.\n\nIf you bind a scalar, you dont need this attribute.",
-                "fieldName": "valueSubField"
-              },
-              {
-                "name": "display-sub-field",
-                "description": "if you bind a complex type, declare here the field which gets updated of display_name by selecting an item.\n\nIf you bind a scalar, you dont need this attribute.",
-                "fieldName": "displaySubField"
-              },
-              {
-                "name": "auto-select-first",
-                "description": "set this attribute to autoSelectFirst the first item in the list, if no item is set in the bounded fieldNode",
-                "type": {
-                  "text": "boolean"
-                },
-                "fieldName": "autoSelectFirst"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp/src/fbp.js"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "summary": "labeled input field",
-            "tagName": "furo-ui5-collection-dropdown-labeled",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "js",
-            "name": "FuroUi5CollectionDropdownLabeled",
-            "declaration": {
-              "name": "FuroUi5CollectionDropdownLabeled",
-              "module": "src/furo-ui5-collection-dropdown-labeled.js"
-            }
-          },
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-ui5-collection-dropdown-labeled",
-            "declaration": {
-              "name": "FuroUi5CollectionDropdownLabeled",
-              "module": "src/furo-ui5-collection-dropdown-labeled.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/furo-ui5-collection-dropdown.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "# DEPRECATED switch to `furo-ui5-select`\n\nThe furo-ui5-collection-dropdown component represents a drop-down list. The items inside define the available\noptions by using the furo-ui5-collection-dropdown component.\n\nKeyboard Handling\nThe furo-ui5-collection-dropdown provides advanced keyboard handling. If the furo-ui5-collection-dropdown\nis focused, you can open or close the drop-down by pressing F4, ALT+UP or ALT+DOWN keys. Once the drop-down is\nopened, you can use the UP and DOWN arrow keys to navigate through the available options and select one\nby pressing the Space or Enter keys.\n\n### auto-select-first\nset this attribute to auto select the first item in the list, if no item is set in the bounded fieldNode.",
-            "name": "FuroUi5CollectionDropdown",
-            "members": [
-              {
-                "kind": "method",
-                "name": "_initBinder",
-                "description": "inits the universalFieldNodeBinder.\nSet the mapped attributes and labels.",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "addItems",
-                "parameters": [
-                  {
-                    "name": "options"
-                  }
-                ],
-                "description": "Adds the option components to the default slot"
-              },
-              {
-                "kind": "method",
-                "name": "_requestUpdate",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "bindData",
-                "parameters": [
-                  {
-                    "name": "fieldNode",
-                    "description": "a Field object",
-                    "type": {
-                      "text": "Object|FieldNode"
-                    }
-                  }
-                ],
-                "description": "Bind a entity field to the range-input. You can use the entity even when no data was received.\nWhen you use `@-object-ready` from a `furo-data-object` which emits a EntityNode, just bind the field with `--entity(*.fields.fieldname)`"
-              },
-              {
-                "kind": "method",
-                "name": "setValue",
-                "parameters": [
-                  {
-                    "name": "val"
-                  }
-                ],
-                "description": "Sets the value for the field. This will update the fieldNode."
-              },
-              {
-                "kind": "method",
-                "name": "_buildListWithMetaOptions",
-                "parameters": [
-                  {
-                    "name": "options"
-                  },
-                  {
-                    "description": "of options with id and display_name",
-                    "name": "list",
-                    "type": {
-                      "text": "options"
-                    }
-                  }
-                ],
-                "description": "Build the dropdown list with given options from meta",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "injectEntities",
-                "parameters": [
-                  {
-                    "name": "entities",
-                    "description": "of type *Entities",
-                    "type": {
-                      "text": "FieldNode"
-                    }
-                  }
-                ],
-                "description": "Inject the array of a collection"
-              },
-              {
-                "kind": "field",
-                "name": "subField",
-                "type": {
-                  "text": "string"
-                },
-                "description": "If you inject an array with complex objects, declare here the path where display_name and value_field are located.\n\nThis is only needed if display_name and value_field are not located in the root of the object.",
-                "default": "'data'"
-              },
-              {
-                "kind": "field",
-                "name": "displayField",
-                "type": {
-                  "text": "string"
-                },
-                "description": "The name of the field from the injected collection that contains the label for the dropdown array.",
-                "default": "'display_name'"
-              },
-              {
-                "kind": "field",
-                "name": "valueField",
-                "type": {
-                  "text": "string"
-                },
-                "description": "declare here the name of the field from the injected collection.  by selecting an item from dropdown the defined\nvalueSubField of bounded complex type or the value by scalar type will be updated according to the value of this field.",
-                "default": "'id'"
-              },
-              {
-                "kind": "field",
-                "name": "valueSubField",
-                "description": "if you bind a complex type, you must declare here the field which gets updated of value by selecting an item. e.g. value-sub-field = \"id\"\n\nIf you bind a scalar, you dont need this attribute.",
-                "type": {
-                  "text": "string"
-                },
-                "default": "undefined"
-              },
-              {
-                "kind": "field",
-                "name": "displaySubField",
-                "type": {
-                  "text": "string"
-                },
-                "description": "if you bind a complex type, declare here the field which gets updated of display_name by selecting an item.\n\nIf you bind a scalar, you dont need this attribute.",
-                "default": "'display_name'"
-              },
-              {
-                "kind": "field",
-                "name": "autoSelectFirst",
-                "type": {
-                  "text": "boolean"
-                },
-                "description": "set this attribute to autoSelectFirst the first item in the list, if no item is set in the bounded fieldNode",
-                "default": "false"
-              },
-              {
-                "kind": "field",
-                "name": "_fieldNodeToUpdate",
-                "type": {
-                  "text": "{}"
-                },
-                "privacy": "private",
-                "default": "{}"
-              },
-              {
-                "kind": "field",
-                "name": "_fieldDisplayNodeToUpdate",
-                "type": {
-                  "text": "{}"
-                },
-                "privacy": "private",
-                "default": "{}"
-              },
-              {
-                "kind": "field",
-                "name": "_dropdownList",
-                "type": {
-                  "text": "*[]"
-                },
-                "privacy": "private",
-                "default": "[]"
-              },
-              {
-                "kind": "field",
-                "name": "_pseudoDropdownList",
-                "type": {
-                  "text": "*[]"
-                },
-                "description": "generated one element dropdown, which has only the data of the bounded DO",
-                "privacy": "private",
-                "default": "[]"
-              },
-              {
-                "kind": "field",
-                "name": "_injectedDropdownList",
-                "type": {
-                  "text": "*[]"
-                },
-                "description": "injected dropdown elements which from a collection of response or in spec defined options",
-                "privacy": "private",
-                "default": "[]"
-              },
-              {
-                "kind": "field",
-                "name": "_valueFoundInList",
-                "type": {
-                  "text": "boolean"
-                },
-                "privacy": "private",
-                "default": "true"
-              }
-            ],
-            "events": [
-              {
-                "type": {
-                  "text": "{*} the original injected data (e.g. entity with link) of the selected item"
-                },
-                "description": " Fired when the item of dropdown list is selected. **bubbles**",
-                "name": "item-selected"
-              }
-            ],
-            "attributes": [
-              {
-                "name": "value-field"
-              },
-              {
-                "name": "display-field"
-              },
-              {
-                "name": "sub-field"
-              },
-              {
-                "name": "value-sub-field"
-              },
-              {
-                "name": "display-sub-field"
-              },
-              {
-                "name": "auto-select-first"
-              }
-            ],
-            "superclass": {
-              "module": "src/furo-ui5-collection-dropdown.js"
-            },
-            "summary": "data collection dropdown",
-            "tagName": "furo-ui5-collection-dropdown",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "js",
-            "name": "FuroUi5CollectionDropdown",
-            "declaration": {
-              "name": "FuroUi5CollectionDropdown",
-              "module": "src/furo-ui5-collection-dropdown.js"
-            }
-          },
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-ui5-collection-dropdown",
-            "declaration": {
-              "name": "FuroUi5CollectionDropdown",
-              "module": "src/furo-ui5-collection-dropdown.js"
             }
           }
         ]
@@ -5892,7 +4964,7 @@
               },
               {
                 "type": {
-                  "text": "String"
+                  "text": "`string`"
                 },
                 "description": "Fires the field value when it changes.",
                 "name": "value-changed"
@@ -9037,6 +8109,199 @@
       },
       {
         "kind": "javascript-module",
+        "path": "src/furo-ui5-sign-pad.js",
+        "declarations": [
+          {
+            "kind": "class",
+            "description": "`furo-sign-pad`\n Simple pad to sign or draw something\n\n### Sample\n <furo-demo-snippet>\n  <template>\n   <furo-sign-pad @-sign-updated=\"--signed\"></furo-sign-pad>\n    <img ƒ-.src=\"--signed\" alt=\"\" width=\"150px\">\n  </template>\n </furo-demo-snippet>",
+            "name": "FuroUi5SignPad",
+            "members": [
+              {
+                "kind": "method",
+                "name": "_FBPReady",
+                "description": "flow is ready lifecycle method",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "resize"
+              },
+              {
+                "kind": "method",
+                "name": "_setEmpty",
+                "parameters": [
+                  {
+                    "name": "b"
+                  }
+                ],
+                "description": "unlock() {\n this.signaturePad.on();\n}\n\nlock() {\n this.signaturePad.off();\n}"
+              },
+              {
+                "kind": "method",
+                "name": "_setActive",
+                "parameters": [
+                  {
+                    "name": "b"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "clear",
+                "description": "Clears the image"
+              },
+              {
+                "kind": "method",
+                "name": "setImage",
+                "parameters": [
+                  {
+                    "name": "encodedImage"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "encodeImage",
+                "description": "Encodes the image using the type and encodingOptions (quality) defined.\nThe encoded image is available in the `image` property."
+              },
+              {
+                "kind": "method",
+                "name": "_onBegin"
+              },
+              {
+                "kind": "method",
+                "name": "_onEnd"
+              },
+              {
+                "kind": "method",
+                "name": "_dotSizeChanged",
+                "parameters": [
+                  {
+                    "name": "newValue"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "_minWidthChanged",
+                "parameters": [
+                  {
+                    "name": "newValue"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "_maxWidthChanged",
+                "parameters": [
+                  {
+                    "name": "newValue"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "_backgroundColorChanged",
+                "parameters": [
+                  {
+                    "name": "newValue"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "_penColorChanged",
+                "parameters": [
+                  {
+                    "name": "newValue"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "_velocityFilterWeightChanged",
+                "parameters": [
+                  {
+                    "name": "newValue"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "_onEncodingChanged",
+                "parameters": [
+                  {
+                    "name": "type"
+                  },
+                  {
+                    "name": "encoderOptions"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "bindData",
+                "parameters": [
+                  {
+                    "name": "entityField"
+                  }
+                ],
+                "description": "bind a entity field"
+              },
+              {
+                "kind": "field",
+                "name": "field",
+                "type": {
+                  "text": "object"
+                },
+                "default": "{}"
+              }
+            ],
+            "events": [
+              {
+                "type": {
+                  "text": "Base64"
+                },
+                "description": "Fired when sign gets new painting, with base encoded image.",
+                "name": "sign-updated"
+              }
+            ],
+            "mixins": [
+              {
+                "name": "FBP",
+                "package": "@furo/fbp"
+              }
+            ],
+            "superclass": {
+              "name": "LitElement",
+              "package": "lit"
+            },
+            "summary": "draw or sign",
+            "tagName": "furo-ui5-sign-pad",
+            "customElement": true
+          }
+        ],
+        "exports": [
+          {
+            "kind": "js",
+            "name": "FuroUi5SignPad",
+            "declaration": {
+              "name": "FuroUi5SignPad",
+              "module": "src/furo-ui5-sign-pad.js"
+            }
+          },
+          {
+            "kind": "custom-element-definition",
+            "name": "furo-ui5-sign-pad",
+            "declaration": {
+              "name": "FuroUi5SignPad",
+              "module": "src/furo-ui5-sign-pad.js"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
         "path": "src/furo-ui5-table.js",
         "declarations": [
           {
@@ -10960,189 +10225,6 @@
       },
       {
         "kind": "javascript-module",
-        "path": "src/lib/DELETEMECollectionDropdownHelper.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "Helper class for furo-data-collection-dropdown and furo-ui5-collection-dropdown",
-            "name": "CollectionDropdownHelper",
-            "members": [
-              {
-                "kind": "method",
-                "name": "triggerSetOptionItem",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "getValueByPath",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "obj"
-                  },
-                  {
-                    "name": "path"
-                  }
-                ],
-                "description": "Let you get an attribute value by path",
-                "return": {
-                  "type": {
-                    "text": "T"
-                  }
-                },
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "notifiySelectedItem",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  },
-                  {
-                    "name": "obj"
-                  }
-                ],
-                "description": "Triggers the item selected event"
-              },
-              {
-                "kind": "method",
-                "name": "findDisplayNameByValue",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  },
-                  {
-                    "name": "val"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "listHasDataObjectValue",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "initDropdownItemWithoutCollectionInjection",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "updateField",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "mapDataToList",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  },
-                  {
-                    "name": "list"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "setItemSelectedViaSelectedMark",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  },
-                  {
-                    "name": "list"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "injectList",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  },
-                  {
-                    "name": "list"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "mapInputToInnerStruct",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  },
-                  {
-                    "name": "collection"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "setOptionItems",
-                "static": true,
-                "parameters": [
-                  {
-                    "name": "caller"
-                  }
-                ],
-                "description": "set option items",
-                "privacy": "private"
-              }
-            ],
-            "events": [
-              {
-                "type": {
-                  "text": "option list"
-                },
-                "description": "Is fired when a new list is applied",
-                "name": "options-injected"
-              }
-            ]
-          }
-        ],
-        "exports": [
-          {
-            "kind": "js",
-            "name": "CollectionDropdownHelper",
-            "declaration": {
-              "name": "CollectionDropdownHelper",
-              "module": "src/lib/DELETEMECollectionDropdownHelper.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
         "path": "src/lib/Events.js",
         "declarations": [
           {
@@ -11612,1281 +10694,6 @@
         "path": "src/lib/ui5-icons.js",
         "declarations": [],
         "exports": []
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/tree/furo-catalog.js",
-        "declarations": [],
-        "exports": []
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/tree/furo-context-menu.js",
-        "declarations": [],
-        "exports": []
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/tree/furo-mini-tabs.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-mini-tabs`\nTabs",
-            "name": "FuroMiniTabs",
-            "members": [
-              {
-                "kind": "method",
-                "name": "injectItems",
-                "parameters": [
-                  {
-                    "name": "nodeArray"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "summary": "todo shortdescription",
-            "tagName": "furo-mini-tabs",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-mini-tabs",
-            "declaration": {
-              "name": "FuroMiniTabs",
-              "module": "src/tree/furo-mini-tabs.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/tree/furo-panel-coordinator-tab-item.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-mini-tab-item`\ntodo Describe your element",
-            "name": "FuroPanelCoordinatorTabItem",
-            "cssProperties": [
-              {
-                "type": {
-                  "text": "#fafafa"
-                },
-                "description": "Border bottom color",
-                "name": "--surface",
-                "default": "N/A"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "foreground color",
-                "name": "--on-surface",
-                "default": "N/A"
-              },
-              {
-                "type": {
-                  "text": "red"
-                },
-                "description": "error color",
-                "name": "--error",
-                "default": "N/A"
-              },
-              {
-                "type": {
-                  "text": "16px"
-                },
-                "description": "label padding, 0 var(--furo-button-padding, var(--spacing-s, 16px))",
-                "name": "--furo-button-padding",
-                "default": "--spacing-s"
-              }
-            ],
-            "members": [
-              {
-                "kind": "method",
-                "name": "bindData",
-                "parameters": [
-                  {
-                    "name": "fieldNode"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_removeListeners"
-              },
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private"
-              },
-              {
-                "kind": "field",
-                "name": "selected",
-                "type": {
-                  "text": "boolean"
-                },
-                "default": "false",
-                "privacy": "public",
-                "description": "Description",
-                "attribute": "selected",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "hovered",
-                "type": {
-                  "text": "boolean"
-                },
-                "default": "false"
-              },
-              {
-                "kind": "field",
-                "name": "inedit",
-                "type": {
-                  "text": "boolean"
-                },
-                "default": "false",
-                "privacy": "public",
-                "attribute": "inedit",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "haserror",
-                "type": {
-                  "text": "boolean"
-                },
-                "default": "false",
-                "privacy": "public",
-                "attribute": "haserror",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "_select"
-              },
-              {
-                "kind": "field",
-                "name": "_deselect"
-              },
-              {
-                "kind": "field",
-                "name": "_error"
-              },
-              {
-                "kind": "field",
-                "name": "_inedit"
-              },
-              {
-                "kind": "field",
-                "name": "_focus"
-              },
-              {
-                "kind": "field",
-                "name": "_unfocus"
-              },
-              {
-                "kind": "field",
-                "name": "_clear"
-              },
-              {
-                "kind": "field",
-                "name": "focused",
-                "privacy": "public",
-                "attribute": "focused",
-                "reflects": true
-              }
-            ],
-            "attributes": [
-              {
-                "name": "selected",
-                "description": "Description",
-                "fieldName": "selected"
-              },
-              {
-                "name": "haserror",
-                "fieldName": "haserror"
-              },
-              {
-                "name": "inedit",
-                "fieldName": "inedit"
-              },
-              {
-                "name": "focused",
-                "fieldName": "focused"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "summary": "todo shortdescription",
-            "tagName": "furo-panel-coordinator-tab-item",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-panel-coordinator-tab-item",
-            "declaration": {
-              "name": "FuroPanelCoordinatorTabItem",
-              "module": "src/tree/furo-panel-coordinator-tab-item.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/tree/furo-panel-coordinator-tabs.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "Tab navigation for the open panels in a panel-coordinator.\n\n\n```html\n <!-- inject the tabs from panelCoordinator and connect the keyboard navigation -->\n <furo-panel-coordinator-tabs ƒ-inject-tabs=\"--panelChanges\" ƒ-trigger-navigation=\"--navpadPanelTabs\" >\n   <!-- add keyboard navigation -->\n   <furo-navigation-pad @-navigated=\"--navpadPanelTabs\"></furo-navigation-pad>\n </furo-panel-coordinator-tabs>\n <furo-pages flex default=\"default\">\n   <furo-panel-coordinator ƒ-show-page=\"--nodeSelected\"  @-panels-changed=\"--panelChanges\"></furo-panel-coordinator>\n```",
-            "name": "FuroPanelCoordinatorTabs",
-            "members": [
-              {
-                "kind": "method",
-                "name": "triggerNavigation",
-                "parameters": [
-                  {
-                    "name": "key"
-                  }
-                ],
-                "description": "Connect your navigation pad.\n\nDefault mappings are:\n- Enter => selectFocused\n- ArroLeft => focusPrevious\n- ArroRight => focusNext\n- Home => focusFirst\n- End => focusLast\n- Escape => closeFocused\n\nTo disable a function, just add the `ignored-keys` to furo-navigation-tabs."
-              },
-              {
-                "kind": "method",
-                "name": "closeFocused",
-                "description": "Closes the focused tab."
-              },
-              {
-                "kind": "method",
-                "name": "focusNext",
-                "description": "Focuses the next tab. If you are on the last tab, the frist tab will be selected"
-              },
-              {
-                "kind": "method",
-                "name": "focusFirst",
-                "description": "Focuses the first tab."
-              },
-              {
-                "kind": "method",
-                "name": "focusLast",
-                "description": "Focuses the last tab."
-              },
-              {
-                "kind": "method",
-                "name": "selectFocused",
-                "description": "Select the focused tab."
-              },
-              {
-                "kind": "method",
-                "name": "focusPrevious",
-                "description": "Focuses the previous tab."
-              },
-              {
-                "kind": "method",
-                "name": "injectTabs",
-                "parameters": [
-                  {
-                    "name": "nodeArray"
-                  }
-                ],
-                "description": "Inject data from a navigationnode"
-              },
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "focus",
-                "description": "focuses the element itself. The \"focused\" tab will get the focus"
-              },
-              {
-                "kind": "field",
-                "name": "tabindex",
-                "type": {
-                  "text": "number"
-                },
-                "default": "0",
-                "privacy": "public",
-                "description": "Sets the tabindex",
-                "attribute": "tabindex",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "_focusIndex",
-                "type": {
-                  "text": "number"
-                },
-                "default": "0"
-              },
-              {
-                "kind": "field",
-                "name": "focused",
-                "privacy": "public",
-                "description": "indicates that the element is focused",
-                "attribute": "focused",
-                "reflects": true
-              }
-            ],
-            "attributes": [
-              {
-                "name": "tabindex",
-                "description": "Sets the tabindex",
-                "fieldName": "tabindex"
-              },
-              {
-                "name": "focused",
-                "description": "indicates that the element is focused",
-                "fieldName": "focused"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "summary": "tab navigation for panel-coordinator",
-            "tagName": "furo-panel-coordinator-tabs",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-panel-coordinator-tabs",
-            "declaration": {
-              "name": "FuroPanelCoordinatorTabs",
-              "module": "src/tree/furo-panel-coordinator-tabs.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/tree/furo-panel-head.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-panel-head`\n Displays a navigation node as title",
-            "name": "FuroPanelHead",
-            "members": [
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "bindData",
-                "parameters": [
-                  {
-                    "name": "fieldNode"
-                  }
-                ],
-                "description": "binds a fieldNode to the internal _field\nis listenting to field-value-changed event"
-              },
-              {
-                "kind": "field",
-                "name": "_field",
-                "type": {
-                  "text": "object"
-                },
-                "default": "{}"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "summary": "dislay a navigationNode as title",
-            "tagName": "furo-panel-head",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-panel-head",
-            "declaration": {
-              "name": "FuroPanelHead",
-              "module": "src/tree/furo-panel-head.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/tree/furo-tree-item.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-tree-item`\ntodo Describe your element",
-            "name": "FuroTreeItem",
-            "cssProperties": [
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 1",
-                "name": "--tree-indentation-1",
-                "default": "16px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 2",
-                "name": "--tree-indentation-2",
-                "default": "32px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 3",
-                "name": "--tree-indentation-3",
-                "default": "48px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 4",
-                "name": "--tree-indentation-4",
-                "default": "56px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 5",
-                "name": "--tree-indentation-5",
-                "default": "64px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 6",
-                "name": "--tree-indentation-6",
-                "default": "72px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 7",
-                "name": "--tree-indentation-7",
-                "default": "80px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 8",
-                "name": "--tree-indentation-8",
-                "default": "88px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 9",
-                "name": "--tree-indentation-9",
-                "default": "92px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 10",
-                "name": "--tree-indentation-10",
-                "default": "96px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 11",
-                "name": "--tree-indentation-11",
-                "default": "100px"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "tree indention level 12",
-                "name": "--tree-indentation-12",
-                "default": "104px"
-              }
-            ],
-            "members": [
-              {
-                "kind": "method",
-                "name": "search",
-                "parameters": [
-                  {
-                    "name": "event"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_updateItem"
-              },
-              {
-                "kind": "method",
-                "name": "bindData",
-                "parameters": [
-                  {
-                    "name": "fieldNode"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "__addSearchListeners",
-                "description": "add listeners for search matches and non matches",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "__addNodeSelectedListener"
-              },
-              {
-                "kind": "method",
-                "name": "__addNodeFocusedListener",
-                "description": "bring the focused element in the visible part of the screen (scroll)",
-                "privacy": "private"
-              },
-              {
-                "kind": "field",
-                "name": "hidden",
-                "type": {
-                  "text": "boolean"
-                },
-                "default": "true",
-                "privacy": "public",
-                "description": "Description",
-                "attribute": "hidden",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "isGroupLabel",
-                "type": {
-                  "text": "boolean"
-                },
-                "default": "false",
-                "privacy": "public",
-                "attribute": "is-group-label",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "indentation",
-                "type": {
-                  "text": "number"
-                },
-                "default": "0"
-              },
-              {
-                "kind": "field",
-                "name": "focused",
-                "privacy": "public",
-                "attribute": "focused",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "searchmatch",
-                "privacy": "public",
-                "attribute": "searchmatch",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "inedit",
-                "privacy": "public",
-                "attribute": "inedit",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "haserror",
-                "privacy": "public",
-                "attribute": "haserror",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "selected",
-                "privacy": "public",
-                "attribute": "selected",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "noicon",
-                "privacy": "public",
-                "attribute": "noicon"
-              }
-            ],
-            "attributes": [
-              {
-                "name": "hidden",
-                "description": "Description",
-                "fieldName": "hidden"
-              },
-              {
-                "name": "focused",
-                "fieldName": "focused"
-              },
-              {
-                "name": "searchmatch",
-                "fieldName": "searchmatch"
-              },
-              {
-                "name": "inedit",
-                "fieldName": "inedit"
-              },
-              {
-                "name": "haserror",
-                "fieldName": "haserror"
-              },
-              {
-                "name": "selected",
-                "fieldName": "selected"
-              },
-              {
-                "name": "noicon",
-                "fieldName": "noicon"
-              },
-              {
-                "name": "is-group-label",
-                "fieldName": "isGroupLabel"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "summary": "todo shortdescription",
-            "tagName": "furo-tree-item",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "js",
-            "name": "FuroTreeItem",
-            "declaration": {
-              "name": "FuroTreeItem",
-              "module": "src/tree/furo-tree-item.js"
-            }
-          },
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-tree-item",
-            "declaration": {
-              "name": "FuroTreeItem",
-              "module": "src/tree/furo-tree-item.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/tree/furo-tree.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-tree`\nrenders a tree structure",
-            "name": "FuroTree",
-            "cssProperties": [
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "background color",
-                "name": "--surface",
-                "default": "white"
-              },
-              {
-                "type": {
-                  "text": "N/A"
-                },
-                "description": "foreground color",
-                "name": "--on-surface",
-                "default": "#333333"
-              }
-            ],
-            "members": [
-              {
-                "kind": "method",
-                "name": "collapseFocused",
-                "description": "collapses the focused element. If it is closed the parent will be focused."
-              },
-              {
-                "kind": "method",
-                "name": "expandFocused",
-                "description": "expands the focused node, if it is opened the first child will be focused"
-              },
-              {
-                "kind": "method",
-                "name": "expandFocusedRecursive",
-                "description": "expands the focused node recursive"
-              },
-              {
-                "kind": "method",
-                "name": "collapseFocusedRecursive",
-                "description": "collapses the focused node recursive"
-              },
-              {
-                "kind": "method",
-                "name": "selectFocused",
-                "description": "selects the focused element."
-              },
-              {
-                "kind": "method",
-                "name": "search",
-                "parameters": [
-                  {
-                    "name": "term"
-                  }
-                ],
-                "description": "Search in the visible nodes",
-                "return": {
-                  "type": {
-                    "text": "[]"
-                  }
-                }
-              },
-              {
-                "kind": "method",
-                "name": "searchOpenTree"
-              },
-              {
-                "kind": "method",
-                "name": "_resetSearch"
-              },
-              {
-                "kind": "method",
-                "name": "_updateSearchmatchAttributesOnItems"
-              },
-              {
-                "kind": "method",
-                "name": "focusParent",
-                "description": "Focuses the parent tree node without selecting it.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
-              },
-              {
-                "kind": "method",
-                "name": "focusPrevious",
-                "description": "focus the previous visible node.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
-              },
-              {
-                "kind": "method",
-                "name": "qpIn",
-                "parameters": [
-                  {
-                    "name": "qpObject"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "locationIn",
-                "parameters": [
-                  {
-                    "name": "locationObject"
-                  }
-                ],
-                "description": "Inject a location object, which contains a query param property to select the current node.",
-                "return": {
-                  "type": {
-                    "text": "*|boolean"
-                  }
-                }
-              },
-              {
-                "kind": "method",
-                "name": "selectById",
-                "parameters": [
-                  {
-                    "name": "nodeID"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "selectPrev",
-                "description": "select the previous visible item"
-              },
-              {
-                "kind": "method",
-                "name": "expandNodeRecursive",
-                "description": "expands the currently selected node recursive"
-              },
-              {
-                "kind": "method",
-                "name": "expandAll"
-              },
-              {
-                "kind": "method",
-                "name": "collapseAll"
-              },
-              {
-                "kind": "method",
-                "name": "collapseNodeRecursive",
-                "description": "expands the currently selected node recursive"
-              },
-              {
-                "kind": "method",
-                "name": "toggle",
-                "description": "toggles the currently selected node"
-              },
-              {
-                "kind": "method",
-                "name": "addSubNode",
-                "parameters": [
-                  {
-                    "name": "rawNode"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "deleteNode"
-              },
-              {
-                "kind": "method",
-                "name": "selectNext",
-                "description": "select the next visible item"
-              },
-              {
-                "kind": "method",
-                "name": "triggerNavigation",
-                "parameters": [
-                  {
-                    "name": "key"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "focusFirst",
-                "description": "Focuses the first node in the tree without selecting it.\n\nUse selectFocused to select the focused node.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
-              },
-              {
-                "kind": "method",
-                "name": "focusLast",
-                "description": "Focuses the last node in the tree without selecting it.\n\nUse selectFocused to select the focused node.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
-              },
-              {
-                "kind": "method",
-                "name": "focusNext",
-                "description": "focuses the next visible tree node.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
-              },
-              {
-                "kind": "method",
-                "name": "focus",
-                "description": "focuses the tree itself. You can use this in combination with keyboard navigation (furo-navigation-pad)"
-              },
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "bindData",
-                "parameters": [
-                  {
-                    "name": "treeNode"
-                  }
-                ],
-                "description": "Binds a FieldNode with a tree signature.\n\nA sample and usable signature can be found in ./specs/"
-              },
-              {
-                "kind": "method",
-                "name": "_setTitle",
-                "parameters": [
-                  {
-                    "name": "treeNode"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "focusSelected",
-                "description": "Focuses the currently selected tree item.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
-              },
-              {
-                "kind": "method",
-                "name": "_init"
-              },
-              {
-                "kind": "method",
-                "name": "_initFocusAndSelectEvents"
-              },
-              {
-                "kind": "method",
-                "name": "_buildFlatTree",
-                "parameters": [
-                  {
-                    "name": "tree"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_parseTreeRecursive",
-                "parameters": [
-                  {
-                    "name": "tree"
-                  },
-                  {
-                    "name": "level"
-                  },
-                  {
-                    "name": "maxdepth"
-                  }
-                ]
-              },
-              {
-                "kind": "field",
-                "name": "_flatTree",
-                "type": {
-                  "text": "Array"
-                },
-                "description": "Flat list representation of the tree",
-                "privacy": "private",
-                "default": "[]"
-              },
-              {
-                "kind": "field",
-                "name": "tabindex",
-                "type": {
-                  "text": "number"
-                },
-                "default": "0",
-                "privacy": "public",
-                "description": "Sets the tabindex",
-                "attribute": "tabindex",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "_searchTerm",
-                "type": {
-                  "text": "string"
-                },
-                "default": "''"
-              },
-              {
-                "kind": "field",
-                "name": "expandDepth",
-                "type": {
-                  "text": "number"
-                },
-                "default": "2",
-                "privacy": "public",
-                "description": "Sets the maximal expand level relative from the current node.\n\nExpanding is a expensive operation.",
-                "attribute": "expand-depth"
-              },
-              {
-                "kind": "field",
-                "name": "_searchIsActive",
-                "type": {
-                  "text": "boolean"
-                },
-                "default": "false",
-                "privacy": "public",
-                "description": "indicator for searching. Maybe you want style your item depending on this attribute",
-                "attribute": "searching",
-                "reflects": true
-              },
-              {
-                "kind": "field",
-                "name": "treeItemComponent",
-                "description": "If you want to use a custom component for the tree-item, set this attribute.\nThe default item component is **furo-tree-item**.",
-                "type": {
-                  "text": "*|string|string"
-                }
-              },
-              {
-                "kind": "field",
-                "name": "_treeItemTepmplate"
-              },
-              {
-                "kind": "field",
-                "name": "depth",
-                "privacy": "public",
-                "description": "Maximal depth for the tree. Default is infinite.",
-                "attribute": "depth"
-              },
-              {
-                "kind": "field",
-                "name": "qp",
-                "privacy": "public",
-                "description": "Query param to watch. If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.\nIf you select an item the `qp-change-request` will be fired.",
-                "attribute": "qp"
-              },
-              {
-                "kind": "field",
-                "name": "rootAsHeader",
-                "privacy": "public",
-                "description": "Set this flag if you do not want a header-text section.",
-                "attribute": "root-as-header"
-              },
-              {
-                "kind": "field",
-                "name": "hideRootNode",
-                "privacy": "public",
-                "description": "Set this flag if you do not want to see the root node",
-                "attribute": "hide-root-node"
-              },
-              {
-                "kind": "field",
-                "name": "headerText",
-                "privacy": "public",
-                "description": "Override display name from root object",
-                "attribute": "header-text"
-              },
-              {
-                "kind": "field",
-                "name": "secondaryText",
-                "privacy": "public",
-                "description": "Override description from root object.",
-                "attribute": "secondary-text"
-              },
-              {
-                "kind": "field",
-                "name": "nobgonhead",
-                "privacy": "public",
-                "description": "disables the background color on focus, selected, ... on header node\n\nWorks only with `root-as-header` enabled",
-                "attribute": "no-bg-on-header"
-              },
-              {
-                "kind": "field",
-                "name": "focused",
-                "privacy": "public",
-                "description": "indicates that the element is focused",
-                "attribute": "focused",
-                "reflects": true
-              }
-            ],
-            "events": [
-              {
-                "type": {
-                  "text": "focused field"
-                },
-                "description": " Fired when",
-                "name": "node-focused"
-              },
-              {
-                "type": {
-                  "text": "focused field"
-                },
-                "description": " Fired when",
-                "name": "branch-focused"
-              },
-              {
-                "description": " Fired when",
-                "name": "leaf-focused"
-              },
-              {
-                "type": {
-                  "text": "selected field"
-                },
-                "description": " Fired when the item gets selected, does not fire when you work with query params",
-                "name": "node-selected"
-              },
-              {
-                "type": {
-                  "text": "Object {\"this.qp\": this._selectedField.id._value}"
-                },
-                "description": " Fired when qp mode is enabled. Nodes are only selectable with qpIn or selectById",
-                "name": "qp-change-requested"
-              },
-              {
-                "type": {
-                  "text": "selected field"
-                },
-                "description": " Fired when",
-                "name": "branch-selected"
-              },
-              {
-                "type": {
-                  "text": "selected field"
-                },
-                "description": " Fired when",
-                "name": "leaf-selected"
-              },
-              {
-                "description": " Fired when a node is opened",
-                "name": "node-opened"
-              },
-              {
-                "description": " Fired when a node is closed",
-                "name": "node-closed"
-              },
-              {
-                "description": " Fired when nodes are expanded recursive",
-                "name": "nodes-expanded"
-              },
-              {
-                "description": " Fired when nodes are collapsed recursive.",
-                "name": "nodes-collapsed"
-              }
-            ],
-            "attributes": [
-              {
-                "name": "depth",
-                "description": "Maximal depth for the tree. Default is infinite.",
-                "fieldName": "depth"
-              },
-              {
-                "name": "expand-depth",
-                "description": "Sets the maximal expand level relative from the current node.\n\nExpanding is a expensive operation.",
-                "fieldName": "expandDepth"
-              },
-              {
-                "name": "qp",
-                "description": "Query param to watch. If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.\nIf you select an item the `qp-change-request` will be fired.",
-                "fieldName": "qp"
-              },
-              {
-                "name": "tabindex",
-                "description": "Sets the tabindex",
-                "fieldName": "tabindex"
-              },
-              {
-                "name": "root-as-header",
-                "description": "Set this flag if you do not want a header-text section.",
-                "fieldName": "rootAsHeader"
-              },
-              {
-                "name": "hide-root-node",
-                "description": "Set this flag if you do not want to see the root node",
-                "fieldName": "hideRootNode"
-              },
-              {
-                "name": "header-text",
-                "description": "Override display name from root object",
-                "fieldName": "headerText"
-              },
-              {
-                "name": "secondary-text",
-                "description": "Override description from root object.",
-                "fieldName": "secondaryText"
-              },
-              {
-                "name": "searching",
-                "description": "indicator for searching. Maybe you want style your item depending on this attribute",
-                "fieldName": "_searchIsActive"
-              },
-              {
-                "name": "no-bg-on-header",
-                "description": "disables the background color on focus, selected, ... on header node\n\nWorks only with `root-as-header` enabled",
-                "fieldName": "nobgonhead"
-              },
-              {
-                "name": "focused",
-                "description": "indicates that the element is focused",
-                "fieldName": "focused"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "summary": "tree navigation menu",
-            "tagName": "furo-tree",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "js",
-            "name": "FuroTree",
-            "declaration": {
-              "name": "FuroTree",
-              "module": "src/tree/furo-tree.js"
-            }
-          },
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-tree",
-            "declaration": {
-              "name": "FuroTree",
-              "module": "src/tree/furo-tree.js"
-            }
-          }
-        ]
       }
     ]
   }

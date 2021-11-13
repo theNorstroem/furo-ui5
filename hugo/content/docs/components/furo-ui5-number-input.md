@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-number-input
-**@furo/components** <small>v1.0.0-alpha.2</small>
+**@furo/components** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/components/src/furo-ui5-number-input.js';`<small>
 <br>exports *FuroUi5NumberInput* js
 <br>exports `<furo-ui5-number-input>` custom-element-definition
@@ -163,7 +163,7 @@ default: **{
 <br><br>
 ### **value-changed**
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
-→ <small>`String`</small>
+→ <small>``string``</small>
 
 Fires the field value when it changes.
 <br><br>

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-google-protobuf-any
-**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/typerenderer/src/display-google-protobuf-any.js';`<small>
 <br>exports `<display-google-protobuf-any>` custom-element-definition
 <br>superclass *LitElement*</small>

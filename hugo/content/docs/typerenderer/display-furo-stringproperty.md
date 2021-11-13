@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-stringproperty
-**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/typerenderer/src/display-furo-stringproperty.js';`<small>
 <br>exports *DisplayFuroStringproperty* js
 <br>exports `<display-furo-stringproperty>` custom-element-definition

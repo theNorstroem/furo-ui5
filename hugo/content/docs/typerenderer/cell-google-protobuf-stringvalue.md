@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-google-protobuf-stringvalue
-**@furo/typerenderer** <small>v1.0.0-alpha.2</small>
+**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
 <br>`import '@furo/typerenderer/src/cell-google-protobuf-stringvalue.js';`<small>
 <br>exports `<cell-google-protobuf-stringvalue>` custom-element-definition
 <br>superclass *LitElement*</small>
