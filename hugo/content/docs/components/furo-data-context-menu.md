@@ -6,8 +6,8 @@ weight: 50
 
 # furo-data-context-menu
 **@furo/components** <small>v1.0.0-alpha.4</small>
-<br>`import '@furo/components/src/furo-data-context-menu.js';`<small>
-<br>exports *FuroDataContextMenu* js
+<br>`import '@furo/components/src/furo-ui5-context-menu.js';`<small>
+<br>exports *FuroUi5ContextMenu* js
 <br>exports `<furo-data-context-menu>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>

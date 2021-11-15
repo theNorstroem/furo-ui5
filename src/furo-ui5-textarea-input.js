@@ -43,7 +43,7 @@ import { Events } from './lib/Events.js';
  * **bind-data(fieldNode)**
  * Bind a entity field. You can use the entity even when no data was received.
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+ * When you use @-object-ready from a furo-ui5-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {`text`} change -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {} input -  Fired when the value of the ui5-input changes at each keystroke.

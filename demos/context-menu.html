@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+    furo-demo-snippet{
+      height: 100vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import './initEnv.js';
+    import '../src/furo-ui5-context-menu.js';
+    import '../src/furo-ui5-context-menu-display.js';
+    import '@furo/data/src/furo-catalog.js';
+    import '@furo/util/src/furo-fetch-json.js';
+    import '@furo/util/src/doc/furo-demo-snippet.js';
+    import '@ui5/webcomponents-icons/dist/chevron-phase.js';
+    import '@ui5/webcomponents-icons/dist/increase-line-height.js';
+
+
+    render(
+      html`
+        <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
+        <furo-demo-snippet>
+          <template>
+
+            <furo-ui5-context-menu
+              condensed
+              position="below"
+              ƒ-trigger="--menuClkd"
+              ƒ-bind-data="--menuDO"
+              @-menu-item-selected="--menuItem"
+            >
+              <button @-click="--menuClkd">open menu</button>
+            </furo-ui5-context-menu>
+
+            <!-- data for the menu -->
+            <furo-data-object
+              type="menu.Menuitem"
+              ƒ-inject-raw="--data"
+              @-object-ready="--menuDO"
+            ></furo-data-object>
+            <furo-fetch-json
+              ƒ-fetch="--menuClkd"
+              src="/mockdata/menu/samplectxmenu.json"
+              @-data="--data"
+            ></furo-fetch-json>
+            <!-- show the selected item -->
+            <furo-pretty-json ƒ-inject-data="--menuItem(*.menuitem._value)"></furo-pretty-json>
+          </template>
+        </furo-demo-snippet>
+
+
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>

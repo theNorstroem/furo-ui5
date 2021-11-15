@@ -103,7 +103,7 @@ import './furo-ui5-dialog.js';
  * Fire a **@-record-selected** to set the item on the reference-search.
  * Fire a **@-close-requested** to close the extended search.
  *
- * @cssprop {#ffffff} [--furo-data-reference-search-list-background=--surface] - background color of the result list
+ * @cssprop {#ffffff} [--furo-ui5-reference-search-list-background=--surface] - background color of the result list
  *
  * @fires {`Object` the complete item} item-selected -  Fired when a item was selected from the list.
  * @fires {`text`} change -  Fired when the input operation has finished by pressing Enter or on focusout.
@@ -954,7 +954,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
         z-index: 1;
         display: none;
         background-color: var(
-          --furo-data-reference-search-list-background,
+          --furo-ui5-reference-search-list-background,
           var(--surface, #ffffff)
         );
       }

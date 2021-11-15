@@ -82,11 +82,11 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  *
  *  The current type mappings are:
  *
- * - "google.type.Date": "furo-data-date-input"
- * - "furo.StringProperty": "furo-data-text-input"
- * - "furo.IntegerProperty": "furo-data-number-input"
- * - "furo.NumberProperty": "furo-data-number-input"
- * - "furo.StringOptionProperty": "furo-data-collection-dropdown"
+ * - "google.type.Date": "furo-ui5-date-input"
+ * - "furo.StringProperty": "furo-ui5-text-input"
+ * - "furo.IntegerProperty": "furo-ui5-number-input"
+ * - "furo.NumberProperty": "furo-ui5-number-input"
+ * - "furo.StringOptionProperty": "furo-ui5-collection-dropdown"
  *
  * @summary display and bind types of type any
  * @customElement

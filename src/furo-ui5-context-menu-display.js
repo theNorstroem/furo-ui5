@@ -4,20 +4,20 @@ import { FBP } from '@furo/fbp';
 import '@furo/fbp/src/flow-repeat';
 import '@furo/util/src/furo-navigation-pad';
 import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode.js';
-import './lib/furo-data-context-menu-item.js';
-import './lib/furo-data-context-submenu.js';
+import './contextmenu/furo-ui5-context-menu-item.js';
+import './contextmenu/furo-ui5-context-submenu.js';
 
-export class FuroDataContextMenuDisplay extends FBP(LitElement) {
+export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
   /**
-   * `furo-data-context-menu-display`
-   *  is the display element for furo-data-context-menu and submenus. Place this component as high as needed in your dom.
+   * `furo-ui5-context-menu-display`
+   *  is the display element for furo-ui5-context-menu and submenus. Place this component as high as needed in your dom.
    *
-   *  You should not interact with this component directly. Use [`furo-data-context-menu`](?t=FuroDataContextMenu) to show a context menu.
+   *  You should not interact with this component directly. Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
    *
    *  There is nothing more to do. The menu creates a transparent "backdrop" with absolut positions 0 0 0 0
    *
    * ```html
-   *  <furo-data-context-menu-display></furo-data-context-menu-display>
+   *  <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
    * ```
    *
    * @cssprop {N/A} [--surface=N/A] - menu background color
@@ -25,7 +25,7 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
    *
    * @summary context menu
    * @customElement
-   * @demo demo-furo-data-context-menu Basic usage
+   * @demo demo-furo-ui5-context-menu Basic usage
    * @appliesMixin FBP
    */
 
@@ -110,7 +110,7 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
     const menucontainer = this.shadowRoot.getElementById('menu');
 
     this.addEventListener('opensub-requested', e => {
-      const submenu = document.createElement('furo-data-context-submenu');
+      const submenu = document.createElement('furo-ui5-context-submenu');
       this.shadowRoot.appendChild(submenu);
 
       if (this.condensed) {
@@ -124,7 +124,7 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
       e.submenu = submenu;
     });
 
-    this.parentNode.addEventListener('open-furo-data-menu-requested', e => {
+    this.parentNode.addEventListener('open-furo-ui5-menu-requested', e => {
       e.stopPropagation();
       this.menuObject = e.detail;
       this.condensed = this.menuObject.condensed;
@@ -258,12 +258,12 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
 
     // remove all submenus
     this.shadowRoot
-      .querySelectorAll('furo-data-context-submenu')
+      .querySelectorAll('furo-ui5-context-submenu')
       .forEach(sub => {
         sub.remove();
       });
 
-    // unregister the event listener from open-furo-data-menu-requested
+    // unregister the event listener from open-furo-ui5-menu-requested
     this._children.removeEventListener(
       'this-repeated-field-changed',
       this._repeatsChanged
@@ -352,10 +352,8 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
         background-color: var(--surface);
         overflow-y: auto;
         box-sizing: border-box;
-        border-radius: 4px;
-        padding: 6px 0;
-        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-          0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+        box-shadow: var(--sapContent_Shadow2);
+        border-radius: var(--_ui5-popup-border-radius);
       }
 
       #menu[start] {
@@ -377,10 +375,9 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
       }
 
       /*  only focus is needed, because the menu closes on select */
-      furo-data-context-menu-item:hover,
-      furo-data-context-menu-item[focused] {
-        background-color: rgba(var(--primary-rgb), var(--state-hover));
-        color: var(--primary);
+      furo-ui5-context-menu-item:hover,
+      furo-ui5-context-menu-item[focused] {
+        background: var(--sapList_Hover_Background);
       }
 
       .separator {
@@ -390,7 +387,7 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
         margin-bottom: 8px;
       }
 
-      :host([condensed]) furo-data-context-menu-item {
+      :host([condensed]) furo-ui5-context-menu-item {
         padding: 0;
       }
     `;
@@ -421,13 +418,13 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
         >
           <template>
             <div>
-              <furo-data-context-menu-item
+              <furo-ui5-context-menu-item
                 ƒ-index="--index"
                 ƒ-select="--trigger"
                 ƒ-set-focused="--itemSelected"
                 ƒ-unset-focused="--itemDeSelected"
                 ƒ-bind-data="--itemInjected(*.item)"
-              ></furo-data-context-menu-item>
+              ></furo-ui5-context-menu-item>
             </div>
           </template>
         </flow-repeat>
@@ -438,6 +435,6 @@ export class FuroDataContextMenuDisplay extends FBP(LitElement) {
 }
 
 window.customElements.define(
-  'furo-data-context-menu-display',
-  FuroDataContextMenuDisplay
+  'furo-ui5-context-menu-display',
+  FuroUi5ContextMenuDisplay
 );

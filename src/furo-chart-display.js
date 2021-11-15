@@ -7,29 +7,29 @@ import ApexCharts from 'apexcharts/dist/apexcharts.esm.js';
  * `furo-chart-display`
  *  Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).
  *
- *  Use `furo-data-chart-binder` to connect your data.
+ *  Use `furo-ui5-chart-binder` to connect your data.
  *
  *  ```html
  *  <furo-chart-display chart-type="bar">
- *     <furo-data-chart-binder
+ *     <furo-ui5-chart-binder
  *         ƒ-bind-data="--projectDAO(*.entities)"
  *         data-field="data.cost_limit.units"
  *         category-field="data.description"
- *     ></furo-data-chart-binder>
+ *     ></furo-ui5-chart-binder>
  *  </furo-chart-display>
  *  ```
  *
- * @fires {Fieldnode} data-point-clicked -  Fired when a marker for this data source was clicked. Note: the event is fired from the furo-data-chart-binder
+ * @fires {Fieldnode} data-point-clicked -  Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart-binder
  *
  * @summary Display charts with data objects
  * @customElement
- * @demo demo-furo-data-chart-mini Small Charts
- * @demo demo-furo-data-chart Basic Usage
- * @demo demo-furo-data-chart-mixed Mixed Charts
- * @demo demo-furo-data-chart-stacked Stacked Charts
- * @demo demo-furo-data-chart-timeline Timeline Chart
- * @demo demo-furo-data-chart-treemap Treemap
- * @demo demo-furo-data-chart-bubble Bubble
+ * @demo demo-furo-ui5-chart-mini Small Charts
+ * @demo demo-furo-ui5-chart Basic Usage
+ * @demo demo-furo-ui5-chart-mixed Mixed Charts
+ * @demo demo-furo-ui5-chart-stacked Stacked Charts
+ * @demo demo-furo-ui5-chart-timeline Timeline Chart
+ * @demo demo-furo-ui5-chart-treemap Treemap
+ * @demo demo-furo-ui5-chart-bubble Bubble
  * @appliesMixin FBP
  */
 class FuroChartDisplay extends FBP(LitElement) {

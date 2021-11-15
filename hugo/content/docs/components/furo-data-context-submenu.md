@@ -6,8 +6,8 @@ weight: 50
 
 # furo-data-context-submenu
 **@furo/components** <small>v1.0.0-alpha.4</small>
-<br>`import '@furo/components/src/furo-data-context-submenu.js';`<small>
-<br>exports *FuroDataContextSubmenu* js
+<br>`import '@furo/components/src/furo-ui5-context-submenu.js';`<small>
+<br>exports *FuroUi5ContextSubmenu* js
 <br>exports `<furo-data-context-submenu>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
@@ -18,7 +18,7 @@ weight: 50
 
 `furo-data-context-submenu` is a helper component for `furo-data-context-menu`.
 
-Use [`furo-data-context-menu`](?t=FuroDataContextMenu) to show a context menu.
+Use [`furo-data-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
 
 {{% api "_furo-data-context-submenu-description.md" %}}
 

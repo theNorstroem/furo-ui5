@@ -2125,7 +2125,7 @@ Put the axis label on the opposite site (usually right) axisLabel #  axis-label<
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>http://web-components.furo.pro/docs/components/furo-data-context-menu/</guid>
-      <description>furo-data-context-menu #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-data-context-menu.js&#39;; exports FuroDataContextMenu js exports &amp;lt;furo-data-context-menu&amp;gt; custom-element-definition superclass LitElement mixes FBP
+      <description>furo-data-context-menu #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-context-menu.js&#39;; exports FuroUi5ContextMenu js exports &amp;lt;furo-data-context-menu&amp;gt; custom-element-definition superclass LitElement mixes FBP
 a context menu
 furo-data-context-menu A material design context menu or menu element.
 You have to put a furo-data-context-menu-display element in one of the parent elements of the element where you use the furo-data-context-menu. The app-shell is a good place for that.
@@ -2138,7 +2138,7 @@ You have to put a furo-data-context-menu-display element in one of the parent el
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>http://web-components.furo.pro/docs/components/furo-data-context-menu-display/</guid>
-      <description>furo-data-context-menu-display #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-data-context-menu-display.js&#39;; exports FuroDataContextMenuDisplay js exports &amp;lt;furo-data-context-menu-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
+      <description>furo-data-context-menu-display #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-context-menu-display.js&#39;; exports FuroUi5ContextMenuDisplay js exports &amp;lt;furo-data-context-menu-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Attributes and Properties #  borderDistance #  default: 48
 
 _repeatsChanged #
@@ -2156,7 +2156,7 @@ triggerNavigation #  triggerNavigation(key `` ) ⟹ void
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>http://web-components.furo.pro/docs/components/furo-data-context-menu-item/</guid>
-      <description>furo-data-context-menu-item #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-data-context-menu-item.js&#39;; exports FuroDataContextMenuItem js exports &amp;lt;furo-data-context-menu-item&amp;gt; custom-element-definition superclass LitElement mixes FBP
+      <description>furo-data-context-menu-item #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-context-menu-item.js&#39;; exports FuroUi5ContextMenuItem js exports &amp;lt;furo-data-context-menu-item&amp;gt; custom-element-definition superclass LitElement mixes FBP
 helper
 furo-data-context-menu-item is a helper component for furo-data-context-menu.
 Use furo-data-context-menu to show a context menu.
@@ -2172,7 +2172,7 @@ Fired when submenu should be opened item-selected #  @-item-selected → item</d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>http://web-components.furo.pro/docs/components/furo-data-context-submenu/</guid>
-      <description>furo-data-context-submenu #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-data-context-submenu.js&#39;; exports FuroDataContextSubmenu js exports &amp;lt;furo-data-context-submenu&amp;gt; custom-element-definition superclass LitElement mixes FBP
+      <description>furo-data-context-submenu #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-context-submenu.js&#39;; exports FuroUi5ContextSubmenu js exports &amp;lt;furo-data-context-submenu&amp;gt; custom-element-definition superclass LitElement mixes FBP
 helper
 furo-data-context-submenu is a helper component for furo-data-context-menu.
 Use furo-data-context-menu to show a context menu.

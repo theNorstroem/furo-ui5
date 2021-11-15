@@ -1,4 +1,3 @@
-import './furo-data-chart-binder.js';
 import './furo-chart-display.js';
 import './furo-ui5-busyindicator.js';
 import './furo-ui5-bool-icon.js';

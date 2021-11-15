@@ -1,18 +1,18 @@
 import { LitElement, css } from 'lit';
 
 /**
- * `furo-data-chart-binder`
+ * `furo-ui5-chart-binder`
  *  Connects data objects (repeaterNodes) with the charting lib.
  *
  *  Use multiple binders if you need more then one series per chart.
  *
  *  ```html
  *  <furo-chart-display chart-type="bar">
- *     <furo-data-chart-binder
+ *     <furo-ui5-chart-binder
  *         ƒ-bind-data="--projectDAO(*.entities)"
  *         data-field="data.cost_limit.units"
  *         category-field="data.description"
- *     ></furo-data-chart-binder>
+ *     ></furo-ui5-chart-binder>
  *  </furo-chart-display>
  *  ```
  *
@@ -21,13 +21,13 @@ import { LitElement, css } from 'lit';
  *
  * @summary connect data to a chart
  * @customElement
- * @demo demo-furo-data-chart-mini Small Charts
- * @demo demo-furo-data-chart Basic Usage
- * @demo demo-furo-data-chart-mixed Mixed Charts
- * @demo demo-furo-data-chart-stacked Stacked Charts
- * @demo demo-furo-data-chart-timeline Timeline Chart
- * @demo demo-furo-data-chart-treemap Treemap
- * @demo demo-furo-data-chart-bubble Bubble
+ * @demo demo-furo-ui5-chart-mini Small Charts
+ * @demo demo-furo-ui5-chart Basic Usage
+ * @demo demo-furo-ui5-chart-mixed Mixed Charts
+ * @demo demo-furo-ui5-chart-stacked Stacked Charts
+ * @demo demo-furo-ui5-chart-timeline Timeline Chart
+ * @demo demo-furo-ui5-chart-treemap Treemap
+ * @demo demo-furo-ui5-chart-bubble Bubble
  * @appliesMixin FBP
  */
 class FuroDataChartBinder extends LitElement {
@@ -436,4 +436,4 @@ class FuroDataChartBinder extends LitElement {
   }
 }
 
-window.customElements.define('furo-data-chart-binder', FuroDataChartBinder);
+window.customElements.define('furo-ui5-chart-binder', FuroDataChartBinder);

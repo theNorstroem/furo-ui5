@@ -6,8 +6,8 @@ weight: 50
 
 # furo-data-context-menu-item
 **@furo/components** <small>v1.0.0-alpha.4</small>
-<br>`import '@furo/components/src/furo-data-context-menu-item.js';`<small>
-<br>exports *FuroDataContextMenuItem* js
+<br>`import '@furo/components/src/furo-ui5-context-menu-item.js';`<small>
+<br>exports *FuroUi5ContextMenuItem* js
 <br>exports `<furo-data-context-menu-item>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
@@ -18,7 +18,7 @@ weight: 50
 
 `furo-data-context-menu-item` is a helper component for `furo-data-context-menu`.
 
-Use [`furo-data-context-menu`](?t=FuroDataContextMenu) to show a context menu.
+Use [`furo-data-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
 
 {{% api "_furo-data-context-menu-item-description.md" %}}
 

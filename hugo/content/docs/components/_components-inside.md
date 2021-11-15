@@ -7,19 +7,15 @@ bookHidden: true
 ### Components
 
 - [furo-chart-display](furo-chart-display.md) Display charts with data objects
-- [furo-data-bool-icon](furo-data-bool-icon.md) Displays a icon/symbol for a boolean value
 - [furo-data-chart-binder](furo-data-chart-binder.md) connect data to a chart
 - [furo-data-context-menu-display](furo-data-context-menu-display.md) 
 - [furo-data-context-menu](furo-data-context-menu.md) a context menu
-- [furo-data-sign-pad](furo-data-sign-pad.md) Bind a entityObject.field to a sign-pad input
-- [furo-sign-pad](furo-sign-pad.md) draw or sign
+- [furo-ui5-bool-icon](furo-ui5-bool-icon.md) Displays a icon/symbol for a boolean value
 - [furo-ui5-busyindicator](furo-ui5-busyindicator.md) ui5 busy indicator
 - [furo-ui5-button](furo-ui5-button.md) ui5 button
 - [furo-ui5-card](furo-ui5-card.md) 
 - [furo-ui5-checkbox-input-labeled](furo-ui5-checkbox-input-labeled.md) labeled input field
 - [furo-ui5-checkbox-input](furo-ui5-checkbox-input.md) data checkbox input field
-- [furo-ui5-collection-dropdown-labeled](furo-ui5-collection-dropdown-labeled.md) labeled input field
-- [furo-ui5-collection-dropdown](furo-ui5-collection-dropdown.md) data collection dropdown
 - [furo-ui5-date-picker-labeled](furo-ui5-date-picker-labeled.md) labeled input field
 - [furo-ui5-date-picker](furo-ui5-date-picker.md) furo data datepicker field
 - [furo-ui5-date-time-picker-labeled](furo-ui5-date-time-picker-labeled.md) labeled input field
@@ -52,6 +48,7 @@ bookHidden: true
 - [furo-ui5-segmented-button](furo-ui5-segmented-button.md) segmented button
 - [furo-ui5-select-labeled](furo-ui5-select-labeled.md) labeled select
 - [furo-ui5-select](furo-ui5-select.md) data select field
+- [furo-ui5-sign-pad](furo-ui5-sign-pad.md) draw or sign
 - [furo-ui5-table](furo-ui5-table.md) 
 - [furo-ui5-text-input-labeled](furo-ui5-text-input-labeled.md) labeled input field
 - [furo-ui5-text-input](furo-ui5-text-input.md) data text input field
@@ -65,9 +62,3 @@ bookHidden: true
 - [furo-data-context-menu-item](furo-data-context-menu-item.md) helper
 - [furo-data-context-submenu](furo-data-context-submenu.md) helper
 - [furo-ui5-table-row](furo-ui5-table-row.md) 
-- [furo-mini-tabs](furo-mini-tabs.md) todo shortdescription
-- [furo-panel-coordinator-tab-item](furo-panel-coordinator-tab-item.md) todo shortdescription
-- [furo-panel-coordinator-tabs](furo-panel-coordinator-tabs.md) tab navigation for panel-coordinator
-- [furo-panel-head](furo-panel-head.md) dislay a navigationNode as title
-- [furo-tree-item](furo-tree-item.md) todo shortdescription
-- [furo-tree](furo-tree.md) tree navigation menu

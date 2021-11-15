@@ -1,11 +1,15 @@
 import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
+import '@furo/layout/src/furo-horizontal-flex.js';
+import '@ui5/webcomponents/dist/Icon.js';
+import '@ui5/webcomponents-icons/dist/slim-arrow-right.js';
+import '@ui5/webcomponents-icons/dist/border.js';
 
 /**
- * `furo-data-context-menu-item` is a helper component for `furo-data-context-menu`.
+ * `furo-ui5-context-menu-item` is a helper component for `furo-ui5-context-menu`.
  *
- * Use [`furo-data-context-menu`](?t=FuroDataContextMenu) to show a context menu.
+ * Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
  *
  *
  * @fires {index} mousefocus -  Fired when hovered with mouse
@@ -16,7 +20,12 @@ import { FBP } from '@furo/fbp';
  * @customElement
  * @appliesMixin FBP
  */
-export class FuroDataContextMenuItem extends FBP(LitElement) {
+export class FuroUi5ContextMenuItem extends FBP(LitElement) {
+  constructor() {
+    super();
+    this.icon = 'border';
+  }
+
   /**
    * @private
    * @return {Object}
@@ -53,6 +62,14 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
 
   bindData(menuNode) {
     this.menuitem = menuNode;
+
+    if (this.menuitem.icon._value) {
+      this.icon = this.menuitem.icon._value;
+      this._noicon = false;
+    } else {
+      this._noicon = true;
+    }
+
     if (this.menuitem.children.repeats.length > 0) {
       this._FBPTriggerWire('--submenu', this.menuitem);
     }
@@ -91,7 +108,7 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
   }
 
   /**
-   * Select the item, furo-data-context-menu callback will be called
+   * Select the item, furo-ui5-context-menu callback will be called
    * @private
    */
   _selectItem() {
@@ -188,6 +205,7 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
       :host {
         display: block;
         padding: 8px 0;
+        color: var(--sapTextColor);
       }
 
       :host([hidden]) {
@@ -196,16 +214,15 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
 
       .children {
         display: none;
-        padding-right: 24px;
+        padding-right: 1rem;
       }
 
-      furo-icon[children] {
+      ui5-icon[children] {
         display: block;
       }
 
-      /* 4px from left comes from horizontal-flex*/
-      furo-icon {
-        padding: 6px 4px 0px 20px;
+      ui5-icon[hidden] {
+        display: none;
       }
 
       /* the display name */
@@ -216,7 +233,7 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
 
       .command {
         color: #838383;
-        padding-right: 24px;
+        padding-right: 1rem;
       }
 
       furo-horizontal-flex {
@@ -224,8 +241,8 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
         line-height: 32px;
         cursor: pointer;
         box-sizing: border-box;
-
         padding-left: 4px;
+        align-items: center;
       }
     `;
   }
@@ -239,25 +256,22 @@ export class FuroDataContextMenuItem extends FBP(LitElement) {
     // language=HTML
     return html`
       <furo-horizontal-flex @click="${this._mouseSelect}"
-        ><furo-icon
-          ?hidden="${this.menuitem._noicon}"
-          icon="${this.menuitem.icon}"
-        ></furo-icon>
+        ><ui5-icon ?hidden="${this._noicon}" name="${this.icon}"></ui5-icon>
         <div flex class="name">${this.menuitem.display_name}</div>
         <div class="command">${this.menuitem.command}</div>
 
-        <furo-icon
-          icon="chevron-right"
+        <ui5-icon
+          name="slim-arrow-right"
           class="children"
           @click="${this._openSub}"
           ?children="${this.menuitem.children.repeats.length > 0}"
-        ></furo-icon>
+        ></ui5-icon>
       </furo-horizontal-flex>
     `;
   }
 }
 
 window.customElements.define(
-  'furo-data-context-menu-item',
-  FuroDataContextMenuItem
+  'furo-ui5-context-menu-item',
+  FuroUi5ContextMenuItem
 );

@@ -9,7 +9,7 @@
   "payload": [],
   "children": [
     {
-      "icon": "av:play-circle-outline",
+      "icon": "chevron-phase",
       "display_name": "main",
       "disabled": false,
       "command": null,
@@ -30,7 +30,7 @@
       "flags": [],
       "payload": []
     },    {
-      "icon": "android",
+      "icon": "increase-line-height",
       "display_name": "Line Spacing",
       "disabled": false,
       "command": null,
@@ -57,14 +57,14 @@
           "leading_divider": false,
           "children": [
             {
-              "icon": "av:play-circle-outline",
+              "icon": "chevron-phase",
               "display_name": "first sub",
               "disabled": false,
               "command": null,
               "action": "action",
               "leading_divider": false,
               "children": [{
-                "icon": "av:play-circle-outline",
+                "icon": "chevron-phase",
                 "display_name": "first sub",
                 "disabled": false,
                 "command": null,
@@ -96,7 +96,7 @@
                   "flags": [],
                   "payload": []
                 },{
-                  "icon": "av:play-circle-outline",
+                  "icon": "chevron-phase",
                   "display_name": "first sub",
                   "disabled": false,
                   "command": null,
@@ -128,7 +128,7 @@
                   "flags": [],
                   "payload": []
                 },{
-                  "icon": "av:play-circle-outline",
+                  "icon": "chevron-phase",
                   "display_name": "first sub",
                   "disabled": false,
                   "command": null,
@@ -190,7 +190,7 @@
           "payload": []
         },
         {
-          "icon": "check",
+          "icon": "border",
           "display_name": "Double",
           "disabled": false,
           "command": "Del",
@@ -227,7 +227,7 @@
       "payload": []
     },
     {
-      "icon": "av:play-circle-outline",
+      "icon": "chevron-phase",
       "display_name": "first sub",
       "disabled": false,
       "command": null,
@@ -246,14 +246,14 @@
       "leading_divider": true,
       "children": [
         {
-          "icon": "av:play-circle-outline",
+          "icon": "chevron-phase",
           "display_name": "first sub",
           "disabled": false,
           "command": null,
           "action": "action",
           "leading_divider": false,
           "children": [{
-            "icon": "av:play-circle-outline",
+            "icon": "chevron-phase",
             "display_name": "first sub",
             "disabled": false,
             "command": null,
@@ -285,7 +285,7 @@
               "flags": [],
               "payload": []
             },{
-              "icon": "av:play-circle-outline",
+              "icon": "chevron-phase",
               "display_name": "first sub",
               "disabled": false,
               "command": null,
@@ -317,7 +317,7 @@
               "flags": [],
               "payload": []
             },{
-              "icon": "av:play-circle-outline",
+              "icon": "chevron-phase",
               "display_name": "first sub",
               "disabled": false,
               "command": null,
@@ -398,14 +398,14 @@
       "leading_divider": true,
       "children": [
         {
-          "icon": "av:play-circle-outline",
+          "icon": "chevron-phase",
           "display_name": "first sub",
           "disabled": false,
           "command": null,
           "action": "action",
           "leading_divider": false,
           "children": [{
-            "icon": "av:play-circle-outline",
+            "icon": "chevron-phase",
             "display_name": "first sub",
             "disabled": false,
             "command": null,
@@ -437,7 +437,7 @@
               "flags": [],
               "payload": []
             },{
-              "icon": "av:play-circle-outline",
+              "icon": "chevron-phase",
               "display_name": "first sub",
               "disabled": false,
               "command": null,
@@ -469,7 +469,7 @@
               "flags": [],
               "payload": []
             },{
-              "icon": "av:play-circle-outline",
+              "icon": "chevron-phase",
               "display_name": "first sub",
               "disabled": false,
               "command": null,
@@ -531,7 +531,7 @@
       "payload": []
     },
     {
-      "icon": "av:play-circle-outline",
+      "icon": "chevron-phase",
       "display_name": "with icon divider",
       "disabled": false,
       "command": "Del",

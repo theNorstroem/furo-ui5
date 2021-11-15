@@ -4,30 +4,30 @@ import { FBP } from '@furo/fbp';
 import '@furo/util/src/furo-keydown';
 
 /**
- * `furo-data-context-menu`
+ * `furo-ui5-context-menu`
  *  A  [material design](https://material.io/components/menus/) context menu or menu element.
  *
- *  You have to put a `furo-data-context-menu-display` element in one of the parent elements of the element where you use the `furo-data-context-menu`.
+ *  You have to put a `furo-ui5-context-menu-display` element in one of the parent elements of the element where you use the `furo-ui5-context-menu`.
  *  The app-shell is a good place for that.
  *
  * ```html
- *  <furo-data-context-menu condensed position="below" ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
+ *  <furo-ui5-context-menu condensed position="below" ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
  *      <furo-icon-button icon="menu" @-click="--menuClkd"></furo-icon-button>
- *  </furo-data-context-menu>
+ *  </furo-ui5-context-menu>
  * ```
  *
  *
- * @fires {{context, menuitem}} open-furo-data-menu-requested -  Fired when context menu was triggered
+ * @fires {{context, menuitem}} open-furo-ui5-menu-requested -  Fired when context menu was triggered
  * @fires { {context, menuitem}} menu-item-selected -  Fired when a menu item is selected
  *
  * @slot {HTMLElement} - default slot to add an individual context menu opener component (e.g. furo-icon-button).
  *
  * @summary a context menu
  * @customElement
- * @demo demo-furo-data-context-menu Basic usage
+ * @demo demo-furo-ui5-context-menu Basic usage
  * @appliesMixin FBP
  */
-export class FuroDataContextMenu extends FBP(LitElement) {
+export class FuroUi5ContextMenu extends FBP(LitElement) {
   /**
    * @private
    * @return {Object}
@@ -84,7 +84,7 @@ export class FuroDataContextMenu extends FBP(LitElement) {
     if (!this._menuNode) {
       this._queueTrigger = true;
     } else {
-      const customEvent = new Event('open-furo-data-menu-requested', {
+      const customEvent = new Event('open-furo-ui5-menu-requested', {
         composed: true,
         bubbles: true,
       });
@@ -170,4 +170,4 @@ export class FuroDataContextMenu extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('furo-data-context-menu', FuroDataContextMenu);
+window.customElements.define('furo-ui5-context-menu', FuroUi5ContextMenu);
