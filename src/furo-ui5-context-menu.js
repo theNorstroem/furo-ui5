@@ -13,7 +13,7 @@ import '@furo/util/src/furo-keydown';
  *
  * ```html
  *  <furo-ui5-context-menu  ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
- *      <ui5-icon name="menu" @-click="--menuClkd"></furo-icon-button>
+ *      <ui5-icon name="menu" @-click="--menuClkd"></ui5-icon>
  *  </furo-ui5-context-menu>
  * ```
  *
@@ -24,7 +24,7 @@ import '@furo/util/src/furo-keydown';
  *  fields:
  *    icon: 'string:1 #Leading icon of the menu'
  *    display_name: 'string:2 #String representation of the menu item. Menu item text'
- *    disabled: 'bool:3 #Display actions as disabled when they can only be used sometimes, under certain conditions. They should be displayed as disabled rather than removing them.'
+ *    disabled: 'bool:3 #Display actions as disabled when they can only be used sometimes and under certain conditions.'
  *    command: 'string:4 #Keyboard command hint'
  *    action: 'string:5 #String representation of the menu item action'
  *    leading_divider: 'bool:6 #Item has a leading divider line'

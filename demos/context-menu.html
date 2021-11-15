@@ -24,6 +24,7 @@
     import '@furo/util/src/furo-fetch-json.js';
     import '@furo/util/src/doc/furo-demo-snippet.js';
     import '@furo/util/src/furo-pretty-json.js';
+    import '@ui5/webcomponents-icons/dist/meal.js';
     import '@ui5/webcomponents-icons/dist/chevron-phase.js';
     import '@ui5/webcomponents-icons/dist/increase-line-height.js';
 
@@ -38,8 +39,8 @@
             <furo-ui5-context-menu
               ƒ-trigger="--menuClkd"
               ƒ-bind-data="--menuDO"
-              @-menu-item-selected="--menuItem"
-            ><strong @-click="--menuClkd">open menu</strong>
+              @-menu-item-selected="--menuItemSelected"
+            ><ui5-icon name="meal" @-click="--menuClkd">open menu</ui5-icon>
             </furo-ui5-context-menu>
 
             <!-- data for the menu -->
@@ -54,7 +55,7 @@
               @-data="--data"
             ></furo-fetch-json>
             <!-- show the selected item -->
-            <furo-pretty-json ƒ-inject-data="--menuItem(*.menuitem._value)"></furo-pretty-json>
+            <furo-pretty-json ƒ-inject-data="--menuItemSelected(*.menuitem._value)"></furo-pretty-json>
           </template>
         </furo-demo-snippet>
 
