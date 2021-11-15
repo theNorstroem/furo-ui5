@@ -935,6 +935,14 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
+   * clears the result set
+   */
+  clearResultList() {
+    this._searchResultItems = [];
+    this._FBPTriggerWire('--resultList', this._searchResultItems);
+  }
+
+  /**
    * Themable Styles
    * @private
    * @return {CSSResult}
