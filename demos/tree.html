@@ -18,44 +18,96 @@
   <script type="module">
     import { html, render } from 'lit';
     import './initEnv.js';
-    import '../src/furo-ui5-context-menu.js';
-    import '../src/furo-ui5-context-menu-display.js';
+    import '../src/furo-ui5-tree.js';
+    import '@furo/route/src/furo-location.js';
+    import '@furo/route/src/furo-location-updater.js';
     import '@furo/data/src/furo-catalog.js';
+    import '@furo/util/src/furo-navigation-pad.js';
+    import '@furo/layout/src/furo-split-view.js';
     import '@furo/util/src/furo-fetch-json.js';
     import '@furo/util/src/doc/furo-demo-snippet.js';
+    import '@furo/util/src/furo-pretty-json.js';
+    import '@ui5/webcomponents-icons/dist/account.js';
+    import '@ui5/webcomponents-icons/dist/appointment.js';
+    import '@ui5/webcomponents-icons/dist/add.js';
     import '@ui5/webcomponents-icons/dist/chevron-phase.js';
     import '@ui5/webcomponents-icons/dist/increase-line-height.js';
 
 
     render(
       html`
-        <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
         <furo-demo-snippet>
           <template>
 
-            <furo-ui5-context-menu
-              condensed
-              position="below"
-              ƒ-trigger="--menuClkd"
-              ƒ-bind-data="--menuDO"
-              @-menu-item-selected="--menuItem"
-            >
-              <button @-click="--menuClkd">open menu</button>
-            </furo-ui5-context-menu>
 
-            <!-- data for the menu -->
+
+            <button @-click="--focusClicked">focus</button>
+            <button @-click="--expandAll">expand all</button>
+            <button @-click="--collapseAll">collapse all</button>
+            <button @-click="--scrollSelected">scroll to selected</button>
+            <button @-click="--focusFirst">focus first node</button>
+            <button @-click="--focusLast">focus last node</button>
+            <button @-click="--focusParent">focus parent node</button>
+            <button @-click="--selectFocused">select focused node</button>
+<br>
+<br>
+            <button @-click="--prev">prev</button>
+            <button @-click="--next">next</button>
+            <button @-click="--deleteNode">delete</button>
+            <button @-click="--collapseFocused">-</button>
+            <button @-click="--expandFocused">+</button>
+
+            <furo-split-view >
+              <furo-ui5-tree
+                slot="master"
+                ƒ-focus="--focusClicked"
+                ƒ-focus-selected="--scrollSelected"
+                ƒ-focus-first="--focusFirst"
+                ƒ-focus-last="--focusLast"
+                ƒ-focus-parent="--focusParent"
+                ƒ-select-focused="--selectFocused"
+                ƒ-collapse-focused="--collapseFocused"
+                ƒ-expand-focused="--expandFocused"
+                ƒ-bind-data="--entityObj(*.data)"
+                qp="panel"
+                ƒ-location-in="--qp"
+                @-node-selected="--nodeSelected"
+                @-qp-change-requested="--qpchangerequest"
+                ƒ-select-next="--next"
+                ƒ-select-prev="--prev"
+                ƒ-add-sub-node="--addSub"
+                ƒ-expand-node-recursive="--expandNode"
+                ƒ-expand-all="--expandAll"
+                ƒ-collapse-all="--collapseAll"
+                ƒ-delete-node="--deleteNode"
+                ƒ-trigger-navigation="--navigation"
+              >
+                <!-- add the furo-navigation-pad for keyboard navigation -->
+                <furo-navigation-pad @-navigated="--navigation"></furo-navigation-pad>
+              </furo-ui5-tree>
+
+              <furo-pretty-json scroll
+                ƒ-inject-data="--nodeSelected(*._value)"
+              ></furo-pretty-json>
+            </furo-split-view>
+
+            <furo-location-updater ƒ-set-qp="--qpchangerequest"></furo-location-updater>
             <furo-data-object
-              type="menu.Menuitem"
+              type="tree.TreeEntity"
               ƒ-inject-raw="--data"
-              @-object-ready="--menuDO"
+              @-object-ready="--entityObj"
             ></furo-data-object>
+            <furo-location @-location-query-changed="--qp"></furo-location>
+
+
+
             <furo-fetch-json
-              ƒ-fetch="--menuClkd"
-              src="/mockdata/menu/samplectxmenu.json"
+              ƒ-fetch="--entityObj"
+              src="/mockdata/trees/1/testdata.json"
               @-data="--data"
             ></furo-fetch-json>
             <!-- show the selected item -->
-            <furo-pretty-json ƒ-inject-data="--menuItem(*.menuitem._value)"></furo-pretty-json>
+
           </template>
         </furo-demo-snippet>
 

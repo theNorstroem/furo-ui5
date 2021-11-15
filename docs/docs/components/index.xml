@@ -213,7 +213,7 @@ Fired when sign gets new painting, with base encoded image. Methods #  resize # 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>http://web-components.furo.pro/docs/components/furo-tree/</guid>
-      <description>furo-tree #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-tree.js&#39;; exports FuroTree js exports &amp;lt;furo-tree&amp;gt; custom-element-definition superclass LitElement mixes FBP
+      <description>furo-tree #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-tree.js&#39;; exports FuroUi5Tree js exports &amp;lt;furo-tree&amp;gt; custom-element-definition superclass LitElement mixes FBP
 tree navigation menu
 furo-tree renders a tree structure
 Attributes and Properties #  tabindex #  tabindex reflects number default: 0
@@ -230,7 +230,7 @@ Expanding is a expensive operation. _searchIsActive #  searching reflects boolea
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>http://web-components.furo.pro/docs/components/furo-tree-item/</guid>
-      <description>furo-tree-item #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-tree-item.js&#39;; exports FuroTreeItem js exports &amp;lt;furo-tree-item&amp;gt; custom-element-definition superclass LitElement mixes FBP
+      <description>furo-tree-item #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-tree-item.js&#39;; exports FuroUi5TreeItem js exports &amp;lt;furo-tree-item&amp;gt; custom-element-definition superclass LitElement mixes FBP
 todo shortdescription
 furo-tree-item todo Describe your element
 Attributes and Properties #  hidden #  hidden reflects boolean default: true

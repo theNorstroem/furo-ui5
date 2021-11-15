@@ -4,7 +4,7 @@ import '@furo/fbp/src/flow-repeat';
 import { FieldNode } from '@furo/data/src/lib/FieldNode';
 import '@furo/layout/src/furo-vertical-flex';
 import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
-import './furo-tree-item.js';
+import './furo-ui5-tree-item.js';
 // import { html as statichtml, literal } from 'lit/static-html.js';
 
 /**
@@ -32,7 +32,7 @@ import './furo-tree-item.js';
  * @demo demo-furo-tree-qp Working with query params
  * @appliesMixin FBP
  */
-export class FuroTree extends FBP(LitElement) {
+export class FuroUi5Tree extends FBP(LitElement) {
   constructor() {
     super();
     /**
@@ -55,19 +55,19 @@ export class FuroTree extends FBP(LitElement) {
     this._searchIsActive = false;
     /**
      * If you want to use a custom component for the tree-item, set this attribute.
-     * The default item component is **furo-tree-item**.
+     * The default item component is **furo-ui5-tree-item**.
      *
      * @type {*|string|string}
      */
     // eslint-disable-next-line wc/no-constructor-attributes
-    this.treeItemComponent =
-      this.getAttribute('tree-item-component') || 'furo-tree-item';
+    this._tic =
+      this.getAttribute('tree-item-component') || 'furo-ui5-tree-item';
     this._treeItemTepmplate = html([
       [
         '<template><tr><td><',
-        this.treeItemComponent,
+        this._tic,
         ' ƒ-bind-data="--itemInjected(*.item)" ƒ-search="--trigger"></',
-        this.treeItemComponent,
+        this._tic,
         '></td></tr></template>',
       ].join(''),
     ]);
@@ -599,9 +599,11 @@ export class FuroTree extends FBP(LitElement) {
       }
 
       /* remove the background color on header node */
-      :host([no-bg-on-header]) td furo-tree-item[selected][isheader],
-      :host([no-bg-on-header]) td furo-tree-item[selected][focused][isheader],
-      :host([no-bg-on-header]) td furo-tree-item[focused][isheader] {
+      :host([no-bg-on-header]) td furo-ui5-tree-item[selected][isheader],
+      :host([no-bg-on-header])
+        td
+        furo-ui5-tree-item[selected][focused][isheader],
+      :host([no-bg-on-header]) td furo-ui5-tree-item[focused][isheader] {
         background-color: unset;
       }
 
@@ -1008,4 +1010,4 @@ export class FuroTree extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('furo-tree', FuroTree);
+window.customElements.define('furo-ui5-tree', FuroUi5Tree);

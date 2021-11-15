@@ -2,6 +2,9 @@ import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
 import '@furo/layout/src/furo-horizontal-flex';
+import './furo-ui5-bool-icon.js';
+import '@ui5/webcomponents/dist/Icon.js';
+import '@ui5/webcomponents-icons/dist/border.js';
 
 import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
 
@@ -26,13 +29,14 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  * @customElement
  * @appliesMixin FBP
  */
-export class FuroTreeItem extends FBP(LitElement) {
+export class FuroUi5TreeItem extends FBP(LitElement) {
   constructor() {
     super();
     // eslint-disable-next-line wc/no-constructor-attributes
     this.hidden = true;
     this.isGroupLabel = false;
     this.indentation = 0;
+    this._icon = 'border';
   }
 
   search(event) {
@@ -58,7 +62,7 @@ export class FuroTreeItem extends FBP(LitElement) {
       });
 
       if (hasResults) {
-        // append fieldnode to result set (used in furo-tree.js)
+        // append fieldnode to result set (used in furo-ui5-tree.js)
         event.results.push(this.fieldNode);
       }
     }
@@ -130,7 +134,10 @@ export class FuroTreeItem extends FBP(LitElement) {
     }
 
     if (!fieldNode.icon._value) {
+      this._icon = 'border';
       this.noicon = true;
+    } else {
+      this._icon = fieldNode.icon._value;
     }
 
     // reflect visible close state to attr
@@ -285,15 +292,12 @@ export class FuroTreeItem extends FBP(LitElement) {
     return css`
       :host {
         display: block;
-        line-height: 48px;
         box-sizing: border-box;
         cursor: pointer;
         font-weight: 400;
         user-select: none;
-        padding-left: var(--spacing-xs, 16px);
         border-radius: 4px;
         position: relative;
-        margin-bottom: var(--spacing-xxs, 4px);
         transition: color 0.2s, background-color 0.2s;
       }
 
@@ -310,7 +314,7 @@ export class FuroTreeItem extends FBP(LitElement) {
         color: var(--error, red);
       }
 
-      :host([haserror]) furo-icon {
+      :host([haserror]) ui5-icon {
         animation: error-pulse 3s infinite;
       }
 
@@ -318,7 +322,6 @@ export class FuroTreeItem extends FBP(LitElement) {
         white-space: nowrap;
         font-size: 16px;
         letter-spacing: 0.15px;
-        margin-left: 8px;
         font-weight: 400;
       }
 
@@ -329,10 +332,8 @@ export class FuroTreeItem extends FBP(LitElement) {
       }
 
       .oc {
-        color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
-        width: 12px;
         box-sizing: border-box;
-        padding-left: 4px;
+        padding-left: 16px;
         font-size: 8px;
       }
 
@@ -344,13 +345,11 @@ export class FuroTreeItem extends FBP(LitElement) {
         color: rgba(var(--primary-rgb), var(--medium-emphasis-primary));
       }
 
-      furo-icon[error] {
+      ui5-icon[error] {
         animation: error-pulse 2s infinite;
       }
 
-      furo-icon {
-        width: 20px;
-        height: 20px;
+      ui5-icon {
         margin-right: 4px;
       }
 
@@ -377,7 +376,7 @@ export class FuroTreeItem extends FBP(LitElement) {
         margin: 0;
       }
 
-      :host([isheader]) furo-icon {
+      :host([isheader]) ui5-icon {
         margin-bottom: 4px;
       }
 
@@ -482,6 +481,9 @@ export class FuroTreeItem extends FBP(LitElement) {
       .indentation-12 .indentation {
         width: var(--tree-indentation-12, 104px);
       }
+      furo-horizontal-flex {
+        align-items: center;
+      }
     `;
   }
 
@@ -505,18 +507,17 @@ export class FuroTreeItem extends FBP(LitElement) {
           ></furo-ui5-bool-icon>
         </div>
         <div flex class="label" @-click="--labelClicked">
-          <furo-icon
+          <ui5-icon
             ?hidden="${this.noicon}"
-            icon="${this.fieldNode.icon}"
+            name="${this._icon}"
             ?error="${this.fieldNode.has_error._value}"
-          ></furo-icon>
+          ></ui5-icon>
           ${this.fieldNode.display_name}
           <span class="desc">${this.fieldNode.secondary_text}</span>
         </div>
-        <furo-ripple noink ƒ-trigger="--labelClicked"></furo-ripple>
       </furo-horizontal-flex>
     `;
   }
 }
 
-window.customElements.define('furo-tree-item', FuroTreeItem);
+window.customElements.define('furo-ui5-tree-item', FuroUi5TreeItem);
