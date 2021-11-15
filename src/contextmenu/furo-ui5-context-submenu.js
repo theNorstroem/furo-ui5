@@ -315,10 +315,6 @@ export class FuroUi5ContextSubmenu extends FBP(LitElement) {
         border-bottom: var(--ui5-listitem-border-bottom);
         margin-bottom: 8px;
       }
-
-      :host([condensed]) furo-ui5-context-menu-item {
-        padding: 0;
-      }
     `;
   }
 

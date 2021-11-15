@@ -5,14 +5,14 @@ import '@furo/util/src/furo-keydown';
 
 /**
  * `furo-ui5-context-menu`
- *  A  [material design](https://material.io/components/menus/) context menu or menu element.
+ *  is a context menu or menu element.
  *
  *  You have to put a `furo-ui5-context-menu-display` element in one of the parent elements of the element where you use the `furo-ui5-context-menu`.
  *  The app-shell is a good place for that.
  *
  * ```html
- *  <furo-ui5-context-menu condensed position="below" ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
- *      <furo-icon-button icon="menu" @-click="--menuClkd"></furo-icon-button>
+ *  <furo-ui5-context-menu position="below" ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
+ *      <ui5-icon name="menu" @-click="--menuClkd"></furo-icon-button>
  *  </furo-ui5-context-menu>
  * ```
  *
@@ -38,10 +38,6 @@ export class FuroUi5ContextMenu extends FBP(LitElement) {
        * Use this to set a string value as context.
        */
       _context: { type: String, attribute: 'context' },
-      /**
-       * set this for condensed mode.
-       */
-      condensed: { type: Boolean },
     };
   }
 
@@ -113,7 +109,6 @@ export class FuroUi5ContextMenu extends FBP(LitElement) {
           }
         },
         initiator: this,
-        condensed: this.condensed,
       };
 
       customEvent.byKeyboard = byKeyboard;

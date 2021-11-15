@@ -86,19 +86,6 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
   }
 
   /**
-   * @private
-   * @return {Object}
-   */
-  static get properties() {
-    return {
-      /**
-       * set this for condensed mode
-       */
-      condensed: { type: Boolean, reflect: true },
-    };
-  }
-
-  /**
    * flow is ready lifecycle method
    * @private
    */
@@ -113,10 +100,6 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
       const submenu = document.createElement('furo-ui5-context-submenu');
       this.shadowRoot.appendChild(submenu);
 
-      if (this.condensed) {
-        submenu.setAttribute('condensed', '');
-      }
-
       setTimeout(() => {
         submenu.init(e, this, e.byKeyboard);
       }, 10);
@@ -127,7 +110,6 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
     this.parentNode.addEventListener('open-furo-ui5-menu-requested', e => {
       e.stopPropagation();
       this.menuObject = e.detail;
-      this.condensed = this.menuObject.condensed;
 
       // if menuObject.menu is an RepeaterNode, a children field was passed in to the menu, otherwise a menuitem itself was passed in
       if (e.detail.menu instanceof RepeaterNode) {
@@ -385,10 +367,6 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
         box-sizing: border-box;
         border-bottom: var(--ui5-listitem-border-bottom);
         margin-bottom: 8px;
-      }
-
-      :host([condensed]) furo-ui5-context-menu-item {
-        padding: 0;
       }
     `;
   }

@@ -204,7 +204,6 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
     return css`
       :host {
         display: block;
-        padding: 8px 0;
         color: var(--sapTextColor);
       }
 
