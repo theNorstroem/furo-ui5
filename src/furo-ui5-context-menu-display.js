@@ -383,7 +383,7 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
       .separator {
         height: 8px;
         box-sizing: border-box;
-        border-bottom: 1px solid var(--separator);
+        border-bottom: var(--ui5-listitem-border-bottom);
         margin-bottom: 8px;
       }
 
