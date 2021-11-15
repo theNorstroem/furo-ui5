@@ -36,6 +36,7 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
        * focused state
        */
       focused: { type: Boolean, reflect: true },
+      disabled: { type: Boolean, reflect: true },
     };
   }
 
@@ -68,6 +69,10 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
       this._noicon = false;
     } else {
       this._noicon = true;
+    }
+
+    if (this.menuitem.disabled) {
+      this.disabled = this.menuitem.disabled._value;
     }
 
     if (this.menuitem.children.repeats.length > 0) {
@@ -112,6 +117,9 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
    * @private
    */
   _selectItem() {
+    if (this.disabled) {
+      return;
+    }
     const customEvent = new Event('item-selected', {
       composed: true,
       bubbles: true,
@@ -205,10 +213,16 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
       :host {
         display: block;
         color: var(--sapTextColor);
+        cursor: pointer;
       }
 
       :host([hidden]) {
         display: none;
+      }
+
+      :host([disabled]) {
+        color: var(--sapContent_DisabledTextColor);
+        cursor: unset;
       }
 
       .children {
@@ -238,7 +252,6 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
       furo-horizontal-flex {
         height: 32px;
         line-height: 32px;
-        cursor: pointer;
         box-sizing: border-box;
         padding-left: 4px;
         align-items: center;

@@ -23,6 +23,7 @@
     import '@furo/data/src/furo-catalog.js';
     import '@furo/util/src/furo-fetch-json.js';
     import '@furo/util/src/doc/furo-demo-snippet.js';
+    import '@furo/util/src/furo-pretty-json.js';
     import '@ui5/webcomponents-icons/dist/chevron-phase.js';
     import '@ui5/webcomponents-icons/dist/increase-line-height.js';
 
@@ -32,14 +33,13 @@
         <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
         <furo-demo-snippet>
           <template>
-
+            Resize your screen to test the auto detected position for
+            displayint the menu.
             <furo-ui5-context-menu
-              condensed
-              position="below"
               ƒ-trigger="--menuClkd"
               ƒ-bind-data="--menuDO"
               @-menu-item-selected="--menuItem"
-            ><button @-click="--menuClkd">open menu</button>
+            ><strong @-click="--menuClkd">open menu</strong>
             </furo-ui5-context-menu>
 
             <!-- data for the menu -->

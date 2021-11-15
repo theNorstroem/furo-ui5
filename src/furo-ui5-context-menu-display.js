@@ -14,14 +14,12 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
    *
    *  You should not interact with this component directly. Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
    *
-   *  There is nothing more to do. The menu creates a transparent "backdrop" with absolut positions 0 0 0 0
+   *  There is nothing more to do. The menu creates a transparent "backdrop" with absolute positions 0 0 0 0
    *
    * ```html
    *  <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
    * ```
    *
-   * @cssprop {N/A} [--surface=N/A] - menu background color
-   * @cssprop {N/A} [--separator=N/A] - menu item border bottom color
    *
    * @summary context menu
    * @customElement
@@ -316,7 +314,6 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
         left: 0;
         bottom: 0;
         right: 0;
-        z-index: 10;
       }
 
       :host([backdrop]) {

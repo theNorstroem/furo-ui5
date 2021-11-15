@@ -217,8 +217,8 @@
     },
     {
       "icon": null,
-      "display_name": "in divider",
-      "disabled": false,
+      "display_name": "disabled divider",
+      "disabled": true,
       "command": "Del",
       "action": "delete",
       "leading_divider": false,

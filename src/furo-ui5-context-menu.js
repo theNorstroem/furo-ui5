@@ -7,15 +7,30 @@ import '@furo/util/src/furo-keydown';
  * `furo-ui5-context-menu`
  *  is a context menu or menu element.
  *
+ *
  *  You have to put a `furo-ui5-context-menu-display` element in one of the parent elements of the element where you use the `furo-ui5-context-menu`.
  *  The app-shell is a good place for that.
  *
  * ```html
- *  <furo-ui5-context-menu position="below" ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
+ *  <furo-ui5-context-menu  ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
  *      <ui5-icon name="menu" @-click="--menuClkd"></furo-icon-button>
  *  </furo-ui5-context-menu>
  * ```
  *
+ * ## Data signature
+ *
+ * ```yaml
+ *- type: 'menu.Menuitem #Item signature for a context menu'
+ *  fields:
+ *    icon: 'string:1 #Leading icon of the menu'
+ *    display_name: 'string:2 #String representation of the menu item. Menu item text'
+ *    disabled: 'bool:3 #Display actions as disabled when they can only be used sometimes, under certain conditions. They should be displayed as disabled rather than removing them.'
+ *    command: 'string:4 #Keyboard command hint'
+ *    action: 'string:5 #String representation of the menu item action'
+ *    leading_divider: 'bool:6 #Item has a leading divider line'
+ *    children: '[] menu.Menuitem:7 #Children of this item'
+ *    flags: '- [] string:8 #Attribute flags e.g. important, negative, positive'
+ *```
  *
  * @fires {{context, menuitem}} open-furo-ui5-menu-requested -  Fired when context menu was triggered
  * @fires { {context, menuitem}} menu-item-selected -  Fired when a menu item is selected
@@ -143,6 +158,7 @@ export class FuroUi5ContextMenu extends FBP(LitElement) {
     return css`
       :host {
         display: inline-block;
+        cursor: context-menu;
       }
 
       :host([hidden]) {
