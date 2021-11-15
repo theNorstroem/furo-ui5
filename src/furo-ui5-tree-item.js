@@ -333,16 +333,16 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
 
       .oc {
         box-sizing: border-box;
-        padding-left: 16px;
         font-size: 8px;
+        padding-left: 16px;
       }
 
       :host([selected]) .oc {
-        color: rgba(var(--primary-rgb), var(--medium-emphasis-primary));
+        color: var(--sapList_Active_Background);
       }
 
       :host([searchmatch]) {
-        color: rgba(var(--primary-rgb), var(--medium-emphasis-primary));
+        color: var(--sapList_Active_Background);
       }
 
       ui5-icon[error] {

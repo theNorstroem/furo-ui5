@@ -6,7 +6,7 @@
   "root": {
     "id": "1",
     "display_name": "Home",
-    "secondary_text": "Secondary node description",
+    "secondary_text": "Secondary node description Secondary node description",
     "description": "Description for home",
     "icon": "account",
     "panel": "view",

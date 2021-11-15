@@ -560,42 +560,33 @@ export class FuroUi5Tree extends FBP(LitElement) {
       /* focus, :host(:focus) td > *[focused]  is for mouse navigation */
       td > *:hover,
       :host([focused]) td > *[focused] {
-        background-color: rgba(var(--primary-rgb), var(--state-hover));
-        color: var(--primary);
+        background: var(--sapList_Hover_Background);
       }
 
-      /* focus, :host(:focus) td > *[focused]  is for mouse navigation */
+      /* selected focus  */
       :host([focused]) td > *[focused] {
-        background-color: rgba(var(--primary-rgb), var(--state-focus));
-        color: var(--primary);
+        background: var(--sapList_Hover_SelectionBackground);
       }
 
       /* selected */
       td > *[selected],
       :host(:not([focused])) td > *[selected] {
-        background-color: rgba(var(--primary-rgb), var(--state-selected));
-        color: var(--primary);
+        background: var(--sapList_SelectionBackgroundColor);
       }
 
       /* selected focus  */
       :host([focused]) td > *[selected] {
-        background-color: rgba(var(--primary-rgb), var(--state-selected-focus));
-        color: var(--primary);
+        background: var(--sapList_Hover_SelectionBackground);
       }
 
       /* selected focus  */
       td:hover > *[selected][focused] {
-        background-color: rgba(
-          var(--primary-rgb),
-          var(--state-selected-focused-hover)
-        );
-        color: var(--primary);
+        background: var(--sapList_Hover_SelectionBackground);
       }
 
       /* selected focus */
       :host([focused]) td > *[selected][focused] {
-        background-color: rgba(var(--primary-rgb), var(--state-selected-focus));
-        color: var(--primary);
+        background: var(--sapList_Hover_SelectionBackground);
       }
 
       /* remove the background color on header node */
