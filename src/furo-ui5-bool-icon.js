@@ -26,6 +26,10 @@ class FuroDataBoolIcon extends FBP(LitElement) {
      * @private
      */
     this._ocSymbol = this.symbolfalse;
+
+    this.addEventListener('click', () => {
+      this.toggle();
+    });
   }
 
   /**
@@ -51,6 +55,13 @@ class FuroDataBoolIcon extends FBP(LitElement) {
 
       this.requestUpdate();
     }
+  }
+
+  /**
+   * Toggles the icon.
+   */
+  toggle() {
+    this._field._value = !this._field._value;
   }
 
   /**

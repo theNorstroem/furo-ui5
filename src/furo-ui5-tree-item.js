@@ -334,7 +334,6 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       .oc {
         box-sizing: border-box;
         font-size: 8px;
-        padding-left: 16px;
       }
 
       :host([selected]) .oc {
@@ -430,6 +429,10 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
         );
       }
 
+      .indentation {
+        height: 35px;
+      }
+
       .indentation-0 .indentation {
         width: var(--tree-indentation-0, 0);
       }
@@ -483,6 +486,10 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       }
       furo-horizontal-flex {
         align-items: center;
+      }
+
+      furo-ui5-bool-icon {
+        text-align: center;
       }
     `;
   }
