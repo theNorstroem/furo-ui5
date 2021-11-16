@@ -19,6 +19,7 @@
     import { html, render } from 'lit';
     import './initEnv.js';
     import '../src/furo-ui5-context-menu.js';
+    import '../src/furo-ui5-text-input-labeled.js';
     import '../src/furo-ui5-context-menu-display.js';
     import '@furo/data/src/furo-catalog.js';
     import '@furo/util/src/furo-fetch-json.js';
@@ -31,9 +32,10 @@
 
     render(
       html`
-        <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
+
         <furo-demo-snippet>
           <template>
+            <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
             Resize your screen to test the auto detected position for
             displayint the menu.
             <furo-ui5-context-menu

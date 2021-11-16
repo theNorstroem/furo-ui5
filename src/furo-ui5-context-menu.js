@@ -26,10 +26,8 @@ import '@furo/util/src/furo-keydown';
  *    display_name: 'string:2 #String representation of the menu item. Menu item text'
  *    disabled: 'bool:3 #Display actions as disabled when they can only be used sometimes and under certain conditions.'
  *    command: 'string:4 #Keyboard command hint'
- *    action: 'string:5 #String representation of the menu item action'
- *    leading_divider: 'bool:6 #Item has a leading divider line'
- *    children: '[] menu.Menuitem:7 #Children of this item'
- *    flags: '- [] string:8 #Attribute flags e.g. important, negative, positive'
+ *    leading_divider: 'bool:5 #Item has a leading divider line'
+ *    children: '[] menu.Menuitem:6 #Children of this item'
  *```
  *
  * @fires {{context, menuitem}} open-furo-ui5-menu-requested -  Fired when context menu was triggered

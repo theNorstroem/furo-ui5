@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+      margin: 0;
+    }
+
+    furo-vertical-scroller{
+      height: 100vh;
+    }
+
+    .demopanel {
+      padding: 0;
+      margin-bottom: 40px;
+      height: 100%;
+      background: #eee;
+      background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.2) 25%,
+        transparent 0,
+        transparent 75%,
+        rgba(0, 0, 0, 0.2) 0
+      ),
+      linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.2) 25%,
+        transparent 0,
+        transparent 75%,
+        rgba(0, 0, 0, 0.2) 0
+      );
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+      border: 1px solid #666666;
+    }
+
+    furo-ui5-flexible-grid div {
+      border: 1px solid black;
+    }
+
+    /* needed because the contents get positioned vertically on small screens*/
+    .left[size='size-s'] {
+      height: 22rem;
+    }
+
+    .left[size='size-m'] {
+      height: 16rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../src/furo-ui5-flexible-grid.js';
+    import '../src/furo-ui5-z-grid.js';
+
+
+
+    render(
+      html`
+        <furo-vertical-scroller>
+
+
+          <h3>Resize your screen</h3>
+
+          <div class="demopanel">
+            <furo-ui5-flexible-grid>
+              <furo-ui5-z-grid class="left" hspan="3" full-on-size-medium="" full-on-size-small="">
+                <div vspan="1" hspan="2" style="background: lightblue;">2x1</div>
+                <div vspan="1" hspan="2" style="background: lightblue;">2x1</div>
+
+                <div vspan="1" hspan="4" style="background: rebeccapurple;">4x1</div>
+
+              </furo-ui5-z-grid>
+
+              <furo-ui5-z-grid hstart="4" fill="">
+                <div vspan="2" hspan="1" style="background: whitesmoke;">1x2</div>
+                <div vspan="1" hspan="1" style="background: pink;">1x1</div>
+                <div vspan="2" hspan="2" style="background: papayawhip;">2x2</div>
+                <div vspan="1" hspan="2" style="background: lightblue;">2x1</div>
+
+                <div hspan="full" style="background: papayawhip;">
+                  full width, no height given
+                </div>
+              </furo-ui5-z-grid>
+            </furo-ui5-flexible-grid>
+
+          </div>
+        </furo-vertical-scroller>
+
+
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
