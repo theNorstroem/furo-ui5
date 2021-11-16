@@ -958,12 +958,12 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       .list {
         position: absolute;
         overflow: auto;
-        box-shadow: rgba(0, 0, 0, 0.42) 0 0 0 1px;
+        box-shadow: var(--sapContent_Shadow2);
         z-index: 1;
         display: none;
         background-color: var(
           --furo-ui5-reference-search-list-background,
-          var(--surface, #ffffff)
+          var(--sapList_Background, #ffffff)
         );
       }
 

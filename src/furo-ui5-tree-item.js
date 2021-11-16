@@ -311,7 +311,7 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
 
       :host([haserror]),
       :host([selected][haserror]) {
-        color: var(--error, red);
+        color: var(--sapNegativeColor, #b00);
       }
 
       :host([haserror]) ui5-icon {
@@ -354,19 +354,19 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
 
       @keyframes error-pulse {
         0% {
-          fill: var(--on-primary, #46150f);
+          fill: var(--sapErrorBackground, #ffebeb);
         }
         12% {
-          fill: var(--error, #fc4d34);
+          fill: var(--sapNegativeColor, #b00);
         }
         24% {
-          fill: var(--on-primary, #46150f);
+          fill: var(--sapErrorBackground, #ffebeb);
         }
         36% {
-          fill: var(--error, #fc4d34);
+          fill: var(--sapNegativeColor, #b00);
         }
         48% {
-          fill: var(--on-primary, #46150f);
+          fill: var(--sapErrorBackground, #ffebeb);
         }
       }
 
@@ -387,7 +387,7 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
         font-size: 14px;
         height: 24px;
         letter-spacing: 0.1px;
-        color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
+        color: var(--sapNeutralTextColor, #6a6d70);
         line-height: 20px;
         display: block;
         position: absolute;
@@ -412,9 +412,9 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       }
 
       :host([is-group-label]) {
-        border-top: 1px solid var(--separator, #cdcdcd);
-        margin-top: var(--spacing-xs);
-        padding-top: var(--spacing-xxs);
+        border-top: 1px solid var(--sapList_GroupHeaderBorderColor, #d9d9d9);
+        margin-top: 0.25rem;
+        padding-top:0.25rem;
         border-radius: 0;
       }
 
@@ -423,10 +423,7 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
         line-height: 20px;
         font-weight: normal;
         letter-spacing: 0.1px;
-        color: var(
-          --group-label-color,
-          rgba(var(--on-surface-rgb), var(--medium-emphasis-surface))
-        );
+        color: var(--sapList_GroupHeaderTextColor, #32363a);
       }
 
       .indentation {

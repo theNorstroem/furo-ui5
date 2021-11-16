@@ -8,6 +8,10 @@ import { FBP } from '@furo/fbp';
  *
  * This component uses utf-8 symbols for true and false at the moment.
  *
+ * ```
+ * <furo-ui5-bool-icon ƒ-bind-data="--FieldNode"></furo-ui5-bool-icon>
+ * ```
+ *
  * @summary  Displays a icon/symbol for a boolean value
  * @customElement
  * @demo demo-furo-ui5-bool-icon

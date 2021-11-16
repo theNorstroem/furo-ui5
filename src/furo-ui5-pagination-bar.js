@@ -20,6 +20,10 @@ import { i18n } from '@furo/framework/src/i18n.js';
  * this pagination element loops the hts array and find out the pagination
  * information like prev, next, first and last
  *
+ * ```
+ *   <furo-ui5-pagination-bar ƒ-inject="--hts"></furo-ui5-pagination-bar>
+ * ```
+ *
  * @cssprop {24px} [--furo-ui5-pagination-bar-padding-right=--spacing] - Right padding definition
  * @cssprop {#ffffff} [--furo-ui5-pagination-bar-background-color=--surface-light] - Background color
  *
@@ -46,13 +50,13 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
       :host {
         width: 100%;
         display: block;
-        padding: var(--spacing-xs)
-          var(--furo-ui5-pagination-bar-padding-right, var(--spacing, 24px))
-          var(--spacing-xs) 0;
+        padding: 0.25rem
+          var(--furo-ui5-pagination-bar-padding-right, 1rem)
+          0.25rem 1rem;
         box-sizing: border-box;
         background-color: var(
           --furo-ui5-pagination-bar-background-color,
-          var(--surface-light, #fff)
+          var(--sapPageHeader_Background, #fff)
         );
       }
 

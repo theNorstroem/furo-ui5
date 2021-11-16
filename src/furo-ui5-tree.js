@@ -529,8 +529,8 @@ export class FuroUi5Tree extends FBP(LitElement) {
         height: 100%;
         outline: none;
         position: relative;
-        background: var(--surface, white);
-        color: var(--on-surface, #333333);
+        background: var(--sapList_Background, #ffffff);
+        color: var(--sapTextColor, #32363a);
       }
 
       .tablewrapper {
@@ -548,7 +548,7 @@ export class FuroUi5Tree extends FBP(LitElement) {
       table {
         border-spacing: 0;
         min-width: 100%;
-        padding: var(--spacing-xs) 8px;
+        padding: 0.25rem 1rem;
         box-sizing: border-box;
       }
 
@@ -600,13 +600,13 @@ export class FuroUi5Tree extends FBP(LitElement) {
 
       @keyframes border-pulsate {
         0% {
-          border-color: var(--primary, #57a9ff);
+          border-color: var(--sapBrandColor, #0a6ed1);
         }
         50% {
-          border-color: var(--surface, #999999);
+          border-color: var(--sapList_Background, #ffffff);
         }
         100% {
-          border-color: var(--primary, #57a9ff);
+          border-color: var(--sapBrandColor, #0a6ed1);
         }
       }
 
@@ -614,15 +614,15 @@ export class FuroUi5Tree extends FBP(LitElement) {
         font-size: 20px;
         height: 40px;
         line-height: 56px;
-        padding-left: var(--spacing-s, 16px);
+        padding-left: 1rem;
       }
 
       .secondary {
         font-size: 14px;
         height: 24px;
         letter-spacing: 0.1px;
-        padding-left: var(--spacing-s, 16px);
-        color: rgba(var(--on-surface-rgb), var(--medium-emphasis-surface));
+        padding-left: 1rem;
+        color: var(--sapNeutralTextColor, #6a6d70);
         line-height: 20px;
       }
 

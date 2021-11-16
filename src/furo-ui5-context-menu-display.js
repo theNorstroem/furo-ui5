@@ -328,7 +328,7 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
           transform 0.12s cubic-bezier(0, 0, 0.2, 1),
           -webkit-transform 0.12s cubic-bezier(0, 0, 0.2, 1);
         opacity: 0;
-        background-color: var(--surface);
+        background-color: var(--sapList_Background);
         overflow-y: auto;
         box-sizing: border-box;
         box-shadow: var(--sapContent_Shadow2);

@@ -26,6 +26,11 @@ import * as Button from '@ui5/webcomponents/dist/Button.js';
  * @demo demo-furo-ui5-button Basic usage
  */
 export class FuroUi5Button extends Button.default {
+
+  /**
+   * Overridden, because we use a different i18n bundle
+   * @returns {*|string}
+   */
   get buttonTypeText() {
     return this.getAttribute('design') || '';
   }

@@ -21,6 +21,10 @@ import '@ui5/webcomponents/dist/Panel.js';
  *  This component is a container which has a header and a content area and is used for grouping and displaying information.
  *  It can be collapsed to save space on the screen.
  *
+ *  ```
+ *   <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task"></furo-ui5-header-panel>
+ *  ```
+ *
  * @slot {HTMLElement [0..n]} action - defines an action, displayed in the right most part of the header panel.
  * @slot {HTMLElement [0..n]} - defines the content of the panel
  *
@@ -183,6 +187,61 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
       panel.collapsed = !panel.collapsed;
       this.collapsed = panel.collapsed;
     });
+
+    this.updateComplete.then(() => {
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(entries => {
+          window.requestAnimationFrame(() => {
+            for (const entry of entries) {
+              this._checkSize(entry.contentRect.width);
+            }
+          });
+        });
+        ro.observe(this);
+      } else {
+        // fallback, just listen to the resize event
+        setTimeout(() => {
+          const cr = this.getBoundingClientRect();
+          this._checkSize(cr.width);
+        }, 1);
+
+        window.addEventListener('resize', () => {
+          const cr = this.getBoundingClientRect();
+          this._checkSize(cr.width);
+        });
+      }
+    });
+
+  }
+
+  /**
+   * Form breakpoints according to SAP Fiori Design System
+   * https://experience.sap.com/fiori-design-web/form/
+   * @param size
+   * @private
+   */
+  _checkSize(size) {
+    if (size <= 600) {
+      this._setSizeAttribute('size-s');
+    } else if (size > 600 && size <= 1023) {
+      this._setSizeAttribute('size-m');
+    } else if (size > 1023 && size <= 1439) {
+      this._setSizeAttribute('size-l');
+    } else if (size > 1439) {
+      this._setSizeAttribute('size-xl');
+    } else {
+      this._setSizeAttribute('size-m');
+    }
+  }
+
+  /**
+   * Sets data-size attribute
+   * @param attrValue
+   * @private
+   */
+  _setSizeAttribute(attrValue) {
+    const panel = this.shadowRoot.querySelector('ui5-panel');
+    panel.setAttribute('data-size', attrValue);
   }
 
   /**
@@ -207,12 +266,27 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
       }
 
       ui5-panel {
-        padding: var(--spacing, 24px) var(--spacing, 24px) 0
-          var(--spacing, 24px);
+        padding: 0.25rem 2rem 0 2rem;
         background: var(--sapGroup_ContentBackground, white);
         min-height: 5rem;
         box-sizing: border-box;
         border-bottom: none;
+      }
+
+      ui5-panel[data-size*=size-s] {
+        padding: 0.25rem 1rem 0 1rem;
+      }
+
+      ui5-panel[data-size*=size-m] {
+        padding: 0.25rem 2rem 0 2rem;
+      }
+
+      ui5-panel[data-size*=size-l] {
+        padding: 1rem 2rem 0 2rem;
+      }
+
+      ui5-panel[data-size*=size-xl] {
+        padding: 2rem 3rem 0 3rem;
       }
 
       .header {
@@ -274,7 +348,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
         will-change: transform;
         overflow: visible;
         cursor: pointer;
-        color: var(--primary-dark);
+        color: var(--sapHighlightColor);
       }
 
       .splitter {
@@ -290,11 +364,11 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
           to right,
           var(
             --furo-ui5-header-panel-splitter-start-color,
-            var(--primary-dark, #0854a0)
+            var(--sapHighlightColor, #0854a0)
           ),
           var(
             --furo-ui5-header-panel-splitter-end-rgba-color,
-            rgba(var(--primary-rgb, 8, 84, 160), 0)
+            rgba(8, 84, 160, 0)
           )
         );
       }
@@ -304,11 +378,11 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
           to left,
           var(
             --furo-ui5-header-panel-splitter-start-color,
-            var(--primary-dark, #0854a0)
+            var(--sapHighlightColor, #0854a0)
           ),
           var(
             --furo-ui5-header-panel-splitter-end-rgba-color,
-            rgba(var(--primary-rgb, 8, 84, 160), 0)
+            rgba(8, 84, 160, 0)
           )
         );
       }

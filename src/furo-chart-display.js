@@ -39,7 +39,7 @@ class FuroChartDisplay extends FBP(LitElement) {
     this.apexOptions = {
       series: [],
       yaxis: [],
-      // belize qualitative color palete
+      // belize qualitative color palette
       colors: [
         '#5899DA',
         '#E8743B',

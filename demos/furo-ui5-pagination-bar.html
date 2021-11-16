@@ -35,25 +35,17 @@
 
   <script type="module">
     import { html, render } from 'lit';
-    import '../src/furo-ui5-bar.js';
-    import '../src/furo-ui5-button.js';
-
+    import '../src/furo-ui5-pagination-bar.js';
 
 
     render(
       html`
         <furo-vertical-scroller>
 
-          <h3>furo-ui5-bar Basic Usage</h3>
+          <h3>furo-ui5-pagination-bar Basic Usage</h3>
 
           <div class="demopanel">
-            <furo-ui5-bar design="Header" ƒ-bind-data="--furoLinkRepeaterNode">
-                 <ui5-label>Something</ui5-label>
-                 <ui5-button rel="update" design="Emphasized" slot="endContent">Save</ui5-button>
-                 <ui5-button rel="delete" slot="endContent">Delete</ui5-button>
-                 <ui5-button slot="endContent">Fixed Action</ui5-button>
-                 <furo-ui5-button slot="startContent" design="Positive">Furo Ui5 Button</furo-ui5-button>
-            </furo-ui5-bar>
+            <furo-ui5-pagination-bar></furo-ui5-pagination-bar>
 
           </div>
         </furo-vertical-scroller>

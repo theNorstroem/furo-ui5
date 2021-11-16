@@ -91,7 +91,7 @@ export class FuroUi5SignPad extends FBP(LitElement) {
         left: 24px;
         right: 24px;
         pointer-events: none;
-        border: 1px dashed black;
+        border: 1px solid var(--sapField_BorderColor, #89919a);
       }
     `;
   }
