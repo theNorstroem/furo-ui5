@@ -1,6 +1,9 @@
 import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
+import '@ui5/webcomponents/dist/Icon.js';
+import '@ui5/webcomponents-icons/dist/navigation-down-arrow.js';
+import '@ui5/webcomponents-icons/dist/navigation-right-arrow.js';
 
 /**
  * `furo-ui5-bool-icon`
@@ -21,8 +24,8 @@ class FuroDataBoolIcon extends FBP(LitElement) {
   constructor() {
     super();
 
-    this.symboltrue = '▼';
-    this.symbolfalse = '▶';
+    this.symboltrue = 'navigation-down-arrow';
+    this.symbolfalse = 'navigation-right-arrow';
     this.field = {};
     /**
      * open close symbol
@@ -30,6 +33,7 @@ class FuroDataBoolIcon extends FBP(LitElement) {
      * @private
      */
     this._ocSymbol = this.symbolfalse;
+    this._state = false;
 
     this.addEventListener('click', () => {
       this.toggle();
@@ -46,15 +50,19 @@ class FuroDataBoolIcon extends FBP(LitElement) {
       this._field.addEventListener('field-value-changed', () => {
         if (this._field._value === true) {
           this._ocSymbol = this.symboltrue;
+          this._state = true;
         } else {
           this._ocSymbol = this.symbolfalse;
+          this._state = false;
         }
         this.requestUpdate();
       });
       if (this._field._value === true) {
         this._ocSymbol = this.symboltrue;
+        this._state = true;
       } else {
         this._ocSymbol = this.symbolfalse;
+        this._state = false;
       }
 
       this.requestUpdate();
@@ -65,7 +73,17 @@ class FuroDataBoolIcon extends FBP(LitElement) {
    * Toggles the icon.
    */
   toggle() {
-    this._field._value = !this._field._value;
+    if (this._field) {
+      this._field._value = !this._field._value;
+    } else {
+      this._state = !this._state;
+      if (this._state) {
+        this._ocSymbol = this.symboltrue;
+      } else {
+        this._ocSymbol = this.symbolfalse;
+      }
+      this.requestUpdate();
+    }
   }
 
   /**
@@ -101,6 +119,13 @@ class FuroDataBoolIcon extends FBP(LitElement) {
       :host([hidden]) {
         display: none;
       }
+
+      ui5-icon {
+        width: var(--_ui5-tree-toggle-icon-size);
+        height: var(--_ui5-tree-toggle-icon-size);
+        color: var(--sapContent_IconColor);
+        cursor: pointer;
+      }
     `;
   }
 
@@ -110,7 +135,7 @@ class FuroDataBoolIcon extends FBP(LitElement) {
    */
   render() {
     // language=HTML
-    return html` ${this._ocSymbol} `;
+    return html`<ui5-icon name="${this._ocSymbol}"></ui5-icon>`;
   }
 }
 
