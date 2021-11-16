@@ -5,6 +5,10 @@
     "name": "FuroUi5Button",
     "members": [
       {
+        "kind": "field",
+        "name": "buttonTypeText"
+      },
+      {
         "kind": "method",
         "name": "disable",
         "description": "Sets the button state to disabled"
@@ -84,6 +88,7 @@
       "signature_pad": "3.0.0-beta.4"
     },
     "devDependencies": {
+      "@furo/route": "^2.0.0-rc.3",
       "lit-html": "2.0.1",
       "@custom-elements-manifest/analyzer": "^0.5.7",
       "@open-wc/eslint-config": "^7.0.0",
@@ -137,6 +142,10 @@
         "description": "`furo-ui5-button`\nThe furo-ui5-button component represents a simple push button. It enables users to trigger actions by clicking or\ntapping the furo-ui5-button, or by pressing certain keyboard keys, such as Enter.\nUsage\nFor the furo-ui5-button UI, you can define text, icon, or both. You can also specify whether the text or the icon is displayed first.\n\nYou can choose from a set of predefined types that offer different styling to correspond to the triggered action.\n\nYou can set the furo-ui5-button as enabled or disabled.\nAn enabled ui5-button can be pressed by clicking or tapping it.\nThe button changes its style to provide visual feedback to the user that it is pressed or hovered over with the mouse cursor.\nA disabled furo-ui5-button appears inactive and cannot be pressed.\n\nWhat is different from ui5-button?\nWith flow based programming it's usual to address functions. So we added two convenience functions for\n- disabling => ƒ-disable\n- enabling => ƒ-enable\n\nhttps://sap.github.io/ui5-webcomponents/playground/components/Button/",
         "name": "FuroUi5Button",
         "members": [
+          {
+            "kind": "field",
+            "name": "buttonTypeText"
+          },
           {
             "kind": "method",
             "name": "disable",

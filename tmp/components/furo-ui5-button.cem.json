@@ -8,6 +8,10 @@
       "name": "FuroUi5Button",
       "members": [
         {
+          "kind": "field",
+          "name": "buttonTypeText"
+        },
+        {
           "kind": "method",
           "name": "disable",
           "description": "Sets the button state to disabled"

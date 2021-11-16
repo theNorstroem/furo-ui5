@@ -236,6 +236,7 @@
       "signature_pad": "3.0.0-beta.4"
     },
     "devDependencies": {
+      "@furo/route": "^2.0.0-rc.3",
       "lit-html": "2.0.1",
       "@custom-elements-manifest/analyzer": "^0.5.7",
       "@open-wc/eslint-config": "^7.0.0",

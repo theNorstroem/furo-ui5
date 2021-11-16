@@ -9,7 +9,7 @@
           "text": "#ffffff"
         },
         "description": "background color of the result list",
-        "name": "--furo-data-reference-search-list-background",
+        "name": "--furo-ui5-reference-search-list-background",
         "default": "--surface"
       }
     ],
@@ -179,6 +179,11 @@
           }
         ],
         "description": "Sets the filter.\nHint: use the FieldNode._base64 property to send complex objects as a filter and decode it on the server side\nor do btoa(JSON.stringify(FILTER))"
+      },
+      {
+        "kind": "method",
+        "name": "clearResultList",
+        "description": "clears the result set"
       },
       {
         "kind": "field",
@@ -627,6 +632,7 @@
       "signature_pad": "3.0.0-beta.4"
     },
     "devDependencies": {
+      "@furo/route": "^2.0.0-rc.3",
       "lit-html": "2.0.1",
       "@custom-elements-manifest/analyzer": "^0.5.7",
       "@open-wc/eslint-config": "^7.0.0",
@@ -685,7 +691,7 @@
               "text": "#ffffff"
             },
             "description": "background color of the result list",
-            "name": "--furo-data-reference-search-list-background",
+            "name": "--furo-ui5-reference-search-list-background",
             "default": "--surface"
           }
         ],
@@ -855,6 +861,11 @@
               }
             ],
             "description": "Sets the filter.\nHint: use the FieldNode._base64 property to send complex objects as a filter and decode it on the server side\nor do btoa(JSON.stringify(FILTER))"
+          },
+          {
+            "kind": "method",
+            "name": "clearResultList",
+            "description": "clears the result set"
           },
           {
             "kind": "field",

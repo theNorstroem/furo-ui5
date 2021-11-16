@@ -17,6 +17,11 @@
       "description": "Binds a field node to the component"
     },
     {
+      "kind": "method",
+      "name": "toggle",
+      "description": "Toggles the icon."
+    },
+    {
       "kind": "field",
       "name": "symboltrue",
       "type": {

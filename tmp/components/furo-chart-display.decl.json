@@ -1,6 +1,6 @@
 {
   "kind": "class",
-  "description": "`furo-chart-display`\n Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).\n\n Use `furo-data-chart-binder` to connect your data.\n\n ```html\n <furo-chart-display chart-type=\"bar\">\n    <furo-data-chart-binder\n        ƒ-bind-data=\"--projectDAO(*.entities)\"\n        data-field=\"data.cost_limit.units\"\n        category-field=\"data.description\"\n    ></furo-data-chart-binder>\n </furo-chart-display>\n ```",
+  "description": "`furo-chart-display`\n Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).\n\n Use `furo-ui5-chart-binder` to connect your data.\n\n ```html\n <furo-chart-display chart-type=\"bar\">\n    <furo-ui5-chart-binder\n        ƒ-bind-data=\"--projectDAO(*.entities)\"\n        data-field=\"data.cost_limit.units\"\n        category-field=\"data.description\"\n    ></furo-ui5-chart-binder>\n </furo-chart-display>\n ```",
   "name": "FuroChartDisplay",
   "members": [
     {
@@ -206,7 +206,7 @@
       "type": {
         "text": "Fieldnode"
       },
-      "description": " Fired when a marker for this data source was clicked. Note: the event is fired from the furo-data-chart-binder",
+      "description": " Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart-binder",
       "name": "data-point-clicked"
     }
   ],

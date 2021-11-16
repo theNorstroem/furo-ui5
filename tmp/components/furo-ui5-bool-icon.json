@@ -18,6 +18,11 @@
         "description": "Binds a field node to the component"
       },
       {
+        "kind": "method",
+        "name": "toggle",
+        "description": "Toggles the icon."
+      },
+      {
         "kind": "field",
         "name": "symboltrue",
         "type": {
@@ -135,6 +140,7 @@
       "signature_pad": "3.0.0-beta.4"
     },
     "devDependencies": {
+      "@furo/route": "^2.0.0-rc.3",
       "lit-html": "2.0.1",
       "@custom-elements-manifest/analyzer": "^0.5.7",
       "@open-wc/eslint-config": "^7.0.0",
@@ -200,6 +206,11 @@
               }
             ],
             "description": "Binds a field node to the component"
+          },
+          {
+            "kind": "method",
+            "name": "toggle",
+            "description": "Toggles the icon."
           },
           {
             "kind": "field",

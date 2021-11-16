@@ -51,6 +51,7 @@
       "signature_pad": "3.0.0-beta.4"
     },
     "devDependencies": {
+      "@furo/route": "^2.0.0-rc.3",
       "lit-html": "2.0.1",
       "@custom-elements-manifest/analyzer": "^0.5.7",
       "@open-wc/eslint-config": "^7.0.0",
@@ -111,7 +112,7 @@
         "declarations": [
           {
             "kind": "class",
-            "description": "`furo-chart-display`\n Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).\n\n Use `furo-data-chart-binder` to connect your data.\n\n ```html\n <furo-chart-display chart-type=\"bar\">\n    <furo-data-chart-binder\n        ƒ-bind-data=\"--projectDAO(*.entities)\"\n        data-field=\"data.cost_limit.units\"\n        category-field=\"data.description\"\n    ></furo-data-chart-binder>\n </furo-chart-display>\n ```",
+            "description": "`furo-chart-display`\n Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).\n\n Use `furo-ui5-chart-binder` to connect your data.\n\n ```html\n <furo-chart-display chart-type=\"bar\">\n    <furo-ui5-chart-binder\n        ƒ-bind-data=\"--projectDAO(*.entities)\"\n        data-field=\"data.cost_limit.units\"\n        category-field=\"data.description\"\n    ></furo-ui5-chart-binder>\n </furo-chart-display>\n ```",
             "name": "FuroChartDisplay",
             "members": [
               {
@@ -317,7 +318,7 @@
                 "type": {
                   "text": "Fieldnode"
                 },
-                "description": " Fired when a marker for this data source was clicked. Note: the event is fired from the furo-data-chart-binder",
+                "description": " Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart-binder",
                 "name": "data-point-clicked"
               }
             ],
@@ -470,7 +471,7 @@
         "declarations": [
           {
             "kind": "class",
-            "description": "`furo-data-chart-binder`\n Connects data objects (repeaterNodes) with the charting lib.\n\n Use multiple binders if you need more then one series per chart.\n\n ```html\n <furo-chart-display chart-type=\"bar\">\n    <furo-data-chart-binder\n        ƒ-bind-data=\"--projectDAO(*.entities)\"\n        data-field=\"data.cost_limit.units\"\n        category-field=\"data.description\"\n    ></furo-data-chart-binder>\n </furo-chart-display>\n ```",
+            "description": "`furo-ui5-chart-binder`\n Connects data objects (repeaterNodes) with the charting lib.\n\n Use multiple binders if you need more then one series per chart.\n\n ```html\n <furo-chart-display chart-type=\"bar\">\n    <furo-ui5-chart-binder\n        ƒ-bind-data=\"--projectDAO(*.entities)\"\n        data-field=\"data.cost_limit.units\"\n        category-field=\"data.description\"\n    ></furo-ui5-chart-binder>\n </furo-chart-display>\n ```",
             "name": "FuroDataChartBinder",
             "members": [
               {
@@ -800,14 +801,14 @@
               "package": "lit"
             },
             "summary": "connect data to a chart",
-            "tagName": "furo-data-chart-binder",
+            "tagName": "furo-ui5-chart-binder",
             "customElement": true
           }
         ],
         "exports": [
           {
             "kind": "custom-element-definition",
-            "name": "furo-data-chart-binder",
+            "name": "furo-ui5-chart-binder",
             "declaration": {
               "name": "FuroDataChartBinder",
               "module": "src/furo-data-chart-binder.js"
@@ -817,248 +818,102 @@
       },
       {
         "kind": "javascript-module",
-        "path": "src/furo-data-context-menu-display.js",
+        "path": "src/furo-ui5-bar.js",
         "declarations": [
           {
             "kind": "class",
-            "description": "",
-            "name": "FuroDataContextMenuDisplay",
-            "members": [
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "hideMenu"
-              },
-              {
-                "kind": "method",
-                "name": "triggerNavigation",
-                "parameters": [
-                  {
-                    "name": "key"
-                  }
-                ],
-                "description": "Interface for the furo navigation pad"
-              },
-              {
-                "kind": "field",
-                "name": "borderDistance",
-                "type": {
-                  "text": "number"
-                },
-                "default": "48"
-              },
-              {
-                "kind": "field",
-                "name": "_repeatsChanged"
-              },
-              {
-                "kind": "field",
-                "name": "condensed",
-                "privacy": "public",
-                "description": "set this for condensed mode",
-                "attribute": "condensed",
-                "reflects": true
-              }
-            ],
-            "attributes": [
-              {
-                "name": "condensed",
-                "description": "set this for condensed mode",
-                "fieldName": "condensed"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "tagName": "furo-data-context-menu-display",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "js",
-            "name": "FuroDataContextMenuDisplay",
-            "declaration": {
-              "name": "FuroDataContextMenuDisplay",
-              "module": "src/furo-data-context-menu-display.js"
-            }
-          },
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-data-context-menu-display",
-            "declaration": {
-              "name": "FuroDataContextMenuDisplay",
-              "module": "src/furo-data-context-menu-display.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/furo-data-context-menu.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-data-context-menu`\n A  [material design](https://material.io/components/menus/) context menu or menu element.\n\n You have to put a `furo-data-context-menu-display` element in one of the parent elements of the element where you use the `furo-data-context-menu`.\n The app-shell is a good place for that.\n\n```html\n <furo-data-context-menu condensed position=\"below\" ƒ-trigger=\"--menuClkd\" ƒ-bind-data=\"--menuObject\" @-menu-item-selected=\"--menuItem\">\n     <furo-icon-button icon=\"menu\" @-click=\"--menuClkd\"></furo-icon-button>\n </furo-data-context-menu>\n```",
-            "name": "FuroDataContextMenu",
+            "description": "The Bar is a container which is primarily used to hold titles, buttons and input elements and its design and\nfunctionality is the basis for page headers and footers.\nThe component consists of three areas to hold its content - startContent slot, default slot and endContent slot.\nIt has the capability to center content, such as a title, while having other components on the left and right side.\n\nThe component exposes a function to bind a FieldNode of type furo.Link to activate/deactivate elements according\nthe HATEOAS relations.\n\n```\n<furo-ui5-bar ƒ-bind-data=\"--furoLinkRepeaterNode\">\n  <furo-ui5-button rel=\"update\" slot=\"endContent\">Save</furo-ui5-button>\n  <furo-ui5-button rel=\"delete\" slot=\"endContent\">Delete</furo-ui5-button>\n  <furo-ui5-button slot=\"endContent\">Fixed Action</furo-ui5-button>\n</furo-ui5-bar>\n```",
+            "name": "FuroUi5Bar",
             "slots": [
               {
                 "type": {
-                  "text": "HTMLElement"
+                  "text": "HTMLElement [0..n]"
                 },
-                "description": "default slot to add an individual context menu opener component (e.g. furo-icon-button).",
-                "name": ""
+                "description": "Defines the content in the middle of the bar",
+                "name": "default"
+              },
+              {
+                "type": {
+                  "text": "HTMLElement [0..n]"
+                },
+                "description": "Defines the content at the start of the bar",
+                "name": "startContent"
+              },
+              {
+                "type": {
+                  "text": "HTMLElement [0..n]"
+                },
+                "description": "Defines the content at the end of the bar https://sap.github.io/ui5-webcomponents/playground/components/Bar/",
+                "name": "endContent"
               }
             ],
             "members": [
               {
                 "kind": "method",
-                "name": "bindData",
+                "name": "onFnaFieldValueChanged",
                 "parameters": [
                   {
-                    "name": "menu"
-                  },
-                  {
-                    "description": "|| RepeaterNode}",
-                    "name": "",
-                    "type": {
-                      "text": "Fieldnode"
-                    }
+                    "name": "val"
                   }
                 ],
-                "description": "Bind your menu object with the signature of menu.Menuitem or [menu.Menuitem]."
-              },
-              {
-                "kind": "method",
-                "name": "setContext",
-                "parameters": [
-                  {
-                    "name": "ctx",
-                    "description": "Can be anything, will be returned at the menu-item-selected method",
-                    "type": {
-                      "text": "*"
-                    }
-                  }
-                ],
-                "description": "Sets the context. Use this if you want to set a Object as context"
-              },
-              {
-                "kind": "method",
-                "name": "trigger",
-                "parameters": [
-                  {
-                    "name": "byKeyboard"
-                  }
-                ],
-                "description": "Triggers the context menu. Set by keyboard to true to focus the first element for keyboard navigation"
-              },
-              {
-                "kind": "method",
-                "name": "triggerContext",
-                "parameters": [
-                  {
-                    "name": "context",
-                    "type": {
-                      "text": "Object"
-                    }
-                  },
-                  {
-                    "name": "byKeyboard"
-                  }
-                ],
-                "description": "triggers the menu with context"
-              },
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
+                "description": "overwrite onFnaFieldValueChanged",
                 "privacy": "private"
               },
               {
-                "kind": "field",
-                "name": "_context",
-                "privacy": "public",
-                "description": "Use this to set a string value as context.",
-                "attribute": "context"
+                "kind": "method",
+                "name": "disableAll",
+                "description": "Disables all elements"
               },
               {
-                "kind": "field",
-                "name": "condensed",
-                "privacy": "public",
-                "description": "set this for condensed mode.",
-                "attribute": "condensed"
-              }
-            ],
-            "events": [
-              {
-                "type": {
-                  "text": "{context, menuitem}"
-                },
-                "description": " Fired when context menu was triggered",
-                "name": "open-furo-data-menu-requested"
+                "kind": "method",
+                "name": "enableAll",
+                "description": "Enables all elements inside if check is true\nCan be used to enable after a request"
               },
               {
-                "type": {
-                  "text": "{context, menuitem}"
-                },
-                "description": " Fired when a menu item is selected",
-                "name": "menu-item-selected"
-              }
-            ],
-            "attributes": [
-              {
-                "name": "context",
-                "description": "Use this to set a string value as context.",
-                "fieldName": "_context"
+                "kind": "method",
+                "name": "enableAllNoChecks",
+                "description": "Enables all elements inside\nIMPORTANT: all checks are disabled"
               },
               {
-                "name": "condensed",
-                "description": "set this for condensed mode.",
-                "fieldName": "condensed"
+                "kind": "method",
+                "name": "_updateElements",
+                "parameters": [
+                  {
+                    "name": "hateoas"
+                  }
+                ],
+                "privacy": "private"
               }
             ],
             "mixins": [
               {
-                "name": "FBP",
-                "package": "@furo/fbp"
+                "name": "FieldNodeAdapter",
+                "package": "@furo/data/src/lib/FieldNodeAdapter.js"
               }
             ],
             "superclass": {
-              "name": "LitElement",
-              "package": "lit"
+              "module": "src/furo-ui5-bar.js"
             },
-            "summary": "a context menu",
-            "tagName": "furo-data-context-menu",
+            "summary": "ui5 bar",
+            "tagName": "furo-ui5-bar",
             "customElement": true
           }
         ],
         "exports": [
           {
             "kind": "js",
-            "name": "FuroDataContextMenu",
+            "name": "FuroUi5Bar",
             "declaration": {
-              "name": "FuroDataContextMenu",
-              "module": "src/furo-data-context-menu.js"
+              "name": "FuroUi5Bar",
+              "module": "src/furo-ui5-bar.js"
             }
           },
           {
             "kind": "custom-element-definition",
-            "name": "furo-data-context-menu",
+            "name": "furo-ui5-bar",
             "declaration": {
-              "name": "FuroDataContextMenu",
-              "module": "src/furo-data-context-menu.js"
+              "name": "FuroUi5Bar",
+              "module": "src/furo-ui5-bar.js"
             }
           }
         ]
@@ -1084,6 +939,11 @@
                   }
                 ],
                 "description": "Binds a field node to the component"
+              },
+              {
+                "kind": "method",
+                "name": "toggle",
+                "description": "Toggles the icon."
               },
               {
                 "kind": "field",
@@ -1212,12 +1072,6 @@
       },
       {
         "kind": "javascript-module",
-        "path": "src/furo-ui5-button-bar.js",
-        "declarations": [],
-        "exports": []
-      },
-      {
-        "kind": "javascript-module",
         "path": "src/furo-ui5-button.js",
         "declarations": [
           {
@@ -1225,6 +1079,10 @@
             "description": "`furo-ui5-button`\nThe furo-ui5-button component represents a simple push button. It enables users to trigger actions by clicking or\ntapping the furo-ui5-button, or by pressing certain keyboard keys, such as Enter.\nUsage\nFor the furo-ui5-button UI, you can define text, icon, or both. You can also specify whether the text or the icon is displayed first.\n\nYou can choose from a set of predefined types that offer different styling to correspond to the triggered action.\n\nYou can set the furo-ui5-button as enabled or disabled.\nAn enabled ui5-button can be pressed by clicking or tapping it.\nThe button changes its style to provide visual feedback to the user that it is pressed or hovered over with the mouse cursor.\nA disabled furo-ui5-button appears inactive and cannot be pressed.\n\nWhat is different from ui5-button?\nWith flow based programming it's usual to address functions. So we added two convenience functions for\n- disabling => ƒ-disable\n- enabling => ƒ-enable\n\nhttps://sap.github.io/ui5-webcomponents/playground/components/Button/",
             "name": "FuroUi5Button",
             "members": [
+              {
+                "kind": "field",
+                "name": "buttonTypeText"
+              },
               {
                 "kind": "method",
                 "name": "disable",
@@ -1835,6 +1693,227 @@
             "declaration": {
               "name": "FuroUi5CheckboxInput",
               "module": "src/furo-ui5-checkbox-input.js"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/furo-ui5-context-menu-display.js",
+        "declarations": [
+          {
+            "kind": "class",
+            "description": "",
+            "name": "FuroUi5ContextMenuDisplay",
+            "members": [
+              {
+                "kind": "method",
+                "name": "_FBPReady",
+                "description": "flow is ready lifecycle method",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "hideMenu"
+              },
+              {
+                "kind": "method",
+                "name": "triggerNavigation",
+                "parameters": [
+                  {
+                    "name": "key"
+                  }
+                ],
+                "description": "Interface for the furo navigation pad"
+              },
+              {
+                "kind": "field",
+                "name": "borderDistance",
+                "type": {
+                  "text": "number"
+                },
+                "default": "48"
+              },
+              {
+                "kind": "field",
+                "name": "_repeatsChanged"
+              }
+            ],
+            "mixins": [
+              {
+                "name": "FBP",
+                "package": "@furo/fbp"
+              }
+            ],
+            "superclass": {
+              "name": "LitElement",
+              "package": "lit"
+            },
+            "tagName": "furo-ui5-context-menu-display",
+            "customElement": true
+          }
+        ],
+        "exports": [
+          {
+            "kind": "js",
+            "name": "FuroUi5ContextMenuDisplay",
+            "declaration": {
+              "name": "FuroUi5ContextMenuDisplay",
+              "module": "src/furo-ui5-context-menu-display.js"
+            }
+          },
+          {
+            "kind": "custom-element-definition",
+            "name": "furo-ui5-context-menu-display",
+            "declaration": {
+              "name": "FuroUi5ContextMenuDisplay",
+              "module": "src/furo-ui5-context-menu-display.js"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/furo-ui5-context-menu.js",
+        "declarations": [
+          {
+            "kind": "class",
+            "description": "`furo-ui5-context-menu`\n is a context menu or menu element.\n\n\n You have to put a `furo-ui5-context-menu-display` element in one of the parent elements of the element where you use the `furo-ui5-context-menu`.\n The app-shell is a good place for that.\n\n```html\n <furo-ui5-context-menu  ƒ-trigger=\"--menuClkd\" ƒ-bind-data=\"--menuObject\" @-menu-item-selected=\"--menuItem\">\n     <ui5-icon name=\"menu\" @-click=\"--menuClkd\"></ui5-icon>\n </furo-ui5-context-menu>\n```\n\n## Data signature\n\n```yaml\n- type: 'menu.Menuitem #Item signature for a context menu'\n fields:\n   icon: 'string:1 #Leading icon of the menu'\n   display_name: 'string:2 #String representation of the menu item. Menu item text'\n   disabled: 'bool:3 #Display actions as disabled when they can only be used sometimes and under certain conditions.'\n   command: 'string:4 #Keyboard command hint'\n   leading_divider: 'bool:5 #Item has a leading divider line'\n   children: '[] menu.Menuitem:6 #Children of this item'\n```",
+            "name": "FuroUi5ContextMenu",
+            "slots": [
+              {
+                "type": {
+                  "text": "HTMLElement"
+                },
+                "description": "default slot to add an individual context menu opener component (e.g. furo-icon-button).",
+                "name": ""
+              }
+            ],
+            "members": [
+              {
+                "kind": "method",
+                "name": "bindData",
+                "parameters": [
+                  {
+                    "name": "menu"
+                  },
+                  {
+                    "description": "|| RepeaterNode}",
+                    "name": "",
+                    "type": {
+                      "text": "Fieldnode"
+                    }
+                  }
+                ],
+                "description": "Bind your menu object with the signature of menu.Menuitem or [menu.Menuitem]."
+              },
+              {
+                "kind": "method",
+                "name": "setContext",
+                "parameters": [
+                  {
+                    "name": "ctx",
+                    "description": "Can be anything, will be returned at the menu-item-selected method",
+                    "type": {
+                      "text": "*"
+                    }
+                  }
+                ],
+                "description": "Sets the context. Use this if you want to set a Object as context"
+              },
+              {
+                "kind": "method",
+                "name": "trigger",
+                "parameters": [
+                  {
+                    "name": "byKeyboard"
+                  }
+                ],
+                "description": "Triggers the context menu. Set by keyboard to true to focus the first element for keyboard navigation"
+              },
+              {
+                "kind": "method",
+                "name": "triggerContext",
+                "parameters": [
+                  {
+                    "name": "context",
+                    "type": {
+                      "text": "Object"
+                    }
+                  },
+                  {
+                    "name": "byKeyboard"
+                  }
+                ],
+                "description": "triggers the menu with context"
+              },
+              {
+                "kind": "method",
+                "name": "_FBPReady",
+                "description": "flow is ready lifecycle method",
+                "privacy": "private"
+              },
+              {
+                "kind": "field",
+                "name": "_context",
+                "privacy": "public",
+                "description": "Use this to set a string value as context.",
+                "attribute": "context"
+              }
+            ],
+            "events": [
+              {
+                "type": {
+                  "text": "{context, menuitem}"
+                },
+                "description": " Fired when context menu was triggered",
+                "name": "open-furo-ui5-menu-requested"
+              },
+              {
+                "type": {
+                  "text": "{context, menuitem}"
+                },
+                "description": " Fired when a menu item is selected",
+                "name": "menu-item-selected"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "context",
+                "description": "Use this to set a string value as context.",
+                "fieldName": "_context"
+              }
+            ],
+            "mixins": [
+              {
+                "name": "FBP",
+                "package": "@furo/fbp"
+              }
+            ],
+            "superclass": {
+              "name": "LitElement",
+              "package": "lit"
+            },
+            "summary": "a context menu",
+            "tagName": "furo-ui5-context-menu",
+            "customElement": true
+          }
+        ],
+        "exports": [
+          {
+            "kind": "js",
+            "name": "FuroUi5ContextMenu",
+            "declaration": {
+              "name": "FuroUi5ContextMenu",
+              "module": "src/furo-ui5-context-menu.js"
+            }
+          },
+          {
+            "kind": "custom-element-definition",
+            "name": "furo-ui5-context-menu",
+            "declaration": {
+              "name": "FuroUi5ContextMenu",
+              "module": "src/furo-ui5-context-menu.js"
             }
           }
         ]
@@ -2531,6 +2610,86 @@
             "declaration": {
               "name": "FuroUi5Dialog",
               "module": "src/furo-ui5-dialog.js"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/furo-ui5-flexible-grid.js",
+        "declarations": [
+          {
+            "kind": "class",
+            "description": "`split-grid`\nwill split your screen contents horizontally (in cols) and put them vertically (left at top) when the available space is to small.\n\n\n```html\n <!-- a simple layout manager with two columns  -->\n<furo-ui5-flexible-grid>\n  <div hspan=\"2\" full-on-size-medium full-on-size-small class=\"left\">\n     <slot name=\"left\"></slot>\n  </div>\n  <!-- this will start at pos 3 and goes to the end of the screen -->\n  <furo-z-grid hstart=\"3\" fill>\n    <slot></slot>\n  </furo-z-grid>\n</furo-ui5-flexible-grid>\n```\n\n## Setting column width\nTo set the width of a column use the `hspan` attribute.\n\n## Fill column to the end of the screen\nTo make a column that uses the available space you have to set a starting point. This can be done with `hstart=\"3\"`\n(begin on cell 3) and the attribute `fill` (fill to the right)\n\n ## full-on-[size]\n To set full width on a specific current size, use `full-on-size-small` , `full-on-size-medium` , `full-on-size-large` ,`full-on-size-xlarge`.\n\n When the available space has the given size, the default hspan are overridden and the full width is used.\n\n ## hstart\n Set the starting point of a filling row with `hstart=\"3\"`.\n\n Available values are `hstart=\"2\"`,...,`hstart=\"9\"`\n\n ## hspan\n Set the horizontal space (the width) with the *hspan* attribute.\n\n Available ranges are from 1 to 9.\n\n `hspan=\"1\"`, `hspan=\"2\"`,...,`hspan=\"9\"`\n\n## Named lines and columns\n**last-col** refers to the last column.\nThere is no line name available",
+            "name": "FuroUi5FlexibleGrid",
+            "slots": [
+              {
+                "description": "{HTMLElement} - slot to add a component on the left hand side.",
+                "name": "left"
+              },
+              {
+                "type": {
+                  "text": "HTMLElement [0..n]"
+                },
+                "description": "default slot to add content.",
+                "name": ""
+              }
+            ],
+            "members": [
+              {
+                "kind": "method",
+                "name": "_FBPReady",
+                "description": "flow is ready lifecycle method",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "_checkSize",
+                "parameters": [
+                  {
+                    "name": "size"
+                  }
+                ],
+                "description": "Form breakpoints according to SAP Fiori Design System\nhttps://experience.sap.com/fiori-design-web/form/",
+                "privacy": "private"
+              },
+              {
+                "kind": "field",
+                "name": "sizeSmall",
+                "privacy": "public",
+                "description": "Breakpoint size for small",
+                "attribute": "size-small"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "size-small",
+                "description": "Breakpoint size for small",
+                "fieldName": "sizeSmall"
+              }
+            ],
+            "mixins": [
+              {
+                "name": "FBP",
+                "package": "@furo/fbp"
+              }
+            ],
+            "superclass": {
+              "name": "LitElement",
+              "package": "lit"
+            },
+            "summary": "a grid splitter",
+            "tagName": "furo-ui5-flexible-grid",
+            "customElement": true
+          }
+        ],
+        "exports": [
+          {
+            "kind": "custom-element-definition",
+            "name": "furo-ui5-flexible-grid",
+            "declaration": {
+              "name": "FuroUi5FlexibleGrid",
+              "module": "src/furo-ui5-flexible-grid.js"
             }
           }
         ]
@@ -3320,7 +3479,7 @@
         "declarations": [
           {
             "kind": "class",
-            "description": "`furo-data-money-input`\nBinds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields\n <sample-furo-data-money-input></sample-furo-data-money-input>\n\n you can set currencies dropdown with options in meta or set options attribute as json in element or set currencies as string in element. the three\n ways have priority : currencies > options as attribute > options in meta. When no currencies is setted. Default currency will be `CHF`\n\n <furo-ui5-money-input autofocus ƒ-bind-data=\"--entity(*.furo_data_money_input)\" options='{\"list\": [ \"CHF\",\"EUR\",\"USD\" ]}'></furo-data-money-input>\n <furo-ui5-money-input autofocus ƒ-bind-data=\"--entity(*.furo_data_money_input)\" options='{\"list\": [ {\"id\":\"CHF\",\"label\":\"Schweiz\"},{\"id\":\"EUR\",\"label\":\"Europa\", \"selected\": true}'></furo-data-money-input>\n <furo-ui5-money-input autofocus ƒ-bind-data=\"--entity(*.furo_data_money_input)\" currencies=\"CHF,EUR,USD\"></furo-data-money-input>\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **required: true** , set the element to required\n\nTags: money input",
+            "description": "`furo-ui5-money-input`\nBinds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields\n <sample-furo-ui5-money-input></sample-furo-ui5-money-input>\n\n you can set currencies dropdown with options in meta or set options attribute as json in element or set currencies as string in element. the three\n ways have priority : currencies > options as attribute > options in meta. When no currencies is setted. Default currency will be `CHF`\n\n <furo-ui5-money-input autofocus ƒ-bind-data=\"--entity(*.furo_data_money_input)\" options='{\"list\": [ \"CHF\",\"EUR\",\"USD\" ]}'></furo-ui5-money-input>\n <furo-ui5-money-input autofocus ƒ-bind-data=\"--entity(*.furo_data_money_input)\" options='{\"list\": [ {\"id\":\"CHF\",\"label\":\"Schweiz\"},{\"id\":\"EUR\",\"label\":\"Europa\", \"selected\": true}'></furo-ui5-money-input>\n <furo-ui5-money-input autofocus ƒ-bind-data=\"--entity(*.furo_data_money_input)\" currencies=\"CHF,EUR,USD\"></furo-ui5-money-input>\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **required: true** , set the element to required\n\nTags: money input",
             "name": "FuroUi5MoneyInput",
             "members": [
               {
@@ -5688,7 +5847,7 @@
         "declarations": [
           {
             "kind": "class",
-            "description": "`furo-ui5-property`\n Field for type furo.Property. This can be used to display \"dynamic\" fields aka properties.\n It works with repeated types and non repeating property types.\n\n ```html\n <furo-ui5-property ƒ-bind-data=\"--entity(*.single_type_property)\"></furo-ui5-property>\n ```\n\n ## Example data for the data-object looks like this\n\n ```json\n \"single_type_property\": {\n   \"data\": {\n     \"@type\": \"google.type.Date\",\n     \"day\": 8,\n     \"month\":  11,\n     \"year\": 2022\n   },\n   \"display_name\": \"a date\",\n   \"id\": \"date\",\n   \"code\": \"date\",\n   \"meta\": {\n     \"fields\": {\n       \"data\": {\n         \"meta\": {\n           \"label\": \"Additional fields\",\n           \"hint\": \"this is data\"\n         },\n         \"constraints\": {\n           \"min\": {\n             \"value\": \"2019-09-09\",\n             \"message\": \"to small\"\n           }\n         }\n       }\n     }\n   }\n }\n ```\n## Example StringOptions Field\n\n```json\n{\n  \"data\": {\n       \"@type\": \"furo.StringOptionProperty\",\n       \"id\": \"bb\",\n       \"display_name\": \"Display\"\n     },\n     \"display_name\": \"Display\",\n     \"id\": \"opt\",\n     \"code\": \"option\",\n     \"meta\": {\n       \"fields\": {\n         \"data\": {\n           \"meta\": {\n             \"label\": \"Please select\",\n             \"hint\": \"datehint is data\",\n             \"repeated\": false,\n             \"options\": [\n               {\n                 \"id\": \"aa\",\n                 \"display_name\": \"The display a\"\n               },\n               {\n                 \"id\": \"bb\",\n                 \"display_name\": \"The display b\"\n               }\n             ]\n           }\n         }\n       }\n     }\n   }\n\n```\n\n The current type mappings are:\n\n- \"google.type.Date\": \"furo-data-date-input\"\n- \"furo.StringProperty\": \"furo-data-text-input\"\n- \"furo.IntegerProperty\": \"furo-data-number-input\"\n- \"furo.NumberProperty\": \"furo-data-number-input\"\n- \"furo.StringOptionProperty\": \"furo-data-collection-dropdown\"",
+            "description": "`furo-ui5-property`\n Field for type furo.Property. This can be used to display \"dynamic\" fields aka properties.\n It works with repeated types and non repeating property types.\n\n ```html\n <furo-ui5-property ƒ-bind-data=\"--entity(*.single_type_property)\"></furo-ui5-property>\n ```\n\n ## Example data for the data-object looks like this\n\n ```json\n \"single_type_property\": {\n   \"data\": {\n     \"@type\": \"google.type.Date\",\n     \"day\": 8,\n     \"month\":  11,\n     \"year\": 2022\n   },\n   \"display_name\": \"a date\",\n   \"id\": \"date\",\n   \"code\": \"date\",\n   \"meta\": {\n     \"fields\": {\n       \"data\": {\n         \"meta\": {\n           \"label\": \"Additional fields\",\n           \"hint\": \"this is data\"\n         },\n         \"constraints\": {\n           \"min\": {\n             \"value\": \"2019-09-09\",\n             \"message\": \"to small\"\n           }\n         }\n       }\n     }\n   }\n }\n ```\n## Example StringOptions Field\n\n```json\n{\n  \"data\": {\n       \"@type\": \"furo.StringOptionProperty\",\n       \"id\": \"bb\",\n       \"display_name\": \"Display\"\n     },\n     \"display_name\": \"Display\",\n     \"id\": \"opt\",\n     \"code\": \"option\",\n     \"meta\": {\n       \"fields\": {\n         \"data\": {\n           \"meta\": {\n             \"label\": \"Please select\",\n             \"hint\": \"datehint is data\",\n             \"repeated\": false,\n             \"options\": [\n               {\n                 \"id\": \"aa\",\n                 \"display_name\": \"The display a\"\n               },\n               {\n                 \"id\": \"bb\",\n                 \"display_name\": \"The display b\"\n               }\n             ]\n           }\n         }\n       }\n     }\n   }\n\n```\n\n The current type mappings are:\n\n- \"google.type.Date\": \"furo-ui5-date-input\"\n- \"furo.StringProperty\": \"furo-ui5-text-input\"\n- \"furo.IntegerProperty\": \"furo-ui5-number-input\"\n- \"furo.NumberProperty\": \"furo-ui5-number-input\"\n- \"furo.StringOptionProperty\": \"furo-ui5-collection-dropdown\"",
             "name": "FuroUi5Property",
             "members": [
               {
@@ -6671,7 +6830,7 @@
                   "text": "#ffffff"
                 },
                 "description": "background color of the result list",
-                "name": "--furo-data-reference-search-list-background",
+                "name": "--furo-ui5-reference-search-list-background",
                 "default": "--surface"
               }
             ],
@@ -6841,6 +7000,11 @@
                   }
                 ],
                 "description": "Sets the filter.\nHint: use the FieldNode._base64 property to send complex objects as a filter and decode it on the server side\nor do btoa(JSON.stringify(FILTER))"
+              },
+              {
+                "kind": "method",
+                "name": "clearResultList",
+                "description": "clears the result set"
               },
               {
                 "kind": "field",
@@ -9229,7 +9393,7 @@
         "declarations": [
           {
             "kind": "class",
-            "description": "The 'furo-ui5-textarea-input' component allows the user to enter and edit texts with data binding.\n\nIt supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).\n\nYou can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.\n\n```html\n <furo-ui5-textarea-input\n    ƒ-bind-data=\"--daoCountry(*.data.name)\"\n ></furo-ui5-textarea-input>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n** meta \t<  fat \t< html \t**\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"placeholder\":\"string\"** set the placeholder for the element\n - **\"rows\":\"number\"** set the number of rows.\n - **\"growing\":\"true\"** Enables the ui5-textarea to automatically grow and shrink dynamically with its content.\n - **\"show-exceeded-text\":\"true\"** if set to true. the characters exceeding the maxlength value are selected on paste and the counter below the ui5-textarea displays their number. If set to false, the user is not allowed to enter more characters than what is set in the maxlength property.\n - **\"growing-max-lines\":\"number\"** Defines the maximum number of lines that the Web Component can grow.\n - **\"max\":\"number\"** set the maximum number of characters available in the input field.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **max:\"number\"** set the maximum number of characters available in the input field.\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
+            "description": "The 'furo-ui5-textarea-input' component allows the user to enter and edit texts with data binding.\n\nIt supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).\n\nYou can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.\n\n```html\n <furo-ui5-textarea-input\n    ƒ-bind-data=\"--daoCountry(*.data.name)\"\n ></furo-ui5-textarea-input>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n** meta \t<  fat \t< html \t**\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"placeholder\":\"string\"** set the placeholder for the element\n - **\"rows\":\"number\"** set the number of rows.\n - **\"growing\":\"true\"** Enables the ui5-textarea to automatically grow and shrink dynamically with its content.\n - **\"show-exceeded-text\":\"true\"** if set to true. the characters exceeding the maxlength value are selected on paste and the counter below the ui5-textarea displays their number. If set to false, the user is not allowed to enter more characters than what is set in the maxlength property.\n - **\"growing-max-lines\":\"number\"** Defines the maximum number of lines that the Web Component can grow.\n - **\"max\":\"number\"** set the maximum number of characters available in the input field.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **max:\"number\"** set the maximum number of characters available in the input field.\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use @-object-ready from a furo-ui5-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
             "name": "FuroUi5TextareaInput",
             "members": [
               {
@@ -10016,6 +10180,844 @@
       },
       {
         "kind": "javascript-module",
+        "path": "src/furo-ui5-tree-item.js",
+        "declarations": [
+          {
+            "kind": "class",
+            "description": "`furo-tree-item`\ntodo Describe your element",
+            "name": "FuroUi5TreeItem",
+            "cssProperties": [
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 1",
+                "name": "--tree-indentation-1",
+                "default": "16px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 2",
+                "name": "--tree-indentation-2",
+                "default": "32px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 3",
+                "name": "--tree-indentation-3",
+                "default": "48px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 4",
+                "name": "--tree-indentation-4",
+                "default": "56px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 5",
+                "name": "--tree-indentation-5",
+                "default": "64px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 6",
+                "name": "--tree-indentation-6",
+                "default": "72px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 7",
+                "name": "--tree-indentation-7",
+                "default": "80px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 8",
+                "name": "--tree-indentation-8",
+                "default": "88px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 9",
+                "name": "--tree-indentation-9",
+                "default": "92px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 10",
+                "name": "--tree-indentation-10",
+                "default": "96px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 11",
+                "name": "--tree-indentation-11",
+                "default": "100px"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "tree indention level 12",
+                "name": "--tree-indentation-12",
+                "default": "104px"
+              }
+            ],
+            "members": [
+              {
+                "kind": "method",
+                "name": "search",
+                "parameters": [
+                  {
+                    "name": "event"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "_updateItem"
+              },
+              {
+                "kind": "method",
+                "name": "bindData",
+                "parameters": [
+                  {
+                    "name": "fieldNode"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "_FBPReady",
+                "description": "flow is ready lifecycle method",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "__addSearchListeners",
+                "description": "add listeners for search matches and non matches",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "__addNodeSelectedListener"
+              },
+              {
+                "kind": "method",
+                "name": "__addNodeFocusedListener",
+                "description": "bring the focused element in the visible part of the screen (scroll)",
+                "privacy": "private"
+              },
+              {
+                "kind": "field",
+                "name": "hidden",
+                "type": {
+                  "text": "boolean"
+                },
+                "default": "true",
+                "privacy": "public",
+                "description": "Description",
+                "attribute": "hidden",
+                "reflects": true
+              },
+              {
+                "kind": "field",
+                "name": "isGroupLabel",
+                "type": {
+                  "text": "boolean"
+                },
+                "default": "false",
+                "privacy": "public",
+                "attribute": "is-group-label",
+                "reflects": true
+              },
+              {
+                "kind": "field",
+                "name": "indentation",
+                "type": {
+                  "text": "number"
+                },
+                "default": "0"
+              },
+              {
+                "kind": "field",
+                "name": "_icon",
+                "type": {
+                  "text": "string"
+                },
+                "default": "'border'"
+              },
+              {
+                "kind": "field",
+                "name": "focused",
+                "privacy": "public",
+                "attribute": "focused",
+                "reflects": true
+              },
+              {
+                "kind": "field",
+                "name": "searchmatch",
+                "privacy": "public",
+                "attribute": "searchmatch",
+                "reflects": true
+              },
+              {
+                "kind": "field",
+                "name": "inedit",
+                "privacy": "public",
+                "attribute": "inedit",
+                "reflects": true
+              },
+              {
+                "kind": "field",
+                "name": "haserror",
+                "privacy": "public",
+                "attribute": "haserror",
+                "reflects": true
+              },
+              {
+                "kind": "field",
+                "name": "selected",
+                "privacy": "public",
+                "attribute": "selected",
+                "reflects": true
+              },
+              {
+                "kind": "field",
+                "name": "noicon",
+                "privacy": "public",
+                "attribute": "noicon"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "hidden",
+                "description": "Description",
+                "fieldName": "hidden"
+              },
+              {
+                "name": "focused",
+                "fieldName": "focused"
+              },
+              {
+                "name": "searchmatch",
+                "fieldName": "searchmatch"
+              },
+              {
+                "name": "inedit",
+                "fieldName": "inedit"
+              },
+              {
+                "name": "haserror",
+                "fieldName": "haserror"
+              },
+              {
+                "name": "selected",
+                "fieldName": "selected"
+              },
+              {
+                "name": "noicon",
+                "fieldName": "noicon"
+              },
+              {
+                "name": "is-group-label",
+                "fieldName": "isGroupLabel"
+              }
+            ],
+            "mixins": [
+              {
+                "name": "FBP",
+                "package": "@furo/fbp"
+              }
+            ],
+            "superclass": {
+              "name": "LitElement",
+              "package": "lit"
+            },
+            "summary": "todo shortdescription",
+            "tagName": "furo-ui5-tree-item",
+            "customElement": true
+          }
+        ],
+        "exports": [
+          {
+            "kind": "js",
+            "name": "FuroUi5TreeItem",
+            "declaration": {
+              "name": "FuroUi5TreeItem",
+              "module": "src/furo-ui5-tree-item.js"
+            }
+          },
+          {
+            "kind": "custom-element-definition",
+            "name": "furo-ui5-tree-item",
+            "declaration": {
+              "name": "FuroUi5TreeItem",
+              "module": "src/furo-ui5-tree-item.js"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/furo-ui5-tree.js",
+        "declarations": [
+          {
+            "kind": "class",
+            "description": "`furo-tree`\nrenders a tree structure",
+            "name": "FuroUi5Tree",
+            "cssProperties": [
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "background color",
+                "name": "--surface",
+                "default": "white"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "foreground color",
+                "name": "--on-surface",
+                "default": "#333333"
+              }
+            ],
+            "members": [
+              {
+                "kind": "method",
+                "name": "collapseFocused",
+                "description": "collapses the focused element. If it is closed the parent will be focused."
+              },
+              {
+                "kind": "method",
+                "name": "expandFocused",
+                "description": "expands the focused node, if it is opened the first child will be focused"
+              },
+              {
+                "kind": "method",
+                "name": "expandFocusedRecursive",
+                "description": "expands the focused node recursive"
+              },
+              {
+                "kind": "method",
+                "name": "collapseFocusedRecursive",
+                "description": "collapses the focused node recursive"
+              },
+              {
+                "kind": "method",
+                "name": "selectFocused",
+                "description": "selects the focused element."
+              },
+              {
+                "kind": "method",
+                "name": "search",
+                "parameters": [
+                  {
+                    "name": "term"
+                  }
+                ],
+                "description": "Search in the visible nodes",
+                "return": {
+                  "type": {
+                    "text": "[]"
+                  }
+                }
+              },
+              {
+                "kind": "method",
+                "name": "searchOpenTree"
+              },
+              {
+                "kind": "method",
+                "name": "_resetSearch"
+              },
+              {
+                "kind": "method",
+                "name": "_updateSearchmatchAttributesOnItems"
+              },
+              {
+                "kind": "method",
+                "name": "focusParent",
+                "description": "Focuses the parent tree node without selecting it.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
+              },
+              {
+                "kind": "method",
+                "name": "focusPrevious",
+                "description": "focus the previous visible node.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
+              },
+              {
+                "kind": "method",
+                "name": "qpIn",
+                "parameters": [
+                  {
+                    "name": "qpObject"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "locationIn",
+                "parameters": [
+                  {
+                    "name": "locationObject"
+                  }
+                ],
+                "description": "Inject a location object, which contains a query param property to select the current node.",
+                "return": {
+                  "type": {
+                    "text": "*|boolean"
+                  }
+                }
+              },
+              {
+                "kind": "method",
+                "name": "selectById",
+                "parameters": [
+                  {
+                    "name": "nodeID"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "selectPrev",
+                "description": "select the previous visible item"
+              },
+              {
+                "kind": "method",
+                "name": "expandNodeRecursive",
+                "description": "expands the currently selected node recursive"
+              },
+              {
+                "kind": "method",
+                "name": "expandAll"
+              },
+              {
+                "kind": "method",
+                "name": "collapseAll"
+              },
+              {
+                "kind": "method",
+                "name": "collapseNodeRecursive",
+                "description": "expands the currently selected node recursive"
+              },
+              {
+                "kind": "method",
+                "name": "toggle",
+                "description": "toggles the currently selected node"
+              },
+              {
+                "kind": "method",
+                "name": "addSubNode",
+                "parameters": [
+                  {
+                    "name": "rawNode"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "deleteNode"
+              },
+              {
+                "kind": "method",
+                "name": "selectNext",
+                "description": "select the next visible item"
+              },
+              {
+                "kind": "method",
+                "name": "triggerNavigation",
+                "parameters": [
+                  {
+                    "name": "key"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "focusFirst",
+                "description": "Focuses the first node in the tree without selecting it.\n\nUse selectFocused to select the focused node.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
+              },
+              {
+                "kind": "method",
+                "name": "focusLast",
+                "description": "Focuses the last node in the tree without selecting it.\n\nUse selectFocused to select the focused node.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
+              },
+              {
+                "kind": "method",
+                "name": "focusNext",
+                "description": "focuses the next visible tree node.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
+              },
+              {
+                "kind": "method",
+                "name": "focus",
+                "description": "focuses the tree itself. You can use this in combination with keyboard navigation (furo-navigation-pad)"
+              },
+              {
+                "kind": "method",
+                "name": "_FBPReady",
+                "description": "flow is ready lifecycle method",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "bindData",
+                "parameters": [
+                  {
+                    "name": "treeNode"
+                  }
+                ],
+                "description": "Binds a FieldNode with a tree signature.\n\nA sample and usable signature can be found in ./specs/"
+              },
+              {
+                "kind": "method",
+                "name": "_setTitle",
+                "parameters": [
+                  {
+                    "name": "treeNode"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "focusSelected",
+                "description": "Focuses the currently selected tree item.\n\nThe tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method)."
+              },
+              {
+                "kind": "method",
+                "name": "_init"
+              },
+              {
+                "kind": "method",
+                "name": "_initFocusAndSelectEvents"
+              },
+              {
+                "kind": "method",
+                "name": "_buildFlatTree",
+                "parameters": [
+                  {
+                    "name": "tree"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "_parseTreeRecursive",
+                "parameters": [
+                  {
+                    "name": "tree"
+                  },
+                  {
+                    "name": "level"
+                  },
+                  {
+                    "name": "maxdepth"
+                  }
+                ]
+              },
+              {
+                "kind": "field",
+                "name": "_flatTree",
+                "type": {
+                  "text": "Array"
+                },
+                "description": "Flat list representation of the tree",
+                "privacy": "private",
+                "default": "[]"
+              },
+              {
+                "kind": "field",
+                "name": "tabindex",
+                "type": {
+                  "text": "number"
+                },
+                "default": "0",
+                "privacy": "public",
+                "description": "Sets the tabindex",
+                "attribute": "tabindex",
+                "reflects": true
+              },
+              {
+                "kind": "field",
+                "name": "_searchTerm",
+                "type": {
+                  "text": "string"
+                },
+                "default": "''"
+              },
+              {
+                "kind": "field",
+                "name": "expandDepth",
+                "type": {
+                  "text": "number"
+                },
+                "default": "2",
+                "privacy": "public",
+                "description": "Sets the maximal expand level relative from the current node.\n\nExpanding is a expensive operation.",
+                "attribute": "expand-depth"
+              },
+              {
+                "kind": "field",
+                "name": "_searchIsActive",
+                "type": {
+                  "text": "boolean"
+                },
+                "default": "false",
+                "privacy": "public",
+                "description": "indicator for searching. Maybe you want style your item depending on this attribute",
+                "attribute": "searching",
+                "reflects": true
+              },
+              {
+                "kind": "field",
+                "name": "_tic",
+                "description": "If you want to use a custom component for the tree-item, set this attribute.\nThe default item component is **furo-ui5-tree-item**.",
+                "type": {
+                  "text": "*|string|string"
+                }
+              },
+              {
+                "kind": "field",
+                "name": "_treeItemTepmplate"
+              },
+              {
+                "kind": "field",
+                "name": "depth",
+                "privacy": "public",
+                "description": "Maximal depth for the tree. Default is infinite.",
+                "attribute": "depth"
+              },
+              {
+                "kind": "field",
+                "name": "qp",
+                "privacy": "public",
+                "description": "Query param to watch. If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.\nIf you select an item the `qp-change-request` will be fired.",
+                "attribute": "qp"
+              },
+              {
+                "kind": "field",
+                "name": "rootAsHeader",
+                "privacy": "public",
+                "description": "Set this flag if you do not want a header-text section.",
+                "attribute": "root-as-header"
+              },
+              {
+                "kind": "field",
+                "name": "hideRootNode",
+                "privacy": "public",
+                "description": "Set this flag if you do not want to see the root node",
+                "attribute": "hide-root-node"
+              },
+              {
+                "kind": "field",
+                "name": "headerText",
+                "privacy": "public",
+                "description": "Override display name from root object",
+                "attribute": "header-text"
+              },
+              {
+                "kind": "field",
+                "name": "secondaryText",
+                "privacy": "public",
+                "description": "Override description from root object.",
+                "attribute": "secondary-text"
+              },
+              {
+                "kind": "field",
+                "name": "nobgonhead",
+                "privacy": "public",
+                "description": "disables the background color on focus, selected, ... on header node\n\nWorks only with `root-as-header` enabled",
+                "attribute": "no-bg-on-header"
+              },
+              {
+                "kind": "field",
+                "name": "focused",
+                "privacy": "public",
+                "description": "indicates that the element is focused",
+                "attribute": "focused",
+                "reflects": true
+              }
+            ],
+            "events": [
+              {
+                "type": {
+                  "text": "focused field"
+                },
+                "description": " Fired when",
+                "name": "node-focused"
+              },
+              {
+                "type": {
+                  "text": "focused field"
+                },
+                "description": " Fired when",
+                "name": "branch-focused"
+              },
+              {
+                "description": " Fired when",
+                "name": "leaf-focused"
+              },
+              {
+                "type": {
+                  "text": "selected field"
+                },
+                "description": " Fired when the item gets selected, does not fire when you work with query params",
+                "name": "node-selected"
+              },
+              {
+                "type": {
+                  "text": "Object {\"this.qp\": this._selectedField.id._value}"
+                },
+                "description": " Fired when qp mode is enabled. Nodes are only selectable with qpIn or selectById",
+                "name": "qp-change-requested"
+              },
+              {
+                "type": {
+                  "text": "selected field"
+                },
+                "description": " Fired when",
+                "name": "branch-selected"
+              },
+              {
+                "type": {
+                  "text": "selected field"
+                },
+                "description": " Fired when",
+                "name": "leaf-selected"
+              },
+              {
+                "description": " Fired when a node is opened",
+                "name": "node-opened"
+              },
+              {
+                "description": " Fired when a node is closed",
+                "name": "node-closed"
+              },
+              {
+                "description": " Fired when nodes are expanded recursive",
+                "name": "nodes-expanded"
+              },
+              {
+                "description": " Fired when nodes are collapsed recursive.",
+                "name": "nodes-collapsed"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "depth",
+                "description": "Maximal depth for the tree. Default is infinite.",
+                "fieldName": "depth"
+              },
+              {
+                "name": "expand-depth",
+                "description": "Sets the maximal expand level relative from the current node.\n\nExpanding is a expensive operation.",
+                "fieldName": "expandDepth"
+              },
+              {
+                "name": "qp",
+                "description": "Query param to watch. If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.\nIf you select an item the `qp-change-request` will be fired.",
+                "fieldName": "qp"
+              },
+              {
+                "name": "tabindex",
+                "description": "Sets the tabindex",
+                "fieldName": "tabindex"
+              },
+              {
+                "name": "root-as-header",
+                "description": "Set this flag if you do not want a header-text section.",
+                "fieldName": "rootAsHeader"
+              },
+              {
+                "name": "hide-root-node",
+                "description": "Set this flag if you do not want to see the root node",
+                "fieldName": "hideRootNode"
+              },
+              {
+                "name": "header-text",
+                "description": "Override display name from root object",
+                "fieldName": "headerText"
+              },
+              {
+                "name": "secondary-text",
+                "description": "Override description from root object.",
+                "fieldName": "secondaryText"
+              },
+              {
+                "name": "searching",
+                "description": "indicator for searching. Maybe you want style your item depending on this attribute",
+                "fieldName": "_searchIsActive"
+              },
+              {
+                "name": "no-bg-on-header",
+                "description": "disables the background color on focus, selected, ... on header node\n\nWorks only with `root-as-header` enabled",
+                "fieldName": "nobgonhead"
+              },
+              {
+                "name": "focused",
+                "description": "indicates that the element is focused",
+                "fieldName": "focused"
+              }
+            ],
+            "mixins": [
+              {
+                "name": "FBP",
+                "package": "@furo/fbp"
+              }
+            ],
+            "superclass": {
+              "name": "LitElement",
+              "package": "lit"
+            },
+            "summary": "tree navigation menu",
+            "tagName": "furo-ui5-tree",
+            "customElement": true
+          }
+        ],
+        "exports": [
+          {
+            "kind": "js",
+            "name": "FuroUi5Tree",
+            "declaration": {
+              "name": "FuroUi5Tree",
+              "module": "src/furo-ui5-tree.js"
+            }
+          },
+          {
+            "kind": "custom-element-definition",
+            "name": "furo-ui5-tree",
+            "declaration": {
+              "name": "FuroUi5Tree",
+              "module": "src/furo-ui5-tree.js"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
         "path": "src/furo-ui5-typerenderer-labeled.js",
         "declarations": [
           {
@@ -10141,6 +11143,142 @@
       },
       {
         "kind": "javascript-module",
+        "path": "src/furo-ui5-z-grid.js",
+        "declarations": [
+          {
+            "kind": "class",
+            "description": "`z-grid`\nis a grid which places your elements in a **z** pattern.\nIt creates a grid which can be imagined as a grid with cells of the size *8rem x 8rem*.~\n\nThe size on the x-axis can vary a little bit, according to the the available space.\n\n\nThis component is nestable.\n\n```html\n\n <furo-z-grid>\n   <your-component hspace=\"2\" vspace=\"4\"></your-component>\n   <your-component hspace=\"2\" vspace=\"2\"></your-component>\n </furo-z-grid>\n\n <!-- with automatic padding -->\n <furo-z-grid padding>\n   <your-component hspan=\"2\" vspan=\"4\"></your-component>\n   <your-component hspan=\"2\" vspan=\"2\"></your-component>\n </furo-z-grid>\n```\n\n\n ## sizes\n The sizes are calculated from the available space that the grid becomes from its parent.\n\n ### Sizes are calculated as following\n\n ```\n  |  small  |   medium   |    large    |    xlarge   |\n  |         |            |             |             |\n  | 0...599 | 600...1023 | 1024...1439 | 1440...nnnn |\n\n ```\n\n ## hspan\n Set the horizontal space (the width) with the *hspan* attribute.\n\n Available ranges are from 1 to 9 and full.\n\n To tell a element that it has to use the full width use `hspan=\"full\"` or use the alias `full` or `full-width`.\n\n `hspan=\"1\"`, `hspan=\"2\"`,...,`hspan=\"9\"`, `hspan=\"full\"`\n\n ## vspan\n Set the vertical space (the height) with the *vspan* attribute.\n\n Available ranges are from 1 to 9.\n\n `vspan=\"1\"`, `vspan=\"2\"`,...,`vspan=\"9\"`\n\n ## newline\n To force a placement on a new line use `newline`\n\n ## padding\n Set the attribute *padding* to add paddings according to the size of the furo-z-grid automatically.\n\n :host([size='size-s']) ==> **0.25rem 1rem;**\n\n :host([size='size-m'] ==> **0.25rem 2rem;**\n\n :host([size='size-l'] ==> **1rem 2rem;**\n\n :host([size='size-xl'] ==> **1rem 3rem;**\n\n ## full-on-[size]\n To set full width on a specific current size, use `full-on-size-small` , `full-on-size-medium` , `full-on-size-large` ,`full-on-size-xlarge`.\n\n When the available space has the given size, the default hspan are overridden and the full width is used.\n\n ## hide-on-[size]\n To hide a element on a specific current size, use `hide-on-size-small` , `hide-on-size-medium` , `hide-on-size-large` ,`hide-on-size-xlarge`.\n\n ## show-on-[size]\n To show a element only on a specific current size, use `show-on-size-small` , `show-on-size-medium` , `show-on-size-large` ,`show-on-size-xlarge`.\n\n ## custom span sizes on different sizes (hspan-on-[size])\n To set a specific width (hspan) on a specific current size, use `hspan-on-size-small=\"1...9\"` , `hspan-on-size-medium=\"1...9\"` , `hspan-on-size-large=\"1...9\"` , `hspan-on-size-xlarge=\"1...9\"` .\n\n ## Ohter attributes\n\n The attributes *full* and *full-width* are aliases for `hspan=\"full\"`.\n\n## Named lines and columns\n**last-col** refers to the last column.\n**last-row** refers to the last line/row.",
+            "name": "FuroUi5ZGrid",
+            "cssProperties": [
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "card content height with vspan=1, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight",
+                "name": "--furo-ui5-cardContentHeight",
+                "default": "4rem"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "card content height with vspan=2, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight",
+                "name": "--furo-ui5-cardContentHeight",
+                "default": "8rem"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "card content height with vspan=3, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight",
+                "name": "--furo-ui5-cardContentHeight",
+                "default": "12rem"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "card content height with vspan=4, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight",
+                "name": "--furo-ui5-cardContentHeight",
+                "default": "16rem"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "card content height with vspan=5, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight",
+                "name": "--furo-ui5-cardContentHeight",
+                "default": "20rem"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "card content height with vspan=6, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight",
+                "name": "--furo-ui5-cardContentHeight",
+                "default": "24rem"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "card content height with vspan=7, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight",
+                "name": "--furo-ui5-cardContentHeight",
+                "default": "28rem"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "card content height with vspan=8, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight",
+                "name": "--furo-ui5-cardContentHeight",
+                "default": "32rem"
+              },
+              {
+                "type": {
+                  "text": "N/A"
+                },
+                "description": "card content height with vspan=9, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight",
+                "name": "--furo-ui5-cardContentHeight",
+                "default": "36rem"
+              }
+            ],
+            "slots": [
+              {
+                "type": {
+                  "text": "HTMLElement [0..n]"
+                },
+                "description": "default slot to add content.",
+                "name": ""
+              }
+            ],
+            "members": [
+              {
+                "kind": "method",
+                "name": "_FBPReady",
+                "description": "flow is ready lifecycle method",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "_checkSize",
+                "parameters": [
+                  {
+                    "name": "size"
+                  }
+                ],
+                "description": "Form breakpoints according to SAP Fiori Design System\nhttps://experience.sap.com/fiori-design-web/form/",
+                "privacy": "private"
+              }
+            ],
+            "mixins": [
+              {
+                "name": "FBP",
+                "package": "@furo/fbp"
+              }
+            ],
+            "superclass": {
+              "name": "LitElement",
+              "package": "lit"
+            },
+            "summary": "grid with a z pattern",
+            "tagName": "furo-ui5-z-grid",
+            "customElement": true
+          }
+        ],
+        "exports": [
+          {
+            "kind": "custom-element-definition",
+            "name": "furo-ui5-z-grid",
+            "declaration": {
+              "name": "FuroUi5ZGrid",
+              "module": "src/furo-ui5-z-grid.js"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
         "path": "src/ui5-reference-search-item.js",
         "declarations": [
           {
@@ -10219,6 +11357,283 @@
             "declaration": {
               "name": "Ui5ReferenceSearchItem",
               "module": "src/ui5-reference-search-item.js"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/contextmenu/furo-ui5-context-menu-item.js",
+        "declarations": [
+          {
+            "kind": "class",
+            "description": "`furo-ui5-context-menu-item` is a helper component for `furo-ui5-context-menu`.\n\nUse [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.",
+            "name": "FuroUi5ContextMenuItem",
+            "members": [
+              {
+                "kind": "method",
+                "name": "_FBPReady",
+                "description": "flow is ready lifecycle method",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "bindData",
+                "parameters": [
+                  {
+                    "name": "menuNode"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "_openSub",
+                "parameters": [
+                  {
+                    "name": "byKeyboard",
+                    "description": "Boolean"
+                  }
+                ],
+                "description": "send event to open the submenu",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "_closeSub",
+                "description": "The submenu item was set from the _openSub() event response",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "_selectItem",
+                "description": "Select the item, furo-ui5-context-menu callback will be called",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "select",
+                "parameters": [
+                  {
+                    "name": "key"
+                  }
+                ],
+                "description": "selects the item if it does not have child elements"
+              },
+              {
+                "kind": "method",
+                "name": "_mouseSelect",
+                "description": "Open the item if it have children",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "index",
+                "parameters": [
+                  {
+                    "name": "i"
+                  }
+                ],
+                "description": "store the index for mouseover focus"
+              },
+              {
+                "kind": "method",
+                "name": "setFocused",
+                "description": "mark item as focused"
+              },
+              {
+                "kind": "method",
+                "name": "unsetFocused",
+                "description": "mark item as unfocused"
+              },
+              {
+                "kind": "field",
+                "name": "icon",
+                "type": {
+                  "text": "string"
+                },
+                "default": "'border'"
+              },
+              {
+                "kind": "field",
+                "name": "focused",
+                "privacy": "public",
+                "description": "focused state",
+                "attribute": "focused",
+                "reflects": true
+              },
+              {
+                "kind": "field",
+                "name": "disabled",
+                "privacy": "public",
+                "attribute": "disabled",
+                "reflects": true
+              }
+            ],
+            "events": [
+              {
+                "type": {
+                  "text": "index"
+                },
+                "description": " Fired when hovered with mouse",
+                "name": "mousefocus"
+              },
+              {
+                "type": {
+                  "text": "menu: this.menuitem, initiator: this"
+                },
+                "description": " Fired when submenu should be opened",
+                "name": "opensub-requested"
+              },
+              {
+                "type": {
+                  "text": "item"
+                },
+                "description": " Fired when item was selected",
+                "name": "item-selected"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "focused",
+                "description": "focused state",
+                "fieldName": "focused"
+              },
+              {
+                "name": "disabled",
+                "fieldName": "disabled"
+              }
+            ],
+            "mixins": [
+              {
+                "name": "FBP",
+                "package": "@furo/fbp"
+              }
+            ],
+            "superclass": {
+              "name": "LitElement",
+              "package": "lit"
+            },
+            "summary": "helper",
+            "tagName": "furo-ui5-context-menu-item",
+            "customElement": true
+          }
+        ],
+        "exports": [
+          {
+            "kind": "js",
+            "name": "FuroUi5ContextMenuItem",
+            "declaration": {
+              "name": "FuroUi5ContextMenuItem",
+              "module": "src/contextmenu/furo-ui5-context-menu-item.js"
+            }
+          },
+          {
+            "kind": "custom-element-definition",
+            "name": "furo-ui5-context-menu-item",
+            "declaration": {
+              "name": "FuroUi5ContextMenuItem",
+              "module": "src/contextmenu/furo-ui5-context-menu-item.js"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/contextmenu/furo-ui5-context-submenu.js",
+        "declarations": [
+          {
+            "kind": "class",
+            "description": "`furo-ui5-context-submenu` is a helper component for `furo-ui5-context-menu`.\n\nUse [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.",
+            "name": "FuroUi5ContextSubmenu",
+            "members": [
+              {
+                "kind": "method",
+                "name": "_FBPReady",
+                "description": "flow is ready lifecycle method",
+                "privacy": "private"
+              },
+              {
+                "kind": "method",
+                "name": "init",
+                "parameters": [
+                  {
+                    "name": "e"
+                  },
+                  {
+                    "name": "display"
+                  },
+                  {
+                    "name": "byKeyboard"
+                  }
+                ]
+              },
+              {
+                "kind": "method",
+                "name": "hideMenu"
+              },
+              {
+                "kind": "method",
+                "name": "triggerNavigation",
+                "parameters": [
+                  {
+                    "name": "key"
+                  }
+                ],
+                "description": "Interface for the furo navigation pad"
+              },
+              {
+                "kind": "field",
+                "name": "borderDistance",
+                "type": {
+                  "text": "number"
+                },
+                "default": "48"
+              },
+              {
+                "kind": "field",
+                "name": "depth",
+                "privacy": "public",
+                "description": "Depth of the submenu",
+                "attribute": "depth"
+              }
+            ],
+            "attributes": [
+              {
+                "name": "depth",
+                "description": "Depth of the submenu",
+                "fieldName": "depth"
+              }
+            ],
+            "mixins": [
+              {
+                "name": "FBP",
+                "package": "@furo/fbp"
+              }
+            ],
+            "superclass": {
+              "name": "LitElement",
+              "package": "lit"
+            },
+            "summary": "helper",
+            "tagName": "furo-ui5-context-submenu",
+            "customElement": true
+          }
+        ],
+        "exports": [
+          {
+            "kind": "js",
+            "name": "FuroUi5ContextSubmenu",
+            "declaration": {
+              "name": "FuroUi5ContextSubmenu",
+              "module": "src/contextmenu/furo-ui5-context-submenu.js"
+            }
+          },
+          {
+            "kind": "custom-element-definition",
+            "name": "furo-ui5-context-submenu",
+            "declaration": {
+              "name": "FuroUi5ContextSubmenu",
+              "module": "src/contextmenu/furo-ui5-context-submenu.js"
             }
           }
         ]
@@ -10314,264 +11729,6 @@
             "declaration": {
               "name": "Ui5LabelDataBinding",
               "module": "src/lib/Ui5LabelDataBinding.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/lib/furo-data-context-menu-item.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-data-context-menu-item` is a helper component for `furo-data-context-menu`.\n\nUse [`furo-data-context-menu`](?t=FuroDataContextMenu) to show a context menu.",
-            "name": "FuroDataContextMenuItem",
-            "members": [
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "bindData",
-                "parameters": [
-                  {
-                    "name": "menuNode"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "_openSub",
-                "parameters": [
-                  {
-                    "name": "byKeyboard",
-                    "description": "Boolean"
-                  }
-                ],
-                "description": "send event to open the submenu",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "_closeSub",
-                "description": "The submenu item was set from the _openSub() event response",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "_selectItem",
-                "description": "Select the item, furo-data-context-menu callback will be called",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "select",
-                "parameters": [
-                  {
-                    "name": "key"
-                  }
-                ],
-                "description": "selects the item if it does not have child elements"
-              },
-              {
-                "kind": "method",
-                "name": "_mouseSelect",
-                "description": "Open the item if it have children",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "index",
-                "parameters": [
-                  {
-                    "name": "i"
-                  }
-                ],
-                "description": "store the index for mouseover focus"
-              },
-              {
-                "kind": "method",
-                "name": "setFocused",
-                "description": "mark item as focused"
-              },
-              {
-                "kind": "method",
-                "name": "unsetFocused",
-                "description": "mark item as unfocused"
-              },
-              {
-                "kind": "field",
-                "name": "focused",
-                "privacy": "public",
-                "description": "focused state",
-                "attribute": "focused",
-                "reflects": true
-              }
-            ],
-            "events": [
-              {
-                "type": {
-                  "text": "index"
-                },
-                "description": " Fired when hovered with mouse",
-                "name": "mousefocus"
-              },
-              {
-                "type": {
-                  "text": "menu: this.menuitem, initiator: this"
-                },
-                "description": " Fired when submenu should be opened",
-                "name": "opensub-requested"
-              },
-              {
-                "type": {
-                  "text": "item"
-                },
-                "description": " Fired when item was selected",
-                "name": "item-selected"
-              }
-            ],
-            "attributes": [
-              {
-                "name": "focused",
-                "description": "focused state",
-                "fieldName": "focused"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "summary": "helper",
-            "tagName": "furo-data-context-menu-item",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "js",
-            "name": "FuroDataContextMenuItem",
-            "declaration": {
-              "name": "FuroDataContextMenuItem",
-              "module": "src/lib/furo-data-context-menu-item.js"
-            }
-          },
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-data-context-menu-item",
-            "declaration": {
-              "name": "FuroDataContextMenuItem",
-              "module": "src/lib/furo-data-context-menu-item.js"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "javascript-module",
-        "path": "src/lib/furo-data-context-submenu.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "`furo-data-context-submenu` is a helper component for `furo-data-context-menu`.\n\nUse [`furo-data-context-menu`](?t=FuroDataContextMenu) to show a context menu.",
-            "name": "FuroDataContextSubmenu",
-            "members": [
-              {
-                "kind": "method",
-                "name": "_FBPReady",
-                "description": "flow is ready lifecycle method",
-                "privacy": "private"
-              },
-              {
-                "kind": "method",
-                "name": "init",
-                "parameters": [
-                  {
-                    "name": "e"
-                  },
-                  {
-                    "name": "display"
-                  },
-                  {
-                    "name": "byKeyboard"
-                  }
-                ]
-              },
-              {
-                "kind": "method",
-                "name": "hideMenu"
-              },
-              {
-                "kind": "method",
-                "name": "triggerNavigation",
-                "parameters": [
-                  {
-                    "name": "key"
-                  }
-                ],
-                "description": "Interface for the furo navigation pad"
-              },
-              {
-                "kind": "field",
-                "name": "borderDistance",
-                "type": {
-                  "text": "number"
-                },
-                "default": "48"
-              },
-              {
-                "kind": "field",
-                "name": "depth",
-                "privacy": "public",
-                "description": "Depth of the submenu",
-                "attribute": "depth"
-              }
-            ],
-            "attributes": [
-              {
-                "name": "depth",
-                "description": "Depth of the submenu",
-                "fieldName": "depth"
-              }
-            ],
-            "mixins": [
-              {
-                "name": "FBP",
-                "package": "@furo/fbp"
-              }
-            ],
-            "superclass": {
-              "name": "LitElement",
-              "package": "lit"
-            },
-            "summary": "helper",
-            "tagName": "furo-data-context-submenu",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "js",
-            "name": "FuroDataContextSubmenu",
-            "declaration": {
-              "name": "FuroDataContextSubmenu",
-              "module": "src/lib/furo-data-context-submenu.js"
-            }
-          },
-          {
-            "kind": "custom-element-definition",
-            "name": "furo-data-context-submenu",
-            "declaration": {
-              "name": "FuroDataContextSubmenu",
-              "module": "src/lib/furo-data-context-submenu.js"
             }
           }
         ]
