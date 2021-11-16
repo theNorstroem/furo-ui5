@@ -26,6 +26,11 @@ import * as Button from '@ui5/webcomponents/dist/Button.js';
  * @demo demo-furo-ui5-button Basic usage
  */
 export class FuroUi5Button extends Button.default {
+
+  get buttonTypeText() {
+    return this.getAttribute('design') || '';
+  }
+
   /**
    * Sets the button state to disabled
    */

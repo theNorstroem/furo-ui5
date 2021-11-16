@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-color: var(--sapBackgroundColor);
+      padding: 1rem 1.5rem;
+      margin: 0;
+    }
+
+    furo-vertical-scroller{
+      height: 100vh;
+    }
+
+    .demopanel {
+
+      margin-bottom: 40px;
+      height: 100%;
+
+    }
+
+    /* needed because the contents get positioned vertically on small screens*/
+    .left[size='size-s'] {
+      height: 22rem;
+    }
+
+    .left[size='size-m'] {
+      height: 16rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../src/furo-ui5-bar.js';
+    import '../src/furo-ui5-button.js';
+
+
+
+    render(
+      html`
+        <furo-vertical-scroller>
+
+          <h3>furo-ui5-bar Basic Usage</h3>
+
+          <div class="demopanel">
+            <furo-ui5-bar design="Header" ƒ-bind-data="--furoLinkRepeaterNode">
+                 <ui5-label>Something</ui5-label>
+                 <ui5-button rel="update" design="Emphasized" slot="endContent">Save</ui5-button>
+                 <ui5-button rel="delete" slot="endContent">Delete</ui5-button>
+                 <ui5-button slot="endContent">Fixed Action</ui5-button>
+                 <furo-ui5-button slot="startContent" design="Positive">Furo Ui5 Button</furo-ui5-button>
+            </furo-ui5-bar>
+
+          </div>
+        </furo-vertical-scroller>
+
+
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
