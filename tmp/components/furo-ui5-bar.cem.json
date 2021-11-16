@@ -1,0 +1,102 @@
+{
+  "kind": "javascript-module",
+  "path": "src/furo-ui5-bar.js",
+  "declarations": [
+    {
+      "kind": "class",
+      "description": "The Bar is a container which is primarily used to hold titles, buttons and input elements and its design and\nfunctionality is the basis for page headers and footers.\nThe component consists of three areas to hold its content - startContent slot, default slot and endContent slot.\nIt has the capability to center content, such as a title, while having other components on the left and right side.\n\nThe component exposes a function to bind a FieldNode of type furo.Link to activate/deactivate elements according\nthe HATEOAS relations.\n\n```\n<furo-ui5-bar ƒ-bind-data=\"--furoLinkRepeaterNode\">\n  <furo-ui5-button rel=\"update\" slot=\"endContent\">Save</furo-ui5-button>\n  <furo-ui5-button rel=\"delete\" slot=\"endContent\">Delete</furo-ui5-button>\n  <furo-ui5-button slot=\"endContent\">Fixed Action</furo-ui5-button>\n</furo-ui5-bar>\n```",
+      "name": "FuroUi5Bar",
+      "slots": [
+        {
+          "type": {
+            "text": "HTMLElement [0..n]"
+          },
+          "description": "Defines the content in the middle of the bar",
+          "name": "default"
+        },
+        {
+          "type": {
+            "text": "HTMLElement [0..n]"
+          },
+          "description": "Defines the content at the start of the bar",
+          "name": "startContent"
+        },
+        {
+          "type": {
+            "text": "HTMLElement [0..n]"
+          },
+          "description": "Defines the content at the end of the bar https://sap.github.io/ui5-webcomponents/playground/components/Bar/",
+          "name": "endContent"
+        }
+      ],
+      "members": [
+        {
+          "kind": "method",
+          "name": "onFnaFieldValueChanged",
+          "parameters": [
+            {
+              "name": "val"
+            }
+          ],
+          "description": "overwrite onFnaFieldValueChanged",
+          "privacy": "private"
+        },
+        {
+          "kind": "method",
+          "name": "disableAll",
+          "description": "Disables all elements"
+        },
+        {
+          "kind": "method",
+          "name": "enableAll",
+          "description": "Enables all elements inside if check is true\nCan be used to enable after a request"
+        },
+        {
+          "kind": "method",
+          "name": "enableAllNoChecks",
+          "description": "Enables all elements inside\nIMPORTANT: all checks are disabled"
+        },
+        {
+          "kind": "method",
+          "name": "_updateElements",
+          "parameters": [
+            {
+              "name": "hateoas"
+            }
+          ],
+          "privacy": "private"
+        }
+      ],
+      "mixins": [
+        {
+          "name": "FieldNodeAdapter",
+          "package": "@furo/data/src/lib/FieldNodeAdapter.js"
+        }
+      ],
+      "superclass": {
+        "module": "src/furo-ui5-bar.js"
+      },
+      "summary": "ui5 bar",
+      "tagName": "furo-ui5-bar",
+      "customElement": true
+    }
+  ],
+  "exports": [
+    {
+      "kind": "js",
+      "name": "FuroUi5Bar",
+      "declaration": {
+        "name": "FuroUi5Bar",
+        "module": "src/furo-ui5-bar.js"
+      }
+    },
+    {
+      "kind": "custom-element-definition",
+      "name": "furo-ui5-bar",
+      "declaration": {
+        "name": "FuroUi5Bar",
+        "module": "src/furo-ui5-bar.js"
+      }
+    }
+  ]
+}

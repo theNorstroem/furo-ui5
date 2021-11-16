@@ -1,0 +1,77 @@
+{
+  "kind": "class",
+  "description": "`furo-ui5-context-submenu` is a helper component for `furo-ui5-context-menu`.\n\nUse [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.",
+  "name": "FuroUi5ContextSubmenu",
+  "members": [
+    {
+      "kind": "method",
+      "name": "_FBPReady",
+      "description": "flow is ready lifecycle method",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "init",
+      "parameters": [
+        {
+          "name": "e"
+        },
+        {
+          "name": "display"
+        },
+        {
+          "name": "byKeyboard"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "hideMenu"
+    },
+    {
+      "kind": "method",
+      "name": "triggerNavigation",
+      "parameters": [
+        {
+          "name": "key"
+        }
+      ],
+      "description": "Interface for the furo navigation pad"
+    },
+    {
+      "kind": "field",
+      "name": "borderDistance",
+      "type": {
+        "text": "number"
+      },
+      "default": "48"
+    },
+    {
+      "kind": "field",
+      "name": "depth",
+      "privacy": "public",
+      "description": "Depth of the submenu",
+      "attribute": "depth"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "depth",
+      "description": "Depth of the submenu",
+      "fieldName": "depth"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "FBP",
+      "package": "@furo/fbp"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "summary": "helper",
+  "tagName": "furo-ui5-context-submenu",
+  "customElement": true
+}
