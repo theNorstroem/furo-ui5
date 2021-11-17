@@ -7,13 +7,13 @@ import '@ui5/webcomponents-fiori/dist/NotificationAction.js';
 import '@ui5/webcomponents/dist/List.js';
 
 /**
- * `furo-ui5-notification-list`
+ *  Notification display component that works together with furo-ui5-notification.
  *  Displays google.rpc.Status messages in a grouped list.
  *  https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto.
  *
- *  Best place the furo-ui5-notification-list on the main site. then you only need one furo-ui5-notification-list.
- *  you can also use more than one furo-ui5-notification-list for special needs.
- *  But you have to be sure the furo-ui5-notification-list can receive the notification events from furo-ui5-notification.
+ *  Best place the furo-ui5-notification-list-display on the main site. then you only need one furo-ui5-notification-list-display.
+ *  you can also use more than one furo-ui5-notification-list-display for special needs.
+ *  But you have to be sure the furo-ui5-notification-list-display can receive the notification events from furo-ui5-notification.
  *
  * @fires {Number} value-changed - Fires a notification counter changed. Use this event to show the amount of notifications to the user.
  *

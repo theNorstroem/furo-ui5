@@ -24,8 +24,8 @@ import { i18n } from '@furo/framework/src/i18n.js';
  *   <furo-ui5-pagination-bar ƒ-inject="--hts"></furo-ui5-pagination-bar>
  * ```
  *
- * @cssprop {24px} [--furo-ui5-pagination-bar-padding-right=--spacing] - Right padding definition
- * @cssprop {#ffffff} [--furo-ui5-pagination-bar-background-color=--surface-light] - Background color
+ * @cssprop {1rem} [--furo-ui5-pagination-bar-padding-right=1rem] - Right padding definition
+ * @cssprop {#ffffff} [--furo-ui5-pagination-bar-background-color=--sapPageHeader_Background] - Background color
  *
  * @fires {} pagination-first -  Is fired if the pagination button 'sys_first_page' was clicked
  * @fires {} pagination-last -  Is fired if the pagination button 'sys_last_page' was clicked
