@@ -1,6 +1,6 @@
 {
   "kind": "javascript-module",
-  "path": "src/furo-ui5-tree-item.js",
+  "path": "src/subcomponents/furo-ui5-tree-item.js",
   "declarations": [
     {
       "kind": "class",
@@ -286,7 +286,7 @@
       "name": "FuroUi5TreeItem",
       "declaration": {
         "name": "FuroUi5TreeItem",
-        "module": "src/furo-ui5-tree-item.js"
+        "module": "src/subcomponents/furo-ui5-tree-item.js"
       }
     },
     {
@@ -294,7 +294,7 @@
       "name": "furo-ui5-tree-item",
       "declaration": {
         "name": "FuroUi5TreeItem",
-        "module": "src/furo-ui5-tree-item.js"
+        "module": "src/subcomponents/furo-ui5-tree-item.js"
       }
     }
   ]

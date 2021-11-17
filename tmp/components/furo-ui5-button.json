@@ -6,7 +6,14 @@
     "members": [
       {
         "kind": "field",
-        "name": "buttonTypeText"
+        "name": "buttonTypeText",
+        "description": "Overridden, because we use a different i18n bundle",
+        "return": {
+          "type": {
+            "text": "*|string"
+          }
+        },
+        "privacy": "private"
       },
       {
         "kind": "method",
@@ -144,7 +151,14 @@
         "members": [
           {
             "kind": "field",
-            "name": "buttonTypeText"
+            "name": "buttonTypeText",
+            "description": "Overridden, because we use a different i18n bundle",
+            "return": {
+              "type": {
+                "text": "*|string"
+              }
+            },
+            "privacy": "private"
           },
           {
             "kind": "method",

@@ -33,8 +33,8 @@ import '@ui5/webcomponents/dist/Panel.js';
  *
  * @cssprop {#ffffff} [--furo-ui5-header-panel-icon-color=--ui5-avatar-initials-color] - Color of the icon
  * @cssprop {#354a5f} [--furo-ui5-header-panel-icon-background-color=--ui5-avatar-accent6] - background Color of the icon
- * @cssprop {#354a5f} [--furo-ui5-header-panel-splitter-start-color=--primary-dark] - the gradient-start hex-Color of the splitter
- * @cssprop {rgba(8, 84, 16, 0)} [--furo-ui5-header-panel-splitter-end-rgba-color=--primary-rgb] - the gradient-end rgba-Color of the splitter
+ * @cssprop {#0854a0} [--furo-ui5-header-panel-splitter-start-color=--sapHighlightColor] - the gradient-start hex-Color of the splitter
+ * @cssprop {rgba(8, 84, 16, 0)} [--furo-ui5-header-panel-splitter-end-rgba-color=rgba(8, 84, 16, 0)] - the gradient-end rgba-Color of the splitter
  *
  * @summary A bindable header panel
  * @customElement
@@ -211,7 +211,6 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
         });
       }
     });
-
   }
 
   /**
@@ -273,19 +272,19 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
         border-bottom: none;
       }
 
-      ui5-panel[data-size*=size-s] {
+      ui5-panel[data-size*='size-s'] {
         padding: 0.25rem 1rem 0 1rem;
       }
 
-      ui5-panel[data-size*=size-m] {
+      ui5-panel[data-size*='size-m'] {
         padding: 0.25rem 2rem 0 2rem;
       }
 
-      ui5-panel[data-size*=size-l] {
+      ui5-panel[data-size*='size-l'] {
         padding: 1rem 2rem 0 2rem;
       }
 
-      ui5-panel[data-size*=size-xl] {
+      ui5-panel[data-size*='size-xl'] {
         padding: 2rem 3rem 0 3rem;
       }
 

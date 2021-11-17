@@ -4,7 +4,7 @@
   "declarations": [
     {
       "kind": "class",
-      "description": "`furo-ui5-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.",
+      "description": "`furo-ui5-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.\n\n```\n<furo-ui5-bool-icon ƒ-bind-data=\"--FieldNode\"></furo-ui5-bool-icon>\n```",
       "name": "FuroDataBoolIcon",
       "members": [
         {
@@ -31,7 +31,7 @@
           "type": {
             "text": "string"
           },
-          "default": "'▼'",
+          "default": "'navigation-down-arrow'",
           "privacy": "public",
           "description": "Defines the symbol for the true state",
           "attribute": "symboltrue"
@@ -42,7 +42,7 @@
           "type": {
             "text": "string"
           },
-          "default": "'▶'",
+          "default": "'navigation-right-arrow'",
           "privacy": "public",
           "description": "Defines the symbol for the false state",
           "attribute": "symbolfalse"
@@ -63,6 +63,14 @@
             "text": "string"
           },
           "privacy": "private"
+        },
+        {
+          "kind": "field",
+          "name": "_state",
+          "type": {
+            "text": "boolean"
+          },
+          "default": "false"
         }
       ],
       "attributes": [

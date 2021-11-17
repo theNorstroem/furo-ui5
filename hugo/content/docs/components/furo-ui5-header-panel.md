@@ -25,11 +25,17 @@ weight: 50
  This component is a container which has a header and a content area and is used for grouping and displaying information.
  It can be collapsed to save space on the screen.
 
+ ```
+  <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task"></furo-ui5-header-panel>
+ ```
+
 {{% api "_furo-ui5-header-panel-description.md" %}}
 
 
 ## Attributes and Properties
 {{% api "_furo-ui5-header-panel-properties.md" %}}
+
+
 
 
 
@@ -148,6 +154,8 @@ toggles the collapse state
 
 
 
+
+
 ## Slots
 {{% api "_furo-ui5-header-panel-slots.md" %}}
 
@@ -170,8 +178,8 @@ Custom property | Description
 ----------------|-------------
 `--furo-ui5-header-panel-icon-color` | Color of the icon <hr> <small>default: `--ui5-avatar-initials-color`</small> <small>fallback: `#ffffff`</small>
 `--furo-ui5-header-panel-icon-background-color` | background Color of the icon <hr> <small>default: `--ui5-avatar-accent6`</small> <small>fallback: `#354a5f`</small>
-`--furo-ui5-header-panel-splitter-start-color` | the gradient-start hex-Color of the splitter <hr> <small>default: `--primary-dark`</small> <small>fallback: `#354a5f`</small>
-`--furo-ui5-header-panel-splitter-end-rgba-color` | the gradient-end rgba-Color of the splitter <hr> <small>default: `--primary-rgb`</small> <small>fallback: `rgba(8, 84, 16, 0)`</small>
+`--furo-ui5-header-panel-splitter-start-color` | the gradient-start hex-Color of the splitter <hr> <small>default: `--sapHighlightColor`</small> <small>fallback: `#0854a0`</small>
+`--furo-ui5-header-panel-splitter-end-rgba-color` | the gradient-end rgba-Color of the splitter <hr> <small>default: `rgba(8, 84, 16, 0)`</small> <small>fallback: `rgba(8, 84, 16, 0)`</small>
 
 {{% api "_furo-ui5-header-panel-footer.md" %}}
 {{% api "_furo-ui5-header-panel-scripts.md" %}}

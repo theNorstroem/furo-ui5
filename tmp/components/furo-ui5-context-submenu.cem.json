@@ -1,6 +1,6 @@
 {
   "kind": "javascript-module",
-  "path": "src/contextmenu/furo-ui5-context-submenu.js",
+  "path": "src/subcomponents/furo-ui5-context-submenu.js",
   "declarations": [
     {
       "kind": "class",
@@ -86,7 +86,7 @@
       "name": "FuroUi5ContextSubmenu",
       "declaration": {
         "name": "FuroUi5ContextSubmenu",
-        "module": "src/contextmenu/furo-ui5-context-submenu.js"
+        "module": "src/subcomponents/furo-ui5-context-submenu.js"
       }
     },
     {
@@ -94,7 +94,7 @@
       "name": "furo-ui5-context-submenu",
       "declaration": {
         "name": "FuroUi5ContextSubmenu",
-        "module": "src/contextmenu/furo-ui5-context-submenu.js"
+        "module": "src/subcomponents/furo-ui5-context-submenu.js"
       }
     }
   ]

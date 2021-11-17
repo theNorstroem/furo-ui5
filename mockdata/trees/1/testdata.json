@@ -22,14 +22,14 @@
     "children": [
       {
         "id": "2",
-        "display_name": "A",
-        "secondary_text": "Secondary node description",
+        "display_name": "Closed on start",
+        "secondary_text": "",
         "description": "first with veery big title sub",
         "icon": "appointment",
         "panel": "view",
         "key_words": "documentation",
         "has_error": false,
-        "open": true,
+        "open": false,
         "link": {
           "rel": "self",
           "method": "GET",
@@ -39,13 +39,14 @@
         "children": [
           {
             "id": "3",
-            "display_name": "C",
-            "secondary_text": "Secondary node description",
+            "display_name": "Is Group Label",
+            "secondary_text": "",
             "description": "Fingerprint Studio",
-            "icon": "add",
+            "icon": "",
             "panel": "view",
             "key_words": "documentation",
             "has_error": false,
+            "is_group_label": true,
             "open": true,
             "link": {
               "rel": "self",
@@ -94,7 +95,7 @@
         "children": [
           {
             "id": "5",
-            "display_name": "D",
+            "display_name": "leading divider",
             "secondary_text": "Secondary node description",
             "description": "sub suirst with veery big titleb",
             "icon": "",

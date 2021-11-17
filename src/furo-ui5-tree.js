@@ -11,6 +11,9 @@ import './subcomponents/furo-ui5-tree-item.js';
  * `furo-tree`
  * renders a tree structure
  *
+ * ## Data Signature
+ *
+ *
  * @cssprop {N/A} [--surface=white] - background color
  * @cssprop {N/A} [--on-surface=#333333] - foreground color
  *
@@ -58,10 +61,16 @@ export class FuroUi5Tree extends FBP(LitElement) {
      * The default item component is **furo-ui5-tree-item**.
      *
      * @type {*|string|string}
+     * @private
      */
     // eslint-disable-next-line wc/no-constructor-attributes
     this._tic =
       this.getAttribute('tree-item-component') || 'furo-ui5-tree-item';
+    /**
+     *
+     * @type {TemplateResult<1>}
+     * @private
+     */
     this._treeItemTepmplate = html([
       [
         '<template><tr><td><',
@@ -237,6 +246,10 @@ export class FuroUi5Tree extends FBP(LitElement) {
         node.selectItem();
 
         // update focused
+        /**
+         *
+         * @private
+         */
         this._focusedField = this._selectedField || this._focusedField;
         /**
          * Fire event, when qp is set, because the selectItem will not fire
@@ -531,6 +544,8 @@ export class FuroUi5Tree extends FBP(LitElement) {
         position: relative;
         background: var(--sapList_Background, #ffffff);
         color: var(--sapTextColor, #32363a);
+        font-size: var(--sapFontSize);
+        font-family: var(--sapFontFamily);
       }
 
       .tablewrapper {
@@ -666,6 +681,10 @@ export class FuroUi5Tree extends FBP(LitElement) {
    */
   bindData(treeNode) {
     if (treeNode.root === undefined) {
+      /**
+       *
+       * @private
+       */
       this._rootNode = treeNode;
     } else {
       this._rootNode = treeNode.root;
@@ -772,6 +791,10 @@ export class FuroUi5Tree extends FBP(LitElement) {
       this._rootNode.broadcastEvent(
         new NodeEvent('tree-node-unselection-requested')
       );
+      /**
+       *
+       * @private
+       */
       this._selectedField = e.target;
 
       if (!this.qp) {

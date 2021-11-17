@@ -245,7 +245,7 @@ Set a fixed height for the plot. Default is auto, this can be useful if you need
 default: **{
       series: [],
       yaxis: [],
-      // belize qualitative color palete
+      // belize qualitative color palette
       colors: [
         &#39;#5899DA&#39;,
         &#39;#E8743B&#39;,

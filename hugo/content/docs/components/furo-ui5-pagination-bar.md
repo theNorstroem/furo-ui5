@@ -20,6 +20,10 @@ weight: 50
 this pagination element loops the hts array and find out the pagination
 information like prev, next, first and last
 
+```
+  <furo-ui5-pagination-bar ƒ-inject="--hts"></furo-ui5-pagination-bar>
+```
+
 {{% api "_furo-ui5-pagination-bar-description.md" %}}
 
 

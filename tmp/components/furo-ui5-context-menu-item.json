@@ -250,7 +250,7 @@
   },
   "cem": {
     "kind": "javascript-module",
-    "path": "src/contextmenu/furo-ui5-context-menu-item.js",
+    "path": "src/subcomponents/furo-ui5-context-menu-item.js",
     "declarations": [
       {
         "kind": "class",
@@ -411,7 +411,7 @@
         "name": "FuroUi5ContextMenuItem",
         "declaration": {
           "name": "FuroUi5ContextMenuItem",
-          "module": "src/contextmenu/furo-ui5-context-menu-item.js"
+          "module": "src/subcomponents/furo-ui5-context-menu-item.js"
         }
       },
       {
@@ -419,7 +419,7 @@
         "name": "furo-ui5-context-menu-item",
         "declaration": {
           "name": "FuroUi5ContextMenuItem",
-          "module": "src/contextmenu/furo-ui5-context-menu-item.js"
+          "module": "src/subcomponents/furo-ui5-context-menu-item.js"
         }
       }
     ]

@@ -372,30 +372,24 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       :host([isheader]) {
         height: 64px;
         margin: 0;
+        min-width: 100%;
       }
 
       :host([isheader]) ui5-icon {
-        margin-bottom: 4px;
+        width: 20px;
       }
 
-      :host([isheader]) .oc {
+      :host([isheader]) furo-ui5-bool-icon {
         display: none;
       }
 
       :host([isheader]) .desc {
         font-size: 14px;
-        height: 24px;
+
         letter-spacing: 0.1px;
         color: var(--sapNeutralTextColor, #6a6d70);
-        line-height: 20px;
+        line-height: 30px;
         display: block;
-        position: absolute;
-        text-overflow: ellipsis;
-        /* Required for text-overflow to do anything */
-        white-space: nowrap;
-        overflow: hidden;
-        width: 100%;
-        top: 32px;
         box-sizing: border-box;
       }
 
@@ -410,7 +404,8 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       }
 
       :host([is-group-label]) {
-        border-top: 1px solid var(--sapList_GroupHeaderBorderColor, #d9d9d9);
+        border-top: 1px solid var(--sapList_GroupHeaderBorderColor, #00d9d9);
+        background: var(--sapList_GroupHeaderBackground);
         margin-top: 0.25rem;
         padding-top: 0.25rem;
         border-radius: 0;
@@ -425,7 +420,7 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       }
 
       .indentation {
-        height: 35px;
+        height: 40px;
       }
 
       .indentation-0 .indentation {

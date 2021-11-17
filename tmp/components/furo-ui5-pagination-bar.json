@@ -1,7 +1,7 @@
 {
   "decl": {
     "kind": "class",
-    "description": "`furo-ui5-pagination-bar`\nthis pagination element loops the hts array and find out the pagination\ninformation like prev, next, first and last",
+    "description": "`furo-ui5-pagination-bar`\nthis pagination element loops the hts array and find out the pagination\ninformation like prev, next, first and last\n\n```\n  <furo-ui5-pagination-bar ƒ-inject=\"--hts\"></furo-ui5-pagination-bar>\n```",
     "name": "FuroUi5PaginationBar",
     "cssProperties": [
       {
@@ -249,7 +249,7 @@
     "declarations": [
       {
         "kind": "class",
-        "description": "`furo-ui5-pagination-bar`\nthis pagination element loops the hts array and find out the pagination\ninformation like prev, next, first and last",
+        "description": "`furo-ui5-pagination-bar`\nthis pagination element loops the hts array and find out the pagination\ninformation like prev, next, first and last\n\n```\n  <furo-ui5-pagination-bar ƒ-inject=\"--hts\"></furo-ui5-pagination-bar>\n```",
         "name": "FuroUi5PaginationBar",
         "cssProperties": [
           {

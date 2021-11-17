@@ -8,7 +8,6 @@ bookHidden: true
 
 - [furo-chart-display](furo-chart-display.md) Display charts with data objects
 - [furo-ui5-chart-binder](furo-ui5-chart-binder.md) connect data to a chart
-- [furo-ui5-bar](furo-ui5-bar.md) ui5 bar
 - [furo-ui5-bool-icon](furo-ui5-bool-icon.md) Displays a icon/symbol for a boolean value
 - [furo-ui5-busyindicator](furo-ui5-busyindicator.md) ui5 busy indicator
 - [furo-ui5-button](furo-ui5-button.md) ui5 button
@@ -59,11 +58,11 @@ bookHidden: true
 - [furo-ui5-time-picker-labeled](furo-ui5-time-picker-labeled.md) labeled input field
 - [furo-ui5-time-picker](furo-ui5-time-picker.md) furo data time picker field
 - [furo-ui5-toggle-button](furo-ui5-toggle-button.md) boolean toggle button
-- [furo-ui5-tree-item](furo-ui5-tree-item.md) todo shortdescription
 - [furo-ui5-tree](furo-ui5-tree.md) tree navigation menu
 - [furo-ui5-typerenderer-labeled](furo-ui5-typerenderer-labeled.md) labeled input field
 - [furo-ui5-z-grid](furo-ui5-z-grid.md) grid with a z pattern
 - [ui5-reference-search-item](ui5-reference-search-item.md) representation of a result item
+- [furo-ui5-table-row](furo-ui5-table-row.md) 
 - [furo-ui5-context-menu-item](furo-ui5-context-menu-item.md) helper
 - [furo-ui5-context-submenu](furo-ui5-context-submenu.md) helper
-- [furo-ui5-table-row](furo-ui5-table-row.md) 
+- [furo-ui5-tree-item](furo-ui5-tree-item.md) todo shortdescription

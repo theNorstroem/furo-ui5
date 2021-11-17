@@ -43,11 +43,6 @@ https://sap.github.io/ui5-webcomponents/playground/components/Button/
 
 
 
-### **buttonTypeText**
-</small>
-
-
-<br><br>
 
 
 

@@ -1,6 +1,6 @@
 {
   "kind": "class",
-  "description": "`furo-ui5-header-panel`\n A bindable **header** panel.\n\n **Info**: This component is intended to use as a header panel, if you need panels in your view, consider to use\n a ui5-panel directly. That is also the reason that the api does not match with ui5-panel.\n\n This component is a container which has a header and a content area and is used for grouping and displaying information.\n It can be collapsed to save space on the screen.",
+  "description": "`furo-ui5-header-panel`\n A bindable **header** panel.\n\n **Info**: This component is intended to use as a header panel, if you need panels in your view, consider to use\n a ui5-panel directly. That is also the reason that the api does not match with ui5-panel.\n\n This component is a container which has a header and a content area and is used for grouping and displaying information.\n It can be collapsed to save space on the screen.\n\n ```\n  <furo-ui5-header-panel header-text=\"Header Text\" secondary-text=\"Subtitle Text\" icon=\"task\"></furo-ui5-header-panel>\n ```",
   "name": "FuroUi5HeaderPanel",
   "cssProperties": [
     {
@@ -21,11 +21,11 @@
     },
     {
       "type": {
-        "text": "#354a5f"
+        "text": "#0854a0"
       },
       "description": "the gradient-start hex-Color of the splitter",
       "name": "--furo-ui5-header-panel-splitter-start-color",
-      "default": "--primary-dark"
+      "default": "--sapHighlightColor"
     },
     {
       "type": {
@@ -33,7 +33,7 @@
       },
       "description": "the gradient-end rgba-Color of the splitter",
       "name": "--furo-ui5-header-panel-splitter-end-rgba-color",
-      "default": "--primary-rgb"
+      "default": "rgba(8, 84, 16, 0)"
     }
   ],
   "slots": [
@@ -125,6 +125,28 @@
       "kind": "method",
       "name": "_FBPReady",
       "description": "flow is ready lifecycle method",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_checkSize",
+      "parameters": [
+        {
+          "name": "size"
+        }
+      ],
+      "description": "Form breakpoints according to SAP Fiori Design System\nhttps://experience.sap.com/fiori-design-web/form/",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_setSizeAttribute",
+      "parameters": [
+        {
+          "name": "attrValue"
+        }
+      ],
+      "description": "Sets data-size attribute",
       "privacy": "private"
     },
     {
