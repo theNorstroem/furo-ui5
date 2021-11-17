@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
 import '@furo/layout/src/furo-horizontal-flex';
-import './furo-ui5-bool-icon.js';
+import '../furo-ui5-bool-icon.js';
 import '@ui5/webcomponents/dist/Icon.js';
 import '@ui5/webcomponents-icons/dist/border.js';
 
@@ -296,7 +296,6 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
         cursor: pointer;
         font-weight: 400;
         user-select: none;
-        border-radius: 4px;
         position: relative;
         transition: color 0.2s, background-color 0.2s;
       }
@@ -315,7 +314,7 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       }
 
       :host([haserror]) ui5-icon {
-        animation: error-pulse 3s infinite;
+        animation: error-pulse 5s infinite;
       }
 
       .label {
@@ -323,17 +322,14 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
         font-size: 16px;
         letter-spacing: 0.15px;
         font-weight: 400;
+        display: flex;
+        align-items: center;
       }
 
       .desc {
         font-size: smaller;
-        line-height: 39px;
-        white-space: nowrap;
-      }
 
-      .oc {
-        box-sizing: border-box;
-        font-size: 8px;
+        white-space: nowrap;
       }
 
       :host([selected]) .oc {
@@ -345,28 +341,31 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       }
 
       ui5-icon[error] {
-        animation: error-pulse 2s infinite;
+        animation: error-pulse 5s infinite;
       }
 
       ui5-icon {
-        margin-right: 4px;
+        margin-right: 0.5rem;
       }
 
       @keyframes error-pulse {
         0% {
-          fill: var(--sapErrorBackground, #ffebeb);
+          fill: var(--sapNegativeColor, #ffebeb);
         }
         12% {
-          fill: var(--sapNegativeColor, #b00);
+          fill: var(--sapErrorBackground, #b00);
         }
         24% {
-          fill: var(--sapErrorBackground, #ffebeb);
+          fill: var(--sapNegativeColor, #ffebeb);
         }
         36% {
-          fill: var(--sapNegativeColor, #b00);
+          fill: var(--sapErrorBackground, #b00);
         }
         48% {
-          fill: var(--sapErrorBackground, #ffebeb);
+          fill: var(--sapNegativeColor, #ffebeb);
+        }
+        94% {
+          fill: var(--sapNegativeColor, #ffebeb);
         }
       }
 
@@ -405,7 +404,6 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
         position: relative;
         font-size: 20px;
         height: 32px;
-        line-height: 40px;
         margin: 0;
         display: block;
         letter-spacing: 0.15px;
@@ -414,7 +412,7 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       :host([is-group-label]) {
         border-top: 1px solid var(--sapList_GroupHeaderBorderColor, #d9d9d9);
         margin-top: 0.25rem;
-        padding-top:0.25rem;
+        padding-top: 0.25rem;
         border-radius: 0;
       }
 
@@ -486,7 +484,7 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       }
 
       furo-ui5-bool-icon {
-        text-align: center;
+        margin-right: 0.5rem;
       }
     `;
   }
@@ -503,21 +501,23 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
         @-dblclick="--dblclicked"
       >
         <div class="indentation" @-click="--labelClicked"></div>
-        <div class="oc">
-          <furo-ui5-bool-icon
-            ?hidden="${!this.fieldNode.children.repeats.length}"
-            ƒ-toggle="--dblclicked"
-            ƒ-bind-data="--fieldOpen"
-          ></furo-ui5-bool-icon>
-        </div>
+
+        <furo-ui5-bool-icon
+          ?hidden="${!this.fieldNode.children.repeats.length}"
+          ƒ-toggle="--dblclicked"
+          ƒ-bind-data="--fieldOpen"
+        ></furo-ui5-bool-icon>
+
         <div flex class="label" @-click="--labelClicked">
           <ui5-icon
             ?hidden="${this.noicon}"
             name="${this._icon}"
             ?error="${this.fieldNode.has_error._value}"
           ></ui5-icon>
-          ${this.fieldNode.display_name}
-          <span class="desc">${this.fieldNode.secondary_text}</span>
+          <span>
+            ${this.fieldNode.display_name}
+            <span class="desc">${this.fieldNode.secondary_text}</span></span
+          >
         </div>
       </furo-horizontal-flex>
     `;

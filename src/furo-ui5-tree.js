@@ -4,7 +4,7 @@ import '@furo/fbp/src/flow-repeat';
 import { FieldNode } from '@furo/data/src/lib/FieldNode';
 import '@furo/layout/src/furo-vertical-flex';
 import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
-import './furo-ui5-tree-item.js';
+import './subcomponents/furo-ui5-tree-item.js';
 // import { html as statichtml, literal } from 'lit/static-html.js';
 
 /**
