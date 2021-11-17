@@ -19,7 +19,32 @@ weight: 50
 `furo-tree`
 renders a tree structure
 
-## Data Signature
+## Data signature
+
+```yaml
+- type: 'tree.Tree #Navigation tree type with recursive navigation nodes'
+  fields:
+    root: 'tree.Navigationnode:1 #Root node of the tree'
+    id: 'string:2 #[optional] Id of the tree'
+    display_name: '- string:3 #[optional] String representation of the tree'
+    description: 'string:4 #[optional] description of the tree'
+```
+
+
+```yaml
+- type: 'tree.Navigationnode #Item of the navigationtree'
+  fields:
+    id: 'string:1 #Id of the node'
+    display_name: '- string:2 #String representation of the node'
+    children: '[] tree.Navigationnode:3 #Children of this node'
+    open: 'bool:4 #node is open or not'
+    secondary_text: 'string:5 #[optional] Secondary text of the node'
+    description: 'string:6 #[optional] Searchable description of the node'
+    icon: 'string:7 #[optional] icon of the node'
+    key_words: 'string:8 #[optional] searchable key words of the node'
+    has_error: 'bool:9 #[optional] error indicator'
+    is_group_label: 'bool:10 #[optional] Mark node as group label'
+```
 
 {{% api "_furo-ui5-tree-description.md" %}}
 
@@ -148,16 +173,6 @@ Override display name from root object
 </small>
 
 Override description from root object.
-<br><br>
-
-### **nobgonhead**
-
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-bg-on-header</span>
-</small>
-
-disables the background color on focus, selected, ... on header node
-
-Works only with `root-as-header` enabled
 <br><br>
 
 ### **focused**
@@ -353,7 +368,9 @@ The tree item will also scrollIntoViewIfNeeded() (on all platforms which support
 <small>`` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-qp-in</span>
 
+Selects the node which is defined on `qp`
 
+Use this, if you do not have a location object.
 
 - <small>qpObject </small>
 <br><br>
@@ -534,16 +551,14 @@ focuses the tree itself. You can use this in combination with keyboard navigatio
 
 
 ### **bindData**
-<small>**bindData**(*treeNode* `` ) ⟹ `void`</small>
+<small>**bindData**(*treeNode* `NavigationNode|Tree` ) ⟹ `void`</small>
 
-<small>`` </small> →
+<small>`NavigationNode|Tree` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-Binds a FieldNode with a tree signature.
+Binds a FieldNode with a tree.Tree or tree.Navigationnode signature.
 
-A sample and usable signature can be found in ./specs/
-
-- <small>treeNode </small>
+- <small>treeNode Fieldnode</small>
 <br><br>
 
 
@@ -571,7 +586,6 @@ The tree item will also scrollIntoViewIfNeeded() (on all platforms which support
 
 - <small>tree </small>
 <br><br>
-
 
 
 

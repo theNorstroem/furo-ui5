@@ -314,7 +314,7 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       }
 
       :host([haserror]) ui5-icon {
-        animation: error-pulse 5s infinite;
+        animation: error-pulse 5s;
       }
 
       .label {
