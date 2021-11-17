@@ -50,8 +50,7 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
       :host {
         width: 100%;
         display: block;
-        padding: 0.25rem
-          var(--furo-ui5-pagination-bar-padding-right, 1rem)
+        padding: 0.25rem var(--furo-ui5-pagination-bar-padding-right, 1rem)
           0.25rem 1rem;
         box-sizing: border-box;
         background-color: var(

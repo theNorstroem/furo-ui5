@@ -341,7 +341,8 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       }
 
       ui5-icon[error] {
-        animation: error-pulse 5s infinite;
+        fill: var(--sapNegativeColor, #ffebeb);
+        animation: error-pulse 5s;
       }
 
       ui5-icon {
@@ -480,6 +481,9 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
 
       furo-ui5-bool-icon {
         margin-right: 0.5rem;
+      }
+      span {
+        line-height: 38px;
       }
     `;
   }

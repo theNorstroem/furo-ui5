@@ -97,9 +97,9 @@ export class FuroUi5Tree extends FBP(LitElement) {
      * @type {*|string|string}
      * @private
      */
+    this._tic = 'furo-ui5-tree-item';
     // eslint-disable-next-line wc/no-constructor-attributes
-    this._tic =
-      this.getAttribute('tree-item-component') || 'furo-ui5-tree-item';
+    this._tic = this.getAttribute('tree-item-component') || this._tic;
     /**
      *
      * @type {TemplateResult<1>}
