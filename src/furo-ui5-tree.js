@@ -49,12 +49,22 @@ export class FuroUi5Tree extends FBP(LitElement) {
      * @type {number}
      */
     this.tabindex = 0;
+    /**
+     *
+     * @type {string}
+     * @private
+     */
     this._searchTerm = '';
     /**
      *
      * @type {number}
      */
     this.expandDepth = 2;
+    /**
+     *
+     * @type {boolean}
+     * @private
+     */
     this._searchIsActive = false;
     /**
      * If you want to use a custom component for the tree-item, set this attribute.
@@ -137,7 +147,7 @@ export class FuroUi5Tree extends FBP(LitElement) {
       this._searchTerm = term;
       this.searchOpenTree();
     } else {
-      this._resetSearch();
+      this.resetSearch();
     }
     return this._foundSearchItems;
   }
@@ -156,13 +166,20 @@ export class FuroUi5Tree extends FBP(LitElement) {
     this.requestUpdate();
   }
 
-  _resetSearch() {
+  /**
+   * Disables the search mode and clears the term
+   */
+  resetSearch() {
     this._searchIsActive = false;
     this._searchTerm = '';
     this._foundSearchItems = [];
     this._updateSearchmatchAttributesOnItems();
   }
 
+  /**
+   *
+   * @private
+   */
   _updateSearchmatchAttributesOnItems() {
     this._rootNode.broadcastEvent(
       new NodeEvent('search-didnt-match', this._rootNode, true)
@@ -455,8 +472,21 @@ export class FuroUi5Tree extends FBP(LitElement) {
        */
       expandDepth: { type: Number, attribute: 'expand-depth' },
       /**
-       * Query param to watch. If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.
-       * If you select an item the `qp-change-request` will be fired.
+       * Query param to watch.  Set `qp` to have a deep linkable tree.
+       *
+       * If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.
+       *
+       * If you select an item the `qp-change-request` will be fired instead. With the qp-change-request event, you should update the url.
+       * A `furo-location` should watch the url and update the location on the tree, which will trigger a node-selected event.
+       *
+       * ```html
+       * <furo-location @-location-query-changed="--qp"></furo-location>
+       * <furo-ui5-tree
+       *    qp="panel"
+       *    ƒ-location-in="--qp" @-qp-change-requested="--qpchangerequest"></furo-ui5-tree>
+       * <!-- update the location with the selected tree item -->
+       * <furo-location-updater ƒ-set-qp="--qpchangerequest"></furo-location-updater>
+       * ```
        */
       qp: { type: String },
       /**
@@ -483,12 +513,7 @@ export class FuroUi5Tree extends FBP(LitElement) {
        * indicator for searching. Maybe you want style your item depending on this attribute
        */
       _searchIsActive: { type: Boolean, attribute: 'searching', reflect: true },
-      /**
-       * disables the background color on focus, selected, ... on header node
-       *
-       * Works only with `root-as-header` enabled
-       */
-      nobgonhead: { type: Boolean, attribute: 'no-bg-on-header' },
+
       /**
        * indicates that the element is focused
        */
@@ -542,7 +567,7 @@ export class FuroUi5Tree extends FBP(LitElement) {
         height: 100%;
         outline: none;
         position: relative;
-        background: var(--sapList_Background, #ffffff);
+
         color: var(--sapTextColor, #32363a);
         font-size: var(--sapFontSize);
         font-family: var(--sapFontFamily), sans-serif;
@@ -605,24 +630,12 @@ export class FuroUi5Tree extends FBP(LitElement) {
       }
 
       /* remove the background color on header node */
-      :host([no-bg-on-header]) td furo-ui5-tree-item[selected][isheader],
-      :host([no-bg-on-header])
+      :host([root-as-header]) td furo-ui5-tree-item[selected][isheader],
+      :host([root-as-header])
         td
         furo-ui5-tree-item[selected][focused][isheader],
-      :host([no-bg-on-header]) td furo-ui5-tree-item[focused][isheader] {
+      :host([root-as-header]) td furo-ui5-tree-item[focused][isheader] {
         background-color: unset;
-      }
-
-      @keyframes border-pulsate {
-        0% {
-          border-color: var(--sapBrandColor, #0a6ed1);
-        }
-        50% {
-          border-color: var(--sapList_Background, #ffffff);
-        }
-        100% {
-          border-color: var(--sapBrandColor, #0a6ed1);
-        }
       }
 
       .title {
@@ -702,6 +715,11 @@ export class FuroUi5Tree extends FBP(LitElement) {
     this._init();
   }
 
+  /**
+   *
+   * @param treeNode
+   * @private
+   */
   _setTitle(treeNode) {
     if (this.headerText && treeNode.display_name) {
       // eslint-disable-next-line no-param-reassign
@@ -722,6 +740,10 @@ export class FuroUi5Tree extends FBP(LitElement) {
     this._selectedField.triggerFocus();
   }
 
+  /**
+   * convert the tree to a flat tree
+   * @private
+   */
   _init() {
     this._buildFlatTree(this._rootNode);
 
@@ -751,6 +773,10 @@ export class FuroUi5Tree extends FBP(LitElement) {
     }
   }
 
+  /**
+   *
+   * @private
+   */
   _initFocusAndSelectEvents() {
     // Internal Event, when a node gets focused
     this._rootNode.addEventListener('tree-node-focused', e => {
@@ -999,6 +1025,13 @@ export class FuroUi5Tree extends FBP(LitElement) {
     );
   }
 
+  /**
+   *
+   * @param tree
+   * @param level
+   * @param maxdepth
+   * @private
+   */
   _parseTreeRecursive(tree, level, maxdepth) {
     if (maxdepth > 0 && !(level < maxdepth)) {
       return;

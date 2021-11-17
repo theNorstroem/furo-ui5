@@ -10021,7 +10021,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "`furo-tree`\nrenders a tree structure",
+          "description": "`furo-tree`\nrenders a tree structure\n\n## Data Signature",
           "name": "FuroUi5Tree",
           "cssProperties": [
             {
@@ -10088,11 +10088,13 @@
             },
             {
               "kind": "method",
-              "name": "_resetSearch"
+              "name": "resetSearch",
+              "description": "Disables the search mode and clears the term"
             },
             {
               "kind": "method",
-              "name": "_updateSearchmatchAttributesOnItems"
+              "name": "_updateSearchmatchAttributesOnItems",
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -10235,7 +10237,8 @@
                 {
                   "name": "treeNode"
                 }
-              ]
+              ],
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -10244,11 +10247,14 @@
             },
             {
               "kind": "method",
-              "name": "_init"
+              "name": "_init",
+              "description": "convert the tree to a flat tree",
+              "privacy": "private"
             },
             {
               "kind": "method",
-              "name": "_initFocusAndSelectEvents"
+              "name": "_initFocusAndSelectEvents",
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -10272,7 +10278,8 @@
                 {
                   "name": "maxdepth"
                 }
-              ]
+              ],
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -10302,6 +10309,7 @@
               "type": {
                 "text": "string"
               },
+              "privacy": "private",
               "default": "''"
             },
             {
@@ -10321,8 +10329,8 @@
               "type": {
                 "text": "boolean"
               },
+              "privacy": "private",
               "default": "false",
-              "privacy": "public",
               "description": "indicator for searching. Maybe you want style your item depending on this attribute",
               "attribute": "searching",
               "reflects": true
@@ -10333,11 +10341,16 @@
               "description": "If you want to use a custom component for the tree-item, set this attribute.\nThe default item component is **furo-ui5-tree-item**.",
               "type": {
                 "text": "*|string|string"
-              }
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",
-              "name": "_treeItemTepmplate"
+              "name": "_treeItemTepmplate",
+              "type": {
+                "text": "TemplateResult<1>"
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -10350,7 +10363,7 @@
               "kind": "field",
               "name": "qp",
               "privacy": "public",
-              "description": "Query param to watch. If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.\nIf you select an item the `qp-change-request` will be fired.",
+              "description": "Query param to watch.  Set `qp` to have a deep linkable tree.\n\nIf you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.\n\nIf you select an item the `qp-change-request` will be fired instead. With the qp-change-request event, you should update the url.\nA `furo-location` should watch the url and update the location on the tree, which will trigger a node-selected event.\n\n```html\n<furo-location @-location-query-changed=\"--qp\"></furo-location>\n<furo-ui5-tree\n   qp=\"panel\"\n   ƒ-location-in=\"--qp\" @-qp-change-requested=\"--qpchangerequest\"></furo-ui5-tree>\n<!-- update the location with the selected tree item -->\n<furo-location-updater ƒ-set-qp=\"--qpchangerequest\"></furo-location-updater>\n```",
               "attribute": "qp"
             },
             {
@@ -10474,7 +10487,7 @@
             },
             {
               "name": "qp",
-              "description": "Query param to watch. If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.\nIf you select an item the `qp-change-request` will be fired.",
+              "description": "Query param to watch.  Set `qp` to have a deep linkable tree.\n\nIf you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.\n\nIf you select an item the `qp-change-request` will be fired instead. With the qp-change-request event, you should update the url.\nA `furo-location` should watch the url and update the location on the tree, which will trigger a node-selected event.\n\n```html\n<furo-location @-location-query-changed=\"--qp\"></furo-location>\n<furo-ui5-tree\n   qp=\"panel\"\n   ƒ-location-in=\"--qp\" @-qp-change-requested=\"--qpchangerequest\"></furo-ui5-tree>\n<!-- update the location with the selected tree item -->\n<furo-location-updater ƒ-set-qp=\"--qpchangerequest\"></furo-location-updater>\n```",
               "fieldName": "qp"
             },
             {

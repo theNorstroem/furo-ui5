@@ -19,6 +19,8 @@ weight: 50
 `furo-tree`
 renders a tree structure
 
+## Data Signature
+
 {{% api "_furo-ui5-tree-description.md" %}}
 
 
@@ -72,11 +74,6 @@ renders a tree structure
 Sets the tabindex
 <br><br>
 
-### **_searchTerm**
-default: **&#39;&#39;**</small>
-
-
-<br><br>
 
 ### **expandDepth**
 
@@ -88,26 +85,8 @@ Sets the maximal expand level relative from the current node.
 Expanding is a expensive operation.
 <br><br>
 
-### **_searchIsActive**
-
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">searching</span> <small>**reflects**</small>
-<small>`boolean` default: **false**</small>
-
-indicator for searching. Maybe you want style your item depending on this attribute
-<br><br>
-
-### **_tic**
-</small>
-
-If you want to use a custom component for the tree-item, set this attribute.
-The default item component is **furo-ui5-tree-item**.
-<br><br>
-
-### **_treeItemTepmplate**
-</small>
 
 
-<br><br>
 
 ### **depth**
 
@@ -122,8 +101,21 @@ Maximal depth for the tree. Default is infinite.
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">qp</span>
 </small>
 
-Query param to watch. If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.
-If you select an item the `qp-change-request` will be fired.
+Query param to watch.  Set `qp` to have a deep linkable tree.
+
+If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.
+
+If you select an item the `qp-change-request` will be fired instead. With the qp-change-request event, you should update the url.
+A `furo-location` should watch the url and update the location on the tree, which will trigger a node-selected event.
+
+```html
+<furo-location @-location-query-changed="--qp"></furo-location>
+<furo-ui5-tree
+   qp="panel"
+   ƒ-location-in="--qp" @-qp-change-requested="--qpchangerequest"></furo-ui5-tree>
+<!-- update the location with the selected tree item -->
+<furo-location-updater ƒ-set-qp="--qpchangerequest"></furo-location-updater>
+```
 <br><br>
 
 ### **rootAsHeader**
@@ -320,25 +312,16 @@ Search in the visible nodes
 
 <br><br>
 
-### **_resetSearch**
-<small>**_resetSearch**() ⟹ `void`</small>
+### **resetSearch**
+<small>**resetSearch**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--reset-search</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-reset-search</span>
 
-
+Disables the search mode and clears the term
 
 <br><br>
 
-### **_updateSearchmatchAttributesOnItems**
-<small>**_updateSearchmatchAttributesOnItems**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--update-searchmatch-attributes-on-items</span>
-
-
-
-<br><br>
 
 ### **focusParent**
 <small>**focusParent**() ⟹ `void`</small>
@@ -563,16 +546,6 @@ A sample and usable signature can be found in ./specs/
 - <small>treeNode </small>
 <br><br>
 
-### **_setTitle**
-<small>**_setTitle**(*treeNode* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--set-title</span>
-
-
-
-- <small>treeNode </small>
-<br><br>
 
 ### **focusSelected**
 <small>**focusSelected**() ⟹ `void`</small>
@@ -586,25 +559,7 @@ The tree item will also scrollIntoViewIfNeeded() (on all platforms which support
 
 <br><br>
 
-### **_init**
-<small>**_init**() ⟹ `void`</small>
 
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--init</span>
-
-
-
-<br><br>
-
-### **_initFocusAndSelectEvents**
-<small>**_initFocusAndSelectEvents**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--init-focus-and-select-events</span>
-
-
-
-<br><br>
 
 ### **_buildFlatTree**
 <small>**_buildFlatTree**(*tree* `` ) ⟹ `void`</small>
@@ -617,18 +572,6 @@ The tree item will also scrollIntoViewIfNeeded() (on all platforms which support
 - <small>tree </small>
 <br><br>
 
-### **_parseTreeRecursive**
-<small>**_parseTreeRecursive**(*tree* `` *level* `` *maxdepth* `` ) ⟹ `void`</small>
-
-<small>`` `` `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--parse-tree-recursive</span>
-
-
-
-- <small>tree </small>
-- <small>level </small>
-- <small>maxdepth </small>
-<br><br>
 
 
 
