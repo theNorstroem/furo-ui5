@@ -545,7 +545,7 @@ export class FuroUi5Tree extends FBP(LitElement) {
         background: var(--sapList_Background, #ffffff);
         color: var(--sapTextColor, #32363a);
         font-size: var(--sapFontSize);
-        font-family: var(--sapFontFamily);
+        font-family: var(--sapFontFamily), sans-serif;
       }
 
       .tablewrapper {

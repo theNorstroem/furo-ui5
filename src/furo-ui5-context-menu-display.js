@@ -4,8 +4,8 @@ import { FBP } from '@furo/fbp';
 import '@furo/fbp/src/flow-repeat';
 import '@furo/util/src/furo-navigation-pad';
 import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode.js';
-import './contextmenu/furo-ui5-context-menu-item.js';
-import './contextmenu/furo-ui5-context-submenu.js';
+import './subcomponents/furo-ui5-context-menu-item.js';
+import './subcomponents/furo-ui5-context-submenu.js';
 
 export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
   /**
@@ -314,6 +314,8 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
         left: 0;
         bottom: 0;
         right: 0;
+        font-family: var(--sapFontFamily), sans-serif;
+        font-size: var(--sapFontSize);
       }
 
       :host([backdrop]) {
