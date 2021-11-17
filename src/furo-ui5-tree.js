@@ -890,6 +890,11 @@ export class FuroUi5Tree extends FBP(LitElement) {
     });
   }
 
+  /**
+   *
+   * @param tree
+   * @private
+   */
   _buildFlatTree(tree) {
     this._flatTree = [tree];
     // eslint-disable-next-line no-param-reassign

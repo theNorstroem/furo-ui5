@@ -74,9 +74,9 @@
     "peerDependencies": {
       "@furo/fbp": "^6.0.0-rc.3",
       "@furo/framework": "^2.0.0-rc.3",
-      "@furo/layout": "^2.0.0-rc.3",
+      "@furo/layout": "^2.0.0-rc.4",
       "@furo/data": "^2.0.0-rc.3",
-      "@furo/util": "^2.0.0-rc.3",
+      "@furo/util": "^2.0.0-rc.4",
       "@ui5/webcomponents": "^1.0.1",
       "@ui5/webcomponents-base": "^1.0.1",
       "@ui5/webcomponents-fiori": "^1.0.1",

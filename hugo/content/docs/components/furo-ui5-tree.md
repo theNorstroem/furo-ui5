@@ -576,16 +576,6 @@ The tree item will also scrollIntoViewIfNeeded() (on all platforms which support
 
 
 
-### **_buildFlatTree**
-<small>**_buildFlatTree**(*tree* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--build-flat-tree</span>
-
-
-
-- <small>tree </small>
-<br><br>
 
 
 

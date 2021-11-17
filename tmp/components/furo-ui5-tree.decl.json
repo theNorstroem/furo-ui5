@@ -247,7 +247,8 @@
         {
           "name": "tree"
         }
-      ]
+      ],
+      "privacy": "private"
     },
     {
       "kind": "method",
