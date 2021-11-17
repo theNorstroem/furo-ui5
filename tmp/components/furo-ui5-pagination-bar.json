@@ -6,11 +6,11 @@
     "cssProperties": [
       {
         "type": {
-          "text": "24px"
+          "text": "1rem"
         },
         "description": "Right padding definition",
         "name": "--furo-ui5-pagination-bar-padding-right",
-        "default": "--spacing"
+        "default": "1rem"
       },
       {
         "type": {
@@ -18,7 +18,7 @@
         },
         "description": "Background color",
         "name": "--furo-ui5-pagination-bar-background-color",
-        "default": "--surface-light"
+        "default": "--sapPageHeader_Background"
       }
     ],
     "members": [
@@ -254,11 +254,11 @@
         "cssProperties": [
           {
             "type": {
-              "text": "24px"
+              "text": "1rem"
             },
             "description": "Right padding definition",
             "name": "--furo-ui5-pagination-bar-padding-right",
-            "default": "--spacing"
+            "default": "1rem"
           },
           {
             "type": {
@@ -266,7 +266,7 @@
             },
             "description": "Background color",
             "name": "--furo-ui5-pagination-bar-background-color",
-            "default": "--surface-light"
+            "default": "--sapPageHeader_Background"
           }
         ],
         "members": [

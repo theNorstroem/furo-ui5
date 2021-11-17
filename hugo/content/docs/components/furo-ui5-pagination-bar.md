@@ -159,8 +159,8 @@ The following custom properties  available for styling:
 
 Custom property | Description
 ----------------|-------------
-`--furo-ui5-pagination-bar-padding-right` | Right padding definition <hr> <small>default: `--spacing`</small> <small>fallback: `24px`</small>
-`--furo-ui5-pagination-bar-background-color` | Background color <hr> <small>default: `--surface-light`</small> <small>fallback: `#ffffff`</small>
+`--furo-ui5-pagination-bar-padding-right` | Right padding definition <hr> <small>default: `1rem`</small> <small>fallback: `1rem`</small>
+`--furo-ui5-pagination-bar-background-color` | Background color <hr> <small>default: `--sapPageHeader_Background`</small> <small>fallback: `#ffffff`</small>
 
 {{% api "_furo-ui5-pagination-bar-footer.md" %}}
 {{% api "_furo-ui5-pagination-bar-scripts.md" %}}

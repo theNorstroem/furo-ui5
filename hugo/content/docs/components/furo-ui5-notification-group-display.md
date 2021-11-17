@@ -16,11 +16,9 @@ weight: 50
 
 **ui5 notification group display**
 
-`furo-ui5-notification-group`
-Lit element
-
- best place the furo-ui5-notification-group on the main site. then you only need one furo-ui5-notification-group.
- you can also use more furo-ui5-notification-group for special needs. but You have to be sure the furo-ui5-notification-group can receive the notification events.
+Notification display component that works together with furo-ui5-notification.
+Best place the furo-ui5-notification-group-display on the main site. then you only need one furo-ui5-notification-group-display.
+you can also use more furo-ui5-notification-group-display's for special needs. But You have to be sure the furo-ui5-notification-group-display can receive the notification events.
 
 {{% api "_furo-ui5-notification-group-display-description.md" %}}
 

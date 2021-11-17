@@ -16,13 +16,13 @@ weight: 50
 
 **ui5 notification list**
 
-`furo-ui5-notification-list`
- Displays google.rpc.Status messages in a grouped list.
- https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto.
+Notification display component that works together with furo-ui5-notification.
+Displays google.rpc.Status messages in a grouped list.
+https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto.
 
- Best place the furo-ui5-notification-list on the main site. then you only need one furo-ui5-notification-list.
- you can also use more than one furo-ui5-notification-list for special needs.
- But you have to be sure the furo-ui5-notification-list can receive the notification events from furo-ui5-notification.
+Best place the furo-ui5-notification-list-display on the main site. then you only need one furo-ui5-notification-list-display.
+you can also use more than one furo-ui5-notification-list-display for special needs.
+But you have to be sure the furo-ui5-notification-list-display can receive the notification events from furo-ui5-notification.
 
 {{% api "_furo-ui5-notification-list-display-description.md" %}}
 
