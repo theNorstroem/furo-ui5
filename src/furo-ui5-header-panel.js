@@ -424,9 +424,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
           @-click="--collapserClicked"
           class="collapser-button"
           name="slim-arrow-up"
-          design="Transparent"
-          ui5-button=""
-          icon-only=""
+          interactive=""
         ></ui5-icon>
         <div class="splitter after"></div>
       </div>
