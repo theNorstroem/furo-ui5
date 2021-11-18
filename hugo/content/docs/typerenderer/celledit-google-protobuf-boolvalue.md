@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-google-protobuf-boolvalue
-**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
+**@furo/typerenderer** <small>v1.0.0-rc.1</small>
 <br>`import '@furo/typerenderer/src/celledit-google-protobuf-boolvalue.js';`<small>
 <br>exports `<celledit-google-protobuf-boolvalue>` custom-element-definition
 <br>extends */src/typerenderer/celledit-bool.js*

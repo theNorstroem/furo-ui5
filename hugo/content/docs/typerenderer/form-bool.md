@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-bool
-**@furo/typerenderer** <small>v1.0.0-alpha.4</small>
+**@furo/typerenderer** <small>v1.0.0-rc.1</small>
 <br>`import '@furo/typerenderer/src/form-bool.js';`<small>
 <br>exports *FormBool* js
 <br>exports `<form-bool>` custom-element-definition
