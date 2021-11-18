@@ -273,11 +273,11 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
       }
 
       ui5-panel[data-size*='size-s'] {
-        padding: 0.25rem 1rem 0 1rem;
+        padding: 0.625rem 1rem 0 1rem;
       }
 
       ui5-panel[data-size*='size-m'] {
-        padding: 0.25rem 2rem 0 2rem;
+        padding: 0.625rem 2rem 0 2rem;
       }
 
       ui5-panel[data-size*='size-l'] {
@@ -285,7 +285,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
       }
 
       ui5-panel[data-size*='size-xl'] {
-        padding: 2rem 3rem 0 3rem;
+        padding: 2rem 3rem 1rem 3rem;
       }
 
       .header {
