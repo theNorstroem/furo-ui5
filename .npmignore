@@ -5,13 +5,13 @@ dist
 .divshot-cache
 .idea
 .DS_Store
+.husky
 test
 hugo
 docs
 tmp
 furo-specs
 mockdata
-test--
 .editorconfig
 .gitignore
 .npmignore
