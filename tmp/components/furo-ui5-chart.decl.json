@@ -1,0 +1,335 @@
+{
+  "kind": "class",
+  "description": "`furo-ui5-chart`\n Connects data objects (repeaterNodes) with the charting lib.\n\n Use multiple binders if you need more then one series per chart.\n\n ```html\n <furo-ui5-chart-display chart-type=\"bar\">\n    <furo-ui5-chart\n        ƒ-bind-data=\"--projectDAO(*.entities)\"\n        data-field=\"data.cost_limit.units\"\n        category-field=\"data.description\"\n    ></furo-ui5-chart>\n </furo-ui5-chart-display>\n ```",
+  "name": "FuroUi5Chart",
+  "members": [
+    {
+      "kind": "field",
+      "name": "axisLabelOpposite",
+      "privacy": "public",
+      "description": "Put the axis label on the opposite site (usually right)",
+      "attribute": "axis-label-opposite"
+    },
+    {
+      "kind": "field",
+      "name": "axisLabel",
+      "privacy": "public",
+      "description": "Text for the y axis",
+      "attribute": "axis-label"
+    },
+    {
+      "kind": "field",
+      "name": "axisLabelColor",
+      "privacy": "public",
+      "description": "Custom color for the y axis description text",
+      "attribute": "axis-label-color"
+    },
+    {
+      "kind": "field",
+      "name": "axisBorder",
+      "privacy": "public",
+      "description": "Show a border on the right side of the y axis descriptions and labels.",
+      "attribute": "axis-border"
+    },
+    {
+      "kind": "field",
+      "name": "axisBorderColor",
+      "privacy": "public",
+      "description": "Custom color for the border.",
+      "attribute": "axis-border-color"
+    },
+    {
+      "kind": "field",
+      "name": "axisTicks",
+      "privacy": "public",
+      "description": "Show tick marks on the y axis.",
+      "attribute": "axis-ticks"
+    },
+    {
+      "kind": "field",
+      "name": "axisTooltip",
+      "privacy": "public",
+      "description": "Show a tooltip with the current value while hovering.",
+      "attribute": "axis-tooltip"
+    },
+    {
+      "kind": "field",
+      "name": "axisTicksColor",
+      "privacy": "public",
+      "description": "Custom color for the ticks",
+      "attribute": "axis-ticks-color"
+    },
+    {
+      "kind": "field",
+      "name": "seriesName",
+      "privacy": "public",
+      "description": "Series with same name will get the same y-axis",
+      "attribute": "series-name"
+    },
+    {
+      "kind": "field",
+      "name": "legendLabel",
+      "privacy": "public",
+      "description": "Label the Series for the legend. This text is also shown on the tooltips. This is useful when you have more then one data series.",
+      "attribute": "legend-label"
+    },
+    {
+      "kind": "method",
+      "name": "bindData",
+      "parameters": [
+        {
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "_dataPointSelection",
+      "parameters": [
+        {
+          "name": "e"
+        },
+        {
+          "name": "context"
+        },
+        {
+          "name": "config"
+        }
+      ]
+    },
+    {
+      "kind": "method",
+      "name": "_convertData",
+      "description": "Prepares the data for the according chart display\n\nsome charts want 1 dimensional data (pie, donut) and others expect more dimensions (boxplot,...)",
+      "privacy": "private"
+    },
+    {
+      "kind": "method",
+      "name": "_initEmptySeries"
+    },
+    {
+      "kind": "method",
+      "name": "_pathGet",
+      "parameters": [
+        {
+          "name": "root",
+          "description": "Object from which to dereference path from",
+          "type": {
+            "text": "Object"
+          }
+        },
+        {
+          "name": "path",
+          "description": "Path to read",
+          "type": {
+            "text": "string | !Array<string|number>"
+          }
+        }
+      ],
+      "description": "Reads a value from a path.  If any sub-property in the path is `undefined`,\nthis method returns `undefined` (will never throw.",
+      "return": {
+        "type": {
+          "text": "*"
+        }
+      }
+    },
+    {
+      "kind": "method",
+      "name": "_split",
+      "parameters": [
+        {
+          "name": "path"
+        }
+      ]
+    },
+    {
+      "kind": "field",
+      "name": "strokeWidth",
+      "type": {
+        "text": "number"
+      },
+      "default": "1",
+      "privacy": "public",
+      "description": "Define the thickness of the lines in px.",
+      "attribute": "chart-stroke-width"
+    },
+    {
+      "kind": "field",
+      "name": "markerSize",
+      "type": {
+        "text": "number"
+      },
+      "default": "0",
+      "privacy": "public",
+      "description": "Set the size of the markers (hover state) in px.",
+      "attribute": "chart-marker-size"
+    },
+    {
+      "kind": "field",
+      "name": "strokeCurve",
+      "type": {
+        "text": "string"
+      },
+      "default": "'straight'",
+      "privacy": "public",
+      "description": "Define the curve style for line and area charts.\n\n Possible values: 'smooth', 'straight',  'stepline'",
+      "attribute": "chart-curve"
+    },
+    {
+      "kind": "field",
+      "name": "options",
+      "type": {
+        "text": "object"
+      },
+      "default": "{\n      seriesName: undefined,\n      legendLabel: undefined, // custom field\n      opposite: false,\n      axisTicks: {\n        show: false,\n        borderType: 'solid',\n        color: '#666666',\n        width: 6,\n        offsetX: 0,\n        offsetY: 0,\n      },\n      axisBorder: {\n        show: false,\n        color: '#666666',\n        stroke: 1,\n      },\n      labels: {\n        show: false,\n        style: {\n          colors: '#666666',\n        },\n      },\n      title: {\n        style: {\n          color: '#666666',\n        },\n      },\n      tooltip: {\n        enabled: false,\n        offsetX: 0,\n      },\n    }"
+    },
+    {
+      "kind": "field",
+      "name": "dataField",
+      "privacy": "public",
+      "description": "Define the data field or fields here. For most charts this is **the y axis**.\n\nSome charts requires more then one data field (i.e. bubbles want at least 3 fields `data-field=\"data.start.day, data.end.day, data.start.day\"` ).",
+      "attribute": "data-field"
+    },
+    {
+      "kind": "field",
+      "name": "categoryField",
+      "privacy": "public",
+      "description": "Define the category field here (only 1 field). You can think of this as it is the x axis for your chart.",
+      "attribute": "category-field"
+    },
+    {
+      "kind": "field",
+      "name": "chartType",
+      "privacy": "public",
+      "description": "**Use this for mixed charts scenarios only**, prefer to define the chart-type on the chart-display.\nSpecify the default type on the display and set the custom type on this binder.",
+      "attribute": "chart-type"
+    },
+    {
+      "kind": "field",
+      "name": "chartColor",
+      "privacy": "public",
+      "description": "If you need to give an explicit color for the series you can use this attribute.",
+      "attribute": "chart-color"
+    },
+    {
+      "kind": "field",
+      "name": "xaxis",
+      "privacy": "public",
+      "attribute": "xaxis"
+    }
+  ],
+  "events": [
+    {
+      "type": {
+        "text": "Fieldnode"
+      },
+      "description": " Fired when a marker for this data source was clicked",
+      "name": "data-point-clicked"
+    },
+    {
+      "type": {
+        "text": "data-series"
+      },
+      "description": " Fired when datasource has updated data",
+      "name": "data-updated"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "data-field",
+      "description": "Define the data field or fields here. For most charts this is **the y axis**.\n\nSome charts requires more then one data field (i.e. bubbles want at least 3 fields `data-field=\"data.start.day, data.end.day, data.start.day\"` ).",
+      "fieldName": "dataField"
+    },
+    {
+      "name": "category-field",
+      "description": "Define the category field here (only 1 field). You can think of this as it is the x axis for your chart.",
+      "fieldName": "categoryField"
+    },
+    {
+      "name": "legend-label",
+      "description": "Label the Series for the legend. This text is also shown on the tooltips. This is useful when you have more then one data series.",
+      "fieldName": "legendLabel"
+    },
+    {
+      "name": "series-name",
+      "description": "Series with same name will get the same y-axis",
+      "fieldName": "seriesName"
+    },
+    {
+      "name": "chart-type",
+      "description": "**Use this for mixed charts scenarios only**, prefer to define the chart-type on the chart-display.\nSpecify the default type on the display and set the custom type on this binder.",
+      "fieldName": "chartType"
+    },
+    {
+      "name": "chart-color",
+      "description": "If you need to give an explicit color for the series you can use this attribute.",
+      "fieldName": "chartColor"
+    },
+    {
+      "name": "axis-label-opposite",
+      "description": "Put the axis label on the opposite site (usually right)",
+      "fieldName": "axisLabelOpposite"
+    },
+    {
+      "name": "axis-label",
+      "description": "Text for the y axis",
+      "fieldName": "axisLabel"
+    },
+    {
+      "name": "axis-label-color",
+      "description": "Custom color for the y axis description text",
+      "fieldName": "axisLabelColor"
+    },
+    {
+      "name": "axis-border",
+      "description": "Show a border on the right side of the y axis descriptions and labels.",
+      "fieldName": "axisBorder"
+    },
+    {
+      "name": "axis-border-color",
+      "description": "Custom color for the border.",
+      "fieldName": "axisBorderColor"
+    },
+    {
+      "name": "axis-ticks",
+      "description": "Show tick marks on the y axis.",
+      "fieldName": "axisTicks"
+    },
+    {
+      "name": "axis-tooltip",
+      "description": "Show a tooltip with the current value while hovering.",
+      "fieldName": "axisTooltip"
+    },
+    {
+      "name": "axis-ticks-color",
+      "description": "Custom color for the ticks",
+      "fieldName": "axisTicksColor"
+    },
+    {
+      "name": "chart-curve",
+      "description": "Define the curve style for line and area charts.\n\n Possible values: 'smooth', 'straight',  'stepline'",
+      "fieldName": "strokeCurve"
+    },
+    {
+      "name": "chart-stroke-width",
+      "description": "Define the thickness of the lines in px.",
+      "fieldName": "strokeWidth"
+    },
+    {
+      "name": "chart-marker-size",
+      "description": "Set the size of the markers (hover state) in px.",
+      "fieldName": "markerSize"
+    },
+    {
+      "name": "xaxis",
+      "fieldName": "xaxis"
+    }
+  ],
+  "superclass": {
+    "name": "LitElement",
+    "package": "lit"
+  },
+  "summary": "connect data to a chart",
+  "tagName": "furo-ui5-chart",
+  "customElement": true
+}

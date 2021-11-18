@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+
+    furo-demo-snippet {
+      height: 95vh;
+      box-sizing: border-box;
+    }
+
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+</body>
+<script type="module">
+  import {html, render} from 'lit';
+
+
+  import './initEnv.js';
+  import '../src/furo-ui5-chart-display.js';
+  import '../src/furo-ui5-chart.js';
+  import '@furo/route/src/furo-location.js';
+  import '@furo/route/src/furo-location-updater.js';
+  import '@furo/data/src/furo-catalog.js';
+  import '@furo/layout/src/furo-catalog.js';
+  import '@furo/util/src/furo-fetch-json.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@ui5/webcomponents/dist/Button.js'
+
+
+  render(
+    html`
+      <furo-demo-snippet>
+        <template>
+
+          <ui5-button @-click="--btnListClicked"> load data</ui5-button>
+          <ui5-button @-click="--changeDataClicked"> change loaded data</ui5-button>
+
+          <furo-vertical-scroller>
+
+            <furo-ui5-chart-display chart-type="bar" title-text="Stack bars" title-align="center" no-data-text="Loading..." fixed-height="300" tooltip="" legend="" data-labels="" grid="" stacked="" legend-align="left" legend-position="bottom" legend-offset-x="70" legend-offset-y="70" toolbar="">
+              <furo-ui5-chart ƒ-bind-data="--projectDAO(*.entities)" data-field="data.start.day" category-field="data.description"></furo-ui5-chart>
+              <furo-ui5-chart ƒ-bind-data="--projectDAO(*.entities)" data-field="data.end.day" category-field="data.description"></furo-ui5-chart>
+              <furo-ui5-chart ƒ-bind-data="--projectDAO(*.entities)" data-field="data.start.day" category-field="data.description"></furo-ui5-chart>
+              <furo-ui5-chart ƒ-bind-data="--projectDAO(*.entities)" data-field="data.end.day" category-field="data.description"></furo-ui5-chart>
+            </furo-ui5-chart-display>
+
+
+            <furo-ui5-chart-display chart-type="rangeBar" title-text="Timeline from numbers" title-align="center" no-data-text="Loading..." fixed-height="300" zebra="#f3f4f5, #fff" xaxis-title="Duration" plot-horizontal="" tooltip="" legend="" grid="">
+              <furo-ui5-chart ƒ-bind-data="--projectDAO(*.entities)" data-field="data.start.day, data.end.day" category-field="data.description" axis-label="Project"></furo-ui5-chart>
+            </furo-ui5-chart-display>
+
+
+            <furo-ui5-chart-display chart-type="treemap" title-text="Treemap with auto height" data-labels="" >
+              <furo-ui5-chart chart-color="#FEA234" ƒ-bind-data="--projectDAO(*.entities)" data-field="data.start.day" category-field="data.description" axis-label="Project"></furo-ui5-chart>
+              <furo-ui5-chart chart-color="#22A294" ƒ-bind-data="--projectDAO(*.entities)" data-field="data.start.day" category-field="data.description" axis-label="Project"></furo-ui5-chart>
+            </furo-ui5-chart-display>
+
+            <furo-ui5-chart-display chart-type="area" title-text="Stack area charts" title-align="center" no-data-text="Loading..." fixed-height="300" tooltip="" legend="" data-labels="" grid="" stacked="" legend-align="left" legend-position="bottom" legend-offset-x="70" legend-offset-y="70" toolbar="">
+              <furo-ui5-chart ƒ-bind-data="--projectDAO(*.entities)" data-field="data.cost_limit.units" category-field="data.description"></furo-ui5-chart>
+              <furo-ui5-chart ƒ-bind-data="--projectDAO(*.entities)" data-field="data.cost_limit.units" category-field="data.description" chart-stroke-width="4"></furo-ui5-chart>
+              <furo-ui5-chart ƒ-bind-data="--projectDAO(*.entities)" data-field="data.cost_limit.units" category-field="data.description" chart-stroke-width="4"></furo-ui5-chart>
+            </furo-ui5-chart-display>
+
+
+
+            <furo-ui5-chart-display chart-type="rangeBar" title-text="Timeline with dates" title-align="center" no-data-text="Loading..." fixed-height="300" xaxis-title="Duration" plot-horizontal="" tooltip="" legend="" data-labels="" xaxis-datetime="">
+              <furo-ui5-chart ƒ-bind-data="--projectDAO(*.entities)" data-field="data.start, data.end" category-field="data.description" axis-label="Project"></furo-ui5-chart>
+            </furo-ui5-chart-display>
+
+
+          </furo-vertical-scroller>
+
+
+
+          <furo-deep-link
+            ƒ-trigger="--btnListClicked"
+            service="ProjectService"
+            @-hts-out="--hts"
+          ></furo-deep-link>
+          <furo-collection-agent
+            service="ProjectService"
+            ƒ-hts-in="--hts"
+            ƒ-list="--changeDataClicked"
+            list-on-hts-in
+            @-response-hts-updated="--responseHts"
+            @-response="--collectionResponse"
+          >
+          </furo-collection-agent>
+
+          <furo-data-object
+            type="project.ProjectCollection"
+            ƒ-inject-raw="--collectionResponse"
+            @-object-ready="--projectDAO"
+          >
+          </furo-data-object>
+
+        </template>
+      </furo-demo-snippet>
+
+
+    `,
+    document.querySelector('#demo')
+  );
+</script>
+</html>
