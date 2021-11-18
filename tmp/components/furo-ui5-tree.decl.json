@@ -323,11 +323,12 @@
     {
       "kind": "field",
       "name": "_tic",
-      "description": "If you want to use a custom component for the tree-item, set this attribute.\nThe default item component is **furo-ui5-tree-item**.",
       "type": {
         "text": "*|string|string"
       },
-      "privacy": "private"
+      "description": "If you want to use a custom component for the tree-item, set this attribute.\nThe default item component is **furo-ui5-tree-item**.",
+      "privacy": "private",
+      "default": "'furo-ui5-tree-item'"
     },
     {
       "kind": "field",
