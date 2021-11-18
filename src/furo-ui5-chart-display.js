@@ -4,22 +4,22 @@ import { FBP } from '@furo/fbp';
 import ApexCharts from 'apexcharts/dist/apexcharts.esm.js';
 
 /**
- * `furo-chart-display`
+ * `furo-ui5-chart-display`
  *  Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).
  *
- *  Use `furo-ui5-chart-binder` to connect your data.
+ *  Use `furo-ui5-chart` to connect your data.
  *
  *  ```html
- *  <furo-chart-display chart-type="bar">
- *     <furo-ui5-chart-binder
+ *  <furo-ui5-chart-display chart-type="bar">
+ *     <furo-ui5-chart
  *         ƒ-bind-data="--projectDAO(*.entities)"
  *         data-field="data.cost_limit.units"
  *         category-field="data.description"
- *     ></furo-ui5-chart-binder>
- *  </furo-chart-display>
+ *     ></furo-ui5-chart>
+ *  </furo-ui5-chart-display>
  *  ```
  *
- * @fires {Fieldnode} data-point-clicked -  Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart-binder
+ * @fires {Fieldnode} data-point-clicked -  Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart
  *
  * @summary Display charts with data objects
  * @customElement
@@ -32,7 +32,7 @@ import ApexCharts from 'apexcharts/dist/apexcharts.esm.js';
  * @demo demo-furo-ui5-chart-bubble Bubble
  * @appliesMixin FBP
  */
-class FuroChartDisplay extends FBP(LitElement) {
+class FuroUi5ChartDisplay extends FBP(LitElement) {
   constructor() {
     super();
     // set the defaults
@@ -40,18 +40,19 @@ class FuroChartDisplay extends FBP(LitElement) {
       series: [],
       yaxis: [],
       // belize qualitative color palette
+      // node_modules/@ui5/webcomponents-theming/dist/themes/sap_fiori_3/css_variables.css
       colors: [
-        '#5899DA',
-        '#E8743B',
-        '#19A979',
-        '#ED4A7B',
-        '#945ECF',
-        '#13A4B4',
-        '#525DF4',
-        '#BF399E',
-        '#6C8893',
-        '#EE6868',
-        '#2F6497',
+        'var(--sapChart_OrderedColor_1 , #5899da)',
+        'var(--sapChart_OrderedColor_2 , #e8743b)',
+        'var(--sapChart_OrderedColor_3 , #19a979)',
+        'var(--sapChart_OrderedColor_4 , #ed4a7b)',
+        'var(--sapChart_OrderedColor_5 , #945ecf)',
+        'var(--sapChart_OrderedColor_6 , #13a4b4)',
+        'var(--sapChart_OrderedColor_7 , #525df4)',
+        'var(--sapChart_OrderedColor_8 , #bf399e)',
+        'var(--sapChart_OrderedColor_9 , #6c8893)',
+        'var(--sapChart_OrderedColor_10 ,: #ee6868)',
+        'var(--sapChart_OrderedColor_11 ,: #2f6497)',
       ],
       noData: {
         text: 'No data.',
@@ -67,6 +68,7 @@ class FuroChartDisplay extends FBP(LitElement) {
       },
       chart: {
         // height: 550,
+        fontFamily: 'var(--sapFontFamily, Helvetica, Arial, sans-serif)',
         type: 'line',
         stacked: false,
         events: {},
@@ -512,7 +514,7 @@ class FuroChartDisplay extends FBP(LitElement) {
       }
 
       .apexcharts-text tspan {
-        font-family: inherit;
+        font-family: var(--sapFontFamily), sans-serif;
       }
 
       .legend-mouseover-inactive {
@@ -556,7 +558,7 @@ class FuroChartDisplay extends FBP(LitElement) {
       }
 
       .apexcharts-tooltip * {
-        font-family: inherit;
+        font-family: var(--sapFontFamily), sans-serif;
       }
 
       .apexcharts-tooltip .apexcharts-marker,
@@ -681,6 +683,7 @@ class FuroChartDisplay extends FBP(LitElement) {
         background: #eceff1;
         border: 1px solid #90a4ae;
         transition: 0.15s ease all;
+        font-family: var(--sapFontFamily), sans-serif;
       }
 
       .apexcharts-xaxistooltip.apexcharts-theme-dark {
@@ -771,6 +774,7 @@ class FuroChartDisplay extends FBP(LitElement) {
         z-index: 10;
         background: #eceff1;
         border: 1px solid #90a4ae;
+        font-family: var(--sapFontFamily), sans-serif;
       }
 
       .apexcharts-yaxistooltip.apexcharts-theme-dark {
@@ -1027,6 +1031,8 @@ class FuroChartDisplay extends FBP(LitElement) {
         top: 100%;
         border: 1px solid #ddd;
         border-radius: 3px;
+        font-family: var(--sapFontFamily), sans-serif;
+        font-size: var(--sapFontSize);
         padding: 3px;
         right: 10px;
         opacity: 0;
@@ -1191,4 +1197,4 @@ class FuroChartDisplay extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('furo-chart-display', FuroChartDisplay);
+window.customElements.define('furo-ui5-chart-display', FuroUi5ChartDisplay);

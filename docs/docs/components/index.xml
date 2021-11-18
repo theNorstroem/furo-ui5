@@ -10,32 +10,32 @@
       <title>furo-chart-display</title>
       <link>http://web-components.furo.pro/docs/components/furo-chart-display/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-chart-display/</guid>
-      <description>furo-chart-display #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-chart-display.js&#39;; exports &amp;lt;furo-chart-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
+      <description>furo-chart-display #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-chart-display.js&#39;; exports &amp;lt;furo-chart-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
 Display charts with data objects
 furo-chart-display Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).
-Use furo-ui5-chart-binder to connect your data.
-1 2 3 4 5 6 7  &amp;lt;furo-chart-display chart-type=&amp;#34;bar&amp;#34;&amp;gt; &amp;lt;furo-ui5-chart-binder ƒ-bind-data=&amp;#34;--projectDAO(*.entities)&amp;#34; data-field=&amp;#34;data.cost_limit.units&amp;#34; category-field=&amp;#34;data.description&amp;#34; &amp;gt;&amp;lt;/furo-ui5-chart-binder&amp;gt; &amp;lt;/furo-chart-display&amp;gt;   Attributes and Properties #  sparkline #  sparkline 
+Use furo-ui5-chart to connect your data.
+1 2 3 4 5 6 7  &amp;lt;furo-chart-display chart-type=&amp;#34;bar&amp;#34;&amp;gt; &amp;lt;furo-ui5-chart ƒ-bind-data=&amp;#34;--projectDAO(*.entities)&amp;#34; data-field=&amp;#34;data.cost_limit.units&amp;#34; category-field=&amp;#34;data.description&amp;#34; &amp;gt;&amp;lt;/furo-ui5-chart&amp;gt; &amp;lt;/furo-chart-display&amp;gt;   Attributes and Properties #  sparkline #  sparkline
 Hides all elements of the chart other than the primary graphic.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-bar</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-bar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-bar/</guid>
       <description>furo-ui5-bar #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-bar.js&#39;; exports FuroUi5Bar js exports &amp;lt;furo-ui5-bar&amp;gt; custom-element-definition extends src/furo-ui5-bar.js mixes FieldNodeAdapter
 ui5 bar
 The Bar is a container which is primarily used to hold titles, buttons and input elements and its design and functionality is the basis for page headers and footers. The component consists of three areas to hold its content - startContent slot, default slot and endContent slot. It has the capability to center content, such as a title, while having other components on the left and right side.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-bool-icon</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-bool-icon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-bool-icon/</guid>
       <description>furo-ui5-bool-icon #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-bool-icon.js&#39;; exports &amp;lt;furo-ui5-bool-icon&amp;gt; custom-element-definition superclass LitElement mixes FBP
 Displays a icon/symbol for a boolean value
@@ -45,59 +45,59 @@ This component uses utf-8 symbols for true and false at the moment.
 Defines the symbol for the true state symbolfalse #  symbolfalse string default: &#39;navigation-right-arrow&#39;
 Defines the symbol for the false state field #  default: {}</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-busyindicator</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-busyindicator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-busyindicator/</guid>
       <description>furo-ui5-busyindicator #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-busyindicator.js&#39;; exports FuroUiBusyindicator js exports &amp;lt;furo-ui5-busyindicator&amp;gt; custom-element-definition extends src/furo-ui5-busyindicator.js
 ui5 busy indicator
 furo-ui5-busyindicator The furo-ui5-busyindicator signals that some operation is going on and that the user must wait. It does not block the current UI screen so other operations could be triggered in parallel. Usage For the furo-ui5-busyindicator you can define the size of the indicator, as well as whether it is shown or hidden.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-button</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-button/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-button/</guid>
       <description>furo-ui5-button #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-button.js&#39;; exports FuroUi5Button js exports &amp;lt;furo-ui5-button&amp;gt; custom-element-definition extends src/furo-ui5-button.js
 ui5 button
 furo-ui5-button The furo-ui5-button component represents a simple push button. It enables users to trigger actions by clicking or tapping the furo-ui5-button, or by pressing certain keyboard keys, such as Enter. Usage For the furo-ui5-button UI, you can define text, icon, or both. You can also specify whether the text or the icon is displayed first.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-card</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-card/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-card/</guid>
       <description>furo-ui5-card #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-card.js&#39;; exports FuroUi5Card js exports &amp;lt;furo-ui5-card&amp;gt; custom-element-definition superclass LitElement mixes FBP
  furo-ui5-card is a bindable card that represents information in the form of a tile with separate header and content areas.
 1 2 3 4 5 6 7 8  &amp;lt;furo-ui5-card heading=&amp;#34;Title&amp;#34; subheading=&amp;#34;Secondary text&amp;#34; icon=&amp;#34;card&amp;#34; &amp;gt; &amp;lt;div slot=&amp;#34;action&amp;#34;&amp;gt;&amp;lt;furo-ui5-button&amp;gt;Action&amp;lt;/furo-ui5-button&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div slot=&amp;#34;content&amp;#34;&amp;gt;content goes here&amp;lt;/div&amp;gt; &amp;lt;/furo-ui5-card&amp;gt;   How To Use Semantic Colors #  You can use semantic colors to visualize the status or state.</description>
     </item>
-    
+
     <item>
-      <title>furo-ui5-chart-binder</title>
-      <link>http://web-components.furo.pro/docs/components/furo-ui5-chart-binder/</link>
+      <title>furo-ui5-chart</title>
+      <link>http://web-components.furo.pro/docs/components/furo-ui5-chart/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://web-components.furo.pro/docs/components/furo-ui5-chart-binder/</guid>
-      <description>furo-ui5-chart-binder #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-chart-binder.js&#39;; exports &amp;lt;furo-ui5-chart-binder&amp;gt; custom-element-definition superclass LitElement
+
+      <guid>http://web-components.furo.pro/docs/components/furo-ui5-chart/</guid>
+      <description>furo-ui5-chart #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-chart.js&#39;; exports &amp;lt;furo-ui5-chart&amp;gt; custom-element-definition superclass LitElement
 connect data to a chart
-furo-ui5-chart-binder Connects data objects (repeaterNodes) with the charting lib.
+furo-ui5-chart Connects data objects (repeaterNodes) with the charting lib.
 Use multiple binders if you need more then one series per chart.
-1 2 3 4 5 6 7  &amp;lt;furo-chart-display chart-type=&amp;#34;bar&amp;#34;&amp;gt; &amp;lt;furo-ui5-chart-binder ƒ-bind-data=&amp;#34;--projectDAO(*.entities)&amp;#34; data-field=&amp;#34;data.cost_limit.units&amp;#34; category-field=&amp;#34;data.description&amp;#34; &amp;gt;&amp;lt;/furo-ui5-chart-binder&amp;gt; &amp;lt;/furo-chart-display&amp;gt;   Attributes and Properties #  axisLabelOpposite #  axis-label-opposite 
+1 2 3 4 5 6 7  &amp;lt;furo-chart-display chart-type=&amp;#34;bar&amp;#34;&amp;gt; &amp;lt;furo-ui5-chart ƒ-bind-data=&amp;#34;--projectDAO(*.entities)&amp;#34; data-field=&amp;#34;data.cost_limit.units&amp;#34; category-field=&amp;#34;data.description&amp;#34; &amp;gt;&amp;lt;/furo-ui5-chart&amp;gt; &amp;lt;/furo-chart-display&amp;gt;   Attributes and Properties #  axisLabelOpposite #  axis-label-opposite
 Put the axis label on the opposite site (usually right) axisLabel #  axis-label</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-checkbox-input</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-checkbox-input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-checkbox-input/</guid>
       <description>furo-ui5-checkbox-input #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-checkbox-input.js&#39;; exports FuroUi5CheckboxInput js exports &amp;lt;furo-ui5-checkbox-input&amp;gt; custom-element-definition extends src/furo-ui5-checkbox-input.js mixes FieldNodeAdapter
 data checkbox input field
@@ -107,27 +107,27 @@ You can bind bool type, furo.fat.Bool type or the google.wrapper.BoolValue type.
        &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;quot;&amp;ndash;daoCountry(*.data.classified_as_risk_area)&amp;quot;
     ### Specificity 1.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-checkbox-input-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-checkbox-input-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-checkbox-input-labeled/</guid>
       <description>furo-ui5-checkbox-input-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-checkbox-input-labeled.js&#39;; exports FuroUi5CheckboxInputLabeled js exports &amp;lt;furo-ui5-checkbox-input-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled input field
 furo-ui5-checkbox-input-labeled
 The furo-ui5-checkbox-input-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
 Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-checkbox-input placeholder #  placeholder 
+the label for the data-checkbox-input placeholder #  placeholder
 the placeholder is the additional information beside the label.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-context-menu</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-context-menu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-context-menu/</guid>
       <description>furo-ui5-context-menu #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-context-menu.js&#39;; exports FuroUi5ContextMenu js exports &amp;lt;furo-ui5-context-menu&amp;gt; custom-element-definition superclass LitElement mixes FBP
 a context menu
@@ -135,17 +135,17 @@ furo-ui5-context-menu is a context menu or menu element.
 You have to put a furo-ui5-context-menu-display element in one of the parent elements of the element where you use the furo-ui5-context-menu. The app-shell is a good place for that.
 1 2 3  &amp;lt;furo-ui5-context-menu ƒ-trigger=&amp;#34;--menuClkd&amp;#34; ƒ-bind-data=&amp;#34;--menuObject&amp;#34; @-menu-item-selected=&amp;#34;--menuItem&amp;#34;&amp;gt; &amp;lt;ui5-icon name=&amp;#34;menu&amp;#34; @-click=&amp;#34;--menuClkd&amp;#34;&amp;gt;&amp;lt;/ui5-icon&amp;gt; &amp;lt;/furo-ui5-context-menu&amp;gt;   Data signature #  1 2 3 4 5 6 7 8  - type:&amp;#39;menu.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-context-menu-display</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-context-menu-display/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-context-menu-display/</guid>
       <description>furo-ui5-context-menu-display #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-context-menu-display.js&#39;; exports FuroUi5ContextMenuDisplay js exports &amp;lt;furo-ui5-context-menu-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Attributes and Properties #  borderDistance #  default: 48
 
-_repeatsChanged #   
+_repeatsChanged #
 Methods #  hideMenu #  hideMenu() ⟹ void
 * → ƒ-hide-menu
 
@@ -154,12 +154,12 @@ triggerNavigation #  triggerNavigation(key `` ) ⟹ void
 Interface for the furo navigation pad
  key    </description>
     </item>
-    
+
     <item>
       <title>furo-ui5-context-menu-item</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-context-menu-item/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-context-menu-item/</guid>
       <description>furo-ui5-context-menu-item #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-context-menu-item.js&#39;; exports FuroUi5ContextMenuItem js exports &amp;lt;furo-ui5-context-menu-item&amp;gt; custom-element-definition superclass LitElement mixes FBP
 helper
@@ -167,18 +167,18 @@ furo-ui5-context-menu-item is a helper component for furo-ui5-context-menu.
 Use furo-ui5-context-menu to show a context menu.
 Attributes and Properties #  icon #  default: &#39;border&#39;
 
-focused #  focused reflects 
-focused state disabled #  disabled reflects 
+focused #  focused reflects
+focused state disabled #  disabled reflects
 
 Events #  mousefocus #  @-mousefocus → index
 Fired when hovered with mouse opensub-requested #  @-opensub-requested → menu: this.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-context-submenu</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-context-submenu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-context-submenu/</guid>
       <description>furo-ui5-context-submenu #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-context-submenu.js&#39;; exports FuroUi5ContextSubmenu js exports &amp;lt;furo-ui5-context-submenu&amp;gt; custom-element-definition superclass LitElement mixes FBP
 helper
@@ -186,16 +186,16 @@ furo-ui5-context-submenu is a helper component for furo-ui5-context-menu.
 Use furo-ui5-context-menu to show a context menu.
 Attributes and Properties #  borderDistance #  default: 48
 
-depth #  depth 
+depth #  depth
 Depth of the submenu Methods #  init #  init(e *display* byKeyboard `` ) ⟹ void
   ``  → ƒ-init</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-date-picker</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-date-picker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-date-picker/</guid>
       <description>furo-ui5-date-picker #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-date-picker.js&#39;; exports FuroUi5DatePicker js exports &amp;lt;furo-ui5-date-picker&amp;gt; custom-element-definition extends src/furo-ui5-date-picker.js mixes FieldNodeAdapter
 furo data datepicker field
@@ -203,52 +203,52 @@ The furo-ui5-date-picker component allows the user to bind an date object like g
 It supports all features from the SAP ui5 DatePicker element.
 you can define the formatPattern (e.g. &amp;lsquo;dd.MM.yyyy&amp;rsquo; ) to show the date according to format pattern.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-date-picker-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-date-picker-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-date-picker-labeled/</guid>
       <description>furo-ui5-date-picker-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-date-picker-labeled.js&#39;; exports FuroUi5DatePickerLabeled js exports &amp;lt;furo-ui5-date-picker-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled input field
 furo-ui5-date-picker-labeled The furo-ui5-date-picker-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
 Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-date-picker required #  required 
+the label for the data-date-picker required #  required
 A Boolean attribute which, if present, means this field is required and marked with *.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-date-time-picker</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-date-time-picker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-date-time-picker/</guid>
       <description>furo-ui5-date-time-picker #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-date-time-picker.js&#39;; exports FuroUi5DateTimePicker js exports &amp;lt;furo-ui5-date-time-picker&amp;gt; custom-element-definition extends src/furo-ui5-date-time-picker.js mixes FieldNodeAdapter
 furo data datetime picker field
 The furo-ui5-date-time-picker component allows the user to bind a date string with IOS 8061 standard in RFC 3339 format likes &amp;ldquo;2017-01-15T01:30:15.01Z&amp;rdquo; to the ui5 date time picker and edit it.
 you can define the formatPattern (e.g. &amp;lsquo;dd.MM.yyyy hh:mm aa&amp;rsquo; ) to show the date according to format pattern. but the data in the payload will still be in format RFC 3339 (2017-01-15T01:30:15.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-date-time-picker-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-date-time-picker-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-date-time-picker-labeled/</guid>
       <description>furo-ui5-date-time-picker-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-date-time-picker-labeled.js&#39;; exports FuroUi5DateTimePickerLabeled js exports &amp;lt;furo-ui5-date-time-picker-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled input field
 furo-ui5-date-time-picker-labeled The furo-ui5-date-time-picker-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
 Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-date-picker required #  required 
+the label for the data-date-picker required #  required
 A Boolean attribute which, if present, means this field is required and marked with *.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-dialog</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-dialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-dialog/</guid>
       <description>furo-ui5-dialog #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-dialog.js&#39;; exports &amp;lt;furo-ui5-dialog&amp;gt; custom-element-definition superclass Dialog
 Dialog element
@@ -256,12 +256,12 @@ furo-ui5-dialog is a extended ui5-dialog which can attach itself to a parent dom
 This is helpful, when you have used z-indexes in one of the parents, which put the original ui5-dialog behind the backdrop.
 Use this component like a regular ui5-dialog and do not forget to place the furo-ui5-dialog-display in one of the parent elements.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-dialog-display</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-dialog-display/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-dialog-display/</guid>
       <description>furo-ui5-dialog-display #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-dialog-display.js&#39;; exports &amp;lt;furo-ui5-dialog-display&amp;gt; custom-element-definition superclass LitElement
 Display position for a dialog
@@ -269,24 +269,24 @@ furo-ui5-dialog-display will catch furo-ui5-dialog elements, to display it in th
 The first furo-ui5-dialog-display will catch the furo-ui5-dialog register request from a underlying furo-ui5-dialog.
 Attributes and Properties #  Methods #  </description>
     </item>
-    
+
     <item>
       <title>furo-ui5-flexible-grid</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-flexible-grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-flexible-grid/</guid>
       <description>furo-ui5-flexible-grid #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-flexible-grid.js&#39;; exports &amp;lt;furo-ui5-flexible-grid&amp;gt; custom-element-definition superclass LitElement mixes FBP
 a grid splitter
 split-grid will split your screen contents horizontally (in cols) and put them vertically (left at top) when the available space is to small.
 1 2 3 4 5 6 7 8 9 10  &amp;lt;!-- a simple layout manager with two columns --&amp;gt; &amp;lt;furo-ui5-flexible-grid&amp;gt; &amp;lt;div hspan=&amp;#34;2&amp;#34; full-on-size-medium full-on-size-small class=&amp;#34;left&amp;#34;&amp;gt; &amp;lt;slot name=&amp;#34;left&amp;#34;&amp;gt;&amp;lt;/slot&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- this will start at pos 3 and goes to the end of the screen --&amp;gt; &amp;lt;furo-z-grid hstart=&amp;#34;3&amp;#34; fill&amp;gt; &amp;lt;slot&amp;gt;&amp;lt;/slot&amp;gt; &amp;lt;/furo-z-grid&amp;gt; &amp;lt;/furo-ui5-flexible-grid&amp;gt;   Setting column width #  To set the width of a column use the hspan attribute.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-form-field-container</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-form-field-container/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-form-field-container/</guid>
       <description>furo-ui5-form-field-container #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-form-field-container.js&#39;; exports FuroUi5FormFieldContainer js exports &amp;lt;furo-ui5-form-field-container&amp;gt; custom-element-definition superclass LitElement mixes FBP
 form field container
@@ -295,12 +295,12 @@ Attributes and Properties #  Methods #  Slots #  label #  Type: HTMLElement
 defines the label to be displayed. default #  Type: HTMLElement
 defines the form field to be displayed in the container element.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-header-panel</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-header-panel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-header-panel/</guid>
       <description>furo-ui5-header-panel #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-header-panel.js&#39;; exports FuroUi5HeaderPanel js exports &amp;lt;furo-ui5-header-panel&amp;gt; custom-element-definition superclass LitElement mixes FBP
 A bindable header panel
@@ -308,12 +308,12 @@ furo-ui5-header-panel A bindable header panel.
 Info: This component is intended to use as a header panel, if you need panels in your view, consider to use a ui5-panel directly. That is also the reason that the api does not match with ui5-panel.
 This component is a container which has a header and a content area and is used for grouping and displaying information.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-message-strip</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-message-strip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-message-strip/</guid>
       <description>furo-ui5-message-strip #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-message-strip.js&#39;; exports FuroUi5MessageStrip js exports &amp;lt;furo-ui5-message-strip&amp;gt; custom-element-definition superclass LitElement mixes FBP
 furo ui5 message strip
@@ -321,12 +321,12 @@ furo-ui5-message-strip
 The furo-ui5-message-strip component enables the embedding of app-related messages. It displays 4 types of messages, each with corresponding semantic color and icon: Information, Positive, Warning and Negative. Each message can have a Close button, so that it can be removed from the UI, if needed.
 It should be used together witch furo-ui5-message-strip-display.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-message-strip-display</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-message-strip-display/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-message-strip-display/</guid>
       <description>furo-ui5-message-strip-display #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-message-strip-display.js&#39;; exports FuroUi5MessageStripDisplay js exports &amp;lt;furo-ui5-message-strip-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
 furo ui5 message strip
@@ -338,38 +338,38 @@ _messageStrips #  default: []
 
 Methods #  clearAll #  clearAll() ⟹ void</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-money-input</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-money-input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-money-input/</guid>
       <description>furo-ui5-money-input #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-money-input.js&#39;; exports FuroUi5MoneyInput js exports &amp;lt;furo-ui5-money-input&amp;gt; custom-element-definition superclass LitElement mixes FBP mixes FieldNodeAdapter
 Binds a entityObject field google.type.Money to a number-input and currency dropdown fields
-furo-ui5-money-input Binds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields 
+furo-ui5-money-input Binds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields
 you can set currencies dropdown with options in meta or set options attribute as json in element or set currencies as string in element. the three ways have priority : currencies &amp;gt; options as attribute &amp;gt; options in meta.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-money-input-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-money-input-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-money-input-labeled/</guid>
       <description>furo-ui5-money-input-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-money-input-labeled.js&#39;; exports FuroUi5MoneyInputLabeled js exports &amp;lt;furo-ui5-money-input-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled input field
 furo-ui5-money-input-labeled The furo-ui5-money-input-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
 Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-money-input required #  required 
+the label for the data-money-input required #  required
 A Boolean attribute which, if present, means this field is required and marked with *.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-multi-input</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-multi-input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-multi-input/</guid>
       <description>furo-ui5-multi-input #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-multi-input.js&#39;; exports FuroUi5MultiInput js exports &amp;lt;furo-ui5-multi-input&amp;gt; custom-element-definition extends src/furo-ui5-multi-input.js mixes FieldNodeAdapter
 data ui5 data multi input
@@ -383,26 +383,26 @@ _attributesFromFNA #  default: { readonly: undefined, placeholder: undefined, }
 
 _constraintsFromFNA #  default: { required: undefined, max: undefined, // maps to maxlength }</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-multi-input-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-multi-input-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-multi-input-labeled/</guid>
       <description>furo-ui5-multi-input-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-multi-input-labeled.js&#39;; exports FuroUi5MultiInputLabeled js exports &amp;lt;furo-ui5-multi-input-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled textarea field
 furo-ui5-multi-input-labeled The furo-ui5-multi-input-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
 Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-multi-input required #  required 
+the label for the data-multi-input required #  required
 A Boolean attribute which, if present, means this field is required and marked with *.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-notification</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-notification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-notification/</guid>
       <description>furo-ui5-notification #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-notification.js&#39;; exports FuroUi5Notification js exports &amp;lt;furo-ui5-notification&amp;gt; custom-element-definition superclass LitElement
 a banner
@@ -410,12 +410,12 @@ furo-ui5-notification Lit element
 furo-ui5-notification should be used together witch furo-ui5-notification-list-display or furo-ui5-notification-group-display. you can place those two components into different places. best place the furo-ui5-notification-list(or group)-display on the main site. then you only need one furo-ui5-notification-list(or group)-display. it can work with n furo-ui5-notification.
 Attributes and Properties #  dismissButtonText #  default: &#39;dismiss&#39;</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-notification-group-display</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-notification-group-display/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-notification-group-display/</guid>
       <description>furo-ui5-notification-group-display #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-notification-group-display.js&#39;; exports FuroUi5NotificationGroupDisplay js exports &amp;lt;furo-ui5-notification-group-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
 ui5 notification group display
@@ -423,12 +423,12 @@ furo-ui5-notification-group Lit element
 best place the furo-ui5-notification-group on the main site. then you only need one furo-ui5-notification-group. you can also use more furo-ui5-notification-group for special needs. but You have to be sure the furo-ui5-notification-group can receive the notification events.
 Attributes and Properties #  headerText #  header-text string default: &#39;&#39;</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-notification-list-display</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-notification-list-display/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-notification-list-display/</guid>
       <description>furo-ui5-notification-list-display #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-notification-list-display.js&#39;; exports FuroUi5NotificationListDisplay js exports &amp;lt;furo-ui5-notification-list-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
 ui5 notification list
@@ -436,12 +436,12 @@ furo-ui5-notification-list Displays google.rpc.Status messages in a grouped list
 Best place the furo-ui5-notification-list on the main site. then you only need one furo-ui5-notification-list. you can also use more than one furo-ui5-notification-list for special needs. But you have to be sure the furo-ui5-notification-list can receive the notification events from furo-ui5-notification.
 Attributes and Properties #  headerText #  header-text string default: &#39;&#39;</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-number-input</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-number-input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-number-input/</guid>
       <description>furo-ui5-number-input #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-number-input.js&#39;; exports FuroUi5NumberInput js exports &amp;lt;furo-ui5-number-input&amp;gt; custom-element-definition extends src/furo-ui5-number-input.js mixes FieldNodeAdapter
 data number input field
@@ -450,12 +450,12 @@ It supports all features from the SAP ui5 Input element.
 You can bind any number type, any furo.fat.xxx number type or the google.wrapper.xxx number types.
 1 2 3  &amp;lt;furo-ui5-number-input ƒ-bind-data=&amp;#34;--daoCountry(*.data.population)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-number-input&amp;gt;   Specificity #   Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-number-input-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-number-input-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-number-input-labeled/</guid>
       <description>furo-ui5-number-input-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-number-input-labeled.js&#39;; exports FuroUi5NumberInputLabeled js exports &amp;lt;furo-ui5-number-input-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled input field
@@ -463,30 +463,30 @@ furo-ui5-number-input-labeled The furo-ui5-number-input-labeled is a composition
 Attributes and Properties #  label #  label string default: &#39;&#39;
 the label for the data-number-input icon #  icon string default: &#39;&#39;</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-pagination-bar</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-pagination-bar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-pagination-bar/</guid>
       <description>furo-ui5-pagination-bar #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-pagination-bar.js&#39;; exports FuroUi5PaginationBar js exports &amp;lt;furo-ui5-pagination-bar&amp;gt; custom-element-definition superclass LitElement mixes FBP
 Pagination Bar
 furo-ui5-pagination-bar this pagination element loops the hts array and find out the pagination information like prev, next, first and last
  &amp;lt;furo-ui5-pagination-bar ƒ-inject=&amp;quot;--hts&amp;quot;&amp;gt;&amp;lt;/furo-ui5-pagination-bar&amp;gt; Attributes and Properties #  currentPage #  currentPage number default: 0
 
-first #  first 
+first #  first
 
-prev #  prev 
+prev #  prev
 
 next #  next</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-password-input</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-password-input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-password-input/</guid>
       <description>furo-ui5-password-input #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-password-input.js&#39;; exports FuroUi5PasswordInput js exports &amp;lt;furo-ui5-password-input&amp;gt; custom-element-definition extends src/furo-ui5-password-input.js mixes FieldNodeAdapter
 data password input field
@@ -495,50 +495,50 @@ It supports all features from the SAP ui5 Input element.
 You can bind any string type, like furo.fat.String type or the google.protobuf.StringValue type.
 1 2 3  &amp;lt;furo-ui5-password-input ƒ-bind-data=&amp;#34;--daoCountry(*.data.name)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-password-input&amp;gt;   Specificity #   Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-password-input-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-password-input-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-password-input-labeled/</guid>
       <description>furo-ui5-password-input-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-password-input-labeled.js&#39;; exports FuroUi5PasswordInputLabeled js exports &amp;lt;furo-ui5-password-input-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled input field
 furo-ui5-password-input-labeled The furo-ui5-password-input-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
 Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-password-input required #  required 
+the label for the data-password-input required #  required
 A Boolean attribute which, if present, means this field is required and marked with *.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-property</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-property/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-property/</guid>
       <description>furo-ui5-property #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-property.js&#39;; exports FuroUi5Property js exports &amp;lt;furo-ui5-property&amp;gt; custom-element-definition superclass LitElement mixes FBP
 display and bind types of type any
 furo-ui5-property Field for type furo.Property. This can be used to display &amp;ldquo;dynamic&amp;rdquo; fields aka properties. It works with repeated types and non repeating property types.
 1  &amp;lt;furo-ui5-property ƒ-bind-data=&amp;#34;--entity(*.single_type_property)&amp;#34;&amp;gt;&amp;lt;/furo-ui5-property&amp;gt;   Example data for the data-object looks like this #  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  &amp;#34;single_type_property&amp;#34;: { &amp;#34;data&amp;#34;: { &amp;#34;@type&amp;#34;: &amp;#34;google.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-propertylist-display</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-propertylist-display/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-propertylist-display/</guid>
       <description>furo-ui5-propertylist-display #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-propertylist-display.js&#39;; exports FuroUi5PropertylistDisplay js exports &amp;lt;furo-ui5-propertylist-display&amp;gt; custom-element-definition superclass LitElement
  furo-ui5-propertylist-display allows the user to show repeated properties (furo.Property) in a readonly mode. For all other types you can use furo-ui5-typerenderer-labeled.
 The type information of the property is used for the display of the individual attributes. E.g.
 [ { &amp;quot;code&amp;quot;: &amp;quot;c0a7f550-0fbe-4046-8fa9-60c86327b6b1&amp;quot;, &amp;quot;data&amp;quot;: { &amp;quot;@type&amp;quot;: &amp;quot;type.googleapis.com/furo.StringProperty&amp;quot;, &amp;quot;data&amp;quot;: &amp;quot;01032020&amp;quot; }, &amp;quot;flags&amp;quot;: [], &amp;quot;display_name&amp;quot;: &amp;quot;Vertragsbeginn&amp;quot;, &amp;quot;id&amp;quot;: &amp;quot;246d79a0-0a15-43c5-b18f-ac8a4a449df1&amp;quot;, &amp;quot;meta&amp;quot;: {} } ] You can bind the furo.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-radio-button</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-radio-button/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-radio-button/</guid>
       <description>furo-ui5-radio-button #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-radio-button.js&#39;; exports FuroUi5RadioButton js exports &amp;lt;furo-ui5-radio-button&amp;gt; custom-element-definition extends src/furo-ui5-radio-button.js mixes FieldNodeAdapter
 boolean toggle button
@@ -547,34 +547,34 @@ It supports all features from the SAP ui5 toggleButton element.
 You can bind bool type, furo.fat.Bool type or the google.wrapper.BoolValue type.
 1 2 3  &amp;lt;furo-ui5-radio-button ƒ-bind-data=&amp;#34;--daoCountry(*.data.classified_as_risk_area)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-radio-button&amp;gt;   1 2 3 4 5 6 7 8  &amp;lt;furo-ui5-radio-group&amp;gt; &amp;lt;furo-ui5-radio-button name=&amp;#34;group&amp;#34; ƒ-bind-data=&amp;#34;--daoCountry(*.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-radio-button-group</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-radio-button-group/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-radio-button-group/</guid>
       <description>furo-ui5-radio-button-group #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-radio-button-group.js&#39;; exports FuroUi5RadioButtonGroup js exports &amp;lt;furo-ui5-radio-button-group&amp;gt; custom-element-definition superclass HTMLElement mixes FieldNodeAdapter
  furo-ui5-radio-button-group The furo-ui5-radio-button-group component enables users to select a single option from a set of options. When a furo-ui5-radio-button-group is selected by the user, the select event is fired. When a furo-ui5-radio-button-group that is within a group is selected, the one that was previously selected gets automatically deselected. You can group radio buttons by using the group-name property.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-radiogroup</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-radiogroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-radiogroup/</guid>
       <description>furo-ui5-radiogroup #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-radiogroup.js&#39;; exports FuroUi5Radiogroup js exports &amp;lt;furo-ui5-radiogroup&amp;gt; custom-element-definition superclass LitElement mixes FBP
 radio group
 furo-ui5-radiogroup The furo-ui5-radiogroup enables users to create a radio group with n size of furo-ui5-radio-buttons inside. Use the components if you want to combine several bool fields into one radiogroup. Only one value can be true.
 Attributes and Properties #  Methods #  </description>
     </item>
-    
+
     <item>
       <title>furo-ui5-reference-search</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-reference-search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-reference-search/</guid>
       <description>furo-ui5-reference-search #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-reference-search.js&#39;; exports FuroUi5ReferenceSearch js exports &amp;lt;furo-ui5-reference-search&amp;gt; custom-element-definition superclass LitElement mixes FBP mixes FieldNodeAdapter
 furo ui5 data reference search
@@ -584,12 +584,12 @@ default usage
 1 2 3  &amp;lt;furo-ui5-reference-search ƒ-bind-data=&amp;#34;--data(*.is_person)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-reference-search&amp;gt;   usage with a extended searcher
 1 2 3 4  &amp;lt;furo-ui5-reference-search extended-searcher=&amp;#34;country-filter&amp;#34; ƒ-bind-data=&amp;#34;--data(*.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-reference-search-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-reference-search-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-reference-search-labeled/</guid>
       <description>furo-ui5-reference-search-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-reference-search-labeled.js&#39;; exports FuroUi5ReferenceSearchLabeled js exports &amp;lt;furo-ui5-reference-search-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled input field
@@ -598,12 +598,12 @@ Attributes and Properties #  service #  service string default: &#39;&#39;
 the service name label #  label string default: &#39;&#39;
 the label for the data-reference-search extendedSearcher #  extended-searcher string default: &#39;&#39;</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-segmented-button</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-segmented-button/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-segmented-button/</guid>
       <description>furo-ui5-segmented-button #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-segmented-button.js&#39;; exports FuroUi5SegmentedButton js exports &amp;lt;furo-ui5-segmented-button&amp;gt; custom-element-definition extends src/furo-ui5-segmented-button.js mixes FieldNodeAdapter
 segmented button
@@ -611,24 +611,24 @@ furo-ui5-segmented-button The furo-ui5-segmented-button component represents a d
 &amp;lt;furo-ui5-segmented-button ƒ-bind-data=&amp;quot;--daoPerson(*.field_with_meta_options)&amp;quot;&amp;gt; &amp;lt;/furo-ui5-segmented-button&amp;gt; &amp;lt;furo-ui5-segmented-button ƒ-bind-data=&amp;quot;--daoPerson(*.field)&amp;quot;&amp;gt; &amp;lt;ui5-segmented-button-item pressed&amp;gt;Option A&amp;lt;/ui5-segmented-button-item&amp;gt; &amp;lt;ui5-segmented-button-item&amp;gt;Option B&amp;lt;/ui5-segmented-button-item&amp;gt; &amp;lt;/furo-ui5-segmented-button&amp;gt; Attributes and Properties #  activeFieldBinding #  default: false
 Flag to indicate if a field is attached Default: false idFieldPath #  default: &#39;id&#39;</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-select</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-select/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-select/</guid>
       <description>furo-ui5-select #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-select.js&#39;; exports FuroUi5Select js exports &amp;lt;furo-ui5-select&amp;gt; custom-element-definition extends src/furo-ui5-select.js mixes FieldNodeAdapter
 data select field
 The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define the available options by using the ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.
 &amp;lt;furo-ui5-select ƒ-bind-data=&amp;quot;--entity(*.data.description)&amp;quot; ƒ-bind-options=&amp;quot;--collection(*.entities)&amp;quot;&amp;gt; &amp;lt;/furo-ui5-select&amp;gt; Attributes and Properties #  activeFieldBinding #  default: false</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-select-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-select-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-select-labeled/</guid>
       <description>furo-ui5-select-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-select-labeled.js&#39;; exports FuroUi5SelectLabeled js exports &amp;lt;furo-ui5-select-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled select
@@ -637,12 +637,12 @@ Attributes and Properties #  label #  label string default: &#39;&#39;
 the label for the data-number-input idFieldPath #  id-field-path string default: &#39;id&#39;
 Defines the field path that is used from the injected RepeaterNode to identify the option items.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-sign-pad</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-sign-pad/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-sign-pad/</guid>
       <description>furo-ui5-sign-pad #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-sign-pad.js&#39;; exports FuroUi5SignPad js exports &amp;lt;furo-ui5-sign-pad&amp;gt; custom-element-definition superclass LitElement mixes FBP
 draw or sign
@@ -652,31 +652,31 @@ Sample #       Attributes and Properties #  field #  default: {}
 Events #  sign-updated #  @-sign-updated → Base64
 Fired when sign gets new painting, with base encoded image. Methods #  resize #  resize() ⟹ void</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-table</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-table/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-table/</guid>
       <description>furo-ui5-table #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-table.js&#39;; exports FuroUi5Table js exports &amp;lt;furo-ui5-table&amp;gt; custom-element-definition superclass LitElement mixes FBP
  furo-ui5-table display entities in a ui5-table
 &amp;lt;furo-ui5-table no-data-text=&amp;ldquo;No data available.&amp;rdquo; ƒ-bind-data=&amp;quot;&amp;ndash;dao(*.entities)&amp;quot;
    Attributes and Properties #  cols #  default: []
 
-_specs #   
+_specs #
 data #  default: []
 
 mode #  mode string default: &#39;None&#39;
 Defines the mode of the component.
 Available options are:</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-table-row</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-table-row/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-table-row/</guid>
       <description>furo-ui5-table-row #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-table-row.js&#39;; exports FuroUi5TableRow js exports &amp;lt;furo-ui5-table-row&amp;gt; custom-element-definition extends src/lib/furo-ui5-table-row.js
  this is a helper component to send tablerow-selected event by clicking the row or pressing the enter on the row.
@@ -688,12 +688,12 @@ tablerow-selected #  @-tablerow-selected → CustomEvent
 
 arrow-down-on-last-row #  @-arrow-down-on-last-row → CustomEvent</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-text-input</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-text-input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-text-input/</guid>
       <description>furo-ui5-text-input #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-text-input.js&#39;; exports FuroUi5TextInput js exports &amp;lt;furo-ui5-text-input&amp;gt; custom-element-definition extends src/furo-ui5-text-input.js mixes FieldNodeAdapter
 data text input field
@@ -702,26 +702,26 @@ It supports all features from the SAP ui5 Input element.
 You can bind any string type, like furo.fat.String type or the google.protobuf.StringValue type.
 1 2 3  &amp;lt;furo-ui5-text-input ƒ-bind-data=&amp;#34;--daoCountry(*.data.name)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-text-input&amp;gt;   Specificity #   Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-text-input-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-text-input-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-text-input-labeled/</guid>
       <description>furo-ui5-text-input-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-text-input-labeled.js&#39;; exports FuroUi5TextInputLabeled js exports &amp;lt;furo-ui5-text-input-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled input field
 furo-ui5-text-input-labeled The furo-ui5-text-input-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
 Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-text-input required #  required Boolean 
+the label for the data-text-input required #  required Boolean
 A Boolean attribute which, if present, means this field is required and marked with *.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-textarea-input</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-textarea-input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-textarea-input/</guid>
       <description>furo-ui5-textarea-input #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-textarea-input.js&#39;; exports FuroUi5TextareaInput js exports &amp;lt;furo-ui5-textarea-input&amp;gt; custom-element-definition extends src/furo-ui5-textarea-input.js mixes FieldNodeAdapter
 data textarea input field
@@ -730,12 +730,12 @@ It supports all features from the SAP ui5 Input element.
 You can bind any string type, like furo.fat.String type or the google.protobuf.StringValue type.
 1 2 3  &amp;lt;furo-ui5-textarea-input ƒ-bind-data=&amp;#34;--daoCountry(*.data.name)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-textarea-input&amp;gt;   Specificity #   Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-textarea-input-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-textarea-input-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-textarea-input-labeled/</guid>
       <description>furo-ui5-textarea-input-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-textarea-input-labeled.js&#39;; exports FuroUi5TextareaInputLabeled js exports &amp;lt;furo-ui5-textarea-input-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled textarea field
@@ -744,12 +744,12 @@ Attributes and Properties #  label #  label string default: &#39;&#39;
 the label for the data-textarea-input rows #  rows number default: 0
 Defines the number of visible text lines for the component.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-time-picker</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-time-picker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-time-picker/</guid>
       <description>furo-ui5-time-picker #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-time-picker.js&#39;; exports FuroUi5TimePicker js exports &amp;lt;furo-ui5-time-picker&amp;gt; custom-element-definition extends src/furo-ui5-time-picker.js mixes FieldNodeAdapter
 furo data time picker field
@@ -757,26 +757,26 @@ The furo-ui5-time-picker component allows the user to bind a field of type googl
 https://sap.github.io/ui5-webcomponents/playground/components/TimePicker/
 Supported format options are pattern-based on Unicode LDML Date Format notation. For more information, see UTS #35: Unicode Locale Data Markup Language.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-time-picker-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-time-picker-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-time-picker-labeled/</guid>
       <description>furo-ui5-time-picker-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-time-picker-labeled.js&#39;; exports FuroUi5TimePickerLabeled js exports &amp;lt;furo-ui5-time-picker-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled input field
 furo-ui5-time-picker-labeled The furo-ui5-time-picker-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
 Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-date-picker required #  required 
+the label for the data-date-picker required #  required
 A Boolean attribute which, if present, means this field is required and marked with *.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-toggle-button</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-toggle-button/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-toggle-button/</guid>
       <description>furo-ui5-toggle-button #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-toggle-button.js&#39;; exports FuroUi5ToggleButton js exports &amp;lt;furo-ui5-toggle-button&amp;gt; custom-element-definition extends src/furo-ui5-toggle-button.js mixes FieldNodeAdapter
 boolean toggle button
@@ -786,12 +786,12 @@ You can bind bool type, furo.fat.Bool type or the google.wrapper.BoolValue type.
        &amp;lt;furo-ui5-toggle-button ƒ-bind-data=&amp;quot;&amp;ndash;daoCountry(*.data.classified_as_risk_area)&amp;quot;
     ### Specificity 1.</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-tree</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-tree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-tree/</guid>
       <description>furo-ui5-tree #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-tree.js&#39;; exports FuroUi5Tree js exports &amp;lt;furo-ui5-tree&amp;gt; custom-element-definition superclass LitElement mixes FBP
 tree navigation menu
@@ -803,12 +803,12 @@ expandDepth #  expand-depth number default: 2
 Sets the maximal expand level relative from the current node.
 Expanding is a expensive operation. _searchIsActive #  searching reflects boolean default: false</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-tree-item</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-tree-item/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-tree-item/</guid>
       <description>furo-ui5-tree-item #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-tree-item.js&#39;; exports FuroUi5TreeItem js exports &amp;lt;furo-ui5-tree-item&amp;gt; custom-element-definition superclass LitElement mixes FBP
 todo shortdescription
@@ -820,16 +820,16 @@ indentation #  default: 0
 
 _icon #  default: &#39;border&#39;
 
-focused #  focused reflects 
+focused #  focused reflects
 
 searchmatch #  searchmatch reflects</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-typerenderer-labeled</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-typerenderer-labeled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-typerenderer-labeled/</guid>
       <description>furo-ui5-typerenderer-labeled #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-typerenderer-labeled.js&#39;; exports FuroUi5TyperendererLabeled js exports &amp;lt;furo-ui5-typerenderer-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
 labeled input field
@@ -838,12 +838,12 @@ Attributes and Properties #  label #  label string default: &#39;&#39;
 the label for the data-text-input valueState #  value-state reflects string default: &#39;&#39;
 Value State context #  context string default: &#39;display&#39;</description>
     </item>
-    
+
     <item>
       <title>furo-ui5-z-grid</title>
       <link>http://web-components.furo.pro/docs/components/furo-ui5-z-grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/furo-ui5-z-grid/</guid>
       <description>furo-ui5-z-grid #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/furo-ui5-z-grid.js&#39;; exports &amp;lt;furo-ui5-z-grid&amp;gt; custom-element-definition superclass LitElement mixes FBP
 grid with a z pattern
@@ -851,12 +851,12 @@ z-grid is a grid which places your elements in a z pattern. It creates a grid wh
 The size on the x-axis can vary a little bit, according to the the available space.
 This component is nestable.</description>
     </item>
-    
+
     <item>
       <title>ui5-reference-search-item</title>
       <link>http://web-components.furo.pro/docs/components/ui5-reference-search-item/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/ui5-reference-search-item/</guid>
       <description>ui5-reference-search-item #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/ui5-reference-search-item.js&#39;; exports Ui5ReferenceSearchItem js exports &amp;lt;ui5-reference-search-item&amp;gt; custom-element-definition extends src/ui5-reference-search-item.js
 representation of a result item
@@ -868,24 +868,24 @@ displayField #  default: &#39;display_name&#39;
 Events #  item-selected #  @-item-selected → item
 Fired when item is selected Methods #  injectItem #  injectItem(item `` ) ⟹ void</description>
     </item>
-    
+
     <item>
       <title>Events</title>
       <link>http://web-components.furo.pro/docs/components/Events/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/Events/</guid>
       <description>Events #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/src/lib/Events.js&#39;; exports Events js
  Attributes and Properties #  Methods #  buildChangeEvent #  buildChangeEvent(detail `` ) ⟹ Event
 Creates an universal value-changed event All extended ui5 components should use this builder function to create the change event
  detail    </description>
     </item>
-    
+
     <item>
       <title>Ui5LabelDataBinding</title>
       <link>http://web-components.furo.pro/docs/components/Ui5LabelDataBinding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/Ui5LabelDataBinding/</guid>
       <description>Ui5LabelDataBinding #  @furo/components v1.0.0-alpha.4 import &#39;@furo/components/src/src/lib/Ui5LabelDataBinding.js&#39;; exports Ui5LabelDataBinding js
  Helper class for binding ui5 labeled elements
@@ -895,15 +895,15 @@ bind data for labeled element
 check whether it is a fat type
  field    </description>
     </item>
-    
+
     <item>
       <title></title>
       <link>http://web-components.furo.pro/docs/components/_components-inside/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>http://web-components.furo.pro/docs/components/_components-inside/</guid>
-      <description>Components #    furo-chart-display Display charts with data objects  furo-ui5-chart-binder connect data to a chart  furo-ui5-bool-icon Displays a icon/symbol for a boolean value  furo-ui5-busyindicator ui5 busy indicator  furo-ui5-button ui5 button  furo-ui5-card  furo-ui5-checkbox-input-labeled labeled input field  furo-ui5-checkbox-input data checkbox input field  furo-ui5-context-menu-display  furo-ui5-context-menu a context menu  furo-ui5-date-picker-labeled labeled input field  furo-ui5-date-picker furo data datepicker field  furo-ui5-date-time-picker-labeled labeled input field  furo-ui5-date-time-picker furo data datetime picker field  furo-ui5-dialog-display Display position for a dialog  furo-ui5-dialog Dialog element  furo-ui5-flexible-grid a grid splitter  furo-ui5-form-field-container form field container  furo-ui5-header-panel A bindable header panel  furo-ui5-message-strip-display furo ui5 message strip  furo-ui5-message-strip furo ui5 message strip  furo-ui5-money-input-labeled labeled input field  furo-ui5-money-input Binds a entityObject field google.</description>
+      <description>Components #    furo-chart-display Display charts with data objects  furo-ui5-chart connect data to a chart  furo-ui5-bool-icon Displays a icon/symbol for a boolean value  furo-ui5-busyindicator ui5 busy indicator  furo-ui5-button ui5 button  furo-ui5-card  furo-ui5-checkbox-input-labeled labeled input field  furo-ui5-checkbox-input data checkbox input field  furo-ui5-context-menu-display  furo-ui5-context-menu a context menu  furo-ui5-date-picker-labeled labeled input field  furo-ui5-date-picker furo data datepicker field  furo-ui5-date-time-picker-labeled labeled input field  furo-ui5-date-time-picker furo data datetime picker field  furo-ui5-dialog-display Display position for a dialog  furo-ui5-dialog Dialog element  furo-ui5-flexible-grid a grid splitter  furo-ui5-form-field-container form field container  furo-ui5-header-panel A bindable header panel  furo-ui5-message-strip-display furo ui5 message strip  furo-ui5-message-strip furo ui5 message strip  furo-ui5-money-input-labeled labeled input field  furo-ui5-money-input Binds a entityObject field google.</description>
     </item>
-    
+
   </channel>
 </rss>

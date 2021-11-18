@@ -1,19 +1,19 @@
 import { LitElement, css } from 'lit';
 
 /**
- * `furo-ui5-chart-binder`
+ * `furo-ui5-chart`
  *  Connects data objects (repeaterNodes) with the charting lib.
  *
  *  Use multiple binders if you need more then one series per chart.
  *
  *  ```html
- *  <furo-chart-display chart-type="bar">
- *     <furo-ui5-chart-binder
+ *  <furo-ui5-chart-display chart-type="bar">
+ *     <furo-ui5-chart
  *         ƒ-bind-data="--projectDAO(*.entities)"
  *         data-field="data.cost_limit.units"
  *         category-field="data.description"
- *     ></furo-ui5-chart-binder>
- *  </furo-chart-display>
+ *     ></furo-ui5-chart>
+ *  </furo-ui5-chart-display>
  *  ```
  *
  * @fires {Fieldnode} data-point-clicked -  Fired when a marker for this data source was clicked
@@ -30,7 +30,7 @@ import { LitElement, css } from 'lit';
  * @demo demo-furo-ui5-chart-bubble Bubble
  * @appliesMixin FBP
  */
-class FuroDataChartBinder extends LitElement {
+class FuroUi5Chart extends LitElement {
   constructor() {
     super();
     this.strokeWidth = 1;
@@ -436,4 +436,4 @@ class FuroDataChartBinder extends LitElement {
   }
 }
 
-window.customElements.define('furo-ui5-chart-binder', FuroDataChartBinder);
+window.customElements.define('furo-ui5-chart', FuroUi5Chart);

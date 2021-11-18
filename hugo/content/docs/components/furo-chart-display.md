@@ -6,7 +6,7 @@ weight: 50
 
 # furo-chart-display
 **@furo/components** <small>v1.0.0-alpha.4</small>
-<br>`import '@furo/components/src/furo-chart-display.js';`<small>
+<br>`import '@furo/components/src/furo-ui5-chart-display.js';`<small>
 <br>exports `<furo-chart-display>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
@@ -18,15 +18,15 @@ weight: 50
 `furo-chart-display`
  Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).
 
- Use `furo-ui5-chart-binder` to connect your data.
+ Use `furo-ui5-chart` to connect your data.
 
  ```html
  <furo-chart-display chart-type="bar">
-    <furo-ui5-chart-binder
+    <furo-ui5-chart
         ƒ-bind-data="--projectDAO(*.entities)"
         data-field="data.cost_limit.units"
         category-field="data.description"
-    ></furo-ui5-chart-binder>
+    ></furo-ui5-chart>
  </furo-chart-display>
  ```
 
@@ -355,7 +355,7 @@ default: **{
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-data-point-clicked</span>
 → <small>`Fieldnode`</small>
 
- Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart-binder
+ Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart
 <br><br>
 
 ## Methods

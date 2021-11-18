@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>http://web-components.furo.pro/docs/modules/components/furo-chart-display/</guid>
-      <description>furo-chart-display #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-chart-display.js&#39;; exports &amp;lt;furo-chart-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
+      <description>furo-chart-display #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-chart-display.js&#39;; exports &amp;lt;furo-chart-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
 Display charts with data objects
 furo-chart-display Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).
 Use furo-data-chart-binder to connect your data.
@@ -26,7 +26,7 @@ Hides all elements of the chart other than the primary graphic.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>http://web-components.furo.pro/docs/modules/components/furo-data-chart-binder/</guid>
-      <description>furo-data-chart-binder #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-data-chart-binder.js&#39;; exports &amp;lt;furo-data-chart-binder&amp;gt; custom-element-definition superclass LitElement
+      <description>furo-data-chart-binder #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-chart.js&#39;; exports &amp;lt;furo-data-chart-binder&amp;gt; custom-element-definition superclass LitElement
 connect data to a chart
 furo-data-chart-binder Connects data objects (repeaterNodes) with the charting lib.
 Use multiple binders if you need more then one series per chart.
