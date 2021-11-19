@@ -3,6 +3,7 @@ import { LitElement, html, css } from 'lit';
 import '@ui5/webcomponents/dist/Icon.js';
 import '@ui5/webcomponents-icons/dist/accept.js';
 import '@ui5/webcomponents-icons/dist/border.js';
+import '@ui5/webcomponents-icons/dist/less.js';
 
 /**
  * `display-bool`
@@ -78,7 +79,9 @@ export class DisplayBool extends LitElement {
   _getTemplate() {
     let tmpl = '';
     if (this._field) {
-      if (!this._field._value || this._field._value === 'false') {
+      if (this._field._value === null) {
+        tmpl = html` <ui5-icon name="less"></ui5-icon> `;
+      } else if (!this._field._value || this._field._value === 'false') {
         tmpl = html` <ui5-icon name="border"></ui5-icon> `;
       } else {
         tmpl = html` <ui5-icon name="accept"></ui5-icon> `;

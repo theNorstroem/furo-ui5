@@ -338,14 +338,18 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
     if (this.isFat()) {
       this._tmpFAT = val;
       if (val.value === null || val.value === undefined) {
-        this.value = '';
+        if (val.labels.empty) {
+          this.value = 0;
+        } else {
+          this.value = '';
+        }
       } else {
         this.value = val.value;
       }
 
-      // set empty value when label empty was given
-      if (this._tmpFAT.labels && this._tmpFAT.labels.empty) {
-        this.value = null;
+      // set empty value when label empty was given and the default value is set.
+      if (this._tmpFAT.labels && this._tmpFAT.labels.empty && val.value === 0) {
+        this.value = '';
       }
       this._updateAttributesFromFat(this._tmpFAT.attributes);
       this._updateLabelsFromFat(this._tmpFAT.labels);
