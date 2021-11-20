@@ -12,6 +12,7 @@ docs
 tmp
 furo-specs
 mockdata
+scripts
 .editorconfig
 .gitignore
 .npmignore
