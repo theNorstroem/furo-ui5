@@ -7,3 +7,6 @@ Put upgrade note in this file
 - furo-ui5-data => furo-ui5
 - furo-ui5-display => furo-ui5-typerenderer-labeled
 - ui5-shellbar-item @-click=“”
+- 
+- layout/furo-z-grid => ui5/furo-ui5-z-grid
+- layout/furo-split-grid => ui5/furo-ui5-split-grid
