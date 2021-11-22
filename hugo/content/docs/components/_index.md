@@ -1,5 +1,5 @@
 ---
-title: "components"
+title: "Components"
 bookCollapseSection: true
 bookToc: false
 weight: 100

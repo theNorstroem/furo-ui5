@@ -1,5 +1,5 @@
 ---
-title: "typerenderer"
+title: "Typerenderer"
 bookCollapseSection: true
 bookToc: false
 weight: 100
