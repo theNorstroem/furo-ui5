@@ -5,7 +5,7 @@ rm docs/en.search*
 
 # build docs
 hugo -s ./hugo -d ../docs
-
+cp -r mockdata docs/mockdata
 # add changes
 git add docs/.
 
