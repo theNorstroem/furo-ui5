@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-type-money
-**@furo/typerenderer** <small>v1.0.0-rc.1</small>
+**@furo/typerenderer** <small>v1.0.0-rc.2</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-type-money.js';`<small>
 <br>exports `<celledit-furo-type-money>` custom-element-definition
 <br>extends */src/furo-ui5-money-input.js*

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-double
-**@furo/typerenderer** <small>v1.0.0-rc.1</small>
+**@furo/typerenderer** <small>v1.0.0-rc.2</small>
 <br>`import '@furo/typerenderer/src/form-double.js';`<small>
 <br>exports *FormDouble* js
 <br>exports `<form-double>` custom-element-definition

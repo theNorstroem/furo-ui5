@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-chart
-**@furo/components** <small>v1.0.0-rc.1</small>
+**@furo/components** <small>v1.0.0-rc.2</small>
 <br>`import '@furo/components/src/furo-ui5-chart.js';`<small>
 <br>exports `<furo-ui5-chart>` custom-element-definition
 <br>superclass *LitElement*</small>

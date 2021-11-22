@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-busyindicator
-**@furo/components** <small>v1.0.0-rc.1</small>
+**@furo/components** <small>v1.0.0-rc.2</small>
 <br>`import '@furo/components/src/furo-ui5-busyindicator.js';`<small>
 <br>exports *FuroUiBusyindicator* js
 <br>exports `<furo-ui5-busyindicator>` custom-element-definition

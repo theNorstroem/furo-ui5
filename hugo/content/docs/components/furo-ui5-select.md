@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-select
-**@furo/components** <small>v1.0.0-rc.1</small>
+**@furo/components** <small>v1.0.0-rc.2</small>
 <br>`import '@furo/components/src/furo-ui5-select.js';`<small>
 <br>exports *FuroUi5Select* js
 <br>exports `<furo-ui5-select>` custom-element-definition

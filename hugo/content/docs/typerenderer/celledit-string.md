@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-string
-**@furo/typerenderer** <small>v1.0.0-rc.1</small>
+**@furo/typerenderer** <small>v1.0.0-rc.2</small>
 <br>`import '@furo/typerenderer/src/celledit-string.js';`<small>
 <br>exports *CelleditString* js
 <br>exports `<celledit-string>` custom-element-definition
