@@ -300,7 +300,6 @@ export class FuroUi5Table extends FBP(LitElement) {
     return css`
       :host {
         display: block;
-        overflow: auto;
         font-variant-numeric: lining-nums tabular-nums;
       }
 
