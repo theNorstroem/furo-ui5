@@ -1,7 +1,7 @@
 {
   "decl": {
     "kind": "class",
-    "description": "`furo-ui5-table` display entities in a ui5-table\n\n<furo-ui5-table\n no-data-text=\"No data available.\"\n ƒ-bind-data=\"--dao(*.entities)\"\n></furo-ui5-table>",
+    "description": "`furo-ui5-table` display entities in a ui5-table\n\n```html\n<furo-ui5-table\n ƒ-bind-data=\"--data(*.entities)\"\n>\n <!-- The column label is evaluated from the specs -->\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.fieldname\"\n  ></ui5-table-column>\n\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.display_name\"\n  ><span>Custom Title</span></ui5-table-column>\n\n</furo-ui5-table>\n```\n\n## Attributes which are taken from `ui5-table-column`\n\n### **field**\nDefine the field you want to bind. `*` is the root of the repeated field.\n\n### **context**\nSet a context for the type renderer. The default value is `cell`.\n\n**renderer**\nSet a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.",
     "name": "FuroUi5Table",
     "members": [
       {
@@ -211,6 +211,7 @@
       "name": "LitElement",
       "package": "lit"
     },
+    "summary": "Display repeated fields in a table",
     "tagName": "furo-ui5-table",
     "customElement": true
   },
@@ -317,7 +318,7 @@
     "declarations": [
       {
         "kind": "class",
-        "description": "`furo-ui5-table` display entities in a ui5-table\n\n<furo-ui5-table\n no-data-text=\"No data available.\"\n ƒ-bind-data=\"--dao(*.entities)\"\n></furo-ui5-table>",
+        "description": "`furo-ui5-table` display entities in a ui5-table\n\n```html\n<furo-ui5-table\n ƒ-bind-data=\"--data(*.entities)\"\n>\n <!-- The column label is evaluated from the specs -->\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.fieldname\"\n  ></ui5-table-column>\n\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.display_name\"\n  ><span>Custom Title</span></ui5-table-column>\n\n</furo-ui5-table>\n```\n\n## Attributes which are taken from `ui5-table-column`\n\n### **field**\nDefine the field you want to bind. `*` is the root of the repeated field.\n\n### **context**\nSet a context for the type renderer. The default value is `cell`.\n\n**renderer**\nSet a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.",
         "name": "FuroUi5Table",
         "members": [
           {
@@ -527,6 +528,7 @@
           "name": "LitElement",
           "package": "lit"
         },
+        "summary": "Display repeated fields in a table",
         "tagName": "furo-ui5-table",
         "customElement": true
       }

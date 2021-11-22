@@ -19,10 +19,36 @@ import { html as statichtml, literal } from 'lit/static-html.js';
 /**
  * `furo-ui5-table` display entities in a ui5-table
  *
+ * ```html
  * <furo-ui5-table
- *  no-data-text="No data available."
- *  ƒ-bind-data="--dao(*.entities)"
- * ></furo-ui5-table>
+ *  ƒ-bind-data="--data(*.entities)"
+ * >
+ *  <!-- The column label is evaluated from the specs -->
+ *   <ui5-table-column
+ *     slot="columns"
+ *     field="*.data.fieldname"
+ *   ></ui5-table-column>
+ *
+ *   <ui5-table-column
+ *     slot="columns"
+ *     field="*.data.display_name"
+ *   ><span>Custom Title</span></ui5-table-column>
+ *
+ * </furo-ui5-table>
+ * ```
+ *
+ * ## Attributes which are taken from `ui5-table-column`
+ *
+ * **field**
+ * Define the field you want to bind. `*` is the root of the repeated field.
+ *
+ * **context**
+ * Set a context for the type renderer. The default value is `cell`.
+ *
+ * **renderer**
+ * Set a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.
+ *
+ *
  *
  * @fires {entity} arrow-down-on-last-row - Fired when the ArrowDown is pressed on the last row. The event detail is the original entity of the row
  * @fires {entity} tablerow-selected - Fired when the row is selected. The event detail is the original entity of the row.
@@ -32,16 +58,27 @@ import { html as statichtml, literal } from 'lit/static-html.js';
  *
  *
  * @customElement
- * @demo demo-furo-ui5-table Basic usage
- * @demo demo-furo-ui5-table-tmpl Usage of Column Templates
- * @demo demo-furo-ui5-table-repeats Usage with Repeats
+ * @summary Display repeated fields in a table
  */
 export class FuroUi5Table extends FBP(LitElement) {
   constructor() {
     super();
+    /**
+     *
+     * @private
+     */
     this.cols = [];
+    /**
+     *
+     * @private
+     */
     this._specs = Env.api.specs;
+    /**
+     *
+     * @private
+     */
     this.data = [];
+
     this.mode = 'None';
   }
 
@@ -74,7 +111,7 @@ export class FuroUi5Table extends FBP(LitElement) {
   }
 
   /**
-   * bind a repeated data
+   * Bind a repeated data node.
    * @param data
    */
   bindData(data) {
@@ -132,7 +169,7 @@ export class FuroUi5Table extends FBP(LitElement) {
   }
 
   /**
-   * focus on the header of the table
+   * Focuses the header of the table
    */
   focus() {
     const table = this.shadowRoot.querySelector('ui5-table');
@@ -150,14 +187,14 @@ export class FuroUi5Table extends FBP(LitElement) {
   }
 
   /**
-   * focus the first row
+   * Focuses the last row.
    */
   focusLast() {
     this._FBPTriggerWire('--triggerLast');
   }
 
   /**
-   * focus the first row
+   * Focuses the first row.
    */
   focusFirst() {
     this._FBPTriggerWire('--triggerFirst');
@@ -332,7 +369,7 @@ export class FuroUi5Table extends FBP(LitElement) {
         type: String,
       },
       /**
-       * the text which can be showed when there is no data in table.
+       * Defines the text that will be displayed when there is no data.
        * string
        */
       noDataText: {
@@ -340,7 +377,7 @@ export class FuroUi5Table extends FBP(LitElement) {
         attribute: 'no-data-text',
       },
       /**
-       * define the header is sticky or not
+       * Determines whether the column headers remain fixed at the top of the page during vertical scrolling as long as the Web Component is in the viewport.
        */
       stickyColumnHeader: {
         type: Boolean,

@@ -142,7 +142,7 @@ inedit #  inedit reflects</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>http://web-components.furo.pro/docs/modules/components/furo-ui5-busyindicator/</guid>
-      <description>furo-ui5-busyindicator #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-busyindicator.js&#39;; exports FuroUiBusyindicator js exports &amp;lt;furo-ui5-busyindicator&amp;gt; custom-element-definition extends src/furo-ui5-busyindicator.js
+      <description>furo-ui5-busyindicator #  @furo/components v1.0.0-alpha.2 import &#39;@furo/components/src/furo-ui5-busy-indicator.js&#39;; exports FuroUiBusyindicator js exports &amp;lt;furo-ui5-busyindicator&amp;gt; custom-element-definition extends src/furo-ui5-busy-indicator.js
 ui5 busy indicator
 furo-ui5-busyindicator The furo-ui5-busyindicator signals that some operation is going on and that the user must wait. It does not block the current UI screen so other operations could be triggered in parallel. Usage For the furo-ui5-busyindicator you can define the size of the indicator, as well as whether it is shown or hidden.</description>
     </item>

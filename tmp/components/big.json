@@ -112,7 +112,7 @@
         "declarations": [
           {
             "kind": "class",
-            "description": "`furo-ui5-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.\n\n```\n<furo-ui5-bool-icon ƒ-bind-data=\"--FieldNode\"></furo-ui5-bool-icon>\n```",
+            "description": "`furo-ui5-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.\n\n```html\n<furo-ui5-bool-icon ƒ-bind-data=\"--FieldNode\"></furo-ui5-bool-icon>\n```\n\nOnly `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.\nIf you set other icons, please do not forget to import them.",
             "name": "FuroDataBoolIcon",
             "members": [
               {
@@ -141,7 +141,7 @@
                 },
                 "default": "'navigation-down-arrow'",
                 "privacy": "public",
-                "description": "Defines the symbol for the true state",
+                "description": "Defines the icon for the true state.",
                 "attribute": "symboltrue"
               },
               {
@@ -152,7 +152,7 @@
                 },
                 "default": "'navigation-right-arrow'",
                 "privacy": "public",
-                "description": "Defines the symbol for the false state",
+                "description": "Defines the icon for the false state.",
                 "attribute": "symbolfalse"
               },
               {
@@ -178,18 +178,19 @@
                 "type": {
                   "text": "boolean"
                 },
+                "privacy": "private",
                 "default": "false"
               }
             ],
             "attributes": [
               {
                 "name": "symboltrue",
-                "description": "Defines the symbol for the true state",
+                "description": "Defines the icon for the true state.",
                 "fieldName": "symboltrue"
               },
               {
                 "name": "symbolfalse",
-                "description": "Defines the symbol for the false state",
+                "description": "Defines the icon for the false state.",
                 "fieldName": "symbolfalse"
               }
             ],
@@ -221,12 +222,12 @@
       },
       {
         "kind": "javascript-module",
-        "path": "src/furo-ui5-busyindicator.js",
+        "path": "src/furo-ui5-busy-indicator.js",
         "declarations": [
           {
             "kind": "class",
-            "description": "`furo-ui5-busyindicator`\nThe furo-ui5-busyindicator signals that some operation is going on and that the user must wait. It does not block\nthe current UI screen so other operations could be triggered in parallel.\nUsage\nFor the furo-ui5-busyindicator you can define the size of the indicator, as well as whether it is shown or hidden.\nIn order to hide it, use the html attribute hidden or display: none;\n\nIn order to show busy state for an HTML element, simply nest the HTML element in a furo-ui5-busyindicator instance.\nNote: Since furo-ui5-busyindicator has display: inline-block; by default and no width of its own, whenever you need\nto wrap a block-level element, you should set display: block to the busy indicator as well.\n\nWhat is different from ui5-busyindicator?\nWith flow based programming it's usual to address functions. So we added two convenience functions for\n- activate => ƒ-activate\n- deactivate => ƒ-deactivate\n\nhttps://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/",
-            "name": "FuroUiBusyindicator",
+            "description": "`furo-ui5-busy-indicator`\nThe furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.\n\n\nWhat is different from ui5-busy-indicator?\nWith flow based programming it's usual to address methods. So we added two convenience functions for\n- activate => ƒ-activate\n- deactivate => ƒ-deactivate\n\nhttps://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/",
+            "name": "FuroUiBusyIndicator",
             "members": [
               {
                 "kind": "method",
@@ -240,28 +241,28 @@
               }
             ],
             "superclass": {
-              "module": "src/furo-ui5-busyindicator.js"
+              "module": "src/furo-ui5-busy-indicator.js"
             },
             "summary": "ui5 busy indicator",
-            "tagName": "furo-ui5-busyindicator",
+            "tagName": "furo-ui5-busy-indicator",
             "customElement": true
           }
         ],
         "exports": [
           {
             "kind": "js",
-            "name": "FuroUiBusyindicator",
+            "name": "FuroUiBusyIndicator",
             "declaration": {
-              "name": "FuroUiBusyindicator",
-              "module": "src/furo-ui5-busyindicator.js"
+              "name": "FuroUiBusyIndicator",
+              "module": "src/furo-ui5-busy-indicator.js"
             }
           },
           {
             "kind": "custom-element-definition",
-            "name": "furo-ui5-busyindicator",
+            "name": "furo-ui5-busy-indicator",
             "declaration": {
-              "name": "FuroUiBusyindicator",
-              "module": "src/furo-ui5-busyindicator.js"
+              "name": "FuroUiBusyIndicator",
+              "module": "src/furo-ui5-busy-indicator.js"
             }
           }
         ]
@@ -8405,7 +8406,7 @@
         "declarations": [
           {
             "kind": "class",
-            "description": "`furo-ui5-table` display entities in a ui5-table\n\n<furo-ui5-table\n no-data-text=\"No data available.\"\n ƒ-bind-data=\"--dao(*.entities)\"\n></furo-ui5-table>",
+            "description": "`furo-ui5-table` display entities in a ui5-table\n\n```html\n<furo-ui5-table\n ƒ-bind-data=\"--data(*.entities)\"\n>\n <!-- The column label is evaluated from the specs -->\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.fieldname\"\n  ></ui5-table-column>\n\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.display_name\"\n  ><span>Custom Title</span></ui5-table-column>\n\n</furo-ui5-table>\n```\n\n## Attributes which are taken from `ui5-table-column`\n\n### **field**\nDefine the field you want to bind. `*` is the root of the repeated field.\n\n### **context**\nSet a context for the type renderer. The default value is `cell`.\n\n**renderer**\nSet a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.",
             "name": "FuroUi5Table",
             "members": [
               {
@@ -8615,6 +8616,7 @@
               "name": "LitElement",
               "package": "lit"
             },
+            "summary": "Display repeated fields in a table",
             "tagName": "furo-ui5-table",
             "customElement": true
           }

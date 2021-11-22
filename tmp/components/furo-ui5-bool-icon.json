@@ -1,7 +1,7 @@
 {
   "decl": {
     "kind": "class",
-    "description": "`furo-ui5-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.\n\n```\n<furo-ui5-bool-icon ƒ-bind-data=\"--FieldNode\"></furo-ui5-bool-icon>\n```",
+    "description": "`furo-ui5-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.\n\n```html\n<furo-ui5-bool-icon ƒ-bind-data=\"--FieldNode\"></furo-ui5-bool-icon>\n```\n\nOnly `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.\nIf you set other icons, please do not forget to import them.",
     "name": "FuroDataBoolIcon",
     "members": [
       {
@@ -30,7 +30,7 @@
         },
         "default": "'navigation-down-arrow'",
         "privacy": "public",
-        "description": "Defines the symbol for the true state",
+        "description": "Defines the icon for the true state.",
         "attribute": "symboltrue"
       },
       {
@@ -41,7 +41,7 @@
         },
         "default": "'navigation-right-arrow'",
         "privacy": "public",
-        "description": "Defines the symbol for the false state",
+        "description": "Defines the icon for the false state.",
         "attribute": "symbolfalse"
       },
       {
@@ -67,18 +67,19 @@
         "type": {
           "text": "boolean"
         },
+        "privacy": "private",
         "default": "false"
       }
     ],
     "attributes": [
       {
         "name": "symboltrue",
-        "description": "Defines the symbol for the true state",
+        "description": "Defines the icon for the true state.",
         "fieldName": "symboltrue"
       },
       {
         "name": "symbolfalse",
-        "description": "Defines the symbol for the false state",
+        "description": "Defines the icon for the false state.",
         "fieldName": "symbolfalse"
       }
     ],
@@ -199,7 +200,7 @@
     "declarations": [
       {
         "kind": "class",
-        "description": "`furo-ui5-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.\n\n```\n<furo-ui5-bool-icon ƒ-bind-data=\"--FieldNode\"></furo-ui5-bool-icon>\n```",
+        "description": "`furo-ui5-bool-icon`\nDisplays a icon/symbol for a boolean value\n\nThis component uses utf-8 symbols for true and false at the moment.\n\n```html\n<furo-ui5-bool-icon ƒ-bind-data=\"--FieldNode\"></furo-ui5-bool-icon>\n```\n\nOnly `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.\nIf you set other icons, please do not forget to import them.",
         "name": "FuroDataBoolIcon",
         "members": [
           {
@@ -228,7 +229,7 @@
             },
             "default": "'navigation-down-arrow'",
             "privacy": "public",
-            "description": "Defines the symbol for the true state",
+            "description": "Defines the icon for the true state.",
             "attribute": "symboltrue"
           },
           {
@@ -239,7 +240,7 @@
             },
             "default": "'navigation-right-arrow'",
             "privacy": "public",
-            "description": "Defines the symbol for the false state",
+            "description": "Defines the icon for the false state.",
             "attribute": "symbolfalse"
           },
           {
@@ -265,18 +266,19 @@
             "type": {
               "text": "boolean"
             },
+            "privacy": "private",
             "default": "false"
           }
         ],
         "attributes": [
           {
             "name": "symboltrue",
-            "description": "Defines the symbol for the true state",
+            "description": "Defines the icon for the true state.",
             "fieldName": "symboltrue"
           },
           {
             "name": "symbolfalse",
-            "description": "Defines the symbol for the false state",
+            "description": "Defines the icon for the false state.",
             "fieldName": "symbolfalse"
           }
         ],

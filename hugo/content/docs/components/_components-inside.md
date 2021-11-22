@@ -7,7 +7,7 @@ bookHidden: true
 ### Components
 
 - [furo-ui5-bool-icon](furo-ui5-bool-icon.md) Displays a icon/symbol for a boolean value
-- [furo-ui5-busyindicator](furo-ui5-busyindicator.md) ui5 busy indicator
+- [furo-ui5-busy-indicator](furo-ui5-busy-indicator.md) ui5 busy indicator
 - [furo-ui5-button](furo-ui5-button.md) ui5 button
 - [furo-ui5-card](furo-ui5-card.md) 
 - [furo-ui5-chart-display](furo-ui5-chart-display.md) Display charts with data objects
@@ -50,7 +50,7 @@ bookHidden: true
 - [furo-ui5-select-labeled](furo-ui5-select-labeled.md) labeled select
 - [furo-ui5-select](furo-ui5-select.md) data select field
 - [furo-ui5-sign-pad](furo-ui5-sign-pad.md) draw or sign
-- [furo-ui5-table](furo-ui5-table.md) 
+- [furo-ui5-table](furo-ui5-table.md) Display repeated fields in a table
 - [furo-ui5-text-input-labeled](furo-ui5-text-input-labeled.md) labeled input field
 - [furo-ui5-text-input](furo-ui5-text-input.md) data text input field
 - [furo-ui5-textarea-input-labeled](furo-ui5-textarea-input-labeled.md) labeled textarea field

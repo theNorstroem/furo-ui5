@@ -11,9 +11,12 @@ import '@ui5/webcomponents-icons/dist/navigation-right-arrow.js';
  *
  * This component uses utf-8 symbols for true and false at the moment.
  *
- * ```
+ * ```html
  * <furo-ui5-bool-icon ƒ-bind-data="--FieldNode"></furo-ui5-bool-icon>
  * ```
+ *
+ * Only `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.
+ * If you set other icons, please do not forget to import them.
  *
  * @summary  Displays a icon/symbol for a boolean value
  * @customElement
@@ -33,6 +36,11 @@ class FuroDataBoolIcon extends FBP(LitElement) {
      * @private
      */
     this._ocSymbol = this.symbolfalse;
+    /**
+     *
+     * @type {boolean}
+     * @private
+     */
     this._state = false;
 
     this.addEventListener('click', () => {
@@ -93,11 +101,12 @@ class FuroDataBoolIcon extends FBP(LitElement) {
   static get properties() {
     return {
       /**
-       * Defines the symbol for the true state
+       * Defines the icon for the true state.
+       *
        */
       symboltrue: { type: String },
       /**
-       * Defines the symbol for the false state
+       * Defines the icon for the false state.
        */
       symbolfalse: { type: String },
     };

@@ -20,9 +20,12 @@ Displays a icon/symbol for a boolean value
 
 This component uses utf-8 symbols for true and false at the moment.
 
-```
+```html
 <furo-ui5-bool-icon ƒ-bind-data="--FieldNode"></furo-ui5-bool-icon>
 ```
+
+Only `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.
+If you set other icons, please do not forget to import them.
 
 {{% api "_furo-ui5-bool-icon-description.md" %}}
 
@@ -39,7 +42,7 @@ This component uses utf-8 symbols for true and false at the moment.
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">symboltrue</span>
 <small>`string` default: **&#39;navigation-down-arrow&#39;**</small>
 
-Defines the symbol for the true state
+Defines the icon for the true state.
 <br><br>
 
 ### **symbolfalse**
@@ -47,7 +50,7 @@ Defines the symbol for the true state
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">symbolfalse</span>
 <small>`string` default: **&#39;navigation-right-arrow&#39;**</small>
 
-Defines the symbol for the false state
+Defines the icon for the false state.
 <br><br>
 
 ### **field**
@@ -57,11 +60,6 @@ default: **{}**</small>
 <br><br>
 
 
-### **_state**
-default: **false**</small>
-
-
-<br><br>
 
 ## Methods
 {{% api "_furo-ui5-bool-icon-methods.md" %}}

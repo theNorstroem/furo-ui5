@@ -1,5 +1,5 @@
 import './furo-ui5-chart-display.js';
-import './furo-ui5-busyindicator.js';
+import './furo-ui5-busy-indicator.js';
 import './furo-ui5-bool-icon.js';
 import './furo-ui5-sign-pad.js';
 import './furo-ui5-button.js';

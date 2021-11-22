@@ -1,6 +1,6 @@
 ---
 title: furo-ui5-table
-description: 
+description: Display repeated fields in a table
 weight: 50
 ---
 
@@ -14,14 +14,38 @@ weight: 50
 
 {{% api "_furo-ui5-table-head.md" %}}
 
-****
+**Display repeated fields in a table**
 
 `furo-ui5-table` display entities in a ui5-table
 
+```html
 <furo-ui5-table
- no-data-text="No data available."
- ƒ-bind-data="--dao(*.entities)"
-></furo-ui5-table>
+ ƒ-bind-data="--data(*.entities)"
+>
+ <!-- The column label is evaluated from the specs -->
+  <ui5-table-column
+    slot="columns"
+    field="*.data.fieldname"
+  ></ui5-table-column>
+
+  <ui5-table-column
+    slot="columns"
+    field="*.data.display_name"
+  ><span>Custom Title</span></ui5-table-column>
+
+</furo-ui5-table>
+```
+
+## Attributes which are taken from `ui5-table-column`
+
+### **field**
+Define the field you want to bind. `*` is the root of the repeated field.
+
+### **context**
+Set a context for the type renderer. The default value is `cell`.
+
+**renderer**
+Set a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.
 
 {{% api "_furo-ui5-table-description.md" %}}
 
