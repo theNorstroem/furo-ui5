@@ -21,7 +21,8 @@ export class FuroUiBusyIndicator extends Busy.default {
    * Sets the busy indicator state to active
    */
   activate() {
-    this.setAttribute('active', 'true');
+    this.setAttribute('active', '');
+    this._render();
   }
 
   /**
@@ -29,6 +30,7 @@ export class FuroUiBusyIndicator extends Busy.default {
    */
   deactivate() {
     this.removeAttribute('active');
+    this._render();
   }
 }
 window.customElements.define('furo-ui5-busy-indicator', FuroUiBusyIndicator);

@@ -4,6 +4,12 @@ html {
   touch-action: manipulation;
 }
 
+.snippet {
+  padding: 1rem 1.5rem;
+  border: 0.0625rem solid #C1C1C1;
+  background-color: var(--sapBackgroundColor);
+}
+
 body {
   min-width: $body-min-width;
   color: var(--body-font-color);
