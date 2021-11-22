@@ -1,0 +1,104 @@
+{
+  "data": {
+    "id": "1",
+    "display_name": "Rework documentation",
+    "description": "Apply new documentation structure",
+    "estimated_time": 5,
+    "owner": {
+      "display_name": "John Doe, +41783332244",
+      "id": "1",
+      "rel": "List",
+      "href": "/mockdata/persons/1/get.json",
+      "method": "GET",
+      "type": "person.Person"
+    },
+    "subtasks": []
+  },
+  "links": [
+    {
+      "href": "/mockdata/tasks/1/get.json",
+      "method": "GET",
+      "rel": "self",
+      "type": "task.TaskEntity",
+      "service": "TaskService"
+    },
+    {
+      "href": "/mockdata/tasks/1/update.json",
+      "method": "PUT",
+      "rel": "update",
+      "type": "task.Task",
+      "service": "TaskService"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "display_name": "",
+      "heading": "heading 1",
+      "message_priority": "Low",
+      "category": "warning",
+      "category_priority": "Low",
+      "actions": [
+
+        {
+          "icon":"accept",
+          "command":"accept",
+          "text": "accept"
+        },
+        {
+          "icon":"message-error",
+          "command":"reject",
+          "text": "Reject"
+        }
+
+      ],
+      "message": "Markdown | Less | Pretty\n--- | --- | ---\n*Still* | `renders` | **nicely**\n1 | 2 | 3"
+    },
+    {
+      "id": 3,
+      "display_name": "",
+      "heading": "heading 3",
+      "message_priority": "Low",
+      "category": "warning",
+      "category_priority": "Low",
+      "actions": [
+
+        {
+          "icon":"accept",
+          "command":"accept",
+          "text": "accept"
+        },
+        {
+          "icon":"message-error",
+          "command":"reject",
+          "text": "Reject"
+        }
+
+      ],
+      "message": "Markdown | Less | Pretty\n--- | --- | ---\n*Still* | `renders` | **nicely**\n1 | 2 | 3"
+    },
+    {
+      "id": 2,
+      "display_name": "",
+      "heading": "heading 2",
+      "message_priority": "High",
+      "category": "Error",
+      "category_priority": "High",
+      "actions": [
+
+        {
+          "icon":"accept",
+          "command":"accept",
+          "text": "accept"
+        },
+        {
+          "icon":"message-error",
+          "command":"reject",
+          "text": "Reject"
+        }
+
+      ],
+      "message": "Markdown | Less | Pretty\n--- | --- | ---\n*Still* | `renders` | **nicely**\n1 | 2 | 3"
+    }
+  ]
+}
