@@ -1,4 +1,4 @@
-import { Init, i18n,  Env } from "https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.3/dist/framework.js";
+import { Init, i18n,  Env } from "https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/framework.js";
 
 
 import {Types,Services} from "./data_environment.js";
@@ -30,7 +30,7 @@ Init.applyCustomApiPrefixToServicesAndTypes(Env.api.prefix);
 /**
  * Translate static messages in SPEC
  */
-let locale = 'de_ch';
+let locale = 'en';
 if (i18n.resbundle[Env.locale.toLowerCase().replace('-', '_')]) {
   locale = Env.locale.toLowerCase().replace('-', '_');
 }

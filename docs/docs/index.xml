@@ -176,7 +176,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-checkbox-input/_furo-ui5-checkbox-input-head/</guid>
-      <description></description>
+      <description>Example #           1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;#34;--doExp(*.furo_data_checkbox_input)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;furo-ui5-checkbox-input value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--doExp(*.furo_data_checkbox_input)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   </description>
     </item>
     
     <item>
@@ -230,7 +230,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-context-menu/_furo-ui5-context-menu-head/</guid>
-      <description></description>
+      <description>Example #     open menu      1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  &amp;lt;body&amp;gt; &amp;lt;!-- The display must be placed in a parent element --&amp;gt; &amp;lt;furo-ui5-context-menu-display&amp;gt;&amp;lt;/furo-ui5-context-menu-display&amp;gt; &amp;lt;main&amp;gt; &amp;lt;div&amp;gt; &amp;lt;article&amp;gt; &amp;lt;furo-ui5-context-menu ƒ-trigger=&amp;#34;--menuClkd&amp;#34; ƒ-bind-data=&amp;#34;--menuDO&amp;#34; @-menu-item-selected=&amp;#34;--menuItemSelected&amp;#34; &amp;gt;&amp;lt;ui5-icon name=&amp;#34;meal&amp;#34; @-click=&amp;#34;--menuClkd&amp;#34;&amp;gt;open menu&amp;lt;/ui5-icon&amp;gt; &amp;lt;/furo-ui5-context-menu&amp;gt; &amp;lt;/article&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/main&amp;gt;   </description>
     </item>
     
     <item>
