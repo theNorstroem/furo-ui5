@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-chart
-**@furo/components** <small>v1.0.0-rc.2</small>
+**@furo/components** <small>v1.0.0-rc.3</small>
 <br>`import '@furo/components/src/furo-ui5-chart.js';`<small>
 <br>exports `<furo-ui5-chart>` custom-element-definition
 <br>superclass *LitElement*</small>
@@ -146,46 +146,9 @@ Set the size of the markers (hover state) in px.
 
 Define the curve style for line and area charts.
 
- Possible values: 'smooth', 'straight',  'stepline'
+ Possible values: `smooth`, `straight`,  `stepline`
 <br><br>
 
-### **options**
-default: **{
-      seriesName: undefined,
-      legendLabel: undefined, // custom field
-      opposite: false,
-      axisTicks: {
-        show: false,
-        borderType: &#39;solid&#39;,
-        color: &#39;#666666&#39;,
-        width: 6,
-        offsetX: 0,
-        offsetY: 0,
-      },
-      axisBorder: {
-        show: false,
-        color: &#39;#666666&#39;,
-        stroke: 1,
-      },
-      labels: {
-        show: false,
-        style: {
-          colors: &#39;#666666&#39;,
-        },
-      },
-      title: {
-        style: {
-          color: &#39;#666666&#39;,
-        },
-      },
-      tooltip: {
-        enabled: false,
-        offsetX: 0,
-      },
-    }**</small>
-
-
-<br><br>
 
 ### **dataField**
 
@@ -270,53 +233,10 @@ If you need to give an explicit color for the series you can use this attribute.
 - <small>data </small>
 <br><br>
 
-### **_dataPointSelection**
-<small>**_dataPointSelection**(*e* `` *context* `` *config* `` ) ⟹ `void`</small>
-
-<small>`` `` `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--data-point-selection</span>
 
 
 
-- <small>e </small>
-- <small>context </small>
-- <small>config </small>
-<br><br>
 
-
-### **_initEmptySeries**
-<small>**_initEmptySeries**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--init-empty-series</span>
-
-
-
-<br><br>
-
-### **_pathGet**
-<small>**_pathGet**(*root* `Object` *path* `string | !Array&lt;string|number&gt;` ) ⟹ `*`</small>
-
-<small>`Object` `string | !Array&lt;string|number&gt;` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--path-get</span>
-
-Reads a value from a path.  If any sub-property in the path is `undefined`,
-this method returns `undefined` (will never throw.
-
-- <small>root Object from which to dereference path from</small>
-- <small>path Path to read</small>
-<br><br>
-
-### **_split**
-<small>**_split**(*path* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--split</span>
-
-
-
-- <small>path </small>
-<br><br>
 
 
 

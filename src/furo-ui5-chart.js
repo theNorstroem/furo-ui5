@@ -37,6 +37,11 @@ class FuroUi5Chart extends LitElement {
     this.markerSize = 0;
     this.strokeCurve = 'straight'; // 'smooth', 'straight',  'stepline'
 
+    /**
+     * Apex options object
+     * @type {Object} Apex options
+     * @private
+     */
     this.options = {
       seriesName: undefined,
       legendLabel: undefined, // custom field
@@ -143,7 +148,7 @@ class FuroUi5Chart extends LitElement {
       /**
        * Define the curve style for line and area charts.
        *
-       *  Possible values: 'smooth', 'straight',  'stepline'
+       *  Possible values: `smooth`, `straight`,  `stepline`
        */
       strokeCurve: { type: String, attribute: 'chart-curve' },
       /**
@@ -213,6 +218,13 @@ class FuroUi5Chart extends LitElement {
     }
   }
 
+  /**
+   *
+   * @param e
+   * @param context
+   * @param config
+   * @private
+   */
   _dataPointSelection(e, context, config) {
     if (config.dataPointIndex !== undefined) {
       const customEvent = new Event('data-point-clicked', {
@@ -377,6 +389,10 @@ class FuroUi5Chart extends LitElement {
     this.dispatchEvent(customEvent);
   }
 
+  /**
+   *
+   * @private
+   */
   _initEmptySeries() {
     // data series
     this.dataSeries = { name: this.options.seriesName, data: [] };
@@ -398,8 +414,8 @@ class FuroUi5Chart extends LitElement {
    *
    * @param {Object} root Object from which to dereference path from
    * @param {string | !Array<string|number>} path Path to read
-   * @return {*} Value at path, or `undefined` if the path could not be
-   *  fully dereferenced.
+   * @return {*} Value at path, or `undefined` if the path could not be fully dereferenced.
+   * @private
    */
   _pathGet(root, path) {
     let prop = root;
@@ -416,6 +432,12 @@ class FuroUi5Chart extends LitElement {
     return prop;
   }
 
+  /**
+   *
+   * @param path
+   * @return {string[]}
+   * @private
+   */
   // eslint-disable-next-line class-methods-use-this
   _split(path) {
     return path.toString().split('.');

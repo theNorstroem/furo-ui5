@@ -1,3 +1,8 @@
+---
+booksearchexclude: false
+bookToc: false
+bookHidden: true
+---
 #### Example
 
 <div class="snippet">

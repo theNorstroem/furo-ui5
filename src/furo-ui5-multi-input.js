@@ -4,6 +4,7 @@ import '@ui5/webcomponents/dist/Token.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Events } from './lib/Events.js';
+
 /**
  * `furo-ui5-multi-input`
  *
@@ -270,4 +271,7 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
     this.innerHTML = '';
   }
 }
-window.customElements.define('furo-ui5-multi-input', FuroUi5MultiInput);
+
+FuroUi5MultiInput.onDefine().then(() => {
+  window.customElements.define('furo-ui5-multi-input', FuroUi5MultiInput);
+});

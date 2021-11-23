@@ -299,7 +299,9 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
   }
 }
 
-window.customElements.define(
-  'furo-ui5-date-time-picker',
-  FuroUi5DateTimePicker
-);
+FuroUi5DateTimePicker.onDefine().then(() => {
+  window.customElements.define(
+    'furo-ui5-date-time-picker',
+    FuroUi5DateTimePicker
+  );
+});

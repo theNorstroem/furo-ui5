@@ -30,7 +30,7 @@ Init.applyCustomApiPrefixToServicesAndTypes(Env.api.prefix);
 /**
  * Translate static messages in SPEC
  */
-let locale = 'de_ch';
+let locale = 'en';
 if (i18n.resbundle[Env.locale.toLowerCase().replace('-', '_')]) {
   locale = Env.locale.toLowerCase().replace('-', '_');
 }

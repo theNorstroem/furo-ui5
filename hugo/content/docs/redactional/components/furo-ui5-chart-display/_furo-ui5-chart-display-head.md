@@ -1,3 +1,8 @@
+---
+booksearchexclude: false
+bookToc: false
+bookHidden: true
+---
 #### Example mixed charts
 
 <script type="module" src="/init.js"></script>

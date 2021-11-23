@@ -642,7 +642,8 @@
                 {
                   "name": "apexOptions"
                 }
-              ]
+              ],
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -657,11 +658,18 @@
                 {
                   "name": "dataSources"
                 }
-              ]
+              ],
+              "return": {
+                "type": {
+                  "text": "Promise<void>"
+                }
+              },
+              "privacy": "private"
             },
             {
               "kind": "method",
-              "name": "_fillInitialData"
+              "name": "_fillInitialData",
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -925,7 +933,8 @@
                 {
                   "name": "config"
                 }
-              ]
+              ],
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -935,7 +944,8 @@
             },
             {
               "kind": "method",
-              "name": "_initEmptySeries"
+              "name": "_initEmptySeries",
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -961,7 +971,8 @@
                 "type": {
                   "text": "*"
                 }
-              }
+              },
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -970,7 +981,13 @@
                 {
                   "name": "path"
                 }
-              ]
+              ],
+              "return": {
+                "type": {
+                  "text": "string[]"
+                }
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -1002,15 +1019,17 @@
               },
               "default": "'straight'",
               "privacy": "public",
-              "description": "Define the curve style for line and area charts.\n\n Possible values: 'smooth', 'straight',  'stepline'",
+              "description": "Define the curve style for line and area charts.\n\n Possible values: `smooth`, `straight`,  `stepline`",
               "attribute": "chart-curve"
             },
             {
               "kind": "field",
               "name": "options",
               "type": {
-                "text": "object"
+                "text": "Object"
               },
+              "description": "Apex options",
+              "privacy": "private",
               "default": "{\n      seriesName: undefined,\n      legendLabel: undefined, // custom field\n      opposite: false,\n      axisTicks: {\n        show: false,\n        borderType: 'solid',\n        color: '#666666',\n        width: 6,\n        offsetX: 0,\n        offsetY: 0,\n      },\n      axisBorder: {\n        show: false,\n        color: '#666666',\n        stroke: 1,\n      },\n      labels: {\n        show: false,\n        style: {\n          colors: '#666666',\n        },\n      },\n      title: {\n        style: {\n          color: '#666666',\n        },\n      },\n      tooltip: {\n        enabled: false,\n        offsetX: 0,\n      },\n    }"
             },
             {
@@ -1137,7 +1156,7 @@
             },
             {
               "name": "chart-curve",
-              "description": "Define the curve style for line and area charts.\n\n Possible values: 'smooth', 'straight',  'stepline'",
+              "description": "Define the curve style for line and area charts.\n\n Possible values: `smooth`, `straight`,  `stepline`",
               "fieldName": "strokeCurve"
             },
             {
@@ -1310,7 +1329,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The 'furo-ui5-checkbox-input' component allows the user to switch true and false for Bool with data binding.\n\nIt supports all features from the [SAP ui5 checkbox element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).\n\nYou can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.\n\n * ```html\n <furo-ui5-checkbox-input\n    ƒ-bind-data=\"--daoCountry(*.data.classified_as_risk_area)\"\n ></furo-ui5-checkbox-input>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n| meta \t| fat \t| html \t|\n|------\t|-----\t|------\t|\n| 1    \t| 10  \t| 100  \t|\n\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n\nThe constraint **required** will mark the element as required\n\n```",
+          "description": "The 'furo-ui5-checkbox-input' component allows the user to switch true and false for Bool with data binding.\n\nIt supports all features from the [SAP ui5 checkbox element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).\n\nYou can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.\n\n```html\n <furo-ui5-checkbox-input\n    ƒ-bind-data=\"--daoCountry(*.data.classified_as_risk_area)\"\n ></furo-ui5-checkbox-input>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n| meta \t| fat \t| html \t|\n|------\t|-----\t|------\t|\n| 1    \t| 10  \t| 100  \t|\n\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n\nThe constraint **required** will mark the element as required\n\n```",
           "name": "FuroUi5CheckboxInput",
           "members": [
             {
@@ -8308,7 +8327,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "`furo-ui5-table` display entities in a ui5-table\n\n```html\n<furo-ui5-table\n ƒ-bind-data=\"--data(*.entities)\"\n>\n <!-- The column label is evaluated from the specs -->\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.fieldname\"\n  ></ui5-table-column>\n\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.display_name\"\n  ><span>Custom Title</span></ui5-table-column>\n\n</furo-ui5-table>\n```\n\n## Attributes which are taken from `ui5-table-column`\n\n### **field**\nDefine the field you want to bind. `*` is the root of the repeated field.\n\n### **context**\nSet a context for the type renderer. The default value is `cell`.\n\n**renderer**\nSet a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.",
+          "description": "`furo-ui5-table` display entities in a ui5-table\n\n```html\n<furo-ui5-table\n ƒ-bind-data=\"--data(*.entities)\"\n>\n <!-- The column label is evaluated from the specs -->\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.fieldname\"\n  ></ui5-table-column>\n\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.display_name\"\n  ><span>Custom Title</span></ui5-table-column>\n\n</furo-ui5-table>\n```\n\n## Attributes which are taken from `ui5-table-column`\n\n**field**\nDefine the field you want to bind. `*` is the root of the repeated field.\n\n**context**\nSet a context for the type renderer. The default value is `cell`.\n\n**renderer**\nSet a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.",
           "name": "FuroUi5Table",
           "members": [
             {
@@ -8323,22 +8342,22 @@
                   "name": "data"
                 }
               ],
-              "description": "bind a repeated data"
+              "description": "Bind a repeated data node."
             },
             {
               "kind": "method",
               "name": "focus",
-              "description": "focus on the header of the table"
+              "description": "Focuses the header of the table"
             },
             {
               "kind": "method",
               "name": "focusLast",
-              "description": "focus the first row"
+              "description": "Focuses the last row."
             },
             {
               "kind": "method",
               "name": "focusFirst",
-              "description": "focus the first row"
+              "description": "Focuses the first row."
             },
             {
               "kind": "method",
@@ -8402,11 +8421,13 @@
               "type": {
                 "text": "array"
               },
+              "privacy": "private",
               "default": "[]"
             },
             {
               "kind": "field",
-              "name": "_specs"
+              "name": "_specs",
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -8414,6 +8435,7 @@
               "type": {
                 "text": "array"
               },
+              "privacy": "private",
               "default": "[]"
             },
             {
@@ -8431,14 +8453,14 @@
               "kind": "field",
               "name": "noDataText",
               "privacy": "public",
-              "description": "the text which can be showed when there is no data in table.\nstring",
+              "description": "Defines the text that will be displayed when there is no data.\nstring",
               "attribute": "no-data-text"
             },
             {
               "kind": "field",
               "name": "stickyColumnHeader",
               "privacy": "public",
-              "description": "define the header is sticky or not",
+              "description": "Determines whether the column headers remain fixed at the top of the page during vertical scrolling as long as the Web Component is in the viewport.",
               "attribute": "sticky-column-header"
             },
             {
@@ -8494,12 +8516,12 @@
             },
             {
               "name": "no-data-text",
-              "description": "the text which can be showed when there is no data in table.\nstring",
+              "description": "Defines the text that will be displayed when there is no data.\nstring",
               "fieldName": "noDataText"
             },
             {
               "name": "sticky-column-header",
-              "description": "define the header is sticky or not",
+              "description": "Determines whether the column headers remain fixed at the top of the page during vertical scrolling as long as the Web Component is in the viewport.",
               "fieldName": "stickyColumnHeader"
             },
             {

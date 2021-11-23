@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-table
-**@furo/components** <small>v1.0.0-rc.2</small>
+**@furo/components** <small>v1.0.0-rc.3</small>
 <br>`import '@furo/components/src/furo-ui5-table.js';`<small>
 <br>exports *FuroUi5Table* js
 <br>exports `<furo-ui5-table>` custom-element-definition
@@ -38,10 +38,10 @@ weight: 50
 
 ## Attributes which are taken from `ui5-table-column`
 
-### **field**
+**field**
 Define the field you want to bind. `*` is the root of the repeated field.
 
-### **context**
+**context**
 Set a context for the type renderer. The default value is `cell`.
 
 **renderer**
@@ -65,23 +65,8 @@ Set a specific renderer component for the column. If not set, the renderer is ev
 
 
 
-### **cols**
-default: **[]**</small>
 
 
-<br><br>
-
-### **_specs**
-</small>
-
-
-<br><br>
-
-### **data**
-default: **[]**</small>
-
-
-<br><br>
 
 ### **mode**
 
@@ -101,7 +86,7 @@ Available options are:
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-data-text</span>
 </small>
 
-the text which can be showed when there is no data in table.
+Defines the text that will be displayed when there is no data.
 string
 <br><br>
 
@@ -110,7 +95,7 @@ string
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">sticky-column-header</span>
 </small>
 
-define the header is sticky or not
+Determines whether the column headers remain fixed at the top of the page during vertical scrolling as long as the Web Component is in the viewport.
 <br><br>
 
 ### **busy**
@@ -174,7 +159,7 @@ Fired when the row selection in MultiSelect mode was changed
 <small>`` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-bind a repeated data
+Bind a repeated data node.
 
 - <small>data </small>
 <br><br>
@@ -185,7 +170,7 @@ bind a repeated data
 <small>`*`</small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span>
 
-focus on the header of the table
+Focuses the header of the table
 
 <br><br>
 
@@ -195,7 +180,7 @@ focus on the header of the table
 <small>`*`</small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-last</span>
 
-focus the first row
+Focuses the last row.
 
 <br><br>
 
@@ -205,7 +190,7 @@ focus the first row
 <small>`*`</small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-first</span>
 
-focus the first row
+Focuses the first row.
 
 <br><br>
 

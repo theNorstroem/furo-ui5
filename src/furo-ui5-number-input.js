@@ -555,4 +555,6 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
   }
 }
 
-window.customElements.define('furo-ui5-number-input', FuroUi5NumberInput);
+FuroUi5NumberInput.onDefine().then(() => {
+  window.customElements.define('furo-ui5-number-input', FuroUi5NumberInput);
+});

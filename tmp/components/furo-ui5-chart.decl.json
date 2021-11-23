@@ -95,7 +95,8 @@
         {
           "name": "config"
         }
-      ]
+      ],
+      "privacy": "private"
     },
     {
       "kind": "method",
@@ -105,7 +106,8 @@
     },
     {
       "kind": "method",
-      "name": "_initEmptySeries"
+      "name": "_initEmptySeries",
+      "privacy": "private"
     },
     {
       "kind": "method",
@@ -131,7 +133,8 @@
         "type": {
           "text": "*"
         }
-      }
+      },
+      "privacy": "private"
     },
     {
       "kind": "method",
@@ -140,7 +143,13 @@
         {
           "name": "path"
         }
-      ]
+      ],
+      "return": {
+        "type": {
+          "text": "string[]"
+        }
+      },
+      "privacy": "private"
     },
     {
       "kind": "field",
@@ -172,15 +181,17 @@
       },
       "default": "'straight'",
       "privacy": "public",
-      "description": "Define the curve style for line and area charts.\n\n Possible values: 'smooth', 'straight',  'stepline'",
+      "description": "Define the curve style for line and area charts.\n\n Possible values: `smooth`, `straight`,  `stepline`",
       "attribute": "chart-curve"
     },
     {
       "kind": "field",
       "name": "options",
       "type": {
-        "text": "object"
+        "text": "Object"
       },
+      "description": "Apex options",
+      "privacy": "private",
       "default": "{\n      seriesName: undefined,\n      legendLabel: undefined, // custom field\n      opposite: false,\n      axisTicks: {\n        show: false,\n        borderType: 'solid',\n        color: '#666666',\n        width: 6,\n        offsetX: 0,\n        offsetY: 0,\n      },\n      axisBorder: {\n        show: false,\n        color: '#666666',\n        stroke: 1,\n      },\n      labels: {\n        show: false,\n        style: {\n          colors: '#666666',\n        },\n      },\n      title: {\n        style: {\n          color: '#666666',\n        },\n      },\n      tooltip: {\n        enabled: false,\n        offsetX: 0,\n      },\n    }"
     },
     {
@@ -307,7 +318,7 @@
     },
     {
       "name": "chart-curve",
-      "description": "Define the curve style for line and area charts.\n\n Possible values: 'smooth', 'straight',  'stepline'",
+      "description": "Define the curve style for line and area charts.\n\n Possible values: `smooth`, `straight`,  `stepline`",
       "fieldName": "strokeCurve"
     },
     {

@@ -3,6 +3,7 @@ import * as Input from '@ui5/webcomponents/dist/Input.js';
 import '@ui5/webcomponents/dist/features/InputSuggestions.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Events } from './lib/Events.js';
+
 /**
  * The 'furo-ui5-password-input' component allows the user to enter and edit password with data binding.
  *
@@ -631,4 +632,6 @@ export class FuroUi5PasswordInput extends FieldNodeAdapter(Input.default) {
   }
 }
 
-window.customElements.define('furo-ui5-password-input', FuroUi5PasswordInput);
+FuroUi5PasswordInput.onDefine().then(() => {
+  window.customElements.define('furo-ui5-password-input', FuroUi5PasswordInput);
+});

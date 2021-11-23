@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-google-type-date
-**@furo/typerenderer** <small>v1.0.0-rc.2</small>
+**@furo/typerenderer** <small>v1.0.0-rc.3</small>
 <br>`import '@furo/typerenderer/src/cell-google-type-date.js';`<small>
 <br>exports *CellGoogleTypeDate* js
 <br>exports `<cell-google-type-date>` custom-element-definition

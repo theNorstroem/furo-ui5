@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-type-date
-**@furo/typerenderer** <small>v1.0.0-rc.2</small>
+**@furo/typerenderer** <small>v1.0.0-rc.3</small>
 <br>`import '@furo/typerenderer/src/display-furo-type-date.js';`<small>
 <br>exports `<display-furo-type-date>` custom-element-definition
 <br>extends */src/typerenderer/display-google-type-date.js*

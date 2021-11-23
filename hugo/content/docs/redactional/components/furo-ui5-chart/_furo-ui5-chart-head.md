@@ -1,3 +1,8 @@
+---
+booksearchexclude: false
+bookToc: false
+bookHidden: true
+---
 #### Simple line chart
 
 <script type="module" src="/init.js"></script>

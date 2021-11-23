@@ -594,4 +594,6 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 }
 
-window.customElements.define('furo-ui5-select', FuroUi5Select);
+FuroUi5Select.onDefine().then(() => {
+  window.customElements.define('furo-ui5-select', FuroUi5Select);
+});

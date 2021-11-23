@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-chart-display
-**@furo/components** <small>v1.0.0-rc.2</small>
+**@furo/components** <small>v1.0.0-rc.3</small>
 <br>`import '@furo/components/src/furo-ui5-chart-display.js';`<small>
 <br>exports `<furo-ui5-chart-display>` custom-element-definition
 <br>superclass *LitElement*
@@ -387,38 +387,9 @@ default: **{
 
 
 
-### **_initChart**
-<small>**_initChart**(*apexOptions* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--init-chart</span>
 
 
 
-- <small>apexOptions </small>
-<br><br>
-
-
-### **_registerDataSourceComponents**
-<small>**_registerDataSourceComponents**(*dataSources* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--register-data-source-components</span>
-
-
-
-- <small>dataSources </small>
-<br><br>
-
-### **_fillInitialData**
-<small>**_fillInitialData**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--fill-initial-data</span>
-
-
-
-<br><br>
 
 
 

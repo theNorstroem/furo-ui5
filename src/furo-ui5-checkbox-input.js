@@ -12,7 +12,7 @@ import { Events } from './lib/Events.js';
 
  * You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
  *
- *  * ```html
+ *```html
  *  <furo-ui5-checkbox-input
  *     ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
  *  ></furo-ui5-checkbox-input>
@@ -36,7 +36,6 @@ import { Events } from './lib/Events.js';
  *
  * The constraint **required** will mark the element as required
  *
- * ```
  *
  * @fires {Boolean} change -  Fired when the checkbox checked state changes.
  * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).
@@ -342,4 +341,6 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
   }
 }
 
-window.customElements.define('furo-ui5-checkbox-input', FuroUi5CheckboxInput);
+FuroUi5CheckboxInput.onDefine().then(() => {
+  window.customElements.define('furo-ui5-checkbox-input', FuroUi5CheckboxInput);
+});

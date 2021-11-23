@@ -2,6 +2,7 @@ import * as ToggleButton from '@ui5/webcomponents/dist/ToggleButton.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Events } from './lib/Events.js';
+
 /**
  * The 'furo-ui5-toggle-button' component allows the user to switch true and false for Bool with data binding.
  *
@@ -19,9 +20,9 @@ import { Events } from './lib/Events.js';
  * 1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.
  * 2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.
  *
- * | meta 	| fat 	| html 	|
- * |------	|-----	|------	|
- * | 1    	| 10  	| 100  	|
+ * | meta  | fat  | html  |
+ * |------  |-----  |------  |
+ * | 1      | 10    | 100    |
  *
  *
  * ## supported FAT attributes
@@ -289,4 +290,7 @@ export class FuroUi5ToggleButton extends FieldNodeAdapter(
     }
   }
 }
-window.customElements.define('furo-ui5-toggle-button', FuroUi5ToggleButton);
+
+FuroUi5ToggleButton.onDefine().then(() => {
+  window.customElements.define('furo-ui5-toggle-button', FuroUi5ToggleButton);
+});

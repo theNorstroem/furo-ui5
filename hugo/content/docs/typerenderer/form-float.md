@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-float
-**@furo/typerenderer** <small>v1.0.0-rc.2</small>
+**@furo/typerenderer** <small>v1.0.0-rc.3</small>
 <br>`import '@furo/typerenderer/src/form-float.js';`<small>
 <br>exports *FormFloat* js
 <br>exports `<form-float>` custom-element-definition

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-int32
-**@furo/typerenderer** <small>v1.0.0-rc.2</small>
+**@furo/typerenderer** <small>v1.0.0-rc.3</small>
 <br>`import '@furo/typerenderer/src/celledit-int32.js';`<small>
 <br>exports *CelleditInt32* js
 <br>exports `<celledit-int32>` custom-element-definition

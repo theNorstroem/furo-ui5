@@ -482,7 +482,9 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
   }
 }
 
-window.customElements.define(
-  'furo-ui5-segmented-button',
-  FuroUi5SegmentedButton
-);
+FuroUi5SegmentedButton.onDefine().then(() => {
+  window.customElements.define(
+    'furo-ui5-segmented-button',
+    FuroUi5SegmentedButton
+  );
+});

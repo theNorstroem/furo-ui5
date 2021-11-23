@@ -172,7 +172,8 @@
           {
             "name": "apexOptions"
           }
-        ]
+        ],
+        "privacy": "private"
       },
       {
         "kind": "method",
@@ -187,11 +188,18 @@
           {
             "name": "dataSources"
           }
-        ]
+        ],
+        "return": {
+          "type": {
+            "text": "Promise<void>"
+          }
+        },
+        "privacy": "private"
       },
       {
         "kind": "method",
-        "name": "_fillInitialData"
+        "name": "_fillInitialData",
+        "privacy": "private"
       },
       {
         "kind": "field",
@@ -347,7 +355,7 @@
   "pkg": {
     "name": "@furo/ui5",
     "description": "SAP UI5 Web Components data bindings for furo",
-    "version": "1.0.0-rc.2",
+    "version": "1.0.0-rc.3",
     "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
     "repository": "git@github.com:eclipse/eclipsefuro-web.git",
     "author": {
@@ -616,7 +624,8 @@
               {
                 "name": "apexOptions"
               }
-            ]
+            ],
+            "privacy": "private"
           },
           {
             "kind": "method",
@@ -631,11 +640,18 @@
               {
                 "name": "dataSources"
               }
-            ]
+            ],
+            "return": {
+              "type": {
+                "text": "Promise<void>"
+              }
+            },
+            "privacy": "private"
           },
           {
             "kind": "method",
-            "name": "_fillInitialData"
+            "name": "_fillInitialData",
+            "privacy": "private"
           },
           {
             "kind": "field",

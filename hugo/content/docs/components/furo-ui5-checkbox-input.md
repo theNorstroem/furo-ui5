@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-checkbox-input
-**@furo/components** <small>v1.0.0-rc.2</small>
+**@furo/components** <small>v1.0.0-rc.3</small>
 <br>`import '@furo/components/src/furo-ui5-checkbox-input.js';`<small>
 <br>exports *FuroUi5CheckboxInput* js
 <br>exports `<furo-ui5-checkbox-input>` custom-element-definition
@@ -22,7 +22,7 @@ It supports all features from the [SAP ui5 checkbox element](https://sap.github.
 
 You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
 
- * ```html
+```html
  <furo-ui5-checkbox-input
     ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
  ></furo-ui5-checkbox-input>

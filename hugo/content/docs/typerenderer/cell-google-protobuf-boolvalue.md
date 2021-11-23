@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-google-protobuf-boolvalue
-**@furo/typerenderer** <small>v1.0.0-rc.2</small>
+**@furo/typerenderer** <small>v1.0.0-rc.3</small>
 <br>`import '@furo/typerenderer/src/cell-google-protobuf-boolvalue.js';`<small>
 <br>exports `<cell-google-protobuf-boolvalue>` custom-element-definition
 <br>extends */src/typerenderer/cell-bool.js*

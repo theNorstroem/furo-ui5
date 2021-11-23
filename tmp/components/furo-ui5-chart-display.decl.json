@@ -171,7 +171,8 @@
         {
           "name": "apexOptions"
         }
-      ]
+      ],
+      "privacy": "private"
     },
     {
       "kind": "method",
@@ -186,11 +187,18 @@
         {
           "name": "dataSources"
         }
-      ]
+      ],
+      "return": {
+        "type": {
+          "text": "Promise<void>"
+        }
+      },
+      "privacy": "private"
     },
     {
       "kind": "method",
-      "name": "_fillInitialData"
+      "name": "_fillInitialData",
+      "privacy": "private"
     },
     {
       "kind": "field",

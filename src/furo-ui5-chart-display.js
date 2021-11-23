@@ -35,6 +35,7 @@ import ApexCharts from 'apexcharts/dist/apexcharts.esm.js';
 class FuroUi5ChartDisplay extends FBP(LitElement) {
   constructor() {
     super();
+
     // set the defaults
     this.apexOptions = {
       series: [],
@@ -366,7 +367,15 @@ class FuroUi5ChartDisplay extends FBP(LitElement) {
     this.apexOptions.chart.height = v;
   }
 
+  /**
+   *
+   * @param apexOptions
+   * @private
+   */
   _initChart(apexOptions) {
+    /**
+     * Apex options object
+     */
     this.options = apexOptions;
 
     // fill initial data (workaround, because we update the data later)
@@ -414,6 +423,12 @@ class FuroUi5ChartDisplay extends FBP(LitElement) {
     this._registerDataSourceComponents(this.dataSourceComponents);
   }
 
+  /**
+   *
+   * @param dataSources
+   * @return {Promise<void>}
+   * @private
+   */
   async _registerDataSourceComponents(dataSources) {
     const it = [];
     dataSources.forEach(e => {
@@ -1178,6 +1193,10 @@ class FuroUi5ChartDisplay extends FBP(LitElement) {
     `;
   }
 
+  /**
+   *
+   * @private
+   */
   _fillInitialData() {
     // eslint-disable-next-line default-case
     switch (this.apexOptions.chart.type) {

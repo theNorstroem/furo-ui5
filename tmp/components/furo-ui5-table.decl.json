@@ -1,6 +1,6 @@
 {
   "kind": "class",
-  "description": "`furo-ui5-table` display entities in a ui5-table\n\n```html\n<furo-ui5-table\n ƒ-bind-data=\"--data(*.entities)\"\n>\n <!-- The column label is evaluated from the specs -->\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.fieldname\"\n  ></ui5-table-column>\n\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.display_name\"\n  ><span>Custom Title</span></ui5-table-column>\n\n</furo-ui5-table>\n```\n\n## Attributes which are taken from `ui5-table-column`\n\n### **field**\nDefine the field you want to bind. `*` is the root of the repeated field.\n\n### **context**\nSet a context for the type renderer. The default value is `cell`.\n\n**renderer**\nSet a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.",
+  "description": "`furo-ui5-table` display entities in a ui5-table\n\n```html\n<furo-ui5-table\n ƒ-bind-data=\"--data(*.entities)\"\n>\n <!-- The column label is evaluated from the specs -->\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.fieldname\"\n  ></ui5-table-column>\n\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.display_name\"\n  ><span>Custom Title</span></ui5-table-column>\n\n</furo-ui5-table>\n```\n\n## Attributes which are taken from `ui5-table-column`\n\n**field**\nDefine the field you want to bind. `*` is the root of the repeated field.\n\n**context**\nSet a context for the type renderer. The default value is `cell`.\n\n**renderer**\nSet a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.",
   "name": "FuroUi5Table",
   "members": [
     {
@@ -15,22 +15,22 @@
           "name": "data"
         }
       ],
-      "description": "bind a repeated data"
+      "description": "Bind a repeated data node."
     },
     {
       "kind": "method",
       "name": "focus",
-      "description": "focus on the header of the table"
+      "description": "Focuses the header of the table"
     },
     {
       "kind": "method",
       "name": "focusLast",
-      "description": "focus the first row"
+      "description": "Focuses the last row."
     },
     {
       "kind": "method",
       "name": "focusFirst",
-      "description": "focus the first row"
+      "description": "Focuses the first row."
     },
     {
       "kind": "method",
@@ -94,11 +94,13 @@
       "type": {
         "text": "array"
       },
+      "privacy": "private",
       "default": "[]"
     },
     {
       "kind": "field",
-      "name": "_specs"
+      "name": "_specs",
+      "privacy": "private"
     },
     {
       "kind": "field",
@@ -106,6 +108,7 @@
       "type": {
         "text": "array"
       },
+      "privacy": "private",
       "default": "[]"
     },
     {
@@ -123,14 +126,14 @@
       "kind": "field",
       "name": "noDataText",
       "privacy": "public",
-      "description": "the text which can be showed when there is no data in table.\nstring",
+      "description": "Defines the text that will be displayed when there is no data.\nstring",
       "attribute": "no-data-text"
     },
     {
       "kind": "field",
       "name": "stickyColumnHeader",
       "privacy": "public",
-      "description": "define the header is sticky or not",
+      "description": "Determines whether the column headers remain fixed at the top of the page during vertical scrolling as long as the Web Component is in the viewport.",
       "attribute": "sticky-column-header"
     },
     {
@@ -186,12 +189,12 @@
     },
     {
       "name": "no-data-text",
-      "description": "the text which can be showed when there is no data in table.\nstring",
+      "description": "Defines the text that will be displayed when there is no data.\nstring",
       "fieldName": "noDataText"
     },
     {
       "name": "sticky-column-header",
-      "description": "define the header is sticky or not",
+      "description": "Determines whether the column headers remain fixed at the top of the page during vertical scrolling as long as the Web Component is in the viewport.",
       "fieldName": "stickyColumnHeader"
     },
     {

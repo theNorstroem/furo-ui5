@@ -330,4 +330,6 @@ export class FuroUi5DatePicker extends FieldNodeAdapter(DatePicker.default) {
   }
 }
 
-window.customElements.define('furo-ui5-date-picker', FuroUi5DatePicker);
+FuroUi5DatePicker.onDefine().then(() => {
+  window.customElements.define('furo-ui5-date-picker', FuroUi5DatePicker);
+});
