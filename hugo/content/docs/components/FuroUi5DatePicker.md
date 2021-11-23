@@ -6,7 +6,7 @@ weight: 100
 
 # FuroUi5DatePicker
 
-**@furo/components** <small>v1.0.0-rc.5</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/src/furo-ui5-date-picker.js';`<small>
 <br>exports *FuroUi5DatePicker* js
 <br>extends *src/furo-ui5-date-picker.js*

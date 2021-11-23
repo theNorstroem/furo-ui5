@@ -59,14 +59,14 @@ enableGitInfo = true
 [menu]
 # [[menu.before]]
 [[menu.after]]
-name = "フロー Furo"
-url = "https://furo.pro"
+name = "フロー Furo UI5"
+url = "https://ui5.furo.pro"
 weight = 10
 
 
 
 [params]
-  PrecompiledFuroVersion = "2.0.0-rc.5"
+  PrecompiledFuroVersion = "2.0.0-rc.6"
 
   # (Optional, default light) Sets color theme: light, dark or auto.
   # Theme 'auto' switches between dark and light modes based on browser/os preferences

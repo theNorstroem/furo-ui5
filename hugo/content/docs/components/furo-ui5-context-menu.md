@@ -1,11 +1,11 @@
 ---
 title: furo-ui5-context-menu
-description: a context menu
+description: Context menu
 weight: 50
 ---
 
 # furo-ui5-context-menu
-**@furo/components** <small>v1.0.0-rc.5</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-context-menu.js';`<small>
 <br>exports *FuroUi5ContextMenu* js
 <br>exports `<furo-ui5-context-menu>` custom-element-definition
@@ -14,14 +14,17 @@ weight: 50
 
 {{% api "_furo-ui5-context-menu-head.md" %}}
 
-**a context menu**
+**Context menu**
 
-`furo-ui5-context-menu`
- is a context menu or menu element.
+`furo-ui5-context-menu` is a context menu or menu element.
 
 
- You have to put a `furo-ui5-context-menu-display` element in one of the parent elements of the element where you use the `furo-ui5-context-menu`.
- The app-shell is a good place for that.
+
+ A `furo-ui5-context-menu-display` element must be inserted in one of the parent elements of the element where you
+ use the `furo-ui5-context-menu`. The app-shell or even body is a good place for that.
+
+ `furo-ui5-context-menu` uses **diplay:inline**, do not forget to change it to display:block if you place it around a block level element.
+
 
 ```html
  <furo-ui5-context-menu  ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
@@ -55,27 +58,14 @@ weight: 50
 
 
 
-### **_context**
-
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">context</span>
-</small>
-
-Use this to set a string value as context.
-<br><br>
 ## Events
 {{% api "_furo-ui5-context-menu-events.md" %}}
 
-### **open-furo-ui5-menu-requested**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-open-furo-ui5-menu-requested</span>
-→ <small>`{context, menuitem}`</small>
-
- Fired when context menu was triggered
-<br><br>
 ### **menu-item-selected**
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-menu-item-selected</span>
 → <small>`{context, menuitem}`</small>
 
- Fired when a menu item is selected
+ Fired when a menu item is selected.
 <br><br>
 
 ## Methods

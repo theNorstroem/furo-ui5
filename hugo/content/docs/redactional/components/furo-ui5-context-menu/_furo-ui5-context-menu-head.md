@@ -24,3 +24,21 @@ bookHidden: true
 ></furo-fetch-json>
 </template>
 </furo-demo-snippet>
+
+```html
+<body>
+  <!-- The display must be placed in a parent element -->
+  <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
+  <main>
+    <div>
+      <article>
+        <furo-ui5-context-menu
+          ƒ-trigger="--menuClkd"
+          ƒ-bind-data="--menuDO"
+          @-menu-item-selected="--menuItemSelected"
+        ><ui5-icon name="meal" @-click="--menuClkd">open menu</ui5-icon>
+        </furo-ui5-context-menu>
+      </article>
+    </div>
+  </main>
+```

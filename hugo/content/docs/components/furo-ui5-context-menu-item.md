@@ -1,11 +1,11 @@
 ---
 title: furo-ui5-context-menu-item
-description: helper
+description: context menu item
 weight: 50
 ---
 
 # furo-ui5-context-menu-item
-**@furo/components** <small>v1.0.0-rc.5</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-context-menu-item.js';`<small>
 <br>exports *FuroUi5ContextMenuItem* js
 <br>exports `<furo-ui5-context-menu-item>` custom-element-definition
@@ -14,11 +14,11 @@ weight: 50
 
 {{% api "_furo-ui5-context-menu-item-head.md" %}}
 
-**helper**
+**context menu item**
 
 `furo-ui5-context-menu-item` is a helper component for `furo-ui5-context-menu`.
 
-Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
+It is not intended for direct usage
 
 {{% api "_furo-ui5-context-menu-item-description.md" %}}
 
@@ -57,7 +57,7 @@ focused state
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span> <small>**reflects**</small>
 </small>
 
-
+disabled state
 <br><br>
 ## Events
 {{% api "_furo-ui5-context-menu-item-events.md" %}}
@@ -92,7 +92,7 @@ focused state
 <small>`` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-
+Bind a single menu node with a `menu.Menuitem` signature.
 
 - <small>menuNode </small>
 <br><br>
@@ -100,16 +100,6 @@ focused state
 
 
 
-### **select**
-<small>**select**(*key* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select</span>
-
-selects the item if it does not have child elements
-
-- <small>key </small>
-<br><br>
 
 
 ### **index**

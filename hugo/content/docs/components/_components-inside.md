@@ -14,7 +14,7 @@ bookHidden: true
 - [furo-ui5-chart](furo-ui5-chart.md) connect data to a chart
 - [furo-ui5-checkbox-input-labeled](furo-ui5-checkbox-input-labeled.md) labeled input field
 - [furo-ui5-context-menu-display](furo-ui5-context-menu-display.md) 
-- [furo-ui5-context-menu](furo-ui5-context-menu.md) a context menu
+- [furo-ui5-context-menu](furo-ui5-context-menu.md) Context menu
 - [furo-ui5-date-picker-labeled](furo-ui5-date-picker-labeled.md) labeled input field
 - [furo-ui5-date-time-picker-labeled](furo-ui5-date-time-picker-labeled.md) labeled input field
 - [furo-ui5-dialog-display](furo-ui5-dialog-display.md) Display position for a dialog
@@ -51,6 +51,6 @@ bookHidden: true
 - [furo-ui5-z-grid](furo-ui5-z-grid.md) grid with a z pattern
 - [ui5-reference-search-item](ui5-reference-search-item.md) representation of a result item
 - [furo-ui5-table-row](furo-ui5-table-row.md) 
-- [furo-ui5-context-menu-item](furo-ui5-context-menu-item.md) helper
+- [furo-ui5-context-menu-item](furo-ui5-context-menu-item.md) context menu item
 - [furo-ui5-context-submenu](furo-ui5-context-submenu.md) helper
 - [furo-ui5-tree-item](furo-ui5-tree-item.md) todo shortdescription

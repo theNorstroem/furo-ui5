@@ -29,9 +29,16 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
 
   constructor(props) {
     super(props);
+    /**
+     * Distance for the sub menus in pixel. This value is used to calculate if the menu or sub menu should apear on the left or on the right.
+     * @type {number}
+     */
     this.borderDistance = 48;
 
-    // for bindData
+    /**
+     *
+     * @private
+     */
     this._repeatsChanged = () => {
       /**
        * add flag _noicon if none of the group (between dividers) has no icons
@@ -230,6 +237,11 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
     });
   }
 
+  /**
+   * Hides the menu witout selecting anything.
+   *
+   * If you click somewhere on the background, the menu will also disappear.
+   */
   hideMenu() {
     this.removeAttribute('backdrop');
     this._start = false;
@@ -255,6 +267,7 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
   /**
    * Interface for the furo navigation pad
    * @param key
+   * @private
    */
   triggerNavigation(key) {
     switch (key) {

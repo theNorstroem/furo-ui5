@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-double
-**@furo/typerenderer** <small>v1.0.0-rc.5</small>
+**@furo/typerenderer** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/typerenderer/src/celledit-double.js';`<small>
 <br>exports *CelleditDouble* js
 <br>exports `<celledit-double>` custom-element-definition

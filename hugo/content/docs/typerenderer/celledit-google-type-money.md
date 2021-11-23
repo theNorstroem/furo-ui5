@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-google-type-money
-**@furo/typerenderer** <small>v1.0.0-rc.5</small>
+**@furo/typerenderer** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/typerenderer/src/celledit-google-type-money.js';`<small>
 <br>exports `<celledit-google-type-money>` custom-element-definition
 <br>extends */src/furo-ui5-money-input.js*

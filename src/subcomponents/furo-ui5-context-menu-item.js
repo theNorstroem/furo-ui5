@@ -9,14 +9,14 @@ import '@ui5/webcomponents-icons/dist/border.js';
 /**
  * `furo-ui5-context-menu-item` is a helper component for `furo-ui5-context-menu`.
  *
- * Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
+ * It is not intended for direct usage
  *
  *
  * @fires {index} mousefocus -  Fired when hovered with mouse
  * @fires { menu: this.menuitem, initiator: this } opensub-requested -  Fired when submenu should be opened
  * @fires {item} item-selected -  Fired when item was selected
  *
- * @summary helper
+ * @summary context menu item
  * @customElement
  * @appliesMixin FBP
  */
@@ -36,6 +36,9 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
        * focused state
        */
       focused: { type: Boolean, reflect: true },
+      /**
+       * disabled state
+       */
       disabled: { type: Boolean, reflect: true },
     };
   }
@@ -61,6 +64,10 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
     });
   }
 
+  /**
+   * Bind a single menu node with a `menu.Menuitem` signature.
+   * @param menuNode
+   */
   bindData(menuNode) {
     this.menuitem = menuNode;
 
@@ -130,6 +137,7 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
 
   /**
    * selects the item if it does not have child elements
+   * @private
    */
   select(key) {
     switch (key) {
@@ -260,7 +268,6 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
   }
 
   /**
-   * @private
    * @returns {TemplateResult}
    * @private
    */

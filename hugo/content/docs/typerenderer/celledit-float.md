@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-float
-**@furo/typerenderer** <small>v1.0.0-rc.5</small>
+**@furo/typerenderer** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/typerenderer/src/celledit-float.js';`<small>
 <br>exports *CelleditFloat* js
 <br>exports `<celledit-float>` custom-element-definition

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-form-field-container
-**@furo/components** <small>v1.0.0-rc.5</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-form-field-container.js';`<small>
 <br>exports *FuroUi5FormFieldContainer* js
 <br>exports `<furo-ui5-form-field-container>` custom-element-definition

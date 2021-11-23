@@ -4,12 +4,15 @@ import { FBP } from '@furo/fbp';
 import '@furo/util/src/furo-keydown';
 
 /**
- * `furo-ui5-context-menu`
- *  is a context menu or menu element.
+ * `furo-ui5-context-menu` is a context menu or menu element.
  *
  *
- *  You have to put a `furo-ui5-context-menu-display` element in one of the parent elements of the element where you use the `furo-ui5-context-menu`.
- *  The app-shell is a good place for that.
+ *
+ *  A `furo-ui5-context-menu-display` element must be inserted in one of the parent elements of the element where you
+ *  use the `furo-ui5-context-menu`. The app-shell or even body is a good place for that.
+ *
+ *  `furo-ui5-context-menu` uses **diplay:inline**, do not forget to change it to display:block if you place it around a block level element.
+ *
  *
  * ```html
  *  <furo-ui5-context-menu  ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
@@ -30,12 +33,11 @@ import '@furo/util/src/furo-keydown';
  *    children: '[] menu.Menuitem:6 #Children of this item'
  *```
  *
- * @fires {{context, menuitem}} open-furo-ui5-menu-requested -  Fired when context menu was triggered
- * @fires { {context, menuitem}} menu-item-selected -  Fired when a menu item is selected
+ * @fires { {context, menuitem}} menu-item-selected -  Fired when a menu item is selected.
  *
  * @slot {HTMLElement} - default slot to add an individual context menu opener component (e.g. furo-icon-button).
  *
- * @summary a context menu
+ * @summary Context menu
  * @customElement
  * @demo demo-furo-ui5-context-menu Basic usage
  * @appliesMixin FBP
@@ -49,6 +51,7 @@ export class FuroUi5ContextMenu extends FBP(LitElement) {
     return {
       /**
        * Use this to set a string value as context.
+       * @private
        */
       _context: { type: String, attribute: 'context' },
     };
@@ -155,7 +158,7 @@ export class FuroUi5ContextMenu extends FBP(LitElement) {
     // language=CSS
     return css`
       :host {
-        display: inline-block;
+        display: inline;
         cursor: context-menu;
       }
 
