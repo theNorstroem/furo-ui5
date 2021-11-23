@@ -16,6 +16,15 @@
     </item>
     
     <item>
+      <title>Signatures</title>
+      <link>http://ui5.furo.pro/docs/guides/signature/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/guides/signature/</guid>
+      <description>What is a signature #   define your specs init &amp;hellip;  </description>
+    </item>
+    
+    <item>
       <title>Init</title>
       <link>http://ui5.furo.pro/docs/guides/init/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
