@@ -1,4 +1,4 @@
-import Dialog from '@ui5/webcomponents/dist/Dialog.js';
+import * as Dialog from '@ui5/webcomponents/dist/Dialog.js';
 
 /**
  * `furo-ui5-dialog` is a extended ui5-dialog which can attach itself to a parent dom element.
@@ -9,9 +9,8 @@ import Dialog from '@ui5/webcomponents/dist/Dialog.js';
  *
  * @summary Dialog element
  * @element furo-ui5-dialog
- * @appliesMixin FBP
  */
-class FuroUi5Dialog extends Dialog {
+class FuroUi5Dialog extends Dialog.default {
   show() {
     // only register once
     if (!this._furoDialogRegistered) {

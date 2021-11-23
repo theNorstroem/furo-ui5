@@ -47,7 +47,7 @@ echo $collection
       name=$(_jq '.declarations[0].name')
 
       if [ "$name" == "null" ]; then
-        echo "************************ not class and not component"
+        echo "************************ $name is not class and not component"
       else
         echo "************************ CLASS *************************"
 
