@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<display-google-type-money>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-google-type-money-head.md" %}}
 
-****
+## Description
 
 `display-google-type-money`
 The display-google-type-money component displays a FieldNode of type `google.type.Money` in read only mode.

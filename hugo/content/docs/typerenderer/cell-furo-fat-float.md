@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-float.js*
 <br>superclass *CellFloat*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-fat-float-head.md" %}}
 
-****
+## Description
 
 `cell-furo-fat-float`
 The cell-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.

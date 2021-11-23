@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-bool.js*
 <br>superclass *CellBool*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-fat-bool-head.md" %}}
 
-****
+## Description
 
 `cell-furo-fat-bool`
 The cell-furo-fat-bool component displays a FieldNode of type `furo.fat.bool` in read only mode.

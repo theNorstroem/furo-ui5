@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
+> **Summary:** form renderer for furo.Integerproperty
+
 {{% api "_form-furo-integerproperty-head.md" %}}
 
-**form renderer for furo.Integerproperty**
+## Description
 
 `form-furo-integerproperty` is a `form` context renderer.
 

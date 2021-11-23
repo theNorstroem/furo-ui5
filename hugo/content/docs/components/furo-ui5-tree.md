@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** tree navigation menu
+
 {{% api "_furo-ui5-tree-head.md" %}}
 
-**tree navigation menu**
+## Description
 
 `furo-tree`
 renders a tree structure

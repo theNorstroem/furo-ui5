@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-float.js*
 <br>superclass *CellFloat*</small>
 
+> **Summary:** 
+
 {{% api "_cell-google-protobuf-floatvalue-head.md" %}}
 
-****
+## Description
 
 `cell-google-protobuf-floatvalue`
 The cell-google-protobuf-floatvalue component displays a FieldNode of type `google.protobuf.FloatValue` in read only mode.

@@ -11,9 +11,11 @@ weight: 50
 <br>extends *src/furo-ui5-date-picker.js*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** bindable datepicker field
+
 {{% api "_furo-ui5-date-picker-head.md" %}}
 
-**bindable datepicker field**
+## Description
 
 The furo-ui5-date-picker component allows the user to bind an date object like google.type.Date or a date string
 with ISO 8061 format like "2020-12-31" to the ui5 datepicker and edit it.

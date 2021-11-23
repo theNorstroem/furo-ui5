@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-furo-fat-int64.js*
 <br>superclass *CellFuroFatInt64*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-fat-uint64-head.md" %}}
 
-****
+## Description
 
 `cell-furo-fat-uint64`
 The cell-furo-fat-uint64 component displays a FieldNode of type `furo.fat.uint64` in read only mode.

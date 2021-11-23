@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-bool.js*
 <br>superclass *DisplayBool*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-fat-bool-head.md" %}}
 
-****
+## Description
 
 `display-furo-fat-bool`
 The display-furo-fat-bool component displays a FieldNode of type `furo.fat.bool` in read only mode.

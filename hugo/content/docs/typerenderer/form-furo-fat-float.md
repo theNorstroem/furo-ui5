@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
+> **Summary:** form renderer for furo.fat.Float
+
 {{% api "_form-furo-fat-float-head.md" %}}
 
-**form renderer for furo.fat.Float**
+## Description
 
 `form-furo-fat-float` is a `form` context renderer.
 

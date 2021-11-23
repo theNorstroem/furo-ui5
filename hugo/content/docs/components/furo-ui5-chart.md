@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<furo-ui5-chart>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** connect data to a chart
+
 {{% api "_furo-ui5-chart-head.md" %}}
 
-**connect data to a chart**
+## Description
 
 `furo-ui5-chart`
  Connects data objects (repeaterNodes) with the charting lib.

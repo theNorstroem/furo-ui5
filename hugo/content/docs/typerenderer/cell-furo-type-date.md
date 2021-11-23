@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-google-type-date.js*
 <br>superclass *CellGoogleTypeDate*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-type-date-head.md" %}}
 
-****
+## Description
 
 `cell-furo-type-date`
 The cell-furo-type-date component displays a FieldNode of type `furo.type.Date` in read only mode.

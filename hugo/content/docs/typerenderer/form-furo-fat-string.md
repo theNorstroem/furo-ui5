@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-text-input-labeled.js*
 <br>superclass *FuroUi5TextInputLabeled*</small>
 
+> **Summary:** 
+
 {{% api "_form-furo-fat-string-head.md" %}}
 
-****
+## Description
 
 
 

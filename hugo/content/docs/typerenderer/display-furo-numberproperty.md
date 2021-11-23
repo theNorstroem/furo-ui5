@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/display-furo-integerproperty.js*
 <br>superclass *DisplayFuroIntegerproperty*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-numberproperty-head.md" %}}
 
-****
+## Description
 
 `display-furo-numberproperty`
 The display-furo-numberrproperty component displays a FieldNode of type `furo.Numberproperty` in read only mode.

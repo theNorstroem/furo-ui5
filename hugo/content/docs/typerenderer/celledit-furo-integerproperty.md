@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
+> **Summary:** celledit renderer for furo.Integerproperty
+
 {{% api "_celledit-furo-integerproperty-head.md" %}}
 
-**celledit renderer for furo.Integerproperty**
+## Description
 
 `celledit-furo-integerproperty` is a `celledit` context renderer.
 

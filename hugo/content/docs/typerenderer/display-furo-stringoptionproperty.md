@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/display-furo-stringproperty.js*
 <br>superclass *DisplayFuroStringproperty*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-stringoptionproperty-head.md" %}}
 
-****
+## Description
 
 `display-furo-stringoptionproperty`
 The display-furo-numberrproperty component displays a FieldNode of type `furo.Stringoptionproperty` in read only mode.

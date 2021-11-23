@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<cell-furo-link>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-link-head.md" %}}
 
-****
+## Description
 
 `cell-furo-link`
 The cell-furo-link component displays a FieldNode of type `furo.Link` in read only mode.

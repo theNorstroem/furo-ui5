@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<display-furo-fat-string>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-fat-string-head.md" %}}
 
-****
+## Description
 
 `display-furo-fat-string`
 The display-furo-fat-string component displays a FieldNode of type `furo.fat.String` in read only mode.

@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/display-string.js*
 <br>superclass *DisplayString*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-stringproperty-head.md" %}}
 
-****
+## Description
 
 `display-furo-stringproperty`
 The display-furo-stringproperty component displays a FieldNode of type `furo.Stringproperty` in read only mode.

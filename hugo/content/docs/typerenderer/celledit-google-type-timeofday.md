@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-time-picker.js*
 <br>superclass *FuroUi5TimePicker*</small>
 
+> **Summary:** celledit renderer for google.type.TimeOfDay
+
 {{% api "_celledit-google-type-timeofday-head.md" %}}
 
-**celledit renderer for google.type.TimeOfDay**
+## Description
 
 `celledit-google-type-timeofday` is a `celledit` context renderer.
 

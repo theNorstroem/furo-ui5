@@ -11,9 +11,11 @@ weight: 50
 <br>extends *src/furo-ui5-password-input.js*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** data password input field
+
 {{% api "_furo-ui5-password-input-head.md" %}}
 
-**data password input field**
+## Description
 
 The 'furo-ui5-password-input' component allows the user to enter and edit password with data binding.
 

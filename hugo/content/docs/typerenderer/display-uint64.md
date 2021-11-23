@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/display-int64.js*
 <br>superclass *DisplayInt64*</small>
 
+> **Summary:** 
+
 {{% api "_display-uint64-head.md" %}}
 
-****
+## Description
 
 `display-uint64`
 The display-uint64 component displays a FieldNode of type `uint64` in read only mode.

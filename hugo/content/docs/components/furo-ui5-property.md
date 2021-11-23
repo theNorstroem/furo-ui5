@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** display and bind types of type any
+
 {{% api "_furo-ui5-property-head.md" %}}
 
-**display and bind types of type any**
+## Description
 
 `furo-ui5-property`
  Field for type furo.Property. This can be used to display "dynamic" fields aka properties.

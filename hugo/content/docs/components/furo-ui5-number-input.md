@@ -11,9 +11,11 @@ weight: 50
 <br>extends *src/furo-ui5-number-input.js*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** data number input field
+
 {{% api "_furo-ui5-number-input-head.md" %}}
 
-**data number input field**
+## Description
 
 The 'furo-ui5-number-input' component allows the user to enter and edit numbers with data binding.
 

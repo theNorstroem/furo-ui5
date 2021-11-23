@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<display-google-protobuf-any>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-google-protobuf-any-head.md" %}}
 
-****
+## Description
 
 `display-google-protobuf-any`
 The display-google-protobuf-any component is a wrapper displays of type `google.protobuf.Any` in read only mode.

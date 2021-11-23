@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<furo-ui5-table-row>` custom-element-definition
 <br>extends *src/lib/furo-ui5-table-row.js*</small>
 
+> **Summary:** 
+
 {{% api "_furo-ui5-table-row-head.md" %}}
 
-****
+## Description
 
 this is a helper component to send `tablerow-selected` event by clicking the row or pressing the enter on the row.
 

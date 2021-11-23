@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<display-furo-link>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-link-head.md" %}}
 
-****
+## Description
 
 `display-furo-link`
 The display-furo-link component displays a FieldNode of type `furo.Link` in read only mode.

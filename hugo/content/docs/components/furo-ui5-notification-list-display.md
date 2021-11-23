@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** ui5 notification list
+
 {{% api "_furo-ui5-notification-list-display-head.md" %}}
 
-**ui5 notification list**
+## Description
 
 Notification display component that works together with furo-ui5-notification.
 Displays google.rpc.Status messages in a grouped list.

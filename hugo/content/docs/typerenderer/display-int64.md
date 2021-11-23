@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<display-int64>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-int64-head.md" %}}
 
-****
+## Description
 
 `display-int64`
 The display-int64 component displays a FieldNode of type `int64` in read only mode.

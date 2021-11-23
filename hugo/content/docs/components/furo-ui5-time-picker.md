@@ -12,9 +12,11 @@ weight: 50
 <br>extends *src/furo-ui5-time-picker.js*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** furo data time picker field
+
 {{% api "_furo-ui5-time-picker-head.md" %}}
 
-**furo data time picker field**
+## Description
 
 The furo-ui5-time-picker component allows the user to bind a field of type google.type.TimeOfDay.
 Represents a time of day. The date and time zone are either not significant

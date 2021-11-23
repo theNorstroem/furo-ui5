@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-uint32-head.md" %}}
 
-****
+## Description
 
 
 

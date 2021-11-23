@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-money-input.js*
 <br>superclass *FuroUi5MoneyInput*</small>
 
+> **Summary:** celledit renderer for google.type.Money
+
 {{% api "_celledit-google-type-money-head.md" %}}
 
-**celledit renderer for google.type.Money**
+## Description
 
 `celledit-google-type-money` is a `celledit` context renderer.
 

@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-furo-stringproperty.js*
 <br>superclass *CellFuroStringproperty*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-stringoptionproperty-head.md" %}}
 
-****
+## Description
 
 `cell-furo-stringoptionproperty`
 The cell-furo-numberrproperty component displays a FieldNode of type `furo.Stringoptionproperty` in read only mode.

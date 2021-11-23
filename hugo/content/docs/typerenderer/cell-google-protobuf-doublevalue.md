@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-double.js*
 <br>superclass *CellDouble*</small>
 
+> **Summary:** 
+
 {{% api "_cell-google-protobuf-doublevalue-head.md" %}}
 
-****
+## Description
 
 `cell-double`
 The cell-double component displays a FieldNode of type `google.protobuf.DoubleValue` in read only mode.

@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<cell-int64>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-int64-head.md" %}}
 
-****
+## Description
 
 `cell-int64`
 The cell-int64 component displays a FieldNode of type `int64` in read only mode.

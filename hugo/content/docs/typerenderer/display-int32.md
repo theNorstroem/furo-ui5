@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<display-int32>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-int32-head.md" %}}
 
-****
+## Description
 
 `display-int32`
 The display-int32 component displays a FieldNode of type `int32` in read only mode.

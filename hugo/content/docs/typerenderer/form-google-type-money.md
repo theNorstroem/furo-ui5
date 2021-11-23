@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-money-input-labeled.js*
 <br>superclass *FuroUi5MoneyInputLabeled*</small>
 
+> **Summary:** form renderer for google.type.Money
+
 {{% api "_form-google-type-money-head.md" %}}
 
-**form renderer for google.type.Money**
+## Description
 
 `form-google-type-money` is a `form` context renderer.
 

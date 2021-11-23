@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** Pagination Bar
+
 {{% api "_furo-ui5-pagination-bar-head.md" %}}
 
-**Pagination Bar**
+## Description
 
 `furo-ui5-pagination-bar`
 this pagination element loops the hts array and find out the pagination

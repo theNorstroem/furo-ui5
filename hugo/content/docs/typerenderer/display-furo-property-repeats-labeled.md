@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/display-furo-property-repeated.js*
 <br>superclass *DisplayFuroPropertyRepeated*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-property-repeats-labeled-head.md" %}}
 
-****
+## Description
 
 `display-furo-property-repeats-labeled`
 The display-furo-property-repeats-labeled component displays a RepeaterNode of type `furo.Property` in read only mode.

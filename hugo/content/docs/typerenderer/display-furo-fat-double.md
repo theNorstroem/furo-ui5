@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-double.js*
 <br>superclass *DisplayDouble*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-fat-double-head.md" %}}
 
-****
+## Description
 
 `display-furo-fat-double`
 The display-furo-fat-double component displays a FieldNode of type `furo.fat.Double` in read only mode.

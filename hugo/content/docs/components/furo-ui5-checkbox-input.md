@@ -11,9 +11,11 @@ weight: 50
 <br>extends *src/furo-ui5-checkbox-input.js*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** data checkbox input field
+
 {{% api "_furo-ui5-checkbox-input-head.md" %}}
 
-**data checkbox input field**
+## Description
 
 The 'furo-ui5-checkbox-input' component allows the user to switch true and false for Bool with data binding.
 

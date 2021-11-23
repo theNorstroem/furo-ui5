@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** labeled input field
+
 {{% api "_furo-ui5-typerenderer-labeled-head.md" %}}
 
-**labeled input field**
+## Description
 
 `furo-ui5-typerenderer-labeled`
 The furo-ui5-typerenderer-labeled is a composition to easily use a display field with label according

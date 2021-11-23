@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** Context menu
+
 {{% api "_furo-ui5-context-menu-head.md" %}}
 
-**Context menu**
+## Description
 
 `furo-ui5-context-menu` is a context menu or menu element.
 

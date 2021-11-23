@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<display-float>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-float-head.md" %}}
 
-****
+## Description
 
 `display-float`
 The display-float component displays a FieldNode of type `float` in read only mode.

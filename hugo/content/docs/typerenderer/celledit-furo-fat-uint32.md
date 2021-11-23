@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
+> **Summary:** celledit renderer for furo.fat.Uint32
+
 {{% api "_celledit-furo-fat-uint32-head.md" %}}
 
-**celledit renderer for furo.fat.Uint32**
+## Description
 
 `celledit-furo-fat-uint32` is a `celledit` context renderer.
 

@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** draw or sign
+
 {{% api "_furo-ui5-sign-pad-head.md" %}}
 
-**draw or sign**
+## Description
 
 `furo-sign-pad`
  Simple pad to sign or draw something

@@ -11,9 +11,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** a grid splitter
+
 {{% api "_furo-ui5-flexible-grid-head.md" %}}
 
-**a grid splitter**
+## Description
 
 `split-grid`
 will split your screen contents horizontally (in cols) and put them vertically (left at top) when the available space is to small.

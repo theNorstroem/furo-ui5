@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<furo-ui5-button>` custom-element-definition
 <br>extends *src/furo-ui5-button.js*</small>
 
+> **Summary:** ui5 button
+
 {{% api "_furo-ui5-button-head.md" %}}
 
-**ui5 button**
+## Description
 
 `furo-ui5-button`
 The furo-ui5-button component represents a simple push button. It enables users to trigger actions by clicking or

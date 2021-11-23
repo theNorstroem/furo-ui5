@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** A bindable header panel
+
 {{% api "_furo-ui5-header-panel-head.md" %}}
 
-**A bindable header panel**
+## Description
 
 `furo-ui5-header-panel`
  A bindable **header** panel.

@@ -11,9 +11,11 @@ weight: 50
 <br>extends *src/furo-ui5-segmented-button.js*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** segmented button
+
 {{% api "_furo-ui5-segmented-button-head.md" %}}
 
-**segmented button**
+## Description
 
 `furo-ui5-segmented-button`
 The furo-ui5-segmented-button component represents a drop-down list. The items inside define the available

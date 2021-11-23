@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/furo-ui5-checkbox-input.js*
 <br>superclass *FuroUi5CheckboxInput*</small>
 
+> **Summary:** celledit renderer for bool
+
 {{% api "_celledit-bool-head.md" %}}
 
-**celledit renderer for bool**
+## Description
 
 `celledit-bool` is a `celledit` context renderer.
 

@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<ui5-reference-search-item>` custom-element-definition
 <br>extends *src/ui5-reference-search-item.js*</small>
 
+> **Summary:** representation of a result item
+
 {{% api "_ui5-reference-search-item-head.md" %}}
 
-**representation of a result item**
+## Description
 
 `reference-search-item`
 Repeated item to display the search result set

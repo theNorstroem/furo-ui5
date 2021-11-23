@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<celledit-furo-link>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-furo-link-head.md" %}}
 
-****
+## Description
 
 `celledit-furo-link`
 The celledit-furo-link component displays a FieldNode of type `furo.Link` in read only mode.

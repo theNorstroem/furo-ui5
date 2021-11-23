@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<cell-furo-reference>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-reference-head.md" %}}
 
-****
+## Description
 
 `cell-furo-reference`
 The cell-furo-reference component displays a FieldNode of type `furo.Reference` in read only mode.

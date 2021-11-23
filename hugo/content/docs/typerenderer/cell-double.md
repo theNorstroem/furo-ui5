@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<cell-double>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-double-head.md" %}}
 
-****
+## Description
 
 `cell-double`
 The cell-double component displays a FieldNode of type `double` in read only mode.

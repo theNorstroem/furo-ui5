@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-int32.js*
 <br>superclass *CellInt32*</small>
 
+> **Summary:** 
+
 {{% api "_cell-uint32-head.md" %}}
 
-****
+## Description
 
 `cell-uint32`
 The cell-uint32 component displays a FieldNode of type `uint64` in read only mode.

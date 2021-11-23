@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<cell-bool>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-bool-head.md" %}}
 
-****
+## Description
 
 `cell-bool`
 The cell-bool component displays a FieldNode of type `bool` in read only mode.

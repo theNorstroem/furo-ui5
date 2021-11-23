@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
+> **Summary:** form renderer for google.protobuf.Int32value
+
 {{% api "_form-google-protobuf-int32value-head.md" %}}
 
-**form renderer for google.protobuf.Int32value**
+## Description
 
 `form-google-protobuf-int32value` is a `form` context renderer.
 

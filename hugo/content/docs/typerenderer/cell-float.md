@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<cell-float>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-float-head.md" %}}
 
-****
+## Description
 
 `cell-float`
 The cell-float component displays a FieldNode of type `float` in read only mode.

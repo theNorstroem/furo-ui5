@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-int32.js*
 <br>superclass *DisplayInt32*</small>
 
+> **Summary:** 
+
 {{% api "_display-google-protobuf-int32value-head.md" %}}
 
-****
+## Description
 
 `display-google-protobuf-boolvalue`
 The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.

@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-reference-search.js*
 <br>superclass *FuroUi5ReferenceSearch*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-furo-reference-head.md" %}}
 
-****
+## Description
 
 
 

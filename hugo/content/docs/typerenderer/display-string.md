@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<display-string>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-string-head.md" %}}
 
-****
+## Description
 
 `display-string`
 The display-string component displays a FieldNode of type `string` in read only mode.

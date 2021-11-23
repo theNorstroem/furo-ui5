@@ -11,9 +11,11 @@ weight: 50
 <br>extends *src/furo-ui5-multi-input.js*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** data ui5 data multi input
+
 {{% api "_furo-ui5-multi-input-head.md" %}}
 
-**data ui5 data multi input**
+## Description
 
 `furo-ui5-multi-input`
 

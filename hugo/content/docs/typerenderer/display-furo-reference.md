@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<display-furo-reference>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-reference-head.md" %}}
 
-****
+## Description
 
 `display-furo-reference`
 The display-furo-reference component displays a FieldNode of type `furo.Reference` in read only mode.

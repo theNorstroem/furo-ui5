@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<display-google-type-color>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-google-type-color-head.md" %}}
 
-****
+## Description
 
 `display-google-type-color`
 The display-google-type-color component displays a FieldNode of type `google.type.Color` in read only mode.

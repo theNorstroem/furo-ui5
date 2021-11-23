@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** ui5 notification group display
+
 {{% api "_furo-ui5-notification-group-display-head.md" %}}
 
-**ui5 notification group display**
+## Description
 
 Notification display component that works together with furo-ui5-notification.
 Best place the furo-ui5-notification-group-display on the main site. then you only need one furo-ui5-notification-group-display.

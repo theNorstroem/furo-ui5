@@ -11,9 +11,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** Displays a icon/symbol for a boolean value
+
 {{% api "_furo-ui5-bool-icon-head.md" %}}
 
-**Displays a icon/symbol for a boolean value**
+## Description
 
 `furo-ui5-bool-icon`
 Displays a icon/symbol for a boolean value

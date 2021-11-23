@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/display-int32.js*
 <br>superclass *DisplayInt32*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-integerproperty-head.md" %}}
 
-****
+## Description
 
 `display-furo-integerproperty`
 The display-furo-integerproperty component displays a FieldNode of type `furo.Integerproperty` in read only mode.

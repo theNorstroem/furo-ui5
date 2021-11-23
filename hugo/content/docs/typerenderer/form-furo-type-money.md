@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-money-input-labeled.js*
 <br>superclass *FuroUi5MoneyInputLabeled*</small>
 
+> **Summary:** 
+
 {{% api "_form-furo-type-money-head.md" %}}
 
-****
+## Description
 
 
 

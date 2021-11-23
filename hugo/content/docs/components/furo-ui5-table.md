@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** Display repeated fields in a table
+
 {{% api "_furo-ui5-table-head.md" %}}
 
-**Display repeated fields in a table**
+## Description
 
 `furo-ui5-table` display entities in a ui5-table
 

@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-property-repeated-head.md" %}}
 
-****
+## Description
 
 `display-furo-property-repeats`
 The display-furo-property-repeats component displays a FieldNode of type `furo.Property` in read only mode.

@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** todo shortdescription
+
 {{% api "_furo-ui5-tree-item-head.md" %}}
 
-**todo shortdescription**
+## Description
 
 `furo-tree-item`
 todo Describe your element

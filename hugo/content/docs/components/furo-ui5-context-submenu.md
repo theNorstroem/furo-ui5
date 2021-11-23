@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** helper
+
 {{% api "_furo-ui5-context-submenu-head.md" %}}
 
-**helper**
+## Description
 
 `furo-ui5-context-submenu` is a helper component for `furo-ui5-context-menu`.
 

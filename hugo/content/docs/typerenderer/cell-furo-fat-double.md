@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-double.js*
 <br>superclass *CellDouble*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-fat-double-head.md" %}}
 
-****
+## Description
 
 `cell-furo-fat-double`
 The cell-furo-fat-double component displays a FieldNode of type `furo.fat.Double` in read only mode.

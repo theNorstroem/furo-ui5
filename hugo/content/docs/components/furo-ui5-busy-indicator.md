@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<furo-ui5-busy-indicator>` custom-element-definition
 <br>extends *src/furo-ui5-busy-indicator.js*</small>
 
+> **Summary:** ui5 busy indicator
+
 {{% api "_furo-ui5-busy-indicator-head.md" %}}
 
-**ui5 busy indicator**
+## Description
 
 `furo-ui5-busy-indicator`
 The furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.

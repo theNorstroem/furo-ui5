@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-select-labeled.js*
 <br>superclass *FuroUi5SelectLabeled*</small>
 
+> **Summary:** 
+
 {{% api "_form-furo-stringoptionproperty-head.md" %}}
 
-****
+## Description
 
 
 

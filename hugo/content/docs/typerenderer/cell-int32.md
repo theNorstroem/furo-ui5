@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<cell-int32>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-int32-head.md" %}}
 
-****
+## Description
 
 `cell-int32`
 The cell-int32 component displays a FieldNode of type `int32` in read only mode.

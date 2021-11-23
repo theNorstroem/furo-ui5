@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-select.js*
 <br>superclass *FuroUi5Select*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-furo-stringoptionproperty-head.md" %}}
 
-****
+## Description
 
 
 

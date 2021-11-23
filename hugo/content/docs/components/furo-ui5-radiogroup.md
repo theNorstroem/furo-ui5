@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** radio group
+
 {{% api "_furo-ui5-radiogroup-head.md" %}}
 
-**radio group**
+## Description
 
 `furo-ui5-radiogroup`
 The furo-ui5-radiogroup enables users to create a radio group with n size of furo-ui5-radio-buttons inside.

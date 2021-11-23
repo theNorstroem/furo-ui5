@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-double.js*
 <br>superclass *DisplayDouble*</small>
 
+> **Summary:** 
+
 {{% api "_display-google-protobuf-doublevalue-head.md" %}}
 
-****
+## Description
 
 `display-double`
 The display-double component displays a FieldNode of type `google.protobuf.DoubleValue` in read only mode.

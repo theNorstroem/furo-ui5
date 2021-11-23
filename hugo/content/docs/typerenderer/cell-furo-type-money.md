@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-google-type-money.js*
 <br>superclass *CellGoogleTypeMoney*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-type-money-head.md" %}}
 
-****
+## Description
 
 `cell-furo-type-money`
 The cell-furo-type-money component displays a FieldNode of type `furo.type.Money` in read only mode.

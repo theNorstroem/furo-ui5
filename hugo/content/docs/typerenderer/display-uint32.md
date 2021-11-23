@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/display-int32.js*
 <br>superclass *DisplayInt32*</small>
 
+> **Summary:** 
+
 {{% api "_display-uint32-head.md" %}}
 
-****
+## Description
 
 `display-uint32`
 The display-uint32 component displays a FieldNode of type `uint64` in read only mode.

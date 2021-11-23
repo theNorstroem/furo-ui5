@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/form-bool.js*
 <br>superclass *FormBool*</small>
 
+> **Summary:** form renderer for bool
+
 {{% api "_form-google-protobuf-boolvalue-head.md" %}}
 
-**form renderer for bool**
+## Description
 
 `form-google-protobuf-boolvalue` is a `form` context renderer.
 

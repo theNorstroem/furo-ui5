@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-float.js*
 <br>superclass *DisplayFloat*</small>
 
+> **Summary:** 
+
 {{% api "_display-google-protobuf-floatvalue-head.md" %}}
 
-****
+## Description
 
 `display-google-protobuf-floatvalue`
 The display-google-protobuf-floatvalue component displays a FieldNode of type `google.protobuf.FloatValue` in read only mode.

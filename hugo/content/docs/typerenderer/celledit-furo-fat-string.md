@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/celledit-string.js*
 <br>superclass *CelleditString*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-furo-fat-string-head.md" %}}
 
-****
+## Description
 
 
 

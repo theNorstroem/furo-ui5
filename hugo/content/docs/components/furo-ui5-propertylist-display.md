@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<furo-ui5-propertylist-display>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_furo-ui5-propertylist-display-head.md" %}}
 
-****
+## Description
 
 `furo-ui5-propertylist-display` allows the user to show repeated properties (furo.Property) in a readonly mode.
 For all other types you can use furo-ui5-typerenderer-labeled.

@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-string.js*
 <br>superclass *DisplayString*</small>
 
+> **Summary:** 
+
 {{% api "_display-google-protobuf-stringvalue-head.md" %}}
 
-****
+## Description
 
 `display-google-protobuf-stringvalue`
 The display-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.Stringvalue` in read only mode.

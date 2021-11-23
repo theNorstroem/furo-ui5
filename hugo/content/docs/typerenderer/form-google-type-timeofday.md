@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-time-picker-labeled.js*
 <br>superclass *FuroUi5TimePickerLabeled*</small>
 
+> **Summary:** form renderer for google.type.TimeOfDay
+
 {{% api "_form-google-type-timeofday-head.md" %}}
 
-**form renderer for google.type.TimeOfDay**
+## Description
 
 `form-google-type-timeofday` is a `form` context renderer.
 

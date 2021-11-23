@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<display-double>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-double-head.md" %}}
 
-****
+## Description
 
 `display-double`
 The display-double component displays a FieldNode of type `double` in read only mode.

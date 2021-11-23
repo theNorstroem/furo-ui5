@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<cell-string>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-string-head.md" %}}
 
-****
+## Description
 
 `cell-string`
 The cell-string component displays a FieldNode of type `string` in read only mode.

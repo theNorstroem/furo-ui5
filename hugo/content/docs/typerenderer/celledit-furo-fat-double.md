@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
+> **Summary:** celledit renderer for furo.fat.Double
+
 {{% api "_celledit-furo-fat-double-head.md" %}}
 
-**celledit renderer for furo.fat.Double**
+## Description
 
 `celledit-furo-fat-double` is a `celledit` context renderer.
 

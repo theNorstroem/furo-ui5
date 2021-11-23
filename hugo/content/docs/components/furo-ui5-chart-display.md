@@ -11,9 +11,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** Display charts with data objects
+
 {{% api "_furo-ui5-chart-display-head.md" %}}
 
-**Display charts with data objects**
+## Description
 
 `furo-ui5-chart-display`
  Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).

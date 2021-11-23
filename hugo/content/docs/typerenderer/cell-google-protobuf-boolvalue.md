@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-bool.js*
 <br>superclass *CellBool*</small>
 
+> **Summary:** 
+
 {{% api "_cell-google-protobuf-boolvalue-head.md" %}}
 
-****
+## Description
 
 `cell-google-protobuf-boolvalue`
 The cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.

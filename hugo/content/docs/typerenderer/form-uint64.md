@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
+> **Summary:** 
+
 {{% api "_form-uint64-head.md" %}}
 
-****
+## Description
 
 
 

@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<furo-ui5-dialog-display>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** Display position for a dialog
+
 {{% api "_furo-ui5-dialog-display-head.md" %}}
 
-**Display position for a dialog**
+## Description
 
 `furo-ui5-dialog-display` will catch furo-ui5-dialog elements, to display it in the dom of the parent element.
 

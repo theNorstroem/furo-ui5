@@ -14,9 +14,11 @@ weight: 50
 <br> mixes *{{$mixin.name}}*
 {{- end}}</small>
 
+> **Summary:** {{.decl.summary}}
+
 {{"{{"}}% api "_{{.component}}-head.md" %{{"}}"}}
 
-**{{.decl.summary}}**
+## Description
 
 {{if .decl.description}}{{.decl.description | noescape}}{{end}}
 

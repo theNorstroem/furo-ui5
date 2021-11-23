@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** labeled textarea field
+
 {{% api "_furo-ui5-textarea-input-labeled-head.md" %}}
 
-**labeled textarea field**
+## Description
 
 `furo-ui5-textarea-input-labeled`
 The furo-ui5-textarea-input-labeled is a composition to easily use a complete input field with label according

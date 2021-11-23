@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<cell-google-protobuf-timestamp>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-google-protobuf-timestamp-head.md" %}}
 
-****
+## Description
 
 `cell-google-protobuf-timestamp`
 The cell-google-protobuf-timestamp component displays a FieldNode of type `google.prtobuf.Timestamp` in read only mode.

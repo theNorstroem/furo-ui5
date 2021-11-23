@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-furo-property-head.md" %}}
 
-****
+## Description
 
 `celledit-furo-property`
 The celledit-furo-property component displays a FieldNode of type `furo.Property` in read only mode.

@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/furo-ui5-checkbox-input-labeled.js*
 <br>superclass *FuroUi5CheckboxInputLabeled*</small>
 
+> **Summary:** form renderer for bool
+
 {{% api "_form-bool-head.md" %}}
 
-**form renderer for bool**
+## Description
 
 `form-bool` is a `form` context renderer.
 

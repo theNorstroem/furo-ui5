@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<cell-google-protobuf-any>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-google-protobuf-any-head.md" %}}
 
-****
+## Description
 
 `cell-google-protobuf-any`
 The cell-google-protobuf-any component is a wrapper displays of type `google.protobuf.Any` in read only mode.

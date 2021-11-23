@@ -11,9 +11,11 @@ weight: 50
 <br>extends *src/furo-ui5-radio-button.js*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** boolean toggle button
+
 {{% api "_furo-ui5-radio-button-head.md" %}}
 
-**boolean toggle button**
+## Description
 
 The 'furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.
 

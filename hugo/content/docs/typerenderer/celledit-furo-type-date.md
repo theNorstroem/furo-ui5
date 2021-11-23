@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-date-picker.js*
 <br>superclass *FuroUi5DatePicker*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-furo-type-date-head.md" %}}
 
-****
+## Description
 
 
 

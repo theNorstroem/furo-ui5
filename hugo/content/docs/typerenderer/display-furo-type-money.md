@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-google-type-money.js*
 <br>superclass *DisplayGoogleTypeMoney*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-type-money-head.md" %}}
 
-****
+## Description
 
 `display-furo-type-money`
 The display-furo-type-money component displays a FieldNode of type `furo.type.Money` in read only mode.

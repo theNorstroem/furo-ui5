@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<display-bool>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-bool-head.md" %}}
 
-****
+## Description
 
 `display-bool`
 The display-bool component displays a FieldNode of type `bool` in read only mode.

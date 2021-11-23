@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
+> **Summary:** celledit renderer for float
+
 {{% api "_celledit-float-head.md" %}}
 
-**celledit renderer for float**
+## Description
 
 `celledit-float` is a `celledit` context renderer.
 

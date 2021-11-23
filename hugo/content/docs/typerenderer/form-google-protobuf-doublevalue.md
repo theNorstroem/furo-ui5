@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
+> **Summary:** form renderer for google.protobuf.Double
+
 {{% api "_form-google-protobuf-doublevalue-head.md" %}}
 
-**form renderer for google.protobuf.Double**
+## Description
 
 `form-google-protobuf-doublevalue` is a `form` context renderer.
 

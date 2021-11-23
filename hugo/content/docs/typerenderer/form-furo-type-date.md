@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-date-picker-labeled.js*
 <br>superclass *FuroUi5DatePickerLabeled*</small>
 
+> **Summary:** 
+
 {{% api "_form-furo-type-date-head.md" %}}
 
-****
+## Description
 
 
 

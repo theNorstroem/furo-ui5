@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/furo-ui5-number-input.js*
 <br>superclass *FuroUi5NumberInput*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-int32-head.md" %}}
 
-****
+## Description
 
 
 

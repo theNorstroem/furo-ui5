@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** form field container
+
 {{% api "_furo-ui5-form-field-container-head.md" %}}
 
-**form field container**
+## Description
 
 `furo-ui5-form-field-container`
 The furo-ui5-form-field-container gives the user a layout to manage

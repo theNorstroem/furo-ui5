@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-reference-search-labeled.js*
 <br>superclass *FuroUi5ReferenceSearchLabeled*</small>
 
+> **Summary:** 
+
 {{% api "_form-furo-reference-head.md" %}}
 
-****
+## Description
 
 
 

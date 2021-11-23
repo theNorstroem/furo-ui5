@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-bool.js*
 <br>superclass *DisplayBool*</small>
 
+> **Summary:** 
+
 {{% api "_display-google-protobuf-boolvalue-head.md" %}}
 
-****
+## Description
 
 `display-google-protobuf-boolvalue`
 The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.

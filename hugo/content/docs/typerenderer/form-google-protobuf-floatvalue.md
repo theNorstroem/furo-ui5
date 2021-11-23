@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
+> **Summary:** form renderer for google.protobuf.Float
+
 {{% api "_form-google-protobuf-floatvalue-head.md" %}}
 
-**form renderer for google.protobuf.Float**
+## Description
 
 `form-google-protobuf-floatvalue` is a `form` context renderer.
 

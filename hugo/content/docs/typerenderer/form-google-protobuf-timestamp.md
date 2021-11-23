@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-date-time-picker-labeled.js*
 <br>superclass *FuroUi5DateTimePickerLabeled*</small>
 
+> **Summary:** 
+
 {{% api "_form-google-protobuf-timestamp-head.md" %}}
 
-****
+## Description
 
 
 

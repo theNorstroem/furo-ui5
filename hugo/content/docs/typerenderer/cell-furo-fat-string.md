@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<cell-furo-fat-string>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-fat-string-head.md" %}}
 
-****
+## Description
 
 `cell-furo-fat-string`
 The cell-furo-fat-string component displays a FieldNode of type `furo.fat.String` in read only mode.

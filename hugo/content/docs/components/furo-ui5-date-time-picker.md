@@ -11,9 +11,11 @@ weight: 50
 <br>extends *src/furo-ui5-date-time-picker.js*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** furo data datetime picker field
+
 {{% api "_furo-ui5-date-time-picker-head.md" %}}
 
-**furo data datetime picker field**
+## Description
 
 The furo-ui5-date-time-picker component allows the user to bind a date string
 with IOS 8061 standard in [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format likes "2017-01-15T01:30:15.01Z" to the ui5 date time picker and edit it.

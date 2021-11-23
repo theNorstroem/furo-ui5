@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
+> **Summary:** celledit renderer for double
+
 {{% api "_celledit-double-head.md" %}}
 
-**celledit renderer for double**
+## Description
 
 `celledit-double` is a `celledit` context renderer.
 

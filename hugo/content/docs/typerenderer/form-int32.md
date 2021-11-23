@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/furo-ui5-number-input-labeled.js*
 <br>superclass *FuroUi5NumberInputLabeled*</small>
 
+> **Summary:** 
+
 {{% api "_form-int32-head.md" %}}
 
-****
+## Description
 
 
 

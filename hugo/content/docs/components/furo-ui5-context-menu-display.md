@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** 
+
 {{% api "_furo-ui5-context-menu-display-head.md" %}}
 
-****
+## Description
 
 
 

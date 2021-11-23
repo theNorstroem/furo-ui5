@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *HTMLElement*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** 
+
 {{% api "_furo-ui5-radio-button-group-head.md" %}}
 
-****
+## Description
 
 `furo-ui5-radio-button-group`
 The furo-ui5-radio-button-group component enables users to select a single option from a set of options.

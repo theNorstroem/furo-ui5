@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<celledit-google-protobuf-any>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-google-protobuf-any-head.md" %}}
 
-****
+## Description
 
 `celledit-google-protobuf-any`
 The celledit-google-protobuf-any component is a wrapper displays of type `google.protobuf.Any` in read only mode.

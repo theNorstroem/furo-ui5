@@ -11,9 +11,11 @@ weight: 50
 <br>exports `<display-google-type-date>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-google-type-date-head.md" %}}
 
-****
+## Description
 
 `display-google-type-date`
 The display-google-type-date component displays a FieldNode of type `google.type.Date` in read only mode.

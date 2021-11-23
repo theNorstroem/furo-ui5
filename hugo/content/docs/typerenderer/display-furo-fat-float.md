@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-float.js*
 <br>superclass *DisplayFloat*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-fat-float-head.md" %}}
 
-****
+## Description
 
 `display-furo-fat-float`
 The display-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.

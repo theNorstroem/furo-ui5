@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
+> **Summary:** celledit renderer for google.protobuf.Uint64value
+
 {{% api "_celledit-google-protobuf-uint64value-head.md" %}}
 
-**celledit renderer for google.protobuf.Uint64value**
+## Description
 
 `celledit-google-protobuf-uint64value` is a `celledit` context renderer.
 

@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<display-google-type-timeofday>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_display-google-type-timeofday-head.md" %}}
 
-****
+## Description
 
 `display-google-type-timeofday`
 The display-google-type-timeofday component displays a FieldNode of type `google.type.TimeOfDay` in read only mode.

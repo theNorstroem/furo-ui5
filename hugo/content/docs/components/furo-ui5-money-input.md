@@ -13,9 +13,11 @@ weight: 50
 <br> mixes *FBP*
 <br> mixes *FieldNodeAdapter*</small>
 
+> **Summary:** Binds a entityObject field google.type.Money to a number-input and currency dropdown fields
+
 {{% api "_furo-ui5-money-input-head.md" %}}
 
-**Binds a entityObject field google.type.Money to a number-input and currency dropdown fields**
+## Description
 
 `furo-ui5-money-input`
 Binds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields

@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-string.js*
 <br>superclass *CellString*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-stringproperty-head.md" %}}
 
-****
+## Description
 
 `cell-furo-stringproperty`
 The cell-furo-stringproperty component displays a FieldNode of type `furo.Stringproperty` in read only mode.

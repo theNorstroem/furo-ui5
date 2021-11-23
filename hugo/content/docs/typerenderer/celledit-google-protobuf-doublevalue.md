@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
+> **Summary:** celledit renderer for google.protobuf.Double
+
 {{% api "_celledit-google-protobuf-doublevalue-head.md" %}}
 
-**celledit renderer for google.protobuf.Double**
+## Description
 
 `celledit-google-protobuf-doublevalue` is a `celledit` context renderer.
 

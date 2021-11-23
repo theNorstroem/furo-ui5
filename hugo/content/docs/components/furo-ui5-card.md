@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** 
+
 {{% api "_furo-ui5-card-head.md" %}}
 
-****
+## Description
 
 `furo-ui5-card`
 is a bindable card that represents information in the form of a tile with separate header and content areas.

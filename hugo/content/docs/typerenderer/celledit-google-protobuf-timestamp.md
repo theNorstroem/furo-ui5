@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-date-time-picker.js*
 <br>superclass *FuroUi5DateTimePicker*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-google-protobuf-timestamp-head.md" %}}
 
-****
+## Description
 
 
 

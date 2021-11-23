@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/celledit-bool.js*
 <br>superclass *CelleditBool*</small>
 
+> **Summary:** celledit renderer for bool
+
 {{% api "_celledit-google-protobuf-boolvalue-head.md" %}}
 
-**celledit renderer for bool**
+## Description
 
 `celledit-google-protobuf-boolvalue` is a `celledit` context renderer.
 

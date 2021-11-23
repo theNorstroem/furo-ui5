@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-furo-fat-int32.js*
 <br>superclass *DisplayFuroFatInt32*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-fat-uint32-head.md" %}}
 
-****
+## Description
 
 `display-furo-fat-uint32`
 The display-furo-fat-uint32 component displays a FieldNode of type `furo.fat.Uint32` in read only mode.

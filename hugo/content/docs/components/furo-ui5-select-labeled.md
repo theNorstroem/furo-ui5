@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** labeled select
+
 {{% api "_furo-ui5-select-labeled-head.md" %}}
 
-**labeled select**
+## Description
 
 `furo-ui5-select-labeled`
 The furo-ui5-select-labeled is a composition to easily use a complete data select with label according

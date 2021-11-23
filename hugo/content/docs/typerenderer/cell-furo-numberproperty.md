@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/cell-furo-integerproperty.js*
 <br>superclass *CellFuroIntegerproperty*</small>
 
+> **Summary:** 
+
 {{% api "_cell-furo-numberproperty-head.md" %}}
 
-****
+## Description
 
 `cell-furo-numberproperty`
 The cell-furo-numberrproperty component displays a FieldNode of type `furo.Numberproperty` in read only mode.

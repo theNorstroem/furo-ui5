@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/furo-ui5-money-input.js*
 <br>superclass *FuroUi5MoneyInput*</small>
 
+> **Summary:** 
+
 {{% api "_celledit-furo-type-money-head.md" %}}
 
-****
+## Description
 
 
 

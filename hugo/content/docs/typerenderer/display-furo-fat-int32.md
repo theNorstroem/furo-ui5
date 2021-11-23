@@ -12,9 +12,11 @@ weight: 50
 <br>extends */src/typerenderer/display-int32.js*
 <br>superclass *DisplayInt32*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-fat-int32-head.md" %}}
 
-****
+## Description
 
 `display-int32`
 The display-int32 component displays a FieldNode of type `furo.fat.Int32` in read only mode.

@@ -11,9 +11,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** grid with a z pattern
+
 {{% api "_furo-ui5-z-grid-head.md" %}}
 
-**grid with a z pattern**
+## Description
 
 `z-grid`
 is a grid which places your elements in a **z** pattern.

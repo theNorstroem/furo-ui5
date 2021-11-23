@@ -10,9 +10,11 @@ weight: 50
 <br>exports `<cell-google-protobuf-stringvalue>` custom-element-definition
 <br>superclass *LitElement*</small>
 
+> **Summary:** 
+
 {{% api "_cell-google-protobuf-stringvalue-head.md" %}}
 
-****
+## Description
 
 `cell-google-protobuf-stringvalue`
 The cell-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.Stringvalue` in read only mode.

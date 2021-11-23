@@ -12,9 +12,11 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
+> **Summary:** furo ui5 message strip
+
 {{% api "_furo-ui5-message-strip-display-head.md" %}}
 
-**furo ui5 message strip**
+## Description
 
 `furo-ui5-message-strip-display`
 

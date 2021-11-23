@@ -11,9 +11,11 @@ weight: 50
 <br>extends */src/typerenderer/display-google-type-date.js*
 <br>superclass *DisplayGoogleTypeDate*</small>
 
+> **Summary:** 
+
 {{% api "_display-furo-type-date-head.md" %}}
 
-****
+## Description
 
 `display-furo-type-date`
 The display-furo-type-date component displays a FieldNode of type `furo.type.Date` in read only mode.
