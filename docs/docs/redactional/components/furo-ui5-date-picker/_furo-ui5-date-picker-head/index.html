@@ -7,17 +7,17 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Example #            1 2 3 4 5 6 7 8 9 10  &lt;furo-form-layouter four&gt; &lt;furo-ui5-checkbox-input ƒ-bind-data=&#34;--doExp(*.furo_data_date_input_google)&#34; &gt;&lt;/furo-ui5-checkbox-input&gt; &lt;furo-ui5-checkbox-input value-state=&#34;Success&#34; text=&#34;Override&#34; ƒ-bind-data=&#34;--doExp(*.furo_data_date_input_google)&#34; &gt;&lt;/furo-ui5-checkbox-input&gt; &lt;/furo-form-layouter&gt;   ">
+<meta name="description" content="Example #            1 2 3 4 5 6 7 8  &lt;furo-ui5-date-picker ƒ-bind-data=&#34;--dataObject(*.furo_data_date_input_google)&#34; &gt;&lt;/furo-ui5-date-picker&gt; &lt;furo-ui5-date-picker value-state=&#34;Information&#34; ƒ-bind-data=&#34;--dataObject(*.furo_data_date_input_google)&#34; &gt;&lt;/furo-ui5-date-picker&gt; &lt;/furo-form-layouter&gt;   ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="Example #            1 2 3 4 5 6 7 8 9 10  &lt;furo-form-layouter four&gt; &lt;furo-ui5-checkbox-input ƒ-bind-data=&#34;--doExp(*.furo_data_date_input_google)&#34; &gt;&lt;/furo-ui5-checkbox-input&gt; &lt;furo-ui5-checkbox-input value-state=&#34;Success&#34; text=&#34;Override&#34; ƒ-bind-data=&#34;--doExp(*.furo_data_date_input_google)&#34; &gt;&lt;/furo-ui5-checkbox-input&gt; &lt;/furo-form-layouter&gt;   " />
+<meta property="og:description" content="Example #            1 2 3 4 5 6 7 8  &lt;furo-ui5-date-picker ƒ-bind-data=&#34;--dataObject(*.furo_data_date_input_google)&#34; &gt;&lt;/furo-ui5-date-picker&gt; &lt;furo-ui5-date-picker value-state=&#34;Information&#34; ƒ-bind-data=&#34;--dataObject(*.furo_data_date_input_google)&#34; &gt;&lt;/furo-ui5-date-picker&gt; &lt;/furo-form-layouter&gt;   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/redactional/components/furo-ui5-date-picker/_furo-ui5-date-picker-head/" />
-<meta property="article:modified_time" content="2021-11-16T16:15:11+01:00" />
+<meta property="article:modified_time" content="2021-11-23T22:17:39+01:00" />
 <title>Furo Ui5 Date Picker Head | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.b88c57306442480303070991f92eb354b002bc0208bc8121714d8c539e922af4.js" integrity="sha256-uIxXMGRCSAMDBwmR&#43;S6zVLACvAIIvIEhcU2MU56SKvQ="></script>
+<script defer src="/en.search.min.4eeecbb82cd1363ff71fd0db3091101768839b9a8878aa01fcf44d5c9f0177ff.js" integrity="sha256-Tu7LuCzRNj/3H9DbMJEQF2iDm5qIeKoB/PRNXJ8Bd/8="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3828,10 +3828,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3902,44 +3898,40 @@ https://github.com/alex-shpak/hugo-book
 <template>
 <furo-form-layouter four>
 <furo-ui5-date-picker
-    ƒ-bind-data="--dd(*.furo_data_date_input_google)"
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_date_input_google)"
  ></furo-ui5-date-picker>
 <furo-ui5-date-picker
     value-state="Information" 
-    ƒ-bind-data="--dd(*.furo_data_date_input_google)"
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_date_input_google)"
  ></furo-ui5-date-picker>
 </furo-form-layouter>
 <furo-data-object
   type="experiment.Experiment"
-  @-object-ready="--doExp"
+  @-object-ready="--dataObject"
 ></furo-data-object>
 <!-- Workaround, because data object is way faster ready -->
-<furo-de-bounce wait="1" ƒ-trigger="--doExp" @-debounced="--dd"></furo-de-bounce>
+<furo-de-bounce wait="1" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
 </template>
 </furo-demo-snippet>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
-  &lt;<span style="color:#000080">furo-ui5-checkbox-input</span>
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_date_input_google)&#34;</span>
-  &gt;&lt;/<span style="color:#000080">furo-ui5-checkbox-input</span>&gt;
-  &lt;<span style="color:#000080">furo-ui5-checkbox-input</span>
-      <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span>
-      <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Override&#34;</span>
-      <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_date_input_google)&#34;</span>
-   &gt;&lt;/<span style="color:#000080">furo-ui5-checkbox-input</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-date-picker</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_date_input_google)&#34;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-date-picker</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-date-picker</span>
+  <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Information&#34;</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_date_input_google)&#34;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-date-picker</span>&gt;
 &lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
 </code></pre></td></tr></table>
 </div>
@@ -3953,9 +3945,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/892e2fc1e7382b7b2d30040b9111604957095eef" title='Last modified by veith | November 16, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73b3ff1ce1f7dee3f684b9d239e3aef42526c4cf" title='Last modified by veith | November 23, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 16, 2021</span>
+      <span>November 23, 2021</span>
     </a>
   </div>
 

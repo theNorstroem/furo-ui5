@@ -2322,7 +2322,7 @@ Depth of the submenu Methods #  init #  init(e *display* byKeyboard `` ) ⟹ voi
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-date-picker/</guid>
       <description>furo-ui5-date-picker #  @furo/components v1.0.0-rc.6 import &#39;@furo/components/src/furo-ui5-date-picker.js&#39;; exports FuroUi5DatePicker js extends src/furo-ui5-date-picker.js mixes FieldNodeAdapter
  Summary: bindable datepicker field
- Example #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;furo-ui5-checkbox-input value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;    Description #  The furo-ui5-date-picker component allows the user to bind an date object like google.</description>
+ Example #            1 2 3 4 5 6 7 8  &amp;lt;furo-ui5-date-picker ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker&amp;gt; &amp;lt;furo-ui5-date-picker value-state=&amp;#34;Information&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;    Description #  The furo-ui5-date-picker component allows the user to bind an date object like google.type.Date or a date string with ISO 8061 format like &amp;ldquo;2020-12-31&amp;rdquo; to the ui5 datepicker and edit it.</description>
     </item>
     
     <item>
@@ -2333,7 +2333,7 @@ Depth of the submenu Methods #  init #  init(e *display* byKeyboard `` ) ⟹ voi
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-date-picker-labeled/</guid>
       <description>furo-ui5-date-picker-labeled #  @furo/components v1.0.0-rc.6 import &#39;@furo/components/src/furo-ui5-date-picker-labeled.js&#39;; exports FuroUi5DatePickerLabeled js exports &amp;lt;furo-ui5-date-picker-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Summary: labeled input field
- Inside a furo-form-layouter set to four #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;furo-ui5-checkbox-input value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   Inside a furo-form-layouter set to two #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter two&amp;gt; &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;#34;--doExp(*.</description>
+ Inside a furo-form-layouter set to four #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-date-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker-labeled&amp;gt; &amp;lt;furo-ui5-date-picker-labeled value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker-labeled&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   Inside a furo-form-layouter set to two #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter two&amp;gt; &amp;lt;furo-ui5-date-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.</description>
     </item>
     
     <item>
@@ -2344,8 +2344,7 @@ Depth of the submenu Methods #  init #  init(e *display* byKeyboard `` ) ⟹ voi
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-date-time-picker/</guid>
       <description>furo-ui5-date-time-picker #  @furo/components v1.0.0-rc.6 import &#39;@furo/components/src/furo-ui5-date-time-picker.js&#39;; exports FuroUi5DateTimePicker js extends src/furo-ui5-date-time-picker.js mixes FieldNodeAdapter
  Summary: furo data datetime picker field
- Description #  The furo-ui5-date-time-picker component allows the user to bind a date string with IOS 8061 standard in RFC 3339 format likes &amp;ldquo;2017-01-15T01:30:15.01Z&amp;rdquo; to the ui5 date time picker and edit it.
-you can define the formatPattern (e.g. &amp;lsquo;dd.MM.yyyy hh:mm aa&amp;rsquo; ) to show the date according to format pattern.</description>
+ Example #            1 2 3 4 5 6 7 8 9  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-date-time-picker ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker&amp;gt; &amp;lt;furo-ui5-date-time-picker value-state=&amp;#34;Information&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;    Description #  The furo-ui5-date-time-picker component allows the user to bind a date string with IOS 8061 standard in RFC 3339 format likes &amp;ldquo;2017-01-15T01:30:15.</description>
     </item>
     
     <item>
@@ -2356,9 +2355,7 @@ you can define the formatPattern (e.g. &amp;lsquo;dd.MM.yyyy hh:mm aa&amp;rsquo;
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-date-time-picker-labeled/</guid>
       <description>furo-ui5-date-time-picker-labeled #  @furo/components v1.0.0-rc.6 import &#39;@furo/components/src/furo-ui5-date-time-picker-labeled.js&#39;; exports FuroUi5DateTimePickerLabeled js exports &amp;lt;furo-ui5-date-time-picker-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Summary: labeled input field
- Description #  furo-ui5-date-time-picker-labeled The furo-ui5-date-time-picker-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
-Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-date-picker required #  required</description>
+ Inside a furo-form-layouter set to four #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-date-time-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker-labeled&amp;gt; &amp;lt;furo-ui5-date-time-picker-labeled value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker-labeled&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   Inside a furo-form-layouter set to two #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter two&amp;gt; &amp;lt;furo-ui5-date-time-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.</description>
     </item>
     
     <item>
@@ -3258,7 +3255,7 @@ check whether it is a fat type
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-date-picker-labeled/_furo-ui5-date-picker-labeled-head/</guid>
-      <description>Inside a furo-form-layouter set to four #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;furo-ui5-checkbox-input value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   Inside a furo-form-layouter set to two #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter two&amp;gt; &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;#34;--doExp(*.</description>
+      <description>Inside a furo-form-layouter set to four #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-date-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker-labeled&amp;gt; &amp;lt;furo-ui5-date-picker-labeled value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker-labeled&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   Inside a furo-form-layouter set to two #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter two&amp;gt; &amp;lt;furo-ui5-date-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.</description>
     </item>
     
     <item>
@@ -3276,7 +3273,7 @@ check whether it is a fat type
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-date-picker/_furo-ui5-date-picker-head/</guid>
-      <description>Example #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;furo-ui5-checkbox-input value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   </description>
+      <description>Example #            1 2 3 4 5 6 7 8  &amp;lt;furo-ui5-date-picker ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker&amp;gt; &amp;lt;furo-ui5-date-picker value-state=&amp;#34;Information&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   </description>
     </item>
     
     <item>
@@ -3294,7 +3291,7 @@ check whether it is a fat type
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-date-time-picker-labeled/_furo-ui5-date-time-picker-labeled-head/</guid>
-      <description></description>
+      <description>Inside a furo-form-layouter set to four #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-date-time-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker-labeled&amp;gt; &amp;lt;furo-ui5-date-time-picker-labeled value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker-labeled&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   Inside a furo-form-layouter set to two #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter two&amp;gt; &amp;lt;furo-ui5-date-time-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.</description>
     </item>
     
     <item>
@@ -3312,7 +3309,7 @@ check whether it is a fat type
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-date-time-picker/_furo-ui5-date-time-picker-head/</guid>
-      <description></description>
+      <description>Example #            1 2 3 4 5 6 7 8 9  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-date-time-picker ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker&amp;gt; &amp;lt;furo-ui5-date-time-picker value-state=&amp;#34;Information&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   </description>
     </item>
     
     <item>

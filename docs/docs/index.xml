@@ -284,7 +284,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-date-picker-labeled/_furo-ui5-date-picker-labeled-head/</guid>
-      <description>Inside a furo-form-layouter set to four #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;furo-ui5-checkbox-input value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   Inside a furo-form-layouter set to two #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter two&amp;gt; &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;#34;--doExp(*.</description>
+      <description>Inside a furo-form-layouter set to four #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-date-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker-labeled&amp;gt; &amp;lt;furo-ui5-date-picker-labeled value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker-labeled&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   Inside a furo-form-layouter set to two #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter two&amp;gt; &amp;lt;furo-ui5-date-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.</description>
     </item>
     
     <item>
@@ -302,7 +302,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-date-picker/_furo-ui5-date-picker-head/</guid>
-      <description>Example #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-checkbox-input ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;furo-ui5-checkbox-input value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--doExp(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-checkbox-input&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   </description>
+      <description>Example #            1 2 3 4 5 6 7 8  &amp;lt;furo-ui5-date-picker ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker&amp;gt; &amp;lt;furo-ui5-date-picker value-state=&amp;#34;Information&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.furo_data_date_input_google)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-picker&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   </description>
     </item>
     
     <item>
@@ -320,7 +320,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-date-time-picker-labeled/_furo-ui5-date-time-picker-labeled-head/</guid>
-      <description></description>
+      <description>Inside a furo-form-layouter set to four #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-date-time-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker-labeled&amp;gt; &amp;lt;furo-ui5-date-time-picker-labeled value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker-labeled&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   Inside a furo-form-layouter set to two #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter two&amp;gt; &amp;lt;furo-ui5-date-time-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.</description>
     </item>
     
     <item>
@@ -338,7 +338,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-date-time-picker/_furo-ui5-date-time-picker-head/</guid>
-      <description></description>
+      <description>Example #            1 2 3 4 5 6 7 8 9  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-date-time-picker ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker&amp;gt; &amp;lt;furo-ui5-date-time-picker value-state=&amp;#34;Information&amp;#34; ƒ-bind-data=&amp;#34;--dataObject(*.google_timestamp)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-date-time-picker&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   </description>
     </item>
     
     <item>

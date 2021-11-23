@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.b88c57306442480303070991f92eb354b002bc0208bc8121714d8c539e922af4.js" integrity="sha256-uIxXMGRCSAMDBwmR&#43;S6zVLACvAIIvIEhcU2MU56SKvQ="></script>
+<script defer src="/en.search.min.4eeecbb82cd1363ff71fd0db3091101768839b9a8878aa01fcf44d5c9f0177ff.js" integrity="sha256-Tu7LuCzRNj/3H9DbMJEQF2iDm5qIeKoB/PRNXJ8Bd/8="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3828,10 +3828,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3943,6 +3939,55 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p><strong>Summary:</strong> furo data datetime picker field</p>
 </blockquote>
+<h4 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-form-layouter four>
+<furo-ui5-date-time-picker
+    ƒ-bind-data="--dataObjectDebounced(*.google_timestamp)"
+ ></furo-ui5-date-time-picker>
+<furo-ui5-date-time-picker
+    value-state="Information" 
+    ƒ-bind-data="--dataObjectDebounced(*.google_timestamp)"
+ ></furo-ui5-date-time-picker>
+</furo-form-layouter>
+<furo-data-object
+  type="experiment.Experiment"
+  @-object-ready="--dataObject"
+></furo-data-object>
+<!-- Workaround, because data object is way faster ready -->
+<furo-de-bounce wait="1" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
+</template>
+</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-date-time-picker</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.google_timestamp)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-date-time-picker</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-date-time-picker</span>
+    <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Information&#34;</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.google_timestamp)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-date-time-picker</span>&gt;
+&lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="description">
   Description
   <a class="anchor" href="#description">#</a>

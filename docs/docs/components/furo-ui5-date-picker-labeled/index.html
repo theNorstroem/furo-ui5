@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.b88c57306442480303070991f92eb354b002bc0208bc8121714d8c539e922af4.js" integrity="sha256-uIxXMGRCSAMDBwmR&#43;S6zVLACvAIIvIEhcU2MU56SKvQ="></script>
+<script defer src="/en.search.min.4eeecbb82cd1363ff71fd0db3091101768839b9a8878aa01fcf44d5c9f0177ff.js" integrity="sha256-Tu7LuCzRNj/3H9DbMJEQF2iDm5qIeKoB/PRNXJ8Bd/8="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3828,10 +3828,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3946,19 +3942,19 @@ https://github.com/alex-shpak/hugo-book
 <template>
 <furo-form-layouter four>
 <furo-ui5-date-picker-labeled
-    ƒ-bind-data="--dd(*.furo_data_date_input_google)"
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_date_input_google)"
  ></furo-ui5-date-picker-labeled>
 <furo-ui5-date-picker-labeled
     value-state="Information" 
-    ƒ-bind-data="--dd(*.furo_data_date_input_google)"
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_date_input_google)"
  ></furo-ui5-date-picker-labeled>
 </furo-form-layouter>
 <furo-data-object
   type="experiment.Experiment"
-  @-object-ready="--doExp"
+  @-object-ready="--dataObject"
 ></furo-data-object>
 <!-- Workaround, because data object is way faster ready -->
-<furo-de-bounce wait="10" ƒ-trigger="--doExp" @-debounced="--dd"></furo-de-bounce>
+<furo-de-bounce wait="10" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
 </template>
 </furo-demo-snippet>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -3976,14 +3972,14 @@ https://github.com/alex-shpak/hugo-book
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
-  &lt;<span style="color:#000080">furo-ui5-checkbox-input</span>
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_date_input_google)&#34;</span>
-  &gt;&lt;/<span style="color:#000080">furo-ui5-checkbox-input</span>&gt;
-  &lt;<span style="color:#000080">furo-ui5-checkbox-input</span>
+  &lt;<span style="color:#000080">furo-ui5-date-picker-labeled</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_date_input_google)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-date-picker-labeled</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-date-picker-labeled</span>
       <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span>
       <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Override&#34;</span>
-      <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_date_input_google)&#34;</span>
-   &gt;&lt;/<span style="color:#000080">furo-ui5-checkbox-input</span>&gt;
+      <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_date_input_google)&#34;</span>
+   &gt;&lt;/<span style="color:#000080">furo-ui5-date-picker-labeled</span>&gt;
 &lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
 </code></pre></td></tr></table>
 </div>
@@ -3996,19 +3992,19 @@ https://github.com/alex-shpak/hugo-book
 <template>
 <furo-form-layouter two>
 <furo-ui5-date-picker-labeled
-    ƒ-bind-data="--dd(*.furo_data_date_input_google)"
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_date_input_google)"
  ></furo-ui5-date-picker-labeled>
 <furo-ui5-date-picker-labeled
     value-state="Information" 
-    ƒ-bind-data="--dd(*.furo_data_date_input_google)"
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_date_input_google)"
  ></furo-ui5-date-picker-labeled>
 </furo-form-layouter>
 <furo-data-object
   type="experiment.Experiment"
-  @-object-ready="--doExp"
+  @-object-ready="--dataObject"
 ></furo-data-object>
 <!-- Workaround, because data object is way faster ready -->
-<furo-de-bounce wait="10" ƒ-trigger="--doExp" @-debounced="--dd"></furo-de-bounce>
+<furo-de-bounce wait="10" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
 </template>
 </furo-demo-snippet>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -4026,14 +4022,14 @@ https://github.com/alex-shpak/hugo-book
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">two</span>&gt;
-  &lt;<span style="color:#000080">furo-ui5-checkbox-input</span>
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_date_input_google)&#34;</span>
-  &gt;&lt;/<span style="color:#000080">furo-ui5-checkbox-input</span>&gt;
-  &lt;<span style="color:#000080">furo-ui5-checkbox-input</span>
+  &lt;<span style="color:#000080">furo-ui5-date-picker-labeled</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_date_input_google)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-date-picker-labeled</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-date-picker-labeled</span>
       <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span>
       <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Override&#34;</span>
-      <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_date_input_google)&#34;</span>
-   &gt;&lt;/<span style="color:#000080">furo-ui5-checkbox-input</span>&gt;
+      <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_date_input_google)&#34;</span>
+   &gt;&lt;/<span style="color:#000080">furo-ui5-date-picker-labeled</span>&gt;
 &lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
 </code></pre></td></tr></table>
 </div>
