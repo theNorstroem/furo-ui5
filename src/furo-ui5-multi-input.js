@@ -270,8 +270,16 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
   _removeAllItems() {
     this.innerHTML = '';
   }
+
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-multi-input';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
 
-FuroUi5MultiInput.onDefine().then(() => {
-  window.customElements.define('furo-ui5-multi-input', FuroUi5MultiInput);
-});
+FuroUi5MultiInput.define();

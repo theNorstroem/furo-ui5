@@ -630,8 +630,16 @@ export class FuroUi5PasswordInput extends FieldNodeAdapter(Input.default) {
       this.show();
     }
   }
+
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-password-input';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
 
-FuroUi5PasswordInput.onDefine().then(() => {
-  window.customElements.define('furo-ui5-password-input', FuroUi5PasswordInput);
-});
+FuroUi5PasswordInput.define();

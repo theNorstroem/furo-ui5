@@ -455,8 +455,16 @@ export class FuroUi5TextareaInput extends FieldNodeAdapter(TextArea.default) {
       this._previousValueState.message
     );
   }
+
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-textarea-input';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
 
-FuroUi5TextareaInput.onDefine().then(() => {
-  window.customElements.define('furo-ui5-textarea-input', FuroUi5TextareaInput);
-});
+FuroUi5TextareaInput.define();

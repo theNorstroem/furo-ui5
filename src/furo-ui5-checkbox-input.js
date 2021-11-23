@@ -1,5 +1,4 @@
 import * as CheckBox from '@ui5/webcomponents/dist/CheckBox.js';
-import { css } from 'lit';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
@@ -327,20 +326,15 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
     }
   }
 
-  /**
-   * extend styling
-   * @returns {string}
-   * @private
-   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-checkbox-input';
+    return md;
+  }
+
   static get styles() {
-    return `${css`` + super.styles}
-        :host([left]) .ui5-checkbox-root{
-          width: auto;
-        }
-      `;
+    return super.styles;
   }
 }
 
-FuroUi5CheckboxInput.onDefine().then(() => {
-  window.customElements.define('furo-ui5-checkbox-input', FuroUi5CheckboxInput);
-});
+FuroUi5CheckboxInput.define();

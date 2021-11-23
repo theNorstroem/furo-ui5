@@ -296,8 +296,16 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
       this.readonly = readonly;
     }
   }
+
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-radio-button';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
 
-FuroUi5RadioButton.onDefine().then(() => {
-  window.customElements.define('furo-ui5-radio-button', FuroUi5RadioButton);
-});
+FuroUi5RadioButton.define();

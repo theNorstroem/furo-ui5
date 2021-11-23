@@ -480,11 +480,16 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
       })
     );
   }
+
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-segmented-button';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
 
-FuroUi5SegmentedButton.onDefine().then(() => {
-  window.customElements.define(
-    'furo-ui5-segmented-button',
-    FuroUi5SegmentedButton
-  );
-});
+FuroUi5SegmentedButton.define();

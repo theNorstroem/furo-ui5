@@ -25,8 +25,16 @@ class FuroUi5Dialog extends Dialog {
     }
     super.show();
   }
+
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-dialog';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
 
-FuroUi5Dialog.onDefine().then(() => {
-  window.customElements.define('furo-ui5-dialog', FuroUi5Dialog);
-});
+FuroUi5Dialog.define();
