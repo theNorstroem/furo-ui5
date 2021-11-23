@@ -24,7 +24,7 @@ weight: 50
 ### Sample
  <furo-demo-snippet>
   <template>
-   <furo-sign-pad @-sign-updated="--signed"></furo-sign-pad>
+   <furo-ui5-sign-pad @-sign-updated="--signed"></furo-ui5-sign-pad>
     <img ƒ-.src="--signed" alt="" width="150px">
   </template>
  </furo-demo-snippet>
