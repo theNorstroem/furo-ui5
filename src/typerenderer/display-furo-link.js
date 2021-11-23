@@ -9,7 +9,7 @@ import { LitElement, html, css } from 'lit';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-furo-link Basic Usage
  */
 class DisplayFuroLink extends LitElement {

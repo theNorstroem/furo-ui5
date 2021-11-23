@@ -22,7 +22,7 @@ import ApexCharts from 'apexcharts/dist/apexcharts.esm.js';
  * @fires {Fieldnode} data-point-clicked -  Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart
  *
  * @summary Display charts with data objects
- * @customElement
+ * @element
  * @demo demo-furo-ui5-chart-mini Small Charts
  * @demo demo-furo-ui5-chart Basic Usage
  * @demo demo-furo-ui5-chart-mixed Mixed Charts

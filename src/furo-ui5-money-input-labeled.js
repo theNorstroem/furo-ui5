@@ -14,7 +14,7 @@ import './furo-ui5-money-input.js';
  * @fires {google.type.Money} value-changed - Fires the field value when it changes.
  *
  * @summary labeled input field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-money-input-labeled Basic Usage
  * @appliesMixin FBP
  */

@@ -6,7 +6,7 @@ import { FormInt32 } from './form-int32.js';
  * It uses furo-ui5-number-input as the renderer
  *
  * @summary form renderer for furo.fat.Int64
- * @customElement form-furo-fat-int64
+ * @element form-furo-fat-int64
  */
 export class FormFuroFatInt64 extends FormInt32 {}
 

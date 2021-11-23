@@ -14,7 +14,7 @@ import { CellInt32 } from './cell-int32.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-int32 Basic Usage
  */
 export class CellFuroFatInt32 extends CellInt32 {

@@ -111,7 +111,7 @@ import './furo-ui5-dialog.js';
  * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
  *
  * @summary furo ui5 data reference search
- * @customElement furo-ui5-reference-search
+ * @element furo-ui5-reference-search
  * @demo demo-furo-ui5-reference-search Basic Usage
  */
 export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {

@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-segmented-button
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-segmented-button.js';`<small>
 <br>exports *FuroUi5SegmentedButton* js
-<br>exports `<furo-ui5-segmented-button>` custom-element-definition
 <br>extends *src/furo-ui5-segmented-button.js*
 <br> mixes *FieldNodeAdapter*</small>
 
@@ -50,6 +49,12 @@ options by using the furo-ui5-segmented-button component.
 
 
 
+
+### **metadata**
+</small>
+
+
+<br><br>
 
 
 ### **activeFieldBinding**
@@ -207,6 +212,7 @@ Selects an option by id
 - <small>val </small>
 - <small>id </small>
 <br><br>
+
 
 
 

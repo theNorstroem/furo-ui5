@@ -11,7 +11,7 @@ import { CellString } from './cell-string.js';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-cell-furo-stringproperty Basic Usage
  */
 export class CellFuroStringproperty extends CellString {

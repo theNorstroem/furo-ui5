@@ -14,7 +14,7 @@ import { Env } from '@furo/framework/src/furo.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-int32 Basic Usage
  */
 export class DisplayInt32 extends LitElement {

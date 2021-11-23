@@ -10,7 +10,7 @@ import { CellFuroIntegerproperty } from './cell-furo-integerproperty.js';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-cell-furo-numberproperty Basic Usage
  */
 export class CellFuroNumberproperty extends CellFuroIntegerproperty {}

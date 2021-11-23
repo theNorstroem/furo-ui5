@@ -12,7 +12,7 @@ import { DisplayFuroFatInt32 } from './display-furo-fat-int32.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-furo-fat-uint32 Basic Usage
  */
 class DisplayFuroFatUint32 extends DisplayFuroFatInt32 {}

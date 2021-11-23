@@ -11,7 +11,7 @@ import { DisplayFuroStringproperty } from './display-furo-stringproperty.js';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-display-furo-stringoptionproperty Basic Usage
  */
 export class DisplayFuroStringoptionproperty extends DisplayFuroStringproperty {

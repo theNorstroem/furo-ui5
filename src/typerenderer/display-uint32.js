@@ -12,7 +12,7 @@ import { DisplayInt32 } from './display-int32.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-uint32 Basic Usage
  */
 export class DisplayUint32 extends DisplayInt32 {}

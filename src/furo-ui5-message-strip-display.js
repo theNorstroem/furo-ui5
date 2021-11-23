@@ -20,7 +20,7 @@ import '@ui5/webcomponents/dist/MessageStrip.js';
  *  ```
  *
  * @summary furo ui5 message strip
- * @customElement
+ * @element
  * @demo demo-furo-ui5-message-strip-display Basic Usage
  */
 export class FuroUi5MessageStripDisplay extends FBP(LitElement) {

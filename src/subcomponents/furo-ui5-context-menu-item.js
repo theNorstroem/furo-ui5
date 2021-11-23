@@ -17,7 +17,7 @@ import '@ui5/webcomponents-icons/dist/border.js';
  * @fires {item} item-selected -  Fired when item was selected
  *
  * @summary context menu item
- * @customElement
+ * @element
  * @appliesMixin FBP
  */
 export class FuroUi5ContextMenuItem extends FBP(LitElement) {

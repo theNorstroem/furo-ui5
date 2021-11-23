@@ -11,7 +11,7 @@ import { CellInt32 } from './cell-int32.js';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-cell-furo-integerproperty Basic Usage
  */
 export class CellFuroIntegerproperty extends CellInt32 {

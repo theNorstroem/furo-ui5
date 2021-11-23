@@ -7,7 +7,7 @@ import { FuroUi5TimePickerLabeled } from '../furo-ui5-time-picker-labeled.js';
  * It uses furo-ui5-time-picker as the renderer
  *
  * @summary form renderer for google.type.TimeOfDay
- * @customElement form-google-type-timeofday
+ * @element form-google-type-timeofday
  */
 class FormGoogleTypeTimeofday extends FuroUi5TimePickerLabeled {}
 

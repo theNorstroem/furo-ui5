@@ -9,7 +9,7 @@ import { DisplayBool } from './display-bool.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-google-protobuf-boolvalue Basic Usage
  */
 class DisplayGoolgeProtobufBoolvalue extends DisplayBool {}

@@ -12,7 +12,7 @@ import '@ui5/webcomponents/dist/ColorPalette.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-google-type-color Basic Usage
  */
 class CellGoolgeTypeColor extends LitElement {

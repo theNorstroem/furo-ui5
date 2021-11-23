@@ -9,7 +9,7 @@ import { CellInt32 } from './cell-int32.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-google-protobuf-boolvalue Basic Usage
  */
 class CellGoolgeProtobufIn32value extends CellInt32 {}

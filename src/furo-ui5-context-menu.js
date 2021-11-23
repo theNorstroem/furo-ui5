@@ -38,7 +38,7 @@ import '@furo/util/src/furo-keydown';
  * @slot {HTMLElement} - default slot to add an individual context menu opener component (e.g. furo-icon-button).
  *
  * @summary Context menu
- * @customElement
+ * @element
  * @demo demo-furo-ui5-context-menu Basic usage
  * @appliesMixin FBP
  */

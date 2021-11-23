@@ -48,7 +48,7 @@ import { Events } from './lib/Events.js';
  * @fires change - Fired when the input operation has finished by pressing Enter or on focusout.
  *
  * @summary furo data datetime picker field
- * @customElement
+ * @element furo-ui5-date-time-picker
  * @demo demo-furo-ui5-date-time-picker Basic Usage
  */
 export class FuroUi5DateTimePicker extends FieldNodeAdapter(

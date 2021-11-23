@@ -9,7 +9,7 @@ import { DisplayInt32 } from './display-int32.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-google-protobuf-boolvalue Basic Usage
  */
 class DisplayGoolgeProtobufIn32value extends DisplayInt32 {}

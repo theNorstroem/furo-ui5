@@ -7,7 +7,7 @@ import { FBP } from '@furo/fbp';
  * Only one value can be true.
  *
  * @summary radio group
- * @customElement
+ * @element
  * @demo demo-furo-ui5-radio-button Sample of radio group
  * @appliesMixin FBP
  */

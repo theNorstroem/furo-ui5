@@ -9,7 +9,7 @@ import { LitElement, css } from 'lit';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo celledit-google-protobuf-any Basic Usage
  */
 class CelleditGoolgeProtobufAny extends LitElement {

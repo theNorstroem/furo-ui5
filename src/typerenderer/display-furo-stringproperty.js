@@ -11,7 +11,7 @@ import { DisplayString } from './display-string.js';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-display-furo-stringproperty Basic Usage
  */
 export class DisplayFuroStringproperty extends DisplayString {

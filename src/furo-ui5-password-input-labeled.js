@@ -18,7 +18,7 @@ import './furo-ui5-password-input.js';
  * @fires {String} value-changed - Fires the field value when it changes.
  *
  * @summary labeled input field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-password-input-labeled Basic Usage
  * @appliesMixin FBP
  */

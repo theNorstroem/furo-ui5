@@ -11,7 +11,7 @@ import { DisplayInt32 } from './display-int32.js';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-display-furo-integerproperty Basic Usage
  */
 export class DisplayFuroIntegerproperty extends DisplayInt32 {

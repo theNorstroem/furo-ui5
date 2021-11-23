@@ -11,7 +11,7 @@ import { DisplayBool } from './display-bool.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-furo-fat-bool Basic Usage
  */
 class DisplayFuroFatBool extends DisplayBool {

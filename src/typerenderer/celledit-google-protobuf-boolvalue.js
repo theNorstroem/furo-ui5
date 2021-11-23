@@ -7,7 +7,7 @@ import { CelleditBool } from './celledit-bool.js';
  * It uses furo-ui5-checkbox-input as the renderer
  *
  * @summary celledit renderer for bool
- * @customElement celledit-google-protobuf-boolvalue
+ * @element celledit-google-protobuf-boolvalue
  */
 
 class CelleditGoogleProtobufBoolvalue extends CelleditBool {}

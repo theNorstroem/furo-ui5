@@ -14,7 +14,7 @@ import { DisplayInt32 } from './display-int32.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-int32 Basic Usage
  */
 export class DisplayFuroFatInt32 extends DisplayInt32 {

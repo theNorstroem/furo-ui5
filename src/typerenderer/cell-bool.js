@@ -12,7 +12,7 @@ import '@ui5/webcomponents-icons/dist/border.js';
  * - function: bindData(fieldNode){...}
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-bool Basic Usage
  */
 export class CellBool extends LitElement {

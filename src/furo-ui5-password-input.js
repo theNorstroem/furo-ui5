@@ -53,7 +53,7 @@ import { Events } from './lib/Events.js';
  * @fires {void} password-hidden - Fired when the password is hidden, after calling the hide() method.
  *
  * @summary data password input field
- * @customElement
+ * @element furo-ui5-password-input
  * @demo demo-furo-ui5-password-input Basic usage (scalar , fat, wrapper values)
  */
 export class FuroUi5PasswordInput extends FieldNodeAdapter(Input.default) {

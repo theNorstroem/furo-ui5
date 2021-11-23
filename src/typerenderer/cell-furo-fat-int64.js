@@ -13,7 +13,7 @@ import { CellFuroFatInt32 } from './cell-furo-fat-int32.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-furo-fat-int64 Basic Usage
  */
 export class CellFuroFatInt64 extends CellFuroFatInt32 {}

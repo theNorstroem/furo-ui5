@@ -13,7 +13,7 @@ import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-celledit-furo-property-repeats Basic Usage
  */
 export class CelleditFuroPropertyRepeated extends FBP(LitElement) {

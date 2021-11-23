@@ -10,7 +10,7 @@ import { DisplayFuroPropertyRepeated } from './display-furo-property-repeated.js
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-display-furo-property-repeats-labeled Basic Usage
  */
 export class DisplayFuroPropertyRepeatsLabeled extends DisplayFuroPropertyRepeated {

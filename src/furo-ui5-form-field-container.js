@@ -65,7 +65,7 @@ import { FBP } from '@furo/fbp/src/fbp.js';
  * @cssprop {N/A} [--furo-ui5-form-field-container-label-justify-gap=end] - label alignment (start, end)
  *
  * @summary form field container
- * @customElement
+ * @element
  * @demo demo-furo-ui5-form-field-container Sample
  * @appliesMixin FBP
  */

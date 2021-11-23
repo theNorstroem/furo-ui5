@@ -104,7 +104,7 @@ import { FBP } from '@furo/fbp';
  *
  * @slot {HTMLElement [0..n]} - default slot to add content.
  * @summary grid with a z pattern
- * @customElement
+ * @element
  * @demo demo-furo-z-grid
  * @appliesMixin FBP
  */

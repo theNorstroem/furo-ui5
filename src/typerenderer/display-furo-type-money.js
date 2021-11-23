@@ -16,7 +16,7 @@ import { DisplayGoogleTypeMoney } from './display-google-type-money.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-furo-type-money Basic Usage
  */
 class DisplayFuroTypeMoney extends DisplayGoogleTypeMoney {

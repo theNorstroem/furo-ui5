@@ -10,7 +10,7 @@ import { DisplayFuroIntegerproperty } from './display-furo-integerproperty.js';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-display-furo-numberproperty Basic Usage
  */
 export class DisplayFuroNumberproperty extends DisplayFuroIntegerproperty {}

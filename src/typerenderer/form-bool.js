@@ -7,7 +7,7 @@ import { FuroUi5CheckboxInputLabeled } from '../furo-ui5-checkbox-input-labeled.
  * It uses furo-ui5-checkbox-input as the renderer
  *
  * @summary form renderer for bool
- * @customElement form-bool
+ * @element form-bool
  */
 export class FormBool extends FuroUi5CheckboxInputLabeled {
   connectedCallback() {

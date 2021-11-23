@@ -50,7 +50,7 @@ import { Events } from './lib/Events.js';
  * @fires {`string`} value-changed - Fires the field value when it changes.
  *
  * @summary data number input field
- * @customElement
+ * @element furo-ui5-number-input
  * @demo demo-furo-ui5-number-input Basic usage (scalar , fat, wrapper values)
  * @demo demo-furo-ui5-text-input Basic usage (scalar , fat, wrapper values)
  * @demo demo-furo-ui5-text-input-together playground

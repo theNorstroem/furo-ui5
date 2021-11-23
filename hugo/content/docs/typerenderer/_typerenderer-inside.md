@@ -59,7 +59,7 @@ bookHidden: true
 - [celledit-furo-fat-uint64](celledit-furo-fat-uint64.md) celledit renderer for furo.fat.Uint64
 - [celledit-furo-integerproperty](celledit-furo-integerproperty.md) celledit renderer for furo.Integerproperty
 - [celledit-furo-link](celledit-furo-link.md) 
-- [celledit-furo-numberproperty](celledit-furo-numberproperty.md) celledit renderer for furo.INumberproperty
+- [celledit-furo-inumberproperty](celledit-furo-inumberproperty.md) celledit renderer for furo.INumberproperty
 - [celledit-furo-property-repeated](celledit-furo-property-repeated.md) 
 - [celledit-furo-property](celledit-furo-property.md) 
 - [celledit-furo-reference](celledit-furo-reference.md) 
@@ -138,7 +138,7 @@ bookHidden: true
 - [form-furo-fat-uint32](form-furo-fat-uint32.md) form renderer for furo.fat.Uint32
 - [form-furo-fat-uint64](form-furo-fat-uint64.md) form renderer for furo.fat.Uint64
 - [form-furo-integerproperty](form-furo-integerproperty.md) form renderer for furo.Integerproperty
-- [form-furo-numberproperty](form-furo-numberproperty.md) form renderer for furo.Integerproperty
+- [form-furo-integerproperty](form-furo-integerproperty.md) form renderer for furo.Integerproperty
 - [form-furo-reference](form-furo-reference.md) 
 - [form-furo-stringoptionproperty](form-furo-stringoptionproperty.md) 
 - [form-furo-stringproperty](form-furo-stringproperty.md) 

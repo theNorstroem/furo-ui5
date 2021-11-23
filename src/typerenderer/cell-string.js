@@ -10,7 +10,7 @@ import { LitElement, html, css } from 'lit';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-string Basic Usage
  */
 export class CellString extends LitElement {

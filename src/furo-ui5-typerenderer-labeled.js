@@ -14,7 +14,7 @@ import './furo-ui5-form-field-container.js';
  * to the design specification of SAP Fiori Design System.
  *
  * @summary labeled input field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-typerenderer-labeled Simple use
  * @demo demo-furo-ui5-readonly-card Card Sample
  * @demo demo-furo-ui5-typerenderer-labeled-form Read only Form

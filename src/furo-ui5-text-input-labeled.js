@@ -17,7 +17,7 @@ import './furo-ui5-text-input.js';
  *
  * @slot {HTMLElement} icon - Defines the icon to be displayed in the input.
  * @summary labeled input field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-text-input-labeled Basic Usage
  * @appliesMixin FBP
  */

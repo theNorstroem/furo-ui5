@@ -9,7 +9,7 @@ import { CellUint64 } from './cell-uint64.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-google-protobuf-boolvalue Basic Usage
  */
 class CellGoolgeProtobufUin64value extends CellUint64 {}

@@ -11,7 +11,7 @@ import './furo-ui5-context-menu-item.js';
  * Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
  *
  * @summary helper
- * @customElement
+ * @element
  * @appliesMixin FBP
  */
 export class FuroUi5ContextSubmenu extends FBP(LitElement) {

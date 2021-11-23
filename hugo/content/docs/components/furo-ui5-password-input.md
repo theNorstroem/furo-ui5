@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-password-input
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-password-input.js';`<small>
 <br>exports *FuroUi5PasswordInput* js
-<br>exports `<furo-ui5-password-input>` custom-element-definition
 <br>extends *src/furo-ui5-password-input.js*
 <br> mixes *FieldNodeAdapter*</small>
 
@@ -90,6 +89,12 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+
+### **metadata**
+</small>
+
+
+<br><br>
 
 ### **type**
 default: **&#39;Password&#39;**</small>
@@ -263,6 +268,7 @@ hide password
 toggle visibility of the password. (show/hide) password
 
 <br><br>
+
 
 
 

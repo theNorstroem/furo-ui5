@@ -7,7 +7,7 @@ import { FormBool } from './form-bool.js';
  * It uses furo-ui5-checkbox-input as the renderer
  *
  * @summary form renderer for bool
- * @customElement form-furo-fat-bool
+ * @element form-furo-fat-bool
  */
 class FormFuroFatBool extends FormBool {}
 

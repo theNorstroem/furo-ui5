@@ -54,7 +54,7 @@ import './subcomponents/furo-ui5-tree-item.js';
  * @fires {} nodes-collapsed -  Fired when nodes are collapsed recursive.
  *
  * @summary tree navigation menu
- * @customElement
+ * @element
  * @demo demo-furo-tree Basic usage
  * @demo demo-furo-tree-qp Working with query params
  * @appliesMixin FBP

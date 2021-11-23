@@ -6,7 +6,7 @@ import * as StandardListItem from '@ui5/webcomponents/dist/StandardListItem.js';
  *
  * @fires {item} item-selected -  Fired when item is selected
  * @summary representation of a result item
- * @customElement
+ * @element
  * @appliesMixin FBP
  */
 export class Ui5ReferenceSearchItem extends StandardListItem.default {

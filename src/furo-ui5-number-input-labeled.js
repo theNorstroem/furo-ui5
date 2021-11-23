@@ -14,7 +14,7 @@ import './furo-ui5-number-input.js';
  * @fires {Number} value-changed - Fires the field value when it changes.
  *
  * @summary labeled input field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-number-input-labeled Basic Usage
  * @appliesMixin FBP
  */

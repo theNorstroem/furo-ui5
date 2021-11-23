@@ -13,7 +13,7 @@ import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-display-furo-property-repeats Basic Usage
  */
 export class DisplayFuroPropertyRepeated extends FBP(LitElement) {

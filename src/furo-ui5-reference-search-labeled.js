@@ -13,7 +13,7 @@ import './furo-ui5-form-field-container.js';
  * to the design specification of SAP Fiori Design System.
  *
  * @summary labeled input field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-reference-search Simple use
  * @appliesMixin FBP
  */

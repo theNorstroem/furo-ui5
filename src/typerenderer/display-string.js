@@ -10,7 +10,7 @@ import { LitElement, html, css } from 'lit';
  *
  *
  * @summary
- * @customElement
+ * @element
  */
 export class DisplayString extends LitElement {
   static get styles() {

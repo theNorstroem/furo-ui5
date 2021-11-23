@@ -1,20 +1,19 @@
 ---
 title: furo-ui5-date-picker
-description: furo data datepicker field
+description: bindable datepicker field
 weight: 50
 ---
 
 # furo-ui5-date-picker
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-date-picker.js';`<small>
 <br>exports *FuroUi5DatePicker* js
-<br>exports `<furo-ui5-date-picker>` custom-element-definition
 <br>extends *src/furo-ui5-date-picker.js*
 <br> mixes *FieldNodeAdapter*</small>
 
 {{% api "_furo-ui5-date-picker-head.md" %}}
 
-**furo data datepicker field**
+**bindable datepicker field**
 
 The furo-ui5-date-picker component allows the user to bind an date object like google.type.Date or a date string
 with ISO 8061 format like "2020-12-31" to the ui5 datepicker and edit it.
@@ -69,6 +68,12 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+### **metadata**
+</small>
+
+
+<br><br>
+
 ### **formatPattern**
 default: **&#39;&#39;**</small>
 
@@ -111,6 +116,7 @@ Attributes that can be se are  `value-state`,  `placeholder`, `required`,`readon
 Use this after manual or scripted update of the attributes.
 
 <br><br>
+
 
 
 

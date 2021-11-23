@@ -9,7 +9,7 @@ import { LitElement, html, css } from 'lit';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-furo-fat-string Basic Usage
  */
 class DisplayFuroFatString extends LitElement {

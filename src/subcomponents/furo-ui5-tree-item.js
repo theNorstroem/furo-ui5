@@ -26,7 +26,7 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  * @cssprop {N/A} [--tree-indentation-12=104px] - tree indention level 12
  *
  * @summary todo shortdescription
- * @customElement
+ * @element
  * @appliesMixin FBP
  */
 export class FuroUi5TreeItem extends FBP(LitElement) {

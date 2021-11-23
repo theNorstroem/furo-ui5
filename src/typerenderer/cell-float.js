@@ -11,7 +11,7 @@ import { Env } from '@furo/framework/src/furo.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-float Basic Usage
  */
 export class CellFloat extends LitElement {

@@ -43,8 +43,8 @@ import { Events } from './lib/Events.js';
  * @fires {Date} value-changed -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {Date} change -Fired when the input operation has finished by pressing Enter or on focusout.
  *
- * @summary furo data datepicker field
- * @customElement
+ * @summary bindable datepicker field
+ * @element furo-ui5-date-picker
  * @demo demo-furo-ui5-date-picker Basic Usage
  */
 export class FuroUi5DatePicker extends FieldNodeAdapter(DatePicker.default) {

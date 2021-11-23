@@ -48,7 +48,7 @@ import { Events } from './lib/Events.js';
  * @fires {Boolean} value-changed - Fires the value of pressed when value changed.
  *
  * @summary boolean toggle button
- * @customElement
+ * @element
  * @demo demo-furo-ui5-toggle-button Basic usage (scalar , fat, wrapper values)
  */
 export class FuroUi5ToggleButton extends FieldNodeAdapter(

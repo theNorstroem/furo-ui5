@@ -47,7 +47,7 @@ import { Events } from './lib/Events.js';
  * @fires change - Fired when the input operation has finished by pressing Enter or on focusout.
  *
  * @summary furo data time picker field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-time-picker Basic Usage
  */
 export class FuroUi5TimePicker extends FieldNodeAdapter(TimePicker.default) {

@@ -9,7 +9,7 @@ import { DisplayFloat } from './display-float.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-furo-fat-float Basic Usage
  */
 class DisplayFuroFatFloat extends DisplayFloat {

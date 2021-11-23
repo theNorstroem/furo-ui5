@@ -10,7 +10,7 @@ import { DisplayString } from './display-string.js';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-google-protobuf-stringvalue Basic Usage
  */
 class DisplayGoogleProtobufStringvalue extends DisplayString {}

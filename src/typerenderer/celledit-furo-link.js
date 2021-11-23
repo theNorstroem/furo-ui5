@@ -9,7 +9,7 @@ import { LitElement, html, css } from 'lit';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo celledit-furo-link Basic Usage
  */
 class CelleditFuroLink extends LitElement {

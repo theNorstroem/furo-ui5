@@ -12,7 +12,7 @@ import { CellInt64 } from './cell-int64.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-uint64 Basic Usage
  */
 export class CellUint64 extends CellInt64 {}

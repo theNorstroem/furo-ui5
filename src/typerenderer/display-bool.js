@@ -14,7 +14,7 @@ import '@ui5/webcomponents-icons/dist/less.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-bool Basic Usage
  */
 export class DisplayBool extends LitElement {

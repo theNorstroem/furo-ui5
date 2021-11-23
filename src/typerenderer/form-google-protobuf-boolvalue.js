@@ -7,7 +7,7 @@ import { FormBool } from './form-bool.js';
  * It uses furo-ui5-checkbox-input as the renderer
  *
  * @summary form renderer for bool
- * @customElement form-google-protobuf-boolvalue
+ * @element form-google-protobuf-boolvalue
  */
 
 class FormGoogleProtobufBoolvalue extends FormBool {}

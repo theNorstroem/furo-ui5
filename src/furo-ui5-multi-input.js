@@ -11,7 +11,7 @@ import { Events } from './lib/Events.js';
  * The furo-ui5-multi-input component represents the repeated strings. e.g. ["aaa","bbb","ccc"]
  *
  * @summary data ui5 data multi input
- * @customElement
+ * @element furo-ui5-multi-input
  * @demo demo-furo-ui5-multi-input Basic usage (recommended for repeated strings)
  */
 export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {

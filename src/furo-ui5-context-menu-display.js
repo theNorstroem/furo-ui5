@@ -22,7 +22,7 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
    *
    *
    * @summary context menu
-   * @customElement
+   * @element
    * @demo demo-furo-ui5-context-menu Basic usage
    * @appliesMixin FBP
    */

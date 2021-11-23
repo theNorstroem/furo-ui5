@@ -13,7 +13,7 @@ import { FieldNode } from '@furo/data/src/lib/FieldNode';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-cell-furo-property Basic Usage
  */
 export class CellFuroProperty extends FBP(LitElement) {

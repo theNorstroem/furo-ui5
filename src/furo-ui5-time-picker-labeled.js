@@ -15,7 +15,7 @@ import './furo-ui5-form-field-container.js';
  * @fires {String} value-changed - Fires the field value when it changes in ISO 8601 format.
  *
  * @summary labeled input field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-time-picker-labeled Basic Usage
  * @appliesMixin FBP
  */

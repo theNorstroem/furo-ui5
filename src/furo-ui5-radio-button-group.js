@@ -30,7 +30,7 @@ import { Events } from './lib/Events.js';
  * @fires options-updated - Fires event options-updated after rebuilding option list.
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-furo-ui5-radio-button-group Basic Usage
  * @appliesMixin FBP
  */

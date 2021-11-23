@@ -11,7 +11,7 @@ import { CellBool } from './cell-bool.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-furo-fat-bool Basic Usage
  */
 class CellFuroFatBool extends CellBool {

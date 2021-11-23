@@ -9,7 +9,7 @@ import { DisplayDouble } from './display-double.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-double Basic Usage
  */
 class DisplayGoogleProtobufDoublevalue extends DisplayDouble {}

@@ -37,7 +37,7 @@ import '@ui5/webcomponents/dist/Panel.js';
  * @cssprop {rgba(8, 84, 16, 0)} [--furo-ui5-header-panel-splitter-end-rgba-color=rgba(8, 84, 16, 0)] - the gradient-end rgba-Color of the splitter
  *
  * @summary A bindable header panel
- * @customElement
+ * @element
  * @demo demo-furo-ui5-header-panel Without data binding
  * @demo demo-furo-ui5-header-panel-binding With data binding
  * @appliesMixin FBP

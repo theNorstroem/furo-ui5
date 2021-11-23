@@ -9,7 +9,7 @@ import { DisplayInt64 } from './display-int64.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-google-protobuf-boolvalue Basic Usage
  */
 class DisplayGoolgeProtobufIn64value extends DisplayInt64 {}

@@ -19,7 +19,7 @@ import '@ui5/webcomponents-icons/dist/navigation-right-arrow.js';
  * If you set other icons, please do not forget to import them.
  *
  * @summary  Displays a icon/symbol for a boolean value
- * @customElement
+ * @element
  * @demo demo-furo-ui5-bool-icon
  * @appliesMixin FBP
  */

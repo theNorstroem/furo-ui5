@@ -9,7 +9,7 @@ import { Env } from '@furo/framework/src/furo.js';
  * - function: bindData(fieldNode){...}
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-double Basic Usage
  */
 export class CellDouble extends LitElement {

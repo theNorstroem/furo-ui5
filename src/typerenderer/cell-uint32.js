@@ -12,7 +12,7 @@ import { CellInt32 } from './cell-int32.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-uint32 Basic Usage
  */
 export class CellUint32 extends CellInt32 {}

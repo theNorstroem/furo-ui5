@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-select
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-select.js';`<small>
 <br>exports *FuroUi5Select* js
-<br>exports `<furo-ui5-select>` custom-element-definition
 <br>extends *src/furo-ui5-select.js*
 <br> mixes *FieldNodeAdapter*</small>
 
@@ -50,6 +49,12 @@ the available options by using the ui5-option component. Use the function bindOp
 
 
 
+
+### **metadata**
+</small>
+
+
+<br><br>
 
 ### **activeFieldBinding**
 default: **false**</small>
@@ -214,6 +219,7 @@ Selects an option by id
 
 - <small>id </small>
 <br><br>
+
 
 
 

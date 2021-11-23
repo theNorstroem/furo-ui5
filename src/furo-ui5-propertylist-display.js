@@ -32,7 +32,7 @@ import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
  *
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo-furo-ui5-typerenderer-labeled Basic Usage
  * @appliesMixin FBP
  */

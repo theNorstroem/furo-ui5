@@ -57,7 +57,7 @@ import { Events } from './lib/Events.js';
  * @fires {Boolean} value-changed - Fired when value changed
  *
  * @summary boolean toggle button
- * @customElement
+ * @element furo-ui5-radio-button
  * @demo demo-furo-ui5-radio-button Basic usage (scalar , fat, wrapper values)
  */
 export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {

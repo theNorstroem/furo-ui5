@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-checkbox-input
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-checkbox-input.js';`<small>
 <br>exports *FuroUi5CheckboxInput* js
-<br>exports `<furo-ui5-checkbox-input>` custom-element-definition
 <br>extends *src/furo-ui5-checkbox-input.js*
 <br> mixes *FieldNodeAdapter*</small>
 
@@ -44,9 +43,7 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
 ## supported meta and constraints
 - **readonly: true** , set the element to readonly
 
-The constraint **required** will mark the element as required
-
-
+The constraint **required** will mark the element as required.
 
 {{% api "_furo-ui5-checkbox-input-description.md" %}}
 
@@ -67,11 +64,38 @@ The constraint **required** will mark the element as required
 
 
 
+### **metadata**
+</small>
+
+
+<br><br>
 
 
 
 
 
+
+## Events
+{{% api "_furo-ui5-checkbox-input-events.md" %}}
+
+### **change**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-change</span>
+→ <small>`Boolean`</small>
+
+ Fired when the checkbox checked state changes.
+<br><br>
+### **xxxx**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-xxxx</span>
+→ <small>`*`</small>
+
+ All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).
+<br><br>
+### **value-changed**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
+→ <small>`Boolean`</small>
+
+Fires the field value when it changes.
+<br><br>
 
 ## Methods
 {{% api "_furo-ui5-checkbox-input-methods.md" %}}
@@ -86,6 +110,7 @@ The constraint **required** will mark the element as required
 Reads the attributes which are set on the component dom.
 
 <br><br>
+
 
 
 

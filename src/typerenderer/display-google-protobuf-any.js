@@ -9,7 +9,7 @@ import { LitElement, css } from 'lit';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-google-protobuf-any Basic Usage
  */
 class DisplayGoolgeProtobufAny extends LitElement {

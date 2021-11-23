@@ -12,7 +12,7 @@ import '@ui5/webcomponents/dist/ColorPalette.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-google-type-color Basic Usage
  */
 class DisplayGoolgeTypeColor extends LitElement {

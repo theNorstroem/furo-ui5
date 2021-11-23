@@ -9,7 +9,7 @@ import { CellFloat } from './cell-float.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-furo-fat-float Basic Usage
  */
 class CellFuroFatFloat extends CellFloat {

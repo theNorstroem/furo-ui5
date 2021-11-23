@@ -14,7 +14,7 @@ import { Env } from '@furo/framework/src/furo.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-google-protobuf-timestamp Basic Usage
  */
 class DisplayGoogleProtobufTimestamp extends LitElement {

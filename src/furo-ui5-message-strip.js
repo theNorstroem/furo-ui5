@@ -22,7 +22,7 @@ import 'markdown-it/dist/markdown-it.js';
  * @fires {{Object}  payload} message-strip-closed -  Fired when the MessageStrip is closed
  *
  * @summary furo ui5 message strip
- * @customElement
+ * @element
  * @demo demo-furo-ui5-message-strip-display Basic Usage
  */
 export class FuroUi5MessageStrip extends FBP(LitElement) {

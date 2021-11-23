@@ -14,7 +14,7 @@ import './furo-ui5-multi-input.js';
  * @fires value-changed - Fires the field value when it changes.
  *
  * @summary labeled textarea field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-multi-input-labeled Basic Usage
  * @appliesMixin FBP
  */

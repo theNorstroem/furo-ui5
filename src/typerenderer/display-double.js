@@ -10,7 +10,7 @@ import { Env } from '@furo/framework/src/furo.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-double Basic Usage
  */
 export class DisplayDouble extends LitElement {

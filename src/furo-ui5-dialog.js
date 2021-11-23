@@ -8,7 +8,7 @@ import Dialog from '@ui5/webcomponents/dist/Dialog.js';
  * Use this component like a regular ui5-dialog and do not forget to place the furo-ui5-dialog-display in one of the parent elements.
  *
  * @summary Dialog element
- * @customElement
+ * @element furo-ui5-dialog
  * @appliesMixin FBP
  */
 class FuroUi5Dialog extends Dialog {

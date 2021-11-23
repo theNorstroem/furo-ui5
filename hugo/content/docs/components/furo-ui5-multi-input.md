@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-multi-input
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-multi-input.js';`<small>
 <br>exports *FuroUi5MultiInput* js
-<br>exports `<furo-ui5-multi-input>` custom-element-definition
 <br>extends *src/furo-ui5-multi-input.js*
 <br> mixes *FieldNodeAdapter*</small>
 
@@ -41,6 +40,12 @@ The furo-ui5-multi-input component represents the repeated strings. e.g. ["aaa",
 
 
 
+
+### **metadata**
+</small>
+
+
+<br><br>
 
 ### **tmpValue**
 default: **[]**</small>
@@ -169,6 +174,7 @@ Use this after manual or scripted update of the attributes.
 
 
 <br><br>
+
 
 
 

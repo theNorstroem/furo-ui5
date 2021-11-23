@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-date-time-picker
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-date-time-picker.js';`<small>
 <br>exports *FuroUi5DateTimePicker* js
-<br>exports `<furo-ui5-date-time-picker>` custom-element-definition
 <br>extends *src/furo-ui5-date-time-picker.js*
 <br> mixes *FieldNodeAdapter*</small>
 
@@ -72,6 +71,12 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+
+### **metadata**
+</small>
+
+
+<br><br>
 
 ### **formatPattern**
 default: **&#39;&#39;**</small>
@@ -170,6 +175,7 @@ overwrite onFnaFieldNodeBecameInvalid function
 
 - <small>validity </small>
 <br><br>
+
 
 
 

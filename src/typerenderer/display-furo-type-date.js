@@ -15,7 +15,7 @@ import { DisplayGoogleTypeDate } from './display-google-type-date.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-furo-type-date Basic Usage
  */
 class DisplayFuroTypeDate extends DisplayGoogleTypeDate {

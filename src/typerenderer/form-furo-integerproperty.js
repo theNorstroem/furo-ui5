@@ -6,7 +6,7 @@ import { FormInt32 } from './form-int32.js';
  * It uses furo-ui5-number-input as the renderer
  *
  * @summary form renderer for furo.Integerproperty
- * @customElement form-furo-integerproperty
+ * @element form-furo-integerproperty
  */
 class FormFuroIntegerproperty extends FormInt32 {
   bindData(fieldNode) {

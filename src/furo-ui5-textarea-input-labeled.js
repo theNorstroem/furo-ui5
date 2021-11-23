@@ -12,7 +12,7 @@ import './furo-ui5-textarea-input.js';
  * to the design specification of SAP Fiori Design System.
  *
  * @summary labeled textarea field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-textarea-input-labeled Basic Usage
  * @appliesMixin FBP
  */

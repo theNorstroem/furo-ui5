@@ -9,7 +9,7 @@ import { DisplayDouble } from './display-double.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-furo-fat-double Basic Usage
  */
 class DisplayFuroFatDouble extends DisplayDouble {

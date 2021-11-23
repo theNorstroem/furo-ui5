@@ -7,7 +7,7 @@ import { FormInt32 } from './form-int32.js';
  * It uses furo-ui5-number-input as the renderer
  *
  * @summary form renderer for google.protobuf.Int64
- * @customElement form-google-protobuf-int64value
+ * @element form-google-protobuf-int64value
  */
 class FormGoolgeProtobufIn64value extends FormInt32 {}
 

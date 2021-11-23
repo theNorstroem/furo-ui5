@@ -14,7 +14,7 @@ import { Env } from '@furo/framework/src/furo.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-google-type-money Basic Usage
  */
 export class CellGoogleTypeMoney extends LitElement {

@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-radio-button
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-radio-button.js';`<small>
 <br>exports *FuroUi5RadioButton* js
-<br>exports `<furo-ui5-radio-button>` custom-element-definition
 <br>extends *src/furo-ui5-radio-button.js*
 <br> mixes *FieldNodeAdapter*</small>
 
@@ -42,9 +41,9 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
 1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.
 2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.
 
-| meta 	| fat 	| html 	|
-|------	|-----	|------	|
-| 1    	| 10  	| 100  	|
+| meta  | fat  | html  |
+|------  |-----  |------  |
+| 1      | 10    | 100    |
 
 
 ## supported FAT attributes
@@ -82,6 +81,12 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+
+### **metadata**
+</small>
+
+
+<br><br>
 
 ### **_previousDesign**
 default: **&#39;Default&#39;**</small>
@@ -210,6 +215,7 @@ label is mapped to text
 - <small>text </small>
 - <small>placeholder </small>
 <br><br>
+
 
 
 

@@ -89,7 +89,7 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  * - "furo.StringOptionProperty": "furo-ui5-collection-dropdown"
  *
  * @summary display and bind types of type any
- * @customElement
+ * @element
  * @demo demo-furo-ui5-property
  * @appliesMixin FBP
  */

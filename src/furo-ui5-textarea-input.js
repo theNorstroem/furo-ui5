@@ -51,7 +51,7 @@ import { Events } from './lib/Events.js';
  * @fires {String} value-changed - Fires the field value when it changes.
  *
  * @summary data textarea input field
- * @customElement
+ * @element
  *
  * @demo demo-furo-ui5-textarea-input Basic usage (scalar , fat, wrapper values)
  */

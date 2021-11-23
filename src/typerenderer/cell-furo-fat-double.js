@@ -9,7 +9,7 @@ import { CellDouble } from './cell-double.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-furo-fat-double Basic Usage
  */
 class CellFuroFatDouble extends CellDouble {

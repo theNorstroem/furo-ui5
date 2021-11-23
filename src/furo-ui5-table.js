@@ -57,7 +57,7 @@ import { html as statichtml, literal } from 'lit/static-html.js';
  * @fires {Array with the selected items} rows-selected - Fired when the row selection in MultiSelect mode was changed
  *
  *
- * @customElement
+ * @element
  * @summary Display repeated fields in a table
  */
 export class FuroUi5Table extends FBP(LitElement) {

@@ -32,7 +32,7 @@ import { Events } from './lib/Events.js';
  * @fires {optionNodeList} options-updated - Fired  after the option list was rebuilt
  *
  * @summary segmented button
- * @customElement
+ * @element furo-ui5-segmented-button
  * @demo demo-furo-ui5-segmented-button Basic Usage
  * @appliesMixin FBP
  */

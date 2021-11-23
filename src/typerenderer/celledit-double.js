@@ -7,7 +7,7 @@ import { CelleditInt32 } from './celledit-int32.js';
  * It uses furo-ui5-number-input as the renderer
  *
  * @summary celledit renderer for double
- * @customElement celledit-double
+ * @element celledit-double
  */
 export class CelleditDouble extends CelleditInt32 {}
 

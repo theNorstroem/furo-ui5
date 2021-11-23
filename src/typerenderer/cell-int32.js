@@ -14,7 +14,7 @@ import { Env } from '@furo/framework/src/furo.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-int32 Basic Usage
  */
 export class CellInt32 extends LitElement {

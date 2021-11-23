@@ -12,7 +12,7 @@ import { DisplayFuroFatInt64 } from './display-furo-fat-int64.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-furo-fat-uint64 Basic Usage
  */
 class DisplayFuroFatUint64 extends DisplayFuroFatInt64 {}

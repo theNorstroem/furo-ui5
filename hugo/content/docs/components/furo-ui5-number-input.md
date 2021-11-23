@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-number-input
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.6</small>
 <br>`import '@furo/components/src/furo-ui5-number-input.js';`<small>
 <br>exports *FuroUi5NumberInput* js
-<br>exports `<furo-ui5-number-input>` custom-element-definition
 <br>extends *src/furo-ui5-number-input.js*
 <br> mixes *FieldNodeAdapter*</small>
 
@@ -87,6 +86,12 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+
+### **metadata**
+</small>
+
+
+<br><br>
 
 ### **_previousValueState**
 default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
@@ -184,6 +189,7 @@ those attributes can be set. `value-state`, `value-state-message`,  `icon`, `pla
 Use this after manual or scripted update of the attributes.
 
 <br><br>
+
 
 
 

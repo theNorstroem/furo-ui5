@@ -13,7 +13,7 @@ import * as Busy from '@ui5/webcomponents/dist/BusyIndicator.js';
  * https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
  *
  * @summary ui5 busy indicator
- * @customElement
+ * @element
  * @demo demo-furo-ui5-busyindicator Basic usage
  */
 export class FuroUiBusyIndicator extends Busy.default {

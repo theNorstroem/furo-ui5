@@ -20,7 +20,7 @@ import { LitElement, css } from 'lit';
  * @fires {data-series} data-updated -  Fired when datasource has updated data
  *
  * @summary connect data to a chart
- * @customElement
+ * @element
  * @demo demo-furo-ui5-chart-mini Small Charts
  * @demo demo-furo-ui5-chart Basic Usage
  * @demo demo-furo-ui5-chart-mixed Mixed Charts

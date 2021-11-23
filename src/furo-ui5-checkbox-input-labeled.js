@@ -13,7 +13,7 @@ import './furo-ui5-checkbox-input.js';
  * to the design specification of SAP Fiori Design System.
  *
  * @summary labeled input field
- * @customElement
+ * @element
  * @demo demo-furo-ui5-checkbox-input-labeled Basic Usage
  * @appliesMixin FBP
  */

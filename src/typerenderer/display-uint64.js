@@ -12,7 +12,7 @@ import { DisplayInt64 } from './display-int64.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-uint64 Basic Usage
  */
 export class DisplayUint64 extends DisplayInt64 {}

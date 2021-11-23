@@ -11,7 +11,7 @@ import { LitElement, css } from 'lit';
  * @fires {{Object}  payload} notification-custom-action-`commandName` -  Fired when notification custom action is triggered.
  *
  * @summary a banner
- * @customElement
+ * @element
  * @demo demo-furo-ui5-notification-list-display ui5 notification display demo
  */
 export class FuroUi5Notification extends LitElement {

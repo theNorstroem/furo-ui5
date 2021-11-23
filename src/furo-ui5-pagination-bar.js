@@ -34,7 +34,7 @@ import { i18n } from '@furo/framework/src/i18n.js';
  *
  * Tags: pagination
  * @summary Pagination Bar
- * @customElement
+ * @element
  * @demo demo-furo-ui5-pagination-bar Basic Usage
  * @mixes FBP
  */

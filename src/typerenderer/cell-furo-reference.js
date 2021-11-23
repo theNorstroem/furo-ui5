@@ -12,7 +12,7 @@ import '@ui5/webcomponents/dist/Link.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-furo-reference Basic Usage
  */
 class CellFuroReference extends LitElement {

@@ -13,7 +13,7 @@ import '@ui5/webcomponents/dist/List.js';
  *
  *
  * @summary ui5 notification group display
- * @customElement
+ * @element
  * @demo demo-furo-ui5-notification-group-display Basic Usage
  */
 export class FuroUi5NotificationGroupDisplay extends FBP(LitElement) {

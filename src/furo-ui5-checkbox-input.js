@@ -40,7 +40,7 @@ import { Events } from './lib/Events.js';
  * @fires {Boolean} value-changed - Fires the field value when it changes.
  *
  * @summary data checkbox input field
- * @customElement
+ * @element furo-ui5-checkbox-input
  */
 export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
   constructor() {

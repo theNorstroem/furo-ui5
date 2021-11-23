@@ -21,7 +21,7 @@ import '@ui5/webcomponents/dist/Option.js';
  * @fires {selectedOption} value-changed - Fires the field value when it changes.
  *
  * @summary data select field
- * @customElement
+ * @element furo-ui5-select
  * @demo demo-furo-ui5-select Basic usage (scalar , fat, wrapper values)
  */
 export class FuroUi5Select extends FieldNodeAdapter(Select.default) {

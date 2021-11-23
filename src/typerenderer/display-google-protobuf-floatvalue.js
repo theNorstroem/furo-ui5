@@ -10,7 +10,7 @@ import { DisplayFloat } from './display-float.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo display-google-protobuf-floatvalue Basic Usage
  */
 class DisplayGoolgeProtobufFloatvalue extends DisplayFloat {}

@@ -14,7 +14,7 @@ import { Env } from '@furo/framework/src/furo.js';
 
  *
  * @summary
- * @customElement
+ * @element
  * @demo demo cell-google-type-date Basic Usage
  */
 export class CellGoogleTypeDate extends LitElement {
