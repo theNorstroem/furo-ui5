@@ -46,7 +46,7 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
 
 The constraint **required** will mark the element as required
 
-```
+
 
 {{% api "_furo-ui5-checkbox-input-description.md" %}}
 

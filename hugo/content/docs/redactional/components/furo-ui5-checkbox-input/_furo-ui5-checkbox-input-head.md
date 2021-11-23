@@ -5,13 +5,35 @@ bookHidden: true
 ---
 #### Example
 <script type="module" src="/init.js"></script>
-<div class="snippet">
-<ui5-select value-state="Success" class="select">
-	<ui5-option icon="meal" selected>Apple</ui5-option>
-	<ui5-option icon="meal">Avocado</ui5-option>
-	<ui5-option icon="meal">Mango</ui5-option>
-</ui5-select>
+<furo-demo-snippet>
+<template>
+<furo-form-layouter four>
 <furo-ui5-checkbox-input
-    ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
+    ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
  ></furo-ui5-checkbox-input>
-</div>
+<furo-ui5-checkbox-input
+    value-state="Success"
+    text="Override"
+    ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+ ></furo-ui5-checkbox-input>
+</furo-form-layouter>
+<furo-data-object
+  type="experiment.Experiment"
+  @-object-ready="--doExp"
+></furo-data-object>
+</template>
+</furo-demo-snippet>
+
+```html
+<furo-form-layouter four>
+  <furo-ui5-checkbox-input
+    ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+  ></furo-ui5-checkbox-input>
+  <furo-ui5-checkbox-input
+      value-state="Success"
+      text="Override"
+      ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+   ></furo-ui5-checkbox-input>
+</furo-form-layouter>
+```
+

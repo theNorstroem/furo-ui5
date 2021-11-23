@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-google-protobuf-stringvalue
-**@furo/typerenderer** <small>v1.0.0-rc.3</small>
+**@furo/typerenderer** <small>v1.0.0-rc.5</small>
 <br>`import '@furo/typerenderer/src/display-google-protobuf-stringvalue.js';`<small>
 <br>exports `<display-google-protobuf-stringvalue>` custom-element-definition
 <br>extends */src/typerenderer/display-string.js*

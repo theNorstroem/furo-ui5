@@ -1,0 +1,442 @@
+{
+  "decl": {
+    "kind": "class",
+    "description": "The furo-ui5-date-time-picker component allows the user to bind a date string\nwith IOS 8061 standard in [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format likes \"2017-01-15T01:30:15.01Z\" to the ui5 date time picker and edit it.\n\nyou can define the formatPattern (e.g. 'dd.MM.yyyy hh:mm aa' ) to show the date according to format pattern. but the data in\nthe payload will still be in format [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt)  (2017-01-15T01:30:15.01Z)\n\nThe text field can be editable or read-only (readonly property), and it can be enabled or disabled (enabled property).\nTo visualize semantic states, such as \"error\" or \"warning\", the valueState property is provided.\nWhen the user makes changes to the datetime, the change event is fired, which enables you to react on any date change.\n\nYou can bind a `string`, `google.protobuf.Timestamp`, `int32`, `int64`.\n\n`int32`, `int64` will be handled as unix timestamps (seconds since epoc) and can not be *empty*.\n\n```html\n <furo-ui5-date-time-picker\n    ƒ-bind-data=\"--data(*.validity_to)\">\n </furo-ui5-date-time-picker>\n```\n\nThe field can be editable or read-only (readonly property), and it can be enabled or disabled (enabled property).\nTo visualize semantic states, such as \"error\" or \"warning\", the valueState property is provided.\nWhen the user makes changes to the date, the change event is fired, which enables you to react on any date change.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **min:\"1999-12-31\"** set the minDate for the element (use iso date in the constraint)\n- **max:\"1999-12-31\"** set the maxDate for the element (use iso date in the constraint)\n- **pattern:\"1999-12-31\"** set the pattern for the element\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
+    "name": "FuroUi5DateTimePicker",
+    "members": [
+      {
+        "kind": "field",
+        "name": "valueStateMessage",
+        "description": "Workaround for language request",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "onFnaFieldValueChanged",
+        "parameters": [
+          {
+            "name": "value"
+          }
+        ]
+      },
+      {
+        "kind": "method",
+        "name": "readAttributes"
+      },
+      {
+        "kind": "method",
+        "name": "onFnaFieldNodeBecameInvalid",
+        "parameters": [
+          {
+            "name": "validity"
+          }
+        ],
+        "description": "overwrite onFnaFieldNodeBecameInvalid function"
+      },
+      {
+        "kind": "method",
+        "name": "onFnaFieldNodeBecameValid",
+        "description": "overwrite onFnaFieldNodeBecameValid function",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "_setValueStateMessage",
+        "parameters": [
+          {
+            "name": "valueState"
+          },
+          {
+            "name": "message"
+          }
+        ],
+        "description": "update the value state and the value state message on demand",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "_resetValueStateMessage",
+        "description": "reset to previous value state",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "onFnaPlaceholderChanged",
+        "parameters": [
+          {
+            "name": "placeholder"
+          }
+        ],
+        "description": "overwrite onFnaPlaceholderChanged function",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "onFnaReadonlyChanged",
+        "parameters": [
+          {
+            "name": "readonly"
+          }
+        ],
+        "description": "overwrite onFnaReadonlyChanged function",
+        "privacy": "private"
+      },
+      {
+        "kind": "method",
+        "name": "onFnaConstraintsChanged",
+        "parameters": [
+          {
+            "name": "constraints"
+          }
+        ],
+        "description": "overwrite onFnaConstraintsChanged function",
+        "privacy": "private"
+      },
+      {
+        "kind": "field",
+        "name": "metadata",
+        "static": true
+      },
+      {
+        "kind": "field",
+        "name": "formatPattern",
+        "type": {
+          "text": "string"
+        },
+        "default": "''"
+      },
+      {
+        "kind": "field",
+        "name": "_previousValueState",
+        "type": {
+          "text": "object"
+        },
+        "default": "{ state: 'None', message: '' }"
+      },
+      {
+        "kind": "field",
+        "name": "_attributesFromFNA",
+        "type": {
+          "text": "object"
+        },
+        "default": "{\n      readonly: undefined,\n      placeholder: undefined,\n      min: undefined,\n      max: undefined,\n      pattern: undefined,\n    }"
+      },
+      {
+        "kind": "field",
+        "name": "_constraintsFromFNA",
+        "type": {
+          "text": "object"
+        },
+        "default": "{\n      required: undefined,\n    }"
+      },
+      {
+        "kind": "field",
+        "name": "_privilegedAttributes",
+        "type": {
+          "text": "object"
+        },
+        "default": "{\n      readonly: null,\n      placeholder: null,\n      required: null,\n      disabled: null,\n      maxDate: null,\n      minDate: null,\n      formatPattern: null,\n    }"
+      }
+    ],
+    "events": [
+      {
+        "type": {
+          "text": "String"
+        },
+        "description": "Fires the field value when it changes in ISO 8601 format.",
+        "name": "value-changed"
+      },
+      {
+        "description": "Fired when the input operation has finished by pressing Enter or on focusout.",
+        "name": "change"
+      }
+    ],
+    "mixins": [
+      {
+        "name": "FieldNodeAdapter",
+        "package": "@furo/data/src/lib/FieldNodeAdapter.js"
+      }
+    ],
+    "superclass": {
+      "module": "src/furo-ui5-date-time-picker.js"
+    },
+    "summary": "furo data datetime picker field"
+  },
+  "path": "src/furo-ui5-date-time-picker.js",
+  "name": "FuroUi5DateTimePicker",
+  "module": "components",
+  "pkg": {
+    "name": "@furo/ui5",
+    "description": "SAP UI5 Web Components data bindings for furo",
+    "version": "1.0.0-rc.5",
+    "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
+    "repository": "git@github.com:eclipse/eclipsefuro-web.git",
+    "author": {
+      "name": "",
+      "email": "",
+      "url": ""
+    },
+    "keywords": [
+      "web-components",
+      "flow based programming",
+      "flowbased",
+      "flow"
+    ],
+    "license": "MIT",
+    "main": "src/furo-catalog.js",
+    "scripts": {
+      "analyze": "cem analyze --globs \"src/**/*.js\" --exclude **/furo-catalog.js --litelement",
+      "start": "web-dev-server --app-index demos --open",
+      "lint": "eslint --ext .js,.html . --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*' --ignore-path .gitignore && prettier \"**/*.js\" --check  --ignore-path .prettierignore",
+      "format": "eslint --ext .js,.html . --fix --ignore-path .prettierignore && prettier \"**/*.js\" --write --ignore-path .prettierignore",
+      "test": "web-test-runner  --coverage",
+      "test:watch": "web-test-runner  --watch",
+      "docs:start": "cd hugo && hugo serve",
+      "docs:generate": "npm run analyze:components && npm run analyze:typerenderer && ./scripts/cem.sh",
+      "docs:publish": "./scripts/publishDocs.sh",
+      "analyze:components": "cem analyze --globs \"src/**/*.js\" --exclude **/typerenderer/* --litelement --outdir tmp/components",
+      "analyze:typerenderer": "cem analyze --globs \"src/typerenderer/*.js\" --exclude --litelement --outdir tmp/typerenderer"
+    },
+    "peerDependencies": {
+      "@furo/fbp": "^6.0.0-rc.3",
+      "@furo/framework": "^2.0.0-rc.3",
+      "@furo/layout": "^2.0.0-rc.4",
+      "@furo/data": "^2.0.0-rc.3",
+      "@furo/util": "^2.0.0-rc.4",
+      "@ui5/webcomponents": "^1.0.1",
+      "@ui5/webcomponents-base": "^1.0.1",
+      "@ui5/webcomponents-fiori": "^1.0.1",
+      "@ui5/webcomponents-icons": "^1.0.1",
+      "lit": "^2.0.1"
+    },
+    "dependencies": {
+      "markdown-it": "^9.0.1",
+      "apexcharts": "^3.29.0",
+      "signature_pad": "3.0.0-beta.4"
+    },
+    "devDependencies": {
+      "@furo/route": "^2.0.0-rc.3",
+      "lit-html": "2.0.1",
+      "@custom-elements-manifest/analyzer": "^0.5.7",
+      "@open-wc/eslint-config": "^7.0.0",
+      "@open-wc/testing": "^3.0.3",
+      "@web/dev-server": "^0.1.28",
+      "@web/test-runner": "^0.13.21",
+      "@esm-bundle/chai": "^4.3.4-fix.0",
+      "eslint": "^8.2.0",
+      "eslint-config-prettier": "^8.3.0",
+      "husky": "^7.0.4",
+      "lerna": "^4.0.0",
+      "lint-staged": "^11.2.6",
+      "prettier": "^2.4.1"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "engines": {
+      "node": ">=10.0"
+    },
+    "customElements": "tmp/typerenderer/custom-elements.json",
+    "eslintConfig": {
+      "extends": [
+        "@open-wc",
+        "prettier"
+      ]
+    },
+    "prettier": {
+      "singleQuote": true,
+      "arrowParens": "avoid"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.js": [
+        "eslint --fix --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*' --ignore-pattern 'test--/*'",
+        "prettier --write",
+        "git add"
+      ]
+    }
+  },
+  "cem": {
+    "kind": "javascript-module",
+    "path": "src/furo-ui5-date-time-picker.js",
+    "declarations": [
+      {
+        "kind": "class",
+        "description": "The furo-ui5-date-time-picker component allows the user to bind a date string\nwith IOS 8061 standard in [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format likes \"2017-01-15T01:30:15.01Z\" to the ui5 date time picker and edit it.\n\nyou can define the formatPattern (e.g. 'dd.MM.yyyy hh:mm aa' ) to show the date according to format pattern. but the data in\nthe payload will still be in format [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt)  (2017-01-15T01:30:15.01Z)\n\nThe text field can be editable or read-only (readonly property), and it can be enabled or disabled (enabled property).\nTo visualize semantic states, such as \"error\" or \"warning\", the valueState property is provided.\nWhen the user makes changes to the datetime, the change event is fired, which enables you to react on any date change.\n\nYou can bind a `string`, `google.protobuf.Timestamp`, `int32`, `int64`.\n\n`int32`, `int64` will be handled as unix timestamps (seconds since epoc) and can not be *empty*.\n\n```html\n <furo-ui5-date-time-picker\n    ƒ-bind-data=\"--data(*.validity_to)\">\n </furo-ui5-date-time-picker>\n```\n\nThe field can be editable or read-only (readonly property), and it can be enabled or disabled (enabled property).\nTo visualize semantic states, such as \"error\" or \"warning\", the valueState property is provided.\nWhen the user makes changes to the date, the change event is fired, which enables you to react on any date change.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **min:\"1999-12-31\"** set the minDate for the element (use iso date in the constraint)\n- **max:\"1999-12-31\"** set the maxDate for the element (use iso date in the constraint)\n- **pattern:\"1999-12-31\"** set the pattern for the element\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
+        "name": "FuroUi5DateTimePicker",
+        "members": [
+          {
+            "kind": "field",
+            "name": "valueStateMessage",
+            "description": "Workaround for language request",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "onFnaFieldValueChanged",
+            "parameters": [
+              {
+                "name": "value"
+              }
+            ]
+          },
+          {
+            "kind": "method",
+            "name": "readAttributes"
+          },
+          {
+            "kind": "method",
+            "name": "onFnaFieldNodeBecameInvalid",
+            "parameters": [
+              {
+                "name": "validity"
+              }
+            ],
+            "description": "overwrite onFnaFieldNodeBecameInvalid function"
+          },
+          {
+            "kind": "method",
+            "name": "onFnaFieldNodeBecameValid",
+            "description": "overwrite onFnaFieldNodeBecameValid function",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "_setValueStateMessage",
+            "parameters": [
+              {
+                "name": "valueState"
+              },
+              {
+                "name": "message"
+              }
+            ],
+            "description": "update the value state and the value state message on demand",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "_resetValueStateMessage",
+            "description": "reset to previous value state",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "onFnaPlaceholderChanged",
+            "parameters": [
+              {
+                "name": "placeholder"
+              }
+            ],
+            "description": "overwrite onFnaPlaceholderChanged function",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "onFnaReadonlyChanged",
+            "parameters": [
+              {
+                "name": "readonly"
+              }
+            ],
+            "description": "overwrite onFnaReadonlyChanged function",
+            "privacy": "private"
+          },
+          {
+            "kind": "method",
+            "name": "onFnaConstraintsChanged",
+            "parameters": [
+              {
+                "name": "constraints"
+              }
+            ],
+            "description": "overwrite onFnaConstraintsChanged function",
+            "privacy": "private"
+          },
+          {
+            "kind": "field",
+            "name": "metadata",
+            "static": true
+          },
+          {
+            "kind": "field",
+            "name": "formatPattern",
+            "type": {
+              "text": "string"
+            },
+            "default": "''"
+          },
+          {
+            "kind": "field",
+            "name": "_previousValueState",
+            "type": {
+              "text": "object"
+            },
+            "default": "{ state: 'None', message: '' }"
+          },
+          {
+            "kind": "field",
+            "name": "_attributesFromFNA",
+            "type": {
+              "text": "object"
+            },
+            "default": "{\n      readonly: undefined,\n      placeholder: undefined,\n      min: undefined,\n      max: undefined,\n      pattern: undefined,\n    }"
+          },
+          {
+            "kind": "field",
+            "name": "_constraintsFromFNA",
+            "type": {
+              "text": "object"
+            },
+            "default": "{\n      required: undefined,\n    }"
+          },
+          {
+            "kind": "field",
+            "name": "_privilegedAttributes",
+            "type": {
+              "text": "object"
+            },
+            "default": "{\n      readonly: null,\n      placeholder: null,\n      required: null,\n      disabled: null,\n      maxDate: null,\n      minDate: null,\n      formatPattern: null,\n    }"
+          }
+        ],
+        "events": [
+          {
+            "type": {
+              "text": "String"
+            },
+            "description": "Fires the field value when it changes in ISO 8601 format.",
+            "name": "value-changed"
+          },
+          {
+            "description": "Fired when the input operation has finished by pressing Enter or on focusout.",
+            "name": "change"
+          }
+        ],
+        "mixins": [
+          {
+            "name": "FieldNodeAdapter",
+            "package": "@furo/data/src/lib/FieldNodeAdapter.js"
+          }
+        ],
+        "superclass": {
+          "module": "src/furo-ui5-date-time-picker.js"
+        },
+        "summary": "furo data datetime picker field"
+      }
+    ],
+    "exports": [
+      {
+        "kind": "js",
+        "name": "FuroUi5DateTimePicker",
+        "declaration": {
+          "name": "FuroUi5DateTimePicker",
+          "module": "src/furo-ui5-date-time-picker.js"
+        }
+      }
+    ]
+  }
+}

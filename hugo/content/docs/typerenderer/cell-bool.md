@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-bool
-**@furo/typerenderer** <small>v1.0.0-rc.3</small>
+**@furo/typerenderer** <small>v1.0.0-rc.5</small>
 <br>`import '@furo/typerenderer/src/cell-bool.js';`<small>
 <br>exports *CellBool* js
 <br>exports `<cell-bool>` custom-element-definition

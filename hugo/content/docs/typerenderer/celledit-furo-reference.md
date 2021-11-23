@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-reference
-**@furo/typerenderer** <small>v1.0.0-rc.3</small>
+**@furo/typerenderer** <small>v1.0.0-rc.5</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-reference.js';`<small>
 <br>exports `<celledit-furo-reference>` custom-element-definition
 <br>extends */src/furo-ui5-reference-search.js*

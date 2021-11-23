@@ -6,7 +6,7 @@ weight: 100
 ---
 
 # @furo/ui5
-**@furo/ui5** <small>v1.0.0-rc.3</small>
+**@furo/ui5** <small>v1.0.0-rc.5</small>
 SAP UI5 Web Components data bindings for furo
 
 {{% api "_components-head.md" %}}
@@ -21,7 +21,7 @@ npm i -S @furo/ui5`
 *cdn*:
 ```js
 <script type="module"
-        src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.0.0-rc.3/dist/components.js">
+        src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.0.0-rc.5/dist/components.js">
 </script>
 ```
 

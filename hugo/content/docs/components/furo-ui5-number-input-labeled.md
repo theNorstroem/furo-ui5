@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-number-input-labeled
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.5</small>
 <br>`import '@furo/components/src/furo-ui5-number-input-labeled.js';`<small>
 <br>exports *FuroUi5NumberInputLabeled* js
 <br>exports `<furo-ui5-number-input-labeled>` custom-element-definition

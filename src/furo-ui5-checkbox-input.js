@@ -33,18 +33,14 @@ import { Events } from './lib/Events.js';
  * ## supported meta and constraints
  * - **readonly: true** , set the element to readonly
  *
- * The constraint **required** will mark the element as required
- *
+ * The constraint **required** will mark the element as required.
  *
  * @fires {Boolean} change -  Fired when the checkbox checked state changes.
- * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).
- *
+ * @fires {*} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).
  * @fires {Boolean} value-changed - Fires the field value when it changes.
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  * @summary data checkbox input field
  * @customElement
- * @demo demo-furo-ui5-checkbox-input Basic usage (scalar , fat, wrapper values)
  */
 export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
   constructor() {
@@ -58,7 +54,6 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
     this._previousValueState = 'None';
     /**
      *
-     * @type {{readonly: undefined, disabled: undefined, label: undefined}}
      * @private
      */
     this._attributesFromFNA = {

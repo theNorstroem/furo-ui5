@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-reference-search-labeled
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.5</small>
 <br>`import '@furo/components/src/furo-ui5-reference-search-labeled.js';`<small>
 <br>exports *FuroUi5ReferenceSearchLabeled* js
 <br>exports `<furo-ui5-reference-search-labeled>` custom-element-definition

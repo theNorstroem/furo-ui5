@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-toggle-button
-**@furo/components** <small>v1.0.0-rc.3</small>
+**@furo/components** <small>v1.0.0-rc.5</small>
 <br>`import '@furo/components/src/furo-ui5-toggle-button.js';`<small>
 <br>exports *FuroUi5ToggleButton* js
 <br>exports `<furo-ui5-toggle-button>` custom-element-definition
@@ -32,9 +32,9 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
 1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.
 2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.
 
-| meta 	| fat 	| html 	|
-|------	|-----	|------	|
-| 1    	| 10  	| 100  	|
+| meta  | fat  | html  |
+|------  |-----  |------  |
+| 1      | 10    | 100    |
 
 
 ## supported FAT attributes

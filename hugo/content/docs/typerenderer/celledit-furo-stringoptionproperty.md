@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-stringoptionproperty
-**@furo/typerenderer** <small>v1.0.0-rc.3</small>
+**@furo/typerenderer** <small>v1.0.0-rc.5</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-stringoptionproperty.js';`<small>
 <br>exports `<celledit-furo-stringoptionproperty>` custom-element-definition
 <br>extends */src/furo-ui5-select.js*
