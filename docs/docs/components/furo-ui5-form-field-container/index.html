@@ -7,17 +7,17 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="form field container">
+<meta name="description" content="responsive labels for your input elements">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-form-field-container" />
-<meta property="og:description" content="form field container" />
+<meta property="og:description" content="responsive labels for your input elements" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-form-field-container/" />
-<meta property="article:modified_time" content="2021-11-23T21:06:45+01:00" />
+<meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
 <title>furo-ui5-form-field-container | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.4eeecbb82cd1363ff71fd0db3091101768839b9a8878aa01fcf44d5c9f0177ff.js" integrity="sha256-Tu7LuCzRNj/3H9DbMJEQF2iDm5qIeKoB/PRNXJ8Bd/8="></script>
+<script defer src="/en.search.min.75dd1cfb455bc07e06c912a73d6279c6483901addc3f002731895c44251488d1.js" integrity="sha256-dd0c&#43;0VbwH4GyRKnPWJ5xkg5Aa3cPwAnMYlcRCUUiNE="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -31,6 +31,7 @@ https://github.com/alex-shpak/hugo-book
 <body dir=>
 <furo-ui5-context-menu-display style="z-index: 8"></furo-ui5-context-menu-display>
 <fixed-tooltip-display></fixed-tooltip-display>
+<furo-ui5-dialog-display></furo-ui5-dialog-display>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
   <div ></div>
@@ -361,6 +362,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-date-time-picker-labeled/" class="">furo-ui5-date-time-picker-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-dialog/" class="">furo-ui5-dialog</a>
   
 
         </li>
@@ -3816,18 +3830,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3915,15 +3917,26 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-form-field-container
   <a class="anchor" href="#furo-ui5-form-field-container">#</a>
 </h1>
-<p><strong>@furo/components</strong> <small>v1.0.0-rc.6</small>
+<p><strong>@furo/components</strong> <small>v1.0.0-rc.7</small>
 <br><code>import '@furo/components/src/furo-ui5-form-field-container.js';</code><small>
 <br>exports <em>FuroUi5FormFieldContainer</em> js
 <br>exports <code>&lt;furo-ui5-form-field-container&gt;</code> custom-element-definition
 <br>superclass <em>LitElement</em>
 <br> mixes <em>FBP</em></small></p>
 <blockquote>
-<p><strong>Summary:</strong> form field container</p>
+<p><strong>Summary:</strong> responsive labels for your input elements</p>
 </blockquote>
+<h4 id="sample">
+  Sample
+  <a class="anchor" href="#sample">#</a>
+</h4>
+ <furo-ui5-form-field-container>
+     <ui5-label label slot="label" for="Custom" show-colon>Currency / Units (custom)</ui5-label>
+    <furo-horizontal-flex id="Custom" content space>
+    <furo-ui5-text-input flex ƒ-bind-data="--entity(*.data.furo_data_money_input.currency_code)"></furo-ui5-text-input>
+     <furo-ui5-number-input flex ƒ-bind-data="--entity(*.data.furo_data_money_input.units)"></furo-ui5-number-input>
+    </furo-horizontal-flex>
+  </furo-ui5-form-field-container>
 <h2 id="description">
   Description
   <a class="anchor" href="#description">#</a>
@@ -3931,6 +3944,53 @@ https://github.com/alex-shpak/hugo-book
 <p><code>furo-ui5-form-field-container</code>
 The furo-ui5-form-field-container gives the user a layout to manage
 input field and labels according to the design specification of SAP Fiori.</p>
+<p>Example</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-form-field-container</span>&gt;
+  &lt;<span style="color:#000080">ui5-label</span> <span style="color:#008080">label</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;label&#34;</span> <span style="color:#008080">for</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Custom&#34;</span> <span style="color:#008080">show-colon</span>&gt;Currency / Units (custom)&lt;/<span style="color:#000080">ui5-label</span>&gt;
+  &lt;<span style="color:#000080">furo-horizontal-flex</span> <span style="color:#008080">id</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Custom&#34;</span> <span style="color:#008080">content</span> <span style="color:#008080">space</span>&gt;
+    &lt;<span style="color:#000080">furo-ui5-text-input</span> <span style="color:#008080">flex</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.furo_data_money_input.currency_code)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
+    &lt;<span style="color:#000080">furo-ui5-number-input</span> <span style="color:#008080">flex</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.furo_data_money_input.units)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-number-input</span>&gt;
+ &lt;/<span style="color:#000080">furo-horizontal-flex</span>&gt;
+&lt;/<span style="color:#000080">furo-ui5-form-field-container</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>The form and simple form in size L use a two-column layout within the responsive grid layout by default.
+That means that the form groups are placed next to each other to have all the information on one screen and to
+avoid scrolling. In these columns, the labels are positioned in the same row as the corresponding input field or value.
+So the form groups adopt the Z layout (reading direction in rows, not in columns).</p>
+<p>The label-field ratio is 4:8:0 by default:</p>
+<p>4 grid columns of the responsive grid layout are used by the labels.
+8 grid columns of the responsive grid layout are used by fields.
+0 grid columns of the responsive grid layout are used by empty columns.</p>
+<p>Size M of the form and simple form also has a single-column layout within the responsive grid layout by default.
+However, in size M the labels are positioned in the same row as the corresponding input field or value, and form
+groups are positioned below each other.</p>
+<p>The label-field ratio is 3:9:0 by default:</p>
+<p>2 grid columns of the responsive grid layout are used by the labels.
+10 grid columns of the responsive grid layout are used by the fields.
+0 columns of the responsive grid layout are used by empty columns.</p>
+<p>Size S (Smartphones and Dialogs)
+The form and simple form use a single-column layout within the responsive grid layout in size S by default.
+This means that the form groups are positioned below each other in a single column and the labels are positioned
+<code>above</code> the fields to avoid truncation of the labels.</p>
+<p>The label-field ratio is 12:12:0 by default:</p>
+<p>12 grid columns of the responsive grid layout are used by the labels.
+(A label handles the space of a whole row.)
+12 grid columns of the responsive grid layout are used by the fields.
+(A field handles the space of a whole row.)
+0 grid columns of the responsive grid layout are used by empty columns.
+(There is no empty space on the right of the field.)</p>
 <h2 id="attributes-and-properties">
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
@@ -3955,7 +4015,7 @@ input field and labels according to the design specification of SAP Fiori.</p>
   <a class="anchor" href="#default">#</a>
 </h3>
 <p>Type: <code>HTMLElement</code></p>
-<p>defines the form field to be displayed in the container element. Example <code>html &lt;furo-ui5-form-field-container&gt; &lt;ui5-label label slot=&quot;label&quot; for=&quot;Custom&quot; show-colon&gt;Currency / Units (custom)&lt;/ui5-label&gt; &lt;furo-horizontal-flex id=&quot;Custom&quot; content space&gt; &lt;furo-ui5-text-input flex ƒ-bind-data=&quot;--entity(*.data.furo_data_money_input.currency_code)&quot;&gt;&lt;/furo-ui5-text-input&gt; &lt;furo-ui5-number-input flex ƒ-bind-data=&quot;--entity(*.data.furo_data_money_input.units)&quot;&gt;&lt;/furo-ui5-number-input&gt; &lt;/furo-horizontal-flex&gt; &lt;/furo-ui5-form-field-container&gt; </code> The form and simple form in size L use a two-column layout within the responsive grid layout by default. That means that the form groups are placed next to each other to have all the information on one screen and to avoid scrolling. In these columns, the labels are positioned in the same row as the corresponding input field or value. So the form groups adopt the Z layout (reading direction in rows, not in columns). The label-field ratio is 4:8:0 by default: 4 grid columns of the responsive grid layout are used by the labels. 8 grid columns of the responsive grid layout are used by fields. 0 grid columns of the responsive grid layout are used by empty columns. Size M of the form and simple form also has a single-column layout within the responsive grid layout by default. However, in size M the labels are positioned in the same row as the corresponding input field or value, and form groups are positioned below each other. The label-field ratio is 3:9:0 by default: 2 grid columns of the responsive grid layout are used by the labels. 10 grid columns of the responsive grid layout are used by the fields. 0 columns of the responsive grid layout are used by empty columns. Size S (Smartphones and Dialogs) The form and simple form use a single-column layout within the responsive grid layout in size S by default. This means that the form groups are positioned below each other in a single column and the labels are positioned <code>above</code> the fields to avoid truncation of the labels. The label-field ratio is 12:12:0 by default: 12 grid columns of the responsive grid layout are used by the labels. (A label handles the space of a whole row.) 12 grid columns of the responsive grid layout are used by the fields. (A field handles the space of a whole row.) 0 grid columns of the responsive grid layout are used by empty columns. (There is no empty space on the right of the field.)
+<p>defines the form field to be displayed in the container element.
 <br><br></p>
 <h2 id="styling">
   Styling
@@ -3994,9 +4054,9 @@ input field and labels according to the design specification of SAP Fiori.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/9e3a36ee186e2174cc53657d2b87247bebd158f7" title='Last modified by veith | November 23, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73d2f92ecb0d19a2e8bb23f2cd2cb1f0c4d9b069" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 23, 2021</span>
+      <span>November 24, 2021</span>
     </a>
   </div>
 
@@ -4045,13 +4105,13 @@ input field and labels according to the design specification of SAP Fiori.</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/util.js"></script>
 
 </html>
 

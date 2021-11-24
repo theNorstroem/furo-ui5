@@ -12,12 +12,12 @@
 <meta property="og:description" content="a grid splitter" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-flexible-grid/" />
-<meta property="article:modified_time" content="2021-11-23T21:06:45+01:00" />
+<meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
 <title>furo-ui5-flexible-grid | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.4eeecbb82cd1363ff71fd0db3091101768839b9a8878aa01fcf44d5c9f0177ff.js" integrity="sha256-Tu7LuCzRNj/3H9DbMJEQF2iDm5qIeKoB/PRNXJ8Bd/8="></script>
+<script defer src="/en.search.min.75dd1cfb455bc07e06c912a73d6279c6483901addc3f002731895c44251488d1.js" integrity="sha256-dd0c&#43;0VbwH4GyRKnPWJ5xkg5Aa3cPwAnMYlcRCUUiNE="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -31,6 +31,7 @@ https://github.com/alex-shpak/hugo-book
 <body dir=>
 <furo-ui5-context-menu-display style="z-index: 8"></furo-ui5-context-menu-display>
 <fixed-tooltip-display></fixed-tooltip-display>
+<furo-ui5-dialog-display></furo-ui5-dialog-display>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
   <div ></div>
@@ -361,6 +362,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-date-time-picker-labeled/" class="">furo-ui5-date-time-picker-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-dialog/" class="">furo-ui5-dialog</a>
   
 
         </li>
@@ -3816,18 +3830,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3924,7 +3926,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-flexible-grid
   <a class="anchor" href="#furo-ui5-flexible-grid">#</a>
 </h1>
-<p><strong>@furo/components</strong> <small>v1.0.0-rc.6</small>
+<p><strong>@furo/components</strong> <small>v1.0.0-rc.7</small>
 <br><code>import '@furo/components/src/furo-ui5-flexible-grid.js';</code><small>
 <br>exports <code>&lt;furo-ui5-flexible-grid&gt;</code> custom-element-definition
 <br>superclass <em>LitElement</em>
@@ -3932,6 +3934,101 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p><strong>Summary:</strong> a grid splitter</p>
 </blockquote>
+<h4 id="sample-split-z-grids-in-2-sections">
+  Sample split z-grids in 2 sections
+  <a class="anchor" href="#sample-split-z-grids-in-2-sections">#</a>
+</h4>
+<p>Switch the demo to fullscreen and resize your screen to see the effect.</p>
+<furo-demo-snippet>
+<template><style>
+    furo-ui5-flexible-grid div {
+      border: 1px solid black;
+    }
+    /* needed because the contents get positioned vertically on small screens*/
+    .left[size='size-s'] {
+      height: 22rem;
+    }
+    .left[size='size-m'] {
+      height: 16rem;
+    }</style>
+<furo-vertical-scroller>
+ <furo-ui5-flexible-grid>
+<furo-ui5-z-grid class="left" hspan="3" full-on-size-medium="" full-on-size-small="">
+  <div vspan="1" hspan="2" style="background: lightblue;">2x1</div>
+  <div vspan="1" hspan="2" style="background: lightblue;">2x1</div>
+  <div vspan="1" hspan="4" style="background: rebeccapurple;">4x1</div>
+</furo-ui5-z-grid>
+<furo-ui5-z-grid hstart="4" fill="">
+  <div vspan="2" hspan="1" style="background: whitesmoke;">1x2</div>
+  <div vspan="1" hspan="1" style="background: pink;">1x1</div>
+  <div vspan="2" hspan="2" style="background: papayawhip;">2x2</div>
+  <div vspan="1" hspan="2" style="background: lightblue;">2x1</div>
+  <div hspan="full" style="background: papayawhip;">
+    full width, no height given
+  </div>
+</furo-ui5-z-grid>
+</furo-ui5-flexible-grid>
+</furo-vertical-scroller>
+</template>
+</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">style</span>&gt;
+  <span style="color:#998;font-style:italic">/* needed because the contents get positioned vertically on small screens*/</span>
+  .<span style="color:#458;font-weight:bold">left</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000080">size</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;size-s&#39;</span><span style="color:#000;font-weight:bold">]</span> {
+    <span style="color:#000;font-weight:bold">height</span>: <span style="color:#099">22</span><span style="color:#458;font-weight:bold">rem</span>;
+  }
+  .<span style="color:#458;font-weight:bold">left</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000080">size</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;size-m&#39;</span><span style="color:#000;font-weight:bold">]</span> {
+    <span style="color:#000;font-weight:bold">height</span>: <span style="color:#099">16</span><span style="color:#458;font-weight:bold">rem</span>;
+  }
+&lt;/<span style="color:#000080">style</span>&gt;
+<p>&lt;<span style="color:#000080">furo-ui5-flexible-grid</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-z-grid</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;left&quot;</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;3&quot;</span> <span style="color:#008080">full-on-size-medium</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&quot;</span> <span style="color:#008080">full-on-size-small</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&quot;</span>&gt;
+&lt;<span style="color:#000080">div</span> <span style="color:#008080">vspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;1&quot;</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;2&quot;</span> <span style="color:#008080">style</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;background: lightblue;&quot;</span>&gt;2x1&lt;/<span style="color:#000080">div</span>&gt;
+&lt;<span style="color:#000080">div</span> <span style="color:#008080">vspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;1&quot;</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;2&quot;</span> <span style="color:#008080">style</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;background: lightblue;&quot;</span>&gt;2x1&lt;/<span style="color:#000080">div</span>&gt;
+&lt;<span style="color:#000080">div</span> <span style="color:#008080">vspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;1&quot;</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;4&quot;</span> <span style="color:#008080">style</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;background: rebeccapurple;&quot;</span>&gt;4x1&lt;/<span style="color:#000080">div</span>&gt;
+&lt;/<span style="color:#000080">furo-ui5-z-grid</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-z-grid</span> <span style="color:#008080">hstart</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;4&quot;</span> <span style="color:#008080">fill</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&quot;</span>&gt;
+&lt;<span style="color:#000080">div</span> <span style="color:#008080">vspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;2&quot;</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;1&quot;</span> <span style="color:#008080">style</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;background: whitesmoke;&quot;</span>&gt;1x2&lt;/<span style="color:#000080">div</span>&gt;
+&lt;<span style="color:#000080">div</span> <span style="color:#008080">vspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;1&quot;</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;1&quot;</span> <span style="color:#008080">style</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;background: pink;&quot;</span>&gt;1x1&lt;/<span style="color:#000080">div</span>&gt;
+&lt;<span style="color:#000080">div</span> <span style="color:#008080">vspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;2&quot;</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;2&quot;</span> <span style="color:#008080">style</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;background: papayawhip;&quot;</span>&gt;2x2&lt;/<span style="color:#000080">div</span>&gt;
+&lt;<span style="color:#000080">div</span> <span style="color:#008080">vspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;1&quot;</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;2&quot;</span> <span style="color:#008080">style</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;background: lightblue;&quot;</span>&gt;2x1&lt;/<span style="color:#000080">div</span>&gt;
+&lt;<span style="color:#000080">div</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;full&quot;</span> <span style="color:#008080">style</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;background: papayawhip;&quot;</span>&gt;
+full width, no height given
+&lt;/<span style="color:#000080">div</span>&gt;
+&lt;/<span style="color:#000080">furo-ui5-z-grid</span>&gt;
+&lt;/<span style="color:#000080">furo-ui5-flexible-grid</span>&gt;
+</code></pre></td></tr></table></p>
+</div>
+</div>
 <h2 id="description">
   Description
   <a class="anchor" href="#description">#</a>
@@ -4044,9 +4141,9 @@ There is no line name available</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/9e3a36ee186e2174cc53657d2b87247bebd158f7" title='Last modified by veith | November 23, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73d2f92ecb0d19a2e8bb23f2cd2cb1f0c4d9b069" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 23, 2021</span>
+      <span>November 24, 2021</span>
     </a>
   </div>
 
@@ -4104,13 +4201,13 @@ There is no line name available</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/util.js"></script>
 
 </html>
 

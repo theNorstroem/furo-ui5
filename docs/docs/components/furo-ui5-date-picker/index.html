@@ -12,12 +12,12 @@
 <meta property="og:description" content="bindable datepicker field" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-date-picker/" />
-<meta property="article:modified_time" content="2021-11-23T21:06:45+01:00" />
+<meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
 <title>furo-ui5-date-picker | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.4eeecbb82cd1363ff71fd0db3091101768839b9a8878aa01fcf44d5c9f0177ff.js" integrity="sha256-Tu7LuCzRNj/3H9DbMJEQF2iDm5qIeKoB/PRNXJ8Bd/8="></script>
+<script defer src="/en.search.min.75dd1cfb455bc07e06c912a73d6279c6483901addc3f002731895c44251488d1.js" integrity="sha256-dd0c&#43;0VbwH4GyRKnPWJ5xkg5Aa3cPwAnMYlcRCUUiNE="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -31,6 +31,7 @@ https://github.com/alex-shpak/hugo-book
 <body dir=>
 <furo-ui5-context-menu-display style="z-index: 8"></furo-ui5-context-menu-display>
 <fixed-tooltip-display></fixed-tooltip-display>
+<furo-ui5-dialog-display></furo-ui5-dialog-display>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
   <div ></div>
@@ -361,6 +362,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-date-time-picker-labeled/" class="">furo-ui5-date-time-picker-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-dialog/" class="">furo-ui5-dialog</a>
   
 
         </li>
@@ -3816,18 +3830,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3895,7 +3897,6 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#methods">Methods</a></li>
     <li><a href="#attributes-and-properties">Attributes and Properties</a>
       <ul>
-        <li><a href="#metadata"><strong>metadata</strong></a></li>
         <li><a href="#formatpattern"><strong>formatPattern</strong></a></li>
       </ul>
     </li>
@@ -3925,7 +3926,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-date-picker
   <a class="anchor" href="#furo-ui5-date-picker">#</a>
 </h1>
-<p><strong>@furo/components</strong> <small>v1.0.0-rc.6</small>
+<p><strong>@furo/components</strong> <small>v1.0.0-rc.7</small>
 <br><code>import '@furo/components/src/furo-ui5-date-picker.js';</code><small>
 <br>exports <em>FuroUi5DatePicker</em> js
 <br>extends <em>src/furo-ui5-date-picker.js</em>
@@ -4028,12 +4029,6 @@ Bind a entity field. You can use the entity even when no data was received.</p>
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
 </h2>
-<h3 id="metadata">
-  <strong>metadata</strong>
-  <a class="anchor" href="#metadata">#</a>
-</h3>
-</small>
-<p><br><br></p>
 <h3 id="formatpattern">
   <strong>formatPattern</strong>
   <a class="anchor" href="#formatpattern">#</a>
@@ -4086,9 +4081,9 @@ Use this after manual or scripted update of the attributes.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/9e3a36ee186e2174cc53657d2b87247bebd158f7" title='Last modified by veith | November 23, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73d2f92ecb0d19a2e8bb23f2cd2cb1f0c4d9b069" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 23, 2021</span>
+      <span>November 24, 2021</span>
     </a>
   </div>
 
@@ -4121,7 +4116,6 @@ Use this after manual or scripted update of the attributes.</p>
     <li><a href="#methods">Methods</a></li>
     <li><a href="#attributes-and-properties">Attributes and Properties</a>
       <ul>
-        <li><a href="#metadata"><strong>metadata</strong></a></li>
         <li><a href="#formatpattern"><strong>formatPattern</strong></a></li>
       </ul>
     </li>
@@ -4147,13 +4141,13 @@ Use this after manual or scripted update of the attributes.</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.6/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/util.js"></script>
 
 </html>
 
