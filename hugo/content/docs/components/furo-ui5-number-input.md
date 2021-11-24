@@ -89,11 +89,6 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
-### **metadata**
-</small>
-
-
-<br><br>
 
 ### **_previousValueState**
 default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>

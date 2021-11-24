@@ -586,6 +586,9 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
     }
   }
 
+  /**
+   * @private
+   */
   static get metadata() {
     const md = super.metadata;
     md.tag = 'furo-ui5-text-input';

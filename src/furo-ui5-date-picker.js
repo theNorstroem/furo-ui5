@@ -329,6 +329,9 @@ export class FuroUi5DatePicker extends FieldNodeAdapter(DatePicker.default) {
     }
   }
 
+  /**
+   * @private
+   */
   static get metadata() {
     const md = super.metadata;
     md.tag = 'furo-ui5-date-picker';

@@ -321,6 +321,9 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
     }
   }
 
+  /**
+   * @private
+   */
   static get metadata() {
     const md = super.metadata;
     md.tag = 'furo-ui5-checkbox-input';

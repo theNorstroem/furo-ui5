@@ -43,11 +43,6 @@ The furo-ui5-multi-input component represents the repeated strings. e.g. ["aaa",
 
 
 
-### **metadata**
-</small>
-
-
-<br><br>
 
 ### **tmpValue**
 default: **[]**</small>

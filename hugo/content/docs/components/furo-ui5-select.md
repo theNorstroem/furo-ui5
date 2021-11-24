@@ -52,11 +52,6 @@ the available options by using the ui5-option component. Use the function bindOp
 
 
 
-### **metadata**
-</small>
-
-
-<br><br>
 
 ### **activeFieldBinding**
 default: **false**</small>

@@ -593,6 +593,9 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
     this.dispatchEvent(customSelectEvent);
   }
 
+  /**
+   * @private
+   */
   static get metadata() {
     const md = super.metadata;
     md.tag = 'furo-ui5-select';

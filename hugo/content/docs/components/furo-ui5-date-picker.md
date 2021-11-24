@@ -70,11 +70,6 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
-### **metadata**
-</small>
-
-
-<br><br>
 
 ### **formatPattern**
 default: **&#39;&#39;**</small>

@@ -66,11 +66,6 @@ The constraint **required** will mark the element as required.
 
 
 
-### **metadata**
-</small>
-
-
-<br><br>
 
 
 

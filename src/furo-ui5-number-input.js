@@ -554,6 +554,9 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
     }
   }
 
+  /**
+   * @private
+   */
   static get metadata() {
     const md = super.metadata;
     md.tag = 'furo-ui5-number-input';

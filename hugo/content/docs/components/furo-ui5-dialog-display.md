@@ -1,6 +1,6 @@
 ---
 title: furo-ui5-dialog-display
-description: Display position for a dialog
+description: Display element for furo-ui5-dialog
 weight: 50
 ---
 
@@ -10,7 +10,7 @@ weight: 50
 <br>exports `<furo-ui5-dialog-display>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** Display position for a dialog
+> **Summary:** Display element for furo-ui5-dialog
 
 {{% api "_furo-ui5-dialog-display-head.md" %}}
 

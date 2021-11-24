@@ -271,6 +271,9 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
     this.innerHTML = '';
   }
 
+  /**
+   * @private
+   */
   static get metadata() {
     const md = super.metadata;
     md.tag = 'furo-ui5-multi-input';

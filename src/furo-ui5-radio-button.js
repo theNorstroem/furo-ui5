@@ -297,6 +297,9 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
     }
   }
 
+  /**
+   * @private
+   */
   static get metadata() {
     const md = super.metadata;
     md.tag = 'furo-ui5-radio-button';

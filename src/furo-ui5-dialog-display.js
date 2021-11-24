@@ -5,9 +5,8 @@ import { LitElement } from 'lit';
  *
  * The first furo-ui5-dialog-display will catch the furo-ui5-dialog register request from a underlying furo-ui5-dialog.
  *
- * @summary Display position for a dialog
- * @element
- * @appliesMixin FBP
+ * @summary Display element for furo-ui5-dialog
+ * @element furo-ui5-dialog-display
  */
 class FuroUi5DialogDisplay extends LitElement {
   connectedCallback() {

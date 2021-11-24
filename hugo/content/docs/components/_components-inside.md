@@ -20,7 +20,8 @@ bookHidden: true
 - [furo-ui5-date-picker](furo-ui5-date-picker.md) bindable datepicker field
 - [furo-ui5-date-time-picker-labeled](furo-ui5-date-time-picker-labeled.md) labeled input field
 - [furo-ui5-date-time-picker](furo-ui5-date-time-picker.md) furo data datetime picker field
-- [furo-ui5-dialog-display](furo-ui5-dialog-display.md) Display position for a dialog
+- [furo-ui5-dialog-display](furo-ui5-dialog-display.md) Display element for furo-ui5-dialog
+- [furo-ui5-dialog](furo-ui5-dialog.md) Dialog element
 - [furo-ui5-flexible-grid](furo-ui5-flexible-grid.md) a grid splitter
 - [furo-ui5-form-field-container](furo-ui5-form-field-container.md) form field container
 - [furo-ui5-header-panel](furo-ui5-header-panel.md) A bindable header panel

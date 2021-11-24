@@ -52,11 +52,6 @@ options by using the furo-ui5-segmented-button component.
 
 
 
-### **metadata**
-</small>
-
-
-<br><br>
 
 
 ### **activeFieldBinding**
