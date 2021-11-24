@@ -26,7 +26,16 @@ import '@ui5/webcomponents/dist/MessageStrip.js';
 export class FuroUi5MessageStripDisplay extends FBP(LitElement) {
   constructor() {
     super();
+    /**
+     * @private
+     * @type {string}
+     */
     this.headerText = '';
+    /**
+     *
+     * @type {*[]}
+     * @private
+     */
     this._messageStrips = []; // holds a list (reference to dom node) of displayed strips
   }
 
@@ -74,6 +83,7 @@ export class FuroUi5MessageStripDisplay extends FBP(LitElement) {
   /**
    * show notification list item.
    * @param text
+   * @private
    */
   show(source) {
     const messagestrip = document.createElement('ui5-message-strip');

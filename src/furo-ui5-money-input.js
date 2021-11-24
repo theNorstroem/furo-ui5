@@ -12,14 +12,16 @@ import { Events } from './lib/Events.js';
 /**
  * `furo-ui5-money-input`
  * Binds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields
- *  <sample-furo-ui5-money-input></sample-furo-ui5-money-input>
+ *
  *
  *  you can set currencies dropdown with options in meta or set options attribute as json in element or set currencies as string in element. the three
  *  ways have priority : currencies > options as attribute > options in meta. When no currencies is setted. Default currency will be `CHF`
  *
+ * ```html
  *  <furo-ui5-money-input autofocus ƒ-bind-data="--entity(*.furo_data_money_input)" options='{"list": [ "CHF","EUR","USD" ]}'></furo-ui5-money-input>
  *  <furo-ui5-money-input autofocus ƒ-bind-data="--entity(*.furo_data_money_input)" options='{"list": [ {"id":"CHF","label":"Schweiz"},{"id":"EUR","label":"Europa", "selected": true}'></furo-ui5-money-input>
  *  <furo-ui5-money-input autofocus ƒ-bind-data="--entity(*.furo_data_money_input)" currencies="CHF,EUR,USD"></furo-ui5-money-input>
+ *```
  *
  * ## supported meta and constraints
  * - **readonly: true** , set the element to readonly

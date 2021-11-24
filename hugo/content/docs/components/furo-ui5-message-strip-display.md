@@ -41,17 +41,7 @@ weight: 50
 
 
 
-### **headerText**
-default: **&#39;&#39;**</small>
 
-
-<br><br>
-
-### **_messageStrips**
-default: **[]**</small>
-
-
-<br><br>
 
 ## Methods
 {{% api "_furo-ui5-message-strip-display-methods.md" %}}
@@ -68,17 +58,6 @@ Removes all strips
 
 <br><br>
 
-### **show**
-<small>**show**(*source* `` *text* `` ) ⟹ `void`</small>
-
-<small>`` `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-show</span>
-
-show notification list item.
-
-- <small>source </small>
-- <small>text </small>
-<br><br>
 
 
 

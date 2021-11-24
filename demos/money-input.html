@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import './initEnv.js';
+    import '../src/furo-catalog.js';
+    import '@furo/layout/src/furo-catalog.js';
+    import '@furo/data/src/furo-catalog.js';
+
+
+    render(
+      html`
+
+            <furo-form-layouter four>
+              <furo-ui5-money-input
+                ƒ-bind-data="--doExp(*.furo_data_money_input)"
+                currencies="CHF,EUR,USD"></furo-ui5-money-input>              <furo-ui5-money-input
+                ƒ-bind-data="--doExp(*.furo_data_money_input)"
+                currencies="CHF,EUR,USD"></furo-ui5-money-input>
+            </furo-form-layouter>
+            <furo-data-object
+              type="experiment.Experiment"
+              @-object-ready="--doExp"
+            ></furo-data-object>
+
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
