@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-bool
-**@furo/typerenderer** <small>v1.0.0-rc.6</small>
+**@furo/typerenderer** <small>v1.0.0-rc.7</small>
 <br>`import '@furo/typerenderer/src/celledit-bool.js';`<small>
 <br>exports *CelleditBool* js
 <br>exports `<celledit-bool>` custom-element-definition

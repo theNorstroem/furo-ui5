@@ -21,7 +21,7 @@ import '@ui5/webcomponents/dist/Panel.js';
  *  This component is a container which has a header and a content area and is used for grouping and displaying information.
  *  It can be collapsed to save space on the screen.
  *
- *  ```
+ *  ```html
  *   <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task"></furo-ui5-header-panel>
  *  ```
  *

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-header-panel
-**@furo/components** <small>v1.0.0-rc.6</small>
+**@furo/components** <small>v1.0.0-rc.7</small>
 <br>`import '@furo/components/src/furo-ui5-header-panel.js';`<small>
 <br>exports *FuroUi5HeaderPanel* js
 <br>exports `<furo-ui5-header-panel>` custom-element-definition
@@ -27,7 +27,7 @@ weight: 50
  This component is a container which has a header and a content area and is used for grouping and displaying information.
  It can be collapsed to save space on the screen.
 
- ```
+ ```html
   <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task"></furo-ui5-header-panel>
  ```
 

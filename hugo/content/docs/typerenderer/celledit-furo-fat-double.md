@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-fat-double
-**@furo/typerenderer** <small>v1.0.0-rc.6</small>
+**@furo/typerenderer** <small>v1.0.0-rc.7</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-fat-double.js';`<small>
 <br>exports `<celledit-furo-fat-double>` custom-element-definition
 <br>extends */src/typerenderer/celledit-int32.js*

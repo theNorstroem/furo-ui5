@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-fat-bool
-**@furo/typerenderer** <small>v1.0.0-rc.6</small>
+**@furo/typerenderer** <small>v1.0.0-rc.7</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-fat-bool.js';`<small>
 <br>exports `<celledit-furo-fat-bool>` custom-element-definition
 <br>extends */src/typerenderer/celledit-bool.js*

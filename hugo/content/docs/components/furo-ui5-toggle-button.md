@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-toggle-button
-**@furo/components** <small>v1.0.0-rc.6</small>
+**@furo/components** <small>v1.0.0-rc.7</small>
 <br>`import '@furo/components/src/furo-ui5-toggle-button.js';`<small>
 <br>exports *FuroUi5ToggleButton* js
 <br>exports `<furo-ui5-toggle-button>` custom-element-definition

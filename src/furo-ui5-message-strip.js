@@ -10,15 +10,15 @@ import 'markdown-it/dist/markdown-it.js';
  * Each message can have a Close button, so that it can be removed from the UI, if needed.
  *
  * It should be used together witch furo-ui5-message-strip-display. You can place those two components into different places.
- * Best place the furo-ui5-message-strip-display on the main site. then you only need one furo-ui5-message-strip-display. It can work with n furo-ui5-message-strip.
+ * A good place for placing the furo-ui5-message-strip-display is on the app-shell.
  * https://experience.sap.com/fiori-design-web/message-strip/
  *
- *  ```
+ *  ```html
+ *  <!-- the display is placed where you want the message to appear -->
  *  <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
  *  <furo-ui5-message-strip ƒ-show-information="--wire"></furo-ui5-message-strip>
  *  ```
  *
- * @fires {{Object}  this} open-furo-ui5-message-strip-requested -  Fired when open message strip is requested
  * @fires {{Object}  payload} message-strip-closed -  Fired when the MessageStrip is closed
  *
  * @summary furo ui5 message strip
@@ -30,8 +30,16 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
     super();
     this.noCloseButton = false;
     this.noIcon = false;
+    /**
+     * @private
+     * @type {string}
+     */
     this.displayMessage = '';
 
+    /**
+     *
+     * @private
+     */
     this._md = window.markdownit({
       html: false,
       linkify: true,
@@ -93,6 +101,7 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
 
   /**
    * the event `message-strip-closed` will be sent with payload when the MessageStrip is closed
+   * @private
    */
   _close() {
     const customEvent = new Event('message-strip-closed', {
@@ -236,18 +245,6 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
 
       this._requestDisplay();
     }
-  }
-
-  /**
-   * Deprecated function! Use showGrpcLocalizedMessage
-   * parse grpc status object. the message in grpc status will be used as the content massage
-   * @deprecated
-   * @param rpcStatus
-   */
-  parseGrpcStatus(rpcStatus) {
-    // eslint-disable-next-line no-console
-    console.warn('Deprecated function. Use showGrpcLocalizedMessage instead.');
-    this.showGrpcLocalizedMessage(rpcStatus);
   }
 
   // set display none

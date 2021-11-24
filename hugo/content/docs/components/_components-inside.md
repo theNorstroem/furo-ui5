@@ -23,7 +23,7 @@ bookHidden: true
 - [furo-ui5-dialog-display](furo-ui5-dialog-display.md) Display element for furo-ui5-dialog
 - [furo-ui5-dialog](furo-ui5-dialog.md) Dialog element
 - [furo-ui5-flexible-grid](furo-ui5-flexible-grid.md) a grid splitter
-- [furo-ui5-form-field-container](furo-ui5-form-field-container.md) form field container
+- [furo-ui5-form-field-container](furo-ui5-form-field-container.md) responsive labels for your input elements
 - [furo-ui5-header-panel](furo-ui5-header-panel.md) A bindable header panel
 - [furo-ui5-message-strip-display](furo-ui5-message-strip-display.md) furo ui5 message strip
 - [furo-ui5-message-strip](furo-ui5-message-strip.md) furo ui5 message strip

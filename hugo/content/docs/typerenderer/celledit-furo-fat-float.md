@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-fat-float
-**@furo/typerenderer** <small>v1.0.0-rc.6</small>
+**@furo/typerenderer** <small>v1.0.0-rc.7</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-fat-float.js';`<small>
 <br>exports `<celledit-furo-fat-float>` custom-element-definition
 <br>extends */src/typerenderer/celledit-int32.js*

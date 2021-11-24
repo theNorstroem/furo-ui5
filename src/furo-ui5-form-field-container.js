@@ -7,8 +7,6 @@ import { FBP } from '@furo/fbp/src/fbp.js';
  * The furo-ui5-form-field-container gives the user a layout to manage
  * input field and labels according to the design specification of SAP Fiori.
  *
- * @slot {HTMLElement} label - defines the label to be displayed.
- * @slot {HTMLElement} - defines the form field to be displayed in the container element.
  *
  * Example
  *
@@ -64,9 +62,11 @@ import { FBP } from '@furo/fbp/src/fbp.js';
  * @cssprop {N/A} [--furo-ui5-form-field-container-grid-column-gap=1em] - grid column gap
  * @cssprop {N/A} [--furo-ui5-form-field-container-label-justify-gap=end] - label alignment (start, end)
  *
- * @summary form field container
- * @element
- * @demo demo-furo-ui5-form-field-container Sample
+ * @slot {HTMLElement} label - defines the label to be displayed.
+ * @slot {HTMLElement} - defines the form field to be displayed in the container element.
+ *
+ * @summary responsive labels for your input elements
+ * @element furo-ui5-form-field-container
  * @appliesMixin FBP
  */
 export class FuroUi5FormFieldContainer extends FBP(LitElement) {

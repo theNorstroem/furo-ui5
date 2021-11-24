@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-message-strip
-**@furo/components** <small>v1.0.0-rc.6</small>
+**@furo/components** <small>v1.0.0-rc.7</small>
 <br>`import '@furo/components/src/furo-ui5-message-strip.js';`<small>
 <br>exports *FuroUi5MessageStrip* js
 <br>exports `<furo-ui5-message-strip>` custom-element-definition
@@ -25,10 +25,11 @@ each with corresponding semantic color and icon: Information, Positive, Warning 
 Each message can have a Close button, so that it can be removed from the UI, if needed.
 
 It should be used together witch furo-ui5-message-strip-display. You can place those two components into different places.
-Best place the furo-ui5-message-strip-display on the main site. then you only need one furo-ui5-message-strip-display. It can work with n furo-ui5-message-strip.
+A good place for placing the furo-ui5-message-strip-display is on the app-shell.
 https://experience.sap.com/fiori-design-web/message-strip/
 
- ```
+ ```html
+ <!-- the display is placed where you want the message to appear -->
  <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
  <furo-ui5-message-strip ƒ-show-information="--wire"></furo-ui5-message-strip>
  ```
@@ -71,11 +72,6 @@ default: **&#39;&#39;**</small>
 
 <br><br>
 
-### **_md**
-</small>
-
-
-<br><br>
 
 ### **size**
 
@@ -95,12 +91,6 @@ the text message of the message strip
 ## Events
 {{% api "_furo-ui5-message-strip-events.md" %}}
 
-### **open-furo-ui5-message-strip-requested**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-open-furo-ui5-message-strip-requested</span>
-→ <small>`{Object}  this`</small>
-
- Fired when open message strip is requested
-<br><br>
 ### **message-strip-closed**
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-message-strip-closed</span>
 → <small>`{Object}  payload`</small>
@@ -113,15 +103,6 @@ the text message of the message strip
 
 
 
-### **_close**
-<small>**_close**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--close</span>
-
-the event `message-strip-closed` will be sent with payload when the MessageStrip is closed
-
-<br><br>
 
 ### **showInformation**
 <small>**showInformation**(*msg* `` ) ⟹ `void`</small>

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-dialog-display
-**@furo/components** <small>v1.0.0-rc.6</small>
+**@furo/components** <small>v1.0.0-rc.7</small>
 <br>`import '@furo/components/src/furo-ui5-dialog-display.js';`<small>
 <br>exports `<furo-ui5-dialog-display>` custom-element-definition
 <br>superclass *LitElement*</small>
@@ -16,9 +16,9 @@ weight: 50
 
 ## Description
 
-`furo-ui5-dialog-display` will catch furo-ui5-dialog elements, to display it in the dom of the parent element.
+`furo-ui5-dialog-display` will catch furo-ui5-dialog elements, to display it in the dom of his parent element.
 
-The first furo-ui5-dialog-display will catch the furo-ui5-dialog register request from a underlying furo-ui5-dialog.
+The first furo-ui5-dialog-display will catch the `furo-ui5-dialog-register` request from a underlying furo-ui5-dialog.
 
 {{% api "_furo-ui5-dialog-display-description.md" %}}
 
