@@ -16,12 +16,11 @@ weight: 50
 
 ## Description
 
-`furo-ui5-pagination-bar`
-this pagination element loops the hts array and find out the pagination
+The furo-ui5-pagination-bar element loops the hateoas array and finds out the pagination
 information like prev, next, first and last
 
 ```
-  <furo-ui5-pagination-bar ƒ-inject="--hts"></furo-ui5-pagination-bar>
+  <furo-ui5-pagination-bar ƒ-inject="--hateoas"></furo-ui5-pagination-bar>
 ```
 
 {{% api "_furo-ui5-pagination-bar-head.md" %}}
@@ -119,6 +118,7 @@ information like prev, next, first and last
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-inject</span>
 
 init pagination attributes
+Supported type: furo.Link
 
 - <small>hts </small>
 <br><br>

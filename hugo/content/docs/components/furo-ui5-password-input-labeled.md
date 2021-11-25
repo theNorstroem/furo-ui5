@@ -16,9 +16,12 @@ weight: 50
 
 ## Description
 
-`furo-ui5-password-input-labeled`
 The furo-ui5-password-input-labeled is a composition to easily use a complete input field with label according
 to the design specification of SAP Fiori Design System.
+
+```html
+<furo-ui5-password-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-password-input>
+```
 
 {{% api "_furo-ui5-password-input-labeled-head.md" %}}
 
@@ -95,6 +98,7 @@ Focuses the underlying ui5 input element
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
 Orchestrates the data field connection to the inside
+Supported types: string, google.protobuf.StringValue, furo.fat.String
 
 - <small>fieldNode </small>
 <br><br>

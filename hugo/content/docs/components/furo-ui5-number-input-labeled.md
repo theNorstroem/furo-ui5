@@ -16,9 +16,12 @@ weight: 50
 
 ## Description
 
-`furo-ui5-number-input-labeled`
 The furo-ui5-number-input-labeled is a composition to easily use a complete input field with label according
 to the design specification of SAP Fiori Design System.
+
+```html
+<furo-ui5-number-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-number-input>
+```
 
 {{% api "_furo-ui5-number-input-labeled-head.md" %}}
 
@@ -103,6 +106,10 @@ Focuses the underlying ui5 input element
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
 Orchestrates the data field connection to the inside
+Supported types:
+double, float, int32, uint32, sint32, fixed32, sfixed32, int64, uint64, sint64, fixed64, sfixed64
+google.protobuf.DoubleValue, google.protobuf.FloatValue, google.protobuf.Int32Value, etc.
+furo.fat.Doube, furo.fat.Float, furo.fat.Int32, etc.
 
 - <small>fieldNode </small>
 <br><br>

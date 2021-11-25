@@ -15,15 +15,14 @@ weight: 50
 
 ## Description
 
-The 'furo-ui5-number-input' component allows the user to enter and edit numbers with data binding.
-
+The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.
 It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
 
 You can bind any `number` type, any `furo.fat.xxx` number type or the `google.wrapper.xxx` number types.
 
 ```html
  <furo-ui5-number-input
-    ƒ-bind-data="--daoCountry(*.data.population)"
+    ƒ-bind-data="--dao(FIELDNODE)"
  ></furo-ui5-number-input>
 ```
 
@@ -87,6 +86,7 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+
 ### **_previousValueState**
 default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
 
@@ -129,6 +129,22 @@ Fires the field value when it changes.
 {{% api "_furo-ui5-number-input-methods.md" %}}
 
 
+
+### **bindData**
+<small>**bindData**(*fieldNode* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+
+Overrides bindData() of FieldNodeAdapter
+Binds a FieldNode to the component
+Supported types:
+double, float, int32, uint32, sint32, fixed32, sfixed32, int64, uint64, sint64, fixed64, sfixed64
+google.protobuf.DoubleValue, google.protobuf.FloatValue, google.protobuf.Int32Value, etc.
+furo.fat.Doube, furo.fat.Float, furo.fat.Int32, etc.
+
+- <small>fieldNode </small>
+<br><br>
 
 ### **readAttributes**
 <small>**readAttributes**() ⟹ `void`</small>

@@ -12,16 +12,16 @@ import { Events } from './lib/Events.js';
  *
  * ```html
  *  <furo-ui5-radio-button
- *     ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
+ *     ƒ-bind-data="--dao(FIELDNODE)"
  *  ></furo-ui5-radio-button>
  * ```
  * ```html
  *  <furo-ui5-radio-group>
  *    <furo-ui5-radio-button name="group"
- *       ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
+ *       ƒ-bind-data="--dao(FIELDNODE)"
  *    ></furo-ui5-radio-button>
  *    <furo-ui5-radio-button name="group"
- *       ƒ-bind-data="--daoCountry(*.data.classified_as_high_risk_area)"
+ *       ƒ-bind-data="--dao(FIELDNODE)"
  *    ></furo-ui5-radio-button>
  *  </furo-ui5-radio-group>
  * ```
@@ -52,7 +52,7 @@ import { Events } from './lib/Events.js';
  *
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
- * @fires {} select -  Fired when the input operation has finished by pressing Enter or on focusout.
+ * @fires {} change -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).
  * @fires {Boolean} value-changed - Fired when value changed
  *
@@ -109,6 +109,16 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();
     this.readAttributes();
+  }
+
+  /**
+   * Overrides bindData() of FieldNodeAdapter
+   * Binds a FieldNode to the component
+   * Supported types: bool, google.protobuf.BoolValue, furo.fat.Bool
+   * @param fieldNode
+   */
+  bindData(fieldNode) {
+    super.bindData(fieldNode);
   }
 
   /**
