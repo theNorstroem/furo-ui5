@@ -62,6 +62,24 @@
     
     <item>
       <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-sign-pad/_furo-sign-pad-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-sign-pad/_furo-sign-pad-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-sign-pad/_furo-sign-pad-scripts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-sign-pad/_furo-sign-pad-scripts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-bool-icon/_furo-ui5-bool-icon-head/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -502,7 +520,7 @@ close dialog  open dialog   1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-dialog hea
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-money-input/_furo-ui5-money-input-head/</guid>
-      <description></description>
+      <description>Example #          1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-money-input ƒ-bind-data=&amp;#34;--doExp(*.furo_data_money_input)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-money-input&amp;gt; &amp;lt;furo-ui5-money-input value-state=&amp;#34;Success&amp;#34; text=&amp;#34;Override&amp;#34; ƒ-bind-data=&amp;#34;--doExp(*.furo_data_money_input)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-money-input&amp;gt; &amp;lt;/furo-form-layouter&amp;gt;   </description>
     </item>
     
     <item>
@@ -520,7 +538,7 @@ close dialog  open dialog   1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-dialog hea
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-multi-input-labeled/_furo-ui5-multi-input-labeled-head/</guid>
-      <description></description>
+      <description>Example #              1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  &amp;lt;furo-ui5-multi-input-labeled full ƒ-bind-data=&amp;#34;--data(*.repstring)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-multi-input-labeled&amp;gt; &amp;lt;furo-ui5-multi-input-labeled required=&amp;#34;&amp;#34; ƒ-bind-data=&amp;#34;--data(*.repstring)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-multi-input-labeled&amp;gt; &amp;lt;furo-ui5-multi-input-labeled disabled=&amp;#34;&amp;#34; ƒ-bind-data=&amp;#34;--data(*.repstring)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-multi-input-labeled&amp;gt; &amp;lt;furo-ui5-multi-input-labeled label=&amp;#34;Label&amp;#34; ƒ-bind-data=&amp;#34;--data(*.repstring)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-multi-input-labeled&amp;gt; &amp;lt;furo-ui5-multi-input-labeled show-value-help-icon ƒ-bind-data=&amp;#34;--data(*.repstring)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-multi-input-labeled&amp;gt;   </description>
     </item>
     
     <item>
@@ -538,7 +556,7 @@ close dialog  open dialog   1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-dialog hea
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-multi-input/_furo-ui5-multi-input-head/</guid>
-      <description></description>
+      <description>Example #           1 2 3 4 5 6 7 8  &amp;lt;furo-ui5-multi-input ƒ-bind-data=&amp;#34;--data(*.repeated_sring)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-multi-input&amp;gt; &amp;lt;furo-ui5-multi-input value-state=&amp;#34;Success&amp;#34; placeholder=&amp;#34;Placeholder&amp;#34; ƒ-bind-data=&amp;#34;--data(*.repeated_sring)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-multi-input&amp;gt;   </description>
     </item>
     
     <item>
@@ -556,7 +574,7 @@ close dialog  open dialog   1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-dialog hea
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-notification-group-display/_furo-ui5-notification-group-display-head/</guid>
-      <description></description>
+      <description>Example #       show notifications clear messages         1 2 3 4 5  &amp;lt;furo-ui5-notification-group-display ƒ-clear-all=&amp;#34;--clearRequested&amp;#34;&amp;gt;&amp;lt;/furo-ui5-notification-group-display&amp;gt; &amp;lt;furo-ui5-notification ƒ-inject-notification-collection=&amp;#34;--notificationsJson&amp;#34; &amp;gt;&amp;lt;/furo-ui5-notification&amp;gt;   </description>
     </item>
     
     <item>
@@ -574,7 +592,9 @@ close dialog  open dialog   1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-dialog hea
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-notification-list-display/_furo-ui5-notification-list-display-head/</guid>
-      <description></description>
+      <description>Example #       show google rpc status messages clear messages          The Status type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by gRPC. Each Status message contains three pieces of data: error code, error message, and error details.
+github.com/googleapis/&amp;hellip;
+ 1 2 3 4 5 6 7 8 9  &amp;lt;furo-ui5-notification-list-display header-text=&amp;#34;Notifications &amp;amp;amp; Errors&amp;#34; ƒ-clear-all=&amp;#34;--clearRequested&amp;#34; group-title-message=&amp;#34;Localized Messages&amp;#34; group-title-help=&amp;#34;Helpful information&amp;#34; group-title-bad-request=&amp;#34;Field Violations&amp;#34; @-notification-counter-update=&amp;#34;--ncUpdated&amp;#34;&amp;gt;&amp;lt;/furo-ui5-notification-list-display&amp;gt; &amp;lt;furo-ui5-notification ƒ-parse-grpc-status=&amp;#34;--grpcStatus&amp;#34;&amp;gt;&amp;lt;/furo-ui5-notification&amp;gt;   </description>
     </item>
     
     <item>
@@ -592,7 +612,9 @@ close dialog  open dialog   1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-dialog hea
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-notification/_furo-ui5-notification-head/</guid>
-      <description></description>
+      <description>Example with defaults #       show google rpc status messages clear messages          The Status type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by gRPC. Each Status message contains three pieces of data: error code, error message, and error details.
+github.com/googleapis/&amp;hellip;
+ 1 2 3 4 5 6 7 8  &amp;lt;body&amp;gt; &amp;lt;furo-ui5-notification-list-display ƒ-clear-all=&amp;#34;--clearRequested&amp;#34;&amp;gt;&amp;lt;/furo-ui5-notification-list-display&amp;gt; &amp;lt;main&amp;gt; &amp;lt;furo-ui5-notification ƒ-parse-grpc-status=&amp;#34;--grpcStatus&amp;#34;&amp;gt;&amp;lt;/furo-ui5-notification&amp;gt; &amp;lt;/main&amp;gt; &amp;lt;/body&amp;gt;   </description>
     </item>
     
     <item>

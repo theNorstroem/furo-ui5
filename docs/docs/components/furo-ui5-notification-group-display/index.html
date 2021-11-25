@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.75dd1cfb455bc07e06c912a73d6279c6483901addc3f002731895c44251488d1.js" integrity="sha256-dd0c&#43;0VbwH4GyRKnPWJ5xkg5Aa3cPwAnMYlcRCUUiNE="></script>
+<script defer src="/en.search.min.f0767b163f790d316ac4f953245393d9e52b5871dfd06c5bc681b8aa6958aa37.js" integrity="sha256-8HZ7Fj95DTFqxPlTJFOT2eUrWHHf0GxbxoG4qmlYqjc="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -158,6 +158,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-sign-pad/" class="">furo-sign-pad</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -790,7 +803,33 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input/" class="">furo-ui5-text-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input-labeled/" class="">furo-ui5-text-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-textarea-input/" class="">furo-ui5-textarea-input</a>
   
 
         </li>
@@ -3822,14 +3861,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3931,6 +3962,50 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p><strong>Summary:</strong> ui5 notification group display</p>
 </blockquote>
+<h4 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-vertical-flex>
+<div>
+<furo-ui5-button @-click="--showNotificationClicked" design="Emphasized">show notifications</furo-ui5-button>
+<furo-ui5-button @-click="--clearRequested">clear messages</furo-ui5-button> 
+</div>
+<div flex scroll>
+<furo-ui5-notification-group-display 
+  ƒ-clear-all="--clearRequested"></furo-ui5-notification-group-display>
+<furo-ui5-notification 
+  ƒ-inject-notification-collection="--notificationsJson"
+></furo-ui5-notification>
+</div>
+</furo-vertical-flex>
+<furo-fetch-json
+  ƒ-fetch="--showNotificationClicked"
+  src="/notification/notifications.json"
+  @-data="--notificationsJson"
+></furo-fetch-json>
+</template>
+</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-notification-group-display</span> 
+  <span style="color:#008080">ƒ-clear-all</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearRequested&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification-group-display</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-notification</span> 
+  <span style="color:#008080">ƒ-inject-notification-collection</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--notificationsJson&#34;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-notification</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="description">
   Description
   <a class="anchor" href="#description">#</a>

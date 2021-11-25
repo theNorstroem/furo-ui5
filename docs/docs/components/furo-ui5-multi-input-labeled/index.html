@@ -12,12 +12,12 @@
 <meta property="og:description" content="labeled textarea field" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-multi-input-labeled/" />
-<meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
+<meta property="article:modified_time" content="2021-11-25T10:57:16+01:00" />
 <title>furo-ui5-multi-input-labeled | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.75dd1cfb455bc07e06c912a73d6279c6483901addc3f002731895c44251488d1.js" integrity="sha256-dd0c&#43;0VbwH4GyRKnPWJ5xkg5Aa3cPwAnMYlcRCUUiNE="></script>
+<script defer src="/en.search.min.f0767b163f790d316ac4f953245393d9e52b5871dfd06c5bc681b8aa6958aa37.js" integrity="sha256-8HZ7Fj95DTFqxPlTJFOT2eUrWHHf0GxbxoG4qmlYqjc="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -158,6 +158,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-sign-pad/" class="">furo-sign-pad</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -790,7 +803,33 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input/" class="">furo-ui5-text-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input-labeled/" class="">furo-ui5-text-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-textarea-input/" class="">furo-ui5-textarea-input</a>
   
 
         </li>
@@ -3822,14 +3861,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3936,6 +3967,88 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p><strong>Summary:</strong> labeled textarea field</p>
 </blockquote>
+<h4 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-form-layouter four>
+<furo-ui5-multi-input-labeled
+    full
+    ƒ-bind-data="--data(*.repstring)"
+ ></furo-ui5-multi-input-labeled>
+<furo-ui5-multi-input-labeled
+    required=""
+    ƒ-bind-data="--data(*.repstring)"
+ ></furo-ui5-multi-input-labeled>
+<furo-ui5-multi-input-labeled
+    disabled=""
+    ƒ-bind-data="--data(*.repstring)"
+ ></furo-ui5-multi-input-labeled>
+<furo-ui5-multi-input-labeled
+    label="Label"
+    ƒ-bind-data="--data(*.repstring)"
+ ></furo-ui5-multi-input-labeled>
+<furo-ui5-multi-input-labeled
+    show-value-help-icon
+    ƒ-bind-data="--data(*.repstring)"
+ ></furo-ui5-multi-input-labeled>
+</furo-form-layouter>
+<furo-data-object
+  type="experiment.Experiment"
+  @-object-ready="--data"
+></furo-data-object>
+</template>
+</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-multi-input-labeled</span>
+  <span style="color:#008080">full</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--data(*.repstring)&#34;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-multi-input-labeled</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-multi-input-labeled</span>
+  <span style="color:#008080">required</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;&#34;</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--data(*.repstring)&#34;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-multi-input-labeled</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-multi-input-labeled</span>
+  <span style="color:#008080">disabled</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;&#34;</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--data(*.repstring)&#34;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-multi-input-labeled</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-multi-input-labeled</span>
+  <span style="color:#008080">label</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Label&#34;</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--data(*.repstring)&#34;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-multi-input-labeled</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-multi-input-labeled</span>
+  <span style="color:#008080">show-value-help-icon</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--data(*.repstring)&#34;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-multi-input-labeled</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="description">
   Description
   <a class="anchor" href="#description">#</a>
@@ -3985,7 +4098,8 @@ to the design specification of SAP Fiori Design System.</p>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">show-value-help-icon</span>
 </small></p>
-<p>Determines whether a value help icon will be should in the end of the input. Pressing the icon will fire <code>value-help-trigger</code> event.
+<p>Determines whether a value help icon will be should in the end of the input.</p>
+<p>Pressing the icon will fire <code>value-help-trigger</code> event.
 <br><br></p>
 <h2 id="events">
   Events
@@ -4025,9 +4139,9 @@ to the design specification of SAP Fiori Design System.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73d2f92ecb0d19a2e8bb23f2cd2cb1f0c4d9b069" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/0691b23826ede9d7a15f09662464d8dd34fe5287" title='Last modified by veith | November 25, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 24, 2021</span>
+      <span>November 25, 2021</span>
     </a>
   </div>
 

@@ -7,17 +7,17 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="a banner">
+<meta name="description" content="agent component for notifications">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-notification" />
-<meta property="og:description" content="a banner" />
+<meta property="og:description" content="agent component for notifications" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-notification/" />
-<meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
+<meta property="article:modified_time" content="2021-11-25T11:34:11+01:00" />
 <title>furo-ui5-notification | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.75dd1cfb455bc07e06c912a73d6279c6483901addc3f002731895c44251488d1.js" integrity="sha256-dd0c&#43;0VbwH4GyRKnPWJ5xkg5Aa3cPwAnMYlcRCUUiNE="></script>
+<script defer src="/en.search.min.f0767b163f790d316ac4f953245393d9e52b5871dfd06c5bc681b8aa6958aa37.js" integrity="sha256-8HZ7Fj95DTFqxPlTJFOT2eUrWHHf0GxbxoG4qmlYqjc="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -158,6 +158,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-sign-pad/" class="">furo-sign-pad</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -790,7 +803,33 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input/" class="">furo-ui5-text-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input-labeled/" class="">furo-ui5-text-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-textarea-input/" class="">furo-ui5-textarea-input</a>
   
 
         </li>
@@ -3822,14 +3861,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3898,7 +3929,6 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#dismissbuttontext"><strong>dismissButtonText</strong></a></li>
         <li><a href="#text"><strong>text</strong></a></li>
         <li><a href="#payload"><strong>payload</strong></a></li>
-        <li><a href="#_type"><strong>_type</strong></a></li>
       </ul>
     </li>
     <li><a href="#events">Events</a>
@@ -3912,8 +3942,6 @@ https://github.com/alex-shpak/hugo-book
     </li>
     <li><a href="#methods">Methods</a>
       <ul>
-        <li><a href="#_requestlistdisplay"><strong>_requestListDisplay</strong></a></li>
-        <li><a href="#_requestgroupdisplay"><strong>_requestGroupDisplay</strong></a></li>
         <li><a href="#parsegrpcstatus"><strong>parseGrpcStatus</strong></a></li>
         <li><a href="#injectnotificationcollection"><strong>injectNotificationCollection</strong></a></li>
       </ul>
@@ -3939,8 +3967,61 @@ https://github.com/alex-shpak/hugo-book
 <br>exports <code>&lt;furo-ui5-notification&gt;</code> custom-element-definition
 <br>superclass <em>LitElement</em></small></p>
 <blockquote>
-<p><strong>Summary:</strong> a banner</p>
+<p><strong>Summary:</strong> agent component for notifications</p>
 </blockquote>
+<h4 id="example-with-defaults">
+  Example with defaults
+  <a class="anchor" href="#example-with-defaults">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-vertical-flex>
+<div>
+<furo-ui5-button @-click="--showStatusClicked" design="Emphasized">show google rpc status messages</furo-ui5-button>
+<furo-ui5-button @-click="--clearRequested">clear messages</furo-ui5-button> 
+</div>
+<div flex scroll>
+<furo-ui5-notification-list-display
+  ƒ-clear-all="--clearRequested"></furo-ui5-notification-list-display>
+  <furo-ui5-notification ƒ-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
+</div>
+</furo-vertical-flex>
+<furo-fetch-json
+  ƒ-fetch="--showStatusClicked"
+  src="/notification/grpc.json"
+  @-data="--grpcStatus"
+></furo-fetch-json>
+</template>
+</furo-demo-snippet>
+<blockquote>
+<p>The Status type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by 
+  <a href="https://github.com/grpc">gRPC</a>. Each <code>Status</code> message contains three pieces of data: error code, error message, and error details.</p>
+<a href="https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto">github.com/googleapis/&hellip;</a></p>
+</blockquote>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">body</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-notification-list-display</span>
+  <span style="color:#008080">ƒ-clear-all</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearRequested&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification-list-display</span>&gt;
+&lt;<span style="color:#000080">main</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-notification</span>
+    <span style="color:#008080">ƒ-parse-grpc-status</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--grpcStatus&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification</span>&gt;
+&lt;/<span style="color:#000080">main</span>&gt;
+&lt;/<span style="color:#000080">body</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="description">
   Description
   <a class="anchor" href="#description">#</a>
@@ -3973,14 +4054,6 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">payload</span>
 </small></p>
 <p>payload. can be a GRPC error or a notification message collection.
-<br><br></p>
-<h3 id="_type">
-  <strong>_type</strong>
-  <a class="anchor" href="#_type">#</a>
-</h3>
-<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">_type</span>
-</small></p>
-<p>type of the notification. <code>grpc</code> or <code>notification</code>
 <br><br></p>
 <h2 id="events">
   Events
@@ -4030,30 +4103,6 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
   Methods
   <a class="anchor" href="#methods">#</a>
 </h2>
-<h3 id="_requestlistdisplay">
-  <strong>_requestListDisplay</strong>
-  <a class="anchor" href="#_requestlistdisplay">#</a>
-</h3>
-<p><small><strong>_requestListDisplay</strong>(<em>p</em> <code>Object</code> ) ⟹ <code>void</code></small></p>
-<p><small><code>Object</code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;request-list-display</span></p>
-<p>request to display the notifications</p>
-<ul>
-<li><small>p payload</small>
-<br><br></li>
-</ul>
-<h3 id="_requestgroupdisplay">
-  <strong>_requestGroupDisplay</strong>
-  <a class="anchor" href="#_requestgroupdisplay">#</a>
-</h3>
-<p><small><strong>_requestGroupDisplay</strong>(<em>p</em> <code>Object</code> ) ⟹ <code>void</code></small></p>
-<p><small><code>Object</code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;request-group-display</span></p>
-<p>request to display the notifications in group</p>
-<ul>
-<li><small>p payload</small>
-<br><br></li>
-</ul>
 <h3 id="parsegrpcstatus">
   <strong>parseGrpcStatus</strong>
   <a class="anchor" href="#parsegrpcstatus">#</a>
@@ -4113,9 +4162,9 @@ the notification message should be an array of the following object signature:
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73d2f92ecb0d19a2e8bb23f2cd2cb1f0c4d9b069" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/cedf839279c8434a407c29b41f9bff726203db62" title='Last modified by veith | November 25, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 24, 2021</span>
+      <span>November 25, 2021</span>
     </a>
   </div>
 
@@ -4149,7 +4198,6 @@ the notification message should be an array of the following object signature:
         <li><a href="#dismissbuttontext"><strong>dismissButtonText</strong></a></li>
         <li><a href="#text"><strong>text</strong></a></li>
         <li><a href="#payload"><strong>payload</strong></a></li>
-        <li><a href="#_type"><strong>_type</strong></a></li>
       </ul>
     </li>
     <li><a href="#events">Events</a>
@@ -4163,8 +4211,6 @@ the notification message should be an array of the following object signature:
     </li>
     <li><a href="#methods">Methods</a>
       <ul>
-        <li><a href="#_requestlistdisplay"><strong>_requestListDisplay</strong></a></li>
-        <li><a href="#_requestgroupdisplay"><strong>_requestGroupDisplay</strong></a></li>
         <li><a href="#parsegrpcstatus"><strong>parseGrpcStatus</strong></a></li>
         <li><a href="#injectnotificationcollection"><strong>injectNotificationCollection</strong></a></li>
       </ul>

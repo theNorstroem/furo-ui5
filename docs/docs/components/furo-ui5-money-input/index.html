@@ -12,12 +12,12 @@
 <meta property="og:description" content="Binds a entityObject field google.type.Money to a number-input and currency dropdown fields" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-money-input/" />
-<meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
+<meta property="article:modified_time" content="2021-11-24T16:15:57+01:00" />
 <title>furo-ui5-money-input | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.75dd1cfb455bc07e06c912a73d6279c6483901addc3f002731895c44251488d1.js" integrity="sha256-dd0c&#43;0VbwH4GyRKnPWJ5xkg5Aa3cPwAnMYlcRCUUiNE="></script>
+<script defer src="/en.search.min.f0767b163f790d316ac4f953245393d9e52b5871dfd06c5bc681b8aa6958aa37.js" integrity="sha256-8HZ7Fj95DTFqxPlTJFOT2eUrWHHf0GxbxoG4qmlYqjc="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -158,6 +158,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-sign-pad/" class="">furo-sign-pad</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -790,7 +803,33 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input/" class="">furo-ui5-text-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input-labeled/" class="">furo-ui5-text-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-textarea-input/" class="">furo-ui5-textarea-input</a>
   
 
         </li>
@@ -3822,14 +3861,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3947,19 +3978,73 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p><strong>Summary:</strong> Binds a entityObject field google.type.Money to a number-input and currency dropdown fields</p>
 </blockquote>
+<h4 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-form-layouter four>
+<furo-ui5-money-input  
+ƒ-bind-data="--doExp(*.furo_data_money_input)" 
+currencies="CHF,EUR,USD"></furo-ui5-money-input>
+</furo-form-layouter>
+<furo-data-object
+  type="experiment.Experiment"
+  @-object-ready="--doExp"
+></furo-data-object>
+</template>
+</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
+<p>&lt;<span style="color:#000080">furo-ui5-money-input</span>
+<span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;doExp(<em>.furo_data_money_input)&quot;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-money-input</span>
+<span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Success&quot;</span>
+<span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Override&quot;</span>
+<span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;doExp(</em>.furo_data_money_input)&quot;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
+&lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
+</code></pre></td></tr></table></p>
+</div>
+</div>
 <h2 id="description">
   Description
   <a class="anchor" href="#description">#</a>
 </h2>
 <p><code>furo-ui5-money-input</code>
-Binds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields
-<sample-furo-ui5-money-input></sample-furo-ui5-money-input></p>
+Binds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields</p>
 <p>you can set currencies dropdown with options in meta or set options attribute as json in element or set currencies as string in element. the three
 ways have priority : currencies &gt; options as attribute &gt; options in meta. When no currencies is setted. Default currency will be <code>CHF</code></p>
-<p>&lt;furo-ui5-money-input autofocus ƒ-bind-data=&quot;&ndash;entity(<em>.furo_data_money_input)&quot; options='{&ldquo;list&rdquo;: [ &ldquo;CHF&rdquo;,&ldquo;EUR&rdquo;,&ldquo;USD&rdquo; ]}'&gt;</furo-ui5-money-input>
-&lt;furo-ui5-money-input autofocus ƒ-bind-data=&quot;&ndash;entity(</em>.furo_data_money_input)&quot; options='{&ldquo;list&rdquo;: [ {&ldquo;id&rdquo;:&ldquo;CHF&rdquo;,&ldquo;label&rdquo;:&ldquo;Schweiz&rdquo;},{&ldquo;id&rdquo;:&ldquo;EUR&rdquo;,&ldquo;label&rdquo;:&ldquo;Europa&rdquo;, &ldquo;selected&rdquo;: true}'&gt;</furo-ui5-money-input>
-&lt;furo-ui5-money-input autofocus ƒ-bind-data=&quot;&ndash;entity(*.furo_data_money_input)&quot; currencies=&ldquo;CHF,EUR,USD&rdquo;&gt;</furo-ui5-money-input></p>
-<h2 id="supported-meta-and-constraints">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-money-input</span> <span style="color:#008080">autofocus</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.furo_data_money_input)&#34;</span> <span style="color:#008080">options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;{&#34;list&#34;: [ &#34;CHF&#34;,&#34;EUR&#34;,&#34;USD&#34; ]}&#39;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
+ &lt;<span style="color:#000080">furo-ui5-money-input</span> <span style="color:#008080">autofocus</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.furo_data_money_input)&#34;</span> <span style="color:#008080">options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;{&#34;list&#34;: [ {&#34;id&#34;:&#34;CHF&#34;,&#34;label&#34;:&#34;Schweiz&#34;},{&#34;id&#34;:&#34;EUR&#34;,&#34;label&#34;:&#34;Europa&#34;, &#34;selected&#34;: true}&#39;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
+ &lt;<span style="color:#000080">furo-ui5-money-input</span> <span style="color:#008080">autofocus</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.furo_data_money_input)&#34;</span> <span style="color:#008080">currencies</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;CHF,EUR,USD&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="supported-meta-and-constraints">
   supported meta and constraints
   <a class="anchor" href="#supported-meta-and-constraints">#</a>
 </h2>
@@ -4140,7 +4225,7 @@ Use this after manual or scripted update of the attributes.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73d2f92ecb0d19a2e8bb23f2cd2cb1f0c4d9b069" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/bcb9a9b42fdd8b62b42b5a844b8f7bb4df3c51e0" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>November 24, 2021</span>
     </a>

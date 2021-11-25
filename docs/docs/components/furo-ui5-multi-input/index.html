@@ -7,17 +7,17 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="data ui5 data multi input">
+<meta name="description" content="repeated strings">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-multi-input" />
-<meta property="og:description" content="data ui5 data multi input" />
+<meta property="og:description" content="repeated strings" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-multi-input/" />
-<meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
+<meta property="article:modified_time" content="2021-11-25T10:57:16+01:00" />
 <title>furo-ui5-multi-input | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.75dd1cfb455bc07e06c912a73d6279c6483901addc3f002731895c44251488d1.js" integrity="sha256-dd0c&#43;0VbwH4GyRKnPWJ5xkg5Aa3cPwAnMYlcRCUUiNE="></script>
+<script defer src="/en.search.min.f0767b163f790d316ac4f953245393d9e52b5871dfd06c5bc681b8aa6958aa37.js" integrity="sha256-8HZ7Fj95DTFqxPlTJFOT2eUrWHHf0GxbxoG4qmlYqjc="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -158,6 +158,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-sign-pad/" class="">furo-sign-pad</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -790,7 +803,33 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input/" class="">furo-ui5-text-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input-labeled/" class="">furo-ui5-text-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-textarea-input/" class="">furo-ui5-textarea-input</a>
   
 
         </li>
@@ -3822,14 +3861,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3893,26 +3924,8 @@ https://github.com/alex-shpak/hugo-book
   <nav id="TableOfContents">
   <ul>
     <li><a href="#description">Description</a></li>
-    <li><a href="#attributes-and-properties">Attributes and Properties</a>
-      <ul>
-        <li><a href="#tmpvalue"><strong>tmpValue</strong></a></li>
-        <li><a href="#_previousvaluestate"><strong>_previousValueState</strong></a></li>
-        <li><a href="#_attributesfromfna"><strong>_attributesFromFNA</strong></a></li>
-        <li><a href="#_constraintsfromfna"><strong>_constraintsFromFNA</strong></a></li>
-        <li><a href="#_labelsfromfat"><strong>_labelsFromFAT</strong></a></li>
-        <li><a href="#_attributesfromfat"><strong>_attributesFromFAT</strong></a></li>
-        <li><a href="#_privilegedattributes"><strong>_privilegedAttributes</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#methods">Methods</a>
-      <ul>
-        <li><a href="#readattributes"><strong>readAttributes</strong></a></li>
-        <li><a href="#_updateitems"><strong>_updateItems</strong></a></li>
-        <li><a href="#_createui5token"><strong>_createUi5Token</strong></a></li>
-        <li><a href="#_triggervaluechangedevent"><strong>_triggerValueChangedEvent</strong></a></li>
-        <li><a href="#_removeallitems"><strong>_removeAllItems</strong></a></li>
-      </ul>
-    </li>
+    <li><a href="#attributes-and-properties">Attributes and Properties</a></li>
+    <li><a href="#methods">Methods</a></li>
   </ul>
 </nav>
 
@@ -3934,8 +3947,54 @@ https://github.com/alex-shpak/hugo-book
 <br>extends <em>src/furo-ui5-multi-input.js</em>
 <br> mixes <em>FieldNodeAdapter</em></small></p>
 <blockquote>
-<p><strong>Summary:</strong> data ui5 data multi input</p>
+<p><strong>Summary:</strong> repeated strings</p>
 </blockquote>
+<h4 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-form-layouter four>
+<furo-ui5-multi-input
+    ƒ-bind-data="--data(*.repstring)"
+ ></furo-ui5-multi-input>
+<furo-ui5-multi-input
+    value-state="Success"
+    placeholder="Placeholder"
+    ƒ-bind-data="--data(*.repstring)"
+ ></furo-ui5-multi-input>
+</furo-form-layouter>
+<furo-data-object
+  type="experiment.Experiment"
+  @-object-ready="--data"
+></furo-data-object>
+</template>
+</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-multi-input</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--data(*.repeated_sring)&#34;</span>
+&gt;&lt;/<span style="color:#000080">furo-ui5-multi-input</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-multi-input</span>
+    <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span>
+    <span style="color:#008080">placeholder</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Placeholder&#34;</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--data(*.repeated_sring)&#34;</span>
+ &gt;&lt;/<span style="color:#000080">furo-ui5-multi-input</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="description">
   Description
   <a class="anchor" href="#description">#</a>
@@ -3946,122 +4005,10 @@ https://github.com/alex-shpak/hugo-book
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
 </h2>
-<h3 id="tmpvalue">
-  <strong>tmpValue</strong>
-  <a class="anchor" href="#tmpvalue">#</a>
-</h3>
-<p>default: <strong>[]</strong></small></p>
-<p><br><br></p>
-<h3 id="_previousvaluestate">
-  <strong>_previousValueState</strong>
-  <a class="anchor" href="#_previousvaluestate">#</a>
-</h3>
-<p>default: <strong>{ state: 'None', message: '' }</strong></small></p>
-<p><br><br></p>
-<h3 id="_attributesfromfna">
-  <strong>_attributesFromFNA</strong>
-  <a class="anchor" href="#_attributesfromfna">#</a>
-</h3>
-<p>default: <strong>{
-readonly: undefined,
-placeholder: undefined,
-}</strong></small></p>
-<p><br><br></p>
-<h3 id="_constraintsfromfna">
-  <strong>_constraintsFromFNA</strong>
-  <a class="anchor" href="#_constraintsfromfna">#</a>
-</h3>
-<p>default: <strong>{
-required: undefined,
-max: undefined, // maps to maxlength
-}</strong></small></p>
-<p><br><br></p>
-<h3 id="_labelsfromfat">
-  <strong>_labelsFromFAT</strong>
-  <a class="anchor" href="#_labelsfromfat">#</a>
-</h3>
-<p>default: <strong>{
-readonly: undefined,
-disabled: undefined,
-required: undefined,
-}</strong></small></p>
-<p><br><br></p>
-<h3 id="_attributesfromfat">
-  <strong>_attributesFromFAT</strong>
-  <a class="anchor" href="#_attributesfromfat">#</a>
-</h3>
-<p>default: <strong>{
-placeholder: undefined,
-max: undefined, // maps to maxlength
-}</strong></small></p>
-<p><br><br></p>
-<h3 id="_privilegedattributes">
-  <strong>_privilegedAttributes</strong>
-  <a class="anchor" href="#_privilegedattributes">#</a>
-</h3>
-<p>default: <strong>{
-readonly: null,
-placeholder: null,
-required: null,
-disabled: null,
-}</strong></small></p>
-<p><br><br></p>
 <h2 id="methods">
   Methods
   <a class="anchor" href="#methods">#</a>
 </h2>
-<h3 id="readattributes">
-  <strong>readAttributes</strong>
-  <a class="anchor" href="#readattributes">#</a>
-</h3>
-<p><small><strong>readAttributes</strong>() ⟹ <code>void</code></small></p>
-<p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span></p>
-<p>Reads the attributes which are set on the component dom.
-those attributes can be set. <code>value-state</code>, <code>value-state-message</code>,  <code>placeholder</code>, <code>required</code>,<code>readonly</code>,<code>disabled</code>
-Use this after manual or scripted update of the attributes.</p>
-<p><br><br></p>
-<h3 id="_updateitems">
-  <strong>_updateItems</strong>
-  <a class="anchor" href="#_updateitems">#</a>
-</h3>
-<p><small><strong>_updateItems</strong>(<em>val</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;update-items</span></p>
-<ul>
-<li><small>val </small>
-<br><br></li>
-</ul>
-<h3 id="_createui5token">
-  <strong>_createUi5Token</strong>
-  <a class="anchor" href="#_createui5token">#</a>
-</h3>
-<p><small><strong>_createUi5Token</strong>(<em>text</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;create-ui-5token</span></p>
-<ul>
-<li><small>text </small>
-<br><br></li>
-</ul>
-<h3 id="_triggervaluechangedevent">
-  <strong>_triggerValueChangedEvent</strong>
-  <a class="anchor" href="#_triggervaluechangedevent">#</a>
-</h3>
-<p><small><strong>_triggerValueChangedEvent</strong>(<em>val</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;trigger-value-changed-event</span></p>
-<ul>
-<li><small>val </small>
-<br><br></li>
-</ul>
-<h3 id="_removeallitems">
-  <strong>_removeAllItems</strong>
-  <a class="anchor" href="#_removeallitems">#</a>
-</h3>
-<p><small><strong>_removeAllItems</strong>() ⟹ <code>void</code></small></p>
-<p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;remove-all-items</span></p>
-<p><br><br></p>
 </article>
  
       
@@ -4072,9 +4019,9 @@ Use this after manual or scripted update of the attributes.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73d2f92ecb0d19a2e8bb23f2cd2cb1f0c4d9b069" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/0691b23826ede9d7a15f09662464d8dd34fe5287" title='Last modified by veith | November 25, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 24, 2021</span>
+      <span>November 25, 2021</span>
     </a>
   </div>
 
@@ -4103,26 +4050,8 @@ Use this after manual or scripted update of the attributes.</p>
   <nav id="TableOfContents">
   <ul>
     <li><a href="#description">Description</a></li>
-    <li><a href="#attributes-and-properties">Attributes and Properties</a>
-      <ul>
-        <li><a href="#tmpvalue"><strong>tmpValue</strong></a></li>
-        <li><a href="#_previousvaluestate"><strong>_previousValueState</strong></a></li>
-        <li><a href="#_attributesfromfna"><strong>_attributesFromFNA</strong></a></li>
-        <li><a href="#_constraintsfromfna"><strong>_constraintsFromFNA</strong></a></li>
-        <li><a href="#_labelsfromfat"><strong>_labelsFromFAT</strong></a></li>
-        <li><a href="#_attributesfromfat"><strong>_attributesFromFAT</strong></a></li>
-        <li><a href="#_privilegedattributes"><strong>_privilegedAttributes</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#methods">Methods</a>
-      <ul>
-        <li><a href="#readattributes"><strong>readAttributes</strong></a></li>
-        <li><a href="#_updateitems"><strong>_updateItems</strong></a></li>
-        <li><a href="#_createui5token"><strong>_createUi5Token</strong></a></li>
-        <li><a href="#_triggervaluechangedevent"><strong>_triggerValueChangedEvent</strong></a></li>
-        <li><a href="#_removeallitems"><strong>_removeAllItems</strong></a></li>
-      </ul>
-    </li>
+    <li><a href="#attributes-and-properties">Attributes and Properties</a></li>
+    <li><a href="#methods">Methods</a></li>
   </ul>
 </nav>
 

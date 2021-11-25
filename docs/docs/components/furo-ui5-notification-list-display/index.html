@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.75dd1cfb455bc07e06c912a73d6279c6483901addc3f002731895c44251488d1.js" integrity="sha256-dd0c&#43;0VbwH4GyRKnPWJ5xkg5Aa3cPwAnMYlcRCUUiNE="></script>
+<script defer src="/en.search.min.f0767b163f790d316ac4f953245393d9e52b5871dfd06c5bc681b8aa6958aa37.js" integrity="sha256-8HZ7Fj95DTFqxPlTJFOT2eUrWHHf0GxbxoG4qmlYqjc="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -158,6 +158,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-sign-pad/" class="">furo-sign-pad</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -790,7 +803,33 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input/" class="">furo-ui5-text-input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-text-input-labeled/" class="">furo-ui5-text-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-textarea-input/" class="">furo-ui5-textarea-input</a>
   
 
         </li>
@@ -3822,14 +3861,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3944,6 +3975,64 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p><strong>Summary:</strong> ui5 notification list</p>
 </blockquote>
+<h4 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-vertical-flex>
+<div>
+<furo-ui5-button @-click="--showStatusClicked" design="Emphasized">show google rpc status messages</furo-ui5-button>
+<furo-ui5-button @-click="--clearRequested">clear messages</furo-ui5-button> 
+</div>
+<div flex scroll>
+<furo-ui5-notification-list-display 
+  header-text="Notifications &amp; Errors" 
+  ƒ-clear-all="--clearRequested" 
+  group-title-message="Localized Messages" 
+  group-title-help="Helpful information" group-title-bad-request="Field Violations" @-notification-counter-update="--notificationCounterUpdated"></furo-ui5-notification-list-display>
+  <furo-ui5-notification ƒ-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
+</div>
+</furo-vertical-flex>
+<furo-fetch-json
+  ƒ-fetch="--showStatusClicked"
+  src="/notification/grpc.json"
+  @-data="--grpcStatus"
+></furo-fetch-json>
+</template>
+</furo-demo-snippet>
+<blockquote>
+<p>The Status type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by 
+  <a href="https://github.com/grpc">gRPC</a>. Each <code>Status</code> message contains three pieces of data: error code, error message, and error details.</p>
+<a href="https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto">github.com/googleapis/&hellip;</a></p>
+</blockquote>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-notification-list-display</span> 
+  <span style="color:#008080">header-text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Notifications &amp;amp; Errors&#34;</span> 
+  <span style="color:#008080">ƒ-clear-all</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearRequested&#34;</span> 
+  <span style="color:#008080">group-title-message</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Localized Messages&#34;</span> 
+  <span style="color:#008080">group-title-help</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Helpful information&#34;</span> 
+  <span style="color:#008080">group-title-bad-request</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Field Violations&#34;</span> 
+  <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-notification-counter-update</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--ncUpdated&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification-list-display</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-notification</span> 
+  <span style="color:#008080">ƒ-parse-grpc-status</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--grpcStatus&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="description">
   Description
   <a class="anchor" href="#description">#</a>
