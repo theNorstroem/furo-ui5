@@ -7,25 +7,24 @@ import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode.js';
 import './subcomponents/furo-ui5-context-menu-item.js';
 import './subcomponents/furo-ui5-context-submenu.js';
 
+/**
+ * The furo-ui5-context-menu-display is the display element for furo-ui5-context-menu and submenus.
+ * Place this component as high as needed in your dom.
+ *
+ * You should not interact with this component directly. Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
+ *
+ * There is nothing more to do. The menu creates a transparent "backdrop" with absolute positions 0 0 0 0
+ *
+ * ```html
+ *  <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
+ * ```
+ *
+ * @summary context menu
+ * @element furo-ui5-context-menu-display
+ * @demo demo-furo-ui5-context-menu Basic usage
+ * @appliesMixin FBP
+ */
 export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
-  /**
-   * `furo-ui5-context-menu-display`
-   *  is the display element for furo-ui5-context-menu and submenus. Place this component as high as needed in your dom.
-   *
-   *  You should not interact with this component directly. Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
-   *
-   *  There is nothing more to do. The menu creates a transparent "backdrop" with absolute positions 0 0 0 0
-   *
-   * ```html
-   *  <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
-   * ```
-   *
-   *
-   * @summary context menu
-   * @element furo-ui5-context-menu-display
-   * @demo demo-furo-ui5-context-menu Basic usage
-   * @appliesMixin FBP
-   */
 
   constructor(props) {
     super(props);

@@ -6,13 +6,13 @@ import '@ui5/webcomponents-icons/dist/navigation-down-arrow.js';
 import '@ui5/webcomponents-icons/dist/navigation-right-arrow.js';
 
 /**
- * `furo-ui5-bool-icon`
  * Displays a icon/symbol for a boolean value
  *
- * This component uses utf-8 symbols for true and false at the moment.
+ * This component uses the SAP Ui5 icons.
+ * https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html
  *
  * ```html
- * <furo-ui5-bool-icon ƒ-bind-data="--FieldNode"></furo-ui5-bool-icon>
+ * <furo-ui5-bool-icon ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-bool-icon>
  * ```
  *
  * Only `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.
@@ -49,7 +49,8 @@ class FuroDataBoolIcon extends FBP(LitElement) {
   }
 
   /**
-   * Binds a field node to the component
+   * Binds a FieldNode
+   * Supported types: bool
    * @param {FieldNode} fieldNode
    */
   bindData(fieldNode) {

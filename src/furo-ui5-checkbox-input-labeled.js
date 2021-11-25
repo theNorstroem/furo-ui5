@@ -7,10 +7,12 @@ import './furo-ui5-form-field-container.js';
 import './furo-ui5-checkbox-input.js';
 
 /**
- * `furo-ui5-checkbox-input-labeled`
- *
  * The furo-ui5-checkbox-input-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
+ *
+ * ```html
+ * <furo-ui5-checkbox-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-checkbox-labeled>
+ * ```
  *
  * @summary labeled input field
  * @element
@@ -80,7 +82,8 @@ export class FuroUi5CheckboxInputLabeled extends FBP(LitElement) {
   }
 
   /**
-   * Orchestrates the data field connection to the inside
+   * Orchestrates the data field connection to the inner components.
+   * Supported types: bool, google.protobuf.BoolValue, furo.fat.Bool
    * @param {FieldNode} fieldNode
    */
   bindData(fieldNode) {

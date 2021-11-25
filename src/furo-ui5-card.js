@@ -9,8 +9,8 @@ import '@ui5/webcomponents/dist/CardHeader.js';
 import '@ui5/webcomponents/dist/Icon.js';
 
 /**
- * `furo-ui5-card`
- * is a bindable card that represents information in the form of a tile with separate header and content areas.
+ * The furo-ui5-card is a bindable card that represents information in the form of a tile with
+ * separate header and content areas.
  *
  * ```html
  *  <furo-ui5-card
@@ -22,6 +22,7 @@ import '@ui5/webcomponents/dist/Icon.js';
  *      <div slot="content">content goes here</div>
  *  </furo-ui5-card>
  *```
+ *
  * ## How To Use Semantic Colors
  * You can use semantic colors to visualize the status or state. Set the attribute design="" with the following values:
  * - Positive (--sapPositiveColor)
@@ -60,7 +61,8 @@ export class FuroUi5Card extends FBP(LitElement) {
   }
 
   /**
-   * Bind any **scalar** field to set the title of the panel.
+   * Binds any **scalar** field to set the title of the panel.
+   * Supported types: scalar types e.g. string
    * @param {FieldNode} fieldNode
    */
   bindHeading(fieldNode) {
@@ -76,8 +78,9 @@ export class FuroUi5Card extends FBP(LitElement) {
   }
 
   /**
-   * Bind any **scalar** field to set the title of the panel.
+   * Binds a FieldNode to set the icon of the panel.
    * Do not forget to import the icon you will use in your component.
+   * Supported types: string
    * @param {FieldNode} fieldNode
    */
   bindIcon(fieldNode) {
@@ -93,7 +96,8 @@ export class FuroUi5Card extends FBP(LitElement) {
   }
 
   /**
-   * Bind any **scalar** field to set the subtitle of the panel.
+   * Binds any **scalar** field to set the subtitle of the panel.
+   * Supported types: scalar types e.g. string
    * @param {FieldNode} fieldNode
    */
   bindSubheading(fieldNode) {
@@ -109,12 +113,11 @@ export class FuroUi5Card extends FBP(LitElement) {
   }
 
   /**
-   * bind a field with the signature of furo.navigation.Navigationnode
+   * Binds a FieldNode with the following signature:
    *
-   * Used fields are:
-   * - display_name
-   * - secondary_text
-   * - icon
+   * - display_name (string)
+   * - secondary_text (string)
+   * - icon (string)
    *
    * @param {FieldNode} fieldNode
    */

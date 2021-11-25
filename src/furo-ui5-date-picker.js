@@ -10,14 +10,13 @@ import { Events } from './lib/Events.js';
  *
  * It supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/ui5-webcomponents/playground/components/DatePicker/).
  *
- *
- * you can define the formatPattern (e.g. 'dd.MM.yyyy' ) to show the date according to format pattern.
+ * You can define the formatPattern (e.g. 'dd.MM.yyyy' ) to show the date according to format pattern.
  *
  * You can bind a `string`, `furo.type.Date` or `google.type.Date`.
  *
  * ```html
  *  <furo-ui5-date-picker
- *     ƒ-bind-data="--data(*.validity_to)">
+ *     ƒ-bind-data="--dao(FIELDNODE)">
  *  </furo-ui5-date-picker>
  * ```
  *
@@ -199,6 +198,16 @@ export class FuroUi5DatePicker extends FieldNodeAdapter(DatePicker.default) {
       this._valueStateElement = vse;
       this._previousValueState.message = vse.innerText;
     }
+  }
+
+  /**
+   * Overrides bindData() of FieldNodeAdapter
+   * Binds a FieldNode to the component
+   * Supported types: string, furo.type.Date, google.type.Date
+   * @param fieldNode
+   */
+  bindData(fieldNode) {
+    super.bindData(fieldNode);
   }
 
   /**

@@ -8,9 +8,12 @@ import './furo-ui5-date-picker.js';
 import './furo-ui5-form-field-container.js';
 
 /**
- * `furo-ui5-date-picker-labeled`
  * The furo-ui5-date-picker-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
+ *
+ * ```html
+ * <furo-ui5-date-picker-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-date-picker-labeled>
+ * ```
  *
  * @fires {String} value-changed - Fires the field value when it changes in ISO 8601 format.
  *
