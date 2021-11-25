@@ -134,6 +134,10 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
     );
   }
 
+  /**
+   *
+   * @private
+   */
   _disableAll() {
     this.first = false;
     this.prev = false;
@@ -158,6 +162,10 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
     }
   }
 
+  /**
+   *
+   * @private
+   */
   _FBPReady() {
     super._FBPReady();
     const btns = this.shadowRoot.querySelectorAll('ui5-button');
