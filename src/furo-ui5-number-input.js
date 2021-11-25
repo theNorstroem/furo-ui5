@@ -4,15 +4,14 @@ import '@ui5/webcomponents/dist/features/InputSuggestions.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Events } from './lib/Events.js';
 /**
- * The 'furo-ui5-number-input' component allows the user to enter and edit numbers with data binding.
- *
+ * The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.
  * It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
  *
  * You can bind any `number` type, any `furo.fat.xxx` number type or the `google.wrapper.xxx` number types.
  *
  * ```html
  *  <furo-ui5-number-input
- *     ƒ-bind-data="--daoCountry(*.data.population)"
+ *     ƒ-bind-data="--dao(FIELDNODE)"
  *  ></furo-ui5-number-input>
  * ```
  *
@@ -140,6 +139,19 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
   // eslint-disable-next-line class-methods-use-this
   get nativeInputAttributes() {
     return {};
+  }
+
+  /**
+   * Overrides bindData() of FieldNodeAdapter
+   * Binds a FieldNode to the component
+   * Supported types:
+   * double, float, int32, uint32, sint32, fixed32, sfixed32, int64, uint64, sint64, fixed64, sfixed64
+   * google.protobuf.DoubleValue, google.protobuf.FloatValue, google.protobuf.Int32Value, etc.
+   * furo.fat.Doube, furo.fat.Float, furo.fat.Int32, etc.
+   * @param fieldNode
+   */
+  bindData(fieldNode) {
+    super.bindData(fieldNode);
   }
 
   /**

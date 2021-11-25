@@ -16,12 +16,11 @@ import '@ui5/webcomponents-icons/dist/sys-prev-page.js';
 import { i18n } from '@furo/framework/src/i18n.js';
 
 /**
- * `furo-ui5-pagination-bar`
- * this pagination element loops the hts array and find out the pagination
+ * The furo-ui5-pagination-bar element loops the hateoas array and finds out the pagination
  * information like prev, next, first and last
  *
  * ```
- *   <furo-ui5-pagination-bar ƒ-inject="--hts"></furo-ui5-pagination-bar>
+ *   <furo-ui5-pagination-bar ƒ-inject="--hateoas"></furo-ui5-pagination-bar>
  * ```
  *
  * @cssprop {1rem} [--furo-ui5-pagination-bar-padding-right=1rem] - Right padding definition
@@ -94,6 +93,7 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
 
   /**
    * init pagination attributes
+   * Supported type: furo.Link
    * @param hts
    */
   inject(hts) {
