@@ -45,43 +45,6 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  *  }
  *  ```
  *
- * ## Example StringOptions Field
- *
- * ```json
- * {
- *   "data": {
- *        "@type": "furo.StringOptionProperty",
- *        "id": "bb",
- *        "display_name": "Display"
- *      },
- *      "display_name": "Display",
- *      "id": "opt",
- *      "code": "option",
- *      "meta": {
- *        "fields": {
- *          "data": {
- *            "meta": {
- *              "label": "Please select",
- *              "hint": "datehint is data",
- *              "repeated": false,
- *              "options": [
- *                {
- *                  "id": "aa",
- *                  "display_name": "The display a"
- *                },
- *                {
- *                  "id": "bb",
- *                  "display_name": "The display b"
- *                }
- *              ]
- *            }
- *          }
- *        }
- *      }
- *    }
- *
- * ```
- *
  * @summary ????? bind types of type any
  * @element
  * @demo demo-furo-ui5-property
@@ -146,6 +109,11 @@ export class FuroUi5Property extends FBP(LitElement) {
     }
   }
 
+  /**
+   *
+   * @param propertyField
+   * @private
+   */
   _createPropComponent(propertyField) {
     if (!this._property_created) {
       const type = propertyField.data['@type']._value.replace(/.*\//, '');
