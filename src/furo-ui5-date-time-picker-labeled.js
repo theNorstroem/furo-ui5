@@ -8,9 +8,12 @@ import './furo-ui5-date-time-picker.js';
 import './furo-ui5-form-field-container.js';
 
 /**
- * `furo-ui5-date-time-picker-labeled`
  * The furo-ui5-date-time-picker-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
+ *
+ * ```html
+ * <furo-ui5-date-time-picker-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-date-time-picker-labeled>
+ * ```
  *
  * @fires {String} value-changed - Fires the field value when it changes in ISO 8601 format.
  *
@@ -74,7 +77,8 @@ export class FuroUi5DateTimePickerLabeled extends FBP(LitElement) {
   }
 
   /**
-   * Orchestrates the data field connection to the inside
+   * Orchestrates the data field connection to the inner components.
+   * Supported types: string, google.protobuf.Timestamp, int32, int64
    * @param {FieldNode} fieldNode
    */
   bindData(fieldNode) {

@@ -12,7 +12,6 @@ import '@ui5/webcomponents/dist/Icon.js';
 import '@ui5/webcomponents/dist/Panel.js';
 
 /**
- * `furo-ui5-header-panel`
  *  A bindable **header** panel.
  *
  *  **Info**: This component is intended to use as a header panel, if you need panels in your view, consider to use
@@ -82,6 +81,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
 
   /**
    * Bind any **scalar** field to set the title of the panel.
+   * Supported types: scalar types
    * @param {FieldNode} fieldNode
    */
   bindHeaderText(fieldNode) {

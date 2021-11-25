@@ -1,7 +1,7 @@
 import * as Dialog from '@ui5/webcomponents/dist/Dialog.js';
 
 /**
- * `furo-ui5-dialog` is a extended ui5-dialog which can attach itself to a parent dom element.
+ * The furo-ui5-dialog is a extended ui5-dialog which can attach itself to a parent dom element.
  *
  * This is helpful, when you have used z-indexes in one of the parents, which put the original ui5-dialog behind the backdrop.
  *
@@ -19,7 +19,6 @@ import * as Dialog from '@ui5/webcomponents/dist/Dialog.js';
  *
  * <button @-click="--openDialogClicked">Open dialog</button>
  * ```
- *
  *
  * @summary Dialog element
  * @element furo-ui5-dialog

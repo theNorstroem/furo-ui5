@@ -6,9 +6,14 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Events } from './lib/Events.js';
 
 /**
- * `furo-ui5-multi-input`
+ * A furo-ui5-multi-input field allows the user to enter multiple values, which are displayed as ui5-token.
+ * https://sap.github.io/ui5-webcomponents/playground/components/MultiInput/
  *
- * The furo-ui5-multi-input component represents the repeated strings. e.g. ["aaa","bbb","ccc"]
+ * Supported type: repeated string
+ *
+ * ```html
+ * <furo-ui5-multi-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input>
+ * ```
  *
  * @summary repeated strings
  * @element furo-ui5-multi-input
@@ -134,6 +139,16 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
       this._valueStateElement = vse;
       this._previousValueState.message = vse.innerText;
     }
+  }
+
+  /**
+   * Overrides bindData() of FieldNodeAdapter
+   * Binds a FieldNode to the component
+   * Supported types: repeated string
+   * @param fieldNode
+   */
+  bindData(fieldNode) {
+    super.bindData(fieldNode);
   }
 
   /**

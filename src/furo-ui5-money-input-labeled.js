@@ -7,9 +7,12 @@ import './furo-ui5-form-field-container.js';
 import './furo-ui5-money-input.js';
 
 /**
- * `furo-ui5-money-input-labeled`
  * The furo-ui5-money-input-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
+ *
+ * ```html
+ * <furo-ui5-money-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-money-input-labeled>
+ * ```
  *
  * @fires {google.type.Money} value-changed - Fires the field value when it changes.
  *
@@ -74,6 +77,7 @@ export class FuroUi5MoneyInputLabeled extends FBP(LitElement) {
 
   /**
    * Orchestrates the data field connection to the inside
+   * Supported types: google.type.Money
    * @param {FieldNode} fieldNode
    */
   bindData(fieldNode) {

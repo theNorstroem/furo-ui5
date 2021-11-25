@@ -3,9 +3,8 @@ import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
 
 /**
- * `split-grid`
- * will split your screen contents horizontally (in cols) and put them vertically (left at top) when the available space is to small.
- *
+ * The furo-ui5-flexible-grid will split your screen contents horizontally (in cols) and put them vertically (left at top)
+ * when the available space is to small.
  *
  * ```html
  *  <!-- a simple layout manager with two columns  -->
