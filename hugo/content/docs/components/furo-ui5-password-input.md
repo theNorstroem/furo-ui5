@@ -16,14 +16,13 @@ weight: 50
 ## Description
 
 The 'furo-ui5-password-input' component allows the user to enter and edit password with data binding.
-
 It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
 
 You can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.
 
 ```html
  <furo-ui5-password-input
-    ƒ-bind-data="--daoCountry(*.data.name)"
+    ƒ-bind-data="--dao(FIELDNODE)"
  ></furo-ui5-password-input>
 ```
 
@@ -66,6 +65,7 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 <br><br>
+
 
 
 
@@ -202,6 +202,19 @@ Fired when the password is hidden, after calling the hide() method.
 {{% api "_furo-ui5-password-input-methods.md" %}}
 
 
+
+### **bindData**
+<small>**bindData**(*fieldNode* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+
+Overrides bindData() of FieldNodeAdapter
+Binds a FieldNode to the component
+Supported types: string, google.protobuf.StringValue, furo.fat.String
+
+- <small>fieldNode </small>
+<br><br>
 
 ### **readAttributes**
 <small>**readAttributes**() ⟹ `void`</small>
