@@ -10,17 +10,18 @@ import { FieldNode } from '@furo/data/src/lib/FieldNode';
 import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
 import { Events } from './lib/Events.js';
 /**
- * `furo-ui5-money-input`
- * Binds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields
+ * The furo-ui5-money-input is a input element composition for FieldNodes of type google.type.Money.
+ * It consists of
+ * - ui5-input of type Number
+ * - furo-ui5-text-input
  *
- *
- *  you can set currencies dropdown with options in meta or set options attribute as json in element or set currencies as string in element. the three
- *  ways have priority : currencies > options as attribute > options in meta. When no currencies is setted. Default currency will be `CHF`
+ *  You can set currencies dropdown with options in meta or set options attribute as json in element or set currencies as string in element. the three
+ *  ways have priority : currencies > options as attribute > options in meta.
  *
  * ```html
- *  <furo-ui5-money-input autofocus ƒ-bind-data="--entity(*.furo_data_money_input)" options='{"list": [ "CHF","EUR","USD" ]}'></furo-ui5-money-input>
- *  <furo-ui5-money-input autofocus ƒ-bind-data="--entity(*.furo_data_money_input)" options='{"list": [ {"id":"CHF","label":"Schweiz"},{"id":"EUR","label":"Europa", "selected": true}'></furo-ui5-money-input>
- *  <furo-ui5-money-input autofocus ƒ-bind-data="--entity(*.furo_data_money_input)" currencies="CHF,EUR,USD"></furo-ui5-money-input>
+ *  <furo-ui5-money-input ƒ-bind-data="--dao(google.type.Money)" options='{"list": [ "CHF","EUR","USD" ]}'></furo-ui5-money-input>
+ *  <furo-ui5-money-input ƒ-bind-data="--dao(google.type.Money)" options='{"list": [ {"id":"CHF","label":"Schweiz"},{"id":"EUR","label":"Europa", "selected": true}'></furo-ui5-money-input>
+ *  <furo-ui5-money-input ƒ-bind-data="--dao(google.type.Money)" currencies="CHF,EUR,USD"></furo-ui5-money-input>
  *```
  *
  * ## supported meta and constraints
@@ -71,6 +72,7 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
 
   /**
    * Binds a fieldNode. Make sure the type of your field is accepted by the implemented component.
+   * Supported types: google.type.Money
    * @param {FieldNode} fieldNode
    */
   bindData(fieldNode) {

@@ -21,7 +21,7 @@ import { Events } from './lib/Events.js';
  *
  * ```html
  *  <furo-ui5-date-time-picker
- *     ƒ-bind-data="--data(*.validity_to)">
+ *     ƒ-bind-data="--dao(FIELDNODE)">
  *  </furo-ui5-date-time-picker>
  * ```
  *
@@ -170,6 +170,16 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
       this._valueStateElement = vse;
       this._previousValueState.message = vse.innerText;
     }
+  }
+
+  /**
+   * Overrides bindData() of FieldNodeAdapter
+   * Binds a FieldNode to the component
+   * Supported types: string, google.protobuf.Timestamp, int32, int64
+   * @param fieldNode
+   */
+  bindData(fieldNode) {
+    super.bindData(fieldNode);
   }
 
   readAttributes() {
