@@ -150,11 +150,11 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
   onFnaFieldValueChanged(val) {
     if (this.isFat()) {
       this._tmpFAT = val;
-      this.selected = !!val.value;
+      this.checked = !!val.value;
       this._updateAttributesFromFat(this._tmpFAT.attributes);
       this._updateLabelsFromFat(this._tmpFAT.labels);
     } else {
-      this.selected = !!val;
+      this.checked = !!val;
     }
   }
 

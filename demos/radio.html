@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+    furo-demo-snippet{
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import './initEnv.js';
+    import '../src/furo-ui5-radio-button.js';
+
+
+    import '@furo/data/src/furo-catalog.js';
+    import '@furo/util/src/furo-fetch-json.js';
+    import '@furo/util/src/doc/furo-demo-snippet.js';
+    import '@furo/layout/src/furo-form-layouter.js';
+    import '@furo/util/src/furo-pretty-json.js';
+
+
+    render(
+      html`
+
+        <furo-demo-snippet>
+          <template>
+            <furo-form-layouter four>
+              <furo-ui5-radio-button
+                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+              ></furo-ui5-radio-button>
+              <furo-ui5-radio-button
+                readonly
+                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+              ></furo-ui5-radio-button>
+              <furo-ui5-radio-button
+                disabled
+                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+              ></furo-ui5-radio-button>
+              <furo-ui5-radio-button
+                value-state="Success"
+                placeholder="Placeholder"
+                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+              ></furo-ui5-radio-button>
+            </furo-form-layouter>
+            <furo-data-object
+              type="experiment.Experiment"
+              @-object-ready="--doExp"
+            ></furo-data-object>
+          </template>
+        </furo-demo-snippet>
+
+
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
