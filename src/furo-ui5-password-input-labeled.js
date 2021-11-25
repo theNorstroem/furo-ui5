@@ -9,9 +9,12 @@ import './furo-ui5-form-field-container.js';
 import './furo-ui5-password-input.js';
 
 /**
- * `furo-ui5-password-input-labeled`
  * The furo-ui5-password-input-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
+ *
+ * ```html
+ * <furo-ui5-password-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-password-input>
+ * ```
  *
  * @slot {HTMLElement} icon - defines the icon to be displayed in the input element.
  *
@@ -87,6 +90,7 @@ export class FuroUi5PasswordInputLabeled extends FBP(LitElement) {
 
   /**
    * Orchestrates the data field connection to the inside
+   * Supported types: string, google.protobuf.StringValue, furo.fat.String
    * @param {FieldNode} fieldNode
    */
   bindData(fieldNode) {

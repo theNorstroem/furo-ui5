@@ -7,9 +7,12 @@ import './furo-ui5-form-field-container.js';
 import './furo-ui5-number-input.js';
 
 /**
- * `furo-ui5-number-input-labeled`
  * The furo-ui5-number-input-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
+ *
+ * ```html
+ * <furo-ui5-number-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-number-input>
+ * ```
  *
  * @fires {Number} value-changed - Fires the field value when it changes.
  *
@@ -87,6 +90,10 @@ export class FuroUi5NumberInputLabeled extends FBP(LitElement) {
 
   /**
    * Orchestrates the data field connection to the inside
+   * Supported types:
+   * double, float, int32, uint32, sint32, fixed32, sfixed32, int64, uint64, sint64, fixed64, sfixed64
+   * google.protobuf.DoubleValue, google.protobuf.FloatValue, google.protobuf.Int32Value, etc.
+   * furo.fat.Doube, furo.fat.Float, furo.fat.Int32, etc.
    * @param {FieldNode} fieldNode
    */
   bindData(fieldNode) {
