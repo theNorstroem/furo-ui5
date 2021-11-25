@@ -36,6 +36,7 @@
     "@furo/layout": "^2.0.0-rc.5",
     "@furo/data": "^2.0.0-rc.3",
     "@furo/util": "^2.0.0-rc.5",
+    "@furo/route": "^2.0.0-rc.4",
     "@ui5/webcomponents": "^1.0.1",
     "@ui5/webcomponents-base": "^1.0.1",
     "@ui5/webcomponents-fiori": "^1.0.1",
@@ -48,7 +49,6 @@
     "signature_pad": "3.0.0-beta.4"
   },
   "devDependencies": {
-    "@furo/route": "^2.0.0-rc.3",
     "lit-html": "2.0.1",
     "@custom-elements-manifest/analyzer": "^0.5.7",
     "@open-wc/eslint-config": "^7.0.0",
