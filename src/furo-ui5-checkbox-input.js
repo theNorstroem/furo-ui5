@@ -5,15 +5,15 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Events } from './lib/Events.js';
 
 /**
- * The 'furo-ui5-checkbox-input' component allows the user to switch true and false for Bool with data binding.
+ * The 'furo-ui5-checkbox-input' component allows the user to switch true and false for type Bool with data binding.
  *
  * It supports all features from the [SAP ui5 checkbox element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).
-
- * You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
+ *
+ * Bindable FieldNodes: `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
  *
  *```html
  *  <furo-ui5-checkbox-input
- *     ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
+ *     ƒ-bind-data="--dao(FIELDNODE)"
  *  ></furo-ui5-checkbox-input>
  * ```
  *
@@ -115,6 +115,16 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();
     this.readAttributes();
+  }
+
+  /**
+   * Overrides bindData() of FieldNodeAdapter
+   * Binds a FieldNode to the component
+   * Supported types: bool, google.protobuf.BoolValue, furo.fat.Bool
+   * @param fieldNode
+   */
+  bindData(fieldNode) {
+    super.bindData(fieldNode);
   }
 
   /**

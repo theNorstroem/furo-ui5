@@ -1,11 +1,14 @@
 import * as Button from '@ui5/webcomponents/dist/Button.js';
 
 /**
- * `furo-ui5-button`
  * The furo-ui5-button component represents a simple push button. It enables users to trigger actions by clicking or
  * tapping the furo-ui5-button, or by pressing certain keyboard keys, such as Enter.
  * Usage
  * For the furo-ui5-button UI, you can define text, icon, or both. You can also specify whether the text or the icon is displayed first.
+ *
+ * ```html
+ * <furo-ui5-button>Register</furo-ui5-button>
+ * ```
  *
  * You can choose from a set of predefined types that offer different styling to correspond to the triggered action.
  *

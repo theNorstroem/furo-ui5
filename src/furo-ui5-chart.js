@@ -1,8 +1,7 @@
 import { LitElement, css } from 'lit';
 
 /**
- * `furo-ui5-chart`
- *  Connects data objects (repeaterNodes) with the charting lib.
+ * furo-ui5-chart connects data objects (repeaterNodes) with the charting lib.
  *
  *  Use multiple binders if you need more then one series per chart.
  *
@@ -206,6 +205,11 @@ class FuroUi5Chart extends LitElement {
     this.options.legendLabel = v;
   }
 
+  /**
+   * Binds a RepeaterNode to the component
+   * Supported types: repeated TYPE
+   * @param data
+   */
   bindData(data) {
     if (data._isRepeater === true) {
       this.repeater = data;
