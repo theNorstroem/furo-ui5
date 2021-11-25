@@ -1,6 +1,6 @@
 ---
 title: furo-ui5-notification
-description: a banner
+description: agent component for notifications
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>exports `<furo-ui5-notification>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** a banner
+> **Summary:** agent component for notifications
 
 {{% api "_furo-ui5-notification-head.md" %}}
 
@@ -58,13 +58,6 @@ banner text content. Use *word* to mark as strong. Use \n to insert a line break
 payload. can be a GRPC error or a notification message collection.
 <br><br>
 
-### **_type**
-
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">_type</span>
-</small>
-
-type of the notification. `grpc` or `notification`
-<br><br>
 ## Events
 {{% api "_furo-ui5-notification-events.md" %}}
 
@@ -103,27 +96,7 @@ type of the notification. `grpc` or `notification`
 {{% api "_furo-ui5-notification-methods.md" %}}
 
 
-### **_requestListDisplay**
-<small>**_requestListDisplay**(*p* `Object` ) ⟹ `void`</small>
 
-<small>`Object` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--request-list-display</span>
-
-request to display the notifications
-
-- <small>p payload</small>
-<br><br>
-
-### **_requestGroupDisplay**
-<small>**_requestGroupDisplay**(*p* `Object` ) ⟹ `void`</small>
-
-<small>`Object` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--request-group-display</span>
-
-request to display the notifications in group
-
-- <small>p payload</small>
-<br><br>
 
 
 

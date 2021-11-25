@@ -10,7 +10,7 @@ import { LitElement, css } from 'lit';
  * @fires {{Object}  payload} notification-custom-action -  Fired when notification custom action is triggered. this is a general action event.
  * @fires {{Object}  payload} notification-custom-action-`commandName` -  Fired when notification custom action is triggered.
  *
- * @summary a banner
+ * @summary trigger component for notifications
  * @element
  */
 export class FuroUi5Notification extends LitElement {
