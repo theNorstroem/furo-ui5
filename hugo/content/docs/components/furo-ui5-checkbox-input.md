@@ -15,15 +15,15 @@ weight: 50
 
 ## Description
 
-The 'furo-ui5-checkbox-input' component allows the user to switch true and false for Bool with data binding.
+The 'furo-ui5-checkbox-input' component allows the user to switch true and false for type Bool with data binding.
 
 It supports all features from the [SAP ui5 checkbox element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).
 
-You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
+Bindable FieldNodes: `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
 
 ```html
  <furo-ui5-checkbox-input
-    ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
+    ƒ-bind-data="--dao(FIELDNODE)"
  ></furo-ui5-checkbox-input>
 ```
 
@@ -69,6 +69,7 @@ The constraint **required** will mark the element as required.
 
 
 
+
 ## Events
 {{% api "_furo-ui5-checkbox-input-events.md" %}}
 
@@ -94,6 +95,19 @@ Fires the field value when it changes.
 ## Methods
 {{% api "_furo-ui5-checkbox-input-methods.md" %}}
 
+
+### **bindData**
+<small>**bindData**(*fieldNode* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+
+Overrides bindData() of FieldNodeAdapter
+Binds a FieldNode to the component
+Supported types: bool, google.protobuf.BoolValue, furo.fat.Bool
+
+- <small>fieldNode </small>
+<br><br>
 
 ### **readAttributes**
 <small>**readAttributes**() ⟹ `void`</small>

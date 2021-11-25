@@ -1,6 +1,6 @@
 ---
 title: furo-ui5-property
-description: display and bind types of type any
+description: ????? bind types of type any
 weight: 50
 ---
 
@@ -12,19 +12,20 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
-> **Summary:** display and bind types of type any
+> **Summary:** ????? bind types of type any
 
 ## Description
 
 `furo-ui5-property`
- Field for type furo.Property. This can be used to display "dynamic" fields aka properties.
- It works with repeated types and non repeating property types.
+ Field for type **furo.Property**. This can be used to display "dynamic" fields aka properties.
+
+ `furo-ui5-property` works with repeated types and non repeating property types.
 
  ```html
  <furo-ui5-property ƒ-bind-data="--entity(*.single_type_property)"></furo-ui5-property>
  ```
 
- ## Example data for the data-object looks like this
+ **Example data for the data-object looks like this**
 
  ```json
  "single_type_property": {
@@ -55,50 +56,6 @@ weight: 50
    }
  }
  ```
-## Example StringOptions Field
-
-```json
-{
-  "data": {
-       "@type": "furo.StringOptionProperty",
-       "id": "bb",
-       "display_name": "Display"
-     },
-     "display_name": "Display",
-     "id": "opt",
-     "code": "option",
-     "meta": {
-       "fields": {
-         "data": {
-           "meta": {
-             "label": "Please select",
-             "hint": "datehint is data",
-             "repeated": false,
-             "options": [
-               {
-                 "id": "aa",
-                 "display_name": "The display a"
-               },
-               {
-                 "id": "bb",
-                 "display_name": "The display b"
-               }
-             ]
-           }
-         }
-       }
-     }
-   }
-
-```
-
- The current type mappings are:
-
-- "google.type.Date": "furo-ui5-date-input"
-- "furo.StringProperty": "furo-ui5-text-input"
-- "furo.IntegerProperty": "furo-ui5-number-input"
-- "furo.NumberProperty": "furo-ui5-number-input"
-- "furo.StringOptionProperty": "furo-ui5-collection-dropdown"
 
 {{% api "_furo-ui5-property-head.md" %}}
 
@@ -110,9 +67,11 @@ weight: 50
 
 
 ### **context**
-default: **&#39;form&#39;**</small>
 
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">context</span>
+<small>`string` default: **&#39;form&#39;**</small>
 
+Set the context, for the renderers.
 <br><br>
 
 ## Methods
@@ -130,16 +89,6 @@ default: **&#39;form&#39;**</small>
 - <small>propertyField </small>
 <br><br>
 
-### **_createPropComponent**
-<small>**_createPropComponent**(*propertyField* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--create-prop-component</span>
-
-
-
-- <small>propertyField </small>
-<br><br>
 
 
 

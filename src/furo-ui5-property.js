@@ -13,7 +13,7 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  *  <furo-ui5-property ƒ-bind-data="--entity(*.single_type_property)"></furo-ui5-property>
  *  ```
  *
- *  ## Example data for the data-object looks like this
+ *  **Example data for the data-object looks like this**
  *
  *  ```json
  *  "single_type_property": {
@@ -107,6 +107,19 @@ export class FuroUi5Property extends FBP(LitElement) {
         );
       }
     }
+  }
+
+  /**
+   * @private
+   * @return {Object}
+   */
+  static get properties() {
+    return {
+      /**
+       * Set the context, for the renderers.
+       */
+      context: { type: String },
+    };
   }
 
   /**

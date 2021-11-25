@@ -16,8 +16,8 @@ weight: 50
 
 ## Description
 
-`furo-ui5-card`
-is a bindable card that represents information in the form of a tile with separate header and content areas.
+The furo-ui5-card is a bindable card that represents information in the form of a tile with
+separate header and content areas.
 
 ```html
  <furo-ui5-card
@@ -29,6 +29,7 @@ is a bindable card that represents information in the form of a tile with separa
      <div slot="content">content goes here</div>
  </furo-ui5-card>
 ```
+
 ## How To Use Semantic Colors
 You can use semantic colors to visualize the status or state. Set the attribute design="" with the following values:
 - Positive (--sapPositiveColor)
@@ -133,7 +134,8 @@ Fired when interactive header was clicked.
 <small>`FieldNode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-heading</span>
 
-Bind any **scalar** field to set the title of the panel.
+Binds any **scalar** field to set the title of the panel.
+Supported types: scalar types e.g. string
 
 - <small>fieldNode </small>
 <br><br>
@@ -144,8 +146,9 @@ Bind any **scalar** field to set the title of the panel.
 <small>`FieldNode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-icon</span>
 
-Bind any **scalar** field to set the title of the panel.
+Binds a FieldNode to set the icon of the panel.
 Do not forget to import the icon you will use in your component.
+Supported types: string
 
 - <small>fieldNode </small>
 <br><br>
@@ -156,7 +159,8 @@ Do not forget to import the icon you will use in your component.
 <small>`FieldNode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-subheading</span>
 
-Bind any **scalar** field to set the subtitle of the panel.
+Binds any **scalar** field to set the subtitle of the panel.
+Supported types: scalar types e.g. string
 
 - <small>fieldNode </small>
 <br><br>
@@ -167,12 +171,11 @@ Bind any **scalar** field to set the subtitle of the panel.
 <small>`FieldNode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-nav-node</span>
 
-bind a field with the signature of furo.navigation.Navigationnode
+Binds a FieldNode with the following signature:
 
-Used fields are:
-- display_name
-- secondary_text
-- icon
+- display_name (string)
+- secondary_text (string)
+- icon (string)
 
 - <small>fieldNode </small>
 <br><br>

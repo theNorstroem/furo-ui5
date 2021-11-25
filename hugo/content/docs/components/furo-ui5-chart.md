@@ -14,8 +14,7 @@ weight: 50
 
 ## Description
 
-`furo-ui5-chart`
- Connects data objects (repeaterNodes) with the charting lib.
+furo-ui5-chart connects data objects (repeaterNodes) with the charting lib.
 
  Use multiple binders if you need more then one series per chart.
 
@@ -227,7 +226,8 @@ If you need to give an explicit color for the series you can use this attribute.
 <small>`` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-
+Binds a RepeaterNode to the component
+Supported types: repeated TYPE
 
 - <small>data </small>
 <br><br>

@@ -20,14 +20,13 @@ with ISO 8061 format like "2020-12-31" to the ui5 datepicker and edit it.
 
 It supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/ui5-webcomponents/playground/components/DatePicker/).
 
-
-you can define the formatPattern (e.g. 'dd.MM.yyyy' ) to show the date according to format pattern.
+You can define the formatPattern (e.g. 'dd.MM.yyyy' ) to show the date according to format pattern.
 
 You can bind a `string`, `furo.type.Date` or `google.type.Date`.
 
 ```html
  <furo-ui5-date-picker
-    ƒ-bind-data="--data(*.validity_to)">
+    ƒ-bind-data="--dao(FIELDNODE)">
  </furo-ui5-date-picker>
 ```
 
@@ -54,6 +53,7 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 ## Attributes and Properties
 {{% api "_furo-ui5-date-picker-properties.md" %}}
+
 
 
 
@@ -98,6 +98,19 @@ The format pattern for the date.
 
 
 
+
+### **bindData**
+<small>**bindData**(*fieldNode* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+
+Overrides bindData() of FieldNodeAdapter
+Binds a FieldNode to the component
+Supported types: string, furo.type.Date, google.type.Date
+
+- <small>fieldNode </small>
+<br><br>
 
 ### **readAttributes**
 <small>**readAttributes**() ⟹ `void`</small>

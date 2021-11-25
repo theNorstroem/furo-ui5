@@ -16,9 +16,12 @@ weight: 50
 
 ## Description
 
-`furo-ui5-date-picker-labeled`
 The furo-ui5-date-picker-labeled is a composition to easily use a complete input field with label according
 to the design specification of SAP Fiori Design System.
+
+```html
+<furo-ui5-date-picker-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-date-picker-labeled>
+```
 
 {{% api "_furo-ui5-date-picker-labeled-head.md" %}}
 

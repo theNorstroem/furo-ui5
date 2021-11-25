@@ -15,8 +15,8 @@ weight: 50
 
 ## Description
 
-`furo-ui5-chart-display`
- Component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).
+The furo-ui5-chart-display is the render component
+to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).
 
  Use `furo-ui5-chart` to connect your data.
 

@@ -14,7 +14,7 @@ bookHidden: true
 - [furo-ui5-chart](furo-ui5-chart.md) connect data to a chart
 - [furo-ui5-checkbox-input-labeled](furo-ui5-checkbox-input-labeled.md) labeled input field
 - [furo-ui5-checkbox-input](furo-ui5-checkbox-input.md) data checkbox input field
-- [furo-ui5-context-menu-display](furo-ui5-context-menu-display.md) 
+- [furo-ui5-context-menu-display](furo-ui5-context-menu-display.md) context menu
 - [furo-ui5-context-menu](furo-ui5-context-menu.md) Context menu
 - [furo-ui5-date-picker-labeled](furo-ui5-date-picker-labeled.md) labeled input field
 - [furo-ui5-date-picker](furo-ui5-date-picker.md) bindable datepicker field
@@ -39,7 +39,7 @@ bookHidden: true
 - [furo-ui5-pagination-bar](furo-ui5-pagination-bar.md) Pagination Bar
 - [furo-ui5-password-input-labeled](furo-ui5-password-input-labeled.md) labeled input field
 - [furo-ui5-password-input](furo-ui5-password-input.md) data password input field
-- [furo-ui5-property](furo-ui5-property.md) display and bind types of type any
+- [furo-ui5-property](furo-ui5-property.md) ????? bind types of type any
 - [furo-ui5-typerenderer-labeled](furo-ui5-typerenderer-labeled.md) 
 - [furo-ui5-radio-button-group](furo-ui5-radio-button-group.md) 
 - [furo-ui5-radio-button](furo-ui5-radio-button.md) boolean toggle button

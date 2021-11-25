@@ -16,15 +16,12 @@ weight: 50
 
 ## Description
 
-`furo-ui5-context-menu` is a context menu or menu element.
+furo-ui5-context-menu is a context menu or menu element.
 
+A `furo-ui5-context-menu-display` element must be inserted in one of the parent elements of the element where you
+use the `furo-ui5-context-menu`. The app-shell or even body is a good place for that.
 
-
- A `furo-ui5-context-menu-display` element must be inserted in one of the parent elements of the element where you
- use the `furo-ui5-context-menu`. The app-shell or even body is a good place for that.
-
- `furo-ui5-context-menu` uses **diplay:inline**, do not forget to change it to display:block if you place it around a block level element.
-
+`furo-ui5-context-menu` uses **diplay:inline**, do not forget to change it to display:block if you place it around a block level element.
 
 ```html
  <furo-ui5-context-menu  ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
@@ -77,7 +74,8 @@ weight: 50
 <small>`` `Fieldnode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-Bind your menu object with the signature of menu.Menuitem or [menu.Menuitem].
+Bind your menu object with the following signature:
+The description of the signature is documented in the header.
 
 - <small>menu </small>
 - <small> || RepeaterNode}</small>

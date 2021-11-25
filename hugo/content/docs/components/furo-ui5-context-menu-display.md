@@ -1,6 +1,6 @@
 ---
 title: furo-ui5-context-menu-display
-description: 
+description: context menu
 weight: 50
 ---
 
@@ -12,11 +12,20 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
-> **Summary:** 
+> **Summary:** context menu
 
 ## Description
 
+The furo-ui5-context-menu-display is the display element for furo-ui5-context-menu and submenus.
+Place this component as high as needed in your dom.
 
+You should not interact with this component directly. Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
+
+There is nothing more to do. The menu creates a transparent "backdrop" with absolute positions 0 0 0 0
+
+```html
+ <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
+```
 
 {{% api "_furo-ui5-context-menu-display-head.md" %}}
 
