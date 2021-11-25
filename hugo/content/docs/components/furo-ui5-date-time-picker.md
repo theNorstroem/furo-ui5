@@ -31,7 +31,7 @@ You can bind a `string`, `google.protobuf.Timestamp`, `int32`, `int64`.
 
 ```html
  <furo-ui5-date-time-picker
-    ƒ-bind-data="--data(*.validity_to)">
+    ƒ-bind-data="--dao(FIELDNODE)">
  </furo-ui5-date-time-picker>
 ```
 
@@ -58,6 +58,7 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 ## Attributes and Properties
 {{% api "_furo-ui5-date-time-picker-properties.md" %}}
+
 
 
 
@@ -147,6 +148,19 @@ Fired when the input operation has finished by pressing Enter or on focusout.
 
 
 - <small>value </small>
+<br><br>
+
+### **bindData**
+<small>**bindData**(*fieldNode* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+
+Overrides bindData() of FieldNodeAdapter
+Binds a FieldNode to the component
+Supported types: string, google.protobuf.Timestamp, int32, int64
+
+- <small>fieldNode </small>
 <br><br>
 
 ### **readAttributes**

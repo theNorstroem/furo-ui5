@@ -14,7 +14,7 @@ weight: 50
 
 ## Description
 
-`furo-ui5-dialog-display` will catch furo-ui5-dialog elements, to display it in the dom of his parent element.
+The furo-ui5-dialog-display will catch furo-ui5-dialog elements, to display it in the dom of his parent element.
 
 The first furo-ui5-dialog-display will catch the `furo-ui5-dialog-register` request from a underlying furo-ui5-dialog.
 

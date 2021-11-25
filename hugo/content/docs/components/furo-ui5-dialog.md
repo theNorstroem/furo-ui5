@@ -14,7 +14,7 @@ weight: 50
 
 ## Description
 
-`furo-ui5-dialog` is a extended ui5-dialog which can attach itself to a parent dom element.
+The furo-ui5-dialog is a extended ui5-dialog which can attach itself to a parent dom element.
 
 This is helpful, when you have used z-indexes in one of the parents, which put the original ui5-dialog behind the backdrop.
 

@@ -16,10 +16,8 @@ weight: 50
 
 ## Description
 
-`furo-ui5-form-field-container`
 The furo-ui5-form-field-container gives the user a layout to manage
 input field and labels according to the design specification of SAP Fiori.
-
 
 Example
 
@@ -32,7 +30,6 @@ Example
  </furo-horizontal-flex>
 </furo-ui5-form-field-container>
 ```
-
 
 The form and simple form in size L use a two-column layout within the responsive grid layout by default.
 That means that the form groups are placed next to each other to have all the information on one screen and to

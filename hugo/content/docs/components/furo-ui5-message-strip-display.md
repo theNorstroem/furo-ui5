@@ -16,17 +16,15 @@ weight: 50
 
 ## Description
 
-`furo-ui5-message-strip-display`
-
- The furo-ui5-message-strip-display is the render component for the furo-ui5-message-strip component.
- The display component can be controlled by several furo-ui5-message-strip components.
+The furo-ui5-message-strip-display is the render component for the furo-ui5-message-strip component.
+The display component can be controlled by several furo-ui5-message-strip components.
 
 ```
  <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
 
  <furo-ui5-message-strip ƒ-show-information="--wire"></furo-ui5-message-strip>
  <furo-ui5-message-strip ƒ-show-warning="--wire" message="Static warning message"></furo-ui5-message-strip>
- ```
+```
 
 {{% api "_furo-ui5-message-strip-display-head.md" %}}
 

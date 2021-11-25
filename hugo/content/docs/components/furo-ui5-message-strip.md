@@ -16,8 +16,6 @@ weight: 50
 
 ## Description
 
-`furo-ui5-message-strip`
-
 The furo-ui5-message-strip component enables the embedding of app-related messages. It displays 4 types of messages,
 each with corresponding semantic color and icon: Information, Positive, Warning and Negative.
 Each message can have a Close button, so that it can be removed from the UI, if needed.

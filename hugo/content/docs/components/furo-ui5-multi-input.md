@@ -15,9 +15,14 @@ weight: 50
 
 ## Description
 
-`furo-ui5-multi-input`
+A furo-ui5-multi-input field allows the user to enter multiple values, which are displayed as ui5-token.
+https://sap.github.io/ui5-webcomponents/playground/components/MultiInput/
 
-The furo-ui5-multi-input component represents the repeated strings. e.g. ["aaa","bbb","ccc"]
+Supported type: repeated string
+
+```html
+<furo-ui5-multi-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input>
+```
 
 {{% api "_furo-ui5-multi-input-head.md" %}}
 
@@ -48,9 +53,23 @@ The furo-ui5-multi-input component represents the repeated strings. e.g. ["aaa",
 
 
 
+
 ## Methods
 {{% api "_furo-ui5-multi-input-methods.md" %}}
 
+
+### **bindData**
+<small>**bindData**(*fieldNode* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+
+Overrides bindData() of FieldNodeAdapter
+Binds a FieldNode to the component
+Supported types: repeated string
+
+- <small>fieldNode </small>
+<br><br>
 
 
 

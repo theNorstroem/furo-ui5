@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+    furo-demo-snippet{
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import './initEnv.js';
+    import '../src/furo-ui5-propertylist-display.js';
+    import '../src/typerenderer/registry.js';
+
+    import '@furo/data/src/furo-catalog.js';
+    import '@furo/util/src/furo-fetch-json.js';
+    import '@furo/util/src/doc/furo-demo-snippet.js';
+    import '@furo/layout/src/furo-form-layouter.js';
+    import '@furo/util/src/furo-pretty-json.js';
+    import '@ui5/webcomponents-icons/dist/meal.js';
+    import '@ui5/webcomponents-icons/dist/chevron-phase.js';
+    import '@ui5/webcomponents-icons/dist/increase-line-height.js';
+
+
+    render(
+      html`
+
+        <furo-demo-snippet>
+          <template>
+
+            <furo-vertical-scroller>
+              <furo-form-layouter four>
+                <furo-ui5-propertylist-display  ƒ-bind-data="--entity(*.data.type_property)"></furo-ui5-propertylist-display>
+              </furo-form-layouter>
+              <button @-click="--read1">load record 1</button>
+              <button @-click="--read2">load record 2</button>
+              <button @-click="--read3">load record 3</button>
+              <furo-pretty-json ƒ-inject-data="--dataChanged(*.data.type_property._value)"></furo-pretty-json>
+              <furo-data-object type="experiment.ExperimentEntity" @-object-ready="--entity" @-data-changed-after-inject="--dataChanged" ƒ-inject-raw="--response"></furo-data-object>
+              <furo-fetch-json
+                ƒ-fetch="--read1"
+                src="/mockdata/experiments/1/get.json"
+                @-data="--response"
+              ></furo-fetch-json>
+              <furo-fetch-json
+                ƒ-fetch="--read2"
+                src="/mockdata/experiments/1/get-less-props.json"
+                @-data="--response"
+              ></furo-fetch-json>
+              <furo-fetch-json
+                ƒ-fetch="--read3"
+                src="/mockdata/experiments/1/get-more-props.json"
+                @-data="--response"
+              ></furo-fetch-json>
+            </furo-vertical-scroller>
+          </template>
+        </furo-demo-snippet>
+
+
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>

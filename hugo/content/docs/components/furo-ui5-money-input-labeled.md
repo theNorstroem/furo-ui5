@@ -16,9 +16,12 @@ weight: 50
 
 ## Description
 
-`furo-ui5-money-input-labeled`
 The furo-ui5-money-input-labeled is a composition to easily use a complete input field with label according
 to the design specification of SAP Fiori Design System.
+
+```html
+<furo-ui5-money-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-money-input-labeled>
+```
 
 {{% api "_furo-ui5-money-input-labeled-head.md" %}}
 
@@ -82,6 +85,7 @@ Fires the field value when it changes.
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
 Orchestrates the data field connection to the inside
+Supported types: google.type.Money
 
 - <small>fieldNode </small>
 <br><br>

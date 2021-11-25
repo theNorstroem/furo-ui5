@@ -16,18 +16,17 @@ weight: 50
 
 ## Description
 
-`furo-ui5-header-panel`
- A bindable **header** panel.
+A bindable **header** panel.
 
- **Info**: This component is intended to use as a header panel, if you need panels in your view, consider to use
- a ui5-panel directly. That is also the reason that the api does not match with ui5-panel.
+**Info**: This component is intended to use as a header panel, if you need panels in your view, consider to use
+a ui5-panel directly. That is also the reason that the api does not match with ui5-panel.
 
- This component is a container which has a header and a content area and is used for grouping and displaying information.
- It can be collapsed to save space on the screen.
+This component is a container which has a header and a content area and is used for grouping and displaying information.
+It can be collapsed to save space on the screen.
 
- ```html
-  <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task"></furo-ui5-header-panel>
- ```
+```html
+ <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task"></furo-ui5-header-panel>
+```
 
 {{% api "_furo-ui5-header-panel-head.md" %}}
 
@@ -96,6 +95,7 @@ sub title
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-header-text</span>
 
 Bind any **scalar** field to set the title of the panel.
+Supported types: scalar types
 
 - <small>fieldNode </small>
 <br><br>
