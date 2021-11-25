@@ -44,7 +44,7 @@ import '@ui5/webcomponents/dist/Icon.js';
  * @fires header-clicked - Fired when the card head is clicked. The header-interactive attribute must be set.
  * @fires header-click - Fired when interactive header was clicked.
  *
- * @element
+ * @element furo-ui5-card
  * @demo demo-furo-ui5-card Basic Usage
  * @demo demo-furo-ui5-card-binding With data binding
  */

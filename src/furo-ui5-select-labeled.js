@@ -16,7 +16,7 @@ import './furo-ui5-select.js';
  * @fires {String} value-changed - Fires the field value when it changes.
  *
  * @summary labeled select
- * @element
+ * @element furo-ui5-select-labeled
  * @demo demo-furo-ui5-select-labeled Basic Usage
  * @appliesMixin FBP
  */

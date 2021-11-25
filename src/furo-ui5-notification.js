@@ -12,7 +12,6 @@ import { LitElement, css } from 'lit';
  *
  * @summary a banner
  * @element
- * @demo demo-furo-ui5-notification-list-display ui5 notification display demo
  */
 export class FuroUi5Notification extends LitElement {
   constructor() {
@@ -41,6 +40,7 @@ export class FuroUi5Notification extends LitElement {
       },
       /**
        * type of the notification. `grpc` or `notification`
+       * @private
        */
       _type: { type: String },
     };
@@ -49,6 +49,7 @@ export class FuroUi5Notification extends LitElement {
   /**
    * request to display the notifications
    * @param p {Object} payload
+   * @private
    */
   _requestListDisplay() {
     const customEvent = new Event('open-furo-ui5-notification-requested', {
@@ -62,6 +63,7 @@ export class FuroUi5Notification extends LitElement {
   /**
    * request to display the notifications in group
    * @param p {Object} payload
+   * @private
    */
   _requestGroupDisplay() {
     const customEvent = new Event(

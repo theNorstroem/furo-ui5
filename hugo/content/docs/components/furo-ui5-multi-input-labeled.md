@@ -69,7 +69,9 @@ A Boolean attribute which, if present, means this field is readonly.
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">show-value-help-icon</span>
 </small>
 
-Determines whether a value help icon will be should in the end of the input. Pressing the icon will fire `value-help-trigger` event.
+Determines whether a value help icon will be should in the end of the input.
+
+Pressing the icon will fire `value-help-trigger` event.
 <br><br>
 ## Events
 {{% api "_furo-ui5-multi-input-labeled-events.md" %}}

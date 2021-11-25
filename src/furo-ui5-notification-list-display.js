@@ -18,7 +18,7 @@ import '@ui5/webcomponents/dist/List.js';
  * @fires {Number} value-changed - Fires a notification counter changed. Use this event to show the amount of notifications to the user.
  *
  * @summary ui5 notification list
- * @element
+ * @element furo-ui5-notification-list-display
  * @demo demo-furo-ui5-notification-list-display ui5 notification display demo
  */
 export class FuroUi5NotificationListDisplay extends FBP(LitElement) {

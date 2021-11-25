@@ -51,8 +51,7 @@ import { FBP } from '@furo/fbp';
  * @slot left {HTMLElement} - slot to add a component on the left hand side.
  * @slot {HTMLElement [0..n]} - default slot to add content.
  * @summary a grid splitter
- * @element
- * @demo demo-furo-ui5-flexible-grid
+ * @element furo-ui5-flexible-grid
  * @appliesMixin FBP
  */
 class FuroUi5FlexibleGrid extends FBP(LitElement) {

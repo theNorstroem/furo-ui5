@@ -10,43 +10,70 @@ import { Events } from './lib/Events.js';
  *
  * The furo-ui5-multi-input component represents the repeated strings. e.g. ["aaa","bbb","ccc"]
  *
- * @summary data ui5 data multi input
+ * @summary repeated strings
  * @element furo-ui5-multi-input
- * @demo demo-furo-ui5-multi-input Basic usage (recommended for repeated strings)
+ * @appliesMixin FieldNodeAdapter
  */
 export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
   constructor() {
     super();
 
+    /**
+     * @private
+     */
     this.tmpValue = [];
 
-    // used to restore the state after a invalidation -> validation change
+    /**
+     * used to restore the state after a invalidation -> validation change
+     * @type {{state: string, message: string}}
+     * @private
+     */
     this._previousValueState = { state: 'None', message: '' };
 
+    /**
+     *
+     * @type {{readonly: undefined, placeholder: undefined}}
+     * @private
+     */
     this._attributesFromFNA = {
       readonly: undefined,
       placeholder: undefined,
     };
 
+    /**
+     *
+     * @private
+     */
     this._constraintsFromFNA = {
       required: undefined,
       max: undefined, // maps to maxlength
     };
 
+    /**
+     *
+     * @private
+     */
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
     };
 
+    /**
+     *
+     * @private
+     */
     this._attributesFromFAT = {
       placeholder: undefined,
       max: undefined, // maps to maxlength
     };
 
-    // a list of privileged attributes. when those attributes are set in textarea-input components initially.
-    // they can not be modified later via response or spec
-    // null is used because getAttribute returns null or value
+    /**
+     * a list of privileged attributes. when those attributes are set in textarea-input components initially.
+     * they can not be modified later via response or spec
+     * null is used because getAttribute returns null or value
+     * @private
+     */
     this._privilegedAttributes = {
       readonly: null,
       placeholder: null,
@@ -113,6 +140,7 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
    * Reads the attributes which are set on the component dom.
    * those attributes can be set. `value-state`, `value-state-message`,  `placeholder`, `required`,`readonly`,`disabled`
    * Use this after manual or scripted update of the attributes.
+   * @private
    */
   readAttributes() {
     this._previousValueState.state = this.getAttribute('value-state')
@@ -240,6 +268,10 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
     this._updateItems(val);
   }
 
+  /**
+   *
+   * @private
+   */
   _updateItems(val) {
     this.value = '';
     this._removeAllItems();
@@ -248,6 +280,10 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
     });
   }
 
+  /**
+   *
+   * @private
+   */
   // eslint-disable-next-line class-methods-use-this
   _createUi5Token(text) {
     const token = document.createElement('ui5-token');
@@ -258,6 +294,10 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
     return token;
   }
 
+  /**
+   *
+   * @private
+   */
   _triggerValueChangedEvent(val) {
     /**
      * Fired when value changed
@@ -267,6 +307,10 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
     this.dispatchEvent(Events.buildChangeEvent(val));
   }
 
+  /**
+   *
+   * @private
+   */
   _removeAllItems() {
     this.innerHTML = '';
   }

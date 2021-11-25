@@ -51,7 +51,7 @@ import { Events } from './lib/Events.js';
  * @fires {String} value-changed - Fires the field value when it changes.
  *
  * @summary data text input field
- * @element
+ * @element furo-ui5-text-input
  * @demo demo-furo-ui5-text-input Basic usage (scalar , fat, wrapper values)
  * @demo demo-furo-ui5-text-input-markup-overwrite Use Markup Overwrites
  * @demo demo-furo-ui5-text-input-together playground

@@ -10,3 +10,11 @@ Put upgrade note in this file
 - 
 - layout/furo-z-grid => ui5/furo-ui5-z-grid
 - layout/furo-split-grid => ui5/furo-ui5-split-grid
+
+
+
+
+# Offene Punkte
+
+furo-ui5-datepicker bind-data delay
+furo-ui5-money-input 

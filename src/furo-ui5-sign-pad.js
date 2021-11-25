@@ -17,7 +17,7 @@ import SignaturePad from 'signature_pad/dist/signature_pad.js';
  * @fires {Base64} sign-updated - Fired when sign gets new painting, with base encoded image.
  *
  * @summary draw or sign
- * @element
+ * @element furo-sign-pad
  * @demo demo-furo-sign-pad Basic usage
  * @demo demo-furo-sign-pad-img with injected image
  * @appliesMixin FBP
