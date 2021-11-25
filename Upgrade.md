@@ -15,7 +15,9 @@ Put upgrade note in this file
 
 
 # Offene Punkte
-
+Alle Elemente mit FNA mit bindData doku ausrüsten
+Alle Elemente eventuell supported fieldnode type beschreiben
 furo-ui5-datepicker bind-data delay
 furo-ui5-money-input
 furo-ui5-notification-group-display zeigt keine Anzahl an, verschwindet nicht bei 0 elementen
+furo-ui5-number-input kein placeholder bei readonly, required

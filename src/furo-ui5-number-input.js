@@ -61,28 +61,42 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
     // used to restore the state after a invalidation -> validation change
     this._previousValueState = { state: 'None', message: '' };
 
+    /**
+     * @private
+     */
     this._attributesFromFNA = {
       readonly: undefined,
       placeholder: undefined,
     };
 
+    /**
+     * @private
+     */
     this._constraintsFromFNA = {
       required: undefined,
     };
 
+    /**
+     * @private
+     */
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
     };
-
+    /**
+     * @private
+     */
     this._attributesFromFAT = {
       placeholder: undefined,
     };
 
-    // a list of privileged attributes. when those attributes are set in number-input components initially.
-    // they can not be modified later via response or spec
-    // null is used because getAttribute returns null or value
+    /**
+     * a list of privileged attributes. when those attributes are set in number-input components initially.
+     * they can not be modified later via response or spec
+     * null is used because getAttribute returns null or value
+     * @private
+     */
     this._privilegedAttributes = {
       readonly: null,
       placeholder: null,

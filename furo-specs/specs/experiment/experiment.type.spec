@@ -240,7 +240,7 @@ fields:
                 message: max 15
             min:
                 is: "6"
-                message: min 6
+                message: min length 6
     furo_data_search_input:
         type: string
         description: field for furo-search-input for testing
