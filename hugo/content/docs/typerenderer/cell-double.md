@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-double-head.md" %}}
-
 ## Description
 
 `cell-double`
@@ -23,8 +21,7 @@ The cell-double component displays a FieldNode of type `double` in read only mod
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-double-description.md" %}}
-
+{{% api "_cell-double-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-double-properties.md" %}}

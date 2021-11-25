@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-google-protobuf-stringvalue-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_celledit-google-protobuf-stringvalue-description.md" %}}
-
+{{% api "_celledit-google-protobuf-stringvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-google-protobuf-stringvalue-properties.md" %}}

@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** Pagination Bar
 
-{{% api "_furo-ui5-pagination-bar-head.md" %}}
-
 ## Description
 
 `furo-ui5-pagination-bar`
@@ -26,8 +24,7 @@ information like prev, next, first and last
   <furo-ui5-pagination-bar ƒ-inject="--hts"></furo-ui5-pagination-bar>
 ```
 
-{{% api "_furo-ui5-pagination-bar-description.md" %}}
-
+{{% api "_furo-ui5-pagination-bar-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-pagination-bar-properties.md" %}}
@@ -126,26 +123,8 @@ init pagination attributes
 - <small>hts </small>
 <br><br>
 
-### **_disableAll**
-<small>**_disableAll**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--disable-all</span>
 
 
-
-<br><br>
-
-
-### **_FBPReady**
-<small>**_FBPReady**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--fbp-ready</span>
-
-
-
-<br><br>
 
 
 

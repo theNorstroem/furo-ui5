@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** furo data datetime picker field
 
-{{% api "_furo-ui5-date-time-picker-head.md" %}}
-
 ## Description
 
 The furo-ui5-date-time-picker component allows the user to bind a date string
@@ -56,8 +54,7 @@ Bind a entity field. You can use the entity even when no data was received.
 
 When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
-{{% api "_furo-ui5-date-time-picker-description.md" %}}
-
+{{% api "_furo-ui5-date-time-picker-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-date-time-picker-properties.md" %}}

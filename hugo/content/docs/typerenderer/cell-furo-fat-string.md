@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-furo-fat-string-head.md" %}}
-
 ## Description
 
 `cell-furo-fat-string`
@@ -22,8 +20,7 @@ The cell-furo-fat-string component displays a FieldNode of type `furo.fat.String
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-furo-fat-string-description.md" %}}
-
+{{% api "_cell-furo-fat-string-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-furo-fat-string-properties.md" %}}

@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** data textarea input field
 
-{{% api "_furo-ui5-textarea-input-head.md" %}}
-
 ## Description
 
 The 'furo-ui5-textarea-input' component allows the user to enter and edit texts with data binding.
@@ -59,8 +57,7 @@ Bind a entity field. You can use the entity even when no data was received.
 
 When you use @-object-ready from a furo-ui5-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
-{{% api "_furo-ui5-textarea-input-description.md" %}}
-
+{{% api "_furo-ui5-textarea-input-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-textarea-input-properties.md" %}}

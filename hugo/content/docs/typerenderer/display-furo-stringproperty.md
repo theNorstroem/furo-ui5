@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-stringproperty-head.md" %}}
-
 ## Description
 
 `display-furo-stringproperty`
@@ -24,8 +22,7 @@ The display-furo-stringproperty component displays a FieldNode of type `furo.Str
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-stringproperty-description.md" %}}
-
+{{% api "_display-furo-stringproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-stringproperty-properties.md" %}}

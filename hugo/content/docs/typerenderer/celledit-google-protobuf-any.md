@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-google-protobuf-any-head.md" %}}
-
 ## Description
 
 `celledit-google-protobuf-any`
@@ -22,8 +20,7 @@ The celledit-google-protobuf-any component is a wrapper displays of type `google
 Every celledit-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_celledit-google-protobuf-any-description.md" %}}
-
+{{% api "_celledit-google-protobuf-any-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-google-protobuf-any-properties.md" %}}

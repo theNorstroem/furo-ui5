@@ -14,16 +14,13 @@ weight: 50
 
 > **Summary:** form renderer for furo.fat.Int64
 
-{{% api "_form-furo-fat-int64-head.md" %}}
-
 ## Description
 
 `form-furo-fat-int64` is a `form` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_form-furo-fat-int64-description.md" %}}
-
+{{% api "_form-furo-fat-int64-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-furo-fat-int64-properties.md" %}}

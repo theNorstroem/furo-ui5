@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-furo-fat-string-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_celledit-furo-fat-string-description.md" %}}
-
+{{% api "_celledit-furo-fat-string-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-fat-string-properties.md" %}}

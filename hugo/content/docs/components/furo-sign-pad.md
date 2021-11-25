@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** draw or sign
 
-{{% api "_furo-sign-pad-head.md" %}}
-
 ## Description
 
 `furo-sign-pad`
@@ -29,8 +27,7 @@ weight: 50
   </template>
  </furo-demo-snippet>
 
-{{% api "_furo-sign-pad-description.md" %}}
-
+{{% api "_furo-sign-pad-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-sign-pad-properties.md" %}}

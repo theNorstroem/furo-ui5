@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** connect data to a chart
 
-{{% api "_furo-ui5-chart-head.md" %}}
-
 ## Description
 
 `furo-ui5-chart`
@@ -31,8 +29,7 @@ weight: 50
  </furo-ui5-chart-display>
  ```
 
-{{% api "_furo-ui5-chart-description.md" %}}
-
+{{% api "_furo-ui5-chart-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-chart-properties.md" %}}

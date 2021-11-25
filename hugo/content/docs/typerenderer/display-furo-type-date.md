@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-type-date-head.md" %}}
-
 ## Description
 
 `display-furo-type-date`
@@ -28,8 +26,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/In
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-type-date-description.md" %}}
-
+{{% api "_display-furo-type-date-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-type-date-properties.md" %}}

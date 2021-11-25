@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-property-repeated-head.md" %}}
-
 ## Description
 
 `display-furo-property-repeats`
@@ -24,8 +22,7 @@ The display-furo-property-repeats component displays a FieldNode of type `furo.P
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-property-repeated-description.md" %}}
-
+{{% api "_display-furo-property-repeated-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-property-repeated-properties.md" %}}

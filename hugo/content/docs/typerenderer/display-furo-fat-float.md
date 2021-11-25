@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-fat-float-head.md" %}}
-
 ## Description
 
 `display-furo-fat-float`
@@ -23,8 +21,7 @@ The display-furo-fat-float component displays a FieldNode of type `furo.fat.Floa
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-fat-float-description.md" %}}
-
+{{% api "_display-furo-fat-float-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-fat-float-properties.md" %}}

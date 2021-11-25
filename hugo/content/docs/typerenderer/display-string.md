@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-string-head.md" %}}
-
 ## Description
 
 `display-string`
@@ -23,8 +21,7 @@ The display-string component displays a FieldNode of type `string` in read only 
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-string-description.md" %}}
-
+{{% api "_display-string-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-string-properties.md" %}}

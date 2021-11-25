@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-google-type-date-head.md" %}}
-
 ## Description
 
 `cell-google-type-date`
@@ -26,8 +24,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/In
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-google-type-date-description.md" %}}
-
+{{% api "_cell-google-type-date-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-google-type-date-properties.md" %}}

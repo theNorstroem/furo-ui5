@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-link-head.md" %}}
-
 ## Description
 
 `display-furo-link`
@@ -22,8 +20,7 @@ The display-furo-link component displays a FieldNode of type `furo.Link` in read
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-link-description.md" %}}
-
+{{% api "_display-furo-link-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-link-properties.md" %}}

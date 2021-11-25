@@ -1,6 +1,6 @@
 ---
 title: furo-ui5-notification
-description: agent component for notifications
+description: trigger component for notifications
 weight: 50
 ---
 
@@ -11,17 +11,14 @@ weight: 50
 <br>exports `<furo-ui5-notification>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** agent component for notifications
-
-{{% api "_furo-ui5-notification-head.md" %}}
+> **Summary:** trigger component for notifications
 
 ## Description
 
 furo-ui5-notification should be used together witch furo-ui5-notification-list-display or furo-ui5-notification-group-display. you can place those two components into different places.
 best place the furo-ui5-notification-list(or group)-display on the main site. then you only need one furo-ui5-notification-list(or group)-display. it can work with n furo-ui5-notification.
 
-{{% api "_furo-ui5-notification-description.md" %}}
-
+{{% api "_furo-ui5-notification-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-notification-properties.md" %}}

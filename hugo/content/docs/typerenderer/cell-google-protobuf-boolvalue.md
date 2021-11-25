@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-google-protobuf-boolvalue-head.md" %}}
-
 ## Description
 
 `cell-google-protobuf-boolvalue`
@@ -23,8 +21,7 @@ The cell-google-protobuf-boolvalue component displays a FieldNode of type `googl
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-google-protobuf-boolvalue-description.md" %}}
-
+{{% api "_cell-google-protobuf-boolvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-google-protobuf-boolvalue-properties.md" %}}

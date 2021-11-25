@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-google-type-color-head.md" %}}
-
 ## Description
 
 `cell-google-type-color`
@@ -22,8 +20,7 @@ The cell-google-type-color component displays a FieldNode of type `google.type.C
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-google-type-color-description.md" %}}
-
+{{% api "_cell-google-type-color-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-google-type-color-properties.md" %}}

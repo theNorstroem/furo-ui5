@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-google-protobuf-any-head.md" %}}
-
 ## Description
 
 `cell-google-protobuf-any`
@@ -22,8 +20,7 @@ The cell-google-protobuf-any component is a wrapper displays of type `google.pro
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-google-protobuf-any-description.md" %}}
-
+{{% api "_cell-google-protobuf-any-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-google-protobuf-any-properties.md" %}}

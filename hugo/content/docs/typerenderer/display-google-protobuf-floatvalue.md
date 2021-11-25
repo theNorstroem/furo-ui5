@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-google-protobuf-floatvalue-head.md" %}}
-
 ## Description
 
 `display-google-protobuf-floatvalue`
@@ -23,8 +21,7 @@ The display-google-protobuf-floatvalue component displays a FieldNode of type `g
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-google-protobuf-floatvalue-description.md" %}}
-
+{{% api "_display-google-protobuf-floatvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-google-protobuf-floatvalue-properties.md" %}}

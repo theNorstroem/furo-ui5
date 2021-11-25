@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_form-furo-fat-string-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_form-furo-fat-string-description.md" %}}
-
+{{% api "_form-furo-fat-string-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-furo-fat-string-properties.md" %}}

@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** responsive labels for your input elements
 
-{{% api "_furo-ui5-form-field-container-head.md" %}}
-
 ## Description
 
 `furo-ui5-form-field-container`
@@ -73,8 +71,7 @@ The label-field ratio is 12:12:0 by default:
 0 grid columns of the responsive grid layout are used by empty columns.
 (There is no empty space on the right of the field.)
 
-{{% api "_furo-ui5-form-field-container-description.md" %}}
-
+{{% api "_furo-ui5-form-field-container-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-form-field-container-properties.md" %}}

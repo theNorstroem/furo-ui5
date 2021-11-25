@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** furo ui5 message strip
 
-{{% api "_furo-ui5-message-strip-display-head.md" %}}
-
 ## Description
 
 `furo-ui5-message-strip-display`
@@ -30,8 +28,7 @@ weight: 50
  <furo-ui5-message-strip ƒ-show-warning="--wire" message="Static warning message"></furo-ui5-message-strip>
  ```
 
-{{% api "_furo-ui5-message-strip-display-description.md" %}}
-
+{{% api "_furo-ui5-message-strip-display-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-message-strip-display-properties.md" %}}

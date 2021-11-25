@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-fat-bool-head.md" %}}
-
 ## Description
 
 `display-furo-fat-bool`
@@ -23,8 +21,7 @@ The display-furo-fat-bool component displays a FieldNode of type `furo.fat.bool`
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-fat-bool-description.md" %}}
-
+{{% api "_display-furo-fat-bool-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-fat-bool-properties.md" %}}

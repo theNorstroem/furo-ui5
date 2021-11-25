@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for bool
 
-{{% api "_form-furo-fat-bool-head.md" %}}
-
 ## Description
 
 `form-furo-fat-bool` is a `form` context renderer.
 
 It uses furo-ui5-checkbox-input as the renderer
 
-{{% api "_form-furo-fat-bool-description.md" %}}
-
+{{% api "_form-furo-fat-bool-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-furo-fat-bool-properties.md" %}}

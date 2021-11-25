@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-google-protobuf-doublevalue-head.md" %}}
-
 ## Description
 
 `cell-double`
@@ -23,8 +21,7 @@ The cell-double component displays a FieldNode of type `google.protobuf.DoubleVa
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-google-protobuf-doublevalue-description.md" %}}
-
+{{% api "_cell-google-protobuf-doublevalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-google-protobuf-doublevalue-properties.md" %}}

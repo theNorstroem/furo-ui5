@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-stringoptionproperty-head.md" %}}
-
 ## Description
 
 `display-furo-stringoptionproperty`
@@ -24,8 +22,7 @@ The display-furo-numberrproperty component displays a FieldNode of type `furo.St
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-stringoptionproperty-description.md" %}}
-
+{{% api "_display-furo-stringoptionproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-stringoptionproperty-properties.md" %}}

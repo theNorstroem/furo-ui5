@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_form-furo-stringoptionproperty-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_form-furo-stringoptionproperty-description.md" %}}
-
+{{% api "_form-furo-stringoptionproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-furo-stringoptionproperty-properties.md" %}}

@@ -13,15 +13,12 @@ weight: 50
 
 > **Summary:** representation of a result item
 
-{{% api "_ui5-reference-search-item-head.md" %}}
-
 ## Description
 
 `reference-search-item`
 Repeated item to display the search result set
 
-{{% api "_ui5-reference-search-item-description.md" %}}
-
+{{% api "_ui5-reference-search-item-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_ui5-reference-search-item-properties.md" %}}

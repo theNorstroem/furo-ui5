@@ -14,16 +14,13 @@ weight: 50
 
 > **Summary:** context menu item
 
-{{% api "_furo-ui5-context-menu-item-head.md" %}}
-
 ## Description
 
 `furo-ui5-context-menu-item` is a helper component for `furo-ui5-context-menu`.
 
 It is not intended for direct usage
 
-{{% api "_furo-ui5-context-menu-item-description.md" %}}
-
+{{% api "_furo-ui5-context-menu-item-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-context-menu-item-properties.md" %}}

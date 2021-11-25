@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for google.protobuf.Double
 
-{{% api "_form-google-protobuf-doublevalue-head.md" %}}
-
 ## Description
 
 `form-google-protobuf-doublevalue` is a `form` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_form-google-protobuf-doublevalue-description.md" %}}
-
+{{% api "_form-google-protobuf-doublevalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-google-protobuf-doublevalue-properties.md" %}}

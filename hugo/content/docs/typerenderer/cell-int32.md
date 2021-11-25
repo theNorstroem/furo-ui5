@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-int32-head.md" %}}
-
 ## Description
 
 `cell-int32`
@@ -26,8 +24,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/In
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-int32-description.md" %}}
-
+{{% api "_cell-int32-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-int32-properties.md" %}}

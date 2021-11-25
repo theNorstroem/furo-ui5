@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** grid with a z pattern
 
-{{% api "_furo-ui5-z-grid-head.md" %}}
-
 ## Description
 
 `z-grid`
@@ -105,8 +103,7 @@ This component is nestable.
 **last-col** refers to the last column.
 **last-row** refers to the last line/row.
 
-{{% api "_furo-ui5-z-grid-description.md" %}}
-
+{{% api "_furo-ui5-z-grid-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-z-grid-properties.md" %}}

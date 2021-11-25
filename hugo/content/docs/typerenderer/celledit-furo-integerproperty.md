@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** celledit renderer for furo.Integerproperty
 
-{{% api "_celledit-furo-integerproperty-head.md" %}}
-
 ## Description
 
 `celledit-furo-integerproperty` is a `celledit` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_celledit-furo-integerproperty-description.md" %}}
-
+{{% api "_celledit-furo-integerproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-integerproperty-properties.md" %}}

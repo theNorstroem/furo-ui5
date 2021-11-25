@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** segmented button
 
-{{% api "_furo-ui5-segmented-button-head.md" %}}
-
 ## Description
 
 `furo-ui5-segmented-button`
@@ -34,8 +32,7 @@ options by using the furo-ui5-segmented-button component.
 </furo-ui5-segmented-button>
 ```
 
-{{% api "_furo-ui5-segmented-button-description.md" %}}
-
+{{% api "_furo-ui5-segmented-button-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-segmented-button-properties.md" %}}

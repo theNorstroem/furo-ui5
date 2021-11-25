@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-uint64-head.md" %}}
-
 ## Description
 
 `display-uint64`
@@ -27,8 +25,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/In
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-uint64-description.md" %}}
-
+{{% api "_display-uint64-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-uint64-properties.md" %}}

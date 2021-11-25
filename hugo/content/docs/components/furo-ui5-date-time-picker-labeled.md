@@ -14,16 +14,13 @@ weight: 50
 
 > **Summary:** labeled input field
 
-{{% api "_furo-ui5-date-time-picker-labeled-head.md" %}}
-
 ## Description
 
 `furo-ui5-date-time-picker-labeled`
 The furo-ui5-date-time-picker-labeled is a composition to easily use a complete input field with label according
 to the design specification of SAP Fiori Design System.
 
-{{% api "_furo-ui5-date-time-picker-labeled-description.md" %}}
-
+{{% api "_furo-ui5-date-time-picker-labeled-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-date-time-picker-labeled-properties.md" %}}

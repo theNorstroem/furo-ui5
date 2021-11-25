@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** celledit renderer for furo.fat.Double
 
-{{% api "_celledit-furo-fat-double-head.md" %}}
-
 ## Description
 
 `celledit-furo-fat-double` is a `celledit` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_celledit-furo-fat-double-description.md" %}}
-
+{{% api "_celledit-furo-fat-double-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-fat-double-properties.md" %}}

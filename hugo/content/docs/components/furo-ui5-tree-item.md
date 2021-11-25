@@ -14,15 +14,12 @@ weight: 50
 
 > **Summary:** todo shortdescription
 
-{{% api "_furo-ui5-tree-item-head.md" %}}
-
 ## Description
 
 `furo-tree-item`
 todo Describe your element
 
-{{% api "_furo-ui5-tree-item-description.md" %}}
-
+{{% api "_furo-ui5-tree-item-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-tree-item-properties.md" %}}

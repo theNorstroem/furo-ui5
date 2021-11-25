@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** celledit renderer for google.protobuf.Uint32value
 
-{{% api "_celledit-google-protobuf-uint32value-head.md" %}}
-
 ## Description
 
 `celledit-google-protobuf-uint32value` is a `celledit` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_celledit-google-protobuf-uint32value-description.md" %}}
-
+{{% api "_celledit-google-protobuf-uint32value-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-google-protobuf-uint32value-properties.md" %}}

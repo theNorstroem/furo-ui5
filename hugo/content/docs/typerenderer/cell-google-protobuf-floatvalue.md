@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-google-protobuf-floatvalue-head.md" %}}
-
 ## Description
 
 `cell-google-protobuf-floatvalue`
@@ -23,8 +21,7 @@ The cell-google-protobuf-floatvalue component displays a FieldNode of type `goog
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-google-protobuf-floatvalue-description.md" %}}
-
+{{% api "_cell-google-protobuf-floatvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-google-protobuf-floatvalue-properties.md" %}}

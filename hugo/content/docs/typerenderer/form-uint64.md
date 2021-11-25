@@ -14,14 +14,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_form-uint64-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_form-uint64-description.md" %}}
-
+{{% api "_form-uint64-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-uint64-properties.md" %}}

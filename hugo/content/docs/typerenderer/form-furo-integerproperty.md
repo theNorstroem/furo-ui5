@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for furo.Integerproperty
 
-{{% api "_form-furo-integerproperty-head.md" %}}
-
 ## Description
 
 `form-furo-integerproperty` is a `form` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_form-furo-integerproperty-description.md" %}}
-
+{{% api "_form-furo-integerproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-furo-integerproperty-properties.md" %}}

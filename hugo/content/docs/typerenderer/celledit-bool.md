@@ -14,16 +14,13 @@ weight: 50
 
 > **Summary:** celledit renderer for bool
 
-{{% api "_celledit-bool-head.md" %}}
-
 ## Description
 
 `celledit-bool` is a `celledit` context renderer.
 
 It uses furo-ui5-checkbox-input as the renderer
 
-{{% api "_celledit-bool-description.md" %}}
-
+{{% api "_celledit-bool-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-bool-properties.md" %}}

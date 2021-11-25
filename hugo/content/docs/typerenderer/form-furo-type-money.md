@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_form-furo-type-money-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_form-furo-type-money-description.md" %}}
-
+{{% api "_form-furo-type-money-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-furo-type-money-properties.md" %}}

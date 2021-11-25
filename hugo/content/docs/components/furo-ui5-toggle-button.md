@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** boolean toggle button
 
-{{% api "_furo-ui5-toggle-button-head.md" %}}
-
 ## Description
 
 The 'furo-ui5-toggle-button' component allows the user to switch true and false for Bool with data binding.
@@ -54,8 +52,7 @@ The constraint **required** will mark the element as required
 **bind-data(fieldNode)**
 Bind a entity field. You can use the entity even when no data was received.
 
-{{% api "_furo-ui5-toggle-button-description.md" %}}
-
+{{% api "_furo-ui5-toggle-button-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-toggle-button-properties.md" %}}

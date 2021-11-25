@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-furo-integerproperty-head.md" %}}
-
 ## Description
 
 `cell-furo-integerproperty`
@@ -24,8 +22,7 @@ The cell-furo-integerproperty component displays a FieldNode of type `furo.Integ
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-furo-integerproperty-description.md" %}}
-
+{{% api "_cell-furo-integerproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-furo-integerproperty-properties.md" %}}

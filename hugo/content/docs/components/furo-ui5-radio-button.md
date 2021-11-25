@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** radio group
 
-{{% api "_furo-ui5-radio-button-head.md" %}}
-
 ## Description
 
 `furo-ui5-radiogroup`
@@ -23,8 +21,7 @@ The furo-ui5-radiogroup enables users to create a radio group with n size of fur
 Use the components if you want to combine several bool fields into one radiogroup.
 Only one value can be true.
 
-{{% api "_furo-ui5-radio-button-description.md" %}}
-
+{{% api "_furo-ui5-radio-button-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-radio-button-properties.md" %}}

@@ -14,16 +14,13 @@ weight: 50
 
 > **Summary:** celledit renderer for furo.fat.Int32
 
-{{% api "_celledit-furo-fat-int32-head.md" %}}
-
 ## Description
 
 `celledit-furo-fat-int32` is a `celledit` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_celledit-furo-fat-int32-description.md" %}}
-
+{{% api "_celledit-furo-fat-int32-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-fat-int32-properties.md" %}}

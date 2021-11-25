@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** ui5 button
 
-{{% api "_furo-ui5-button-head.md" %}}
-
 ## Description
 
 `furo-ui5-button`
@@ -37,8 +35,7 @@ With flow based programming it's usual to address functions. So we added two con
 
 https://sap.github.io/ui5-webcomponents/playground/components/Button/
 
-{{% api "_furo-ui5-button-description.md" %}}
-
+{{% api "_furo-ui5-button-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-button-properties.md" %}}

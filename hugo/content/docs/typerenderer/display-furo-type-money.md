@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-type-money-head.md" %}}
-
 ## Description
 
 `display-furo-type-money`
@@ -28,8 +26,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/In
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-type-money-description.md" %}}
-
+{{% api "_display-furo-type-money-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-type-money-properties.md" %}}

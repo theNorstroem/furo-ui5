@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-furo-fat-bool-head.md" %}}
-
 ## Description
 
 `cell-furo-fat-bool`
@@ -23,8 +21,7 @@ The cell-furo-fat-bool component displays a FieldNode of type `furo.fat.bool` in
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-furo-fat-bool-description.md" %}}
-
+{{% api "_cell-furo-fat-bool-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-furo-fat-bool-properties.md" %}}

@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** celledit renderer for google.type.TimeOfDay
 
-{{% api "_celledit-google-type-timeofday-head.md" %}}
-
 ## Description
 
 `celledit-google-type-timeofday` is a `celledit` context renderer.
 
 It uses furo-ui5-time-picker as the renderer
 
-{{% api "_celledit-google-type-timeofday-description.md" %}}
-
+{{% api "_celledit-google-type-timeofday-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-google-type-timeofday-properties.md" %}}

@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** Display charts with data objects
 
-{{% api "_furo-ui5-chart-display-head.md" %}}
-
 ## Description
 
 `furo-ui5-chart-display`
@@ -32,8 +30,7 @@ weight: 50
  </furo-ui5-chart-display>
  ```
 
-{{% api "_furo-ui5-chart-display-description.md" %}}
-
+{{% api "_furo-ui5-chart-display-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-chart-display-properties.md" %}}

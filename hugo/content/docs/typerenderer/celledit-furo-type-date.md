@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-furo-type-date-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_celledit-furo-type-date-description.md" %}}
-
+{{% api "_celledit-furo-type-date-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-type-date-properties.md" %}}

@@ -14,16 +14,13 @@ weight: 50
 
 > **Summary:** celledit renderer for float
 
-{{% api "_celledit-float-head.md" %}}
-
 ## Description
 
 `celledit-float` is a `celledit` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_celledit-float-description.md" %}}
-
+{{% api "_celledit-float-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-float-properties.md" %}}

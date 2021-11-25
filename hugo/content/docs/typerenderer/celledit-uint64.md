@@ -14,14 +14,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-uint64-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_celledit-uint64-description.md" %}}
-
+{{% api "_celledit-uint64-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-uint64-properties.md" %}}

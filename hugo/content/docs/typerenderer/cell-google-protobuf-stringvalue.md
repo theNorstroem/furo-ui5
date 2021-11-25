@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-google-protobuf-stringvalue-head.md" %}}
-
 ## Description
 
 `cell-google-protobuf-stringvalue`
@@ -22,8 +20,7 @@ The cell-google-protobuf-stringvalue component displays a FieldNode of type `goo
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-google-protobuf-stringvalue-description.md" %}}
-
+{{% api "_cell-google-protobuf-stringvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-google-protobuf-stringvalue-properties.md" %}}

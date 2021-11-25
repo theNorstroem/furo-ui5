@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-property-head.md" %}}
-
 ## Description
 
 `display-furo-property`
@@ -24,8 +22,7 @@ The display-furo-property component displays a FieldNode of type `furo.Property`
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-property-description.md" %}}
-
+{{% api "_display-furo-property-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-property-properties.md" %}}

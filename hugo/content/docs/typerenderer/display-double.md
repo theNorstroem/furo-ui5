@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-double-head.md" %}}
-
 ## Description
 
 `display-double`
@@ -23,8 +21,7 @@ The display-double component displays a FieldNode of type `double` in read only 
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-double-description.md" %}}
-
+{{% api "_display-double-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-double-properties.md" %}}

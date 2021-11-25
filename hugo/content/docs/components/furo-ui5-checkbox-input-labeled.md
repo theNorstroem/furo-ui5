@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** labeled input field
 
-{{% api "_furo-ui5-checkbox-input-labeled-head.md" %}}
-
 ## Description
 
 `furo-ui5-checkbox-input-labeled`
@@ -23,8 +21,7 @@ weight: 50
 The furo-ui5-checkbox-input-labeled is a composition to easily use a complete input field with label according
 to the design specification of SAP Fiori Design System.
 
-{{% api "_furo-ui5-checkbox-input-labeled-description.md" %}}
-
+{{% api "_furo-ui5-checkbox-input-labeled-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-checkbox-input-labeled-properties.md" %}}

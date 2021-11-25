@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for google.type.TimeOfDay
 
-{{% api "_form-google-type-timeofday-head.md" %}}
-
 ## Description
 
 `form-google-type-timeofday` is a `form` context renderer.
 
 It uses furo-ui5-time-picker as the renderer
 
-{{% api "_form-google-type-timeofday-description.md" %}}
-
+{{% api "_form-google-type-timeofday-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-google-type-timeofday-properties.md" %}}

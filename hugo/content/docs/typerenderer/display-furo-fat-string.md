@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-fat-string-head.md" %}}
-
 ## Description
 
 `display-furo-fat-string`
@@ -22,8 +20,7 @@ The display-furo-fat-string component displays a FieldNode of type `furo.fat.Str
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-fat-string-description.md" %}}
-
+{{% api "_display-furo-fat-string-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-fat-string-properties.md" %}}

@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for google.protobuf.Float
 
-{{% api "_form-google-protobuf-floatvalue-head.md" %}}
-
 ## Description
 
 `form-google-protobuf-floatvalue` is a `form` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_form-google-protobuf-floatvalue-description.md" %}}
-
+{{% api "_form-google-protobuf-floatvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-google-protobuf-floatvalue-properties.md" %}}

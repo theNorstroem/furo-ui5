@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-furo-link-head.md" %}}
-
 ## Description
 
 `cell-furo-link`
@@ -22,8 +20,7 @@ The cell-furo-link component displays a FieldNode of type `furo.Link` in read on
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-furo-link-description.md" %}}
-
+{{% api "_cell-furo-link-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-furo-link-properties.md" %}}

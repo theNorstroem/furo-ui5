@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** celledit renderer for google.type.Date
 
-{{% api "_celledit-google-type-date-head.md" %}}
-
 ## Description
 
 `celledit-google-type-date` is a `celledit` context renderer.
 
 It uses furo-ui5-date-picker as the renderer
 
-{{% api "_celledit-google-type-date-description.md" %}}
-
+{{% api "_celledit-google-type-date-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-google-type-date-properties.md" %}}

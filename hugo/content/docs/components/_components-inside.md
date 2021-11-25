@@ -33,7 +33,7 @@ bookHidden: true
 - [furo-ui5-multi-input](furo-ui5-multi-input.md) repeated strings
 - [furo-ui5-notification-group-display](furo-ui5-notification-group-display.md) ui5 notification group display
 - [furo-ui5-notification-list-display](furo-ui5-notification-list-display.md) ui5 notification list
-- [furo-ui5-notification](furo-ui5-notification.md) agent component for notifications
+- [furo-ui5-notification](furo-ui5-notification.md) trigger component for notifications
 - [furo-ui5-number-input-labeled](furo-ui5-number-input-labeled.md) labeled input field
 - [furo-ui5-number-input](furo-ui5-number-input.md) data number input field
 - [furo-ui5-pagination-bar](furo-ui5-pagination-bar.md) Pagination Bar

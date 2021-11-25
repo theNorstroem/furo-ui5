@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-google-type-color-head.md" %}}
-
 ## Description
 
 `display-google-type-color`
@@ -22,8 +20,7 @@ The display-google-type-color component displays a FieldNode of type `google.typ
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-google-type-color-description.md" %}}
-
+{{% api "_display-google-type-color-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-google-type-color-properties.md" %}}

@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-furo-property-repeated-head.md" %}}
-
 ## Description
 
 `cell-furo-property-repeats`
@@ -24,8 +22,7 @@ The cell-furo-property-repeats component displays a FieldNode of type `furo.Prop
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-furo-property-repeated-description.md" %}}
-
+{{% api "_cell-furo-property-repeated-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-furo-property-repeated-properties.md" %}}

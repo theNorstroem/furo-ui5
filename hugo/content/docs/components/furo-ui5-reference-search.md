@@ -15,8 +15,6 @@ weight: 50
 
 > **Summary:** furo ui5 data reference search
 
-{{% api "_furo-ui5-reference-search-head.md" %}}
-
 ## Description
 
 The furo-ui5-reference-search
@@ -108,8 +106,7 @@ searcher. A call on qpIn on the searcher will also pass the resulting hts to the
 Fire a **@-record-selected** to set the item on the reference-search.
 Fire a **@-close-requested** to close the extended search.
 
-{{% api "_furo-ui5-reference-search-description.md" %}}
-
+{{% api "_furo-ui5-reference-search-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-reference-search-properties.md" %}}

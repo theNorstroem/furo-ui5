@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** celledit renderer for furo.fat.Float
 
-{{% api "_celledit-furo-fat-float-head.md" %}}
-
 ## Description
 
 `celledit-furo-fat-float` is a `celledit` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_celledit-furo-fat-float-description.md" %}}
-
+{{% api "_celledit-furo-fat-float-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-fat-float-properties.md" %}}

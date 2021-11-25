@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-string-head.md" %}}
-
 ## Description
 
 `cell-string`
@@ -23,8 +21,7 @@ The cell-string component displays a FieldNode of type `string` in read only mod
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-string-description.md" %}}
-
+{{% api "_cell-string-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-string-properties.md" %}}

@@ -14,14 +14,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-int32-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_celledit-int32-description.md" %}}
-
+{{% api "_celledit-int32-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-int32-properties.md" %}}

@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** data checkbox input field
 
-{{% api "_furo-ui5-checkbox-input-head.md" %}}
-
 ## Description
 
 The 'furo-ui5-checkbox-input' component allows the user to switch true and false for Bool with data binding.
@@ -47,8 +45,7 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
 
 The constraint **required** will mark the element as required.
 
-{{% api "_furo-ui5-checkbox-input-description.md" %}}
-
+{{% api "_furo-ui5-checkbox-input-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-checkbox-input-properties.md" %}}

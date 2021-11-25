@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_furo-ui5-radio-button-group-head.md" %}}
-
 ## Description
 
 `furo-ui5-radio-button-group`
@@ -39,8 +37,7 @@ You can group radio buttons by using the group-name property.
 </furo-ui5-radio-button-group>
 ```
 
-{{% api "_furo-ui5-radio-button-group-description.md" %}}
-
+{{% api "_furo-ui5-radio-button-group-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-radio-button-group-properties.md" %}}

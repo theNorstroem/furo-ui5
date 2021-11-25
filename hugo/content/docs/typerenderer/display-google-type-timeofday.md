@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-google-type-timeofday-head.md" %}}
-
 ## Description
 
 `display-google-type-timeofday`
@@ -25,8 +23,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Da
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-google-type-timeofday-description.md" %}}
-
+{{% api "_display-google-type-timeofday-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-google-type-timeofday-properties.md" %}}

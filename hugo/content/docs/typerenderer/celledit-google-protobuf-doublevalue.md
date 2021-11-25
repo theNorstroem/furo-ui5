@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** celledit renderer for google.protobuf.Double
 
-{{% api "_celledit-google-protobuf-doublevalue-head.md" %}}
-
 ## Description
 
 `celledit-google-protobuf-doublevalue` is a `celledit` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_celledit-google-protobuf-doublevalue-description.md" %}}
-
+{{% api "_celledit-google-protobuf-doublevalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-google-protobuf-doublevalue-properties.md" %}}

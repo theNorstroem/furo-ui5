@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for google.type.Money
 
-{{% api "_form-google-type-money-head.md" %}}
-
 ## Description
 
 `form-google-type-money` is a `form` context renderer.
 
 It uses furo-ui5-money-input as the renderer
 
-{{% api "_form-google-type-money-description.md" %}}
-
+{{% api "_form-google-type-money-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-google-type-money-properties.md" %}}

@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** Displays a icon/symbol for a boolean value
 
-{{% api "_furo-ui5-bool-icon-head.md" %}}
-
 ## Description
 
 `furo-ui5-bool-icon`
@@ -29,8 +27,7 @@ This component uses utf-8 symbols for true and false at the moment.
 Only `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.
 If you set other icons, please do not forget to import them.
 
-{{% api "_furo-ui5-bool-icon-description.md" %}}
-
+{{% api "_furo-ui5-bool-icon-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-bool-icon-properties.md" %}}

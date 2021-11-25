@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-furo-link-head.md" %}}
-
 ## Description
 
 `celledit-furo-link`
@@ -22,8 +20,7 @@ The celledit-furo-link component displays a FieldNode of type `furo.Link` in rea
 Every celledit-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_celledit-furo-link-description.md" %}}
-
+{{% api "_celledit-furo-link-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-link-properties.md" %}}

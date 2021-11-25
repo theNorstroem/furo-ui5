@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** celledit renderer for google.type.Money
 
-{{% api "_celledit-google-type-money-head.md" %}}
-
 ## Description
 
 `celledit-google-type-money` is a `celledit` context renderer.
 
 It uses furo-ui5-money-input as the renderer
 
-{{% api "_celledit-google-type-money-description.md" %}}
-
+{{% api "_celledit-google-type-money-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-google-type-money-properties.md" %}}

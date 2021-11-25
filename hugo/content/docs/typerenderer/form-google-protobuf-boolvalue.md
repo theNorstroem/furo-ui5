@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for bool
 
-{{% api "_form-google-protobuf-boolvalue-head.md" %}}
-
 ## Description
 
 `form-google-protobuf-boolvalue` is a `form` context renderer.
 
 It uses furo-ui5-checkbox-input as the renderer
 
-{{% api "_form-google-protobuf-boolvalue-description.md" %}}
-
+{{% api "_form-google-protobuf-boolvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-google-protobuf-boolvalue-properties.md" %}}

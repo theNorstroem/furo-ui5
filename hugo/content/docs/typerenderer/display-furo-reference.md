@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-reference-head.md" %}}
-
 ## Description
 
 `display-furo-reference`
@@ -22,8 +20,7 @@ The display-furo-reference component displays a FieldNode of type `furo.Referenc
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-reference-description.md" %}}
-
+{{% api "_display-furo-reference-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-reference-properties.md" %}}

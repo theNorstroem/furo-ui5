@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** data select field
 
-{{% api "_furo-ui5-select-head.md" %}}
-
 ## Description
 
 The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define
@@ -27,8 +25,7 @@ the available options by using the ui5-option component. Use the function bindOp
 </furo-ui5-select>
 ```
 
-{{% api "_furo-ui5-select-description.md" %}}
-
+{{% api "_furo-ui5-select-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-select-properties.md" %}}

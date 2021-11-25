@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_furo-ui5-card-head.md" %}}
-
 ## Description
 
 `furo-ui5-card`
@@ -47,8 +45,7 @@ You can use semantic colors to visualize the status or state. Set the attribute 
  </furo-ui5-card>
 ```
 
-{{% api "_furo-ui5-card-description.md" %}}
-
+{{% api "_furo-ui5-card-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-card-properties.md" %}}

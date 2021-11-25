@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-furo-type-money-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_celledit-furo-type-money-description.md" %}}
-
+{{% api "_celledit-furo-type-money-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-type-money-properties.md" %}}

@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** bindable datepicker field
 
-{{% api "_furo-ui5-date-picker-head.md" %}}
-
 ## Description
 
 The furo-ui5-date-picker component allows the user to bind an date object like google.type.Date or a date string
@@ -52,8 +50,7 @@ Bind a entity field. You can use the entity even when no data was received.
 
 When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
-{{% api "_furo-ui5-date-picker-description.md" %}}
-
+{{% api "_furo-ui5-date-picker-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-date-picker-properties.md" %}}

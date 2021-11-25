@@ -14,16 +14,13 @@ weight: 50
 
 > **Summary:** celledit renderer for double
 
-{{% api "_celledit-double-head.md" %}}
-
 ## Description
 
 `celledit-double` is a `celledit` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_celledit-double-description.md" %}}
-
+{{% api "_celledit-double-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-double-properties.md" %}}

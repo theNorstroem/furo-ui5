@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-furo-reference-head.md" %}}
-
 ## Description
 
 `cell-furo-reference`
@@ -22,8 +20,7 @@ The cell-furo-reference component displays a FieldNode of type `furo.Reference` 
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-furo-reference-description.md" %}}
-
+{{% api "_cell-furo-reference-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-furo-reference-properties.md" %}}

@@ -14,14 +14,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-string-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_celledit-string-description.md" %}}
-
+{{% api "_celledit-string-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-string-properties.md" %}}

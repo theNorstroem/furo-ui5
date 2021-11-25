@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-furo-property-head.md" %}}
-
 ## Description
 
 `celledit-furo-property`
@@ -24,8 +22,7 @@ The celledit-furo-property component displays a FieldNode of type `furo.Property
 Every celledit-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_celledit-furo-property-description.md" %}}
-
+{{% api "_celledit-furo-property-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-property-properties.md" %}}

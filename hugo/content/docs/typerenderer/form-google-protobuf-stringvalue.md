@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_form-google-protobuf-stringvalue-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_form-google-protobuf-stringvalue-description.md" %}}
-
+{{% api "_form-google-protobuf-stringvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-google-protobuf-stringvalue-properties.md" %}}

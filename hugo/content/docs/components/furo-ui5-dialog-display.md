@@ -12,16 +12,13 @@ weight: 50
 
 > **Summary:** Display element for furo-ui5-dialog
 
-{{% api "_furo-ui5-dialog-display-head.md" %}}
-
 ## Description
 
 `furo-ui5-dialog-display` will catch furo-ui5-dialog elements, to display it in the dom of his parent element.
 
 The first furo-ui5-dialog-display will catch the `furo-ui5-dialog-register` request from a underlying furo-ui5-dialog.
 
-{{% api "_furo-ui5-dialog-display-description.md" %}}
-
+{{% api "_furo-ui5-dialog-display-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-dialog-display-properties.md" %}}

@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** ui5 busy indicator
 
-{{% api "_furo-ui5-busy-indicator-head.md" %}}
-
 ## Description
 
 `furo-ui5-busy-indicator`
@@ -28,8 +26,7 @@ With flow based programming it's usual to address methods. So we added two conve
 
 https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
 
-{{% api "_furo-ui5-busy-indicator-description.md" %}}
-
+{{% api "_furo-ui5-busy-indicator-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-busy-indicator-properties.md" %}}

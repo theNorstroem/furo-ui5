@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-bool-head.md" %}}
-
 ## Description
 
 `display-bool`
@@ -23,8 +21,7 @@ The display-bool component displays a FieldNode of type `bool` in read only mode
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-bool-description.md" %}}
-
+{{% api "_display-bool-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-bool-properties.md" %}}

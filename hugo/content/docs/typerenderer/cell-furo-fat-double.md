@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-furo-fat-double-head.md" %}}
-
 ## Description
 
 `cell-furo-fat-double`
@@ -23,8 +21,7 @@ The cell-furo-fat-double component displays a FieldNode of type `furo.fat.Double
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-furo-fat-double-description.md" %}}
-
+{{% api "_cell-furo-fat-double-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-furo-fat-double-properties.md" %}}

@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-furo-property-head.md" %}}
-
 ## Description
 
 `cell-furo-property`
@@ -24,8 +22,7 @@ The cell-furo-property component displays a FieldNode of type `furo.Property` in
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-furo-property-description.md" %}}
-
+{{% api "_cell-furo-property-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-furo-property-properties.md" %}}

@@ -16,14 +16,11 @@ weight: 50
 
 > **Summary:** {{.decl.summary}}
 
-{{"{{"}}% api "_{{.component}}-head.md" %{{"}}"}}
-
 ## Description
 
 {{if .decl.description}}{{.decl.description | noescape}}{{end}}
 
-{{"{{"}}% api "_{{.component}}-description.md" %{{"}}"}}
-
+{{"{{"}}% api "_{{.component}}-head.md" %{{"}}"}}
 
 ## Attributes and Properties
 {{"{{"}}% api "_{{.component}}-properties.md" %{{"}}"}}

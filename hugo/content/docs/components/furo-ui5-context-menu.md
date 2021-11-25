@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** Context menu
 
-{{% api "_furo-ui5-context-menu-head.md" %}}
-
 ## Description
 
 `furo-ui5-context-menu` is a context menu or menu element.
@@ -47,8 +45,7 @@ weight: 50
    children: '[] menu.Menuitem:6 #Children of this item'
 ```
 
-{{% api "_furo-ui5-context-menu-description.md" %}}
-
+{{% api "_furo-ui5-context-menu-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-context-menu-properties.md" %}}

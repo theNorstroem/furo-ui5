@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** A bindable header panel
 
-{{% api "_furo-ui5-header-panel-head.md" %}}
-
 ## Description
 
 `furo-ui5-header-panel`
@@ -31,8 +29,7 @@ weight: 50
   <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task"></furo-ui5-header-panel>
  ```
 
-{{% api "_furo-ui5-header-panel-description.md" %}}
-
+{{% api "_furo-ui5-header-panel-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-header-panel-properties.md" %}}

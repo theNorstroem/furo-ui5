@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-int32-head.md" %}}
-
 ## Description
 
 `display-int32`
@@ -26,8 +24,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/In
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-int32-description.md" %}}
-
+{{% api "_display-int32-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-int32-properties.md" %}}

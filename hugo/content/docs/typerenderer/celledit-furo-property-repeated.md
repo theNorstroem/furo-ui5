@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-furo-property-repeated-head.md" %}}
-
 ## Description
 
 `celledit-furo-property-repeats`
@@ -24,8 +22,7 @@ The celledit-furo-property-repeats component displays a FieldNode of type `furo.
 Every celledit-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_celledit-furo-property-repeated-description.md" %}}
-
+{{% api "_celledit-furo-property-repeated-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-property-repeated-properties.md" %}}

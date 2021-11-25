@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-bool-head.md" %}}
-
 ## Description
 
 `cell-bool`
@@ -23,8 +21,7 @@ The cell-bool component displays a FieldNode of type `bool` in read only mode.
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-bool-description.md" %}}
-
+{{% api "_cell-bool-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-bool-properties.md" %}}

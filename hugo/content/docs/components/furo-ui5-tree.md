@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** tree navigation menu
 
-{{% api "_furo-ui5-tree-head.md" %}}
-
 ## Description
 
 `furo-tree`
@@ -48,8 +46,7 @@ renders a tree structure
     is_group_label: 'bool:10 #[optional] Mark node as group label'
 ```
 
-{{% api "_furo-ui5-tree-description.md" %}}
-
+{{% api "_furo-ui5-tree-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-tree-properties.md" %}}

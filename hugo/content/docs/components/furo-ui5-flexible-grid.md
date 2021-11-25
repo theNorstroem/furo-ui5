@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** a grid splitter
 
-{{% api "_furo-ui5-flexible-grid-head.md" %}}
-
 ## Description
 
 `split-grid`
@@ -62,8 +60,7 @@ To make a column that uses the available space you have to set a starting point.
 **last-col** refers to the last column.
 There is no line name available
 
-{{% api "_furo-ui5-flexible-grid-description.md" %}}
-
+{{% api "_furo-ui5-flexible-grid-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-flexible-grid-properties.md" %}}

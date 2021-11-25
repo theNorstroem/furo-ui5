@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for furo.fat.Float
 
-{{% api "_form-furo-fat-float-head.md" %}}
-
 ## Description
 
 `form-furo-fat-float` is a `form` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_form-furo-fat-float-description.md" %}}
-
+{{% api "_form-furo-fat-float-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-furo-fat-float-properties.md" %}}

@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-furo-stringoptionproperty-head.md" %}}
-
 ## Description
 
 `cell-furo-stringoptionproperty`
@@ -24,8 +22,7 @@ The cell-furo-numberrproperty component displays a FieldNode of type `furo.Strin
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-furo-stringoptionproperty-description.md" %}}
-
+{{% api "_cell-furo-stringoptionproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-furo-stringoptionproperty-properties.md" %}}

@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-google-protobuf-doublevalue-head.md" %}}
-
 ## Description
 
 `display-double`
@@ -23,8 +21,7 @@ The display-double component displays a FieldNode of type `google.protobuf.Doubl
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-google-protobuf-doublevalue-description.md" %}}
-
+{{% api "_display-google-protobuf-doublevalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-google-protobuf-doublevalue-properties.md" %}}

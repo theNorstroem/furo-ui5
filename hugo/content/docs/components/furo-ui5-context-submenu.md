@@ -14,16 +14,13 @@ weight: 50
 
 > **Summary:** helper
 
-{{% api "_furo-ui5-context-submenu-head.md" %}}
-
 ## Description
 
 `furo-ui5-context-submenu` is a helper component for `furo-ui5-context-menu`.
 
 Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.
 
-{{% api "_furo-ui5-context-submenu-description.md" %}}
-
+{{% api "_furo-ui5-context-submenu-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-context-submenu-properties.md" %}}

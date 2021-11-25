@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for furo.fat.Double
 
-{{% api "_form-furo-fat-double-head.md" %}}
-
 ## Description
 
 `form-furo-fat-double` is a `form` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_form-furo-fat-double-description.md" %}}
-
+{{% api "_form-furo-fat-double-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-furo-fat-double-properties.md" %}}

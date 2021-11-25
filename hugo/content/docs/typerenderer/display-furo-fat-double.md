@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-fat-double-head.md" %}}
-
 ## Description
 
 `display-furo-fat-double`
@@ -23,8 +21,7 @@ The display-furo-fat-double component displays a FieldNode of type `furo.fat.Dou
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-fat-double-description.md" %}}
-
+{{% api "_display-furo-fat-double-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-fat-double-properties.md" %}}

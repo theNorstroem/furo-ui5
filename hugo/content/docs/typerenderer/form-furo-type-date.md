@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_form-furo-type-date-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_form-furo-type-date-description.md" %}}
-
+{{% api "_form-furo-type-date-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-furo-type-date-properties.md" %}}

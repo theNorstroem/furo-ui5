@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_form-google-protobuf-timestamp-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_form-google-protobuf-timestamp-description.md" %}}
-
+{{% api "_form-google-protobuf-timestamp-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-google-protobuf-timestamp-properties.md" %}}

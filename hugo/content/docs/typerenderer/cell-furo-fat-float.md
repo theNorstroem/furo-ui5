@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-furo-fat-float-head.md" %}}
-
 ## Description
 
 `cell-furo-fat-float`
@@ -23,8 +21,7 @@ The cell-furo-fat-float component displays a FieldNode of type `furo.fat.Float` 
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-furo-fat-float-description.md" %}}
-
+{{% api "_cell-furo-fat-float-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-furo-fat-float-properties.md" %}}

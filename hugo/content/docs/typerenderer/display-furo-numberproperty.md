@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-numberproperty-head.md" %}}
-
 ## Description
 
 `display-furo-numberproperty`
@@ -24,8 +22,7 @@ The display-furo-numberrproperty component displays a FieldNode of type `furo.Nu
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-numberproperty-description.md" %}}
-
+{{% api "_display-furo-numberproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-numberproperty-properties.md" %}}

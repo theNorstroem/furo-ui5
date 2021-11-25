@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** data number input field
 
-{{% api "_furo-ui5-number-input-head.md" %}}
-
 ## Description
 
 The 'furo-ui5-number-input' component allows the user to enter and edit numbers with data binding.
@@ -56,8 +54,7 @@ Bind a entity field. You can use the entity even when no data was received.
 
 When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
-{{% api "_furo-ui5-number-input-description.md" %}}
-
+{{% api "_furo-ui5-number-input-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-number-input-properties.md" %}}
@@ -96,52 +93,10 @@ default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
 
 <br><br>
 
-### **_attributesFromFNA**
-default: **{
-      readonly: undefined,
-      placeholder: undefined,
-    }**</small>
 
 
-<br><br>
-
-### **_constraintsFromFNA**
-default: **{
-      required: undefined,
-    }**</small>
 
 
-<br><br>
-
-### **_labelsFromFAT**
-default: **{
-      readonly: undefined,
-      disabled: undefined,
-      required: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_attributesFromFAT**
-default: **{
-      placeholder: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_privilegedAttributes**
-default: **{
-      readonly: null,
-      placeholder: null,
-      required: null,
-      disabled: null,
-      icon: null,
-    }**</small>
-
-
-<br><br>
 ## Events
 {{% api "_furo-ui5-number-input-events.md" %}}
 

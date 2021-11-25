@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** Dialog element
 
-{{% api "_furo-ui5-dialog-head.md" %}}
-
 ## Description
 
 `furo-ui5-dialog` is a extended ui5-dialog which can attach itself to a parent dom element.
@@ -35,8 +33,7 @@ It supports all features from the [SAP ui5 Dialog element](https://sap.github.io
 <button @-click="--openDialogClicked">Open dialog</button>
 ```
 
-{{% api "_furo-ui5-dialog-description.md" %}}
-
+{{% api "_furo-ui5-dialog-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-dialog-properties.md" %}}

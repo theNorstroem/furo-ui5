@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for google.type.Date
 
-{{% api "_form-google-type-date-head.md" %}}
-
 ## Description
 
 `form-google-type-date` is a `form` context renderer.
 
 It uses furo-ui5-date-picker as the renderer
 
-{{% api "_form-google-type-date-description.md" %}}
-
+{{% api "_form-google-type-date-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-google-type-date-properties.md" %}}

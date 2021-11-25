@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-google-protobuf-boolvalue-head.md" %}}
-
 ## Description
 
 `display-google-protobuf-boolvalue`
@@ -23,8 +21,7 @@ The display-google-protobuf-boolvalue component displays a FieldNode of type `go
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-google-protobuf-boolvalue-description.md" %}}
-
+{{% api "_display-google-protobuf-boolvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-google-protobuf-boolvalue-properties.md" %}}

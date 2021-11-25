@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-integerproperty-head.md" %}}
-
 ## Description
 
 `display-furo-integerproperty`
@@ -24,8 +22,7 @@ The display-furo-integerproperty component displays a FieldNode of type `furo.In
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-integerproperty-description.md" %}}
-
+{{% api "_display-furo-integerproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-integerproperty-properties.md" %}}

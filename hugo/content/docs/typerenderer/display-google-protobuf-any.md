@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-google-protobuf-any-head.md" %}}
-
 ## Description
 
 `display-google-protobuf-any`
@@ -22,8 +20,7 @@ The display-google-protobuf-any component is a wrapper displays of type `google.
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-google-protobuf-any-description.md" %}}
-
+{{% api "_display-google-protobuf-any-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-google-protobuf-any-properties.md" %}}

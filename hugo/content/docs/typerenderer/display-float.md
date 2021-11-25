@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-float-head.md" %}}
-
 ## Description
 
 `display-float`
@@ -23,8 +21,7 @@ The display-float component displays a FieldNode of type `float` in read only mo
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-float-description.md" %}}
-
+{{% api "_display-float-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-float-properties.md" %}}

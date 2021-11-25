@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** form renderer for google.protobuf.Int32value
 
-{{% api "_form-google-protobuf-int32value-head.md" %}}
-
 ## Description
 
 `form-google-protobuf-int32value` is a `form` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_form-google-protobuf-int32value-description.md" %}}
-
+{{% api "_form-google-protobuf-int32value-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-google-protobuf-int32value-properties.md" %}}

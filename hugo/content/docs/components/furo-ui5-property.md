@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** display and bind types of type any
 
-{{% api "_furo-ui5-property-head.md" %}}
-
 ## Description
 
 `furo-ui5-property`
@@ -102,8 +100,7 @@ weight: 50
 - "furo.NumberProperty": "furo-ui5-number-input"
 - "furo.StringOptionProperty": "furo-ui5-collection-dropdown"
 
-{{% api "_furo-ui5-property-description.md" %}}
-
+{{% api "_furo-ui5-property-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-property-properties.md" %}}

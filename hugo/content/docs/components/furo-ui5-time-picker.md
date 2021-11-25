@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** furo data time picker field
 
-{{% api "_furo-ui5-time-picker-head.md" %}}
-
 ## Description
 
 The furo-ui5-time-picker component allows the user to bind a field of type google.type.TimeOfDay.
@@ -56,8 +54,7 @@ Bind a entity field. You can use the entity even when no data was received.
 
 When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
-{{% api "_furo-ui5-time-picker-description.md" %}}
-
+{{% api "_furo-ui5-time-picker-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-time-picker-properties.md" %}}

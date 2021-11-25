@@ -13,8 +13,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-google-protobuf-stringvalue-head.md" %}}
-
 ## Description
 
 `display-google-protobuf-stringvalue`
@@ -23,8 +21,7 @@ The display-google-protobuf-stringvalue component displays a FieldNode of type `
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-google-protobuf-stringvalue-description.md" %}}
-
+{{% api "_display-google-protobuf-stringvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-google-protobuf-stringvalue-properties.md" %}}

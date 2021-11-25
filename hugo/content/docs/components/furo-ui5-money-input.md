@@ -15,8 +15,6 @@ weight: 50
 
 > **Summary:** Binds a entityObject field google.type.Money to a number-input and currency dropdown fields
 
-{{% api "_furo-ui5-money-input-head.md" %}}
-
 ## Description
 
 `furo-ui5-money-input`
@@ -38,8 +36,7 @@ Binds a entityObject field google.type.Money to a furo-number-input and currency
 
 Tags: money input
 
-{{% api "_furo-ui5-money-input-description.md" %}}
-
+{{% api "_furo-ui5-money-input-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-money-input-properties.md" %}}

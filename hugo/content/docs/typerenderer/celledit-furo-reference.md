@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-furo-reference-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_celledit-furo-reference-description.md" %}}
-
+{{% api "_celledit-furo-reference-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-reference-properties.md" %}}

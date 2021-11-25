@@ -14,14 +14,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_form-float-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_form-float-description.md" %}}
-
+{{% api "_form-float-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-float-properties.md" %}}

@@ -12,8 +12,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_cell-google-protobuf-timestamp-head.md" %}}
-
 ## Description
 
 `cell-google-protobuf-timestamp`
@@ -25,8 +23,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/In
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_cell-google-protobuf-timestamp-description.md" %}}
-
+{{% api "_cell-google-protobuf-timestamp-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_cell-google-protobuf-timestamp-properties.md" %}}

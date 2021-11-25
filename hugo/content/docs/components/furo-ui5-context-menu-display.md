@@ -14,14 +14,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_furo-ui5-context-menu-display-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_furo-ui5-context-menu-display-description.md" %}}
-
+{{% api "_furo-ui5-context-menu-display-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-context-menu-display-properties.md" %}}

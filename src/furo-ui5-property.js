@@ -5,8 +5,9 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
 
 /**
  * `furo-ui5-property`
- *  Field for type furo.Property. This can be used to display "dynamic" fields aka properties.
- *  It works with repeated types and non repeating property types.
+ *  Field for type **furo.Property**. This can be used to display "dynamic" fields aka properties.
+ *
+ *  `furo-ui5-property` works with repeated types and non repeating property types.
  *
  *  ```html
  *  <furo-ui5-property ƒ-bind-data="--entity(*.single_type_property)"></furo-ui5-property>
@@ -43,6 +44,7 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  *    }
  *  }
  *  ```
+ *
  * ## Example StringOptions Field
  *
  * ```json
@@ -80,15 +82,7 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  *
  * ```
  *
- *  The current type mappings are:
- *
- * - "google.type.Date": "furo-ui5-date-input"
- * - "furo.StringProperty": "furo-ui5-text-input"
- * - "furo.IntegerProperty": "furo-ui5-number-input"
- * - "furo.NumberProperty": "furo-ui5-number-input"
- * - "furo.StringOptionProperty": "furo-ui5-collection-dropdown"
- *
- * @summary display and bind types of type any
+ * @summary ????? bind types of type any
  * @element
  * @demo demo-furo-ui5-property
  * @appliesMixin FBP

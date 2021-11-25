@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_display-furo-property-repeats-labeled-head.md" %}}
-
 ## Description
 
 `display-furo-property-repeats-labeled`
@@ -24,8 +22,7 @@ The display-furo-property-repeats-labeled component displays a RepeaterNode of t
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-property-repeats-labeled-description.md" %}}
-
+{{% api "_display-furo-property-repeats-labeled-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_display-furo-property-repeats-labeled-properties.md" %}}

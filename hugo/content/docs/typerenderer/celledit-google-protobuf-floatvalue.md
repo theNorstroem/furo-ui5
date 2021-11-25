@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** celledit renderer for google.protobuf.Float
 
-{{% api "_celledit-google-protobuf-floatvalue-head.md" %}}
-
 ## Description
 
 `celledit-google-protobuf-floatvalue` is a `celledit` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_celledit-google-protobuf-floatvalue-description.md" %}}
-
+{{% api "_celledit-google-protobuf-floatvalue-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-google-protobuf-floatvalue-properties.md" %}}

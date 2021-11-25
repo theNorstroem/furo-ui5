@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** repeated strings
 
-{{% api "_furo-ui5-multi-input-head.md" %}}
-
 ## Description
 
 `furo-ui5-multi-input`
 
 The furo-ui5-multi-input component represents the repeated strings. e.g. ["aaa","bbb","ccc"]
 
-{{% api "_furo-ui5-multi-input-description.md" %}}
-
+{{% api "_furo-ui5-multi-input-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-multi-input-properties.md" %}}

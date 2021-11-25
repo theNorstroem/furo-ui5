@@ -13,16 +13,13 @@ weight: 50
 
 > **Summary:** celledit renderer for furo.INumberproperty
 
-{{% api "_celledit-furo-inumberproperty-head.md" %}}
-
 ## Description
 
 `celledit-furo-numberproperty` is a `celledit` context renderer.
 
 It uses furo-ui5-number-input as the renderer
 
-{{% api "_celledit-furo-inumberproperty-description.md" %}}
-
+{{% api "_celledit-furo-inumberproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-inumberproperty-properties.md" %}}

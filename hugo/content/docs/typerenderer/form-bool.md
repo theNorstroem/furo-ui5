@@ -14,16 +14,13 @@ weight: 50
 
 > **Summary:** form renderer for bool
 
-{{% api "_form-bool-head.md" %}}
-
 ## Description
 
 `form-bool` is a `form` context renderer.
 
 It uses furo-ui5-checkbox-input as the renderer
 
-{{% api "_form-bool-description.md" %}}
-
+{{% api "_form-bool-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-bool-properties.md" %}}

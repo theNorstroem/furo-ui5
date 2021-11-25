@@ -13,14 +13,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_celledit-furo-stringoptionproperty-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_celledit-furo-stringoptionproperty-description.md" %}}
-
+{{% api "_celledit-furo-stringoptionproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_celledit-furo-stringoptionproperty-properties.md" %}}

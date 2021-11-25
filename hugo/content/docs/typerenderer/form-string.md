@@ -14,14 +14,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_form-string-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_form-string-description.md" %}}
-
+{{% api "_form-string-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-string-properties.md" %}}

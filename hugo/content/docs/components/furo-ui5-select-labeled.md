@@ -14,16 +14,13 @@ weight: 50
 
 > **Summary:** labeled select
 
-{{% api "_furo-ui5-select-labeled-head.md" %}}
-
 ## Description
 
 `furo-ui5-select-labeled`
 The furo-ui5-select-labeled is a composition to easily use a complete data select with label according
 to the design specification of SAP Fiori Design System.
 
-{{% api "_furo-ui5-select-labeled-description.md" %}}
-
+{{% api "_furo-ui5-select-labeled-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-select-labeled-properties.md" %}}

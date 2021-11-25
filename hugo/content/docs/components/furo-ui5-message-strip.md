@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** furo ui5 message strip
 
-{{% api "_furo-ui5-message-strip-head.md" %}}
-
 ## Description
 
 `furo-ui5-message-strip`
@@ -34,8 +32,7 @@ https://experience.sap.com/fiori-design-web/message-strip/
  <furo-ui5-message-strip ƒ-show-information="--wire"></furo-ui5-message-strip>
  ```
 
-{{% api "_furo-ui5-message-strip-description.md" %}}
-
+{{% api "_furo-ui5-message-strip-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-message-strip-properties.md" %}}

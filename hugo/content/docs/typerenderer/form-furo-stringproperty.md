@@ -14,14 +14,11 @@ weight: 50
 
 > **Summary:** 
 
-{{% api "_form-furo-stringproperty-head.md" %}}
-
 ## Description
 
 
 
-{{% api "_form-furo-stringproperty-description.md" %}}
-
+{{% api "_form-furo-stringproperty-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_form-furo-stringproperty-properties.md" %}}

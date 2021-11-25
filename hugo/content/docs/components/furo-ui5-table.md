@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** Display repeated fields in a table
 
-{{% api "_furo-ui5-table-head.md" %}}
-
 ## Description
 
 `furo-ui5-table` display entities in a ui5-table
@@ -49,8 +47,7 @@ Set a context for the type renderer. The default value is `cell`.
 **renderer**
 Set a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.
 
-{{% api "_furo-ui5-table-description.md" %}}
-
+{{% api "_furo-ui5-table-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-table-properties.md" %}}

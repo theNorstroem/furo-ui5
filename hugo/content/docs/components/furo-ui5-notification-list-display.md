@@ -14,8 +14,6 @@ weight: 50
 
 > **Summary:** ui5 notification list
 
-{{% api "_furo-ui5-notification-list-display-head.md" %}}
-
 ## Description
 
 Notification display component that works together with furo-ui5-notification.
@@ -26,8 +24,7 @@ Best place the furo-ui5-notification-list-display on the main site. then you onl
 you can also use more than one furo-ui5-notification-list-display for special needs.
 But you have to be sure the furo-ui5-notification-list-display can receive the notification events from furo-ui5-notification.
 
-{{% api "_furo-ui5-notification-list-display-description.md" %}}
-
+{{% api "_furo-ui5-notification-list-display-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-notification-list-display-properties.md" %}}
