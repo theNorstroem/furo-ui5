@@ -205,9 +205,9 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
     // text
     if (this._privilegedAttributes.text === null) {
       if (fatAttributes.label !== undefined) {
-        this.innerText = fatAttributes.label;
+        this.text = fatAttributes.label;
       } else if (this._attributesFromFNA.label !== undefined) {
-        this.innerText = this._attributesFromFNA.label;
+        this.text = this._attributesFromFNA.label;
       }
       this._render();
     }
@@ -278,7 +278,7 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
       this._privilegedAttributes.text === null &&
       this._attributesFromFAT.label === undefined
     ) {
-      this.innerText = text;
+      this.text = text;
     }
   }
 

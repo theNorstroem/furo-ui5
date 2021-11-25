@@ -21,7 +21,7 @@ bookHidden: true
  ></furo-ui5-radio-button>
 <furo-ui5-radio-button
     value-state="Success"
-    placeholder="Placeholder"
+    text="Some Text"
     ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
  ></furo-ui5-radio-button>
 </furo-form-layouter>
