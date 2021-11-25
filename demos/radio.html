@@ -19,6 +19,7 @@
     import { html, render } from 'lit';
     import './initEnv.js';
     import '../src/furo-ui5-radio-button.js';
+    import '../src/furo-ui5-checkbox-input.js';
 
 
     import '@furo/data/src/furo-catalog.js';
@@ -39,6 +40,7 @@
               ></furo-ui5-radio-button>
               <furo-ui5-radio-button
                 readonly
+                text="Override"
                 ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
               ></furo-ui5-radio-button>
               <furo-ui5-radio-button
@@ -46,10 +48,15 @@
                 ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
               ></furo-ui5-radio-button>
               <furo-ui5-radio-button
-                value-state="Success"
+                value-state="Warning"
                 placeholder="Placeholder"
                 ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
               ></furo-ui5-radio-button>
+              <furo-ui5-checkbox-input
+                value-state="Success"
+                text="Some Text"
+                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+              ></furo-ui5-checkbox-input>
             </furo-form-layouter>
             <furo-data-object
               type="experiment.Experiment"
