@@ -179,7 +179,7 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
    * @param fieldNode
    */
   bindData(fieldNode) {
-    super.bindData(fieldNode);
+    return super.bindData(fieldNode);
   }
 
   readAttributes() {

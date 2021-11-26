@@ -147,7 +147,7 @@ export class FuroUi5PasswordInput extends FieldNodeAdapter(Input.default) {
    * @param fieldNode
    */
   bindData(fieldNode) {
-    super.bindData(fieldNode);
+    return super.bindData(fieldNode);
   }
 
   /**

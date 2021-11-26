@@ -148,7 +148,7 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
    * @param fieldNode
    */
   bindData(fieldNode) {
-    super.bindData(fieldNode);
+    return super.bindData(fieldNode);
   }
 
   /**

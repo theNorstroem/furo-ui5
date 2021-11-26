@@ -15,11 +15,10 @@ import '@ui5/webcomponents-icons/dist/search.js';
 import './furo-ui5-dialog.js';
 
 /**
- * The furo-ui5-reference-search
- *  search a reference
+ * The furo-ui5-reference-search is a search input field with the capability to open and extended search component.
  *
- *  Bounded data must fullfill the  furo.reference signature. The service, deeplink,... is taken from the spec of your field.
- *  Do not forget to specify.
+ * Bound data must fullfill the furo.Reference signature. The service, deeplink,... is taken from the spec of your field.
+ * Do not forget to specify.
  *
  *  *default usage*
  * ```html
@@ -53,10 +52,6 @@ import './furo-ui5-dialog.js';
  * - **max:"number"** set the maximum number of characters available in the input field.
  *
  * The constraint **required** will mark the element as required
- *
- * ## Methods
- * **bind-data(fieldNode)**
- * Bind a entity field. This can be a scalar type or any complex type with 'id','display_name' signature.
  *
  * If your type has a *reference* type signature ('id','display_name', 'link'), the service, and initial deep link is extracted from
  * the link part of your type.
@@ -246,6 +241,16 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
         this._previousValueState.message = vse.innerText;
       }
     });
+  }
+
+  /**
+   * Overrides bindData() of FieldNodeAdapter
+   * Binds a FieldNode to the component
+   * Supported types: can be a scalar type or any complex type with 'id','display_name' signature.
+   * @param fieldNode
+   */
+  bindData(fieldNode) {
+    return super.bindData(fieldNode)
   }
 
   /**

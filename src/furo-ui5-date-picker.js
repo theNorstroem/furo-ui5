@@ -207,7 +207,7 @@ export class FuroUi5DatePicker extends FieldNodeAdapter(DatePicker.default) {
    * @param fieldNode
    */
   bindData(fieldNode) {
-    super.bindData(fieldNode);
+    return super.bindData(fieldNode);
   }
 
   /**

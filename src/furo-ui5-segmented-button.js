@@ -5,7 +5,6 @@ import '@ui5/webcomponents/dist/SegmentedButtonItem.js';
 import { Events } from './lib/Events.js';
 
 /**
- * `furo-ui5-segmented-button`
  * The furo-ui5-segmented-button component represents a drop-down list. The items inside define the available
  * options by using the furo-ui5-segmented-button component.
  *
@@ -131,8 +130,9 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
   }
 
   /**
-   * overwrite bindData of FieldNodeAdapter
-   * @param {FieldNode} fieldNode
+   * Overrides bindData() of FieldNodeAdapter
+   * Binds a FieldNode to the component
+   * Supported types:
    * @returns {boolean}
    */
   bindData(fieldNode) {

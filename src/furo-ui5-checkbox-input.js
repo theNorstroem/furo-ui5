@@ -124,7 +124,7 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
    * @param fieldNode
    */
   bindData(fieldNode) {
-    super.bindData(fieldNode);
+    return super.bindData(fieldNode);
   }
 
   /**

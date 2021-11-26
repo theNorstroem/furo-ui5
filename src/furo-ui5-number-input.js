@@ -151,7 +151,7 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
    * @param fieldNode
    */
   bindData(fieldNode) {
-    super.bindData(fieldNode);
+    return super.bindData(fieldNode);
   }
 
   /**

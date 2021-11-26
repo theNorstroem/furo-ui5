@@ -119,7 +119,7 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
    * @param fieldNode
    */
   bindData(fieldNode) {
-    super.bindData(fieldNode);
+    return super.bindData(fieldNode);
   }
 
   /**
