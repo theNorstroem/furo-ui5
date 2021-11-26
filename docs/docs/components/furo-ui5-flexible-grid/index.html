@@ -12,12 +12,12 @@
 <meta property="og:description" content="a grid splitter" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-flexible-grid/" />
-<meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
+<meta property="article:modified_time" content="2021-11-25T15:38:13+01:00" />
 <title>furo-ui5-flexible-grid | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.f0767b163f790d316ac4f953245393d9e52b5871dfd06c5bc681b8aa6958aa37.js" integrity="sha256-8HZ7Fj95DTFqxPlTJFOT2eUrWHHf0GxbxoG4qmlYqjc="></script>
+<script defer src="/en.search.min.4eca31333a8962beef6c5fe4e8d2d600097af91553985c4ee6118a52b0ccd250.js" integrity="sha256-TsoxMzqJYr7vbF/k6NLWAAl6&#43;RVTmFxO5hGKUrDM0lA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -661,32 +661,6 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-radio-button/" class="">furo-ui5-radio-button</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://ui5.furo.pro/docs/components/furo-ui5-radio-button-group/" class="">furo-ui5-radio-button-group</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://ui5.furo.pro/docs/components/furo-ui5-radiogroup/" class="">furo-ui5-radiogroup</a>
   
 
         </li>
@@ -3134,47 +3108,16 @@ https://github.com/alex-shpak/hugo-book
       
     
       
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/redactional/components/furo-ui5-propertylist-display/_furo-ui5-propertylist-display-head/" class="">Furo Ui5 Propertylist Display Head</a>
+  
+
+        </li>
       
     
       
@@ -3965,6 +3908,74 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p><strong>Summary:</strong> a grid splitter</p>
 </blockquote>
+<h2 id="description">
+  Description
+  <a class="anchor" href="#description">#</a>
+</h2>
+<p>The furo-ui5-flexible-grid will split your screen contents horizontally (in cols) and put them vertically (left at top)
+when the available space is to small.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#998;font-style:italic">&lt;!-- a simple layout manager with two columns  --&gt;</span>
+&lt;<span style="color:#000080">furo-ui5-flexible-grid</span>&gt;
+  &lt;<span style="color:#000080">div</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;2&#34;</span> <span style="color:#008080">full-on-size-medium</span> <span style="color:#008080">full-on-size-small</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;left&#34;</span>&gt;
+     &lt;<span style="color:#000080">slot</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;left&#34;</span>&gt;&lt;/<span style="color:#000080">slot</span>&gt;
+  &lt;/<span style="color:#000080">div</span>&gt;
+  <span style="color:#998;font-style:italic">&lt;!-- this will start at pos 3 and goes to the end of the screen --&gt;</span>
+  &lt;<span style="color:#000080">furo-z-grid</span> <span style="color:#008080">hstart</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;3&#34;</span> <span style="color:#008080">fill</span>&gt;
+    &lt;<span style="color:#000080">slot</span>&gt;&lt;/<span style="color:#000080">slot</span>&gt;
+  &lt;/<span style="color:#000080">furo-z-grid</span>&gt;
+&lt;/<span style="color:#000080">furo-ui5-flexible-grid</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="setting-column-width">
+  Setting column width
+  <a class="anchor" href="#setting-column-width">#</a>
+</h2>
+<p>To set the width of a column use the <code>hspan</code> attribute.</p>
+<h2 id="fill-column-to-the-end-of-the-screen">
+  Fill column to the end of the screen
+  <a class="anchor" href="#fill-column-to-the-end-of-the-screen">#</a>
+</h2>
+<p>To make a column that uses the available space you have to set a starting point. This can be done with <code>hstart=&quot;3&quot;</code>
+(begin on cell 3) and the attribute <code>fill</code> (fill to the right)</p>
+<h2 id="full-on-size">
+  full-on-[size]
+  <a class="anchor" href="#full-on-size">#</a>
+</h2>
+<p>To set full width on a specific current size, use <code>full-on-size-small</code> , <code>full-on-size-medium</code> , <code>full-on-size-large</code> ,<code>full-on-size-xlarge</code>.</p>
+<p>When the available space has the given size, the default hspan are overridden and the full width is used.</p>
+<h2 id="hstart">
+  hstart
+  <a class="anchor" href="#hstart">#</a>
+</h2>
+<p>Set the starting point of a filling row with <code>hstart=&quot;3&quot;</code>.</p>
+<p>Available values are <code>hstart=&quot;2&quot;</code>,&hellip;,<code>hstart=&quot;9&quot;</code></p>
+<h2 id="hspan">
+  hspan
+  <a class="anchor" href="#hspan">#</a>
+</h2>
+<p>Set the horizontal space (the width) with the <em>hspan</em> attribute.</p>
+<p>Available ranges are from 1 to 9.</p>
+<p><code>hspan=&quot;1&quot;</code>, <code>hspan=&quot;2&quot;</code>,&hellip;,<code>hspan=&quot;9&quot;</code></p>
+<h2 id="named-lines-and-columns">
+  Named lines and columns
+  <a class="anchor" href="#named-lines-and-columns">#</a>
+</h2>
+<p><strong>last-col</strong> refers to the last column.
+There is no line name available</p>
 <h4 id="sample-split-z-grids-in-2-sections">
   Sample split z-grids in 2 sections
   <a class="anchor" href="#sample-split-z-grids-in-2-sections">#</a>
@@ -4060,74 +4071,6 @@ full width, no height given
 </code></pre></td></tr></table></p>
 </div>
 </div>
-<h2 id="description">
-  Description
-  <a class="anchor" href="#description">#</a>
-</h2>
-<p><code>split-grid</code>
-will split your screen contents horizontally (in cols) and put them vertically (left at top) when the available space is to small.</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#998;font-style:italic">&lt;!-- a simple layout manager with two columns  --&gt;</span>
-&lt;<span style="color:#000080">furo-ui5-flexible-grid</span>&gt;
-  &lt;<span style="color:#000080">div</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;2&#34;</span> <span style="color:#008080">full-on-size-medium</span> <span style="color:#008080">full-on-size-small</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;left&#34;</span>&gt;
-     &lt;<span style="color:#000080">slot</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;left&#34;</span>&gt;&lt;/<span style="color:#000080">slot</span>&gt;
-  &lt;/<span style="color:#000080">div</span>&gt;
-  <span style="color:#998;font-style:italic">&lt;!-- this will start at pos 3 and goes to the end of the screen --&gt;</span>
-  &lt;<span style="color:#000080">furo-z-grid</span> <span style="color:#008080">hstart</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;3&#34;</span> <span style="color:#008080">fill</span>&gt;
-    &lt;<span style="color:#000080">slot</span>&gt;&lt;/<span style="color:#000080">slot</span>&gt;
-  &lt;/<span style="color:#000080">furo-z-grid</span>&gt;
-&lt;/<span style="color:#000080">furo-ui5-flexible-grid</span>&gt;
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="setting-column-width">
-  Setting column width
-  <a class="anchor" href="#setting-column-width">#</a>
-</h2>
-<p>To set the width of a column use the <code>hspan</code> attribute.</p>
-<h2 id="fill-column-to-the-end-of-the-screen">
-  Fill column to the end of the screen
-  <a class="anchor" href="#fill-column-to-the-end-of-the-screen">#</a>
-</h2>
-<p>To make a column that uses the available space you have to set a starting point. This can be done with <code>hstart=&quot;3&quot;</code>
-(begin on cell 3) and the attribute <code>fill</code> (fill to the right)</p>
-<h2 id="full-on-size">
-  full-on-[size]
-  <a class="anchor" href="#full-on-size">#</a>
-</h2>
-<p>To set full width on a specific current size, use <code>full-on-size-small</code> , <code>full-on-size-medium</code> , <code>full-on-size-large</code> ,<code>full-on-size-xlarge</code>.</p>
-<p>When the available space has the given size, the default hspan are overridden and the full width is used.</p>
-<h2 id="hstart">
-  hstart
-  <a class="anchor" href="#hstart">#</a>
-</h2>
-<p>Set the starting point of a filling row with <code>hstart=&quot;3&quot;</code>.</p>
-<p>Available values are <code>hstart=&quot;2&quot;</code>,&hellip;,<code>hstart=&quot;9&quot;</code></p>
-<h2 id="hspan">
-  hspan
-  <a class="anchor" href="#hspan">#</a>
-</h2>
-<p>Set the horizontal space (the width) with the <em>hspan</em> attribute.</p>
-<p>Available ranges are from 1 to 9.</p>
-<p><code>hspan=&quot;1&quot;</code>, <code>hspan=&quot;2&quot;</code>,&hellip;,<code>hspan=&quot;9&quot;</code></p>
-<h2 id="named-lines-and-columns">
-  Named lines and columns
-  <a class="anchor" href="#named-lines-and-columns">#</a>
-</h2>
-<p><strong>last-col</strong> refers to the last column.
-There is no line name available</p>
 <h2 id="attributes-and-properties">
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
@@ -4172,9 +4115,9 @@ There is no line name available</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73d2f92ecb0d19a2e8bb23f2cd2cb1f0c4d9b069" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/7386a67b5fe01b0b777c0e081cc2b0337900ae74" title='Last modified by veith | November 25, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 24, 2021</span>
+      <span>November 25, 2021</span>
     </a>
   </div>
 
@@ -4239,6 +4182,7 @@ There is no line name available</p>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/data.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 

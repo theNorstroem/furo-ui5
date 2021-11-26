@@ -12,12 +12,12 @@
 <meta property="og:description" content="data select field" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-select/" />
-<meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
+<meta property="article:modified_time" content="2021-11-26T15:26:12+01:00" />
 <title>furo-ui5-select | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.f0767b163f790d316ac4f953245393d9e52b5871dfd06c5bc681b8aa6958aa37.js" integrity="sha256-8HZ7Fj95DTFqxPlTJFOT2eUrWHHf0GxbxoG4qmlYqjc="></script>
+<script defer src="/en.search.min.4eca31333a8962beef6c5fe4e8d2d600097af91553985c4ee6118a52b0ccd250.js" integrity="sha256-TsoxMzqJYr7vbF/k6NLWAAl6&#43;RVTmFxO5hGKUrDM0lA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -661,32 +661,6 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-radio-button/" class="">furo-ui5-radio-button</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://ui5.furo.pro/docs/components/furo-ui5-radio-button-group/" class="">furo-ui5-radio-button-group</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://ui5.furo.pro/docs/components/furo-ui5-radiogroup/" class="">furo-ui5-radiogroup</a>
   
 
         </li>
@@ -3134,47 +3108,16 @@ https://github.com/alex-shpak/hugo-book
       
     
       
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/redactional/components/furo-ui5-propertylist-display/_furo-ui5-propertylist-display-head/" class="">Furo Ui5 Propertylist Display Head</a>
+  
+
+        </li>
       
     
       
@@ -3930,12 +3873,6 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#idfieldpath"><strong>idFieldPath</strong></a></li>
         <li><a href="#displayfieldpath"><strong>displayFieldPath</strong></a></li>
         <li><a href="#valuefieldpath"><strong>valueFieldPath</strong></a></li>
-        <li><a href="#_previousvaluestate"><strong>_previousValueState</strong></a></li>
-        <li><a href="#_attributesfromfna"><strong>_attributesFromFNA</strong></a></li>
-        <li><a href="#_constraintsfromfna"><strong>_constraintsFromFNA</strong></a></li>
-        <li><a href="#_labelsfromfat"><strong>_labelsFromFAT</strong></a></li>
-        <li><a href="#_attributesfromfat"><strong>_attributesFromFAT</strong></a></li>
-        <li><a href="#_privilegedattributes"><strong>_privilegedAttributes</strong></a></li>
       </ul>
     </li>
     <li><a href="#events">Events</a>
@@ -3986,7 +3923,298 @@ the available options by using the ui5-option component. Use the function bindOp
    ƒ-bind-data=&quot;--entity(*.data.description)&quot;
    ƒ-bind-options=&quot;--collection(*.entities)&quot;&gt;
 &lt;/furo-ui5-select&gt;
-</code></pre><h2 id="attributes-and-properties">
+</code></pre><h3 id="example-with-options-from-specs">
+  Example with options from specs
+  <a class="anchor" href="#example-with-options-from-specs">#</a>
+</h3>
+<p>A simple way to use the segmented button is, uising it with specified options for a string type.</p>
+<p>Defining a type with the options may look like a big overhead, but it let you switch the UI implementation by just changing
+the tag name.</p>
+<p><em>The labels in the demo are not translated for better readability.</em></p>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-form-layouter four>
+<furo-ui5-select
+  label="Use with select"
+  value-state="Success" 
+  ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
+<furo-ui5-select
+  label="Use with select"
+  value-state="Success" 
+  ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
+<furo-ui5-text-input
+  label="use with text-input"
+  value-state="Success" ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-text-input>
+</furo-form-layouter>
+<furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
+</template>
+</furo-demo-snippet>
+<h4 id="markup">
+  Markup
+  <a class="anchor" href="#markup">#</a>
+</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-select</span>
+  <span style="color:#008080">label</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Use with select&#34;</span>
+  <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoPerson(*.sex)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-select</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-select</span>
+  <span style="color:#008080">label</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Use with select&#34;</span>
+  <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoPerson(*.sex)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-select</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-text-input</span>
+  <span style="color:#008080">label</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;use with text-input&#34;</span>
+  <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoPerson(*.sex)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="type-definition">
+  Type definition
+  <a class="anchor" href="#type-definition">#</a>
+</h4>
+<blockquote>
+<p>look at <code>fields.sex.meta.options.list</code></p>
+</blockquote>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">name</span>:<span style="color:#bbb"> </span>Person<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">type</span>:<span style="color:#bbb"> </span>Person<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">description</span>:<span style="color:#bbb"> </span>Person message type<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">lifecycle</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">null</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">__proto</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">package</span>:<span style="color:#bbb"> </span>person<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">targetfile</span>:<span style="color:#bbb"> </span>person.proto<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">imports</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>- google/protobuf/field_mask.proto<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">options</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">go_package</span>:<span style="color:#bbb"> </span>github.com/eclipse/eclipsefuro-web/furo-specs/dist/pb/person;personpb<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">java_multiple_files</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;true&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">java_outer_classname</span>:<span style="color:#bbb"> </span>PersonProto<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">java_package</span>:<span style="color:#bbb"> </span>com.example.tutorial.person<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">fields</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">sex</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">type</span>:<span style="color:#bbb"> </span>string<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">description</span>:<span style="color:#bbb"> </span>sex<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">__proto</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000080">number</span>:<span style="color:#bbb"> </span><span style="color:#099">8</span><span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">__ui</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">null</span><span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">meta</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000080">default</span>:<span style="color:#bbb"> </span>female<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000080">placeholder</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000080">hint</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000080">label</span>:<span style="color:#bbb"> </span>sex<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000080">options</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">        </span><span style="color:#000080">flags</span>:<span style="color:#bbb"> </span>[]<span style="color:#bbb">
+</span><span style="color:#bbb">        </span><span style="color:#000080">list</span>:<span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># set the default options</span><span style="color:#bbb">
+</span><span style="color:#bbb">          </span>- <span style="color:#000080">&#39;@type&#39;</span>:<span style="color:#bbb"> </span>type.googleapis.com/furo.Optionitem<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">display_name</span>:<span style="color:#bbb"> </span>person.type.sex.unknown.label<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">id</span>:<span style="color:#bbb"> </span>unknown<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">selected</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span><span style="color:#bbb">
+</span><span style="color:#bbb">          </span>- <span style="color:#000080">&#39;@type&#39;</span>:<span style="color:#bbb"> </span>type.googleapis.com/furo.Optionitem<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">display_name</span>:<span style="color:#bbb"> </span>person.type.sex.female.label<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">id</span>:<span style="color:#bbb"> </span>female<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">selected</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb">          </span>- <span style="color:#000080">&#39;@type&#39;</span>:<span style="color:#bbb"> </span>type.googleapis.com/furo.Optionitem<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">display_name</span>:<span style="color:#bbb"> </span>person.type.sex.male.label<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">id</span>:<span style="color:#bbb"> </span>male<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">selected</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span><span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000080">readonly</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span><span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000080">repeated</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span><span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000080">typespecific</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">null</span><span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">constraints</span>:<span style="color:#bbb"> </span>{}<span style="color:#bbb">
+</span><span style="color:#bbb">    
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="example-with-bindoptions">
+  Example with bindOptions
+  <a class="anchor" href="#example-with-bindoptions">#</a>
+</h3>
+<p>Set the id of the selected optioin to a value which is not in the list and press <em>load options</em> again.</p>
+<furo-demo-snippet>
+<template>
+<button @-click="--read1">load options</button>
+<furo-form-layouter one>
+  <furo-ui5-select
+    label="by display_name"
+    value-field-path="data.id" 
+    id-field-path="data.id" 
+    display-field-path="data.display_name" 
+    ƒ-bind-options="--collection(*.entities)" 
+    ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-select>
+  <furo-ui5-select
+    label="by first_name"
+    value-field-path="data.id"
+    id-field-path="data.id" 
+    display-field-path="data.first_name" 
+    ƒ-bind-options="--collection(*.entities)" 
+    ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-select>
+  <furo-ui5-select 
+    label="by phone_nr"
+    value-field-path="data.id" 
+    id-field-path="data.id" 
+    display-field-path="data.phone_nr" 
+    ƒ-bind-options="--collection(*.entities)" 
+    ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-select>
+  <furo-ui5-number-input 
+    label="Selected option" 
+    ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-number-input>
+  </furo-form-layouter>
+  <furo-data-object 
+    type="person.PersonCollection"
+    @-object-ready="--collection" 
+    ƒ-inject-raw="--response"></furo-data-object>
+  <furo-data-object 
+    type="task.Task"
+    @-object-ready="--entity"></furo-data-object>
+  <furo-fetch-json
+    ƒ-fetch="--read1"
+    src="/mockdata/persons/list.json"
+    @-data="--response"
+    ></furo-fetch-json>
+</template>
+</furo-demo-snippet>
+<h4 id="markup-1">
+  Markup
+  <a class="anchor" href="#markup-1">#</a>
+</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-select</span>
+  <span style="color:#008080">label</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;by display_name&#34;</span>
+  <span style="color:#008080">value-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span>
+  <span style="color:#008080">id-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span>
+  <span style="color:#008080">display-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.display_name&#34;</span>
+  <span style="color:#008080">ƒ-bind-options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-select</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-select</span>
+  <span style="color:#008080">label</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;by first_name&#34;</span>
+  <span style="color:#008080">value-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span>
+  <span style="color:#008080">id-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span>
+  <span style="color:#008080">display-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.first_name&#34;</span>
+  <span style="color:#008080">ƒ-bind-options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-select</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-select</span>
+  <span style="color:#008080">label</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;by phone_nr&#34;</span>
+  <span style="color:#008080">value-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span>
+  <span style="color:#008080">id-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span>
+  <span style="color:#008080">display-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.phone_nr&#34;</span>
+  <span style="color:#008080">ƒ-bind-options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-select</span>&gt;
+&lt;<span style="color:#000080">furo-ui5-number-input</span>
+  <span style="color:#008080">label</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Selected option&#34;</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-number-input</span>&gt;
+&lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
+<span style="color:#998;font-style:italic">&lt;!-- this data object contains the list --&gt;</span>
+&lt;<span style="color:#000080">furo-data-object</span>
+  <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;person.PersonCollection&#34;</span>
+  <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-object-ready</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection&#34;</span>
+  <span style="color:#008080">ƒ-inject-raw</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--response&#34;</span>&gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;
+<span style="color:#998;font-style:italic">&lt;!-- this data object contains the field, you want to update --&gt;</span>
+&lt;<span style="color:#000080">furo-data-object</span>
+  <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;task.Task&#34;</span>
+  <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-object-ready</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity&#34;</span>&gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="attributes-and-properties">
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
 </h2>
@@ -4027,60 +4255,6 @@ default: display_name
 Point-separated path to the field
 Must be set if a data binding is specified.
 default: id
-<br><br></p>
-<h3 id="_previousvaluestate">
-  <strong>_previousValueState</strong>
-  <a class="anchor" href="#_previousvaluestate">#</a>
-</h3>
-<p>default: <strong>{ state: 'None', message: '' }</strong></small></p>
-<p><br><br></p>
-<h3 id="_attributesfromfna">
-  <strong>_attributesFromFNA</strong>
-  <a class="anchor" href="#_attributesfromfna">#</a>
-</h3>
-<p>default: <strong>{
-readonly: undefined,
-}</strong></small></p>
-<p><br><br></p>
-<h3 id="_constraintsfromfna">
-  <strong>_constraintsFromFNA</strong>
-  <a class="anchor" href="#_constraintsfromfna">#</a>
-</h3>
-<p>default: <strong>{
-required: undefined,
-}</strong></small></p>
-<p><br><br></p>
-<h3 id="_labelsfromfat">
-  <strong>_labelsFromFAT</strong>
-  <a class="anchor" href="#_labelsfromfat">#</a>
-</h3>
-<p>default: <strong>{
-readonly: undefined,
-disabled: undefined,
-required: undefined,
-}</strong></small></p>
-<p><br><br></p>
-<h3 id="_attributesfromfat">
-  <strong>_attributesFromFAT</strong>
-  <a class="anchor" href="#_attributesfromfat">#</a>
-</h3>
-<p>default: <strong>{}</strong></small></p>
-<p><br><br></p>
-<h3 id="_privilegedattributes">
-  <strong>_privilegedAttributes</strong>
-  <a class="anchor" href="#_privilegedattributes">#</a>
-</h3>
-<p>default: <strong>{
-readonly: null,
-required: null,
-disabled: null,
-'id-field-path': 'id',
-'value-field-path': 'id',
-'display-field-path': 'display_name',
-}</strong></small></p>
-<p>a list of privileged attributes. when those attributes are set in furo-ui5-select components initially.
-they can not be modified later via response or spec
-null is used because getAttribute returns null or value
 <br><br></p>
 <h2 id="events">
   Events
@@ -4153,12 +4327,13 @@ Use this after manual or scripted update of the attributes.</p>
   <strong>selectOptionById</strong>
   <a class="anchor" href="#selectoptionbyid">#</a>
 </h3>
-<p><small><strong>selectOptionById</strong>(<em>id</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
+<p><small><strong>selectOptionById</strong>(<em>id</em> <code>*</code> ) ⟹ <code>void</code></small></p>
+<p><small><code>*</code> </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-option-by-id</span></p>
-<p>Selects an option by id</p>
+<p>Selects an option by id.
+The id field must be comparable.</p>
 <ul>
-<li><small>id </small>
+<li><small>id must match the data</small>
 <br><br></li>
 </ul>
 </article>
@@ -4171,9 +4346,9 @@ Use this after manual or scripted update of the attributes.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73d2f92ecb0d19a2e8bb23f2cd2cb1f0c4d9b069" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/042f658d35bca133fffe3752689b08bd2fe61faf" title='Last modified by veith | November 26, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 24, 2021</span>
+      <span>November 26, 2021</span>
     </a>
   </div>
 
@@ -4208,12 +4383,6 @@ Use this after manual or scripted update of the attributes.</p>
         <li><a href="#idfieldpath"><strong>idFieldPath</strong></a></li>
         <li><a href="#displayfieldpath"><strong>displayFieldPath</strong></a></li>
         <li><a href="#valuefieldpath"><strong>valueFieldPath</strong></a></li>
-        <li><a href="#_previousvaluestate"><strong>_previousValueState</strong></a></li>
-        <li><a href="#_attributesfromfna"><strong>_attributesFromFNA</strong></a></li>
-        <li><a href="#_constraintsfromfna"><strong>_constraintsFromFNA</strong></a></li>
-        <li><a href="#_labelsfromfat"><strong>_labelsFromFAT</strong></a></li>
-        <li><a href="#_attributesfromfat"><strong>_attributesFromFAT</strong></a></li>
-        <li><a href="#_privilegedattributes"><strong>_privilegedAttributes</strong></a></li>
       </ul>
     </li>
     <li><a href="#events">Events</a>
@@ -4249,6 +4418,7 @@ Use this after manual or scripted update of the attributes.</p>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/data.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 

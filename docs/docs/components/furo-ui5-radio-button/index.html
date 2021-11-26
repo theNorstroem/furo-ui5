@@ -7,17 +7,17 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="radio group">
+<meta name="description" content="boolean toggle button">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-radio-button" />
-<meta property="og:description" content="radio group" />
+<meta property="og:description" content="boolean toggle button" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-radio-button/" />
-<meta property="article:modified_time" content="2021-11-25T10:57:16+01:00" />
+<meta property="article:modified_time" content="2021-11-26T10:37:28+01:00" />
 <title>furo-ui5-radio-button | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.f0767b163f790d316ac4f953245393d9e52b5871dfd06c5bc681b8aa6958aa37.js" integrity="sha256-8HZ7Fj95DTFqxPlTJFOT2eUrWHHf0GxbxoG4qmlYqjc="></script>
+<script defer src="/en.search.min.4eca31333a8962beef6c5fe4e8d2d600097af91553985c4ee6118a52b0ccd250.js" integrity="sha256-TsoxMzqJYr7vbF/k6NLWAAl6&#43;RVTmFxO5hGKUrDM0lA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -661,32 +661,6 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-radio-button/" class=" active">furo-ui5-radio-button</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://ui5.furo.pro/docs/components/furo-ui5-radio-button-group/" class="">furo-ui5-radio-button-group</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://ui5.furo.pro/docs/components/furo-ui5-radiogroup/" class="">furo-ui5-radiogroup</a>
   
 
         </li>
@@ -3134,47 +3108,16 @@ https://github.com/alex-shpak/hugo-book
       
     
       
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/redactional/components/furo-ui5-propertylist-display/_furo-ui5-propertylist-display-head/" class="">Furo Ui5 Propertylist Display Head</a>
+  
+
+        </li>
       
     
       
@@ -3923,9 +3866,40 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#description">Description</a></li>
-    <li><a href="#attributes-and-properties">Attributes and Properties</a></li>
+    <li><a href="#description">Description</a>
+      <ul>
+        <li><a href="#specificity">Specificity</a></li>
+      </ul>
+    </li>
+    <li><a href="#supported-fat-attributes">supported FAT attributes</a></li>
+    <li><a href="#supported-meta-and-constraints">supported meta and constraints</a></li>
     <li><a href="#methods">Methods</a></li>
+    <li><a href="#attributes-and-properties">Attributes and Properties</a>
+      <ul>
+        <li><a href="#_previousdesign"><strong>_previousDesign</strong></a></li>
+        <li><a href="#_attributesfromfna"><strong>_attributesFromFNA</strong></a></li>
+        <li><a href="#_constraintsfromfna"><strong>_constraintsFromFNA</strong></a></li>
+        <li><a href="#_attributesfromfat"><strong>_attributesFromFAT</strong></a></li>
+        <li><a href="#_labelsfromfat"><strong>_labelsFromFAT</strong></a></li>
+        <li><a href="#_privilegedattributes"><strong>_privilegedAttributes</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#events">Events</a>
+      <ul>
+        <li><a href="#change"><strong>change</strong></a></li>
+        <li><a href="#xxxx"><strong>xxxx</strong></a></li>
+        <li><a href="#value-changed"><strong>value-changed</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#methods-1">Methods</a>
+      <ul>
+        <li><a href="#binddata"><strong>bindData</strong></a></li>
+        <li><a href="#readattributes"><strong>readAttributes</strong></a></li>
+        <li><a href="#onfnafieldvaluechanged"><strong>onFnaFieldValueChanged</strong></a></li>
+        <li><a href="#onfnafieldnodebecameinvalid"><strong>onFnaFieldNodeBecameInvalid</strong></a></li>
+        <li><a href="#onfnalabelchanged"><strong>onFnaLabelChanged</strong></a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -3943,29 +3917,335 @@ https://github.com/alex-shpak/hugo-book
 </h1>
 <p><strong>@furo/components</strong> <small>v1.0.0-rc.7</small>
 <br><code>import '@furo/components/src/furo-ui5-radio-button.js';</code><small>
-<br>exports <em>FuroUi5Radiogroup</em> js
-<br>exports <code>&lt;furo-ui5-radiogroup&gt;</code> custom-element-definition
-<br>superclass <em>LitElement</em>
-<br> mixes <em>FBP</em></small></p>
+<br>exports <em>FuroUi5RadioButton</em> js
+<br>extends <em>src/furo-ui5-radio-button.js</em>
+<br> mixes <em>FieldNodeAdapter</em></small></p>
 <blockquote>
-<p><strong>Summary:</strong> radio group</p>
+<p><strong>Summary:</strong> boolean toggle button</p>
 </blockquote>
 <h2 id="description">
   Description
   <a class="anchor" href="#description">#</a>
 </h2>
-<p><code>furo-ui5-radiogroup</code>
-The furo-ui5-radiogroup enables users to create a radio group with n size of furo-ui5-radio-buttons inside.
-Use the components if you want to combine several bool fields into one radiogroup.
-Only one value can be true.</p>
-<h2 id="attributes-and-properties">
-  Attributes and Properties
-  <a class="anchor" href="#attributes-and-properties">#</a>
+<p>The &lsquo;furo-ui5-radio-button&rsquo; component allows the user to switch true and false for Bool with data binding.</p>
+<p>It supports all features from the 
+  <a href="https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/">SAP ui5 toggleButton element</a>.</p>
+<p>You can bind  <code>bool</code> type, <code>furo.fat.Bool</code> type or the <code>google.wrapper.BoolValue</code>  type.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-radio-button</span>
+    <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;groupA&#34;</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dao(FIELDNODE)&#34;</span>
+ &gt;&lt;/<span style="color:#000080">furo-ui5-radio-button</span>&gt;
+ &lt;<span style="color:#000080">furo-ui5-radio-button</span>
+    <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;groupA&#34;</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dao(OTHERFIELDNODE)&#34;</span>
+ &gt;&lt;/<span style="color:#000080">furo-ui5-radio-button</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="specificity">
+  Specificity
+  <a class="anchor" href="#specificity">#</a>
+</h3>
+<ol>
+<li>Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.</li>
+<li>Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>meta</th>
+<th>fat</th>
+<th>html</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-fat-attributes">
+  supported FAT attributes
+  <a class="anchor" href="#supported-fat-attributes">#</a>
 </h2>
+<ul>
+<li><strong>&ldquo;readonly&rdquo;:&ldquo;true&rdquo;</strong> set the element to readonly</li>
+<li><strong>&ldquo;disabled&rdquo;:&ldquo;true&rdquo;</strong> set the element to disabled</li>
+<li><strong>&ldquo;icon&rdquo;:&quot;&quot;</strong> set the icon</li>
+<li><strong>&ldquo;design&rdquo;:&quot;&quot;</strong> set the design</li>
+</ul>
+<h2 id="supported-meta-and-constraints">
+  supported meta and constraints
+  <a class="anchor" href="#supported-meta-and-constraints">#</a>
+</h2>
+<ul>
+<li><strong>readonly: true</strong> , set the element to readonly</li>
+</ul>
+<p>The constraint <strong>required</strong> will mark the element as required</p>
 <h2 id="methods">
   Methods
   <a class="anchor" href="#methods">#</a>
 </h2>
+<p><strong>bind-data(fieldNode)</strong>
+Bind a entity field. You can use the entity even when no data was received.</p>
+<p>When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with &ndash;entity(*.fields.fieldname)</p>
+<h4 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet> 
+<template>
+            <furo-form-layouter four>
+              <furo-ui5-radio-button
+                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+              ></furo-ui5-radio-button>
+              <furo-ui5-radio-button
+                readonly
+                text="Override"
+                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+              ></furo-ui5-radio-button>
+              <furo-ui5-radio-button
+                disabled
+                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+              ></furo-ui5-radio-button>
+              <furo-ui5-radio-button
+                value-state="Warning"
+                placeholder="Placeholder"
+                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+              ></furo-ui5-radio-button>
+              <furo-ui5-checkbox-input
+                value-state="Success"
+                text="Toggle"
+                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+              ></furo-ui5-checkbox-input>
+            </furo-form-layouter>
+            <furo-data-object
+              type="experiment.Experiment"
+              @-object-ready="--doExp"
+            ></furo-data-object>
+          </template>
+</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-radio-button</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_checkbox_input)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-radio-button</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-radio-button</span>
+    <span style="color:#008080">readonly</span>
+    <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Override&#34;</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_checkbox_input)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-radio-button</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-radio-button</span>
+    <span style="color:#008080">disabled</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_checkbox_input)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-radio-button</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-radio-button</span>
+    <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Warning&#34;</span>
+    <span style="color:#008080">placeholder</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Placeholder&#34;</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_checkbox_input)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-radio-button</span>&gt;
+  <span style="color:#998;font-style:italic">&lt;!-- just to be able to disable the radio again --&gt;</span>
+  &lt;<span style="color:#000080">furo-ui5-checkbox-input</span>
+    <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span>
+    <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Toggle&#34;</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_checkbox_input)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-checkbox-input</span>&gt;
+&lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="attributes-and-properties">
+  Attributes and Properties
+  <a class="anchor" href="#attributes-and-properties">#</a>
+</h2>
+<h3 id="_previousdesign">
+  <strong>_previousDesign</strong>
+  <a class="anchor" href="#_previousdesign">#</a>
+</h3>
+<p>default: <strong>'Default'</strong></small></p>
+<p><br><br></p>
+<h3 id="_attributesfromfna">
+  <strong>_attributesFromFNA</strong>
+  <a class="anchor" href="#_attributesfromfna">#</a>
+</h3>
+<p>default: <strong>{
+readonly: undefined,
+disabled: undefined,
+label: undefined,
+}</strong></small></p>
+<p><br><br></p>
+<h3 id="_constraintsfromfna">
+  <strong>_constraintsFromFNA</strong>
+  <a class="anchor" href="#_constraintsfromfna">#</a>
+</h3>
+<p>default: <strong>{}</strong></small></p>
+<p><br><br></p>
+<h3 id="_attributesfromfat">
+  <strong>_attributesFromFAT</strong>
+  <a class="anchor" href="#_attributesfromfat">#</a>
+</h3>
+<p>default: <strong>{
+name: undefined, // the group name
+label: undefined,
+icon: undefined,
+design: undefined,
+}</strong></small></p>
+<p><br><br></p>
+<h3 id="_labelsfromfat">
+  <strong>_labelsFromFAT</strong>
+  <a class="anchor" href="#_labelsfromfat">#</a>
+</h3>
+<p>default: <strong>{
+readonly: undefined,
+disabled: undefined,
+}</strong></small></p>
+<p><br><br></p>
+<h3 id="_privilegedattributes">
+  <strong>_privilegedAttributes</strong>
+  <a class="anchor" href="#_privilegedattributes">#</a>
+</h3>
+<p>default: <strong>{
+name: null,
+readonly: null,
+disabled: null,
+text: null,
+icon: null,
+design: null,
+}</strong></small></p>
+<p><br><br></p>
+<h2 id="events">
+  Events
+  <a class="anchor" href="#events">#</a>
+</h2>
+<h3 id="change">
+  <strong>change</strong>
+  <a class="anchor" href="#change">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-change</span>
+→ <small>``</small></p>
+<p>Fired when the input operation has finished by pressing Enter or on focusout.
+<br><br></p>
+<h3 id="xxxx">
+  <strong>xxxx</strong>
+  <a class="anchor" href="#xxxx">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-xxxx</span>
+→ <small>``</small></p>
+<p>All events from the 
+  <a href="https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/">ui5 Input element</a>.
+<br><br></p>
+<h3 id="value-changed">
+  <strong>value-changed</strong>
+  <a class="anchor" href="#value-changed">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
+→ <small><code>Boolean</code></small></p>
+<p>Fired when value changed
+<br><br></p>
+<h2 id="methods-1">
+  Methods
+  <a class="anchor" href="#methods-1">#</a>
+</h2>
+<h3 id="binddata">
+  <strong>bindData</strong>
+  <a class="anchor" href="#binddata">#</a>
+</h3>
+<p><small><strong>bindData</strong>(<em>fieldNode</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span></p>
+<p>Overrides bindData() of FieldNodeAdapter
+Binds a FieldNode to the component
+Supported types: bool, google.protobuf.BoolValue, furo.fat.Bool</p>
+<ul>
+<li><small>fieldNode </small>
+<br><br></li>
+</ul>
+<h3 id="readattributes">
+  <strong>readAttributes</strong>
+  <a class="anchor" href="#readattributes">#</a>
+</h3>
+<p><small><strong>readAttributes</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span></p>
+<p>Reads the attributes which are set on the component dom.</p>
+<p><br><br></p>
+<h3 id="onfnafieldvaluechanged">
+  <strong>onFnaFieldValueChanged</strong>
+  <a class="anchor" href="#onfnafieldvaluechanged">#</a>
+</h3>
+<p><small><strong>onFnaFieldValueChanged</strong>(<em>val</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-field-value-changed</span></p>
+<p>overwrite onFnaFieldValueChanged</p>
+<ul>
+<li><small>val </small>
+<br><br></li>
+</ul>
+<h3 id="onfnafieldnodebecameinvalid">
+  <strong>onFnaFieldNodeBecameInvalid</strong>
+  <a class="anchor" href="#onfnafieldnodebecameinvalid">#</a>
+</h3>
+<p><small><strong>onFnaFieldNodeBecameInvalid</strong>() ⟹ <code>void</code></small></p>
+<p><small><code>*</code></small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-field-node-became-invalid</span></p>
+<p>overwrite onFnaFieldNodeBecameInvalid function</p>
+<p><br><br></p>
+<h3 id="onfnalabelchanged">
+  <strong>onFnaLabelChanged</strong>
+  <a class="anchor" href="#onfnalabelchanged">#</a>
+</h3>
+<p><small><strong>onFnaLabelChanged</strong>(<em>text</em> <code>*placeholder*</code> ) ⟹ <code>void</code></small></p>
+<p><small><code> </code> </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-label-changed</span></p>
+<p>overwrite onFnaLabelChanged function
+label is mapped to text</p>
+<ul>
+<li><small>text </small></li>
+<li><small>placeholder </small>
+<br><br></li>
+</ul>
 </article>
  
       
@@ -3976,9 +4256,9 @@ Only one value can be true.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/0691b23826ede9d7a15f09662464d8dd34fe5287" title='Last modified by veith | November 25, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/ce0067f7f4776be92670151a1225a674dad5e872" title='Last modified by veith | November 26, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 25, 2021</span>
+      <span>November 26, 2021</span>
     </a>
   </div>
 
@@ -4006,9 +4286,40 @@ Only one value can be true.</p>
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#description">Description</a></li>
-    <li><a href="#attributes-and-properties">Attributes and Properties</a></li>
+    <li><a href="#description">Description</a>
+      <ul>
+        <li><a href="#specificity">Specificity</a></li>
+      </ul>
+    </li>
+    <li><a href="#supported-fat-attributes">supported FAT attributes</a></li>
+    <li><a href="#supported-meta-and-constraints">supported meta and constraints</a></li>
     <li><a href="#methods">Methods</a></li>
+    <li><a href="#attributes-and-properties">Attributes and Properties</a>
+      <ul>
+        <li><a href="#_previousdesign"><strong>_previousDesign</strong></a></li>
+        <li><a href="#_attributesfromfna"><strong>_attributesFromFNA</strong></a></li>
+        <li><a href="#_constraintsfromfna"><strong>_constraintsFromFNA</strong></a></li>
+        <li><a href="#_attributesfromfat"><strong>_attributesFromFAT</strong></a></li>
+        <li><a href="#_labelsfromfat"><strong>_labelsFromFAT</strong></a></li>
+        <li><a href="#_privilegedattributes"><strong>_privilegedAttributes</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#events">Events</a>
+      <ul>
+        <li><a href="#change"><strong>change</strong></a></li>
+        <li><a href="#xxxx"><strong>xxxx</strong></a></li>
+        <li><a href="#value-changed"><strong>value-changed</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#methods-1">Methods</a>
+      <ul>
+        <li><a href="#binddata"><strong>bindData</strong></a></li>
+        <li><a href="#readattributes"><strong>readAttributes</strong></a></li>
+        <li><a href="#onfnafieldvaluechanged"><strong>onFnaFieldValueChanged</strong></a></li>
+        <li><a href="#onfnafieldnodebecameinvalid"><strong>onFnaFieldNodeBecameInvalid</strong></a></li>
+        <li><a href="#onfnalabelchanged"><strong>onFnaLabelChanged</strong></a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -4027,6 +4338,7 @@ Only one value can be true.</p>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/data.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 
