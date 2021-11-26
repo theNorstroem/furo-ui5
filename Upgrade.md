@@ -25,11 +25,14 @@ furo-ui5-notification-group-display zeigt keine Anzahl an, verschwindet nicht be
 furo-ui5-number-input kein placeholder bei readonly, required
 furo-ui5-radio-button: Ist design neu der value-state?
 furo-ui5-radio-button: Error handling => design, value-state?
+furo-ui5-radio-button: Repeated bool example
 
 
 
 
 
-# Missing Component
+
+# Missing Components / features
 furo-ui5-radio-button-labeled
 furo-ui5-reference-search value-state feature
+feat: furo-ui5-segmented-button iconFieldPath to use icons from bindOptions

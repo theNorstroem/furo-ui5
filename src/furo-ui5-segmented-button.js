@@ -9,18 +9,12 @@ import { Events } from './lib/Events.js';
  * The furo-ui5-segmented-button component represents a drop-down list. The items inside define the available
  * options by using the furo-ui5-segmented-button component.
  *
- * ```
+ * ```html
  * <furo-ui5-segmented-button
  *    ƒ-bind-data="--daoPerson(*.field_with_meta_options)">
  * </furo-ui5-segmented-button>
  * ```
- * ```
- * <furo-ui5-segmented-button
- *    ƒ-bind-data="--daoPerson(*.field)">
- *      <ui5-segmented-button-item pressed>Option A</ui5-segmented-button-item>
- *      <ui5-segmented-button-item>Option B</ui5-segmented-button-item>
- * </furo-ui5-segmented-button>
- * ```
+ *
  * @fires {{*} the value from the value-field. By default the value field is "id"} value-changed -  Fired when value has changed from the component inside. **bubbles**
  *
  * @fires {selectedOption} item-selected - Fired when the toggle button was clicked.
@@ -57,7 +51,7 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
     this.activeFieldBinding = false;
 
     /**
-     * Defines the field path that is used from the injected RepeaterNode to identify the option items.
+     * Defines the field path that is used from the bound RepeaterNode (`bindOptions()`) to identify the option items.
      * Point-separated path to the field
      * E.g. data.partner.ulid
      * default: id
@@ -66,7 +60,7 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
     this.idFieldPath = 'id';
 
     /**
-     * Defines the field path that is used from the injected RepeaterNode to display the option items.
+     * Defines the field path that is used from the bound RepeaterNode (`bindOptions()`) to display the option items.
      * Point-separated path to the field
      * E.g. data.partner.display_name
      * default: display_name
@@ -91,27 +85,37 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
      * @private
      */
     this._optionList = [];
-
+    /**
+     * @private
+     */
     this._attributesFromFNA = {
       readonly: undefined,
     };
-
+    /**
+     * @private
+     */
     this._constraintsFromFNA = {
       required: undefined,
     };
-
+    /**
+     * @private
+     */
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
     };
-
+    /**
+     * @private
+     */
     this._attributesFromFAT = {};
 
     /**
      * a list of privileged attributes. when those attributes are set in furo-ui5-select components initially.
      * they can not be modified later via response or spec
      * null is used because getAttribute returns null or value
+     *
+     * @private
      */
     this._privilegedAttributes = {
       readonly: null,
@@ -137,8 +141,17 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
   }
 
   /**
-   * Here a RepeaterNode can be connected to the component as an option list.
-   * @param repeaterNode
+   * Bind a `RepeaterNode` that will be used to build up the option list.
+   *
+   * Use `idFieldPath` and `displayFieldPath` if your structrure does not match the following signature:
+   *
+   * ```json
+   * [
+   *   { "id": 1, "display_name": "option A"},
+   *   { "id": 2, "display_name": "option B"}
+   * ]
+   * ```
+   * @param repeaterNode {RepeaterNode} The list with the options
    */
   bindOptions(repeaterNode) {
     if (!(repeaterNode instanceof RepeaterNode)) {
@@ -258,7 +271,7 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
 
   /**
    * Selects an option by id
-   * @param id
+   * @param val {Id} The id
    */
   selectOptionById(val) {
     if (!this.activeFieldBinding) {
