@@ -41,9 +41,7 @@ bookHidden: true
 - [furo-ui5-password-input](furo-ui5-password-input.md) data password input field
 - [furo-ui5-property](furo-ui5-property.md) ????? bind types of type any
 - [furo-ui5-typerenderer-labeled](furo-ui5-typerenderer-labeled.md) 
-- [furo-ui5-radio-button-group](furo-ui5-radio-button-group.md) 
 - [furo-ui5-radio-button](furo-ui5-radio-button.md) boolean toggle button
-- [furo-ui5-radio-button](furo-ui5-radio-button.md) radio group
 - [furo-ui5-reference-search](furo-ui5-reference-search.md) labeled input field
 - [furo-ui5-reference-search](furo-ui5-reference-search.md) furo ui5 data reference search
 - [furo-ui5-segmented-button](furo-ui5-segmented-button.md) segmented button

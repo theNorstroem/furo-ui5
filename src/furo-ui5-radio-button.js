@@ -12,18 +12,13 @@ import { Events } from './lib/Events.js';
  *
  * ```html
  *  <furo-ui5-radio-button
+ *     name="groupA"
  *     ƒ-bind-data="--dao(FIELDNODE)"
  *  ></furo-ui5-radio-button>
- * ```
- * ```html
- *  <furo-ui5-radio-group>
- *    <furo-ui5-radio-button name="group"
- *       ƒ-bind-data="--dao(FIELDNODE)"
- *    ></furo-ui5-radio-button>
- *    <furo-ui5-radio-button name="group"
- *       ƒ-bind-data="--dao(FIELDNODE)"
- *    ></furo-ui5-radio-button>
- *  </furo-ui5-radio-group>
+ *  <furo-ui5-radio-button
+ *     name="groupA"
+ *     ƒ-bind-data="--dao(OTHERFIELDNODE)"
+ *  ></furo-ui5-radio-button>
  * ```
  *
  * ### Specificity
@@ -76,6 +71,7 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
     this._constraintsFromFNA = {};
 
     this._attributesFromFAT = {
+      name: undefined, // the group name
       label: undefined,
       icon: undefined,
       design: undefined,
@@ -90,6 +86,7 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
     // they can not be modified later via response or spec
     // null is used because getAttribute returns null or value
     this._privilegedAttributes = {
+      name: null,
       readonly: null,
       disabled: null,
       text: null,
@@ -235,6 +232,16 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
         this.icon = fatAttributes.icon;
       } else if (this._attributesFromFNA.icon !== undefined) {
         this.icon = this._attributesFromFNA.icon;
+      }
+      this._render();
+    }
+
+    // group
+    if (this._privilegedAttributes.group === null) {
+      if (fatAttributes.group !== undefined) {
+        this.group = fatAttributes.group;
+      } else if (this._attributesFromFNA.group !== undefined) {
+        this.group = this._attributesFromFNA.group;
       }
       this._render();
     }

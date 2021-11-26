@@ -249,17 +249,7 @@ Use with caution, normally the specs defines this value.
 hint text when result not found by search
 <br><br>
 
-### **_hasmore**
-default: **&#39;None&#39;**</small>
 
-
-<br><br>
-
-### **_hasExtendedSearcher**
-default: **false**</small>
-
-
-<br><br>
 
 ### **disableSearchList**
 
@@ -279,11 +269,6 @@ This is very useful when you want enforce the usage of the extended search
 Use this attribute to set a custom icon for your searcher
 <br><br>
 
-### **_previousValueState**
-default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
-
-
-<br><br>
 
 ### **valueState**
 default: **&#39;None&#39;**</small>
@@ -291,36 +276,8 @@ default: **&#39;None&#39;**</small>
 
 <br><br>
 
-### **_attributesFromFNA**
-default: **{
-      readonly: undefined,
-      placeholder: undefined,
-      label: undefined,
-    }**</small>
 
 
-<br><br>
-
-### **_constraintsFromFNA**
-default: **{
-      required: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_privilegedAttributes**
-default: **{
-      readonly: null,
-      placeholder: null,
-      label: null,
-      required: null,
-      disabled: null,
-      icon: null,
-    }**</small>
-
-
-<br><br>
 
 ### **required**
 
@@ -407,28 +364,9 @@ Define the extended searcher. Do not forget to import the searcher you want to u
 {{% api "_furo-ui5-reference-search-methods.md" %}}
 
 
-### **onFnaFieldValueChanged**
-<small>**onFnaFieldValueChanged**(*val* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-field-value-changed</span>
-
-This is triggered from the FieldNodeAdapter when the data has changed
-
-- <small>val </small>
-<br><br>
 
 
 
-### **_FBPReady**
-<small>**_FBPReady**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--fbp-ready</span>
-
-
-
-<br><br>
 
 
 

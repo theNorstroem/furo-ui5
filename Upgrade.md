@@ -23,6 +23,13 @@ furo-ui5-datepicker bind-data delay
 furo-ui5-money-input
 furo-ui5-notification-group-display zeigt keine Anzahl an, verschwindet nicht bei 0 elementen
 furo-ui5-number-input kein placeholder bei readonly, required
-furo-ui5-radio-button checked statt statt selected
+furo-ui5-radio-button: Ist design neu der value-state?
+furo-ui5-radio-button: Error handling => design, value-state?
 
 
+
+
+
+# Missing Component
+furo-ui5-radio-button-labeled
+furo-ui5-reference-search value-state feature

@@ -7,6 +7,7 @@ import '@furo/data/src/furo-collection-agent.js';
 import '@furo/fbp/src/flow-repeat.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/util/src/furo-de-bounce.js';
+import '@ui5/webcomponents/dist/Input.js';
 import '@ui5/webcomponents/dist/List.js';
 import './ui5-reference-search-item.js';
 import '@ui5/webcomponents-icons/dist/value-help.js';
@@ -137,28 +138,46 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
     this.noDataText = 'no result found';
 
     // for the show more button
+    /**
+     * @private
+     */
     this._hasmore = 'None';
+    /**
+     * @private
+     */
     this._hasExtendedSearcher = false;
     this.disableSearchList = false;
     this.icon = 'search';
 
     // used to restore the state after a invalidation -> validation change
+    /**
+     *
+     * @private
+     */
     this._previousValueState = { state: 'None', message: '' };
     this.valueState = 'None';
-
+    /**
+     * @private
+     */
     this._attributesFromFNA = {
       readonly: undefined,
       placeholder: undefined,
       label: undefined,
     };
 
+    /**
+     * @private
+     */
     this._constraintsFromFNA = {
       required: undefined,
     };
 
-    // a list of privileged attributes. when those attributes are set in text-input components initially.
-    // they can not be modified later via response or spec
-    // null is used because getAttribute returns null or value
+    /**
+     * a list of privileged attributes. when those attributes are set in text-input components initially.
+     * they can not be modified later via response or spec
+     * null is used because getAttribute returns null or value
+     * @private
+     */
     this._privilegedAttributes = {
       readonly: null,
       placeholder: null,
@@ -171,6 +190,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
 
   /**
    * This is triggered from the FieldNodeAdapter when the data has changed
+   * @private
    * @param val
    */
   onFnaFieldValueChanged(val) {
@@ -205,6 +225,9 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
     }
   }
 
+  /**
+   * @private
+   */
   connectedCallback() {
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();
@@ -410,6 +433,9 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
     }
   }
 
+  /**
+   * @private
+   */
   _FBPReady() {
     /**
      * handle extended searcher
@@ -1072,8 +1098,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       >
       </furo-ui5-dialog>
       <furo-de-bounce
-        ƒ-input-wire="--searchTerm"
-        @-out="--debouncedSrch"
+        ƒ-trigger="--searchTerm"
+        @-debounced="--debouncedSrch"
         wait="${this.debounceTimeout}"
       ></furo-de-bounce>
 
