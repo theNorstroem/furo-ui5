@@ -41,10 +41,6 @@ import { Events } from './lib/Events.js';
  *
  * The constraint **required** will mark the element as required
  *
- * ## Methods
- * **bind-data(fieldNode)**
- * Bind a entity field. You can use the entity even when no data was received.
- *
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {} change -  Fired when the input operation has finished by pressing Enter or on focusout.
