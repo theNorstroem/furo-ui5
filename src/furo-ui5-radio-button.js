@@ -101,6 +101,14 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
   }
 
   /**
+   * @private
+   */
+  syncGroup() {
+    super.syncGroup();
+    this._updateFNA();
+  }
+
+  /**
    * connectedCallback() method is called when an element is added to the DOM.
    * webcomponent lifecycle event
    * @private
@@ -149,7 +157,6 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
     } else {
       this.setFnaFieldValue(this.checked);
     }
-
     this.dispatchEvent(Events.buildChangeEvent(this.checked));
   }
 
