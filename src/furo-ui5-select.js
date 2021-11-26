@@ -9,7 +9,7 @@ import '@ui5/webcomponents/dist/Option.js';
  * The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define
  * the available options by using the ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.
  *
- * ```
+ * ```html
  * <furo-ui5-select
  *    ƒ-bind-data="--entity(*.data.description)"
  *    ƒ-bind-options="--collection(*.entities)">
@@ -70,30 +70,43 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
      * @private
      */
     this._optionList = [];
-
-    // used to restore the state after a invalidation -> validation change
+    /**
+     * used to restore the state after a invalidation -> validation change
+     * @private
+     */
     this._previousValueState = { state: 'None', message: '' };
-
+    /**
+     * @private
+     */
     this._attributesFromFNA = {
       readonly: undefined,
     };
+    /**
+     * @private
+     */
 
     this._constraintsFromFNA = {
       required: undefined,
     };
-
+    /**
+     * @private
+     */
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
     };
-
+    /**
+     * @private
+     */
     this._attributesFromFAT = {};
 
     /**
      * a list of privileged attributes. when those attributes are set in furo-ui5-select components initially.
      * they can not be modified later via response or spec
      * null is used because getAttribute returns null or value
+     *
+     * @private
      */
     this._privilegedAttributes = {
       readonly: null,
@@ -287,8 +300,9 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 
   /**
-   * Selects an option by id
-   * @param id
+   * Selects an option by id.
+   * The id field must be comparable.
+   * @param id {*} must match the data
    */
   selectOptionById(id) {
     if (!this.activeFieldBinding) {

@@ -156,15 +156,14 @@ Use this after manual or scripted update of the attributes.
 
 
 ### **selectOptionById**
-<small>**selectOptionById**(*val* `` *id* `` ) ⟹ `void`</small>
+<small>**selectOptionById**(*val* `Id` ) ⟹ `void`</small>
 
-<small>`` `` </small> →
+<small>`Id` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-option-by-id</span>
 
 Selects an option by id
 
-- <small>val </small>
-- <small>id </small>
+- <small>val The id</small>
 <br><br>
 
 

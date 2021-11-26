@@ -85,58 +85,11 @@ default: id
 <br><br>
 
 
-### **_previousValueState**
-default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
 
 
-<br><br>
-
-### **_attributesFromFNA**
-default: **{
-      readonly: undefined,
-    }**</small>
 
 
-<br><br>
 
-### **_constraintsFromFNA**
-default: **{
-      required: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_labelsFromFAT**
-default: **{
-      readonly: undefined,
-      disabled: undefined,
-      required: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_attributesFromFAT**
-default: **{}**</small>
-
-
-<br><br>
-
-### **_privilegedAttributes**
-default: **{
-      readonly: null,
-      required: null,
-      disabled: null,
-      &#39;id-field-path&#39;: &#39;id&#39;,
-      &#39;value-field-path&#39;: &#39;id&#39;,
-      &#39;display-field-path&#39;: &#39;display_name&#39;,
-    }**</small>
-
-a list of privileged attributes. when those attributes are set in furo-ui5-select components initially.
-they can not be modified later via response or spec
-null is used because getAttribute returns null or value
-<br><br>
 ## Events
 {{% api "_furo-ui5-select-events.md" %}}
 
@@ -204,14 +157,15 @@ overwrite bindData of FieldNodeAdapter
 
 
 ### **selectOptionById**
-<small>**selectOptionById**(*id* `` ) ⟹ `void`</small>
+<small>**selectOptionById**(*id* `*` ) ⟹ `void`</small>
 
-<small>`` </small> →
+<small>`*` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-option-by-id</span>
 
-Selects an option by id
+Selects an option by id.
+The id field must be comparable.
 
-- <small>id </small>
+- <small>id must match the data</small>
 <br><br>
 
 

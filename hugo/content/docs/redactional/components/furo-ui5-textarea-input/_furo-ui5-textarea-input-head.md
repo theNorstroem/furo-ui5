@@ -10,11 +10,12 @@ bookHidden: true
 <template>
 <furo-form-layouter four>
 <furo-ui5-textarea-input
-    ƒ-bind-data="--dataObjectDebounced(*.furo_data_time_input)"
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_textarea_input)"
  ></furo-ui5-textarea-input>
 <furo-ui5-textarea-input
     value-state="Information" 
-    ƒ-bind-data="--dataObjectDebounced(*.furo_data_time_input)"
+    rows="9"
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_textarea_input)"
  ></furo-ui5-textarea-input>
 </furo-form-layouter>
 <furo-data-object
@@ -28,12 +29,12 @@ bookHidden: true
 
 ```html
 <furo-ui5-textarea-input
-  ƒ-bind-data="--dataObject(*.furo_data_time_input)"
+  ƒ-bind-data="--dataObject(*.furo_data_textarea_input)"
 ></furo-ui5-textarea-input>
 <furo-ui5-textarea-input
+  rows="9"
   value-state="Information"
-  ƒ-bind-data="--dataObject(*.furo_data_time_input)"
+  ƒ-bind-data="--dataObject(*.furo_data_textarea_input)"
 ></furo-ui5-textarea-input>
-</furo-form-layouter>
 ```
 
