@@ -25,7 +25,6 @@ import './subcomponents/furo-ui5-context-submenu.js';
  * @appliesMixin FBP
  */
 export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
-
   constructor(props) {
     super(props);
     /**

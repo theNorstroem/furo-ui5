@@ -34,8 +34,6 @@ import './furo-ui5-password-input-labeled.js';
 import './furo-ui5-property.js';
 import './furo-ui5-propertylist-display.js';
 import './furo-ui5-radio-button.js';
-import './furo-ui5-radio-button-group.js';
-import './furo-ui5-radiogroup.js';
 import './furo-ui5-reference-search.js';
 import './furo-ui5-reference-search-labeled.js';
 import './furo-ui5-segmented-button.js';
