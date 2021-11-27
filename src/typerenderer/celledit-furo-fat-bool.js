@@ -14,9 +14,7 @@ class CelleditFuroFatBool extends CelleditBool {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-furo-fat-bool';
-    return md;
+    return { tag: 'celledit-furo-fat-bool' };
   }
 
   static get styles() {

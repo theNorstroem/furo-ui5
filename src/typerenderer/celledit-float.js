@@ -14,9 +14,7 @@ export class CelleditFloat extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-float';
-    return md;
+    return { tag: 'celledit-float' };
   }
 
   static get styles() {

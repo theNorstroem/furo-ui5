@@ -14,9 +14,7 @@ export class CelleditDouble extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-double';
-    return md;
+    return { tag: 'celledit-double' };
   }
 
   static get styles() {

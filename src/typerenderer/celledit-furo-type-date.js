@@ -6,9 +6,7 @@ class CelleditFuroTypeDate extends FuroUi5DatePicker {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-furo-type-date';
-    return md;
+    return { tag: 'celledit-furo-type-date' };
   }
 
   static get styles() {

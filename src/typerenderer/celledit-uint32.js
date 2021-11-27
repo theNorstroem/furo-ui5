@@ -6,9 +6,7 @@ export class CelleditUint32 extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-uint32';
-    return md;
+    return { tag: 'celledit-uint32' };
   }
 
   static get styles() {

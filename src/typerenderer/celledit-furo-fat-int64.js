@@ -13,9 +13,7 @@ export class CelleditFuroFatInt64 extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-furo-fat-int64';
-    return md;
+    return { tag: 'celledit-furo-fat-int64' };
   }
 
   static get styles() {

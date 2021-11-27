@@ -14,9 +14,7 @@ class CelleditFuroFatDouble extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-furo-fat-double';
-    return md;
+    return { tag: 'celledit-furo-fat-double' };
   }
 
   static get styles() {
