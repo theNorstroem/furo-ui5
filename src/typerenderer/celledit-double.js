@@ -9,6 +9,19 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @summary celledit renderer for double
  * @element celledit-double
  */
-export class CelleditDouble extends CelleditInt32 {}
+export class CelleditDouble extends CelleditInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-double';
+    return md;
+  }
 
-window.customElements.define('celledit-double', CelleditDouble);
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditDouble.define();

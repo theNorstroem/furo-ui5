@@ -9,6 +9,19 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @element celledit-furo-fat-int32
  */
 
-export class CelleditFuroFatInt32 extends CelleditInt32 {}
+export class CelleditFuroFatInt32 extends CelleditInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-furo-fat-int32';
+    return md;
+  }
 
-window.customElements.define('celledit-furo-fat-int32', CelleditFuroFatInt32);
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditFuroFatInt32.define();

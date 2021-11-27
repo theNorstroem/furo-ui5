@@ -9,6 +9,19 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @summary celledit renderer for float
  * @element celledit-float
  */
-export class CelleditFloat extends CelleditInt32 {}
+export class CelleditFloat extends CelleditInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-float';
+    return md;
+  }
 
-window.customElements.define('celledit-float', CelleditFloat);
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditFloat.define();

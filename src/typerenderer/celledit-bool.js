@@ -16,5 +16,19 @@ export class CelleditBool extends FuroUi5CheckboxInput {
     this.style.display = 'block';
     this.style.setProperty('--_ui5_checkbox_width_height', '0');
   }
+
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-bool';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
-window.customElements.define('celledit-bool', CelleditBool);
+
+CelleditBool.define();

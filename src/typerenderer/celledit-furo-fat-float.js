@@ -8,6 +8,19 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @summary celledit renderer for furo.fat.Float
  * @element celledit-furo-fat-float
  */
-class CelleditFuroFatFloat extends CelleditInt32 {}
+class CelleditFuroFatFloat extends CelleditInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-furo-fat-float';
+    return md;
+  }
 
-window.customElements.define('celledit-furo-fat-float', CelleditFuroFatFloat);
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditFuroFatFloat.define();

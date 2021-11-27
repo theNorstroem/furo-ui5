@@ -9,6 +9,19 @@ import { CelleditBool } from './celledit-bool.js';
  * @summary celledit renderer for bool
  * @element celledit-furo-fat-bool
  */
-class CelleditFuroFatBool extends CelleditBool {}
+class CelleditFuroFatBool extends CelleditBool {
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-furo-fat-bool';
+    return md;
+  }
 
-window.customElements.define('celledit-furo-fat-bool', CelleditFuroFatBool);
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditFuroFatBool.define();

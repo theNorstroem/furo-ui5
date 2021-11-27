@@ -250,7 +250,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
    * @param fieldNode
    */
   bindData(fieldNode) {
-    return super.bindData(fieldNode)
+    return super.bindData(fieldNode);
   }
 
   /**

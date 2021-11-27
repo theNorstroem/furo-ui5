@@ -17,9 +17,19 @@ class CelleditGoogleTypeDate extends FuroUi5DatePicker {
       e.preventDefault();
     });
   }
+
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-google-type-date';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
 
-window.customElements.define(
-  'celledit-google-type-date',
-  CelleditGoogleTypeDate
-);
+CelleditGoogleTypeDate.define();
