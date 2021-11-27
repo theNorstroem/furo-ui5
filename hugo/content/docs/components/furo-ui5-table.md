@@ -142,15 +142,6 @@ Fired when the row selection in MultiSelect mode was changed
 {{% api "_furo-ui5-table-methods.md" %}}
 
 
-### **_FBPReady**
-<small>**_FBPReady**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--fbp-ready</span>
-
-
-
-<br><br>
 
 ### **bindData**
 <small>**bindData**(*data* `` ) ⟹ `void`</small>

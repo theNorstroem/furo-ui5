@@ -31,7 +31,7 @@ You can bind any `string` type, like `furo.fat.String` type or the `google.proto
 1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.
 2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.
 
-** meta 	<  fat 	< html 	**
+** meta  <  fat  < html  **
 
 ## supported FAT attributes
  - **"readonly":"true"** set the element to readonly
@@ -93,80 +93,29 @@ default: **&#39;Text&#39;**</small>
 
 <br><br>
 
-### **_previousValueState**
-default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
 
 
-<br><br>
-
-### **_attributesFromFNA**
-default: **{
-      readonly: undefined,
-      placeholder: undefined,
-    }**</small>
 
 
-<br><br>
 
-### **_constraintsFromFNA**
-default: **{
-      required: undefined,
-      max: undefined, // maps to maxlength
-    }**</small>
-
-
-<br><br>
-
-### **_labelsFromFAT**
-default: **{
-      readonly: undefined,
-      disabled: undefined,
-      required: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_attributesFromFAT**
-default: **{
-      placeholder: undefined,
-      max: undefined, // maps to maxlength
-      icon: undefined, // updates the icon
-    }**</small>
-
-
-<br><br>
-
-### **_privilegedAttributes**
-default: **{
-      readonly: null,
-      placeholder: null,
-      required: null,
-      disabled: null,
-      icon: null,
-      maxlength: null,
-    }**</small>
-
-
-<br><br>
 ## Events
 {{% api "_furo-ui5-text-input-events.md" %}}
 
 ### **change**
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-change</span>
-→ <small>``text``</small>
+→ <small>`String`</small>
 
  Fired when the input operation has finished by pressing Enter or on focusout.
 <br><br>
 ### **input**
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-input</span>
-→ <small>``</small>
+→ <small>`String`</small>
 
  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
 <br><br>
 ### **xxxx**
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-xxxx</span>
-→ <small>``</small>
+→ <small>`*`</small>
 
  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
 <br><br>

@@ -90,68 +90,11 @@ default: **&#39;&#39;**</small>
 
 <br><br>
 
-### **_previousValueState**
-default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
 
 
-<br><br>
-
-### **_attributesFromFNA**
-default: **{
-      readonly: undefined,
-      placeholder: undefined,
-    }**</small>
 
 
-<br><br>
 
-### **_constraintsFromFNA**
-default: **{
-      required: undefined,
-      max: undefined, // maps to maxlength
-    }**</small>
-
-
-<br><br>
-
-### **_labelsFromFAT**
-default: **{
-      readonly: undefined,
-      disabled: undefined,
-      required: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_attributesFromFAT**
-default: **{
-      placeholder: undefined,
-      max: undefined, // maps to maxlength
-      rows: undefined,
-      growing: undefined,
-      growingMaxLines: undefined,
-      showExceededText: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_privilegedAttributes**
-default: **{
-      readonly: null,
-      placeholder: null,
-      required: null,
-      disabled: null,
-      maxlength: null,
-      rows: null,
-      growing: null,
-      growingMaxLines: null,
-      showExceededText: null,
-    }**</small>
-
-
-<br><br>
 ## Events
 {{% api "_furo-ui5-textarea-input-events.md" %}}
 

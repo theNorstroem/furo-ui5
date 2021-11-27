@@ -21,7 +21,7 @@ import { Events } from './lib/Events.js';
  * 1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.
  * 2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.
  *
- * ** meta 	<  fat 	< html 	**
+ * ** meta  <  fat  < html  **
  *
  * ## supported FAT attributes
  *  - **"readonly":"true"** set the element to readonly
@@ -44,51 +44,70 @@ import { Events } from './lib/Events.js';
  *
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
- * @fires {`text`} change -  Fired when the input operation has finished by pressing Enter or on focusout.
- * @fires {} input -  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
- * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
+ * @fires {String} change -  Fired when the input operation has finished by pressing Enter or on focusout.
+ * @fires {String} input -  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
+ * @fires {*} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
  *
  * @fires {String} value-changed - Fires the field value when it changes.
  *
  * @summary data text input field
  * @element furo-ui5-text-input
- * @demo demo-furo-ui5-text-input Basic usage (scalar , fat, wrapper values)
- * @demo demo-furo-ui5-text-input-markup-overwrite Use Markup Overwrites
- * @demo demo-furo-ui5-text-input-together playground
  */
 export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
   constructor() {
     super();
 
     this.type = 'Text';
-    // used to restore the state after a invalidation -> validation change
-    this._previousValueState = { state: 'None', message: '' };
 
+    /**
+     * used to restore the state after a invalidation -> validation change
+     *
+     * @private
+     */
+    this._previousValueState = { state: 'None', message: '' };
+    /**
+     *
+     * @private
+     */
     this._attributesFromFNA = {
       readonly: undefined,
       placeholder: undefined,
     };
-
+    /**
+     *
+     * @private
+     */
     this._constraintsFromFNA = {
       required: undefined,
       max: undefined, // maps to maxlength
     };
-
+    /**
+     *
+     * @private
+     */
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
     };
-
+    /**
+     *
+     * @private
+     */
     this._attributesFromFAT = {
       placeholder: undefined,
       max: undefined, // maps to maxlength
       icon: undefined, // updates the icon
     };
 
-    // a list of privileged attributes. when those attributes are set in text-input components initially.
-    // they can not be modified later via response or spec
-    // null is used because getAttribute returns null or value
+    /**
+     * a list of privileged attributes. when those attributes are set in text-input components initially.
+     * they can not be modified later via response or spec
+     * null is used because getAttribute returns null or value
+     *
+     *
+     * @private
+     */
     this._privilegedAttributes = {
       readonly: null,
       placeholder: null,

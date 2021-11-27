@@ -13,7 +13,7 @@ import '@ui5/webcomponents/dist/Table.js';
 import '@ui5/webcomponents/dist/TableColumn.js';
 import '@ui5/webcomponents/dist/TableCell.js';
 
-import './lib/furo-ui5-table-row.js';
+import './subcomponents/furo-ui5-table-row.js';
 import { html as statichtml, literal } from 'lit/static-html.js';
 
 /**
@@ -82,6 +82,10 @@ export class FuroUi5Table extends FBP(LitElement) {
     this.mode = 'None';
   }
 
+  /**
+   *
+   * @private
+   */
   _FBPReady() {
     super._FBPReady();
     /**

@@ -60,25 +60,41 @@ export class FuroUi5TextareaInput extends FieldNodeAdapter(TextArea.default) {
     super();
     this.value = '';
 
-    // used to restore the state after a invalidation -> validation change
+    /**
+     * used to restore the state after a invalidation -> validation change
+     * @type {{state: string, message: string}}
+     * @private
+     */
     this._previousValueState = { state: 'None', message: '' };
-
+    /**
+     *
+     * @private
+     */
     this._attributesFromFNA = {
       readonly: undefined,
       placeholder: undefined,
     };
-
+    /**
+     *
+     * @private
+     */
     this._constraintsFromFNA = {
       required: undefined,
       max: undefined, // maps to maxlength
     };
-
+    /**
+     *
+     * @private
+     */
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
     };
-
+    /**
+     *
+     * @private
+     */
     this._attributesFromFAT = {
       placeholder: undefined,
       max: undefined, // maps to maxlength
@@ -88,9 +104,13 @@ export class FuroUi5TextareaInput extends FieldNodeAdapter(TextArea.default) {
       showExceededText: undefined,
     };
 
-    // a list of privileged attributes. when those attributes are set in textarea-input components initially.
-    // they can not be modified later via response or spec
-    // null is used because getAttribute returns null or value
+    /**
+     * a list of privileged attributes. when those attributes are set in textarea-input components initially.
+     * they can not be modified later via response or spec
+     * null is used because getAttribute returns null or value
+     *
+     * @private
+     */
     this._privilegedAttributes = {
       readonly: null,
       placeholder: null,

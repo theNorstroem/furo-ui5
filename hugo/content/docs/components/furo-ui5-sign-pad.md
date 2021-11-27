@@ -14,23 +14,12 @@ weight: 50
 
 > **Summary:** draw or sign
 
-{{% api "_furo-ui5-sign-pad-head.md" %}}
-
 ## Description
 
 `furo-sign-pad`
  Simple pad to sign or draw something
 
-### Sample
- <furo-demo-snippet>
-  <template>
-   <furo-ui5-sign-pad @-sign-updated="--signed"></furo-ui5-sign-pad>
-    <img ƒ-.src="--signed" alt="" width="150px">
-  </template>
- </furo-demo-snippet>
-
-{{% api "_furo-ui5-sign-pad-description.md" %}}
-
+{{% api "_furo-ui5-sign-pad-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-sign-pad-properties.md" %}}
@@ -54,11 +43,6 @@ weight: 50
 
 
 
-### **field**
-default: **{}**</small>
-
-
-<br><br>
 ## Events
 {{% api "_furo-ui5-sign-pad-events.md" %}}
 
@@ -80,37 +64,13 @@ Fired when sign gets new painting, with base encoded image.
 <small>`*`</small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-resize</span>
 
+Trigger this method after a resize.
 
+This is also needed
 
 <br><br>
 
-### **_setEmpty**
-<small>**_setEmpty**(*b* `` ) ⟹ `void`</small>
 
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--set-empty</span>
-
-unlock() {
- this.signaturePad.on();
-}
-
-lock() {
- this.signaturePad.off();
-}
-
-- <small>b </small>
-<br><br>
-
-### **_setActive**
-<small>**_setActive**(*b* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--set-active</span>
-
-
-
-- <small>b </small>
-<br><br>
 
 ### **clear**
 <small>**clear**() ⟹ `void`</small>
@@ -118,17 +78,19 @@ lock() {
 <small>`*`</small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-clear</span>
 
-Clears the image
+Clears the image. This also updates the bound field.
 
 <br><br>
 
-### **setImage**
-<small>**setImage**(*encodedImage* `` ) ⟹ `void`</small>
+### **putImage**
+<small>**putImage**(*encodedImage* `imageURL` ) ⟹ `void`</small>
 
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-image</span>
+<small>`imageURL` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-put-image</span>
 
+Adds the encoded image to the canvas.
 
+Maybe you want to clear first.
 
 - <small>encodedImage </small>
 <br><br>
@@ -144,103 +106,14 @@ The encoded image is available in the `image` property.
 
 <br><br>
 
-### **_onBegin**
-<small>**_onBegin**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--on-begin</span>
 
 
 
-<br><br>
-
-### **_onEnd**
-<small>**_onEnd**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--on-end</span>
 
 
 
-<br><br>
-
-### **_dotSizeChanged**
-<small>**_dotSizeChanged**(*newValue* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--dot-size-changed</span>
 
 
-
-- <small>newValue </small>
-<br><br>
-
-### **_minWidthChanged**
-<small>**_minWidthChanged**(*newValue* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--min-width-changed</span>
-
-
-
-- <small>newValue </small>
-<br><br>
-
-### **_maxWidthChanged**
-<small>**_maxWidthChanged**(*newValue* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--max-width-changed</span>
-
-
-
-- <small>newValue </small>
-<br><br>
-
-### **_backgroundColorChanged**
-<small>**_backgroundColorChanged**(*newValue* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--background-color-changed</span>
-
-
-
-- <small>newValue </small>
-<br><br>
-
-### **_penColorChanged**
-<small>**_penColorChanged**(*newValue* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--pen-color-changed</span>
-
-
-
-- <small>newValue </small>
-<br><br>
-
-### **_velocityFilterWeightChanged**
-<small>**_velocityFilterWeightChanged**(*newValue* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--velocity-filter-weight-changed</span>
-
-
-
-- <small>newValue </small>
-<br><br>
-
-### **_onEncodingChanged**
-<small>**_onEncodingChanged**(*type* `` *encoderOptions* `` ) ⟹ `void`</small>
-
-<small>`` `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--on-encoding-changed</span>
-
-
-
-- <small>type </small>
-- <small>encoderOptions </small>
-<br><br>
 
 ### **bindData**
 <small>**bindData**(*entityField* `` ) ⟹ `void`</small>
