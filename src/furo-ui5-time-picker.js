@@ -354,8 +354,19 @@ export class FuroUi5TimePicker extends FieldNodeAdapter(TimePicker.default) {
       }
     }
   }
+
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-time-picker';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
 
-FuroUi5TimePicker.onDefine().then(() => {
-  window.customElements.define('furo-ui5-time-picker', FuroUi5TimePicker);
-});
+FuroUi5TimePicker.define();

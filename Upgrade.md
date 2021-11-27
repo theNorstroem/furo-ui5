@@ -7,7 +7,7 @@ Put upgrade note in this file
 - furo-ui5-data => furo-ui5
 - furo-ui5-display => furo-ui5-typerenderer-labeled
 - ui5-shellbar-item @-click=“”
-- 
+- furo-ui5-busyindicator  => furo-ui5-busy-indicator
 - layout/furo-z-grid => ui5/furo-ui5-z-grid
 - layout/furo-split-grid => ui5/furo-ui5-split-grid
 
@@ -19,7 +19,10 @@ Alle Elemente mit FNA mit bindData doku ausrüsten
 Alle Elemente eventuell supported fieldnode type beschreiben
 Alle Elemente value-state from FAT
 
-furo-ui5-datepicker bind-data delay
+furo-ui5-date-picker bind-data delay
+furo-ui5-date-time-picker bind-data delay
+furo-ui5-time-picker bind-data delay
+
 furo-ui5-money-input
 
 furo-ui5-notification-group-display zeigt keine Anzahl an, verschwindet nicht bei 0 elementen
@@ -31,6 +34,30 @@ furo-ui5-radio-button: Repeated bool example
 furo-ui5-select BUG: <div slot="valueStateMessage">Information message. </div>
 
 furo-ui5-sign-pad: unlock, lock
+furo-ui5-toggle-button BUG: text wird nicht gesetzt oder ev. überschieben
+
+Alle typerenderer die von ui5-xx ableiten mit folgendem erweitern:
+```
+
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-string';
+    return md;
+  }
+  /**
+   * @private
+   */
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditString.define();
+
+```
 
 
 # Missing Components / features

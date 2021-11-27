@@ -6,6 +6,19 @@ export class CelleditInt32 extends FuroUi5NumberInput {
     super.connectedCallback();
     this.style.width = '100%';
   }
+
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-int32';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
 
-window.customElements.define('celledit-int32', CelleditInt32);
+CelleditInt32.define();

@@ -306,8 +306,19 @@ export class FuroUi5ToggleButton extends FieldNodeAdapter(
       this.readonly = readonly;
     }
   }
+
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-toggle-button';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
 
-FuroUi5ToggleButton.onDefine().then(() => {
-  window.customElements.define('furo-ui5-toggle-button', FuroUi5ToggleButton);
-});
+FuroUi5ToggleButton.define();

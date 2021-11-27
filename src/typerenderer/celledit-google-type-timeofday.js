@@ -9,9 +9,19 @@ import { FuroUi5TimePicker } from '../furo-ui5-time-picker.js';
  * @summary celledit renderer for google.type.TimeOfDay
  * @element celledit-google-type-timeofday
  */
-class CelleditGoogleTypeTimeofday extends FuroUi5TimePicker {}
+class CelleditGoogleTypeTimeofday extends FuroUi5TimePicker {
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-google-type-timeofday';
+    return md;
+  }
 
-window.customElements.define(
-  'celledit-google-type-timeofday',
-  CelleditGoogleTypeTimeofday
-);
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditGoogleTypeTimeofday.define();
