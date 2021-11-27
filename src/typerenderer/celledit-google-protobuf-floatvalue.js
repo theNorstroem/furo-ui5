@@ -9,9 +9,19 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @summary celledit renderer for google.protobuf.Float
  * @element celledit-google-protobuf-floatvalue
  */
-class CelleditGoolgeProtobufFloatvalue extends CelleditInt32 {}
+class CelleditGoolgeProtobufFloatvalue extends CelleditInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-google-protobuf-floatvalue';
+    return md;
+  }
 
-window.customElements.define(
-  'celledit-google-protobuf-floatvalue',
-  CelleditGoolgeProtobufFloatvalue
-);
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditGoolgeProtobufFloatvalue.define();

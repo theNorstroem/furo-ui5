@@ -9,9 +9,19 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @summary celledit renderer for google.protobuf.Int32value
  * @element celledit-google-protobuf-int32value
  */
-class CelleditGoolgeProtobufIn32value extends CelleditInt32 {}
+class CelleditGoolgeProtobufIn32value extends CelleditInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-google-protobuf-int32value';
+    return md;
+  }
 
-window.customElements.define(
-  'celledit-google-protobuf-int32value',
-  CelleditGoolgeProtobufIn32value
-);
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditGoolgeProtobufIn32value.define();

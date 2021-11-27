@@ -1,8 +1,18 @@
 import { CelleditString } from './celledit-string.js';
 
-class CelleditGoogleProtobufStringvalue extends CelleditString {}
+class CelleditGoogleProtobufStringvalue extends CelleditString {
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-google-protobuf-stringvalue';
+    return md;
+  }
 
-window.customElements.define(
-  'celledit-google-protobuf-stringvalue',
-  CelleditGoogleProtobufStringvalue
-);
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditGoogleProtobufStringvalue.define();

@@ -10,9 +10,19 @@ import { CelleditBool } from './celledit-bool.js';
  * @element celledit-google-protobuf-boolvalue
  */
 
-class CelleditGoogleProtobufBoolvalue extends CelleditBool {}
+class CelleditGoogleProtobufBoolvalue extends CelleditBool {
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-google-protobuf-boolvalue';
+    return md;
+  }
 
-window.customElements.define(
-  'celledit-google-protobuf-boolvalue',
-  CelleditGoogleProtobufBoolvalue
-);
+  static get styles() {
+    return super.styles;
+  }
+}
+
+CelleditGoogleProtobufBoolvalue.define();

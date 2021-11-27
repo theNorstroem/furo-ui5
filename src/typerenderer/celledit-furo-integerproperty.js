@@ -9,12 +9,18 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @element celledit-furo-integerproperty
  */
 class CelleditFuroIntegerproperty extends CelleditInt32 {
-  bindData(fieldNode) {
-    super.bindData(fieldNode.data);
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-furo-integerproperty';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
   }
 }
 
-window.customElements.define(
-  'celledit-furo-integerproperty',
-  CelleditFuroIntegerproperty
-);
+CelleditFuroIntegerproperty.define();

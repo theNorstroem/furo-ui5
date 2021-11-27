@@ -2,12 +2,18 @@
 import { FuroUi5Select } from '../furo-ui5-select.js';
 
 class CelleditFuroStringoptionproperty extends FuroUi5Select {
-  bindData(fieldNode) {
-    super.bindData(fieldNode);
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'celledit-furo-stringoptionproperty';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
   }
 }
 
-window.customElements.define(
-  'celledit-furo-stringoptionproperty',
-  CelleditFuroStringoptionproperty
-);
+CelleditFuroStringoptionproperty.define();
