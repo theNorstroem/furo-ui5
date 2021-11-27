@@ -22,7 +22,7 @@ It supports all features from the [SAP ui5 toggleButton element](https://sap.git
 
 You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
 
- * ```html
+```html
  <furo-ui5-toggle-button
     ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
  ></furo-ui5-toggle-button>

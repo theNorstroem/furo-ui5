@@ -10,11 +10,11 @@ import { Events } from './lib/Events.js';
 
  * You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
  *
- *  * ```html
+ *```html
  *  <furo-ui5-toggle-button
  *     ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
  *  ></furo-ui5-toggle-button>
- * ```
+ *```
  *
  * ### Specificity
  * 1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.
@@ -36,20 +36,14 @@ import { Events } from './lib/Events.js';
  *
  * The constraint **required** will mark the element as required
  *
- * ## Methods
- * **bind-data(fieldNode)**
- * Bind a entity field. You can use the entity even when no data was received.
- *
  * @fires {} click -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {Boolean} value-changed - Fires the value of pressed when value changed.
  *
  * @summary boolean toggle button
- * @element
- * @demo demo-furo-ui5-toggle-button Basic usage (scalar , fat, wrapper values)
+ * @element furo-ui5-toggle-button
  */
 export class FuroUi5ToggleButton extends FieldNodeAdapter(
   ToggleButton.default
@@ -60,28 +54,48 @@ export class FuroUi5ToggleButton extends FieldNodeAdapter(
     // used to restore the state after a invalidation -> validation change
     this._previousDesign = 'Default';
 
+    /**
+     *
+     * @private
+     */
     this._attributesFromFNA = {
       readonly: undefined,
       disabled: undefined,
       label: undefined,
     };
 
+    /**
+     *
+     * @private
+     */
     this._constraintsFromFNA = {};
 
+    /**
+     *
+     * @private
+     */
     this._attributesFromFAT = {
       label: undefined,
       icon: undefined,
       design: undefined,
     };
 
+    /**
+     *
+     * @private
+     */
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
     };
 
-    // a list of privileged attributes. when those attributes are set in number-input components initially.
-    // they can not be modified later via response or spec
-    // null is used because getAttribute returns null or value
+    /**
+     * a list of privileged attributes. when those attributes are set in number-input components initially.
+     * they can not be modified later via response or spec
+     * null is used because getAttribute returns null or value
+     *
+     * @private
+     */
     this._privilegedAttributes = {
       readonly: null,
       disabled: null,
@@ -139,6 +153,7 @@ export class FuroUi5ToggleButton extends FieldNodeAdapter(
   /**
    * overwrite onFnaFieldValueChanged
    * @param val
+   * @private
    */
   onFnaFieldValueChanged(val) {
     if (this.isFat()) {
@@ -198,9 +213,9 @@ export class FuroUi5ToggleButton extends FieldNodeAdapter(
     // text
     if (this._privilegedAttributes.text === null) {
       if (fatAttributes.label !== undefined) {
-        this.innerText = fatAttributes.label;
+        this.textContent = fatAttributes.label;
       } else if (this._attributesFromFNA.label !== undefined) {
-        this.innerText = this._attributesFromFNA.label;
+        this.textContent = this._attributesFromFNA.label;
       }
       this._render();
     }
@@ -230,6 +245,7 @@ export class FuroUi5ToggleButton extends FieldNodeAdapter(
 
   /**
    * overwrite onFnaFieldNodeBecameInvalid function
+   * @private
    */
   onFnaFieldNodeBecameInvalid() {
     this._setDesign('Error');
@@ -263,6 +279,7 @@ export class FuroUi5ToggleButton extends FieldNodeAdapter(
   /**
    * overwrite onFnaLabelChanged function
    * label is mapped to text
+   * @private
    * @param placeholder
    */
   onFnaLabelChanged(text) {
@@ -271,7 +288,7 @@ export class FuroUi5ToggleButton extends FieldNodeAdapter(
       this._privilegedAttributes.text === null &&
       this._attributesFromFAT.label === undefined
     ) {
-      this.innerText = text;
+      this.textContent = text;
     }
   }
 

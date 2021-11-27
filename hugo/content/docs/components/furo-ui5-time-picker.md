@@ -78,45 +78,9 @@ default: **&#39;&#39;**</small>
 
 <br><br>
 
-### **_previousValueState**
-default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
 
 
-<br><br>
 
-### **_attributesFromFNA**
-default: **{
-      readonly: undefined,
-      placeholder: undefined,
-      min: undefined,
-      max: undefined,
-      pattern: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_constraintsFromFNA**
-default: **{
-      required: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_privilegedAttributes**
-default: **{
-      readonly: null,
-      placeholder: null,
-      required: null,
-      disabled: null,
-      maxDate: null,
-      minDate: null,
-      formatPattern: null,
-    }**</small>
-
-
-<br><br>
 ## Events
 {{% api "_furo-ui5-time-picker-events.md" %}}
 
@@ -157,20 +121,13 @@ handle changes on the model.
 <small>`*`</small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
 
+Reads the attributes which are set on the component dom.
+those attributes can be set. `value-state`, `value-state-message`,  `icon`, `placeholder`, `required`,`readonly`,`disabled`
 
+Use this after manual or scripted update of the attributes.
 
 <br><br>
 
-### **onFnaFieldNodeBecameInvalid**
-<small>**onFnaFieldNodeBecameInvalid**(*validity* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-field-node-became-invalid</span>
-
-overwrite onFnaFieldNodeBecameInvalid function
-
-- <small>validity </small>
-<br><br>
 
 
 

@@ -57,9 +57,16 @@ export class FuroUi5TimePicker extends FieldNodeAdapter(TimePicker.default) {
     super();
     this.formatPattern = ''; // needed to avoid cldr errors
 
-    // used to restore the state after a invalidation -> validation change
+    /**
+     * used to restore the state after a invalidation -> validation change
+     *
+     * @private
+     */
     this._previousValueState = { state: 'None', message: '' };
-
+    /**
+     *
+     * @private
+     */
     this._attributesFromFNA = {
       readonly: undefined,
       placeholder: undefined,
@@ -67,14 +74,21 @@ export class FuroUi5TimePicker extends FieldNodeAdapter(TimePicker.default) {
       max: undefined,
       pattern: undefined,
     };
-
+    /**
+     *
+     * @private
+     */
     this._constraintsFromFNA = {
       required: undefined,
     };
 
-    // a list of privileged attributes. when those attributes are set in number-input components initially.
-    // they can not be modified later via response or spec
-    // null is used because getAttribute returns null or value
+    /**
+     * a list of privileged attributes. when those attributes are set in number-input components initially.
+     * they can not be modified later via response or spec
+     * null is used because getAttribute returns null or value
+     *
+     * @private
+     */
     this._privilegedAttributes = {
       readonly: null,
       placeholder: null,
@@ -153,6 +167,7 @@ export class FuroUi5TimePicker extends FieldNodeAdapter(TimePicker.default) {
    * FieldNodeAdapter callback function to
    * handle changes on the model.
    * @param value
+   *
    */
   onFnaFieldValueChanged(value) {
     const type = this.getDataType();
@@ -192,6 +207,9 @@ export class FuroUi5TimePicker extends FieldNodeAdapter(TimePicker.default) {
     }
   }
 
+  /**
+   * @private
+   */
   connectedCallback() {
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();
@@ -210,6 +228,12 @@ export class FuroUi5TimePicker extends FieldNodeAdapter(TimePicker.default) {
     }
   }
 
+  /**
+   * Reads the attributes which are set on the component dom.
+   * those attributes can be set. `value-state`, `value-state-message`,  `icon`, `placeholder`, `required`,`readonly`,`disabled`
+   *
+   * Use this after manual or scripted update of the attributes.
+   */
   readAttributes() {
     this._previousValueState.state = this.getAttribute('value-state')
       ? this.getAttribute('value-state')
@@ -223,6 +247,7 @@ export class FuroUi5TimePicker extends FieldNodeAdapter(TimePicker.default) {
 
   /**
    * overwrite onFnaFieldNodeBecameInvalid function
+   * @private
    */
   onFnaFieldNodeBecameInvalid(validity) {
     if (validity.description) {

@@ -23,7 +23,7 @@ bookHidden: true
   @-object-ready="--dataObject"
 ></furo-data-object>
 <!-- Workaround, because data object is way faster ready -->
-<furo-de-bounce wait="10" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
+<furo-de-bounce wait="100" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
 </template>
 </furo-demo-snippet>
 

@@ -163,6 +163,7 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
   /**
    * Reads the attributes which are set on the component dom.
    * those attributes can be set. `value-state`, `value-state-message`,  `icon`, `placeholder`, `required`,`readonly`,`disabled`
+   *
    * Use this after manual or scripted update of the attributes.
    */
   readAttributes() {

@@ -139,6 +139,7 @@ Fires the field value when it changes.
 
 Reads the attributes which are set on the component dom.
 those attributes can be set. `value-state`, `value-state-message`,  `icon`, `placeholder`, `required`,`readonly`,`disabled`
+
 Use this after manual or scripted update of the attributes.
 
 <br><br>
