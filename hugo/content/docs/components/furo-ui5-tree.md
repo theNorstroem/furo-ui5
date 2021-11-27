@@ -602,6 +602,18 @@ Custom property | Description
 ----------------|-------------
 `--surface` | background color <hr> <small>default: `white`</small> <small>fallback: `N/A`</small>
 `--on-surface` | foreground color <hr> <small>default: `#333333`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-1` | tree indention level 1 <hr> <small>default: `16px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-2` | tree indention level 2 <hr> <small>default: `32px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-3` | tree indention level 3 <hr> <small>default: `48px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-4` | tree indention level 4 <hr> <small>default: `56px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-5` | tree indention level 5 <hr> <small>default: `64px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-6` | tree indention level 6 <hr> <small>default: `72px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-7` | tree indention level 7 <hr> <small>default: `80px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-8` | tree indention level 8 <hr> <small>default: `88px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-9` | tree indention level 9 <hr> <small>default: `92px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-10` | tree indention level 10 <hr> <small>default: `96px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-11` | tree indention level 11 <hr> <small>default: `100px`</small> <small>fallback: `N/A`</small>
+`--tree-indentation-12` | tree indention level 12 <hr> <small>default: `104px`</small> <small>fallback: `N/A`</small>
 
 {{% api "_furo-ui5-tree-footer.md" %}}
 {{% api "_furo-ui5-tree-scripts.md" %}}

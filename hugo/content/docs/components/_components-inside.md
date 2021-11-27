@@ -63,4 +63,4 @@ bookHidden: true
 - [furo-ui5-context-menu-item](furo-ui5-context-menu-item.md) context menu item
 - [furo-ui5-context-submenu](furo-ui5-context-submenu.md) helper
 - [furo-ui5-table-row](furo-ui5-table-row.md) 
-- [furo-ui5-tree-item](furo-ui5-tree-item.md) todo shortdescription
+- [furo-ui5-tree-item](furo-ui5-tree-item.md) tree item

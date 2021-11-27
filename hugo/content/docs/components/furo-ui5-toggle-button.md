@@ -48,10 +48,6 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
 
 The constraint **required** will mark the element as required
 
-## Methods
-**bind-data(fieldNode)**
-Bind a entity field. You can use the entity even when no data was received.
-
 {{% api "_furo-ui5-toggle-button-head.md" %}}
 
 ## Attributes and Properties
@@ -76,52 +72,10 @@ default: **&#39;Default&#39;**</small>
 
 <br><br>
 
-### **_attributesFromFNA**
-default: **{
-      readonly: undefined,
-      disabled: undefined,
-      label: undefined,
-    }**</small>
 
 
-<br><br>
-
-### **_constraintsFromFNA**
-default: **{}**</small>
 
 
-<br><br>
-
-### **_attributesFromFAT**
-default: **{
-      label: undefined,
-      icon: undefined,
-      design: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_labelsFromFAT**
-default: **{
-      readonly: undefined,
-      disabled: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_privilegedAttributes**
-default: **{
-      readonly: null,
-      disabled: null,
-      text: null,
-      icon: null,
-      design: null,
-    }**</small>
-
-
-<br><br>
 ## Events
 {{% api "_furo-ui5-toggle-button-events.md" %}}
 
@@ -135,7 +89,7 @@ default: **{
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-xxxx</span>
 → <small>``</small>
 
- All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/). When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+ All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).
 <br><br>
 ### **value-changed**
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
@@ -159,44 +113,13 @@ Reads the attributes which are set on the component dom.
 <br><br>
 
 
-### **onFnaFieldValueChanged**
-<small>**onFnaFieldValueChanged**(*val* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-field-value-changed</span>
-
-overwrite onFnaFieldValueChanged
-
-- <small>val </small>
-<br><br>
-
-
-
-### **onFnaFieldNodeBecameInvalid**
-<small>**onFnaFieldNodeBecameInvalid**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-field-node-became-invalid</span>
-
-overwrite onFnaFieldNodeBecameInvalid function
-
-<br><br>
 
 
 
 
-### **onFnaLabelChanged**
-<small>**onFnaLabelChanged**(*text* `` *placeholder* `` ) ⟹ `void`</small>
 
-<small>`` `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-label-changed</span>
 
-overwrite onFnaLabelChanged function
-label is mapped to text
 
-- <small>text </small>
-- <small>placeholder </small>
-<br><br>
 
 
 

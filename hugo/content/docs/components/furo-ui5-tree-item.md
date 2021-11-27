@@ -1,6 +1,6 @@
 ---
 title: furo-ui5-tree-item
-description: todo shortdescription
+description: tree item
 weight: 50
 ---
 
@@ -12,12 +12,14 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
-> **Summary:** todo shortdescription
+> **Summary:** tree item
 
 ## Description
 
 `furo-tree-item`
-todo Describe your element
+/**
+# INTERNAL COMPONENT
+This is a helper component to send `tablerow-selected` event by clicking the row or pressing the enter on the row.
 
 {{% api "_furo-ui5-tree-item-head.md" %}}
 

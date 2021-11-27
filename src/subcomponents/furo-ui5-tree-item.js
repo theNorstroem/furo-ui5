@@ -10,7 +10,10 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
 
 /**
  * `furo-tree-item`
- * todo Describe your element
+ /**
+ * # INTERNAL COMPONENT
+ * This is a helper component to send `tablerow-selected` event by clicking the row or pressing the enter on the row.
+ *
  *
  * @cssprop {N/A} [--tree-indentation-1=16px] - tree indention level 1
  * @cssprop {N/A} [--tree-indentation-2=32px] - tree indention level 2
@@ -25,7 +28,7 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  * @cssprop {N/A} [--tree-indentation-11=100px] - tree indention level 11
  * @cssprop {N/A} [--tree-indentation-12=104px] - tree indention level 12
  *
- * @summary todo shortdescription
+ * @summary tree item
  * @element
  * @appliesMixin FBP
  */
@@ -154,7 +157,10 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
       }
     });
 
-    // for elements that are already ready
+    /**
+     * for elements that are already ready
+     * @private
+     */
     this._updateItem();
 
     this.fieldNode.addEventListener('branch-value-changed', e => {
