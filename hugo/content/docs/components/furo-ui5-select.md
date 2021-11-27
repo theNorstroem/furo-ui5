@@ -18,7 +18,7 @@ weight: 50
 The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define
 the available options by using the ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.
 
-```
+```html
 <furo-ui5-select
    ƒ-bind-data="--entity(*.data.description)"
    ƒ-bind-options="--collection(*.entities)">
@@ -60,19 +60,21 @@ Default: false
 ### **idFieldPath**
 default: **&#39;id&#39;**</small>
 
-Defines the field path that is used from the injected RepeaterNode to identify the option items.
+Defines the field path that is used from the bound RepeaterNode (bindOptions) to identify the option items.
 Point-separated path to the field
 E.g. data.partner.ulid
 default: id
+This attribute is related to the option list
 <br><br>
 
 ### **displayFieldPath**
 default: **&#39;display_name&#39;**</small>
 
-Defines the field path that is used from the injected RepeaterNode to display the option items.
+Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the option items.
 Point-separated path to the field
 E.g. data.partner.display_name
 default: display_name
+This attribute is related to the option list
 <br><br>
 
 ### **valueFieldPath**
@@ -82,6 +84,17 @@ Defines the field path that is used to update the bound component if the user ha
 Point-separated path to the field
 Must be set if a data binding is specified.
 default: id
+This attribute is related to the option list. optionList[selected].valueFieldPath ==> bound FieldNode
+<br><br>
+
+### **boundFieldIdPath**
+default: **&#39;id&#39;**</small>
+
+Defines the id field path of the bound FieldNode.
+Point-separated path to the field
+Must be set if a data binding is specified with a complex type.
+default: id
+This attribute is related to the bound FieldNode.
 <br><br>
 
 
@@ -167,6 +180,7 @@ The id field must be comparable.
 
 - <small>id must match the data</small>
 <br><br>
+
 
 
 

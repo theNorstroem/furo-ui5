@@ -6,26 +6,20 @@ import SignaturePad from 'signature_pad/dist/signature_pad.js';
  * `furo-sign-pad`
  *  Simple pad to sign or draw something
  *
- * ### Sample
- *  <furo-demo-snippet>
- *   <template>
- *    <furo-ui5-sign-pad @-sign-updated="--signed"></furo-ui5-sign-pad>
- *     <img ƒ-.src="--signed" alt="" width="150px">
- *   </template>
- *  </furo-demo-snippet>
  *
  * @fires {Base64} sign-updated - Fired when sign gets new painting, with base encoded image.
  *
  * @summary draw or sign
- * @element furo-sign-pad
- * @demo demo-furo-sign-pad Basic usage
- * @demo demo-furo-sign-pad-img with injected image
+ * @element furo-ui5-sign-pad
  * @appliesMixin FBP
  */
 export class FuroUi5SignPad extends FBP(LitElement) {
   constructor() {
     super();
-    this.field = {}; // ensure that field is available
+    /**
+     * @private
+     */
+    this._field = {}; // ensure that field is available
   }
 
   /**
@@ -53,6 +47,11 @@ export class FuroUi5SignPad extends FBP(LitElement) {
     this.signaturePad.clear();
   }
 
+  /**
+   * Trigger this method after a resize.
+   *
+   * This is also needed
+   */
   resize() {
     if (this.canvas) {
       const ratio = 1;
@@ -108,36 +107,47 @@ export class FuroUi5SignPad extends FBP(LitElement) {
     `;
   }
 
+  //  unlock() {
+  //   this.signaturePad.on();
+  // }
+
+  //  lock() {
+  //   this.signaturePad.off();
+  // }
+
   /**
-   unlock() {
-    this.signaturePad.on();
-  }
-
-   lock() {
-    this.signaturePad.off();
-  }
+   * @private
    */
-
   _setEmpty(b) {
     this.empty = b;
   }
 
+  /**
+   * @private
+   */
   _setActive(b) {
     this.active = b;
   }
 
   /**
-   * Clears the image
+   * Clears the image. This also updates the bound field.
    */
   clear() {
     this.signaturePad.clear();
     this.encodeImage();
 
     // super.clear();
-    this.field._value = '';
+    this._field._value = '';
   }
 
-  setImage(encodedImage) {
+  /**
+   * Adds the encoded image to the canvas.
+   *
+   * Maybe you want to clear first.
+   *
+   * @param encodedImage {imageURL}
+   */
+  putImage(encodedImage) {
     const img = new Image();
     img.src = encodedImage;
     const ctx = this.canvas.getContext('2d');
@@ -162,49 +172,76 @@ export class FuroUi5SignPad extends FBP(LitElement) {
     customEvent.detail = this.image;
     this.dispatchEvent(customEvent);
 
-    this.field._value = this.image;
-    return this.field._value;
+    this._field._value = this.image;
+    return this._field._value;
   }
 
+  /**
+   * @private
+   */
   _onBegin() {
     this._setActive(true);
   }
 
+  /**
+   * @private
+   */
   _onEnd() {
     this._setActive(false);
     this.encodeImage();
   }
 
+  /**
+   * @private
+   */
   _dotSizeChanged(newValue) {
     if (!this.signaturePad) return;
     this.signaturePad.dotSize = newValue;
   }
 
+  /**
+   * @private
+   */
   _minWidthChanged(newValue) {
     if (!this.signaturePad) return;
     this.signaturePad.minWidth = newValue;
   }
 
+  /**
+   * @private
+   */
   _maxWidthChanged(newValue) {
     if (!this.signaturePad) return;
     this.signaturePad.maxWidth = newValue;
   }
 
+  /**
+   * @private
+   */
   _backgroundColorChanged(newValue) {
     if (!this.signaturePad) return;
     this.signaturePad.backgroundColor = newValue;
   }
 
+  /**
+   * @private
+   */
   _penColorChanged(newValue) {
     if (!this.signaturePad) return;
     this.signaturePad.penColor = newValue;
   }
 
+  /**
+   * @private
+   */
   _velocityFilterWeightChanged(newValue) {
     if (!this.signaturePad) return;
     this.signaturePad.velocityFilterWeight = newValue;
   }
 
+  /**
+   * @private
+   */
   // todo implement type and encoderOptions
   // eslint-disable-next-line no-unused-vars
   _onEncodingChanged(type, encoderOptions) {
@@ -218,14 +255,14 @@ export class FuroUi5SignPad extends FBP(LitElement) {
    * @param entityField
    */
   bindData(entityField) {
-    this.field = entityField;
-    if (this.field._value) {
-      this.setImage(this.field._value);
+    this._field = entityField;
+    if (this._field._value) {
+      this.putImage(this._field._value);
     }
     // update drawing on changes from outside
-    this.field.addEventListener('this-field-value-changed', () => {
+    this._field.addEventListener('this-field-value-changed', () => {
       this.signaturePad.clear();
-      this.setImage(this.field._value);
+      this.putImage(this._field._value);
     });
   }
 }

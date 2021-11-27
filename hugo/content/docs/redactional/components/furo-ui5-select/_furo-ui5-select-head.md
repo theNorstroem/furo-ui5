@@ -19,8 +19,9 @@ the tag name.
 <furo-form-layouter four>
 <furo-ui5-select
   label="Use with select"
-  value-state="Success" 
-  ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
+  ƒ-bind-data="--daoPerson(*.sex)">
+  	<div slot="valueStateMessage">Information message. </div>
+  </furo-ui5-select>
 <furo-ui5-select
   label="Use with select"
   value-state="Success" 

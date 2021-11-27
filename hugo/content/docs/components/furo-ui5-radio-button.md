@@ -52,10 +52,6 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
 
 The constraint **required** will mark the element as required
 
-## Methods
-**bind-data(fieldNode)**
-Bind a entity field. You can use the entity even when no data was received.
-
 When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
 {{% api "_furo-ui5-radio-button-head.md" %}}

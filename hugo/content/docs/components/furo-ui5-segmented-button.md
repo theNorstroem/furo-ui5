@@ -15,7 +15,6 @@ weight: 50
 
 ## Description
 
-`furo-ui5-segmented-button`
 The furo-ui5-segmented-button component represents a drop-down list. The items inside define the available
 options by using the furo-ui5-segmented-button component.
 
@@ -110,12 +109,14 @@ Fired when the toggle button was clicked. Payload: - if no option binding is act
 
 
 ### **bindData**
-<small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `boolean`</small>
+<small>**bindData**(*fieldNode* `` ) ⟹ `boolean`</small>
 
-<small>`FieldNode` </small> →
+<small>`` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-overwrite bindData of FieldNodeAdapter
+Overrides bindData() of FieldNodeAdapter
+Binds a FieldNode to the component
+Supported types:
 
 - <small>fieldNode </small>
 <br><br>
