@@ -12,12 +12,12 @@
 <meta property="og:description" content="data select field" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-select/" />
-<meta property="article:modified_time" content="2021-11-26T15:26:12+01:00" />
+<meta property="article:modified_time" content="2021-11-27T11:25:03+01:00" />
 <title>furo-ui5-select | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.4eca31333a8962beef6c5fe4e8d2d600097af91553985c4ee6118a52b0ccd250.js" integrity="sha256-TsoxMzqJYr7vbF/k6NLWAAl6&#43;RVTmFxO5hGKUrDM0lA="></script>
+<script defer src="/en.search.min.e0fdba8f1feb1250265dba1b101ff531eb197eff96abe67c5c9d6ad422872a00.js" integrity="sha256-4P26jx/rElAmXbobEB/1MesZfv&#43;Wq&#43;Z8XJ1q1CKHKgA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -158,19 +158,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://ui5.furo.pro/docs/components/furo-sign-pad/" class="">furo-sign-pad</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -3794,16 +3781,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3873,6 +3850,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#idfieldpath"><strong>idFieldPath</strong></a></li>
         <li><a href="#displayfieldpath"><strong>displayFieldPath</strong></a></li>
         <li><a href="#valuefieldpath"><strong>valueFieldPath</strong></a></li>
+        <li><a href="#boundfieldidpath"><strong>boundFieldIdPath</strong></a></li>
       </ul>
     </li>
     <li><a href="#events">Events</a>
@@ -3919,11 +3897,21 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define
 the available options by using the ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.</p>
-<pre><code>&lt;furo-ui5-select
-   ƒ-bind-data=&quot;--entity(*.data.description)&quot;
-   ƒ-bind-options=&quot;--collection(*.entities)&quot;&gt;
-&lt;/furo-ui5-select&gt;
-</code></pre><h3 id="example-with-options-from-specs">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-select</span>
+   <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.description)&#34;</span>
+   <span style="color:#008080">ƒ-bind-options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span>&gt;
+&lt;/<span style="color:#000080">furo-ui5-select</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="example-with-options-from-specs">
   Example with options from specs
   <a class="anchor" href="#example-with-options-from-specs">#</a>
 </h3>
@@ -3937,8 +3925,9 @@ the tag name.</p>
 <furo-form-layouter four>
 <furo-ui5-select
   label="Use with select"
-  value-state="Success" 
-  ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
+  ƒ-bind-data="--daoPerson(*.sex)">
+  	<div slot="valueStateMessage">Information message. </div>
+  </furo-ui5-select>
 <furo-ui5-select
   label="Use with select"
   value-state="Success" 
@@ -4231,20 +4220,22 @@ Default: false
   <a class="anchor" href="#idfieldpath">#</a>
 </h3>
 <p>default: <strong>'id'</strong></small></p>
-<p>Defines the field path that is used from the injected RepeaterNode to identify the option items.
+<p>Defines the field path that is used from the bound RepeaterNode (bindOptions) to identify the option items.
 Point-separated path to the field
 E.g. data.partner.ulid
 default: id
+This attribute is related to the option list
 <br><br></p>
 <h3 id="displayfieldpath">
   <strong>displayFieldPath</strong>
   <a class="anchor" href="#displayfieldpath">#</a>
 </h3>
 <p>default: <strong>'display_name'</strong></small></p>
-<p>Defines the field path that is used from the injected RepeaterNode to display the option items.
+<p>Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the option items.
 Point-separated path to the field
 E.g. data.partner.display_name
 default: display_name
+This attribute is related to the option list
 <br><br></p>
 <h3 id="valuefieldpath">
   <strong>valueFieldPath</strong>
@@ -4255,6 +4246,18 @@ default: display_name
 Point-separated path to the field
 Must be set if a data binding is specified.
 default: id
+This attribute is related to the option list. optionList[selected].valueFieldPath ==&gt; bound FieldNode
+<br><br></p>
+<h3 id="boundfieldidpath">
+  <strong>boundFieldIdPath</strong>
+  <a class="anchor" href="#boundfieldidpath">#</a>
+</h3>
+<p>default: <strong>'id'</strong></small></p>
+<p>Defines the id field path of the bound FieldNode.
+Point-separated path to the field
+Must be set if a data binding is specified with a complex type.
+default: id
+This attribute is related to the bound FieldNode.
 <br><br></p>
 <h2 id="events">
   Events
@@ -4346,9 +4349,9 @@ The id field must be comparable.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/042f658d35bca133fffe3752689b08bd2fe61faf" title='Last modified by veith | November 26, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/b174c12b0b4ca3765497f44b97fd84bf08490ab8" title='Last modified by veith | November 27, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 26, 2021</span>
+      <span>November 27, 2021</span>
     </a>
   </div>
 
@@ -4383,6 +4386,7 @@ The id field must be comparable.</p>
         <li><a href="#idfieldpath"><strong>idFieldPath</strong></a></li>
         <li><a href="#displayfieldpath"><strong>displayFieldPath</strong></a></li>
         <li><a href="#valuefieldpath"><strong>valueFieldPath</strong></a></li>
+        <li><a href="#boundfieldidpath"><strong>boundFieldIdPath</strong></a></li>
       </ul>
     </li>
     <li><a href="#events">Events</a>
@@ -4411,14 +4415,15 @@ The id field must be comparable.</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 

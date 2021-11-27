@@ -12,12 +12,12 @@
 <meta property="og:description" content="Display repeated fields in a table" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-table/" />
-<meta property="article:modified_time" content="2021-11-25T14:43:52+01:00" />
+<meta property="article:modified_time" content="2021-11-27T12:11:14+01:00" />
 <title>furo-ui5-table | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.4eca31333a8962beef6c5fe4e8d2d600097af91553985c4ee6118a52b0ccd250.js" integrity="sha256-TsoxMzqJYr7vbF/k6NLWAAl6&#43;RVTmFxO5hGKUrDM0lA="></script>
+<script defer src="/en.search.min.e0fdba8f1feb1250265dba1b101ff531eb197eff96abe67c5c9d6ad422872a00.js" integrity="sha256-4P26jx/rElAmXbobEB/1MesZfv&#43;Wq&#43;Z8XJ1q1CKHKgA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -158,19 +158,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://ui5.furo.pro/docs/components/furo-sign-pad/" class="">furo-sign-pad</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -3794,16 +3781,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3887,7 +3864,6 @@ https://github.com/alex-shpak/hugo-book
     </li>
     <li><a href="#methods">Methods</a>
       <ul>
-        <li><a href="#_fbpready"><strong>_FBPReady</strong></a></li>
         <li><a href="#binddata"><strong>bindData</strong></a></li>
         <li><a href="#focus"><strong>focus</strong></a></li>
         <li><a href="#focuslast"><strong>focusLast</strong></a></li>
@@ -3971,6 +3947,113 @@ Define the field you want to bind. <code>*</code> is the root of the repeated fi
 Set a context for the type renderer. The default value is <code>cell</code>.</p>
 <p><strong>renderer</strong>
 Set a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.</p>
+<h3 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h3>
+<p>The default typerenderer context for the cells is <strong>cell</strong>. You can set the context on the <code>ui5-table-column</code>.</p>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<button @-click="--read">load data</button><br><br>
+<furo-ui5-table
+ ƒ-bind-data="--collection(*.entities)"
+>
+ <!-- The column label is evaluated from the specs -->
+  <ui5-table-column
+    slot="columns"
+    field="*.data.phone_nr"
+  ></ui5-table-column>  <ui5-table-column
+    slot="columns"
+    field="*.data.first_name"
+  ></ui5-table-column> <ui5-table-column
+    slot="columns"
+    context="celledit"
+    field="*.data.first_name"
+  ></ui5-table-column>
+<ui5-table-column
+  slot="columns"
+  field="*.data.name"
+><span>Custom Title</span></ui5-table-column>
+</furo-ui5-table>
+<furo-data-object
+  type="person.PersonCollection"
+  @-object-ready="--collection"
+  ƒ-inject-raw="--response"></furo-data-object>
+  <furo-fetch-json
+    ƒ-fetch="--read"
+    src="/mockdata/persons/list.json"
+    @-data="--response"
+    ></furo-fetch-json>
+</template>
+</furo-demo-snippet>
+<h4 id="markup">
+  Markup
+  <a class="anchor" href="#markup">#</a>
+</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-table</span>
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span>&gt;
+  <span style="color:#998;font-style:italic">&lt;!-- The column label is evaluated from the specs --&gt;</span>
+  &lt;<span style="color:#000080">ui5-table-column</span>
+    <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;columns&#34;</span>
+    <span style="color:#008080">field</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;*.data.phone_nr&#34;</span>
+  &gt;&lt;/<span style="color:#000080">ui5-table-column</span>&gt; 
+  &lt;<span style="color:#000080">ui5-table-column</span>
+    <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;columns&#34;</span>
+    <span style="color:#008080">field</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;*.data.first_name&#34;</span>
+  &gt;&lt;/<span style="color:#000080">ui5-table-column</span>&gt;
+  <span style="color:#998;font-style:italic">&lt;!-- set a context for the typerenderer --&gt;</span>
+  &lt;<span style="color:#000080">ui5-table-column</span>
+    <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;columns&#34;</span>
+    <span style="color:#008080">context</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;celledit&#34;</span>
+    <span style="color:#008080">field</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;*.data.first_name&#34;</span>
+  &gt;&lt;/<span style="color:#000080">ui5-table-column</span>&gt;
+  <span style="color:#998;font-style:italic">&lt;!-- Setting a custom label --&gt;</span>
+  &lt;<span style="color:#000080">ui5-table-column</span>
+    <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;columns&#34;</span>
+    <span style="color:#008080">field</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;*.data.name&#34;</span>
+  &gt;&lt;<span style="color:#000080">span</span>&gt;Custom Title&lt;/<span style="color:#000080">span</span>&gt;&lt;/<span style="color:#000080">ui5-table-column</span>&gt;
+&lt;/<span style="color:#000080">furo-ui5-table</span>&gt;
+<p>&lt;<span style="color:#000080">furo-data-object</span>
+<span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;person.PersonCollection&quot;</span>
+<span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-object-ready</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;collection&quot;</span>
+<span style="color:#008080">ƒ-inject-raw</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;response&quot;</span>&gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;</p>
+<p></code></pre></td></tr></table></p>
+</div>
+</div>
 <h2 id="attributes-and-properties">
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
@@ -4062,14 +4145,6 @@ string
   Methods
   <a class="anchor" href="#methods">#</a>
 </h2>
-<h3 id="_fbpready">
-  <strong>_FBPReady</strong>
-  <a class="anchor" href="#_fbpready">#</a>
-</h3>
-<p><small><strong>_FBPReady</strong>() ⟹ <code>void</code></small></p>
-<p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;fbp-ready</span></p>
-<p><br><br></p>
 <h3 id="binddata">
   <strong>bindData</strong>
   <a class="anchor" href="#binddata">#</a>
@@ -4137,9 +4212,9 @@ string
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/651f2ef423526a3cc3859df52a55d7e08390a0b4" title='Last modified by veith | November 25, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/c39b493164560d54f2debcefa03645a304217c91" title='Last modified by veith | November 27, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 25, 2021</span>
+      <span>November 27, 2021</span>
     </a>
   </div>
 
@@ -4188,7 +4263,6 @@ string
     </li>
     <li><a href="#methods">Methods</a>
       <ul>
-        <li><a href="#_fbpready"><strong>_FBPReady</strong></a></li>
         <li><a href="#binddata"><strong>bindData</strong></a></li>
         <li><a href="#focus"><strong>focus</strong></a></li>
         <li><a href="#focuslast"><strong>focusLast</strong></a></li>
@@ -4208,14 +4282,15 @@ string
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 

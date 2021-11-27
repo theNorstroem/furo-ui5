@@ -7,21 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://ui5.furo.pro/docs/components/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>furo-sign-pad</title>
-      <link>http://ui5.furo.pro/docs/components/furo-sign-pad/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/components/furo-sign-pad/</guid>
-      <description>furo-sign-pad #  @furo/components v1.0.0-rc.7 import &#39;@furo/components/src/furo-sign-pad.js&#39;; exports FuroUi5SignPad js exports &amp;lt;furo-ui5-sign-pad&amp;gt; custom-element-definition superclass LitElement mixes FBP
- Summary: draw or sign
- Description #  furo-sign-pad Simple pad to sign or draw something
-Sample #       Attributes and Properties #  field #  default: {}
-
-Events #  sign-updated #  @-sign-updated → Base64
-Fired when sign gets new painting, with base encoded image.</description>
-    </item>
-    
-    <item>
       <title>furo-ui5-bool-icon</title>
       <link>http://ui5.furo.pro/docs/components/furo-ui5-bool-icon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -513,10 +498,9 @@ You can bind bool type, furo.fat.Bool type or the google.wrapper.BoolValue type.
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-reference-search/</guid>
       <description>furo-ui5-reference-search #  @furo/components v1.0.0-rc.7 import &#39;@furo/components/src/furo-ui5-reference-search.js&#39;; exports FuroUi5ReferenceSearch js exports &amp;lt;furo-ui5-reference-search&amp;gt; custom-element-definition superclass LitElement mixes FBP mixes FieldNodeAdapter
  Summary: furo ui5 data reference search
- Description #  The furo-ui5-reference-search search a reference
-Bounded data must fullfill the furo.reference signature. The service, deeplink,&amp;hellip; is taken from the spec of your field. Do not forget to specify.
-default usage
-1 2 3  &amp;lt;furo-ui5-reference-search ƒ-bind-data=&amp;#34;--data(*.is_person)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-reference-search&amp;gt;   usage with a extended searcher</description>
+ Description #  The furo-ui5-reference-search is a search input field with the capability to open and extended search component.
+Bound data must fullfill the furo.Reference signature. The service, deeplink,&amp;hellip; is taken from the spec of your field. Do not forget to specify.
+default usage</description>
     </item>
     
     <item>
@@ -538,7 +522,7 @@ default usage
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-segmented-button/</guid>
       <description>furo-ui5-segmented-button #  @furo/components v1.0.0-rc.7 import &#39;@furo/components/src/furo-ui5-segmented-button.js&#39;; exports FuroUi5SegmentedButton js extends src/furo-ui5-segmented-button.js mixes FieldNodeAdapter
  Summary: segmented button
- Description #  furo-ui5-segmented-button The furo-ui5-segmented-button component represents a drop-down list. The items inside define the available options by using the furo-ui5-segmented-button component.
+ Description #  The furo-ui5-segmented-button component represents a drop-down list. The items inside define the available options by using the furo-ui5-segmented-button component.
 1 2 3  &amp;lt;furo-ui5-segmented-button ƒ-bind-data=&amp;#34;--daoPerson(*.field_with_meta_options)&amp;#34;&amp;gt; &amp;lt;/furo-ui5-segmented-button&amp;gt;   Example with options from specs #  A simple way to use the segmented button is, uising it with specified options for a string type.</description>
     </item>
     
@@ -551,7 +535,7 @@ default usage
       <description>furo-ui5-select #  @furo/components v1.0.0-rc.7 import &#39;@furo/components/src/furo-ui5-select.js&#39;; exports FuroUi5Select js extends src/furo-ui5-select.js mixes FieldNodeAdapter
  Summary: data select field
  Description #  The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define the available options by using the ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.
-&amp;lt;furo-ui5-select ƒ-bind-data=&amp;quot;--entity(*.data.description)&amp;quot; ƒ-bind-options=&amp;quot;--collection(*.entities)&amp;quot;&amp;gt; &amp;lt;/furo-ui5-select&amp;gt; Example with options from specs #  A simple way to use the segmented button is, uising it with specified options for a string type.</description>
+1 2 3 4  &amp;lt;furo-ui5-select ƒ-bind-data=&amp;#34;--entity(*.data.description)&amp;#34; ƒ-bind-options=&amp;#34;--collection(*.entities)&amp;#34;&amp;gt; &amp;lt;/furo-ui5-select&amp;gt;   Example with options from specs #  A simple way to use the segmented button is, uising it with specified options for a string type.</description>
     </item>
     
     <item>
@@ -575,10 +559,7 @@ Example with options from specs #  A simple way to use the segmented button is, 
       <description>furo-ui5-sign-pad #  @furo/components v1.0.0-rc.7 import &#39;@furo/components/src/furo-ui5-sign-pad.js&#39;; exports FuroUi5SignPad js exports &amp;lt;furo-ui5-sign-pad&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Summary: draw or sign
  Description #  furo-sign-pad Simple pad to sign or draw something
-Sample #       Attributes and Properties #  field #  default: {}
-
-Events #  sign-updated #  @-sign-updated → Base64
-Fired when sign gets new painting, with base encoded image.</description>
+Example #    clear      1 2 3 4 5 6  &amp;lt;button @-click=&amp;#34;--clearClicked&amp;#34;&amp;gt;clear&amp;lt;/button&amp;gt; &amp;lt;furo-form-layouter four &amp;gt; &amp;lt;furo-ui5-sign-pad ƒ-clear=&amp;#34;--clearClicked&amp;#34; @-sign-updated=&amp;#34;--signed&amp;#34;&amp;gt;&amp;lt;/furo-ui5-sign-pad&amp;gt; &amp;lt;furo-ui5-sign-pad ƒ-clear=&amp;#34;--clearClicked&amp;#34; ƒ-put-image=&amp;#34;--signed&amp;#34;&amp;gt;&amp;lt;/furo-ui5-sign-pad&amp;gt; &amp;lt;/furo-form-layouter&amp;gt; &amp;lt;img ƒ-.src=&amp;#34;--signed&amp;#34; alt=&amp;#34;&amp;#34; width=&amp;#34;100px&amp;#34;&amp;gt;    Attributes and Properties #  Events #  sign-updated #  @-sign-updated → Base64</description>
     </item>
     
     <item>
@@ -599,16 +580,14 @@ Fired when sign gets new painting, with base encoded image.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-table-row/</guid>
-      <description>furo-ui5-table-row #  @furo/components v1.0.0-rc.7 import &#39;@furo/components/src/furo-ui5-table-row.js&#39;; exports FuroUi5TableRow js exports &amp;lt;furo-ui5-table-row&amp;gt; custom-element-definition extends src/lib/furo-ui5-table-row.js
+      <description>furo-ui5-table-row #  @furo/components v1.0.0-rc.7 import &#39;@furo/components/src/furo-ui5-table-row.js&#39;; exports FuroUi5TableRow js exports &amp;lt;furo-ui5-table-row&amp;gt; custom-element-definition extends src/subcomponents/furo-ui5-table-row.js
  Summary:
- Description #  this is a helper component to send tablerow-selected event by clicking the row or pressing the enter on the row.
+ Description #  INTERNAL COMPONENT #  This is a helper component to send tablerow-selected event by clicking the row or pressing the enter on the row.
 Attributes and Properties #  _data #  default: {}
 
 Events #  ui5-selection-requested #  @-ui5-selection-requested → Event
 
-tablerow-selected #  @-tablerow-selected → CustomEvent
-
-arrow-down-on-last-row #  @-arrow-down-on-last-row → CustomEvent</description>
+tablerow-selected #  @-tablerow-selected → CustomEvent</description>
     </item>
     
     <item>
@@ -685,8 +664,7 @@ Supported format options are pattern-based on Unicode LDML Date Format notation.
       <description>furo-ui5-time-picker-labeled #  @furo/components v1.0.0-rc.7 import &#39;@furo/components/src/furo-ui5-time-picker-labeled.js&#39;; exports FuroUi5TimePickerLabeled js exports &amp;lt;furo-ui5-time-picker-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Summary: labeled input field
  Description #  furo-ui5-time-picker-labeled The furo-ui5-time-picker-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
-Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-date-picker required #  required</description>
+Inside a furo-form-layouter set to four #            1 2 3 4 5 6 7 8 9 10  &amp;lt;furo-form-layouter four&amp;gt; &amp;lt;furo-ui5-time-picker-labeled ƒ-bind-data=&amp;#34;--dataObject(*.</description>
     </item>
     
     <item>
@@ -700,7 +678,7 @@ the label for the data-date-picker required #  required</description>
  Description #  The &amp;lsquo;furo-ui5-toggle-button&amp;rsquo; component allows the user to switch true and false for Bool with data binding.
 It supports all features from the SAP ui5 toggleButton element.
 You can bind bool type, furo.fat.Bool type or the google.wrapper.BoolValue type.
-       &amp;lt;furo-ui5-toggle-button ƒ-bind-data=&amp;quot;&amp;ndash;daoCountry(*.</description>
+1 2 3  &amp;lt;furo-ui5-toggle-button ƒ-bind-data=&amp;#34;--daoCountry(*.data.classified_as_risk_area)&amp;#34; &amp;gt;&amp;lt;/furo-ui5-toggle-button&amp;gt;   Specificity #   Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.</description>
     </item>
     
     <item>
@@ -722,16 +700,11 @@ Data signature #  1 2 3 4 5 6  - type:&amp;#39;tree.Tree #Navigation tree type w
       
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-tree-item/</guid>
       <description>furo-ui5-tree-item #  @furo/components v1.0.0-rc.7 import &#39;@furo/components/src/furo-ui5-tree-item.js&#39;; exports FuroUi5TreeItem js exports &amp;lt;furo-ui5-tree-item&amp;gt; custom-element-definition superclass LitElement mixes FBP
- Summary: todo shortdescription
- Description #  furo-tree-item todo Describe your element
+ Summary: tree item
+ Description #  furo-tree-item /**
+INTERNAL COMPONENT #  This is a helper component to send tablerow-selected event by clicking the row or pressing the enter on the row.
 Attributes and Properties #  hidden #  hidden reflects boolean default: true
-Description isGroupLabel #  is-group-label reflects boolean default: false
-
-indentation #  default: 0
-
-_icon #  default: &#39;border&#39;
-
-focused #  focused reflects</description>
+Description isGroupLabel #  is-group-label reflects boolean default: false</description>
     </item>
     
     <item>

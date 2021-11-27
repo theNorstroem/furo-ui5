@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.4eca31333a8962beef6c5fe4e8d2d600097af91553985c4ee6118a52b0ccd250.js" integrity="sha256-TsoxMzqJYr7vbF/k6NLWAAl6&#43;RVTmFxO5hGKUrDM0lA="></script>
+<script defer src="/en.search.min.e0fdba8f1feb1250265dba1b101ff531eb197eff96abe67c5c9d6ad422872a00.js" integrity="sha256-4P26jx/rElAmXbobEB/1MesZfv&#43;Wq&#43;Z8XJ1q1CKHKgA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -158,19 +158,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://ui5.furo.pro/docs/components/furo-sign-pad/" class="">furo-sign-pad</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -3794,16 +3781,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3916,6 +3893,106 @@ https://github.com/alex-shpak/hugo-book
 <p><code>furo-ui5-time-picker-labeled</code>
 The furo-ui5-time-picker-labeled is a composition to easily use a complete input field with label according
 to the design specification of SAP Fiori Design System.</p>
+<h4 id="inside-a-furo-form-layouter-set-to-four">
+  Inside a furo-form-layouter set to <em>four</em>
+  <a class="anchor" href="#inside-a-furo-form-layouter-set-to-four">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-form-layouter four>
+<furo-ui5-time-picker-labeled
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_time_input)"
+ ></furo-ui5-time-picker-labeled>
+<furo-ui5-time-picker-labeled
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_time_input)"
+ ></furo-ui5-time-picker-labeled>
+</furo-form-layouter>
+<furo-data-object
+  type="experiment.Experiment"
+  @-object-ready="--dataObject"
+></furo-data-object>
+<!-- Workaround, because data object is way faster ready -->
+<furo-de-bounce wait="100" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
+</template>
+</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-time-picker-labeled</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_time_input)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-time-picker-labeled</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-time-picker-labeled</span>
+      <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span>
+      <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Override&#34;</span>
+      <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_time_input)&#34;</span>
+   &gt;&lt;/<span style="color:#000080">furo-ui5-time-picker-labeled</span>&gt;
+&lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="inside-a-furo-form-layouter-set-to-two">
+  Inside a furo-form-layouter set to <em>two</em>
+  <a class="anchor" href="#inside-a-furo-form-layouter-set-to-two">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-form-layouter two>
+<furo-ui5-time-picker-labeled
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_time_input)"
+ ></furo-ui5-time-picker-labeled>
+<furo-ui5-time-picker-labeled
+    value-state="Information" 
+    ƒ-bind-data="--dataObjectDebounced(*.furo_data_time_input)"
+ ></furo-ui5-time-picker-labeled>
+</furo-form-layouter>
+<furo-data-object
+  type="experiment.Experiment"
+  @-object-ready="--dataObject"
+></furo-data-object>
+<!-- Workaround, because data object is way faster ready -->
+<furo-de-bounce wait="10" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
+</template>
+</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">two</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-time-picker-labeled</span>
+    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_time_input)&#34;</span>
+  &gt;&lt;/<span style="color:#000080">furo-ui5-time-picker-labeled</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-time-picker-labeled</span>
+      <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span>
+      <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Override&#34;</span>
+      <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_time_input)&#34;</span>
+   &gt;&lt;/<span style="color:#000080">furo-ui5-time-picker-labeled</span>&gt;
+&lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="attributes-and-properties">
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
@@ -4050,14 +4127,15 @@ to the design specification of SAP Fiori Design System.</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 

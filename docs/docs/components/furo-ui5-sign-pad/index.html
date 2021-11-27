@@ -12,12 +12,12 @@
 <meta property="og:description" content="draw or sign" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-sign-pad/" />
-<meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
+<meta property="article:modified_time" content="2021-11-27T12:11:14+01:00" />
 <title>furo-ui5-sign-pad | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.4eca31333a8962beef6c5fe4e8d2d600097af91553985c4ee6118a52b0ccd250.js" integrity="sha256-TsoxMzqJYr7vbF/k6NLWAAl6&#43;RVTmFxO5hGKUrDM0lA="></script>
+<script defer src="/en.search.min.e0fdba8f1feb1250265dba1b101ff531eb197eff96abe67c5c9d6ad422872a00.js" integrity="sha256-4P26jx/rElAmXbobEB/1MesZfv&#43;Wq&#43;Z8XJ1q1CKHKgA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -158,19 +158,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://ui5.furo.pro/docs/components/furo-sign-pad/" class="">furo-sign-pad</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -3794,16 +3781,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
   </ul>
 
 
@@ -3866,16 +3843,8 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#description">Description</a>
-      <ul>
-        <li><a href="#sample">Sample</a></li>
-      </ul>
-    </li>
-    <li><a href="#attributes-and-properties">Attributes and Properties</a>
-      <ul>
-        <li><a href="#field"><strong>field</strong></a></li>
-      </ul>
-    </li>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#attributes-and-properties">Attributes and Properties</a></li>
     <li><a href="#events">Events</a>
       <ul>
         <li><a href="#sign-updated"><strong>sign-updated</strong></a></li>
@@ -3884,20 +3853,9 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#methods">Methods</a>
       <ul>
         <li><a href="#resize"><strong>resize</strong></a></li>
-        <li><a href="#_setempty"><strong>_setEmpty</strong></a></li>
-        <li><a href="#_setactive"><strong>_setActive</strong></a></li>
         <li><a href="#clear"><strong>clear</strong></a></li>
-        <li><a href="#setimage"><strong>setImage</strong></a></li>
+        <li><a href="#putimage"><strong>putImage</strong></a></li>
         <li><a href="#encodeimage"><strong>encodeImage</strong></a></li>
-        <li><a href="#_onbegin"><strong>_onBegin</strong></a></li>
-        <li><a href="#_onend"><strong>_onEnd</strong></a></li>
-        <li><a href="#_dotsizechanged"><strong>_dotSizeChanged</strong></a></li>
-        <li><a href="#_minwidthchanged"><strong>_minWidthChanged</strong></a></li>
-        <li><a href="#_maxwidthchanged"><strong>_maxWidthChanged</strong></a></li>
-        <li><a href="#_backgroundcolorchanged"><strong>_backgroundColorChanged</strong></a></li>
-        <li><a href="#_pencolorchanged"><strong>_penColorChanged</strong></a></li>
-        <li><a href="#_velocityfilterweightchanged"><strong>_velocityFilterWeightChanged</strong></a></li>
-        <li><a href="#_onencodingchanged"><strong>_onEncodingChanged</strong></a></li>
         <li><a href="#binddata"><strong>bindData</strong></a></li>
       </ul>
     </li>
@@ -3931,26 +3889,43 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p><code>furo-sign-pad</code>
 Simple pad to sign or draw something</p>
-<h3 id="sample">
-  Sample
-  <a class="anchor" href="#sample">#</a>
+<h3 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
 </h3>
- <furo-demo-snippet>
-  <template>
-   <furo-ui5-sign-pad @-sign-updated="--signed"></furo-ui5-sign-pad>
-    <img ƒ-.src="--signed" alt="" width="150px">
-  </template>
- </furo-demo-snippet>
+<furo-demo-snippet>
+<template>
+<button @-click="--clearClicked">clear</button>
+<furo-form-layouter four >
+<furo-ui5-sign-pad ƒ-clear="--clearClicked" @-sign-updated="--signed"></furo-ui5-sign-pad>
+<furo-ui5-sign-pad ƒ-clear="--clearClicked" ƒ-put-image="--signed"></furo-ui5-sign-pad>
+</furo-form-layouter>
+<img ƒ-.src="--signed" alt="" width="100px">
+</template>
+</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearClicked&#34;</span>&gt;clear&lt;/<span style="color:#000080">button</span>&gt;
+&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span> &gt;
+  &lt;<span style="color:#000080">furo-ui5-sign-pad</span> <span style="color:#008080">ƒ-clear</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearClicked&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-sign-updated</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--signed&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-sign-pad</span>&gt;
+  &lt;<span style="color:#000080">furo-ui5-sign-pad</span> <span style="color:#008080">ƒ-clear</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearClicked&#34;</span> <span style="color:#008080">ƒ-put-image</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--signed&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-sign-pad</span>&gt;
+&lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
+&lt;<span style="color:#000080">img</span> <span style="color:#008080">ƒ-</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--signed&#34;</span> <span style="color:#008080">alt</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;&#34;</span> <span style="color:#008080">width</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;100px&#34;</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="attributes-and-properties">
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
 </h2>
-<h3 id="field">
-  <strong>field</strong>
-  <a class="anchor" href="#field">#</a>
-</h3>
-<p>default: <strong>{}</strong></small></p>
-<p><br><br></p>
 <h2 id="events">
   Events
   <a class="anchor" href="#events">#</a>
@@ -3974,35 +3949,9 @@ Simple pad to sign or draw something</p>
 <p><small><strong>resize</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-resize</span></p>
+<p>Trigger this method after a resize.</p>
+<p>This is also needed</p>
 <p><br><br></p>
-<h3 id="_setempty">
-  <strong>_setEmpty</strong>
-  <a class="anchor" href="#_setempty">#</a>
-</h3>
-<p><small><strong>_setEmpty</strong>(<em>b</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;set-empty</span></p>
-<p>unlock() {
-this.signaturePad.on();
-}</p>
-<p>lock() {
-this.signaturePad.off();
-}</p>
-<ul>
-<li><small>b </small>
-<br><br></li>
-</ul>
-<h3 id="_setactive">
-  <strong>_setActive</strong>
-  <a class="anchor" href="#_setactive">#</a>
-</h3>
-<p><small><strong>_setActive</strong>(<em>b</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;set-active</span></p>
-<ul>
-<li><small>b </small>
-<br><br></li>
-</ul>
 <h3 id="clear">
   <strong>clear</strong>
   <a class="anchor" href="#clear">#</a>
@@ -4010,15 +3959,17 @@ this.signaturePad.off();
 <p><small><strong>clear</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-clear</span></p>
-<p>Clears the image</p>
+<p>Clears the image. This also updates the bound field.</p>
 <p><br><br></p>
-<h3 id="setimage">
-  <strong>setImage</strong>
-  <a class="anchor" href="#setimage">#</a>
+<h3 id="putimage">
+  <strong>putImage</strong>
+  <a class="anchor" href="#putimage">#</a>
 </h3>
-<p><small><strong>setImage</strong>(<em>encodedImage</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-image</span></p>
+<p><small><strong>putImage</strong>(<em>encodedImage</em> <code>imageURL</code> ) ⟹ <code>void</code></small></p>
+<p><small><code>imageURL</code> </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-put-image</span></p>
+<p>Adds the encoded image to the canvas.</p>
+<p>Maybe you want to clear first.</p>
 <ul>
 <li><small>encodedImage </small>
 <br><br></li>
@@ -4033,100 +3984,6 @@ this.signaturePad.off();
 <p>Encodes the image using the type and encodingOptions (quality) defined.
 The encoded image is available in the <code>image</code> property.</p>
 <p><br><br></p>
-<h3 id="_onbegin">
-  <strong>_onBegin</strong>
-  <a class="anchor" href="#_onbegin">#</a>
-</h3>
-<p><small><strong>_onBegin</strong>() ⟹ <code>void</code></small></p>
-<p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;on-begin</span></p>
-<p><br><br></p>
-<h3 id="_onend">
-  <strong>_onEnd</strong>
-  <a class="anchor" href="#_onend">#</a>
-</h3>
-<p><small><strong>_onEnd</strong>() ⟹ <code>void</code></small></p>
-<p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;on-end</span></p>
-<p><br><br></p>
-<h3 id="_dotsizechanged">
-  <strong>_dotSizeChanged</strong>
-  <a class="anchor" href="#_dotsizechanged">#</a>
-</h3>
-<p><small><strong>_dotSizeChanged</strong>(<em>newValue</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;dot-size-changed</span></p>
-<ul>
-<li><small>newValue </small>
-<br><br></li>
-</ul>
-<h3 id="_minwidthchanged">
-  <strong>_minWidthChanged</strong>
-  <a class="anchor" href="#_minwidthchanged">#</a>
-</h3>
-<p><small><strong>_minWidthChanged</strong>(<em>newValue</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;min-width-changed</span></p>
-<ul>
-<li><small>newValue </small>
-<br><br></li>
-</ul>
-<h3 id="_maxwidthchanged">
-  <strong>_maxWidthChanged</strong>
-  <a class="anchor" href="#_maxwidthchanged">#</a>
-</h3>
-<p><small><strong>_maxWidthChanged</strong>(<em>newValue</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;max-width-changed</span></p>
-<ul>
-<li><small>newValue </small>
-<br><br></li>
-</ul>
-<h3 id="_backgroundcolorchanged">
-  <strong>_backgroundColorChanged</strong>
-  <a class="anchor" href="#_backgroundcolorchanged">#</a>
-</h3>
-<p><small><strong>_backgroundColorChanged</strong>(<em>newValue</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;background-color-changed</span></p>
-<ul>
-<li><small>newValue </small>
-<br><br></li>
-</ul>
-<h3 id="_pencolorchanged">
-  <strong>_penColorChanged</strong>
-  <a class="anchor" href="#_pencolorchanged">#</a>
-</h3>
-<p><small><strong>_penColorChanged</strong>(<em>newValue</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;pen-color-changed</span></p>
-<ul>
-<li><small>newValue </small>
-<br><br></li>
-</ul>
-<h3 id="_velocityfilterweightchanged">
-  <strong>_velocityFilterWeightChanged</strong>
-  <a class="anchor" href="#_velocityfilterweightchanged">#</a>
-</h3>
-<p><small><strong>_velocityFilterWeightChanged</strong>(<em>newValue</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;velocity-filter-weight-changed</span></p>
-<ul>
-<li><small>newValue </small>
-<br><br></li>
-</ul>
-<h3 id="_onencodingchanged">
-  <strong>_onEncodingChanged</strong>
-  <a class="anchor" href="#_onencodingchanged">#</a>
-</h3>
-<p><small><strong>_onEncodingChanged</strong>(<em>type</em> <code>*encoderOptions*</code> ) ⟹ <code>void</code></small></p>
-<p><small><code> </code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;on-encoding-changed</span></p>
-<ul>
-<li><small>type </small></li>
-<li><small>encoderOptions </small>
-<br><br></li>
-</ul>
 <h3 id="binddata">
   <strong>bindData</strong>
   <a class="anchor" href="#binddata">#</a>
@@ -4149,9 +4006,9 @@ The encoded image is available in the <code>image</code> property.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/73d2f92ecb0d19a2e8bb23f2cd2cb1f0c4d9b069" title='Last modified by veith | November 24, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/c39b493164560d54f2debcefa03645a304217c91" title='Last modified by veith | November 27, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 24, 2021</span>
+      <span>November 27, 2021</span>
     </a>
   </div>
 
@@ -4179,16 +4036,8 @@ The encoded image is available in the <code>image</code> property.</p>
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#description">Description</a>
-      <ul>
-        <li><a href="#sample">Sample</a></li>
-      </ul>
-    </li>
-    <li><a href="#attributes-and-properties">Attributes and Properties</a>
-      <ul>
-        <li><a href="#field"><strong>field</strong></a></li>
-      </ul>
-    </li>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#attributes-and-properties">Attributes and Properties</a></li>
     <li><a href="#events">Events</a>
       <ul>
         <li><a href="#sign-updated"><strong>sign-updated</strong></a></li>
@@ -4197,20 +4046,9 @@ The encoded image is available in the <code>image</code> property.</p>
     <li><a href="#methods">Methods</a>
       <ul>
         <li><a href="#resize"><strong>resize</strong></a></li>
-        <li><a href="#_setempty"><strong>_setEmpty</strong></a></li>
-        <li><a href="#_setactive"><strong>_setActive</strong></a></li>
         <li><a href="#clear"><strong>clear</strong></a></li>
-        <li><a href="#setimage"><strong>setImage</strong></a></li>
+        <li><a href="#putimage"><strong>putImage</strong></a></li>
         <li><a href="#encodeimage"><strong>encodeImage</strong></a></li>
-        <li><a href="#_onbegin"><strong>_onBegin</strong></a></li>
-        <li><a href="#_onend"><strong>_onEnd</strong></a></li>
-        <li><a href="#_dotsizechanged"><strong>_dotSizeChanged</strong></a></li>
-        <li><a href="#_minwidthchanged"><strong>_minWidthChanged</strong></a></li>
-        <li><a href="#_maxwidthchanged"><strong>_maxWidthChanged</strong></a></li>
-        <li><a href="#_backgroundcolorchanged"><strong>_backgroundColorChanged</strong></a></li>
-        <li><a href="#_pencolorchanged"><strong>_penColorChanged</strong></a></li>
-        <li><a href="#_velocityfilterweightchanged"><strong>_velocityFilterWeightChanged</strong></a></li>
-        <li><a href="#_onencodingchanged"><strong>_onEncodingChanged</strong></a></li>
         <li><a href="#binddata"><strong>bindData</strong></a></li>
       </ul>
     </li>
@@ -4225,14 +4063,15 @@ The encoded image is available in the <code>image</code> property.</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.7/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.9/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 
