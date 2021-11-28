@@ -14,9 +14,7 @@ class CelleditGoolgeProtobufFloatvalue extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-google-protobuf-floatvalue';
-    return md;
+    return { tag: 'celledit-google-protobuf-floatvalue' };
   }
 
   static get styles() {

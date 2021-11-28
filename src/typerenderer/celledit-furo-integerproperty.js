@@ -13,9 +13,7 @@ class CelleditFuroIntegerproperty extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-furo-integerproperty';
-    return md;
+    return { tag: 'celledit-furo-integerproperty' };
   }
 
   static get styles() {

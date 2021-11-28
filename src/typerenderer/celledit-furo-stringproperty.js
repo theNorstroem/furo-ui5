@@ -5,9 +5,7 @@ class CelleditFuroStringproperty extends CelleditString {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-furo-stringproperty';
-    return md;
+    return { tag: 'celledit-furo-stringproperty' };
   }
 
   static get styles() {

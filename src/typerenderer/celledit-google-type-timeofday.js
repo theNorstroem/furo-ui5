@@ -14,9 +14,7 @@ class CelleditGoogleTypeTimeofday extends FuroUi5TimePicker {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-google-type-timeofday';
-    return md;
+    return { tag: 'celledit-google-type-timeofday' };
   }
 
   static get styles() {

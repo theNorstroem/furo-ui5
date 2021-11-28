@@ -6,9 +6,7 @@ class CelleditGoogleProtobufTimestamp extends FuroUi5DateTimePicker {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-google-protobuf-timestamp';
-    return md;
+    return { tag: 'celledit-google-protobuf-timestamp' };
   }
 
   static get styles() {

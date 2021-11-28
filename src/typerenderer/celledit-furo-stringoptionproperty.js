@@ -6,9 +6,7 @@ class CelleditFuroStringoptionproperty extends FuroUi5Select {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-furo-stringoptionproperty';
-    return md;
+    return { tag: 'celledit-furo-stringoptionproperty' };
   }
 
   static get styles() {

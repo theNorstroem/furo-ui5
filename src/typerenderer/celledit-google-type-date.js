@@ -22,9 +22,7 @@ class CelleditGoogleTypeDate extends FuroUi5DatePicker {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-google-type-date';
-    return md;
+    return { tag: 'celledit-google-type-date' };
   }
 
   static get styles() {

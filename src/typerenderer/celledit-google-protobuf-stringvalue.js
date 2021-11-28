@@ -5,9 +5,7 @@ class CelleditGoogleProtobufStringvalue extends CelleditString {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-google-protobuf-stringvalue';
-    return md;
+    return { tag: 'celledit-google-protobuf-stringvalue' };
   }
 
   static get styles() {

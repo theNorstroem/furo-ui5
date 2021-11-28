@@ -13,9 +13,7 @@ class CelleditFuroFatUint32 extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-furo-fat-uint32';
-    return md;
+    return { tag: 'celledit-furo-fat-uint32' };
   }
 
   static get styles() {

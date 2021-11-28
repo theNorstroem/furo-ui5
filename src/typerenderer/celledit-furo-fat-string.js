@@ -5,9 +5,7 @@ class CelleditFuroFatString extends CelleditString {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-furo-fat-string';
-    return md;
+    return { tag: 'celledit-furo-fat-string' };
   }
 
   static get styles() {

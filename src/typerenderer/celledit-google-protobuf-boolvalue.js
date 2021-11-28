@@ -15,9 +15,7 @@ class CelleditGoogleProtobufBoolvalue extends CelleditBool {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-google-protobuf-boolvalue';
-    return md;
+    return { tag: 'celledit-google-protobuf-boolvalue' };
   }
 
   static get styles() {

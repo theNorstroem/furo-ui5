@@ -15,9 +15,7 @@ export class CelleditString extends FuroUi5TextInput {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-string';
-    return md;
+    return { tag: 'celledit-string' };
   }
 
   /**

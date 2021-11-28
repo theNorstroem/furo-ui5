@@ -14,9 +14,7 @@ class CelleditGoolgeProtobufIn64value extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-google-protobuf-int64value';
-    return md;
+    return { tag: 'celledit-google-protobuf-int64value' };
   }
 
   static get styles() {

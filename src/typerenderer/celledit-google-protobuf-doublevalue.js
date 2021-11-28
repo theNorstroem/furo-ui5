@@ -14,9 +14,7 @@ class CelleditGoogleProtobufDoublevalue extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-google-protobuf-doublevalue';
-    return md;
+    return { tag: 'celledit-google-protobuf-doublevalue' };
   }
 
   static get styles() {
