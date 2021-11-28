@@ -19,6 +19,7 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/cell/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
@@ -28,11 +29,6 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/cell-double/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/cell-float/</loc>
     <lastmod>2021-11-28T11:06:03+01:00</lastmod>
   </url>
   
@@ -128,6 +124,7 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
@@ -143,11 +140,6 @@
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-doublevalue/</loc>
     <lastmod>2021-11-28T11:29:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-floatvalue/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
   </url>
   
   <url>
@@ -241,21 +233,6 @@
   </url>
   
   <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-bool/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-double/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-float/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-int32/</loc>
     <lastmod>2021-11-28T11:29:12+01:00</lastmod>
   </url>
@@ -266,38 +243,8 @@
   </url>
   
   <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-string/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-uint32/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-uint64/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-integerproperty/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-inumberproperty/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-link/</loc>
     <lastmod>2021-11-28T11:29:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-numberproperty/</loc>
-    <lastmod>2021-11-23T20:17:46+01:00</lastmod>
   </url>
   
   <url>
@@ -316,21 +263,6 @@
   </url>
   
   <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-stringoptionproperty/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-stringproperty/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-type-date/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/celledit-furo-type-money/</loc>
     <lastmod>2021-11-28T11:29:12+01:00</lastmod>
   </url>
@@ -341,63 +273,8 @@
   </url>
   
   <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-boolvalue/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-doublevalue/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-floatvalue/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-int32value/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-int64value/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-stringvalue/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-timestamp/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-uint32value/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-uint64value/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-type-date/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-type-money/</loc>
     <lastmod>2021-11-28T11:29:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/celledit-google-type-timeofday/</loc>
-    <lastmod>2021-11-25T14:43:52+01:00</lastmod>
   </url>
   
   <url>
@@ -427,384 +304,367 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-bool/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-double/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-float/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-bool/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-double/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-float/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-int32/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-int64/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-string/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-uint32/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-Uint32/</loc>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-uint64/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-integerproperty/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-link/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-numberproperty/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-property/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-property-labeled/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-property-repeated/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-property-repeats-labeled/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-reference/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-stringoptionproperty/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-stringproperty/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-type-date/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-furo-type-money/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-/</loc>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-any/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-boolvalue/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-doublevalue/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-floatvalue/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int32value/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int32Value/</loc>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int64value/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int64Value/</loc>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-stringvalue/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-timestamp/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-uint32value/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-uint64value/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-type-color/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-type-date/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-type-money/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-google-type-timeofday/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-int32/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-int64/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-string/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-uint32/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/display-uint64/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T11:46:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-bool/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-double/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-float/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-fat-bool/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-fat-double/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-fat-float/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-fat-int32/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-fat-int64/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-fat-string/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-fat-uint32/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-fat-uint64/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-integerproperty/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-numberproperty/</loc>
-    <lastmod>2021-11-23T20:17:46+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-reference/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-stringoptionproperty/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-stringproperty/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-type-date/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-furo-type-money/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-boolvalue/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-doublevalue/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-floatvalue/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-int32value/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-int64value/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-stringvalue/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <loc>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-stringValue/</loc>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-timestamp/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-google-type-date/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-google-type-money/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-google-type-timeofday/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-int32/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-int64/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-string/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-uint32/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/form-uint64/</loc>
-    <lastmod>2021-11-28T11:06:03+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
@@ -1095,22 +955,6 @@
   <url>
     <loc>http://ui5.furo.pro/docs/components/ui5-reference-search-item/</loc>
     <lastmod>2021-11-28T11:06:03+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/CelleditInt32/</loc>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/CelleditInt64/</loc>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/CelleditUint32/</loc>
-  </url>
-  
-  <url>
-    <loc>http://ui5.furo.pro/docs/typerenderer/CelleditUint64/</loc>
   </url>
   
   <url>
@@ -2000,10 +1844,12 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/typerenderer/cell-google-protobuf-/_cell-google-protobuf-head/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/typerenderer/cell-google-protobuf-/_cell-google-protobuf-scripts/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
@@ -2198,10 +2044,12 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/typerenderer/cell/_cell-head/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/typerenderer/cell/_cell-scripts/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
@@ -2636,10 +2484,12 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/typerenderer/display-furo-/_display-furo-head/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/typerenderer/display-furo-/_display-furo-scripts/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
@@ -2754,10 +2604,12 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/typerenderer/display-furo-property-labeled/_display-furo-property-labeled-head/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/typerenderer/display-furo-property-labeled/_display-furo-property-labeled-scripts/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
@@ -2842,10 +2694,12 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/typerenderer/display-google-protobuf-/_display-google-protobuf-head/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/typerenderer/display-google-protobuf-/_display-google-protobuf-scripts/</loc>
+    <lastmod>2021-11-28T11:46:57+01:00</lastmod>
   </url>
   
   <url>
@@ -3370,7 +3224,7 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/typerenderer/_typerenderer-inside/</loc>
-    <lastmod>2021-11-28T11:29:12+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>
@@ -3379,7 +3233,7 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/</loc>
-    <lastmod>2021-11-28T11:29:12+01:00</lastmod>
+    <lastmod>2021-11-28T12:17:17+01:00</lastmod>
   </url>
   
   <url>

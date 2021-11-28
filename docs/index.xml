@@ -68,22 +68,6 @@ FieldNode  → ƒ-bind-data</description>
     </item>
     
     <item>
-      <title>cell-float</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/cell-float/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/cell-float/</guid>
-      <description>cell-float #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/cell-float.js&#39;; exports CellFloat js exports &amp;lt;cell-float&amp;gt; custom-element-definition superclass LitElement
- Summary:
- Description #  cell-float The cell-float component displays a FieldNode of type float in read only mode.
-Every cell-xxx component should implement the following API:
- function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  _displayValue #  default: &#39;&#39;
-
-Methods #  bindData #  bindData(fieldNode FieldNode ) ⟹ void
-FieldNode  → ƒ-bind-data</description>
-    </item>
-    
-    <item>
       <title>cell-furo-fat-bool</title>
       <link>http://ui5.furo.pro/docs/typerenderer/cell-furo-fat-bool/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -395,22 +379,6 @@ FieldNode  → ƒ-bind-data</description>
     </item>
     
     <item>
-      <title>cell-google-protobuf-floatvalue</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-floatvalue/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-floatvalue/</guid>
-      <description>cell-google-protobuf-floatvalue #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/cell-google-protobuf-floatvalue.js&#39;; exports &amp;lt;cell-google-protobuf-floatvalue&amp;gt; custom-element-definition extends /src/typerenderer/cell-float.js superclass CellFloat
- Summary:
- Description #  cell-google-protobuf-floatvalue The cell-google-protobuf-floatvalue component displays a FieldNode of type google.protobuf.FloatValue in read only mode.
-Every cell-xxx component should implement the following API:
- function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  _displayValue #  default: &#39;&#39;
-
-Methods #  bindData #  bindData(fieldNode FieldNode ) ⟹ void
-FieldNode  → ƒ-bind-data</description>
-    </item>
-    
-    <item>
       <title>cell-google-protobuf-int32value</title>
       <link>http://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-int32value/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -664,45 +632,6 @@ Attributes and Properties #  Methods #  </description>
     </item>
     
     <item>
-      <title>celledit-furo-fat-bool</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-bool/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-bool/</guid>
-      <description>celledit-furo-fat-bool #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-fat-bool.js&#39;; exports &amp;lt;celledit-furo-fat-bool&amp;gt; custom-element-definition extends /src/typerenderer/celledit-bool.js superclass CelleditBool
- Summary: celledit renderer for bool
- Description #  celledit-furo-fat-bool is a celledit context renderer.
-It uses furo-ui5-checkbox-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-furo-fat-double</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-double/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-double/</guid>
-      <description>celledit-furo-fat-double #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-fat-double.js&#39;; exports &amp;lt;celledit-furo-fat-double&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for furo.fat.Double
- Description #  celledit-furo-fat-double is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-furo-fat-float</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-float/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-float/</guid>
-      <description>celledit-furo-fat-float #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-fat-float.js&#39;; exports &amp;lt;celledit-furo-fat-float&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for furo.fat.Float
- Description #  celledit-furo-fat-float is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
       <title>celledit-furo-fat-int32</title>
       <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-int32/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -729,73 +658,6 @@ Attributes and Properties #  Methods #  </description>
     </item>
     
     <item>
-      <title>celledit-furo-fat-string</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-string/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-string/</guid>
-      <description>celledit-furo-fat-string #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-fat-string.js&#39;; exports &amp;lt;celledit-furo-fat-string&amp;gt; custom-element-definition extends /src/typerenderer/celledit-string.js superclass CelleditString
- Summary:
- Description #  Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-furo-fat-uint32</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-uint32/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-uint32/</guid>
-      <description>celledit-furo-fat-uint32 #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-fat-uint32.js&#39;; exports &amp;lt;celledit-furo-fat-uint32&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for furo.fat.Uint32
- Description #  celledit-furo-fat-uint32 is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-furo-fat-uint64</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-uint64/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-uint64/</guid>
-      <description>celledit-furo-fat-uint64 #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-fat-uint64.js&#39;; exports &amp;lt;celledit-furo-fat-uint64&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for furo.fat.Uint64
- Description #  celledit-furo-fat-uint64 is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-furo-integerproperty</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-integerproperty/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-integerproperty/</guid>
-      <description>celledit-furo-integerproperty #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-integerproperty.js&#39;; exports &amp;lt;celledit-furo-integerproperty&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for furo.Integerproperty
- Description #  celledit-furo-integerproperty is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
-``  → ƒ-bind-data
- fieldNode    </description>
-    </item>
-    
-    <item>
-      <title>celledit-furo-inumberproperty</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-inumberproperty/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-inumberproperty/</guid>
-      <description>celledit-furo-inumberproperty #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-inumberproperty.js&#39;; exports &amp;lt;celledit-furo-numberproperty&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for furo.INumberproperty
- Description #  celledit-furo-numberproperty is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
-``  → ƒ-bind-data
- fieldNode    </description>
-    </item>
-    
-    <item>
       <title>celledit-furo-link</title>
       <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-link/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -808,21 +670,6 @@ Every celledit-xxx component should implement the following API:
  function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  Methods #  bindData #  bindData(fieldNode FieldNode ) ⟹ void
 FieldNode  → ƒ-bind-data
 Binds a field node to the component</description>
-    </item>
-    
-    <item>
-      <title>celledit-furo-numberproperty</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-numberproperty/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-numberproperty/</guid>
-      <description>celledit-furo-numberproperty #  @furo/typerenderer v1.0.0-rc.6 import &#39;@furo/typerenderer/src/celledit-furo-numberproperty.js&#39;; exports &amp;lt;celledit-furo-numberproperty&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
-celledit renderer for furo.INumberproperty
-celledit-furo-numberproperty is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
-``  → ƒ-bind-data
- fieldNode    </description>
     </item>
     
     <item>
@@ -866,43 +713,6 @@ _typeResolved #  default: false</description>
     </item>
     
     <item>
-      <title>celledit-furo-stringoptionproperty</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-stringoptionproperty/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-stringoptionproperty/</guid>
-      <description>celledit-furo-stringoptionproperty #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-stringoptionproperty.js&#39;; exports &amp;lt;celledit-furo-stringoptionproperty&amp;gt; custom-element-definition extends /src/furo-ui5-select.js superclass FuroUi5Select
- Summary:
- Description #  Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
-``  → ƒ-bind-data
- fieldNode    </description>
-    </item>
-    
-    <item>
-      <title>celledit-furo-stringproperty</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-stringproperty/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-stringproperty/</guid>
-      <description>celledit-furo-stringproperty #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-stringproperty.js&#39;; exports &amp;lt;celledit-furo-stringproperty&amp;gt; custom-element-definition extends /src/typerenderer/celledit-string.js superclass CelleditString
- Summary:
- Description #  Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
-``  → ƒ-bind-data
- fieldNode    </description>
-    </item>
-    
-    <item>
-      <title>celledit-furo-type-date</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-type-date/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-furo-type-date/</guid>
-      <description>celledit-furo-type-date #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-furo-type-date.js&#39;; exports &amp;lt;celledit-furo-type-date&amp;gt; custom-element-definition extends /src/furo-ui5-date-picker.js superclass FuroUi5DatePicker
- Summary:
- Description #  Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
       <title>celledit-furo-type-money</title>
       <link>http://ui5.furo.pro/docs/typerenderer/celledit-furo-type-money/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -929,132 +739,6 @@ Methods #  bindData #  bindData(fieldNode FieldNode ) ⟹ void</description>
     </item>
     
     <item>
-      <title>celledit-google-protobuf-boolvalue</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-boolvalue/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-boolvalue/</guid>
-      <description>celledit-google-protobuf-boolvalue #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-protobuf-boolvalue.js&#39;; exports &amp;lt;celledit-google-protobuf-boolvalue&amp;gt; custom-element-definition extends /src/typerenderer/celledit-bool.js superclass CelleditBool
- Summary: celledit renderer for bool
- Description #  celledit-google-protobuf-boolvalue is a celledit context renderer.
-It uses furo-ui5-checkbox-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-google-protobuf-doublevalue</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-doublevalue/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-doublevalue/</guid>
-      <description>celledit-google-protobuf-doublevalue #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-protobuf-doublevalue.js&#39;; exports &amp;lt;celledit-google-protobuf-doublevalue&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for google.protobuf.Double
- Description #  celledit-google-protobuf-doublevalue is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-google-protobuf-floatvalue</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-floatvalue/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-floatvalue/</guid>
-      <description>celledit-google-protobuf-floatvalue #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-protobuf-floatvalue.js&#39;; exports &amp;lt;celledit-google-protobuf-floatvalue&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for google.protobuf.Float
- Description #  celledit-google-protobuf-floatvalue is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-google-protobuf-int32value</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-int32value/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-int32value/</guid>
-      <description>celledit-google-protobuf-int32value #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-protobuf-int32value.js&#39;; exports &amp;lt;celledit-google-protobuf-int32value&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for google.protobuf.Int32value
- Description #  celledit-google-protobuf-int32value is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-google-protobuf-int64value</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-int64value/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-int64value/</guid>
-      <description>celledit-google-protobuf-int64value #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-protobuf-int64value.js&#39;; exports &amp;lt;celledit-google-protobuf-int64value&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for google.protobuf.Int64
- Description #  celledit-google-protobuf-int64value is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-google-protobuf-stringvalue</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-stringvalue/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-stringvalue/</guid>
-      <description>celledit-google-protobuf-stringvalue #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-protobuf-stringvalue.js&#39;; exports &amp;lt;celledit-google-protobuf-stringvalue&amp;gt; custom-element-definition extends /src/typerenderer/celledit-string.js superclass CelleditString
- Summary:
- Description #  Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-google-protobuf-timestamp</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-timestamp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-timestamp/</guid>
-      <description>celledit-google-protobuf-timestamp #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-protobuf-timestamp.js&#39;; exports &amp;lt;celledit-google-protobuf-timestamp&amp;gt; custom-element-definition extends /src/furo-ui5-date-time-picker.js superclass FuroUi5DateTimePicker
- Summary:
- Description #  Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-google-protobuf-uint32value</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-uint32value/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-uint32value/</guid>
-      <description>celledit-google-protobuf-uint32value #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-protobuf-uint32value.js&#39;; exports &amp;lt;celledit-google-protobuf-uint32value&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for google.protobuf.Uint32value
- Description #  celledit-google-protobuf-uint32value is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-google-protobuf-uint64value</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-uint64value/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-uint64value/</guid>
-      <description>celledit-google-protobuf-uint64value #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-protobuf-uint64value.js&#39;; exports &amp;lt;celledit-google-protobuf-uint64value&amp;gt; custom-element-definition extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Summary: celledit renderer for google.protobuf.Uint64value
- Description #  celledit-google-protobuf-uint64value is a celledit context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-google-type-date</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-type-date/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-type-date/</guid>
-      <description>celledit-google-type-date #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-type-date.js&#39;; exports &amp;lt;celledit-google-type-date&amp;gt; custom-element-definition extends /src/furo-ui5-date-picker.js superclass FuroUi5DatePicker
- Summary: celledit renderer for google.type.Date
- Description #  celledit-google-type-date is a celledit context renderer.
-It uses furo-ui5-date-picker as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
       <title>celledit-google-type-money</title>
       <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-type-money/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1064,19 +748,6 @@ Attributes and Properties #  Methods #  </description>
  Summary: celledit renderer for google.type.Money
  Description #  celledit-google-type-money is a celledit context renderer.
 It uses furo-ui5-money-input as the renderer
-Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>celledit-google-type-timeofday</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/celledit-google-type-timeofday/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/celledit-google-type-timeofday/</guid>
-      <description>celledit-google-type-timeofday #  @furo/typerenderer v1.0.0-rc.7 import &#39;@furo/typerenderer/src/celledit-google-type-timeofday.js&#39;; exports &amp;lt;celledit-google-type-timeofday&amp;gt; custom-element-definition extends /src/furo-ui5-time-picker.js superclass FuroUi5TimePicker
- Summary: celledit renderer for google.type.TimeOfDay
- Description #  celledit-google-type-timeofday is a celledit context renderer.
-It uses furo-ui5-time-picker as the renderer
 Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -1282,10 +953,10 @@ Binds a field node to the component</description>
     
     <item>
       <title>display-furo-fat-Uint32</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-uint32/</link>
+      <link>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-Uint32/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-uint32/</guid>
+      <guid>http://ui5.furo.pro/docs/typerenderer/display-furo-fat-Uint32/</guid>
       <description>display-furo-fat-Uint32 #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/display-furo-fat-Uint32.js&#39;; exports &amp;lt;display-furo-fat-uint32&amp;gt; custom-element-definition extends /src/typerenderer/display-furo-fat-int32.js superclass DisplayFuroFatInt32
  Summary: display renderer for furo.fat.Uint32
  Description #  display-furo-fat-uint32 The display-furo-fat-uint32 component displays a FieldNode of type furo.fat.Uint32 in read only mode.
@@ -1306,22 +977,6 @@ Every display-xxx component should implement the following API:
 The component uses locale from the environment to display the date value accordingly. https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 Every display-xxx component should implement the following API:
  function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  Methods #  _formatDisplay #  _formatDisplay() ⟹ void</description>
-    </item>
-    
-    <item>
-      <title>display-furo-integerproperty</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/display-furo-integerproperty/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/display-furo-integerproperty/</guid>
-      <description>display-furo-integerproperty #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/display-furo-integerproperty.js&#39;; exports DisplayFuroIntegerproperty js exports &amp;lt;display-furo-integerproperty&amp;gt; custom-element-definition extends /src/typerenderer/display-int32.js superclass DisplayInt32
- Summary:
- Description #  display-furo-integerproperty The display-furo-integerproperty component displays a FieldNode of type furo.Integerproperty in read only mode.
-Every display-xxx component should implement the following API:
- function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  Methods #  _formatDisplay #  _formatDisplay() ⟹ void
-* → ƒ&amp;ndash;format-display
-
-bindData #  bindData(fieldNode FieldNode ) ⟹ void</description>
     </item>
     
     <item>
@@ -1395,23 +1050,6 @@ Every display-xxx component should implement the following API:
  function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  elementList #  default: []
 
 _typeResolved #  default: false</description>
-    </item>
-    
-    <item>
-      <title>display-furo-property-repeats-labeled</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/display-furo-property-repeats-labeled/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/display-furo-property-repeats-labeled/</guid>
-      <description>display-furo-property-repeats-labeled #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/display-furo-property-repeats-labeled.js&#39;; exports DisplayFuroPropertyRepeatsLabeled js exports &amp;lt;display-furo-property-repeats-labeled&amp;gt; custom-element-definition extends /src/typerenderer/display-furo-property-repeated.js superclass DisplayFuroPropertyRepeated
- Summary:
- Description #  display-furo-property-repeats-labeled The display-furo-property-repeats-labeled component displays a RepeaterNode of type furo.Property in read only mode.
-Every display-xxx component should implement the following API:
- function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  elementList #  default: []
-
-_typeResolved #  default: false
-
-noDataText #  noDataText</description>
     </item>
     
     <item>
@@ -1501,22 +1139,6 @@ Methods #  bindData #  bindData(fieldNode FieldNode ) ⟹ void</description>
     </item>
     
     <item>
-      <title>display-google-protobuf-any</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-any/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-any/</guid>
-      <description>display-google-protobuf-any #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/display-google-protobuf-any.js&#39;; exports &amp;lt;display-google-protobuf-any&amp;gt; custom-element-definition superclass LitElement
- Summary:
- Description #  display-google-protobuf-any The display-google-protobuf-any component is a wrapper displays of type google.protobuf.Any in read only mode.
-Every display-xxx component should implement the following API:
- function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  _typeResolved #  default: false
-
-Methods #  bindData #  bindData(fieldNode FieldNode ) ⟹ void
-FieldNode  → ƒ-bind-data</description>
-    </item>
-    
-    <item>
       <title>display-google-protobuf-boolvalue</title>
       <link>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-boolvalue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1560,10 +1182,10 @@ FieldNode  → ƒ-bind-data</description>
     
     <item>
       <title>display-google-protobuf-int32Value</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int32value/</link>
+      <link>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int32Value/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int32value/</guid>
+      <guid>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int32Value/</guid>
       <description>display-google-protobuf-int32Value #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/display-google-protobuf-int32Value.js&#39;; exports &amp;lt;display-google-protobuf-int32value&amp;gt; custom-element-definition extends /src/typerenderer/display-int32.js superclass DisplayInt32
  Summary: display renderer for google.protobuf.Int32Value
  Description #  display-google-protobuf-boolvalue The display-google-protobuf-boolvalue component displays a FieldNode of type google.protobuf.Int32Value in read only mode.
@@ -1574,10 +1196,10 @@ FieldNode  → ƒ-bind-data</description>
     
     <item>
       <title>display-google-protobuf-int64Value</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int64value/</link>
+      <link>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int64Value/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int64value/</guid>
+      <guid>http://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int64Value/</guid>
       <description>display-google-protobuf-int64Value #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/display-google-protobuf-int64Value.js&#39;; exports &amp;lt;display-google-protobuf-int64value&amp;gt; custom-element-definition extends /src/typerenderer/display-int64.js superclass DisplayInt64
  Summary: display renderer for google.protobuf.Int64Value
  Description #  display-google-protobuf-boolvalue The display-google-protobuf-boolvalue component displays a FieldNode of type google.protobuf.Int64Value in read only mode.
@@ -1790,8 +1412,8 @@ Attributes and Properties #  Methods #  </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-double/</guid>
-      <description>form-double #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-double.js&#39;; exports FormDouble js exports &amp;lt;form-double&amp;gt; custom-element-definition extends /src/typerenderer/form-int32.js superclass FormInt32
- Summary:
+      <description>form-double #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-double.js&#39;; exports FormDouble js exports &amp;lt;form-double&amp;gt; custom-element-definition extends /src/furo-ui5-number-input-labeled.js superclass FuroUi5NumberInputLabeled
+ Summary: form renderer for double
  Description #  Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -1801,8 +1423,8 @@ Attributes and Properties #  Methods #  </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-float/</guid>
-      <description>form-float #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-float.js&#39;; exports FormFloat js exports &amp;lt;form-float&amp;gt; custom-element-definition extends /src/typerenderer/form-int32.js superclass FormInt32
- Summary:
+      <description>form-float #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-float.js&#39;; exports FormFloat js exports &amp;lt;form-float&amp;gt; custom-element-definition extends /src/furo-ui5-number-input-labeled.js superclass FuroUi5NumberInputLabeled
+ Summary: form renderer for float
  Description #  Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -1813,7 +1435,7 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-furo-fat-bool/</guid>
       <description>form-furo-fat-bool #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-furo-fat-bool.js&#39;; exports &amp;lt;form-furo-fat-bool&amp;gt; custom-element-definition extends /src/typerenderer/form-bool.js superclass FormBool
- Summary: form renderer for bool
+ Summary: form renderer for furo.fat.Bool
  Description #  form-furo-fat-bool is a form context renderer.
 It uses furo-ui5-checkbox-input as the renderer
 Attributes and Properties #  Methods #  </description>
@@ -1878,7 +1500,7 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-furo-fat-string/</guid>
       <description>form-furo-fat-string #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-furo-fat-string.js&#39;; exports &amp;lt;form-furo-fat-string&amp;gt; custom-element-definition extends /src/furo-ui5-text-input-labeled.js superclass FuroUi5TextInputLabeled
- Summary:
+ Summary: form renderer for furo.fat.String
  Description #  Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
 ``  → ƒ-bind-data
  fieldNode    </description>
@@ -1926,28 +1548,13 @@ Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ 
     </item>
     
     <item>
-      <title>form-furo-numberproperty</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/form-furo-numberproperty/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/form-furo-numberproperty/</guid>
-      <description>form-furo-numberproperty #  @furo/typerenderer v1.0.0-rc.6 import &#39;@furo/typerenderer/src/form-furo-numberproperty.js&#39;; exports &amp;lt;form-furo-numberproperty&amp;gt; custom-element-definition extends /src/typerenderer/form-int32.js superclass FormInt32
-form renderer for furo.Integerproperty
-form-furo-integerproperty is a form context renderer.
-It uses furo-ui5-number-input as the renderer
-Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
-``  → ƒ-bind-data
- fieldNode    </description>
-    </item>
-    
-    <item>
       <title>form-furo-reference</title>
       <link>http://ui5.furo.pro/docs/typerenderer/form-furo-reference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-furo-reference/</guid>
       <description>form-furo-reference #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-furo-reference.js&#39;; exports &amp;lt;form-furo-reference&amp;gt; custom-element-definition extends /src/furo-ui5-reference-search-labeled.js superclass FuroUi5ReferenceSearchLabeled
- Summary:
+ Summary: form renderer for furo.Reference
  Description #  Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -1958,7 +1565,7 @@ Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ 
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-furo-stringoptionproperty/</guid>
       <description>form-furo-stringoptionproperty #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-furo-stringoptionproperty.js&#39;; exports &amp;lt;form-furo-stringoptionproperty&amp;gt; custom-element-definition extends /src/furo-ui5-select-labeled.js superclass FuroUi5SelectLabeled
- Summary:
+ Summary: form renderer for furo.Stringoptionproperty
  Description #  Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
 ``  → ƒ-bind-data
  fieldNode    </description>
@@ -1971,7 +1578,7 @@ Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ 
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-furo-stringproperty/</guid>
       <description>form-furo-stringproperty #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-furo-stringproperty.js&#39;; exports FormFuroStringproperty js exports &amp;lt;form-furo-stringproperty&amp;gt; custom-element-definition extends /src/furo-ui5-text-input-labeled.js superclass FuroUi5TextInputLabeled
- Summary:
+ Summary: form renderer for furo.Stringproperty
  Description #  Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
 ``  → ƒ-bind-data
  fieldNode    </description>
@@ -1984,7 +1591,7 @@ Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ 
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-furo-type-date/</guid>
       <description>form-furo-type-date #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-furo-type-date.js&#39;; exports &amp;lt;form-furo-type-date&amp;gt; custom-element-definition extends /src/furo-ui5-date-picker-labeled.js superclass FuroUi5DatePickerLabeled
- Summary:
+ Summary: form renderer for furo.type.Date
  Description #  Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -1995,7 +1602,7 @@ Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ 
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-furo-type-money/</guid>
       <description>form-furo-type-money #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-furo-type-money.js&#39;; exports &amp;lt;form-furo-type-money&amp;gt; custom-element-definition extends /src/furo-ui5-money-input-labeled.js superclass FuroUi5MoneyInputLabeled
- Summary:
+ Summary: form renderer for furo.type.Money
  Description #  Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -2006,7 +1613,7 @@ Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ 
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-boolvalue/</guid>
       <description>form-google-protobuf-boolvalue #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-google-protobuf-boolvalue.js&#39;; exports &amp;lt;form-google-protobuf-boolvalue&amp;gt; custom-element-definition extends /src/typerenderer/form-bool.js superclass FormBool
- Summary: form renderer for bool
+ Summary: form renderer for google.protobuf.BoolValue
  Description #  form-google-protobuf-boolvalue is a form context renderer.
 It uses furo-ui5-checkbox-input as the renderer
 Attributes and Properties #  Methods #  </description>
@@ -2032,7 +1639,7 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-floatvalue/</guid>
       <description>form-google-protobuf-floatvalue #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-google-protobuf-floatvalue.js&#39;; exports &amp;lt;form-google-protobuf-floatvalue&amp;gt; custom-element-definition extends /src/typerenderer/form-int32.js superclass FormInt32
- Summary: form renderer for google.protobuf.Float
+ Summary: form renderer for google.protobuf.FloatValue
  Description #  form-google-protobuf-floatvalue is a form context renderer.
 It uses furo-ui5-number-input as the renderer
 Attributes and Properties #  Methods #  </description>
@@ -2045,7 +1652,7 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-int32value/</guid>
       <description>form-google-protobuf-int32value #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-google-protobuf-int32value.js&#39;; exports &amp;lt;form-google-protobuf-int32value&amp;gt; custom-element-definition extends /src/typerenderer/form-int32.js superclass FormInt32
- Summary: form renderer for google.protobuf.Int32value
+ Summary: form renderer for google.protobuf.Int32Value
  Description #  form-google-protobuf-int32value is a form context renderer.
 It uses furo-ui5-number-input as the renderer
 Attributes and Properties #  Methods #  </description>
@@ -2058,20 +1665,20 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-int64value/</guid>
       <description>form-google-protobuf-int64value #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-google-protobuf-int64value.js&#39;; exports &amp;lt;form-google-protobuf-int64value&amp;gt; custom-element-definition extends /src/typerenderer/form-int32.js superclass FormInt32
- Summary: form renderer for google.protobuf.Int64
+ Summary: form renderer for google.protobuf.Int64Value
  Description #  form-google-protobuf-int64value is a form context renderer.
 It uses furo-ui5-number-input as the renderer
 Attributes and Properties #  Methods #  </description>
     </item>
     
     <item>
-      <title>form-google-protobuf-stringvalue</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-stringvalue/</link>
+      <title>form-google-protobuf-stringValue</title>
+      <link>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-stringValue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-stringvalue/</guid>
-      <description>form-google-protobuf-stringvalue #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-google-protobuf-stringvalue.js&#39;; exports &amp;lt;form-google-protobuf-stringvalue&amp;gt; custom-element-definition extends /src/furo-ui5-text-input-labeled.js superclass FuroUi5TextInputLabeled
- Summary:
+      <guid>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-stringValue/</guid>
+      <description>form-google-protobuf-stringValue #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-google-protobuf-stringValue.js&#39;; exports &amp;lt;form-google-protobuf-stringvalue&amp;gt; custom-element-definition extends /src/furo-ui5-text-input-labeled.js superclass FuroUi5TextInputLabeled
+ Summary: form renderer for google.protobuf.StringValue
  Description #  Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
 ``  → ƒ-bind-data
  fieldNode    </description>
@@ -2084,7 +1691,7 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-google-protobuf-timestamp/</guid>
       <description>form-google-protobuf-timestamp #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-google-protobuf-timestamp.js&#39;; exports &amp;lt;form-google-protobuf-timestamp&amp;gt; custom-element-definition extends /src/furo-ui5-date-time-picker-labeled.js superclass FuroUi5DateTimePickerLabeled
- Summary:
+ Summary: form renderer for google.protobuf.Timestamp
  Description #  Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -2134,7 +1741,7 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-int32/</guid>
       <description>form-int32 #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-int32.js&#39;; exports FormInt32 js exports &amp;lt;form-int32&amp;gt; custom-element-definition extends /src/furo-ui5-number-input-labeled.js superclass FuroUi5NumberInputLabeled
- Summary:
+ Summary: form renderer for int32
  Description #  Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -2145,7 +1752,7 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-int64/</guid>
       <description>form-int64 #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-int64.js&#39;; exports FormInt64 js exports &amp;lt;form-int64&amp;gt; custom-element-definition extends /src/typerenderer/form-int32.js superclass FormInt32
- Summary:
+ Summary: form renderer for int64
  Description #  Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -2156,7 +1763,7 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-string/</guid>
       <description>form-string #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-string.js&#39;; exports FormString js exports &amp;lt;form-string&amp;gt; custom-element-definition extends /src/furo-ui5-text-input-labeled.js superclass FuroUi5TextInputLabeled
- Summary:
+ Summary: form renderer for string
  Description #  Attributes and Properties #  Methods #  bindData #  bindData(fieldNode `` ) ⟹ void
 ``  → ƒ-bind-data
  fieldNode    </description>
@@ -2169,7 +1776,7 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-uint32/</guid>
       <description>form-uint32 #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-uint32.js&#39;; exports FormUint32 js exports &amp;lt;form-uint32&amp;gt; custom-element-definition extends /src/typerenderer/form-int32.js superclass FormInt32
- Summary:
+ Summary: form renderer for uint32
  Description #  Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -2180,7 +1787,7 @@ Attributes and Properties #  Methods #  </description>
       
       <guid>http://ui5.furo.pro/docs/typerenderer/form-uint64/</guid>
       <description>form-uint64 #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/form-uint64.js&#39;; exports FormUint64 js exports &amp;lt;form-uint64&amp;gt; custom-element-definition extends /src/typerenderer/form-int32.js superclass FormInt32
- Summary:
+ Summary: form renderer for uint64
  Description #  Attributes and Properties #  Methods #  </description>
     </item>
     
@@ -2925,46 +2532,6 @@ displayField #  default: &#39;display_name&#39;
 
 Events #  item-selected #  @-item-selected → item
 Fired when item is selected Methods #  injectItem #  injectItem(item `` ) ⟹ void</description>
-    </item>
-    
-    <item>
-      <title>CelleditInt32</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/CelleditInt32/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/CelleditInt32/</guid>
-      <description>CelleditInt32 #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/src/typerenderer/celledit-int32.js&#39;; exports CelleditInt32 js extends /src/furo-ui5-number-input.js superclass FuroUi5NumberInput
- Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>CelleditInt64</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/CelleditInt64/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/CelleditInt64/</guid>
-      <description>CelleditInt64 #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/src/typerenderer/celledit-int64.js&#39;; exports CelleditInt64 js extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>CelleditUint32</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/CelleditUint32/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/CelleditUint32/</guid>
-      <description>CelleditUint32 #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/src/typerenderer/celledit-uint32.js&#39;; exports CelleditUint32 js extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Attributes and Properties #  Methods #  </description>
-    </item>
-    
-    <item>
-      <title>CelleditUint64</title>
-      <link>http://ui5.furo.pro/docs/typerenderer/CelleditUint64/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ui5.furo.pro/docs/typerenderer/CelleditUint64/</guid>
-      <description>CelleditUint64 #  @furo/typerenderer v1.0.0-rc.8 import &#39;@furo/typerenderer/src/src/typerenderer/celledit-uint64.js&#39;; exports CelleditUint64 js extends /src/typerenderer/celledit-int32.js superclass CelleditInt32
- Attributes and Properties #  Methods #  </description>
     </item>
     
     <item>
