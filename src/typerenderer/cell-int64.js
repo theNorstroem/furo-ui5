@@ -11,11 +11,9 @@ import { Env } from '@furo/framework/src/furo.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-int64 Basic Usage
+ * @summary cell display renderer for `int64`
+ * @element cell-int64
  */
 export class CellInt64 extends LitElement {
   constructor() {

@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-toggle-button
-**@furo/components** <small>v1.0.0-rc.7</small>
+**@furo/components** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/components/src/furo-ui5-toggle-button.js';`<small>
 <br>exports *FuroUi5ToggleButton* js
-<br>exports `<furo-ui5-toggle-button>` custom-element-definition
 <br>extends *src/furo-ui5-toggle-button.js*
 <br> mixes *FieldNodeAdapter*</small>
 
@@ -52,6 +51,7 @@ The constraint **required** will mark the element as required
 
 ## Attributes and Properties
 {{% api "_furo-ui5-toggle-button-properties.md" %}}
+
 
 
 
@@ -111,6 +111,7 @@ Fires the value of pressed when value changed.
 Reads the attributes which are set on the component dom.
 
 <br><br>
+
 
 
 

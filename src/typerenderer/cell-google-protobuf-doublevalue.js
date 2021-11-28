@@ -6,11 +6,9 @@ import { CellDouble } from './cell-double.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-double Basic Usage
+ * @summary cell display renderer for `google.protobuf.DoubleValue`
+ * @element cell-google-protobuf-doublevalue
  */
 class CellGoogleProtobufDoublevalue extends CellDouble {}
 

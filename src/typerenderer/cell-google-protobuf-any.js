@@ -6,11 +6,9 @@ import { LitElement, css } from 'lit';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-google-protobuf-any Basic Usage
+ * @summary cell display renderer for `google.protobuf.Any`
+ * @element cell-google-protobuf-any
  */
 class CellGoolgeProtobufAny extends LitElement {
   constructor() {

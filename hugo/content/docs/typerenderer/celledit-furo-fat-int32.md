@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # celledit-furo-fat-int32
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-fat-int32.js';`<small>
 <br>exports *CelleditFuroFatInt32* js
-<br>exports `<celledit-furo-fat-int32>` custom-element-definition
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
@@ -27,8 +26,10 @@ It uses furo-ui5-number-input as the renderer
 
 
 
+
 ## Methods
 {{% api "_celledit-furo-fat-int32-methods.md" %}}
+
 
 
 

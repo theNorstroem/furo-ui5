@@ -2,16 +2,13 @@ import { LitElement, html, css } from 'lit';
 
 /**
  * `cell-google-protobuf-stringvalue`
- * The cell-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.Stringvalue` in read only mode.
+ * The cell-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.StringValue` in read only mode.
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- *
- * @summary
- * @element
- * @demo demo cell-google-protobuf-stringvalue Basic Usage
+ * @summary cell display renderer for `google.protobuf.StringValue`
+ * @element cell-google-protobuf-stringvalue
  */
 class CellGoogleProtobufStringvalue extends LitElement {
   constructor() {

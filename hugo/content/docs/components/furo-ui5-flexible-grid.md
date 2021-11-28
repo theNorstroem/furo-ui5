@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-flexible-grid
-**@furo/components** <small>v1.0.0-rc.7</small>
+**@furo/components** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/components/src/furo-ui5-flexible-grid.js';`<small>
 <br>exports `<furo-ui5-flexible-grid>` custom-element-definition
 <br>superclass *LitElement*

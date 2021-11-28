@@ -6,11 +6,10 @@ import { LitElement, html, css } from 'lit';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-furo-link Basic Usage
+ * @summary cell display renderer for `furo.Link`
+ * @element cell-furo-link
+ *
  */
 class CellFuroLink extends LitElement {
   static get styles() {

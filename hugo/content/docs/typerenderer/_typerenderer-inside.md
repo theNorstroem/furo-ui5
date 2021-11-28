@@ -6,25 +6,25 @@ bookHidden: true
 
 ### Components
 
-- [cell-bool](cell-bool.md) 
-- [cell-double](cell-double.md) 
-- [cell-float](cell-float.md) 
-- [cell-furo-fat-bool](cell-furo-fat-bool.md) 
-- [cell-furo-fat-double](cell-furo-fat-double.md) 
-- [cell-furo-fat-float](cell-furo-fat-float.md) 
-- [cell-furo-fat-int32](cell-furo-fat-int32.md) 
-- [cell-furo-fat-int64](cell-furo-fat-int64.md) 
-- [cell-furo-fat-string](cell-furo-fat-string.md) 
-- [cell-furo-fat-uint32](cell-furo-fat-uint32.md) 
-- [cell-furo-fat-uint64](cell-furo-fat-uint64.md) 
-- [cell-furo-integerproperty](cell-furo-integerproperty.md) 
-- [cell-furo-link](cell-furo-link.md) 
-- [cell-furo-numberproperty](cell-furo-numberproperty.md) 
-- [cell-furo-property-repeated](cell-furo-property-repeated.md) 
-- [cell-furo-property](cell-furo-property.md) 
-- [cell-furo-reference](cell-furo-reference.md) 
-- [cell-furo-stringoptionproperty](cell-furo-stringoptionproperty.md) 
-- [cell-furo-stringproperty](cell-furo-stringproperty.md) 
+- [cell-bool](cell-bool.md) cell display renderer for `bool`
+- [cell-double](cell-double.md) cell display renderer for `double`
+- [cell](cell.md) cell display renderer for `float`
+- [cell-furo-fat-bool](cell-furo-fat-bool.md) cell display renderer for `furo.fat.Bool`
+- [cell-furo-fat-double](cell-furo-fat-double.md) cell display renderer for `furo.fat.Double`
+- [cell-furo-fat-float](cell-furo-fat-float.md) cell display renderer for `furo.fat.Float`
+- [cell-furo-fat-int32](cell-furo-fat-int32.md) cell display renderer for `furo.fat.Int32`
+- [cell-furo-fat-int64](cell-furo-fat-int64.md) cell display renderer for `furo.fat.Int64`
+- [cell-furo-fat-string](cell-furo-fat-string.md) cell display renderer for `furo.fat.String`
+- [cell-furo-fat-uint32](cell-furo-fat-uint32.md) cell display renderer for `furo.fat.Uint32`
+- [cell-furo-fat-uint64](cell-furo-fat-uint64.md) cell display renderer for `furo.fat.Uint64`
+- [cell-furo-integerproperty](cell-furo-integerproperty.md) cell display renderer for `furo.Integerproperty`
+- [cell-furo-link](cell-furo-link.md) cell display renderer for `furo.Link`
+- [cell-furo-numberproperty](cell-furo-numberproperty.md) cell display renderer for `furo.Numberproperty`
+- [cell-furo-property-repeated](cell-furo-property-repeated.md) cell display renderer for `[] furo.Property`
+- [cell-furo-property](cell-furo-property.md) cell display renderer for `furo.Property`
+- [cell-furo-reference](cell-furo-reference.md) cell display renderer for `furo.Reference`
+- [cell-furo-stringoptionproperty](cell-furo-stringoptionproperty.md) cell display renderer for `furo.Stringoptionproperty`
+- [cell-furo-stringproperty](cell-furo-stringproperty.md) cell display renderer for `furo.Stringproperty`
 - [cell-furo-type-date](cell-furo-type-date.md) 
 - [cell-furo-type-money](cell-furo-type-money.md) 
 - [cell-google-protobuf-any](cell-google-protobuf-any.md) 
@@ -49,42 +49,16 @@ bookHidden: true
 - [celledit-bool](celledit-bool.md) celledit renderer for bool
 - [celledit-double](celledit-double.md) celledit renderer for double
 - [celledit-float](celledit-float.md) celledit renderer for float
-- [celledit-furo-fat-bool](celledit-furo-fat-bool.md) celledit renderer for bool
-- [celledit-furo-fat-double](celledit-furo-fat-double.md) celledit renderer for furo.fat.Double
-- [celledit-furo-fat-float](celledit-furo-fat-float.md) celledit renderer for furo.fat.Float
 - [celledit-furo-fat-int32](celledit-furo-fat-int32.md) celledit renderer for furo.fat.Int32
 - [celledit-furo-fat-int64](celledit-furo-fat-int64.md) celledit renderer for furo.fat.Int64
-- [celledit-furo-fat-string](celledit-furo-fat-string.md) 
-- [celledit-furo-fat-uint32](celledit-furo-fat-uint32.md) celledit renderer for furo.fat.Uint32
-- [celledit-furo-fat-uint64](celledit-furo-fat-uint64.md) celledit renderer for furo.fat.Uint64
-- [celledit-furo-integerproperty](celledit-furo-integerproperty.md) celledit renderer for furo.Integerproperty
 - [celledit-furo-link](celledit-furo-link.md) 
-- [celledit-furo-inumberproperty](celledit-furo-inumberproperty.md) celledit renderer for furo.INumberproperty
 - [celledit-furo-property-repeated](celledit-furo-property-repeated.md) 
 - [celledit-furo-property](celledit-furo-property.md) 
 - [celledit-furo-reference](celledit-furo-reference.md) 
-- [celledit-furo-stringoptionproperty](celledit-furo-stringoptionproperty.md) 
-- [celledit-furo-stringproperty](celledit-furo-stringproperty.md) 
-- [celledit-furo-type-date](celledit-furo-type-date.md) 
 - [celledit-furo-type-money](celledit-furo-type-money.md) 
 - [celledit-google-protobuf-any](celledit-google-protobuf-any.md) 
-- [celledit-google-protobuf-boolvalue](celledit-google-protobuf-boolvalue.md) celledit renderer for bool
-- [celledit-google-protobuf-doublevalue](celledit-google-protobuf-doublevalue.md) celledit renderer for google.protobuf.Double
-- [celledit-google-protobuf-floatvalue](celledit-google-protobuf-floatvalue.md) celledit renderer for google.protobuf.Float
-- [celledit-google-protobuf-int32value](celledit-google-protobuf-int32value.md) celledit renderer for google.protobuf.Int32value
-- [celledit-google-protobuf-int64value](celledit-google-protobuf-int64value.md) celledit renderer for google.protobuf.Int64
-- [celledit-google-protobuf-stringvalue](celledit-google-protobuf-stringvalue.md) 
-- [celledit-google-protobuf-timestamp](celledit-google-protobuf-timestamp.md) 
-- [celledit-google-protobuf-uint32value](celledit-google-protobuf-uint32value.md) celledit renderer for google.protobuf.Uint32value
-- [celledit-google-protobuf-uint64value](celledit-google-protobuf-uint64value.md) celledit renderer for google.protobuf.Uint64value
-- [celledit-google-type-date](celledit-google-type-date.md) celledit renderer for google.type.Date
 - [celledit-google-type-money](celledit-google-type-money.md) celledit renderer for google.type.Money
-- [celledit-google-type-timeofday](celledit-google-type-timeofday.md) celledit renderer for google.type.TimeOfDay
-- [celledit-int32](celledit-int32.md) 
-- [celledit-int64](celledit-int64.md) 
 - [celledit-string](celledit-string.md) 
-- [celledit-uint32](celledit-uint32.md) 
-- [celledit-uint64](celledit-uint64.md) 
 - [display-bool](display-bool.md) 
 - [display-double](display-double.md) 
 - [display-float](display-float.md) 

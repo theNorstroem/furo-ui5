@@ -1,17 +1,17 @@
 ---
 title: cell-furo-fat-bool
-description: 
+description: cell display renderer for `furo.fat.Bool`
 weight: 50
 ---
 
 # cell-furo-fat-bool
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-fat-bool.js';`<small>
 <br>exports `<cell-furo-fat-bool>` custom-element-definition
 <br>extends */src/typerenderer/cell-bool.js*
 <br>superclass *CellBool*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.fat.Bool`
 
 ## Description
 

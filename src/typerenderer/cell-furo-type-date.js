@@ -12,11 +12,9 @@ import { CellGoogleTypeDate } from './cell-google-type-date.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-furo-type-date Basic Usage
+ * @summary cell display renderer for `furo.type.Date`
+ * @element cell-furo-type-date
  */
 class CellFuroTypeDate extends CellGoogleTypeDate {
   /**

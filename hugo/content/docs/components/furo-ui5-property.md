@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-property
-**@furo/components** <small>v1.0.0-rc.7</small>
+**@furo/components** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/components/src/furo-ui5-property.js';`<small>
 <br>exports *FuroUi5Property* js
 <br>exports `<furo-ui5-property>` custom-element-definition

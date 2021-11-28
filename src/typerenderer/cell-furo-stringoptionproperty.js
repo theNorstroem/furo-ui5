@@ -7,12 +7,10 @@ import { CellFuroStringproperty } from './cell-furo-stringproperty.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
+ * @summary cell display renderer for `furo.Stringoptionproperty`
+ * @element cell-furo-stringoptionproperty
  *
- * @summary
- * @element
- * @demo demo-cell-furo-stringoptionproperty Basic Usage
  */
 export class CellFuroStringoptionproperty extends CellFuroStringproperty {
   /**

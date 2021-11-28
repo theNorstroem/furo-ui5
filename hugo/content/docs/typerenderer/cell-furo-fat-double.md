@@ -1,17 +1,17 @@
 ---
 title: cell-furo-fat-double
-description: 
+description: cell display renderer for `furo.fat.Double`
 weight: 50
 ---
 
 # cell-furo-fat-double
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-fat-double.js';`<small>
 <br>exports `<cell-furo-fat-double>` custom-element-definition
 <br>extends */src/typerenderer/cell-double.js*
 <br>superclass *CellDouble*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.fat.Double`
 
 ## Description
 

@@ -6,12 +6,10 @@ import { CellFuroIntegerproperty } from './cell-furo-integerproperty.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
+ * @summary cell display renderer for `furo.Numberproperty`
+ * @element cell-furo-numberproperty
  *
- * @summary
- * @element
- * @demo demo-cell-furo-numberproperty Basic Usage
  */
 export class CellFuroNumberproperty extends CellFuroIntegerproperty {}
 

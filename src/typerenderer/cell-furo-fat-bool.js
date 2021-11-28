@@ -10,9 +10,8 @@ import { CellBool } from './cell-bool.js';
  * - function: bindData(fieldNode){...}
 
  *
- * @summary
- * @element
- * @demo demo cell-furo-fat-bool Basic Usage
+ * @summary cell display renderer for `furo.fat.Bool`
+ * @element cell-furo-fat-bool
  */
 class CellFuroFatBool extends CellBool {
   /**

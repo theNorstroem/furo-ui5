@@ -7,11 +7,9 @@ import { CellFloat } from './cell-float.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-google-protobuf-floatvalue Basic Usage
+ * @summary cell display renderer for `google.protobuf.`
+ * @element cell-google-protobuf-
  */
 class CellGoolgeProtobufFloatvalue extends CellFloat {}
 

@@ -10,9 +10,8 @@ import { Env } from '@furo/framework/src/furo.js';
  * - function: bindData(fieldNode){...}
 
  *
- * @summary
- * @element
- * @demo demo cell-float Basic Usage
+ * @summary cell display renderer for `float`
+ * @element cell float
  */
 export class CellFloat extends LitElement {
   constructor() {

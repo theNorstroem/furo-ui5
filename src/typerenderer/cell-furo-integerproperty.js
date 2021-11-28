@@ -7,13 +7,12 @@ import { CellInt32 } from './cell-int32.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
+ * @summary cell display renderer for `furo.Integerproperty`
+ * @element cell-furo-integerproperty
  *
- * @summary
- * @element
- * @demo demo-cell-furo-integerproperty Basic Usage
  */
+
 export class CellFuroIntegerproperty extends CellInt32 {
   /**
    *

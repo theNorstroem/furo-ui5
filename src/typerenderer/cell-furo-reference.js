@@ -9,11 +9,10 @@ import '@ui5/webcomponents/dist/Link.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-furo-reference Basic Usage
+ * @summary cell display renderer for `furo.Reference`
+ * @element cell-furo-reference
+ *
  */
 class CellFuroReference extends LitElement {
   constructor() {

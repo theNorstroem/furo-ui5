@@ -13,11 +13,9 @@ import { CellGoogleTypeMoney } from './cell-google-type-money.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-furo-type-money Basic Usage
+ * @summary cell display renderer for `furo.type.Money`
+ * @element cell-furo-type-money
  */
 class CellFuroTypeMoney extends CellGoogleTypeMoney {
   /**

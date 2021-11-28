@@ -1,18 +1,18 @@
 ---
 title: cell-furo-integerproperty
-description: 
+description: cell display renderer for `furo.Integerproperty`
 weight: 50
 ---
 
 # cell-furo-integerproperty
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-integerproperty.js';`<small>
 <br>exports *CellFuroIntegerproperty* js
 <br>exports `<cell-furo-integerproperty>` custom-element-definition
 <br>extends */src/typerenderer/cell-int32.js*
 <br>superclass *CellInt32*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.Integerproperty`
 
 ## Description
 

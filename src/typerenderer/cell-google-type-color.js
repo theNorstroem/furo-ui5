@@ -9,11 +9,9 @@ import '@ui5/webcomponents/dist/ColorPalette.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-google-type-color Basic Usage
+ * @summary cell display renderer for `google.type.Color`
+ * @element cell-google-type-color
  */
 class CellGoolgeTypeColor extends LitElement {
   constructor() {

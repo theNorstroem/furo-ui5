@@ -1,18 +1,18 @@
 ---
 title: cell-furo-numberproperty
-description: 
+description: cell display renderer for `furo.Numberproperty`
 weight: 50
 ---
 
 # cell-furo-numberproperty
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-numberproperty.js';`<small>
 <br>exports *CellFuroNumberproperty* js
 <br>exports `<cell-furo-numberproperty>` custom-element-definition
 <br>extends */src/typerenderer/cell-furo-integerproperty.js*
 <br>superclass *CellFuroIntegerproperty*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.Numberproperty`
 
 ## Description
 

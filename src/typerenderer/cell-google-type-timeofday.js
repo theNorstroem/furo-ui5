@@ -11,11 +11,9 @@ import { Env } from '@furo/framework/src/furo.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-google-type-timeofday Basic Usage
+ * @summary cell display renderer for `google.type.TimeOfDay`
+ * @element cell-google-type-timeofday
  */
 class CellGoogleTypeTimeofday extends LitElement {
   constructor() {

@@ -8,9 +8,8 @@ import { CellDouble } from './cell-double.js';
  * - function: bindData(fieldNode){...}
 
  *
- * @summary
- * @element
- * @demo demo cell-furo-fat-double Basic Usage
+ * @summary cell display renderer for `furo.fat.Double`
+ * @element cell-furo-fat-double
  */
 class CellFuroFatDouble extends CellDouble {
   /**

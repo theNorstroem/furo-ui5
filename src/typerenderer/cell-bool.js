@@ -11,9 +11,8 @@ import '@ui5/webcomponents-icons/dist/border.js';
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
  *
- * @summary
- * @element
- * @demo demo cell-bool Basic Usage
+ * @summary cell display renderer for `bool`
+ * @element cell-bool
  */
 export class CellBool extends LitElement {
   static get styles() {

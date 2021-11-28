@@ -1,18 +1,18 @@
 ---
 title: cell-furo-property
-description: 
+description: cell display renderer for `furo.Property`
 weight: 50
 ---
 
 # cell-furo-property
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-property.js';`<small>
 <br>exports *CellFuroProperty* js
 <br>exports `<cell-furo-property>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.Property`
 
 ## Description
 

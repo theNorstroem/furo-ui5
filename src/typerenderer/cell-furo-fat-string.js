@@ -6,11 +6,9 @@ import { LitElement, html, css } from 'lit';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-furo-fat-string Basic Usage
+ * @summary cell display renderer for `furo.fat.String`
+ * @element cell-furo-fat-string
  */
 class CellFuroFatString extends LitElement {
   constructor() {

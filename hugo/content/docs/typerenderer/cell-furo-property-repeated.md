@@ -1,18 +1,18 @@
 ---
 title: cell-furo-property-repeated
-description: 
+description: cell display renderer for `[] furo.Property`
 weight: 50
 ---
 
 # cell-furo-property-repeated
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-property-repeated.js';`<small>
 <br>exports *CellFuroPropertyRepeated* js
 <br>exports `<cell-furo-property-repeated>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `[] furo.Property`
 
 ## Description
 

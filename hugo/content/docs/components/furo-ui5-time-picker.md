@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-time-picker
-**@furo/components** <small>v1.0.0-rc.7</small>
+**@furo/components** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/components/src/furo-ui5-time-picker.js';`<small>
 <br>exports *FuroUi5TimePicker* js
-<br>exports `<furo-ui5-time-picker>` custom-element-definition
 <br>extends *src/furo-ui5-time-picker.js*
 <br> mixes *FieldNodeAdapter*</small>
 
@@ -58,6 +57,7 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 ## Attributes and Properties
 {{% api "_furo-ui5-time-picker-properties.md" %}}
+
 
 
 
@@ -127,6 +127,7 @@ those attributes can be set. `value-state`, `value-state-message`,  `icon`, `pla
 Use this after manual or scripted update of the attributes.
 
 <br><br>
+
 
 
 

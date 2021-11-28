@@ -1,18 +1,18 @@
 ---
 title: cell-furo-stringoptionproperty
-description: 
+description: cell display renderer for `furo.Stringoptionproperty`
 weight: 50
 ---
 
 # cell-furo-stringoptionproperty
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-stringoptionproperty.js';`<small>
 <br>exports *CellFuroStringoptionproperty* js
 <br>exports `<cell-furo-stringoptionproperty>` custom-element-definition
 <br>extends */src/typerenderer/cell-furo-stringproperty.js*
 <br>superclass *CellFuroStringproperty*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.Stringoptionproperty`
 
 ## Description
 

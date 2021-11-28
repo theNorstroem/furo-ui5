@@ -1,17 +1,17 @@
 ---
 title: cell-furo-fat-float
-description: 
+description: cell display renderer for `furo.fat.Float`
 weight: 50
 ---
 
 # cell-furo-fat-float
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-fat-float.js';`<small>
 <br>exports `<cell-furo-fat-float>` custom-element-definition
 <br>extends */src/typerenderer/cell-float.js*
 <br>superclass *CellFloat*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.fat.Float`
 
 ## Description
 

@@ -7,12 +7,10 @@ import { CellString } from './cell-string.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
+ * @summary cell display renderer for `furo.Stringproperty`
+ * @element cell-furo-stringproperty
  *
- * @summary
- * @element
- * @demo demo-cell-furo-stringproperty Basic Usage
  */
 export class CellFuroStringproperty extends CellString {
   /**

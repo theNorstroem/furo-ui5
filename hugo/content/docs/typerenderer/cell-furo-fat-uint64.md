@@ -1,17 +1,17 @@
 ---
 title: cell-furo-fat-uint64
-description: 
+description: cell display renderer for `furo.fat.Uint64`
 weight: 50
 ---
 
 # cell-furo-fat-uint64
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-fat-uint64.js';`<small>
 <br>exports `<cell-furo-fat-uint64>` custom-element-definition
 <br>extends */src/typerenderer/cell-furo-fat-int64.js*
 <br>superclass *CellFuroFatInt64*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.fat.Uint64`
 
 ## Description
 

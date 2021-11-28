@@ -1,17 +1,17 @@
 ---
 title: cell-double
-description: 
+description: cell display renderer for `double`
 weight: 50
 ---
 
 # cell-double
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-double.js';`<small>
 <br>exports *CellDouble* js
 <br>exports `<cell-double>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `double`
 
 ## Description
 

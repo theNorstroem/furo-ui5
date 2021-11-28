@@ -6,10 +6,9 @@ import { CellFloat } from './cell-float.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
+ * @summary cell display renderer for `furo.fat.Float`
+ * @element cell-furo-fat-float
  * @demo demo cell-furo-fat-float Basic Usage
  */
 class CellFuroFatFloat extends CellFloat {

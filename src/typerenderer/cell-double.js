@@ -8,9 +8,8 @@ import { Env } from '@furo/framework/src/furo.js';
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
  *
- * @summary
- * @element
- * @demo demo cell-double Basic Usage
+ * @summary cell display renderer for `double`
+ * @element cell-double
  */
 export class CellDouble extends LitElement {
   constructor() {

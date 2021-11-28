@@ -9,11 +9,9 @@ import { CellInt64 } from './cell-int64.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-uint64 Basic Usage
+ * @summary cell display renderer for `uint64`
+ * @element cell-uint64
  */
 export class CellUint64 extends CellInt64 {}
 

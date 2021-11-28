@@ -11,11 +11,9 @@ import { Env } from '@furo/framework/src/furo.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-google-type-money Basic Usage
+ * @summary cell display renderer for `google.type.Money`
+ * @element cell-google-type-money
  */
 export class CellGoogleTypeMoney extends LitElement {
   constructor() {

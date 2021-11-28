@@ -6,12 +6,9 @@ import { LitElement, html, css } from 'lit';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- *
- * @summary
- * @element
- * @demo demo cell-string Basic Usage
+ * @summary cell display renderer for `string`
+ * @element cell-string
  */
 export class CellString extends LitElement {
   static get styles() {

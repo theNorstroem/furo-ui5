@@ -1,16 +1,16 @@
 ---
 title: cell-furo-link
-description: 
+description: cell display renderer for `furo.Link`
 weight: 50
 ---
 
 # cell-furo-link
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-link.js';`<small>
 <br>exports `<cell-furo-link>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.Link`
 
 ## Description
 

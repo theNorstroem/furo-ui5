@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # celledit-string
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/celledit-string.js';`<small>
 <br>exports *CelleditString* js
-<br>exports `<celledit-string>` custom-element-definition
 <br>extends */src/furo-ui5-text-input.js*
 <br>superclass *FuroUi5TextInput*</small>
 
@@ -25,8 +24,10 @@ weight: 50
 
 
 
+
 ## Methods
 {{% api "_celledit-string-methods.md" %}}
+
 
 
 

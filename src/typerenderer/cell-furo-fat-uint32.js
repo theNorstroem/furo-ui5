@@ -9,11 +9,9 @@ import { CellFuroFatInt32 } from './cell-furo-fat-int32.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-furo-fat-uint32 Basic Usage
+ * @summary cell display renderer for `furo.fat.Uint32`
+ * @element cell-furo-fat-uint32
  */
 class CellFuroFatUint32 extends CellFuroFatInt32 {}
 

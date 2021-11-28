@@ -11,11 +11,9 @@ import { CellInt32 } from './cell-int32.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-int32 Basic Usage
+ * @summary cell display renderer for `furo.fat.Int32`
+ * @element cell-furo-fat-int32
  */
 export class CellFuroFatInt32 extends CellInt32 {
   /**

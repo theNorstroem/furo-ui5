@@ -9,12 +9,10 @@ import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
+ * @summary cell display renderer for `[] furo.Property`
+ * @element cell-furo-property-repeated
  *
- * @summary
- * @element
- * @demo demo-cell-furo-property-repeats Basic Usage
  */
 export class CellFuroPropertyRepeated extends FBP(LitElement) {
   constructor() {

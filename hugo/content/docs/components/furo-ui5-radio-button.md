@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-radio-button
-**@furo/components** <small>v1.0.0-rc.7</small>
+**@furo/components** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/components/src/furo-ui5-radio-button.js';`<small>
 <br>exports *FuroUi5RadioButton* js
 <br>extends *src/furo-ui5-radio-button.js*

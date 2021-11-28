@@ -6,11 +6,9 @@ import { CellBool } from './cell-bool.js';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo cell-google-protobuf-boolvalue Basic Usage
+ * @summary cell display renderer for `google.protobuf.BoolValue`
+ * @element cell-google-protobuf-boolvalue
  */
 class CellGoolgeProtobufBoolvalue extends CellBool {}
 

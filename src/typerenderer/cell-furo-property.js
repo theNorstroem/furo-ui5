@@ -9,12 +9,10 @@ import { FieldNode } from '@furo/data/src/lib/FieldNode';
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
+ * @summary cell display renderer for `furo.Property`
+ * @element cell-furo-property
  *
- * @summary
- * @element
- * @demo demo-cell-furo-property Basic Usage
  */
 export class CellFuroProperty extends FBP(LitElement) {
   constructor() {

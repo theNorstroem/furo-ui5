@@ -1,18 +1,18 @@
 ---
 title: cell-furo-fat-int32
-description: 
+description: cell display renderer for `furo.fat.Int32`
 weight: 50
 ---
 
 # cell-furo-fat-int32
-**@furo/typerenderer** <small>v1.0.0-rc.7</small>
+**@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/cell-furo-fat-int32.js';`<small>
 <br>exports *CellFuroFatInt32* js
 <br>exports `<cell-furo-fat-int32>` custom-element-definition
 <br>extends */src/typerenderer/cell-int32.js*
 <br>superclass *CellInt32*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.fat.Int32`
 
 ## Description
 
