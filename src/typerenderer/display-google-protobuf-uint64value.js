@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { DisplayUint64 } from './display-uint64.js';
 /**
  * `display-google-protobuf-boolvalue`

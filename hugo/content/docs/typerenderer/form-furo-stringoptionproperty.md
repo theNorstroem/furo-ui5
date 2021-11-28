@@ -1,6 +1,6 @@
 ---
 title: form-furo-stringoptionproperty
-description: 
+description: form renderer for `furo.Stringoptionproperty`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-select-labeled.js*
 <br>superclass *FuroUi5SelectLabeled*</small>
 
-> **Summary:** 
+> **Summary:** form renderer for `furo.Stringoptionproperty`
 
 ## Description
 

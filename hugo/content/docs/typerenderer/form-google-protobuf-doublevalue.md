@@ -1,6 +1,6 @@
 ---
 title: form-google-protobuf-doublevalue
-description: form renderer for google.protobuf.Double
+description: form renderer for `google.protobuf.Double`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
-> **Summary:** form renderer for google.protobuf.Double
+> **Summary:** form renderer for `google.protobuf.Double`
 
 ## Description
 

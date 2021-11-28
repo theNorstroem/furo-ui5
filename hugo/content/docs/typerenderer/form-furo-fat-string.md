@@ -1,6 +1,6 @@
 ---
 title: form-furo-fat-string
-description: 
+description: form renderer for `furo.fat.String`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-text-input-labeled.js*
 <br>superclass *FuroUi5TextInputLabeled*</small>
 
-> **Summary:** 
+> **Summary:** form renderer for `furo.fat.String`
 
 ## Description
 

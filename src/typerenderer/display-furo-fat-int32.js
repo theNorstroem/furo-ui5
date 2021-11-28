@@ -1,5 +1,4 @@
 import { Env } from '@furo/framework/src/furo.js';
-// eslint-disable-next-line no-unused-vars
 import { DisplayInt32 } from './display-int32.js';
 
 /**

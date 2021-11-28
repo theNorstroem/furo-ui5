@@ -1,6 +1,6 @@
 ---
 title: form-furo-fat-float
-description: form renderer for furo.fat.Float
+description: form renderer for `furo.fat.Float`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
-> **Summary:** form renderer for furo.fat.Float
+> **Summary:** form renderer for `furo.fat.Float`
 
 ## Description
 

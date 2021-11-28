@@ -1,6 +1,6 @@
 ---
 title: form-google-type-money
-description: form renderer for google.type.Money
+description: form renderer for `google.type.Money`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-money-input-labeled.js*
 <br>superclass *FuroUi5MoneyInputLabeled*</small>
 
-> **Summary:** form renderer for google.type.Money
+> **Summary:** form renderer for `google.type.Money`
 
 ## Description
 

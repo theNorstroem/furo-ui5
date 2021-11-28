@@ -1,6 +1,6 @@
 ---
 title: form-furo-reference
-description: 
+description: form renderer for `furo.Reference`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-reference-search-labeled.js*
 <br>superclass *FuroUi5ReferenceSearchLabeled*</small>
 
-> **Summary:** 
+> **Summary:** form renderer for `furo.Reference`
 
 ## Description
 

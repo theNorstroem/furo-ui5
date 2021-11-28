@@ -1,6 +1,6 @@
 ---
 title: form-furo-integerproperty
-description: form renderer for furo.Integerproperty
+description: form renderer for `furo.Integerproperty`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
-> **Summary:** form renderer for furo.Integerproperty
+> **Summary:** form renderer for `furo.Integerproperty`
 
 ## Description
 

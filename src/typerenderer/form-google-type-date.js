@@ -6,7 +6,7 @@ import { FuroUi5DatePickerLabeled } from '../furo-ui5-date-picker-labeled.js';
  *
  * It uses furo-ui5-date-picker as the renderer
  *
- * @summary form renderer for google.type.Date
+ * @summary form renderer for `google.type.Date`
  * @element form-google-type-date
  */
 class FormGoogleTypeDate extends FuroUi5DatePickerLabeled {}

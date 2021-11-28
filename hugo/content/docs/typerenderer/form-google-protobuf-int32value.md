@@ -1,6 +1,6 @@
 ---
 title: form-google-protobuf-int32value
-description: form renderer for google.protobuf.Int32value
+description: form renderer for `google.protobuf.Int32Value`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
-> **Summary:** form renderer for google.protobuf.Int32value
+> **Summary:** form renderer for `google.protobuf.Int32Value`
 
 ## Description
 

@@ -1,6 +1,6 @@
 ---
 title: form-google-type-date
-description: form renderer for google.type.Date
+description: form renderer for `google.type.Date`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-date-picker-labeled.js*
 <br>superclass *FuroUi5DatePickerLabeled*</small>
 
-> **Summary:** form renderer for google.type.Date
+> **Summary:** form renderer for `google.type.Date`
 
 ## Description
 

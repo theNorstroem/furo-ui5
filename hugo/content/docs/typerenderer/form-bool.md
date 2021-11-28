@@ -1,6 +1,6 @@
 ---
 title: form-bool
-description: form renderer for bool
+description: form renderer for `bool`
 weight: 50
 ---
 
@@ -12,7 +12,7 @@ weight: 50
 <br>extends */src/furo-ui5-checkbox-input-labeled.js*
 <br>superclass *FuroUi5CheckboxInputLabeled*</small>
 
-> **Summary:** form renderer for bool
+> **Summary:** form renderer for `bool`
 
 ## Description
 

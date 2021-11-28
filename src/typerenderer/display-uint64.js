@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { DisplayInt64 } from './display-int64.js';
 /**
  * `display-uint64`

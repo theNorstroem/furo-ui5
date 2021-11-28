@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { FormInt32 } from './form-int32.js';
 
 /**
@@ -6,7 +5,7 @@ import { FormInt32 } from './form-int32.js';
  *
  * It uses furo-ui5-number-input as the renderer
  *
- * @summary form renderer for google.protobuf.Int32value
+ * @summary form renderer for `google.protobuf.Int32Value`
  * @element form-google-protobuf-int32value
  */
 class FormGoolgeProtobufIn32value extends FormInt32 {}

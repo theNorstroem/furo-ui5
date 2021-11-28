@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { CellInt32 } from './cell-int32.js';
 /**
  * `cell-google-protobuf-boolvalue`

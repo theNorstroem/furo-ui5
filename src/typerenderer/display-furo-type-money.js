@@ -1,5 +1,4 @@
 import { Env } from '@furo/framework/src/furo.js';
-// eslint-disable-next-line import/named
 import { DisplayGoogleTypeMoney } from './display-google-type-money.js';
 
 /**

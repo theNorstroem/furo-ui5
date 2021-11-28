@@ -13,8 +13,9 @@ Put upgrade note in this file
 
 
 
-
 # Offene Punkte
+Alle Elemente Summarys damit http://localhost:1313/docs/components/ fein aussieht
+
 Alle Elemente mit FNA mit bindData doku ausrüsten
 Alle Elemente eventuell supported fieldnode type beschreiben
 Alle Elemente value-state from FAT

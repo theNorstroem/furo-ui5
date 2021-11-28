@@ -1,6 +1,6 @@
 ---
 title: form-furo-type-money
-description: 
+description: form renderer for `furo.type.Money`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-money-input-labeled.js*
 <br>superclass *FuroUi5MoneyInputLabeled*</small>
 
-> **Summary:** 
+> **Summary:** form renderer for `furo.type.Money`
 
 ## Description
 

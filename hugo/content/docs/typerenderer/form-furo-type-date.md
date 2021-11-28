@@ -1,6 +1,6 @@
 ---
 title: form-furo-type-date
-description: 
+description: form renderer for `furo.type.Date`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-date-picker-labeled.js*
 <br>superclass *FuroUi5DatePickerLabeled*</small>
 
-> **Summary:** 
+> **Summary:** form renderer for `furo.type.Date`
 
 ## Description
 

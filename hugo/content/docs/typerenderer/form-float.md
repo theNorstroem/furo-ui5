@@ -1,6 +1,6 @@
 ---
 title: form-float
-description: 
+description: form renderer for `float`
 weight: 50
 ---
 
@@ -9,10 +9,10 @@ weight: 50
 <br>`import '@furo/typerenderer/src/form-float.js';`<small>
 <br>exports *FormFloat* js
 <br>exports `<form-float>` custom-element-definition
-<br>extends */src/typerenderer/form-int32.js*
-<br>superclass *FormInt32*</small>
+<br>extends */src/furo-ui5-number-input-labeled.js*
+<br>superclass *FuroUi5NumberInputLabeled*</small>
 
-> **Summary:** 
+> **Summary:** form renderer for `float`
 
 ## Description
 

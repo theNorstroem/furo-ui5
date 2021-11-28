@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { FormBool } from './form-bool.js';
 
 /**
@@ -6,7 +5,7 @@ import { FormBool } from './form-bool.js';
  *
  * It uses furo-ui5-checkbox-input as the renderer
  *
- * @summary form renderer for bool
+ * @summary form renderer for `furo.fat.Bool`
  * @element form-furo-fat-bool
  */
 class FormFuroFatBool extends FormBool {}

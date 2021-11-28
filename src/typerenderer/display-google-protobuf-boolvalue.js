@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { DisplayBool } from './display-bool.js';
 /**
  * `display-google-protobuf-boolvalue`

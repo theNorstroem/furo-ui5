@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { CellInt64 } from './cell-int64.js';
 /**
  * `cell-uint64`

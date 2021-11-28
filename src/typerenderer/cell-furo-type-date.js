@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { CellGoogleTypeDate } from './cell-google-type-date.js';
 
 /**

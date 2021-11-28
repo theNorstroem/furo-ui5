@@ -104,36 +104,36 @@ bookHidden: true
 - [display-string](display-string.md) display renderer for `string`
 - [display-uint32](display-uint32.md) display renderer for `uint32`
 - [display-uint64](display-uint64.md) display renderer for `uint64`
-- [form-bool](form-bool.md) form renderer for bool
-- [form-double](form-double.md) 
-- [form-float](form-float.md) 
-- [form-furo-fat-bool](form-furo-fat-bool.md) form renderer for bool
-- [form-furo-fat-double](form-furo-fat-double.md) form renderer for furo.fat.Double
-- [form-furo-fat-float](form-furo-fat-float.md) form renderer for furo.fat.Float
-- [form-furo-fat-int32](form-furo-fat-int32.md) form renderer for furo.fat.Int32
-- [form-furo-fat-int64](form-furo-fat-int64.md) form renderer for furo.fat.Int64
-- [form-furo-fat-string](form-furo-fat-string.md) 
-- [form-furo-fat-uint32](form-furo-fat-uint32.md) form renderer for furo.fat.Uint32
-- [form-furo-fat-uint64](form-furo-fat-uint64.md) form renderer for furo.fat.Uint64
-- [form-furo-integerproperty](form-furo-integerproperty.md) form renderer for furo.Integerproperty
-- [form-furo-integerproperty](form-furo-integerproperty.md) form renderer for furo.Integerproperty
-- [form-furo-reference](form-furo-reference.md) 
-- [form-furo-stringoptionproperty](form-furo-stringoptionproperty.md) 
-- [form-furo-stringproperty](form-furo-stringproperty.md) 
-- [form-furo-type-date](form-furo-type-date.md) 
-- [form-furo-type-money](form-furo-type-money.md) 
-- [form-google-protobuf-boolvalue](form-google-protobuf-boolvalue.md) form renderer for bool
-- [form-google-protobuf-doublevalue](form-google-protobuf-doublevalue.md) form renderer for google.protobuf.Double
-- [form-google-protobuf-floatvalue](form-google-protobuf-floatvalue.md) form renderer for google.protobuf.Float
-- [form-google-protobuf-int32value](form-google-protobuf-int32value.md) form renderer for google.protobuf.Int32value
-- [form-google-protobuf-int64value](form-google-protobuf-int64value.md) form renderer for google.protobuf.Int64
-- [form-google-protobuf-stringvalue](form-google-protobuf-stringvalue.md) 
-- [form-google-protobuf-timestamp](form-google-protobuf-timestamp.md) 
-- [form-google-type-date](form-google-type-date.md) form renderer for google.type.Date
-- [form-google-type-money](form-google-type-money.md) form renderer for google.type.Money
-- [form-google-type-timeofday](form-google-type-timeofday.md) form renderer for google.type.TimeOfDay
-- [form-int32](form-int32.md) 
-- [form-int64](form-int64.md) 
-- [form-string](form-string.md) 
-- [form-uint32](form-uint32.md) 
-- [form-uint64](form-uint64.md) 
+- [form-bool](form-bool.md) form renderer for `bool`
+- [form-double](form-double.md) form renderer for `double`
+- [form-float](form-float.md) form renderer for `float`
+- [form-furo-fat-bool](form-furo-fat-bool.md) form renderer for `furo.fat.Bool`
+- [form-furo-fat-double](form-furo-fat-double.md) form renderer for `furo.fat.Double`
+- [form-furo-fat-float](form-furo-fat-float.md) form renderer for `furo.fat.Float`
+- [form-furo-fat-int32](form-furo-fat-int32.md) form renderer for `furo.fat.Int32`
+- [form-furo-fat-int64](form-furo-fat-int64.md) form renderer for `furo.fat.Int64`
+- [form-furo-fat-string](form-furo-fat-string.md) form renderer for `furo.fat.String`
+- [form-furo-fat-uint32](form-furo-fat-uint32.md) form renderer for `furo.fat.Uint32`
+- [form-furo-fat-uint64](form-furo-fat-uint64.md) form renderer for `furo.fat.Uint64`
+- [form-furo-integerproperty](form-furo-integerproperty.md) form renderer for `furo.Integerproperty`
+- [form-furo-integerproperty](form-furo-integerproperty.md) form renderer for `furo.Integerproperty`
+- [form-furo-reference](form-furo-reference.md) form renderer for `furo.Reference`
+- [form-furo-stringoptionproperty](form-furo-stringoptionproperty.md) form renderer for `furo.Stringoptionproperty`
+- [form-furo-stringproperty](form-furo-stringproperty.md) form renderer for `furo.Stringproperty`
+- [form-furo-type-date](form-furo-type-date.md) form renderer for `furo.type.Date`
+- [form-furo-type-money](form-furo-type-money.md) form renderer for `furo.type.Money`
+- [form-google-protobuf-boolvalue](form-google-protobuf-boolvalue.md) form renderer for `google.protobuf.BoolValue`
+- [form-google-protobuf-doublevalue](form-google-protobuf-doublevalue.md) form renderer for `google.protobuf.Double`
+- [form-google-protobuf-floatvalue](form-google-protobuf-floatvalue.md) form renderer for `google.protobuf.FloatValue`
+- [form-google-protobuf-int32value](form-google-protobuf-int32value.md) form renderer for `google.protobuf.Int32Value`
+- [form-google-protobuf-int64value](form-google-protobuf-int64value.md) form renderer for `google.protobuf.Int64Value`
+- [form-google-protobuf-stringValue](form-google-protobuf-stringValue.md) form renderer for `google.protobuf.StringValue`
+- [form-google-protobuf-timestamp](form-google-protobuf-timestamp.md) form renderer for `google.protobuf.Timestamp`
+- [form-google-type-date](form-google-type-date.md) form renderer for `google.type.Date`
+- [form-google-type-money](form-google-type-money.md) form renderer for `google.type.Money`
+- [form-google-type-timeofday](form-google-type-timeofday.md) form renderer for `google.type.TimeOfDay`
+- [form-int32](form-int32.md) form renderer for `int32`
+- [form-int64](form-int64.md) form renderer for `int64`
+- [form-string](form-string.md) form renderer for `string`
+- [form-uint32](form-uint32.md) form renderer for `uint32`
+- [form-uint64](form-uint64.md) form renderer for `uint64`

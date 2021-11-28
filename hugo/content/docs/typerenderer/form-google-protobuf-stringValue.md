@@ -1,32 +1,32 @@
 ---
-title: form-google-protobuf-stringvalue
-description: 
+title: form-google-protobuf-stringValue
+description: form renderer for `google.protobuf.StringValue`
 weight: 50
 ---
 
-# form-google-protobuf-stringvalue
+# form-google-protobuf-stringValue
 **@furo/typerenderer** <small>v1.0.0-rc.8</small>
-<br>`import '@furo/typerenderer/src/form-google-protobuf-stringvalue.js';`<small>
+<br>`import '@furo/typerenderer/src/form-google-protobuf-stringValue.js';`<small>
 <br>exports `<form-google-protobuf-stringvalue>` custom-element-definition
 <br>extends */src/furo-ui5-text-input-labeled.js*
 <br>superclass *FuroUi5TextInputLabeled*</small>
 
-> **Summary:** 
+> **Summary:** form renderer for `google.protobuf.StringValue`
 
 ## Description
 
 
 
-{{% api "_form-google-protobuf-stringvalue-head.md" %}}
+{{% api "_form-google-protobuf-stringValue-head.md" %}}
 
 ## Attributes and Properties
-{{% api "_form-google-protobuf-stringvalue-properties.md" %}}
+{{% api "_form-google-protobuf-stringValue-properties.md" %}}
 
 
 
 
 ## Methods
-{{% api "_form-google-protobuf-stringvalue-methods.md" %}}
+{{% api "_form-google-protobuf-stringValue-methods.md" %}}
 
 
 ### **bindData**
@@ -43,5 +43,5 @@ weight: 50
 
 
 
-{{% api "_form-google-protobuf-stringvalue-footer.md" %}}
-{{% api "_form-google-protobuf-stringvalue-scripts.md" %}}
+{{% api "_form-google-protobuf-stringValue-footer.md" %}}
+{{% api "_form-google-protobuf-stringValue-scripts.md" %}}

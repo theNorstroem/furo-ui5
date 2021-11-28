@@ -1,6 +1,15 @@
-// eslint-disable-next-line import/named
-import { FormInt32 } from './form-int32.js';
+import { FuroUi5NumberInputLabeled } from '../furo-ui5-number-input-labeled.js';
 
-export class FormFloat extends FormInt32 {}
+/**
+ *
+ * @summary form renderer for `float`
+ * @element form-float
+ */
+export class FormFloat extends FuroUi5NumberInputLabeled {
+  connectedCallback() {
+    super.connectedCallback();
+    this.style.width = '100%';
+  }
+}
 
 window.customElements.define('form-float', FormFloat);

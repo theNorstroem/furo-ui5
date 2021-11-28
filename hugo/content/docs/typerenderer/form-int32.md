@@ -1,6 +1,6 @@
 ---
 title: form-int32
-description: 
+description: form renderer for `int32`
 weight: 50
 ---
 
@@ -12,7 +12,7 @@ weight: 50
 <br>extends */src/furo-ui5-number-input-labeled.js*
 <br>superclass *FuroUi5NumberInputLabeled*</small>
 
-> **Summary:** 
+> **Summary:** form renderer for `int32`
 
 ## Description
 

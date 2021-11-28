@@ -1,6 +1,6 @@
 ---
 title: form-google-protobuf-timestamp
-description: 
+description: form renderer for `google.protobuf.Timestamp`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-date-time-picker-labeled.js*
 <br>superclass *FuroUi5DateTimePickerLabeled*</small>
 
-> **Summary:** 
+> **Summary:** form renderer for `google.protobuf.Timestamp`
 
 ## Description
 

@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { CellFuroFatInt64 } from './cell-furo-fat-int64.js';
 /**
  * `cell-furo-fat-uint64`

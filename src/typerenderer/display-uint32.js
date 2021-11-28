@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { DisplayInt32 } from './display-int32.js';
 /**
  * `display-uint32`

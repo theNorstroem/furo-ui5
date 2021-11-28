@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { DisplayGoogleTypeDate } from './display-google-type-date.js';
 
 /**

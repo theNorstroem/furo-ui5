@@ -1,6 +1,6 @@
 ---
 title: form-furo-fat-bool
-description: form renderer for bool
+description: form renderer for `furo.fat.Bool`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/form-bool.js*
 <br>superclass *FormBool*</small>
 
-> **Summary:** form renderer for bool
+> **Summary:** form renderer for `furo.fat.Bool`
 
 ## Description
 

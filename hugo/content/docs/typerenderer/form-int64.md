@@ -1,6 +1,6 @@
 ---
 title: form-int64
-description: 
+description: form renderer for `int64`
 weight: 50
 ---
 
@@ -12,7 +12,7 @@ weight: 50
 <br>extends */src/typerenderer/form-int32.js*
 <br>superclass *FormInt32*</small>
 
-> **Summary:** 
+> **Summary:** form renderer for `int64`
 
 ## Description
 

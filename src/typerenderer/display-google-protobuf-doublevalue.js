@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { DisplayDouble } from './display-double.js';
 /**
  * `display-double`

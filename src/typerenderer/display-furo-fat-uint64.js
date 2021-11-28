@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { DisplayFuroFatInt64 } from './display-furo-fat-int64.js';
 /**
  * `display-furo-fat-uint64`

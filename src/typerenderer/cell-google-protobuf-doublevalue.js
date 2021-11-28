@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/named
 import { CellDouble } from './cell-double.js';
 /**
  * `cell-double`
