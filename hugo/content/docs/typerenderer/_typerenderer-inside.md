@@ -63,47 +63,47 @@ bookHidden: true
 - [celledit-string](celledit-string.md) celledit renderer for `string`
 - [celledit-uint32](celledit-uint32.md) celledit renderer for `uint32`
 - [celledit-uint64](celledit-uint64.md) celledit renderer for `uint64`
-- [display-bool](display-bool.md) 
-- [display-double](display-double.md) 
-- [display-float](display-float.md) 
-- [display-furo-fat-bool](display-furo-fat-bool.md) 
-- [display-furo-fat-double](display-furo-fat-double.md) 
-- [display-furo-fat-float](display-furo-fat-float.md) 
-- [display-furo-fat-int32](display-furo-fat-int32.md) 
-- [display-furo-fat-int64](display-furo-fat-int64.md) 
-- [display-furo-fat-string](display-furo-fat-string.md) 
-- [display-furo-fat-uint32](display-furo-fat-uint32.md) 
-- [display-furo-fat-uint64](display-furo-fat-uint64.md) 
-- [display-furo-integerproperty](display-furo-integerproperty.md) 
-- [display-furo-link](display-furo-link.md) 
-- [display-furo-numberproperty](display-furo-numberproperty.md) 
-- [display-furo-property-repeated](display-furo-property-repeated.md) 
-- [display-furo-property-repeats-labeled](display-furo-property-repeats-labeled.md) 
-- [display-furo-property](display-furo-property.md) 
-- [display-furo-reference](display-furo-reference.md) 
-- [display-furo-stringoptionproperty](display-furo-stringoptionproperty.md) 
-- [display-furo-stringproperty](display-furo-stringproperty.md) 
-- [display-furo-type-date](display-furo-type-date.md) 
-- [display-furo-type-money](display-furo-type-money.md) 
-- [display-google-protobuf-any](display-google-protobuf-any.md) 
-- [display-google-protobuf-boolvalue](display-google-protobuf-boolvalue.md) 
-- [display-google-protobuf-doublevalue](display-google-protobuf-doublevalue.md) 
-- [display-google-protobuf-floatvalue](display-google-protobuf-floatvalue.md) 
-- [display-google-protobuf-int32value](display-google-protobuf-int32value.md) 
-- [display-google-protobuf-int64value](display-google-protobuf-int64value.md) 
-- [display-google-protobuf-stringvalue](display-google-protobuf-stringvalue.md) 
-- [display-google-protobuf-timestamp](display-google-protobuf-timestamp.md) 
-- [display-google-protobuf-uint32value](display-google-protobuf-uint32value.md) 
-- [display-google-protobuf-uint64value](display-google-protobuf-uint64value.md) 
-- [display-google-type-color](display-google-type-color.md) 
-- [display-google-type-date](display-google-type-date.md) 
-- [display-google-type-money](display-google-type-money.md) 
-- [display-google-type-timeofday](display-google-type-timeofday.md) 
-- [display-int32](display-int32.md) 
-- [display-int64](display-int64.md) 
-- [display-string](display-string.md) 
-- [display-uint32](display-uint32.md) 
-- [display-uint64](display-uint64.md) 
+- [display-bool](display-bool.md) display renderer for `bool`
+- [display-double](display-double.md) display renderer for `double`
+- [display-float](display-float.md) display renderer for `float`
+- [display-furo-fat-bool](display-furo-fat-bool.md) display renderer for `furo.fat.Bool`
+- [display-furo-fat-double](display-furo-fat-double.md) display renderer for `furo.fat.Double`
+- [display-furo-fat-float](display-furo-fat-float.md) display renderer for `furo.fat.Float`
+- [display-furo-fat-int32](display-furo-fat-int32.md) display renderer for `furo.fat.Int32`
+- [display-furo-fat-int64](display-furo-fat-int64.md) display renderer for `furo.fat.Int64`
+- [display-furo-fat-string](display-furo-fat-string.md) display renderer for `furo.fat.String`
+- [display-furo-fat-Uint32](display-furo-fat-Uint32.md) display renderer for `furo.fat.Uint32`
+- [display-furo-fat-uint64](display-furo-fat-uint64.md) display renderer for `furo.fat.Uint64`
+- [display-furo-](display-furo-.md) display renderer for `furo.`
+- [display-furo-link](display-furo-link.md) display renderer for `furo.Link`
+- [display-furo-numberproperty](display-furo-numberproperty.md) display renderer for `furo.Numberproperty`
+- [display-furo-property-repeated](display-furo-property-repeated.md) display renderer for `[] furo.Property`
+- [display-furo-property-labeled](display-furo-property-labeled.md) display renderer for `[] furo.Property` with labels
+- [display-furo-property](display-furo-property.md) display renderer for `furo.Property`
+- [display-furo-reference](display-furo-reference.md) display renderer for `furo.Reference`
+- [display-furo-stringoptionproperty](display-furo-stringoptionproperty.md) display renderer for `furo.Stringoptionproperty`
+- [display-furo-stringproperty](display-furo-stringproperty.md) display renderer for `furo.Stringproperty`
+- [display-furo-type-date](display-furo-type-date.md) display renderer for `furo.type.Date`
+- [display-furo-type-money](display-furo-type-money.md) display renderer for `furo.type.Money`
+- [display-google-protobuf-](display-google-protobuf-.md) display renderer for `google.protobuf.`
+- [display-google-protobuf-boolvalue](display-google-protobuf-boolvalue.md) display renderer for `google.protobuf.BoolValue`
+- [display-google-protobuf-doublevalue](display-google-protobuf-doublevalue.md) display renderer for `google.protobuf.DoubleValue`
+- [display-google-protobuf-floatvalue](display-google-protobuf-floatvalue.md) display renderer for `google.protobuf.FloatValue`
+- [display-google-protobuf-int32Value](display-google-protobuf-int32Value.md) display renderer for `google.protobuf.Int32Value`
+- [display-google-protobuf-int64Value](display-google-protobuf-int64Value.md) display renderer for `google.protobuf.Int64Value`
+- [display-google-protobuf-stringvalue](display-google-protobuf-stringvalue.md) display renderer for `google.protobuf.StringValue`
+- [display-google-protobuf-timestamp](display-google-protobuf-timestamp.md) display renderer for `google.protobuf.Timestamp`
+- [display-google-protobuf-uint32value](display-google-protobuf-uint32value.md) display renderer for `google.protobuf.Uint32Value`
+- [display-google-protobuf-uint64value](display-google-protobuf-uint64value.md) display renderer for `google.protobuf.Uint64Value`
+- [display-google-type-color](display-google-type-color.md) display renderer for `google.type.Color`
+- [display-google-type-date](display-google-type-date.md) display renderer for `google.type.Date`
+- [display-google-type-money](display-google-type-money.md) display renderer for `google.type.Money`
+- [display-google-type-timeofday](display-google-type-timeofday.md) display renderer for `google.type.TimeOfDay`
+- [display-int32](display-int32.md) display renderer for `int32`
+- [display-int64](display-int64.md) display renderer for `int64`
+- [display-string](display-string.md) display renderer for `string`
+- [display-uint32](display-uint32.md) display renderer for `uint32`
+- [display-uint64](display-uint64.md) display renderer for `uint64`
 - [form-bool](form-bool.md) form renderer for bool
 - [form-double](form-double.md) 
 - [form-float](form-float.md) 

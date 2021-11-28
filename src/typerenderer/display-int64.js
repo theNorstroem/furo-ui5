@@ -11,11 +11,9 @@ import { Env } from '@furo/framework/src/furo.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-int64 Basic Usage
+ * @summary display renderer for `int64`
+ * @element display-int64
  */
 export class DisplayInt64 extends LitElement {
   constructor() {

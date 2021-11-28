@@ -1,6 +1,6 @@
 ---
 title: display-google-type-color
-description: 
+description: display renderer for `google.type.Color`
 weight: 50
 ---
 
@@ -10,7 +10,7 @@ weight: 50
 <br>exports `<display-google-type-color>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.type.Color`
 
 ## Description
 

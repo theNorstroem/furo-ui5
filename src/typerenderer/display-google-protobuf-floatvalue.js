@@ -7,11 +7,9 @@ import { DisplayFloat } from './display-float.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-google-protobuf-floatvalue Basic Usage
+ * @summary display renderer for `google.protobuf.FloatValue`
+ * @element display-google-protobuf-floatvalue
  */
 class DisplayGoolgeProtobufFloatvalue extends DisplayFloat {}
 

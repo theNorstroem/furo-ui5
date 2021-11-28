@@ -12,11 +12,9 @@ import { DisplayGoogleTypeDate } from './display-google-type-date.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-furo-type-date Basic Usage
+ * @summary display renderer for `furo.type.Date`
+ * @element display-furo-type-date
  */
 class DisplayFuroTypeDate extends DisplayGoogleTypeDate {
   _formatDisplay() {

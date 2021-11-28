@@ -1,6 +1,6 @@
 ---
 title: display-furo-stringoptionproperty
-description: 
+description: display renderer for `furo.Stringoptionproperty`
 weight: 50
 ---
 
@@ -12,7 +12,7 @@ weight: 50
 <br>extends */src/typerenderer/display-furo-stringproperty.js*
 <br>superclass *DisplayFuroStringproperty*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.Stringoptionproperty`
 
 ## Description
 

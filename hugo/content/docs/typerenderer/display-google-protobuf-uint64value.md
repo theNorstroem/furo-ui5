@@ -1,6 +1,6 @@
 ---
 title: display-google-protobuf-uint64value
-description: 
+description: display renderer for `google.protobuf.Uint64Value`
 weight: 50
 ---
 
@@ -11,12 +11,12 @@ weight: 50
 <br>extends */src/typerenderer/display-uint64.js*
 <br>superclass *DisplayUint64*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.protobuf.Uint64Value`
 
 ## Description
 
 `display-google-protobuf-boolvalue`
-The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.
+The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Uint64Value` in read only mode.
 
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}

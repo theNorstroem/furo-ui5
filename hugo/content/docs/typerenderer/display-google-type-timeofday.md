@@ -1,6 +1,6 @@
 ---
 title: display-google-type-timeofday
-description: 
+description: display renderer for `google.type.TimeOfDay`
 weight: 50
 ---
 
@@ -10,7 +10,7 @@ weight: 50
 <br>exports `<display-google-type-timeofday>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.type.TimeOfDay`
 
 ## Description
 

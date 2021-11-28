@@ -6,11 +6,9 @@ import { LitElement, html, css } from 'lit';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-furo-fat-string Basic Usage
+ * @summary display renderer for `furo.fat.String`
+ * @element display-furo-fat-string
  */
 class DisplayFuroFatString extends LitElement {
   constructor() {

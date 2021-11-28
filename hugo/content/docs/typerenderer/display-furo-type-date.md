@@ -1,6 +1,6 @@
 ---
 title: display-furo-type-date
-description: 
+description: display renderer for `furo.type.Date`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/display-google-type-date.js*
 <br>superclass *DisplayGoogleTypeDate*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.type.Date`
 
 ## Description
 

@@ -1,6 +1,6 @@
 ---
 title: display-furo-numberproperty
-description: 
+description: display renderer for `furo.Numberproperty`
 weight: 50
 ---
 
@@ -12,7 +12,7 @@ weight: 50
 <br>extends */src/typerenderer/display-furo-integerproperty.js*
 <br>superclass *DisplayFuroIntegerproperty*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.Numberproperty`
 
 ## Description
 

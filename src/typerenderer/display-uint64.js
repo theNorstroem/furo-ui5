@@ -9,11 +9,9 @@ import { DisplayInt64 } from './display-int64.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-uint64 Basic Usage
+ * @summary display renderer for `uint64`
+ * @element display-uint64
  */
 export class DisplayUint64 extends DisplayInt64 {}
 

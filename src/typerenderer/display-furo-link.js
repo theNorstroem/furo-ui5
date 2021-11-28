@@ -6,11 +6,9 @@ import { LitElement, html, css } from 'lit';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-furo-link Basic Usage
+ * @summary display renderer for `furo.Link`
+ * @element display-furo-link
  */
 class DisplayFuroLink extends LitElement {
   static get styles() {

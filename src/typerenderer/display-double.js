@@ -7,11 +7,9 @@ import { Env } from '@furo/framework/src/furo.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-double Basic Usage
+ * @summary display renderer for `double`
+ * @element display-double
  */
 export class DisplayDouble extends LitElement {
   constructor() {

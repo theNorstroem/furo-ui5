@@ -1,6 +1,6 @@
 ---
 title: display-furo-reference
-description: 
+description: display renderer for `furo.Reference`
 weight: 50
 ---
 
@@ -10,7 +10,7 @@ weight: 50
 <br>exports `<display-furo-reference>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.Reference`
 
 ## Description
 

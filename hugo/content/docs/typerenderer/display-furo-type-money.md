@@ -1,6 +1,6 @@
 ---
 title: display-furo-type-money
-description: 
+description: display renderer for `furo.type.Money`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/display-google-type-money.js*
 <br>superclass *DisplayGoogleTypeMoney*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.type.Money`
 
 ## Description
 

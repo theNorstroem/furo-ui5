@@ -9,11 +9,9 @@ import '@ui5/webcomponents/dist/Link.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-furo-reference Basic Usage
+ * @summary display renderer for `furo.Reference`
+ * @element display-furo-reference
  */
 class DisplayFuroReference extends LitElement {
   constructor() {

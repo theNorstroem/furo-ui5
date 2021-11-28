@@ -11,11 +11,9 @@ import { Env } from '@furo/framework/src/furo.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-google-type-date Basic Usage
+ * @summary display renderer for `google.type.Date`
+ * @element display-google-type-date
  */
 export class DisplayGoogleTypeDate extends LitElement {
   constructor() {

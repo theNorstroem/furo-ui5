@@ -9,12 +9,9 @@ import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- *
- * @summary
- * @element
- * @demo demo-display-furo-property-repeats Basic Usage
+ * @summary display renderer for `[] furo.Property`
+ * @element display-furo-property-repeated
  */
 export class DisplayFuroPropertyRepeated extends FBP(LitElement) {
   constructor() {

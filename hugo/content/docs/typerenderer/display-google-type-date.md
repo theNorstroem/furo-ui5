@@ -1,6 +1,6 @@
 ---
 title: display-google-type-date
-description: 
+description: display renderer for `google.type.Date`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>exports `<display-google-type-date>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.type.Date`
 
 ## Description
 

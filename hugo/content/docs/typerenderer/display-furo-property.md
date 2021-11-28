@@ -1,6 +1,6 @@
 ---
 title: display-furo-property
-description: 
+description: display renderer for `furo.Property`
 weight: 50
 ---
 
@@ -12,7 +12,7 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.Property`
 
 ## Description
 

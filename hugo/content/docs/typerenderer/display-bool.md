@@ -1,6 +1,6 @@
 ---
 title: display-bool
-description: 
+description: display renderer for `bool`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>exports `<display-bool>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `bool`
 
 ## Description
 

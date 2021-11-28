@@ -11,11 +11,9 @@ import { Env } from '@furo/framework/src/furo.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-google-protobuf-timestamp Basic Usage
+ * @summary display renderer for `google.protobuf.Timestamp`
+ * @element display-google-protobuf-timestamp
  */
 class DisplayGoogleProtobufTimestamp extends LitElement {
   constructor() {

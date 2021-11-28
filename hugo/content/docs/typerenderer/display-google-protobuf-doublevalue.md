@@ -1,6 +1,6 @@
 ---
 title: display-google-protobuf-doublevalue
-description: 
+description: display renderer for `google.protobuf.DoubleValue`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/display-double.js*
 <br>superclass *DisplayDouble*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.protobuf.DoubleValue`
 
 ## Description
 

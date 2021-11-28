@@ -1,6 +1,6 @@
 ---
 title: display-google-type-money
-description: 
+description: display renderer for `google.type.Money`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>exports `<display-google-type-money>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.type.Money`
 
 ## Description
 

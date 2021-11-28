@@ -6,11 +6,9 @@ import { DisplayDouble } from './display-double.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-furo-fat-double Basic Usage
+ * @summary display renderer for `furo.fat.Double`
+ * @element display-furo-fat-double
  */
 class DisplayFuroFatDouble extends DisplayDouble {
   _formatDisplay() {

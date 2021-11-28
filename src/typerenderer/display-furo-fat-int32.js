@@ -11,11 +11,9 @@ import { DisplayInt32 } from './display-int32.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-int32 Basic Usage
+ * @summary display renderer for `furo.fat.Int32`
+ * @element display-furo-fat-int32
  */
 export class DisplayFuroFatInt32 extends DisplayInt32 {
   _formatDisplay() {

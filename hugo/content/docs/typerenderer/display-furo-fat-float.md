@@ -1,6 +1,6 @@
 ---
 title: display-furo-fat-float
-description: 
+description: display renderer for `furo.fat.Float`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/display-float.js*
 <br>superclass *DisplayFloat*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.fat.Float`
 
 ## Description
 

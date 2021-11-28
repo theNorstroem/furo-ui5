@@ -9,11 +9,9 @@ import { DisplayFuroFatInt64 } from './display-furo-fat-int64.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-furo-fat-uint64 Basic Usage
+ * @summary display renderer for `furo.fat.Uint64`
+ * @element display-furo-fat-uint64
  */
 class DisplayFuroFatUint64 extends DisplayFuroFatInt64 {}
 

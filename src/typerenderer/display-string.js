@@ -6,11 +6,9 @@ import { LitElement, html, css } from 'lit';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- *
- * @summary
- * @element
+ * @summary display renderer for `string`
+ * @element display-string
  */
 export class DisplayString extends LitElement {
   static get styles() {

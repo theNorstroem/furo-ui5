@@ -1,6 +1,6 @@
 ---
 title: display-furo-fat-double
-description: 
+description: display renderer for `furo.fat.Double`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/display-double.js*
 <br>superclass *DisplayDouble*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.fat.Double`
 
 ## Description
 

@@ -1,6 +1,6 @@
 ---
 title: display-int32
-description: 
+description: display renderer for `int32`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>exports `<display-int32>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `int32`
 
 ## Description
 

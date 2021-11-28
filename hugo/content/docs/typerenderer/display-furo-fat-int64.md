@@ -1,6 +1,6 @@
 ---
 title: display-furo-fat-int64
-description: 
+description: display renderer for `furo.fat.Int64`
 weight: 50
 ---
 
@@ -12,7 +12,7 @@ weight: 50
 <br>extends */src/typerenderer/display-furo-fat-int32.js*
 <br>superclass *DisplayFuroFatInt32*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.fat.Int64`
 
 ## Description
 

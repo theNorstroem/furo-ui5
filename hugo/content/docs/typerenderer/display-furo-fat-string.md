@@ -1,6 +1,6 @@
 ---
 title: display-furo-fat-string
-description: 
+description: display renderer for `furo.fat.String`
 weight: 50
 ---
 
@@ -10,7 +10,7 @@ weight: 50
 <br>exports `<display-furo-fat-string>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.fat.String`
 
 ## Description
 

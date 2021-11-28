@@ -1,30 +1,30 @@
 ---
-title: display-google-protobuf-int64value
-description: 
+title: display-google-protobuf-int64Value
+description: display renderer for `google.protobuf.Int64Value`
 weight: 50
 ---
 
-# display-google-protobuf-int64value
+# display-google-protobuf-int64Value
 **@furo/typerenderer** <small>v1.0.0-rc.8</small>
-<br>`import '@furo/typerenderer/src/display-google-protobuf-int64value.js';`<small>
+<br>`import '@furo/typerenderer/src/display-google-protobuf-int64Value.js';`<small>
 <br>exports `<display-google-protobuf-int64value>` custom-element-definition
 <br>extends */src/typerenderer/display-int64.js*
 <br>superclass *DisplayInt64*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.protobuf.Int64Value`
 
 ## Description
 
 `display-google-protobuf-boolvalue`
-The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.
+The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Int64Value` in read only mode.
 
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-google-protobuf-int64value-head.md" %}}
+{{% api "_display-google-protobuf-int64Value-head.md" %}}
 
 ## Attributes and Properties
-{{% api "_display-google-protobuf-int64value-properties.md" %}}
+{{% api "_display-google-protobuf-int64Value-properties.md" %}}
 
 
 
@@ -32,7 +32,7 @@ Every display-xxx component should implement the following API:
 
 
 ## Methods
-{{% api "_display-google-protobuf-int64value-methods.md" %}}
+{{% api "_display-google-protobuf-int64Value-methods.md" %}}
 
 
 ### **bindData**
@@ -60,5 +60,5 @@ Binds a field node to the component
 
 
 
-{{% api "_display-google-protobuf-int64value-footer.md" %}}
-{{% api "_display-google-protobuf-int64value-scripts.md" %}}
+{{% api "_display-google-protobuf-int64Value-footer.md" %}}
+{{% api "_display-google-protobuf-int64Value-scripts.md" %}}

@@ -1,6 +1,6 @@
 ---
 title: display-google-protobuf-uint32value
-description: 
+description: display renderer for `google.protobuf.Uint32Value`
 weight: 50
 ---
 
@@ -11,12 +11,12 @@ weight: 50
 <br>extends */src/typerenderer/display-uint32.js*
 <br>superclass *DisplayUint32*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.protobuf.Uint32Value`
 
 ## Description
 
 `display-google-protobuf-boolvalue`
-The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.
+The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Uint32Value` in read only mode.
 
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}

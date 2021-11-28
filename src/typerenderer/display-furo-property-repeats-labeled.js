@@ -6,12 +6,9 @@ import { DisplayFuroPropertyRepeated } from './display-furo-property-repeated.js
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- *
- * @summary
- * @element
- * @demo demo-display-furo-property-repeats-labeled Basic Usage
+ * @summary display renderer for `[] furo.Property` with labels
+ * @element display-furo-property-labeled
  */
 export class DisplayFuroPropertyRepeatsLabeled extends DisplayFuroPropertyRepeated {
   /**

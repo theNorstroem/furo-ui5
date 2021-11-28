@@ -1,17 +1,17 @@
 ---
-title: display-furo-fat-uint32
-description: 
+title: display-furo-fat-Uint32
+description: display renderer for `furo.fat.Uint32`
 weight: 50
 ---
 
-# display-furo-fat-uint32
+# display-furo-fat-Uint32
 **@furo/typerenderer** <small>v1.0.0-rc.8</small>
-<br>`import '@furo/typerenderer/src/display-furo-fat-uint32.js';`<small>
+<br>`import '@furo/typerenderer/src/display-furo-fat-Uint32.js';`<small>
 <br>exports `<display-furo-fat-uint32>` custom-element-definition
 <br>extends */src/typerenderer/display-furo-fat-int32.js*
 <br>superclass *DisplayFuroFatInt32*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.fat.Uint32`
 
 ## Description
 
@@ -24,10 +24,10 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/In
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
 
-{{% api "_display-furo-fat-uint32-head.md" %}}
+{{% api "_display-furo-fat-Uint32-head.md" %}}
 
 ## Attributes and Properties
-{{% api "_display-furo-fat-uint32-properties.md" %}}
+{{% api "_display-furo-fat-Uint32-properties.md" %}}
 
 
 
@@ -35,7 +35,7 @@ Every display-xxx component should implement the following API:
 
 
 ## Methods
-{{% api "_display-furo-fat-uint32-methods.md" %}}
+{{% api "_display-furo-fat-Uint32-methods.md" %}}
 
 
 ### **_formatDisplay**
@@ -63,5 +63,5 @@ Binds a field node to the component
 
 
 
-{{% api "_display-furo-fat-uint32-footer.md" %}}
-{{% api "_display-furo-fat-uint32-scripts.md" %}}
+{{% api "_display-furo-fat-Uint32-footer.md" %}}
+{{% api "_display-furo-fat-Uint32-scripts.md" %}}

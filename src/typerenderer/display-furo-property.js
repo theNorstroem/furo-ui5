@@ -9,12 +9,9 @@ import { FieldNode } from '@furo/data/src/lib/FieldNode';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- *
- * @summary
- * @element
- * @demo demo-display-furo-property Basic Usage
+ * @summary display renderer for `furo.Property`
+ * @element display-furo-property
  */
 export class DisplayFuroProperty extends FBP(LitElement) {
   constructor() {

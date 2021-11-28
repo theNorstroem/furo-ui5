@@ -9,11 +9,9 @@ import '@ui5/webcomponents/dist/ColorPalette.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-google-type-color Basic Usage
+ * @summary display renderer for `google.type.Color`
+ * @element display-google-type-color
  */
 class DisplayGoolgeTypeColor extends LitElement {
   constructor() {

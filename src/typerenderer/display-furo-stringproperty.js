@@ -7,12 +7,9 @@ import { DisplayString } from './display-string.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- *
- * @summary
- * @element
- * @demo demo-display-furo-stringproperty Basic Usage
+ * @summary display renderer for `furo.Stringproperty`
+ * @element display-furo-stringproperty
  */
 export class DisplayFuroStringproperty extends DisplayString {
   /**

@@ -13,11 +13,9 @@ import { DisplayGoogleTypeMoney } from './display-google-type-money.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-furo-type-money Basic Usage
+ * @summary display renderer for `furo.type.Money`
+ * @element display-furo-type-money
  */
 class DisplayFuroTypeMoney extends DisplayGoogleTypeMoney {
   _formatDisplay() {

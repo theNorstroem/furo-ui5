@@ -1,6 +1,6 @@
 ---
 title: display-google-protobuf-boolvalue
-description: 
+description: display renderer for `google.protobuf.BoolValue`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/display-bool.js*
 <br>superclass *DisplayBool*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.protobuf.BoolValue`
 
 ## Description
 

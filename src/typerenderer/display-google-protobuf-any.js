@@ -6,11 +6,9 @@ import { LitElement, css } from 'lit';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-google-protobuf-any Basic Usage
+ * @summary display renderer for `google.protobuf.`
+ * @element display-google-protobuf-
  */
 class DisplayGoolgeProtobufAny extends LitElement {
   constructor() {

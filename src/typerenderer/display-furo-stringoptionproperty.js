@@ -7,12 +7,9 @@ import { DisplayFuroStringproperty } from './display-furo-stringproperty.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- *
- * @summary
- * @element
- * @demo demo-display-furo-stringoptionproperty Basic Usage
+ * @summary display renderer for `furo.Stringoptionproperty`
+ * @element display-furo-stringoptionproperty
  */
 export class DisplayFuroStringoptionproperty extends DisplayFuroStringproperty {
   /**

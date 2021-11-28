@@ -1,6 +1,6 @@
 ---
 title: display-google-protobuf-floatvalue
-description: 
+description: display renderer for `google.protobuf.FloatValue`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/display-float.js*
 <br>superclass *DisplayFloat*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.protobuf.FloatValue`
 
 ## Description
 

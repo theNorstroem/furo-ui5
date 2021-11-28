@@ -1,6 +1,6 @@
 ---
 title: display-uint64
-description: 
+description: display renderer for `uint64`
 weight: 50
 ---
 
@@ -12,7 +12,7 @@ weight: 50
 <br>extends */src/typerenderer/display-int64.js*
 <br>superclass *DisplayInt64*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `uint64`
 
 ## Description
 

@@ -8,11 +8,9 @@ import { DisplayBool } from './display-bool.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-furo-fat-bool Basic Usage
+ * @summary display renderer for `furo.fat.Bool`
+ * @element display-furo-fat-bool
  */
 class DisplayFuroFatBool extends DisplayBool {
   /**

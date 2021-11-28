@@ -1,6 +1,6 @@
 ---
 title: display-furo-fat-bool
-description: 
+description: display renderer for `furo.fat.Bool`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/display-bool.js*
 <br>superclass *DisplayBool*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `furo.fat.Bool`
 
 ## Description
 

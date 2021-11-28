@@ -11,11 +11,9 @@ import { Env } from '@furo/framework/src/furo.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-google-type-money Basic Usage
+ * @summary display renderer for `google.type.Money`
+ * @element display-google-type-money
  */
 export class DisplayGoogleTypeMoney extends LitElement {
   constructor() {

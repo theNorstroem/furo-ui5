@@ -1,6 +1,6 @@
 ---
 title: display-google-protobuf-stringvalue
-description: 
+description: display renderer for `google.protobuf.StringValue`
 weight: 50
 ---
 
@@ -11,12 +11,12 @@ weight: 50
 <br>extends */src/typerenderer/display-string.js*
 <br>superclass *DisplayString*</small>
 
-> **Summary:** 
+> **Summary:** display renderer for `google.protobuf.StringValue`
 
 ## Description
 
 `display-google-protobuf-stringvalue`
-The display-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.Stringvalue` in read only mode.
+The display-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.StringValue` in read only mode.
 
 Every display-xxx component should implement the following API:
 - function: bindData(fieldNode){...}

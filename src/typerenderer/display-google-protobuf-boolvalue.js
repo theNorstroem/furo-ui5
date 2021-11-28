@@ -6,11 +6,9 @@ import { DisplayBool } from './display-bool.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-google-protobuf-boolvalue Basic Usage
+ * @summary display renderer for `google.protobuf.BoolValue`
+ * @element display-google-protobuf-boolvalue
  */
 class DisplayGoolgeProtobufBoolvalue extends DisplayBool {}
 

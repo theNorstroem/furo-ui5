@@ -8,11 +8,9 @@ import { Env } from '@furo/framework/src/furo.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-float Basic Usage
+ * @summary display renderer for `float`
+ * @element display-float
  */
 export class DisplayFloat extends LitElement {
   constructor() {

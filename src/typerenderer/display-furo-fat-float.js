@@ -6,11 +6,9 @@ import { DisplayFloat } from './display-float.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-furo-fat-float Basic Usage
+ * @summary display renderer for `furo.fat.Float`
+ * @element display-furo-fat-float
  */
 class DisplayFuroFatFloat extends DisplayFloat {
   _formatDisplay() {
