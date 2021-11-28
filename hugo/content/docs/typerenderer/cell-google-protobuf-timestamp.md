@@ -1,6 +1,6 @@
 ---
 title: cell-google-protobuf-timestamp
-description: 
+description: cell display renderer for `google.protobuf.Timestamp`
 weight: 50
 ---
 
@@ -10,7 +10,7 @@ weight: 50
 <br>exports `<cell-google-protobuf-timestamp>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `google.protobuf.Timestamp`
 
 ## Description
 

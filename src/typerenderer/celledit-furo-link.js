@@ -6,11 +6,9 @@ import { LitElement, html, css } from 'lit';
  *
  * Every celledit-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo celledit-furo-link Basic Usage
+ * @summary celledit renderer for `furo.Link`
+ * @element celledit-furo-link
  */
 class CelleditFuroLink extends LitElement {
   static get styles() {

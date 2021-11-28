@@ -1,6 +1,6 @@
 ---
 title: celledit-float
-description: celledit renderer for float
+description: celledit renderer for `float`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
-> **Summary:** celledit renderer for float
+> **Summary:** celledit renderer for `float`
 
 ## Description
 

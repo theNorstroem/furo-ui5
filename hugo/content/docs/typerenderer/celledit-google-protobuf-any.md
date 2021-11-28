@@ -1,6 +1,6 @@
 ---
 title: celledit-google-protobuf-any
-description: 
+description: celledit renderer for `google.protobuf.Any`
 weight: 50
 ---
 
@@ -10,7 +10,7 @@ weight: 50
 <br>exports `<celledit-google-protobuf-any>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** celledit renderer for `google.protobuf.Any`
 
 ## Description
 

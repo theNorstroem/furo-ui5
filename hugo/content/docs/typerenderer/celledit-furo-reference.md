@@ -1,17 +1,18 @@
 ---
 title: celledit-furo-reference
-description: 
+description: celledit renderer for `furo.Reference`
 weight: 50
 ---
 
 # celledit-furo-reference
 **@furo/typerenderer** <small>v1.0.0-rc.8</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-reference.js';`<small>
+<br>exports *CelleditFuroReference* js
 <br>exports `<celledit-furo-reference>` custom-element-definition
 <br>extends */src/furo-ui5-reference-search.js*
 <br>superclass *FuroUi5ReferenceSearch*</small>
 
-> **Summary:** 
+> **Summary:** celledit renderer for `furo.Reference`
 
 ## Description
 

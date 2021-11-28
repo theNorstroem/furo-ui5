@@ -1,6 +1,6 @@
 ---
 title: cell-google-protobuf-any
-description: 
+description: cell display renderer for `google.protobuf.Any`
 weight: 50
 ---
 
@@ -10,7 +10,7 @@ weight: 50
 <br>exports `<cell-google-protobuf-any>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `google.protobuf.Any`
 
 ## Description
 

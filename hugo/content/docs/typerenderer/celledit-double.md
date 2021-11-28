@@ -1,6 +1,6 @@
 ---
 title: celledit-double
-description: celledit renderer for double
+description: celledit renderer for `double`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
-> **Summary:** celledit renderer for double
+> **Summary:** celledit renderer for `double`
 
 ## Description
 

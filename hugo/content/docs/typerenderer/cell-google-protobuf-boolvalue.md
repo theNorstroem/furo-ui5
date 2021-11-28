@@ -1,6 +1,6 @@
 ---
 title: cell-google-protobuf-boolvalue
-description: 
+description: cell display renderer for `google.protobuf.BoolValue`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/cell-bool.js*
 <br>superclass *CellBool*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `google.protobuf.BoolValue`
 
 ## Description
 

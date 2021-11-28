@@ -6,11 +6,9 @@ import { LitElement, css } from 'lit';
  *
  * Every celledit-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo celledit-google-protobuf-any Basic Usage
+ * @summary celledit renderer for `google.protobuf.Any`
+ * @element celledit-google-protobuf-any
  */
 class CelleditGoolgeProtobufAny extends LitElement {
   constructor() {

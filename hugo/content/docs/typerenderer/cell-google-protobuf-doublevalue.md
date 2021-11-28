@@ -1,6 +1,6 @@
 ---
 title: cell-google-protobuf-doublevalue
-description: 
+description: cell display renderer for `google.protobuf.DoubleValue`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/cell-double.js*
 <br>superclass *CellDouble*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `google.protobuf.DoubleValue`
 
 ## Description
 

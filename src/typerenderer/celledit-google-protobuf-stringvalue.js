@@ -1,5 +1,10 @@
 import { CelleditString } from './celledit-string.js';
 
+/**
+ *
+ * @summary celledit renderer for `google.protobuf.StringValue`
+ * @element celledit-google-protobuf-stringvalue
+ */
 class CelleditGoogleProtobufStringvalue extends CelleditString {
   /**
    * @private

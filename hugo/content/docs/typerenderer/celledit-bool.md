@@ -1,6 +1,6 @@
 ---
 title: celledit-bool
-description: celledit renderer for bool
+description: celledit renderer for `bool`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-checkbox-input.js*
 <br>superclass *FuroUi5CheckboxInput*</small>
 
-> **Summary:** celledit renderer for bool
+> **Summary:** celledit renderer for `bool`
 
 ## Description
 

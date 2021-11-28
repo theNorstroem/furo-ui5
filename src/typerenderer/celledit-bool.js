@@ -6,7 +6,7 @@ import { FuroUi5CheckboxInput } from '../furo-ui5-checkbox-input.js';
  *
  * It uses furo-ui5-checkbox-input as the renderer
  *
- * @summary celledit renderer for bool
+ * @summary celledit renderer for `bool`
  * @element celledit-bool
  */
 export class CelleditBool extends FuroUi5CheckboxInput {

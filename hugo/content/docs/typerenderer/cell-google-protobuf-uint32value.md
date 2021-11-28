@@ -1,6 +1,6 @@
 ---
 title: cell-google-protobuf-uint32value
-description: 
+description: cell display renderer for `google.protobuf.Uint32Value`
 weight: 50
 ---
 
@@ -11,12 +11,12 @@ weight: 50
 <br>extends */src/typerenderer/cell-uint32.js*
 <br>superclass *CellUint32*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `google.protobuf.Uint32Value`
 
 ## Description
 
 `cell-google-protobuf-boolvalue`
-The cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.
+The cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Uint32Value` in read only mode.
 
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}

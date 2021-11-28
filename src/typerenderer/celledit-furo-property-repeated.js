@@ -9,12 +9,9 @@ import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
  *
  * Every celledit-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- *
- * @summary
- * @element
- * @demo demo-celledit-furo-property-repeats Basic Usage
+ * @summary celledit renderer for `[] furo.Property`
+ * @element celledit-furo-property-repeated
  */
 export class CelleditFuroPropertyRepeated extends FBP(LitElement) {
   constructor() {

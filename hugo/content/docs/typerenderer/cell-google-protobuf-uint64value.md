@@ -1,6 +1,6 @@
 ---
 title: cell-google-protobuf-uint64value
-description: 
+description: cell display renderer for `google.protobuf.Uint64Value`
 weight: 50
 ---
 
@@ -11,12 +11,12 @@ weight: 50
 <br>extends */src/typerenderer/cell-uint64.js*
 <br>superclass *CellUint64*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `google.protobuf.Uint64Value`
 
 ## Description
 
 `cell-google-protobuf-boolvalue`
-The cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.
+The cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Uint64Value` in read only mode.
 
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}

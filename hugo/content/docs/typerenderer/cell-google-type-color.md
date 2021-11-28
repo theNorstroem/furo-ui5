@@ -1,6 +1,6 @@
 ---
 title: cell-google-type-color
-description: 
+description: cell display renderer for `google.type.Color`
 weight: 50
 ---
 
@@ -10,7 +10,7 @@ weight: 50
 <br>exports `<cell-google-type-color>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `google.type.Color`
 
 ## Description
 

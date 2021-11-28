@@ -1,6 +1,11 @@
 // eslint-disable-next-line import/named
 import { CelleditInt32 } from './celledit-int32.js';
-
+/**
+ *
+ *
+ * @summary celledit renderer for `uint32`
+ * @element celledit-uint32
+ */
 export class CelleditUint32 extends CelleditInt32 {
   /**
    * @private

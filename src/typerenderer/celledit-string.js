@@ -3,6 +3,8 @@ import { FuroUi5TextInput } from '../furo-ui5-text-input.js';
 
 /**
  *
+ *
+ * @summary celledit renderer for `string`
  * @element celledit-string
  */
 export class CelleditString extends FuroUi5TextInput {

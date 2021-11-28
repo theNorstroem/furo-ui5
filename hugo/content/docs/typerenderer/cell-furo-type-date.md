@@ -1,6 +1,6 @@
 ---
 title: cell-furo-type-date
-description: 
+description: cell display renderer for `furo.type.Date`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/cell-google-type-date.js*
 <br>superclass *CellGoogleTypeDate*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `furo.type.Date`
 
 ## Description
 

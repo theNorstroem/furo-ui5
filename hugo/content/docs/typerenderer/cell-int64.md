@@ -1,6 +1,6 @@
 ---
 title: cell-int64
-description: 
+description: cell display renderer for `int64`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>exports `<cell-int64>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `int64`
 
 ## Description
 

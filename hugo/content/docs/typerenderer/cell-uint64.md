@@ -1,6 +1,6 @@
 ---
 title: cell-uint64
-description: 
+description: cell display renderer for `uint64`
 weight: 50
 ---
 
@@ -12,7 +12,7 @@ weight: 50
 <br>extends */src/typerenderer/cell-int64.js*
 <br>superclass *CellInt64*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `uint64`
 
 ## Description
 

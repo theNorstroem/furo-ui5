@@ -1,6 +1,6 @@
 ---
 title: celledit-furo-type-money
-description: 
+description: celledit renderer for `furo.type.Money`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-money-input.js*
 <br>superclass *FuroUi5MoneyInput*</small>
 
-> **Summary:** 
+> **Summary:** celledit renderer for `furo.type.Money`
 
 ## Description
 

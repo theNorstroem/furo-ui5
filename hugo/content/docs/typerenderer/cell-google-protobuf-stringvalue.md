@@ -1,6 +1,6 @@
 ---
 title: cell-google-protobuf-stringvalue
-description: 
+description: cell display renderer for `google.protobuf.StringValue`
 weight: 50
 ---
 
@@ -10,12 +10,12 @@ weight: 50
 <br>exports `<cell-google-protobuf-stringvalue>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `google.protobuf.StringValue`
 
 ## Description
 
 `cell-google-protobuf-stringvalue`
-The cell-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.Stringvalue` in read only mode.
+The cell-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.StringValue` in read only mode.
 
 Every cell-xxx component should implement the following API:
 - function: bindData(fieldNode){...}
@@ -45,15 +45,6 @@ Binds a field node to the component
 - <small>fieldNode </small>
 <br><br>
 
-### **_updateValue**
-<small>**_updateValue**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--update-value</span>
-
-
-
-<br><br>
 
 
 

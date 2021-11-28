@@ -6,7 +6,7 @@ import { CelleditInt32 } from './celledit-int32.js';
  *
  * It uses furo-ui5-number-input as the renderer
  *
- * @summary celledit renderer for google.protobuf.Double
+ * @summary celledit renderer for `google.protobuf.Double`
  * @element celledit-google-protobuf-doublevalue
  */
 class CelleditGoogleProtobufDoublevalue extends CelleditInt32 {

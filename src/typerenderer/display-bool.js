@@ -11,11 +11,9 @@ import '@ui5/webcomponents-icons/dist/less.js';
  *
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- * @summary
- * @element
- * @demo demo display-bool Basic Usage
+ * @summary display renderer for `bool`
+ * @element display-bool
  */
 export class DisplayBool extends LitElement {
   static get styles() {

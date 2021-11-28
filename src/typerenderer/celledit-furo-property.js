@@ -9,12 +9,9 @@ import { FieldNode } from '@furo/data/src/lib/FieldNode';
  *
  * Every celledit-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
-
  *
- *
- * @summary
- * @element
- * @demo demo-celledit-furo-property Basic Usage
+ * @summary celledit renderer for `furo.Property`
+ * @element celledit-furo-property
  */
 export class CelleditFuroProperty extends FBP(LitElement) {
   constructor() {

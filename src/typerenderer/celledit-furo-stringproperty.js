@@ -1,5 +1,10 @@
 import { CelleditString } from './celledit-string.js';
 
+/**
+ *
+ * @summary celledit renderer for `furo.Stringproperty`
+ * @element celledit-furo-stringproperty
+ */
 class CelleditFuroStringproperty extends CelleditString {
   /**
    * @private

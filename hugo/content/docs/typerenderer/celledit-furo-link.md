@@ -1,6 +1,6 @@
 ---
 title: celledit-furo-link
-description: 
+description: celledit renderer for `furo.Link`
 weight: 50
 ---
 
@@ -10,7 +10,7 @@ weight: 50
 <br>exports `<celledit-furo-link>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** celledit renderer for `furo.Link`
 
 ## Description
 

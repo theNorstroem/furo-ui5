@@ -82,6 +82,10 @@ class CellGoogleProtobufStringvalue extends LitElement {
     }
   }
 
+  /**
+   *
+   * @private
+   */
   _updateValue() {
     if (this._field && this._field.value) {
       this._displayValue = this._field.value._value;

@@ -1,6 +1,6 @@
 ---
 title: celledit-furo-fat-int64
-description: celledit renderer for furo.fat.Int64
+description: celledit renderer for `furo.fat.Int64`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/typerenderer/celledit-int32.js*
 <br>superclass *CelleditInt32*</small>
 
-> **Summary:** celledit renderer for furo.fat.Int64
+> **Summary:** celledit renderer for `furo.fat.Int64`
 
 ## Description
 

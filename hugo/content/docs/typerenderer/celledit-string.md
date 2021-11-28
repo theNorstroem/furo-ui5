@@ -1,6 +1,6 @@
 ---
 title: celledit-string
-description: 
+description: celledit renderer for `string`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>extends */src/furo-ui5-text-input.js*
 <br>superclass *FuroUi5TextInput*</small>
 
-> **Summary:** 
+> **Summary:** celledit renderer for `string`
 
 ## Description
 

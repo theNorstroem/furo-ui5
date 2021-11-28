@@ -6,7 +6,7 @@ import { FuroUi5MoneyInput } from '../furo-ui5-money-input.js';
  *
  * It uses furo-ui5-money-input as the renderer
  *
- * @summary celledit renderer for google.type.Money
+ * @summary celledit renderer for `google.type.Money`
  * @element celledit-google-type-money
  */
 class CelleditGoogleTypeMoney extends FuroUi5MoneyInput {}

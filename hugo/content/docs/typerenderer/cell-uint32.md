@@ -1,6 +1,6 @@
 ---
 title: cell-uint32
-description: 
+description: cell display renderer for `uint32`
 weight: 50
 ---
 
@@ -12,12 +12,12 @@ weight: 50
 <br>extends */src/typerenderer/cell-int32.js*
 <br>superclass *CellInt32*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `uint32`
 
 ## Description
 
 `cell-uint32`
-The cell-uint32 component displays a FieldNode of type `uint64` in read only mode.
+The cell-uint32 component displays a FieldNode of type `uint32` in read only mode.
 
 The component uses locale from the environment to display the date value accordingly.
 https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat

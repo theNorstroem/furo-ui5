@@ -1,6 +1,6 @@
 ---
 title: cell-int32
-description: 
+description: cell display renderer for `int32`
 weight: 50
 ---
 
@@ -11,7 +11,7 @@ weight: 50
 <br>exports `<cell-int32>` custom-element-definition
 <br>superclass *LitElement*</small>
 
-> **Summary:** 
+> **Summary:** cell display renderer for `int32`
 
 ## Description
 
