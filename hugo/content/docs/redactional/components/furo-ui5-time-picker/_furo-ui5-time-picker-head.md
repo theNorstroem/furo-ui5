@@ -10,19 +10,17 @@ bookHidden: true
 <template>
 <furo-form-layouter four>
 <furo-ui5-time-picker
-    ƒ-bind-data="--dataObjectDebounced(*.furo_data_time_input)"
+    ƒ-bind-data="--dataObject(*.furo_data_time_input)"
  ></furo-ui5-time-picker>
 <furo-ui5-time-picker
     value-state="Information" 
-    ƒ-bind-data="--dataObjectDebounced(*.furo_data_time_input)"
+    ƒ-bind-data="--dataObject(*.furo_data_time_input)"
  ></furo-ui5-time-picker>
 </furo-form-layouter>
 <furo-data-object
   type="experiment.Experiment"
   @-object-ready="--dataObject"
 ></furo-data-object>
-<!-- Workaround, because data object is way faster ready -->
-<furo-de-bounce wait="100" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
 </template>
 </furo-demo-snippet>
 

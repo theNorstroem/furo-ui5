@@ -10,20 +10,18 @@ bookHidden: true
 <template>
 <furo-form-layouter four>
 <furo-ui5-textarea-input
-    ƒ-bind-data="--dataObjectDebounced(*.furo_data_textarea_input)"
+    ƒ-bind-data="--dataObject(*.furo_data_textarea_input)"
  ></furo-ui5-textarea-input>
 <furo-ui5-textarea-input
     value-state="Information" 
     rows="9"
-    ƒ-bind-data="--dataObjectDebounced(*.furo_data_textarea_input)"
+    ƒ-bind-data="--dataObject(*.furo_data_textarea_input)"
  ></furo-ui5-textarea-input>
 </furo-form-layouter>
 <furo-data-object
   type="experiment.Experiment"
   @-object-ready="--dataObject"
 ></furo-data-object>
-<!-- Workaround, because data object is way faster ready -->
-<furo-de-bounce wait="1" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
 </template>
 </furo-demo-snippet>
 
