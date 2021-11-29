@@ -37,34 +37,34 @@
             <furo-form-layouter four>
               <furo-ui5-radio-button
                 name="A"
-                ƒ-bind-data="--doExp(*.furo_data_bool_icon)"
+                ƒ-bind-data="--doExp(*.wrapper_bool)"
               ></furo-ui5-radio-button>
               <furo-ui5-radio-button
                 name="A"
                 text="Override"
-                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+                ƒ-bind-data="--doExp(*.fat_bool)"
               ></furo-ui5-radio-button>
 
               <furo-ui5-radio-button
                 disabled
-                ƒ-bind-data="--doExp(*.furo_data_bool_icon)"
+                ƒ-bind-data="--doExp(*.wrapper_bool)"
               ></furo-ui5-radio-button>
 
               <furo-ui5-radio-button
                 disabled
                 value-state="Warning"
                 placeholder="Placeholder"
-                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+                ƒ-bind-data="--doExp(*.fat_bool)"
               ></furo-ui5-radio-button>
 
               <furo-ui5-checkbox-input
                 value-state="Success"
                 text="Some Text"
-                ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+                ƒ-bind-data="--doExp(*.fat_bool)"
               ></furo-ui5-checkbox-input>
             </furo-form-layouter>
             <furo-data-object
-              type="experiment.Experiment"
+              type="universaltest.Universaltest"
               @-object-ready="--doExp"
             ></furo-data-object>
           </template>

@@ -34,7 +34,7 @@ import { Events } from './lib/Events.js';
  *  - **"readonly":"true"** set the element to readonly
  *  - **"disabled":"true"** set the element to disabled
  *  - **"icon":""** set the icon
- *  - **"design":""** set the design
+ *  - **"value-state":""** set the value-state
  *
  * ## supported meta and constraints
  * - **readonly: true** , set the element to readonly
@@ -56,8 +56,8 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
     super();
 
     // used to restore the state after a invalidation -> validation change
-    this._previousDesign = 'Default';
-
+    this._previousValueState = 'None';
+    this._tmpFAT = { labels: {}, value: false };
     this._attributesFromFNA = {
       readonly: undefined,
       disabled: undefined,
@@ -70,7 +70,7 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
       name: undefined, // the group name
       label: undefined,
       icon: undefined,
-      design: undefined,
+      'value-state': undefined,
     };
 
     this._labelsFromFAT = {
@@ -87,7 +87,7 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
       disabled: null,
       text: null,
       icon: null,
-      design: null,
+      'value-state': null,
     };
 
     this.addEventListener('change', this._updateFNA);
@@ -242,16 +242,15 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
       this._render();
     }
 
-    // design and corresponding message
-    if (fatAttributes.design !== undefined) {
+    // value-state and corresponding message
+    if (fatAttributes['value-state'] !== undefined) {
       // save state as previous state
-      this._previousDesign = fatAttributes.design;
-      this._setDesign(fatAttributes.design);
+      this._previousValueState = fatAttributes['value-state'];
+      this._setValueState(fatAttributes['value-state']);
     } else {
       // remove state if fat does not have state, even it is set in the html
-      // save state as previous state
-      this._previousDesign = 'Default';
-      this._setDesign('Default');
+      this._previousValueState = 'None';
+      this._setValueState(fatAttributes['value-state']);
     }
   }
 
@@ -259,7 +258,7 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
    * overwrite onFnaFieldNodeBecameInvalid function
    */
   onFnaFieldNodeBecameInvalid() {
-    this._setDesign('Error');
+    this._setValueState('Error');
   }
 
   /**
@@ -267,24 +266,24 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
    * @private
    */
   onFnaFieldNodeBecameValid() {
-    this._resetDesign();
+    this._resetValueState();
   }
 
   /**
-   * Updates the design
+   * Updates the state
    *
    * @private
    */
-  _setDesign(design) {
-    this.design = design;
+  _setValueState(valueState) {
+    this.valueState = valueState;
   }
 
   /**
    * reset to previous value state
    * @private
    */
-  _resetDesign() {
-    this._setDesign(this._previousDesign);
+  _resetValueState() {
+    this._setValueState(this._previousValueState);
   }
 
   /**
