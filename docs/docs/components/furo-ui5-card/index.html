@@ -7,23 +7,17 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="furo-ui5-card #  @furo/components v1.0.0-rc.8 import &#39;@furo/components/src/furo-ui5-card.js&#39;; exports FuroUi5Card js exports &lt;furo-ui5-card&gt; custom-element-definition superclass LitElement mixes FBP
- Summary:
- Description #  The furo-ui5-card is a bindable card that represents information in the form of a tile with separate header and content areas.
-1 2 3 4 5 6 7 8  &lt;furo-ui5-card heading=&#34;Title&#34; subheading=&#34;Secondary text&#34; icon=&#34;card&#34; &gt; &lt;div slot=&#34;action&#34;&gt;&lt;furo-ui5-button&gt;Action&lt;/furo-ui5-button&gt;&lt;/div&gt; &lt;div slot=&#34;content&#34;&gt;content goes here&lt;/div&gt; &lt;/furo-ui5-card&gt;   How To Use Semantic Colors #  You can use semantic colors to visualize the status or state.">
+<meta name="description" content="Ui5 card with data bindings">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-card" />
-<meta property="og:description" content="furo-ui5-card #  @furo/components v1.0.0-rc.8 import &#39;@furo/components/src/furo-ui5-card.js&#39;; exports FuroUi5Card js exports &lt;furo-ui5-card&gt; custom-element-definition superclass LitElement mixes FBP
- Summary:
- Description #  The furo-ui5-card is a bindable card that represents information in the form of a tile with separate header and content areas.
-1 2 3 4 5 6 7 8  &lt;furo-ui5-card heading=&#34;Title&#34; subheading=&#34;Secondary text&#34; icon=&#34;card&#34; &gt; &lt;div slot=&#34;action&#34;&gt;&lt;furo-ui5-button&gt;Action&lt;/furo-ui5-button&gt;&lt;/div&gt; &lt;div slot=&#34;content&#34;&gt;content goes here&lt;/div&gt; &lt;/furo-ui5-card&gt;   How To Use Semantic Colors #  You can use semantic colors to visualize the status or state." />
+<meta property="og:description" content="Ui5 card with data bindings" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-card/" />
-<meta property="article:modified_time" content="2021-11-28T11:06:03+01:00" />
+<meta property="article:modified_time" content="2021-11-29T10:26:31+01:00" />
 <title>furo-ui5-card | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.5d05e39730c7a766def9a478b82e4c849a40ee0cb171124d7189d2bd6b07f086.js" integrity="sha256-XQXjlzDHp2be&#43;aR4uC5MhJpA7gyxcRJNcYnSvWsH8IY="></script>
+<script defer src="/en.search.min.524961c691158c3cdbeeb023a9cd4da583b6401673bb806ff846d887811a3161.js" integrity="sha256-UklhxpEVjDzb7rAjqc1NpYO2QBZzu4Bv&#43;EbYh4EaMWE="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3604,14 +3598,14 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-card
   <a class="anchor" href="#furo-ui5-card">#</a>
 </h1>
-<p><strong>@furo/components</strong> <small>v1.0.0-rc.8</small>
+<p><strong>@furo/components</strong> <small>v1.0.0-rc.9</small>
 <br><code>import '@furo/components/src/furo-ui5-card.js';</code><small>
 <br>exports <em>FuroUi5Card</em> js
 <br>exports <code>&lt;furo-ui5-card&gt;</code> custom-element-definition
 <br>superclass <em>LitElement</em>
 <br> mixes <em>FBP</em></small></p>
 <blockquote>
-<p><strong>Summary:</strong></p>
+<p><strong>Summary:</strong> Ui5 card with data bindings</p>
 </blockquote>
 <h2 id="description">
   Description
@@ -3652,37 +3646,47 @@ separate header and content areas.</p>
 <li>Critical (&ndash;sapCriticalColor)</li>
 <li>Neutral (&ndash;sapCriticalColor)</li>
 </ul>
-<ul>
-<li>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code></code></pre></td>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"></code></pre></td></tr></table>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-card</span>
+   <span style="color:#008080">design</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Positive&#34;</span>
+   <span style="color:#008080">icon</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;card&#34;</span>
+ &gt;
+     &lt;<span style="color:#000080">div</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;content&#34;</span>&gt;content goes here&lt;/<span style="color:#000080">div</span>&gt;
+ &lt;/<span style="color:#000080">furo-ui5-card</span>&gt;
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-<p>&lt;furo-ui5-card
-design=&ldquo;Positive&rdquo;
-icon=&ldquo;card&rdquo;</p>
-<blockquote>
-</blockquote>
-<pre><code> &lt;div slot=&quot;content&quot;&gt;content goes here&lt;/div&gt;
-</code></pre>
- </furo-ui5-card>
-```
-<h4 id="example">
+</div><h4 id="example">
   Example
   <a class="anchor" href="#example">#</a>
 </h4>
-<furo-demo-snippet>
-<template>
- <furo-ui5-card icon="globe" heading="Title" subheading="Secondary text" icon="card">
+<furo-ui5-card design="Positive" icon="globe" heading="Title" subheading="Secondary text" icon="card">
    <div slot="action"><furo-ui5-button>Action</furo-ui5-button></div>
    <div slot="content">content goes here</div>
  </furo-ui5-card>
-</template>
-</furo-demo-snippet>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-card</span> <span style="color:#008080">design</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Positive&#34;</span> <span style="color:#008080">icon</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;globe&#34;</span> <span style="color:#008080">heading</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Title&#34;</span> <span style="color:#008080">subheading</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Secondary text&#34;</span> <span style="color:#008080">icon</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;card&#34;</span>&gt;
+   &lt;<span style="color:#000080">div</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;action&#34;</span>&gt;&lt;<span style="color:#000080">furo-ui5-button</span>&gt;Action&lt;/<span style="color:#000080">furo-ui5-button</span>&gt;&lt;/<span style="color:#000080">div</span>&gt;
+   &lt;<span style="color:#000080">div</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;content&#34;</span>&gt;content goes here&lt;/<span style="color:#000080">div</span>&gt;
+ &lt;/<span style="color:#000080">furo-ui5-card</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="attributes-and-properties">
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
@@ -3852,9 +3856,9 @@ Supported types: scalar types e.g. string</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/fc2f2432a6e422752ed21108af1b940daf5a33d0" title='Last modified by veith | November 28, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/a14a1813fc371daaea139ac9456e28f509b2903c" title='Last modified by veith | November 29, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 28, 2021</span>
+      <span>November 29, 2021</span>
     </a>
   </div>
 
@@ -3925,15 +3929,15 @@ Supported types: scalar types e.g. string</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/route.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 

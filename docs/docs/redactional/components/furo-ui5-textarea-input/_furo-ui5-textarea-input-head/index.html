@@ -7,17 +7,17 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Example #            1 2 3 4 5 6 7 8  &lt;furo-ui5-textarea-input ƒ-bind-data=&#34;--dataObject(*.furo_data_textarea_input)&#34; &gt;&lt;/furo-ui5-textarea-input&gt; &lt;furo-ui5-textarea-input rows=&#34;9&#34; value-state=&#34;Information&#34; ƒ-bind-data=&#34;--dataObject(*.furo_data_textarea_input)&#34; &gt;&lt;/furo-ui5-textarea-input&gt;   ">
+<meta name="description" content="Example #           1 2 3 4 5 6 7 8  &lt;furo-ui5-textarea-input ƒ-bind-data=&#34;--dataObject(*.furo_data_textarea_input)&#34; &gt;&lt;/furo-ui5-textarea-input&gt; &lt;furo-ui5-textarea-input rows=&#34;9&#34; value-state=&#34;Information&#34; ƒ-bind-data=&#34;--dataObject(*.furo_data_textarea_input)&#34; &gt;&lt;/furo-ui5-textarea-input&gt;   ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="Example #            1 2 3 4 5 6 7 8  &lt;furo-ui5-textarea-input ƒ-bind-data=&#34;--dataObject(*.furo_data_textarea_input)&#34; &gt;&lt;/furo-ui5-textarea-input&gt; &lt;furo-ui5-textarea-input rows=&#34;9&#34; value-state=&#34;Information&#34; ƒ-bind-data=&#34;--dataObject(*.furo_data_textarea_input)&#34; &gt;&lt;/furo-ui5-textarea-input&gt;   " />
+<meta property="og:description" content="Example #           1 2 3 4 5 6 7 8  &lt;furo-ui5-textarea-input ƒ-bind-data=&#34;--dataObject(*.furo_data_textarea_input)&#34; &gt;&lt;/furo-ui5-textarea-input&gt; &lt;furo-ui5-textarea-input rows=&#34;9&#34; value-state=&#34;Information&#34; ƒ-bind-data=&#34;--dataObject(*.furo_data_textarea_input)&#34; &gt;&lt;/furo-ui5-textarea-input&gt;   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/redactional/components/furo-ui5-textarea-input/_furo-ui5-textarea-input-head/" />
-<meta property="article:modified_time" content="2021-11-26T15:26:12+01:00" />
+<meta property="article:modified_time" content="2021-11-29T11:02:45+01:00" />
 <title>Furo Ui5 Textarea Input Head | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.5d05e39730c7a766def9a478b82e4c849a40ee0cb171124d7189d2bd6b07f086.js" integrity="sha256-XQXjlzDHp2be&#43;aR4uC5MhJpA7gyxcRJNcYnSvWsH8IY="></script>
+<script defer src="/en.search.min.524961c691158c3cdbeeb023a9cd4da583b6401673bb806ff846d887811a3161.js" integrity="sha256-UklhxpEVjDzb7rAjqc1NpYO2QBZzu4Bv&#43;EbYh4EaMWE="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3559,20 +3559,18 @@ https://github.com/alex-shpak/hugo-book
 <template>
 <furo-form-layouter four>
 <furo-ui5-textarea-input
-    ƒ-bind-data="--dataObjectDebounced(*.furo_data_textarea_input)"
+    ƒ-bind-data="--dataObject(*.furo_data_textarea_input)"
  ></furo-ui5-textarea-input>
 <furo-ui5-textarea-input
     value-state="Information" 
     rows="9"
-    ƒ-bind-data="--dataObjectDebounced(*.furo_data_textarea_input)"
+    ƒ-bind-data="--dataObject(*.furo_data_textarea_input)"
  ></furo-ui5-textarea-input>
 </furo-form-layouter>
 <furo-data-object
   type="experiment.Experiment"
   @-object-ready="--dataObject"
 ></furo-data-object>
-<!-- Workaround, because data object is way faster ready -->
-<furo-de-bounce wait="1" ƒ-trigger="--dataObject" @-debounced="--dataObjectDebounced"></furo-de-bounce>
 </template>
 </furo-demo-snippet>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -3607,9 +3605,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/042f658d35bca133fffe3752689b08bd2fe61faf" title='Last modified by veith | November 26, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/d0235b2c521c37710f5d7f522fca9c67427ad4f8" title='Last modified by veith | November 29, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 26, 2021</span>
+      <span>November 29, 2021</span>
     </a>
   </div>
 
@@ -3638,15 +3636,15 @@ https://github.com/alex-shpak/hugo-book
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/route.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.10/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.11/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 
