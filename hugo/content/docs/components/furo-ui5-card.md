@@ -135,9 +135,10 @@ Fired when interactive header was clicked.
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-heading</span>
 
 Binds any **scalar** field to set the title of the panel.
+
 Supported types: scalar types e.g. `string`
 
-- <small>fieldNode </small>
+- <small>fieldNode `string`</small>
 <br><br>
 
 ### **bindIcon**
@@ -147,10 +148,12 @@ Supported types: scalar types e.g. `string`
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-icon</span>
 
 Binds a FieldNode to set the icon of the panel.
-Do not forget to import the icon you will use in your component.
-Supported types: string
 
-- <small>fieldNode </small>
+Do not forget to import the icon you will use in your component.
+
+Supported types: `string`
+
+- <small>fieldNode `string`</small>
 <br><br>
 
 ### **bindSubheading**
@@ -160,9 +163,10 @@ Supported types: string
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-subheading</span>
 
 Binds any **scalar** field to set the subtitle of the panel.
-Supported types: scalar types e.g. string
 
-- <small>fieldNode </small>
+Supported types: scalar types e.g. `string`
+
+- <small>fieldNode `string`</small>
 <br><br>
 
 ### **bindNavNode**
@@ -173,11 +177,11 @@ Supported types: scalar types e.g. string
 
 Binds a FieldNode with the following signature:
 
-- display_name (string)
-- secondary_text (string)
-- icon (string)
+- display_name (`string`)
+- secondary_text (`string`)
+- icon (`string`)
 
-- <small>fieldNode </small>
+- <small>fieldNode `string`</small>
 <br><br>
 
 

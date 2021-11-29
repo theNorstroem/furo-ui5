@@ -157,9 +157,10 @@ Fired when the input operation has finished by pressing Enter or on focusout.
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
 Binds a FieldNode to the component.
-Supported types: string, google.protobuf.Timestamp, int32, int64
 
-- <small>fieldNode </small>
+Supported types: `string`, `google.protobuf.Timestamp`, `int32`, `int64`
+
+- <small>fieldNode of type: `string`, `google.protobuf.Timestamp`, `int32`, `int64`</small>
 <br><br>
 
 ### **readAttributes**
