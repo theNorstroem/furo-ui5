@@ -730,7 +730,9 @@ export class FuroUi5Tree extends FBP(LitElement) {
   }
 
   /**
-   * Binds a FieldNode with a tree.Tree or tree.Navigationnode signature.
+   * Binds a FieldNode.
+   *
+   * Supported types: everything with a `tree.Tree` or `tree.Navigationnode` signature.
    *
    * @param treeNode{NavigationNode|Tree} Fieldnode
    */

@@ -142,6 +142,7 @@ export class FuroUi5PasswordInput extends FieldNodeAdapter(Input.default) {
 
   /**
    * Binds a FieldNode to the component.
+   *
    * Supported types: string, google.protobuf.StringValue, furo.fat.String
    * @param fieldNode {FieldNode}
    */

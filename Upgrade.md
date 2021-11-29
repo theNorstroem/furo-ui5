@@ -14,12 +14,7 @@ Put upgrade note in this file
 
 
 # Offene Punkte
-Alle Elemente Summarys damit http://localhost:1313/docs/components/ fein aussieht
-
-Alle Elemente mit FNA mit bindData doku ausrüsten
-Alle Elemente eventuell supported fieldnode type beschreiben
 Alle Elemente value-state from FAT
-
 
 furo-ui5-money-input
 
@@ -27,19 +22,25 @@ furo-ui5-notification-group-display zeigt keine Anzahl an, verschwindet nicht be
 
 furo-ui5-radio-button: Repeated bool example
 
-furo-ui5-select BUG: <div slot="valueStateMessage">Information message. </div>
-
-furo-ui5-sign-pad: unlock, lock
+furo-ui5-context-menu-display does not work propperly with scrolled content
 
 
 # Missing Components / features
 furo-ui5-radio-button-labeled
+
+furo-ui5-radio-button-repeated
+furo-ui5-radio-button-repeated-labeled
+
 furo-ui5-reference-search value-state feature
+
 feat: furo-ui5-segmented-button iconFieldPath to use icons from bindOptions
 
-
+# Nice to have
+furo-ui5-sign-pad: unlock, lock
 
 
 # Findings
 - furo-ui5-number-input kein placeholder bei readonly, required
-  - Kein bug 
+  - das ist **kein** bug
+  
+Alle Elemente Summarys gemeinsam durchgehen

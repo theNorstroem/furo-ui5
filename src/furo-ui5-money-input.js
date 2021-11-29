@@ -71,9 +71,10 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
-   * Binds a fieldNode. Make sure the type of your field is accepted by the implemented component.
-   * Supported types: google.type.Money
-   * @param {FieldNode} fieldNode
+   * Binds a fieldNode.
+   *
+   * Supported types: `google.type.Money`
+   * @param {FieldNode} fieldNode of type  `google.type.Money`
    */
   bindData(fieldNode) {
     // check if we have a FieldNode or RepeaterNode

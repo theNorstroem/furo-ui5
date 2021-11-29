@@ -45,7 +45,7 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
  - **"readonly":"true"** set the element to readonly
  - **"disabled":"true"** set the element to disabled
  - **"icon":""** set the icon
- - **"design":""** set the design
+ - **"value-state":""** set the value-state
 
 ## supported meta and constraints
 - **readonly: true** , set the element to readonly
@@ -75,8 +75,14 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
-### **_previousDesign**
-default: **&#39;Default&#39;**</small>
+### **_previousValueState**
+default: **&#39;None&#39;**</small>
+
+
+<br><br>
+
+### **_tmpFAT**
+default: **{ labels: {}, value: false }**</small>
 
 
 <br><br>
@@ -102,7 +108,7 @@ default: **{
       name: undefined, // the group name
       label: undefined,
       icon: undefined,
-      design: undefined,
+      &#39;value-state&#39;: undefined,
     }**</small>
 
 
@@ -124,7 +130,7 @@ default: **{
       disabled: null,
       text: null,
       icon: null,
-      design: null,
+      &#39;value-state&#39;: null,
     }**</small>
 
 
@@ -218,6 +224,7 @@ label is mapped to text
 - <small>text </small>
 - <small>placeholder </small>
 <br><br>
+
 
 
 

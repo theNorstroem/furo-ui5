@@ -143,10 +143,11 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
 
   /**
    * Binds a FieldNode to the component.
+   *
    * Supported types:
-   * double, float, int32, uint32, sint32, fixed32, sfixed32, int64, uint64, sint64, fixed64, sfixed64
-   * google.protobuf.DoubleValue, google.protobuf.FloatValue, google.protobuf.Int32Value, etc.
-   * furo.fat.Doube, furo.fat.Float, furo.fat.Int32, etc.
+   * - `double`, `float`, `int32`, `uint32`, `sint32`, `fixed32`, `sfixed32`, `int64`, `uint64`, `sint64`, `fixed64`, `sfixed64`
+   * - `google.protobuf.DoubleValue`, `google.protobuf.FloatValue`, `google.protobuf.Int32Value`, etc.
+   * - `furo.fat.Doube`, `furo.fat.Float`, `furo.fat.Int32`, etc.
    * @param fieldNode {FieldNode}
    */
   bindData(fieldNode) {

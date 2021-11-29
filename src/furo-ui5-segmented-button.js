@@ -131,6 +131,7 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
 
   /**
    * Binds a FieldNode to the component.
+   *
    * Supported types:
    * @returns {boolean}
    */

@@ -55,9 +55,9 @@ export class FuroUi5ContextMenu extends FBP(LitElement) {
   }
 
   /**
-   * Bind your menu object with the following signature:
-   * The description of the signature is documented in the header.
-   * @param {Fieldnode || RepeaterNode}
+   * Bind your menu object.
+   *
+   * @param {Fieldnode || RepeaterNode} menu with `menu.Menuitem` signature
    */
   bindData(menu) {
     this._menuNode = menu;

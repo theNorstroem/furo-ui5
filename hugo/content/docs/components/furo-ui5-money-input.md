@@ -143,10 +143,11 @@ A Boolean attribute which, if present, means this field is readonly.
 <small>`FieldNode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-Binds a fieldNode. Make sure the type of your field is accepted by the implemented component.
-Supported types: google.type.Money
+Binds a fieldNode.
 
-- <small>fieldNode </small>
+Supported types: `google.type.Money`
+
+- <small>fieldNode of type  `google.type.Money`</small>
 <br><br>
 
 ### **readAttributes**

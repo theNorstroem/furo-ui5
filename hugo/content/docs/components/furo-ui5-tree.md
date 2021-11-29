@@ -555,7 +555,9 @@ focuses the tree itself. You can use this in combination with keyboard navigatio
 <small>`NavigationNode|Tree` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-Binds a FieldNode with a tree.Tree or tree.Navigationnode signature.
+Binds a FieldNode.
+
+Supported types: everything with a `tree.Tree` or `tree.Navigationnode` signature.
 
 - <small>treeNode Fieldnode</small>
 <br><br>

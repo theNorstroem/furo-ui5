@@ -11,6 +11,10 @@ import '@furo/data/src/furo-deep-link';
 import '../src/furo-ui5-context-menu.js';
 import '../src/furo-ui5-context-menu-display.js';
 
+import '@ui5/webcomponents-icons/dist/meal.js';
+import '@ui5/webcomponents-icons/dist/chevron-phase.js';
+import '@ui5/webcomponents-icons/dist/increase-line-height.js';
+
 import '@furo/data';
 
 describe('furo-ui5-context-menu', () => {

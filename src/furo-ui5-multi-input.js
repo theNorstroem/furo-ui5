@@ -143,6 +143,7 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
 
   /**
    * Binds a FieldNode to the component.
+   *
    * Supported types: repeated string
    * @param fieldNode {FieldNode}
    */
