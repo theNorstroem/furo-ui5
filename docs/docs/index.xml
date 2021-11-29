@@ -861,7 +861,7 @@ The labels in the demo are not translated for better readability.
       <description>Example with options from specs #  A simple way to use the segmented button is, uising it with specified options for a string type.
 Defining a type with the options may look like a big overhead, but it let you switch the UI implementation by just changing the tag name.
 The labels in the demo are not translated for better readability.
-   Information message.         Markup #  1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-select label=&amp;#34;Use with select&amp;#34; value-state=&amp;#34;Success&amp;#34; ƒ-bind-data=&amp;#34;--daoPerson(*.</description>
+   Information message. This is a Link.</description>
     </item>
     
     <item>

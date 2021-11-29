@@ -12,12 +12,12 @@
 <meta property="og:description" content="boolean toggle button" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-radio-button/" />
-<meta property="article:modified_time" content="2021-11-29T10:26:31+01:00" />
+<meta property="article:modified_time" content="2021-11-29T16:43:20+01:00" />
 <title>furo-ui5-radio-button | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.d3204eed63c2fc95fa0b4f5d595b47f180436e6aa18cdb0ba1cd3fdd2d29bc88.js" integrity="sha256-0yBO7WPC/JX6C09dWVtH8YBDbmqhjNsLoc0/3S0pvIg="></script>
+<script defer src="/en.search.min.2eb9d6ee38ab508fb372e0e26149f3cf81adf2ab393141721abc8a2f8ab51423.js" integrity="sha256-LrnW7jirUI&#43;zcuDiYUnzz4Gt8qs5MUFyGryKL4q1FCM="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3560,7 +3560,8 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#supported-meta-and-constraints">supported meta and constraints</a></li>
     <li><a href="#attributes-and-properties">Attributes and Properties</a>
       <ul>
-        <li><a href="#_previousdesign"><strong>_previousDesign</strong></a></li>
+        <li><a href="#_previousvaluestate"><strong>_previousValueState</strong></a></li>
+        <li><a href="#_tmpfat"><strong>_tmpFAT</strong></a></li>
         <li><a href="#_attributesfromfna"><strong>_attributesFromFNA</strong></a></li>
         <li><a href="#_constraintsfromfna"><strong>_constraintsFromFNA</strong></a></li>
         <li><a href="#_attributesfromfat"><strong>_attributesFromFAT</strong></a></li>
@@ -3669,7 +3670,7 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>&ldquo;readonly&rdquo;:&ldquo;true&rdquo;</strong> set the element to readonly</li>
 <li><strong>&ldquo;disabled&rdquo;:&ldquo;true&rdquo;</strong> set the element to disabled</li>
 <li><strong>&ldquo;icon&rdquo;:&quot;&quot;</strong> set the icon</li>
-<li><strong>&ldquo;design&rdquo;:&quot;&quot;</strong> set the design</li>
+<li><strong>&ldquo;value-state&rdquo;:&quot;&quot;</strong> set the value-state</li>
 </ul>
 <h2 id="supported-meta-and-constraints">
   supported meta and constraints
@@ -3778,11 +3779,17 @@ https://github.com/alex-shpak/hugo-book
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
 </h2>
-<h3 id="_previousdesign">
-  <strong>_previousDesign</strong>
-  <a class="anchor" href="#_previousdesign">#</a>
+<h3 id="_previousvaluestate">
+  <strong>_previousValueState</strong>
+  <a class="anchor" href="#_previousvaluestate">#</a>
 </h3>
-<p>default: <strong>'Default'</strong></small></p>
+<p>default: <strong>'None'</strong></small></p>
+<p><br><br></p>
+<h3 id="_tmpfat">
+  <strong>_tmpFAT</strong>
+  <a class="anchor" href="#_tmpfat">#</a>
+</h3>
+<p>default: <strong>{ labels: {}, value: false }</strong></small></p>
 <p><br><br></p>
 <h3 id="_attributesfromfna">
   <strong>_attributesFromFNA</strong>
@@ -3808,7 +3815,7 @@ label: undefined,
 name: undefined, // the group name
 label: undefined,
 icon: undefined,
-design: undefined,
+'value-state': undefined,
 }</strong></small></p>
 <p><br><br></p>
 <h3 id="_labelsfromfat">
@@ -3830,7 +3837,7 @@ readonly: null,
 disabled: null,
 text: null,
 icon: null,
-design: null,
+'value-state': null,
 }</strong></small></p>
 <p><br><br></p>
 <h2 id="events">
@@ -3933,7 +3940,7 @@ label is mapped to text</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/a14a1813fc371daaea139ac9456e28f509b2903c" title='Last modified by veith | November 29, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/dc9a6e5947cc630cb169a6682f2b2fc6dec7f26c" title='Last modified by veith | November 29, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>November 29, 2021</span>
     </a>
@@ -3972,7 +3979,8 @@ label is mapped to text</p>
     <li><a href="#supported-meta-and-constraints">supported meta and constraints</a></li>
     <li><a href="#attributes-and-properties">Attributes and Properties</a>
       <ul>
-        <li><a href="#_previousdesign"><strong>_previousDesign</strong></a></li>
+        <li><a href="#_previousvaluestate"><strong>_previousValueState</strong></a></li>
+        <li><a href="#_tmpfat"><strong>_tmpFAT</strong></a></li>
         <li><a href="#_attributesfromfna"><strong>_attributesFromFNA</strong></a></li>
         <li><a href="#_constraintsfromfna"><strong>_constraintsFromFNA</strong></a></li>
         <li><a href="#_attributesfromfat"><strong>_attributesFromFAT</strong></a></li>
