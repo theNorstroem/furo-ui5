@@ -1,17 +1,17 @@
 ---
 title: furo-ui5-busy-indicator
-description: ui5 busy indicator
+description: ui5 busy indicator with methods
 weight: 50
 ---
 
 # furo-ui5-busy-indicator
-**@furo/components** <small>v1.0.0-rc.8</small>
+**@furo/components** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/components/src/furo-ui5-busy-indicator.js';`<small>
 <br>exports *FuroUiBusyIndicator* js
 <br>exports `<furo-ui5-busy-indicator>` custom-element-definition
 <br>extends *src/furo-ui5-busy-indicator.js*</small>
 
-> **Summary:** ui5 busy indicator
+> **Summary:** ui5 busy indicator with methods
 
 ## Description
 

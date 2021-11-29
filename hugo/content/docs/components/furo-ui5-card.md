@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-card
-**@furo/components** <small>v1.0.0-rc.8</small>
+**@furo/components** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/components/src/furo-ui5-card.js';`<small>
 <br>exports *FuroUi5Card* js
 <br>exports `<furo-ui5-card>` custom-element-definition
@@ -37,7 +37,7 @@ You can use semantic colors to visualize the status or state. Set the attribute 
 - Critical (--sapCriticalColor)
 - Neutral (--sapCriticalColor)
 
-* ```html
+```html
  <furo-ui5-card
    design="Positive"
    icon="card"

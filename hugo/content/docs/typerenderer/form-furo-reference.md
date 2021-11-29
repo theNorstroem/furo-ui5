@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-furo-reference
-**@furo/typerenderer** <small>v1.0.0-rc.8</small>
+**@furo/typerenderer** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/typerenderer/src/form-furo-reference.js';`<small>
 <br>exports `<form-furo-reference>` custom-element-definition
 <br>extends */src/furo-ui5-reference-search-labeled.js*

@@ -1,17 +1,17 @@
 ---
 title: furo-ui5-bool-icon
-description: Displays a icon/symbol for a boolean value
+description: Displays a icon for a boolean value
 weight: 50
 ---
 
 # furo-ui5-bool-icon
-**@furo/components** <small>v1.0.0-rc.8</small>
+**@furo/components** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/components/src/furo-ui5-bool-icon.js';`<small>
 <br>exports `<furo-ui5-bool-icon>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
-> **Summary:** Displays a icon/symbol for a boolean value
+> **Summary:** Displays a icon for a boolean value
 
 ## Description
 

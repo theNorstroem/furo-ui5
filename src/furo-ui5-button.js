@@ -24,9 +24,8 @@ import * as Button from '@ui5/webcomponents/dist/Button.js';
  *
  * https://sap.github.io/ui5-webcomponents/playground/components/Button/
  *
- * @summary ui5 button
- * @element
- * @demo demo-furo-ui5-button Basic usage
+ * @summary ui5 button with methods
+ * @element furo-ui5-button
  */
 export class FuroUi5Button extends Button.default {
   /**

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-segmented-button
-**@furo/components** <small>v1.0.0-rc.8</small>
+**@furo/components** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/components/src/furo-ui5-segmented-button.js';`<small>
 <br>exports *FuroUi5SegmentedButton* js
 <br>extends *src/furo-ui5-segmented-button.js*

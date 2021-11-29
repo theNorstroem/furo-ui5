@@ -1,17 +1,17 @@
 ---
 title: furo-ui5-button
-description: ui5 button
+description: ui5 button with methods
 weight: 50
 ---
 
 # furo-ui5-button
-**@furo/components** <small>v1.0.0-rc.8</small>
+**@furo/components** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/components/src/furo-ui5-button.js';`<small>
 <br>exports *FuroUi5Button* js
 <br>exports `<furo-ui5-button>` custom-element-definition
 <br>extends *src/furo-ui5-button.js*</small>
 
-> **Summary:** ui5 button
+> **Summary:** ui5 button with methods
 
 ## Description
 

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-link
-**@furo/typerenderer** <small>v1.0.0-rc.8</small>
+**@furo/typerenderer** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-link.js';`<small>
 <br>exports `<celledit-furo-link>` custom-element-definition
 <br>superclass *LitElement*</small>

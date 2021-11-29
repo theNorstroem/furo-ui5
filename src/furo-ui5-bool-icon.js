@@ -18,9 +18,8 @@ import '@ui5/webcomponents-icons/dist/navigation-right-arrow.js';
  * Only `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.
  * If you set other icons, please do not forget to import them.
  *
- * @summary  Displays a icon/symbol for a boolean value
+ * @summary  Displays a icon for a boolean value
  * @element furo-ui5-bool-icon
- * @demo demo-furo-ui5-bool-icon
  * @appliesMixin FBP
  */
 class FuroDataBoolIcon extends FBP(LitElement) {

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-number-input
-**@furo/components** <small>v1.0.0-rc.8</small>
+**@furo/components** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/components/src/furo-ui5-number-input.js';`<small>
 <br>exports *FuroUi5NumberInput* js
 <br>extends *src/furo-ui5-number-input.js*

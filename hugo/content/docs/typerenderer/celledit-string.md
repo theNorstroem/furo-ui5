@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-string
-**@furo/typerenderer** <small>v1.0.0-rc.8</small>
+**@furo/typerenderer** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/typerenderer/src/celledit-string.js';`<small>
 <br>exports *CelleditString* js
 <br>extends */src/furo-ui5-text-input.js*

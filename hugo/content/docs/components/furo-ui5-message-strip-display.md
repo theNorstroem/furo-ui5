@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-message-strip-display
-**@furo/components** <small>v1.0.0-rc.8</small>
+**@furo/components** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/components/src/furo-ui5-message-strip-display.js';`<small>
 <br>exports *FuroUi5MessageStripDisplay* js
 <br>exports `<furo-ui5-message-strip-display>` custom-element-definition

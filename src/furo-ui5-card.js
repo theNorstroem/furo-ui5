@@ -2,10 +2,8 @@ import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 import '@ui5/webcomponents/dist/Card.js';
 import '@ui5/webcomponents/dist/CardHeader.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import '@ui5/webcomponents/dist/Icon.js';
 
 /**
@@ -30,7 +28,7 @@ import '@ui5/webcomponents/dist/Icon.js';
  * - Critical (--sapCriticalColor)
  * - Neutral (--sapCriticalColor)
  *
- * * ```html
+ *```html
  *  <furo-ui5-card
  *    design="Positive"
  *    icon="card"
@@ -46,8 +44,7 @@ import '@ui5/webcomponents/dist/Icon.js';
  * @fires header-click - Fired when interactive header was clicked.
  *
  * @element furo-ui5-card
- * @demo demo-furo-ui5-card Basic Usage
- * @demo demo-furo-ui5-card-binding With data binding
+ * @summary Ui5 card with data bindings
  */
 export class FuroUi5Card extends FBP(LitElement) {
   constructor() {

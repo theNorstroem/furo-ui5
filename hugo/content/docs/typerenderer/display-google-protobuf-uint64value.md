@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-google-protobuf-uint64value
-**@furo/typerenderer** <small>v1.0.0-rc.8</small>
+**@furo/typerenderer** <small>v1.0.0-rc.9</small>
 <br>`import '@furo/typerenderer/src/display-google-protobuf-uint64value.js';`<small>
 <br>exports `<display-google-protobuf-uint64value>` custom-element-definition
 <br>extends */src/typerenderer/display-uint64.js*
