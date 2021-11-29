@@ -4,6 +4,9 @@ import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode.js';
 import { Events } from './lib/Events.js';
 
 import '@ui5/webcomponents/dist/Option.js';
+import '@ui5/webcomponents-icons/dist/alert.js';
+import '@ui5/webcomponents-icons/dist/error.js';
+import '@ui5/webcomponents-icons/dist/information.js';
 
 /**
  * The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define
@@ -156,18 +159,6 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
     }
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();
-
-    // created to avoid the default messages from ui5
-    const vse = this.querySelector('*[slot="valueStateMessage"]');
-    if (vse === null) {
-      this._valueStateElement = document.createElement('div');
-      this._valueStateElement.setAttribute('slot', 'valueStateMessage');
-      // eslint-disable-next-line wc/no-constructor-attributes
-      this.appendChild(this._valueStateElement);
-    } else {
-      this._valueStateElement = vse;
-      this._previousValueState.message = vse.innerText;
-    }
   }
 
   /**
@@ -435,7 +426,13 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   _setValueStateMessage(valueState, message) {
     this.valueState = valueState;
     if (message !== undefined) {
-      // element was created in constructor
+      // created to avoid the default messages from ui5
+      const vse = this.querySelector('*[slot="valueStateMessage"]');
+      if (vse === null) {
+        this._valueStateElement = document.createElement('div');
+        this._valueStateElement.setAttribute('slot', 'valueStateMessage');
+        this.appendChild(this._valueStateElement);
+      }
       this._valueStateElement.innerText = message;
     }
   }
@@ -512,7 +509,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
       });
 
       optionNodeList.forEach(newOpt => {
-        this.insertBefore(newOpt, this._valueStateElement);
+        this.appendChild(newOpt);
         this.options.push(newOpt);
       });
     }

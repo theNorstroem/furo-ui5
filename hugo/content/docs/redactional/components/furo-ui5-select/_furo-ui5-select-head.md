@@ -19,12 +19,12 @@ the tag name.
 <furo-form-layouter four>
 <furo-ui5-select
   label="Use with select"
+  value-state="Success" 
   ƒ-bind-data="--daoPerson(*.sex)">
-  	<div slot="valueStateMessage">Information message. </div>
-  </furo-ui5-select>
+  		<div slot="valueStateMessage">Information message. This is a <a href="#">Link</a>. Extra long text used as an information message. Extra long text used as an information message - 2. Extra long text used as an information message - 3.</div>
+</furo-ui5-select>
 <furo-ui5-select
   label="Use with select"
-  value-state="Success" 
   ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
 <furo-ui5-text-input
   label="use with text-input"

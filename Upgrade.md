@@ -25,8 +25,6 @@ furo-ui5-money-input
 
 furo-ui5-notification-group-display zeigt keine Anzahl an, verschwindet nicht bei 0 elementen
 
-
-furo-ui5-radio-button: Error handling => design, value-state?
 furo-ui5-radio-button: Repeated bool example
 
 furo-ui5-select BUG: <div slot="valueStateMessage">Information message. </div>
