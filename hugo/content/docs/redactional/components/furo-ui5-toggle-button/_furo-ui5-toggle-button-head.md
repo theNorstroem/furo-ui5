@@ -12,10 +12,10 @@ bookHidden: true
     ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
  ></furo-ui5-toggle-button>
 <furo-ui5-toggle-button
-    design="Success"
-    text="TEXT"
+    design="Positive"
+    text
     ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
- ></furo-ui5-toggle-button>
+ >Override</furo-ui5-toggle-button>
 </furo-form-layouter>
 <furo-data-object
   type="experiment.Experiment"
@@ -30,10 +30,10 @@ bookHidden: true
     ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
   ></furo-ui5-toggle-button>
   <furo-ui5-toggle-button
-      value-state="Success"
-      text="Override"
-      ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
-   ></furo-ui5-toggle-button>
+    design="Positive"
+    text
+    ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+  >Override</furo-ui5-toggle-button>
 </furo-form-layouter>
 ```
 

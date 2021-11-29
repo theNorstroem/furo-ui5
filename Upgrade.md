@@ -35,30 +35,6 @@ furo-ui5-radio-button: Repeated bool example
 furo-ui5-select BUG: <div slot="valueStateMessage">Information message. </div>
 
 furo-ui5-sign-pad: unlock, lock
-furo-ui5-toggle-button BUG: text wird nicht gesetzt oder ev. überschieben
-
-Alle typerenderer die von ui5-xx ableiten mit folgendem erweitern:
-```
-
-  /**
-   * @private
-   */
-  static get metadata() {
-    const md = super.metadata;
-    md.tag = 'celledit-string';
-    return md;
-  }
-  /**
-   * @private
-   */
-  static get styles() {
-    return super.styles;
-  }
-}
-
-CelleditString.define();
-
-```
 
 
 # Missing Components / features
