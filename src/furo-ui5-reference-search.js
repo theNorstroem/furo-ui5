@@ -244,10 +244,9 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
-   * Overrides bindData() of FieldNodeAdapter
-   * Binds a FieldNode to the component
+   * Binds a FieldNode to the component.
    * Supported types: can be a scalar type or any complex type with 'id','display_name' signature.
-   * @param fieldNode
+   * @param fieldNode {FieldNode}
    */
   bindData(fieldNode) {
     return super.bindData(fieldNode);

@@ -3,6 +3,8 @@ import * as DatePicker from '@ui5/webcomponents/dist/DatePicker.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Events } from './lib/Events.js';
+import '@ui5/webcomponents-icons/dist/information.js';
+import '@ui5/webcomponents-icons/dist/error.js';
 
 /**
  * The furo-ui5-date-picker component allows the user to bind an date object like google.type.Date or a date string
@@ -201,10 +203,9 @@ export class FuroUi5DatePicker extends FieldNodeAdapter(DatePicker.default) {
   }
 
   /**
-   * Overrides bindData() of FieldNodeAdapter
-   * Binds a FieldNode to the component
+   * Binds a FieldNode to the component.
    * Supported types: string, furo.type.Date, google.type.Date
-   * @param fieldNode
+   * @param fieldNode {FieldNode}
    */
   bindData(fieldNode) {
     return super.bindData(fieldNode);
@@ -342,9 +343,7 @@ export class FuroUi5DatePicker extends FieldNodeAdapter(DatePicker.default) {
    * @private
    */
   static get metadata() {
-    const md = super.metadata;
-    md.tag = 'furo-ui5-date-picker';
-    return md;
+    return { tag: 'furo-ui5-date-picker' };
   }
 
   static get styles() {

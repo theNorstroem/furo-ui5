@@ -173,10 +173,9 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
   }
 
   /**
-   * Overrides bindData() of FieldNodeAdapter
-   * Binds a FieldNode to the component
+   * Binds a FieldNode to the component.
    * Supported types: string, google.protobuf.Timestamp, int32, int64
-   * @param fieldNode
+   * @param fieldNode {FieldNode}
    */
   bindData(fieldNode) {
     return super.bindData(fieldNode);

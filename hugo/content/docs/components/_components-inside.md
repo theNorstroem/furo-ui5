@@ -9,7 +9,7 @@ bookHidden: true
 - [furo-ui5-bool-icon](furo-ui5-bool-icon.md) Displays a icon for a boolean value
 - [furo-ui5-busy-indicator](furo-ui5-busy-indicator.md) ui5 busy indicator with methods
 - [furo-ui5-button](furo-ui5-button.md) ui5 button with methods
-- [furo-ui5-card](furo-ui5-card.md) 
+- [furo-ui5-card](furo-ui5-card.md) Ui5 card with data bindings
 - [furo-ui5-chart-display](furo-ui5-chart-display.md) Display charts with data objects
 - [furo-ui5-chart](furo-ui5-chart.md) connect data to a chart
 - [furo-ui5-checkbox-input-labeled](furo-ui5-checkbox-input-labeled.md) labeled input field

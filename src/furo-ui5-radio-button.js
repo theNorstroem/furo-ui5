@@ -113,10 +113,10 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
   }
 
   /**
-   * Overrides bindData() of FieldNodeAdapter
-   * Binds a FieldNode to the component
-   * Supported types: bool, google.protobuf.BoolValue, furo.fat.Bool
-   * @param fieldNode
+   * Binds a FieldNode to the component.
+   *
+   * Supported types: `bool`, `google.protobuf.BoolValue`, `furo.fat.Bool`
+   * @param fieldNode {FieldNode}
    */
   bindData(fieldNode) {
     return super.bindData(fieldNode);

@@ -1,6 +1,6 @@
 ---
 title: furo-ui5-card
-description: 
+description: Ui5 card with data bindings
 weight: 50
 ---
 
@@ -12,7 +12,7 @@ weight: 50
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
 
-> **Summary:** 
+> **Summary:** Ui5 card with data bindings
 
 ## Description
 

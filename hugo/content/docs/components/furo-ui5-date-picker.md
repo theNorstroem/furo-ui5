@@ -100,13 +100,12 @@ The format pattern for the date.
 
 
 ### **bindData**
-<small>**bindData**(*fieldNode* `` ) ⟹ `void`</small>
+<small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
-<small>`` </small> →
+<small>`FieldNode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-Overrides bindData() of FieldNodeAdapter
-Binds a FieldNode to the component
+Binds a FieldNode to the component.
 Supported types: string, furo.type.Date, google.type.Date
 
 - <small>fieldNode </small>

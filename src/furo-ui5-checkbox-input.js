@@ -118,10 +118,9 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
   }
 
   /**
-   * Overrides bindData() of FieldNodeAdapter
-   * Binds a FieldNode to the component
+   * Binds a FieldNode to the component.
    * Supported types: bool, google.protobuf.BoolValue, furo.fat.Bool
-   * @param fieldNode
+   * @param fieldNode {FieldNode}
    */
   bindData(fieldNode) {
     return super.bindData(fieldNode);

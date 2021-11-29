@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import {html, render} from 'lit';
+  import './initEnv.js';
+
+  import '@furo/fbp/src/flow-bind.js';
+
+  import '@furo/data/src/furo-catalog.js';
+
+
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+
+  setTimeout(()=>{
+    import ('../src/furo-ui5-date-picker.js');
+  },500)
+
+  render(
+    html`
+      <flow-bind><template>
+
+      <furo-data-object
+        type="experiment.Experiment"
+        @-object-ready="--dataObject"
+      ></furo-data-object>
+
+      <furo-form-layouter four>
+        <furo-ui5-date-picker
+          ƒ-bind-data="--dataObject(*.furo_data_date_input_google)"
+        ></furo-ui5-date-picker>
+
+        <furo-ui5-date-picker
+          value-state="Information"
+          ƒ-bind-data="--dataObject(*.furo_data_date_input_google)"
+        >
+          <div slot="valueStateMessage">INFO</div>
+        </furo-ui5-date-picker>
+      </furo-form-layouter>
+
+
+      </template></flow-bind>
+
+    `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>

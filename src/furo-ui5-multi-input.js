@@ -142,10 +142,9 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
   }
 
   /**
-   * Overrides bindData() of FieldNodeAdapter
-   * Binds a FieldNode to the component
+   * Binds a FieldNode to the component.
    * Supported types: repeated string
-   * @param fieldNode
+   * @param fieldNode {FieldNode}
    */
   bindData(fieldNode) {
     return super.bindData(fieldNode);
