@@ -221,9 +221,9 @@ If you need to give an explicit color for the series you can use this attribute.
 
 
 ### **bindData**
-<small>**bindData**(*data* `` ) ⟹ `void`</small>
+<small>**bindData**(*data* `RepeaterNode` ) ⟹ `void`</small>
 
-<small>`` </small> →
+<small>`RepeaterNode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
 Binds a RepeaterNode to the component

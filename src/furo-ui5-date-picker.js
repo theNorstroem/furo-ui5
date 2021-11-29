@@ -205,8 +205,9 @@ export class FuroUi5DatePicker extends FieldNodeAdapter(DatePicker.default) {
 
   /**
    * Binds a FieldNode to the component.
-   * Supported types: string, furo.type.Date, google.type.Date
-   * @param fieldNode {FieldNode}
+   *
+   * Supported types: `string`, `furo.type.Date`, `google.type.Date`
+   * @param fieldNode {FieldNode} of type: `string`, `furo.type.Date`, `google.type.Date`
    */
   bindData(fieldNode) {
     return super.bindData(fieldNode);

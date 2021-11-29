@@ -49,7 +49,7 @@ class FuroDataBoolIcon extends FBP(LitElement) {
 
   /**
    * Binds a FieldNode
-   * Supported types: bool
+   * Supported types: `bool`
    * @param {FieldNode} fieldNode
    */
   bindData(fieldNode) {

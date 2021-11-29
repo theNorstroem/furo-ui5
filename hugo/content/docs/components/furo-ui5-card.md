@@ -135,7 +135,7 @@ Fired when interactive header was clicked.
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-heading</span>
 
 Binds any **scalar** field to set the title of the panel.
-Supported types: scalar types e.g. string
+Supported types: scalar types e.g. `string`
 
 - <small>fieldNode </small>
 <br><br>

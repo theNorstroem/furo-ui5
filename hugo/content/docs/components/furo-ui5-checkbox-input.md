@@ -103,9 +103,10 @@ Fires the field value when it changes.
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
 Binds a FieldNode to the component.
-Supported types: bool, google.protobuf.BoolValue, furo.fat.Bool
 
-- <small>fieldNode </small>
+Supported types: `bool`, `google.protobuf.BoolValue`, `furo.fat.Bool`
+
+- <small>fieldNode of type: `bool`, `google.protobuf.BoolValue`, `furo.fat.Bool`</small>
 <br><br>
 
 ### **readAttributes**

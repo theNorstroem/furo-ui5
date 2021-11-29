@@ -84,9 +84,9 @@ A Boolean attribute which, if present, means this field is readonly.
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
 Orchestrates the data field connection to the inner components.
-Supported types: bool, google.protobuf.BoolValue, furo.fat.Bool
+Supported types: `bool`, `google.protobuf.BoolValue`, `furo.fat.Bool`
 
-- <small>fieldNode </small>
+- <small>fieldNode Supported types: `bool`, `google.protobuf.BoolValue`, `furo.fat.Bool`</small>
 <br><br>
 
 

@@ -82,9 +82,11 @@ export class FuroUi5CheckboxInputLabeled extends FBP(LitElement) {
   }
 
   /**
-   * Orchestrates the data field connection to the inner components.
-   * Supported types: bool, google.protobuf.BoolValue, furo.fat.Bool
-   * @param {FieldNode} fieldNode
+   * Binds a FieldNode to the component.
+   *
+   * Supported types: `bool`, `google.protobuf.BoolValue`, `furo.fat.Bool`
+   *
+   * @param {FieldNode} fieldNode - Supported types: `bool`, `google.protobuf.BoolValue`, `furo.fat.Bool`
    */
   bindData(fieldNode) {
     Ui5LabelDataBinding.bindData(this, fieldNode);

@@ -77,7 +77,7 @@ export class FuroUi5MoneyInputLabeled extends FBP(LitElement) {
 
   /**
    * Orchestrates the data field connection to the inside
-   * Supported types: google.type.Money
+   * Supported types: `google.type.Money`
    * @param {FieldNode} fieldNode
    */
   bindData(fieldNode) {

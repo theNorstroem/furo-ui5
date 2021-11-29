@@ -206,9 +206,11 @@ class FuroUi5Chart extends LitElement {
   }
 
   /**
-   * Binds a RepeaterNode to the component
-   * Supported types: repeated TYPE
-   * @param data
+   * Binds a RepeaterNode to the component.
+   *
+   * Supported types: repeated types
+   *
+   * @param data {RepeaterNode}
    */
   bindData(data) {
     if (data._isRepeater === true) {

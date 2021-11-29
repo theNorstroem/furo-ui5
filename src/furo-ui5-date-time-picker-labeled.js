@@ -77,9 +77,10 @@ export class FuroUi5DateTimePickerLabeled extends FBP(LitElement) {
   }
 
   /**
-   * Orchestrates the data field connection to the inner components.
-   * Supported types: string, google.protobuf.Timestamp, int32, int64
-   * @param {FieldNode} fieldNode
+   * Binds a FieldNode to the component.
+   *
+   * Supported types: `string`, `google.protobuf.Timestamp`, `int32`, `int64`
+   * @param {FieldNode} fieldNode of type : `string`, `google.protobuf.Timestamp`, `int32`, `int64`
    */
   bindData(fieldNode) {
     Ui5LabelDataBinding.bindData(this, fieldNode);

@@ -59,8 +59,9 @@ export class FuroUi5Card extends FBP(LitElement) {
 
   /**
    * Binds any **scalar** field to set the title of the panel.
-   * Supported types: scalar types e.g. string
-   * @param {FieldNode} fieldNode
+   *
+   * Supported types: scalar types e.g. `string`
+   * @param {FieldNode} fieldNode `string`
    */
   bindHeading(fieldNode) {
     if (fieldNode === undefined) {
@@ -76,9 +77,11 @@ export class FuroUi5Card extends FBP(LitElement) {
 
   /**
    * Binds a FieldNode to set the icon of the panel.
+   *
    * Do not forget to import the icon you will use in your component.
-   * Supported types: string
-   * @param {FieldNode} fieldNode
+   *
+   * Supported types: `string`
+   * @param {FieldNode} fieldNode `string`
    */
   bindIcon(fieldNode) {
     if (fieldNode === undefined) {
@@ -94,8 +97,9 @@ export class FuroUi5Card extends FBP(LitElement) {
 
   /**
    * Binds any **scalar** field to set the subtitle of the panel.
-   * Supported types: scalar types e.g. string
-   * @param {FieldNode} fieldNode
+   *
+   * Supported types: scalar types e.g. `string`
+   * @param {FieldNode} fieldNode `string`
    */
   bindSubheading(fieldNode) {
     if (fieldNode === undefined) {
@@ -112,11 +116,11 @@ export class FuroUi5Card extends FBP(LitElement) {
   /**
    * Binds a FieldNode with the following signature:
    *
-   * - display_name (string)
-   * - secondary_text (string)
-   * - icon (string)
+   * - display_name (`string`)
+   * - secondary_text (`string`)
+   * - icon (`string`)
    *
-   * @param {FieldNode} fieldNode
+   * @param {FieldNode} fieldNode `string`
    */
   bindNavNode(fieldNode) {
     if (fieldNode === undefined || fieldNode.display_name === undefined) {

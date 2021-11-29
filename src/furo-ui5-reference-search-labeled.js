@@ -137,8 +137,9 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
   }
 
   /**
-   * Orchestrates the data field connection to the inside
-   * Supported types: can be a scalar type or any complex type with 'id','display_name' signature.
+   * Binds a FieldNode to the component.
+   *
+   * Supported types: can be a `scalar` type or any complex type with **{'id','display_name'}** signature.
    * @param {FieldNode} fieldNode
    */
   bindData(fieldNode) {
