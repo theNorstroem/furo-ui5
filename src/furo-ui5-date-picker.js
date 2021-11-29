@@ -3,6 +3,7 @@ import * as DatePicker from '@ui5/webcomponents/dist/DatePicker.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Events } from './lib/Events.js';
+import '@ui5/webcomponents-icons/dist/alert.js';
 import '@ui5/webcomponents-icons/dist/information.js';
 import '@ui5/webcomponents-icons/dist/error.js';
 
