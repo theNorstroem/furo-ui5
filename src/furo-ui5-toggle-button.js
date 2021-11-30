@@ -37,7 +37,6 @@ import { Events } from './lib/Events.js';
  * The constraint **required** will mark the element as required
  *
  * @fires {} click -  Fired when the input operation has finished by pressing Enter or on focusout.
- * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).
  *
  *
  * @fires {Boolean} value-changed - Fires the value of pressed when value changed.

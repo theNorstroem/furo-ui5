@@ -1,5 +1,5 @@
 ---
-title: "{{.module}}"
+title: "{{.module|camelcase}}"
 bookCollapseSection: true
 bookToc: false
 weight: 100
@@ -10,20 +10,6 @@ weight: 100
 {{.pkg.description}}
 
 {{"{{"}}% api "_{{.module}}-head.md" %{{"}}"}}
-
-### Installation
-*npm*:
-```bash
-npm i -S {{.pkg.name}}`
-```
-
-
-*cdn*:
-```js
-<script type="module"
-        src="https://cdn.jsdelivr.net/npm/@furo/precompiled@{{.collection}}/dist/{{.module}}.js">
-</script>
-```
 
 {{"{{"}}% api "_{{.module}}-description.md" %{{"}}"}}
 

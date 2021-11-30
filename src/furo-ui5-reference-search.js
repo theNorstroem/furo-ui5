@@ -104,7 +104,6 @@ import './furo-ui5-dialog.js';
  * @fires {`Object` the complete item} item-selected -  Fired when a item was selected from the list.
  * @fires {`text`} change -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {} input -  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
- * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
  *
  * @summary furo ui5 data reference search
  * @element furo-ui5-reference-search

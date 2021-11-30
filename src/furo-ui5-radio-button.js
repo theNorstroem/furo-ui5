@@ -44,7 +44,6 @@ import { Events } from './lib/Events.js';
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {} change -  Fired when the input operation has finished by pressing Enter or on focusout.
- * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).
  * @fires {Boolean} value-changed - Fired when value changed
  *
  * @summary boolean toggle button

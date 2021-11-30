@@ -1,4 +1,8 @@
-
+---
+booksearchexclude: false
+bookToc: false
+bookHidden: true
+---
 
 #### Example with context="display"
 <script type="module" src="/init.js"></script>

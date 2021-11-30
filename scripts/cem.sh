@@ -64,7 +64,6 @@ echo $collection
       echo $COMPONENTINDEX $component
       mkdir -p $injectsDir/$module/$component
       touch $injectsDir/$module/$component/"_"$component"-head.md"
-      touch $injectsDir/$module/$component/"_"$component"-scripts.md"
       # generate the component documentation itself
       echo '{"module":"'$module'", "component":"'$component'"}' | jq . > $component.base.json
 

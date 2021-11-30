@@ -144,12 +144,6 @@ default: **{
 
  Fired when the input operation has finished by pressing Enter or on focusout.
 <br><br>
-### **xxxx**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-xxxx</span>
-→ <small>``</small>
-
- All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).
-<br><br>
 ### **value-changed**
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
 → <small>`Boolean`</small>

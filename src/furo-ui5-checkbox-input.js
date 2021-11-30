@@ -36,7 +36,6 @@ import { Events } from './lib/Events.js';
  * The constraint **required** will mark the element as required.
  *
  * @fires {Boolean} change -  Fired when the checkbox checked state changes.
- * @fires {*} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).
  * @fires {Boolean} value-changed - Fires the field value when it changes.
  *
  * @summary data checkbox input field

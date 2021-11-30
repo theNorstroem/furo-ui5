@@ -74,11 +74,10 @@ use the `furo-ui5-context-menu`. The app-shell or even body is a good place for 
 <small>`` `Fieldnode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-Bind your menu object with the following signature:
-The description of the signature is documented in the header.
+Bind your menu object.
 
 - <small>menu </small>
-- <small> || RepeaterNode}</small>
+- <small> || RepeaterNode} menu with `menu.Menuitem` signature</small>
 <br><br>
 
 ### **setContext**

@@ -21,11 +21,6 @@ The furo-ui5-busy-indicator signals that some operation is going on and that the
 <furo-ui5-busy-indicator></furo-ui5-busy-indicator>
 ```
 
-What is different from ui5-busy-indicator?
-With flow based programming it's usual to address methods. So we added two convenience functions for
-- activate => ƒ-activate
-- deactivate => ƒ-deactivate
-
 https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
 
 {{% api "_furo-ui5-busy-indicator-head.md" %}}

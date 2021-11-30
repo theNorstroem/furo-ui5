@@ -59,9 +59,13 @@ enableGitInfo = true
 [menu]
 # [[menu.before]]
 [[menu.after]]
-name = "フロー Furo UI5"
-url = "https://ui5.furo.pro"
+name = "フロー"
+url = "https://furo.pro"
 weight = 10
+[[menu.after]]
+name = "フロー - Components"
+url = "https://web-components.furo.pro"
+weight = 8
 
 
 

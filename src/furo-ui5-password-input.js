@@ -45,7 +45,6 @@ import { Events } from './lib/Events.js';
  *
  * @fires {`text`} change -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {} input -  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
- * @fires {} xxxx -  All events from the [ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
  * @fires {String} value-changed - Fires the field value when it changes.
  * @fires {MouseEvent} icon-clicked - Fired when icon is clicked
  * @fires {void} password-showed - Fired when the password is showed, after calling the show method.
