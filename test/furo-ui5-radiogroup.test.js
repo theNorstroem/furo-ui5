@@ -2,7 +2,7 @@ import { fixture, html } from '@open-wc/testing';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 import { assert } from '@esm-bundle/chai';
@@ -15,9 +15,9 @@ describe('furo-ui5-radiogroup', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
-          <furo-ui5-radiogroup>
+          <div>
             <furo-ui5-radio-button
               name="Group1"
               ƒ-bind-data="--data(*.furo_data_checkbox_input)"
@@ -26,13 +26,13 @@ describe('furo-ui5-radiogroup', () => {
               name="Group1"
               ƒ-bind-data="--data(*.furo_data_bool_icon)"
             ></furo-ui5-radio-button>
-          </furo-ui5-radiogroup>
+          </div>
           <furo-data-object
             type="experiment.Experiment"
             @-object-ready="--data"
           ></furo-data-object>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;
@@ -42,24 +42,18 @@ describe('furo-ui5-radiogroup', () => {
     await dao.updateComplete;
   });
 
-  it('should be a furo-ui5-radiogroup element', done => {
-    // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(radiogroup.nodeName.toLowerCase(), 'furo-ui5-radiogroup');
-    done();
-  });
-
   it('should allow only one truly value', done => {
-    radiogroup.children[0].selected = true;
+    radiogroup.children[0].checked = true;
     setTimeout(() => {
-      assert.equal(radiogroup.children[1].selected, false);
+      assert.equal(radiogroup.children[1].checked, false);
       done();
     }, 24);
   });
 
   it('should toggle the elements', done => {
-    radiogroup.children[1].selected = true;
+    radiogroup.children[1].checked = true;
     setTimeout(() => {
-      assert.equal(radiogroup.children[0].selected, false);
+      assert.equal(radiogroup.children[0].checked, false);
       done();
     }, 24);
   });

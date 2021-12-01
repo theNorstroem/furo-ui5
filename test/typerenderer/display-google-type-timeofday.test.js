@@ -1,7 +1,7 @@
 import { fixture, html } from '@open-wc/testing';
 
 import { assert } from '@esm-bundle/chai';
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '../initEnv.js';
 import '../../src/typerenderer/display-google-type-timeofday.js';
@@ -14,7 +14,7 @@ describe('display-google-type-timeofday', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <display-google-type-timeofday
             ƒ-bind-data="--dao(*.google_timeofday)"
@@ -24,7 +24,7 @@ describe('display-google-type-timeofday', () => {
             @-object-ready="--dao"
           ></furo-data-object>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;

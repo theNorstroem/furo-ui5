@@ -1,7 +1,7 @@
 import { fixture, html } from '@open-wc/testing';
 
 import { assert } from '@esm-bundle/chai';
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '../initEnv.js';
 import '../../src/typerenderer/display-int32.js';
@@ -13,7 +13,7 @@ describe('display-int32', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <display-int32 ƒ-bind-data="--dao(*.scalar_int32)"></display-int32>
           <furo-data-object
@@ -21,7 +21,7 @@ describe('display-int32', () => {
             @-object-ready="--dao"
           ></furo-data-object>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;

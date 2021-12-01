@@ -1,7 +1,7 @@
 import { fixture, html } from '@open-wc/testing';
 
 import { assert } from '@esm-bundle/chai';
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '../initEnv.js';
 import '../../src/typerenderer/display-furo-type-money.js';
@@ -14,7 +14,7 @@ describe('display-furo-type-money', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <display-furo-type-money
             ƒ-bind-data="--dao(*.furo_type_money)"
@@ -24,7 +24,7 @@ describe('display-furo-type-money', () => {
             @-object-ready="--dao"
           ></furo-data-object>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;

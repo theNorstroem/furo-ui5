@@ -1,23 +1,23 @@
 import { fixture, html } from '@open-wc/testing';
 
 import { assert } from '@esm-bundle/chai';
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 
-import '../src/furo-catalog.js';
+import '../src/furo-ui5-busy-indicator.js';
 
-describe('furo-ui5-busyindicator', () => {
+describe('furo-ui5-busy-indicator', () => {
   let host;
   let busy;
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
-          <furo-ui5-busyindicator size="Small"></furo-ui5-busyindicator>
+          <furo-ui5-busy-indicator size="Small"></furo-ui5-busy-indicator>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;
@@ -28,16 +28,8 @@ describe('furo-ui5-busyindicator', () => {
 
   it('should be a furo-ui5-busyindicator element', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(busy.nodeName.toLowerCase(), 'furo-ui5-busyindicator');
+    assert.equal(busy.nodeName.toLowerCase(), 'furo-ui5-busy-indicator');
     done();
-  });
-
-  it('should have different sizes', done => {
-    busy.setAttribute('size', 'Medium');
-    setTimeout(() => {
-      assert.equal(busy.size, 'Medium');
-      done();
-    }, 16);
   });
 
   it('should be activatable', done => {

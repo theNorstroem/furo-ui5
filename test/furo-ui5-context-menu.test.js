@@ -1,7 +1,7 @@
 import { fixture, html } from '@open-wc/testing';
 
 import { assert } from '@esm-bundle/chai';
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 import { Samplectxmenudata } from './samplectxmenudata.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
@@ -26,7 +26,7 @@ describe('furo-ui5-context-menu', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind
+      <flow-bind
         style="height: 800px;width: 800px; display: block; position: relative"
       >
         <template>
@@ -46,7 +46,7 @@ describe('furo-ui5-context-menu', () => {
           <furo-icon-button icon="menu" @-click="--menuClkd"></furo-icon-button>
           <furo-ui5-context-menu-display></furo-ui5-context-menu-display>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;

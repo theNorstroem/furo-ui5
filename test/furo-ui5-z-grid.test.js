@@ -1,6 +1,6 @@
 import { fixture, html } from '@open-wc/testing';
-import '@furo/layout/src/furo-catalog.js';
-import '@furo/fbp/src/testhelper/test-bind.js';
+import '../src/furo-ui5-z-grid.js';
+import '@furo/fbp/src/flow-bind.js';
 import { assert } from '@esm-bundle/chai';
 
 describe('furo-ui5-z-grid', () => {
@@ -9,11 +9,11 @@ describe('furo-ui5-z-grid', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <furo-ui5-z-grid></furo-ui5-z-grid>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;

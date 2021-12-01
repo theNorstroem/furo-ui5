@@ -4,7 +4,7 @@ import { setLanguage } from '@ui5/webcomponents-base/dist/config/Language.js';
 
 import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 
@@ -25,7 +25,7 @@ describe('furo-ui5-time-picker-labeled', () => {
   beforeEach(async () => {
     await setLanguage('en');
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <furo-ui5-time-picker-labeled
             ƒ-bind-data="--entity(*.data.google_timeofday)"
@@ -35,7 +35,7 @@ describe('furo-ui5-time-picker-labeled', () => {
             @-object-ready="--entity"
           ></furo-data-object>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;

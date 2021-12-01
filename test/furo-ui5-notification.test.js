@@ -2,7 +2,7 @@ import { fixture, html } from '@open-wc/testing';
 
 import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
-import '@furo/fbp/src/testhelper/test-bind'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind'; // for testing with wires and hooks
 import '@ui5/webcomponents-icons/dist/AllIcons.js';
 
 describe('furo-ui5-notification', () => {
@@ -124,7 +124,7 @@ describe('furo-ui5-notification', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <furo-ui5-notification-list-display
             show-close
@@ -132,7 +132,7 @@ describe('furo-ui5-notification', () => {
           <furo-ui5-notification></furo-ui5-notification>
           <div></div>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;

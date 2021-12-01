@@ -1,7 +1,7 @@
 import { fixture, html } from '@open-wc/testing';
 import { assert } from '@esm-bundle/chai';
 import '../src/furo-ui5-flexible-grid.js';
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 
 describe('furo-ui5-flexible-grid', () => {
   let element;
@@ -9,11 +9,11 @@ describe('furo-ui5-flexible-grid', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <furo-ui5-flexible-grid></furo-ui5-flexible-grid>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;

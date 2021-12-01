@@ -2,7 +2,7 @@ import { fixture, html } from '@open-wc/testing';
 
 import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
-import '@furo/fbp/src/testhelper/test-bind'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind'; // for testing with wires and hooks
 import '@ui5/webcomponents-icons/dist/AllIcons.js';
 
 describe('furo-ui5-message-strip-display', () => {
@@ -13,13 +13,13 @@ describe('furo-ui5-message-strip-display', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
           <furo-ui5-message-strip></furo-ui5-message-strip>
           <div></div>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;

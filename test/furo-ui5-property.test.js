@@ -2,7 +2,7 @@ import { fixture, html } from '@open-wc/testing';
 
 import { assert } from '@esm-bundle/chai';
 import '../src/furo-catalog.js';
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 import '@furo/data/src/furo-deep-link.js'; // for testing with wires and hooks
 import '@furo/data/src/furo-entity-agent.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -18,7 +18,7 @@ describe('furo-ui5-property', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <!-- single Property -->
           <furo-ui5-property
@@ -46,7 +46,7 @@ describe('furo-ui5-property', () => {
             ></furo-ui5-property>
           </div>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;

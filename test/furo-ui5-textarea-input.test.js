@@ -2,7 +2,7 @@ import { fixture, html } from '@open-wc/testing';
 
 import { assert } from '@esm-bundle/chai'; // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/data/src/furo-data-object.js';
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 
@@ -110,7 +110,7 @@ describe('furo-ui5-textarea-input', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <furo-ui5-textarea-input
             ƒ-bind-data="--entity(*.data.furo_data_textarea_input)"
@@ -127,7 +127,7 @@ describe('furo-ui5-textarea-input', () => {
             @-object-ready="--entityU"
           ></furo-data-object>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;
@@ -164,6 +164,7 @@ describe('furo-ui5-textarea-input', () => {
 
   it('should update the fieldNode', done => {
     input.value = 'new text set';
+
     input._updateFNA(
       new CustomEvent('input', {
         bubbles: true,
@@ -179,7 +180,7 @@ describe('furo-ui5-textarea-input', () => {
         'check dao'
       );
       done();
-    }, 32);
+    }, 128);
   });
 
   it('should update value after inject response', done => {

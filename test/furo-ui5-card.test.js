@@ -1,6 +1,6 @@
 import { fixture, html } from '@open-wc/testing';
 
-import '@furo/fbp/src/testhelper/test-bind.js'; // for testing with wires and hooks
+import '@furo/fbp/src/flow-bind.js'; // for testing with wires and hooks
 // eslint-disable-next-line import/no-extraneous-dependencies
 import './initEnv.js';
 import '@ui5/webcomponents-icons/dist/AllIcons.js';
@@ -15,7 +15,7 @@ describe('furo-ui5-card', () => {
 
   beforeEach(async () => {
     const testbind = await fixture(html`
-      <test-bind>
+      <flow-bind>
         <template>
           <furo-ui5-card ƒ-bind-nav-node="--Navnode"></furo-ui5-card>
           <furo-data-object
@@ -23,7 +23,7 @@ describe('furo-ui5-card', () => {
             @-object-ready="--Navnode"
           ></furo-data-object>
         </template>
-      </test-bind>
+      </flow-bind>
     `);
     await testbind.updateComplete;
     host = testbind._host;
