@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>components on フロー Furo UI5</title>
+    <title>Components on フロー Furo UI5</title>
     <link>http://ui5.furo.pro/docs/components/</link>
-    <description>Recent content in components on フロー Furo UI5</description>
+    <description>Recent content in Components on フロー Furo UI5</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://ui5.furo.pro/docs/components/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -29,8 +29,10 @@ Example #    Attributes and Properties #  symboltrue #  symboltrue string defaul
       <description>furo-ui5-busy-indicator #  @furo/components v1.0.0-rc.9 import &#39;@furo/components/src/furo-ui5-busy-indicator.js&#39;; exports FuroUiBusyIndicator js exports &amp;lt;furo-ui5-busy-indicator&amp;gt; custom-element-definition extends src/furo-ui5-busy-indicator.js
  Summary: ui5 busy indicator with methods
  Description #  The furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.
-1  &amp;lt;furo-ui5-busy-indicator&amp;gt;&amp;lt;/furo-ui5-busy-indicator&amp;gt;   What is different from ui5-busy-indicator? With flow based programming it&amp;rsquo;s usual to address methods. So we added two convenience functions for
- activate =&amp;gt; ƒ-activate deactivate =&amp;gt; ƒ-deactivate  https://sap.</description>
+1  &amp;lt;furo-ui5-busy-indicator&amp;gt;&amp;lt;/furo-ui5-busy-indicator&amp;gt;   https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
+Example #    
+
+  activate deactivate   Attributes and Properties #  Methods #  activate #  activate() ⟹ void</description>
     </item>
     
     <item>
