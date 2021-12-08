@@ -29,7 +29,7 @@ Example #    Attributes and Properties #  symboltrue #  symboltrue string defaul
       <description>furo-ui5-busy-indicator #  @furo/components v1.0.0-rc.9 import &#39;@furo/components/src/furo-ui5-busy-indicator.js&#39;; exports FuroUiBusyIndicator js exports &amp;lt;furo-ui5-busy-indicator&amp;gt; custom-element-definition extends src/furo-ui5-busy-indicator.js
  Summary: ui5 busy indicator with methods
  Description #  The furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.
-1  &amp;lt;furo-ui5-busy-indicator&amp;gt;&amp;lt;/furo-ui5-busy-indicator&amp;gt;   https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
+1  &amp;lt;furo-ui5-busy-indicator&amp;gt;&amp;lt;/furo-ui5-busy-indicator&amp;gt;    https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
 Example #    
 
   activate deactivate   Attributes and Properties #  Methods #  activate #  activate() ⟹ void</description>
@@ -79,7 +79,7 @@ Use multiple binders if you need more then one series per chart.
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-chart-display/</guid>
       <description>furo-ui5-chart-display #  @furo/components v1.0.0-rc.9 import &#39;@furo/components/src/furo-ui5-chart-display.js&#39;; exports &amp;lt;furo-ui5-chart-display&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Summary: Display charts with data objects
- Description #  The furo-ui5-chart-display is the render component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).
+ Description #  The furo-ui5-chart-display is the render component to display charts with apex the apex charts lib ( https://github.com/apexcharts/apexcharts.js).
 Use furo-ui5-chart to connect your data.
 1 2 3 4 5 6 7  &amp;lt;furo-ui5-chart-display chart-type=&amp;#34;bar&amp;#34;&amp;gt; &amp;lt;furo-ui5-chart ƒ-bind-data=&amp;#34;--projectDAO(*.entities)&amp;#34; data-field=&amp;#34;data.cost_limit.units&amp;#34; category-field=&amp;#34;data.description&amp;#34; &amp;gt;&amp;lt;/furo-ui5-chart&amp;gt; &amp;lt;/furo-ui5-chart-display&amp;gt;   Example mixed charts #     load data change data            Attributes and Properties #  sparkline #  sparkline</description>
     </item>
@@ -653,7 +653,7 @@ Example #           1 2 3 4 5 6 7 8  &amp;lt;furo-ui5-textarea-input-labeled ƒ-
       <description>furo-ui5-time-picker #  @furo/components v1.0.0-rc.9 import &#39;@furo/components/src/furo-ui5-time-picker.js&#39;; exports FuroUi5TimePicker js extends src/furo-ui5-time-picker.js mixes FieldNodeAdapter
  Summary: furo data time picker field
  Description #  The furo-ui5-time-picker component allows the user to bind a field of type google.type.TimeOfDay. Represents a time of day. The date and time zone are either not significant or are specified elsewhere.
-https://sap.github.io/ui5-webcomponents/playground/components/TimePicker/
+ https://sap.github.io/ui5-webcomponents/playground/components/TimePicker/
 Supported format options are pattern-based on Unicode LDML Date Format notation. For more information, see UTS #35: Unicode Locale Data Markup Language.</description>
     </item>
     
@@ -797,7 +797,7 @@ check whether it is a fat type
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/components/_components-inside/</guid>
-      <description>Components #    furo-ui5-bool-icon Displays a icon for a boolean value  furo-ui5-busy-indicator ui5 busy indicator with methods  furo-ui5-button ui5 button with methods  furo-ui5-card Ui5 card with data bindings  furo-ui5-chart-display Display charts with data objects  furo-ui5-chart connect data to a chart  furo-ui5-checkbox-input-labeled labeled input field  furo-ui5-checkbox-input data checkbox input field  furo-ui5-context-menu-display context menu  furo-ui5-context-menu Context menu  furo-ui5-date-picker-labeled labeled input field  furo-ui5-date-picker bindable datepicker field  furo-ui5-date-time-picker-labeled labeled input field  furo-ui5-date-time-picker furo data datetime picker field  furo-ui5-dialog-display Display element for furo-ui5-dialog  furo-ui5-dialog Dialog element  furo-ui5-flexible-grid a grid splitter  furo-ui5-form-field-container responsive labels for your input elements  furo-ui5-header-panel A bindable header panel  furo-ui5-message-strip-display furo ui5 message strip  furo-ui5-message-strip furo ui5 message strip  furo-ui5-money-input-labeled labeled input field  furo-ui5-money-input Binds a entityObject field google.</description>
+      <description></description>
     </item>
     
   </channel>
