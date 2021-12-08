@@ -59,11 +59,11 @@ enableGitInfo = true
 [menu]
 # [[menu.before]]
 [[menu.after]]
-name = "フロー"
+name = "フロー - Eclipse Furo"
 url = "https://furo.pro"
 weight = 10
 [[menu.after]]
-name = "フロー - Components"
+name = "フロー - Eclipse Furo Core Web Components"
 url = "https://web-components.furo.pro"
 weight = 8
 
