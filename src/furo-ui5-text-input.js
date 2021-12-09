@@ -2,6 +2,7 @@ import * as Input from '@ui5/webcomponents/dist/Input.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@ui5/webcomponents/dist/features/InputSuggestions.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
+import {RepeaterNode} from "@furo/data/src/lib/RepeaterNode";
 import { Events } from './lib/Events.js';
 
 /**
@@ -39,7 +40,7 @@ import { Events } from './lib/Events.js';
  * The constraint **required** will mark the element as required
  *
  * ## Methods
- * **bind-data(fieldNode)**
+ * **bindData(fieldNode)**
  * Bind a entity field. You can use the entity even when no data was received.
  *
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
@@ -59,11 +60,28 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
     this.type = 'Text';
 
     /**
-     * used to restore the state after a invalidation -> validation change
-     *
+     * Internal pointer to the options RepeaterNode
+     * @type {{}}
+     * @private
+     */
+    this._optionList = {};
+
+    /**
+     * Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the option items.
+     * Point-separated path to the field
+     * E.g. data.partner.display_name
+     * default: display_name
+     * This attribute is related to the option list
+     * @type {string}
+     */
+    this.displayFieldPath = 'display_name';
+
+    /**
+     * used to restore the state after an invalidation -> validation change
      * @private
      */
     this._previousValueState = { state: 'None', message: '' };
+
     /**
      *
      * @private
@@ -72,6 +90,7 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
       readonly: undefined,
       placeholder: undefined,
     };
+
     /**
      *
      * @private
@@ -80,6 +99,7 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
       required: undefined,
       max: undefined, // maps to maxlength
     };
+
     /**
      *
      * @private
@@ -89,6 +109,7 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
       disabled: undefined,
       required: undefined,
     };
+
     /**
      *
      * @private
@@ -114,6 +135,7 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
       disabled: null,
       icon: null,
       maxlength: null,
+      'display-field-path': 'display_name',
     };
 
     this.addEventListener('input', this._updateFNA);
@@ -603,6 +625,77 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
       this._icon.name = icon;
       this.appendChild(this._icon);
     }
+  }
+
+  /**
+   * Maps a RepeaterNode according the mapping definition to an ui5-suggestion-item.
+   * Supported fields are:
+   * - text
+   * - description
+   * - icon
+   *
+   * @param repeaterNode
+   * @returns {*[]}
+   * @private
+   */
+  _mapOptionsToSuggestions(repeaterNode) {
+
+    const mappedOptions = [];
+
+    repeaterNode.repeats.forEach((item) =>{
+      const option = {};
+      option.text = FuroUi5TextInput.getValueByPath(item, this._privilegedAttributes['display-field-path'])._value
+      mappedOptions.push(option);
+    })
+    return mappedOptions;
+  }
+
+  /**
+   * Let you get an attribute value by path
+   * @param obj
+   * @param path
+   * @returns {}
+   * @private
+   */
+  static getValueByPath(obj, path) {
+    if (obj && path) {
+      return path.split('.').reduce((res, prop) => res[prop], obj) || obj;
+    }
+    return {};
+  }
+
+  /**
+   * Here a RepeaterNode can be connected to the component as an option list.
+   * The items are displayed as suggestion items.
+   * @param repeaterNode
+   */
+  bindOptions(repeaterNode) {
+    if (!(repeaterNode instanceof RepeaterNode)) {
+      // eslint-disable-next-line no-console
+      console.warn(
+        'Invalid param in function bindOptions. Param is not of type RepeaterNode',
+        repeaterNode
+      );
+      return false;
+    }
+    this._optionList = repeaterNode;
+
+    /**
+     * Subscription for changes in the RepeaterNode
+     */
+    this._optionList.addEventListener('this-repeated-field-changed', () => {
+      const possibleSuggestions = this._mapOptionsToSuggestions(this._optionList);
+      if (possibleSuggestions.length) {
+        this._setSuggestions(possibleSuggestions);
+      }
+
+    });
+
+    const possibleSuggestions = this._mapOptionsToSuggestions(this._optionList);
+    if (possibleSuggestions.length) {
+      this._setSuggestions(possibleSuggestions);
+    }
+    return true;
   }
 
   /**
