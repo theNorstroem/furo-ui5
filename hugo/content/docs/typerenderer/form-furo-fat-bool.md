@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-furo-fat-bool
-**@furo/typerenderer** <small>v1.0.0-rc.9</small>
+**@furo/typerenderer** <small>v1.0.0-rc.11</small>
 <br>`import '@furo/typerenderer/src/form-furo-fat-bool.js';`<small>
 <br>exports `<form-furo-fat-bool>` custom-element-definition
 <br>extends */src/typerenderer/form-bool.js*

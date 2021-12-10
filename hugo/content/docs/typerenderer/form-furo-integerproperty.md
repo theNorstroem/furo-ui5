@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-furo-integerproperty
-**@furo/typerenderer** <small>v1.0.0-rc.9</small>
+**@furo/typerenderer** <small>v1.0.0-rc.11</small>
 <br>`import '@furo/typerenderer/src/form-furo-integerproperty.js';`<small>
 <br>exports `<form-furo-numberproperty>` custom-element-definition
 <br>extends */src/typerenderer/form-int32.js*

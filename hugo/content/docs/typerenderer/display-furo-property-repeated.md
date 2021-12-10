@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-property-repeated
-**@furo/typerenderer** <small>v1.0.0-rc.9</small>
+**@furo/typerenderer** <small>v1.0.0-rc.11</small>
 <br>`import '@furo/typerenderer/src/display-furo-property-repeated.js';`<small>
 <br>exports *DisplayFuroPropertyRepeated* js
 <br>exports `<display-furo-property-repeated>` custom-element-definition

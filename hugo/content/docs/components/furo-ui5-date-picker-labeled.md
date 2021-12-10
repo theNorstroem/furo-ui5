@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-date-picker-labeled
-**@furo/components** <small>v1.0.0-rc.9</small>
+**@furo/components** <small>v1.0.0-rc.11</small>
 <br>`import '@furo/components/src/furo-ui5-date-picker-labeled.js';`<small>
 <br>exports *FuroUi5DatePickerLabeled* js
 <br>exports `<furo-ui5-date-picker-labeled>` custom-element-definition

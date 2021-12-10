@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-select
-**@furo/components** <small>v1.0.0-rc.9</small>
+**@furo/components** <small>v1.0.0-rc.11</small>
 <br>`import '@furo/components/src/furo-ui5-select.js';`<small>
 <br>exports *FuroUi5Select* js
 <br>extends *src/furo-ui5-select.js*
@@ -158,7 +158,7 @@ Here a RepeaterNode can be connected to the component as an option list.
 <small>`FieldNode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
-overwrite bindData of FieldNodeAdapter
+Overridden bindData of FieldNodeAdapter
 
 - <small>fieldNode </small>
 <br><br>

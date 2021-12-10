@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-property
-**@furo/typerenderer** <small>v1.0.0-rc.9</small>
+**@furo/typerenderer** <small>v1.0.0-rc.11</small>
 <br>`import '@furo/typerenderer/src/celledit-furo-property.js';`<small>
 <br>exports *CelleditFuroProperty* js
 <br>exports `<celledit-furo-property>` custom-element-definition

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-z-grid
-**@furo/components** <small>v1.0.0-rc.9</small>
+**@furo/components** <small>v1.0.0-rc.11</small>
 <br>`import '@furo/components/src/furo-ui5-z-grid.js';`<small>
 <br>exports `<furo-ui5-z-grid>` custom-element-definition
 <br>superclass *LitElement*

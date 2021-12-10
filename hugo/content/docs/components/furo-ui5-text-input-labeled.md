@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-text-input-labeled
-**@furo/components** <small>v1.0.0-rc.9</small>
+**@furo/components** <small>v1.0.0-rc.11</small>
 <br>`import '@furo/components/src/furo-ui5-text-input-labeled.js';`<small>
 <br>exports *FuroUi5TextInputLabeled* js
 <br>exports `<furo-ui5-text-input-labeled>` custom-element-definition
@@ -30,12 +30,36 @@ to the design specification of SAP Fiori Design System.
 
 
 
+
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
 <small>`string` default: **&#39;&#39;**</small>
 
 the label for the data-text-input
+<br><br>
+
+### **descFieldPath**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">desc-field-path</span>
+<small>`string` default: **&#39;id&#39;**</small>
+
+Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the additional
+description of the option items.
+Point-separated path to the field
+E.g. data.partner.id
+default: id
+This attribute is related to the option list
+<br><br>
+
+### **displayFieldPath**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">display-field-path</span>
+<small>`string` default: **&#39;display_name&#39;**</small>
+
+Defines the field path that is used from the injected RepeaterNode to display the option items.
+Point-separated path to the field
+E.g. data.partner.display_name
 <br><br>
 
 ### **required**
@@ -98,6 +122,19 @@ Orchestrates the data field connection to the inside
 
 - <small>fieldNode </small>
 <br><br>
+
+### **bindOptions**
+<small>**bindOptions**(*repeaterNode* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-options</span>
+
+Binds a repeaterNode to the furo-ui5-combobox component
+
+- <small>repeaterNode </small>
+<br><br>
+
+
 
 
 

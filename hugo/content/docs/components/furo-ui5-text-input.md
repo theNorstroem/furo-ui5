@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-text-input
-**@furo/components** <small>v1.0.0-rc.9</small>
+**@furo/components** <small>v1.0.0-rc.11</small>
 <br>`import '@furo/components/src/furo-ui5-text-input.js';`<small>
 <br>exports *FuroUi5TextInput* js
 <br>extends *src/furo-ui5-text-input.js*
@@ -50,7 +50,7 @@ The constraint **required** will mark the element as required
 
 ## Methods
 **bindData(fieldNode)**
-Bind a entity field. You can use the entity even when no data was received.
+Bind an entity field. You can use the entity even when no data was received.
 
 When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
@@ -66,6 +66,7 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 <br><br>
+
 
 
 
@@ -119,6 +120,14 @@ default: id
 This attribute is related to the option list
 <br><br>
 
+### **wait**
+default: **250**</small>
+
+Debounce time in milliseconds
+Default value: 250
+<br><br>
+
+
 
 
 
@@ -127,6 +136,12 @@ This attribute is related to the option list
 ## Events
 {{% api "_furo-ui5-text-input-events.md" %}}
 
+### **search-requested**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-search-requested</span>
+→ <small>`value`</small>
+
+Fired when typing in input (debounced, default 250ms)
+<br><br>
 ### **change**
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-change</span>
 → <small>`String`</small>
@@ -195,6 +210,9 @@ The items are displayed as suggestion items.
 
 - <small>repeaterNode </small>
 <br><br>
+
+
+
 
 
 
