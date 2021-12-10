@@ -52,3 +52,5 @@ import './furo-ui5-tree.js';
 import './furo-ui5-typerenderer-labeled.js';
 import './furo-ui5-z-grid.js';
 import './ui5-reference-search-item.js';
+import './furo-ui5-combobox.js';
+import './furo-ui5-combobox-labeled.js';
