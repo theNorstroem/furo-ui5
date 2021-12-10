@@ -87,7 +87,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
      */
     this._optionList = [];
     /**
-     * used to restore the state after a invalidation -> validation change
+     * used to restore the state after an invalidation -> validation change
      * @private
      */
     this._previousValueState = { state: 'None', message: '' };
@@ -205,7 +205,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 
   /**
-   * overwrite bindData of FieldNodeAdapter
+   * Overridden bindData of FieldNodeAdapter
    * @param {FieldNode} fieldNode
    * @returns {boolean}
    */
@@ -215,7 +215,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 
   /**
-   * overwrite onFnaFieldValueChanged
+   * Overridden onFnaFieldValueChanged
    * @private
    * @param val
    */
@@ -249,7 +249,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 
   /**
-   * overwrite onFnaReadonlyChanged function
+   * Overridden onFnaReadonlyChanged function
    * @private
    * @param readonly
    */
@@ -265,7 +265,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 
   /**
-   * overwrite onFnaOptionsChanged function
+   * Overridden onFnaOptionsChanged function
    * @private
    * @param options
    */
@@ -276,7 +276,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 
   /**
-   * overwrite onFnaConstraintsChanged function
+   * Overridden onFnaConstraintsChanged function
    * @private
    * @param constraints
    */
@@ -294,7 +294,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 
   /**
-   * overwrite onFnaFieldNodeBecameInvalid function
+   * Overridden onFnaFieldNodeBecameInvalid function
    * @private
    * @param validity
    */
@@ -306,7 +306,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 
   /**
-   * overwrite onFnaFieldNodeBecameValid function
+   * Overridden onFnaFieldNodeBecameValid function
    * @private
    */
   onFnaFieldNodeBecameValid() {

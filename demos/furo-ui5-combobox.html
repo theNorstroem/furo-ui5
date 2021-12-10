@@ -18,7 +18,7 @@
 <script type="module">
   import { html, render } from 'lit';
   import './initEnv.js';
-  import '../src/furo-ui5-text-input.js';
+  import '../src/furo-ui5-combobox.js';
 
   import '@furo/route/src/furo-location.js';
   import '@furo/data/src/furo-deep-link.js';
@@ -39,36 +39,23 @@
 
             <furo-form-layouter two>
               <p full>
-                FuroUi5TextInput with static suggestions.
+                Basic usage of FuroUi5Combobox
               </p>
-              <furo-ui5-text-input
-                label="use with text-input"
+              <furo-ui5-combobox
                 ƒ-bind-data="--daoPerson(*.sex)">
-              </furo-ui5-text-input>
+              </furo-ui5-combobox>
+
               <p full>
-                FuroUi5TextInput with search integration to show lazy loaded suggestions (debounced input).
+                Lazy loaded combobox items
               </p>
-              <furo-ui5-text-input
-                label="use with text-input"
+              <furo-ui5-combobox
                 display-field-path="data.name"
                 desc-field-path="data.display_name"
                 ƒ-bind-data="--daoPerson(*.sex)"
                 ƒ-bind-options="--collection(*.entities)"
                 @-search-requested="--searchRequest">
-                <ui5-icon slot="icon" name="search"></ui5-icon>
-              </furo-ui5-text-input>
+              </furo-ui5-combobox>
 
-              <p full>
-                FuroUi5TextInput with search integration to show lazy loaded suggestions (click on icon).
-              </p>
-              <furo-ui5-text-input
-                label="use with text-input"
-                display-field-path="data.name"
-                desc-field-path="data.display_name"
-                ƒ-bind-data="--daoPerson(*.sex)"
-                ƒ-bind-options="--collection(*.entities)">
-                <ui5-icon slot="icon" name="search" interactive @-click="--iconClicked"></ui5-icon>
-              </furo-ui5-text-input>
             </furo-form-layouter>
             <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
 
@@ -77,7 +64,10 @@
             <furo-location @-location-changed="--locationChanged"></furo-location>
             <furo-deep-link service="PersonService" @-hts-out="--hts" ƒ-qp-in="--locationChanged(*.query)"></furo-deep-link>
 
-            <furo-collection-agent service="PersonService" ƒ-hts-in="--hts" ƒ-search="--searchRequest" ƒ-list="--iconClicked" @-response="--response">
+            <furo-collection-agent service="PersonService"
+                                   ƒ-hts-in="--hts"
+                                   ƒ-search="--searchRequest"
+                                   @-response="--response">
             </furo-collection-agent>
 
 

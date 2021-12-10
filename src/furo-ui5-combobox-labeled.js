@@ -4,24 +4,23 @@ import { FBP } from '@furo/fbp/src/fbp.js';
 import { Ui5LabelDataBinding } from './lib/Ui5LabelDataBinding.js';
 
 import './furo-ui5-form-field-container.js';
-import './furo-ui5-text-input.js';
+import './furo-ui5-combobox.js';
 
 /**
- * `furo-ui5-text-input-labeled`
- * The furo-ui5-text-input-labeled is a composition to easily use a complete input field with label according
+ * `furo-ui5-combobox-labeled`
+ * The furo-ui5-combobox-labeled is a composition to easily use a complete data combobox with label according
  * to the design specification of SAP Fiori Design System.
  *
- * @slot {HTMLElement} icon - defines the icon to be displayed in the input element.
+ * @slot {HTMLElement} valueStateMessage - defines the value state message that will be displayed as pop up under the input element.
  *
  * @fires {String} value-changed - Fires the field value when it changes.
  *
- * @slot {HTMLElement} icon - Defines the icon to be displayed in the input.
- * @summary labeled input field
- * @element
- * @demo demo-furo-ui5-text-input-labeled Basic Usage
+ * @summary labeled combobox
+ * @element furo-ui5-combobox-labeled
+ * @demo demo-furo-ui5-combobox-labeled Basic Usage
  * @appliesMixin FBP
  */
-export class FuroUi5TextInputLabeled extends FBP(LitElement) {
+export class FuroUi5ComboboxLabeled extends FBP(LitElement) {
   constructor() {
     super();
     this.label = '';
@@ -49,13 +48,12 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
   static get properties() {
     return {
       /**
-       * the label for the data-text-input
+       * the label for the data-number-input
        */
       label: { type: String },
 
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
-       * @type {Boolean}
        */
       required: {
         type: Boolean,
@@ -63,14 +61,12 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user and
        * appears in disabled state.
-       * @type {Boolean}
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
-       * @type {Boolean}
        */
       readonly: {
         type: Boolean,
@@ -109,6 +105,10 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
       :host([hidden]) {
         display: none;
       }
+
+      .hidden {
+        display: none;
+      }
     `;
   }
 
@@ -144,7 +144,7 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
           ?required=${this.required}
           >${this.label}</ui5-label
         >
-        <furo-ui5-text-input
+        <furo-ui5-combobox
           content
           id="Input"
           ?disabled=${this.disabled}
@@ -155,14 +155,10 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
           ƒ-bind-options="--options"
           ƒ-focus="--focus"
         >
-          <div slot="icon"><slot name="icon"></slot></div>
-        </furo-ui5-text-input>
+        </furo-ui5-combobox>
       </furo-ui5-form-field-container>
     `;
   }
 }
 
-window.customElements.define(
-  'furo-ui5-text-input-labeled',
-  FuroUi5TextInputLabeled
-);
+window.customElements.define('furo-ui5-combobox-labeled', FuroUi5ComboboxLabeled);
