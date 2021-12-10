@@ -11,15 +11,13 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-text-input" />
 <meta property="og:description" content="data text input field" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-text-input/" /><meta property="article:section" content="docs" />
-
-<meta property="article:modified_time" content="2021-11-30T11:15:25+01:00" />
-
+<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-text-input/" />
+<meta property="article:modified_time" content="2021-12-10T15:36:59+01:00" />
 <title>furo-ui5-text-input | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.8970c3c9d4b531a16cf725277f7ef50634ac43356703adef922b3d646410e36d.css" integrity="sha256-iXDDydS1MaFs9yUnf371BjSsQzVnA63vkis9ZGQQ420=">
-<script defer src="/en.search.min.3b941a17629f77e063da55bc46e7fe309e87aa6f86deb535141c327b32a4b71a.js" integrity="sha256-O5QaF2Kfd&#43;Bj2lW8Ruf&#43;MJ6Hqm&#43;G3rU1FBwyezKktxo="></script>
+<link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
+<script defer src="/en.search.min.c0d3cf604ce1f36e00dc27f02015252471da2b00aeffb82b24bae2678f9a56ce.js" integrity="sha256-wNPPYEzh824A3CfwIBUlJHHaKwCu/7grJLriZ4&#43;aVs4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -186,6 +184,32 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-checkbox-input-labeled/" class="">furo-ui5-checkbox-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-combobox/" class="">furo-ui5-combobox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-combobox-labeled/" class="">furo-ui5-combobox-labeled</a>
   
 
         </li>
@@ -878,8 +902,6 @@ https://github.com/alex-shpak/hugo-book
   
 
         </li>
-      
-    
       
     
   </ul>
@@ -2897,6 +2919,10 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
+      
+    
   </ul>
 
 
@@ -2936,7 +2962,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
  
@@ -2977,10 +3003,14 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#nativeinputattributes"><strong>nativeInputAttributes</strong></a></li>
         <li><a href="#type"><strong>type</strong></a></li>
+        <li><a href="#displayfieldpath"><strong>displayFieldPath</strong></a></li>
+        <li><a href="#descfieldpath"><strong>descFieldPath</strong></a></li>
+        <li><a href="#wait"><strong>wait</strong></a></li>
       </ul>
     </li>
     <li><a href="#events">Events</a>
       <ul>
+        <li><a href="#search-requested"><strong>search-requested</strong></a></li>
         <li><a href="#change"><strong>change</strong></a></li>
         <li><a href="#input"><strong>input</strong></a></li>
         <li><a href="#value-changed"><strong>value-changed</strong></a></li>
@@ -2989,6 +3019,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#methods-1">Methods</a>
       <ul>
         <li><a href="#readattributes"><strong>readAttributes</strong></a></li>
+        <li><a href="#bindoptions"><strong>bindOptions</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -3006,7 +3037,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-text-input
   <a class="anchor" href="#furo-ui5-text-input">#</a>
 </h1>
-<p><strong>@furo/components</strong> <small>v1.0.0-rc.9</small>
+<p><strong>@furo/components</strong> <small>v1.0.0-rc.11</small>
 <br><code>import '@furo/components/src/furo-ui5-text-input.js';</code><small>
 <br>exports <em>FuroUi5TextInput</em> js
 <br>extends <em>src/furo-ui5-text-input.js</em>
@@ -3024,12 +3055,12 @@ https://github.com/alex-shpak/hugo-book
 <p>You can bind any <code>string</code> type, like <code>furo.fat.String</code> type or the <code>google.protobuf.StringValue</code> type.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-text-input</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-text-input</span>
     <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoCountry(*.data.name)&#34;</span>
  &gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
 </code></pre></td></tr></table>
@@ -3069,8 +3100,8 @@ https://github.com/alex-shpak/hugo-book
   Methods
   <a class="anchor" href="#methods">#</a>
 </h2>
-<p><strong>bind-data(fieldNode)</strong>
-Bind a entity field. You can use the entity even when no data was received.</p>
+<p><strong>bindData(fieldNode)</strong>
+Bind an entity field. You can use the entity even when no data was received.</p>
 <p>When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with &ndash;entity(*.fields.fieldname)</p>
 <h4 id="example">
   Example
@@ -3105,7 +3136,7 @@ Bind a entity field. You can use the entity even when no data was received.</p>
 </furo-demo-snippet>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -3125,7 +3156,7 @@ Bind a entity field. You can use the entity even when no data was received.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-text-input</span>
     <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_text_input)&#34;</span>
   &gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
@@ -3162,10 +3193,50 @@ Bind a entity field. You can use the entity even when no data was received.</p>
 </h3>
 <p>default: <strong>'Text'</strong></small></p>
 <p><br><br></p>
+<h3 id="displayfieldpath">
+  <strong>displayFieldPath</strong>
+  <a class="anchor" href="#displayfieldpath">#</a>
+</h3>
+<p>default: <strong>'display_name'</strong></small></p>
+<p>Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the text of the
+option items.
+Point-separated path to the field
+E.g. data.partner.display_name
+default: display_name
+This attribute is related to the option list
+<br><br></p>
+<h3 id="descfieldpath">
+  <strong>descFieldPath</strong>
+  <a class="anchor" href="#descfieldpath">#</a>
+</h3>
+<p>default: <strong>'id'</strong></small></p>
+<p>Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the additional
+description of the option items.
+Point-separated path to the field
+E.g. data.partner.id
+default: id
+This attribute is related to the option list
+<br><br></p>
+<h3 id="wait">
+  <strong>wait</strong>
+  <a class="anchor" href="#wait">#</a>
+</h3>
+<p>default: <strong>250</strong></small></p>
+<p>Debounce time in milliseconds
+Default value: 250
+<br><br></p>
 <h2 id="events">
   Events
   <a class="anchor" href="#events">#</a>
 </h2>
+<h3 id="search-requested">
+  <strong>search-requested</strong>
+  <a class="anchor" href="#search-requested">#</a>
+</h3>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-search-requested</span>
+→ <small><code>value</code></small></p>
+<p>Fired when typing in input (debounced, default 250ms)
+<br><br></p>
 <h3 id="change">
   <strong>change</strong>
   <a class="anchor" href="#change">#</a>
@@ -3205,6 +3276,19 @@ Bind a entity field. You can use the entity even when no data was received.</p>
 those attributes can be set. <code>value-state</code>, <code>value-state-message</code>,  <code>icon</code>, <code>placeholder</code>, <code>required</code>,<code>readonly</code>,<code>disabled</code></p>
 <p>Use this after manual or scripted update of the attributes.</p>
 <p><br><br></p>
+<h3 id="bindoptions">
+  <strong>bindOptions</strong>
+  <a class="anchor" href="#bindoptions">#</a>
+</h3>
+<p><small><strong>bindOptions</strong>(<em>repeaterNode</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-options</span></p>
+<p>Here a RepeaterNode can be connected to the component as an option list.
+The items are displayed as suggestion items.</p>
+<ul>
+<li><small>repeaterNode </small>
+<br><br></li>
+</ul>
 </article>
  
       
@@ -3215,9 +3299,9 @@ those attributes can be set. <code>value-state</code>, <code>value-state-message
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/b25649e9d9a161348e46b0c1d110c4ba178b4dfa" title='Last modified by veith | November 30, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/0a92f8eee5d74047a2952e97cc323fb20586a1e3" title='Last modified by veith | December 10, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 30, 2021</span>
+      <span>December 10, 2021</span>
     </a>
   </div>
 
@@ -3257,10 +3341,14 @@ those attributes can be set. <code>value-state</code>, <code>value-state-message
       <ul>
         <li><a href="#nativeinputattributes"><strong>nativeInputAttributes</strong></a></li>
         <li><a href="#type"><strong>type</strong></a></li>
+        <li><a href="#displayfieldpath"><strong>displayFieldPath</strong></a></li>
+        <li><a href="#descfieldpath"><strong>descFieldPath</strong></a></li>
+        <li><a href="#wait"><strong>wait</strong></a></li>
       </ul>
     </li>
     <li><a href="#events">Events</a>
       <ul>
+        <li><a href="#search-requested"><strong>search-requested</strong></a></li>
         <li><a href="#change"><strong>change</strong></a></li>
         <li><a href="#input"><strong>input</strong></a></li>
         <li><a href="#value-changed"><strong>value-changed</strong></a></li>
@@ -3269,6 +3357,7 @@ those attributes can be set. <code>value-state</code>, <code>value-state-message
     <li><a href="#methods-1">Methods</a>
       <ul>
         <li><a href="#readattributes"><strong>readAttributes</strong></a></li>
+        <li><a href="#bindoptions"><strong>bindOptions</strong></a></li>
       </ul>
     </li>
   </ul>

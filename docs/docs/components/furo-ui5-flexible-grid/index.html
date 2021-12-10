@@ -11,15 +11,13 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-flexible-grid" />
 <meta property="og:description" content="a grid splitter" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-flexible-grid/" /><meta property="article:section" content="docs" />
-
-<meta property="article:modified_time" content="2021-11-29T07:38:24+01:00" />
-
+<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-flexible-grid/" />
+<meta property="article:modified_time" content="2021-12-10T15:36:59+01:00" />
 <title>furo-ui5-flexible-grid | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.8970c3c9d4b531a16cf725277f7ef50634ac43356703adef922b3d646410e36d.css" integrity="sha256-iXDDydS1MaFs9yUnf371BjSsQzVnA63vkis9ZGQQ420=">
-<script defer src="/en.search.min.3b941a17629f77e063da55bc46e7fe309e87aa6f86deb535141c327b32a4b71a.js" integrity="sha256-O5QaF2Kfd&#43;Bj2lW8Ruf&#43;MJ6Hqm&#43;G3rU1FBwyezKktxo="></script>
+<link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
+<script defer src="/en.search.min.c0d3cf604ce1f36e00dc27f02015252471da2b00aeffb82b24bae2678f9a56ce.js" integrity="sha256-wNPPYEzh824A3CfwIBUlJHHaKwCu/7grJLriZ4&#43;aVs4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -186,6 +184,32 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-checkbox-input-labeled/" class="">furo-ui5-checkbox-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-combobox/" class="">furo-ui5-combobox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-combobox-labeled/" class="">furo-ui5-combobox-labeled</a>
   
 
         </li>
@@ -878,8 +902,6 @@ https://github.com/alex-shpak/hugo-book
   
 
         </li>
-      
-    
       
     
   </ul>
@@ -2897,6 +2919,10 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
+      
+    
   </ul>
 
 
@@ -2936,7 +2962,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
  
@@ -2999,7 +3025,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-flexible-grid
   <a class="anchor" href="#furo-ui5-flexible-grid">#</a>
 </h1>
-<p><strong>@furo/components</strong> <small>v1.0.0-rc.9</small>
+<p><strong>@furo/components</strong> <small>v1.0.0-rc.11</small>
 <br><code>import '@furo/components/src/furo-ui5-flexible-grid.js';</code><small>
 <br>exports <code>&lt;furo-ui5-flexible-grid&gt;</code> custom-element-definition
 <br>superclass <em>LitElement</em>
@@ -3015,7 +3041,7 @@ https://github.com/alex-shpak/hugo-book
 when the available space is to small.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -3027,7 +3053,7 @@ when the available space is to small.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#998;font-style:italic">&lt;!-- a simple layout manager with two columns  --&gt;</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#998;font-style:italic">&lt;!-- a simple layout manager with two columns  --&gt;</span>
 &lt;<span style="color:#000080">furo-ui5-flexible-grid</span>&gt;
   &lt;<span style="color:#000080">div</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;2&#34;</span> <span style="color:#008080">full-on-size-medium</span> <span style="color:#008080">full-on-size-small</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;left&#34;</span>&gt;
      &lt;<span style="color:#000080">slot</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;left&#34;</span>&gt;&lt;/<span style="color:#000080">slot</span>&gt;
@@ -3114,7 +3140,7 @@ There is no line name available</p>
 </furo-demo-snippet>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -3142,7 +3168,7 @@ There is no line name available</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">style</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">style</span>&gt;
   <span style="color:#998;font-style:italic">/* needed because the contents get positioned vertically on small screens*/</span>
   .<span style="color:#458;font-weight:bold">left</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000080">size</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;size-s&#39;</span><span style="color:#000;font-weight:bold">]</span> {
     <span style="color:#000;font-weight:bold">height</span>: <span style="color:#099">22</span><span style="color:#458;font-weight:bold">rem</span>;
@@ -3214,9 +3240,9 @@ full width, no height given
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/069220875f72caea5eb3f326da5d8c83f4ee27e3" title='Last modified by veith | November 29, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/0a92f8eee5d74047a2952e97cc323fb20586a1e3" title='Last modified by veith | December 10, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 29, 2021</span>
+      <span>December 10, 2021</span>
     </a>
   </div>
 

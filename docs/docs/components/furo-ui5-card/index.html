@@ -11,15 +11,13 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-card" />
 <meta property="og:description" content="Ui5 card with data bindings" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-card/" /><meta property="article:section" content="docs" />
-
-<meta property="article:modified_time" content="2021-11-29T12:56:47+01:00" />
-
+<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-card/" />
+<meta property="article:modified_time" content="2021-12-10T15:36:59+01:00" />
 <title>furo-ui5-card | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.8970c3c9d4b531a16cf725277f7ef50634ac43356703adef922b3d646410e36d.css" integrity="sha256-iXDDydS1MaFs9yUnf371BjSsQzVnA63vkis9ZGQQ420=">
-<script defer src="/en.search.min.3b941a17629f77e063da55bc46e7fe309e87aa6f86deb535141c327b32a4b71a.js" integrity="sha256-O5QaF2Kfd&#43;Bj2lW8Ruf&#43;MJ6Hqm&#43;G3rU1FBwyezKktxo="></script>
+<link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
+<script defer src="/en.search.min.c0d3cf604ce1f36e00dc27f02015252471da2b00aeffb82b24bae2678f9a56ce.js" integrity="sha256-wNPPYEzh824A3CfwIBUlJHHaKwCu/7grJLriZ4&#43;aVs4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -186,6 +184,32 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-checkbox-input-labeled/" class="">furo-ui5-checkbox-input-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-combobox/" class="">furo-ui5-combobox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-combobox-labeled/" class="">furo-ui5-combobox-labeled</a>
   
 
         </li>
@@ -878,8 +902,6 @@ https://github.com/alex-shpak/hugo-book
   
 
         </li>
-      
-    
       
     
   </ul>
@@ -2897,6 +2919,10 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
+      
+    
   </ul>
 
 
@@ -2936,7 +2962,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
  
@@ -3012,7 +3038,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-card
   <a class="anchor" href="#furo-ui5-card">#</a>
 </h1>
-<p><strong>@furo/components</strong> <small>v1.0.0-rc.9</small>
+<p><strong>@furo/components</strong> <small>v1.0.0-rc.11</small>
 <br><code>import '@furo/components/src/furo-ui5-card.js';</code><small>
 <br>exports <em>FuroUi5Card</em> js
 <br>exports <code>&lt;furo-ui5-card&gt;</code> custom-element-definition
@@ -3029,7 +3055,7 @@ https://github.com/alex-shpak/hugo-book
 separate header and content areas.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -3039,7 +3065,7 @@ separate header and content areas.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-card</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-card</span>
    <span style="color:#008080">heading</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Title&#34;</span>
    <span style="color:#008080">subheading</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Secondary text&#34;</span>
    <span style="color:#008080">icon</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;card&#34;</span>
@@ -3062,7 +3088,7 @@ separate header and content areas.</p>
 </ul>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -3070,7 +3096,7 @@ separate header and content areas.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-card</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-card</span>
    <span style="color:#008080">design</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Positive&#34;</span>
    <span style="color:#008080">icon</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;card&#34;</span>
  &gt;
@@ -3088,13 +3114,13 @@ separate header and content areas.</p>
  </furo-ui5-card>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-card</span> <span style="color:#008080">design</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Positive&#34;</span> <span style="color:#008080">icon</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;globe&#34;</span> <span style="color:#008080">heading</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Title&#34;</span> <span style="color:#008080">subheading</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Secondary text&#34;</span> <span style="color:#008080">icon</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;card&#34;</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-card</span> <span style="color:#008080">design</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Positive&#34;</span> <span style="color:#008080">icon</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;globe&#34;</span> <span style="color:#008080">heading</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Title&#34;</span> <span style="color:#008080">subheading</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Secondary text&#34;</span> <span style="color:#008080">icon</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;card&#34;</span>&gt;
    &lt;<span style="color:#000080">div</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;action&#34;</span>&gt;&lt;<span style="color:#000080">furo-ui5-button</span>&gt;Action&lt;/<span style="color:#000080">furo-ui5-button</span>&gt;&lt;/<span style="color:#000080">div</span>&gt;
    &lt;<span style="color:#000080">div</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;content&#34;</span>&gt;content goes here&lt;/<span style="color:#000080">div</span>&gt;
  &lt;/<span style="color:#000080">furo-ui5-card</span>&gt;
@@ -3112,8 +3138,7 @@ separate header and content areas.</p>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon</span> <small><strong>reflects</strong></small>
 <small><code>string</code> default: <strong>''</strong></small></p>
 <p>Defines the visual representation in the header of the card. Supports images and icons.
-
-  <a href="https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html">https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html</a>
+<a href="https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html">https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html</a>
 <br><br></p>
 <h3 id="heading">
   <strong>heading</strong>
@@ -3271,9 +3296,9 @@ separate header and content areas.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/ca176ae3b386baf2db1363e56b775c3caa05c936" title='Last modified by veith | November 29, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/0a92f8eee5d74047a2952e97cc323fb20586a1e3" title='Last modified by veith | December 10, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 29, 2021</span>
+      <span>December 10, 2021</span>
     </a>
   </div>
 
