@@ -149,7 +149,6 @@ export class FuroUi5ComboboxLabeled extends FBP(LitElement) {
           id="Input"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
-          id-field-path=${this.idFieldPath}
           display-field-path=${this.displayFieldPath}
           desc-field-path=${this.descFieldPath}
           ƒ-bind-data="--data"

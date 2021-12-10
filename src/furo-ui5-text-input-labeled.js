@@ -25,6 +25,8 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
   constructor() {
     super();
     this.label = '';
+    this.descFieldPath = 'id';
+    this.displayFieldPath = 'display_name';
   }
 
   /**
@@ -50,6 +52,7 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
        * the label for the data-text-input
        */
       label: { type: String },
+
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
        * @type {Boolean}
@@ -71,6 +74,28 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
        */
       readonly: {
         type: Boolean,
+      },
+      /**
+       * Defines the field path that is used from the injected RepeaterNode to display the option items.
+       * Point-separated path to the field
+       * E.g. data.partner.display_name
+       */
+      displayFieldPath: {
+        type: String,
+        attribute: 'display-field-path',
+      },
+      /**
+       * Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the additional
+       * description of the option items.
+       * Point-separated path to the field
+       * E.g. data.partner.id
+       * default: id
+       * This attribute is related to the option list
+       * @type {string}
+       */
+      descFieldPath: {
+        type: String,
+        attribute: 'desc-field-path',
       },
     };
   }
@@ -96,6 +121,14 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
   }
 
   /**
+   * Binds a repeaterNode to the furo-ui5-combobox component
+   * @param repeaterNode
+   */
+  bindOptions(repeaterNode) {
+    this._FBPTriggerWire('--options', repeaterNode);
+  }
+
+  /**
    * @private
    * @returns {TemplateResult|TemplateResult}
    */
@@ -116,7 +149,10 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
           id="Input"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
+          display-field-path=${this.displayFieldPath}
+          desc-field-path=${this.descFieldPath}
           ƒ-bind-data="--data"
+          ƒ-bind-options="--options"
           ƒ-focus="--focus"
         >
           <div slot="icon"><slot name="icon"></slot></div>
