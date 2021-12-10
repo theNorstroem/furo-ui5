@@ -53,8 +53,9 @@
                 display-field-path="data.name"
                 desc-field-path="data.display_name"
                 ƒ-bind-data="--daoPerson(*.sex)"
-                ƒ-bind-options="--collection(*.entities)">
-                <ui5-icon slot="icon" name="search" interactive @-click="--iconClicked"></ui5-icon>
+                ƒ-bind-options="--collection(*.entities)"
+                @-search-requested="--searchRequest">
+                <ui5-icon slot="icon" name="search"></ui5-icon>
               </furo-ui5-text-input>
             </furo-form-layouter>
             <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
@@ -64,7 +65,7 @@
             <furo-location @-location-changed="--locationChanged"></furo-location>
             <furo-deep-link service="PersonService" @-hts-out="--hts" ƒ-qp-in="--locationChanged(*.query)"></furo-deep-link>
 
-            <furo-collection-agent service="PersonService" ƒ-hts-in="--hts" ƒ-list="--iconClicked" @-response="--response">
+            <furo-collection-agent service="PersonService" ƒ-hts-in="--hts" ƒ-search="--searchRequest" @-response="--response">
             </furo-collection-agent>
 
 

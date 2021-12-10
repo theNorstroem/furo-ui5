@@ -47,7 +47,7 @@ import { Events } from './lib/Events.js';
  *
  * @fires {String} change -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {String} input -  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
- *
+ * @fires {value} search-requested - Fired when typing in input (debounced, default 250ms)
  * @fires {String} value-changed - Fires the field value when it changes.
  *
  * @summary data text input field
@@ -87,6 +87,12 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
      * @type {string}
      */
     this.descFieldPath = 'id';
+
+    /**
+     * Debounce time in milliseconds
+     * Default value: 250
+     */
+    this.wait = 250;
 
     /**
      * used to restore the state after an invalidation -> validation change
@@ -146,6 +152,7 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
       disabled: null,
       icon: null,
       maxlength: null,
+      wait: 250,
       'display-field-path': 'display_name',
       'desc-field-path': 'id',
     };
@@ -159,6 +166,31 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
         this.value = '';
       }
     });
+
+    /**
+     * Debounce function, taken from Underscore.js
+     * @param func
+     * @param wait
+     * @param immediate
+     * @return {(function(): void)|*}
+     * @private
+     */
+    this._debounce = function debounce(func, wait, immediate) {
+      let timeout;
+      return function debouncer() {
+        const context = this;
+        // eslint-disable-next-line prefer-rest-params
+        const args = arguments;
+        const later = function applyLater() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
   }
 
   /**
@@ -213,6 +245,9 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
     if (this._privilegedAttributes.icon) {
       this._setIcon(this._privilegedAttributes.icon);
     }
+
+    // creates the debounce handler for the search-requested event
+    this._createHandler(this._privilegedAttributes.wait, false);
   }
 
   /**
@@ -252,6 +287,8 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
     }
 
     this.dispatchEvent(Events.buildChangeEvent(this.value));
+
+    this.handler(this.value);
   }
 
   /**
@@ -710,6 +747,28 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
       this._setSuggestions(possibleSuggestions);
     }
     return true;
+  }
+
+  /**
+   * Internal create of debounce handler function
+   * @param wait
+   * @param immediate
+   * @private
+   */
+  _createHandler(wait, immediate) {
+    this.handler = this._debounce(
+      wire => {
+        this.dispatchEvent(
+          new CustomEvent('search-requested', {
+            detail: wire,
+            bubbles: true,
+            composed: true,
+          })
+        );
+      },
+      wait,
+      immediate,
+    );
   }
 
   /**
