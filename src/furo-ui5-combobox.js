@@ -41,16 +41,6 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
     this.activeFieldBinding = false;
 
     /**
-     * Defines the id field path of the bound FieldNode.
-     * Point-separated path to the field
-     * Must be set if a data binding is specified with a complex type.
-     * default: display_name
-     * This attribute is related to the bound FieldNode.
-     * @type {string}
-     */
-    this.boundFieldIdPath = 'display_name';
-
-    /**
      * Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the option items.
      * Point-separated path to the field
      * E.g. data.partner.display_name
@@ -132,7 +122,6 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
       required: null,
       disabled: null,
       wait: 250,
-      'bound-field-id-path': 'display_name',
       'display-field-path': 'display_name',
       'desc-field-path': 'id',
     };
@@ -254,19 +243,81 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
       this._updateAttributesFromFat(this._fatValue.attributes);
       this._updateLabelsFromFat(this._fatValue.labels);
     } else {
-      // checks if incoming param is a complex object
-      if (
-        val !== null &&
-        typeof val === 'object' &&
-        val[this._privilegedAttributes['bound-field-id-path']] !== undefined
-      ) {
-        this._tmpValue = val[this._privilegedAttributes['bound-field-id-path']];
-      } else {
-        // scalar value
-        this._tmpValue = val;
-      }
+      this._tmpValue = val;
       this.value = this._tmpValue;
     }
+  }
+
+  /**
+   * Overridden onFnaReadonlyChanged function
+   * @private
+   * @param readonly
+   */
+  onFnaReadonlyChanged(readonly) {
+    this._attributesFromFNA.readonly = readonly;
+    if (
+      this._privilegedAttributes.readonly === null &&
+      this._labelsFromFAT.readonly === undefined
+    ) {
+      this.readonly = readonly;
+    }
+  }
+
+  /**
+   * Overridden onFnaOptionsChanged function
+   * @private
+   * @param options
+   */
+  onFnaOptionsChanged(options) {
+    if (options && options.list) {
+      const mappedOptions = [];
+
+      options.list.forEach((item) =>{
+        const option = {};
+        option.text = item.id;
+        option.display_name = item.display_name;
+        mappedOptions.push(option);
+      })
+      this._updateOptionList(mappedOptions);
+    }
+  }
+
+  /**
+   * Overridden onFnaConstraintsChanged function
+   * @private
+   * @param constraints
+   */
+  onFnaConstraintsChanged(constraints) {
+    // required
+    if (constraints.required !== undefined) {
+      this._constraintsFromFNA.required = constraints.required;
+      if (
+        this._privilegedAttributes.required === null &&
+        this._labelsFromFAT.required === undefined
+      ) {
+        this.required = constraints.required.is === 'true';
+      }
+    }
+  }
+
+  /**
+   * Overridden onFnaFieldNodeBecameInvalid function
+   * @private
+   * @param validity
+   */
+  onFnaFieldNodeBecameInvalid(validity) {
+    // if (validity.description) {
+    // this value state should not be saved as a previous value state
+    this._setValueStateMessage('Error', validity.description);
+    // }
+  }
+
+  /**
+   * Overridden onFnaFieldNodeBecameValid function
+   * @private
+   */
+  onFnaFieldNodeBecameValid() {
+    this._resetValueStateMessage();
   }
 
   /**
@@ -326,8 +377,8 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
         arr.forEach(e => {
           const element = document.createElement("ui5-cb-item");
 
-          element.text = e.text;
-          element.additionalText = e.display_name;
+          element.text = e.text || '';
+          element.additionalText = e.display_name || '';
           this.appendChild(element);
 
         });
