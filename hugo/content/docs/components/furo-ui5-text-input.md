@@ -49,7 +49,7 @@ You can bind any `string` type, like `furo.fat.String` type or the `google.proto
 The constraint **required** will mark the element as required
 
 ## Methods
-**bind-data(fieldNode)**
+**bindData(fieldNode)**
 Bind a entity field. You can use the entity even when no data was received.
 
 When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
@@ -87,10 +87,36 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+
+
+
 ### **type**
 default: **&#39;Text&#39;**</small>
 
 
+<br><br>
+
+
+### **displayFieldPath**
+default: **&#39;display_name&#39;**</small>
+
+Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the text of the
+option items.
+Point-separated path to the field
+E.g. data.partner.display_name
+default: display_name
+This attribute is related to the option list
+<br><br>
+
+### **descFieldPath**
+default: **&#39;id&#39;**</small>
+
+Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the additional
+description of the option items.
+Point-separated path to the field
+E.g. data.partner.id
+default: id
+This attribute is related to the option list
 <br><br>
 
 
@@ -152,6 +178,23 @@ Use this after manual or scripted update of the attributes.
 
 
 
+
+
+
+
+
+
+### **bindOptions**
+<small>**bindOptions**(*repeaterNode* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-options</span>
+
+Here a RepeaterNode can be connected to the component as an option list.
+The items are displayed as suggestion items.
+
+- <small>repeaterNode </small>
+<br><br>
 
 
 

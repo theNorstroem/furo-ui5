@@ -50,7 +50,8 @@
               </p>
               <furo-ui5-text-input
                 label="use with text-input"
-                display-field-path="data.first_name"
+                display-field-path="data.name"
+                desc-field-path="data.display_name"
                 ƒ-bind-data="--daoPerson(*.sex)"
                 ƒ-bind-options="--collection(*.entities)">
                 <ui5-icon slot="icon" name="search" interactive @-click="--iconClicked"></ui5-icon>

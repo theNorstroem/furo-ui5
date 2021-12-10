@@ -67,7 +67,8 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
     this._optionList = {};
 
     /**
-     * Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the option items.
+     * Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the text of the
+     * option items.
      * Point-separated path to the field
      * E.g. data.partner.display_name
      * default: display_name
@@ -75,6 +76,17 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
      * @type {string}
      */
     this.displayFieldPath = 'display_name';
+
+    /**
+     * Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the additional
+     * description of the option items.
+     * Point-separated path to the field
+     * E.g. data.partner.id
+     * default: id
+     * This attribute is related to the option list
+     * @type {string}
+     */
+    this.descFieldPath = 'id';
 
     /**
      * used to restore the state after an invalidation -> validation change
@@ -125,7 +137,6 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
      * they can not be modified later via response or spec
      * null is used because getAttribute returns null or value
      *
-     *
      * @private
      */
     this._privilegedAttributes = {
@@ -136,6 +147,7 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
       icon: null,
       maxlength: null,
       'display-field-path': 'display_name',
+      'desc-field-path': 'id',
     };
 
     this.addEventListener('input', this._updateFNA);
@@ -194,7 +206,9 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
 
     // save the original attribute for later usages, we do this, because some components reflect
     Object.keys(this._privilegedAttributes).forEach(attr => {
-      this._privilegedAttributes[attr] = this.getAttribute(attr);
+      if (this.getAttribute(attr) !== null) {
+        this._privilegedAttributes[attr] = this.getAttribute(attr);
+      }
     });
     if (this._privilegedAttributes.icon) {
       this._setIcon(this._privilegedAttributes.icon);
@@ -632,7 +646,6 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
    * Supported fields are:
    * - text
    * - description
-   * - icon
    *
    * @param repeaterNode
    * @returns {*[]}
@@ -645,6 +658,7 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
     repeaterNode.repeats.forEach((item) =>{
       const option = {};
       option.text = FuroUi5TextInput.getValueByPath(item, this._privilegedAttributes['display-field-path'])._value
+      option.display_name = FuroUi5TextInput.getValueByPath(item, this._privilegedAttributes['desc-field-path'])._value
       mappedOptions.push(option);
     })
     return mappedOptions;
