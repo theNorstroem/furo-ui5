@@ -41,7 +41,7 @@ import { Events } from './lib/Events.js';
  *
  * ## Methods
  * **bindData(fieldNode)**
- * Bind a entity field. You can use the entity even when no data was received.
+ * Bind an entity field. You can use the entity even when no data was received.
  *
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
