@@ -1,0 +1,250 @@
+{
+  "data":{
+  "id": "2121",
+  "display_name": "Project tree",
+  "description": "Navigation tree",
+  "root": {
+    "id": "1",
+    "display_name": "Home",
+    "secondary_text": "Secondary node description Secondary node description",
+    "description": "Description for home",
+    "icon": "account",
+    "panel": "view",
+    "key_words": "documentation",
+    "has_error": false,
+    "open": true,
+    "link": {
+      "rel": "self",
+      "method": "GET",
+      "href": "./api/v1/tasks/12.json",
+      "type": "task.Task"
+    },
+    "children": [
+      {
+        "id": "2",
+        "display_name": "Closed on start",
+        "secondary_text": "",
+        "description": "first with veery big title sub",
+        "icon": "appointment",
+        "panel": "view",
+        "key_words": "documentation",
+        "has_error": false,
+        "open": false,
+        "link": {
+          "rel": "self",
+          "method": "GET",
+          "href": "./api/v1/tasks/A.json",
+          "type": "task.Task"
+        },
+        "children": [
+          {
+            "id": "3",
+            "display_name": "Is Group Label",
+            "secondary_text": "",
+            "description": "Fingerprint Studio",
+            "icon": "",
+            "panel": "view",
+            "key_words": "documentation",
+            "has_error": false,
+            "is_group_label": true,
+            "open": true,
+            "link": {
+              "rel": "self",
+              "method": "GET",
+              "href": "./api/v1/tasks/c4.json",
+              "type": "task.Task"
+            },
+            "children": []
+          },
+          {
+            "id": "4ddd",
+            "display_name": "--->",
+            "secondary_text": "secondary",
+            "description": "Android Studo",
+            "icon": "dazwischen",
+            "panel": null,
+            "key_words": null,
+            "has_error": null,
+            "open": true,
+            "link": {
+              "rel": null,
+              "method": null,
+              "href": null,
+              "type": null
+            },
+            "children": []
+          },
+          {
+            "id": "4",
+            "display_name": null,
+            "secondary_text": "secondary",
+            "description": "Android Studo",
+            "icon": "add",
+            "panel": null,
+            "key_words": null,
+            "has_error": null,
+            "open": true,
+            "link": {
+              "rel": null,
+              "method": null,
+              "href": null,
+              "type": null
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "4w",
+        "display_name": "Node with error",
+        "secondary_text": "desc",
+        "description": "Sent data",
+        "icon": "error",
+        "panel": "view",
+        "key_words": "documentation",
+        "has_error": true,
+        "open": true,
+        "link": {
+          "rel": "self",
+          "method": "GET",
+          "href": "./api/v1/tasks/12.json",
+          "type": "task.Task-b"
+        },
+        "children": [
+          {
+            "id": "5",
+            "display_name": "leading divider",
+            "secondary_text": "Secondary node description",
+            "description": "sub suirst with veery big titleb",
+            "icon": "",
+            "panel": "view",
+            "key_words": "documentation xxx",
+            "has_error": false,
+            "open": true,
+            "link": {
+              "rel": "self",
+              "method": "GET",
+              "href": "./api/v1/tasks/12.json",
+              "type": "task.Task"
+            },
+            "children": [
+              {
+                "id": "6",
+                "display_name": "E",
+                "secondary_text": "Secondary node description",
+                "description": "sub suirst with veery big titleb",
+                "icon": "filter",
+                "panel": "view",
+                "key_words": "documentation",
+                "has_error": false,
+                "open": true,
+                "link": {
+                  "rel": "self",
+                  "method": "GET",
+                  "href": "./api/v1/tasks/12.json",
+                  "type": "task.Task"
+                },
+                "children": [
+                  {
+                    "id": "7",
+                    "display_name": "E",
+                    "secondary_text": "Secondary node description",
+                    "description": "sub sub",
+                    "icon": "email",
+                    "panel": "view",
+                    "key_words": "documentation",
+                    "has_error": false,
+                    "open": true,
+                    "link": {
+                      "rel": "self",
+                      "method": "GET",
+                      "href": "./api/v1/tasks/12.json",
+                      "type": "task.Task"
+                    },
+                    "children": [
+                      {
+                        "id": "82",
+                        "display_name": "E",
+                        "secondary_text": "Secondary node description",
+                        "description": "sub sub",
+                        "icon": "email",
+                        "panel": "view",
+                        "key_words": "documentation",
+                        "has_error": false,
+                        "open": true,
+                        "link": {
+                          "rel": "self",
+                          "method": "GET",
+                          "href": "./api/v1/tasks/12.json",
+                          "type": "task.Task"
+                        },
+                        "children": [
+                          {
+                            "id": "455",
+                            "display_name": "E",
+                            "secondary_text": null,
+                            "description": "Berlin",
+                            "icon": null,
+                            "panel": null,
+                            "key_words": null,
+                            "has_error": null,
+                            "open": true,
+                            "link": {
+                              "rel": null,
+                              "method": null,
+                              "href": null,
+                              "type": null
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "234",
+            "display_name": "E",
+            "secondary_text": "Secondary node description",
+            "description": "sub unknown type",
+            "icon": "email",
+            "panel": "view",
+            "key_words": "documentation",
+            "has_error": false,
+            "open": true,
+            "link": {
+              "rel": "self",
+              "method": "GET",
+              "href": "./api/v1/tasks/12.json",
+              "type": "task.Task"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+},
+  "meta": {
+    "fields": {
+      "data.root.display_name": {
+        "meta": {
+          "readonly": false
+        }
+
+      }
+    }
+  },
+  "links": [
+    {
+      "href": "/mockdata/trees/1/get.json",
+      "method": "GET",
+      "rel": "self",
+      "type": "tree.TreeEntity",
+      "service": "TreeService"
+    }
+  ]
+}

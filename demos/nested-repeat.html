@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+
+    furo-demo-snippet {
+      height: 90vh;
+      box-sizing: border-box;
+    }
+
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import {html, render} from 'lit';
+  import './initEnv.js';
+  import '@furo/data/src/furo-catalog.js';
+  import '@furo/util/src/furo-fetch-json.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+
+  import './nested-flow-repeat.js'
+
+
+  render(
+    html`
+      <furo-demo-snippet>
+        <template>
+          <table>
+            <tr>
+              <td>
+                <nested-flow-repeat ƒ-bind-data="--entityObj(*.data.root)"></nested-flow-repeat>
+              </td>
+              <td>
+                <nested-flow-repeat ƒ-bind-data="--entityObj(*.data.root)"></nested-flow-repeat>
+              </td>
+            </tr>
+          </table>
+
+
+          <furo-data-object
+            type="tree.TreeEntity"
+            ƒ-inject-raw="--data"
+            @-object-ready="--entityObj"
+          ></furo-data-object>
+          <furo-location @-location-query-changed="--qp"></furo-location>
+
+
+          <furo-fetch-json
+            ƒ-fetch="--entityObj"
+            src="/mockdata/trees/1/testdata.json"
+            @-data="--data"
+          ></furo-fetch-json>
+
+          <button @-click="--b">B</button>
+          <furo-fetch-json
+            ƒ-fetch="--b"
+            src="/mockdata/trees/1/testdataB.json"
+            @-data="--data"
+          ></furo-fetch-json>
+
+        <button @-click="--c">C</button>
+          <furo-fetch-json
+            ƒ-fetch="--c"
+            src="/mockdata/trees/1/testdataC.json"
+            @-data="--data"
+          ></furo-fetch-json>
+
+
+          <!-- show the selected item -->
+
+        </template>
+      </furo-demo-snippet>
+
+
+    `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>

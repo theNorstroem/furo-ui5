@@ -18,7 +18,7 @@
   <script type="module">
     import { html, render } from 'lit';
     import './initEnv.js';
-    import '../src/furo-ui5-property.js';
+    import '../src/furo-ui5-propertylist-display.js';
     import '../src/typerenderer/registry.js';
 
     import '@furo/data/src/furo-catalog.js';
@@ -39,7 +39,7 @@
 
             <furo-vertical-scroller>
               <furo-form-layouter four>
-                <furo-ui5-property  ƒ-bind-data="--entity(*.data.type_property)"></furo-ui5-property>
+                <furo-ui5-propertylist-display  ƒ-bind-data="--entity(*.data.type_property)"></furo-ui5-propertylist-display>
               </furo-form-layouter>
               <button @-click="--read1">load record 1</button>
               <button @-click="--read2">load record 2</button>
