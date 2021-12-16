@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-google-type-money
-**@furo/typerenderer** <small>v1.0.0-rc.11</small>
+**@furo/typerenderer** <small>v1.0.0-rc.12</small>
 <br>`import '@furo/typerenderer/src/display-google-type-money.js';`<small>
 <br>exports *DisplayGoogleTypeMoney* js
 <br>exports `<display-google-type-money>` custom-element-definition

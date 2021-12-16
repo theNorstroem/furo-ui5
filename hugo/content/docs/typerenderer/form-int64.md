@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-int64
-**@furo/typerenderer** <small>v1.0.0-rc.11</small>
+**@furo/typerenderer** <small>v1.0.0-rc.12</small>
 <br>`import '@furo/typerenderer/src/form-int64.js';`<small>
 <br>exports *FormInt64* js
 <br>exports `<form-int64>` custom-element-definition

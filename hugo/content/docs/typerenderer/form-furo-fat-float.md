@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-furo-fat-float
-**@furo/typerenderer** <small>v1.0.0-rc.11</small>
+**@furo/typerenderer** <small>v1.0.0-rc.12</small>
 <br>`import '@furo/typerenderer/src/form-furo-fat-float.js';`<small>
 <br>exports `<form-furo-fat-float>` custom-element-definition
 <br>extends */src/typerenderer/form-int32.js*

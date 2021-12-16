@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-uint64
-**@furo/typerenderer** <small>v1.0.0-rc.11</small>
+**@furo/typerenderer** <small>v1.0.0-rc.12</small>
 <br>`import '@furo/typerenderer/src/celledit-uint64.js';`<small>
 <br>exports *CelleditUint64* js
 <br>extends */src/typerenderer/celledit-int32.js*
