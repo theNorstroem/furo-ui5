@@ -31,6 +31,7 @@
     html`
       <furo-demo-snippet>
         <template>
+          <div style="overflow-y: scroll; height: 80%">
           <table>
             <tr>
               <td>
@@ -41,7 +42,7 @@
               </td>
             </tr>
           </table>
-
+          </div>
 
           <furo-data-object
             type="tree.TreeEntity"
@@ -50,9 +51,9 @@
           ></furo-data-object>
           <furo-location @-location-query-changed="--qp"></furo-location>
 
-
+          <button @-click="--a">A</button>
           <furo-fetch-json
-            ƒ-fetch="--entityObj"
+            ƒ-fetch="--entityObj, --a"
             src="/mockdata/trees/1/testdata.json"
             @-data="--data"
           ></furo-fetch-json>

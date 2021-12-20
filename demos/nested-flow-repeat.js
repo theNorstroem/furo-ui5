@@ -2,6 +2,9 @@ import {LitElement, html, css} from 'lit';
 import {FBP} from "@furo/fbp";
 import "@furo/data/src/furo-data-flow-repeat.js"
 import "../src/furo-ui5-text-input.js"
+import "@furo/data/src/furo-type-renderer.js"
+import "../src/typerenderer/registry.js"
+
 /**
  * `nested-flow-repeat`
  * todo Describe your element
@@ -75,9 +78,8 @@ class NestedFlowRepeat extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-
       <furo-ui5-text-input ƒ-bind-data="|--bindData(*.display_name)" ></furo-ui5-text-input>
-      <furo-ui5-text-input ƒ-bind-data="|--bindData(*.icon)" ></furo-ui5-text-input>
+      <furo-type-renderer context="celledit" ƒ-bind-data="|--bindData(*.icon)" ></furo-type-renderer>
       <furo-data-flow-repeat identity-path="id" ƒ-bind-data="|--bindData(*.children)">
         <template>
           <nested-flow-repeat ƒ-bind-data="--init(*)"></nested-flow-repeat>
