@@ -1,0 +1,5 @@
+- type: 'numeric.Numeric #Numeric data description'
+  fields:
+    bigdecimal: 'furo.BigDecimal:1 #'
+
+  target: numeric.proto

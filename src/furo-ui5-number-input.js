@@ -3,6 +3,7 @@ import * as Input from '@ui5/webcomponents/dist/Input.js';
 import '@ui5/webcomponents/dist/features/InputSuggestions.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Events } from './lib/Events.js';
+
 /**
  * The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.
  * It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
@@ -19,9 +20,9 @@ import { Events } from './lib/Events.js';
  * 1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.
  * 2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.
  *
- * | meta 	| fat 	| html 	|
- * |------	|-----	|------	|
- * | 1    	| 10  	| 100  	|
+ * | meta  | fat  | html  |
+ * |------  |-----  |------  |
+ * | 1      | 10    | 100    |
  *
  *
  * ## supported FAT attributes
@@ -201,6 +202,20 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
         this._tmpFAT.labels.modified = true;
       }
       this.setFnaFieldValue(this._tmpFAT);
+    } else if (this.getDataType() === 'furo.BigDecimal') {
+      const v = { unscaled_value: null, scale: null };
+      if (value !== '') {
+        const matches = value.match(/(\d*)\D(\d*)/);
+        if (matches !== null) {
+          v.scale = matches[2].length;
+          v.unscaled_value = parseInt(matches[1] + matches[2], 10);
+        } else {
+          v.scale = 0;
+          v.unscaled_value = parseInt(value, 10);
+        }
+      }
+
+      this.setFnaFieldValue(v);
     } else if (this.isWrapper()) {
       this.setFnaFieldValue(value === '' ? null : value);
     } else {
@@ -378,6 +393,20 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
       }
       this._updateAttributesFromFat(this._tmpFAT.attributes);
       this._updateLabelsFromFat(this._tmpFAT.labels);
+    } else if (this.getDataType() === 'furo.BigDecimal') {
+      if (val.scale === null && val.unscaled_value === null) {
+        this.value = '';
+      } else {
+        // treat as strings, because
+        // this.value = val.unscaled_value * Math.pow(10, -val.scale)
+        // will not work
+        const vstr = val.unscaled_value.toString(10);
+        this.value = parseFloat(
+          `${vstr.substr(0, vstr.length - val.scale)}.${vstr.substr(
+            vstr.length - val.scale
+          )}`
+        );
+      }
     } else if (val === null || val === undefined) {
       this.value = '';
     } else {

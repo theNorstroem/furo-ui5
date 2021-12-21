@@ -293,7 +293,7 @@ fields:
                 message: step 5
     furo_data_bool_icon:
         type: bool
-        description: field for furo-data-bool-icon for testing
+        description: field for furo-ui5-bool-icon for testing
         __proto:
             number: 14
         __ui: null
