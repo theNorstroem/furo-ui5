@@ -19,6 +19,7 @@
   import { html, render } from 'lit';
   import './initEnv.js';
   import '../src/furo-ui5-number-input.js';
+  import '../src/furo-ui5-number-input-labeled.js';
 
   import '@furo/route/src/furo-location.js';
   import '@furo/data/src/furo-deep-link.js';
@@ -40,14 +41,38 @@
 
             <furo-form-layouter two>
 
-              <furo-ui5-number-input
-                label="use with text-input"
+              <furo-ui5-number-input-labeled
+
                 ƒ-bind-data="--numT(*.bigdecimal)">
-              </furo-ui5-number-input>
-              <furo-ui5-number-input
-                label="use with text-input"
+              </furo-ui5-number-input-labeled>
+
+              <furo-ui5-number-input-labeled
                 ƒ-bind-data="--numT(*.bigdecimal)">
-              </furo-ui5-number-input>
+              </furo-ui5-number-input-labeled>
+
+
+              <furo-ui5-number-input-labeled
+                ƒ-bind-data="--numT(*.float)">
+              </furo-ui5-number-input-labeled>
+
+              <furo-ui5-number-input-labeled
+                ƒ-bind-data="--numT(*.float)">
+              </furo-ui5-number-input-labeled>
+
+              <furo-ui5-number-input-labeled
+                ƒ-bind-data="--numT(*.int)">
+              </furo-ui5-number-input-labeled>
+
+              <furo-ui5-number-input-labeled
+                ƒ-bind-data="--numT(*.int)">
+              </furo-ui5-number-input-labeled>
+              <furo-ui5-number-input-labeled
+                ƒ-bind-data="--numT(*.fatint)">
+              </furo-ui5-number-input-labeled>
+
+              <furo-ui5-number-input-labeled
+                ƒ-bind-data="--numT(*.fatint)">
+              </furo-ui5-number-input-labeled>
 
                           </furo-form-layouter>
 

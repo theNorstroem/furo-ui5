@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-double
-**@furo/typerenderer** <small>v1.0.0-rc.12</small>
+**@furo/typerenderer** <small>v1.0.0-rc.13</small>
 <br>`import '@furo/typerenderer/src/display-double.js';`<small>
 <br>exports *DisplayDouble* js
 <br>exports `<display-double>` custom-element-definition

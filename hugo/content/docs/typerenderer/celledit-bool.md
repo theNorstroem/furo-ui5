@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-bool
-**@furo/typerenderer** <small>v1.0.0-rc.12</small>
+**@furo/typerenderer** <small>v1.0.0-rc.13</small>
 <br>`import '@furo/typerenderer/src/celledit-bool.js';`<small>
 <br>exports *CelleditBool* js
 <br>extends */src/furo-ui5-checkbox-input.js*

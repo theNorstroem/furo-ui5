@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-furo-type-money
-**@furo/typerenderer** <small>v1.0.0-rc.12</small>
+**@furo/typerenderer** <small>v1.0.0-rc.13</small>
 <br>`import '@furo/typerenderer/src/cell-furo-type-money.js';`<small>
 <br>exports `<cell-furo-type-money>` custom-element-definition
 <br>extends */src/typerenderer/cell-google-type-money.js*

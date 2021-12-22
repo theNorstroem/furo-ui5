@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-furo-fat-double
-**@furo/typerenderer** <small>v1.0.0-rc.12</small>
+**@furo/typerenderer** <small>v1.0.0-rc.13</small>
 <br>`import '@furo/typerenderer/src/cell-furo-fat-double.js';`<small>
 <br>exports `<cell-furo-fat-double>` custom-element-definition
 <br>extends */src/typerenderer/cell-double.js*

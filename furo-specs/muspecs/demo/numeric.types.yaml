@@ -1,5 +1,8 @@
 - type: 'numeric.Numeric #Numeric data description'
   fields:
     bigdecimal: 'furo.BigDecimal:1 #'
-
+    bigdecimalmax: 'furo.BigDecimal:2 #with max'
+    float: 'float64:3 #Float value'
+    int: 'int64:4 #Int value'
+    fatint: 'furo.fat.Int64:5 #fat Int value'
   target: numeric.proto

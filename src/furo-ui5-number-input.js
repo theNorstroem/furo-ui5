@@ -8,7 +8,7 @@ import { Events } from './lib/Events.js';
  * The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.
  * It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
  *
- * You can bind any `number` type, any `furo.fat.xxx` number type or the `google.wrapper.xxx` number types.
+ * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
  *
  * ```html
  *  <furo-ui5-number-input
@@ -148,6 +148,7 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
    * - `double`, `float`, `int32`, `uint32`, `sint32`, `fixed32`, `sfixed32`, `int64`, `uint64`, `sint64`, `fixed64`, `sfixed64`
    * - `google.protobuf.DoubleValue`, `google.protobuf.FloatValue`, `google.protobuf.Int32Value`, etc.
    * - `furo.fat.Doube`, `furo.fat.Float`, `furo.fat.Int32`, etc.
+   * - `furo.BigDecimal`
    * @param fieldNode {FieldNode}
    */
   bindData(fieldNode) {
@@ -180,6 +181,7 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
    */
   _updateFNA() {
     const { value } = this;
+
     if (this.isFat()) {
       if (value === '') {
         this._tmpFAT.value = null;
@@ -189,7 +191,7 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
         }
         this._tmpFAT.labels.empty = true;
       } else {
-        this._tmpFAT.value = value;
+        this._tmpFAT.value = parseFloat(value);
         // remove empty state
         if (this._tmpFAT.labels && this._tmpFAT.labels.empty) {
           delete this._tmpFAT.labels.empty;
@@ -217,9 +219,9 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
 
       this.setFnaFieldValue(v);
     } else if (this.isWrapper()) {
-      this.setFnaFieldValue(value === '' ? null : value);
+      this.setFnaFieldValue(value === '' ? null : parseFloat(value));
     } else {
-      this.setFnaFieldValue(value === '' ? 0 : value);
+      this.setFnaFieldValue(value === '' ? 0 : parseFloat(value));
     }
 
     this.dispatchEvent(Events.buildChangeEvent(this.value));

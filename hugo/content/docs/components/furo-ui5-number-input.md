@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-number-input
-**@furo/components** <small>v1.0.0-rc.12</small>
+**@furo/components** <small>v1.0.0-rc.13</small>
 <br>`import '@furo/components/src/furo-ui5-number-input.js';`<small>
 <br>exports *FuroUi5NumberInput* js
 <br>extends *src/furo-ui5-number-input.js*
@@ -18,7 +18,7 @@ weight: 50
 The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.
 It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
 
-You can bind any `number` type, any `furo.fat.xxx` number type or the `google.wrapper.xxx` number types.
+You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
 
 ```html
  <furo-ui5-number-input
@@ -30,9 +30,9 @@ You can bind any `number` type, any `furo.fat.xxx` number type or the `google.wr
 1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.
 2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.
 
-| meta 	| fat 	| html 	|
-|------	|-----	|------	|
-| 1    	| 10  	| 100  	|
+| meta  | fat  | html  |
+|------  |-----  |------  |
+| 1      | 10    | 100    |
 
 
 ## supported FAT attributes
@@ -136,6 +136,7 @@ Supported types:
 - `double`, `float`, `int32`, `uint32`, `sint32`, `fixed32`, `sfixed32`, `int64`, `uint64`, `sint64`, `fixed64`, `sfixed64`
 - `google.protobuf.DoubleValue`, `google.protobuf.FloatValue`, `google.protobuf.Int32Value`, etc.
 - `furo.fat.Doube`, `furo.fat.Float`, `furo.fat.Int32`, etc.
+- `furo.BigDecimal`
 
 - <small>fieldNode </small>
 <br><br>
