@@ -2,8 +2,8 @@ import { CelleditInt32 } from './celledit-int32.js';
 /**
  *
  *
- * @summary celledit renderer for `uint64`
- * @element celledit-uint64
+ * @summary celledit renderer for type `furo.BigDecimal`
+ * @element celledit-furo-bigdecimal
  */
 export class CelleditFuroBigdecimal extends CelleditInt32 {
   /**

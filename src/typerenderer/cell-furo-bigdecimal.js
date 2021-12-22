@@ -2,15 +2,13 @@ import { Env } from '@furo/framework/src/furo.js';
 import { CellFloat } from './cell-float.js';
 
 /**
- * `cell-furo-fat-float`
- * The cell-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.
+ * The `cell-furo-bigdecimal`  component displays a FieldNode of type `furo.BigDecimal` in read only mode.
  *
- * Every cell-xxx component should implement the following API:
- * - function: bindData(fieldNode){...}
+ * The component uses locale from the environment to display the date value accordingly.
+ * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
  *
- * @summary cell display renderer for `furo.fat.Float`
- * @element cell-furo-fat-float
- * @demo demo cell-furo-fat-float Basic Usage
+ * @summary cell display renderer for type `furo.BigDecimal`
+ * @element cell-furo-bigdecimal
  */
 class CellFuroBigdecimal extends CellFloat {
   /**

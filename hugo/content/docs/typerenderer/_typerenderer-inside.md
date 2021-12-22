@@ -9,6 +9,7 @@ bookHidden: true
 - [cell-bool](cell-bool.md) cell display renderer for `bool`
 - [cell-double](cell-double.md) cell display renderer for `double`
 - [cell](cell.md) cell display renderer for `float`
+- [cell-furo-bigdecimal](cell-furo-bigdecimal.md) cell display renderer for type `furo.BigDecimal`
 - [cell-furo-fat-bool](cell-furo-fat-bool.md) cell display renderer for `furo.fat.Bool`
 - [cell-furo-fat-double](cell-furo-fat-double.md) cell display renderer for `furo.fat.Double`
 - [cell-furo-fat-float](cell-furo-fat-float.md) cell display renderer for `furo.fat.Float`
@@ -49,6 +50,7 @@ bookHidden: true
 - [celledit-bool](celledit-bool.md) celledit renderer for `bool`
 - [celledit-double](celledit-double.md) celledit renderer for `double`
 - [celledit-float](celledit-float.md) celledit renderer for `float`
+- [celledit-furo-bigdecimal](celledit-furo-bigdecimal.md) celledit renderer for type `furo.BigDecimal`
 - [celledit-furo-fat-int32](celledit-furo-fat-int32.md) celledit renderer for `furo.fat.Int32`
 - [celledit-furo-fat-int64](celledit-furo-fat-int64.md) celledit renderer for `furo.fat.Int64`
 - [celledit-furo-link](celledit-furo-link.md) celledit renderer for `furo.Link`
@@ -66,6 +68,7 @@ bookHidden: true
 - [display-bool](display-bool.md) display renderer for `bool`
 - [display-double](display-double.md) display renderer for `double`
 - [display-float](display-float.md) display renderer for `float`
+- [display-furo-bigdecimal](display-furo-bigdecimal.md) display renderer for `furo.BigDecimal`
 - [display-furo-fat-bool](display-furo-fat-bool.md) display renderer for `furo.fat.Bool`
 - [display-furo-fat-double](display-furo-fat-double.md) display renderer for `furo.fat.Double`
 - [display-furo-fat-float](display-furo-fat-float.md) display renderer for `furo.fat.Float`
@@ -107,6 +110,7 @@ bookHidden: true
 - [form-bool](form-bool.md) form renderer for `bool`
 - [form-double](form-double.md) form renderer for `double`
 - [form-float](form-float.md) form renderer for `float`
+- [form-furo-bigdecimal](form-furo-bigdecimal.md) form renderer for type `furo.BigDecimal`
 - [form-furo-fat-bool](form-furo-fat-bool.md) form renderer for `furo.fat.Bool`
 - [form-furo-fat-double](form-furo-fat-double.md) form renderer for `furo.fat.Double`
 - [form-furo-fat-float](form-furo-fat-float.md) form renderer for `furo.fat.Float`
