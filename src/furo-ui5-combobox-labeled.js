@@ -161,4 +161,7 @@ export class FuroUi5ComboboxLabeled extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('furo-ui5-combobox-labeled', FuroUi5ComboboxLabeled);
+window.customElements.define(
+  'furo-ui5-combobox-labeled',
+  FuroUi5ComboboxLabeled
+);

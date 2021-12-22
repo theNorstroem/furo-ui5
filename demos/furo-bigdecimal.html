@@ -20,6 +20,10 @@
   import './initEnv.js';
   import '../src/furo-ui5-number-input.js';
   import '../src/furo-ui5-number-input-labeled.js';
+  import '../src/typerenderer/cell-furo-bigdecimal.js';
+  import '../src/typerenderer/celledit-furo-bigdecimal.js';
+  import '../src/typerenderer/display-furo-bigdecimal.js';
+  import '../src/typerenderer/form-furo-bigdecimal.js';
 
   import '@furo/route/src/furo-location.js';
   import '@furo/data/src/furo-deep-link.js';
@@ -49,30 +53,20 @@
               <furo-ui5-number-input-labeled
                 ƒ-bind-data="--numT(*.bigdecimal)">
               </furo-ui5-number-input-labeled>
+              <div >cell:</div>
+              <cell-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></cell-furo-bigdecimal>
+
+              <div >celledit:</div>
+              <celledit-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></celledit-furo-bigdecimal>
 
 
-              <furo-ui5-number-input-labeled
-                ƒ-bind-data="--numT(*.float)">
-              </furo-ui5-number-input-labeled>
+              <div >display:</div>
+              <display-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></display-furo-bigdecimal>
 
-              <furo-ui5-number-input-labeled
-                ƒ-bind-data="--numT(*.float)">
-              </furo-ui5-number-input-labeled>
+              <div >form:</div>
+              <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></form-furo-bigdecimal>
 
-              <furo-ui5-number-input-labeled
-                ƒ-bind-data="--numT(*.int)">
-              </furo-ui5-number-input-labeled>
 
-              <furo-ui5-number-input-labeled
-                ƒ-bind-data="--numT(*.int)">
-              </furo-ui5-number-input-labeled>
-              <furo-ui5-number-input-labeled
-                ƒ-bind-data="--numT(*.fatint)">
-              </furo-ui5-number-input-labeled>
-
-              <furo-ui5-number-input-labeled
-                ƒ-bind-data="--numT(*.fatint)">
-              </furo-ui5-number-input-labeled>
 
                           </furo-form-layouter>
 

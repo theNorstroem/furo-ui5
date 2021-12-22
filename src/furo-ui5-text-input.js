@@ -2,7 +2,7 @@ import * as Input from '@ui5/webcomponents/dist/Input.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@ui5/webcomponents/dist/features/InputSuggestions.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
-import {RepeaterNode} from "@furo/data/src/lib/RepeaterNode";
+import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
 import { Events } from './lib/Events.js';
 
 /**
@@ -689,15 +689,20 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
    * @private
    */
   _mapOptionsToSuggestions(repeaterNode) {
-
     const mappedOptions = [];
 
-    repeaterNode.repeats.forEach((item) =>{
+    repeaterNode.repeats.forEach(item => {
       const option = {};
-      option.text = FuroUi5TextInput.getValueByPath(item, this._privilegedAttributes['display-field-path'])._value
-      option.display_name = FuroUi5TextInput.getValueByPath(item, this._privilegedAttributes['desc-field-path'])._value
+      option.text = FuroUi5TextInput.getValueByPath(
+        item,
+        this._privilegedAttributes['display-field-path']
+      )._value;
+      option.display_name = FuroUi5TextInput.getValueByPath(
+        item,
+        this._privilegedAttributes['desc-field-path']
+      )._value;
       mappedOptions.push(option);
-    })
+    });
     return mappedOptions;
   }
 
@@ -735,11 +740,12 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
      * Subscription for changes in the RepeaterNode
      */
     this._optionList.addEventListener('this-repeated-field-changed', () => {
-      const possibleSuggestions = this._mapOptionsToSuggestions(this._optionList);
+      const possibleSuggestions = this._mapOptionsToSuggestions(
+        this._optionList
+      );
       if (possibleSuggestions.length) {
         this._setSuggestions(possibleSuggestions);
       }
-
     });
 
     const possibleSuggestions = this._mapOptionsToSuggestions(this._optionList);
@@ -767,7 +773,7 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
         );
       },
       wait,
-      immediate,
+      immediate
     );
   }
 

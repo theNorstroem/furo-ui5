@@ -8,7 +8,6 @@ import './initEnv.js';
 
 import '../src/furo-ui5-combobox.js';
 
-
 describe('furo-ui5-combobox', () => {
   let host;
   let input;

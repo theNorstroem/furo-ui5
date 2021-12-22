@@ -1,7 +1,7 @@
 import * as ComboBox from '@ui5/webcomponents/dist/ComboBox.js';
-import {FieldNodeAdapter} from '@furo/data/src/lib/FieldNodeAdapter.js';
-import {RepeaterNode} from '@furo/data/src/lib/RepeaterNode.js';
-import {Events} from './lib/Events.js';
+import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
+import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode.js';
+import { Events } from './lib/Events.js';
 
 import '@ui5/webcomponents/dist/ComboBoxItem.js';
 import '@ui5/webcomponents-icons/dist/alert.js';
@@ -154,7 +154,6 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
         if (callNow) func.apply(context, args);
       };
     };
-
   }
 
   /**
@@ -218,7 +217,9 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
      * Subscription for changes in the RepeaterNode
      */
     this._optionList.addEventListener('this-repeated-field-changed', () => {
-      const possibleSuggestions = this._mapOptionsToSuggestions(this._optionList);
+      const possibleSuggestions = this._mapOptionsToSuggestions(
+        this._optionList
+      );
       if (possibleSuggestions.length) {
         this._updateOptionList(possibleSuggestions);
       }
@@ -272,12 +273,12 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
     if (options && options.list) {
       const mappedOptions = [];
 
-      options.list.forEach((item) =>{
+      options.list.forEach(item => {
         const option = {};
         option.text = item.id;
         option.display_name = item.display_name;
         mappedOptions.push(option);
-      })
+      });
       this._updateOptionList(mappedOptions);
     }
   }
@@ -372,26 +373,23 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
       });
 
       if (Array.isArray(arr) && arr.length > 0) {
-
         // add current combobox items
         arr.forEach(e => {
-          const element = document.createElement("ui5-cb-item");
+          const element = document.createElement('ui5-cb-item');
 
           element.text = e.text || '';
           element.additionalText = e.display_name || '';
           this.appendChild(element);
-
         });
       }
     }
-
   }
 
   /**
    * Fires a debounced search event, that can be used to lazy load options.
    * @private
    */
-  _fireDebouncedEvent(){
+  _fireDebouncedEvent() {
     this.handler(this.value);
   }
 
@@ -406,15 +404,20 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
    * @private
    */
   _mapOptionsToSuggestions(repeaterNode) {
-
     const mappedOptions = [];
 
-    repeaterNode.repeats.forEach((item) =>{
+    repeaterNode.repeats.forEach(item => {
       const option = {};
-      option.text = FuroUi5Combobox.getValueByPath(item, this._privilegedAttributes['display-field-path'])._value
-      option.display_name = FuroUi5Combobox.getValueByPath(item, this._privilegedAttributes['desc-field-path'])._value
+      option.text = FuroUi5Combobox.getValueByPath(
+        item,
+        this._privilegedAttributes['display-field-path']
+      )._value;
+      option.display_name = FuroUi5Combobox.getValueByPath(
+        item,
+        this._privilegedAttributes['desc-field-path']
+      )._value;
       mappedOptions.push(option);
-    })
+    });
     return mappedOptions;
   }
 
@@ -436,7 +439,7 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
         );
       },
       wait,
-      immediate,
+      immediate
     );
   }
 

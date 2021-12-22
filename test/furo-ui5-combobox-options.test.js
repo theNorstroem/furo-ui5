@@ -12,44 +12,10 @@ import './initEnv.js';
 
 import '../src/furo-ui5-combobox.js';
 
-
 describe('furo-ui5-combobox', () => {
   let host;
   let input;
   let dao;
-
-  const testRecordMeta = {
-    data: {
-      description: 'Description from record',
-    },
-    links: [
-      {
-        href: '/mockdata/experiments/1/get-less-props.json',
-        method: 'GET',
-        rel: 'self',
-        type: 'experiment.ExperimentEntity',
-        service: 'ExperimentService',
-      },
-    ],
-    meta: {
-      fields: {
-        'data.description': {
-          meta: {
-            label: 'My description',
-            readonly: false,
-            hint: 'Please enter a description',
-          },
-          constraints: {
-            required: {
-              is: 'true',
-              message: 'Please fill in!',
-            },
-          },
-        },
-      },
-    },
-  };
-
   beforeEach(async () => {
     const testbind = await fixture(html`
       <flow-bind>
@@ -59,19 +25,33 @@ describe('furo-ui5-combobox', () => {
             desc-field-path="data.display_name"
             ƒ-bind-data="--daoPerson(*.sex)"
             ƒ-bind-options="--collection(*.entities)"
-            @-search-requested="--searchRequest">
+            @-search-requested="--searchRequest"
+          >
           </furo-ui5-combobox>
-          <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
+          <furo-data-object
+            type="person.Person"
+            @-object-ready="--daoPerson"
+          ></furo-data-object>
 
-          <furo-data-object type="person.PersonCollection" @-object-ready="--collection" ƒ-inject-raw="--response"></furo-data-object>
+          <furo-data-object
+            type="person.PersonCollection"
+            @-object-ready="--collection"
+            ƒ-inject-raw="--response"
+          ></furo-data-object>
 
           <furo-location @-location-changed="--locationChanged"></furo-location>
-          <furo-deep-link service="PersonService" @-hts-out="--hts" ƒ-qp-in="--locationChanged(*.query)"></furo-deep-link>
+          <furo-deep-link
+            service="PersonService"
+            @-hts-out="--hts"
+            ƒ-qp-in="--locationChanged(*.query)"
+          ></furo-deep-link>
 
-          <furo-collection-agent service="PersonService"
-                                 ƒ-hts-in="--hts"
-                                 ƒ-search="--searchRequest"
-                                 @-response="--response">
+          <furo-collection-agent
+            service="PersonService"
+            ƒ-hts-in="--hts"
+            ƒ-search="--searchRequest"
+            @-response="--response"
+          >
           </furo-collection-agent>
         </template>
       </flow-bind>
@@ -86,9 +66,12 @@ describe('furo-ui5-combobox', () => {
 
   it('should have options from the type spec', done => {
     setTimeout(() => {
-      assert.equal(input.querySelectorAll('ui5-cb-item').length, 3, 'check options');
+      assert.equal(
+        input.querySelectorAll('ui5-cb-item').length,
+        3,
+        'check options'
+      );
       done();
     }, 16);
   });
-
 });

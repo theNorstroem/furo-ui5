@@ -611,7 +611,10 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
         this._tmpValue = newValue === '' ? null : newValue;
         this.setFnaFieldValue(newValue === '' ? null : newValue);
       } else if (this.getDataType() === 'furo.StringOptionProperty') {
-        const strOpt = {id: newValue, display_name: selectedOption.textContent}
+        const strOpt = {
+          id: newValue,
+          display_name: selectedOption.textContent,
+        };
         this.setFnaFieldValue(strOpt);
         return;
       } else {

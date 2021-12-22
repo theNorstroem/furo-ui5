@@ -403,11 +403,15 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
         // this.value = val.unscaled_value * Math.pow(10, -val.scale)
         // will not work
         const vstr = val.unscaled_value.toString(10);
-        this.value = parseFloat(
-          `${vstr.substr(0, vstr.length - val.scale)}.${vstr.substr(
-            vstr.length - val.scale
-          )}`
-        );
+        if (val.scale < 0) {
+          this.value = parseInt(vstr + ''.padEnd(Math.abs(val.scale), 0), 10);
+        } else {
+          this.value = parseFloat(
+            `${vstr.substr(0, vstr.length - val.scale)}.${vstr.substr(
+              vstr.length - val.scale
+            )}`
+          );
+        }
       }
     } else if (val === null || val === undefined) {
       this.value = '';
