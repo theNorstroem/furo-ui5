@@ -97,9 +97,9 @@ meta:
 The only method you have to implement is **htsIn**. The reference-search will pass its own hts to the extended
 searcher. A call on qpIn on the searcher will also pass the resulting hts to the extended searcher.
 
-### Searcher Events
-Fire a **@-record-selected** to set the item on the reference-search.
-Fire a **@-close-requested** to close the extended search.
+### Extended Searcher Events
+Fire a **record-selected** to set the item on the reference-search.
+Fire a **escape-filter-panel** to close the extended search.
 
 {{% api "_furo-ui5-reference-search-head.md" %}}
 

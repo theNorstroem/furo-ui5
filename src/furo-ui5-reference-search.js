@@ -773,6 +773,13 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
+   * focuses the input field
+   */
+  focus() {
+    this._inputField.focus();
+  }
+
+  /**
    * Closes the list
    * @private
    */
