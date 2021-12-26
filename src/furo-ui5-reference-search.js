@@ -758,7 +758,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
            */
           if (this._inputField.value !== '') {
             this._tmp_value = JSON.stringify(this.value);
-            this.value = { id: '', display_name: '' };
+            this.value.id = '';
+            this.value.display_name = '';
             this._updateField();
           } else {
             this.value = JSON.parse(this._tmp_value);
