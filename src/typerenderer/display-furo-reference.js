@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { FBP } from '@furo/fbp';
 
 // eslint-disable-next-line import/no-unresolved
 import '@ui5/webcomponents/dist/Link.js';
@@ -13,7 +14,7 @@ import '@ui5/webcomponents/dist/Link.js';
  * @summary display renderer for `furo.Reference`
  * @element display-furo-reference
  */
-class DisplayFuroReference extends LitElement {
+class DisplayFuroReference extends FBP(LitElement) {
   constructor() {
     super();
     /**
@@ -77,7 +78,9 @@ class DisplayFuroReference extends LitElement {
    */
   render() {
     // language=HTML
-    return html` <ui5-link href="" wrap>${this._displayValue}</ui5-link> `;
+    return html`<ui5-link wrap @-click="-^click"
+      >${this._displayValue}</ui5-link
+    >`;
   }
 }
 

@@ -9,6 +9,7 @@ import './initEnv.js';
 import '../src/furo-ui5-text-input.js';
 
 import '../src/lib/ui5-icons.js';
+import '@ui5/webcomponents-icons/dist/filter.js';
 
 describe('furo-ui5-text-input-scalar', () => {
   let host;
