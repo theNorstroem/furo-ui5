@@ -777,7 +777,9 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
    * focuses the input field
    */
   focus() {
-    this._inputField.focus();
+    this.updateComplete.then(() => {
+      this._inputField.focus();
+    });
   }
 
   /**
