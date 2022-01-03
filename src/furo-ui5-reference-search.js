@@ -537,6 +537,17 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
         this._searchResultItems = [];
         this._closeList();
         this._setValueStateMessage('Information', this.noDataText);
+        /**
+         * @event no-results
+         * Fired when search has no results
+         * detail payload: term
+         */
+        const customEvent = new Event('no-results', {
+          composed: true,
+          bubbles: true,
+        });
+        customEvent.detail = this._searchTerm;
+        this.dispatchEvent(customEvent);
       }
       this.requestUpdate();
     });
@@ -780,6 +791,18 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
     this.updateComplete.then(() => {
       this._inputField.focus();
     });
+  }
+
+  /**
+   * triggerSearch search for a term
+   * @public
+   * @param term
+   */
+  triggerSearch(term) {
+    setTimeout(() => {
+      this._FBPTriggerWire('--displayValue', term);
+      this._FBPTriggerWire('--searchTerm', term);
+    }, 100);
   }
 
   /**
