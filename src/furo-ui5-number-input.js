@@ -380,7 +380,7 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
     if (this.isFat()) {
       this._tmpFAT = val;
       if (val.value === null || val.value === undefined) {
-        if (val.labels.empty) {
+        if (val.labels && val.labels.empty) {
           this.value = 0;
         } else {
           this.value = '';
