@@ -102,30 +102,6 @@ export class FuroUi5Tree extends FBP(LitElement) {
      * @private
      */
     this._searchIsActive = false;
-    /**
-     * If you want to use a custom component for the tree-item, set this attribute.
-     * The default item component is **furo-ui5-tree-item**.
-     *
-     * @type {*|string|string}
-     * @private
-     */
-    this._tic = 'furo-ui5-tree-item';
-    // eslint-disable-next-line wc/no-constructor-attributes
-    this._tic = this.getAttribute('tree-item-component') || this._tic;
-    /**
-     *
-     * @type {TemplateResult<1>}
-     * @private
-     */
-    this._treeItemTepmplate = html([
-      [
-        '<template><tr><td><',
-        this._tic,
-        ' ƒ-bind-data="--itemInjected(*.item)" ƒ-search="--trigger"></',
-        this._tic,
-        '></td></tr></template>',
-      ].join(''),
-    ]);
   }
 
   /**
@@ -720,7 +696,9 @@ export class FuroUi5Tree extends FBP(LitElement) {
         <div class='tablewrapper' flex>
           <table>
             <flow-repeat ƒ-inject-items='--treeChanged' ƒ-trigger-all='--searchRequested' identity-path='id._value'>
-              ${this._treeItemTepmplate}
+              <template><tr><td>
+                <furo-ui5-tree-item ƒ-bind-data="--itemInjected(*.item)" ƒ-search="--trigger"></furo-ui5-tree-item>
+              </td></tr></template>
             </flow-repeat>
 
           </table>
