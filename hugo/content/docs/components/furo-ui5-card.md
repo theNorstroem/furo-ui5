@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-card
-**@furo/components** <small>v1.0.0-rc.13</small>
+**@furo/components** <small>v1.0.0-rc.15</small>
 <br>`import '@furo/components/src/furo-ui5-card.js';`<small>
 <br>exports *FuroUi5Card* js
 <br>exports `<furo-ui5-card>` custom-element-definition

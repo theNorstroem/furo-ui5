@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-property-labeled
-**@furo/typerenderer** <small>v1.0.0-rc.13</small>
+**@furo/typerenderer** <small>v1.0.0-rc.15</small>
 <br>`import '@furo/typerenderer/src/display-furo-property-labeled.js';`<small>
 <br>exports *DisplayFuroPropertyRepeatsLabeled* js
 <br>exports `<display-furo-property-repeats-labeled>` custom-element-definition

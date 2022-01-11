@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-bigdecimal
-**@furo/typerenderer** <small>v1.0.0-rc.13</small>
+**@furo/typerenderer** <small>v1.0.0-rc.15</small>
 <br>`import '@furo/typerenderer/src/display-furo-bigdecimal.js';`<small>
 <br>exports *DisplayFuroBigdecimal* js
 <br>exports `<display-furo-bigdecimal>` custom-element-definition

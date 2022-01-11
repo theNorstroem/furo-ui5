@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-reference-search
-**@furo/components** <small>v1.0.0-rc.13</small>
+**@furo/components** <small>v1.0.0-rc.15</small>
 <br>`import '@furo/components/src/furo-ui5-reference-search.js';`<small>
 <br>exports *FuroUi5ReferenceSearch* js
 <br>exports `<furo-ui5-reference-search>` custom-element-definition
@@ -118,6 +118,8 @@ Fire a **escape-filter-panel** to close the extended search.
 
 Set the service. This is only needed when you do not use a bind or bind a scalar value.
 <br><br>
+
+
 
 
 
@@ -370,6 +372,27 @@ Supported types: can be a scalar type or any complex type with 'id','display_nam
 
 
 
+
+### **focus**
+<small>**focus**() ⟹ `void`</small>
+
+<small>`*`</small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span>
+
+focuses the input field
+
+<br><br>
+
+### **triggerSearch**
+<small>**triggerSearch**(*term* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-trigger-search</span>
+
+triggerSearch search for a term
+
+- <small>term </small>
+<br><br>
 
 
 

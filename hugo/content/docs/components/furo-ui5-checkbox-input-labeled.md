@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-checkbox-input-labeled
-**@furo/components** <small>v1.0.0-rc.13</small>
+**@furo/components** <small>v1.0.0-rc.15</small>
 <br>`import '@furo/components/src/furo-ui5-checkbox-input-labeled.js';`<small>
 <br>exports *FuroUi5CheckboxInputLabeled* js
 <br>exports `<furo-ui5-checkbox-input-labeled>` custom-element-definition

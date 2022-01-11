@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-tree
-**@furo/components** <small>v1.0.0-rc.13</small>
+**@furo/components** <small>v1.0.0-rc.15</small>
 <br>`import '@furo/components/src/furo-ui5-tree.js';`<small>
 <br>exports *FuroUi5Tree* js
 <br>exports `<furo-ui5-tree>` custom-element-definition
@@ -108,8 +108,6 @@ Sets the maximal expand level relative from the current node.
 
 Expanding is a expensive operation.
 <br><br>
-
-
 
 
 ### **depth**
@@ -574,8 +572,6 @@ Focuses the currently selected tree item.
 The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).
 
 <br><br>
-
-
 
 
 

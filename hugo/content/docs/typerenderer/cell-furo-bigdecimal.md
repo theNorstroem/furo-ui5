@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-furo-bigdecimal
-**@furo/typerenderer** <small>v1.0.0-rc.13</small>
+**@furo/typerenderer** <small>v1.0.0-rc.15</small>
 <br>`import '@furo/typerenderer/src/cell-furo-bigdecimal.js';`<small>
 <br>exports `<cell-furo-bigdecimal>` custom-element-definition
 <br>extends */src/typerenderer/cell-float.js*
