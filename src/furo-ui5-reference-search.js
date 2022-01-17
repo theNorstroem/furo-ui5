@@ -689,7 +689,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
      * notify about response errors
      */
     this._FBPAddWireHook('--responseError', e => {
-      this._setValueStateMessage('Error', `System Error: ${e.message}`);
+      this._setValueStateMessage('Error', e.message);
     });
 
     /**
