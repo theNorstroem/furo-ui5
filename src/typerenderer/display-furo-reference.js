@@ -11,6 +11,8 @@ import '@ui5/webcomponents/dist/Link.js';
  * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
  *
+ * @fires selected when item was clicked or selected, because click from ui5 does not bubble
+ *
  * @summary display renderer for `furo.Reference`
  * @element display-furo-reference
  */
@@ -78,7 +80,7 @@ class DisplayFuroReference extends FBP(LitElement) {
    */
   render() {
     // language=HTML
-    return html`<ui5-link wrap @-click="-^click"
+    return html`<ui5-link wrap @-click="-^selected"
       >${this._displayValue}</ui5-link
     >`;
   }
