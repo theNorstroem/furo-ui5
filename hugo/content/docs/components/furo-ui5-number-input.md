@@ -60,6 +60,8 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+
+
 ### **nativeInputAttributes**
 </small>
 
@@ -121,6 +123,8 @@ Fires the field value when it changes.
 
 ## Methods
 {{% api "_furo-ui5-number-input-methods.md" %}}
+
+
 
 
 

@@ -111,6 +111,8 @@ Fire a **escape-filter-panel** to close the extended search.
 
 
 
+
+
 ### **service**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">service</span>
@@ -269,9 +271,11 @@ Use this attribute to set a custom icon for your searcher
 
 
 ### **valueState**
-default: **&#39;None&#39;**</small>
 
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">value-state</span>
+<small>`string` default: **&#39;None&#39;**</small>
 
+Value State of the input field
 <br><br>
 
 
@@ -354,6 +358,8 @@ Define the extended searcher. Do not forget to import the searcher you want to u
 
 ## Methods
 {{% api "_furo-ui5-reference-search-methods.md" %}}
+
+
 
 
 

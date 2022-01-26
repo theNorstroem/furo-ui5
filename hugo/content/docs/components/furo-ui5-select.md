@@ -50,6 +50,8 @@ the available options by using the ui5-option component. Use the function bindOp
 
 
 
+
+
 ### **activeFieldBinding**
 default: **false**</small>
 
@@ -180,6 +182,8 @@ The id field must be comparable.
 
 - <small>id must match the data</small>
 <br><br>
+
+
 
 
 

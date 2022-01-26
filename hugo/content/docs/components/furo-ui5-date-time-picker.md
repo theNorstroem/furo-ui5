@@ -73,6 +73,8 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+
+
 ### **formatPattern**
 default: **&#39;&#39;**</small>
 
@@ -149,6 +151,8 @@ Fired when the input operation has finished by pressing Enter or on focusout.
 
 - <small>value </small>
 <br><br>
+
+
 
 ### **bindData**
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
