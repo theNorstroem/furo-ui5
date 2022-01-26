@@ -168,6 +168,38 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
   }
 
   /**
+   * Adds a div with slot="valueStateMessage" to show
+   * field related information if the attribute value-state is set.
+   * @returns {HTMLDivElement}
+   * @private
+   */
+  _addValueStateMessage() {
+    const EXISTING_VSE = this.querySelector('div[slot="valueStateMessage"]');
+    if (EXISTING_VSE !== null) {
+      return EXISTING_VSE;
+    }
+    // we only create the ValueStateContainer if none already exists.
+    const VALUE_STATE_MESSAGE_ELEMENT = document.createElement('div');
+    VALUE_STATE_MESSAGE_ELEMENT.setAttribute('slot', 'valueStateMessage');
+    // eslint-disable-next-line wc/no-constructor-attributes
+    this.appendChild(VALUE_STATE_MESSAGE_ELEMENT);
+    return VALUE_STATE_MESSAGE_ELEMENT;
+  }
+
+  /**
+   * Removes <div slot="valueStateMessage"></div>
+   * @private
+   */
+  _removeValueStateMessage() {
+    const VALUE_STATE_MESSAGE_ELEMENT = this.querySelector(
+      'div[slot="valueStateMessage"]'
+    );
+    if (VALUE_STATE_MESSAGE_ELEMENT !== null) {
+      VALUE_STATE_MESSAGE_ELEMENT.remove();
+    }
+  }
+
+  /**
    * Reads the attributes which are set on the component dom.
    * those attributes can be set. `value-state`, `required`,`readonly`,`disabled`, `value-field-path`, `display-field-path`
    * Use this after manual or scripted update of the attributes.
@@ -307,10 +339,12 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
    * @param validity
    */
   onFnaFieldNodeBecameInvalid(validity) {
-    // if (validity.description) {
-    // this value state should not be saved as a previous value state
-    this._setValueStateMessage('Error', validity.description);
-    // }
+    if (validity.description) {
+      // this value state should not be saved as a previous value state
+      this._setValueStateMessage('Error', validity.description);
+    } else {
+      this.valueState = 'Error';
+    }
   }
 
   /**
@@ -319,6 +353,39 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
    */
   onFnaFieldNodeBecameValid() {
     this._resetValueStateMessage();
+  }
+
+  /**
+   * update the value state and the value state message on demand
+   *
+   * @param valueState
+   * @param message
+   * @private
+   */
+  _setValueStateMessage(valueState, message) {
+    const VSE = this._addValueStateMessage();
+    this.valueState = valueState;
+    if (VSE !== null) {
+      VSE.innerText = message || '';
+    }
+  }
+
+  /**
+   * resets value-state and valueStateMessage to previous value state
+   * If no previous message is set, the valueStateMessage container is removed.
+   * @private
+   */
+  _resetValueStateMessage() {
+    this.valueState = this._previousValueState.state;
+
+    if (this._previousValueState?.message?.length) {
+      this._setValueStateMessage(
+        this._previousValueState.state,
+        this._previousValueState.message
+      );
+    } else {
+      this._removeValueStateMessage();
+    }
   }
 
   /**

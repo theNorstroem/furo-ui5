@@ -205,6 +205,40 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
+   * Checks if options.flags has an entry `currency_list`
+   * In this case the option list is applied to the currency field as suggestion items.
+   *
+   * If you use a static option definition in the type specification (furo), you can
+   * define the list as follows:
+   *
+   * ```
+   * options:
+   *   flags:
+   *       - currency_list
+   *   list:
+   *       - '@type': type.googleapis.com/furo.Optionitem
+   *         display_name: Swiss francs (CHF)
+   *         id: CHF
+   *         selected: false
+   *       - '@type': type.googleapis.com/furo.Optionitem
+   *         display_name: Euro (EUR)
+   *         id: EUR
+   *         selected: false
+   *       - '@type': type.googleapis.com/furo.Optionitem
+   *         display_name: US Dollar (USD)
+   *         id: USD
+   *         selected: false
+   * ```
+   *
+   * @param options
+   */
+  onFnaOptionsChanged(options) {
+    if (options.flags && options.flags.includes('currency_list')) {
+      this.__fieldNode.currency_code._meta.options = options;
+    }
+  }
+
+  /**
    * overwrite onFnaConstraintsChanged function
    * @private
    * @param constraints
@@ -230,12 +264,6 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
 
     // update value when the amount changed
     this._FBPAddWireHook('--inputInput', e => {
-      if (e.inputType === 'deleteContentBackward') {
-        // this.binder.fieldNode.reset();
-        // this.binder.fieldNode.currency_code._value = '';
-        // this._FBPTriggerWire('--valueAmount', '');
-      }
-
       let value = {};
       if (e.composedPath()[0].nodeName === 'UI5-INPUT') {
         value = this._convertDataToMoneyObj(
@@ -288,25 +316,11 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
-   *
-   * @returns {{options: {type: ObjectConstructor}, currencies: {type: StringConstructor}}}
+   * Reactive properties
+   * @returns {{readonly: {type: BooleanConstructor}, disabled: {type: BooleanConstructor}}}
    */
   static get properties() {
     return {
-      /**
-       * the string list of currencies for the dropdown. e.g. "CHF,EUR,USD"
-       */
-      currencies: {
-        type: String,
-      },
-      /**
-       * the option object defines the currencies dropdown
-       * '{"list": [ "chf","eur","usd" ]}'
-       * '{"list": [ {"id":"CHF","label":"Schweiz"},{"id":"EUR","label":"Europa", "selected": true}'
-       */
-      options: {
-        type: Object,
-      },
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user.
        */
@@ -433,77 +447,6 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
-   * option setter
-   * @param options
-   */
-  set options(options) {
-    this.setOptions(options);
-  }
-
-  /**
-   * set options for currencies dropdown
-   * @param options
-   */
-  setOptions(options) {
-    // the attribute currencies has priority than the options in meta
-    if (this._currencies && this._currencies.length > 0) {
-      this.updateSuggestions(this._currencies);
-    } else {
-      let collection;
-      if (options.list) {
-        collection = options.list;
-      } else {
-        collection = options;
-      }
-      this._collection = collection;
-      this.updateSuggestions();
-    }
-  }
-
-  /**
-   * set currencies
-   * @param c
-   */
-  set currencies(c) {
-    const arr = c.split(',').map(item => item.trim());
-    this._currencies = arr;
-    this._collection = arr;
-
-    this.updateSuggestions();
-  }
-
-  /**
-   * inject the currency entities for dropdown
-   * @param entities
-   */
-  injectEntities(entities) {
-    const ent = { list: [] };
-    entities.forEach(e => {
-      if (e.data) {
-        const o = {};
-        o.id = e.id;
-        o.label = e.display_name;
-        ent.list.push(o);
-      }
-    });
-    this.setOptions(ent);
-  }
-
-  updateSuggestions() {
-    const collection = this._collection;
-    let arr = [];
-    // convert array list to id, label structure
-    if (typeof collection[0] === 'string') {
-      // eslint-disable-next-line no-param-reassign
-      arr = collection.map(item => ({ text: item }));
-    } else {
-      arr = collection.map(e => ({ text: e.id }));
-    }
-
-    this._FBPTriggerWire('--suggestions', arr);
-  }
-
-  /**
    *
    * @private
    * @return {CSSResult}
@@ -549,7 +492,6 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
           ?readonly=${this.readonly}
           ?required=${this.required}
           ƒ-bind-data="--data(*.currency_code)"
-          ƒ-.suggestions="--suggestions"
           @-field-value-changed=":STOP, --inputInput(*)"
         ></furo-ui5-text-input>
       </furo-horizontal-flex>
