@@ -71,6 +71,42 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
+   * Adds a div with slot="valueStateMessage" to show
+   * field related information if the attribute value-state is set.
+   * @returns {HTMLDivElement}
+   * @private
+   */
+  _addValueStateMessage() {
+    this._getElements();
+    const EXISTING_VSE = this.amount.querySelector(
+      'div[slot="valueStateMessage"]'
+    );
+    if (EXISTING_VSE !== null) {
+      return EXISTING_VSE;
+    }
+    // we only create the ValueStateContainer if none already exists.
+    const VALUE_STATE_MESSAGE_ELEMENT = document.createElement('div');
+    VALUE_STATE_MESSAGE_ELEMENT.setAttribute('slot', 'valueStateMessage');
+    // eslint-disable-next-line wc/no-constructor-attributes
+    this.amount.appendChild(VALUE_STATE_MESSAGE_ELEMENT);
+    return VALUE_STATE_MESSAGE_ELEMENT;
+  }
+
+  /**
+   * Removes <div slot="valueStateMessage"></div>
+   * @private
+   */
+  _removeValueStateMessage() {
+    this._getElements();
+    const VALUE_STATE_MESSAGE_ELEMENT = this.amount.querySelector(
+      'div[slot="valueStateMessage"]'
+    );
+    if (VALUE_STATE_MESSAGE_ELEMENT !== null) {
+      VALUE_STATE_MESSAGE_ELEMENT.remove();
+    }
+  }
+
+  /**
    * Binds a fieldNode.
    *
    * Supported types: `google.type.Money`
@@ -336,24 +372,10 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   onFnaFieldNodeBecameInvalid(validity) {
     if (validity.description) {
       this._getElements();
-
-      // created to avoid the default messages from ui5
-      const vse = this.amount.querySelector('div[slot="valueStateMessage"]');
-      if (vse === null) {
-        this._valueStateElement = document.createElement('div');
-        this._valueStateElement.setAttribute('slot', 'valueStateMessage');
-        // eslint-disable-next-line wc/no-constructor-attributes
-        this.amount.appendChild(this._valueStateElement);
-      } else {
-        this._valueStateElement = vse;
-        this._previousValueState.message = vse.innerText;
-      }
-
+      // this value state should not be saved as a previous value state
+      this._setValueStateMessage('Error', validity.description);
+    } else {
       this.amount.valueState = 'Error';
-      // element was created in constructor
-      this._valueStateElement.innerText = validity.description;
-
-      this.currency._setValueStateMessage('Error', validity.description);
     }
   }
 
@@ -362,12 +384,7 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
    * @private
    */
   onFnaFieldNodeBecameValid() {
-    this._getElements();
-
-    this.currency._resetValueStateMessage();
-    this.amount.valueState = this._previousValueState.state;
-    // element was created in constructor
-    this._valueStateElement.innerText = this._previousValueState.message;
+    this._resetValueStateMessage();
   }
 
   _getElements() {
@@ -376,6 +393,42 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
     }
     if (!this.currency) {
       this.currency = this.shadowRoot.getElementById('currency');
+    }
+  }
+
+  /**
+   * update the value state and the value state message on demand
+   *
+   * @param valueState
+   * @param message
+   * @private
+   */
+  _setValueStateMessage(valueState, message) {
+    this._getElements();
+    const VSE = this._addValueStateMessage();
+    this.amount.valueState = valueState;
+    if (VSE !== null) {
+      VSE.innerText = message || '';
+    }
+  }
+
+  /**
+   * resets value-state and valueStateMessage to previous value state
+   * If no previous message is set, the valueStateMessage container is removed.
+   * @private
+   */
+  _resetValueStateMessage() {
+    this._getElements();
+    this.amount.valueState = this._previousValueState.state;
+    this.currency.valueState = this._previousValueState.state;
+
+    if (this._previousValueState?.message?.length) {
+      this._setValueStateMessage(
+        this._previousValueState.state,
+        this._previousValueState.message
+      );
+    } else {
+      this._removeValueStateMessage();
     }
   }
 
@@ -461,7 +514,6 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
       #currency {
         width: 100px;
         min-width: 100px;
-        margin-left: var(--spacing-xs);
       }
 
       #amount {
