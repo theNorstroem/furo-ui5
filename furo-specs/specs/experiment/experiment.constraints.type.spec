@@ -65,7 +65,7 @@ fields:
             number: 3
         __ui: null
         meta:
-            default: "1"
+            default: ""
             placeholder: ""
             hint: ""
             label: Valid values are 6,9,12

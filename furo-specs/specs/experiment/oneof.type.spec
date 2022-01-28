@@ -50,7 +50,6 @@ fields:
         description: Localized String representation of a experiment
         __proto:
             number: 2
-            oneof: aaa
         __ui: null
         meta:
             default: ""
@@ -67,10 +66,9 @@ fields:
         description: Short experiment description
         __proto:
             number: 3
-            oneof: bbb
         __ui: null
         meta:
-            default: Default Description
+            default: ""
             placeholder: ""
             hint: ""
             label: Description
@@ -84,7 +82,6 @@ fields:
         description: field for furo_data_checkbox_input for testing
         __proto:
             number: 4
-            oneof: aaa
         __ui: null
         meta:
             default: ""
@@ -101,7 +98,6 @@ fields:
         description: field for furo_data_text_input for testing
         __proto:
             number: 5
-            oneof: bbb
         __ui: null
         meta:
             default: ""
@@ -149,7 +145,6 @@ fields:
         description: Contains a field_mask which fields of the targeted resource are going to be updated
         __proto:
             number: 23
-            oneof: complex
         __ui: null
         meta:
             default: ""
@@ -166,7 +161,6 @@ fields:
         description: for oneof test purposes only
         __proto:
             number: 24
-            oneof: complex
         __ui: null
         meta:
             default: ""
@@ -183,7 +177,6 @@ fields:
         description: skalar in a group of complex
         __proto:
             number: 25
-            oneof: complex
         __ui: null
         meta:
             default: ""

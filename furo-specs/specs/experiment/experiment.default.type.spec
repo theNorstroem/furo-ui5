@@ -51,7 +51,7 @@ fields:
             number: 3
         __ui: null
         meta:
-            default: Ein text per default
+            default: ""
             placeholder: ""
             hint: ""
             label: Description
@@ -67,7 +67,7 @@ fields:
             number: 4
         __ui: null
         meta:
-            default: Ein text per default
+            default: ""
             placeholder: ""
             hint: ""
             label: Description

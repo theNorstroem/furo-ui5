@@ -52,7 +52,7 @@ fields:
             number: 3
         __ui: null
         meta:
-            default: "false"
+            default: ""
             placeholder: ""
             hint: ""
             label: ""
@@ -100,7 +100,7 @@ fields:
             number: 6
         __ui: null
         meta:
-            default: "false"
+            default: ""
             placeholder: ""
             hint: ""
             label: ""

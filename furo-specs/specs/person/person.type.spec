@@ -139,7 +139,7 @@ fields:
             number: 8
         __ui: null
         meta:
-            default: female
+            default: ""
             placeholder: ""
             hint: ""
             label: sex
@@ -157,6 +157,41 @@ fields:
                     - '@type': type.googleapis.com/furo.Optionitem
                       display_name: person.type.sex.male.label
                       id: male
+                      selected: false
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints: {}
+    bmi:
+        type: int32
+        description: bmi, with options
+        __proto:
+            number: 9
+        __ui: null
+        meta:
+            default: ""
+            placeholder: person.person.bmi.placeholder
+            hint: ""
+            label: person.person.bmi.label
+            options:
+                flags:
+                    - enum
+                list:
+                    - '@type': type.googleapis.com/furo.Optionitem
+                      display_name: enum.packagename.typename.unknown.label
+                      id: 0
+                      selected: false
+                    - '@type': type.googleapis.com/furo.Optionitem
+                      display_name: enum.packagename.typename.low.label
+                      id: 10
+                      selected: false
+                    - '@type': type.googleapis.com/furo.Optionitem
+                      display_name: enum.packagename.typename.ok.label
+                      id: 25
+                      selected: false
+                    - '@type': type.googleapis.com/furo.Optionitem
+                      display_name: enum.packagename.typename.high.label
+                      id: 33
                       selected: false
             readonly: false
             repeated: false

@@ -90,15 +90,7 @@ fields:
             number: 5
         __ui: null
         meta:
-            default: |
-                { "link":
-                  { "rel": "list",
-                    "href": "/mockdata/persons/list.json",
-                    "method": "GET",
-                    "type": "person.Person",
-                    "service": "PersonService"
-                  }
-                }
+            default: ""
             placeholder: ""
             hint: ""
             label: person.label

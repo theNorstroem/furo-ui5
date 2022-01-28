@@ -180,7 +180,7 @@ fields:
             number: 11
         __ui: null
         meta:
-            default: "false"
+            default: ""
             placeholder: ""
             hint: ""
             label: ""
