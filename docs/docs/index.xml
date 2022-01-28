@@ -664,6 +664,15 @@ Look at furo-ui5-flexible-grid for more examples.
     
     <item>
       <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/typerenderer/cell-furo-bigdecimal/_cell-furo-bigdecimal-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/typerenderer/cell-furo-bigdecimal/_cell-furo-bigdecimal-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://ui5.furo.pro/docs/redactional/typerenderer/cell-furo-fat-bool/_cell-furo-fat-bool-head/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1033,6 +1042,15 @@ Look at furo-ui5-flexible-grid for more examples.
     
     <item>
       <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/typerenderer/celledit-furo-bigdecimal/_celledit-furo-bigdecimal-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/typerenderer/celledit-furo-bigdecimal/_celledit-furo-bigdecimal-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://ui5.furo.pro/docs/redactional/typerenderer/celledit-furo-fat-int32/_celledit-furo-fat-int32-head/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1190,6 +1208,15 @@ Look at furo-ui5-flexible-grid for more examples.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/typerenderer/display-furo-/_display-furo-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/typerenderer/display-furo-bigdecimal/_display-furo-bigdecimal-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/typerenderer/display-furo-bigdecimal/_display-furo-bigdecimal-head/</guid>
       <description></description>
     </item>
     
@@ -1550,6 +1577,15 @@ Look at furo-ui5-flexible-grid for more examples.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/typerenderer/form-float/_form-float-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/typerenderer/form-furo-bigdecimal/_form-furo-bigdecimal-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/typerenderer/form-furo-bigdecimal/_form-furo-bigdecimal-head/</guid>
       <description></description>
     </item>
     

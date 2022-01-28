@@ -12,12 +12,12 @@
 <meta property="og:description" content="Binds a entityObject field google.type.Money to a number-input and currency dropdown fields" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-money-input/" />
-<meta property="article:modified_time" content="2021-12-16T08:25:12+01:00" />
+<meta property="article:modified_time" content="2022-01-26T15:18:24+01:00" />
 <title>furo-ui5-money-input | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.b22c2958d46cad2f1dbe7fe3771a03288a30d57efce2d8a703eba5392048fbb0.js" integrity="sha256-siwpWNRsrS8dvn/jdxoDKIow1X784tinA&#43;ulOSBI&#43;7A="></script>
+<script defer src="/en.search.min.b7912b86ab7d815e39c4e719abc71db5374413da57b70def804f22e0f52f3022.js" integrity="sha256-t5Erhqt9gV45xOcZq8cdtTdEE9pXtw3vgE8i4PUvMCI="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -972,6 +972,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://ui5.furo.pro/docs/typerenderer/cell-furo-bigdecimal/" class="">cell-furo-bigdecimal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://ui5.furo.pro/docs/typerenderer/cell-furo-fat-bool/" class="">cell-furo-fat-bool</a>
   
 
@@ -1492,6 +1505,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://ui5.furo.pro/docs/typerenderer/celledit-furo-bigdecimal/" class="">celledit-furo-bigdecimal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-int32/" class="">celledit-furo-fat-int32</a>
   
 
@@ -1714,6 +1740,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/typerenderer/display-furo-/" class="">display-furo-</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/typerenderer/display-furo-bigdecimal/" class="">display-furo-bigdecimal</a>
   
 
         </li>
@@ -2234,6 +2273,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/typerenderer/form-float/" class="">form-float</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/typerenderer/form-furo-bigdecimal/" class="">form-furo-bigdecimal</a>
   
 
         </li>
@@ -2923,6 +2975,14 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
+      
+    
+      
+    
+      
+    
   </ul>
 
 
@@ -2995,8 +3055,6 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#supported-meta-and-constraints">supported meta and constraints</a></li>
     <li><a href="#attributes-and-properties">Attributes and Properties</a>
       <ul>
-        <li><a href="#options"><strong>options</strong></a></li>
-        <li><a href="#currencies"><strong>currencies</strong></a></li>
         <li><a href="#_previousvaluestate"><strong>_previousValueState</strong></a></li>
         <li><a href="#_attributesfromfna"><strong>_attributesFromFNA</strong></a></li>
         <li><a href="#_constraintsfromfna"><strong>_constraintsFromFNA</strong></a></li>
@@ -3014,11 +3072,9 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#binddata"><strong>bindData</strong></a></li>
         <li><a href="#readattributes"><strong>readAttributes</strong></a></li>
+        <li><a href="#onfnaoptionschanged"><strong>onFnaOptionsChanged</strong></a></li>
         <li><a href="#_convertdatatomoneyobj"><strong>_convertDataToMoneyObj</strong></a></li>
         <li><a href="#_getelements"><strong>_getElements</strong></a></li>
-        <li><a href="#setoptions"><strong>setOptions</strong></a></li>
-        <li><a href="#injectentities"><strong>injectEntities</strong></a></li>
-        <li><a href="#updatesuggestions"><strong>updateSuggestions</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -3036,8 +3092,8 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-money-input
   <a class="anchor" href="#furo-ui5-money-input">#</a>
 </h1>
-<p><strong>@furo/components</strong> <small>v1.0.0-rc.13</small>
-<br><code>import '@furo/components/src/furo-ui5-money-input.js';</code><small>
+<p><strong>@furo/ui5</strong> <small>v1.0.0-rc.16</small>
+<br><code>import '@furo/ui5/src/furo-ui5-money-input.js';</code><small>
 <br>exports <em>FuroUi5MoneyInput</em> js
 <br>exports <code>&lt;furo-ui5-money-input&gt;</code> custom-element-definition
 <br>superclass <em>LitElement</em>
@@ -3129,24 +3185,6 @@ currencies="CHF,EUR,USD"></furo-ui5-money-input>
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
 </h2>
-<h3 id="options">
-  <strong>options</strong>
-  <a class="anchor" href="#options">#</a>
-</h3>
-<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">options</span>
-</small></p>
-<p>the option object defines the currencies dropdown
-&lsquo;{&ldquo;list&rdquo;: [ &ldquo;chf&rdquo;,&ldquo;eur&rdquo;,&ldquo;usd&rdquo; ]}&rsquo;
-&lsquo;{&ldquo;list&rdquo;: [ {&ldquo;id&rdquo;:&ldquo;CHF&rdquo;,&ldquo;label&rdquo;:&ldquo;Schweiz&rdquo;},{&ldquo;id&rdquo;:&ldquo;EUR&rdquo;,&ldquo;label&rdquo;:&ldquo;Europa&rdquo;, &ldquo;selected&rdquo;: true}&rsquo;
-<br><br></p>
-<h3 id="currencies">
-  <strong>currencies</strong>
-  <a class="anchor" href="#currencies">#</a>
-</h3>
-<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">currencies</span>
-</small></p>
-<p>the string list of currencies for the dropdown. e.g. &ldquo;CHF,EUR,USD&rdquo;
-<br><br></p>
 <h3 id="_previousvaluestate">
   <strong>_previousValueState</strong>
   <a class="anchor" href="#_previousvaluestate">#</a>
@@ -3235,6 +3273,37 @@ disabled: null,
 Attributes that can be se are   <code>required</code>,<code>readonly</code>,<code>disabled</code> ,
 Use this after manual or scripted update of the attributes.</p>
 <p><br><br></p>
+<h3 id="onfnaoptionschanged">
+  <strong>onFnaOptionsChanged</strong>
+  <a class="anchor" href="#onfnaoptionschanged">#</a>
+</h3>
+<p><small><strong>onFnaOptionsChanged</strong>(<em>options</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-options-changed</span></p>
+<p>Checks if options.flags has an entry <code>currency_list</code>
+In this case the option list is applied to the currency field as suggestion items.</p>
+<p>If you use a static option definition in the type specification (furo), you can
+define the list as follows:</p>
+<pre><code>options:
+  flags:
+      - currency_list
+  list:
+      - '@type': type.googleapis.com/furo.Optionitem
+        display_name: Swiss francs (CHF)
+        id: CHF
+        selected: false
+      - '@type': type.googleapis.com/furo.Optionitem
+        display_name: Euro (EUR)
+        id: EUR
+        selected: false
+      - '@type': type.googleapis.com/furo.Optionitem
+        display_name: US Dollar (USD)
+        id: USD
+        selected: false
+</code></pre><ul>
+<li><small>options </small>
+<br><br></li>
+</ul>
 <h3 id="_convertdatatomoneyobj">
   <strong>_convertDataToMoneyObj</strong>
   <a class="anchor" href="#_convertdatatomoneyobj">#</a>
@@ -3256,38 +3325,6 @@ Use this after manual or scripted update of the attributes.</p>
 <p><small><code>*</code></small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;get-elements</span></p>
 <p><br><br></p>
-<h3 id="setoptions">
-  <strong>setOptions</strong>
-  <a class="anchor" href="#setoptions">#</a>
-</h3>
-<p><small><strong>setOptions</strong>(<em>options</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-options</span></p>
-<p>set options for currencies dropdown</p>
-<ul>
-<li><small>options </small>
-<br><br></li>
-</ul>
-<h3 id="injectentities">
-  <strong>injectEntities</strong>
-  <a class="anchor" href="#injectentities">#</a>
-</h3>
-<p><small><strong>injectEntities</strong>(<em>entities</em> `` ) ⟹ <code>void</code></small></p>
-<p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-inject-entities</span></p>
-<p>inject the currency entities for dropdown</p>
-<ul>
-<li><small>entities </small>
-<br><br></li>
-</ul>
-<h3 id="updatesuggestions">
-  <strong>updateSuggestions</strong>
-  <a class="anchor" href="#updatesuggestions">#</a>
-</h3>
-<p><small><strong>updateSuggestions</strong>() ⟹ <code>void</code></small></p>
-<p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-update-suggestions</span></p>
-<p><br><br></p>
 </article>
  
       
@@ -3298,9 +3335,9 @@ Use this after manual or scripted update of the attributes.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/2da4b705a12e33e8c0eb69b25d99ea444e9c0cef" title='Last modified by veith | December 16, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/1c952807eef187bdec353740954e0fa361d3134d" title='Last modified by maltenorstroem | January 26, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>December 16, 2021</span>
+      <span>January 26, 2022</span>
     </a>
   </div>
 
@@ -3332,8 +3369,6 @@ Use this after manual or scripted update of the attributes.</p>
     <li><a href="#supported-meta-and-constraints">supported meta and constraints</a></li>
     <li><a href="#attributes-and-properties">Attributes and Properties</a>
       <ul>
-        <li><a href="#options"><strong>options</strong></a></li>
-        <li><a href="#currencies"><strong>currencies</strong></a></li>
         <li><a href="#_previousvaluestate"><strong>_previousValueState</strong></a></li>
         <li><a href="#_attributesfromfna"><strong>_attributesFromFNA</strong></a></li>
         <li><a href="#_constraintsfromfna"><strong>_constraintsFromFNA</strong></a></li>
@@ -3351,11 +3386,9 @@ Use this after manual or scripted update of the attributes.</p>
       <ul>
         <li><a href="#binddata"><strong>bindData</strong></a></li>
         <li><a href="#readattributes"><strong>readAttributes</strong></a></li>
+        <li><a href="#onfnaoptionschanged"><strong>onFnaOptionsChanged</strong></a></li>
         <li><a href="#_convertdatatomoneyobj"><strong>_convertDataToMoneyObj</strong></a></li>
         <li><a href="#_getelements"><strong>_getElements</strong></a></li>
-        <li><a href="#setoptions"><strong>setOptions</strong></a></li>
-        <li><a href="#injectentities"><strong>injectEntities</strong></a></li>
-        <li><a href="#updatesuggestions"><strong>updateSuggestions</strong></a></li>
       </ul>
     </li>
   </ul>
