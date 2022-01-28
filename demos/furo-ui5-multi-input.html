@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+    furo-demo-snippet{
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import { html, render } from 'lit';
+  import './initEnv.js';
+  import '../src/furo-ui5-multi-input.js';
+
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+
+  import '@ui5/webcomponents/dist/Icon.js';
+  import '@ui5/webcomponents-icons/dist/search.js';
+
+
+  render(
+    html`
+
+        <furo-demo-snippet>
+          <template>
+
+            <furo-form-layouter two>
+              <p full>
+                FuroUi5MultiInput
+              </p>
+              <furo-ui5-multi-input
+                label="use with text-input"
+                ƒ-bind-data="--daoExp(*.repstring)">
+              </furo-ui5-multi-input>
+
+            </furo-form-layouter>
+            <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp"></furo-data-object>
+
+
+          </template>
+        </furo-demo-snippet>
+
+
+      `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>

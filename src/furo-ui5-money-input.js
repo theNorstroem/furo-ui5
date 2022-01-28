@@ -71,6 +71,42 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
+   * Adds a div with slot="valueStateMessage" to show
+   * field related information if the attribute value-state is set.
+   * @returns {HTMLDivElement}
+   * @private
+   */
+  _addValueStateMessage() {
+    this._getElements();
+    const EXISTING_VSE = this.amount.querySelector(
+      'div[slot="valueStateMessage"]'
+    );
+    if (EXISTING_VSE !== null) {
+      return EXISTING_VSE;
+    }
+    // we only create the ValueStateContainer if none already exists.
+    const VALUE_STATE_MESSAGE_ELEMENT = document.createElement('div');
+    VALUE_STATE_MESSAGE_ELEMENT.setAttribute('slot', 'valueStateMessage');
+    // eslint-disable-next-line wc/no-constructor-attributes
+    this.amount.appendChild(VALUE_STATE_MESSAGE_ELEMENT);
+    return VALUE_STATE_MESSAGE_ELEMENT;
+  }
+
+  /**
+   * Removes <div slot="valueStateMessage"></div>
+   * @private
+   */
+  _removeValueStateMessage() {
+    this._getElements();
+    const VALUE_STATE_MESSAGE_ELEMENT = this.amount.querySelector(
+      'div[slot="valueStateMessage"]'
+    );
+    if (VALUE_STATE_MESSAGE_ELEMENT !== null) {
+      VALUE_STATE_MESSAGE_ELEMENT.remove();
+    }
+  }
+
+  /**
    * Binds a fieldNode.
    *
    * Supported types: `google.type.Money`
@@ -169,6 +205,40 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
+   * Checks if options.flags has an entry `currency_list`
+   * In this case the option list is applied to the currency field as suggestion items.
+   *
+   * If you use a static option definition in the type specification (furo), you can
+   * define the list as follows:
+   *
+   * ```
+   * options:
+   *   flags:
+   *       - currency_list
+   *   list:
+   *       - '@type': type.googleapis.com/furo.Optionitem
+   *         display_name: Swiss francs (CHF)
+   *         id: CHF
+   *         selected: false
+   *       - '@type': type.googleapis.com/furo.Optionitem
+   *         display_name: Euro (EUR)
+   *         id: EUR
+   *         selected: false
+   *       - '@type': type.googleapis.com/furo.Optionitem
+   *         display_name: US Dollar (USD)
+   *         id: USD
+   *         selected: false
+   * ```
+   *
+   * @param options
+   */
+  onFnaOptionsChanged(options) {
+    if (options.flags && options.flags.includes('currency_list')) {
+      this.__fieldNode.currency_code._meta.options = options;
+    }
+  }
+
+  /**
    * overwrite onFnaConstraintsChanged function
    * @private
    * @param constraints
@@ -194,12 +264,6 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
 
     // update value when the amount changed
     this._FBPAddWireHook('--inputInput', e => {
-      if (e.inputType === 'deleteContentBackward') {
-        // this.binder.fieldNode.reset();
-        // this.binder.fieldNode.currency_code._value = '';
-        // this._FBPTriggerWire('--valueAmount', '');
-      }
-
       let value = {};
       if (e.composedPath()[0].nodeName === 'UI5-INPUT') {
         value = this._convertDataToMoneyObj(
@@ -252,25 +316,11 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
-   *
-   * @returns {{options: {type: ObjectConstructor}, currencies: {type: StringConstructor}}}
+   * Reactive properties
+   * @returns {{readonly: {type: BooleanConstructor}, disabled: {type: BooleanConstructor}}}
    */
   static get properties() {
     return {
-      /**
-       * the string list of currencies for the dropdown. e.g. "CHF,EUR,USD"
-       */
-      currencies: {
-        type: String,
-      },
-      /**
-       * the option object defines the currencies dropdown
-       * '{"list": [ "chf","eur","usd" ]}'
-       * '{"list": [ {"id":"CHF","label":"Schweiz"},{"id":"EUR","label":"Europa", "selected": true}'
-       */
-      options: {
-        type: Object,
-      },
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user.
        */
@@ -336,24 +386,10 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   onFnaFieldNodeBecameInvalid(validity) {
     if (validity.description) {
       this._getElements();
-
-      // created to avoid the default messages from ui5
-      const vse = this.amount.querySelector('div[slot="valueStateMessage"]');
-      if (vse === null) {
-        this._valueStateElement = document.createElement('div');
-        this._valueStateElement.setAttribute('slot', 'valueStateMessage');
-        // eslint-disable-next-line wc/no-constructor-attributes
-        this.amount.appendChild(this._valueStateElement);
-      } else {
-        this._valueStateElement = vse;
-        this._previousValueState.message = vse.innerText;
-      }
-
+      // this value state should not be saved as a previous value state
+      this._setValueStateMessage('Error', validity.description);
+    } else {
       this.amount.valueState = 'Error';
-      // element was created in constructor
-      this._valueStateElement.innerText = validity.description;
-
-      this.currency._setValueStateMessage('Error', validity.description);
     }
   }
 
@@ -362,12 +398,7 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
    * @private
    */
   onFnaFieldNodeBecameValid() {
-    this._getElements();
-
-    this.currency._resetValueStateMessage();
-    this.amount.valueState = this._previousValueState.state;
-    // element was created in constructor
-    this._valueStateElement.innerText = this._previousValueState.message;
+    this._resetValueStateMessage();
   }
 
   _getElements() {
@@ -380,74 +411,39 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
-   * option setter
-   * @param options
+   * update the value state and the value state message on demand
+   *
+   * @param valueState
+   * @param message
+   * @private
    */
-  set options(options) {
-    this.setOptions(options);
-  }
-
-  /**
-   * set options for currencies dropdown
-   * @param options
-   */
-  setOptions(options) {
-    // the attribute currencies has priority than the options in meta
-    if (this._currencies && this._currencies.length > 0) {
-      this.updateSuggestions(this._currencies);
-    } else {
-      let collection;
-      if (options.list) {
-        collection = options.list;
-      } else {
-        collection = options;
-      }
-      this._collection = collection;
-      this.updateSuggestions();
+  _setValueStateMessage(valueState, message) {
+    this._getElements();
+    const VSE = this._addValueStateMessage();
+    this.amount.valueState = valueState;
+    if (VSE !== null) {
+      VSE.innerText = message || '';
     }
   }
 
   /**
-   * set currencies
-   * @param c
+   * resets value-state and valueStateMessage to previous value state
+   * If no previous message is set, the valueStateMessage container is removed.
+   * @private
    */
-  set currencies(c) {
-    const arr = c.split(',').map(item => item.trim());
-    this._currencies = arr;
-    this._collection = arr;
+  _resetValueStateMessage() {
+    this._getElements();
+    this.amount.valueState = this._previousValueState.state;
+    this.currency.valueState = this._previousValueState.state;
 
-    this.updateSuggestions();
-  }
-
-  /**
-   * inject the currency entities for dropdown
-   * @param entities
-   */
-  injectEntities(entities) {
-    const ent = { list: [] };
-    entities.forEach(e => {
-      if (e.data) {
-        const o = {};
-        o.id = e.id;
-        o.label = e.display_name;
-        ent.list.push(o);
-      }
-    });
-    this.setOptions(ent);
-  }
-
-  updateSuggestions() {
-    const collection = this._collection;
-    let arr = [];
-    // convert array list to id, label structure
-    if (typeof collection[0] === 'string') {
-      // eslint-disable-next-line no-param-reassign
-      arr = collection.map(item => ({ text: item }));
+    if (this._previousValueState?.message?.length) {
+      this._setValueStateMessage(
+        this._previousValueState.state,
+        this._previousValueState.message
+      );
     } else {
-      arr = collection.map(e => ({ text: e.id }));
+      this._removeValueStateMessage();
     }
-
-    this._FBPTriggerWire('--suggestions', arr);
   }
 
   /**
@@ -461,7 +457,6 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
       #currency {
         width: 100px;
         min-width: 100px;
-        margin-left: var(--spacing-xs);
       }
 
       #amount {
@@ -497,7 +492,6 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
           ?readonly=${this.readonly}
           ?required=${this.required}
           ƒ-bind-data="--data(*.currency_code)"
-          ƒ-.suggestions="--suggestions"
           @-field-value-changed=":STOP, --inputInput(*)"
         ></furo-ui5-text-input>
       </furo-horizontal-flex>

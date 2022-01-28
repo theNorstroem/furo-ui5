@@ -68,6 +68,8 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+
+
 ### **formatPattern**
 default: **&#39;&#39;**</small>
 
@@ -95,6 +97,8 @@ The format pattern for the date.
 
 ## Methods
 {{% api "_furo-ui5-date-picker-methods.md" %}}
+
+
 
 
 

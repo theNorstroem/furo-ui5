@@ -55,24 +55,8 @@ Tags: money input
 
 
 
-### **options**
-
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">options</span>
-</small>
-
-the option object defines the currencies dropdown
-'{"list": [ "chf","eur","usd" ]}'
-'{"list": [ {"id":"CHF","label":"Schweiz"},{"id":"EUR","label":"Europa", "selected": true}'
-<br><br>
 
 
-### **currencies**
-
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">currencies</span>
-</small>
-
-the string list of currencies for the dropdown. e.g. "CHF,EUR,USD"
-<br><br>
 
 
 
@@ -137,6 +121,8 @@ A Boolean attribute which, if present, means this field is readonly.
 {{% api "_furo-ui5-money-input-methods.md" %}}
 
 
+
+
 ### **bindData**
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
@@ -162,6 +148,40 @@ Use this after manual or scripted update of the attributes.
 
 <br><br>
 
+
+### **onFnaOptionsChanged**
+<small>**onFnaOptionsChanged**(*options* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-options-changed</span>
+
+Checks if options.flags has an entry `currency_list`
+In this case the option list is applied to the currency field as suggestion items.
+
+If you use a static option definition in the type specification (furo), you can
+define the list as follows:
+
+```
+options:
+  flags:
+      - currency_list
+  list:
+      - '@type': type.googleapis.com/furo.Optionitem
+        display_name: Swiss francs (CHF)
+        id: CHF
+        selected: false
+      - '@type': type.googleapis.com/furo.Optionitem
+        display_name: Euro (EUR)
+        id: EUR
+        selected: false
+      - '@type': type.googleapis.com/furo.Optionitem
+        display_name: US Dollar (USD)
+        id: USD
+        selected: false
+```
+
+- <small>options </small>
+<br><br>
 
 
 
@@ -193,38 +213,6 @@ Use this after manual or scripted update of the attributes.
 <br><br>
 
 
-### **setOptions**
-<small>**setOptions**(*options* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-options</span>
-
-set options for currencies dropdown
-
-- <small>options </small>
-<br><br>
-
-
-### **injectEntities**
-<small>**injectEntities**(*entities* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-inject-entities</span>
-
-inject the currency entities for dropdown
-
-- <small>entities </small>
-<br><br>
-
-### **updateSuggestions**
-<small>**updateSuggestions**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-update-suggestions</span>
-
-
-
-<br><br>
 
 
 

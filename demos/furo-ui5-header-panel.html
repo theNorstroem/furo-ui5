@@ -36,7 +36,8 @@
   <script type="module">
     import { html, render } from 'lit';
     import '../src/furo-ui5-header-panel.js';
-    import '@ui5/webcomponents-icons/dist/AllIcons.js';
+    import '../src/furo-ui5-button.js';
+    import '@ui5/webcomponents-icons/dist/process.js';
     import '@ui5/webcomponents-icons/dist/task.js';
 
 
@@ -47,7 +48,18 @@
           <h3>furo-ui5-header-panel Basic Usage</h3>
 
           <div class="demopanel">
-            <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task"></furo-ui5-header-panel>
+            <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task">
+              <div slot="action">
+                <furo-ui5-button
+                  design="Emphasized"
+                  icon="process"
+                  icon-end
+                >Primary action
+                </furo-ui5-button>
+                <furo-ui5-button>Other Action</furo-ui5-button>
+              </div>
+
+            </furo-ui5-header-panel>
 
           </div>
         </furo-vertical-scroller>

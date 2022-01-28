@@ -143,7 +143,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
     this.disableSearchList = false;
     this.icon = 'search';
 
-    // used to restore the state after a invalidation -> validation change
+    // used to restore the state after an invalidation -> validation change
     /**
      *
      * @private
@@ -198,7 +198,11 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
     }
 
     // set the service by wire, because collection-agent can not handle empty service entries
-    if (typeof val.link === 'object' && val.link.service !== null && val.link.service.length) {
+    if (
+      typeof val.link === 'object' &&
+      val.link.service !== null &&
+      val.link.service.length
+    ) {
       this._FBPTriggerWire('--detectedService', val.link.service);
       this._FBPTriggerWire('--hts', val.link);
     } else if (
@@ -226,20 +230,42 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();
     this.readAttributes();
+  }
 
-    this.updateComplete.then(() => {
-      // created to avoid the default messages from ui5
-      const vse = this.querySelector('div[slot="valueStateMessage"]');
-      if (vse === null) {
-        this._valueStateElement = document.createElement('div');
-        this._valueStateElement.setAttribute('slot', 'valueStateMessage');
-        // eslint-disable-next-line wc/no-constructor-attributes
-        this._inputField.appendChild(this._valueStateElement);
-      } else {
-        this._valueStateElement = vse;
-        this._previousValueState.message = vse.innerText;
-      }
-    });
+  /**
+   * Adds a div with slot="valueStateMessage" to show
+   * field related information if the attribute value-state is set.
+   * @returns {HTMLDivElement}
+   * @private
+   */
+  _addValueStateMessage() {
+    const INPUT_FIELD = this.shadowRoot.querySelector('#input');
+    const EXISTING_VSE = INPUT_FIELD.querySelector(
+      'div[slot="valueStateMessage"]'
+    );
+    if (EXISTING_VSE !== null) {
+      return EXISTING_VSE;
+    }
+    // we only create the ValueStateContainer if none already exists.
+    const VALUE_STATE_MESSAGE_ELEMENT = document.createElement('div');
+    VALUE_STATE_MESSAGE_ELEMENT.setAttribute('slot', 'valueStateMessage');
+    // eslint-disable-next-line wc/no-constructor-attributes
+    INPUT_FIELD.appendChild(VALUE_STATE_MESSAGE_ELEMENT);
+    return VALUE_STATE_MESSAGE_ELEMENT;
+  }
+
+  /**
+   * Removes <div slot="valueStateMessage"></div>
+   * @private
+   */
+  _removeValueStateMessage() {
+    const INPUT_FIELD = this.shadowRoot.querySelector('#input');
+    const VALUE_STATE_MESSAGE_ELEMENT = INPUT_FIELD.querySelector(
+      'div[slot="valueStateMessage"]'
+    );
+    if (VALUE_STATE_MESSAGE_ELEMENT !== null) {
+      VALUE_STATE_MESSAGE_ELEMENT.remove();
+    }
   }
 
   /**
@@ -405,7 +431,13 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       busy: {
         type: Boolean,
       },
-
+      /**
+       * Value State of the input field
+       */
+      valueState: {
+        type: String,
+        attribute: 'value-state',
+      },
       /**
        * wait for this time between keystrokes to trigger a search to the service
        */
@@ -922,10 +954,11 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
    * @private
    */
   _setValueStateMessage(valueState, message) {
+    const VSE = this._addValueStateMessage();
     this.valueState = valueState;
-    // element was created in constructor
-    this._valueStateElement.innerText = message;
-    this.requestUpdate();
+    if (VSE !== null) {
+      VSE.innerText = message || '';
+    }
   }
 
   /**
@@ -933,10 +966,16 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
    * @private
    */
   _resetValueStateMessage() {
-    this._setValueStateMessage(
-      this._previousValueState.state,
-      this._previousValueState.message
-    );
+    this.valueState = this._previousValueState.state;
+
+    if (this._previousValueState?.message?.length) {
+      this._setValueStateMessage(
+        this._previousValueState.state,
+        this._previousValueState.message
+      );
+    } else {
+      this._removeValueStateMessage();
+    }
   }
 
   /**
@@ -958,6 +997,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
     this._previousValueState.state = this.getAttribute('value-state')
       ? this.getAttribute('value-state')
       : 'None';
+
+    this.valueState = this._previousValueState.state;
 
     // save the original attribute for later usages, we do this, because some components reflect
     Object.keys(this._privilegedAttributes).forEach(attr => {

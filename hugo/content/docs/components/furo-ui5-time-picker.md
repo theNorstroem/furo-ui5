@@ -72,6 +72,8 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
+
+
 ### **formatPattern**
 default: **&#39;&#39;**</small>
 
@@ -114,6 +116,8 @@ handle changes on the model.
 
 - <small>value </small>
 <br><br>
+
+
 
 ### **readAttributes**
 <small>**readAttributes**() ⟹ `void`</small>

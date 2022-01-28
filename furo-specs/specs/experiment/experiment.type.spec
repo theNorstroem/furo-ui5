@@ -438,8 +438,21 @@ fields:
             hint: google.type.Money
             label: Amount
             options:
-                flags: []
-                list: []
+                flags:
+                    - currency_list
+                list:
+                    - '@type': type.googleapis.com/furo.Optionitem
+                      display_name: Swiss francs (CHF)
+                      id: CHF
+                      selected: false
+                    - '@type': type.googleapis.com/furo.Optionitem
+                      display_name: Euro (EUR)
+                      id: EUR
+                      selected: false
+                    - '@type': type.googleapis.com/furo.Optionitem
+                      display_name: US Dollar (USD)
+                      id: USD
+                      selected: false
             readonly: false
             repeated: false
             typespecific: null
@@ -579,7 +592,22 @@ fields:
             placeholder: ""
             hint: ""
             label: furo Money
-            options: null
+            options:
+                flags:
+                    - currency_list
+                list:
+                    - '@type': type.googleapis.com/furo.Optionitem
+                      display_name: CHF
+                      id: chf
+                      selected: true
+                    - '@type': type.googleapis.com/furo.Optionitem
+                      display_name: EUR
+                      id: eur
+                      selected: false
+                    - '@type': type.googleapis.com/furo.Optionitem
+                      display_name: USD
+                      id: usd
+                      selected: false
             readonly: false
             repeated: false
             typespecific: null

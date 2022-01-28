@@ -30,6 +30,15 @@ Every display-xxx component should implement the following API:
 
 
 
+## Events
+{{% api "_display-furo-reference-events.md" %}}
+
+### **selected**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-selected</span>
+→ <small>``</small>
+
+when item was clicked or selected, because click from ui5 does not bubble
+<br><br>
 
 ## Methods
 {{% api "_display-furo-reference-methods.md" %}}

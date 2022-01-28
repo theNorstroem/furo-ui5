@@ -49,6 +49,10 @@ Use the function bindOptions to bind a RepeaterNode as an option list.
 
 
 
+
+
+
+
 ### **activeFieldBinding**
 default: **false**</small>
 
@@ -123,6 +127,8 @@ Fired after the field value was changed.
 {{% api "_furo-ui5-combobox-methods.md" %}}
 
 
+
+
 ### **readAttributes**
 <small>**readAttributes**() ⟹ `void`</small>
 
@@ -156,6 +162,8 @@ Here a RepeaterNode can be connected to the component as an option list.
 
 - <small>repeaterNode </small>
 <br><br>
+
+
 
 
 
