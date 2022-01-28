@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # cell-double
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/cell-double.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/cell-double.js';`<small>
 <br>exports *CellDouble* js
 <br>exports `<cell-double>` custom-element-definition
 <br>superclass *LitElement*</small>

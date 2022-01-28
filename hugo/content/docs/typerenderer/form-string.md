@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # form-string
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/form-string.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/form-string.js';`<small>
 <br>exports *FormString* js
 <br>exports `<form-string>` custom-element-definition
 <br>extends */src/furo-ui5-text-input-labeled.js*

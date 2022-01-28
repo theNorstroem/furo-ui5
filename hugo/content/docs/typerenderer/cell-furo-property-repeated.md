@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # cell-furo-property-repeated
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/cell-furo-property-repeated.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/cell-furo-property-repeated.js';`<small>
 <br>exports *CellFuroPropertyRepeated* js
 <br>exports `<cell-furo-property-repeated>` custom-element-definition
 <br>superclass *LitElement*

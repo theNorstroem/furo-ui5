@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # display-google-type-color
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/display-google-type-color.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/display-google-type-color.js';`<small>
 <br>exports `<display-google-type-color>` custom-element-definition
 <br>superclass *LitElement*</small>
 

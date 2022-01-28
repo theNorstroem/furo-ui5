@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # form-furo-bigdecimal
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/form-furo-bigdecimal.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/form-furo-bigdecimal.js';`<small>
 <br>exports *FormFuroBigdecimal* js
 <br>exports `<form-furo-bigdecimal>` custom-element-definition
 <br>extends */src/typerenderer/form-int32.js*

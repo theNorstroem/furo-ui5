@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # celledit-int32
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/celledit-int32.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/celledit-int32.js';`<small>
 <br>exports *CelleditInt32* js
 <br>extends */src/furo-ui5-number-input.js*
 <br>superclass *FuroUi5NumberInput*</small>

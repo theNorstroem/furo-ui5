@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # display-furo-bigdecimal
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/display-furo-bigdecimal.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/display-furo-bigdecimal.js';`<small>
 <br>exports *DisplayFuroBigdecimal* js
 <br>exports `<display-furo-bigdecimal>` custom-element-definition
 <br>superclass *LitElement*</small>

@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # form-furo-stringoptionproperty
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/form-furo-stringoptionproperty.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/form-furo-stringoptionproperty.js';`<small>
 <br>exports `<form-furo-stringoptionproperty>` custom-element-definition
 <br>extends */src/furo-ui5-select-labeled.js*
 <br>superclass *FuroUi5SelectLabeled*</small>

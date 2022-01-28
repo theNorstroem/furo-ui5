@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # form-bool
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/form-bool.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/form-bool.js';`<small>
 <br>exports *FormBool* js
 <br>exports `<form-bool>` custom-element-definition
 <br>extends */src/furo-ui5-checkbox-input-labeled.js*

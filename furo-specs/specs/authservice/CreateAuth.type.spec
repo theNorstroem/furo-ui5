@@ -1,5 +1,5 @@
-name: CreateAuthRequest
-type: CreateAuthRequest
+name: CreateAuth
+type: CreateAuth
 description: request message for CreateAuth
 lifecycle: null
 __proto:
@@ -21,9 +21,9 @@ fields:
         __ui: null
         meta:
             default: ""
-            placeholder: authservice.createauthrequest.body.placeholder
+            placeholder: authservice.createauth.body.placeholder
             hint: ""
-            label: authservice.createauthrequest.body.label
+            label: authservice.createauth.body.label
             options:
                 flags: []
                 list: []

@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # display-string
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/display-string.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/display-string.js';`<small>
 <br>exports *DisplayString* js
 <br>exports `<display-string>` custom-element-definition
 <br>superclass *LitElement*</small>

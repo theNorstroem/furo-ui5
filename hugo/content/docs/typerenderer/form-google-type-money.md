@@ -5,8 +5,8 @@ weight: 50
 ---
 
 # form-google-type-money
-**@furo/typerenderer** <small>v1.0.0-rc.15</small>
-<br>`import '@furo/typerenderer/src/form-google-type-money.js';`<small>
+**@furo/ui5** <small>v1.0.0-rc.16</small>
+<br>`import '@furo/ui5/src/typerenderer/form-google-type-money.js';`<small>
 <br>exports `<form-google-type-money>` custom-element-definition
 <br>extends */src/furo-ui5-money-input-labeled.js*
 <br>superclass *FuroUi5MoneyInputLabeled*</small>
