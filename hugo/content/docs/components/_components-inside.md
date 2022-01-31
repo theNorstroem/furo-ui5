@@ -31,6 +31,8 @@ bookHidden: true
 - [furo-ui5-message-strip](furo-ui5-message-strip.md) furo ui5 message strip
 - [furo-ui5-money-input-labeled](furo-ui5-money-input-labeled.md) labeled input field
 - [furo-ui5-money-input](furo-ui5-money-input.md) Binds a entityObject field google.type.Money to a number-input and currency dropdown fields
+- [furo-ui5-multi-combobox-labeled](furo-ui5-multi-combobox-labeled.md) labeled multi-combobox
+- [furo-ui5-multi-combobox](furo-ui5-multi-combobox.md) data select field
 - [furo-ui5-multi-input-labeled](furo-ui5-multi-input-labeled.md) labeled textarea field
 - [furo-ui5-multi-input](furo-ui5-multi-input.md) repeated strings
 - [furo-ui5-notification-group-display](furo-ui5-notification-group-display.md) ui5 notification group display
