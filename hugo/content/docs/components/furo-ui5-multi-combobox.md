@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-multi-combobox
-**@furo/ui5** <small>v1.0.0-rc.17</small>
+**@furo/ui5** <small>v1.0.0-rc.18</small>
 <br>`import '@furo/ui5/src/furo-ui5-multi-combobox.js';`<small>
 <br>exports *FuroUi5MultiCombobox* js
 <br>extends *src/furo-ui5-multi-combobox.js*
@@ -165,16 +165,16 @@ Overridden bindData of FieldNodeAdapter
 
 
 
-### **selectOptionById**
-<small>**selectOptionById**(*ids* `*` ) ⟹ `void`</small>
+### **selectOptionsByIds**
+<small>**selectOptionsByIds**(*ids* `[]` ) ⟹ `void`</small>
 
-<small>`*` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-option-by-id</span>
+<small>`[]` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-options-by-ids</span>
 
 Selects an option by id.
 The id field must be comparable.
 
-- <small>ids must match the data</small>
+- <small>ids string} must match the data</small>
 <br><br>
 
 

@@ -71,7 +71,7 @@ weight = 8
 
 [params]
   # do not forget to update ./static/init.js too
-  PrecompiledFuroVersion = "2.0.0-rc.17"
+  PrecompiledFuroVersion = "2.0.0-rc.18"
 
   # (Optional, default light) Sets color theme: light, dark or auto.
   # Theme 'auto' switches between dark and light modes based on browser/os preferences

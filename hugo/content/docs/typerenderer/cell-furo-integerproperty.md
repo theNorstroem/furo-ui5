@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-furo-integerproperty
-**@furo/ui5** <small>v1.0.0-rc.17</small>
+**@furo/ui5** <small>v1.0.0-rc.18</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-furo-integerproperty.js';`<small>
 <br>exports *CellFuroIntegerproperty* js
 <br>exports `<cell-furo-integerproperty>` custom-element-definition
