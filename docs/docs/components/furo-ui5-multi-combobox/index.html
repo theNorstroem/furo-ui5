@@ -12,12 +12,12 @@
 <meta property="og:description" content="data select field" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-multi-combobox/" />
-<meta property="article:modified_time" content="2022-01-31T16:03:56+01:00" />
+<meta property="article:modified_time" content="2022-01-31T16:13:12+01:00" />
 <title>furo-ui5-multi-combobox | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.f3df96b55b6d7c017d068b689120e241827387f1f8001eee7410a4e5e7e821fd.js" integrity="sha256-89&#43;WtVttfAF9BotokSDiQYJzh/H4AB7udBCk5efoIf0="></script>
+<script defer src="/en.search.min.d76d44ef5970cde3965149cb4e59b7e4bfc3031f4677ac11103e83ebfab39fb0.js" integrity="sha256-121E71lwzeOWUUnLTlm35L/DAx9Gd6wRED6D6/qzn7A="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3102,7 +3102,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#readattributes"><strong>readAttributes</strong></a></li>
         <li><a href="#bindoptions"><strong>bindOptions</strong></a></li>
         <li><a href="#binddata"><strong>bindData</strong></a></li>
-        <li><a href="#selectoptionbyid"><strong>selectOptionById</strong></a></li>
+        <li><a href="#selectoptionsbyids"><strong>selectOptionsByIds</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -3120,7 +3120,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-multi-combobox
   <a class="anchor" href="#furo-ui5-multi-combobox">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.0.0-rc.17</small>
+<p><strong>@furo/ui5</strong> <small>v1.0.0-rc.18</small>
 <br><code>import '@furo/ui5/src/furo-ui5-multi-combobox.js';</code><small>
 <br>exports <em>FuroUi5MultiCombobox</em> js
 <br>extends <em>src/furo-ui5-multi-combobox.js</em>
@@ -3263,17 +3263,17 @@ Use this after manual or scripted update of the attributes.</p>
 <li><small>fieldNode </small>
 <br><br></li>
 </ul>
-<h3 id="selectoptionbyid">
-  <strong>selectOptionById</strong>
-  <a class="anchor" href="#selectoptionbyid">#</a>
+<h3 id="selectoptionsbyids">
+  <strong>selectOptionsByIds</strong>
+  <a class="anchor" href="#selectoptionsbyids">#</a>
 </h3>
-<p><small><strong>selectOptionById</strong>(<em>ids</em> <code>*</code> ) ⟹ <code>void</code></small></p>
-<p><small><code>*</code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-option-by-id</span></p>
+<p><small><strong>selectOptionsByIds</strong>(<em>ids</em> <code>[]</code> ) ⟹ <code>void</code></small></p>
+<p><small><code>[]</code> </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-options-by-ids</span></p>
 <p>Selects an option by id.
 The id field must be comparable.</p>
 <ul>
-<li><small>ids must match the data</small>
+<li><small>ids string} must match the data</small>
 <br><br></li>
 </ul>
 </article>
@@ -3286,7 +3286,7 @@ The id field must be comparable.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/94a07688cb50015b5433eaccb469e5da9e07c87e" title='Last modified by veith | January 31, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/c89a156935c7ccfd0219bf9954f10a92f4b588e9" title='Last modified by veith | January 31, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>January 31, 2022</span>
     </a>
@@ -3337,7 +3337,7 @@ The id field must be comparable.</p>
         <li><a href="#readattributes"><strong>readAttributes</strong></a></li>
         <li><a href="#bindoptions"><strong>bindOptions</strong></a></li>
         <li><a href="#binddata"><strong>bindData</strong></a></li>
-        <li><a href="#selectoptionbyid"><strong>selectOptionById</strong></a></li>
+        <li><a href="#selectoptionsbyids"><strong>selectOptionsByIds</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -3351,15 +3351,15 @@ The id field must be comparable.</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.17/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.17/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.17/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.17/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.17/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.17/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.17/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.17/dist/route.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.17/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 
