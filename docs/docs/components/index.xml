@@ -356,6 +356,31 @@ the label for the data-money-input required #  required</description>
     </item>
     
     <item>
+      <title>furo-ui5-multi-combobox</title>
+      <link>http://ui5.furo.pro/docs/components/furo-ui5-multi-combobox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/components/furo-ui5-multi-combobox/</guid>
+      <description>furo-ui5-multi-combobox #  @furo/ui5 v1.0.0-rc.17 import &#39;@furo/ui5/src/furo-ui5-multi-combobox.js&#39;; exports FuroUi5MultiCombobox js extends src/furo-ui5-multi-combobox.js mixes FieldNodeAdapter
+ Summary: data select field
+ Description #  The furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-ui5-multi-combobox define the available options by using the ui5-mcb-item component. Use the function bindOptions to bind a RepeaterNode as a option list.
+1 2 3 4  &amp;lt;furo-ui5-multi-combobox ƒ-bind-data=&amp;#34;--entity(*.data.description)&amp;#34; ƒ-bind-options=&amp;#34;--collection(*.entities)&amp;#34;&amp;gt; &amp;lt;/furo-ui5-multi-combobox&amp;gt;   Attributes and Properties #  activeFieldBinding #  default: false</description>
+    </item>
+    
+    <item>
+      <title>furo-ui5-multi-combobox-labeled</title>
+      <link>http://ui5.furo.pro/docs/components/furo-ui5-multi-combobox-labeled/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/components/furo-ui5-multi-combobox-labeled/</guid>
+      <description>furo-ui5-multi-combobox-labeled #  @furo/ui5 v1.0.0-rc.17 import &#39;@furo/ui5/src/furo-ui5-multi-combobox-labeled.js&#39;; exports FuroUi5MultiComboboxLabeled js exports &amp;lt;furo-ui5-multi-combobox-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
+ Summary: labeled multi-combobox
+ Description #  furo-ui5-multi-combobox-labeled The furo-ui5-multi-combobox-labeled is a composition to easily use a complete data multi-combobox with label according to the design specification of SAP Fiori Design System.
+Attributes and Properties #  label #  label string default: &#39;&#39;
+the label for the data-number-input idFieldPath #  id-field-path string default: &#39;id&#39;</description>
+    </item>
+    
+    <item>
       <title>furo-ui5-multi-input</title>
       <link>http://ui5.furo.pro/docs/components/furo-ui5-multi-input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
