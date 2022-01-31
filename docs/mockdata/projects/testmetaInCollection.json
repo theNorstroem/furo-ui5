@@ -98,7 +98,7 @@
       "method": "GET",
       "rel": "self",
       "type": "project.ProjectEntity",
-      "service": "ProjectService"
+      "service": "projectservice.ProjectService"
     }
   ]
 }],
@@ -108,7 +108,7 @@
       "method": "GET",
       "rel": "LIST",
       "type": "project.ProjectCollection",
-      "service": "ProjectService"
+      "service": "projectservice.ProjectService"
     }
   ]
 }

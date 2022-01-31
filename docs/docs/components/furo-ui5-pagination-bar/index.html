@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.d76d44ef5970cde3965149cb4e59b7e4bfc3031f4677ac11103e83ebfab39fb0.js" integrity="sha256-121E71lwzeOWUUnLTlm35L/DAx9Gd6wRED6D6/qzn7A="></script>
+<script defer src="/en.search.min.6d19dd1971bad0df1997359eddbaa73f647758502dafed43d4b43186c619fc81.js" integrity="sha256-bRndGXG60N8ZlzWe3bqnP2R3WFAtr&#43;1D1LQxhsYZ/IE="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3146,8 +3146,8 @@ information like prev, next, first and last</p>
 <template>
 <furo-ui5-button @-click="--btnListClicked">load collection</furo-ui5-button>
 <furo-ui5-pagination-bar ƒ-inject="--responseHts" @-pagination-next="--next" @-pagination-last="--last"></furo-ui5-pagination-bar>
-<furo-deep-link ƒ-trigger="--btnListClicked" service="ProjectService" @-hts-out="--hts"></furo-deep-link>
-<furo-collection-agent service="ProjectService" ƒ-hts-in="--hts" ƒ-next="--next" ƒ-last="--last" list-on-hts-in="" @-response-hts-updated="--responseHts">
+<furo-deep-link ƒ-trigger="--btnListClicked" service="projectservice.ProjectService" @-hts-out="--hts"></furo-deep-link>
+<furo-collection-agent service="projectservice.ProjectService" ƒ-hts-in="--hts" ƒ-next="--next" ƒ-last="--last" list-on-hts-in="" @-response-hts-updated="--responseHts">
 </furo-collection-agent>
 </template>
 </furo-demo-snippet>
@@ -3171,7 +3171,7 @@ information like prev, next, first and last</p>
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-pagination-next</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--next&#34;</span> 
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-pagination-last</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--last&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-pagination-bar</span>&gt;
 &lt;<span style="color:#000080">furo-collection-agent</span> 
-  <span style="color:#008080">service</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;ProjectService&#34;</span> 
+  <span style="color:#008080">service</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;projectservice.ProjectService&#34;</span> 
   <span style="color:#008080">ƒ-hts-in</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--hts&#34;</span> 
   <span style="color:#008080">ƒ-next</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--next&#34;</span> 
   <span style="color:#008080">ƒ-last</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--last&#34;</span>

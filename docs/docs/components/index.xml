@@ -474,7 +474,7 @@ You can bind any number type, any furo.fat.xxx number type, furo.BigDecimal or t
       <description>furo-ui5-pagination-bar #  @furo/ui5 v1.0.0-rc.18 import &#39;@furo/ui5/src/furo-ui5-pagination-bar.js&#39;; exports FuroUi5PaginationBar js exports &amp;lt;furo-ui5-pagination-bar&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Summary: Pagination Bar
  Description #  The furo-ui5-pagination-bar element loops the hateoas array and finds out the pagination information like prev, next, first and last
- &amp;lt;furo-ui5-pagination-bar ƒ-inject=&amp;quot;--hateoas&amp;quot;&amp;gt;&amp;lt;/furo-ui5-pagination-bar&amp;gt; Example #     load collection      1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-pagination-bar ƒ-inject=&amp;#34;--responseHts&amp;#34; @-pagination-next=&amp;#34;--next&amp;#34; @-pagination-last=&amp;#34;--last&amp;#34;&amp;gt;&amp;lt;/furo-ui5-pagination-bar&amp;gt; &amp;lt;furo-collection-agent service=&amp;#34;ProjectService&amp;#34; ƒ-hts-in=&amp;#34;--hts&amp;#34; ƒ-next=&amp;#34;--next&amp;#34; ƒ-last=&amp;#34;--last&amp;#34; @-response-hts-updated=&amp;#34;--responseHts&amp;#34;&amp;gt; &amp;lt;/furo-collection-agent&amp;gt;    Attributes and Properties #  currentPage #  currentPage number default: 0</description>
+ &amp;lt;furo-ui5-pagination-bar ƒ-inject=&amp;quot;--hateoas&amp;quot;&amp;gt;&amp;lt;/furo-ui5-pagination-bar&amp;gt; Example #     load collection      1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-pagination-bar ƒ-inject=&amp;#34;--responseHts&amp;#34; @-pagination-next=&amp;#34;--next&amp;#34; @-pagination-last=&amp;#34;--last&amp;#34;&amp;gt;&amp;lt;/furo-ui5-pagination-bar&amp;gt; &amp;lt;furo-collection-agent service=&amp;#34;projectservice.</description>
     </item>
     
     <item>
