@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-google-protobuf-boolvalue
-**@furo/ui5** <small>v1.0.0-rc.16</small>
+**@furo/ui5** <small>v1.0.0-rc.17</small>
 <br>`import '@furo/ui5/src/typerenderer/form-google-protobuf-boolvalue.js';`<small>
 <br>exports `<form-google-protobuf-boolvalue>` custom-element-definition
 <br>extends */src/typerenderer/form-bool.js*

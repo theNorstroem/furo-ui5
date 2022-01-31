@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-furo-stringproperty
-**@furo/ui5** <small>v1.0.0-rc.16</small>
+**@furo/ui5** <small>v1.0.0-rc.17</small>
 <br>`import '@furo/ui5/src/typerenderer/form-furo-stringproperty.js';`<small>
 <br>exports *FormFuroStringproperty* js
 <br>exports `<form-furo-stringproperty>` custom-element-definition
