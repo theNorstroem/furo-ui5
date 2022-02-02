@@ -13,7 +13,7 @@
       "method": "GET",
       "rel": "self",
       "type": "person.Person",
-      "service": "PersonService"
+      "service": "projectservice.ProjectService"
     }
   ]
 }

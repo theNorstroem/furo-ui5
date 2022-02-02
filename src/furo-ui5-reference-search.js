@@ -531,6 +531,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
      * build the --resultList
      */
     this._FBPAddWireHook('--searchResponse', response => {
+      // reset possible errors from before
       this._hasmore = 'None';
       // check for rel next to show the more button
       if (response.links) {
@@ -804,9 +805,11 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
             this.value.id = '';
             this.value.display_name = '';
             this._updateField();
-          } else {
+          } else if (this._tmp_value !== undefined) {
             this.value = JSON.parse(this._tmp_value);
-            this._inputField.value = this.value.display_name;
+            if (this.value.display_name !== undefined) {
+              this._inputField.value = this.value.display_name;
+            }
             this._updateField();
           }
         }
@@ -963,6 +966,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
 
   /**
    * reset to previous value state
+   * todo: check that this will not toggle between information and error
    * @private
    */
   _resetValueStateMessage() {
@@ -1042,6 +1046,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
    * clears the result set
    */
   clearResultList() {
+    this._resetValueStateMessage();
     this._searchResultItems = [];
     this._FBPTriggerWire('--resultList', this._searchResultItems);
   }

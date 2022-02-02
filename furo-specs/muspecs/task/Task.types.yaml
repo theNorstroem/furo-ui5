@@ -4,6 +4,14 @@
     display_name: '- string:2 #Localized String representation of a task'
     description: '* string:3 #Short task description'
     estimated_time: 'int32:4 #Estimated time in days'
-    owner: 'furo.Reference:5 #Owner of a task'
+    owner: |-
+      * furo.Reference:5
+      = {"link" :
+          { "rel": "list",
+            "href": "/mockdata/persons/list.json",
+            "method": "GET",
+            "type": "person.Person",
+            "service": "personservice.PersonService"}}
+      #Owner of a task'
     subtasks: '[] task.Task:6 #List of subtasks'
   target: task.proto

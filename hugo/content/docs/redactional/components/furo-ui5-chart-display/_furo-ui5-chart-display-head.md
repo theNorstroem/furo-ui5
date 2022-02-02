@@ -80,11 +80,11 @@ bookHidden: true
 </furo-vertical-flex>
 <furo-deep-link
   ƒ-trigger="--btnListClicked"
-  service="ProjectService"
+  service="projectservice.ProjectService"
   @-hts-out="--hts"
 ></furo-deep-link>
 <furo-collection-agent
-  service="ProjectService"
+  service="projectservice.ProjectService"
   ƒ-hts-in="--hts"
   ƒ-list="--changeDataClicked"
   list-on-hts-in

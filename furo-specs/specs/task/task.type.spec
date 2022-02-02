@@ -85,12 +85,18 @@ fields:
         constraints: {}
     owner:
         type: furo.Reference
-        description: Owner of a task
+        description: Owner of a task'
         __proto:
             number: 5
         __ui: null
         meta:
-            default: ""
+            default: |-
+                {"link" :
+                    { "rel": "list",
+                      "href": "/mockdata/persons/list.json",
+                      "method": "GET",
+                      "type": "person.Person",
+                      "service": "personservice.PersonService"}}
             placeholder: ""
             hint: ""
             label: person.label
@@ -98,7 +104,10 @@ fields:
             readonly: false
             repeated: false
             typespecific: null
-        constraints: {}
+        constraints:
+            required:
+                is: "true"
+                message: task.task.owner.constraint.required.message
     subtasks:
         type: task.Task
         description: List of subtasks

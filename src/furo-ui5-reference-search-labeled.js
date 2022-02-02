@@ -50,6 +50,14 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
     this._searcher = this.shadowRoot.getElementById('Input');
   }
 
+  /**
+   * clearResultList clears the result list and the value state
+   * @public
+   */
+  clearResultList() {
+    this._FBPTriggerWire('|--clearResultList', null);
+  }
+
   static get properties() {
     return {
       /**
@@ -201,6 +209,7 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
           ƒ-bind-data="--data"
           ƒ-focus="--focus"
           ƒ-set-filter="--filter"
+          ƒ-clear-result-list="|--clearResultList"
         ></furo-ui5-reference-search>
       </furo-ui5-form-field-container>
     `;

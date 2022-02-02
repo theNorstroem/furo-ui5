@@ -212,7 +212,7 @@
       "method": "POST",
       "rel": "create",
       "type": "experiment.ExperimentEntity",
-      "service": "ExperimentService"
+      "service": "experimentservice.ExperimentService"
     }
   ]
 }

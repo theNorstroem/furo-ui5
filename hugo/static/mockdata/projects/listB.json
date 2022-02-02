@@ -52,7 +52,7 @@
           "method": "GET",
           "rel": "self",
           "type": "project.Project",
-          "service": "ProjectService"
+          "service": "projectservice.ProjectService"
         }
       ]
     },
@@ -100,7 +100,7 @@
           "method": "GET",
           "rel": "self",
           "type": "project.Project",
-          "service": "ProjectService"
+          "service": "projectservice.ProjectService"
         }
       ]
     },
@@ -148,7 +148,7 @@
           "method": "GET",
           "rel": "self",
           "type": "project.Project",
-          "service": "ProjectService"
+          "service": "projectservice.ProjectService"
         }
       ]
     },
@@ -196,7 +196,7 @@
           "method": "GET",
           "rel": "self",
           "type": "project.Project",
-          "service": "ProjectService"
+          "service": "projectservice.ProjectService"
         }
       ]
     }
@@ -207,21 +207,21 @@
       "method": "GET",
       "rel": "list",
       "type": "project.ProjectCollection",
-      "service": "ProjectService"
+      "service": "projectservice.ProjectService"
     },
     {
       "href": "/mockdata/projects/list.json?page=2",
       "method": "GET",
       "rel": "next",
       "type": "project.ProjectCollection",
-      "service": "ProjectService"
+      "service": "projectservice.ProjectService"
     },
     {
       "href": "/mockdata/projects/list.json?page=3",
       "method": "GET",
       "rel": "last",
       "type": "project.ProjectCollection",
-      "service": "ProjectService"
+      "service": "projectservice.ProjectService"
     }
   ]
 }
