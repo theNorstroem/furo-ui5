@@ -501,6 +501,10 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
           )
         );
 
+        if (item.icon !== undefined) {
+          optionItem.setAttribute('icon', item.icon);
+        }
+
         optionItem.innerText = FuroUi5Select.getValueByPath(
           item,
           this._privilegedAttributes['display-field-path']
