@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "markdown-it": "^12.3.2",
+    "prismjs": "^1.26.0",
     "apexcharts": "^3.29.0",
     "signature_pad": "3.0.0-beta.4"
   },
