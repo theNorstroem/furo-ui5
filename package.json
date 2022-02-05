@@ -35,7 +35,7 @@
     "@furo/framework": "^2.0.0-rc.5",
     "@furo/layout": "^2.0.0-rc.11",
     "@furo/data": "^2.0.0-rc.10",
-    "@furo/util": "^2.0.0-rc.12",
+    "@furo/util": "^2.0.0-rc.13",
     "@furo/route": "^2.0.0-rc.10",
     "@ui5/webcomponents": "^1.1.2",
     "@ui5/webcomponents-base": "^1.1.2",
