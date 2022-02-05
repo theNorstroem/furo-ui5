@@ -204,7 +204,7 @@ class FuroUi5Markdown extends LitElement {
         background: rgb(245, 242, 240);
         color: black;
         padding: 1em;
-        margin: 0px;
+        margin: 0;
         overflow: auto;
       }
       /**
@@ -227,7 +227,6 @@ class FuroUi5Markdown extends LitElement {
         line-height: 1.5;
 
         -moz-tab-size: 4;
-        -o-tab-size: 4;
         tab-size: 4;
 
         -webkit-hyphens: none;
