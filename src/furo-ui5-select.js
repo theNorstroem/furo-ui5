@@ -501,7 +501,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
           )
         );
 
-        if (item.icon._value !== undefined) {
+        if (item.icon && item.icon._value !== undefined) {
           optionItem.setAttribute('icon', item.icon._value);
         }
 
