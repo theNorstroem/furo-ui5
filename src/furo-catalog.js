@@ -34,6 +34,7 @@ import './furo-ui5-number-input-labeled.js';
 import './furo-ui5-pagination-bar.js';
 import './furo-ui5-password-input.js';
 import './furo-ui5-password-input-labeled.js';
+import './furo-ui5-progress-indicator.js';
 import './furo-ui5-property.js';
 import './furo-ui5-propertylist-display.js';
 import './furo-ui5-radio-button.js';

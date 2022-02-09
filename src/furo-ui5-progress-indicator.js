@@ -22,7 +22,12 @@ export class FuroUi5ProgressIndicator extends FieldNodeAdapter(
 ) {
   constructor() {
     super();
-    // used to restore the state after a invalidation -> validation change
+
+    /**
+     * used to restore the state after a invalidation -> validation change
+     * @type {{state: string, message: string}}
+     * @private
+     */
     this.__previousValueState = { state: 'None', message: '' };
 
     /**

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-notification
-**@furo/ui5** <small>v1.0.0-rc.23</small>
+**@furo/ui5** <small>v1.0.0-rc.24</small>
 <br>`import '@furo/ui5/src/furo-ui5-notification.js';`<small>
 <br>exports *FuroUi5Notification* js
 <br>exports `<furo-ui5-notification>` custom-element-definition

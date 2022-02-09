@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-select-labeled
-**@furo/ui5** <small>v1.0.0-rc.23</small>
+**@furo/ui5** <small>v1.0.0-rc.24</small>
 <br>`import '@furo/ui5/src/furo-ui5-select-labeled.js';`<small>
 <br>exports *FuroUi5SelectLabeled* js
 <br>exports `<furo-ui5-select-labeled>` custom-element-definition
