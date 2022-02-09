@@ -45,6 +45,10 @@ export class FuroUi5TimePickerLabeled extends FBP(LitElement) {
        */
       label: { type: String },
       /**
+       * forwards the format-pattern to the furo-ui5-time-picker component.
+       */
+      formatPattern: { type: String, attribute: 'format-pattern' },
+      /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
        */
       required: { type: Boolean },
@@ -104,6 +108,7 @@ export class FuroUi5TimePickerLabeled extends FBP(LitElement) {
         <furo-ui5-time-picker
           content
           id="Input"
+          format-pattern="${this.formatPattern}"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
           ƒ-bind-data="--data"
