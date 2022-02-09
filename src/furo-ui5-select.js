@@ -205,6 +205,16 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 
   /**
+   * inject raw data as options
+   * @param [rawJson] raw data array
+   * @return {boolean}
+   */
+  setOptions(arr) {
+    this._updateOptions(arr);
+    return true;
+  }
+
+  /**
    * Overridden bindData of FieldNodeAdapter
    * @param {FieldNode} fieldNode
    * @returns {boolean}
@@ -501,7 +511,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
           )
         );
 
-        if (item.icon._value !== undefined) {
+        if (item.icon && item.icon._value !== undefined) {
           optionItem.setAttribute('icon', item.icon._value);
         }
 

@@ -173,9 +173,11 @@ export class FuroUi5FormFieldContainer extends FBP(LitElement) {
         opacity: var(--_ui5_input_disabled_opacity);
       }
 
+      /* ui5 components have a min width, this does not work with well with a furo-form-layouter six */
       ::slotted(*[content][data-size*='size-s']) {
         grid-column: span 12;
         width: 100%;
+        min-width: 80px;
       }
 
       ::slotted(*[label][data-size*='size-s']) {
