@@ -5,6 +5,9 @@ bookHidden: true
 ---
 #### Example
 
+> **Note** The demo is a little bit broken, because of the scrolling position of the
+> documentation system. Scroll up to see the menu after you opened it.
+
 <script type="module" src="/init.js"></script>
 <furo-demo-snippet>
 <template>

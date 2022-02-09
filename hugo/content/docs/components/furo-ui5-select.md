@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-select
-**@furo/ui5** <small>v1.0.0-rc.18</small>
+**@furo/ui5** <small>v1.0.0-rc.23</small>
 <br>`import '@furo/ui5/src/furo-ui5-select.js';`<small>
 <br>exports *FuroUi5Select* js
 <br>extends *src/furo-ui5-select.js*
@@ -29,6 +29,7 @@ the available options by using the ui5-option component. Use the function bindOp
 
 ## Attributes and Properties
 {{% api "_furo-ui5-select-properties.md" %}}
+
 
 
 
@@ -152,6 +153,18 @@ Use this after manual or scripted update of the attributes.
 Here a RepeaterNode can be connected to the component as an option list.
 
 - <small>repeaterNode </small>
+<br><br>
+
+### **setOptions**
+<small>**setOptions**(*arr* `` *rawJson* `` ) ⟹ `boolean`</small>
+
+<small>`` `` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-options</span>
+
+inject raw data as options
+
+- <small>arr </small>
+- <small>rawJson raw data array</small>
 <br><br>
 
 ### **bindData**

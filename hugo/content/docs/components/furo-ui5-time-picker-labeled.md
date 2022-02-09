@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-time-picker-labeled
-**@furo/ui5** <small>v1.0.0-rc.18</small>
+**@furo/ui5** <small>v1.0.0-rc.23</small>
 <br>`import '@furo/ui5/src/furo-ui5-time-picker-labeled.js';`<small>
 <br>exports *FuroUi5TimePickerLabeled* js
 <br>exports `<furo-ui5-time-picker-labeled>` custom-element-definition
@@ -35,6 +35,14 @@ to the design specification of SAP Fiori Design System.
 <small>`string` default: **&#39;&#39;**</small>
 
 the label for the data-date-picker
+<br><br>
+
+### **formatPattern**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">format-pattern</span>
+</small>
+
+forwards the format-pattern to the furo-ui5-time-picker component.
 <br><br>
 
 ### **required**
@@ -85,6 +93,7 @@ Orchestrates the data field connection to the inside
 
 - <small>fieldNode </small>
 <br><br>
+
 
 
 

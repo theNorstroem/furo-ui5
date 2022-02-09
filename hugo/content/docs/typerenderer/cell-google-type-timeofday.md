@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-google-type-timeofday
-**@furo/ui5** <small>v1.0.0-rc.18</small>
+**@furo/ui5** <small>v1.0.0-rc.23</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-google-type-timeofday.js';`<small>
 <br>exports `<cell-google-type-timeofday>` custom-element-definition
 <br>superclass *LitElement*</small>

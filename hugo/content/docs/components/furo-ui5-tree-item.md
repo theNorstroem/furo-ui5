@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-tree-item
-**@furo/ui5** <small>v1.0.0-rc.18</small>
+**@furo/ui5** <small>v1.0.0-rc.23</small>
 <br>`import '@furo/ui5/src/subcomponents/furo-ui5-tree-item.js';`<small>
 <br>exports *FuroUi5TreeItem* js
 <br>exports `<furo-ui5-tree-item>` custom-element-definition

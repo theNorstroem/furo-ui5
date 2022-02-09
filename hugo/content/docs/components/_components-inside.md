@@ -27,6 +27,7 @@ bookHidden: true
 - [furo-ui5-flexible-grid](furo-ui5-flexible-grid.md) a grid splitter
 - [furo-ui5-form-field-container](furo-ui5-form-field-container.md) responsive labels for your input elements
 - [furo-ui5-header-panel](furo-ui5-header-panel.md) A bindable header panel
+- [furo-ui5-markdown](furo-ui5-markdown.md) renders markdown data
 - [furo-ui5-message-strip-display](furo-ui5-message-strip-display.md) furo ui5 message strip
 - [furo-ui5-message-strip](furo-ui5-message-strip.md) furo ui5 message strip
 - [furo-ui5-money-input-labeled](furo-ui5-money-input-labeled.md) labeled input field
@@ -52,6 +53,8 @@ bookHidden: true
 - [furo-ui5-select-labeled](furo-ui5-select-labeled.md) labeled select
 - [furo-ui5-select](furo-ui5-select.md) data select field
 - [furo-ui5-sign-pad](furo-ui5-sign-pad.md) draw or sign
+- [furo-ui5-step-input-labeled](furo-ui5-step-input-labeled.md) labeled input field
+- [furo-ui5-number-input](furo-ui5-number-input.md) data number input field
 - [furo-ui5-table](furo-ui5-table.md) Display repeated fields in a table
 - [furo-ui5-text-input-labeled](furo-ui5-text-input-labeled.md) labeled input field
 - [furo-ui5-text-input](furo-ui5-text-input.md) data text input field

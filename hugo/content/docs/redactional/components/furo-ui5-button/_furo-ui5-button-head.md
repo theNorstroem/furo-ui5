@@ -7,10 +7,10 @@ bookHidden: true
 
 <furo-demo-snippet>
 <template>
-<furo-ui5-button @-click="--hideClicked">Hide</furo-ui5-button>
-<furo-ui5-button @-click="--showClicked">Show</furo-ui5-button>
+<furo-ui5-button  design="Negative" @-click="--hideClicked">Hide</furo-ui5-button>
+<furo-ui5-button  design="Transparent" @-click="--showClicked">Show</furo-ui5-button>
 <furo-ui5-button @-click="--disableClicked">Disable</furo-ui5-button>
-<furo-ui5-button @-click="--enableClicked">Enable</furo-ui5-button>
+<furo-ui5-button design="Positive"  @-click="--enableClicked">Enable</furo-ui5-button>
 <br><br><br>
 <furo-ui5-button
  design="Emphasized"
