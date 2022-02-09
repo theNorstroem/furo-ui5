@@ -13,7 +13,7 @@ import './furo-ui5-select.js';
  *
  * @slot {HTMLElement} valueStateMessage - defines the value state message that will be displayed as pop up under the input element.
  *
- * @fires {String} value-changed - Fires the field value when it changes.
+ * @fires {String} furo-value-changed - Fires the field value when it changes.
  *
  * @summary labeled select
  * @element furo-ui5-select-labeled

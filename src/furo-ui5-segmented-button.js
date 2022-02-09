@@ -14,7 +14,7 @@ import { Events } from './lib/Events.js';
  * </furo-ui5-segmented-button>
  * ```
  *
- * @fires {{*} the value from the value-field. By default the value field is "id"} value-changed -  Fired when value has changed from the component inside. **bubbles**
+ * @fires {{*} the value from the value-field. By default the value field is "id"} furo-value-changed -  Fired when value has changed from the component inside. **bubbles**
  *
  * @fires {selectedOption} item-selected - Fired when the toggle button was clicked.
  *
@@ -390,7 +390,7 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
      * Payload:
      *  - if no option binding is active: ui5-segmented-button-item
      *  - if a RepeaterNode is bound: FieldNode
-     *  * @fires {String} value-changed - Fires the field value when it changes.
+     *  * @fires {String} furo-value-changed - Fires the field value when it changes.
      * @type {Event}
      */
     this.dispatchEvent(Events.buildChangeEvent(selectedOption));

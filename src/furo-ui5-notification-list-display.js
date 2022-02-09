@@ -15,7 +15,7 @@ import '@ui5/webcomponents/dist/List.js';
  *  you can also use more than one furo-ui5-notification-list-display for special needs.
  *  But you have to be sure the furo-ui5-notification-list-display can receive the notification events from furo-ui5-notification.
  *
- * @fires {Number} value-changed - Fires a notification counter changed. Use this event to show the amount of notifications to the user.
+ * @fires {Number} furo-value-changed - Fires a notification counter changed. Use this event to show the amount of notifications to the user.
  *
  * @summary ui5 notification list
  * @element furo-ui5-notification-list-display

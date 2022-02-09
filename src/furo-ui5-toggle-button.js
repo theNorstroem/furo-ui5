@@ -39,7 +39,7 @@ import { Events } from './lib/Events.js';
  * @fires {} click -  Fired when the input operation has finished by pressing Enter or on focusout.
  *
  *
- * @fires {Boolean} value-changed - Fires the value of pressed when value changed.
+ * @fires {Boolean} furo-value-changed - Fires the value of pressed when value changed.
  *
  * @summary boolean toggle button
  * @element furo-ui5-toggle-button

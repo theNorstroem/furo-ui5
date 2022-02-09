@@ -12,7 +12,7 @@ import './furo-ui5-form-field-container.js';
  * The furo-ui5-time-picker-labeled is a composition to easily use a complete input field with label according
  * to the design specification of SAP Fiori Design System.
  *
- * @fires {String} value-changed - Fires the field value when it changes in ISO 8601 format.
+ * @fires {String} furo-value-changed - Fires the field value when it changes in ISO 8601 format.
  *
  * @summary labeled input field
  * @element furo-ui5-time-picker-labeled

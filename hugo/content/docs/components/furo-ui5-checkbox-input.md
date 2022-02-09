@@ -79,8 +79,8 @@ The constraint **required** will mark the element as required.
 
  Fired when the checkbox checked state changes.
 <br><br>
-### **value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
+### **furo-value-changed**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
 → <small>`Boolean`</small>
 
 Fires the field value when it changes.

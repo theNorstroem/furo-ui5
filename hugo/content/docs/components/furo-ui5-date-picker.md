@@ -82,8 +82,8 @@ The format pattern for the date.
 ## Events
 {{% api "_furo-ui5-date-picker-events.md" %}}
 
-### **value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
+### **furo-value-changed**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
 → <small>`Date`</small>
 
  Fired when the input operation has finished by pressing Enter or on focusout.

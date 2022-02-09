@@ -21,7 +21,7 @@ import '@ui5/webcomponents-icons/dist/information.js';
  *
  * @fires {optionNodeList} options-updated - Fired  after the option list was rebuilt.
  * @fires {selectedOption} item-selected - Fired when the item of the dropdown list is selected.
- * @fires {selectedOption} value-changed - Fires the field value when it changes.
+ * @fires {selectedOption} furo-value-changed - Fires the field value when it changes.
  *
  * @summary data select field
  * @element furo-ui5-select

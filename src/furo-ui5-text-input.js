@@ -48,7 +48,7 @@ import { Events } from './lib/Events.js';
  * @fires {String} change -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {String} input -  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
  * @fires {value} search-requested - Fired when typing in input (debounced, default 250ms)
- * @fires {String} value-changed - Fires the field value when it changes.
+ * @fires {String} furo-value-changed - Fires the field value when it changes.
  *
  * @summary data text input field
  * @element furo-ui5-text-input

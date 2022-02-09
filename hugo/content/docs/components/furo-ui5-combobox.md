@@ -116,8 +116,8 @@ Fired after the option list was rebuilt.
 
 Fired when selection is changed by user interaction
 <br><br>
-### **value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
+### **furo-value-changed**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
 → <small>`selectedOption`</small>
 
 Fired after the field value was changed.

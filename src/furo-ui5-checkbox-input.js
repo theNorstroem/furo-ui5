@@ -36,7 +36,7 @@ import { Events } from './lib/Events.js';
  * The constraint **required** will mark the element as required.
  *
  * @fires {Boolean} change -  Fired when the checkbox checked state changes.
- * @fires {Boolean} value-changed - Fires the field value when it changes.
+ * @fires {Boolean} furo-value-changed - Fires the field value when it changes.
  *
  * @summary data checkbox input field
  * @element furo-ui5-checkbox-input

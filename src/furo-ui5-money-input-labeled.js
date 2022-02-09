@@ -14,7 +14,7 @@ import './furo-ui5-money-input.js';
  * <furo-ui5-money-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-money-input-labeled>
  * ```
  *
- * @fires {google.type.Money} value-changed - Fires the field value when it changes.
+ * @fires {google.type.Money} furo-value-changed - Fires the field value when it changes.
  *
  * @summary labeled input field
  * @element furo-ui5-money-input-labeled

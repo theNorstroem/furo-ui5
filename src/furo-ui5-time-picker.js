@@ -43,7 +43,7 @@ import { Events } from './lib/Events.js';
  *
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
- * @fires {String} value-changed - Fires the field value when it changes in ISO 8601 format.
+ * @fires {String} furo-value-changed - Fires the field value when it changes in ISO 8601 format.
  * @fires change - Fired when the input operation has finished by pressing Enter or on focusout.
  *
  * @summary furo data time picker field

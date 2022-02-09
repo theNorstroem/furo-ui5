@@ -14,7 +14,7 @@ import './furo-ui5-number-input.js';
  * <furo-ui5-number-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-number-input>
  * ```
  *
- * @fires {Number} value-changed - Fires the field value when it changes.
+ * @fires {Number} furo-value-changed - Fires the field value when it changes.
  *
  * @summary labeled input field
  * @element furo-ui5-number-input-labeled

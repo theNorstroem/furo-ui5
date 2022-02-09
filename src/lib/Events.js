@@ -3,7 +3,7 @@
  */
 
 // todo: @maltenorstroem this can cause collisions with ui5 packages, should switch to furo-value-changedd
-const VALUE_CHANGED = 'value-changed';
+const VALUE_CHANGED = 'furo-value-changed';
 
 export class Events {
   /**

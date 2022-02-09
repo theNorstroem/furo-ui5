@@ -14,7 +14,7 @@ import './furo-ui5-multi-input.js';
  * <furo-ui5-multi-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input-labeled>
  * ```
  *
- * @fires value-changed - Fires the field value when it changes.
+ * @fires furo-value-changed - Fires the field value when it changes.
  *
  * @summary labeled textarea field
  * @element

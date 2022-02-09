@@ -169,8 +169,8 @@ default: **{
 
  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
 <br><br>
-### **value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
+### **furo-value-changed**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
 → <small>`String`</small>
 
 Fires the field value when it changes.

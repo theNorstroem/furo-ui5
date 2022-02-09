@@ -29,7 +29,7 @@ import { Events } from './lib/Events.js';
  * - **required: true** , set the element to required
  *
  * Tags: money input
- * @fires {Money} value-changed -  Fired when the input operation has finished by pressing Enter or on focusout.
+ * @fires {Money} furo-value-changed -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @summary  Binds a entityObject field google.type.Money to a number-input and currency dropdown fields
  * @element
  * @demo demo-furo-ui5-money-input Basic Usage

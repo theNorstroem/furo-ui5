@@ -114,8 +114,8 @@ This attribute is related to the bound FieldNode.
 
 Fired  after the option list was rebuilt.
 <br><br>
-### **value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
+### **furo-value-changed**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
 → <small>`[string]`</small>
 
 Fires the field value when it changes.
@@ -149,14 +149,14 @@ Here a RepeaterNode can be connected to the component as an option list.
 <br><br>
 
 ### **bindData**
-<small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `boolean`</small>
+<small>**bindData**(*repeaterNode* `RepeaterNode` ) ⟹ `boolean`</small>
 
-<small>`FieldNode` </small> →
+<small>`RepeaterNode` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
 
 Overridden bindData of FieldNodeAdapter
 
-- <small>fieldNode </small>
+- <small>repeaterNode </small>
 <br><br>
 
 

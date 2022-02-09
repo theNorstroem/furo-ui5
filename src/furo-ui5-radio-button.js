@@ -44,7 +44,7 @@ import { Events } from './lib/Events.js';
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {} change -  Fired when the input operation has finished by pressing Enter or on focusout.
- * @fires {Boolean} value-changed - Fired when value changed
+ * @fires {Boolean} furo-value-changed - Fired when value changed
  *
  * @summary boolean toggle button
  * @element furo-ui5-radio-button

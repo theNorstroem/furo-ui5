@@ -14,7 +14,7 @@ import './furo-ui5-step-input.js';
  * <furo-ui5-step-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-step-input>
  * ```
  *
- * @fires {Step} value-changed - Fires the field value when it changes.
+ * @fires {Step} furo-value-changed - Fires the field value when it changes.
  *
  * @summary labeled input field
  * @element furo-ui5-step-input-labeled

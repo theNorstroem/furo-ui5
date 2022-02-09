@@ -15,7 +15,7 @@ import './furo-ui5-form-field-container.js';
  * <furo-ui5-date-time-picker-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-date-time-picker-labeled>
  * ```
  *
- * @fires {String} value-changed - Fires the field value when it changes in ISO 8601 format.
+ * @fires {String} furo-value-changed - Fires the field value when it changes in ISO 8601 format.
  *
  * @summary labeled input field
  * @element furo-ui5-date-time-picker-labeled

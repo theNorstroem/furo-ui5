@@ -3,6 +3,20 @@ import * as ProgressIndicator from '@ui5/webcomponents/dist/ProgressIndicator.js
 import '@ui5/webcomponents/dist/features/InputSuggestions.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 
+/**
+ * A furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..
+ * https://sap.github.io/ui5-webcomponents/playground/components/ProgressIndicator/
+ *
+ * Supported type: You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types
+ *
+ * ```html
+ * <furo-ui5-progress-indicator ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-progress-indicator>
+ * ```
+ *
+ * @summary repeated strings
+ * @element furo-ui5-progress-indicator
+ * @appliesMixin FieldNodeAdapter
+ */
 export class FuroUi5ProgressIndicator extends FieldNodeAdapter(
   ProgressIndicator.default
 ) {

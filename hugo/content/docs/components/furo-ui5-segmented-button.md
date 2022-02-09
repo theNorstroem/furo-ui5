@@ -91,8 +91,8 @@ default: id
 
 Fired  after the option list was rebuilt
 <br><br>
-### **value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
+### **furo-value-changed**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
 → <small>`{*} the value from the value-field. By default the value field is &#34;id&#34;`</small>
 
  Fired when value has changed from the component inside. **bubbles**

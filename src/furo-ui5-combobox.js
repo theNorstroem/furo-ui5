@@ -23,7 +23,7 @@ import '@ui5/webcomponents-icons/dist/information.js';
  * @fires {optionNodeList} options-updated - Fired after the option list was rebuilt.
  * @fires {value} search-requested - Fired when typing in input (debounced, default 250ms)
  * @fires {selectedOption} selection-change - Fired when selection is changed by user interaction
- * @fires {selectedOption} value-changed - Fired after the field value was changed.
+ * @fires {selectedOption} furo-value-changed - Fired after the field value was changed.
  *
  * @summary data combobox field
  * @element furo-ui5-combobox

@@ -44,6 +44,7 @@ bookHidden: true
 - [furo-ui5-pagination-bar](furo-ui5-pagination-bar.md) Pagination Bar
 - [furo-ui5-password-input-labeled](furo-ui5-password-input-labeled.md) labeled input field
 - [furo-ui5-password-input](furo-ui5-password-input.md) data password input field
+- [furo-ui5-progress-indicator](furo-ui5-progress-indicator.md) repeated strings
 - [furo-ui5-property](furo-ui5-property.md) ????? bind types of type any
 - [furo-ui5-typerenderer-labeled](furo-ui5-typerenderer-labeled.md) 
 - [furo-ui5-radio-button](furo-ui5-radio-button.md) boolean toggle button

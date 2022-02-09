@@ -42,7 +42,7 @@ import '@ui5/webcomponents-icons/dist/error.js';
  *
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
- * @fires {Date} value-changed -  Fired when the input operation has finished by pressing Enter or on focusout.
+ * @fires {Date} furo-value-changed -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {Date} change -Fired when the input operation has finished by pressing Enter or on focusout.
  *
  * @summary bindable datepicker field

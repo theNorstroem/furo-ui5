@@ -19,7 +19,7 @@ import '@ui5/webcomponents-icons/dist/information.js';
  * ```
  *
  * @fires {optionNodeList} options-updated - Fired  after the option list was rebuilt.
- * @fires {[string]} value-changed - Fires the field value when it changes.
+ * @fires {[string]} furo-value-changed - Fires the field value when it changes.
  *
  * @summary data select field
  * @element furo-ui5-multi-combobox
@@ -204,12 +204,12 @@ export class FuroUi5MultiCombobox extends FieldNodeAdapter(ComboBox.default) {
 
   /**
    * Overridden bindData of FieldNodeAdapter
-   * @param {FieldNode} fieldNode
+   * @param {RepeaterNode} repeaterNode
    * @returns {boolean}
    */
-  bindData(fieldNode) {
+  bindData(repeaterNode) {
     this.activeFieldBinding = true;
-    return super.bindData(fieldNode);
+    return super.bindData(repeaterNode);
   }
 
   /**

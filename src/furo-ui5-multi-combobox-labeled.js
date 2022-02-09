@@ -13,7 +13,7 @@ import './furo-ui5-multi-combobox.js';
  *
  * @slot {HTMLElement} valueStateMessage - defines the value state message that will be displayed as pop up under the input element.
  *
- * @fires {String} value-changed - Fires the field value when it changes.
+ * @fires {String} furo-value-changed - Fires the field value when it changes.
  *
  * @summary labeled multi-combobox
  * @element furo-ui5-multi-combobox-labeled
