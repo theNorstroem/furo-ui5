@@ -12,12 +12,12 @@
 <meta property="og:description" content="data combobox field" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-combobox/" />
-<meta property="article:modified_time" content="2022-01-31T16:13:12+01:00" />
+<meta property="article:modified_time" content="2022-02-09T14:06:44+01:00" />
 <title>furo-ui5-combobox | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.6d19dd1971bad0df1997359eddbaa73f647758502dafed43d4b43186c619fc81.js" integrity="sha256-bRndGXG60N8ZlzWe3bqnP2R3WFAtr&#43;1D1LQxhsYZ/IE="></script>
+<script defer src="/en.search.min.3b3dced4f7fc9aade1a8ce937f881ab18e34cb62e4579e8b16d5c514ac3d198b.js" integrity="sha256-Oz3O1Pf8mq3hqM6Tf4gasY40y2LkV56LFtXFFKw9GYs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -391,6 +391,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-markdown/" class="">furo-ui5-markdown</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-message-strip/" class="">furo-ui5-message-strip</a>
   
 
@@ -599,6 +612,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-progress-indicator/" class="">furo-ui5-progress-indicator</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-property/" class="">furo-ui5-property</a>
   
 
@@ -704,6 +730,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-sign-pad/" class="">furo-ui5-sign-pad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-step-input-labeled/" class="">furo-ui5-step-input-labeled</a>
   
 
         </li>
@@ -3011,8 +3050,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
   </ul>
 
 
@@ -3095,7 +3132,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#search-requested"><strong>search-requested</strong></a></li>
         <li><a href="#options-updated"><strong>options-updated</strong></a></li>
         <li><a href="#selection-change"><strong>selection-change</strong></a></li>
-        <li><a href="#value-changed"><strong>value-changed</strong></a></li>
+        <li><a href="#furo-value-changed"><strong>furo-value-changed</strong></a></li>
       </ul>
     </li>
     <li><a href="#methods">Methods</a>
@@ -3120,7 +3157,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-combobox
   <a class="anchor" href="#furo-ui5-combobox">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.0.0-rc.18</small>
+<p><strong>@furo/ui5</strong> <small>v1.0.0-rc.23</small>
 <br><code>import '@furo/ui5/src/furo-ui5-combobox.js';</code><small>
 <br>exports <em>FuroUi5Combobox</em> js
 <br>extends <em>src/furo-ui5-combobox.js</em>
@@ -3149,7 +3186,79 @@ Use the function bindOptions to bind a RepeaterNode as an option list.</p>
 &lt;/<span style="color:#000080">furo-ui5-combobox</span>&gt;
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="attributes-and-properties">
+</div><p>You can bind the options, or enter the options in the html</p>
+<furo-ui5-combobox placeholder="Enter value">
+	<ui5-cb-item text="Item 1"></ui5-cb-item>
+	<ui5-cb-item text="Item 2"></ui5-cb-item>
+	<ui5-cb-item text="Item 3"></ui5-cb-item>
+</furo-ui5-combobox>
+<furo-ui5-combobox value-state="Success" value="Item 1">
+	<ui5-cb-item text="Item 1"></ui5-cb-item>
+	<ui5-cb-item text="Item 2"></ui5-cb-item>
+	<ui5-cb-item text="Item 3"></ui5-cb-item>
+</furo-ui5-combobox>
+<furo-ui5-combobox value-state="Warning" value="Item 2">
+	<ui5-cb-item text="Item 1"></ui5-cb-item>
+	<ui5-cb-item text="Item 2"></ui5-cb-item>
+	<ui5-cb-item text="Item 3"></ui5-cb-item>
+</furo-ui5-combobox>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
+&lt;<span style="color:#000080">furo-ui5-combobox</span> 
+  <span style="color:#008080">placeholder</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Enter value&#34;</span> 
+  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.description)&#34;</span>&gt;
+	&lt;<span style="color:#000080">ui5-cb-item</span> <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Item 1&#34;</span>&gt;&lt;/<span style="color:#000080">ui5-cb-item</span>&gt;
+	&lt;<span style="color:#000080">ui5-cb-item</span> <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Item 2&#34;</span>&gt;&lt;/<span style="color:#000080">ui5-cb-item</span>&gt;
+	&lt;<span style="color:#000080">ui5-cb-item</span> <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Item 3&#34;</span>&gt;&lt;/<span style="color:#000080">ui5-cb-item</span>&gt;
+&lt;/<span style="color:#000080">furo-ui5-combobox</span>&gt;
+<p>&lt;<span style="color:#000080">furo-ui5-combobox</span>
+<span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Success&quot;</span>
+<span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;entity(*.data.item1)&quot;</span>&gt;
+&lt;<span style="color:#000080">ui5-cb-item</span> <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Item 1&quot;</span>&gt;&lt;/<span style="color:#000080">ui5-cb-item</span>&gt;
+&lt;<span style="color:#000080">ui5-cb-item</span> <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Item 2&quot;</span>&gt;&lt;/<span style="color:#000080">ui5-cb-item</span>&gt;
+&lt;<span style="color:#000080">ui5-cb-item</span> <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Item 3&quot;</span>&gt;&lt;/<span style="color:#000080">ui5-cb-item</span>&gt;
+&lt;/<span style="color:#000080">furo-ui5-combobox</span>&gt;</p>
+<p>&lt;<span style="color:#000080">furo-ui5-combobox</span>
+<span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Warning&quot;</span>
+<span style="color:#008080">value</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Item 2&quot;</span>
+<span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;entity(*.data.item2)&quot;</span>&gt;
+&lt;<span style="color:#000080">ui5-cb-item</span> <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Item 1&quot;</span>&gt;&lt;/<span style="color:#000080">ui5-cb-item</span>&gt;
+&lt;<span style="color:#000080">ui5-cb-item</span> <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Item 2&quot;</span>&gt;&lt;/<span style="color:#000080">ui5-cb-item</span>&gt;
+&lt;<span style="color:#000080">ui5-cb-item</span> <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Item 3&quot;</span>&gt;&lt;/<span style="color:#000080">ui5-cb-item</span>&gt;
+&lt;/<span style="color:#000080">furo-ui5-combobox</span>&gt;</p>
+<p></code></pre></td></tr></table></p>
+</div>
+</div>
+<h2 id="attributes-and-properties">
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
 </h2>
@@ -3220,11 +3329,11 @@ Default value: 250
 → <small><code>selectedOption</code></small></p>
 <p>Fired when selection is changed by user interaction
 <br><br></p>
-<h3 id="value-changed">
-  <strong>value-changed</strong>
-  <a class="anchor" href="#value-changed">#</a>
+<h3 id="furo-value-changed">
+  <strong>furo-value-changed</strong>
+  <a class="anchor" href="#furo-value-changed">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-value-changed</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
 → <small><code>selectedOption</code></small></p>
 <p>Fired after the field value was changed.
 <br><br></p>
@@ -3277,9 +3386,9 @@ Use this after manual or scripted update of the attributes.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/c89a156935c7ccfd0219bf9954f10a92f4b588e9" title='Last modified by veith | January 31, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/8981a053b8f897b6b2f371ade6580e7f5375ee8f" title='Last modified by veith | February 9, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>January 31, 2022</span>
+      <span>February 9, 2022</span>
     </a>
   </div>
 
@@ -3321,7 +3430,7 @@ Use this after manual or scripted update of the attributes.</p>
         <li><a href="#search-requested"><strong>search-requested</strong></a></li>
         <li><a href="#options-updated"><strong>options-updated</strong></a></li>
         <li><a href="#selection-change"><strong>selection-change</strong></a></li>
-        <li><a href="#value-changed"><strong>value-changed</strong></a></li>
+        <li><a href="#furo-value-changed"><strong>furo-value-changed</strong></a></li>
       </ul>
     </li>
     <li><a href="#methods">Methods</a>
@@ -3342,15 +3451,15 @@ Use this after manual or scripted update of the attributes.</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/route.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.18/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.23/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.23/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.23/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.23/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.23/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.23/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.23/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.23/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.23/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 
