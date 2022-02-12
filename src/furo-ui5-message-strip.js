@@ -212,7 +212,12 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
    * @param rpcStatus
    */
   showGrpcLocalizedMessage(rpcStatus) {
-    if (rpcStatus && rpcStatus.details && rpcStatus.details.length) {
+    if (
+      rpcStatus &&
+      rpcStatus.details &&
+      rpcStatus.details.filter(det => det['@type'].includes('LocalizedMessage'))
+        .length > 0
+    ) {
       let messages = [];
       messages = messages.concat(
         rpcStatus.details
