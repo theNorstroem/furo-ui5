@@ -28,5 +28,18 @@ export class FuroUiBusyIndicator extends Busy.default {
     this.removeAttribute('active');
     this._render();
   }
+
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-busy-indicator';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
 }
-window.customElements.define('furo-ui5-busy-indicator', FuroUiBusyIndicator);
+FuroUiBusyIndicator.define();

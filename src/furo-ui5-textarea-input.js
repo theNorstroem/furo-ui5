@@ -516,7 +516,12 @@ export class FuroUi5TextareaInput extends FieldNodeAdapter(TextArea.default) {
   }
 
   static get styles() {
-    return super.styles;
+    const s = super.styles;
+    // workaround, disable scrollbars on growing textarea
+    s.push({
+      content: ':host([growing]) .ui5-textarea-inner { overflow: hidden}',
+    });
+    return s;
   }
 }
 
