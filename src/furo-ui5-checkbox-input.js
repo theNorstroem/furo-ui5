@@ -106,6 +106,20 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
   }
 
   /**
+   * Checks the checkbox and updates the value
+   */
+  check() {
+    this.checked = true;
+  }
+
+  /**
+   * Unhecks the checkbox and updates the value
+   */
+  uncheck() {
+    this.checked = false;
+  }
+
+  /**
    * connectedCallback() method is called when an element is added to the DOM.
    * webcomponent lifecycle event
    * @private
