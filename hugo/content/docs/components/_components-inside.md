@@ -7,7 +7,6 @@ bookHidden: true
 ### Components
 
 - [furo-ui5-bool-icon](furo-ui5-bool-icon.md) Displays a icon for a boolean value
-- [furo-ui5-busy-indicator](furo-ui5-busy-indicator.md) ui5 busy indicator with methods
 - [furo-ui5-button](furo-ui5-button.md) ui5 button with methods
 - [furo-ui5-card](furo-ui5-card.md) Ui5 card with data bindings
 - [furo-ui5-chart-display](furo-ui5-chart-display.md) Display charts with data objects
@@ -48,6 +47,7 @@ bookHidden: true
 - [furo-ui5-property](furo-ui5-property.md) ????? bind types of type any
 - [furo-ui5-typerenderer-labeled](furo-ui5-typerenderer-labeled.md) 
 - [furo-ui5-radio-button](furo-ui5-radio-button.md) boolean toggle button
+- [furo-ui5-rating-indicator](furo-ui5-rating-indicator.md) data rating input field
 - [furo-ui5-reference-search](furo-ui5-reference-search.md) labeled input field
 - [furo-ui5-reference-search](furo-ui5-reference-search.md) furo ui5 data reference search
 - [furo-ui5-segmented-button](furo-ui5-segmented-button.md) segmented button
