@@ -85,14 +85,16 @@ class DisplayFuroFatString extends LitElement {
     /**
      * Sets the attributes from the field node
      */
-    Object.keys(this._field.attributes).forEach(key => {
-      if (!key.startsWith('_') && key !== 'label') {
+    if (this._field.attributes['value-state']) {
+      const state = this._field.attributes['value-state']._value;
+      this.setAttribute('value-state', state);
+      if (state !== 'None' && this._field.attributes['value-state-message']) {
         this.setAttribute(
-          this._field.attributes[key]._name,
-          this._field.attributes[key]._value
+          'title',
+          this._field.attributes['value-state-message']._value
         );
       }
-    });
+    }
   }
 
   _formatDisplay() {

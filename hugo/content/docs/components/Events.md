@@ -30,7 +30,7 @@ weight: 100
 ### **buildChangeEvent**
 <small>**buildChangeEvent**(*detail* `` ) ⟹ `Event`</small>
 
-Creates an universal `value-changed` event
+Creates an universal `furo-value-changed` event
 All extended ui5 components should use this builder function to create
 the change event
 

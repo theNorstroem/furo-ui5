@@ -8,7 +8,6 @@ weight: 50
 **@furo/ui5** <small>v1.0.0-rc.25</small>
 <br>`import '@furo/ui5/src/furo-ui5-button.js';`<small>
 <br>exports *FuroUi5Button* js
-<br>exports `<furo-ui5-button>` custom-element-definition
 <br>extends *src/furo-ui5-button.js*</small>
 
 > **Summary:** ui5 button with methods
@@ -42,6 +41,7 @@ https://sap.github.io/ui5-webcomponents/playground/components/Button/
 
 ## Attributes and Properties
 {{% api "_furo-ui5-button-properties.md" %}}
+
 
 
 
@@ -94,6 +94,7 @@ shows the button, when it was hidden before
 hides the button
 
 <br><br>
+
 
 
 

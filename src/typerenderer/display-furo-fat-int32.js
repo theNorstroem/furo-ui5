@@ -16,6 +16,20 @@ import { DisplayInt32 } from './display-int32.js';
  */
 export class DisplayFuroFatInt32 extends DisplayInt32 {
   _formatDisplay() {
+    /**
+     * Sets the attributes from the field node
+     */
+    if (this._field.attributes['value-state']) {
+      const state = this._field.attributes['value-state']._value;
+      this.setAttribute('value-state', state);
+      if (state !== 'None' && this._field.attributes['value-state-message']) {
+        this.setAttribute(
+          'title',
+          this._field.attributes['value-state-message']._value
+        );
+      }
+    }
+
     if (
       this._field.value._value !== null &&
       !(this._field.labels?.empty && this._field.labels.empty._value)

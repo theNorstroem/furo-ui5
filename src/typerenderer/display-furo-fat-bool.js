@@ -20,6 +20,20 @@ class DisplayFuroFatBool extends DisplayBool {
   _getTemplate() {
     let tmpl = '';
     if (this._field) {
+      /**
+       * Sets the attributes from the field node
+       */
+      if (this._field.attributes['value-state']) {
+        const state = this._field.attributes['value-state']._value;
+        this.setAttribute('value-state', state);
+        if (state !== 'None' && this._field.attributes['value-state-message']) {
+          this.setAttribute(
+            'title',
+            this._field.attributes['value-state-message']._value
+          );
+        }
+      }
+
       if (
         this._field.labels &&
         this._field.labels.empty &&

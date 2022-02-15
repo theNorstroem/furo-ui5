@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+
+    furo-demo-snippet {
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import {html, render} from 'lit';
+  import './initEnv.js';
+  import '../src/typerenderer/registry.js';
+
+
+  // eslint-disable-next-line import/no-extraneous-dependencies
+  import {DOMFBP} from '@furo/fbp/src/DOMFBP.js';
+
+  import '@furo/route/src/furo-location.js';
+  import '@furo/data/src/furo-deep-link.js';
+  import '@furo/data/src/furo-collection-agent.js';
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+
+
+  import '@ui5/webcomponents/dist/Icon.js';
+  import '@ui5/webcomponents-icons/dist/search.js';
+
+
+  render(
+    html`
+
+      <furo-form-layouter four>
+
+        <display-furo-fat-string ƒ-bind-data="--DO(*.fat_string)"></display-furo-fat-string>
+        <form-furo-fat-string ƒ-bind-data="--DO(*.fat_string)"></form-furo-fat-string>
+        <cell-furo-fat-string ƒ-bind-data="--DO(*.fat_string)"></cell-furo-fat-string>
+
+        <div full></div>
+
+        <display-furo-fat-int32 ƒ-bind-data="--DO(*.fat_int32)"></display-furo-fat-int32>
+        <form-furo-fat-int32 ƒ-bind-data="--DO(*.fat_int32)"></form-furo-fat-int32>
+        <cell-furo-fat-int32 ƒ-bind-data="--DO(*.fat_int32)"></cell-furo-fat-int32>
+
+
+        <div full></div>
+        <display-furo-fat-int64 ƒ-bind-data="--DO(*.fat_int64)"></display-furo-fat-int64>
+        <form-furo-fat-int64 ƒ-bind-data="--DO(*.fat_int64)"></form-furo-fat-int64>
+        <cell-furo-fat-int64 ƒ-bind-data="--DO(*.fat_int64)"></cell-furo-fat-int64>
+        <div></div>
+
+        <div full></div>
+        <display-furo-fat-float ƒ-bind-data="--DO(*.fat_float)"></display-furo-fat-float>
+        <form-furo-fat-float ƒ-bind-data="--DO(*.fat_float)"></form-furo-fat-float>
+        <cell-furo-fat-float ƒ-bind-data="--DO(*.fat_float)"></cell-furo-fat-float>
+        <div full></div>
+        <display-furo-fat-bool ƒ-bind-data="--DO(*.fat_bool)"></display-furo-fat-bool>
+        <form-furo-fat-bool ƒ-bind-data="--DO(*.fat_bool)"></form-furo-fat-bool>
+        <cell-furo-fat-bool ƒ-bind-data="--DO(*.fat_bool)"></cell-furo-fat-bool>
+        <div></div>
+
+
+      </furo-form-layouter>
+
+      <div>DO
+        <furo-data-object type="universaltest.Universaltest" ƒ-inject-raw="--data"
+                          @-object-ready="--DO"></furo-data-object>
+      </div>
+
+    `,
+    document.querySelector('#demo')
+  );
+
+  const fbp = new DOMFBP(document.querySelector('#demo'));
+
+  fbp._FBPTriggerWire('--data', {
+    fat_string: {value: "Good", attributes: {"value-state": "Error", "value-state-message": "is Error"}},
+    fat_int32: {value: "32", attributes: {"value-state": "Success", "value-state-message": "is Positive"}},
+    fat_int64: {value: "64", attributes: {"value-state": "Warning", "value-state-message": "is Critical"}},
+    fat_float: {value: "64.98", attributes: {"value-state": "Warning", "value-state-message": "is Critical"}},
+    fat_bool: {value: true, attributes: {"value-state": "Success", "value-state-message": "is Critical"}},
+  });
+</script>
+</body>
+</html>
