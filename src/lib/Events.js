@@ -1,13 +1,11 @@
 /**
  * Event Builder Class
  */
-
-// todo: @maltenorstroem this can cause collisions with ui5 packages, should switch to furo-value-changedd
 const VALUE_CHANGED = 'furo-value-changed';
 
 export class Events {
   /**
-   * Creates an universal `value-changed` event
+   * Creates an universal `furo-value-changed` event
    * All extended ui5 components should use this builder function to create
    * the change event
    * @param detail
