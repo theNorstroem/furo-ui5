@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-type-money
-**@furo/ui5** <small>v1.0.0-rc.24</small>
+**@furo/ui5** <small>v1.0.0-rc.25</small>
 <br>`import '@furo/ui5/src/typerenderer/display-furo-type-money.js';`<small>
 <br>exports `<display-furo-type-money>` custom-element-definition
 <br>extends */src/typerenderer/display-google-type-money.js*

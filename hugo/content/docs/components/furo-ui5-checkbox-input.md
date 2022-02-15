@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-checkbox-input
-**@furo/ui5** <small>v1.0.0-rc.24</small>
+**@furo/ui5** <small>v1.0.0-rc.25</small>
 <br>`import '@furo/ui5/src/furo-ui5-checkbox-input.js';`<small>
 <br>exports *FuroUi5CheckboxInput* js
 <br>extends *src/furo-ui5-checkbox-input.js*
@@ -70,6 +70,8 @@ The constraint **required** will mark the element as required.
 
 
 
+
+
 ## Events
 {{% api "_furo-ui5-checkbox-input-events.md" %}}
 
@@ -89,6 +91,26 @@ Fires the field value when it changes.
 ## Methods
 {{% api "_furo-ui5-checkbox-input-methods.md" %}}
 
+
+### **check**
+<small>**check**() ⟹ `void`</small>
+
+<small>`*`</small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-check</span>
+
+Checks the checkbox and updates the value
+
+<br><br>
+
+### **uncheck**
+<small>**uncheck**() ⟹ `void`</small>
+
+<small>`*`</small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-uncheck</span>
+
+Unhecks the checkbox and updates the value
+
+<br><br>
 
 ### **bindData**
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-furo-fat-int32
-**@furo/ui5** <small>v1.0.0-rc.24</small>
+**@furo/ui5** <small>v1.0.0-rc.25</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-furo-fat-int32.js';`<small>
 <br>exports *CellFuroFatInt32* js
 <br>exports `<cell-furo-fat-int32>` custom-element-definition

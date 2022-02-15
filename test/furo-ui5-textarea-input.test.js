@@ -214,7 +214,7 @@ describe('furo-ui5-textarea-input', () => {
         );
         assert.equal(inputFat._state.valueState, 'Error', 'check valueState');
         assert.equal(
-          inputFat._valueStateElement.innerText,
+          inputFat.querySelector('div[slot="valueStateMessage"]').innerText,
           'Your fat string is valid',
           'check valueStateMessage content'
         );
