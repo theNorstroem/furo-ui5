@@ -64,6 +64,18 @@ export class FuroUi5Button extends Button.default {
   hide() {
     this.hidden = true;
   }
-}
 
-window.customElements.define('furo-ui5-button', FuroUi5Button);
+  /**
+   * @private
+   */
+  static get metadata() {
+    const md = super.metadata;
+    md.tag = 'furo-ui5-button';
+    return md;
+  }
+
+  static get styles() {
+    return super.styles;
+  }
+}
+FuroUi5Button.define();
