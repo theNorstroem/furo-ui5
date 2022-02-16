@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+    furo-demo-snippet{
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import { html, render } from 'lit';
+  import './initEnv.js';
+  import '../src/furo-ui5-step-input.js';
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+
+  render(
+    html`
+
+        <furo-demo-snippet>
+          <template>
+
+            <furo-form-layouter two>
+              <p full>
+                FuroUi5StepInput.
+              </p>
+
+              <furo-ui5-step-input
+                ƒ-bind-data="--daoPerson(*.bmi)">
+              </furo-ui5-step-input>
+
+              <furo-ui5-step-input
+                value-state="Information"
+                value-precision="4"
+                ƒ-bind-data="--daoPerson(*.bmi)">
+                <div slot="valueStateMessage">Value precision set to 4</div>
+              </furo-ui5-step-input>
+
+              <furo-ui5-step-input
+                disabled
+                ƒ-bind-data="--daoPerson(*.bmi)">
+              </furo-ui5-step-input>
+
+            </furo-form-layouter>
+            <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
+
+          </template>
+        </furo-demo-snippet>
+
+
+      `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>

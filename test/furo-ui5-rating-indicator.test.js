@@ -14,17 +14,19 @@ describe('furo-ui5-rating-indicator', () => {
   let host;
   let dataObject;
 
-  const dataScalar = {"scalar_int32": 4,};
-  const dataWrapper = {"wrapper_int32": 3,};
-  const dataFat = {"fat_int32":{
-    "value": 5,
-    "labels": {
-      "disabled": true
+  const dataScalar = { scalar_int32: 4 };
+  const dataWrapper = { wrapper_int32: 3 };
+  const dataFat = {
+    fat_int32: {
+      value: 5,
+      labels: {
+        disabled: true,
+      },
+      attributes: {
+        max: '16',
+      },
     },
-    "attributes": {
-      "max": "16",
-    }
-  },};
+  };
 
   beforeEach(async () => {
     const testbind = await fixture(html`
@@ -40,7 +42,9 @@ describe('furo-ui5-rating-indicator', () => {
             ƒ-bind-data="--dao(*.fat_int32)"
           ></furo-ui5-rating-indicator>
 
-          <furo-ui5-number-input ƒ-bind-data="--dao(*.scalar_int32)"></furo-ui5-number-input>
+          <furo-ui5-number-input
+            ƒ-bind-data="--dao(*.scalar_int32)"
+          ></furo-ui5-number-input>
 
           <furo-data-object
             type="universaltest.Universaltest"
@@ -51,59 +55,50 @@ describe('furo-ui5-rating-indicator', () => {
     `);
     await testbind.updateComplete;
     host = testbind._host;
-    [
-      ,
-      riSclar, riWrapper, riFat, input, dataObject,
-
-    ] = testbind.parentNode.children;
+    [, riSclar, riWrapper, riFat, input, dataObject] =
+      testbind.parentNode.children;
     await host.updateComplete;
     await riSclar.updateComplete;
     await riWrapper.updateComplete;
     await riFat.updateComplete;
     await input.updateComplete;
     await dataObject.updateComplete;
-
   });
 
   it('should be a furo-ui5-rating-indicator', done => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(
-      riSclar.nodeName.toLowerCase(),
-      'furo-ui5-rating-indicator'
-    );
+    assert.equal(riSclar.nodeName.toLowerCase(), 'furo-ui5-rating-indicator');
     done();
   });
 
   it('should bind a scalar number type', done => {
-    dataObject.addEventListener('data-injected', ()=>{
-      setTimeout(()=>{
+    dataObject.addEventListener('data-injected', () => {
+      setTimeout(() => {
         assert.equal(riSclar.value, 4);
         done();
-      },10)
-    })
+      }, 10);
+    });
     dataObject.injectRaw(dataScalar);
   });
 
   it('should bind a wrapper number type', done => {
-    dataObject.addEventListener('data-injected', ()=>{
-      setTimeout(()=>{
+    dataObject.addEventListener('data-injected', () => {
+      setTimeout(() => {
         assert.equal(riWrapper.value, 3);
         done();
-      },10)
-    })
+      }, 10);
+    });
     dataObject.injectRaw(dataWrapper);
   });
 
   it('should bind a fat number type', done => {
-    dataObject.addEventListener('data-injected', ()=>{
-      setTimeout(()=>{
+    dataObject.addEventListener('data-injected', () => {
+      setTimeout(() => {
         assert.equal(riFat.value, 5);
         assert.equal(riFat.disabled, true);
         done();
-      },10)
-    })
+      }, 10);
+    });
     dataObject.injectRaw(dataFat);
   });
-
-
 });

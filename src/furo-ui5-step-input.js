@@ -1,12 +1,16 @@
 import * as StepInput from '@ui5/webcomponents/dist/StepInput.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import '@ui5/webcomponents/dist/features/InputSuggestions.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Events } from './lib/Events.js';
 
+import '@ui5/webcomponents-icons/dist/alert.js';
+import '@ui5/webcomponents-icons/dist/information.js';
+import '@ui5/webcomponents-icons/dist/error.js';
+
 /**
- * The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.
- * It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
+ * The furo-ui5-step-input component allows the user to enter and edit numbers with data binding. It consists of an
+ * input field and buttons with icons to increase/decrease the value with the predefined step.
+ * It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/StepInput/).
  *
  * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
  *
@@ -39,7 +43,7 @@ import { Events } from './lib/Events.js';
  *
  * ## Methods
  * **bind-data(fieldNode)**
- * Bind a entity field. You can use the entity even when no data was received.
+ * Bind an entity field. You can use the entity even when no data was received.
  *
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
@@ -48,8 +52,8 @@ import { Events } from './lib/Events.js';
  *
  * @fires {`string`} furo-value-changed - Fires the field value when it changes.
  *
- * @summary data number input field
- * @element furo-ui5-number-input
+ * @summary data step input field
+ * @element furo-ui5-step-input
  * @demo demo-furo-ui5-number-input Basic usage (scalar , fat, wrapper values)
  * @demo demo-furo-ui5-text-input Basic usage (scalar , fat, wrapper values)
  * @demo demo-furo-ui5-text-input-together playground
@@ -101,7 +105,6 @@ export class FuroUi5StepInput extends FieldNodeAdapter(StepInput.default) {
       placeholder: null,
       required: null,
       disabled: null,
-      icon: null,
     };
 
     this.addEventListener('change', this._updateFNA);
@@ -187,9 +190,6 @@ export class FuroUi5StepInput extends FieldNodeAdapter(StepInput.default) {
     Object.keys(this._privilegedAttributes).forEach(attr => {
       this._privilegedAttributes[attr] = this.getAttribute(attr);
     });
-    if (this._privilegedAttributes.icon) {
-      this._setIcon(this._privilegedAttributes.icon);
-    }
   }
 
   /**
@@ -300,7 +300,6 @@ export class FuroUi5StepInput extends FieldNodeAdapter(StepInput.default) {
     // this is needed to check the specifity in the onFnaXXXXChanged callback functions
     this._attributesFromFAT.disabled = fatAttributes.disabled;
     this._attributesFromFAT.placeholder = fatAttributes.placeholder;
-    this._attributesFromFAT.icon = fatAttributes.icon;
 
     // placeholder
     if (this._privilegedAttributes.placeholder === null) {
@@ -330,24 +329,6 @@ export class FuroUi5StepInput extends FieldNodeAdapter(StepInput.default) {
       };
       this._setValueStateMessage('None', fatAttributes['value-state-message']);
     }
-
-    // suggestions
-    // see Properties/Attributes from ui5 on https://sap.github.io/ui5-webcomponents/playground/components/Input/
-    if (fatAttributes.suggestions !== undefined) {
-      if (typeof fatAttributes.suggestions === 'string') {
-        this._setSuggestions(JSON.parse(fatAttributes.suggestions));
-      } else if (Array.isArray(fatAttributes.suggestions)) {
-        this._setSuggestions(fatAttributes.suggestions);
-      }
-    }
-
-    // icon
-    if (
-      this._privilegedAttributes.icon === null &&
-      fatAttributes.icon !== undefined
-    ) {
-      this._setIcon(fatAttributes.icon);
-    }
   }
 
   /**
@@ -370,24 +351,6 @@ export class FuroUi5StepInput extends FieldNodeAdapter(StepInput.default) {
    */
   get valueStateMessage() {
     return super.valueStateMessage || {};
-  }
-
-  /**
-   * overwrite to fix error
-   * @private
-   * @returns {*|[]}
-   */
-  get suggestionItems() {
-    return super.suggestionItems || [];
-  }
-
-  /**
-   * overwrite to fix error
-   * @private
-   * @returns {*|[]}
-   */
-  get icon() {
-    return super.icon || [];
   }
 
   /**
@@ -470,17 +433,6 @@ export class FuroUi5StepInput extends FieldNodeAdapter(StepInput.default) {
   }
 
   /**
-   * overwrite onFnaOptionsChanged function
-   * @private
-   * @param options
-   */
-  onFnaOptionsChanged(options) {
-    if (options && options.list) {
-      this._setSuggestions(options.list);
-    }
-  }
-
-  /**
    * overwrite onFnaConstraintsChanged function
    * @private
    * @param constraints
@@ -521,80 +473,6 @@ export class FuroUi5StepInput extends FieldNodeAdapter(StepInput.default) {
   }
 
   /**
-   * set suggestions as the ui5-suggestion-item element
-   * ui5 suggestions sample data: [{"text":"Spain","icon":"world","type":"Active","infoState":"None","group":false,"key":0},.. ]
-   * furo.Fieldoption as suggestions: [{"id": 1,"display_name":"show 1"}, ..]
-   * if the suggestion item has icon , the ui5 icons should be imported in your ui component
-   *
-   * @private
-   * @param arr
-   */
-  _setSuggestions(arr) {
-    if (!this.readonly && !this.disabled) {
-      // remove previous suggestion items.
-      this.querySelectorAll('ui5-suggestion-item').forEach(e => {
-        e.remove();
-      });
-
-      if (Array.isArray(arr) && arr.length > 0) {
-        this.showSuggestions = true;
-        this.highlight = true;
-
-        // add current suggestion items
-        arr.forEach(e => {
-          const suggestion = document.createElement('ui5-suggestion-item');
-
-          // suggestions from furo.optionItem
-          if (e.id !== undefined) {
-            suggestion.text = e.id;
-          }
-
-          // suggestions from furo.optionItem
-          if (e.display_name !== undefined && e.display_name !== e.id) {
-            suggestion.description = e.display_name;
-          }
-
-          // suggestions from fat attribute
-          if (e.text !== undefined) {
-            suggestion.text = e.text;
-          }
-
-          // appends only when suggestion text exists
-          // see Properties/Attributes on https://sap.github.io/ui5-webcomponents/playground/components/Input/
-          if (suggestion.text !== undefined) {
-            if (e.icon !== undefined) {
-              suggestion.icon = e.icon;
-            }
-            if (e.iconEnd !== undefined) {
-              suggestion.iconEnd = e.iconEnd;
-            }
-            if (e.image !== undefined) {
-              suggestion.image = e.image;
-            }
-            if (e.info !== undefined) {
-              suggestion.info = e.info;
-            }
-            if (e.type !== undefined) {
-              suggestion.type = e.type;
-            }
-            if (e.infoState !== undefined) {
-              suggestion.infoState = e.infoState;
-            }
-            if (e.group !== undefined) {
-              suggestion.group = e.group;
-            }
-            if (e.key !== undefined) {
-              suggestion.key = e.key;
-            }
-
-            this.appendChild(suggestion);
-          }
-        });
-      }
-    }
-  }
-
-  /**
    * updates the value state and the value state message on demand
    *
    * @param valueState
@@ -624,23 +502,6 @@ export class FuroUi5StepInput extends FieldNodeAdapter(StepInput.default) {
       );
     } else {
       this._removeValueStateMessage();
-    }
-  }
-
-  /**
-   * set ui5 icon
-   * @param icon
-   * @private
-   */
-  _setIcon(icon) {
-    if (this._icon) {
-      this._icon.remove();
-    }
-    if (icon) {
-      this._icon = document.createElement('ui5-icon');
-      this._icon.slot = 'icon';
-      this._icon.name = icon;
-      this.appendChild(this._icon);
     }
   }
 
