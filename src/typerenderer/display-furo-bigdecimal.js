@@ -81,6 +81,20 @@ export class DisplayFuroBigdecimal extends LitElement {
   }
 
   _formatDisplay() {
+    /**
+     * Sets the attributes from the field node
+     */
+    if (this._field.attributes['value-state']) {
+      const state = this._field.attributes['value-state']._value;
+      this.setAttribute('value-state', state);
+      if (state !== 'None' && this._field.attributes['value-state-message']) {
+        this.setAttribute(
+          'title',
+          this._field.attributes['value-state-message']._value
+        );
+      }
+    }
+
     const val = this._field._value;
     let displayValue = '';
     if (!(val.scale === null || val.unscaled_value === null)) {

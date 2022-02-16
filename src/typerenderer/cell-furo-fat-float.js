@@ -17,6 +17,19 @@ class CellFuroFatFloat extends CellFloat {
    * @private
    */
   _formatCell() {
+    /**
+     * Sets the attributes from the field node
+     */
+    if (this._field.attributes['value-state']) {
+      const state = this._field.attributes['value-state']._value;
+      this.setAttribute('value-state', state);
+      if (state !== 'None' && this._field.attributes['value-state-message']) {
+        this.setAttribute(
+          'title',
+          this._field.attributes['value-state-message']._value
+        );
+      }
+    }
     const displayValue = new Intl.NumberFormat(Env.locale, {}).format(
       this._field.value._value
     );
