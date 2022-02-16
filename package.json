@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components data bindings for furo",
-  "version": "1.0.0-rc.25",
+  "version": "1.0.0-rc.26",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": "git@github.com:eclipse/eclipsefuro-web.git",
   "author": {
@@ -32,17 +32,17 @@
     "prepare": "husky install"
   },
   "peerDependencies": {
-    "@furo/fbp": "^6.0.0-rc.9",
-    "@furo/framework": "^2.0.0-rc.6",
-    "@furo/layout": "^2.0.0-rc.12",
-    "@furo/data": "^2.0.0-rc.12",
-    "@furo/util": "^2.0.0-rc.14",
-    "@furo/route": "^2.0.0-rc.11",
+    "@furo/fbp": "^6.0.0-rc.10",
+    "@furo/framework": "^2.0.0-rc.7",
+    "@furo/layout": "^2.0.0-rc.13",
+    "@furo/data": "^2.0.0-rc.13",
+    "@furo/util": "^2.0.0-rc.15",
+    "@furo/route": "^2.0.0-rc.12",
     "@ui5/webcomponents": "^1.1.2",
     "@ui5/webcomponents-base": "^1.1.2",
     "@ui5/webcomponents-fiori": "^1.1.2",
     "@ui5/webcomponents-icons": "^1.1.2",
-    "lit": "^2.0.1"
+    "lit": "^2.0.2"
   },
   "dependencies": {
     "markdown-it": "^12.3.2",
