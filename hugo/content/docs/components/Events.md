@@ -6,7 +6,7 @@ weight: 100
 
 # Events
 
-**@furo/components** <small>v1.0.0-rc.25</small>
+**@furo/components** <small>v1.0.0-rc.26</small>
 <br>`import '@furo/components/src/src/lib/Events.js';`<small>
 <br>exports *Events* js</small>
 

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-string
-**@furo/ui5** <small>v1.0.0-rc.25</small>
+**@furo/ui5** <small>v1.0.0-rc.26</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-string.js';`<small>
 <br>exports *CellString* js
 <br>exports `<cell-string>` custom-element-definition

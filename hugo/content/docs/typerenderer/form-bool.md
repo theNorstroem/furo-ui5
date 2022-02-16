@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-bool
-**@furo/ui5** <small>v1.0.0-rc.25</small>
+**@furo/ui5** <small>v1.0.0-rc.26</small>
 <br>`import '@furo/ui5/src/typerenderer/form-bool.js';`<small>
 <br>exports *FormBool* js
 <br>exports `<form-bool>` custom-element-definition

@@ -11,13 +11,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-flexible-grid" />
 <meta property="og:description" content="a grid splitter" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-flexible-grid/" />
+<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-flexible-grid/" /><meta property="article:section" content="docs" />
+
 <meta property="article:modified_time" content="2022-02-14T16:34:47+01:00" />
+
 <title>furo-ui5-flexible-grid | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.985f29f4c39482150c407938200edca90e24a2a98678bcd3d034dc90ff6e2787.js" integrity="sha256-mF8p9MOUghUMQHk4IA7cqQ4koqmGeLzT0DTckP9uJ4c="></script>
+<link rel="stylesheet" href="/book.min.8970c3c9d4b531a16cf725277f7ef50634ac43356703adef922b3d646410e36d.css" integrity="sha256-iXDDydS1MaFs9yUnf371BjSsQzVnA63vkis9ZGQQ420=">
+<script defer src="/en.search.min.9dc245b0d0aaed0edc34dfd67d6c48bae23adb345797c5c545cd09745e0ccb01.js" integrity="sha256-ncJFsNCq7Q7cNN/WfWxIuuI62zRXl8XFRc0JdF4MywE="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3057,10 +3059,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3100,7 +3098,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -3163,7 +3161,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-flexible-grid
   <a class="anchor" href="#furo-ui5-flexible-grid">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.0.0-rc.25</small>
+<p><strong>@furo/ui5</strong> <small>v1.0.0-rc.26</small>
 <br><code>import '@furo/ui5/src/furo-ui5-flexible-grid.js';</code><small>
 <br>exports <code>&lt;furo-ui5-flexible-grid&gt;</code> custom-element-definition
 <br>superclass <em>LitElement</em>
@@ -3179,7 +3177,7 @@ https://github.com/alex-shpak/hugo-book
 when the available space is to small.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -3191,7 +3189,7 @@ when the available space is to small.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#998;font-style:italic">&lt;!-- a simple layout manager with two columns  --&gt;</span>
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#998;font-style:italic">&lt;!-- a simple layout manager with two columns  --&gt;</span>
 &lt;<span style="color:#000080">furo-ui5-flexible-grid</span>&gt;
   &lt;<span style="color:#000080">div</span> <span style="color:#008080">hspan</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;2&#34;</span> <span style="color:#008080">full-on-size-medium</span> <span style="color:#008080">full-on-size-small</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;left&#34;</span>&gt;
      &lt;<span style="color:#000080">slot</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;left&#34;</span>&gt;&lt;/<span style="color:#000080">slot</span>&gt;
@@ -3278,7 +3276,7 @@ There is no line name available</p>
 </furo-demo-snippet>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -3306,7 +3304,7 @@ There is no line name available</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">style</span>&gt;
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">style</span>&gt;
   <span style="color:#998;font-style:italic">/* needed because the contents get positioned vertically on small screens*/</span>
   .<span style="color:#458;font-weight:bold">left</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000080">size</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;size-s&#39;</span><span style="color:#000;font-weight:bold">]</span> {
     <span style="color:#000;font-weight:bold">height</span>: <span style="color:#099">22</span><span style="color:#458;font-weight:bold">rem</span>;
@@ -3438,15 +3436,15 @@ full width, no height given
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/route.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 

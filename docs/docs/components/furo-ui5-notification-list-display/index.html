@@ -11,13 +11,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-notification-list-display" />
 <meta property="og:description" content="ui5 notification list" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-notification-list-display/" />
+<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-notification-list-display/" /><meta property="article:section" content="docs" />
+
 <meta property="article:modified_time" content="2022-02-14T16:34:47+01:00" />
+
 <title>furo-ui5-notification-list-display | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.985f29f4c39482150c407938200edca90e24a2a98678bcd3d034dc90ff6e2787.js" integrity="sha256-mF8p9MOUghUMQHk4IA7cqQ4koqmGeLzT0DTckP9uJ4c="></script>
+<link rel="stylesheet" href="/book.min.8970c3c9d4b531a16cf725277f7ef50634ac43356703adef922b3d646410e36d.css" integrity="sha256-iXDDydS1MaFs9yUnf371BjSsQzVnA63vkis9ZGQQ420=">
+<script defer src="/en.search.min.9dc245b0d0aaed0edc34dfd67d6c48bae23adb345797c5c545cd09745e0ccb01.js" integrity="sha256-ncJFsNCq7Q7cNN/WfWxIuuI62zRXl8XFRc0JdF4MywE="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3057,10 +3059,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3100,7 +3098,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -3172,7 +3170,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-notification-list-display
   <a class="anchor" href="#furo-ui5-notification-list-display">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.0.0-rc.25</small>
+<p><strong>@furo/ui5</strong> <small>v1.0.0-rc.26</small>
 <br><code>import '@furo/ui5/src/furo-ui5-notification-list-display.js';</code><small>
 <br>exports <em>FuroUi5NotificationListDisplay</em> js
 <br>exports <code>&lt;furo-ui5-notification-list-display&gt;</code> custom-element-definition
@@ -3187,7 +3185,8 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>Notification display component that works together with furo-ui5-notification.
 Displays google.rpc.Status messages in a grouped list.
-<a href="https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto">https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto</a>.</p>
+
+  <a href="https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto">https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto</a>.</p>
 <p>Best place the furo-ui5-notification-list-display on the main site. then you only need one furo-ui5-notification-list-display.
 you can also use more than one furo-ui5-notification-list-display for special needs.
 But you have to be sure the furo-ui5-notification-list-display can receive the notification events from furo-ui5-notification.</p>
@@ -3226,7 +3225,7 @@ But you have to be sure the furo-ui5-notification-list-display can receive the n
 </blockquote>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -3237,7 +3236,7 @@ But you have to be sure the furo-ui5-notification-list-display can receive the n
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-notification-list-display</span> 
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-notification-list-display</span> 
   <span style="color:#008080">header-text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Notifications &amp;amp; Errors&#34;</span> 
   <span style="color:#008080">ƒ-clear-all</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearRequested&#34;</span> 
   <span style="color:#008080">group-title-message</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Localized Messages&#34;</span> 
@@ -3347,7 +3346,8 @@ But you have to be sure the furo-ui5-notification-list-display can receive the n
 <p><small>`` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-grpc-status</span></p>
 <p>parse grpc status object and set the notification text according to the LocalizedMessage in status.
-<a href="https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto">https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto</a>.</p>
+
+  <a href="https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto">https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto</a>.</p>
 <ul>
 <li><small>d </small>
 <br><br></li>
@@ -3499,15 +3499,15 @@ implemented types are:</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/route.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.24/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 

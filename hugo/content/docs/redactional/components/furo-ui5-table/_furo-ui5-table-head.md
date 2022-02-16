@@ -14,7 +14,7 @@ The default typerenderer context for the cells is **cell**. You can set the cont
 <furo-demo-snippet>
 <template>
 <button @-click="--read">load data</button><br><br>
-<furo-ui5-table
+<furo-ui5-table mode="SingleSelect"
  ƒ-bind-data="--collection(*.entities)"
 >
  <!-- The column label is evaluated from the specs -->

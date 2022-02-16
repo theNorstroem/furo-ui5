@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-table-row
-**@furo/ui5** <small>v1.0.0-rc.25</small>
+**@furo/ui5** <small>v1.0.0-rc.26</small>
 <br>`import '@furo/ui5/src/subcomponents/furo-ui5-table-row.js';`<small>
 <br>exports *FuroUi5TableRow* js
 <br>exports `<furo-ui5-table-row>` custom-element-definition
