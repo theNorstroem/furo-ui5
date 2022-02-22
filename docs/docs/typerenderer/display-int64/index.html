@@ -11,15 +11,13 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="display-int64" />
 <meta property="og:description" content="display renderer for `int64`" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://ui5.furo.pro/docs/typerenderer/display-int64/" /><meta property="article:section" content="docs" />
-
-<meta property="article:modified_time" content="2022-02-14T16:34:47+01:00" />
-
+<meta property="og:url" content="http://ui5.furo.pro/docs/typerenderer/display-int64/" />
+<meta property="article:modified_time" content="2022-02-16T09:46:31+01:00" />
 <title>display-int64 | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.8970c3c9d4b531a16cf725277f7ef50634ac43356703adef922b3d646410e36d.css" integrity="sha256-iXDDydS1MaFs9yUnf371BjSsQzVnA63vkis9ZGQQ420=">
-<script defer src="/en.search.min.9dc245b0d0aaed0edc34dfd67d6c48bae23adb345797c5c545cd09745e0ccb01.js" integrity="sha256-ncJFsNCq7Q7cNN/WfWxIuuI62zRXl8XFRc0JdF4MywE="></script>
+<link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
+<script defer src="/en.search.min.e7ac868cec3c53553746f267b1909313f5c073c7bf6b18eef0ed685f4e9560ca.js" integrity="sha256-56yGjOw8U1U3RvJnsZCTE/XAc8e/axju8O1oX06VYMo="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -745,6 +743,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-sign-pad/" class="">furo-ui5-sign-pad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-step-input/" class="">furo-ui5-step-input</a>
   
 
         </li>
@@ -3059,6 +3070,8 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
   </ul>
 
 
@@ -3098,7 +3111,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
  
@@ -3150,7 +3163,7 @@ https://github.com/alex-shpak/hugo-book
   display-int64
   <a class="anchor" href="#display-int64">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.0.0-rc.26</small>
+<p><strong>@furo/ui5</strong> <small>v1.0.0</small>
 <br><code>import '@furo/ui5/src/typerenderer/display-int64.js';</code><small>
 <br>exports <em>DisplayInt64</em> js
 <br>exports <code>&lt;display-int64&gt;</code> custom-element-definition
@@ -3165,8 +3178,7 @@ https://github.com/alex-shpak/hugo-book
 <p><code>display-int64</code>
 The display-int64 component displays a FieldNode of type <code>int64</code> in read only mode.</p>
 <p>The component uses locale from the environment to display the date value accordingly.
-
-  <a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat">https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat</a></p>
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat">https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat</a></p>
 <p>Every display-xxx component should implement the following API:</p>
 <ul>
 <li>function: bindData(fieldNode){&hellip;}</li>
@@ -3209,9 +3221,9 @@ The display-int64 component displays a FieldNode of type <code>int64</code> in r
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/0c20f270ec8a20a5568abc21274f737aba3efd6c" title='Last modified by maltenorstroem | February 14, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/8bbb2652be659567fe3723ae7eb42b618c65d165" title='Last modified by maltenorstroem | February 16, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>February 14, 2022</span>
+      <span>February 16, 2022</span>
     </a>
   </div>
 
@@ -3258,15 +3270,15 @@ The display-int64 component displays a FieldNode of type <code>int64</code> in r
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/route.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 

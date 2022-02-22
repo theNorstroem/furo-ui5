@@ -7,27 +7,25 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MediaSize #  @furo/components v1.0.0-rc.26 import &#39;@furo/components/src/src/lib/MediaSize.js&#39;; exports MediaSize js
+<meta name="description" content="MediaSize #  @furo/components v1.0.0 import &#39;@furo/components/src/src/lib/MediaSize.js&#39;; exports MediaSize js
  MediaSize resolver #  Returns the media size from S to XXL according to the screen width.
 Use this to set style vars according to the current media size.
 Usage #  Apply the media-size attribute to your main-stage or component.
 1 2 3 4 5 6 7  window.addEventListener(&#39;resize&#39;, MediaSize.DebounceBuilder(() =&gt; { this.setAttribute(&#34;media-size&#34;, MediaSize.GetMediaSize()) }, MediaSize.HANDLE_RESIZE_DEBOUNCE_RATE) ); // initial size this.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="MediaSize" />
-<meta property="og:description" content="MediaSize #  @furo/components v1.0.0-rc.26 import &#39;@furo/components/src/src/lib/MediaSize.js&#39;; exports MediaSize js
+<meta property="og:description" content="MediaSize #  @furo/components v1.0.0 import &#39;@furo/components/src/src/lib/MediaSize.js&#39;; exports MediaSize js
  MediaSize resolver #  Returns the media size from S to XXL according to the screen width.
 Use this to set style vars according to the current media size.
 Usage #  Apply the media-size attribute to your main-stage or component.
 1 2 3 4 5 6 7  window.addEventListener(&#39;resize&#39;, MediaSize.DebounceBuilder(() =&gt; { this.setAttribute(&#34;media-size&#34;, MediaSize.GetMediaSize()) }, MediaSize.HANDLE_RESIZE_DEBOUNCE_RATE) ); // initial size this." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://ui5.furo.pro/docs/components/MediaSize/" /><meta property="article:section" content="docs" />
-
-<meta property="article:modified_time" content="2022-02-14T16:34:47+01:00" />
-
+<meta property="og:url" content="http://ui5.furo.pro/docs/components/MediaSize/" />
+<meta property="article:modified_time" content="2022-02-16T09:46:31+01:00" />
 <title>MediaSize | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.8970c3c9d4b531a16cf725277f7ef50634ac43356703adef922b3d646410e36d.css" integrity="sha256-iXDDydS1MaFs9yUnf371BjSsQzVnA63vkis9ZGQQ420=">
-<script defer src="/en.search.min.9dc245b0d0aaed0edc34dfd67d6c48bae23adb345797c5c545cd09745e0ccb01.js" integrity="sha256-ncJFsNCq7Q7cNN/WfWxIuuI62zRXl8XFRc0JdF4MywE="></script>
+<link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
+<script defer src="/en.search.min.e7ac868cec3c53553746f267b1909313f5c073c7bf6b18eef0ed685f4e9560ca.js" integrity="sha256-56yGjOw8U1U3RvJnsZCTE/XAc8e/axju8O1oX06VYMo="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -753,6 +751,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-sign-pad/" class="">furo-ui5-sign-pad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-step-input/" class="">furo-ui5-step-input</a>
   
 
         </li>
@@ -3067,6 +3078,8 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
   </ul>
 
 
@@ -3106,7 +3119,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
  
@@ -3164,7 +3177,7 @@ https://github.com/alex-shpak/hugo-book
   MediaSize
   <a class="anchor" href="#mediasize">#</a>
 </h1>
-<p><strong>@furo/components</strong> <small>v1.0.0-rc.26</small>
+<p><strong>@furo/components</strong> <small>v1.0.0</small>
 <br><code>import '@furo/components/src/src/lib/MediaSize.js';</code><small>
 <br>exports <em>MediaSize</em> js</small></p>
 <hr>
@@ -3181,7 +3194,7 @@ https://github.com/alex-shpak/hugo-book
 <p>Apply the media-size attribute to your main-stage or component.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -3190,7 +3203,7 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#0086b3">window</span>.addEventListener(<span style="color:#d14">&#39;resize&#39;</span>,   MediaSize.DebounceBuilder(() =&gt; {
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#0086b3">window</span>.addEventListener(<span style="color:#d14">&#39;resize&#39;</span>,   MediaSize.DebounceBuilder(() =&gt; {
       <span style="color:#000;font-weight:bold">this</span>.setAttribute(<span style="color:#d14">&#34;media-size&#34;</span>, MediaSize.GetMediaSize())
     }, MediaSize.HANDLE_RESIZE_DEBOUNCE_RATE)
 );
@@ -3202,7 +3215,7 @@ https://github.com/alex-shpak/hugo-book
 </div><p>Set media-size related values for your variables.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -3243,7 +3256,7 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"> :<span style="color:#3c5d5d;font-weight:bold">host</span><span style="color:#000;font-weight:bold">([</span><span style="color:#000080">media-size</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;XXL&#39;</span><span style="color:#000;font-weight:bold">])</span> {
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"> :<span style="color:#3c5d5d;font-weight:bold">host</span><span style="color:#000;font-weight:bold">([</span><span style="color:#000080">media-size</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;XXL&#39;</span><span style="color:#000;font-weight:bold">])</span> {
          <span style="color:#008080">--FuroUi5MediaSizeIndentation</span>: <span style="color:#099">2</span><span style="color:#458;font-weight:bold">rem</span> <span style="color:#099">3</span><span style="color:#458;font-weight:bold">rem</span> <span style="color:#099">1</span><span style="color:#458;font-weight:bold">rem</span> <span style="color:#099">3</span><span style="color:#458;font-weight:bold">rem</span>;
          <span style="color:#008080">--FuroUi5MediaSizeIndentationTop</span>: <span style="color:#099">2</span><span style="color:#458;font-weight:bold">rem</span>;
          <span style="color:#008080">--FuroUi5MediaSizeIndentationRight</span>: <span style="color:#099">3</span><span style="color:#458;font-weight:bold">rem</span>;
@@ -3341,9 +3354,9 @@ S,M,L,XL,XXl</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/0c20f270ec8a20a5568abc21274f737aba3efd6c" title='Last modified by maltenorstroem | February 14, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/8bbb2652be659567fe3723ae7eb42b618c65d165" title='Last modified by maltenorstroem | February 16, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>February 14, 2022</span>
+      <span>February 16, 2022</span>
     </a>
   </div>
 
@@ -3396,15 +3409,15 @@ S,M,L,XL,XXl</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/route.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 

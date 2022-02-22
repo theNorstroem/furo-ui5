@@ -15,15 +15,13 @@
  Summary:
  Example with context=&ldquo;display&rdquo; #        load record 1 load record 2 load record 3        1 2 3 4 5 6 7 8  &lt;furo-form-layouter four&gt; &lt;furo-ui5-propertylist-display ƒ-bind-data=&#34;--entity(*.data.type_property)&#34;&gt;&lt;/furo-ui5-propertylist-display&gt; &lt;/furo-form-layouter&gt; &lt;furo-data-object type=&#34;experiment.ExperimentEntity&#34; @-object-ready=&#34;--entity&#34; ƒ-inject-raw=&#34;--response&#34;&gt;&lt;/furo-data-object&gt;    Description #  furo-ui5-propertylist-display allows the user to show repeated properties (furo." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-propertylist-display/" /><meta property="article:section" content="docs" />
-
+<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-propertylist-display/" />
 <meta property="article:modified_time" content="2021-11-24T13:14:15+01:00" />
-
 <title>furo-ui5-propertylist-display | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.8970c3c9d4b531a16cf725277f7ef50634ac43356703adef922b3d646410e36d.css" integrity="sha256-iXDDydS1MaFs9yUnf371BjSsQzVnA63vkis9ZGQQ420=">
-<script defer src="/en.search.min.9dc245b0d0aaed0edc34dfd67d6c48bae23adb345797c5c545cd09745e0ccb01.js" integrity="sha256-ncJFsNCq7Q7cNN/WfWxIuuI62zRXl8XFRc0JdF4MywE="></script>
+<link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
+<script defer src="/en.search.min.e7ac868cec3c53553746f267b1909313f5c073c7bf6b18eef0ed685f4e9560ca.js" integrity="sha256-56yGjOw8U1U3RvJnsZCTE/XAc8e/axju8O1oX06VYMo="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -749,6 +747,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-sign-pad/" class="">furo-ui5-sign-pad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-step-input/" class="">furo-ui5-step-input</a>
   
 
         </li>
@@ -3063,6 +3074,8 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
   </ul>
 
 
@@ -3102,7 +3115,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
  
@@ -3196,7 +3209,7 @@ https://github.com/alex-shpak/hugo-book
 </furo-demo-snippet>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -3206,7 +3219,7 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-propertylist-display</span>  
     <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.type_property)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-propertylist-display</span>&gt;
 &lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
@@ -3225,7 +3238,7 @@ https://github.com/alex-shpak/hugo-book
 For all other types you can use furo-ui5-typerenderer-labeled.</p>
 <p>The type information of the property is used for the display of the individual attributes.
 E.g.</p>
-<pre tabindex="0"><code>[
+<pre><code>[
  {
    &quot;code&quot;: &quot;c0a7f550-0fbe-4046-8fa9-60c86327b6b1&quot;,
    &quot;data&quot;: {
@@ -3241,12 +3254,12 @@ E.g.</p>
 </code></pre><p>You can bind the furo.Property type (single and repeated).</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-propertylist-display</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-propertylist-display</span>
     <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoCountry(*.data.additional_data)&#34;</span>
  &gt;&lt;/<span style="color:#000080">furo-ui5-propertylist-display</span>&gt;
 </code></pre></td></tr></table>
@@ -3329,15 +3342,15 @@ E.g.</p>
   
 </body>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5Icons.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/furo-fbp.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/doc-helper.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/layout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/data.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/util.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/route.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.26/dist/ui5DisplayRegistry.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/ui5Icons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/furo-fbp.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/doc-helper.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/layout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/ui5.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/data.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/util.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/route.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/ui5DisplayRegistry.js"></script>
 
 </html>
 
