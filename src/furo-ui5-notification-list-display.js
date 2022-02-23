@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
 
 import 'markdown-it/dist/markdown-it.js';
+import '@ui5/webcomponents-fiori/dist/NotificationListGroupItem.js';
 import '@ui5/webcomponents-fiori/dist/NotificationListItem.js';
 import '@ui5/webcomponents-fiori/dist/NotificationAction.js';
 import '@ui5/webcomponents/dist/List.js';
