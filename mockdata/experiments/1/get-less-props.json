@@ -19,7 +19,6 @@
     "furo_data_range_input": 31,
     "furo_data_bool_icon": false,
     "type_property": [
-
       {
         "data": {
           "@type": "xx/furo.NumberProperty",
@@ -29,6 +28,7 @@
         "display_name": "Display",
         "id": "bb",
         "code": "option",
+        "flags": ["double","newline"],
         "meta": {
           "fields": {
             "data.data": {

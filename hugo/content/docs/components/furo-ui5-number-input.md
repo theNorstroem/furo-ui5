@@ -5,10 +5,10 @@ weight: 50
 ---
 
 # furo-ui5-number-input
-**@furo/ui5** <small>v1.0.0-rc.26</small>
-<br>`import '@furo/ui5/src/furo-ui5-step-input.js';`<small>
-<br>exports *FuroUi5StepInput* js
-<br>extends *src/furo-ui5-step-input.js*
+**@furo/ui5** <small>v1.0.0</small>
+<br>`import '@furo/ui5/src/furo-ui5-number-input.js';`<small>
+<br>exports *FuroUi5NumberInput* js
+<br>extends *src/furo-ui5-number-input.js*
 <br> mixes *FieldNodeAdapter*</small>
 
 > **Summary:** data number input field
@@ -89,7 +89,7 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 
 
 
-### **__previousValueState**
+### **_previousValueState**
 default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
 
 
