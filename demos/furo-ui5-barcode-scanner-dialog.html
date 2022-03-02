@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+      --furo-form-layouter-row-gap: 8px;
+      --furo-form-layouter-column-gap: 8px;
+    }
+
+    furo-demo-snippet {
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import {html, render} from 'lit';
+  import './initEnv.js';
+  import '@ui5/webcomponents-icons/dist/bar-code.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+  import '@furo/data/src/furo-data-object.js';
+  import '../src/furo-ui5-barcode-scanner-dialog.js';
+  import '../src/furo-ui5-button.js';
+  import '../src/furo-ui5-text-input.js';
+
+
+  render(
+    html`
+      <furo-demo-snippet>
+        <template>
+          <furo-form-layouter two>
+            <p full>
+              Furo Ui5 Scanner Dialog FAT
+            </p>
+            <furo-ui5-text-input full readonly ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
+            <furo-ui5-button @-click="--openClicked" icon="bar-code">Start Scanning</furo-ui5-button>
+
+
+            <furo-ui5-barcode-scanner-dialog ƒ-show="--openClicked" ƒ-close="--closeClicked"
+                                             ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-barcode-scanner-dialog>
+
+            <p full>
+              Furo Ui5 Scanner Dialog Google wrapper
+            </p>
+            <furo-ui5-text-input full readonly ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
+            <furo-ui5-button @-click="--openClicked" icon="bar-code">Start Scanning</furo-ui5-button>
+
+            <furo-ui5-barcode-scanner-dialog ƒ-show="--openClicked" ƒ-close="--closeClicked"
+                                             ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-barcode-scanner-dialog>
+
+            <p full>
+              Furo Ui5 Scanner Dialog String scalar
+            </p>
+            <furo-ui5-text-input full readonly ƒ-bind-data="--dao(*.scalar_string)"></furo-ui5-text-input>
+            <furo-ui5-button @-click="--openClicked" icon="bar-code">Start Scanning</furo-ui5-button>
+
+            <furo-ui5-barcode-scanner-dialog ƒ-show="--openClicked" ƒ-close="--closeClicked"
+                                             ƒ-bind-data="--dao(*.scalar_string)"></furo-ui5-barcode-scanner-dialog>
+          </furo-form-layouter>
+
+          <furo-data-object type="universaltest.Universaltest" @-object-ready="--dao"></furo-data-object>
+        </template>
+      </furo-demo-snippet>
+    `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>

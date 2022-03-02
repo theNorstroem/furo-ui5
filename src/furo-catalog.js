@@ -61,3 +61,4 @@ import './ui5-reference-search-item.js';
 import './furo-ui5-combobox.js';
 import './furo-ui5-combobox-labeled.js';
 import './furo-ui5-rating-indicator.js';
+import './furo-ui5-barcode-scanner-dialog.js';
