@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-furo-fat-string
-**@furo/ui5** <small>v1.0.0</small>
+**@furo/ui5** <small>v1.1.0</small>
 <br>`import '@furo/ui5/src/typerenderer/form-furo-fat-string.js';`<small>
 <br>exports `<form-furo-fat-string>` custom-element-definition
 <br>extends */src/furo-ui5-text-input-labeled.js*
