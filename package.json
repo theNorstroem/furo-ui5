@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components data bindings for furo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": "git@github.com:eclipse/eclipsefuro-web.git",
   "author": {
@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "markdown-it": "^12.3.2",
-    "prismjs": "^1.26.0",
+    "prismjs": "^1.27.0",
     "apexcharts": "^3.29.0",
     "signature_pad": "4.0.2"
   },
