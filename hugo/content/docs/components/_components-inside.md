@@ -6,6 +6,7 @@ bookHidden: true
 
 ### Components
 
+- [furo-ui5-barcode-scanner-dialog](furo-ui5-barcode-scanner-dialog.md) data barcode scanner dialog
 - [furo-ui5-bool-icon](furo-ui5-bool-icon.md) Displays a icon for a boolean value
 - [furo-ui5-button](furo-ui5-button.md) ui5 button with methods
 - [furo-ui5-card](furo-ui5-card.md) Ui5 card with data bindings

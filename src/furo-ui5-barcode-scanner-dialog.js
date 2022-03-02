@@ -6,6 +6,8 @@ import { Events } from './lib/Events.js';
 /**
  * The 'furo-ui5-barcode-scanner-dialog' component  provides barcode scanning functionality for all devices that
  * support the MediaDevices.getUserMedia() native API. Opening the dialog launches the device camera and scans for known barcode formats.
+ * Internally, the component uses the zxing-js/library third party OSS. For a list of supported barcode formats, see the
+ * zxing-js/library documentation. https://github.com/zxing-js/library
  *
  * It supports all features from the [SAP ui5 Barcode Scanner Dialog element](https://sap.github.io/ui5-webcomponents/playground/components/BarcodeScannerDialog/).
  *
@@ -31,15 +33,14 @@ import { Events } from './lib/Events.js';
  * @summary data barcode scanner dialog
  * @element furo-ui5-barcode-scanner-dialog
  */
-export class FuroUi5BarcodeScannerDialog extends FieldNodeAdapter(BarCodeScanner.default) {
-
+export class FuroUi5BarcodeScannerDialog extends FieldNodeAdapter(
+  BarCodeScanner.default
+) {
   constructor() {
     super();
 
     this.addEventListener('scan-success', this._updateFNA);
-
   }
-
 
   /**
    * Input change handler
@@ -50,7 +51,7 @@ export class FuroUi5BarcodeScannerDialog extends FieldNodeAdapter(BarCodeScanner
   _updateFNA(e) {
     const { text } = e.detail;
     if (this.isFat()) {
-      this._tmpFAT = {value: null, labels: {}, attributes: {}};
+      this._tmpFAT = { value: null, labels: {}, attributes: {} };
       if (text === '') {
         this._tmpFAT.value = null;
         // add empty state
