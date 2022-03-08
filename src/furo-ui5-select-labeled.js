@@ -46,6 +46,15 @@ export class FuroUi5SelectLabeled extends FBP(LitElement) {
     // this._FBPTraceWires();
   }
 
+  /**
+   * inject raw data as options
+   * @param [rawJson] raw data array with a id, display_name signature
+   * @return {boolean}
+   */
+  setOptions(arr) {
+    this._FBPTriggerWire('|--setOptions', arr);
+  }
+
   static get properties() {
     return {
       /**
@@ -161,6 +170,7 @@ export class FuroUi5SelectLabeled extends FBP(LitElement) {
           ƒ-bind-data="--data"
           ƒ-bind-options="--options"
           ƒ-focus="--focus"
+          ƒ-set-options="|--setOptions"
         >
         </furo-ui5-select>
       </furo-ui5-form-field-container>
