@@ -31,6 +31,7 @@ to the design specification of SAP Fiori Design System.
 
 
 
+
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
@@ -118,6 +119,18 @@ Focuses the underlying ui5 input element
 - <small>options https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus</small>
 <br><br>
 
+
+### **setOptions**
+<small>**setOptions**(*arr* `` *rawJson* `` ) ⟹ `boolean`</small>
+
+<small>`` `` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-options</span>
+
+inject raw data as options
+
+- <small>arr </small>
+- <small>rawJson raw data array with a id, display_name signature</small>
+<br><br>
 
 ### **bindData**
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+      --furo-form-layouter-row-gap: 8px;
+      --furo-form-layouter-column-gap: 8px;
+    }
+
+    furo-demo-snippet {
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import {html, render} from 'lit';
+  import './initEnv.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+  import '../src/furo-ui5-busy-indicator.js';
+  import '../src/furo-ui5-text-input.js';
+  import '../src/furo-ui5-section.js';
+  import '../src/furo-ui5-button.js';
+
+  render(
+    html`
+      <furo-demo-snippet>
+        <template>
+          <furo-ui5-button @-click="--busy">Set busy state</furo-ui5-button>
+          <furo-ui5-button @-click="--reset">Reset busy state</furo-ui5-button>
+          <furo-ui5-busy-indicator ƒ-activate="--busy" ƒ-deactivate="--reset" style="display: block">
+          <furo-ui5-section heading="Furo Ui5 Section with attribute heading, state busy">
+            <furo-form-layouter two>
+              <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)"></furo-ui5-text-input>
+              <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
+              <furo-ui5-text-input ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
+            </furo-form-layouter>
+          </furo-ui5-section>
+          </furo-ui5-busy-indicator>
+          <furo-ui5-section heading="Furo Ui5 Section with attribute heading">
+            <furo-form-layouter two>
+              <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)"></furo-ui5-text-input>
+              <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
+              <furo-ui5-text-input ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
+            </furo-form-layouter>
+          </furo-ui5-section>
+
+          <furo-ui5-section ƒ-bind-data="--dao(*.scalar_string)">
+            <furo-form-layouter two>
+              <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)" placeholder="Enter text to display the title"></furo-ui5-text-input>
+              <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
+              <furo-ui5-text-input ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
+            </furo-form-layouter>
+          </furo-ui5-section>
+
+          <furo-data-object type="universaltest.Universaltest" @-object-ready="--dao"></furo-data-object>
+        </template>
+      </furo-demo-snippet>
+    `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>
