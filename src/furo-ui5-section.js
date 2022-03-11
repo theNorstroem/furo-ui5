@@ -10,20 +10,21 @@ import '@ui5/webcomponents/dist/BusyIndicator.js';
  * `furo-ui5-section`
  * The object page content according to the SAP Design System Fiori guidelines consists of sections and subsections
  * arranged in a column layout.
- * The furo-ui5-section is basically a layout manager component to structure object pages.
+ * The furo-ui5-section is basically a layout manager component to structure object pages. Sections can only
+ * contain subsections, not content.
  *
  * ```html
  *  <furo-ui5-section heading="STRING">
- *    <subsection-one></subsection-one>
- *    <subsection-two></subsection-two>
+ *    <furo-ui5-subsection></furo-ui5-subsection>
+ *    <furo-ui5-subsection></furo-ui5-subsection>
  *  </furo-ui5-section>
  * ```
+ *
  * ```html
  * <furo-ui5-section
  *    ƒ-bind-data="--dao(*.field_of_type_string)">
- *
- *    <subsection-one></subsection-one>
- *    <subsection-two></subsection-two>
+ *    <furo-ui5-subsection></furo-ui5-subsection>
+ *    <furo-ui5-subsection></furo-ui5-subsection>
  * </furo-ui5-section>
  * ```
  *
