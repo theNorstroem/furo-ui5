@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp/src/fbp.js';
+import '@furo/layout/src/furo-horizontal-flex.js';
 import '@ui5/webcomponents/dist/Link.js';
 import '@ui5/webcomponents-fiori/dist/Bar.js';
 
