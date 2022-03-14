@@ -115,20 +115,24 @@
             </furo-ui5-section>
           </furo-ui5-busy-indicator>
           <furo-ui5-section heading="Furo Ui5 Section with attribute heading">
-            <furo-form-layouter two>
-              <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)"></furo-ui5-text-input>
-              <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
-              <furo-ui5-text-input ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
-            </furo-form-layouter>
+            <furo-ui5-subsection>
+              <furo-form-layouter two>
+                <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)"></furo-ui5-text-input>
+                <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
+                <furo-ui5-text-input ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
+              </furo-form-layouter>
+            </furo-ui5-subsection>
           </furo-ui5-section>
 
           <furo-ui5-section ƒ-bind-data="--dao(*.scalar_string)">
-            <furo-form-layouter two>
-              <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)"
-                                   placeholder="Enter text to display the title"></furo-ui5-text-input>
-              <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
-              <furo-ui5-text-input ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
-            </furo-form-layouter>
+            <furo-ui5-subsection>
+              <furo-form-layouter two>
+                <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)"
+                                     placeholder="Enter text to display the title"></furo-ui5-text-input>
+                <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
+                <furo-ui5-text-input ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
+              </furo-form-layouter>
+            </furo-ui5-subsection>
           </furo-ui5-section>
 
           <furo-data-object type="universaltest.Universaltest" @-object-ready="--dao"></furo-data-object>
