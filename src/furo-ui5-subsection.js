@@ -175,7 +175,7 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
       <slot></slot>
       <furo-horizontal-flex class="more">
         <furo-empty-spacer flex></furo-empty-spacer>
-        <ui5-link @-click="--collapserClicked" ?disabled=${!this.hasMoreContent}
+        <ui5-link @-click="--collapserClicked" ?hidden=${!this.hasMoreContent}
           >${this.showMoreDataText}</ui5-link
         >
       </furo-horizontal-flex>
