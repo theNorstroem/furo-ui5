@@ -110,6 +110,7 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
    */
   check() {
     this.checked = true;
+    this._updateFNA();
   }
 
   /**
@@ -117,6 +118,7 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
    */
   uncheck() {
     this.checked = false;
+    this._updateFNA();
   }
 
   /**
