@@ -108,6 +108,7 @@ export class FuroUi5Section extends FBP(FieldNodeAdapter(LitElement)) {
 
       hr {
         border-color: var(--sapToolbar_SeparatorColor, #d9d9d9);
+        border-style: solid;
       }
     `;
   }

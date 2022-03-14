@@ -2,13 +2,14 @@ import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp/src/fbp.js';
 import '@furo/layout/src/furo-horizontal-flex.js';
 import '@ui5/webcomponents/dist/Link.js';
-import '@ui5/webcomponents-fiori/dist/Bar.js';
 
 /**
  * `furo-ui5-subsection`
  * The furo-ui5-subsection component is a containers for actual content. It is envisaged that this component will be
  * used within a furo-ui5-section
  * Subsections have a progressive disclosure mechanism to show and hide content
+ *
+ * https://experience.sap.com/fiori-design-web/object-page/#content-area
  *
  * ```html
  *  <furo-ui5-section heading="STRING">
@@ -115,12 +116,12 @@ export class FuroUi5Subsection extends FBP(LitElement) {
         display: none;
       }
 
-      ui5-bar {
-        background-color: transparent;
+      furo-horizontal-flex.heading {
+        padding-bottom: var(--spacing-s, 0.625rem);
       }
 
       furo-horizontal-flex.more {
-        padding-top: var(--spacing-s, 1rem);
+        padding-top: var(--spacing-s, 0.625rem);
       }
     `;
   }
@@ -139,16 +140,13 @@ export class FuroUi5Subsection extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <ui5-bar design="Subheader">
+      <furo-horizontal-flex class="heading" space>
         ${this.heading.length
-          ? html`
-              <ui5-title level="H4" slot="startContent"
-                >${this.heading}</ui5-title
-              >
-            `
+          ? html` <ui5-title flex level="H4">${this.heading}</ui5-title> `
           : html``}
-        <div slot="endContent"><slot name="action"></slot></div>
-      </ui5-bar>
+        <furo-empty-spacer flex></furo-empty-spacer>
+        <div><slot name="action"></slot></div>
+      </furo-horizontal-flex>
 
       <slot></slot>
       <furo-horizontal-flex class="more">
