@@ -60,8 +60,8 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();
 
-    if (this.querySelector('div[slot=more]')) {
-      if (this.querySelector('div[slot=more]').childElementCount) {
+    if (this.querySelector('*[slot=more]')) {
+      if (this.querySelector('*[slot=more]').childElementCount) {
         this.hasMoreContent = true;
       }
     } else {
