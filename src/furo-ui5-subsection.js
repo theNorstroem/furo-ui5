@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp/src/fbp.js';
+import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter';
 import '@furo/layout/src/furo-horizontal-flex.js';
 import '@ui5/webcomponents/dist/Link.js';
 
@@ -20,14 +21,19 @@ import '@ui5/webcomponents/dist/Link.js';
  *    </furo-ui5-subsection>
  *  </furo-ui5-section>
  * ```
+ * ## Methods
+ * **bindData(fieldNode)**
+ * Binds an entity field to the heading. You can use the entity even when no data was received.
  *
- *
+ * @slot {HTMLElement [0..n]} default - defines the content of the subsection.
+ * @slot {HTMLElement [0..n]} action - defines the heading bar of the subsection.
+ * @slot {HTMLElement [0..n]} more - defines the additional content in the `show more` section.
  *
  * @summary
  * @customElement
  * @appliesMixin FBP
  */
-export class FuroUi5Subsection extends FBP(LitElement) {
+export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
   constructor() {
     super();
     this.heading = '';
@@ -124,6 +130,24 @@ export class FuroUi5Subsection extends FBP(LitElement) {
         padding-top: var(--spacing-s, 0.625rem);
       }
     `;
+  }
+
+  /**
+   * Overridden onFnaFieldValueChanged
+   * @private
+   * @param val
+   */
+  onFnaFieldValueChanged(val) {
+    if (this.isFat()) {
+      this._tmpFAT = val;
+      this.heading = val.value === null ? '' : val.value;
+      // set empty value when label empty was given
+      if (this._tmpFAT.labels && this._tmpFAT.labels.empty) {
+        this.heading = '';
+      }
+    } else {
+      this.heading = val === null ? '' : val;
+    }
   }
 
   /**

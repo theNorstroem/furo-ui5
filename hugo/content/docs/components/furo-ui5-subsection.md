@@ -10,7 +10,8 @@ weight: 50
 <br>exports *FuroUi5Subsection* js
 <br>exports `<furo-ui5-subsection>` custom-element-definition
 <br>superclass *LitElement*
-<br> mixes *FBP*</small>
+<br> mixes *FBP*
+<br> mixes *FieldNodeAdapter*</small>
 
 > **Summary:** 
 
@@ -21,6 +22,8 @@ The furo-ui5-subsection component is a containers for actual content. It is envi
 used within a furo-ui5-section
 Subsections have a progressive disclosure mechanism to show and hide content
 
+https://experience.sap.com/fiori-design-web/object-page/#content-area
+
 ```html
  <furo-ui5-section heading="STRING">
    <furo-ui5-subsection heading="Subsection Title">
@@ -30,11 +33,15 @@ Subsections have a progressive disclosure mechanism to show and hide content
    </furo-ui5-subsection>
  </furo-ui5-section>
 ```
+## Methods
+**bindData(fieldNode)**
+Binds an entity field to the heading. You can use the entity even when no data was received.
 
 {{% api "_furo-ui5-subsection-head.md" %}}
 
 ## Attributes and Properties
 {{% api "_furo-ui5-subsection-properties.md" %}}
+
 
 
 
@@ -92,6 +99,7 @@ Furo flow is ready lifecycle method
 
 <br><br>
 
+
 ### **toggleCollapse**
 <small>**toggleCollapse**() ⟹ `void`</small>
 
@@ -109,6 +117,24 @@ toggles the collapse state
 
 
 
+## Slots
+{{% api "_furo-ui5-subsection-slots.md" %}}
+
+### **default**
+Type: `HTMLElement [0..n]`
+
+defines the content of the subsection.
+<br><br>
+### **action**
+Type: `HTMLElement [0..n]`
+
+defines the heading bar of the subsection.
+<br><br>
+### **more**
+Type: `HTMLElement [0..n]`
+
+defines the additional content in the `show more` section.
+<br><br>
 
 {{% api "_furo-ui5-subsection-footer.md" %}}
 {{% api "_furo-ui5-subsection-scripts.md" %}}
