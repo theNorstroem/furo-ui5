@@ -39,7 +39,7 @@ import '@ui5/webcomponents/dist/BusyIndicator.js';
  * @customElement
  * @appliesMixin FBP
  */
-class FuroUi5Section extends FBP(FieldNodeAdapter(LitElement)) {
+export class FuroUi5Section extends FBP(FieldNodeAdapter(LitElement)) {
   constructor() {
     super();
     this.heading = '';

@@ -26,10 +26,14 @@ import '@ui5/webcomponents-fiori/dist/Bar.js';
  * @customElement
  * @appliesMixin FBP
  */
-class FuroUi5Subsection extends FBP(LitElement) {
+export class FuroUi5Subsection extends FBP(LitElement) {
   constructor() {
     super();
     this.heading = '';
+    this.showMoreDataText = 'Show More';
+    this.showLessDataText = 'Show Less';
+    this.collapsed = false;
+    this.hasMoreContent = false;
   }
 
   /**
@@ -38,6 +42,24 @@ class FuroUi5Subsection extends FBP(LitElement) {
   _FBPReady() {
     super._FBPReady();
     // this._FBPTraceWires();
+
+    this._FBPAddWireHook('--collapserClicked', () => {
+      // toggle the read more content section
+      this.collapsed = !this.collapsed;
+    });
+  }
+
+  connectedCallback() {
+    // eslint-disable-next-line wc/guard-super-call
+    super.connectedCallback();
+
+    if (this.querySelector('div[slot=more]')) {
+      if (this.querySelector('div[slot=more]').childElementCount) {
+        this.hasMoreContent = true;
+      }
+    } else {
+      this.hasMoreContent = false;
+    }
   }
 
   static get properties() {
@@ -46,6 +68,18 @@ class FuroUi5Subsection extends FBP(LitElement) {
        * Heading title of the section
        */
       heading: { type: String, attribute: 'heading' },
+      /**
+       * Collapsed state of the `read more` section
+       */
+      collapsed: { type: Boolean, reflect: true },
+      /**
+       * Defines the text that will be displayed for `show more`
+       */
+      showMoreDataText: { type: String, attribute: 'show-more-data-text' },
+      /**
+       * Defines the text that will be displayed for `show less`
+       */
+      showLessDataText: { type: String, attribute: 'show-less-data-text' },
     };
   }
 
@@ -59,10 +93,43 @@ class FuroUi5Subsection extends FBP(LitElement) {
         display: none;
       }
 
+      :host slot[name='more'] {
+        display: none;
+        padding-top: 1rem;
+      }
+
+      :host([collapsed]) slot[name='more'] {
+        display: block;
+      }
+
+      :host([collapsed]) .less {
+        display: flex;
+        padding-top: 1rem;
+      }
+
+      .less {
+        display: none;
+      }
+
+      :host([collapsed]) .more {
+        display: none;
+      }
+
       ui5-bar {
         background-color: transparent;
       }
+
+      furo-horizontal-flex.more {
+        padding-top: var(--spacing-s, 1rem);
+      }
     `;
+  }
+
+  /**
+   * toggles the collapse state
+   */
+  toggleCollapse() {
+    this._FBPTriggerWire('--collapserClicked', null);
   }
 
   /**
@@ -84,11 +151,21 @@ class FuroUi5Subsection extends FBP(LitElement) {
       </ui5-bar>
 
       <slot></slot>
-      <furo-horizontal-flex>
+      <furo-horizontal-flex class="more">
         <furo-empty-spacer flex></furo-empty-spacer>
-        <ui5-link>Show More</ui5-link>
+        <ui5-link @-click="--collapserClicked" ?disabled=${!this.hasMoreContent}
+          >${this.showMoreDataText}</ui5-link
+        >
       </furo-horizontal-flex>
+
       <slot name="more"></slot>
+
+      <furo-horizontal-flex class="less">
+        <furo-empty-spacer flex></furo-empty-spacer>
+        <ui5-link @-click="--collapserClicked"
+          >${this.showLessDataText}</ui5-link
+        >
+      </furo-horizontal-flex>
     `;
   }
 }

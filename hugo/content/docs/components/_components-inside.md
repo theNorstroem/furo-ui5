@@ -58,6 +58,7 @@ bookHidden: true
 - [furo-ui5-sign-pad](furo-ui5-sign-pad.md) draw or sign
 - [furo-ui5-step-input-labeled](furo-ui5-step-input-labeled.md) labeled input field
 - [furo-ui5-step-input](furo-ui5-step-input.md) data step input field
+- [furo-ui5-subsection](furo-ui5-subsection.md) 
 - [furo-ui5-table](furo-ui5-table.md) Display repeated fields in a table
 - [furo-ui5-text-input-labeled](furo-ui5-text-input-labeled.md) labeled input field
 - [furo-ui5-text-input](furo-ui5-text-input.md) data text input field

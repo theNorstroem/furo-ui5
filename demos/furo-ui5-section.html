@@ -108,15 +108,21 @@
                               accessible-name-ref="lblActionSettings"></ui5-button>
                 </furo-horizontal-flex>
 
-                <div slot="more"></div>
+                <div slot="more">
+                  <furo-form-layouter three>
+                    <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)"></furo-ui5-text-input>
+                    <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
+                    <furo-ui5-text-input ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
+                  </furo-form-layouter>
+                </div>
 
               </furo-ui5-subsection>
 
             </furo-ui5-section>
           </furo-ui5-busy-indicator>
-          <furo-ui5-section heading="Furo Ui5 Section with attribute heading">
+          <furo-ui5-section heading="Furo Ui5 Section with attribute heading, slot MORE not available">
             <furo-ui5-subsection>
-              <furo-form-layouter two>
+              <furo-form-layouter three>
                 <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)"></furo-ui5-text-input>
                 <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
                 <furo-ui5-text-input ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
@@ -125,8 +131,8 @@
           </furo-ui5-section>
 
           <furo-ui5-section ƒ-bind-data="--dao(*.scalar_string)">
-            <furo-ui5-subsection>
-              <furo-form-layouter two>
+            <furo-ui5-subsection show-more-data-text="More Content">
+              <furo-form-layouter three>
                 <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)"
                                      placeholder="Enter text to display the title"></furo-ui5-text-input>
                 <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
