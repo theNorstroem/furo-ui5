@@ -9,23 +9,29 @@
   </style>
 </head>
 <body>
-  <div id="demo"></div>
+<div id="demo"></div>
 
-  <script type="module">
-    import { html, render } from 'lit';
-    import '../src/furo-ui5-checkbox-input.js';
-    import '@furo/data/src/furo-catalog.js';
+<script type="module">
+  import {html, render} from 'lit';
+  import './initEnv.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/data/src/furo-catalog.js';
+  import '../src/furo-ui5-checkbox-input.js';
 
 
-    render(
-      html`
-
-        <div>
-        <furo-ui5-checkbox-input text="mkkk"></furo-ui5-checkbox-input>
-        </div>
-      `,
-      document.querySelector('#demo')
-    );
-  </script>
+  render(
+    html`
+      <furo-demo-snippet>
+        <template>
+          <furo-ui5-checkbox-input ƒ-bind-data="--dao(*.fat_bool)" @-click="--cb1Clicked"></furo-ui5-checkbox-input>
+          <furo-ui5-checkbox-input ƒ-bind-data="--dao(*.wrapper_bool)" ƒ-uncheck="--cb1Clicked"></furo-ui5-checkbox-input>
+          <furo-data-object type="universaltest.Universaltest" @-object-ready="--dao"></furo-data-object>
+        </template>
+      </furo-demo-snippet>
+    `,
+    document.querySelector('#demo')
+  );
+</script>
 </body>
 </html>
