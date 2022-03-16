@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+
+    furo-demo-snippet {
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import {html, render} from 'lit';
+  import './initEnv.js';
+
+  import '../src/furo-catalog.js';
+  import '../src/typerenderer/registry.js';
+  import '@furo/data/src/furo-catalog.js';
+  import {FuroFeatureToggle} from '@furo/framework/src/FuroFeatureToggler/FuroFeatureToggle.js';
+  import '@furo/util/src/furo-feature-toggle.js';
+  import '@furo/util/src/furo-fetch-json.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+  import '@furo/util/src/furo-pretty-json.js';
+
+  import '@ui5/webcomponents-icons/dist/information.js';
+  import '@ui5/webcomponents-icons/dist/error.js';
+  import '@ui5/webcomponents-icons/dist/warning.js';
+  import '@ui5/webcomponents-icons/dist/alert.js';
+  import {DOMFBP} from '@furo/fbp/src/DOMFBP.js';
+
+  FuroFeatureToggle.setKeyState('feature', true)
+
+
+
+  render(
+    html`
+
+          <button data-furo-toggle-disable='feature' @-click='--setTrueClicked'>set true</button>
+          <button data-furo-toggle-enable='feature' @-click='--setFalseClicked'>set false</button>
+          <furo-feature-toggle key='feature' fn-set-true='--setTrueClicked' fn-set-false='--setFalseClicked'></furo-feature-toggle>
+          <ui5-button @-click="--btnListClicked"> load data</ui5-button>
+          <hr>
+          <furo-ui5-table
+            ƒ-bind-data="--data(*.entities)"
+          >
+            <!-- The column label is evaluated from the specs -->
+            <ui5-table-column
+              data-furo-toggle-hide='feature'
+              slot="columns"
+              field="*.data.id"
+              demand-popin
+            ></ui5-table-column>
+
+            <ui5-table-column
+              slot="columns"
+              field="*.data.display_name"
+            > </ui5-table-column>
+
+          </furo-ui5-table>
+
+          <hr>
+          <furo-deep-link
+            ƒ-trigger="--btnListClicked"
+            service="projectservice.ProjectService"
+            @-hts-out="--hts"
+          ></furo-deep-link>
+          <furo-collection-agent
+            service="projectservice.ProjectService"
+            ƒ-hts-in="--hts"
+            ƒ-list="--changeDataClicked"
+            list-on-hts-in
+            @-response-hts-updated="--responseHts"
+            @-response="--collectionResponse"
+          >
+          </furo-collection-agent>
+          <furo-data-object
+            type="project.ProjectCollection"
+            ƒ-inject-raw="--collectionResponse"
+            @-object-ready="--data"
+          >
+          </furo-data-object>
+    `,
+    document.querySelector('#demo')
+  );
+  FuroFeatureToggle.parseDom(document.querySelector('#demo'))
+  console.log(document.querySelector('ui5-table-column'))
+  new DOMFBP(document.querySelector('#demo'))
+
+
+</script>
+</body>
+</html>
