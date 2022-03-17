@@ -9,23 +9,39 @@
   </style>
 </head>
 <body>
-  <div id="demo"></div>
+<div id="demo"></div>
 
-  <script type="module">
-    import { html, render } from 'lit';
-    import '@ui5/webcomponents/dist/Input.js';
-    import '../src/furo-ui5-sign-pad.js';
-    import '@furo/data/src/furo-catalog.js';
+<script type="module">
+
+  // eslint-disable-next-line import/no-extraneous-dependencies
+  import {DOMFBP} from '@furo/fbp/src/DOMFBP.js';
+
+  import { html, render } from 'lit';
+  import '@ui5/webcomponents/dist/Input.js';
+  import '../src/furo-ui5-sign-pad.js';
+  import '@furo/data/src/furo-catalog.js';
 
 
-    render(
-      html`
+  render(
+    html`
 
-        <furo-ui5-sign-pad></furo-ui5-sign-pad>
+      <button @-click="--clearClicked">clear</button>
+      <button @-click="--disableClicked">disable</button>
+      <button @-click="--enableClicked">enable</button>
 
-      `,
-      document.querySelector('#demo')
-    );
-  </script>
+      <furo-form-layouter four="">
+        <furo-ui5-sign-pad ƒ-clear="--clearClicked" ƒ-disable="--disableClicked"  ƒ-enable="--enableClicked" @-sign-updated="--signed"></furo-ui5-sign-pad>
+        <furo-ui5-sign-pad ƒ-clear="--clearClicked" ƒ-put-image="--signed"></furo-ui5-sign-pad>
+      </furo-form-layouter>
+      <img ƒ-.src="--signed" alt="" width="100px">
+
+    `,
+    document.querySelector('#demo')
+  );
+
+  const fbp = new DOMFBP(document.querySelector('#demo'));
+  fbp._FBPTraceWires()
+
+</script>
 </body>
 </html>

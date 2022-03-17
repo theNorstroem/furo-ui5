@@ -31,14 +31,14 @@ export class FuroUi5SignPad extends FBP(LitElement) {
 
     this.canvas = this.shadowRoot.querySelector('canvas');
 
-    this.signaturePad = new SignaturePad(this.canvas, {
-      onBegin: this._onBegin.bind(this),
-      onEnd: this._onEnd.bind(this),
+    this.signaturePad = new SignaturePad(this.canvas, {});
+
+    this.signaturePad.addEventListener('afterUpdateStroke', () => {
+      this.encodeImage();
     });
 
     setTimeout(() => {
       this.resize();
-
       if (this.getAttribute('image')) {
         this.setImage(this.getAttribute('image'));
       }
@@ -50,7 +50,6 @@ export class FuroUi5SignPad extends FBP(LitElement) {
   /**
    * Trigger this method after a resize.
    *
-   * This is also needed
    */
   resize() {
     if (this.canvas) {
@@ -90,7 +89,7 @@ export class FuroUi5SignPad extends FBP(LitElement) {
         left: 24px;
         right: 24px;
         pointer-events: none;
-        border: 1px solid var(--sapField_BorderColor, #89919a);
+        border: 1px dashed var(--sapField_BorderColor, #89919a);
       }
     `;
   }
@@ -107,26 +106,25 @@ export class FuroUi5SignPad extends FBP(LitElement) {
     `;
   }
 
-  //  unlock() {
-  //   this.signaturePad.on();
-  // }
+  /**
+   * Disables the pad
+   */
+  disable() {
+    this.signaturePad.off();
+  }
 
-  //  lock() {
-  //   this.signaturePad.off();
-  // }
+  /**
+   * Enables the pad
+   */
+  enable() {
+    this.signaturePad.on();
+  }
 
   /**
    * @private
    */
   _setEmpty(b) {
     this.empty = b;
-  }
-
-  /**
-   * @private
-   */
-  _setActive(b) {
-    this.active = b;
   }
 
   /**
@@ -165,6 +163,7 @@ export class FuroUi5SignPad extends FBP(LitElement) {
   encodeImage() {
     this.image = this.canvas.toDataURL(this.type, this.encodingOptions);
     this._setEmpty(this.signaturePad.isEmpty());
+
     const customEvent = new Event('sign-updated', {
       composed: true,
       bubbles: true,
@@ -174,80 +173,6 @@ export class FuroUi5SignPad extends FBP(LitElement) {
 
     this._field._value = this.image;
     return this._field._value;
-  }
-
-  /**
-   * @private
-   */
-  _onBegin() {
-    this._setActive(true);
-  }
-
-  /**
-   * @private
-   */
-  _onEnd() {
-    this._setActive(false);
-    this.encodeImage();
-  }
-
-  /**
-   * @private
-   */
-  _dotSizeChanged(newValue) {
-    if (!this.signaturePad) return;
-    this.signaturePad.dotSize = newValue;
-  }
-
-  /**
-   * @private
-   */
-  _minWidthChanged(newValue) {
-    if (!this.signaturePad) return;
-    this.signaturePad.minWidth = newValue;
-  }
-
-  /**
-   * @private
-   */
-  _maxWidthChanged(newValue) {
-    if (!this.signaturePad) return;
-    this.signaturePad.maxWidth = newValue;
-  }
-
-  /**
-   * @private
-   */
-  _backgroundColorChanged(newValue) {
-    if (!this.signaturePad) return;
-    this.signaturePad.backgroundColor = newValue;
-  }
-
-  /**
-   * @private
-   */
-  _penColorChanged(newValue) {
-    if (!this.signaturePad) return;
-    this.signaturePad.penColor = newValue;
-  }
-
-  /**
-   * @private
-   */
-  _velocityFilterWeightChanged(newValue) {
-    if (!this.signaturePad) return;
-    this.signaturePad.velocityFilterWeight = newValue;
-  }
-
-  /**
-   * @private
-   */
-  // todo implement type and encoderOptions
-  // eslint-disable-next-line no-unused-vars
-  _onEncodingChanged(type, encoderOptions) {
-    if (this.signaturePad) {
-      this.encodeImage();
-    }
   }
 
   /**
