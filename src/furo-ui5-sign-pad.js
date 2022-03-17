@@ -33,18 +33,12 @@ export class FuroUi5SignPad extends FBP(LitElement) {
 
     this.signaturePad = new SignaturePad(this.canvas, {});
 
-    this.signaturePad.addEventListener('beginStroke', () => {
-      this._setActive(true);
-    });
-
     this.signaturePad.addEventListener('afterUpdateStroke', () => {
-      this._setActive(false);
       this.encodeImage();
     });
 
     setTimeout(() => {
       this.resize();
-
       if (this.getAttribute('image')) {
         this.setImage(this.getAttribute('image'));
       }
@@ -56,7 +50,6 @@ export class FuroUi5SignPad extends FBP(LitElement) {
   /**
    * Trigger this method after a resize.
    *
-   * This is also needed
    */
   resize() {
     if (this.canvas) {
@@ -132,13 +125,6 @@ export class FuroUi5SignPad extends FBP(LitElement) {
    */
   _setEmpty(b) {
     this.empty = b;
-  }
-
-  /**
-   * @private
-   */
-  _setActive(b) {
-    this.active = b;
   }
 
   /**
