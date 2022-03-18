@@ -1,7 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp/src/fbp.js';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
-import { MediaSize } from './lib/MediaSize.js';
 
 import '@ui5/webcomponents/dist/Title.js';
 import '@ui5/webcomponents/dist/BusyIndicator.js';
@@ -51,15 +50,6 @@ export class FuroUi5Section extends FBP(FieldNodeAdapter(LitElement)) {
   _FBPReady() {
     super._FBPReady();
     // this._FBPTraceWires();
-
-    window.addEventListener(
-      'resize',
-      MediaSize.DebounceBuilder(() => {
-        this.setAttribute('media-size', MediaSize.GetMediaSize());
-      }, MediaSize.HANDLE_RESIZE_DEBOUNCE_RATE)
-    );
-    // initial size
-    this.setAttribute('media-size', MediaSize.GetMediaSize());
   }
 
   static get properties() {
@@ -76,34 +66,15 @@ export class FuroUi5Section extends FBP(FieldNodeAdapter(LitElement)) {
       :host {
         display: block;
         width: 100%;
+        padding: var(--FuroUi5MediaSizeIndentation, 0.625rem 2rem 0 2rem);
       }
 
       :host([hidden]) {
         display: none;
       }
 
-      :host([media-size='XXL']) .section {
-        padding: 2rem 3rem 1rem 3rem;
-      }
-
-      :host([media-size='XL']) .section {
-        padding: 2rem 3rem 1rem 3rem;
-      }
-
-      :host([media-size='L']) .section {
-        padding: 1rem 2rem 0 2rem;
-      }
-
-      :host([media-size='M']) .section {
-        padding: 0.625rem 2rem 0 2rem;
-      }
-
-      :host([media-size='S']) .section {
-        padding: 0.625rem 1rem 0 1rem;
-      }
-
       ui5-title {
-        padding-bottom: 0.625rem;
+        padding-bottom: var(--FuroUi5MediaSizeIndentationBottom, 0.625rem);
       }
 
       hr {
