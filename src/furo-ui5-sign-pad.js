@@ -32,9 +32,9 @@ export class FuroUi5SignPad extends FBP(LitElement) {
     this.canvas = this.shadowRoot.querySelector('canvas');
 
     this.signaturePad = new SignaturePad(this.canvas, {});
-
+    const processChange = this._debounce(() => this.encodeImage());
     this.signaturePad.addEventListener('afterUpdateStroke', () => {
-      this.encodeImage();
+      processChange();
     });
 
     setTimeout(() => {
@@ -189,6 +189,22 @@ export class FuroUi5SignPad extends FBP(LitElement) {
       this.signaturePad.clear();
       this.putImage(this._field._value);
     });
+  }
+
+  /**
+   * @private
+   * @param func
+   * @param timeout
+   * @return {(function(...[*]): void)|*}
+   */
+  _debounce(func, timeout = 333) {
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        func.apply(this, args);
+      }, timeout);
+    };
   }
 }
 
