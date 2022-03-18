@@ -913,6 +913,11 @@
   </url>
   
   <url>
+    <loc>http://ui5.furo.pro/docs/components/furo-ui5-section/</loc>
+    <lastmod>2022-03-14T09:41:12+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ui5.furo.pro/docs/components/furo-ui5-segmented-button/</loc>
     <lastmod>2022-03-02T15:01:07+01:00</lastmod>
   </url>
@@ -924,7 +929,7 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/components/furo-ui5-select-labeled/</loc>
-    <lastmod>2022-03-02T15:01:07+01:00</lastmod>
+    <lastmod>2022-03-11T10:47:37+01:00</lastmod>
   </url>
   
   <url>
@@ -940,6 +945,11 @@
   <url>
     <loc>http://ui5.furo.pro/docs/components/furo-ui5-step-input-labeled/</loc>
     <lastmod>2022-03-02T15:01:07+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ui5.furo.pro/docs/components/furo-ui5-subsection/</loc>
+    <lastmod>2022-03-14T10:49:36+01:00</lastmod>
   </url>
   
   <url>
@@ -1039,7 +1049,7 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/components/_components-inside/</loc>
-    <lastmod>2022-03-02T11:51:55+01:00</lastmod>
+    <lastmod>2022-03-14T09:41:12+01:00</lastmod>
   </url>
   
   <url>
@@ -1069,7 +1079,7 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/components/furo-ui5-barcode-scanner-dialog/_furo-ui5-barcode-scanner-dialog-head/</loc>
-    <lastmod>2022-03-02T11:51:55+01:00</lastmod>
+    <lastmod>2022-03-11T10:47:37+01:00</lastmod>
   </url>
   
   <url>
@@ -1308,6 +1318,11 @@
   </url>
   
   <url>
+    <loc>http://ui5.furo.pro/docs/redactional/components/furo-ui5-section/_furo-ui5-section-head/</loc>
+    <lastmod>2022-03-11T10:47:37+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ui5.furo.pro/docs/redactional/components/furo-ui5-segmented-button/_furo-ui5-segmented-button-head/</loc>
     <lastmod>2021-11-26T14:55:16+01:00</lastmod>
   </url>
@@ -1335,6 +1350,11 @@
   <url>
     <loc>http://ui5.furo.pro/docs/redactional/components/furo-ui5-step-input/_furo-ui5-step-input-head/</loc>
     <lastmod>2022-02-24T07:58:39+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ui5.furo.pro/docs/redactional/components/furo-ui5-subsection/_furo-ui5-subsection-head/</loc>
+    <lastmod>2022-03-14T09:41:12+01:00</lastmod>
   </url>
   
   <url>
@@ -2103,7 +2123,7 @@
   
   <url>
     <loc>http://ui5.furo.pro/docs/</loc>
-    <lastmod>2022-03-02T15:01:07+01:00</lastmod>
+    <lastmod>2022-03-14T10:49:36+01:00</lastmod>
   </url>
   
   <url>

@@ -57,7 +57,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-barcode-scanner-dialog/_furo-ui5-barcode-scanner-dialog-head/</guid>
-      <description></description>
+      <description>Example #    Open    1 2  &amp;lt;ui5-button @-click=&amp;#34;--openClicked&amp;#34; design=&amp;#34;Default&amp;#34;&amp;gt;Open&amp;lt;/ui5-button&amp;gt; &amp;lt;furo-ui5-barcode-scanner-dialog ƒ-show=&amp;#34;--openClicked&amp;#34;&amp;gt;&amp;lt;/furo-ui5-barcode-scanner-dialog&amp;gt;   </description>
     </item>
     
     <item>
@@ -499,6 +499,15 @@ The min-term-length in this demo is set to 1 character.
     
     <item>
       <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-section/_furo-ui5-section-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-section/_furo-ui5-section-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-segmented-button/_furo-ui5-segmented-button-head/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -557,6 +566,15 @@ The labels in the demo are not translated for better readability.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-step-input/_furo-ui5-step-input-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-subsection/_furo-ui5-subsection-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-subsection/_furo-ui5-subsection-head/</guid>
       <description></description>
     </item>
     
