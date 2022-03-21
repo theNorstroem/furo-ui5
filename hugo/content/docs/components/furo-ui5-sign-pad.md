@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-sign-pad
-**@furo/ui5** <small>v1.1.0</small>
+**@furo/ui5** <small>v1.1.3</small>
 <br>`import '@furo/ui5/src/furo-ui5-sign-pad.js';`<small>
 <br>exports *FuroUi5SignPad* js
 <br>exports `<furo-ui5-sign-pad>` custom-element-definition
@@ -23,13 +23,6 @@ weight: 50
 
 ## Attributes and Properties
 {{% api "_furo-ui5-sign-pad-properties.md" %}}
-
-
-
-
-
-
-
 
 
 
@@ -66,10 +59,27 @@ Fired when sign gets new painting, with base encoded image.
 
 Trigger this method after a resize.
 
-This is also needed
+<br><br>
+
+### **disable**
+<small>**disable**() ⟹ `void`</small>
+
+<small>`*`</small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-disable</span>
+
+Disables the pad
 
 <br><br>
 
+### **enable**
+<small>**enable**() ⟹ `void`</small>
+
+<small>`*`</small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-enable</span>
+
+Enables the pad
+
+<br><br>
 
 
 ### **clear**
@@ -106,15 +116,6 @@ The encoded image is available in the `image` property.
 
 <br><br>
 
-
-
-
-
-
-
-
-
-
 ### **bindData**
 <small>**bindData**(*entityField* `` ) ⟹ `void`</small>
 
@@ -125,6 +126,7 @@ bind a entity field
 
 - <small>entityField </small>
 <br><br>
+
 
 
 

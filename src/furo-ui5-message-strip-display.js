@@ -17,6 +17,10 @@ import '@ui5/webcomponents/dist/MessageStrip.js';
  *  <furo-ui5-message-strip ƒ-show-warning="--wire" message="Static warning message"></furo-ui5-message-strip>
  * ```
  *
+ * ## CSS Style Vars
+ * - margin-top: var(--FuroUi5MediaSizeIndentationTop, 0);
+ * - margin-bottom: var(--FuroUi5MediaSizeIndentationBottom, 0);
+ *
  * @summary furo ui5 message strip
  * @element furo-ui5-message-strip-display
  */
@@ -128,7 +132,8 @@ export class FuroUi5MessageStripDisplay extends FBP(LitElement) {
       }
 
       ui5-message-strip {
-        margin-bottom: 0.6875rem;
+        margin-top: var(--FuroUi5MediaSizeIndentationTop, 0);
+        margin-bottom: var(--FuroUi5MediaSizeIndentationBottom, 0);
       }
     `;
   }

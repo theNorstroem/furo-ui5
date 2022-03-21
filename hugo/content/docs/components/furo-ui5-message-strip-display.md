@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-message-strip-display
-**@furo/ui5** <small>v1.1.0</small>
+**@furo/ui5** <small>v1.1.3</small>
 <br>`import '@furo/ui5/src/furo-ui5-message-strip-display.js';`<small>
 <br>exports *FuroUi5MessageStripDisplay* js
 <br>exports `<furo-ui5-message-strip-display>` custom-element-definition
@@ -25,6 +25,10 @@ The display component can be controlled by several furo-ui5-message-strip compon
  <furo-ui5-message-strip ƒ-show-information="--wire"></furo-ui5-message-strip>
  <furo-ui5-message-strip ƒ-show-warning="--wire" message="Static warning message"></furo-ui5-message-strip>
 ```
+
+## CSS Style Vars
+- margin-top: var(--FuroUi5MediaSizeIndentationTop, 0);
+- margin-bottom: var(--FuroUi5MediaSizeIndentationBottom, 0);
 
 {{% api "_furo-ui5-message-strip-display-head.md" %}}
 
