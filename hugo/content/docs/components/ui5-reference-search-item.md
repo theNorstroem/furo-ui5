@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # ui5-reference-search-item
-**@furo/ui5** <small>v1.1.0</small>
+**@furo/ui5** <small>v1.1.3</small>
 <br>`import '@furo/ui5/src/ui5-reference-search-item.js';`<small>
 <br>exports *Ui5ReferenceSearchItem* js
 <br>exports `<ui5-reference-search-item>` custom-element-definition

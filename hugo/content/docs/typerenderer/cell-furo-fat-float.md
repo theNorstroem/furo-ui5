@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-furo-fat-float
-**@furo/ui5** <small>v1.1.0</small>
+**@furo/ui5** <small>v1.1.3</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-furo-fat-float.js';`<small>
 <br>exports `<cell-furo-fat-float>` custom-element-definition
 <br>extends */src/typerenderer/cell-float.js*

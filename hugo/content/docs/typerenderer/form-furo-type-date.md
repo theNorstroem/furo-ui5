@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-furo-type-date
-**@furo/ui5** <small>v1.1.0</small>
+**@furo/ui5** <small>v1.1.3</small>
 <br>`import '@furo/ui5/src/typerenderer/form-furo-type-date.js';`<small>
 <br>exports `<form-furo-type-date>` custom-element-definition
 <br>extends */src/furo-ui5-date-picker-labeled.js*

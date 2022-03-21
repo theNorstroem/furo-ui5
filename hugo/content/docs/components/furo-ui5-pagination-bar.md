@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-pagination-bar
-**@furo/ui5** <small>v1.1.0</small>
+**@furo/ui5** <small>v1.1.3</small>
 <br>`import '@furo/ui5/src/furo-ui5-pagination-bar.js';`<small>
 <br>exports *FuroUi5PaginationBar* js
 <br>exports `<furo-ui5-pagination-bar>` custom-element-definition
