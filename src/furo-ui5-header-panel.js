@@ -345,12 +345,12 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
         will-change: transform;
         overflow: visible;
         cursor: pointer;
-        color: var(--sapHighlightColor);
+        color: var(--sapButton_TextColor);
       }
 
       .splitter {
         width: 6rem;
-        height: 1rem;
+        height: 1.1rem;
         background-size: 100% 0.0625rem;
         background-repeat: no-repeat;
         background-position: center;
@@ -361,7 +361,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
           to right,
           var(
             --furo-ui5-header-panel-splitter-start-color,
-            var(--sapHighlightColor, #0854a0)
+            var(--sapButton_Lite_Hover_BorderColor, #0854a0)
           ),
           var(
             --furo-ui5-header-panel-splitter-end-rgba-color,
@@ -375,13 +375,22 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
           to left,
           var(
             --furo-ui5-header-panel-splitter-start-color,
-            var(--sapHighlightColor, #0854a0)
+            var(--sapButton_Lite_Hover_BorderColor, #0854a0)
           ),
           var(
             --furo-ui5-header-panel-splitter-end-rgba-color,
             rgba(8, 84, 160, 0)
           )
         );
+      }
+
+      .splitter_bar:hover > ui5-icon{
+        border-radius: var(--sapButton_BorderCornerRadius);
+        border: 1px solid var(--sapButton_Lite_Hover_BorderColor, #0854a0);
+      }
+
+      .splitter_bar:hover > .splitter {
+        width: 8rem;
       }
     `;
   }
