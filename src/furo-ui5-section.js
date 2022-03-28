@@ -66,11 +66,14 @@ export class FuroUi5Section extends FBP(FieldNodeAdapter(LitElement)) {
       :host {
         display: block;
         width: 100%;
-        padding: var(--FuroUi5MediaSizeIndentation, 0.625rem 2rem 0 2rem);
       }
 
       :host([hidden]) {
         display: none;
+      }
+
+      .section {
+        padding: var(--FuroUi5MediaSizeIndentation, 0.625rem 2rem 0 2rem);
       }
 
       ui5-title {
