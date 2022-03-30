@@ -10,7 +10,6 @@ The default typerenderer context for the cells is **cell**. You can set the cont
 
 <script type="module" src="/init.js"></script>
 
-
 <furo-demo-snippet>
 <template>
 <button @-click="--read">load data</button><br><br>
