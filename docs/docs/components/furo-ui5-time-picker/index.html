@@ -11,13 +11,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-time-picker" />
 <meta property="og:description" content="furo data time picker field" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-time-picker/" />
-<meta property="article:modified_time" content="2022-03-02T15:01:07+01:00" />
+<meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-time-picker/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-03-21T14:19:56+01:00" />
+
 <title>furo-ui5-time-picker | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.a0e3f53ea9ab3e91a4d6e3374c053eb0607cf85f9c231a489548b072f3090a9b.js" integrity="sha256-oOP1PqmrPpGk1uM3TAU&#43;sGB8&#43;F&#43;cIxpIlUiwcvMJCps="></script>
+<link rel="stylesheet" href="/book.min.8970c3c9d4b531a16cf725277f7ef50634ac43356703adef922b3d646410e36d.css" integrity="sha256-iXDDydS1MaFs9yUnf371BjSsQzVnA63vkis9ZGQQ420=">
+<script defer src="/en.search.min.adafb3a48c98ee350da3849fd9b9db6f2261fbc02fc9255a61854f12b632e606.js" integrity="sha256-ra&#43;zpIyY7jUNo4Sf2bnbbyJh&#43;8AvySVaYYVPErYy5gY="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3154,7 +3156,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -3233,22 +3235,24 @@ https://github.com/alex-shpak/hugo-book
 <p>The furo-ui5-time-picker component allows the user to bind a field of type google.type.TimeOfDay.
 Represents a time of day. The date and time zone are either not significant
 or are specified elsewhere.</p>
-<p><a href="https://sap.github.io/ui5-webcomponents/playground/components/TimePicker/">https://sap.github.io/ui5-webcomponents/playground/components/TimePicker/</a></p>
+<p>
+  <a href="https://sap.github.io/ui5-webcomponents/playground/components/TimePicker/">https://sap.github.io/ui5-webcomponents/playground/components/TimePicker/</a></p>
 <p>Supported format options are pattern-based on Unicode LDML Date Format notation. For more information, see
 UTS #35: Unicode Locale Data Markup Language.</p>
 <p>For example, if the format-pattern is &ldquo;hh:mm:ss&rdquo;, a valid value string is &ldquo;11:42:35&rdquo; and the same is displayed in the input.</p>
 <p>The text field can be editable or read-only (readonly property), and it can be enabled or disabled (enabled property).
 To visualize semantic states, such as &ldquo;error&rdquo; or &ldquo;warning&rdquo;, the valueState property is provided.
 When the user makes changes to the time, the change event is fired, which enables you to react on any time change.</p>
-<p>You can bind a <code>string</code> or <code>google.type.TimeOfDay</code> (<a href="https://github.com/googleapis/googleapis/blob/master/google/type/timeofday.proto)">https://github.com/googleapis/googleapis/blob/master/google/type/timeofday.proto)</a>.</p>
+<p>You can bind a <code>string</code> or <code>google.type.TimeOfDay</code> (
+  <a href="https://github.com/googleapis/googleapis/blob/master/google/type/timeofday.proto%29">https://github.com/googleapis/googleapis/blob/master/google/type/timeofday.proto)</a>.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-time-picker</span>
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-time-picker</span>
     <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--data(*.start_time)&#34;</span>&gt;
  &lt;/<span style="color:#000080">furo-ui5-time-picker</span>&gt;
 </code></pre></td></tr></table>
@@ -3296,7 +3300,7 @@ Bind a entity field. You can use the entity even when no data was received.</p>
 </furo-demo-snippet>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -3306,7 +3310,7 @@ Bind a entity field. You can use the entity even when no data was received.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-time-picker</span>
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-time-picker</span>
   <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dataObject(*.furo_data_time_input)&#34;</span>
 &gt;&lt;/<span style="color:#000080">furo-ui5-time-picker</span>&gt;
 &lt;<span style="color:#000080">furo-ui5-time-picker</span>
@@ -3385,9 +3389,9 @@ those attributes can be set. <code>value-state</code>, <code>value-state-message
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/011464f1f33a104f1bc2f2235b8601c17d969668" title='Last modified by veith | March 2, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/5f65f3e92281d8edabc82fabebf903f97fdd1114" title='Last modified by maltenorstroem | March 21, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>March 2, 2022</span>
+      <span>March 21, 2022</span>
     </a>
   </div>
 
