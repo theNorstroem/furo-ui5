@@ -22,7 +22,7 @@
     import '../src/furo-ui5-reference-search.js';
     import '../src/furo-ui5-reference-search-labeled.js';
 
-    import '@furo/data/src/furo-catalog.js';
+    import '@furo/data/src/furo-data-object.js';
     import '@furo/util/src/furo-fetch-json.js';
     import '@furo/util/src/doc/furo-demo-snippet.js';
     import '@furo/layout/src/furo-form-layouter.js';
@@ -42,12 +42,14 @@
             <furo-form-layouter four="">
               <furo-ui5-reference-search ƒ-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
               </furo-ui5-reference-search>
+
               <furo-ui5-reference-search ƒ-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
               </furo-ui5-reference-search>
 
-              <furo-ui5-reference-search-labeled no-data-text="some" ƒ-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
+              <furo-ui5-reference-search-labeled  newline no-data-text="some" ƒ-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
               </furo-ui5-reference-search-labeled>
             </furo-form-layouter>
+
             <furo-data-object type="task.Task" @-object-ready="--entityReady">
             </furo-data-object>
           </template>

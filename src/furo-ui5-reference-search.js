@@ -1,17 +1,18 @@
 import { LitElement, html, css } from 'lit';
-
 import { FBP } from '@furo/fbp';
 import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Env } from '@furo/framework';
+
 import '@furo/data/src/furo-collection-agent.js';
 import '@furo/fbp/src/flow-repeat.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/util/src/furo-de-bounce.js';
 import '@ui5/webcomponents/dist/Input.js';
 import '@ui5/webcomponents/dist/List.js';
-import './ui5-reference-search-item.js';
 import '@ui5/webcomponents-icons/dist/value-help.js';
 import '@ui5/webcomponents-icons/dist/search.js';
+
+import './ui5-reference-search-item.js';
 import './furo-ui5-dialog.js';
 
 /**
@@ -27,7 +28,7 @@ import './furo-ui5-dialog.js';
  *   ></furo-ui5-reference-search>
  * ```
  *
- *  *usage with a extended searcher*
+ *  *usage with an extended searcher*
  * ```html
  *   <furo-ui5-reference-search
  *   extended-searcher="country-filter"
@@ -56,12 +57,12 @@ import './furo-ui5-dialog.js';
  * If your type has a *reference* type signature ('id','display_name', 'link'), the service, and initial deep link is extracted from
  * the link part of your type.
  *
- * If you bind a skalar field, the value which is set in 'valueFieldPath' will be set.
+ * If you bind a scalar field, the value which is set in 'valueFieldPath' will be set.
  *
  * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * ## Specs
- * Define a propper default value on the reference type.
+ * Define a proper default value on the reference type.
  *
  * ```yaml
  * link:
@@ -77,7 +78,7 @@ import './furo-ui5-dialog.js';
  *          "href": "/contacts",
  *          "method": "GET",
  *          "type": "contact.Contact",
- *          "service": "Contacts"
+ *          "service": "contact.Contacts"
  *      }
  *   placeholder: ""
  *   hint: ""
@@ -90,8 +91,8 @@ import './furo-ui5-dialog.js';
  *   typespecific: null
  *
  * ```
- * ### API of a extended searcher
- * ### Searcher Mehtods
+ * ### API of an extended searcher
+ * ### Searcher Methods
  * The only method you have to implement is **htsIn**. The reference-search will pass its own hts to the extended
  * searcher. A call on qpIn on the searcher will also pass the resulting hts to the extended searcher.
  *
@@ -272,7 +273,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
   /**
    * Binds a FieldNode to the component.
    *
-   * Supported types: can be a scalar type or any complex type with 'id','display_name' signature.
+   * Supported types: can be a scalar type or any complex type with 'id','display_name' signature or use
+   * the furo.Reference type.
    * @param fieldNode {FieldNode}
    */
   bindData(fieldNode) {
@@ -316,7 +318,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        */
       displayFieldPath: { type: String, attribute: 'display-field-path' },
       /**
-       * Path to response value item of the exteded search which is used for the id.
+       * Path to response value item of the extended search which is used for the id.
        * By default this goes to *data.id*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
        */
@@ -653,6 +655,9 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
 
       if (!this._lockBlur) {
         this._closeList();
+        // When the field is left, the value from the model should be displayed. The entered search term is removed.
+        const INPUT_FIELD = this.shadowRoot.querySelector('#input');
+        INPUT_FIELD.value = this.value.display_name;
       }
     });
 
@@ -681,7 +686,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
     });
 
     /**
-     * Update the fieldnode when an item from the list was selected
+     * Update the field node when an item from the list was selected
      */
     this._FBPAddWireHook('--itemSelected', item => {
       this.value.id = this.valueFieldPath
