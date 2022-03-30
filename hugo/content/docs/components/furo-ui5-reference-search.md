@@ -29,7 +29,7 @@ Do not forget to specify.
   ></furo-ui5-reference-search>
 ```
 
- *usage with a extended searcher*
+ *usage with an extended searcher*
 ```html
   <furo-ui5-reference-search
   extended-searcher="country-filter"
@@ -58,12 +58,12 @@ The constraint **required** will mark the element as required
 If your type has a *reference* type signature ('id','display_name', 'link'), the service, and initial deep link is extracted from
 the link part of your type.
 
-If you bind a skalar field, the value which is set in 'valueFieldPath' will be set.
+If you bind a scalar field, the value which is set in 'valueFieldPath' will be set.
 
 When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
 ## Specs
-Define a propper default value on the reference type.
+Define a proper default value on the reference type.
 
 ```yaml
 link:
@@ -79,7 +79,7 @@ meta:
          "href": "/contacts",
          "method": "GET",
          "type": "contact.Contact",
-         "service": "Contacts"
+         "service": "contact.Contacts"
      }
   placeholder: ""
   hint: ""
@@ -92,8 +92,8 @@ meta:
   typespecific: null
 
 ```
-### API of a extended searcher
-### Searcher Mehtods
+### API of an extended searcher
+### Searcher Methods
 The only method you have to implement is **htsIn**. The reference-search will pass its own hts to the extended
 searcher. A call on qpIn on the searcher will also pass the resulting hts to the extended searcher.
 
@@ -171,7 +171,7 @@ By default this goes to *data.display_name*
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">extended-value-field-path</span>
 <small>`string` default: **&#39;data.id&#39;**</small>
 
-Path to response value item of the exteded search which is used for the id.
+Path to response value item of the extended search which is used for the id.
 By default this goes to *data.id*.
 Only needed when your extended searcher does not have the id, display_name signature in the response.
 <br><br>
@@ -371,7 +371,8 @@ Define the extended searcher. Do not forget to import the searcher you want to u
 
 Binds a FieldNode to the component.
 
-Supported types: can be a scalar type or any complex type with 'id','display_name' signature.
+Supported types: can be a scalar type or any complex type with 'id','display_name' signature or use
+the furo.Reference type.
 
 - <small>fieldNode </small>
 <br><br>
