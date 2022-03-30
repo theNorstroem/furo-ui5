@@ -384,7 +384,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
         );
       }
 
-      .splitter_bar:hover > ui5-icon{
+      .splitter_bar:hover > ui5-icon {
         border-radius: var(--sapButton_BorderCornerRadius);
         border: 1px solid var(--sapButton_Lite_Hover_BorderColor, #0854a0);
       }

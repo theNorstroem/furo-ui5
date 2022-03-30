@@ -15,7 +15,7 @@
           "method": "GET",
           "rel": "self",
           "type": "person.Person",
-          "service": "projectservice.ProjectService"
+          "service": "personservice.PersonService"
         }
       ]
     },
@@ -34,7 +34,7 @@
           "method": "GET",
           "rel": "self",
           "type": "person.Person",
-          "service": "projectservice.ProjectService"
+          "service": "personservice.PersonService"
         }
       ]
     },
@@ -53,7 +53,7 @@
           "method": "GET",
           "rel": "self",
           "type": "person.Person",
-          "service": "projectservice.ProjectService"
+          "service": "personservice.PersonService"
         }
       ]
     },
@@ -72,7 +72,7 @@
           "method": "GET",
           "rel": "self",
           "type": "person.Person",
-          "service": "projectservice.ProjectService"
+          "service": "personservice.PersonService"
         }
       ]
     },
@@ -91,7 +91,7 @@
           "method": "GET",
           "rel": "self",
           "type": "person.Person",
-          "service": "projectservice.ProjectService"
+          "service": "personservice.PersonService"
         }
       ]
     }
@@ -102,7 +102,7 @@
       "method": "GET",
       "rel": "list",
       "type": "person.PersonCollection",
-      "service": "projectservice.ProjectService"
+      "service": "personservice.PersonService"
     }
   ]
 }

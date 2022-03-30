@@ -19,18 +19,9 @@
   import { html, render } from 'lit';
   import './initEnv.js';
   import '../src/furo-ui5-number-input.js';
-  import '../src/furo-ui5-select.js';
-
-  import '@furo/route/src/furo-location.js';
-  import '@furo/data/src/furo-deep-link.js';
-  import '@furo/data/src/furo-collection-agent.js';
   import '@furo/data/src/furo-data-object.js';
   import '@furo/util/src/doc/furo-demo-snippet.js';
   import '@furo/layout/src/furo-form-layouter.js';
-
-  import '@ui5/webcomponents/dist/Icon.js';
-  import '@ui5/webcomponents-icons/dist/search.js';
-
 
   render(
     html`
@@ -39,58 +30,17 @@
           <template>
 
             <furo-form-layouter two>
-              <p full>
-                FuroUi5TextInput with static suggestions.
-              </p>
-              <furo-ui5-select
-                label="use with text-input"
-                ƒ-bind-data="--daoPerson(*.bmi)">
-              </furo-ui5-select>
-            <br>
-              <furo-ui5-select
-                label="use with text-input"
-                ƒ-bind-data="--daoPerson(*.bmi)">
-              </furo-ui5-select>
-            <br>
-              <furo-ui5-number-input
-                readonly=""
-                label="use with text-input"
-                ƒ-bind-data="--daoPerson(*.bmi)">
-              </furo-ui5-number-input>
-              <p full>
-                FuroUi5TextInput with search integration to show lazy loaded suggestions (debounced input).
-              </p>
+
               <furo-ui5-number-input
                 label="use with text-input"
-                display-field-path="data.name"
-                desc-field-path="data.display_name"
-                ƒ-bind-data="--daoPerson(*.bmi)"
-                ƒ-bind-options="--collection(*.entities)"
-                @-search-requested="--searchRequest">
-                <ui5-icon slot="icon" name="search"></ui5-icon>
+                ƒ-bind-data="--daoPerson(*.bmi)">
               </furo-ui5-number-input>
 
-              <p full>
-                FuroUi5TextInput with search integration to show lazy loaded suggestions (click on icon).
-              </p>
-              <furo-ui5-number-input
-                label="use with text-input"
-                display-field-path="data.name"
-                desc-field-path="data.display_name"
-                ƒ-bind-data="--daoPerson(*.bmi)"
-                ƒ-bind-options="--collection(*.entities)">
-                <ui5-icon slot="icon" name="search" interactive @-click="--iconClicked"></ui5-icon>
-              </furo-ui5-number-input>
+            <furo-ui5-number-input ƒ-bind-data="--daoPerson(*.bmi)"></furo-ui5-number-input>
             </furo-form-layouter>
+
+
             <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
-
-            <furo-data-object type="person.PersonCollection" @-object-ready="--collection" ƒ-inject-raw="--response"></furo-data-object>
-
-            <furo-location @-location-changed="--locationChanged"></furo-location>
-            <furo-deep-link service="PersonService" @-hts-out="--hts" ƒ-qp-in="--locationChanged(*.query)"></furo-deep-link>
-
-            <furo-collection-agent service="PersonService" ƒ-hts-in="--hts" ƒ-search="--searchRequest" ƒ-list="--iconClicked" @-response="--response">
-            </furo-collection-agent>
 
 
           </template>
