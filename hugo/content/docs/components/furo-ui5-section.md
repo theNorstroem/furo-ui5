@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-section
-**@furo/ui5** <small>v1.1.3</small>
+**@furo/ui5** <small>v1.1.4</small>
 <br>`import '@furo/ui5/src/furo-ui5-section.js';`<small>
 <br>exports *FuroUi5Section* js
 <br>exports `<furo-ui5-section>` custom-element-definition
@@ -59,6 +59,14 @@ Binds an entity field to the heading. You can use the entity even when no data w
 Heading title of the section
 <br><br>
 
+### **noborder**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">noborder</span>
+</small>
+
+Setting this attribute will hide the bottom border
+<br><br>
+
 ## Methods
 {{% api "_furo-ui5-section-methods.md" %}}
 
@@ -72,6 +80,7 @@ Heading title of the section
 Furo flow is ready lifecycle method
 
 <br><br>
+
 
 
 
