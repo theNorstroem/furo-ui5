@@ -58,6 +58,11 @@ export class FuroUi5Section extends FBP(FieldNodeAdapter(LitElement)) {
        * Heading title of the section
        */
       heading: { type: String, attribute: 'heading' },
+
+      /**
+       * Setting this attribute will hide the bottom border
+       */
+      noborder: { type: Boolean },
     };
   }
 
@@ -83,6 +88,10 @@ export class FuroUi5Section extends FBP(FieldNodeAdapter(LitElement)) {
       hr {
         border-color: var(--sapToolbar_SeparatorColor, #d9d9d9);
         border-style: solid;
+      }
+
+      :host([noborder]) hr {
+        display: none;
       }
     `;
   }
