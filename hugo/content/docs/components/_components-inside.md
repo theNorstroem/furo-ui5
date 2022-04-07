@@ -51,6 +51,7 @@ bookHidden: true
 - [furo-ui5-rating-indicator](furo-ui5-rating-indicator.md) data rating input field
 - [furo-ui5-reference-search](furo-ui5-reference-search.md) labeled input field
 - [furo-ui5-reference-search](furo-ui5-reference-search.md) furo ui5 data reference search
+- [furo-ui5-relative-time-badge](furo-ui5-relative-time-badge.md) bindable relative time badge
 - [furo-ui5-section](furo-ui5-section.md) 
 - [furo-ui5-segmented-button](furo-ui5-segmented-button.md) segmented button
 - [furo-ui5-select-labeled](furo-ui5-select-labeled.md) labeled select

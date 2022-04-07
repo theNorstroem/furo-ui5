@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-header-panel
-**@furo/ui5** <small>v1.1.3</small>
+**@furo/ui5** <small>v1.1.4</small>
 <br>`import '@furo/ui5/src/furo-ui5-header-panel.js';`<small>
 <br>exports *FuroUi5HeaderPanel* js
 <br>exports `<furo-ui5-header-panel>` custom-element-definition

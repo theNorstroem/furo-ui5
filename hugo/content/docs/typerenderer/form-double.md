@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-double
-**@furo/ui5** <small>v1.1.3</small>
+**@furo/ui5** <small>v1.1.4</small>
 <br>`import '@furo/ui5/src/typerenderer/form-double.js';`<small>
 <br>exports *FormDouble* js
 <br>exports `<form-double>` custom-element-definition

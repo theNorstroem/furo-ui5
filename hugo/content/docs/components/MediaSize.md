@@ -6,7 +6,7 @@ weight: 100
 
 # MediaSize
 
-**@furo/components** <small>v1.1.3</small>
+**@furo/components** <small>v1.1.4</small>
 <br>`import '@furo/components/src/src/lib/MediaSize.js';`<small>
 <br>exports *MediaSize* js</small>
 
