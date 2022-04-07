@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+    furo-demo-snippet{
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import { html, render } from 'lit';
+  import './initEnv.js';
+  import '../src/furo-ui5-date-picker.js';
+  import '../src/furo-ui5-date-time-picker.js';
+  import '../src/furo-ui5-text-input.js';
+  import '../src/furo-ui5-number-input.js';
+  import '../src/furo-ui5-relative-time-badge.js';
+
+  import '@furo/route/src/furo-location.js';
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/data/src/furo-deep-link.js';
+  import '@furo/data/src/furo-entity-agent.js';
+
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+
+  render(
+    html`
+
+        <furo-demo-snippet>
+          <template>
+
+            <furo-form-layouter two>
+              <p full>
+                FuroUi5RelativeTimeBadge, type String
+              </p>
+              <furo-ui5-date-time-picker ƒ-bind-data="--daoExp(*.furo_data_time_input)"></furo-ui5-date-time-picker>
+              <furo-ui5-relative-time-badge
+                ƒ-bind-data="--daoExp(*.furo_data_time_input)">
+              </furo-ui5-relative-time-badge>
+
+              <p full>
+                FuroUi5RelativeTimeBadge, type google.protobuf.Timestamp
+              </p>
+              <furo-ui5-date-time-picker ƒ-bind-data="--daoExp(*.google_timestamp)"></furo-ui5-date-time-picker>
+              <furo-ui5-relative-time-badge
+                color-scheme-positive="1"
+                color-scheme-negative="6"
+                option-style="short"
+                option-numeric="auto"
+                ƒ-bind-data="--daoExp(*.google_timestamp)">
+              </furo-ui5-relative-time-badge>
+
+              <p full>
+                FuroUi5RelativeTimeBadge, type furo.type.Date
+              </p>
+              <furo-ui5-date-picker ƒ-bind-data="--daoExp(*.furo_type_date)"></furo-ui5-date-picker>
+              <furo-ui5-relative-time-badge
+                color-scheme-positive="1"
+                color-scheme-negative="6"
+                option-style="narrow"
+                option-numeric="always"
+                ƒ-bind-data="--daoExp(*.furo_type_date)">
+              </furo-ui5-relative-time-badge>
+
+              <p full>
+                FuroUi5RelativeTimeBadge, type furo_data_date_input_google
+              </p>
+              <furo-ui5-date-picker ƒ-bind-data="--daoExp(*.furo_data_date_input_google)"></furo-ui5-date-picker>
+              <furo-ui5-relative-time-badge
+                color-scheme-positive="1"
+                color-scheme-negative="6"
+                option-style="long"
+                option-numeric="always"
+                ƒ-bind-data="--daoExp(*.furo_data_date_input_google)">
+              </furo-ui5-relative-time-badge>
+
+              <p full>
+                FuroUi5RelativeTimeBadge, type string, 2022-03-29T10:05:45-06:00
+              </p>
+              <furo-ui5-text-input ƒ-bind-data="--daoExp(*.furo_data_date_input)"></furo-ui5-text-input>
+              <furo-ui5-relative-time-badge
+                color-scheme-positive="2"
+                color-scheme-negative="8"
+                option-style="short"
+                option-numeric="auto"
+                ƒ-bind-data="--daoExp(*.furo_data_date_input)">
+              </furo-ui5-relative-time-badge>
+
+              <p full>
+                FuroUi5RelativeTimeBadge, type int64, 1649260119
+              </p>
+              <furo-ui5-number-input ƒ-bind-data="--daoExp(*.int64)"></furo-ui5-number-input>
+              <furo-ui5-relative-time-badge
+                color-scheme-positive="2"
+                color-scheme-negative="8"
+                option-style="short"
+                option-numeric="auto"
+                ƒ-bind-data="--daoExp(*.int64)">
+              </furo-ui5-relative-time-badge>
+
+            </furo-form-layouter>
+
+            <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp" ƒ-inject-raw="--response"></furo-data-object>
+
+
+          </template>
+        </furo-demo-snippet>
+
+
+      `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>
