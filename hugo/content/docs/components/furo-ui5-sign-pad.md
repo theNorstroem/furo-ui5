@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-sign-pad
-**@furo/ui5** <small>v1.1.3</small>
+**@furo/ui5** <small>v1.1.4</small>
 <br>`import '@furo/ui5/src/furo-ui5-sign-pad.js';`<small>
 <br>exports *FuroUi5SignPad* js
 <br>exports `<furo-ui5-sign-pad>` custom-element-definition
@@ -126,7 +126,6 @@ bind a entity field
 
 - <small>entityField </small>
 <br><br>
-
 
 
 

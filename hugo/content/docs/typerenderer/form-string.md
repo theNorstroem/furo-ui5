@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-string
-**@furo/ui5** <small>v1.1.3</small>
+**@furo/ui5** <small>v1.1.4</small>
 <br>`import '@furo/ui5/src/typerenderer/form-string.js';`<small>
 <br>exports *FormString* js
 <br>exports `<form-string>` custom-element-definition
@@ -25,21 +25,9 @@ weight: 50
 
 
 
-
 ## Methods
 {{% api "_form-string-methods.md" %}}
 
-
-### **bindData**
-<small>**bindData**(*fieldNode* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
-
-
-
-- <small>fieldNode </small>
-<br><br>
 
 
 

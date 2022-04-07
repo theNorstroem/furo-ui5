@@ -24,8 +24,8 @@ import '@ui5/webcomponents/dist/Panel.js';
  *   <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task"></furo-ui5-header-panel>
  *  ```
  *
- * @event collapsed Fired when panel is collapsed by user interaction
- * @event expanded Fired when panel is expanded by user interaction
+ * @event collapsed Fired when panel is collapsed by user interaction.
+ * @event expanded Fired when panel is expanded by user interaction.
  *
  * @slot {HTMLElement [0..n]} action - defines an action, displayed in the right most part of the header panel.
  * @slot {HTMLElement [0..n]} - defines the content of the panel
