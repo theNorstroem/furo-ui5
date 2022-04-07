@@ -83,6 +83,21 @@ sub title
 
 
 <br><br>
+## Events
+{{% api "_furo-ui5-header-panel-events.md" %}}
+
+### **collapsed**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-collapsed</span>
+→ <small>`Event`</small>
+
+Fired when panel is collapsed by user interaction.
+<br><br>
+### **expanded**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-expanded</span>
+→ <small>`Event`</small>
+
+Fired when panel is expanded by user interaction.
+<br><br>
 
 ## Methods
 {{% api "_furo-ui5-header-panel-methods.md" %}}
