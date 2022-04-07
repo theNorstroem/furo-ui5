@@ -106,7 +106,7 @@ class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
   static get styles() {
     return css`
       :host {
-        display: block;
+        display: inline-block;
       }
 
       :host([hidden]) {
@@ -170,7 +170,8 @@ class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
   }
 
   /**
-   *
+   * Internal relative time format function
+   * use of Intl.RelativeTimeFormat
    * @private
    */
   _formatDisplay(endTime) {
@@ -189,10 +190,19 @@ class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
       second: '2-digit',
     }).format(new Date(endTime));
 
+    let diffValue = difference / 1000 / 60 / 60 / 24;
+    if (diffValue < 1 && diffValue > -1) {
+      diffValue = 1;
+      // special check for small differences
+      if (new Date(now).getDate() === new Date(now + difference).getDate()) {
+        diffValue = 0;
+      }
+    }
+
     this._dueTime = new Intl.RelativeTimeFormat([Env.locale, 'de-CH'], {
       style: this.optionStyle,
       numeric: this.optionNumeric,
-    }).format(Math.floor(difference / 1000 / 60 / 60 / 24), 'day');
+    }).format(Math.floor(diffValue), 'day');
 
     // check if negative color scheme should be applied
     if (difference < 0) {
