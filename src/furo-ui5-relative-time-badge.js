@@ -195,7 +195,11 @@ class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
       // special check for small differences
       if (new Date(now).getDate() === new Date(now + difference).getDate()) {
         diffValue = 0;
+      } else {
+        diffValue = Math.round(diffValue);
       }
+    } else {
+      diffValue = Math.round(diffValue);
     }
 
     this._dueTime = new Intl.RelativeTimeFormat([Env.locale, 'de-CH'], {
