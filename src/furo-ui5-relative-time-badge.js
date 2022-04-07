@@ -192,7 +192,6 @@ class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
 
     let diffValue = difference / 1000 / 60 / 60 / 24;
     if (diffValue < 1 && diffValue > -1) {
-      diffValue = 1;
       // special check for small differences
       if (new Date(now).getDate() === new Date(now + difference).getDate()) {
         diffValue = 0;
@@ -202,7 +201,7 @@ class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
     this._dueTime = new Intl.RelativeTimeFormat([Env.locale, 'de-CH'], {
       style: this.optionStyle,
       numeric: this.optionNumeric,
-    }).format(Math.floor(diffValue), 'day');
+    }).format(diffValue, 'day');
 
     // check if negative color scheme should be applied
     if (difference < 0) {
