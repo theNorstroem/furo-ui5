@@ -24,6 +24,9 @@ import '@ui5/webcomponents/dist/Panel.js';
  *   <furo-ui5-header-panel header-text="Header Text" secondary-text="Subtitle Text" icon="task"></furo-ui5-header-panel>
  *  ```
  *
+ * @event collapsed Fired when panel is collapsed by user interaction.
+ * @event expanded Fired when panel is expanded by user interaction.
+ *
  * @slot {HTMLElement [0..n]} action - defines an action, displayed in the right most part of the header panel.
  * @slot {HTMLElement [0..n]} - defines the content of the panel
  *
@@ -184,6 +187,18 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
       // toggle the panel
       panel.collapsed = !panel.collapsed;
       this.collapsed = panel.collapsed;
+
+      setTimeout(() => {
+        if (this.collapsed) {
+          this.dispatchEvent(
+            new Event('collapsed', { composed: true, bubbles: true })
+          );
+        } else {
+          this.dispatchEvent(
+            new Event('expanded', { composed: true, bubbles: true })
+          );
+        }
+      }, 16);
     });
 
     this.updateComplete.then(() => {
@@ -403,7 +418,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <ui5-panel fixed ?collapsed="${this.collapsed}">
+      <ui5-panel id="panel" fixed ?collapsed="${this.collapsed}">
         <div slot="header" class="header">
           <ui5-title>${this.headerText}</ui5-title>
           <ui5-label>${this.secondaryText}</ui5-label>

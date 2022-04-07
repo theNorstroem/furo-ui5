@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-header-panel
-**@furo/ui5** <small>v1.1.3</small>
+**@furo/ui5** <small>v1.1.4</small>
 <br>`import '@furo/ui5/src/furo-ui5-header-panel.js';`<small>
 <br>exports *FuroUi5HeaderPanel* js
 <br>exports `<furo-ui5-header-panel>` custom-element-definition
@@ -82,6 +82,21 @@ sub title
 <small>`boolean` default: **false**</small>
 
 
+<br><br>
+## Events
+{{% api "_furo-ui5-header-panel-events.md" %}}
+
+### **collapsed**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-collapsed</span>
+→ <small>`Event`</small>
+
+Fired when panel is collapsed by user interaction.
+<br><br>
+### **expanded**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-expanded</span>
+→ <small>`Event`</small>
+
+Fired when panel is expanded by user interaction.
 <br><br>
 
 ## Methods
