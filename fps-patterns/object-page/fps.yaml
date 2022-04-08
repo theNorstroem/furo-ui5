@@ -1,0 +1,95 @@
+name: "SAP Fiori Object Page"
+description: "The object page detail floorplan is used to display and categorize all relevant information about an object (aggregate)."
+variables:
+
+  - varname: ServiceName
+    default: "'partnermanagement.NaturalPersonService'"
+    prompt: "Please select the service"
+    inputKind: "service"
+
+  - varname: Service
+    expression: "GetService(ServiceName)"
+
+
+  - varname: EntityName
+    default: "GetStringFromMap(Service,'services.Get.data.response')"
+    prompt: "Please select the entity of the primary object."
+    inputKind: "type"
+
+
+  - varname: Entity
+    expression: "GetType(EntityName)"
+
+
+  - varname: InnerTypeName
+    default: "GetStringFromMap(Entity,'fields.data.type')"
+    prompt: "Set the main object type"
+    inputKind: "string"
+
+  - varname: InnerType
+    expression: "GetType(InnerTypeName)"
+
+  - varname: Description
+    default: ""
+    prompt: "Enter a short description"
+    inputKind: "string"
+
+
+  - varname: Dir
+    default: "'./src/' + ToKebab(InnerTypeName)"
+    prompt: "Target directory"
+    inputKind: "directory"
+
+
+  - varname: ComponentsPrefix
+    default: "ToKebab(InnerTypeName)"
+    prompt: "Please enter prefix for the sub components"
+    inputKind: "string"
+
+  - varname: Tabs
+    default: "'detail, family, emails'"
+    prompt: "Please enter the tab names"
+    inputKind: "stringlist"
+    regexp: "^[^\\s-]+$"
+    regexpText: "No whitespaces allowed"
+
+  - varname: ViewComponentName
+    default: "'view-' + ToKebab(InnerTypeName) + '-object-detail'"
+    prompt: "Change the component name if you do not like it"
+    inputKind: "directory"
+
+  - varname: ViewComponentClassName
+    expression: "ToCamel(ViewComponentName)"
+
+  - varname: DataEntityComponentName
+    default: "ComponentsPrefix + '-entity'"
+    prompt: "Change the data entity component name if you do not like it"
+    inputKind: "directory"
+
+  - varname: DataEntityClassName
+    expression: "ToCamel(DataEntityComponentName)"
+
+  - varname: LowerInnerTypeName
+    expression: "ToLower(InnerTypeName)"
+
+structure:
+  - target: "Dir + '/' + ViewComponentName + '.js'"
+    template: "view-xx-xx-object-detail.js.tpl"
+    notes: ""
+    condition: ""
+
+  - target: "Dir + '/data/' + DataEntityComponentName + '.js'"
+    template: "data/xx-xx-entity.js.tpl"
+    notes: ""
+    condition: ""
+
+  - target: "Dir + '/detail/' + DetailElementName + '.js'"
+    template: "panel-object-detail.js.tpl"
+    notes: "Initial detail panel"
+    repeatBy: "Tabs"
+    repeatAs: "Tab"
+    condition: ""
+    repeatExpressions:
+      DetailElementName: "ToKebab(ComponentsPrefix + '-' + Tab)"
+      DetailClassName: "ToCamel(DetailElementName)"
+data: #additional data, this goes directly to your template and is not parsed or evaluated.

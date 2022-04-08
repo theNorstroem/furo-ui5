@@ -1,0 +1,17 @@
+name: "SAP Fiori Overview Page"
+description: "Object Overview is a view that gives you a unique way to look at the singular object from the perspective of other objects and its connections."
+variables:
+
+structure:
+  - target: "Dir + '/' + ViewComponentName + '.js'"
+    template: "view-xx-xx-overview.js"
+    notes: ""
+    condition: ""
+
+  - target: "Dir + '/data/' + DataEntityComponentName + '.js'"
+    template: "data/xx-xx-entity.js.tpl"
+    notes: ""
+    condition: ""
+
+
+data: #additional data, this goes directly to your template and is not parsed or evaluated.
