@@ -378,7 +378,12 @@ export class FuroUi5DatePicker extends FieldNodeAdapter(DatePicker.default) {
   }
 
   static get styles() {
-    return super.styles;
+    return [
+      super.styles,
+      {
+        content: ':host .ui5-date-picker-input{min-width: unset}',
+      },
+    ];
   }
 }
 
