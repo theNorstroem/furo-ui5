@@ -26,7 +26,7 @@ import './data/{{.Var.DataEntityComponentName}}.js';
 // Detail tab panels
 {{$prefix :=  .Var.ComponentsPrefix }} {{$PageType :=  .Var.PageType }}
 {{range $i, $tab := .Var.Tabs}}
-import './panels/object-{{$PageType}}/{{$prefix}}-{{$PageType}}-{{$tab}}.js';
+import './object-{{$PageType}}/{{$prefix}}-{{$PageType}}-{{$tab}}.js';
 {{end}}
 
 {{$LowerInnerTypeName := .Var.LowerInnerTypeName}}
