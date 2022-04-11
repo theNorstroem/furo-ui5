@@ -1,4 +1,5 @@
 import { LitElement, css } from 'lit';
+import { Env } from '@furo/framework';
 
 /**
  *  furo-ui5-notification should be used together witch furo-ui5-notification-list-display or furo-ui5-notification-group-display. you can place those two components into different places.
@@ -162,6 +163,56 @@ export class FuroUi5Notification extends LitElement {
     this.payload = c;
     this._type = 'notification';
     this._requestGroupDisplay();
+  }
+
+  /**
+   * Parses the output of dataObject.getValidityMessages and
+   * transforms the incoming data into a google.rpc.Status message of type google.rpc.BadRequest with
+   * a list of field violations as content
+   * @param fieldViolations
+   */
+  parseFieldValidityMessages(fieldViolations) {
+    const fieldValidityMessages = [];
+    Object.entries(fieldViolations.data).forEach(([key, element]) => {
+      if (key !== 'field_description') {
+        const item = { field: '', description: '' };
+        item.field = element.field_description.meta.label;
+        if (element.description !== undefined) {
+          item.description = element.description || '';
+        } else {
+          const subitem = [];
+          Object.entries(element).forEach(([, subElement]) => {
+            if (
+              subElement.field_description &&
+              subElement.description &&
+              subElement.description.length
+            ) {
+              subitem.push(
+                `${subElement.field_description.meta.label}: ${subElement.description}`
+              );
+            }
+          });
+          item.description = new Intl.ListFormat([Env.locale, 'de-CH'], {
+            style: 'long',
+            type: 'conjunction',
+          }).format(subitem);
+        }
+        fieldValidityMessages.push(item);
+      }
+    });
+
+    const status = {
+      code: 1,
+      details: [
+        {
+          '@type': 'type.googleapis.com/google.rpc.BadRequest',
+          field_violations: fieldValidityMessages,
+        },
+      ],
+    };
+    this.payload = status;
+    this._type = 'grpc';
+    this._requestListDisplay();
   }
 
   static get styles() {
