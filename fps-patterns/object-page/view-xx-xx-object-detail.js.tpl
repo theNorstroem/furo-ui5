@@ -21,19 +21,20 @@ import '@ui5/webcomponents/dist/Popover.js';
 import '@ui5/webcomponents-fiori/dist/ShellBar.js';
 import '@ui5/webcomponents-fiori/dist/ShellBarItem.js';
 
-import './data/{{.Var.ComponentsPrefix }}-entity.js';
+import './data/{{.Var.DataEntityComponentName}}.js';
 
 // Detail tab panels
-{{$prefix :=  .Var.ComponentsPrefix }}
+{{$prefix :=  .Var.ComponentsPrefix }} {{$PageType :=  .Var.PageType }}
 {{range $i, $tab := .Var.Tabs}}
-import './detail/{{$prefix}}-{{$tab}}.js';
+import './panels/object-{{$PageType}}/{{$prefix}}-{{$PageType}}-{{$tab}}.js';
 {{end}}
 
 {{$LowerInnerTypeName := .Var.LowerInnerTypeName}}
 
 /**
  * `{{.Var.ViewComponentName}}`
- * Shows an overview for a nat person
+ *
+ * {{.Var.Description}}
  *
  * @customElement
  * @appliesMixin FBP
@@ -41,7 +42,8 @@ import './detail/{{$prefix}}-{{$tab}}.js';
 class {{.Var.ViewComponentClassName}} extends FBP(LitElement) {
   constructor() {
     super();
-    this._currentTab = 'basics';
+    const urlParams = new URLSearchParams(window.location.search);
+    this._currentTab = urlParams.get('tab') || '{{index .Var.Tabs 0}}';
   }
 
   /**
@@ -51,15 +53,12 @@ class {{.Var.ViewComponentClassName}} extends FBP(LitElement) {
     super._FBPReady();
     // this._FBPTraceWires();
 
-    /**
-     * Register hook on wire --pageHashChanged to
-     * select the correct tab on deep linked calls or a page reload
-     */
-    this._FBPAddWireHook('--pageHashChanged', e => {
-      this._currentTab = e.hash.tab;
+    // TABS
+       this._FBPAddWireHook('--pageQueryChanged', e => {
+         this._currentTab = e.query.tab;
       if (this._currentTab === undefined) {
         // set default
-        this._currentTab = 'basics';
+        this._currentTab = '{{index .Var.Tabs 0}}';
       }
       this.requestUpdate();
     });
@@ -133,66 +132,16 @@ class {{.Var.ViewComponentClassName}} extends FBP(LitElement) {
       <furo-vertical-flex>
         <!-- shell Bar with standard functionality -->
         <ui5-shellbar
-          primary-title="SYRIUS "
-          secondary-title="${i18n.t('{{$LowerInnerTypeName}}.secondarytitle')}"
-          @-profile-click="--userRequested(*.detail.targetRef)"
+          primary-title="${i18n.t('{{$LowerInnerTypeName}}.primarytitle')} "
         >
-          <ui5-avatar slot="profile" initials="AN"></ui5-avatar>
+
           <ui5-button
             icon="nav-back"
             slot="startButton"
             @-click="^^return-to-last-waypoint"
           ></ui5-button>
-          <ui5-shellbar-item
-            id="notes"
-            icon="tnt/values"
-            title="Technical View"
-            text="Technical View"
-            @-click="--openAllAttributes"
-          ></ui5-shellbar-item>
-          <ui5-shellbar-item
-            id="notes"
-            icon="notes"
-            count="2"
-            title="Notes"
-            text="Notes"
-          ></ui5-shellbar-item>
-          <ui5-shellbar-item
-            id="history"
-            icon="history"
-            text="History"
-            title="History"
-          ></ui5-shellbar-item>
-          <ui5-shellbar-item id="help" icon="sys-help" text="Help" title="Help"></ui5-shellbar-item>
+
         </ui5-shellbar>
-
-        <!-- user setting popover menu -->
-        <ui5-popover ƒ-show-at="--userRequested" placement-type="Bottom">
-          <div class="popover-header">
-            <ui5-title style="padding: 0.25rem 1rem 0rem 1rem">Anonymous User</ui5-title>
-          </div>
-          <div class="popover-content">
-            <ui5-list separators="None">
-              <ui5-li icon="settings">Language</ui5-li>
-              <ui5-li icon="sys-help">Help</ui5-li>
-            </ui5-list>
-          </div>
-        </ui5-popover>
-
-        <!-- all attributes view -->
-        <furo-ui5-dialog
-          ƒ-show="--openAllAttributes"
-          ƒ-close="--closeDialogClicked"
-          header-text="${i18n.t('syrius.partnermgmt.technical.view.title')}"
-          stretch="true"
-        >
-          <natperson-all-attributes ƒ-bind-data="--ObjectDetailDO"></natperson-all-attributes>
-          <div slot="footer">
-            <furo-ui5-button @-click="--closeDialogClicked"
-              >${i18n.t('syrius.partnermgmt.dialog.closeaction')}</furo-ui5-button
-            >
-          </div>
-        </furo-ui5-dialog>
 
         <!-- business object header panel
              most important information comes here -->
@@ -222,7 +171,7 @@ class {{.Var.ViewComponentClassName}} extends FBP(LitElement) {
           {{end}}
 
         </ui5-tabcontainer>
-        <furo-location-updater ƒ-set-hash="--subTabSelected(*.tab.dataset)"></furo-location-updater>
+        <furo-location-updater ƒ-set-qp="--subTabSelected(*.tab.dataset)"></furo-location-updater>
 
         <!-- gRPC localized messages -->
         <furo-ui5-message-strip-display class="padding-lr"></furo-ui5-message-strip-display>
@@ -234,17 +183,17 @@ class {{.Var.ViewComponentClassName}} extends FBP(LitElement) {
 
         <!-- sub-page handling
              each page must have an attribute name. This name appears in the URL as routing information -->
-        <furo-pages scroll ƒ-activate-page="--pageHashChanged(*.hash.tab)" default="{{index .Var.Tabs 0}}">
+        <furo-pages scroll ƒ-activate-page="--pageQueryChanged(*.query.tab)" default="{{index .Var.Tabs 0}}">
 {{$prefix := .Var.ComponentsPrefix}}
           {{range $i, $tab := .Var.Tabs}}
-              <{{$prefix}}-{{$tab}} ƒ-bind-data="--ObjectDetailDO" name={{$tab}}> </{{$prefix}}-{{$tab}}  >
+              <{{$prefix}}-{{$PageType}}-{{$tab}} ƒ-bind-data="--ObjectDetailDO" name={{$tab}}> </{{$prefix}}-{{$PageType}}-{{$tab}}  >
           {{end}}
         </furo-pages>
       </furo-vertical-flex>
 
       <!-- data model, api connections-->
       <{{.Var.DataEntityComponentName}}
-        ƒ-qp-in="--pageActivated(*.query), --pageHashChanged(*.query)"
+        ƒ-qp-in="--pageActivated(*.query)"
         ƒ-clear="--pageDeActivated"
         load-on-qp
         @-data-object="--ObjectDetailDO"
@@ -260,11 +209,7 @@ class {{.Var.ViewComponentClassName}} extends FBP(LitElement) {
         ƒ-bind-title="--ObjectDetailDO(*.name)"
       ></furo-document-title>
 
-      <!-- configurable routing-->
-      <furo-app-flow
-        ƒ-emit="--processStartRequest"
-        event="usertask-start-requested"
-      ></furo-app-flow>
+
     `;
   }
 }
