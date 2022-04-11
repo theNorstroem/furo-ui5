@@ -6,13 +6,11 @@ import '@furo/ui5/src/furo-ui5-header-panel.js';
 import '@furo/ui5/src/furo-ui5-typerenderer-labeled.js';
 import '@furo/ui5/src/furo-ui5-message-strip-display.js';
 import '@furo/ui5/src/furo-ui5-message-strip.js';
-import '@furo/ui5/src/furo-ui5-dialog.js';
 
 import '@furo/route/src/furo-app-flow.js';
 import '@furo/route/src/furo-location-updater.js';
 import '@furo/route/src/furo-pages.js';
 
-import '@ui5/webcomponents/dist/RatingIndicator.js';
 import '@ui5/webcomponents/dist/TabContainer.js';
 import '@ui5/webcomponents/dist/Tab.js';
 import '@ui5/webcomponents/dist/Button.js';
@@ -82,6 +80,16 @@ class {{.Var.ViewComponentClassName}} extends FBP(LitElement) {
   static get styles() {
     // language=CSS
     return css`
+      :host {
+        display: block;
+        height: 100%;
+      }
+
+      :host([hidden]) {
+        display: none;
+      }
+
+      /* SCROLLBAR */
       /* width */
       ::-webkit-scrollbar {
         width: var(--sapScrollBar_Dimension, 0.75rem);
@@ -102,18 +110,7 @@ class {{.Var.ViewComponentClassName}} extends FBP(LitElement) {
         background: var(--sapScrollBar_Hover_FaceColor, #4a5a6a);
       }
 
-      :host {
-        display: block;
-        height: 100%;
-      }
-
-      :host([hidden]) {
-        display: none;
-      }
-
-      .padding {
-        padding: var(--FuroUi5MediaSizeIndentation, 0.625rem 2rem 0 2rem);
-      }
+      /* paddings for the message strip */
       .padding-lr {
         padding-left: var(--FuroUi5MediaSizeIndentationLeft, 2rem);
         padding-right: var(--FuroUi5MediaSizeIndentationRight, 2rem);
