@@ -75,7 +75,7 @@ describe('furo-ui5-checkbox-input-scalar', () => {
         method: 'GET',
         rel: 'self',
         type: 'experiment.ExperimentEntity',
-        service: 'ExperimentService',
+        service: 'experimentservice.ExperimentService',
       },
     ],
     meta: {

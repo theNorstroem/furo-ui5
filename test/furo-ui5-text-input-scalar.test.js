@@ -26,7 +26,7 @@ describe('furo-ui5-text-input-scalar', () => {
         method: 'GET',
         rel: 'self',
         type: 'experiment.ExperimentEntity',
-        service: 'ExperimentService',
+        service: 'experimentservice.ExperimentService',
       },
     ],
     meta: {

@@ -86,7 +86,7 @@ describe('furo-ui5-textarea-input', () => {
         method: 'GET',
         rel: 'self',
         type: 'experiment.ExperimentEntity',
-        service: 'ExperimentService',
+        service: 'experimentservice.ExperimentService',
       },
     ],
     meta: {
@@ -154,7 +154,7 @@ describe('furo-ui5-textarea-input', () => {
       assert.equal(input._state.valueState, 'None', 'check valueState');
       assert.equal(
         input._state.valueStateMessage.length,
-        1,
+        0,
         'check valueStateMessage'
       );
       assert.equal(input._state.name, '', 'check name');

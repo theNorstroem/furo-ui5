@@ -43,12 +43,4 @@ describe('furo-ui5-barcode-scanner-dialog', () => {
     );
     done();
   });
-
-  it('scanner should open', done => {
-    input.show();
-    setTimeout(() => {
-      assert.equal(input._isOpen, true);
-      done();
-    }, 1500);
-  });
 });
