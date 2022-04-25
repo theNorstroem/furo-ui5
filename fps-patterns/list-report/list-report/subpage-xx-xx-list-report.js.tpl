@@ -9,6 +9,7 @@ import '@furo/layout/src/furo-form-layouter.js';
 import '@furo/route/src/furo-app-flow.js';
 import '@furo/route/src/furo-pages.js';
 import '@furo/layout/src/furo-vertical-flex.js';
+import '@furo/ui5/src/furo-ui5-message-strip-display.js';
 
 import './{{.Var.FilterPanelComponentName}}.js';
 import './{{.Var.SearchResultsComponentName}}.js';
@@ -108,6 +109,12 @@ class {{.Var.SubPageClassName}} extends FBP(LitElement) {
       ::-webkit-scrollbar-thumb:hover {
         background: var(--sapScrollBar_Hover_FaceColor, #4a5a6a);
       }
+
+      /* paddings for the message strip */
+      .padding-lr {
+        padding-left: var(--FuroUi5MediaSizeIndentationLeft, 2rem);
+        padding-right: var(--FuroUi5MediaSizeIndentationRight, 2rem);
+      }
     `;
   }
 
@@ -126,6 +133,7 @@ class {{.Var.SubPageClassName}} extends FBP(LitElement) {
           at-collapsed="--panelCollapsed"
         ></{{.Var.FilterPanelComponentName}}>
 
+        <furo-ui5-message-strip-display class="padding-lr"></furo-ui5-message-strip-display>
 
         <furo-pages
           flex

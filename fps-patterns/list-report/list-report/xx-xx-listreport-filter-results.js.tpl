@@ -11,7 +11,6 @@ import '@furo/data/src/furo-data-object.js';
 import '@furo/ui5/src/furo-ui5-table.js';
 import '@furo/ui5/src/furo-ui5-pagination-bar.js';
 import '@furo/ui5/src/furo-ui5-busy-indicator.js';
-import '@furo/ui5/src/furo-ui5-message-strip-display.js';
 import '@furo/ui5/src/furo-ui5-message-strip.js';
 import '@furo/ui5/src/furo-ui5-section.js'
 import '@furo/ui5/src/furo-ui5-subsection.js'
@@ -216,7 +215,6 @@ export class {{.Var.SearchResultsClassName}} extends FBP(LitElement) {
     // language=HTML
     return html`
       <furo-keydown key="Escape" at-key="^^escape-pressed"></furo-keydown>
-      <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
       <furo-ui5-message-strip
         message="Sorry, the services for the App are currently not available. We are working on it."
         fn-show-error="--err"
