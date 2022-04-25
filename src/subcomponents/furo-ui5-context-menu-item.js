@@ -82,7 +82,7 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
       this.disabled = this.menuitem.disabled._value;
     }
 
-    if (this.menuitem.children.repeats.length > 0) {
+    if (this.menuitem.children && this.menuitem.children.repeats.length > 0) {
       this._FBPTriggerWire('--submenu', this.menuitem);
     }
     if (this.menuitem.leading_divider._value === true) {
@@ -143,21 +143,30 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
     switch (key) {
       case 'Enter':
         // select
-        if (this.menuitem.children.repeats.length === 0) {
+        if (
+          !this.menuitem.children ||
+          this.menuitem.children.repeats.length === 0
+        ) {
           this._selectItem();
         }
         break;
 
       case 'ArrowLeft':
         // closes subnav
-        if (this.menuitem.children.repeats.length > 0) {
+        if (
+          this.menuitem.children &&
+          this.menuitem.children.repeats.length > 0
+        ) {
           this._closeSub();
         }
         break;
 
       case 'ArrowRight':
         // opens subnav
-        if (this.menuitem.children.repeats.length > 0) {
+        if (
+          this.menuitem.children &&
+          this.menuitem.children.repeats.length > 0
+        ) {
           this._openSub(true);
         }
         break;
@@ -171,7 +180,10 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
    */
   _mouseSelect() {
     // select
-    if (this.menuitem.children.repeats.length === 0) {
+    if (
+      !this.menuitem.children ||
+      this.menuitem.children.repeats.length === 0
+    ) {
       this._selectItem();
     }
   }
@@ -190,7 +202,11 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
   setFocused() {
     this.focused = true;
     // opens subnav on mousefocus
-    if (this._mouseFocus && this.menuitem.children.repeats.length > 0) {
+    if (
+      this._mouseFocus &&
+      this.menuitem.children &&
+      this.menuitem.children.repeats.length > 0
+    ) {
       this._openSub();
       this._mouseFocus = false;
     }
@@ -201,7 +217,7 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
    */
   unsetFocused() {
     this.focused = false;
-    if (this.menuitem.children.repeats.length > 0) {
+    if (this.menuitem.children && this.menuitem.children.repeats.length > 0) {
       this._closeSub();
     }
   }
@@ -283,7 +299,8 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
           name="slim-arrow-right"
           class="children"
           @click="${this._openSub}"
-          ?children="${this.menuitem.children.repeats.length > 0}"
+          ?children="${this.menuitem.children &&
+          this.menuitem.children.repeats.length > 0}"
         ></ui5-icon>
       </furo-horizontal-flex>
     `;
