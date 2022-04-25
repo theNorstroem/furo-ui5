@@ -1,0 +1,96 @@
+name: "SAP Fiori List Report"
+description: "A worklist displays a collection of items a user needs to process. Working through the list usually involves reviewing details of the items and taking action."
+variables:
+  - varname: ServiceName
+    default: ""
+    prompt: "Please select the service"
+    inputKind: "service"
+
+  - varname: Service
+    expression: "GetService(ServiceName)"
+
+  - varname: CollectionName
+    expression: "GetStringFromMap(Service,'services.List.data.response')"
+
+  - varname: Collection
+    expression: "GetType(CollectionName)"
+
+  - varname: InnerTypeName
+    default: "GetStringFromMap(Collection,'fields.entities.type')"
+    prompt: "Please select the type which is displayed in the result table"
+    inputKind: "type"
+
+  - varname: InnerType
+    expression: "GetType(InnerTypeName)"
+
+  - varname: FilterObjectName
+    default: ""
+    prompt: "Please select your filter object. This is used to build the filter-options panel."
+    inputKind: "type"
+
+  - varname: FilterType
+    expression: "GetType(FilterObjectName)"
+
+  - varname: Description
+    default: ""
+    prompt: "Enter a short description"
+    inputKind: "string"
+
+
+  - varname: Dir
+    default: "'./src/' + GetStringFromMap(InnerType,'__proto.package')"
+    prompt: "Target directory"
+    inputKind: "directory"
+
+
+  - varname: ComponentsPrefix
+    default: "GetStringFromMap(InnerType,'__proto.package')"
+    prompt: "Please enter prefix for the sub components"
+    inputKind: "string"
+
+  - varname: LowerPrefix
+    expression: "ToLower(ComponentsPrefix)"
+
+  - varname: PageComponentName
+    default: "'page-' + ComponentsPrefix + '-worklist-simple'"
+    prompt: "Enter the component name for the list report page"
+    inputKind: "directory"
+
+  - varname: PageClassName
+    expression: "ToCamel(PageComponentName)"
+
+  - varname: SubPageComponentName
+    expression: "'subpage-' + ComponentsPrefix + '-worklist-simple'"
+
+  - varname: SubPageClassName
+    expression: "ToCamel(PageComponentName)"
+
+  - varname: SearchResultsComponentName
+    expression: "ComponentsPrefix + '-worklist-simple-filter-results'"
+
+
+  - varname: SearchResultsClassName
+    expression: "ToCamel(SearchResultsComponentName)"
+
+
+structure:
+  - target: "Dir + '/' + PageComponentName + '.js'"
+    template: "page-xx-xx-worklist-simple.js.tpl"
+    notes: ""
+    condition: ""
+
+
+  - target: "Dir + '/worklist-simple/' + SubPageComponentName + '.js'"
+    template: "worklist-simple/subpage-xx-xx-worklist-simple.js.tpl"
+    notes: ""
+    condition: ""
+
+
+  - target: "Dir + '/worklist-simple/' + SearchResultsComponentName + '.js'"
+    template: "worklist-simple/xx-xx-worklist-simple-results.js.tpl"
+    notes: ""
+    condition: ""
+
+
+
+data: #additional data, this goes directly to your template and is not parsed or evaluated.
