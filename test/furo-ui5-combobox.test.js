@@ -23,7 +23,7 @@ describe('furo-ui5-combobox', () => {
         method: 'GET',
         rel: 'self',
         type: 'experiment.ExperimentEntity',
-        service: 'ExperimentService',
+        service: 'experimentservice.ExperimentService',
       },
     ],
     meta: {
@@ -80,7 +80,7 @@ describe('furo-ui5-combobox', () => {
       assert.equal(input._state.placeholder, '', 'check placeholder');
       assert.equal(input._state.readonly, false, 'check readonly');
       assert.equal(input._state.required, false, 'check required');
-      assert.equal(input._state.value, 'Default Description', 'check value');
+      assert.equal(input._state.value, '', 'check value');
       assert.equal(input._state.valueState, 'None', 'check valueState');
       done();
     }, 16);

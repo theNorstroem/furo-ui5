@@ -30,11 +30,11 @@ describe('furo-ui5-property', () => {
             ƒ-inject-raw="--response(*.data)"
           ></furo-data-object>
           <furo-deep-link
-            service="ExperimentService"
+            service="experimentservice.ExperimentService"
             @-hts-out="--hts"
           ></furo-deep-link>
           <furo-entity-agent
-            service="ExperimentService"
+            service="experimentservice.ExperimentService"
             ƒ-hts-in="--hts"
             ƒ-load="--hts"
             @-response="--response"

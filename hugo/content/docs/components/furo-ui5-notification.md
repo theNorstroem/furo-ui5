@@ -31,6 +31,7 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
 
 
 
+
 ### **dismissButtonText**
 default: **&#39;dismiss&#39;**</small>
 
@@ -142,6 +143,19 @@ the notification message should be an array of the following object signature:
 }
 
 - <small>c </small>
+<br><br>
+
+### **parseFieldValidityMessages**
+<small>**parseFieldValidityMessages**(*fieldViolations* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-field-validity-messages</span>
+
+Parses the output of dataObject.getValidityMessages and
+transforms the incoming data into a google.rpc.Status message of type google.rpc.BadRequest with
+a list of field violations as content
+
+- <small>fieldViolations </small>
 <br><br>
 
 

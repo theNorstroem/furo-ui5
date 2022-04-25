@@ -186,7 +186,7 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
           .map(det => det.message)
       );
 
-      // @type: "type.googleapis.com/google.rpc.BadRequest"
+      // @type: "type.googleapis.com/google.rpc.LocalizedMessage"
       this.localizedMsg = [];
       this.localizedMsg = status.details.filter(det =>
         det['@type'].includes('google.rpc.LocalizedMessage')
@@ -300,7 +300,7 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
    */
   _createLocalizedMessageElement() {
     return new Promise(resolve => {
-      if (this.localizedMsg) {
+      if (this.localizedMsg && this.localizedMsg.length) {
         this._notificationCount += this.localizedMsg.length;
         this._dispatchNotificationCounterUpdates(this._notificationCount);
         /**
