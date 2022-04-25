@@ -312,8 +312,6 @@ export class {{.Var.SearchResultsClassName}} extends FBP(LitElement) {
     // language=HTML
     return html`
       <furo-vertical-flex>
-
-      <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
       <furo-ui5-message-strip
         message="Sorry, the services for the App are currently not available. We are working on it."
         fn-show-error="--err"

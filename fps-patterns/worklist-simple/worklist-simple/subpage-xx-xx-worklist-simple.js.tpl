@@ -10,6 +10,7 @@ import '@furo/route/src/furo-app-flow.js';
 import '@furo/route/src/furo-pages.js';
 import '@furo/layout/src/furo-vertical-flex.js';
 import '@furo/ui5/src/furo-ui5-header-panel.js';
+import '@furo/ui5/src/furo-ui5-message-strip-display.js';
 
 import './{{.Var.SearchResultsComponentName}}.js';
 
@@ -97,7 +98,11 @@ class {{.Var.SubPageClassName}} extends FBP(LitElement) {
       furo-pages {
         overflow: hidden;
       }
-
+    /* paddings for the message strip */
+      .padding-lr {
+        padding-left: var(--FuroUi5MediaSizeIndentationLeft, 2rem);
+        padding-right: var(--FuroUi5MediaSizeIndentationRight, 2rem);
+      }
     `;
   }
 
@@ -113,6 +118,8 @@ class {{.Var.SubPageClassName}} extends FBP(LitElement) {
          collapsed
          header-text="${i18n.t('{{.Var.LowerPrefix}}.worklist.panel.headertext')}">
         </furo-ui5-header-panel>
+
+        <furo-ui5-message-strip-display class="padding-lr"></furo-ui5-message-strip-display>
 
         <furo-pages
           flex
