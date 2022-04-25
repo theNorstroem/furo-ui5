@@ -49,6 +49,7 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
          */
         let pushed = false;
         if (
+          item.leading_divider &&
           item.leading_divider._value &&
           items[i + 1] &&
           items[i + 1].leading_divider._value
