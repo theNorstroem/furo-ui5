@@ -71,7 +71,7 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
   bindData(menuNode) {
     this.menuitem = menuNode;
 
-    if (this.menuitem.icon._value) {
+    if (this.menuitem.icon?._value) {
       this.icon = this.menuitem.icon._value;
       this._noicon = false;
     } else {
@@ -85,7 +85,7 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
     if (this.menuitem.children && this.menuitem.children.repeats.length > 0) {
       this._FBPTriggerWire('--submenu', this.menuitem);
     }
-    if (this.menuitem.leading_divider._value === true) {
+    if (this.menuitem.leading_divider?._value === true) {
       const separator = document.createElement('div');
       separator.classList.add('separator');
       this.parentNode.insertBefore(separator, this);

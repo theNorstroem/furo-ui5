@@ -58,10 +58,10 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
           pushed = true;
         }
 
-        if (item.icon._value) {
+        if (item.icon?._value) {
           noicon = false;
         }
-        if (item.leading_divider._value) {
+        if (item.leading_divider?._value) {
           stage.forEach(stg => {
             // eslint-disable-next-line no-param-reassign
             stg._noicon = noicon;
@@ -76,7 +76,7 @@ export class FuroUi5ContextMenuDisplay extends FBP(LitElement) {
       noicon = true;
       // do the last stage
       stage.forEach(item => {
-        if (item.icon._value) {
+        if (item.icon?._value) {
           noicon = false;
         }
         stage.forEach(i => {

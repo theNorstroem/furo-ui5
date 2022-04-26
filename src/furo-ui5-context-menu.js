@@ -30,6 +30,15 @@ import '@furo/util/src/furo-keydown';
  *    children: '[] menu.Menuitem:6 #Children of this item'
  *```
  *
+ * ## Minimal data signature
+ *
+ * ```yaml
+ * - type: 'menu.Menuitem #Item signature for a context menu'
+ *  fields:
+ *    id: 'string:1 #Id of the menu item'
+ *    display_name: 'string:2 #String representation of the menu item. Menu item text'
+ * ```
+ *
  * @fires { {context, menuitem}} menu-item-selected -  Fired when a menu item is selected.
  *
  * @slot {HTMLElement} - default slot to add an individual context menu opener component (e.g. furo-icon-button).
