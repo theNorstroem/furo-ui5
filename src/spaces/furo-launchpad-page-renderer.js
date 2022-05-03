@@ -4,10 +4,10 @@ import './furo-launchpad-section-renderer.js';
 
 /**
  * `furo-launchpad-page-renderer`
- * todo Describe your element
+ *  Renders a page of a space.
  *
- * @summary todo shortdescription
- * @customElement
+ * @summary tile renderer
+ * @customElement furo-launchpad-page-renderer
  * @appliesMixin FBP
  */
 class FuroLaunchpadPageRenderer extends FBP(LitElement) {

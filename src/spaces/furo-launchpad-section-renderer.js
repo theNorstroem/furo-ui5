@@ -9,10 +9,10 @@ import '../typerenderer/line-launchpad-monitortile.js';
 
 /**
  * `furo-launchpad-section-renderer`
- * todo Describe your element
+ *  Renders a section of a page
  *
- * @summary todo shortdescription
- * @customElement
+ * @summary section renderer for a tile page
+ * @customElement furo-launchpad-section-renderer
  * @appliesMixin FBP
  */
 class FuroLaunchpadSectionRenderer extends FBP(LitElement) {
