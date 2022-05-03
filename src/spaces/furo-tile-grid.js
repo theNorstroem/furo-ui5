@@ -4,9 +4,9 @@ import { FBP } from '@furo/fbp';
 
 /**
  * `furo-tile-grid`
- * todo Describe your element
+ *  Layout component used in sections.
  *
- * @summary todo shortdescription
+ * @summary tile layout component
  * @customElement furo-tile-grid
  * @appliesMixin FBP
  */
