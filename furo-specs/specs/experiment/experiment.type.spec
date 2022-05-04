@@ -612,3 +612,24 @@ fields:
             repeated: false
             typespecific: null
         constraints: {}
+    furo_data_date_input_google_req:
+        type: google.type.Date
+        description: field for furo-data-date-input for testing
+        __proto:
+            number: 30
+        __ui: null
+        meta:
+            default: ""
+            placeholder: experiment.experiment.furodatadateinputgooglereq.placeholder
+            hint: ""
+            label: experiment.experiment.furodatadateinputgooglereq.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints:
+            required:
+                is: "true"
+                message: experiment.experiment.furodatadateinputgooglereq.constraint.required.message

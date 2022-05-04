@@ -18,6 +18,7 @@
 <script type="module">
   import { html, render } from 'lit';
   import './initEnv.js';
+  import '../src/furo-ui5-date-picker-labeled.js';
   import '../src/furo-ui5-date-picker.js';
 
   import '@furo/data/src/furo-data-object.js';
@@ -43,9 +44,26 @@
                 ƒ-bind-data="--daoExp(*.furo_data_date_input)">
               </furo-ui5-date-picker>
 
+              <furo-ui5-date-picker
+                label="Simple date"
+                ƒ-bind-data="--daoExp(*.furo_data_date_input)">
+              </furo-ui5-date-picker>
+
+              <furo-ui5-date-picker-labeled
+                label="Simple date"
+                ƒ-bind-data="--daoExp(*.furo_data_date_input_google_req)">
+              </furo-ui5-date-picker-labeled>
+              <furo-ui5-date-picker
+                label="Simple date"
+                ƒ-bind-data="--daoExp(*.furo_data_date_input_google_req)">
+              </furo-ui5-date-picker>
+
             </furo-form-layouter>
-            <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp"></furo-data-object>
-            </furo-entity-agent>
+            <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp" fn-validate-all-fields="--validation">
+            </furo-data-object>
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
+
 
 
           </template>
