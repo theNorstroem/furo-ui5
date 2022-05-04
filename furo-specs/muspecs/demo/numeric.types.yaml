@@ -5,4 +5,5 @@
     float: 'float64:3 #Float value'
     int: 'int64:4 #Int value'
     fatint: 'furo.fat.Int64:5 #fat Int value'
+    bigdecimal_req: '* furo.BigDecimal:6 #'
   target: numeric.proto

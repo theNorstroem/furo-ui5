@@ -113,3 +113,24 @@ fields:
             repeated: false
             typespecific: null
         constraints: {}
+    bigdecimal_req:
+        type: furo.BigDecimal
+        description: no description
+        __proto:
+            number: 6
+        __ui: null
+        meta:
+            default: ""
+            placeholder: numeric.numeric.bigdecimalreq.placeholder
+            hint: ""
+            label: numeric.numeric.bigdecimalreq.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints:
+            required:
+                is: "true"
+                message: numeric.numeric.bigdecimalreq.constraint.required.message
