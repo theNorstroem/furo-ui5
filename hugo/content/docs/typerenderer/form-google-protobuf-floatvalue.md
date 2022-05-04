@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-google-protobuf-floatvalue
-**@furo/ui5** <small>v1.1.4</small>
+**@furo/ui5** <small>v1.3.0-rc.0</small>
 <br>`import '@furo/ui5/src/typerenderer/form-google-protobuf-floatvalue.js';`<small>
 <br>exports `<form-google-protobuf-floatvalue>` custom-element-definition
 <br>extends */src/typerenderer/form-int32.js*

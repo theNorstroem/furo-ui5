@@ -1,21 +1,17 @@
 import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
-import './furo-tile-grid.js';
+import './furo-ui5-launchpad-tile-grid.js';
 import '@furo/data/src/furo-type-renderer.js';
-import '../typerenderer/tile-launchpad-launchtile.js';
-import '../typerenderer/line-launchpad-launchtile.js';
-import '../typerenderer/tile-launchpad-monitortile.js';
-import '../typerenderer/line-launchpad-monitortile.js';
 
 /**
- * `furo-launchpad-section-renderer`
+ * `furo-ui5-launchpad-section-renderer`
  *  Renders a section of a page
  *
  * @summary section renderer for a tile page
- * @customElement furo-launchpad-section-renderer
+ * @customElement furo-ui5-launchpad-section-renderer
  * @appliesMixin FBP
  */
-class FuroLaunchpadSectionRenderer extends FBP(LitElement) {
+class FuroUi5LaunchpadSectionRenderer extends FBP(LitElement) {
   /**
    * bindSection Bind a fieldnode of type launchpad.Section
    * @public
@@ -76,7 +72,7 @@ class FuroLaunchpadSectionRenderer extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <furo-tile-grid>
+      <furo-ui5-launchpad-tile-grid>
         <ui5-title>${this.sectionTitle}</ui5-title>
 
         <!-- tiles -->
@@ -106,12 +102,12 @@ class FuroLaunchpadSectionRenderer extends FBP(LitElement) {
             </template>
           </furo-data-flow-repeat>
         </div>
-      </furo-tile-grid>
+      </furo-ui5-launchpad-tile-grid>
     `;
   }
 }
 
 window.customElements.define(
-  'furo-launchpad-section-renderer',
-  FuroLaunchpadSectionRenderer
+  'furo-ui5-launchpad-section-renderer',
+  FuroUi5LaunchpadSectionRenderer
 );

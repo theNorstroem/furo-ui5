@@ -3,14 +3,14 @@ import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
 
 /**
- * `furo-tile-grid`
+ * `furo-ui5-launchpad-tile-grid`
  *  Layout component used in sections.
  *
  * @summary tile layout component
- * @customElement furo-tile-grid
+ * @customElement furo-ui5-launchpad-tile-grid
  * @appliesMixin FBP
  */
-class FuroTileGrid extends FBP(LitElement) {
+class FuroUi5LaunchpadTileGrid extends FBP(LitElement) {
   _FBPReady() {
     super._FBPReady();
   }
@@ -142,4 +142,7 @@ class FuroTileGrid extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('furo-tile-grid', FuroTileGrid);
+window.customElements.define(
+  'furo-ui5-launchpad-tile-grid',
+  FuroUi5LaunchpadTileGrid
+);

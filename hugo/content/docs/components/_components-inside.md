@@ -72,6 +72,10 @@ bookHidden: true
 - [furo-ui5-typerenderer-labeled](furo-ui5-typerenderer-labeled.md) labeled input field
 - [furo-ui5-z-grid](furo-ui5-z-grid.md) grid with a z pattern
 - [ui5-reference-search-item](ui5-reference-search-item.md) representation of a result item
+- [furo-ui5-launchpad-navigation](furo-ui5-launchpad-navigation.md) Spaces navigation tabs
+- [furo-ui5-launchpad-page-renderer](furo-ui5-launchpad-page-renderer.md) tile renderer
+- [furo-ui5-launchpad-section-renderer](furo-ui5-launchpad-section-renderer.md) section renderer for a tile page
+- [furo-ui5-launchpad-tile-grid](furo-ui5-launchpad-tile-grid.md) tile layout component
 - [furo-ui5-context-menu-item](furo-ui5-context-menu-item.md) context menu item
 - [furo-ui5-context-submenu](furo-ui5-context-submenu.md) helper
 - [furo-ui5-table-row](furo-ui5-table-row.md) 
