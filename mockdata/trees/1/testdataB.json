@@ -244,7 +244,7 @@
       "method": "GET",
       "rel": "self",
       "type": "tree.TreeEntity",
-      "service": "TreeService"
+      "service": "treeservice.TreeService"
     }
   ]
 }
