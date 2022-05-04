@@ -48,10 +48,14 @@
 
               <furo-ui5-reference-search-labeled  newline no-data-text="some" ƒ-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
               </furo-ui5-reference-search-labeled>
+
+
             </furo-form-layouter>
 
-            <furo-data-object type="task.Task" @-object-ready="--entityReady">
+            <furo-data-object type="task.Task" @-object-ready="--entityReady" fn-validate-all-fields="--validation">
             </furo-data-object>
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
           </template>
         </furo-demo-snippet>
 
