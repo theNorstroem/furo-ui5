@@ -17,6 +17,7 @@
   <script type="module">
     import { html, render } from 'lit';
     import './initEnv.js';
+    import '../src/furo-ui5-money-input-labeled.js';
     import '../src/furo-ui5-money-input.js';
     import '@furo/layout/src/furo-form-layouter.js';
     import '@furo/data/src/furo-data-object.js';
@@ -32,9 +33,9 @@
           <template>
 
             <furo-form-layouter two>
-              <furo-ui5-money-input
+              <furo-ui5-money-input-labeled
                 ƒ-bind-data="--doExp(*.furo_data_money_input)"
-                ></furo-ui5-money-input>
+                ></furo-ui5-money-input-labeled>
               <furo-ui5-money-input
                 ƒ-bind-data="--doExp(*.furo_data_money_input)"
                 ></furo-ui5-money-input>
@@ -42,7 +43,13 @@
             <furo-data-object
               type="experiment.Experiment"
               @-object-ready="--doExp"
+              fn-validate-all-fields="--validation"
             ></furo-data-object>
+
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
+            <hr>
+
           </template>
         </furo-demo-snippet>
 
