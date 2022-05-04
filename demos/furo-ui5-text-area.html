@@ -27,6 +27,7 @@
   import '@furo/util/src/doc/furo-demo-snippet.js';
   import '@furo/layout/src/furo-form-layouter.js';
 
+  import '../src/furo-ui5-button.js'
 
   render(
     html`
@@ -43,9 +44,17 @@
                 ƒ-bind-data="--daoPerson(*.first_name)">
               </furo-ui5-textarea-input-labeled>
 
-            </furo-form-layouter>
-            <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
+              <furo-ui5-textarea-input-labeled
+                label="use with text-input"
+                ƒ-bind-data="--daoPerson(*.name)">
+              </furo-ui5-textarea-input-labeled>
 
+            </furo-form-layouter>
+            <furo-data-object type="person.Person" @-object-ready="--daoPerson" fn-validate-all-fields="--validation"></furo-data-object>
+
+
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
           </template>
         </furo-demo-snippet>
 
