@@ -49,22 +49,24 @@
                 ƒ-bind-data="--daoExp(*.furo_data_date_input)">
               </furo-ui5-date-picker>
 
-              <furo-ui5-date-picker-labeled
-                label="Simple date"
-                ƒ-bind-data="--daoExp(*.furo_data_date_input_google_req)">
-              </furo-ui5-date-picker-labeled>
-              <furo-ui5-date-picker
-                label="Simple date"
-                ƒ-bind-data="--daoExp(*.furo_data_date_input_google_req)">
-              </furo-ui5-date-picker>
-
             </furo-form-layouter>
             <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp" fn-validate-all-fields="--validation">
             </furo-data-object>
             <hr>
             <ui5-button at-click="--validation">Trigger validation</ui5-button>
 
+<hr>
+            <furo-form-layouter two>
+            <furo-ui5-date-picker-labeled
+              label="Simple date"
+              ƒ-bind-data="--daoExp(*.furo_data_date_input_google_req)">
+            </furo-ui5-date-picker-labeled>
+            <furo-ui5-date-picker
+              label="Simple date"
+              ƒ-bind-data="--daoExp(*.furo_data_date_input_google_req)">
+            </furo-ui5-date-picker>
 
+            </furo-form-layouter>
 
           </template>
         </furo-demo-snippet>
