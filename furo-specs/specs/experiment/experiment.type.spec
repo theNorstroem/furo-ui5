@@ -636,3 +636,24 @@ fields:
             required:
                 is: "true"
                 message: experiment.experiment.furodatadateinputgooglereq.constraint.required.message
+    repstring_req:
+        type: string
+        description: repeated string
+        __proto:
+            number: 31
+        __ui: null
+        meta:
+            default: ""
+            placeholder: experiment.experiment.repstringreq.placeholder
+            hint: ""
+            label: experiment.experiment.repstringreq.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: true
+            typespecific: null
+        constraints:
+            required:
+                is: "true"
+                message: experiment.experiment.repstringreq.constraint.required.message
