@@ -580,7 +580,10 @@ fields:
             readonly: false
             repeated: false
             typespecific: null
-        constraints: {}
+        constraints:
+            required:
+                is: "true"
+                message: experiment.experiment.googletimeofday.constraint.required.message
     furo_type_money:
         type: furo.type.Money
         description: furo Money

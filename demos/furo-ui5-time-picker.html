@@ -21,6 +21,7 @@
 <script type="module">
   import { html, render } from 'lit';
   import './initEnv.js';
+  import '../src/furo-ui5-time-picker-labeled.js';
   import '../src/furo-ui5-time-picker.js';
 
   import '@furo/data/src/furo-data-object.js';
@@ -39,16 +40,38 @@
 
             <furo-form-layouter two>
               <p full>
-                FuroUi5DatePicker
+                FuroUi5DatePicker (string)
               </p>
               <furo-ui5-time-picker
                 label="Simple time"
                 ƒ-bind-data="--daoExp(*.furo_data_time_input)">
               </furo-ui5-time-picker>
 
+              <furo-ui5-time-picker-labeled
+                label="Simple time"
+                ƒ-bind-data="--daoExp(*.furo_data_time_input)">
+              </furo-ui5-time-picker-labeled>
+
+ <p full>
+                FuroUi5DatePicker (google.type.TimeOfDay)
+              </p>
+              <furo-ui5-time-picker
+                label="Simple time"
+                ƒ-bind-data="--daoExp(*.google_timeofday)">
+              </furo-ui5-time-picker>
+
+              <furo-ui5-time-picker-labeled
+                label="Simple time"
+                ƒ-bind-data="--daoExp(*.google_timeofday)">
+              </furo-ui5-time-picker-labeled>
+
             </furo-form-layouter>
-            <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp"></furo-data-object>
-            </furo-entity-agent>
+            <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp"  fn-validate-all-fields="--validation"></furo-data-object>
+
+
+
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
 
 
           </template>

@@ -27,7 +27,7 @@
     double: 'double:25 #double type'
     int64: 'int64:26 #double type'
     furo_type_date: 'furo.type.Date:27 #furo date'
-    google_timeofday: 'google.type.TimeOfDay:28 #google TimeOfDay'
+    google_timeofday: '* google.type.TimeOfDay:28 #google TimeOfDay'
     furo_type_money: 'furo.type.Money:29 #furo Money'
     furo_data_date_input_google_req: '* google.type.Date:30 #field for furo-data-date-input for testing'
   target: experiment.proto
