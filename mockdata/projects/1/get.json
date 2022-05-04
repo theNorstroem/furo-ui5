@@ -84,14 +84,14 @@
       "method": "GET",
       "rel": "self",
       "type": "project.ProjectEntity",
-      "service": "ProjectService"
+      "service": "projectservice.ProjectService"
     },
     {
       "href": "/mockdata/projects/1/update.json",
       "method": "UPDATE",
       "rel": "update",
       "type": "project.ProjectEntity",
-      "service": "ProjectService"
+      "service": "projectservice.ProjectService"
     }
   ]
 }

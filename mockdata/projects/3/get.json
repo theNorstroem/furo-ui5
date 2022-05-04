@@ -42,7 +42,7 @@
       "method": "GET",
       "rel": "self",
       "type": "project.ProjectEntity",
-      "service": "ProjectService"
+      "service": "projectservice.ProjectService"
     }
   ]
 }
