@@ -67,11 +67,7 @@
               </p>
 
               <furo-ui5-combobox-labeled
-                display-field-path="data.name"
-                desc-field-path="data.display_name"
-                ƒ-bind-data="--daoPerson(*.name)"
-                ƒ-bind-options="--collection(*.entities)"
-                @-search-requested="--searchRequest">
+                ƒ-bind-data="--daoPerson(*.sex_req)">
               </furo-ui5-combobox-labeled>
 
             </furo-form-layouter>
