@@ -183,7 +183,10 @@ fields:
             readonly: false
             repeated: false
             typespecific: null
-        constraints: {}
+        constraints:
+            required:
+                is: "true"
+                message: universaltest.universaltest.wrapperbool.constraint.required.message
     fat_bool:
         type: furo.fat.Bool
         description: field of a fat bool for the Universaltest

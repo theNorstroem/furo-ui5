@@ -20,16 +20,30 @@
   import '@furo/util/src/doc/furo-demo-snippet.js';
   import '@furo/data/src/furo-data-object.js';
   import '@furo/data/src/furo-catalog.js';
+
+  import '../src/furo-ui5-checkbox-input-labeled.js';
   import '../src/furo-ui5-checkbox-input.js';
+  import '../src/furo-ui5-button.js';
 
 
   render(
     html`
       <furo-demo-snippet>
         <template>
+
           <furo-ui5-checkbox-input ƒ-bind-data="--dao(*.fat_bool)" @-click="--cb1Clicked"></furo-ui5-checkbox-input>
+          <br>
+          <furo-ui5-checkbox-input-labeled ƒ-bind-data="--dao(*.wrapper_bool)" ƒ-uncheck="--cb1Clicked"></furo-ui5-checkbox-input-labeled>
+          <br>
           <furo-ui5-checkbox-input ƒ-bind-data="--dao(*.wrapper_bool)" ƒ-uncheck="--cb1Clicked"></furo-ui5-checkbox-input>
-          <furo-data-object type="universaltest.Universaltest" @-object-ready="--dao"></furo-data-object>
+          <br>
+
+
+          <furo-data-object type="universaltest.Universaltest" @-object-ready="--dao" fn-validate-all-fields="--validation"></furo-data-object>
+
+
+          <hr>
+          <ui5-button at-click="--validation">Trigger validation</ui5-button>
         </template>
       </furo-demo-snippet>
     `,
