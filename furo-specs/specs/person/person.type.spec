@@ -7,6 +7,7 @@ __proto:
     targetfile: person.proto
     imports:
         - google/protobuf/field_mask.proto
+        - google/protobuf/wrappers.proto
     options:
         go_package: github.com/eclipse/eclipsefuro-web/furo-specs/dist/pb/person;personpb
         java_multiple_files: "true"
@@ -230,3 +231,24 @@ fields:
             required:
                 is: "true"
                 message: person.person.sexreq.constraint.required.message
+    bmi_req:
+        type: google.protobuf.Int32Value
+        description: bmi, with options
+        __proto:
+            number: 11
+        __ui: null
+        meta:
+            default: ""
+            placeholder: person.person.bmireq.placeholder
+            hint: ""
+            label: person.person.bmireq.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints:
+            required:
+                is: "true"
+                message: person.person.bmireq.constraint.required.message

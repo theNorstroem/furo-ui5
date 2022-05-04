@@ -71,7 +71,7 @@
               </furo-ui5-combobox-labeled>
 
             </furo-form-layouter>
-            <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
+            <furo-data-object type="person.Person" @-object-ready="--daoPerson" fn-validate-all-fields="--validation"></furo-data-object>
 
             <furo-data-object type="person.PersonCollection" @-object-ready="--collection" ƒ-inject-raw="--response"></furo-data-object>
 

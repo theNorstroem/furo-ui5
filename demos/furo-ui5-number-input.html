@@ -21,6 +21,7 @@
 <script type="module">
   import { html, render } from 'lit';
   import './initEnv.js';
+  import '../src/furo-ui5-number-input-labeled.js';
   import '../src/furo-ui5-number-input.js';
   import '@furo/data/src/furo-data-object.js';
   import '@furo/util/src/doc/furo-demo-snippet.js';
@@ -40,10 +41,14 @@
               </furo-ui5-number-input>
 
             <furo-ui5-number-input ƒ-bind-data="--daoPerson(*.bmi)"></furo-ui5-number-input>
+            <furo-ui5-number-input-labeled ƒ-bind-data="--daoPerson(*.bmi_req)"></furo-ui5-number-input-labeled>
             </furo-form-layouter>
 
 
-            <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
+            <furo-data-object type="person.Person" @-object-ready="--daoPerson"  fn-validate-all-fields="--validation" ></furo-data-object>
+
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
 
 
           </template>
