@@ -21,6 +21,7 @@
 <script type="module">
   import { html, render } from 'lit';
   import './initEnv.js';
+  import '../src/furo-ui5-text-input-labeled.js';
   import '../src/furo-ui5-text-input.js';
 
   import '@furo/route/src/furo-location.js';
@@ -72,9 +73,12 @@
                 ƒ-bind-options="--collection(*.entities)">
                 <ui5-icon slot="icon" name="search" interactive @-click="--iconClicked"></ui5-icon>
               </furo-ui5-text-input>
+
+              <p full>Required</p>
+              <furo-ui5-text-input-labeled fn-bind-data="--daoPerson(*.name)"></furo-ui5-text-input-labeled>
             </furo-form-layouter>
 
-            <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
+            <furo-data-object type="person.Person" @-object-ready="--daoPerson"  fn-validate-all-fields="--validation"></furo-data-object>
 
             <furo-data-object type="person.PersonCollection" @-object-ready="--collection" ƒ-inject-raw="--response"></furo-data-object>
 
@@ -85,6 +89,8 @@
             </furo-collection-agent>
 
 
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
           </template>
         </furo-demo-snippet>
 
