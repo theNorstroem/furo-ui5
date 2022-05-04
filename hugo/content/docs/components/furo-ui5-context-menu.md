@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-context-menu
-**@furo/ui5** <small>v1.1.4</small>
+**@furo/ui5** <small>v1.3.0-rc.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-context-menu.js';`<small>
 <br>exports *FuroUi5ContextMenu* js
 <br>exports `<furo-ui5-context-menu>` custom-element-definition
@@ -40,6 +40,15 @@ use the `furo-ui5-context-menu`. The app-shell or even body is a good place for 
    command: 'string:4 #Keyboard command hint'
    leading_divider: 'bool:5 #Item has a leading divider line'
    children: '[] menu.Menuitem:6 #Children of this item'
+```
+
+## Minimal data signature
+
+```yaml
+- type: 'menu.Menuitem #Item signature for a context menu'
+ fields:
+   id: 'string:1 #Id of the menu item'
+   display_name: 'string:2 #String representation of the menu item. Menu item text'
 ```
 
 {{% api "_furo-ui5-context-menu-head.md" %}}

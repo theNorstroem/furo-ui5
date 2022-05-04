@@ -1,16 +1,16 @@
 import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
-import './furo-launchpad-section-renderer.js';
+import './furo-ui5-launchpad-section-renderer.js';
 
 /**
- * `furo-launchpad-page-renderer`
+ * `furo-ui5-launchpad-page-renderer`
  *  Renders a page of a space.
  *
  * @summary tile renderer
- * @customElement furo-launchpad-page-renderer
+ * @customElement furo-ui5-launchpad-page-renderer
  * @appliesMixin FBP
  */
-class FuroLaunchpadPageRenderer extends FBP(LitElement) {
+class FuroUi5LaunchpadPageRenderer extends FBP(LitElement) {
   /**
    * flow is ready lifecycle method
    */
@@ -24,7 +24,7 @@ class FuroLaunchpadPageRenderer extends FBP(LitElement) {
      */
     this._FBPAddWireHook('--sectionsAppended', () => {
       this._fisrtSection = this.shadowRoot.querySelector(
-        'furo-launchpad-section-renderer'
+        'furo-ui5-launchpad-section-renderer'
       );
       if (this._fisrtSection) {
         this._fisrtSection.focus();
@@ -84,9 +84,9 @@ class FuroLaunchpadPageRenderer extends FBP(LitElement) {
         at-items-in-dom="--sectionsAppended"
       >
         <template>
-          <furo-launchpad-section-renderer
+          <furo-ui5-launchpad-section-renderer
             fn-bind-section="--init"
-          ></furo-launchpad-section-renderer>
+          ></furo-ui5-launchpad-section-renderer>
         </template>
       </furo-data-flow-repeat>
 
@@ -100,6 +100,6 @@ class FuroLaunchpadPageRenderer extends FBP(LitElement) {
 }
 
 window.customElements.define(
-  'furo-launchpad-page-renderer',
-  FuroLaunchpadPageRenderer
+  'furo-ui5-launchpad-page-renderer',
+  FuroUi5LaunchpadPageRenderer
 );

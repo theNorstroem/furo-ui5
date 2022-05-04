@@ -3,17 +3,17 @@ import { FBP } from '@furo/fbp';
 import '@ui5/webcomponents/dist/TabContainer.js';
 import '@ui5/webcomponents/dist/Tab.js';
 /**
- * `furo-launchpad-navigation`
+ * `furo-ui5-launchpad-navigation`
  *
  * Is used to navigate between spaces and pages.
  *
  * @fires page-selected {Object} Fired when a page was selected. The object contains the page:id
  *
  * @summary Spaces navigation tabs
- * @customElement furo-launchpad-navigation
+ * @customElement furo-ui5-launchpad-navigation
  * @appliesMixin FBP
  */
-class FuroLaunchpadNavigation extends FBP(LitElement) {
+class FuroUi5LaunchpadNavigation extends FBP(LitElement) {
   bindSpaces(fn) {
     const TC = this.shadowRoot.getElementById('TC');
 
@@ -96,6 +96,6 @@ class FuroLaunchpadNavigation extends FBP(LitElement) {
 }
 
 window.customElements.define(
-  'furo-launchpad-navigation',
-  FuroLaunchpadNavigation
+  'furo-ui5-launchpad-navigation',
+  FuroUi5LaunchpadNavigation
 );
