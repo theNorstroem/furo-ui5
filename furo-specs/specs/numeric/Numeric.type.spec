@@ -113,3 +113,87 @@ fields:
             repeated: false
             typespecific: null
         constraints: {}
+    bigdecimal_req:
+        type: furo.BigDecimal
+        description: no description
+        __proto:
+            number: 6
+        __ui: null
+        meta:
+            default: ""
+            placeholder: numeric.numeric.bigdecimalreq.placeholder
+            hint: ""
+            label: numeric.numeric.bigdecimalreq.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints:
+            required:
+                is: "true"
+                message: numeric.numeric.bigdecimalreq.constraint.required.message
+    bigdecimal_min:
+        type: furo.BigDecimal
+        description: no description
+        __proto:
+            number: 7
+        __ui: null
+        meta:
+            default: ""
+            placeholder: numeric.numeric.bigdecimalmin.placeholder
+            hint: ""
+            label: numeric.numeric.bigdecimalmin.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints:
+            min:
+                is: "5"
+                message: numeric.numeric.bigdecimalreq.constraint.min.message
+    bigdecimal_max:
+        type: furo.BigDecimal
+        description: no description
+        __proto:
+            number: 8
+        __ui: null
+        meta:
+            default: ""
+            placeholder: numeric.numeric.bigdecimalmax.placeholder
+            hint: ""
+            label: numeric.numeric.bigdecimalmax.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints:
+            max:
+                is: "5"
+                message: numeric.numeric.bigdecimalreq.constraint.max.message
+    bigdecimal_step:
+        type: furo.BigDecimal
+        description: no description
+        __proto:
+            number: 9
+        __ui: null
+        meta:
+            default: ""
+            placeholder: numeric.numeric.bigdecimalstep.placeholder
+            hint: ""
+            label: numeric.numeric.bigdecimalstep.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints:
+            step:
+                is: "0.005"
+                message: numeric.numeric.bigdecimalreq.constraint.step.message

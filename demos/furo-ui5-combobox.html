@@ -5,6 +5,9 @@
   <style>
     body {
       background: #fafafa;
+
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
     }
     furo-demo-snippet{
       height: 90vh;
@@ -18,6 +21,7 @@
 <script type="module">
   import { html, render } from 'lit';
   import './initEnv.js';
+  import '../src/furo-ui5-combobox-labeled.js';
   import '../src/furo-ui5-combobox.js';
 
   import '@furo/route/src/furo-location.js';
@@ -48,6 +52,8 @@
               <p full>
                 Lazy loaded combobox items
               </p>
+
+
               <furo-ui5-combobox
                 display-field-path="data.name"
                 desc-field-path="data.display_name"
@@ -56,20 +62,32 @@
                 @-search-requested="--searchRequest">
               </furo-ui5-combobox>
 
+              <p full>
+                Required
+              </p>
+
+              <furo-ui5-combobox-labeled
+                ƒ-bind-data="--daoPerson(*.sex_req)">
+              </furo-ui5-combobox-labeled>
+
             </furo-form-layouter>
-            <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
+            <furo-data-object type="person.Person" @-object-ready="--daoPerson" fn-validate-all-fields="--validation"></furo-data-object>
 
             <furo-data-object type="person.PersonCollection" @-object-ready="--collection" ƒ-inject-raw="--response"></furo-data-object>
 
             <furo-location @-location-changed="--locationChanged"></furo-location>
-            <furo-deep-link service="PersonService" @-hts-out="--hts" ƒ-qp-in="--locationChanged(*.query)"></furo-deep-link>
+            <furo-deep-link service="personservice.PersonService" @-hts-out="--hts" ƒ-qp-in="--locationChanged(*.query)"></furo-deep-link>
 
-            <furo-collection-agent service="PersonService"
+            <furo-collection-agent service="personservice.PersonService"
                                    ƒ-hts-in="--hts"
                                    ƒ-search="--searchRequest"
                                    @-response="--response">
             </furo-collection-agent>
 
+
+
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
 
           </template>
         </furo-demo-snippet>

@@ -20,7 +20,7 @@
       "method": "GET",
       "rel": "self",
       "type": "projectfilter.ProjectfilterEntity",
-      "service": "ProjectfilterService"
+      "service": "projectservice.ProjectfilterService"
     }
   ]
 }

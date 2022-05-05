@@ -5,6 +5,9 @@
   <style>
     body {
       background: #fafafa;
+
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
     }
     furo-demo-snippet{
       height: 90vh;
@@ -57,10 +60,14 @@
               <furo-ui5-text-input
                 label="use with text-input"
                 value-state="Success" ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-text-input>
+
+
+
             </furo-form-layouter>
 
 
-            <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
+            <furo-data-object type="person.Person" @-object-ready="--daoPerson" ></furo-data-object>
+
 
           </template>
         </furo-demo-snippet>

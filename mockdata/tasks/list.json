@@ -22,7 +22,7 @@
           "method": "GET",
           "rel": "self",
           "type": "task.TaskEntity",
-          "service": "TaskService"
+          "service": "taskservice.TaskService"
         }
       ]
     },
@@ -48,7 +48,7 @@
           "method": "GET",
           "rel": "self",
           "type": "task.TaskEntity",
-          "service": "TaskService"
+          "service": "taskservice.TaskService"
         }
       ]
     },
@@ -74,7 +74,7 @@
           "method": "GET",
           "rel": "self",
           "type": "task.TaskEntity",
-          "service": "TaskService"
+          "service": "taskservice.TaskService"
         }
       ]
     },
@@ -100,7 +100,7 @@
           "method": "GET",
           "rel": "self",
           "type": "task.TaskEntity",
-          "service": "TaskService"
+          "service": "taskservice.TaskService"
         }
       ]
     }
@@ -111,21 +111,21 @@
       "method": "GET",
       "rel": "list",
       "type": "task.TaskCollection",
-      "service": "TaskService"
+      "service": "taskservice.TaskService"
     },
     {
       "href": "/mockdata/tasks/list.json?page=2",
       "method": "GET",
       "rel": "next",
       "type": "task.TaskCollection",
-      "service": "TaskService"
+      "service": "taskservice.TaskService"
     },
     {
       "href": "/mockdata/tasks/list.json?page=2",
       "method": "GET",
       "rel": "last",
       "type": "task.TaskCollection",
-      "service": "TaskService"
+      "service": "taskservice.TaskService"
     }
   ]
 }

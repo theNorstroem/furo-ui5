@@ -5,6 +5,9 @@
   <style>
     body {
       background: #fafafa;
+
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
     }
     furo-demo-snippet{
       height: 90vh;
@@ -74,11 +77,30 @@
               <div >form:</div>
               <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></form-furo-bigdecimal>
 
+              <div newline full >REQUIRED:</div>
+              <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal_req)"></form-furo-bigdecimal>
+
+              <furo-ui5-number-input-labeled
+
+                ƒ-bind-data="--numT(*.bigdecimal_req)">
+              </furo-ui5-number-input-labeled>
 
 
-                          </furo-form-layouter>
+              <div newline full >min:</div>
+              <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal_min)"></form-furo-bigdecimal>
 
-            <furo-data-object type="numeric.Numeric" @-object-ready="--numT" @-data-changed="--d"></furo-data-object>
+
+              <div newline full >max:</div>
+              <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal_max)"></form-furo-bigdecimal>
+
+              <div newline full >step: 0.005</div>
+              <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal_step)"></form-furo-bigdecimal>
+
+            </furo-form-layouter>
+
+            <furo-data-object type="numeric.Numeric" @-object-ready="--numT" @-data-changed="--d"  fn-validate-all-fields="--validation"></furo-data-object>
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
 
             <furo-pretty-json ƒ-inject-data="--d(*._value)"></furo-pretty-json>
 

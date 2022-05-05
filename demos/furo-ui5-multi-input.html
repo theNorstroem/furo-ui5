@@ -5,6 +5,9 @@
   <style>
     body {
       background: #fafafa;
+
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
     }
     furo-demo-snippet{
       height: 90vh;
@@ -43,9 +46,21 @@
                 ƒ-bind-data="--daoExp(*.repstring)">
               </furo-ui5-multi-input>
 
-            </furo-form-layouter>
-            <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp"></furo-data-object>
 
+              <p full>
+                FuroUi5MultiInput required
+              </p>
+              <furo-ui5-multi-input
+                label="use with text-input"
+                ƒ-bind-data="--daoExp(*.repstring_req)">
+              </furo-ui5-multi-input>
+
+            </furo-form-layouter>
+            <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp" fn-validate-all-fields="--validation"></furo-data-object>
+
+
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
 
           </template>
         </furo-demo-snippet>

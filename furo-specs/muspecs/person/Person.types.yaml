@@ -9,4 +9,6 @@
     update_mask: 'google.protobuf.FieldMask:7 #Contains a field_mask which fields of the targeted resource are going to be updated'
     sex: 'string:8 #sex'
     bmi: 'int32:9 #bmi, with options'
+    sex_req: '* string:10 #sex'
+    bmi_req: '* google.protobuf.Int32Value:11 #bmi, with options'
   target: person.proto

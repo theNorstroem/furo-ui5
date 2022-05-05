@@ -5,6 +5,9 @@
   <style>
     body {
       background: #fafafa;
+
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
     }
 
     furo-demo-snippet {
@@ -80,11 +83,11 @@
 
           <furo-deep-link
             ƒ-trigger="--btnListClicked"
-            service="ProjectService"
+            service="projectservice.ProjectService"
             @-hts-out="--hts"
           ></furo-deep-link>
           <furo-collection-agent
-            service="ProjectService"
+            service="projectservice.ProjectService"
             ƒ-hts-in="--hts"
             ƒ-list="--changeDataClicked"
             list-on-hts-in

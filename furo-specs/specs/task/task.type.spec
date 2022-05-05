@@ -104,10 +104,7 @@ fields:
             readonly: false
             repeated: false
             typespecific: null
-        constraints:
-            required:
-                is: "true"
-                message: task.task.owner.constraint.required.message
+        constraints: {}
     subtasks:
         type: task.Task
         description: List of subtasks
@@ -124,3 +121,30 @@ fields:
             repeated: true
             typespecific: null
         constraints: {}
+    owner_req:
+        type: furo.Reference
+        description: Owner of a task'
+        __proto:
+            number: 7
+        __ui: null
+        meta:
+            default: |-
+                {"link" :
+                    { "rel": "list",
+                      "href": "/mockdata/persons/list.json",
+                      "method": "GET",
+                      "type": "person.Person",
+                      "service": "personservice.PersonService"}}
+            placeholder: task.task.ownerreq.placeholder
+            hint: ""
+            label: task.task.ownerreq.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints:
+            required:
+                is: "true"
+                message: task.task.ownerreq.constraint.required.message

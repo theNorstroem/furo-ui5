@@ -19,7 +19,7 @@ class CellFuroBigdecimal extends CellFloat {
     /**
      * Sets the attributes from the field node
      */
-    if (this._field.attributes['value-state']) {
+    if (this._field.attributes && this._field.attributes['value-state']) {
       const state = this._field.attributes['value-state']._value;
       this.setAttribute('value-state', state);
       if (state !== 'None' && this._field.attributes['value-state-message']) {
