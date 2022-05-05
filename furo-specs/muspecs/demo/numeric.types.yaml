@@ -6,4 +6,7 @@
     int: 'int64:4 #Int value'
     fatint: 'furo.fat.Int64:5 #fat Int value'
     bigdecimal_req: '* furo.BigDecimal:6 #'
+    bigdecimal_min: 'furo.BigDecimal:7 #'
+    bigdecimal_max: 'furo.BigDecimal:8 #'
+    bigdecimal_step: 'furo.BigDecimal:9 #'
   target: numeric.proto

@@ -85,7 +85,18 @@
                 ƒ-bind-data="--numT(*.bigdecimal_req)">
               </furo-ui5-number-input-labeled>
 
-                          </furo-form-layouter>
+
+              <div newline full >min:</div>
+              <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal_min)"></form-furo-bigdecimal>
+
+
+              <div newline full >max:</div>
+              <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal_max)"></form-furo-bigdecimal>
+
+              <div newline full >step: 0.005</div>
+              <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal_step)"></form-furo-bigdecimal>
+
+            </furo-form-layouter>
 
             <furo-data-object type="numeric.Numeric" @-object-ready="--numT" @-data-changed="--d"  fn-validate-all-fields="--validation"></furo-data-object>
             <hr>
