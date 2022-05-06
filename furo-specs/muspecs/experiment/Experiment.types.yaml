@@ -31,4 +31,6 @@
     furo_type_money: 'furo.type.Money:29 #furo Money'
     furo_data_date_input_google_req: '* google.type.Date:30 #field for furo-data-date-input for testing'
     repstring_req: '* [] string:31 #repeated string'
+    enum: 'experiment.Enum:32 #Enum'
+
   target: experiment.proto

@@ -6,6 +6,7 @@ __proto:
     package: experiment
     targetfile: experiment.proto
     imports:
+        - experiment/enums.proto
         - furo/property.proto
         - furo/type/type.proto
         - google/protobuf/any.proto
@@ -611,6 +612,24 @@ fields:
                       display_name: USD
                       id: usd
                       selected: false
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints: {}
+    enum:
+        type: experiment.Enum
+        description: Enum
+        __proto:
+            number: 32
+        __ui: null
+        meta:
+            default: ""
+            placeholder: experiment.experiment.enum.placeholder
+            hint: ""
+            label: experiment.experiment.enum.label
+            options:
+                flags: []
+                list: []
             readonly: false
             repeated: false
             typespecific: null

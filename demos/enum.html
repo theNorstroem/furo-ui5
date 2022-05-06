@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
+    }
+    furo-demo-snippet{
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import { html, render } from 'lit';
+  import './initEnv.js';
+  import '../src/furo-ui5-select.js';
+  import '../src/furo-ui5-select-labeled.js';
+
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+
+  import '@ui5/webcomponents/dist/Icon.js';
+  import '@ui5/webcomponents-icons/dist/search.js';
+
+
+  render(
+    html`
+
+        <furo-demo-snippet>
+          <template>
+
+            <furo-form-layouter two>
+              <furo-ui5-select
+                value-state="Warning"
+                label="Use with select"
+                ƒ-bind-data="--daoExp(*.enum)"></furo-ui5-select>
+
+
+              <furo-ui5-select-labeled
+                value-state="Warning"
+                label="Use with select"
+                ƒ-bind-data="--daoExp(*.enum)"></furo-ui5-select-labeled>
+
+            </furo-form-layouter>
+            <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp" fn-validate-all-fields="--validation"></furo-data-object>
+
+
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
+
+          </template>
+        </furo-demo-snippet>
+
+
+      `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>

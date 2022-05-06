@@ -1,0 +1,8 @@
+- enum: 'experiment.Enum #Description for a enum sample with aliases'
+  values:
+    UNKNOWN: 0
+    STARTED: 1
+    RUNNING: 1
+    COMPLETE: 2
+  target: enums.proto
+  alias: true # this is needed when you want to allow aliases

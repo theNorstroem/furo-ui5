@@ -16,7 +16,7 @@ __proto:
         objc_class_prefix: FPB
 fields:
     id:
-        type: int32
+        type: string
         description: Id
         __proto:
             number: 1
