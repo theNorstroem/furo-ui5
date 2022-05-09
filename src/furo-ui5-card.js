@@ -195,7 +195,7 @@ export class FuroUi5Card extends FBP(LitElement) {
       }
 
       ::slotted([slot='content']) {
-        padding: var(--_ui5_card_content_padding);
+        padding: var(--_ui5_card_header_padding, 1rem);
       }
 
       :host([no-content-padding]) ::slotted([slot='content']) {

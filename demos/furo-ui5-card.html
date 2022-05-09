@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+      --furo-form-layouter-row-gap: 8px;
+      --furo-form-layouter-column-gap: 8px;
+    }
+
+    furo-demo-snippet {
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import {html, render} from 'lit';
+  import './initEnv.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+  import '@furo/layout/src/furo-horizontal-flex.js';
+
+  import '@ui5/webcomponents/dist/Icon.js';
+  import '@ui5/webcomponents/dist/Table.js';
+  import '@ui5/webcomponents/dist/TableColumn.js';
+  import '@ui5/webcomponents/dist/TableRow.js';
+  import '@ui5/webcomponents/dist/TableCell.js';
+  import '@ui5/webcomponents-icons/dist/filter.js';
+  import '@ui5/webcomponents-icons/dist/action-settings.js';
+  import '@ui5/webcomponents-icons/dist/sort.js';
+  import '../src/furo-ui5-text-input.js';
+  import '../src/furo-ui5-card.js';
+  import '../src/furo-ui5-button.js';
+  import '../src/furo-ui5-reference-search.js';
+  import '../src/furo-ui5-typerenderer-labeled.js';
+
+  render(
+    html`
+      <furo-demo-snippet>
+        <template>
+           <furo-ui5-card heading="Furo Ui5 Card" no-content-padding subheading="subheading" icon="sort">
+
+                <ui5-table mode="SingleSelect"
+                           slot="content"
+                           show-no-data
+                           no-data-text="No data">
+                  <!-- Columns -->
+                  <ui5-table-column slot="columns" style="width: 12rem">
+                    <span style="line-height: 1.4rem">Product</span>
+                  </ui5-table-column>
+
+                  <ui5-table-column slot="columns" min-width="800">
+                    <span style="line-height: 1.4rem">Supplier</span>
+                  </ui5-table-column>
+
+                  <ui5-table-column slot="columns" min-width="600" popin-text="Dimensions" demand-popin>
+                    <span style="line-height: 1.4rem">Dimensions</span>
+                  </ui5-table-column>
+
+                  <ui5-table-column slot="columns" min-width="600" popin-text="Weight" demand-popin>
+                    <span style="line-height: 1.4rem">Weight</span>
+                  </ui5-table-column>
+
+                  <ui5-table-column slot="columns">
+                    <span style="line-height: 1.4rem">Price</span>
+                  </ui5-table-column>
+
+                  <ui5-table-row>
+                    <ui5-table-cell>Notebook Basic 15HT-1000</ui5-table-cell>
+                    <ui5-table-cell>Very Best Screens</ui5-table-cell>
+                    <ui5-table-cell>30 x 18 x 3cm</ui5-table-cell>
+                    <ui5-table-cell>4.2KG</ui5-table-cell>
+                    <ui5-table-cell>956EUR</ui5-table-cell>
+                  </ui5-table-row>
+
+                  <ui5-table-row>
+                    <ui5-table-cell>Notebook Basic 17HT-1001</ui5-table-cell>
+                    <ui5-table-cell>Very Best Screens</ui5-table-cell>
+                    <ui5-table-cell>29 x 17 x 3.1cm</ui5-table-cell>
+                    <ui5-table-cell>4.5KG</ui5-table-cell>
+                    <ui5-table-cell>1249EUR</ui5-table-cell>
+                  </ui5-table-row>
+
+                  <ui5-table-row>
+                    <ui5-table-cell>Notebook Basic 18HT-1002</ui5-table-cell>
+                    <ui5-table-cell>Very Best Screens</ui5-table-cell>
+                    <ui5-table-cell>28 x 19 x 2.5cm</ui5-table-cell>
+                    <ui5-table-cell>4.2KG</ui5-table-cell>
+                    <ui5-table-cell>1570EUR</ui5-table-cell>
+                  </ui5-table-row>
+
+                </ui5-table>
+
+                <furo-horizontal-flex space slot="action">
+                  <furo-ui5-reference-search></furo-ui5-reference-search>
+                  <ui5-button icon="sort" design="Transparent" accessible-name-ref="lblSort"></ui5-button>
+                  <ui5-button icon="filter" design="Transparent" accessible-name-ref="lblFilter"></ui5-button>
+                  <ui5-button icon="action-settings" design="Transparent"
+                              accessible-name-ref="lblActionSettings"></ui5-button>
+                </furo-horizontal-flex>
+
+                <div slot="more">
+                  <furo-form-layouter three>
+                    <furo-ui5-text-input ƒ-bind-data="--dao(*.scalar_string)"></furo-ui5-text-input>
+                    <furo-ui5-text-input ƒ-bind-data="--dao(*.wrapper_string)"></furo-ui5-text-input>
+                    <furo-ui5-text-input ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-text-input>
+                  </furo-form-layouter>
+                </div>
+
+            </furo-ui5-card>
+
+          <furo-ui5-card heading="Furo Ui5 Card with auto padding" design="Negative" subheading="subheading" icon="action-settings">
+            <furo-form-layouter two slot="content">
+
+              <furo-ui5-typerenderer-labeled ƒ-bind-data="--dao(*.fat_bool)"></furo-ui5-typerenderer-labeled>
+              <furo-ui5-typerenderer-labeled ƒ-bind-data="--dao(*.fat_double)"></furo-ui5-typerenderer-labeled>
+              <furo-ui5-typerenderer-labeled ƒ-bind-data="--dao(*.fat_float)"></furo-ui5-typerenderer-labeled>
+              <furo-ui5-typerenderer-labeled ƒ-bind-data="--dao(*.fat_string)"></furo-ui5-typerenderer-labeled>
+            </furo-form-layouter>
+          </furo-ui5-card>
+
+          <furo-data-object type="universaltest.Universaltest" @-object-ready="--dao"></furo-data-object>
+        </template>
+      </furo-demo-snippet>
+    `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>
