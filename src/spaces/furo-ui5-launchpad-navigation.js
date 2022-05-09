@@ -30,6 +30,15 @@ class FuroUi5LaunchpadNavigation extends FBP(LitElement) {
     return this._currentTab === tab;
   }
 
+  /**
+   * focus Focuses the first tab
+   * @public
+
+   */
+  focus() {
+    this._firstTab.focus();
+  }
+
   bindSpaces(fn) {
     const TC = this.shadowRoot.getElementById('TC');
 
@@ -39,6 +48,11 @@ class FuroUi5LaunchpadNavigation extends FBP(LitElement) {
       // set page id, not space id
       node.id = space.pages.repeats[0].id._value;
       node.selected = this._checkInitialTab(space.pages.repeats[0].id._value);
+
+      // store focuspoint on first node
+      if (this._firstTab === undefined) {
+        this._firstTab = node;
+      }
 
       if (space.pages.repeats.length > 1) {
         space.pages.repeats.forEach(t => {
