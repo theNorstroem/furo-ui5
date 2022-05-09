@@ -14,6 +14,22 @@ import '@ui5/webcomponents/dist/Tab.js';
  * @appliesMixin FBP
  */
 class FuroUi5LaunchpadNavigation extends FBP(LitElement) {
+  constructor() {
+    super();
+    const urlParams = new URLSearchParams(window.location.search);
+    this._currentTab = urlParams.get('page');
+  }
+
+  /**
+   * check if the current tab is selected
+   * @param tab
+   * @return {boolean}
+   * @private
+   */
+  _checkInitialTab(tab) {
+    return this._currentTab === tab;
+  }
+
   bindSpaces(fn) {
     const TC = this.shadowRoot.getElementById('TC');
 
@@ -22,6 +38,7 @@ class FuroUi5LaunchpadNavigation extends FBP(LitElement) {
       node.text = space.display_name._value;
       // set page id, not space id
       node.id = space.pages.repeats[0].id._value;
+      node.selected = this._checkInitialTab(space.pages.repeats[0].id._value);
 
       if (space.pages.repeats.length > 1) {
         space.pages.repeats.forEach(t => {
@@ -30,6 +47,9 @@ class FuroUi5LaunchpadNavigation extends FBP(LitElement) {
           subtab.text = t.display_name._value;
 
           subtab.id = t.id._value;
+
+          subtab.selected = this._checkInitialTab(t.id._value);
+
           if (t.icon) {
             subtab.icon = t.icon._value;
           }
