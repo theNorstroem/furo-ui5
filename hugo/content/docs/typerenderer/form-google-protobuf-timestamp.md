@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-google-protobuf-timestamp
-**@furo/ui5** <small>v1.1.4</small>
+**@furo/ui5** <small>v1.3.0-rc.0</small>
 <br>`import '@furo/ui5/src/typerenderer/form-google-protobuf-timestamp.js';`<small>
 <br>exports `<form-google-protobuf-timestamp>` custom-element-definition
 <br>extends */src/furo-ui5-date-time-picker-labeled.js*

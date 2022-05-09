@@ -160,3 +160,9 @@ import './form-furo-numberproperty.js';
 import './form-furo-integerproperty.js';
 import './form-furo-stringoptionproperty.js';
 import './form-furo-stringproperty.js';
+
+// tile and line renderers:
+import './tile-launchpad-launchtile.js';
+import './line-launchpad-launchtile.js';
+import './tile-launchpad-monitortile.js';
+import './line-launchpad-monitortile.js';

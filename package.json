@@ -35,7 +35,7 @@
     "@furo/fbp": "^6.3.1",
     "@furo/framework": "^2.1.1",
     "@furo/layout": "^2.0.5",
-    "@furo/data": "^2.2.0",
+    "@furo/data": "^2.1.0",
     "@furo/util": "^2.0.6",
     "@furo/route": "^2.0.6",
     "@ui5/webcomponents": "^1.2.4",

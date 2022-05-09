@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-fat-string
-**@furo/ui5** <small>v1.1.4</small>
+**@furo/ui5** <small>v1.3.0-rc.0</small>
 <br>`import '@furo/ui5/src/typerenderer/display-furo-fat-string.js';`<small>
 <br>exports `<display-furo-fat-string>` custom-element-definition
 <br>superclass *LitElement*</small>
