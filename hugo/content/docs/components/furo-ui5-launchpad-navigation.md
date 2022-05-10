@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-launchpad-navigation
-**@furo/ui5** <small>v1.3.0-rc.0</small>
+**@furo/ui5** <small>v1.4.1</small>
 <br>`import '@furo/ui5/src/spaces/furo-ui5-launchpad-navigation.js';`<small>
 <br>exports `<furo-ui5-launchpad-navigation>` custom-element-definition
 <br>superclass *LitElement*
@@ -27,6 +27,14 @@ Is used to navigate between spaces and pages.
 
 
 
+
+
+
+### **_currentTab**
+</small>
+
+
+<br><br>
 ## Events
 {{% api "_furo-ui5-launchpad-navigation-events.md" %}}
 
@@ -40,6 +48,17 @@ Is used to navigate between spaces and pages.
 ## Methods
 {{% api "_furo-ui5-launchpad-navigation-methods.md" %}}
 
+
+
+### **focus**
+<small>**focus**() ⟹ `void`</small>
+
+<small>`*`</small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span>
+
+focus Focuses the first tab
+
+<br><br>
 
 ### **bindSpaces**
 <small>**bindSpaces**(*fn* `` ) ⟹ `void`</small>
@@ -61,6 +80,7 @@ Is used to navigate between spaces and pages.
 flow is ready lifecycle method
 
 <br><br>
+
 
 
 

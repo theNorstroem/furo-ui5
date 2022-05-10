@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-launchpad-page-renderer
-**@furo/ui5** <small>v1.3.0-rc.0</small>
+**@furo/ui5** <small>v1.4.1</small>
 <br>`import '@furo/ui5/src/spaces/furo-ui5-launchpad-page-renderer.js';`<small>
 <br>exports `<furo-ui5-launchpad-page-renderer>` custom-element-definition
 <br>superclass *LitElement*

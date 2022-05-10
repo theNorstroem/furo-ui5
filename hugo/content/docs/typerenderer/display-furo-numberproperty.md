@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-numberproperty
-**@furo/ui5** <small>v1.3.0-rc.0</small>
+**@furo/ui5** <small>v1.4.1</small>
 <br>`import '@furo/ui5/src/typerenderer/display-furo-numberproperty.js';`<small>
 <br>exports *DisplayFuroNumberproperty* js
 <br>exports `<display-furo-numberproperty>` custom-element-definition
