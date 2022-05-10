@@ -53,6 +53,42 @@
     
     <item>
       <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-launchpad-navigation/_furo-launchpad-navigation-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-launchpad-navigation/_furo-launchpad-navigation-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-launchpad-page-renderer/_furo-launchpad-page-renderer-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-launchpad-page-renderer/_furo-launchpad-page-renderer-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-launchpad-section-renderer/_furo-launchpad-section-renderer-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-launchpad-section-renderer/_furo-launchpad-section-renderer-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-tile-grid/_furo-tile-grid-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-tile-grid/_furo-tile-grid-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-barcode-scanner-dialog/_furo-ui5-barcode-scanner-dialog-head/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -271,6 +307,42 @@ close dialog  open dialog   1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-dialog hea
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-header-panel/_furo-ui5-header-panel-head/</guid>
       <description>Sample #  default slot action slot  1 2 3 4  &amp;lt;furo-ui5-header-panel header-text=&amp;#34;Header Text&amp;#34;&amp;gt; &amp;lt;div&amp;gt;default slot&amp;lt;/div&amp;gt; &amp;lt;ui5-button design=&amp;#34;Emphasized&amp;#34; slot=&amp;#34;action&amp;#34;&amp;gt;action slot&amp;lt;/ui5-button&amp;gt; &amp;lt;/furo-ui5-header-panel&amp;gt;   Sample with icon #  default slot action slot action slot  1 2 3 4 5  &amp;lt;furo-ui5-header-panel header-text=&amp;#34;Header Text&amp;#34; secondary-text=&amp;#34;Subtitle Text&amp;#34; icon=&amp;#34;task&amp;#34;&amp;gt; &amp;lt;div&amp;gt;default slot&amp;lt;/div&amp;gt; &amp;lt;ui5-button design=&amp;#34;Transparent&amp;#34; slot=&amp;#34;action&amp;#34;&amp;gt;action slot&amp;lt;/ui5-button&amp;gt; &amp;lt;ui5-button design=&amp;#34;Emphasized&amp;#34; slot=&amp;#34;action&amp;#34;&amp;gt;action slot&amp;lt;/ui5-button&amp;gt; &amp;lt;/furo-ui5-header-panel&amp;gt;   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-launchpad-navigation/_furo-ui5-launchpad-navigation-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-launchpad-navigation/_furo-ui5-launchpad-navigation-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-launchpad-page-renderer/_furo-ui5-launchpad-page-renderer-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-launchpad-page-renderer/_furo-ui5-launchpad-page-renderer-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-launchpad-section-renderer/_furo-ui5-launchpad-section-renderer-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-launchpad-section-renderer/_furo-ui5-launchpad-section-renderer-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-launchpad-tile-grid/_furo-ui5-launchpad-tile-grid-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-launchpad-tile-grid/_furo-ui5-launchpad-tile-grid-head/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -1948,6 +2020,42 @@ Look at furo-ui5-flexible-grid for more examples.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/typerenderer/form-uint64/_form-uint64-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/typerenderer/line-launchpad-launchtile/_line-launchpad-launchtile-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/typerenderer/line-launchpad-launchtile/_line-launchpad-launchtile-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/typerenderer/line-launchpad-monitortile/_line-launchpad-monitortile-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/typerenderer/line-launchpad-monitortile/_line-launchpad-monitortile-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/typerenderer/tile-launchpad-launchtile/_tile-launchpad-launchtile-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/typerenderer/tile-launchpad-launchtile/_tile-launchpad-launchtile-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/typerenderer/tile-launchpad-monitortile/_tile-launchpad-monitortile-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/typerenderer/tile-launchpad-monitortile/_tile-launchpad-monitortile-head/</guid>
       <description></description>
     </item>
     
