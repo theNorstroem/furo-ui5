@@ -57,6 +57,17 @@ export class FuroUi5MultiCombobox extends FieldNodeAdapter(ComboBox.default) {
     this.displayFieldPath = 'display_name';
 
     /**
+     * Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the additional
+     * description of the option items.
+     * Point-separated path to the field
+     * E.g. data.partner.id
+     * default: id
+     * This attribute is related to the option list
+     * @type {string}
+     */
+    this.descFieldPath = 'id';
+
+    /**
      * Defines the field path that is used to update the bound component if the user has selected an option.
      * Point-separated path to the field
      * Must be set if a data binding is specified.
@@ -129,6 +140,7 @@ export class FuroUi5MultiCombobox extends FieldNodeAdapter(ComboBox.default) {
       'id-field-path': 'id',
       'value-field-path': 'id',
       'display-field-path': 'display_name',
+      'desc-field-path': 'id',
       'bound-field-id-path': 'id',
     };
 
@@ -498,7 +510,10 @@ export class FuroUi5MultiCombobox extends FieldNodeAdapter(ComboBox.default) {
         );
         optionItem.setAttribute(
           'additional-text',
-          FuroUi5MultiCombobox.getValueByPath(item, 'description')
+          FuroUi5MultiCombobox.getValueByPath(
+            item,
+            this._privilegedAttributes['desc-field-path']
+          )
         );
 
         optionNodeList.push(optionItem);

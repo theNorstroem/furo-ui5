@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-barcode-scanner-dialog
-**@furo/ui5** <small>v1.3.0-rc.0</small>
+**@furo/ui5** <small>v1.4.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-barcode-scanner-dialog.js';`<small>
 <br>exports *FuroUi5BarcodeScannerDialog* js
 <br>extends *src/furo-ui5-barcode-scanner-dialog.js*

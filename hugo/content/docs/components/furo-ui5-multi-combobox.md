@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-multi-combobox
-**@furo/ui5** <small>v1.3.0-rc.0</small>
+**@furo/ui5** <small>v1.4.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-multi-combobox.js';`<small>
 <br>exports *FuroUi5MultiCombobox* js
 <br>extends *src/furo-ui5-multi-combobox.js*
@@ -76,6 +76,17 @@ Defines the field path that is used from the bound RepeaterNode (bindOptions) to
 Point-separated path to the field
 E.g. data.partner.display_name
 default: display_name
+This attribute is related to the option list
+<br><br>
+
+### **descFieldPath**
+default: **&#39;id&#39;**</small>
+
+Defines the field path that is used from the bound RepeaterNode (bindOptions) to display the additional
+description of the option items.
+Point-separated path to the field
+E.g. data.partner.id
+default: id
 This attribute is related to the option list
 <br><br>
 
@@ -176,6 +187,7 @@ The id field must be comparable.
 
 - <small>ids string} must match the data</small>
 <br><br>
+
 
 
 

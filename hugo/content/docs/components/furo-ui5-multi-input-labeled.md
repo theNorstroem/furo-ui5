@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-multi-input-labeled
-**@furo/ui5** <small>v1.3.0-rc.0</small>
+**@furo/ui5** <small>v1.4.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-multi-input-labeled.js';`<small>
 <br>exports *FuroUi5MultiInputLabeled* js
 <br>exports `<furo-ui5-multi-input-labeled>` custom-element-definition

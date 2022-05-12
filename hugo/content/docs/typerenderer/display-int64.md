@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-int64
-**@furo/ui5** <small>v1.3.0-rc.0</small>
+**@furo/ui5** <small>v1.4.1</small>
 <br>`import '@furo/ui5/src/typerenderer/display-int64.js';`<small>
 <br>exports *DisplayInt64* js
 <br>exports `<display-int64>` custom-element-definition
