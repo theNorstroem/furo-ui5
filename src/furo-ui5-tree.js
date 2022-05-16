@@ -905,6 +905,7 @@ export class FuroUi5Tree extends FBP(LitElement) {
 
     if (this.rootAsHeader === true) {
       this._flatTree[0]._rootAsHeader = true;
+      this._flatTree[0]._isHidden = false;
       startlevel = -1;
     }
 
