@@ -97,6 +97,7 @@ export class DisplayFuroBigdecimal extends LitElement {
 
     const val = this._field._value;
     let displayValue = '';
+    this._displayValue = '';
     if (!(val.scale === null || val.unscaled_value === null)) {
       const vstr = val.unscaled_value.toString(10);
       if (val.scale < 0) {
@@ -108,13 +109,12 @@ export class DisplayFuroBigdecimal extends LitElement {
           )}`
         );
       }
-    }
-    if (displayValue !== 'NaN') {
       this._displayValue = new Intl.NumberFormat(Env.locale, {}).format(
         displayValue
       );
-      this.requestUpdate();
     }
+
+    this.requestUpdate();
   }
 
   /**

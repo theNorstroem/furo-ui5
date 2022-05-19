@@ -96,7 +96,7 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
         case 'int32':
         case 'int64':
           if (e.value !== '' && e.valid) {
-            this.setFnaFieldValue(new Date(this.value).getTime() / 1000);
+            this.setFnaFieldValue(this.dateValue.getTime() / 1000);
           } else {
             this.setFnaFieldValue(0);
           }
@@ -104,7 +104,7 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
 
         case 'google.protobuf.Timestamp':
           if (e.value !== '' && e.valid) {
-            this.setFnaFieldValue(new Date(this.value).toISOString());
+            this.setFnaFieldValue(this.dateValue.toISOString());
           } else {
             this.setFnaFieldValue(null);
           }
@@ -112,7 +112,7 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
         case 'string':
         default:
           if (e.value !== '' && e.valid) {
-            this.setFnaFieldValue(new Date(this.value).toISOString());
+            this.setFnaFieldValue(this.dateValue.toISOString());
           } else {
             this.setFnaFieldValue('');
           }
