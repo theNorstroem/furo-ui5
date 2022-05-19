@@ -45,7 +45,7 @@
     "lit": "^2.0.2"
   },
   "dependencies": {
-    "markdown-it": "^12.3.2",
+    "markdown-it": "^13.0.1",
     "prismjs": "^1.27.0",
     "apexcharts": "^3.29.0",
     "signature_pad": "4.0.2"

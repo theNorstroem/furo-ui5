@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
+    }
+
+    furo-demo-snippet {
+      height: 90vh;
+      box-sizing: border-box;
+    }
+
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+<script type="module">
+  import {html, render} from 'lit';
+
+
+  import './initEnv.js';
+  import '../src/furo-ui5-markdown.js';
+  import '../src/furo-ui5-textarea-input.js';
+  import '@furo/route/src/furo-location.js';
+  import '@furo/route/src/furo-location-updater.js';
+  import '@furo/data/src/furo-catalog.js';
+  import '@furo/layout/src/furo-catalog.js';
+  import '@furo/util/src/furo-fetch-json.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@ui5/webcomponents/dist/Button.js'
+
+  render(
+    html`
+      <furo-demo-snippet>
+        <template>
+          <furo-vertical-scroller>
+
+            <furo-ui5-textarea-input fn-bind-data="--daoExp(*.description)" set-value="--text"></furo-ui5-textarea-input>
+            <furo-ui5-markdown fn-bind-data="--daoExp(*.description)"></furo-ui5-markdown>
+          </furo-vertical-scroller>
+
+
+
+          <furo-data-object type="experiment.Experiment" at-object-ready="--daoExp"  ></furo-data-object>
+
+
+        </template>
+      </furo-demo-snippet>
+
+
+    `,
+    document.querySelector('#demo')
+  );
+
+
+</script>
+</body>
+</html>
