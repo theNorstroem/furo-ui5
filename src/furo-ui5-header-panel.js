@@ -350,6 +350,10 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
       :host(:not([secondary-text])) ui5-label {
         display: none;
       }
+
+      :host(:not([fixed])) {
+        padding-bottom: 0;
+      }
     `;
   }
 
