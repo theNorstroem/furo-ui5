@@ -7,9 +7,11 @@ import { FBP } from '@furo/fbp';
 import '@ui5/webcomponents-icons/dist/slim-arrow-up.js';
 import '@ui5/webcomponents/dist/Avatar.js';
 
+import '@ui5/webcomponents/dist/Title.js';
 import '@ui5/webcomponents/dist/Label.js';
 import '@ui5/webcomponents/dist/Icon.js';
-import '@ui5/webcomponents/dist/Panel.js';
+
+import '@furo/layout/src/furo-horizontal-flex.js';
 
 /**
  *  A bindable **header** panel.
@@ -181,12 +183,11 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
    */
   _FBPReady() {
     super._FBPReady();
-    const panel = this.shadowRoot.querySelector('ui5-panel');
 
     this._FBPAddWireHook('--collapserClicked', () => {
       // toggle the panel
-      panel.collapsed = !panel.collapsed;
-      this.collapsed = panel.collapsed;
+
+      this.collapsed = !this.collapsed;
 
       setTimeout(() => {
         if (this.collapsed) {
@@ -200,50 +201,6 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
         }
       }, 16);
     });
-
-    this.updateComplete.then(() => {
-      if (window.ResizeObserver) {
-        const ro = new ResizeObserver(entries => {
-          window.requestAnimationFrame(() => {
-            for (const entry of entries) {
-              this._checkSize(entry.contentRect.width);
-            }
-          });
-        });
-        ro.observe(this);
-      } else {
-        // fallback, just listen to the resize event
-        setTimeout(() => {
-          const cr = this.getBoundingClientRect();
-          this._checkSize(cr.width);
-        }, 1);
-
-        window.addEventListener('resize', () => {
-          const cr = this.getBoundingClientRect();
-          this._checkSize(cr.width);
-        });
-      }
-    });
-  }
-
-  /**
-   * Form breakpoints according to SAP Fiori Design System
-   * https://experience.sap.com/fiori-design-web/form/
-   * @param size
-   * @private
-   */
-  _checkSize(size) {
-    if (size <= 600) {
-      this._setSizeAttribute('size-s');
-    } else if (size > 600 && size <= 1023) {
-      this._setSizeAttribute('size-m');
-    } else if (size > 1023 && size <= 1439) {
-      this._setSizeAttribute('size-l');
-    } else if (size > 1439) {
-      this._setSizeAttribute('size-xl');
-    } else {
-      this._setSizeAttribute('size-m');
-    }
   }
 
   /**
@@ -266,44 +223,27 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
     return css`
       :host {
         display: block;
-        position: relative;
+        padding: var(--FuroUi5MediaSizeIndentation, 0.625rem 2rem 0 2rem);
+        background: var(--sapGroup_ContentBackground, white);
+        border-bottom: 1px solid var(--sapGroup_TitleBorderColor);
+        box-sizing: border-box;
       }
 
       :host([hidden]) {
         display: none;
       }
 
+      .collapser-button {
+        transition: all ease-in-out 0.25s;
+      }
+
       :host([collapsed]) .collapser-button {
+        transition: all ease-in-out 0.25s;
         transform: rotate(180deg);
       }
 
-      ui5-panel {
-        padding: 0.25rem 2rem 0 2rem;
-        background: var(--sapGroup_ContentBackground, white);
-        min-height: 5rem;
-        box-sizing: border-box;
-        border-bottom: none;
-      }
-
-      ui5-panel[data-size*='size-s'] {
-        padding: 0.625rem 1rem 0 1rem;
-      }
-
-      ui5-panel[data-size*='size-m'] {
-        padding: 0.625rem 2rem 0 2rem;
-      }
-
-      ui5-panel[data-size*='size-l'] {
-        padding: 1rem 2rem 0 2rem;
-      }
-
-      ui5-panel[data-size*='size-xl'] {
-        padding: 2rem 3rem 1rem 3rem;
-      }
-
-      .header {
-        width: 100%;
-        margin-bottom: 0.5rem;
+      :host([collapsed]) .wrapper {
+        display: none;
       }
 
       .content {
@@ -313,16 +253,13 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
 
       .wrapper {
         display: flex;
+        padding: var(--FuroUi5MediaSizeIndentation, 0.625rem 2rem 0 2rem);
+        padding-left: 0;
+        padding-right: 0;
       }
 
-      .action {
-        display: inline-block;
-        float: right;
-        margin-top: -26px;
-      }
-
-      .header .ui5-panel-header-button-root {
-        display: none;
+      :host([fixed]) {
+        padding-bottom: var(--FuroUi5MediaSizeIndentationBottom, 0.25rem);
       }
 
       ui5-avatar {
@@ -334,7 +271,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
           --furo-ui5-header-panel-icon-background-color,
           var(--ui5-avatar-accent6, #354a5f)
         );
-        margin-right: var(--spacing-xs);
+        margin-right: 0.5rem;
       }
 
       :host([fixed]) .splitter_bar {
@@ -348,9 +285,6 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
         justify-content: center;
         align-items: center;
         background: var(--sapGroup_ContentBackground, white);
-        border-bottom: 1px solid var(--sapGroup_TitleBorderColor);
-        position: absolute;
-        bottom: 0;
       }
 
       .collapser-button {
@@ -402,10 +336,19 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
       .splitter_bar:hover > ui5-icon {
         border-radius: var(--sapButton_BorderCornerRadius);
         border: 1px solid var(--sapButton_Lite_Hover_BorderColor, #0854a0);
+        box-sizing: border-box;
       }
 
       .splitter_bar:hover > .splitter {
         width: 8rem;
+      }
+
+      furo-horizontal-flex {
+        align-items: end;
+      }
+
+      :host(:not([secondary-text])) ui5-label {
+        display: none;
       }
     `;
   }
@@ -418,28 +361,28 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <ui5-panel id="panel" fixed ?collapsed="${this.collapsed}">
-        <div slot="header" class="header">
-          <ui5-title>${this.headerText}</ui5-title>
-          <ui5-label>${this.secondaryText}</ui5-label>
-          <slot name="action" class="action"></slot>
+      <furo-horizontal-flex space class="header">
+        <ui5-title>${this.headerText}</ui5-title>
+        <div flex></div>
+        <slot name="action"></slot>
+      </furo-horizontal-flex>
+      <ui5-label>${this.secondaryText}</ui5-label>
+      <div class="wrapper">
+        ${this.icon
+          ? html`
+              <ui5-avatar
+                class="icon"
+                icon="${this.icon}"
+                size="${this.iconSize}"
+                shape="Square"
+              ></ui5-avatar>
+            `
+          : html``}
+        <div class="content">
+          <slot></slot>
         </div>
-        <div class="wrapper">
-          ${this.icon
-            ? html`
-                <ui5-avatar
-                  class="icon"
-                  icon="${this.icon}"
-                  size="${this.iconSize}"
-                  shape="Square"
-                ></ui5-avatar>
-              `
-            : html``}
-          <div class="content">
-            <slot></slot>
-          </div>
-        </div>
-      </ui5-panel>
+      </div>
+
       <div class="splitter_bar">
         <div class="splitter before"></div>
         <ui5-icon
