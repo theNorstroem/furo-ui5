@@ -181,14 +181,17 @@ export class FuroUi5SignPad extends FBP(LitElement) {
    */
   bindData(entityField) {
     this._field = entityField;
-    if (this._field._value) {
-      this.putImage(this._field._value);
-    }
     // update drawing on changes from outside
     this._field.addEventListener('this-field-value-changed', () => {
       this.signaturePad.clear();
       this.putImage(this._field._value);
     });
+
+    setTimeout(() => {
+      if (this._field._value) {
+        this.putImage(this._field._value);
+      }
+    }, 16);
   }
 
   /**
