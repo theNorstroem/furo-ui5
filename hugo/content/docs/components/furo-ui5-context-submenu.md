@@ -40,7 +40,7 @@ default: **48**</small>
 ### **depth**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">depth</span>
-</small>
+<small>`Number` </small>
 
 Depth of the submenu
 <br><br>

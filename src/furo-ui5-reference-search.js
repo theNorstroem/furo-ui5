@@ -305,22 +305,30 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       /**
        * Path to the node in the response value which contains the array with the selection items.
        * By default this goes to *entitites*
+       *
+       * @type String
        */
       searchResponsePath: { type: String, attribute: 'search-response-path' },
       /**
        * Path to response value item which is used for the id.
        * By default this goes to *data.id*
+       *
+       * @type String
        */
       valueFieldPath: { type: String, attribute: 'value-field-path' },
       /**
        * Path to selection value node which is used for the display.
        * By default this goes to *data.display_name*
+       *
+       * @type String
        */
       displayFieldPath: { type: String, attribute: 'display-field-path' },
       /**
        * Path to response value item of the extended search which is used for the id.
        * By default this goes to *data.id*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
+       *
+       * @type String
        */
       extendedValueFieldPath: {
         type: String,
@@ -330,6 +338,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Path to response value item of the exteded search which is used for the display.
        * By default this goes to *data.display_name*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
+       *
+       * @type String
        */
       extendedDisplayFieldPath: {
         type: String,
@@ -337,16 +347,22 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       },
       /**
        * Set the service. This is only needed when you do not use a bind or bind a scalar value.
+       *
+       * @type String
        */
       service: { type: String },
       /**
        * Use this attribute to set a custom icon for your searcher
+       *
+       * @type String
        */
       icon: { type: String },
       /**
        * A Boolean attribute which, if present, means this field can not be searched.
        *
        * This is very useful when you want enforce the usage of the extended search
+       *
+       * @type Boolean
        */
       disableSearchList: {
         type: Boolean,
@@ -354,6 +370,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       },
       /**
        * hint text when result not found by search
+       *
+       * @type String
        */
       noDataText: {
         type: String,
@@ -363,6 +381,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Overrides the required value from the **specs**.
        *
        * Use with caution, normally the specs defines this value.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
@@ -372,6 +392,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Overrides the hint text from the **specs**.
        *
        * Use with caution, normally the specs defines this value.
+       *
+       * @type String
        */
       placeholder: {
         type: String,
@@ -380,6 +402,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Overrides the label text from the **specs**.
        *
        * Use with caution, normally the specs defines this value.
+       *
+       * @type String
        */
       label: {
         type: String,
@@ -387,6 +411,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       /**
        * The minimal length of search term to trigger a search.
        *
+       *
+       * @type Number
        */
       minTermLength: {
         type: Number,
@@ -399,6 +425,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        *
        * If the response contains hts information with rel *next* a "load more" button will be displayed at the end
        * of the list.
+       *
+       * @type Number
        */
       maxItemsToDisplay: {
         type: Number,
@@ -409,6 +437,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Enable this, to avoid the automatic triggering of "search".
        *
        * The user have to press enter to trigger the search. Min-term-length is respected.
+       *
+       * @type Boolean
        */
       searchOnEnterOnly: {
         type: Boolean,
@@ -418,24 +448,32 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Overrides the readonly value from the **specs**.
        *
        * Use with caution, normally the specs defines this value.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
       },
       /**
        * Disable
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * This is used to activate the loading indicator.
+       *
+       * @type Boolean
        */
       busy: {
         type: Boolean,
       },
       /**
        * Value State of the input field
+       *
+       * @type String
        */
       valueState: {
         type: String,
@@ -443,6 +481,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       },
       /**
        * wait for this time between keystrokes to trigger a search to the service
+       *
+       * @type Number
        */
       debounceTimeout: {
         type: Number,
@@ -451,6 +491,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
 
       /**
        * Define the extended searcher. Do not forget to import the searcher you want to use.
+       *
+       * @type String
        */
       extendedSearcher: {
         type: String,

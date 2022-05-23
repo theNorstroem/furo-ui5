@@ -104,10 +104,13 @@ class FuroDataBoolIcon extends FBP(LitElement) {
       /**
        * Defines the icon for the true state.
        *
+       * @type String
        */
       symboltrue: { type: String },
       /**
        * Defines the icon for the false state.
+       *
+       * @type String
        */
       symbolfalse: { type: String },
     };

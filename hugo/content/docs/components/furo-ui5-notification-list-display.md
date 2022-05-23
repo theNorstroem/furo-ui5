@@ -43,7 +43,7 @@ But you have to be sure the furo-ui5-notification-list-display can receive the n
 ### **headerText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-text</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 the header text of the notification
 <br><br>
@@ -51,7 +51,7 @@ the header text of the notification
 ### **noDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-data-text</span>
-<small>`string` default: **&#39;No messages&#39;**</small>
+<small>`String` default: **&#39;No messages&#39;**</small>
 
 Defines the text that is displayed when the list contains no items.
 <br><br>
@@ -65,7 +65,7 @@ default: **0**</small>
 ### **groupTitleHelp**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">group-title-help</span>
-<small>`string` default: **&#39;Help&#39;**</small>
+<small>`String` default: **&#39;Help&#39;**</small>
 
 Defines the notification group element title for notifications of type
 "type.googleapis.com/google.rpc.Help"
@@ -74,7 +74,7 @@ Defines the notification group element title for notifications of type
 ### **groupTitleBadRequest**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">group-title-bad-request</span>
-<small>`string` default: **&#39;Bad Request&#39;**</small>
+<small>`String` default: **&#39;Bad Request&#39;**</small>
 
 Defines the notification group element title for notifications of type
 "type.googleapis.com/google.rpc.BadRequest"
@@ -83,7 +83,7 @@ Defines the notification group element title for notifications of type
 ### **groupTitleMessage**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">group-title-message</span>
-<small>`string` default: **&#39;Information&#39;**</small>
+<small>`String` default: **&#39;Information&#39;**</small>
 
 Defines the notification group element title for notifications of type
 "type.googleapis.com/google.rpc.LocalizedMessage"
@@ -98,7 +98,7 @@ Defines the notification group element title for notifications of type
 ### **showClose**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">show-close</span>
-</small>
+<small>`Boolean` </small>
 
 Defines if the close button would be displayed.
 <br><br>

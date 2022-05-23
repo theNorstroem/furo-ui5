@@ -34,7 +34,7 @@ to the design specification of SAP Fiori Design System.
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 the label for the data-text-input
 <br><br>
@@ -55,7 +55,7 @@ This attribute is related to the option list
 ### **displayFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">display-field-path</span>
-<small>`string` default: **&#39;display_name&#39;**</small>
+<small>`String` default: **&#39;display_name&#39;**</small>
 
 Defines the field path that is used from the injected RepeaterNode to display the option items.
 Point-separated path to the field

@@ -38,16 +38,22 @@ export class FuroUi5CheckboxInputLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-checkbox-input
+       *
+       * @type String
        */
       label: { type: String },
 
       /**
        * the placeholder is the additional information beside the label. it will be showed on the right side of the checkbox.
+       *
+       * @type String
        */
       placeholder: { type: String },
 
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
@@ -55,6 +61,8 @@ export class FuroUi5CheckboxInputLabeled extends FBP(LitElement) {
 
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
@@ -62,6 +70,8 @@ export class FuroUi5CheckboxInputLabeled extends FBP(LitElement) {
 
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,

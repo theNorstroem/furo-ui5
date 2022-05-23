@@ -323,12 +323,16 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
     return {
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,

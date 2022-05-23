@@ -117,6 +117,8 @@ export class FuroUi5Property extends FBP(LitElement) {
     return {
       /**
        * Set the context, for the renderers.
+       *
+       * @type String
        */
       context: { type: String },
     };

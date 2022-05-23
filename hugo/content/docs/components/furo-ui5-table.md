@@ -70,7 +70,7 @@ Set a specific renderer component for the column. If not set, the renderer is ev
 ### **mode**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">mode</span>
-<small>`string` default: **&#39;None&#39;**</small>
+<small>`String` default: **&#39;None&#39;**</small>
 
 Defines the mode of the component.
 
@@ -83,7 +83,7 @@ Available options are:
 ### **noDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-data-text</span>
-</small>
+<small>`String` </small>
 
 Defines the text that will be displayed when there is no data.
 string
@@ -92,7 +92,7 @@ string
 ### **stickyColumnHeader**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">sticky-column-header</span>
-</small>
+<small>`Boolean` </small>
 
 Determines whether the column headers remain fixed at the top of the page during vertical scrolling as long as the Web Component is in the viewport.
 <br><br>
@@ -100,7 +100,7 @@ Determines whether the column headers remain fixed at the top of the page during
 ### **busy**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">busy</span>
-</small>
+<small>`Boolean` </small>
 
 Busy state
 <br><br>

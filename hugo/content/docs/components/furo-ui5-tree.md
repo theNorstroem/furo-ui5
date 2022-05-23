@@ -113,7 +113,7 @@ Expanding is a expensive operation.
 ### **depth**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">depth</span>
-</small>
+<small>`Number` </small>
 
 Maximal depth for the tree. Default is infinite.
 <br><br>
@@ -121,7 +121,7 @@ Maximal depth for the tree. Default is infinite.
 ### **qp**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">qp</span>
-</small>
+<small>`String` </small>
 
 Query param to watch.  Set `qp` to have a deep linkable tree.
 
@@ -143,7 +143,7 @@ A `furo-location` should watch the url and update the location on the tree, whic
 ### **rootAsHeader**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">root-as-header</span>
-</small>
+<small>`Boolean` </small>
 
 Set this flag if you do not want a header-text section.
 <br><br>
@@ -151,7 +151,7 @@ Set this flag if you do not want a header-text section.
 ### **hideRootNode**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">hide-root-node</span>
-</small>
+<small>`Boolean` </small>
 
 Set this flag if you do not want to see the root node
 <br><br>
@@ -159,7 +159,7 @@ Set this flag if you do not want to see the root node
 ### **headerText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-text</span>
-</small>
+<small>`String` </small>
 
 Override display name from root object
 <br><br>
@@ -167,7 +167,7 @@ Override display name from root object
 ### **secondaryText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">secondary-text</span>
-</small>
+<small>`String` </small>
 
 Override description from root object.
 <br><br>
@@ -175,7 +175,7 @@ Override description from root object.
 ### **focused**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">focused</span> <small>**reflects**</small>
-</small>
+<small>`Boolean` </small>
 
 indicates that the element is focused
 <br><br>

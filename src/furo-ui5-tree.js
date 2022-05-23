@@ -482,12 +482,16 @@ export class FuroUi5Tree extends FBP(LitElement) {
     return {
       /**
        * Maximal depth for the tree. Default is infinite.
+       *
+       * @type Number
        */
       depth: { type: Number },
       /**
        * Sets the maximal expand level relative from the current node.
        *
        * Expanding is a expensive operation.
+       *
+       * @type Number
        */
       expandDepth: { type: Number, attribute: 'expand-depth' },
       /**
@@ -506,35 +510,51 @@ export class FuroUi5Tree extends FBP(LitElement) {
        * <!-- update the location with the selected tree item -->
        * <furo-location-updater fn-set-qp="--qpchangerequest"></furo-location-updater>
        * ```
+       *
+       * @type String
        */
       qp: { type: String },
       /**
        * Sets the tabindex
+       *
+       * @type Number
        */
       tabindex: { type: Number, reflect: true },
       /**
        * Set this flag if you do not want a header-text section.
+       *
+       * @type Boolean
        */
       rootAsHeader: { type: Boolean, attribute: 'root-as-header' },
       /**
        * Set this flag if you do not want to see the root node
+       *
+       * @type Boolean
        */
       hideRootNode: { type: Boolean, attribute: 'hide-root-node' },
       /**
        * Override display name from root object
+       *
+       * @type String
        */
       headerText: { type: String, attribute: 'header-text' },
       /**
        * Override description from root object.
+       *
+       * @type String
        */
       secondaryText: { type: String, attribute: 'secondary-text' },
       /**
        * indicator for searching. Maybe you want style your item depending on this attribute
+       *
+       * @type Boolean
        */
       _searchIsActive: { type: Boolean, attribute: 'searching', reflect: true },
 
       /**
        * indicates that the element is focused
+       *
+       * @type Boolean
        */
       focused: { type: Boolean, reflect: true },
     };

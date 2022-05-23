@@ -35,7 +35,7 @@ Every display-xxx component should implement the following API:
 ### **noDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">noDataText</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 Defines the empty state display
 With a furo.Property type, the effective type is only known when the data is transmitted.

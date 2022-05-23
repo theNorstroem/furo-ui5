@@ -46,7 +46,7 @@ default: **&#39;border&#39;**</small>
 ### **focused**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">focused</span> <small>**reflects**</small>
-</small>
+<small>`Boolean` </small>
 
 focused state
 <br><br>
@@ -54,7 +54,7 @@ focused state
 ### **disabled**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span> <small>**reflects**</small>
-</small>
+<small>`Boolean` </small>
 
 disabled state
 <br><br>

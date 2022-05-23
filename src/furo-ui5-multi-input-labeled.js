@@ -40,22 +40,30 @@ export class FuroUi5MultiInputLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-multi-input
+       *
+       * @type String
        */
       label: { type: String },
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
@@ -64,6 +72,8 @@ export class FuroUi5MultiInputLabeled extends FBP(LitElement) {
        * Determines whether a value help icon will be should in the end of the input.
        *
        * Pressing the icon will fire `value-help-trigger` event.
+       *
+       * @type Boolean
        */
       showValueHelpIcon: {
         type: Boolean,

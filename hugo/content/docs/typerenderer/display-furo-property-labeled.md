@@ -47,7 +47,7 @@ default: **false**</small>
 ### **noDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">noDataText</span>
-</small>
+<small>`String` </small>
 
 Defines the empty state display
 With a furo.Property type, the effective type is only known when the data is transmitted.

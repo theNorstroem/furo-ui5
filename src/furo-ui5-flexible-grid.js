@@ -62,6 +62,8 @@ class FuroUi5FlexibleGrid extends FBP(LitElement) {
     return {
       /**
        * Breakpoint size for small
+       *
+       * @type Number
        */
       sizeSmall: { type: Number, attribute: 'size-small' },
     };

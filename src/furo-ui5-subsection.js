@@ -73,18 +73,26 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
     return {
       /**
        * Heading title of the section
+       *
+       * @type String
        */
       heading: { type: String, attribute: 'heading' },
       /**
        * Collapsed state of the `read more` section
+       *
+       * @type Boolean
        */
       collapsed: { type: Boolean, reflect: true },
       /**
        * Defines the text that will be displayed for `show more`
+       *
+       * @type String
        */
       showMoreDataText: { type: String, attribute: 'show-more-data-text' },
       /**
        * Defines the text that will be displayed for `show less`
+       *
+       * @type String
        */
       showLessDataText: { type: String, attribute: 'show-less-data-text' },
     };

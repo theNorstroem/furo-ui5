@@ -41,7 +41,7 @@ default: **&#39;dismiss&#39;**</small>
 ### **text**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">text</span>
-</small>
+<small>`String` </small>
 
 banner text content. Use *word* to mark as strong. Use \n to insert a line break.
 
@@ -51,7 +51,7 @@ banner text content. Use *word* to mark as strong. Use \n to insert a line break
 ### **payload**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">payload</span>
-</small>
+<small>`Object` </small>
 
 payload. can be a GRPC error or a notification message collection.
 <br><br>

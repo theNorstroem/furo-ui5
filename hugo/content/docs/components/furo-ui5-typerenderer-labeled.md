@@ -34,7 +34,7 @@ to the design specification of SAP Fiori Design System.
 ### **context**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">context</span>
-<small>`string` default: **&#39;display&#39;**</small>
+<small>`String` default: **&#39;display&#39;**</small>
 
 Set the render context. Default is **display**, the type renderer set of @furo/ui5 supports
 **cell**, **form**, **celledit**
@@ -43,7 +43,7 @@ Set the render context. Default is **display**, the type renderer set of @furo/u
 ### **disabled**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span> <small>**reflects**</small>
-</small>
+<small>`Boolean` </small>
 
 Disabled State
 <br><br>

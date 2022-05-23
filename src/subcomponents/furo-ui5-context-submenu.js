@@ -28,6 +28,8 @@ export class FuroUi5ContextSubmenu extends FBP(LitElement) {
     return {
       /**
        * Depth of the submenu
+       *
+       * @type Number
        */
       depth: { type: Number },
     };

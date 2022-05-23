@@ -36,7 +36,7 @@ to the design specification of SAP Fiori Design System.
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 the label for the data-number-input
 <br><br>
@@ -44,15 +44,15 @@ the label for the data-number-input
 ### **icon**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
-
+Icon on the right side
 <br><br>
 
 ### **required**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">required</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field is required and marked with *.
 <br><br>
@@ -60,7 +60,7 @@ A Boolean attribute which, if present, means this field is required and marked w
 ### **disabled**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field cannot be edited by the user and
 appears in disabled state.
@@ -69,7 +69,7 @@ appears in disabled state.
 ### **readonly**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">readonly</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field is readonly.
 <br><br>

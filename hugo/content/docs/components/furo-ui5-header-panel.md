@@ -46,7 +46,7 @@ It can be collapsed to save space on the screen.
 ### **icon**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 icon
 <br><br>
@@ -54,7 +54,7 @@ icon
 ### **iconSize**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon-size</span>
-<small>`string` default: **&#39;S&#39;**</small>
+<small>`String` default: **&#39;S&#39;**</small>
 
 size of the icon. Available options are: XS S M L XL. Default is S.
 <br><br>
@@ -62,7 +62,7 @@ size of the icon. Available options are: XS S M L XL. Default is S.
 ### **headerText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-text</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 Header Text
 <br><br>
@@ -70,7 +70,7 @@ Header Text
 ### **secondaryText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">secondary-text</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 sub title
 <br><br>
@@ -78,9 +78,9 @@ sub title
 ### **collapsed**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">collapsed</span> <small>**reflects**</small>
-<small>`boolean` default: **false**</small>
+<small>`Boolean` default: **false**</small>
 
-
+Collapsed
 <br><br>
 ## Events
 {{% api "_furo-ui5-header-panel-events.md" %}}

@@ -95,7 +95,7 @@ default: **{
 ### **disabled**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field cannot be edited by the user.
 <br><br>
@@ -103,7 +103,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 ### **readonly**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">readonly</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field is readonly.
 <br><br>

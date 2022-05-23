@@ -16,19 +16,6 @@ class FuroUi5LaunchpadTileGrid extends FBP(LitElement) {
   }
 
   /**
-   * @private
-   * @return {Object}
-   */
-  static get properties() {
-    return {
-      /**
-       * Description
-       */
-      myBool: { type: Boolean },
-    };
-  }
-
-  /**
    * Themable Styles
    * @private
    * @return {CSSResult}

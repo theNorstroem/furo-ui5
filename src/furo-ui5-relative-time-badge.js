@@ -66,6 +66,8 @@ class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
        * number from "1" to "10". The colorScheme "1" will be set by default.
        *
        * Note: Color schemes have no visual representation in High Contrast Black (sap_belize_hcb) theme.
+       *
+       * @type String
        */
       colorSchemePositive: {
         type: String,
@@ -78,6 +80,8 @@ class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
        * number from "1" to "10". The colorScheme "1" will be set by default.
        *
        * Note: Color schemes have no visual representation in High Contrast Black (sap_belize_hcb) theme.
+       *
+       * @type String
        */
       colorSchemeNegative: {
         type: String,
@@ -88,12 +92,16 @@ class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
        * Defines the output style
        * long, short, narrow
        * Default: long
+       *
+       * @type String
        */
       optionStyle: { type: String, attribute: 'option-style' },
       /**
        * Defines the output format
        * always, auto
        * Default: auto
+       *
+       * @type String
        */
       optionNumeric: { type: String, attribute: 'option-numeric' },
     };

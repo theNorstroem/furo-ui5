@@ -56,11 +56,15 @@ export class FuroUi5Section extends FBP(FieldNodeAdapter(LitElement)) {
     return {
       /**
        * Heading title of the section
+       *
+       * @type String
        */
       heading: { type: String, attribute: 'heading' },
 
       /**
        * Setting this attribute will hide the bottom border
+       *
+       * @type Boolean
        */
       noborder: { type: Boolean },
     };

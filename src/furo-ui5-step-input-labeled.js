@@ -49,10 +49,14 @@ export class FuroUi5StepInputLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-step-input
+       *
+       * @type String
        */
       label: { type: String },
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
@@ -60,25 +64,49 @@ export class FuroUi5StepInputLabeled extends FBP(LitElement) {
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user and
        * appears in disabled state.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
       },
+      /**
+       * icon on the right
+       *
+       * @type String
+       */
       icon: {
         type: String,
       },
+      /**
+       * Step size
+       *
+       * @type Number
+       */
       step: {
         type: Number,
       },
+      /**
+       * Minimal value
+       *
+       * @type Number
+       */
       min: {
         type: Number,
       },
+      /**
+       * Maximal value
+       *
+       * @type Number
+       */
       max: {
         type: Number,
       },

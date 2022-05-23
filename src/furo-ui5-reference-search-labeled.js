@@ -62,31 +62,43 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
     return {
       /**
        * the service name
+       *
+       * @type String
        */
       service: { type: String },
       /**
        * the label for the data-reference-search
+       *
+       * @type String
        */
       label: { type: String },
       /**
        * Path to response value item which is used for the id.
        * By default this goes to *data.id*
+       *
+       * @type String
        */
       valueFieldPath: { type: String, attribute: 'value-field-path' },
       /**
        * Path to selection value node which is used for the display.
        * By default this goes to *data.display_name*
+       *
+       * @type String
        */
       displayFieldPath: { type: String, attribute: 'display-field-path' },
       /**
        * Path to the node in the response value which contains the array with the selection items.
        * By default this goes to *entitites*
+       *
+       * @type String
        */
       searchResponsePath: { type: String, attribute: 'search-response-path' },
       /**
        * Path to response value item of the exteded search which is used for the id.
        * By default this goes to *data.id*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
+       *
+       * @type String
        */
       extendedValueFieldPath: {
         type: String,
@@ -96,6 +108,8 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
        * Path to response value item of the exteded search which is used for the display.
        * By default this goes to *data.display_name*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
+       *
+       * @type String
        */
       extendedDisplayFieldPath: {
         type: String,
@@ -104,16 +118,22 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
       /**
        * Overrides the hint text from the **specs**.
        * Use with caution, normally the specs defines this value.
+       *
+       * @type String
        */
       placeholder: { type: String },
       /**
        * Use this attribute to set a custom icon for your searcher
+       *
+       * @type String
        */
       icon: { type: String },
       /**
        * A Boolean attribute which, if present, means this field can not be searched.
        *
        * This is very useful when you want enforce the usage of the extended search
+       *
+       * @type Boolean
        */
       disableSearchList: {
         type: Boolean,
@@ -121,21 +141,32 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
       },
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
+      /**
+       * Readonly state
+       *
+       * @type Boolean
+       */
       readonly: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
       },
       /**
        * Define the extended searcher. Do not forget to import the searcher you want to use.
+       *
+       * @type String
        */
       extendedSearcher: {
         type: String,
@@ -143,6 +174,8 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
       },
       /**
        * hint text when result not found by search
+       *
+       * @type String
        */
       noDataText: {
         type: String,

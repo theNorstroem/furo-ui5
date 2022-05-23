@@ -47,7 +47,7 @@ https://experience.sap.com/fiori-design-web/message-strip/
 ### **noCloseButton**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-close-button</span>
-<small>`boolean` default: **false**</small>
+<small>`Boolean` default: **false**</small>
 
 Defines whether the MessageStrip renders close icon.
 <br><br>
@@ -55,7 +55,7 @@ Defines whether the MessageStrip renders close icon.
 ### **noIcon**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-icon</span>
-<small>`boolean` default: **false**</small>
+<small>`Boolean` default: **false**</small>
 
 Defines whether the MessageStrip will show an icon in the beginning. You can directly provide an icon with the icon slot. Otherwise, the default icon for the type will be used.
 <br><br>
@@ -65,7 +65,7 @@ Defines whether the MessageStrip will show an icon in the beginning. You can dir
 ### **size**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">size</span>
-</small>
+<small>`String` </small>
 
 define the width of ui5-messagestrip. e.g. 200px
 <br><br>
@@ -73,7 +73,7 @@ define the width of ui5-messagestrip. e.g. 200px
 ### **message**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">message</span>
-</small>
+<small>`String` </small>
 
 the text message of the message strip
 <br><br>

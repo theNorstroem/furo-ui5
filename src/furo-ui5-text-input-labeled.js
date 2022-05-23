@@ -50,6 +50,8 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-text-input
+       *
+       * @type String
        */
       label: { type: String },
 
@@ -79,6 +81,8 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
        * Defines the field path that is used from the injected RepeaterNode to display the option items.
        * Point-separated path to the field
        * E.g. data.partner.display_name
+       *
+       * @type String
        */
       displayFieldPath: {
         type: String,

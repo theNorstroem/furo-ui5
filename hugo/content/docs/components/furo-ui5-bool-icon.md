@@ -39,7 +39,7 @@ If you set other icons, please do not forget to import them.
 ### **symboltrue**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">symboltrue</span>
-<small>`string` default: **&#39;navigation-down-arrow&#39;**</small>
+<small>`String` default: **&#39;navigation-down-arrow&#39;**</small>
 
 Defines the icon for the true state.
 <br><br>
@@ -47,7 +47,7 @@ Defines the icon for the true state.
 ### **symbolfalse**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">symbolfalse</span>
-<small>`string` default: **&#39;navigation-right-arrow&#39;**</small>
+<small>`String` default: **&#39;navigation-right-arrow&#39;**</small>
 
 Defines the icon for the false state.
 <br><br>

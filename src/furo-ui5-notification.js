@@ -29,12 +29,16 @@ export class FuroUi5Notification extends LitElement {
        * banner text content. Use *word* to mark as strong. Use \n to insert a line break.
        *
        * *HTML tags will be stripped out.*
+       *
+       * @type String
        */
       text: {
         type: String,
       },
       /**
        * payload. can be a GRPC error or a notification message collection.
+       *
+       * @type Object
        */
       payload: {
         type: Object,

@@ -157,10 +157,14 @@ class FuroUi5ChartDisplay extends FBP(LitElement) {
        * radar, scatter, heatmap
        *
        * pie donut polarArea radialBar can only consume 1 data series
+       *
+       * @type String
        */
       chartType: { type: String, attribute: 'chart-type' },
       /**
        * Set the title.
+       *
+       * @type String
        */
       titleText: { type: String, attribute: 'title-text' },
       /**
@@ -168,73 +172,105 @@ class FuroUi5ChartDisplay extends FBP(LitElement) {
        *
        * Default is **left**
        *
+       *
+       * @type String
        */
       titleAlign: { type: String, attribute: 'title-align' },
       /**
        * Moves the title for n pixels on the x-axis from the alignment direction
+       *
+       * @type Number
        */
       titleOffsetX: { type: Number, attribute: 'title-offset-x' },
       /**
        * Moves the title for n pixels on the y-axis from the alignment direction
+       *
+       * @type Number
        */
       titleOffsetY: { type: Number, attribute: 'title-offset-y' },
       /**
        * Set the text to display, if no data is given.
        *
        * If this option is not set, the default is **No data.**
+       *
+       * @type String
        */
       noDataText: { type: String, attribute: 'no-data-text' },
       /**
        * WORK IN PROGRESS
        * Stacked bar charts are not mixable
+       *
+       * @type Boolean
        */
       stacked: { type: Boolean },
       /**
        * Enable labels with data on every item.
+       *
+       * @type Boolean
        */
       dataLabels: { type: Boolean, attribute: 'data-labels' },
       /**
        * Set a fixed height for the plot. Default is auto, this can be useful if you need to control the heights
+       *
+       * @type Number
        */
       fixedHeight: { type: Number, attribute: 'fixed-height' },
       /**
        * show a tooltip on mouseover
+       *
+       * @type Boolean
        */
       tooltip: { type: Boolean },
       /**
        * Enables the legend on bottom left with offset 0:0
+       *
+       * @type Boolean
        */
       legend: { type: Boolean },
       /**
        * Draw the horizontal grid lines
+       *
+       * @type Boolean
        */
       grid: { type: Boolean },
       /**
        * Aligns the legend to `left` `center` `right`
        *
        * default is **left**
+       *
+       * @type String
        */
       legendAlign: { type: String, attribute: 'legend-align' },
       /**
        * Set the position of the legend to `top`, `right`, `bottom`, `left`
        *
        * Default is **bottom**
+       *
+       * @type String
        */
       legendPosition: { type: String, attribute: 'legend-position' },
       /**
        * Moves the legend in the **x** direction for n pixels from `legend-position`
+       *
+       * @type Number
        */
       legendOffsetX: { type: Number, attribute: 'legend-offset-x' },
       /**
        * Moves the legend in the **y** direction for n pixels from `legend-position`
+       *
+       * @type Number
        */
       legendOffsetY: { type: Number, attribute: 'legend-offset-y' },
       /**
        * Enables the toolbar
+       *
+       * @type Boolean
        */
       toolbar: { type: Boolean },
       /**
        * Enables the download option in the toolbar (svg,csv,png)
+       *
+       * @type Boolean
        */
       toolbarDownload: { type: Boolean, attribute: 'toolbar-download' },
       /**
@@ -244,18 +280,26 @@ class FuroUi5ChartDisplay extends FBP(LitElement) {
       /**
        * Hides all elements of the chart other than the primary graphic.
        * Use this to visualize data in very small areas.
+       *
+       * @type Boolean
        */
       sparkline: { type: Boolean },
       /**
        * set zebra color like zebra="#f3f4f5, #fff" to get stripes
+       *
+       * @type String
        */
       zebra: { type: String },
       /**
        * Give the x-axis a title which will be displayed below the axis labels by default.
+       *
+       * @type String
        */
       xaxisTitle: { type: String, attribute: 'xaxis-title' },
       /**
        * Set this to true if you have datetime, google.type.date or timestamp data on the x-axis
+       *
+       * @type Boolean
        */
       xaxisDatetime: { type: Boolean, attribute: 'xaxis-datetime' },
     };

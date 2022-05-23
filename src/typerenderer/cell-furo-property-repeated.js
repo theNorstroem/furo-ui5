@@ -31,6 +31,8 @@ export class CellFuroPropertyRepeated extends FBP(LitElement) {
        * Defines the empty state display
        * With a furo.Property type, the effective type is only known when the data is transmitted.
        * Default: ''
+       *
+       * @type String
        */
       noDataText: { type: String },
     };

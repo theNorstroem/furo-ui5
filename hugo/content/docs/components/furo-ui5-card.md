@@ -61,7 +61,7 @@ You can use semantic colors to visualize the status or state. Set the attribute 
 ### **icon**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon</span> <small>**reflects**</small>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 Defines the visual representation in the header of the card. Supports images and icons.
 https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html
@@ -70,7 +70,7 @@ https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/weba
 ### **heading**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">heading</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 Defines the title displayed in the ui5-card header.
 <br><br>
@@ -78,7 +78,7 @@ Defines the title displayed in the ui5-card header.
 ### **subheading**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">subheading</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 Defines the subheading displayed in the ui5-card header.
 <br><br>
@@ -86,7 +86,7 @@ Defines the subheading displayed in the ui5-card header.
 ### **status**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">status</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 Defines the status text displayed in the card header (upper right).
 
@@ -96,7 +96,7 @@ By enabling the status, actions are not visible.
 ### **headerInteractive**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-interactive</span> <small>**reflects**</small>
-<small>`boolean` default: **false**</small>
+<small>`Boolean` default: **false**</small>
 
 Defines if the ui5-card header would be interactive, e.g gets hover effect, gets focused and header-click event is fired, when it is pressed.
 <br><br>
@@ -104,7 +104,7 @@ Defines if the ui5-card header would be interactive, e.g gets hover effect, gets
 ### **noContentPadding**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-content-padding</span> <small>**reflects**</small>
-<small>`boolean` default: **false**</small>
+<small>`Boolean` default: **false**</small>
 
 Shows the content slot area with no padding
 <br><br>

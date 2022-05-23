@@ -26,14 +26,6 @@ weight: 50
 
 
 
-### **myBool**
-
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">myBool</span>
-</small>
-
-Description
-<br><br>
-
 ## Methods
 {{% api "_furo-ui5-launchpad-tile-grid-methods.md" %}}
 
@@ -47,7 +39,6 @@ Description
 
 
 <br><br>
-
 
 
 

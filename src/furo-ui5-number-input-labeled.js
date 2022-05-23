@@ -49,10 +49,14 @@ export class FuroUi5NumberInputLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-number-input
+       *
+       * @type String
        */
       label: { type: String },
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
@@ -60,16 +64,25 @@ export class FuroUi5NumberInputLabeled extends FBP(LitElement) {
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user and
        * appears in disabled state.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
       },
+      /**
+       * Icon on the right side
+       *
+       * @type String
+       */
       icon: {
         type: String,
       },

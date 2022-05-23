@@ -368,6 +368,8 @@ export class FuroUi5Table extends FBP(LitElement) {
        * - MultiSelect
        * - SingleSelect
        * - None
+       *
+       * @type String
        */
       mode: {
         type: String,
@@ -375,6 +377,8 @@ export class FuroUi5Table extends FBP(LitElement) {
       /**
        * Defines the text that will be displayed when there is no data.
        * string
+       *
+       * @type String
        */
       noDataText: {
         type: String,
@@ -382,6 +386,8 @@ export class FuroUi5Table extends FBP(LitElement) {
       },
       /**
        * Determines whether the column headers remain fixed at the top of the page during vertical scrolling as long as the Web Component is in the viewport.
+       *
+       * @type Boolean
        */
       stickyColumnHeader: {
         type: Boolean,
@@ -389,6 +395,8 @@ export class FuroUi5Table extends FBP(LitElement) {
       },
       /**
        * Busy state
+       *
+       * @type Boolean
        */
       busy: {
         type: Boolean,
