@@ -12,12 +12,12 @@
 <meta property="og:description" content="Pagination Bar" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-pagination-bar/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-pagination-bar | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3366,7 +3362,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-pagination-bar
   <a class="anchor" href="#furo-ui5-pagination-bar">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-pagination-bar.js';</code><small>
 <br>exports <em>FuroUi5PaginationBar</em> js
 <br>exports <code>&lt;furo-ui5-pagination-bar&gt;</code> custom-element-definition
@@ -3381,7 +3377,7 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>The furo-ui5-pagination-bar element loops the hateoas array and finds out the pagination
 information like prev, next, first and last</p>
-<pre><code>  &lt;furo-ui5-pagination-bar ƒ-inject=&quot;--hateoas&quot;&gt;&lt;/furo-ui5-pagination-bar&gt;
+<pre><code>  &lt;furo-ui5-pagination-bar fn-inject=&quot;--hateoas&quot;&gt;&lt;/furo-ui5-pagination-bar&gt;
 </code></pre><h4 id="example">
   Example
   <a class="anchor" href="#example">#</a>
@@ -3390,9 +3386,9 @@ information like prev, next, first and last</p>
 <furo-demo-snippet>
 <template>
 <furo-ui5-button @-click="--btnListClicked">load collection</furo-ui5-button>
-<furo-ui5-pagination-bar ƒ-inject="--responseHts" @-pagination-next="--next" @-pagination-last="--last"></furo-ui5-pagination-bar>
-<furo-deep-link ƒ-trigger="--btnListClicked" service="projectservice.ProjectService" @-hts-out="--hts"></furo-deep-link>
-<furo-collection-agent service="projectservice.ProjectService" ƒ-hts-in="--hts" ƒ-next="--next" ƒ-last="--last" list-on-hts-in="" @-response-hts-updated="--responseHts">
+<furo-ui5-pagination-bar fn-inject="--responseHts" @-pagination-next="--next" @-pagination-last="--last"></furo-ui5-pagination-bar>
+<furo-deep-link fn-trigger="--btnListClicked" service="projectservice.ProjectService" @-hts-out="--hts"></furo-deep-link>
+<furo-collection-agent service="projectservice.ProjectService" fn-hts-in="--hts" fn-next="--next" fn-last="--last" list-on-hts-in="" @-response-hts-updated="--responseHts">
 </furo-collection-agent>
 </template>
 </furo-demo-snippet>
@@ -3412,14 +3408,14 @@ information like prev, next, first and last</p>
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-pagination-bar</span> 
-  <span style="color:#008080">ƒ-inject</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--responseHts&#34;</span> 
+  <span style="color:#008080">fn-inject</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--responseHts&#34;</span> 
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-pagination-next</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--next&#34;</span> 
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-pagination-last</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--last&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-pagination-bar</span>&gt;
 &lt;<span style="color:#000080">furo-collection-agent</span> 
   <span style="color:#008080">service</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;projectservice.ProjectService&#34;</span> 
-  <span style="color:#008080">ƒ-hts-in</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--hts&#34;</span> 
-  <span style="color:#008080">ƒ-next</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--next&#34;</span> 
-  <span style="color:#008080">ƒ-last</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--last&#34;</span>
+  <span style="color:#008080">fn-hts-in</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--hts&#34;</span> 
+  <span style="color:#008080">fn-next</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--next&#34;</span> 
+  <span style="color:#008080">fn-last</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--last&#34;</span>
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-response-hts-updated</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--responseHts&#34;</span>&gt;
 &lt;/<span style="color:#000080">furo-collection-agent</span>&gt;
 </code></pre></td></tr></table>
@@ -3472,14 +3468,14 @@ information like prev, next, first and last</p>
   <strong>hts-injected</strong>
   <a class="anchor" href="#hts-injected">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-hts-injected</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-hts-injected</span>
 → <small><code>CustomEvent</code></small></p>
 <p><br><br></p>
 <h3 id="pagination-first">
   <strong>pagination-first</strong>
   <a class="anchor" href="#pagination-first">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-pagination-first</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-pagination-first</span>
 → <small>``</small></p>
 <p>Is fired if the pagination button &lsquo;sys_first_page&rsquo; was clicked
 <br><br></p>
@@ -3487,7 +3483,7 @@ information like prev, next, first and last</p>
   <strong>pagination-last</strong>
   <a class="anchor" href="#pagination-last">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-pagination-last</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-pagination-last</span>
 → <small>``</small></p>
 <p>Is fired if the pagination button &lsquo;sys_last_page&rsquo; was clicked
 <br><br></p>
@@ -3495,7 +3491,7 @@ information like prev, next, first and last</p>
   <strong>pagination-prev</strong>
   <a class="anchor" href="#pagination-prev">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-pagination-prev</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-pagination-prev</span>
 → <small>``</small></p>
 <p>Is fired if the pagination button &lsquo;sys_prev_page&rsquo; was clicked
 <br><br></p>
@@ -3503,7 +3499,7 @@ information like prev, next, first and last</p>
   <strong>pagination-next</strong>
   <a class="anchor" href="#pagination-next">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-pagination-next</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-pagination-next</span>
 → <small>``</small></p>
 <p>Is fired if the pagination button &lsquo;sys_next_page&rsquo; was clicked Tags: pagination
 <br><br></p>
@@ -3517,7 +3513,7 @@ information like prev, next, first and last</p>
 </h3>
 <p><small><strong>inject</strong>(<em>hts</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-inject</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-inject</span></p>
 <p>init pagination attributes
 Supported type: furo.Link</p>
 <ul>
@@ -3557,9 +3553,9 @@ Supported type: furo.Link</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

@@ -16,12 +16,12 @@ bookHidden: true
 </div>
 <div flex scroll>
 <furo-ui5-notification-list-display
-  ƒ-clear-all="--clearRequested"></furo-ui5-notification-list-display>
-  <furo-ui5-notification ƒ-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
+  fn-clear-all="--clearRequested"></furo-ui5-notification-list-display>
+  <furo-ui5-notification fn-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
 </div>
 </furo-vertical-flex>
 <furo-fetch-json
-  ƒ-fetch="--showStatusClicked"
+  fn-fetch="--showStatusClicked"
   src="/notification/grpc.json"
   @-data="--grpcStatus"
 ></furo-fetch-json>
@@ -35,10 +35,10 @@ bookHidden: true
 ```html
 <body>
 <furo-ui5-notification-list-display
-  ƒ-clear-all="--clearRequested"></furo-ui5-notification-list-display>
+  fn-clear-all="--clearRequested"></furo-ui5-notification-list-display>
 <main>
   <furo-ui5-notification
-    ƒ-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
+    fn-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
 </main>
 </body>
 ```

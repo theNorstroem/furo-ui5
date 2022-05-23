@@ -14,9 +14,9 @@ import { Events } from './lib/Events.js';
  * You can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.
  *
  * ```html
- *  <furo-ui5-button @-click=--openClicked>Open Scanner</furo-ui5-button>
- *  <furo-ui5-barcode-scanner-dialog ƒ-show="--openClicked"
- *                                   ƒ-bind-data="--dao(*.field)"></furo-ui5-barcode-scanner-dialog>
+ *  <furo-ui5-button at-click=--openClicked>Open Scanner</furo-ui5-button>
+ *  <furo-ui5-barcode-scanner-dialog fn-show="--openClicked"
+ *                                   fn-bind-data="--dao(*.field)"></furo-ui5-barcode-scanner-dialog>
  *
  * ```
  *
@@ -24,7 +24,7 @@ import { Events } from './lib/Events.js';
  * **bindData(fieldNode)**
  * Bind an entity field. You can use the entity even when no data was received.
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+ * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {String} scan-success -  Fires when the scan is completed successfuuly.
  * @fires {String} scan-error -  Fires when the scan fails with error.

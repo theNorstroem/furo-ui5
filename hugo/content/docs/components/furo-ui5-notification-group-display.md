@@ -34,7 +34,7 @@ you can also use more furo-ui5-notification-group-display's for special needs. B
 ### **headerText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-text</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 the header text of the notification
 <br><br>
@@ -42,7 +42,7 @@ the header text of the notification
 ### **target**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">target</span>
-</small>
+<small>`Object` </small>
 
 the target dom object, which sends the notification event
 <br><br>
@@ -50,7 +50,7 @@ the target dom object, which sends the notification event
 ### **collapsed**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">collapsed</span>
-</small>
+<small>`Boolean` </small>
 
 Defines if the group is collapsed or expanded.
 <br><br>
@@ -58,7 +58,7 @@ Defines if the group is collapsed or expanded.
 ### **showCounter**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">show-counter</span>
-</small>
+<small>`Boolean` </small>
 
 Defines if the items counter would be displayed.
 <br><br>
@@ -66,7 +66,7 @@ Defines if the items counter would be displayed.
 ### **showClose**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">show-close</span>
-</small>
+<small>`Boolean` </small>
 
 Defines if the close button would be displayed.
 <br><br>
@@ -82,7 +82,7 @@ Defines if the close button would be displayed.
 <small>**clearAll**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-clear-all</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-clear-all</span>
 
 clear all notifications
 

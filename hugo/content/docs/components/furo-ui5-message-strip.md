@@ -27,7 +27,7 @@ https://experience.sap.com/fiori-design-web/message-strip/
  ```html
  <!-- the display is placed where you want the message to appear -->
  <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
- <furo-ui5-message-strip ƒ-show-information="--wire"></furo-ui5-message-strip>
+ <furo-ui5-message-strip fn-show-information="--wire"></furo-ui5-message-strip>
  ```
 
 {{% api "_furo-ui5-message-strip-head.md" %}}
@@ -47,7 +47,7 @@ https://experience.sap.com/fiori-design-web/message-strip/
 ### **noCloseButton**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-close-button</span>
-<small>`boolean` default: **false**</small>
+<small>`Boolean` default: **false**</small>
 
 Defines whether the MessageStrip renders close icon.
 <br><br>
@@ -55,7 +55,7 @@ Defines whether the MessageStrip renders close icon.
 ### **noIcon**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-icon</span>
-<small>`boolean` default: **false**</small>
+<small>`Boolean` default: **false**</small>
 
 Defines whether the MessageStrip will show an icon in the beginning. You can directly provide an icon with the icon slot. Otherwise, the default icon for the type will be used.
 <br><br>
@@ -65,7 +65,7 @@ Defines whether the MessageStrip will show an icon in the beginning. You can dir
 ### **size**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">size</span>
-</small>
+<small>`String` </small>
 
 define the width of ui5-messagestrip. e.g. 200px
 <br><br>
@@ -73,7 +73,7 @@ define the width of ui5-messagestrip. e.g. 200px
 ### **message**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">message</span>
-</small>
+<small>`String` </small>
 
 the text message of the message strip
 <br><br>
@@ -81,7 +81,7 @@ the text message of the message strip
 {{% api "_furo-ui5-message-strip-events.md" %}}
 
 ### **message-strip-closed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-message-strip-closed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-message-strip-closed</span>
 → <small>`{Object}  payload`</small>
 
  Fired when the MessageStrip is closed
@@ -97,7 +97,7 @@ the text message of the message strip
 <small>**showInformation**(*msg* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-show-information</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-show-information</span>
 
 shows an information message
 if the param msg is empty, the attribute message is used.
@@ -109,7 +109,7 @@ if the param msg is empty, the attribute message is used.
 <small>**showSuccess**(*msg* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-show-success</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-show-success</span>
 
 shows a success message
 if the param msg is empty, the attribute message is used.
@@ -121,7 +121,7 @@ if the param msg is empty, the attribute message is used.
 <small>**showWarning**(*msg* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-show-warning</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-show-warning</span>
 
 shows a warning message
 if the param msg is empty, the attribute message is used.
@@ -133,7 +133,7 @@ if the param msg is empty, the attribute message is used.
 <small>**showError**(*msg* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-show-error</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-show-error</span>
 
 shows an error message
 if the param msg is empty, the attribute message is used.
@@ -145,7 +145,7 @@ if the param msg is empty, the attribute message is used.
 <small>**showGrpcLocalizedMessage**(*rpcStatus* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-show-grpc-localized-message</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-show-grpc-localized-message</span>
 
 shows a google rpc status message (message LocalizedMessage)
 Provides a localized error message that is safe to return to the user

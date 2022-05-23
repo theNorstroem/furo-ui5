@@ -46,6 +46,8 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
     return {
       /**
        * the header text of the notification
+       *
+       * @type String
        */
       headerText: {
         type: String,
@@ -53,6 +55,8 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
       },
       /**
        * Defines if the close button would be displayed.
+       *
+       * @type Boolean
        */
       showClose: {
         type: Boolean,
@@ -60,6 +64,8 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
       },
       /**
        * Defines the text that is displayed when the list contains no items.
+       *
+       * @type String
        */
       noDataText: {
         type: String,
@@ -68,6 +74,8 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
       /**
        * Defines the notification group element title for notifications of type
        * "type.googleapis.com/google.rpc.LocalizedMessage"
+       *
+       * @type String
        */
       groupTitleMessage: {
         type: String,
@@ -76,6 +84,8 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
       /**
        * Defines the notification group element title for notifications of type
        * "type.googleapis.com/google.rpc.Help"
+       *
+       * @type String
        */
       groupTitleHelp: {
         type: String,
@@ -84,6 +94,8 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
       /**
        * Defines the notification group element title for notifications of type
        * "type.googleapis.com/google.rpc.BadRequest"
+       *
+       * @type String
        */
       groupTitleBadRequest: {
         type: String,

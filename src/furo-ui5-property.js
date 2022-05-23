@@ -10,7 +10,7 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  *  `furo-ui5-property` works with repeated types and non repeating property types.
  *
  *  ```html
- *  <furo-ui5-property ƒ-bind-data="--entity(*.single_type_property)"></furo-ui5-property>
+ *  <furo-ui5-property fn-bind-data="--entity(*.single_type_property)"></furo-ui5-property>
  *  ```
  *
  *  **Example data for the data-object looks like this**
@@ -80,7 +80,7 @@ export class FuroUi5Property extends FBP(LitElement) {
           attrs += `${nodeName}="${nodeValue}"`;
         }
       }
-      r.innerHTML = `<template><furo-ui5-property ƒ-bind-data='--init' ${attrs}></furo-ui5-property></template>`;
+      r.innerHTML = `<template><furo-ui5-property fn-bind-data='--init' ${attrs}></furo-ui5-property></template>`;
 
       const repeater = this.parentNode.insertBefore(r, this);
       this._createdRepeater = repeater;
@@ -117,6 +117,8 @@ export class FuroUi5Property extends FBP(LitElement) {
     return {
       /**
        * Set the context, for the renderers.
+       *
+       * @type String
        */
       context: { type: String },
     };

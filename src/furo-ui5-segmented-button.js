@@ -10,7 +10,7 @@ import { Events } from './lib/Events.js';
  *
  * ```html
  * <furo-ui5-segmented-button
- *    ƒ-bind-data="--daoPerson(*.field_with_meta_options)">
+ *    fn-bind-data="--daoPerson(*.field_with_meta_options)">
  * </furo-ui5-segmented-button>
  * ```
  *

@@ -32,7 +32,7 @@ to the design specification of SAP Fiori Design System.
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 the label for the data-date-picker
 <br><br>
@@ -40,7 +40,7 @@ the label for the data-date-picker
 ### **formatPattern**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">format-pattern</span>
-</small>
+<small>`String` </small>
 
 forwards the format-pattern to the furo-ui5-time-picker component.
 <br><br>
@@ -48,7 +48,7 @@ forwards the format-pattern to the furo-ui5-time-picker component.
 ### **required**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">required</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field is required and marked with *.
 <br><br>
@@ -56,7 +56,7 @@ A Boolean attribute which, if present, means this field is required and marked w
 ### **disabled**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span> <small>**reflects**</small>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field cannot be edited by the user.
 <br><br>
@@ -64,7 +64,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 ### **readonly**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">readonly</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field is readonly.
 <br><br>
@@ -72,7 +72,7 @@ A Boolean attribute which, if present, means this field is readonly.
 {{% api "_furo-ui5-time-picker-labeled-events.md" %}}
 
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`String`</small>
 
 Fires the field value when it changes in ISO 8601 format.
@@ -87,7 +87,7 @@ Fires the field value when it changes in ISO 8601 format.
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Orchestrates the data field connection to the inside
 

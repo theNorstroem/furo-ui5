@@ -12,12 +12,12 @@ import * as Dialog from '@ui5/webcomponents/dist/Dialog.js';
  * **important:** Place a furo-ui5-dialog-display in any dom parent of the component where you use furo-ui5-dialog. Your app-shell or body is a good place to do that.
  *
  *```html
- * <furo-ui5-dialog header-text="Dialog title" ƒ-show="--openDialogClicked" ƒ-close="--closeDialogClicked">
+ * <furo-ui5-dialog header-text="Dialog title" fn-show="--openDialogClicked" fn-close="--closeDialogClicked">
  *   <p>Content</p>
- *   <div slot="footer"> <button @-click="--closeDialogClicked">close dialog</button></div>
+ *   <div slot="footer"> <button at-click="--closeDialogClicked">close dialog</button></div>
  * </furo-ui5-dialog>
  *
- * <button @-click="--openDialogClicked">Open dialog</button>
+ * <button at-click="--openDialogClicked">Open dialog</button>
  * ```
  *
  * @summary Dialog element

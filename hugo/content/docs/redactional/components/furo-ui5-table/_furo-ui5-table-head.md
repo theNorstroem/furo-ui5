@@ -14,7 +14,7 @@ The default typerenderer context for the cells is **cell**. You can set the cont
 <template>
 <button @-click="--read">load data</button><br><br>
 <furo-ui5-table mode="SingleSelect"
- ƒ-bind-data="--collection(*.entities)"
+ fn-bind-data="--collection(*.entities)"
 >
  <!-- The column label is evaluated from the specs -->
   <ui5-table-column
@@ -36,9 +36,9 @@ The default typerenderer context for the cells is **cell**. You can set the cont
 <furo-data-object
   type="person.PersonCollection"
   @-object-ready="--collection"
-  ƒ-inject-raw="--response"></furo-data-object>
+  fn-inject-raw="--response"></furo-data-object>
   <furo-fetch-json
-    ƒ-fetch="--read"
+    fn-fetch="--read"
     src="/mockdata/persons/list.json"
     @-data="--response"
     ></furo-fetch-json>
@@ -48,7 +48,7 @@ The default typerenderer context for the cells is **cell**. You can set the cont
 #### Markup
 ```html
 <furo-ui5-table
-  ƒ-bind-data="--collection(*.entities)">
+  fn-bind-data="--collection(*.entities)">
   <!-- The column label is evaluated from the specs -->
   <ui5-table-column
     slot="columns"
@@ -74,6 +74,6 @@ The default typerenderer context for the cells is **cell**. You can set the cont
 <furo-data-object
   type="person.PersonCollection"
   @-object-ready="--collection"
-  ƒ-inject-raw="--response"></furo-data-object>
+  fn-inject-raw="--response"></furo-data-object>
 
 ```

@@ -14,10 +14,10 @@ bookHidden: true
 <br><br><br>
 <furo-ui5-button
  design="Emphasized"
- ƒ-hide="--hideClicked"
- ƒ-show="--showClicked"
- ƒ-disable="--disableClicked"
- ƒ-enable="--enableClicked"
+ fn-hide="--hideClicked"
+ fn-show="--showClicked"
+ fn-disable="--disableClicked"
+ fn-enable="--enableClicked"
 >Button</furo-ui5-button>
 </template>
 </furo-demo-snippet>

@@ -23,7 +23,7 @@ You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal
 
 ```html
  <furo-ui5-rating-indicator
-    ƒ-bind-data="--dao(FIELDNODE)"
+    fn-bind-data="--dao(FIELDNODE)"
  ></furo-ui5-rating-indicator>
 ```
 
@@ -47,7 +47,7 @@ You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal
 **bind-data(fieldNode)**
 Bind aa entity field. You can use the entity even when no data was received.
 
-When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
 {{% api "_furo-ui5-rating-indicator-head.md" %}}
 
@@ -68,13 +68,13 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 {{% api "_furo-ui5-rating-indicator-events.md" %}}
 
 ### **change**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-change</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-change</span>
 → <small>``number``</small>
 
  Fired when the values changes.
 <br><br>
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>``number``</small>
 
 Fires the field value when it changes.
@@ -88,7 +88,7 @@ Fires the field value when it changes.
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 those attributes can be set. `readonly`,`disabled`
@@ -101,7 +101,7 @@ Use this after manual or scripted update of the attributes.
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a FieldNode to the component.
 

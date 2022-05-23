@@ -42,7 +42,7 @@ You can bind the furo.Property type (single and repeated).
 
 ```html
  <furo-ui5-propertylist-display
-    ƒ-bind-data="--daoCountry(*.data.additional_data)"
+    fn-bind-data="--daoCountry(*.data.additional_data)"
  ></furo-ui5-propertylist-display>
 ```
 
@@ -63,7 +63,7 @@ You can bind the furo.Property type (single and repeated).
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `boolean`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a RepeaterNode of type furo.Property.
 

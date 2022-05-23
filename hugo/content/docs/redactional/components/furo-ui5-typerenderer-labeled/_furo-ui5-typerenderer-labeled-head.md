@@ -10,12 +10,12 @@ bookHidden: true
 <furo-demo-snippet>
 <template>
 <furo-ui5-textarea-input
-    ƒ-bind-data="--dataObject(*.furo_data_textarea_input)"
+    fn-bind-data="--dataObject(*.furo_data_textarea_input)"
  ></furo-ui5-textarea-input>
 <hr>
-<furo-ui5-typerenderer-labeled ƒ-bind-data="--dataObject(*.furo_data_textarea_input)"></furo-ui5-typerenderer-labeled>
-<furo-ui5-typerenderer-labeled disabled ƒ-bind-data="--dataObject(*.furo_data_textarea_input)"></furo-ui5-typerenderer-labeled>
-<furo-ui5-typerenderer-labeled disabled context="form" ƒ-bind-data="--dataObject(*.furo_data_textarea_input)"></furo-ui5-typerenderer-labeled>
+<furo-ui5-typerenderer-labeled fn-bind-data="--dataObject(*.furo_data_textarea_input)"></furo-ui5-typerenderer-labeled>
+<furo-ui5-typerenderer-labeled disabled fn-bind-data="--dataObject(*.furo_data_textarea_input)"></furo-ui5-typerenderer-labeled>
+<furo-ui5-typerenderer-labeled disabled context="form" fn-bind-data="--dataObject(*.furo_data_textarea_input)"></furo-ui5-typerenderer-labeled>
 <furo-data-object
   type="experiment.Experiment"
   @-object-ready="--dataObject"

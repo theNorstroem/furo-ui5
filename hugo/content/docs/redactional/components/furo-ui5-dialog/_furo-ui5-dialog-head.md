@@ -9,7 +9,7 @@ bookHidden: true
 
 <furo-demo-snippet>
 <template>
-<furo-ui5-dialog header-text="Dialog title" ƒ-show="--openDialogClicked" ƒ-close="--closeDialogClicked">
+<furo-ui5-dialog header-text="Dialog title" fn-show="--openDialogClicked" fn-close="--closeDialogClicked">
 <p>Content</p>
 <div slot="footer"> <button @-click="--closeDialogClicked">close dialog</button></div>
 </furo-ui5-dialog>
@@ -21,8 +21,8 @@ bookHidden: true
 ```html
 <furo-ui5-dialog 
   header-text="Dialog title" 
-  ƒ-show="--openDialogClicked" 
-  ƒ-close="--closeDialogClicked">
+  fn-show="--openDialogClicked" 
+  fn-close="--closeDialogClicked">
   <p>Content</p>
   <div slot="footer">
     <button @-click="--closeDialogClicked">close dialog</button>

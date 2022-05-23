@@ -12,12 +12,12 @@
 <meta property="og:description" content="Binds a entityObject field google.type.Money to a number-input and currency dropdown fields" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-money-input/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-money-input | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3367,7 +3363,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-money-input
   <a class="anchor" href="#furo-ui5-money-input">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-money-input.js';</code><small>
 <br>exports <em>FuroUi5MoneyInput</em> js
 <br>exports <code>&lt;furo-ui5-money-input&gt;</code> custom-element-definition
@@ -3396,9 +3392,9 @@ ways have priority : currencies &gt; options as attribute &gt; options in meta.<
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-money-input</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dao(google.type.Money)&#34;</span> <span style="color:#008080">options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;{&#34;list&#34;: [ &#34;CHF&#34;,&#34;EUR&#34;,&#34;USD&#34; ]}&#39;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
- &lt;<span style="color:#000080">furo-ui5-money-input</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dao(google.type.Money)&#34;</span> <span style="color:#008080">options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;{&#34;list&#34;: [ {&#34;id&#34;:&#34;CHF&#34;,&#34;label&#34;:&#34;Schweiz&#34;},{&#34;id&#34;:&#34;EUR&#34;,&#34;label&#34;:&#34;Europa&#34;, &#34;selected&#34;: true}&#39;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
- &lt;<span style="color:#000080">furo-ui5-money-input</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dao(google.type.Money)&#34;</span> <span style="color:#008080">currencies</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;CHF,EUR,USD&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-money-input</span> <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dao(google.type.Money)&#34;</span> <span style="color:#008080">options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;{&#34;list&#34;: [ &#34;CHF&#34;,&#34;EUR&#34;,&#34;USD&#34; ]}&#39;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
+ &lt;<span style="color:#000080">furo-ui5-money-input</span> <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dao(google.type.Money)&#34;</span> <span style="color:#008080">options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;{&#34;list&#34;: [ {&#34;id&#34;:&#34;CHF&#34;,&#34;label&#34;:&#34;Schweiz&#34;},{&#34;id&#34;:&#34;EUR&#34;,&#34;label&#34;:&#34;Europa&#34;, &#34;selected&#34;: true}&#39;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
+ &lt;<span style="color:#000080">furo-ui5-money-input</span> <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--dao(google.type.Money)&#34;</span> <span style="color:#008080">currencies</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;CHF,EUR,USD&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="supported-meta-and-constraints">
@@ -3419,7 +3415,7 @@ ways have priority : currencies &gt; options as attribute &gt; options in meta.<
 <template>
 <furo-form-layouter four>
 <furo-ui5-money-input  
-ƒ-bind-data="--doExp(*.furo_data_money_input)" 
+fn-bind-data="--doExp(*.furo_data_money_input)" 
 currencies="CHF,EUR,USD"></furo-ui5-money-input>
 </furo-form-layouter>
 <furo-data-object
@@ -3445,12 +3441,12 @@ currencies="CHF,EUR,USD"></furo-ui5-money-input>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
 <p>&lt;<span style="color:#000080">furo-ui5-money-input</span>
-<span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;doExp(<em>.furo_data_money_input)&quot;</span>
+<span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;doExp(<em>.furo_data_money_input)&quot;</span>
 &gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
 &lt;<span style="color:#000080">furo-ui5-money-input</span>
 <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Success&quot;</span>
 <span style="color:#008080">text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;Override&quot;</span>
-<span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;doExp(</em>.furo_data_money_input)&quot;</span>
+<span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;doExp(</em>.furo_data_money_input)&quot;</span>
 &gt;&lt;/<span style="color:#000080">furo-ui5-money-input</span>&gt;
 &lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
 </code></pre></td></tr></table></p>
@@ -3516,7 +3512,7 @@ disabled: null,
   <strong>furo-value-changed</strong>
   <a class="anchor" href="#furo-value-changed">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small><code>Money</code></small></p>
 <p>Fired when the input operation has finished by pressing Enter or on focusout.
 <br><br></p>
@@ -3530,7 +3526,7 @@ disabled: null,
 </h3>
 <p><small><strong>bindData</strong>(<em>fieldNode</em> <code>FieldNode</code> ) ⟹ <code>void</code></small></p>
 <p><small><code>FieldNode</code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span></p>
 <p>Binds a fieldNode.</p>
 <p>Supported types: <code>google.type.Money</code></p>
 <ul>
@@ -3543,7 +3539,7 @@ disabled: null,
 </h3>
 <p><small><strong>readAttributes</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span></p>
 <p>Reads the attributes which are set on the component dom.
 Attributes that can be se are   <code>required</code>,<code>readonly</code>,<code>disabled</code> ,
 Use this after manual or scripted update of the attributes.</p>
@@ -3554,7 +3550,7 @@ Use this after manual or scripted update of the attributes.</p>
 </h3>
 <p><small><strong>onFnaOptionsChanged</strong>(<em>options</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-options-changed</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-options-changed</span></p>
 <p>Checks if options.flags has an entry <code>currency_list</code>
 In this case the option list is applied to the currency field as suggestion items.</p>
 <p>If you use a static option definition in the type specification (furo), you can
@@ -3585,7 +3581,7 @@ define the list as follows:</p>
 </h3>
 <p><small><strong>_convertDataToMoneyObj</strong>(<em>currency</em> <code>*amount*</code> <em>obj</em> `` ) ⟹ <code>void</code></small></p>
 <p><small><code> </code> `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;convert-data-to-money-obj</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn&ndash;convert-data-to-money-obj</span></p>
 <ul>
 <li><small>currency </small></li>
 <li><small>amount </small></li>
@@ -3598,7 +3594,7 @@ define the list as follows:</p>
 </h3>
 <p><small><strong>_getElements</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;get-elements</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn&ndash;get-elements</span></p>
 <p><br><br></p>
 </article>
  
@@ -3610,9 +3606,9 @@ define the list as follows:</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

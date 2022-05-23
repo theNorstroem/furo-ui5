@@ -21,7 +21,7 @@ This component uses the SAP Ui5 icons.
 https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html
 
 ```html
-<furo-ui5-bool-icon ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-bool-icon>
+<furo-ui5-bool-icon fn-bind-data="--dao(FIELDNODE)"></furo-ui5-bool-icon>
 ```
 
 Only `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.
@@ -39,7 +39,7 @@ If you set other icons, please do not forget to import them.
 ### **symboltrue**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">symboltrue</span>
-<small>`string` default: **&#39;navigation-down-arrow&#39;**</small>
+<small>`String` default: **&#39;navigation-down-arrow&#39;**</small>
 
 Defines the icon for the true state.
 <br><br>
@@ -47,7 +47,7 @@ Defines the icon for the true state.
 ### **symbolfalse**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">symbolfalse</span>
-<small>`string` default: **&#39;navigation-right-arrow&#39;**</small>
+<small>`String` default: **&#39;navigation-right-arrow&#39;**</small>
 
 Defines the icon for the false state.
 <br><br>
@@ -68,7 +68,7 @@ default: **{}**</small>
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a FieldNode
 
@@ -81,7 +81,7 @@ Supported types: `bool`
 <small>**toggle**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-toggle</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-toggle</span>
 
 Toggles the icon.
 

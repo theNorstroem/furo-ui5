@@ -47,7 +47,7 @@ default: **false**</small>
 ### **noDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">noDataText</span>
-</small>
+<small>`String` </small>
 
 Defines the empty state display
 With a furo.Property type, the effective type is only known when the data is transmitted.
@@ -64,7 +64,7 @@ Default: ''
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a field node to the component
 the display-furo-property-repeats is a simple proxy element to show

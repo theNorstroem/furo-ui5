@@ -24,7 +24,7 @@ import './furo-ui5-dialog.js';
  *  *default usage*
  * ```html
  *   <furo-ui5-reference-search
- *   ƒ-bind-data="--data(*.is_person)"
+ *   fn-bind-data="--data(*.is_person)"
  *   ></furo-ui5-reference-search>
  * ```
  *
@@ -32,7 +32,7 @@ import './furo-ui5-dialog.js';
  * ```html
  *   <furo-ui5-reference-search
  *   extended-searcher="country-filter"
- *   ƒ-bind-data="--data(*.is_person)"
+ *   fn-bind-data="--data(*.is_person)"
  *   ></furo-ui5-reference-search>
  * ```
  *
@@ -43,7 +43,7 @@ import './furo-ui5-dialog.js';
  *   search-response-path="xx_entities"
  *   value-field-path="data.xx_id"
  *   display-field-path="data.xx_display_name"
- *   ƒ-bind-data="--data(*.is_person)"
+ *   fn-bind-data="--data(*.is_person)"
  *   ></furo-ui5-reference-search-labeled>
  * ```
  *
@@ -59,7 +59,7 @@ import './furo-ui5-dialog.js';
  *
  * If you bind a scalar field, the value which is set in 'valueFieldPath' will be set.
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+ * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * ## Specs
  * Define a proper default value on the reference type.
@@ -305,22 +305,30 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       /**
        * Path to the node in the response value which contains the array with the selection items.
        * By default this goes to *entitites*
+       *
+       * @type String
        */
       searchResponsePath: { type: String, attribute: 'search-response-path' },
       /**
        * Path to response value item which is used for the id.
        * By default this goes to *data.id*
+       *
+       * @type String
        */
       valueFieldPath: { type: String, attribute: 'value-field-path' },
       /**
        * Path to selection value node which is used for the display.
        * By default this goes to *data.display_name*
+       *
+       * @type String
        */
       displayFieldPath: { type: String, attribute: 'display-field-path' },
       /**
        * Path to response value item of the extended search which is used for the id.
        * By default this goes to *data.id*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
+       *
+       * @type String
        */
       extendedValueFieldPath: {
         type: String,
@@ -330,6 +338,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Path to response value item of the exteded search which is used for the display.
        * By default this goes to *data.display_name*.
        * Only needed when your extended searcher does not have the id, display_name signature in the response.
+       *
+       * @type String
        */
       extendedDisplayFieldPath: {
         type: String,
@@ -337,16 +347,22 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       },
       /**
        * Set the service. This is only needed when you do not use a bind or bind a scalar value.
+       *
+       * @type String
        */
       service: { type: String },
       /**
        * Use this attribute to set a custom icon for your searcher
+       *
+       * @type String
        */
       icon: { type: String },
       /**
        * A Boolean attribute which, if present, means this field can not be searched.
        *
        * This is very useful when you want enforce the usage of the extended search
+       *
+       * @type Boolean
        */
       disableSearchList: {
         type: Boolean,
@@ -354,6 +370,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       },
       /**
        * hint text when result not found by search
+       *
+       * @type String
        */
       noDataText: {
         type: String,
@@ -363,6 +381,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Overrides the required value from the **specs**.
        *
        * Use with caution, normally the specs defines this value.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
@@ -372,6 +392,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Overrides the hint text from the **specs**.
        *
        * Use with caution, normally the specs defines this value.
+       *
+       * @type String
        */
       placeholder: {
         type: String,
@@ -380,6 +402,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Overrides the label text from the **specs**.
        *
        * Use with caution, normally the specs defines this value.
+       *
+       * @type String
        */
       label: {
         type: String,
@@ -387,6 +411,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       /**
        * The minimal length of search term to trigger a search.
        *
+       *
+       * @type Number
        */
       minTermLength: {
         type: Number,
@@ -399,6 +425,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        *
        * If the response contains hts information with rel *next* a "load more" button will be displayed at the end
        * of the list.
+       *
+       * @type Number
        */
       maxItemsToDisplay: {
         type: Number,
@@ -409,6 +437,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Enable this, to avoid the automatic triggering of "search".
        *
        * The user have to press enter to trigger the search. Min-term-length is respected.
+       *
+       * @type Boolean
        */
       searchOnEnterOnly: {
         type: Boolean,
@@ -418,24 +448,32 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        * Overrides the readonly value from the **specs**.
        *
        * Use with caution, normally the specs defines this value.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
       },
       /**
        * Disable
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * This is used to activate the loading indicator.
+       *
+       * @type Boolean
        */
       busy: {
         type: Boolean,
       },
       /**
        * Value State of the input field
+       *
+       * @type String
        */
       valueState: {
         type: String,
@@ -443,6 +481,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       },
       /**
        * wait for this time between keystrokes to trigger a search to the service
+       *
+       * @type Number
        */
       debounceTimeout: {
         type: Number,
@@ -451,6 +491,8 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
 
       /**
        * Define the extended searcher. Do not forget to import the searcher you want to use.
+       *
+       * @type String
        */
       extendedSearcher: {
         type: String,
@@ -493,7 +535,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
 
       /**
        * Register hook on wire --BackdropFocus , |--htsIn, --hts to pass it to the value helper
-       * This is done so, because we can not set @-xxx attributes in js
+       * This is done so, because we can not set at-xxx attributes in js
        */
       this._FBPAddWireHook('--BackdropFocus', () => {
         this._valueHelperComponent.focus();
@@ -1131,16 +1173,16 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
         ?readonly="${this.readonly}"
         ?disabled="${this.disabled}"
         value-state="${this.valueState}"
-        ƒ-.value="--displayValue"
-        @-blur="--blured"
-        @-focus="--focused"
-        @-click="--focused"
+        set-value="--displayValue"
+        at-blur="--blured"
+        at-focus="--focused"
+        at-click="--focused"
         placeholder="${this.placeholder}"
       >
         <ui5-icon
           slot="icon"
           name="${this.icon}"
-          @-click="^^search-icon-clicked,--expandIconClicked"
+          at-click="^^search-icon-clicked,--expandIconClicked"
         ></ui5-icon>
       </ui5-input>
       <ui5-busy-indicator
@@ -1150,68 +1192,68 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       <ui5-list
         mode="SingleSelect"
         class="list"
-        @-item-selected="--itemSelected"
+        at-item-selected="--itemSelected"
         growing="${this._hasmore}"
-        @-load-more="--loadMore"
-        @-last-element-selected="--lastListElementReached"
+        at-load-more="--loadMore"
+        at-last-element-selected="--lastListElementReached"
       >
         <flow-repeat
-          ƒ-inject-items="--resultList"
-          ƒ-select="--listOpened"
-          ƒ-deselect-all="--listDeselectAll"
-          ƒ-select-next-index="--arrowDownPressed"
-          ƒ-select-previous-index="--arrowUpPressed"
-          ƒ-trigger-selected="--enterPressedForSelect"
+          fn-inject-items="--resultList"
+          fn-select="--listOpened"
+          fn-deselect-all="--listDeselectAll"
+          fn-select-next-index="--arrowDownPressed"
+          fn-select-previous-index="--arrowUpPressed"
+          fn-trigger-selected="--enterPressedForSelect"
         >
           <template>
             <ui5-reference-search-item
               display-field="data.display_name"
-              ƒ-deselect="--itemDeSelected"
-              ƒ-select="--trigger"
-              ƒ-preselect="--itemSelected"
-              ƒ-inject-item="--item"
+              fn-deselect="--itemDeSelected"
+              fn-select="--trigger"
+              fn-preselect="--itemSelected"
+              fn-inject-item="--item"
             ></ui5-reference-search-item>
           </template>
         </flow-repeat>
       </ui5-list>
       <furo-ui5-dialog
-        ƒ-show="--valueHelperRequested"
-        @-after-open="--BackdropFocus"
-        ƒ-close="--closeRequested, --recordSelected"
-        @-after-close="--backdropClosed"
+        fn-show="--valueHelperRequested"
+        at-after-open="--BackdropFocus"
+        fn-close="--closeRequested, --recordSelected"
+        at-after-close="--backdropClosed"
         stretch
         header-text="${this.label}"
-        @-escape-filter-panel="--closeRequested"
-        @-record-selected="--recordSelected"
+        at-escape-filter-panel="--closeRequested"
+        at-record-selected="--recordSelected"
         id="dialog"
       >
       </furo-ui5-dialog>
       <furo-de-bounce
-        ƒ-trigger="--searchTerm"
-        @-debounced="--debouncedSrch"
+        fn-trigger="--searchTerm"
+        at-debounced="--debouncedSrch"
         wait="${this.debounceTimeout}"
       ></furo-de-bounce>
 
       <furo-deep-link
-        ƒ-.service="--detectedService, |--service"
-        ƒ-qp-in="|--qpIn"
-        @-hts-out="--hts"
+        set-service="--detectedService, |--service"
+        fn-qp-in="|--qpIn"
+        at-hts-out="--hts"
       >
       </furo-deep-link>
 
-      <!-- todo: ƒ-cancel-request="--searchTerm" -->
+      <!-- todo: fn-cancel-request="--searchTerm" -->
       <furo-collection-agent
-        ƒ-.service="--detectedService, |--service"
-        ƒ-set-filter="--filter"
-        ƒ-search="--debouncedSrch"
-        ƒ-next="--loadMore"
+        set-service="--detectedService, |--service"
+        fn-set-filter="--filter"
+        fn-search="--debouncedSrch"
+        fn-next="--loadMore"
         page-size="${this.maxItemsToDisplay}"
-        ƒ-hts-in="|--htsIn, --hts"
-        @-search-success="--searchResponse"
-        @-next-success="--nextSearchResponse"
-        @-next-rejected="--nextRejected"
-        @-response="--responseReceived"
-        @-response-error="--responseReceived, --responseError"
+        fn-hts-in="|--htsIn, --hts"
+        at-search-success="--searchResponse"
+        at-next-success="--nextSearchResponse"
+        at-next-rejected="--nextRejected"
+        at-response="--responseReceived"
+        at-response-error="--responseReceived, --responseError"
       ></furo-collection-agent>
     `;
   }

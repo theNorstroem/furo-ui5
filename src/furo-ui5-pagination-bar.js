@@ -20,7 +20,7 @@ import { i18n } from '@furo/framework/src/i18n.js';
  * information like prev, next, first and last
  *
  * ```
- *   <furo-ui5-pagination-bar ƒ-inject="--hateoas"></furo-ui5-pagination-bar>
+ *   <furo-ui5-pagination-bar fn-inject="--hateoas"></furo-ui5-pagination-bar>
  * ```
  *
  * @cssprop {1rem} [--furo-ui5-pagination-bar-padding-right=1rem] - Right padding definition
@@ -219,14 +219,14 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
         <ui5-button
           title="${i18n.t('sys_first_page')}"
           design="Transparent"
-          @-click="^^pagination-first"
+          at-click="^^pagination-first"
           icon="sys-first-page"
           ?disabled="${!this.first}"
         ></ui5-button>
         <ui5-button
           title="${i18n.t('sys_prev_page')}"
           design="Transparent"
-          @-click="^^pagination-prev"
+          at-click="^^pagination-prev"
           icon="sys-prev-page"
           ?disabled="${!this.prev}"
         ></ui5-button>
@@ -234,19 +234,19 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
         <ui5-button
           title="${i18n.t('sys_next_page')}"
           design="Transparent"
-          @-click="^^pagination-next"
+          at-click="^^pagination-next"
           icon="sys-next-page"
           ?disabled="${!this.next}"
         ></ui5-button>
         <ui5-button
           title="${i18n.t('sys_last_page')}"
           design="Transparent"
-          @-click="^^pagination-last"
+          at-click="^^pagination-last"
           icon="sys-last-page"
           ?disabled="${!this.last}"
         ></ui5-button>
       </furo-horizontal-flex>
-      <furo-navigation-pad @-navigated="--navigated"></furo-navigation-pad>
+      <furo-navigation-pad at-navigated="--navigated"></furo-navigation-pad>
     `;
   }
 }

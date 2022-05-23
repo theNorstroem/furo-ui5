@@ -23,7 +23,7 @@ You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal
 
 ```html
  <furo-ui5-number-input
-    ƒ-bind-data="--dao(FIELDNODE)"
+    fn-bind-data="--dao(FIELDNODE)"
  ></furo-ui5-number-input>
 ```
 
@@ -52,7 +52,7 @@ The constraint **required** will mark the element as required
 **bind-data(fieldNode)**
 Bind an entity field. You can use the entity even when no data was received.
 
-When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
 {{% api "_furo-ui5-step-input-head.md" %}}
 
@@ -99,19 +99,19 @@ default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
 {{% api "_furo-ui5-step-input-events.md" %}}
 
 ### **change**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-change</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-change</span>
 → <small>``number``</small>
 
  Fired when the input operation has finished by pressing Enter or on focusout.
 <br><br>
 ### **input**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-input</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-input</span>
 → <small>``</small>
 
  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
 <br><br>
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>``string``</small>
 
 Fires the field value when it changes.
@@ -128,7 +128,7 @@ Fires the field value when it changes.
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a FieldNode to the component.
 
@@ -145,7 +145,7 @@ Supported types:
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 those attributes can be set. `value-state`, `value-state-message`,  `icon`, `placeholder`, `required`,`readonly`,`disabled`

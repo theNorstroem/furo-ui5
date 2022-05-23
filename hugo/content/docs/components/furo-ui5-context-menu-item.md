@@ -46,7 +46,7 @@ default: **&#39;border&#39;**</small>
 ### **focused**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">focused</span> <small>**reflects**</small>
-</small>
+<small>`Boolean` </small>
 
 focused state
 <br><br>
@@ -54,7 +54,7 @@ focused state
 ### **disabled**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span> <small>**reflects**</small>
-</small>
+<small>`Boolean` </small>
 
 disabled state
 <br><br>
@@ -62,19 +62,19 @@ disabled state
 {{% api "_furo-ui5-context-menu-item-events.md" %}}
 
 ### **mousefocus**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-mousefocus</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-mousefocus</span>
 → <small>`index`</small>
 
  Fired when hovered with mouse
 <br><br>
 ### **opensub-requested**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-opensub-requested</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-opensub-requested</span>
 → <small>`menu: this.menuitem, initiator: this`</small>
 
  Fired when submenu should be opened
 <br><br>
 ### **item-selected**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-item-selected</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-item-selected</span>
 → <small>`item`</small>
 
  Fired when item was selected
@@ -89,7 +89,7 @@ disabled state
 <small>**bindData**(*menuNode* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Bind a single menu node with a `menu.Menuitem` signature.
 
@@ -105,7 +105,7 @@ Bind a single menu node with a `menu.Menuitem` signature.
 <small>**index**(*i* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-index</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-index</span>
 
 store the index for mouseover focus
 
@@ -116,7 +116,7 @@ store the index for mouseover focus
 <small>**setFocused**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-focused</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-set-focused</span>
 
 mark item as focused
 
@@ -126,7 +126,7 @@ mark item as focused
 <small>**unsetFocused**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-unset-focused</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-unset-focused</span>
 
 mark item as unfocused
 

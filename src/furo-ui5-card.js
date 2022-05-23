@@ -217,26 +217,35 @@ export class FuroUi5Card extends FBP(LitElement) {
     return {
       /**
        * Defines the title displayed in the ui5-card header.
+       *
+       * @type String
        */
       heading: { type: String },
       /**
        * Defines the subheading displayed in the ui5-card header.
+       *
+       * @type String
        */
       subheading: { type: String },
       /**
        * Defines the visual representation in the header of the card. Supports images and icons.
        * https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html
+       *
+       * @type String
        */
       icon: { type: String, reflect: true, attribute: 'icon' },
       /**
        * Defines the status text displayed in the card header (upper right).
        *
        * By enabling the status, actions are not visible.
+       *
+       * @type String
        */
       status: { type: String },
       /**
        * Defines if the ui5-card header would be interactive, e.g gets hover effect, gets focused and header-click event is fired, when it is pressed.
        *
+       * @type Boolean
        */
       headerInteractive: {
         type: Boolean,
@@ -245,6 +254,8 @@ export class FuroUi5Card extends FBP(LitElement) {
       },
       /**
        * Shows the content slot area with no padding
+       *
+       * @type Boolean
        */
       noContentPadding: {
         type: Boolean,
@@ -262,7 +273,7 @@ export class FuroUi5Card extends FBP(LitElement) {
     return html`
       <ui5-card ?no-content-padding="${this.noContentPadding}">
         <ui5-card-header
-          @-click="^^header-clicked"
+          at-click="^^header-clicked"
           slot="header"
           ?interactive="${this.headerInteractive}"
           title-text="${this.heading}"

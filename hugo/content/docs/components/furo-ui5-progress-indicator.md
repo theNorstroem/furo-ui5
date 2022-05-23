@@ -21,7 +21,7 @@ https://sap.github.io/ui5-webcomponents/playground/components/ProgressIndicator/
 Supported type: You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types
 
 ```html
-<furo-ui5-progress-indicator ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-progress-indicator>
+<furo-ui5-progress-indicator fn-bind-data="--dao(FIELDNODE)"></furo-ui5-progress-indicator>
 ```
 
 {{% api "_furo-ui5-progress-indicator-head.md" %}}
@@ -49,7 +49,7 @@ Supported type: You can bind any `number` type, any `furo.fat.xxx` number type, 
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 those attributes can be set. `value-state`, `value-state-message`,  `icon`, `placeholder`, `required`,`readonly`,`disabled`

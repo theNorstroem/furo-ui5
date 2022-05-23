@@ -21,7 +21,7 @@ import '@ui5/webcomponents/dist/BusyIndicator.js';
  *
  * ```html
  * <furo-ui5-section
- *    ƒ-bind-data="--dao(*.field_of_type_string)">
+ *    fn-bind-data="--dao(*.field_of_type_string)">
  *    <furo-ui5-subsection></furo-ui5-subsection>
  *    <furo-ui5-subsection></furo-ui5-subsection>
  * </furo-ui5-section>
@@ -56,11 +56,15 @@ export class FuroUi5Section extends FBP(FieldNodeAdapter(LitElement)) {
     return {
       /**
        * Heading title of the section
+       *
+       * @type String
        */
       heading: { type: String, attribute: 'heading' },
 
       /**
        * Setting this attribute will hide the bottom border
+       *
+       * @type Boolean
        */
       noborder: { type: Boolean },
     };

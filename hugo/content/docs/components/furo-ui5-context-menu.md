@@ -24,8 +24,8 @@ use the `furo-ui5-context-menu`. The app-shell or even body is a good place for 
 `furo-ui5-context-menu` uses **diplay:inline**, do not forget to change it to display:block if you place it around a block level element.
 
 ```html
- <furo-ui5-context-menu  ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
-     <ui5-icon name="menu" @-click="--menuClkd"></ui5-icon>
+ <furo-ui5-context-menu  fn-trigger="--menuClkd" fn-bind-data="--menuObject" at-menu-item-selected="--menuItem">
+     <ui5-icon name="menu" at-click="--menuClkd"></ui5-icon>
  </furo-ui5-context-menu>
 ```
 
@@ -67,7 +67,7 @@ use the `furo-ui5-context-menu`. The app-shell or even body is a good place for 
 {{% api "_furo-ui5-context-menu-events.md" %}}
 
 ### **menu-item-selected**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-menu-item-selected</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-menu-item-selected</span>
 → <small>`{context, menuitem}`</small>
 
  Fired when a menu item is selected.
@@ -81,7 +81,7 @@ use the `furo-ui5-context-menu`. The app-shell or even body is a good place for 
 <small>**bindData**(*menu* `` ** `Fieldnode` ) ⟹ `void`</small>
 
 <small>`` `Fieldnode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Bind your menu object.
 
@@ -93,7 +93,7 @@ Bind your menu object.
 <small>**setContext**(*ctx* `*` ) ⟹ `void`</small>
 
 <small>`*` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-context</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-set-context</span>
 
 Sets the context. Use this if you want to set a Object as context
 
@@ -104,7 +104,7 @@ Sets the context. Use this if you want to set a Object as context
 <small>**trigger**(*byKeyboard* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-trigger</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-trigger</span>
 
 Triggers the context menu. Set by keyboard to true to focus the first element for keyboard navigation
 
@@ -115,7 +115,7 @@ Triggers the context menu. Set by keyboard to true to focus the first element fo
 <small>**triggerContext**(*context* `Object` *byKeyboard* `` ) ⟹ `void`</small>
 
 <small>`Object` `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-trigger-context</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-trigger-context</span>
 
 triggers the menu with context
 

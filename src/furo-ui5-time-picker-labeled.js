@@ -42,18 +42,26 @@ export class FuroUi5TimePickerLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-date-picker
+       *
+       * @type String
        */
       label: { type: String },
       /**
        * forwards the format-pattern to the furo-ui5-time-picker component.
+       *
+       * @type String
        */
       formatPattern: { type: String, attribute: 'format-pattern' },
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: { type: Boolean },
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
@@ -62,6 +70,8 @@ export class FuroUi5TimePickerLabeled extends FBP(LitElement) {
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
@@ -111,7 +121,7 @@ export class FuroUi5TimePickerLabeled extends FBP(LitElement) {
           format-pattern="${this.formatPattern}"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
-          ƒ-bind-data="--data"
+          fn-bind-data="--data"
         ></furo-ui5-time-picker>
       </furo-ui5-form-field-container>
     `;

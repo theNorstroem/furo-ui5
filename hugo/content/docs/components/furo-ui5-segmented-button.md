@@ -20,7 +20,7 @@ options by using the furo-ui5-segmented-button component.
 
 ```html
 <furo-ui5-segmented-button
-   ƒ-bind-data="--daoPerson(*.field_with_meta_options)">
+   fn-bind-data="--daoPerson(*.field_with_meta_options)">
 </furo-ui5-segmented-button>
 ```
 
@@ -86,19 +86,19 @@ default: id
 {{% api "_furo-ui5-segmented-button-events.md" %}}
 
 ### **options-updated**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-options-updated</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-options-updated</span>
 → <small>`optionNodeList`</small>
 
 Fired  after the option list was rebuilt
 <br><br>
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`{*} the value from the value-field. By default the value field is &#34;id&#34;`</small>
 
  Fired when value has changed from the component inside. **bubbles**
 <br><br>
 ### **item-selected**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-item-selected</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-item-selected</span>
 → <small>`selectedOption`</small>
 
 Fired when the toggle button was clicked. Payload: - if no option binding is active: ui5-segmented-button-item - if a RepeaterNode is bound: FieldNode
@@ -112,7 +112,7 @@ Fired when the toggle button was clicked. Payload: - if no option binding is act
 <small>**bindData**(*fieldNode* `` ) ⟹ `boolean`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a FieldNode to the component.
 
@@ -125,7 +125,7 @@ Supported types:
 <small>**bindOptions**(*repeaterNode* `RepeaterNode` ) ⟹ `void`</small>
 
 <small>`RepeaterNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-options</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-options</span>
 
 Bind a `RepeaterNode` that will be used to build up the option list.
 
@@ -145,7 +145,7 @@ Use `idFieldPath` and `displayFieldPath` if your structrure does not match the f
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 those attributes can be set. `readonly`,`disabled`, `value-field-path`, `display-field-path`
@@ -160,7 +160,7 @@ Use this after manual or scripted update of the attributes.
 <small>**selectOptionById**(*val* `Id` ) ⟹ `void`</small>
 
 <small>`Id` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-option-by-id</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-option-by-id</span>
 
 Selects an option by id
 

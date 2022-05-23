@@ -11,7 +11,7 @@ import './furo-ui5-money-input.js';
  * to the design specification of SAP Fiori Design System.
  *
  * ```html
- * <furo-ui5-money-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-money-input-labeled>
+ * <furo-ui5-money-input-labeled fn-bind-data="--dao(FIELDNODE)"></furo-ui5-money-input-labeled>
  * ```
  *
  * @fires {google.type.Money} furo-value-changed - Fires the field value when it changes.
@@ -40,22 +40,30 @@ export class FuroUi5MoneyInputLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-money-input
+       *
+       * @type String
        */
       label: { type: String },
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
@@ -105,7 +113,7 @@ export class FuroUi5MoneyInputLabeled extends FBP(LitElement) {
           id="Input"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
-          ƒ-bind-data="--data"
+          fn-bind-data="--data"
         ></furo-ui5-money-input>
       </furo-ui5-form-field-container>
     `;

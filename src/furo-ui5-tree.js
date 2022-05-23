@@ -482,59 +482,79 @@ export class FuroUi5Tree extends FBP(LitElement) {
     return {
       /**
        * Maximal depth for the tree. Default is infinite.
+       *
+       * @type Number
        */
       depth: { type: Number },
       /**
        * Sets the maximal expand level relative from the current node.
        *
        * Expanding is a expensive operation.
+       *
+       * @type Number
        */
       expandDepth: { type: Number, attribute: 'expand-depth' },
       /**
        * Query param to watch.  Set `qp` to have a deep linkable tree.
        *
-       * If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.
+       * If you set this attribute, the node-selected event will only be fired on `fn-qp-in` or `fn-select-by-id`.
        *
        * If you select an item the `qp-change-request` will be fired instead. With the qp-change-request event, you should update the url.
        * A `furo-location` should watch the url and update the location on the tree, which will trigger a node-selected event.
        *
        * ```html
-       * <furo-location @-location-query-changed="--qp"></furo-location>
+       * <furo-location at-location-query-changed="--qp"></furo-location>
        * <furo-ui5-tree
        *    qp="panel"
-       *    ƒ-location-in="--qp" @-qp-change-requested="--qpchangerequest"></furo-ui5-tree>
+       *    fn-location-in="--qp" at-qp-change-requested="--qpchangerequest"></furo-ui5-tree>
        * <!-- update the location with the selected tree item -->
-       * <furo-location-updater ƒ-set-qp="--qpchangerequest"></furo-location-updater>
+       * <furo-location-updater fn-set-qp="--qpchangerequest"></furo-location-updater>
        * ```
+       *
+       * @type String
        */
       qp: { type: String },
       /**
        * Sets the tabindex
+       *
+       * @type Number
        */
       tabindex: { type: Number, reflect: true },
       /**
        * Set this flag if you do not want a header-text section.
+       *
+       * @type Boolean
        */
       rootAsHeader: { type: Boolean, attribute: 'root-as-header' },
       /**
        * Set this flag if you do not want to see the root node
+       *
+       * @type Boolean
        */
       hideRootNode: { type: Boolean, attribute: 'hide-root-node' },
       /**
        * Override display name from root object
+       *
+       * @type String
        */
       headerText: { type: String, attribute: 'header-text' },
       /**
        * Override description from root object.
+       *
+       * @type String
        */
       secondaryText: { type: String, attribute: 'secondary-text' },
       /**
        * indicator for searching. Maybe you want style your item depending on this attribute
+       *
+       * @type Boolean
        */
       _searchIsActive: { type: Boolean, attribute: 'searching', reflect: true },
 
       /**
        * indicates that the element is focused
+       *
+       * @type Boolean
        */
       focused: { type: Boolean, reflect: true },
     };
@@ -695,9 +715,9 @@ export class FuroUi5Tree extends FBP(LitElement) {
       <furo-vertical-flex>
         <div class='tablewrapper' flex>
           <table>
-            <flow-repeat ƒ-inject-items='--treeChanged' ƒ-trigger-all='--searchRequested' identity-path='id._value'>
+            <flow-repeat fn-inject-items='--treeChanged' fn-trigger-all='--searchRequested' identity-path='id._value'>
               <template><tr><td>
-                <furo-ui5-tree-item ƒ-bind-data="--itemInjected(*.item)" ƒ-search="--trigger"></furo-ui5-tree-item>
+                <furo-ui5-tree-item fn-bind-data="--itemInjected(*.item)" fn-search="--trigger"></furo-ui5-tree-item>
               </td></tr></template>
             </flow-repeat>
 

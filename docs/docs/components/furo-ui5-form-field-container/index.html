@@ -12,12 +12,12 @@
 <meta property="og:description" content="responsive labels for your input elements" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-form-field-container/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-form-field-container | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3351,7 +3347,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-form-field-container
   <a class="anchor" href="#furo-ui5-form-field-container">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-form-field-container.js';</code><small>
 <br>exports <em>FuroUi5FormFieldContainer</em> js
 <br>exports <code>&lt;furo-ui5-form-field-container&gt;</code> custom-element-definition
@@ -3381,8 +3377,8 @@ input field and labels according to the design specification of SAP Fiori.</p>
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-form-field-container</span>&gt;
   &lt;<span style="color:#000080">ui5-label</span> <span style="color:#008080">label</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;label&#34;</span> <span style="color:#008080">for</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Custom&#34;</span> <span style="color:#008080">show-colon</span>&gt;Currency / Units (custom)&lt;/<span style="color:#000080">ui5-label</span>&gt;
   &lt;<span style="color:#000080">furo-horizontal-flex</span> <span style="color:#008080">id</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Custom&#34;</span> <span style="color:#008080">content</span> <span style="color:#008080">space</span>&gt;
-    &lt;<span style="color:#000080">furo-ui5-text-input</span> <span style="color:#008080">flex</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.furo_data_money_input.currency_code)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
-    &lt;<span style="color:#000080">furo-ui5-number-input</span> <span style="color:#008080">flex</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.furo_data_money_input.units)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-number-input</span>&gt;
+    &lt;<span style="color:#000080">furo-ui5-text-input</span> <span style="color:#008080">flex</span> <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.furo_data_money_input.currency_code)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
+    &lt;<span style="color:#000080">furo-ui5-number-input</span> <span style="color:#008080">flex</span> <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.furo_data_money_input.units)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-number-input</span>&gt;
  &lt;/<span style="color:#000080">furo-horizontal-flex</span>&gt;
 &lt;/<span style="color:#000080">furo-ui5-form-field-container</span>&gt;
 </code></pre></td></tr></table>
@@ -3420,8 +3416,8 @@ This means that the form groups are positioned below each other in a single colu
  <furo-ui5-form-field-container>
      <ui5-label label slot="label" for="Custom" show-colon>Currency / Units (custom)</ui5-label>
     <furo-horizontal-flex id="Custom" content space>
-    <furo-ui5-text-input flex ƒ-bind-data="--entity(*.data.furo_data_money_input.currency_code)"></furo-ui5-text-input>
-     <furo-ui5-number-input flex ƒ-bind-data="--entity(*.data.furo_data_money_input.units)"></furo-ui5-number-input>
+    <furo-ui5-text-input flex fn-bind-data="--entity(*.data.furo_data_money_input.currency_code)"></furo-ui5-text-input>
+     <furo-ui5-number-input flex fn-bind-data="--entity(*.data.furo_data_money_input.units)"></furo-ui5-number-input>
     </furo-horizontal-flex>
   </furo-ui5-form-field-container>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -3439,8 +3435,8 @@ This means that the form groups are positioned below each other in a single colu
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-form-field-container</span>&gt;
      &lt;<span style="color:#000080">ui5-label</span> <span style="color:#008080">label</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;label&#34;</span> <span style="color:#008080">for</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Custom&#34;</span> <span style="color:#008080">show-colon</span>&gt;Currency / Units (custom)&lt;/<span style="color:#000080">ui5-label</span>&gt;
     &lt;<span style="color:#000080">furo-horizontal-flex</span> <span style="color:#008080">id</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Custom&#34;</span> <span style="color:#008080">content</span> <span style="color:#008080">space</span>&gt;
-    &lt;<span style="color:#000080">furo-ui5-text-input</span> <span style="color:#008080">flex</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.furo_data_money_input.currency_code)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
-     &lt;<span style="color:#000080">furo-ui5-number-input</span> <span style="color:#008080">flex</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.furo_data_money_input.units)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-number-input</span>&gt;
+    &lt;<span style="color:#000080">furo-ui5-text-input</span> <span style="color:#008080">flex</span> <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.furo_data_money_input.currency_code)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
+     &lt;<span style="color:#000080">furo-ui5-number-input</span> <span style="color:#008080">flex</span> <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.furo_data_money_input.units)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-number-input</span>&gt;
     &lt;/<span style="color:#000080">furo-horizontal-flex</span>&gt;
   &lt;/<span style="color:#000080">furo-ui5-form-field-container</span>&gt;
 <p></code></pre></td></tr></table></p>
@@ -3509,9 +3505,9 @@ This means that the form groups are positioned below each other in a single colu
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

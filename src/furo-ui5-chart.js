@@ -8,7 +8,7 @@ import { LitElement, css } from 'lit';
  *  ```html
  *  <furo-ui5-chart-display chart-type="bar">
  *     <furo-ui5-chart
- *         ƒ-bind-data="--projectDAO(*.entities)"
+ *         fn-bind-data="--projectDAO(*.entities)"
  *         data-field="data.cost_limit.units"
  *         category-field="data.description"
  *     ></furo-ui5-chart>
@@ -88,77 +88,114 @@ class FuroUi5Chart extends LitElement {
        * Define the data field or fields here. For most charts this is **the y axis**.
        *
        * Some charts requires more then one data field (i.e. bubbles want at least 3 fields `data-field="data.start.day, data.end.day, data.start.day"` ).
+       *
+       * @type String
        */
       dataField: { type: String, attribute: 'data-field' },
       /**
        * Define the category field here (only 1 field). You can think of this as it is the x axis for your chart.
+       *
+       * @type String
        */
       categoryField: { type: String, attribute: 'category-field' },
       /**
        * Label the Series for the legend. This text is also shown on the tooltips. This is useful when you have more then one data series.
+       *
+       * @type String
        */
       legendLabel: { type: String, attribute: 'legend-label' },
       /**
        * Series with same name will get the same y-axis
+       *
+       * @type String
        */
       seriesName: { type: String, attribute: 'series-name' },
       /**
        * **Use this for mixed charts scenarios only**, prefer to define the chart-type on the chart-display.
        * Specify the default type on the display and set the custom type on this binder.
        *
+       * @type String
        */
       chartType: { type: String, attribute: 'chart-type' },
       /**
        * If you need to give an explicit color for the series you can use this attribute.
+       *
+       * @type String
        */
       chartColor: { type: String, attribute: 'chart-color' },
       /**
        * Put the axis label on the opposite site (usually right)
+       *
+       * @type Boolean
        */
       axisLabelOpposite: { type: Boolean, attribute: 'axis-label-opposite' },
       /**
        * Text for the y axis
+       *
+       * @type String
        */
       axisLabel: { type: String, attribute: 'axis-label' },
       /**
        * Custom color for the y axis description text
+       *
+       * @type String
        */
       axisLabelColor: { type: String, attribute: 'axis-label-color' },
       /**
        * Show a border on the right side of the y axis descriptions and labels.
+       *
+       * @type Boolean
        */
       axisBorder: { type: Boolean, attribute: 'axis-border' },
       /**
        * Custom color for the border.
+       *
+       * @type String
        */
       axisBorderColor: { type: String, attribute: 'axis-border-color' },
       /**
        * Show tick marks on the y axis.
+       *
+       * @type Boolean
        */
       axisTicks: { type: Boolean, attribute: 'axis-ticks' },
       /**
        * Show a tooltip with the current value while hovering.
+       *
+       * @type Boolean
        */
       axisTooltip: { type: Boolean, attribute: 'axis-tooltip' },
       /**
        * Custom color for the ticks
+       *
+       * @type String
        */
       axisTicksColor: { type: String, attribute: 'axis-ticks-color' },
       /**
        * Define the curve style for line and area charts.
        *
        *  Possible values: `smooth`, `straight`,  `stepline`
+       *
+       * @type String
        */
       strokeCurve: { type: String, attribute: 'chart-curve' },
       /**
        * Define the thickness of the lines in px.
+       *
+       * @type Number
        */
       strokeWidth: { type: Number, attribute: 'chart-stroke-width' },
       /**
        * Set the size of the markers (hover state) in px.
+       *
+       * @type Number
        */
       markerSize: { type: Number, attribute: 'chart-marker-size' },
-
+      /**
+       *
+       *
+       * @type String
+       */
       xaxis: { type: String },
     };
   }

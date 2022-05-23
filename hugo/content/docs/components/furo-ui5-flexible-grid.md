@@ -71,7 +71,7 @@ There is no line name available
 ### **sizeSmall**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">size-small</span>
-</small>
+<small>`Number` </small>
 
 Breakpoint size for small
 <br><br>

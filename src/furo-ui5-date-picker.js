@@ -19,7 +19,7 @@ import '@ui5/webcomponents-icons/dist/error.js';
  *
  * ```html
  *  <furo-ui5-date-picker
- *     ƒ-bind-data="--dao(FIELDNODE)">
+ *     fn-bind-data="--dao(FIELDNODE)">
  *  </furo-ui5-date-picker>
  * ```
  *
@@ -40,7 +40,7 @@ import '@ui5/webcomponents-icons/dist/error.js';
  * **bind-data(fieldNode)**
  * Bind a entity field. You can use the entity even when no data was received.
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+ * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {Date} furo-value-changed -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {Date} change -Fired when the input operation has finished by pressing Enter or on focusout.

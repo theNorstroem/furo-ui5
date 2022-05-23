@@ -12,12 +12,12 @@
 <meta property="og:description" content="labeled input field" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-typerenderer-labeled/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-typerenderer-labeled | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3329,8 +3325,6 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#description">Description</a></li>
     <li><a href="#attributes-and-properties">Attributes and Properties</a>
       <ul>
-        <li><a href="#label"><strong>label</strong></a></li>
-        <li><a href="#valuestate"><strong>valueState</strong></a></li>
         <li><a href="#context"><strong>context</strong></a></li>
         <li><a href="#disabled"><strong>disabled</strong></a></li>
       </ul>
@@ -3355,7 +3349,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-typerenderer-labeled
   <a class="anchor" href="#furo-ui5-typerenderer-labeled">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-typerenderer-labeled.js';</code><small>
 <br>exports <em>FuroUi5TyperendererLabeled</em> js
 <br>exports <code>&lt;furo-ui5-typerenderer-labeled&gt;</code> custom-element-definition
@@ -3371,33 +3365,39 @@ https://github.com/alex-shpak/hugo-book
 <p><code>furo-ui5-typerenderer-labeled</code>
 The furo-ui5-typerenderer-labeled is a composition to easily use a display field with label according
 to the design specification of SAP Fiori Design System.</p>
+<h4 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h4>
+<script type="module" src="/init.js"></script>
+<furo-demo-snippet>
+<template>
+<furo-ui5-textarea-input
+    fn-bind-data="--dataObject(*.furo_data_textarea_input)"
+ ></furo-ui5-textarea-input>
+<hr>
+<furo-ui5-typerenderer-labeled fn-bind-data="--dataObject(*.furo_data_textarea_input)"></furo-ui5-typerenderer-labeled>
+<furo-ui5-typerenderer-labeled disabled fn-bind-data="--dataObject(*.furo_data_textarea_input)"></furo-ui5-typerenderer-labeled>
+<furo-ui5-typerenderer-labeled disabled context="form" fn-bind-data="--dataObject(*.furo_data_textarea_input)"></furo-ui5-typerenderer-labeled>
+<furo-data-object
+  type="experiment.Experiment"
+  @-object-ready="--dataObject"
+></furo-data-object>
+</template>
+</furo-demo-snippet>
 <h2 id="attributes-and-properties">
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
 </h2>
-<h3 id="label">
-  <strong>label</strong>
-  <a class="anchor" href="#label">#</a>
-</h3>
-<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small><code>string</code> default: <strong>''</strong></small></p>
-<p>the label for the data-text-input
-<br><br></p>
-<h3 id="valuestate">
-  <strong>valueState</strong>
-  <a class="anchor" href="#valuestate">#</a>
-</h3>
-<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">value-state</span> <small><strong>reflects</strong></small>
-<small><code>string</code> default: <strong>''</strong></small></p>
-<p>Value State
-<br><br></p>
 <h3 id="context">
   <strong>context</strong>
   <a class="anchor" href="#context">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">context</span>
 <small><code>string</code> default: <strong>'display'</strong></small></p>
-<p><br><br></p>
+<p>Set the render context. Default is <strong>display</strong>, the type renderer set of @furo/ui5 supports
+<strong>cell</strong>, <strong>form</strong>, <strong>celledit</strong>
+<br><br></p>
 <h3 id="disabled">
   <strong>disabled</strong>
   <a class="anchor" href="#disabled">#</a>
@@ -3416,7 +3416,7 @@ to the design specification of SAP Fiori Design System.</p>
 </h3>
 <p><small><strong>bindData</strong>(<em>fieldNode</em> <code>FieldNode</code> ) ⟹ <code>void</code></small></p>
 <p><small><code>FieldNode</code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span></p>
 <p>Binds the fieldNode to the component
 binding set can be customised here otherwise the standard bindData in the ui5-data-input will be used</p>
 <ul>
@@ -3433,9 +3433,9 @@ binding set can be customised here otherwise the standard bindData in the ui5-da
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 
@@ -3466,8 +3466,6 @@ binding set can be customised here otherwise the standard bindData in the ui5-da
     <li><a href="#description">Description</a></li>
     <li><a href="#attributes-and-properties">Attributes and Properties</a>
       <ul>
-        <li><a href="#label"><strong>label</strong></a></li>
-        <li><a href="#valuestate"><strong>valueState</strong></a></li>
         <li><a href="#context"><strong>context</strong></a></li>
         <li><a href="#disabled"><strong>disabled</strong></a></li>
       </ul>

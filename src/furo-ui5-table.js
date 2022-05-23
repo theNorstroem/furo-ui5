@@ -21,7 +21,7 @@ import { html as statichtml, literal } from 'lit/static-html.js';
  *
  * ```html
  * <furo-ui5-table
- *  ƒ-bind-data="--data(*.entities)"
+ *  fn-bind-data="--data(*.entities)"
  * >
  *  <!-- The column label is evaluated from the specs -->
  *   <ui5-table-column
@@ -234,7 +234,7 @@ export class FuroUi5Table extends FBP(LitElement) {
     });
 
     this._rowRepeatTemplate = statichtml`<template>
-        <furo-ui5-table-row ƒ-set-data='--init(*)' ƒ-focus='--trigger'>
+        <furo-ui5-table-row fn-set-data='--init(*)' fn-focus='--trigger'>
           ${this._cellMap(fieldPaths)}
         </furo-ui5-table-row>
     </template>`;
@@ -254,7 +254,7 @@ export class FuroUi5Table extends FBP(LitElement) {
     const items = [];
     fieldPaths.forEach((fieldPath, index) => {
       items.push(`<ui5-table-cell><${this._renderer[index]} `);
-      items.push(`ƒ-bind-data="${this._wires[index]}" `);
+      items.push(`fn-bind-data="${this._wires[index]}" `);
       items.push(`context="${this._ctx[index]}"`);
       items.push(`></${this._renderer[index]}></ui5-table-cell>`);
     });
@@ -368,6 +368,8 @@ export class FuroUi5Table extends FBP(LitElement) {
        * - MultiSelect
        * - SingleSelect
        * - None
+       *
+       * @type String
        */
       mode: {
         type: String,
@@ -375,6 +377,8 @@ export class FuroUi5Table extends FBP(LitElement) {
       /**
        * Defines the text that will be displayed when there is no data.
        * string
+       *
+       * @type String
        */
       noDataText: {
         type: String,
@@ -382,6 +386,8 @@ export class FuroUi5Table extends FBP(LitElement) {
       },
       /**
        * Determines whether the column headers remain fixed at the top of the page during vertical scrolling as long as the Web Component is in the viewport.
+       *
+       * @type Boolean
        */
       stickyColumnHeader: {
         type: Boolean,
@@ -389,6 +395,8 @@ export class FuroUi5Table extends FBP(LitElement) {
       },
       /**
        * Busy state
+       *
+       * @type Boolean
        */
       busy: {
         type: Boolean,
@@ -408,9 +416,9 @@ export class FuroUi5Table extends FBP(LitElement) {
         ?busy="${this.busy}"
       >
         <flow-repeat
-          ƒ-inject-items="--data"
-          ƒ-trigger-first="--triggerFirst"
-          ƒ-trigger-last="--triggerLast"
+          fn-inject-items="--data"
+          fn-trigger-first="--triggerFirst"
+          fn-trigger-last="--triggerLast"
         >
           ${this._rowRepeatTemplate}
         </flow-repeat>

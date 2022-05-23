@@ -62,24 +62,36 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
     return {
       /**
        * Header Text
+       *
+       * @type String
        */
       headerText: { type: String, attribute: 'header-text' },
 
       /**
        * sub title
+       *
+       * @type String
        */
       secondaryText: { type: String, attribute: 'secondary-text' },
 
       /**
        * icon
+       *
+       * @type String
        */
       icon: { type: String, attribute: 'icon' },
 
       /**
        * size of the icon. Available options are: XS S M L XL. Default is S.
+       *
+       * @type String
        */
       iconSize: { type: String, attribute: 'icon-size' },
-
+      /**
+       * Collapsed
+       *
+       * @type Boolean
+       */
       collapsed: { type: Boolean, reflect: true },
     };
   }
@@ -390,7 +402,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
       <div class="splitter_bar">
         <div class="splitter before"></div>
         <ui5-icon
-          @-click="--collapserClicked"
+          at-click="--collapserClicked"
           class="collapser-button"
           name="slim-arrow-up"
           interactive=""

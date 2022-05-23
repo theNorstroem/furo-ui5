@@ -27,7 +27,7 @@ weight: 50
 ### **mdsrc**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">mdsrc</span>
-</small>
+<small>`String` </small>
 
 source of the md
 <br><br>
@@ -35,7 +35,7 @@ source of the md
 ### **markdown**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">markdown</span>
-</small>
+<small>`String` </small>
 
 markdown string
 <br><br>
@@ -53,7 +53,7 @@ default: **undefined**</small>
 ### **unsafe**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">unsafe</span>
-</small>
+<small>`Boolean` </small>
 
 allow unsafe md. (writing html, components,...)
 <br><br>
@@ -68,7 +68,7 @@ allow unsafe md. (writing html, components,...)
 <small>**fetchMd**(*src* `` ) ⟹ `Promise&lt;string | never&gt;`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-fetch-md</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-fetch-md</span>
 
 fetch markdown from a url or path
 
@@ -79,7 +79,7 @@ fetch markdown from a url or path
 <small>**parseMarkdown**(*markdown* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-markdown</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-parse-markdown</span>
 
 Parse markdown string to html content
 
@@ -90,7 +90,7 @@ Parse markdown string to html content
 <small>**bindData**(*stringField* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 
 

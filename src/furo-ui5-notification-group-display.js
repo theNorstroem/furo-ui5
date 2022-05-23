@@ -192,6 +192,8 @@ export class FuroUi5NotificationGroupDisplay extends FBP(LitElement) {
     return {
       /**
        * the header text of the notification
+       *
+       * @type String
        */
       headerText: {
         type: String,
@@ -199,18 +201,24 @@ export class FuroUi5NotificationGroupDisplay extends FBP(LitElement) {
       },
       /**
        * the target dom object, which sends the notification event
+       *
+       * @type Object
        */
       target: {
         type: Object,
       },
       /**
        * Defines if the group is collapsed or expanded.
+       *
+       * @type Boolean
        */
       collapsed: {
         type: Boolean,
       },
       /**
        * Defines if the items counter would be displayed.
+       *
+       * @type Boolean
        */
       showCounter: {
         type: Boolean,
@@ -218,6 +226,8 @@ export class FuroUi5NotificationGroupDisplay extends FBP(LitElement) {
       },
       /**
        * Defines if the close button would be displayed.
+       *
+       * @type Boolean
        */
       showClose: {
         type: Boolean,

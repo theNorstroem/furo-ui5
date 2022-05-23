@@ -50,7 +50,7 @@ Binds an entity field to the heading. You can use the entity even when no data w
 ### **heading**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">heading</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 Heading title of the section
 <br><br>
@@ -58,7 +58,7 @@ Heading title of the section
 ### **showMoreDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">show-more-data-text</span>
-<small>`string` default: **&#39;Show More&#39;**</small>
+<small>`String` default: **&#39;Show More&#39;**</small>
 
 Defines the text that will be displayed for `show more`
 <br><br>
@@ -66,7 +66,7 @@ Defines the text that will be displayed for `show more`
 ### **showLessDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">show-less-data-text</span>
-<small>`string` default: **&#39;Show Less&#39;**</small>
+<small>`String` default: **&#39;Show Less&#39;**</small>
 
 Defines the text that will be displayed for `show less`
 <br><br>
@@ -74,7 +74,7 @@ Defines the text that will be displayed for `show less`
 ### **collapsed**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">collapsed</span> <small>**reflects**</small>
-<small>`boolean` default: **false**</small>
+<small>`Boolean` default: **false**</small>
 
 Collapsed state of the `read more` section
 <br><br>
@@ -93,7 +93,7 @@ default: **false**</small>
 <small>**_FBPReady**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--fbp-ready</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--fbp-ready</span>
 
 Furo flow is ready lifecycle method
 
@@ -104,7 +104,7 @@ Furo flow is ready lifecycle method
 <small>**toggleCollapse**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-toggle-collapse</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-toggle-collapse</span>
 
 toggles the collapse state
 

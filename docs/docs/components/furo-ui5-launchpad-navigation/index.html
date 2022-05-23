@@ -12,12 +12,12 @@
 <meta property="og:description" content="Spaces navigation tabs" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-launchpad-navigation/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-launchpad-navigation | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3359,7 +3355,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-launchpad-navigation
   <a class="anchor" href="#furo-ui5-launchpad-navigation">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/spaces/furo-ui5-launchpad-navigation.js';</code><small>
 <br>exports <code>&lt;furo-ui5-launchpad-navigation&gt;</code> custom-element-definition
 <br>superclass <em>LitElement</em>
@@ -3391,7 +3387,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>page-selected</strong>
   <a class="anchor" href="#page-selected">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-page-selected</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-page-selected</span>
 → <small>``</small></p>
 <p>{Object} Fired when a page was selected. The object contains the page:id
 <br><br></p>
@@ -3405,7 +3401,7 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p><small><strong>focus</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span></p>
 <p>focus Focuses the first tab</p>
 <p><br><br></p>
 <h3 id="bindspaces">
@@ -3414,7 +3410,7 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p><small><strong>bindSpaces</strong>(<em>fn</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-spaces</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-spaces</span></p>
 <ul>
 <li><small>fn </small>
 <br><br></li>
@@ -3425,7 +3421,7 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p><small><strong>_FBPReady</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;fbp-ready</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn&ndash;fbp-ready</span></p>
 <p>flow is ready lifecycle method</p>
 <p><br><br></p>
 </article>
@@ -3438,9 +3434,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

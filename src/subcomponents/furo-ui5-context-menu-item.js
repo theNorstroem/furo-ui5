@@ -34,10 +34,14 @@ export class FuroUi5ContextMenuItem extends FBP(LitElement) {
     return {
       /**
        * focused state
+       *
+       * @type Boolean
        */
       focused: { type: Boolean, reflect: true },
       /**
        * disabled state
+       *
+       * @type Boolean
        */
       disabled: { type: Boolean, reflect: true },
     };

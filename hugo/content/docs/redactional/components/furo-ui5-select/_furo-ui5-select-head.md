@@ -20,15 +20,15 @@ the tag name.
 <furo-ui5-select
   label="Use with select"
   value-state="Success" 
-  ƒ-bind-data="--daoPerson(*.sex)">
+  fn-bind-data="--daoPerson(*.sex)">
   		<div slot="valueStateMessage">Information message. This is a <a href="#">Link</a>. Extra long text used as an information message. Extra long text used as an information message - 2. Extra long text used as an information message - 3.</div>
 </furo-ui5-select>
 <furo-ui5-select
   label="Use with select"
-  ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
+  fn-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
 <furo-ui5-text-input
   label="use with text-input"
-  value-state="Success" ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-text-input>
+  value-state="Success" fn-bind-data="--daoPerson(*.sex)"></furo-ui5-text-input>
 </furo-form-layouter>
 <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
 </template>
@@ -39,14 +39,14 @@ the tag name.
 <furo-ui5-select
   label="Use with select"
   value-state="Success"
-  ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
+  fn-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
 <furo-ui5-select
   label="Use with select"
   value-state="Success"
-  ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
+  fn-bind-data="--daoPerson(*.sex)"></furo-ui5-select>
 <furo-ui5-text-input
   label="use with text-input"
-  value-state="Success" ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-text-input>
+  value-state="Success" fn-bind-data="--daoPerson(*.sex)"></furo-ui5-text-input>
 ```
 
 #### Type definition
@@ -114,35 +114,35 @@ Set the id of the selected optioin to a value which is not in the list and press
     value-field-path="data.id" 
     id-field-path="data.id" 
     display-field-path="data.display_name" 
-    ƒ-bind-options="--collection(*.entities)" 
-    ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-select>
+    fn-bind-options="--collection(*.entities)" 
+    fn-bind-data="--entity(*.owner.id)"></furo-ui5-select>
   <furo-ui5-select
     label="by first_name"
     value-field-path="data.id"
     id-field-path="data.id" 
     display-field-path="data.first_name" 
-    ƒ-bind-options="--collection(*.entities)" 
-    ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-select>
+    fn-bind-options="--collection(*.entities)" 
+    fn-bind-data="--entity(*.owner.id)"></furo-ui5-select>
   <furo-ui5-select 
     label="by phone_nr"
     value-field-path="data.id" 
     id-field-path="data.id" 
     display-field-path="data.phone_nr" 
-    ƒ-bind-options="--collection(*.entities)" 
-    ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-select>
+    fn-bind-options="--collection(*.entities)" 
+    fn-bind-data="--entity(*.owner.id)"></furo-ui5-select>
   <furo-ui5-number-input 
     label="Selected option" 
-    ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-number-input>
+    fn-bind-data="--entity(*.owner.id)"></furo-ui5-number-input>
   </furo-form-layouter>
   <furo-data-object 
     type="person.PersonCollection"
     @-object-ready="--collection" 
-    ƒ-inject-raw="--response"></furo-data-object>
+    fn-inject-raw="--response"></furo-data-object>
   <furo-data-object 
     type="task.Task"
     @-object-ready="--entity"></furo-data-object>
   <furo-fetch-json
-    ƒ-fetch="--read1"
+    fn-fetch="--read1"
     src="/mockdata/persons/list.json"
     @-data="--response"
     ></furo-fetch-json>
@@ -156,31 +156,31 @@ Set the id of the selected optioin to a value which is not in the list and press
   value-field-path="data.id"
   id-field-path="data.id"
   display-field-path="data.display_name"
-  ƒ-bind-options="--collection(*.entities)"
-  ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-select>
+  fn-bind-options="--collection(*.entities)"
+  fn-bind-data="--entity(*.owner.id)"></furo-ui5-select>
 <furo-ui5-select
   label="by first_name"
   value-field-path="data.id"
   id-field-path="data.id"
   display-field-path="data.first_name"
-  ƒ-bind-options="--collection(*.entities)"
-  ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-select>
+  fn-bind-options="--collection(*.entities)"
+  fn-bind-data="--entity(*.owner.id)"></furo-ui5-select>
 <furo-ui5-select
   label="by phone_nr"
   value-field-path="data.id"
   id-field-path="data.id"
   display-field-path="data.phone_nr"
-  ƒ-bind-options="--collection(*.entities)"
-  ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-select>
+  fn-bind-options="--collection(*.entities)"
+  fn-bind-data="--entity(*.owner.id)"></furo-ui5-select>
 <furo-ui5-number-input
   label="Selected option"
-  ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-number-input>
+  fn-bind-data="--entity(*.owner.id)"></furo-ui5-number-input>
 </furo-form-layouter>
 <!-- this data object contains the list -->
 <furo-data-object
   type="person.PersonCollection"
   @-object-ready="--collection"
-  ƒ-inject-raw="--response"></furo-data-object>
+  fn-inject-raw="--response"></furo-data-object>
 <!-- this data object contains the field, you want to update -->
 <furo-data-object
   type="task.Task"

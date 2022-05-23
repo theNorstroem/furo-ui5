@@ -12,12 +12,12 @@
 <meta property="og:description" content="data text input field" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-text-input/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-text-input | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3372,7 +3368,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-text-input
   <a class="anchor" href="#furo-ui5-text-input">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-text-input.js';</code><small>
 <br>exports <em>FuroUi5TextInput</em> js
 <br>extends <em>src/furo-ui5-text-input.js</em>
@@ -3396,7 +3392,7 @@ https://github.com/alex-shpak/hugo-book
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-text-input</span>
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoCountry(*.data.name)&#34;</span>
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoCountry(*.data.name)&#34;</span>
  &gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
 </code></pre></td></tr></table>
 </div>
@@ -3437,7 +3433,7 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p><strong>bindData(fieldNode)</strong>
 Bind an entity field. You can use the entity even when no data was received.</p>
-<p>When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with &ndash;entity(*.fields.fieldname)</p>
+<p>When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with &ndash;entity(*.fields.fieldname)</p>
 <h4 id="example">
   Example
   <a class="anchor" href="#example">#</a>
@@ -3447,20 +3443,20 @@ Bind an entity field. You can use the entity even when no data was received.</p>
 <template>
 <furo-form-layouter four>
 <furo-ui5-text-input
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
  ></furo-ui5-text-input>
 <furo-ui5-text-input
     readonly
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
  ></furo-ui5-text-input>
 <furo-ui5-text-input
     disabled
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
  ></furo-ui5-text-input>
 <furo-ui5-text-input
     value-state="Success"
     placeholder="Placeholder"
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
  ></furo-ui5-text-input>
 </furo-form-layouter>
 <furo-data-object
@@ -3493,20 +3489,20 @@ Bind an entity field. You can use the entity even when no data was received.</p>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-text-input</span>
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_text_input)&#34;</span>
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_text_input)&#34;</span>
   &gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-text-input</span>
     <span style="color:#008080">readonly</span>
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_text_input)&#34;</span>
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_text_input)&#34;</span>
   &gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-text-input</span>
     <span style="color:#008080">disabled</span>
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_text_input)&#34;</span>
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_text_input)&#34;</span>
   &gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-text-input</span>
     <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span>
     <span style="color:#008080">placeholder</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Placeholder&#34;</span>
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_text_input)&#34;</span>
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--doExp(*.furo_data_text_input)&#34;</span>
   &gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
 &lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
 </code></pre></td></tr></table>
@@ -3568,7 +3564,7 @@ Default value: 250
   <strong>search-requested</strong>
   <a class="anchor" href="#search-requested">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-search-requested</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-search-requested</span>
 → <small><code>value</code></small></p>
 <p>Fired when typing in input (debounced, default 250ms)
 <br><br></p>
@@ -3576,7 +3572,7 @@ Default value: 250
   <strong>change</strong>
   <a class="anchor" href="#change">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-change</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-change</span>
 → <small><code>String</code></small></p>
 <p>Fired when the input operation has finished by pressing Enter or on focusout.
 <br><br></p>
@@ -3584,7 +3580,7 @@ Default value: 250
   <strong>input</strong>
   <a class="anchor" href="#input">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-input</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-input</span>
 → <small><code>String</code></small></p>
 <p>Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
 <br><br></p>
@@ -3592,7 +3588,7 @@ Default value: 250
   <strong>furo-value-changed</strong>
   <a class="anchor" href="#furo-value-changed">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small><code>String</code></small></p>
 <p>Fires the field value when it changes.
 <br><br></p>
@@ -3606,7 +3602,7 @@ Default value: 250
 </h3>
 <p><small><strong>readAttributes</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span></p>
 <p>Reads the attributes which are set on the component dom.
 those attributes can be set. <code>value-state</code>, <code>value-state-message</code>,  <code>icon</code>, <code>placeholder</code>, <code>required</code>,<code>readonly</code>,<code>disabled</code></p>
 <p>Use this after manual or scripted update of the attributes.</p>
@@ -3617,7 +3613,7 @@ those attributes can be set. <code>value-state</code>, <code>value-state-message
 </h3>
 <p><small><strong>bindOptions</strong>(<em>repeaterNode</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-options</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-options</span></p>
 <p>Here a RepeaterNode can be connected to the component as an option list.
 The items are displayed as suggestion items.</p>
 <ul>
@@ -3634,9 +3630,9 @@ The items are displayed as suggestion items.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

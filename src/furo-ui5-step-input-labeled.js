@@ -11,7 +11,7 @@ import './furo-ui5-step-input.js';
  * to the design specification of SAP Fiori Design System.
  *
  * ```html
- * <furo-ui5-step-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-step-input>
+ * <furo-ui5-step-input fn-bind-data="--dao(FIELDNODE)"></furo-ui5-step-input>
  * ```
  *
  * @fires {Step} furo-value-changed - Fires the field value when it changes.
@@ -49,10 +49,14 @@ export class FuroUi5StepInputLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-step-input
+       *
+       * @type String
        */
       label: { type: String },
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
@@ -60,25 +64,49 @@ export class FuroUi5StepInputLabeled extends FBP(LitElement) {
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user and
        * appears in disabled state.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
       },
+      /**
+       * icon on the right
+       *
+       * @type String
+       */
       icon: {
         type: String,
       },
+      /**
+       * Step size
+       *
+       * @type Number
+       */
       step: {
         type: Number,
       },
+      /**
+       * Minimal value
+       *
+       * @type Number
+       */
       min: {
         type: Number,
       },
+      /**
+       * Maximal value
+       *
+       * @type Number
+       */
       max: {
         type: Number,
       },
@@ -134,8 +162,8 @@ export class FuroUi5StepInputLabeled extends FBP(LitElement) {
           step="${this.step}"
           min="${this.min}"
           max="${this.max}"
-          ƒ-bind-data="--data"
-          ƒ-focus="--focus"
+          fn-bind-data="--data"
+          fn-focus="--focus"
         >
         </furo-ui5-step-input>
       </furo-ui5-form-field-container>

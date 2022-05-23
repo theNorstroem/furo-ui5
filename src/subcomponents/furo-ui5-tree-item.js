@@ -503,17 +503,17 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
     return html`
       <furo-horizontal-flex
         class="indentation-${this.indentation}"
-        @-dblclick="--dblclicked"
+        at-dblclick="--dblclicked"
       >
-        <div class="indentation" @-click="--labelClicked"></div>
+        <div class="indentation" at-click="--labelClicked"></div>
 
         <furo-ui5-bool-icon
           ?hidden="${!this.fieldNode.children.repeats.length}"
-          ƒ-toggle="--dblclicked"
-          ƒ-bind-data="--fieldOpen"
+          fn-toggle="--dblclicked"
+          fn-bind-data="--fieldOpen"
         ></furo-ui5-bool-icon>
 
-        <div flex class="label" @-click="--labelClicked">
+        <div flex class="label" at-click="--labelClicked">
           <ui5-icon
             ?hidden="${this.noicon}"
             name="${this._icon}"

@@ -10,7 +10,7 @@ bookHidden: true
 
 <furo-demo-snippet>
 <template>
-<furo-ui5-combobox-labeled placeholder="Enter value" ƒ-bind-data="--dao(*.type_with_options)"></furo-ui5-combobox-labeled>
+<furo-ui5-combobox-labeled placeholder="Enter value" fn-bind-data="--dao(*.type_with_options)"></furo-ui5-combobox-labeled>
 <furo-data-object type="experiment.Experiment" @-object-ready="--dao"></furo-data-object>
 </template>
 </furo-demo-snippet>
@@ -19,7 +19,7 @@ bookHidden: true
 ```html
 
 <furo-ui5-combobox-labeled placeholder="Enter value" 
-                           ƒ-bind-data="--dao(*.type_with_options)"></furo-ui5-combobox-labeled>
+                           fn-bind-data="--dao(*.type_with_options)"></furo-ui5-combobox-labeled>
 
 <furo-data-object type="experiment.Experiment" 
                   @-object-ready="--dao"></furo-data-object>

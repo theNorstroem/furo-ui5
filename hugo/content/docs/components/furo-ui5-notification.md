@@ -41,7 +41,7 @@ default: **&#39;dismiss&#39;**</small>
 ### **text**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">text</span>
-</small>
+<small>`String` </small>
 
 banner text content. Use *word* to mark as strong. Use \n to insert a line break.
 
@@ -51,7 +51,7 @@ banner text content. Use *word* to mark as strong. Use \n to insert a line break
 ### **payload**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">payload</span>
-</small>
+<small>`Object` </small>
 
 payload. can be a GRPC error or a notification message collection.
 <br><br>
@@ -60,31 +60,31 @@ payload. can be a GRPC error or a notification message collection.
 {{% api "_furo-ui5-notification-events.md" %}}
 
 ### **open-furo-ui5-notification-requested**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-open-furo-ui5-notification-requested</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-open-furo-ui5-notification-requested</span>
 → <small>`{Object}  this`</small>
 
  Fired when value open banner is requested
 <br><br>
 ### **open-furo-ui5-notification-group-requested**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-open-furo-ui5-notification-group-requested</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-open-furo-ui5-notification-group-requested</span>
 → <small>`{Object}  this`</small>
 
  Fired when value open banner is requested
 <br><br>
 ### **notification-closed.**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-notification-closed.</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-notification-closed.</span>
 → <small>`{Object}  payload`</small>
 
  Fired when notification is closed.
 <br><br>
 ### **notification-custom-action**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-notification-custom-action</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-notification-custom-action</span>
 → <small>`{Object}  payload`</small>
 
  Fired when notification custom action is triggered. this is a general action event.
 <br><br>
 ### **notification-custom-action-`commandName`**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-notification-custom-action-`commandName`</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-notification-custom-action-`commandName`</span>
 → <small>`{Object}  payload`</small>
 
  Fired when notification custom action is triggered.
@@ -102,7 +102,7 @@ payload. can be a GRPC error or a notification message collection.
 <small>**parseGrpcStatus**(*status* `` *s* `` ) ⟹ `void`</small>
 
 <small>`` `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-grpc-status</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-parse-grpc-status</span>
 
 inject a grpc status object
 parse grpc status object and set the label according to the LocalizedMessage in status.
@@ -116,7 +116,7 @@ https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto .
 <small>**injectNotificationCollection**(*c* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-inject-notification-collection</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-inject-notification-collection</span>
 
 inject an array of notification messages.
 the notification message should be an array of the following object signature:
@@ -149,7 +149,7 @@ the notification message should be an array of the following object signature:
 <small>**parseFieldValidityMessages**(*fieldViolations* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-field-validity-messages</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-parse-field-validity-messages</span>
 
 Parses the output of dataObject.getValidityMessages and
 transforms the incoming data into a google.rpc.Status message of type google.rpc.BadRequest with

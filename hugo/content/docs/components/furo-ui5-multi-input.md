@@ -21,7 +21,7 @@ https://sap.github.io/ui5-webcomponents/playground/components/MultiInput/
 Supported type: repeated string
 
 ```html
-<furo-ui5-multi-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input>
+<furo-ui5-multi-input fn-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input>
 ```
 
 {{% api "_furo-ui5-multi-input-head.md" %}}
@@ -66,7 +66,7 @@ Supported type: repeated string
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a FieldNode to the component.
 

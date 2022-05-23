@@ -13,7 +13,7 @@ import './furo-ui5-password-input.js';
  * to the design specification of SAP Fiori Design System.
  *
  * ```html
- * <furo-ui5-password-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-password-input>
+ * <furo-ui5-password-input-labeled fn-bind-data="--dao(FIELDNODE)"></furo-ui5-password-input>
  * ```
  *
  * @slot {HTMLElement} icon - defines the icon to be displayed in the input element.
@@ -52,10 +52,14 @@ export class FuroUi5PasswordInputLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-password-input
+       *
+       * @type String
        */
       label: { type: String },
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
@@ -63,12 +67,16 @@ export class FuroUi5PasswordInputLabeled extends FBP(LitElement) {
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user and
        * appears in disabled state.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
@@ -118,8 +126,8 @@ export class FuroUi5PasswordInputLabeled extends FBP(LitElement) {
           id="Input"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
-          ƒ-bind-data="--data"
-          ƒ-focus="--focus"
+          fn-bind-data="--data"
+          fn-focus="--focus"
         >
           <div slot="icon"><slot name="icon"></slot></div>
         </furo-ui5-password-input>

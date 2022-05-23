@@ -49,11 +49,15 @@ export class FuroUi5MultiComboboxLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-number-input
+       *
+       * @type String
        */
       label: { type: String },
 
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
@@ -61,12 +65,16 @@ export class FuroUi5MultiComboboxLabeled extends FBP(LitElement) {
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user and
        * appears in disabled state.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
@@ -75,6 +83,8 @@ export class FuroUi5MultiComboboxLabeled extends FBP(LitElement) {
        * Defines the field path that is used from the injected RepeaterNode to identify the option items.
        * Point-separated path to the field
        * E.g. data.partner.ulid
+       *
+       * @type String
        */
       idFieldPath: {
         type: String,
@@ -84,6 +94,8 @@ export class FuroUi5MultiComboboxLabeled extends FBP(LitElement) {
        * Defines the field path that is used from the injected RepeaterNode to display the option items.
        * Point-separated path to the field
        * E.g. data.partner.display_name
+       *
+       * @type String
        */
       displayFieldPath: {
         type: String,
@@ -93,6 +105,8 @@ export class FuroUi5MultiComboboxLabeled extends FBP(LitElement) {
        * Defines the field path that is used to update the bound component if the user has selected an option.
        * Point-separated path to the field
        * Must be set if a data binding is specified.
+       *
+       * @type String
        */
       valueFieldPath: {
         type: String,
@@ -157,9 +171,9 @@ export class FuroUi5MultiComboboxLabeled extends FBP(LitElement) {
           id-field-path=${this.idFieldPath}
           display-field-path=${this.displayFieldPath}
           value-field-path=${this.valueFieldPath}
-          ƒ-bind-data="--data"
-          ƒ-bind-options="--options"
-          ƒ-focus="--focus"
+          fn-bind-data="--data"
+          fn-bind-options="--options"
+          fn-focus="--focus"
         >
         </furo-ui5-multi-combobox>
       </furo-ui5-form-field-container>

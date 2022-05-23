@@ -11,7 +11,7 @@ import './furo-ui5-multi-input.js';
  * to the design specification of SAP Fiori Design System.
  *
  * ```html
- * <furo-ui5-multi-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input-labeled>
+ * <furo-ui5-multi-input-labeled fn-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input-labeled>
  * ```
  *
  * @fires furo-value-changed - Fires the field value when it changes.
@@ -40,22 +40,30 @@ export class FuroUi5MultiInputLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-multi-input
+       *
+       * @type String
        */
       label: { type: String },
       /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
+       *
+       * @type Boolean
        */
       required: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
@@ -64,6 +72,8 @@ export class FuroUi5MultiInputLabeled extends FBP(LitElement) {
        * Determines whether a value help icon will be should in the end of the input.
        *
        * Pressing the icon will fire `value-help-trigger` event.
+       *
+       * @type Boolean
        */
       showValueHelpIcon: {
         type: Boolean,
@@ -115,7 +125,7 @@ export class FuroUi5MultiInputLabeled extends FBP(LitElement) {
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
           ?show-value-help-icon=${this.showValueHelpIcon}
-          ƒ-bind-data="--data"
+          fn-bind-data="--data"
         ></furo-ui5-multi-input>
       </furo-ui5-form-field-container>
     `;

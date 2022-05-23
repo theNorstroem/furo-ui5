@@ -9,26 +9,26 @@ bookHidden: true
 <template>
 <furo-form-layouter four>
 <furo-ui5-text-input-labeled
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
  ></furo-ui5-text-input-labeled>
 <furo-ui5-text-input-labeled
     label="readonly"
     readonly
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
  ></furo-ui5-text-input-labeled>
 <furo-ui5-text-input-labeled
     label="disabled"
     disabled
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
  ></furo-ui5-text-input-labeled>  
 <furo-ui5-text-input-labeled
     required
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
   ></furo-ui5-text-input-labeled>
 <furo-ui5-text-input-labeled
     value-state="Success"
     placeholder="Placeholder"
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
  ></furo-ui5-text-input-labeled>
 </furo-form-layouter>
 <furo-data-object
@@ -41,24 +41,24 @@ bookHidden: true
 ```html
 <furo-form-layouter four>
   <furo-ui5-text-input-labeled
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
   ></furo-ui5-text-input-labeled>
   <furo-ui5-text-input-labeled
     readonly
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
   ></furo-ui5-text-input-labeled>
   <furo-ui5-text-input-labeled
     disabled
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
   ></furo-ui5-text-input-labeled>  
   <furo-ui5-text-input-labeled
     required
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
   ></furo-ui5-text-input-labeled>
   <furo-ui5-text-input-labeled
     value-state="Success"
     placeholder="Placeholder"
-    ƒ-bind-data="--doExp(*.furo_data_text_input)"
+    fn-bind-data="--doExp(*.furo_data_text_input)"
   ></furo-ui5-text-input-labeled>
 </furo-form-layouter>
 ```

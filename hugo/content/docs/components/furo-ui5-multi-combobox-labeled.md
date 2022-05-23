@@ -34,7 +34,7 @@ to the design specification of SAP Fiori Design System.
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 the label for the data-number-input
 <br><br>
@@ -42,7 +42,7 @@ the label for the data-number-input
 ### **idFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">id-field-path</span>
-<small>`string` default: **&#39;id&#39;**</small>
+<small>`String` default: **&#39;id&#39;**</small>
 
 Defines the field path that is used from the injected RepeaterNode to identify the option items.
 Point-separated path to the field
@@ -52,7 +52,7 @@ E.g. data.partner.ulid
 ### **valueFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">value-field-path</span>
-<small>`string` default: **&#39;id&#39;**</small>
+<small>`String` default: **&#39;id&#39;**</small>
 
 Defines the field path that is used to update the bound component if the user has selected an option.
 Point-separated path to the field
@@ -62,7 +62,7 @@ Must be set if a data binding is specified.
 ### **displayFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">display-field-path</span>
-<small>`string` default: **&#39;display_name&#39;**</small>
+<small>`String` default: **&#39;display_name&#39;**</small>
 
 Defines the field path that is used from the injected RepeaterNode to display the option items.
 Point-separated path to the field
@@ -72,7 +72,7 @@ E.g. data.partner.display_name
 ### **required**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">required</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field is required and marked with *.
 <br><br>
@@ -80,7 +80,7 @@ A Boolean attribute which, if present, means this field is required and marked w
 ### **disabled**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field cannot be edited by the user and
 appears in disabled state.
@@ -89,7 +89,7 @@ appears in disabled state.
 ### **readonly**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">readonly</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field is readonly.
 <br><br>
@@ -97,7 +97,7 @@ A Boolean attribute which, if present, means this field is readonly.
 {{% api "_furo-ui5-multi-combobox-labeled-events.md" %}}
 
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`String`</small>
 
 Fires the field value when it changes.
@@ -111,7 +111,7 @@ Fires the field value when it changes.
 <small>**focus**(*options* `Object` ) ⟹ `void`</small>
 
 <small>`Object` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span>
 
 Focuses the underlying ui5 input element
 
@@ -123,7 +123,7 @@ Focuses the underlying ui5 input element
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Orchestrates the data field connection to the inside
 
@@ -134,7 +134,7 @@ Orchestrates the data field connection to the inside
 <small>**bindOptions**(*repeaterNode* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-options</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-options</span>
 
 Binds a repeaterNode to the furo-ui5-multi-combobox component
 

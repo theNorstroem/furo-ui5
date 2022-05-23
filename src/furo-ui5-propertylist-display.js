@@ -26,7 +26,7 @@ import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
  *
  * ```html
  *  <furo-ui5-propertylist-display
- *     ƒ-bind-data="--daoCountry(*.data.additional_data)"
+ *     fn-bind-data="--daoCountry(*.data.additional_data)"
  *  ></furo-ui5-propertylist-display>
  * ```
  *

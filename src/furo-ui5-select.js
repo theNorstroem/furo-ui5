@@ -14,8 +14,8 @@ import '@ui5/webcomponents-icons/dist/information.js';
  *
  * ```html
  * <furo-ui5-select
- *    ƒ-bind-data="--entity(*.data.description)"
- *    ƒ-bind-options="--collection(*.entities)">
+ *    fn-bind-data="--entity(*.data.description)"
+ *    fn-bind-options="--collection(*.entities)">
  * </furo-ui5-select>
  * ```
  *

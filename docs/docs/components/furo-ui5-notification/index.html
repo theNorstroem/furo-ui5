@@ -12,12 +12,12 @@
 <meta property="og:description" content="trigger component for notifications" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-notification/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-notification | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3365,7 +3361,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-notification
   <a class="anchor" href="#furo-ui5-notification">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-notification.js';</code><small>
 <br>exports <em>FuroUi5Notification</em> js
 <br>exports <code>&lt;furo-ui5-notification&gt;</code> custom-element-definition
@@ -3393,12 +3389,12 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
 </div>
 <div flex scroll>
 <furo-ui5-notification-list-display
-  ƒ-clear-all="--clearRequested"></furo-ui5-notification-list-display>
-  <furo-ui5-notification ƒ-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
+  fn-clear-all="--clearRequested"></furo-ui5-notification-list-display>
+  <furo-ui5-notification fn-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
 </div>
 </furo-vertical-flex>
 <furo-fetch-json
-  ƒ-fetch="--showStatusClicked"
+  fn-fetch="--showStatusClicked"
   src="/notification/grpc.json"
   @-data="--grpcStatus"
 ></furo-fetch-json>
@@ -3423,10 +3419,10 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">body</span>&gt;
 &lt;<span style="color:#000080">furo-ui5-notification-list-display</span>
-  <span style="color:#008080">ƒ-clear-all</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearRequested&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification-list-display</span>&gt;
+  <span style="color:#008080">fn-clear-all</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearRequested&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification-list-display</span>&gt;
 &lt;<span style="color:#000080">main</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-notification</span>
-    <span style="color:#008080">ƒ-parse-grpc-status</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--grpcStatus&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification</span>&gt;
+    <span style="color:#008080">fn-parse-grpc-status</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--grpcStatus&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification</span>&gt;
 &lt;/<span style="color:#000080">main</span>&gt;
 &lt;/<span style="color:#000080">body</span>&gt;
 </code></pre></td></tr></table>
@@ -3467,7 +3463,7 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
   <strong>open-furo-ui5-notification-requested</strong>
   <a class="anchor" href="#open-furo-ui5-notification-requested">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-open-furo-ui5-notification-requested</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-open-furo-ui5-notification-requested</span>
 → <small><code>{Object}  this</code></small></p>
 <p>Fired when value open banner is requested
 <br><br></p>
@@ -3475,7 +3471,7 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
   <strong>open-furo-ui5-notification-group-requested</strong>
   <a class="anchor" href="#open-furo-ui5-notification-group-requested">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-open-furo-ui5-notification-group-requested</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-open-furo-ui5-notification-group-requested</span>
 → <small><code>{Object}  this</code></small></p>
 <p>Fired when value open banner is requested
 <br><br></p>
@@ -3483,7 +3479,7 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
   <strong>notification-closed.</strong>
   <a class="anchor" href="#notification-closed">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-notification-closed.</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-notification-closed.</span>
 → <small><code>{Object}  payload</code></small></p>
 <p>Fired when notification is closed.
 <br><br></p>
@@ -3491,7 +3487,7 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
   <strong>notification-custom-action</strong>
   <a class="anchor" href="#notification-custom-action">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-notification-custom-action</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-notification-custom-action</span>
 → <small><code>{Object}  payload</code></small></p>
 <p>Fired when notification custom action is triggered. this is a general action event.
 <br><br></p>
@@ -3499,7 +3495,7 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
   <strong>notification-custom-action-<code>commandName</code></strong>
   <a class="anchor" href="#notification-custom-action-commandname">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-notification-custom-action-<code>commandName</code></span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-notification-custom-action-<code>commandName</code></span>
 → <small><code>{Object}  payload</code></small></p>
 <p>Fired when notification custom action is triggered.
 <br><br></p>
@@ -3513,7 +3509,7 @@ best place the furo-ui5-notification-list(or group)-display on the main site. th
 </h3>
 <p><small><strong>parseGrpcStatus</strong>(<em>status</em> <code>*s*</code> ) ⟹ <code>void</code></small></p>
 <p><small><code> </code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-grpc-status</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-parse-grpc-status</span></p>
 <p>inject a grpc status object
 parse grpc status object and set the label according to the LocalizedMessage in status.
 <a href="https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto">https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto</a> .</p>
@@ -3528,7 +3524,7 @@ parse grpc status object and set the label according to the LocalizedMessage in 
 </h3>
 <p><small><strong>injectNotificationCollection</strong>(<em>c</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-inject-notification-collection</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-inject-notification-collection</span></p>
 <p>inject an array of notification messages.
 the notification message should be an array of the following object signature:
 {
@@ -3562,7 +3558,7 @@ the notification message should be an array of the following object signature:
 </h3>
 <p><small><strong>parseFieldValidityMessages</strong>(<em>fieldViolations</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-field-validity-messages</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-parse-field-validity-messages</span></p>
 <p>Parses the output of dataObject.getValidityMessages and
 transforms the incoming data into a google.rpc.Status message of type google.rpc.BadRequest with
 a list of field violations as content</p>
@@ -3580,9 +3576,9 @@ a list of field violations as content</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

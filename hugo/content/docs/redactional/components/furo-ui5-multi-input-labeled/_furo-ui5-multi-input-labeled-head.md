@@ -10,23 +10,23 @@ bookHidden: true
 <furo-form-layouter four>
 <furo-ui5-multi-input-labeled
     full
-    ƒ-bind-data="--data(*.repstring)"
+    fn-bind-data="--data(*.repstring)"
  ></furo-ui5-multi-input-labeled>
 <furo-ui5-multi-input-labeled
     required=""
-    ƒ-bind-data="--data(*.repstring)"
+    fn-bind-data="--data(*.repstring)"
  ></furo-ui5-multi-input-labeled>
 <furo-ui5-multi-input-labeled
     disabled=""
-    ƒ-bind-data="--data(*.repstring)"
+    fn-bind-data="--data(*.repstring)"
  ></furo-ui5-multi-input-labeled>
 <furo-ui5-multi-input-labeled
     label="Label"
-    ƒ-bind-data="--data(*.repstring)"
+    fn-bind-data="--data(*.repstring)"
  ></furo-ui5-multi-input-labeled>
 <furo-ui5-multi-input-labeled
     show-value-help-icon
-    ƒ-bind-data="--data(*.repstring)"
+    fn-bind-data="--data(*.repstring)"
  ></furo-ui5-multi-input-labeled>
 </furo-form-layouter>
 <furo-data-object
@@ -39,23 +39,23 @@ bookHidden: true
 ```html
 <furo-ui5-multi-input-labeled
   full
-  ƒ-bind-data="--data(*.repstring)"
+  fn-bind-data="--data(*.repstring)"
 ></furo-ui5-multi-input-labeled>
 <furo-ui5-multi-input-labeled
   required=""
-  ƒ-bind-data="--data(*.repstring)"
+  fn-bind-data="--data(*.repstring)"
 ></furo-ui5-multi-input-labeled>
 <furo-ui5-multi-input-labeled
   disabled=""
-  ƒ-bind-data="--data(*.repstring)"
+  fn-bind-data="--data(*.repstring)"
 ></furo-ui5-multi-input-labeled>
 <furo-ui5-multi-input-labeled
   label="Label"
-  ƒ-bind-data="--data(*.repstring)"
+  fn-bind-data="--data(*.repstring)"
 ></furo-ui5-multi-input-labeled>
 <furo-ui5-multi-input-labeled
   show-value-help-icon
-  ƒ-bind-data="--data(*.repstring)"
+  fn-bind-data="--data(*.repstring)"
 ></furo-ui5-multi-input-labeled>
 ```
 

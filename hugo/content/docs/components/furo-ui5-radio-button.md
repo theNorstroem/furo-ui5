@@ -24,11 +24,11 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
 ```html
  <furo-ui5-radio-button
     name="groupA"
-    ƒ-bind-data="--dao(FIELDNODE)"
+    fn-bind-data="--dao(FIELDNODE)"
  ></furo-ui5-radio-button>
  <furo-ui5-radio-button
     name="groupA"
-    ƒ-bind-data="--dao(OTHERFIELDNODE)"
+    fn-bind-data="--dao(OTHERFIELDNODE)"
  ></furo-ui5-radio-button>
 ```
 
@@ -52,7 +52,7 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
 
 The constraint **required** will mark the element as required
 
-When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
 {{% api "_furo-ui5-radio-button-head.md" %}}
 
@@ -139,13 +139,13 @@ default: **{
 {{% api "_furo-ui5-radio-button-events.md" %}}
 
 ### **change**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-change</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-change</span>
 → <small>``</small>
 
  Fired when the input operation has finished by pressing Enter or on focusout.
 <br><br>
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`Boolean`</small>
 
 Fired when value changed
@@ -160,7 +160,7 @@ Fired when value changed
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a FieldNode to the component.
 
@@ -173,7 +173,7 @@ Supported types: `bool`, `google.protobuf.BoolValue`, `furo.fat.Bool`
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 
@@ -184,7 +184,7 @@ Reads the attributes which are set on the component dom.
 <small>**onFnaFieldValueChanged**(*val* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-field-value-changed</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-field-value-changed</span>
 
 overwrite onFnaFieldValueChanged
 
@@ -197,7 +197,7 @@ overwrite onFnaFieldValueChanged
 <small>**onFnaFieldNodeBecameInvalid**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-field-node-became-invalid</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-field-node-became-invalid</span>
 
 overwrite onFnaFieldNodeBecameInvalid function
 
@@ -210,7 +210,7 @@ overwrite onFnaFieldNodeBecameInvalid function
 <small>**onFnaLabelChanged**(*text* `` *placeholder* `` ) ⟹ `void`</small>
 
 <small>`` `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-label-changed</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-label-changed</span>
 
 overwrite onFnaLabelChanged function
 label is mapped to text

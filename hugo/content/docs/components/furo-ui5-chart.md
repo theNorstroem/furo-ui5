@@ -21,7 +21,7 @@ furo-ui5-chart connects data objects (repeaterNodes) with the charting lib.
  ```html
  <furo-ui5-chart-display chart-type="bar">
     <furo-ui5-chart
-        ƒ-bind-data="--projectDAO(*.entities)"
+        fn-bind-data="--projectDAO(*.entities)"
         data-field="data.cost_limit.units"
         category-field="data.description"
     ></furo-ui5-chart>
@@ -38,7 +38,7 @@ furo-ui5-chart connects data objects (repeaterNodes) with the charting lib.
 ### **axisLabelOpposite**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">axis-label-opposite</span>
-</small>
+<small>`Boolean` </small>
 
 Put the axis label on the opposite site (usually right)
 <br><br>
@@ -46,7 +46,7 @@ Put the axis label on the opposite site (usually right)
 ### **axisLabel**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">axis-label</span>
-</small>
+<small>`String` </small>
 
 Text for the y axis
 <br><br>
@@ -54,7 +54,7 @@ Text for the y axis
 ### **axisLabelColor**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">axis-label-color</span>
-</small>
+<small>`String` </small>
 
 Custom color for the y axis description text
 <br><br>
@@ -62,7 +62,7 @@ Custom color for the y axis description text
 ### **axisBorder**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">axis-border</span>
-</small>
+<small>`Boolean` </small>
 
 Show a border on the right side of the y axis descriptions and labels.
 <br><br>
@@ -70,7 +70,7 @@ Show a border on the right side of the y axis descriptions and labels.
 ### **axisBorderColor**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">axis-border-color</span>
-</small>
+<small>`String` </small>
 
 Custom color for the border.
 <br><br>
@@ -78,7 +78,7 @@ Custom color for the border.
 ### **axisTicks**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">axis-ticks</span>
-</small>
+<small>`Boolean` </small>
 
 Show tick marks on the y axis.
 <br><br>
@@ -86,7 +86,7 @@ Show tick marks on the y axis.
 ### **axisTooltip**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">axis-tooltip</span>
-</small>
+<small>`Boolean` </small>
 
 Show a tooltip with the current value while hovering.
 <br><br>
@@ -94,7 +94,7 @@ Show a tooltip with the current value while hovering.
 ### **axisTicksColor**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">axis-ticks-color</span>
-</small>
+<small>`String` </small>
 
 Custom color for the ticks
 <br><br>
@@ -102,7 +102,7 @@ Custom color for the ticks
 ### **seriesName**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">series-name</span>
-</small>
+<small>`String` </small>
 
 Series with same name will get the same y-axis
 <br><br>
@@ -110,7 +110,7 @@ Series with same name will get the same y-axis
 ### **legendLabel**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">legend-label</span>
-</small>
+<small>`String` </small>
 
 Label the Series for the legend. This text is also shown on the tooltips. This is useful when you have more then one data series.
 <br><br>
@@ -124,7 +124,7 @@ Label the Series for the legend. This text is also shown on the tooltips. This i
 ### **strokeWidth**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">chart-stroke-width</span>
-<small>`number` default: **1**</small>
+<small>`Number` default: **1**</small>
 
 Define the thickness of the lines in px.
 <br><br>
@@ -132,7 +132,7 @@ Define the thickness of the lines in px.
 ### **markerSize**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">chart-marker-size</span>
-<small>`number` default: **0**</small>
+<small>`Number` default: **0**</small>
 
 Set the size of the markers (hover state) in px.
 <br><br>
@@ -140,7 +140,7 @@ Set the size of the markers (hover state) in px.
 ### **strokeCurve**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">chart-curve</span>
-<small>`string` default: **&#39;straight&#39;**</small>
+<small>`String` default: **&#39;straight&#39;**</small>
 
 Define the curve style for line and area charts.
 
@@ -151,7 +151,7 @@ Define the curve style for line and area charts.
 ### **dataField**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">data-field</span>
-</small>
+<small>`String` </small>
 
 Define the data field or fields here. For most charts this is **the y axis**.
 
@@ -161,7 +161,7 @@ Some charts requires more then one data field (i.e. bubbles want at least 3 fiel
 ### **categoryField**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">category-field</span>
-</small>
+<small>`String` </small>
 
 Define the category field here (only 1 field). You can think of this as it is the x axis for your chart.
 <br><br>
@@ -169,7 +169,7 @@ Define the category field here (only 1 field). You can think of this as it is th
 ### **chartType**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">chart-type</span>
-</small>
+<small>`String` </small>
 
 **Use this for mixed charts scenarios only**, prefer to define the chart-type on the chart-display.
 Specify the default type on the display and set the custom type on this binder.
@@ -178,7 +178,7 @@ Specify the default type on the display and set the custom type on this binder.
 ### **chartColor**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">chart-color</span>
-</small>
+<small>`String` </small>
 
 If you need to give an explicit color for the series you can use this attribute.
 <br><br>
@@ -186,7 +186,7 @@ If you need to give an explicit color for the series you can use this attribute.
 ### **xaxis**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">xaxis</span>
-</small>
+<small>`String` </small>
 
 
 <br><br>
@@ -194,13 +194,13 @@ If you need to give an explicit color for the series you can use this attribute.
 {{% api "_furo-ui5-chart-events.md" %}}
 
 ### **data-point-clicked**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-data-point-clicked</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-data-point-clicked</span>
 → <small>`Fieldnode`</small>
 
  Fired when a marker for this data source was clicked
 <br><br>
 ### **data-updated**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-data-updated</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-data-updated</span>
 → <small>`data-series`</small>
 
  Fired when datasource has updated data
@@ -224,7 +224,7 @@ If you need to give an explicit color for the series you can use this attribute.
 <small>**bindData**(*data* `RepeaterNode` ) ⟹ `void`</small>
 
 <small>`RepeaterNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a RepeaterNode to the component.
 

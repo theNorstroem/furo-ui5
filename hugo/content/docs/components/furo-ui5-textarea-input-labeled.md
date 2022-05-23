@@ -33,7 +33,7 @@ to the design specification of SAP Fiori Design System.
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 the label for the data-textarea-input
 <br><br>
@@ -41,7 +41,7 @@ the label for the data-textarea-input
 ### **rows**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">rows</span>
-<small>`number` default: **0**</small>
+<small>`Number` default: **0**</small>
 
 Defines the number of visible text lines for the component.
 <br><br>
@@ -49,7 +49,7 @@ Defines the number of visible text lines for the component.
 ### **growingMaxLines**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">growing-max-lines</span>
-<small>`number` default: **0**</small>
+<small>`Number` default: **0**</small>
 
 Defines the maximum number of lines that the Web Component can grow.
 <br><br>
@@ -57,7 +57,7 @@ Defines the maximum number of lines that the Web Component can grow.
 ### **required**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">required</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field is required and marked with *.
 <br><br>
@@ -65,7 +65,7 @@ A Boolean attribute which, if present, means this field is required and marked w
 ### **disabled**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field cannot be edited by the user.
 <br><br>
@@ -73,7 +73,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 ### **readonly**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">readonly</span>
-</small>
+<small>`Boolean` </small>
 
 A Boolean attribute which, if present, means this field is readonly.
 <br><br>
@@ -81,7 +81,7 @@ A Boolean attribute which, if present, means this field is readonly.
 ### **showExceededText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">show-exceeded-text</span>
-</small>
+<small>`Boolean` </small>
 
 Determines whether the characters exceeding the maximum allowed character count are visible in the furo-ui5-textarea-input.
 
@@ -93,7 +93,7 @@ the furo-ui5-textarea-input displays their number.
 ### **growing**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">growing</span>
-</small>
+<small>`Boolean` </small>
 
 Enables the furo-ui5-textarea to automatically grow and shrink dynamically with its content.
 <br><br>
@@ -106,7 +106,7 @@ Enables the furo-ui5-textarea to automatically grow and shrink dynamically with 
 <small>**focus**(*options* `Object` ) ⟹ `void`</small>
 
 <small>`Object` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span>
 
 Focuses the underlying ui5 input element
 
@@ -118,7 +118,7 @@ Focuses the underlying ui5 input element
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Orchestrates the data field connection to the inside
 

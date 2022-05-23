@@ -23,7 +23,7 @@ to display charts with apex the apex charts lib (https://github.com/apexcharts/a
  ```html
  <furo-ui5-chart-display chart-type="bar">
     <furo-ui5-chart
-        ƒ-bind-data="--projectDAO(*.entities)"
+        fn-bind-data="--projectDAO(*.entities)"
         data-field="data.cost_limit.units"
         category-field="data.description"
     ></furo-ui5-chart>
@@ -40,7 +40,7 @@ to display charts with apex the apex charts lib (https://github.com/apexcharts/a
 ### **sparkline**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">sparkline</span>
-</small>
+<small>`Boolean` </small>
 
 Hides all elements of the chart other than the primary graphic.
 Use this to visualize data in very small areas.
@@ -49,7 +49,7 @@ Use this to visualize data in very small areas.
 ### **xaxisTitle**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">xaxis-title</span>
-</small>
+<small>`String` </small>
 
 Give the x-axis a title which will be displayed below the axis labels by default.
 <br><br>
@@ -57,7 +57,7 @@ Give the x-axis a title which will be displayed below the axis labels by default
 ### **xaxisDatetime**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">xaxis-datetime</span>
-</small>
+<small>`Boolean` </small>
 
 Set this to true if you have datetime, google.type.date or timestamp data on the x-axis
 <br><br>
@@ -65,7 +65,7 @@ Set this to true if you have datetime, google.type.date or timestamp data on the
 ### **zebra**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">zebra</span>
-</small>
+<small>`String` </small>
 
 set zebra color like zebra="#f3f4f5, #fff" to get stripes
 <br><br>
@@ -73,7 +73,7 @@ set zebra color like zebra="#f3f4f5, #fff" to get stripes
 ### **noDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-data-text</span>
-</small>
+<small>`String` </small>
 
 Set the text to display, if no data is given.
 
@@ -83,7 +83,7 @@ If this option is not set, the default is **No data.**
 ### **legend**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">legend</span>
-</small>
+<small>`Boolean` </small>
 
 Enables the legend on bottom left with offset 0:0
 <br><br>
@@ -91,7 +91,7 @@ Enables the legend on bottom left with offset 0:0
 ### **dataLabels**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">data-labels</span>
-</small>
+<small>`Boolean` </small>
 
 Enable labels with data on every item.
 <br><br>
@@ -99,7 +99,7 @@ Enable labels with data on every item.
 ### **tooltip**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">tooltip</span>
-</small>
+<small>`Boolean` </small>
 
 show a tooltip on mouseover
 <br><br>
@@ -107,7 +107,7 @@ show a tooltip on mouseover
 ### **legendAlign**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">legend-align</span>
-</small>
+<small>`String` </small>
 
 Aligns the legend to `left` `center` `right`
 
@@ -117,7 +117,7 @@ default is **left**
 ### **legendPosition**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">legend-position</span>
-</small>
+<small>`String` </small>
 
 Set the position of the legend to `top`, `right`, `bottom`, `left`
 
@@ -127,7 +127,7 @@ Default is **bottom**
 ### **legendOffsetX**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">legend-offset-x</span>
-</small>
+<small>`Number` </small>
 
 Moves the legend in the **x** direction for n pixels from `legend-position`
 <br><br>
@@ -135,7 +135,7 @@ Moves the legend in the **x** direction for n pixels from `legend-position`
 ### **legendOffsetY**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">legend-offset-y</span>
-</small>
+<small>`Number` </small>
 
 Moves the legend in the **y** direction for n pixels from `legend-position`
 <br><br>
@@ -143,7 +143,7 @@ Moves the legend in the **y** direction for n pixels from `legend-position`
 ### **toolbar**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">toolbar</span>
-</small>
+<small>`Boolean` </small>
 
 Enables the toolbar
 <br><br>
@@ -151,7 +151,7 @@ Enables the toolbar
 ### **toolbarDownload**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">toolbar-download</span>
-</small>
+<small>`Boolean` </small>
 
 Enables the download option in the toolbar (svg,csv,png)
 <br><br>
@@ -167,7 +167,7 @@ Enable this to draw the bars horizontally
 ### **grid**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">grid</span>
-</small>
+<small>`Boolean` </small>
 
 Draw the horizontal grid lines
 <br><br>
@@ -175,7 +175,7 @@ Draw the horizontal grid lines
 ### **chartType**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">chart-type</span>
-</small>
+<small>`String` </small>
 
 
 line, area, bar are mixable
@@ -188,7 +188,7 @@ pie donut polarArea radialBar can only consume 1 data series
 ### **stacked**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">stacked</span>
-</small>
+<small>`Boolean` </small>
 
 WORK IN PROGRESS
 Stacked bar charts are not mixable
@@ -197,7 +197,7 @@ Stacked bar charts are not mixable
 ### **titleText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">title-text</span>
-</small>
+<small>`String` </small>
 
 Set the title.
 <br><br>
@@ -205,7 +205,7 @@ Set the title.
 ### **titleAlign**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">title-align</span>
-</small>
+<small>`String` </small>
 
 Aligns the title. Possible values are 'left', 'center', 'right'
 
@@ -215,7 +215,7 @@ Default is **left**
 ### **titleOffsetX**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">title-offset-x</span>
-</small>
+<small>`Number` </small>
 
 Moves the title for n pixels on the x-axis from the alignment direction
 <br><br>
@@ -223,7 +223,7 @@ Moves the title for n pixels on the x-axis from the alignment direction
 ### **titleOffsetY**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">title-offset-y</span>
-</small>
+<small>`Number` </small>
 
 Moves the title for n pixels on the y-axis from the alignment direction
 <br><br>
@@ -231,7 +231,7 @@ Moves the title for n pixels on the y-axis from the alignment direction
 ### **fixedHeight**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">fixed-height</span>
-</small>
+<small>`Number` </small>
 
 Set a fixed height for the plot. Default is auto, this can be useful if you need to control the heights
 <br><br>
@@ -353,7 +353,7 @@ default: **{
 {{% api "_furo-ui5-chart-display-events.md" %}}
 
 ### **data-point-clicked**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-data-point-clicked</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-data-point-clicked</span>
 → <small>`Fieldnode`</small>
 
  Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart

@@ -19,9 +19,9 @@ import { Events } from './lib/Events.js';
  *  ways have priority : currencies > options as attribute > options in meta.
  *
  * ```html
- *  <furo-ui5-money-input ƒ-bind-data="--dao(google.type.Money)" options='{"list": [ "CHF","EUR","USD" ]}'></furo-ui5-money-input>
- *  <furo-ui5-money-input ƒ-bind-data="--dao(google.type.Money)" options='{"list": [ {"id":"CHF","label":"Schweiz"},{"id":"EUR","label":"Europa", "selected": true}'></furo-ui5-money-input>
- *  <furo-ui5-money-input ƒ-bind-data="--dao(google.type.Money)" currencies="CHF,EUR,USD"></furo-ui5-money-input>
+ *  <furo-ui5-money-input fn-bind-data="--dao(google.type.Money)" options='{"list": [ "CHF","EUR","USD" ]}'></furo-ui5-money-input>
+ *  <furo-ui5-money-input fn-bind-data="--dao(google.type.Money)" options='{"list": [ {"id":"CHF","label":"Schweiz"},{"id":"EUR","label":"Europa", "selected": true}'></furo-ui5-money-input>
+ *  <furo-ui5-money-input fn-bind-data="--dao(google.type.Money)" currencies="CHF,EUR,USD"></furo-ui5-money-input>
  *```
  *
  * ## supported meta and constraints
@@ -323,12 +323,16 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
     return {
       /**
        * A Boolean attribute which, if present, means this field cannot be edited by the user.
+       *
+       * @type Boolean
        */
       disabled: {
         type: Boolean,
       },
       /**
        * A Boolean attribute which, if present, means this field is readonly.
+       *
+       * @type Boolean
        */
       readonly: {
         type: Boolean,
@@ -483,16 +487,16 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
           ?required=${this.required}
-          ƒ-.value="--valueAmount"
-          @-input="--inputInput(*)"
+          set-value="--valueAmount"
+          at-input="--inputInput(*)"
         ></ui5-input>
         <furo-ui5-text-input
           id="currency"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
           ?required=${this.required}
-          ƒ-bind-data="--data(*.currency_code)"
-          @-field-value-changed=":STOP, --inputInput(*)"
+          fn-bind-data="--data(*.currency_code)"
+          at-field-value-changed=":STOP, --inputInput(*)"
         ></furo-ui5-text-input>
       </furo-horizontal-flex>
     `;

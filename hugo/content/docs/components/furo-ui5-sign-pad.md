@@ -40,7 +40,7 @@ weight: 50
 {{% api "_furo-ui5-sign-pad-events.md" %}}
 
 ### **sign-updated**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-sign-updated</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-sign-updated</span>
 → <small>`Base64`</small>
 
 Fired when sign gets new painting, with base encoded image.
@@ -55,7 +55,7 @@ Fired when sign gets new painting, with base encoded image.
 <small>**resize**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-resize</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-resize</span>
 
 Trigger this method after a resize.
 
@@ -65,7 +65,7 @@ Trigger this method after a resize.
 <small>**disable**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-disable</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-disable</span>
 
 Disables the pad
 
@@ -75,7 +75,7 @@ Disables the pad
 <small>**enable**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-enable</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-enable</span>
 
 Enables the pad
 
@@ -86,7 +86,7 @@ Enables the pad
 <small>**clear**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-clear</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-clear</span>
 
 Clears the image. This also updates the bound field.
 
@@ -96,7 +96,7 @@ Clears the image. This also updates the bound field.
 <small>**putImage**(*encodedImage* `imageURL` ) ⟹ `void`</small>
 
 <small>`imageURL` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-put-image</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-put-image</span>
 
 Adds the encoded image to the canvas.
 
@@ -109,7 +109,7 @@ Maybe you want to clear first.
 <small>**encodeImage**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-encode-image</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-encode-image</span>
 
 Encodes the image using the type and encodingOptions (quality) defined.
 The encoded image is available in the `image` property.
@@ -120,7 +120,7 @@ The encoded image is available in the `image` property.
 <small>**bindData**(*entityField* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 bind a entity field
 

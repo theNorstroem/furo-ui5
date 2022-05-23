@@ -9,8 +9,8 @@ bookHidden: true
 <furo-demo-snippet style="height: 525px">
 <template>
 <furo-vertical-flex>
-<div><furo-ui5-button @-click="--btnListClicked" ƒ-hide="--btnListClicked"> load data</furo-ui5-button>
-<furo-ui5-button hidden ƒ-show="--btnListClicked" @-click="--changeDataClicked"> change  data</furo-ui5-button>
+<div><furo-ui5-button @-click="--btnListClicked" fn-hide="--btnListClicked"> load data</furo-ui5-button>
+<furo-ui5-button hidden fn-show="--btnListClicked" @-click="--changeDataClicked"> change  data</furo-ui5-button>
 </div>
 <furo-ui5-chart-display
     flex scroll
@@ -26,7 +26,7 @@ bookHidden: true
     toolbar-download
   >
     <furo-ui5-chart
-      ƒ-bind-data="--projectDAO(*.entities)"
+      fn-bind-data="--projectDAO(*.entities)"
       data-field="data.cost_limit.units"
       category-field="data.description"
       chart-type="line"
@@ -38,7 +38,7 @@ bookHidden: true
       axis-tooltip
     ></furo-ui5-chart>
     <furo-ui5-chart
-      ƒ-bind-data="--projectDAO(*.entities)"
+      fn-bind-data="--projectDAO(*.entities)"
       data-field="data.cost_limit.units"
       category-field="data.description"
       legend-label="Cost"
@@ -56,7 +56,7 @@ bookHidden: true
       axis-tooltip
     ></furo-ui5-chart>
     <furo-ui5-chart
-      ƒ-bind-data="--projectDAO(*.entities)"
+      fn-bind-data="--projectDAO(*.entities)"
       data-field="data.start.day"
       category-field="data.description"
       chart-type="area"
@@ -79,21 +79,21 @@ bookHidden: true
   </furo-ui5-chart-display>
 </furo-vertical-flex>
 <furo-deep-link
-  ƒ-trigger="--btnListClicked"
+  fn-trigger="--btnListClicked"
   service="projectservice.ProjectService"
   @-hts-out="--hts"
 ></furo-deep-link>
 <furo-collection-agent
   service="projectservice.ProjectService"
-  ƒ-hts-in="--hts"
-  ƒ-list="--changeDataClicked"
+  fn-hts-in="--hts"
+  fn-list="--changeDataClicked"
   list-on-hts-in
   @-response="--collectionResponse"
 >
 </furo-collection-agent>
 <furo-data-object
   type="project.ProjectCollection"
-  ƒ-inject-raw="--collectionResponse"
+  fn-inject-raw="--collectionResponse"
   @-object-ready="--projectDAO"
 ></furo-data-object>
 </template>

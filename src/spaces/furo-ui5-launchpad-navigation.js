@@ -123,7 +123,7 @@ class FuroUi5LaunchpadNavigation extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <ui5-tabcontainer id="TC" collapsed fixed @-tab-select="--TabSelected">
+      <ui5-tabcontainer id="TC" collapsed fixed at-tab-select="--TabSelected">
       </ui5-tabcontainer>
     `;
   }

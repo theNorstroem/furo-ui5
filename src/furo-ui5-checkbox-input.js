@@ -13,7 +13,7 @@ import { Events } from './lib/Events.js';
  *
  *```html
  *  <furo-ui5-checkbox-input
- *     ƒ-bind-data="--dao(FIELDNODE)"
+ *     fn-bind-data="--dao(FIELDNODE)"
  *  ></furo-ui5-checkbox-input>
  * ```
  *

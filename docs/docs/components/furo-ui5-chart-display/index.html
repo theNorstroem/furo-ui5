@@ -12,12 +12,12 @@
 <meta property="og:description" content="Display charts with data objects" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-chart-display/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-chart-display | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3376,7 +3372,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-chart-display
   <a class="anchor" href="#furo-ui5-chart-display">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-chart-display.js';</code><small>
 <br>exports <code>&lt;furo-ui5-chart-display&gt;</code> custom-element-definition
 <br>superclass <em>LitElement</em>
@@ -3404,7 +3400,7 @@ to display charts with apex the apex charts lib (<a href="https://github.com/ape
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-chart-display</span> <span style="color:#008080">chart-type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;bar&#34;</span>&gt;
    &lt;<span style="color:#000080">furo-ui5-chart</span>
-       <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--projectDAO(*.entities)&#34;</span>
+       <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--projectDAO(*.entities)&#34;</span>
        <span style="color:#008080">data-field</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.cost_limit.units&#34;</span>
        <span style="color:#008080">category-field</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.description&#34;</span>
    &gt;&lt;/<span style="color:#000080">furo-ui5-chart</span>&gt;
@@ -3419,8 +3415,8 @@ to display charts with apex the apex charts lib (<a href="https://github.com/ape
 <furo-demo-snippet style="height: 525px">
 <template>
 <furo-vertical-flex>
-<div><furo-ui5-button @-click="--btnListClicked" ƒ-hide="--btnListClicked"> load data</furo-ui5-button>
-<furo-ui5-button hidden ƒ-show="--btnListClicked" @-click="--changeDataClicked"> change  data</furo-ui5-button>
+<div><furo-ui5-button @-click="--btnListClicked" fn-hide="--btnListClicked"> load data</furo-ui5-button>
+<furo-ui5-button hidden fn-show="--btnListClicked" @-click="--changeDataClicked"> change  data</furo-ui5-button>
 </div>
 <furo-ui5-chart-display
     flex scroll
@@ -3436,7 +3432,7 @@ to display charts with apex the apex charts lib (<a href="https://github.com/ape
     toolbar-download
   >
     <furo-ui5-chart
-      ƒ-bind-data="--projectDAO(*.entities)"
+      fn-bind-data="--projectDAO(*.entities)"
       data-field="data.cost_limit.units"
       category-field="data.description"
       chart-type="line"
@@ -3448,7 +3444,7 @@ to display charts with apex the apex charts lib (<a href="https://github.com/ape
       axis-tooltip
     ></furo-ui5-chart>
     <furo-ui5-chart
-      ƒ-bind-data="--projectDAO(*.entities)"
+      fn-bind-data="--projectDAO(*.entities)"
       data-field="data.cost_limit.units"
       category-field="data.description"
       legend-label="Cost"
@@ -3466,7 +3462,7 @@ to display charts with apex the apex charts lib (<a href="https://github.com/ape
       axis-tooltip
     ></furo-ui5-chart>
     <furo-ui5-chart
-      ƒ-bind-data="--projectDAO(*.entities)"
+      fn-bind-data="--projectDAO(*.entities)"
       data-field="data.start.day"
       category-field="data.description"
       chart-type="area"
@@ -3489,21 +3485,21 @@ to display charts with apex the apex charts lib (<a href="https://github.com/ape
   </furo-ui5-chart-display>
 </furo-vertical-flex>
 <furo-deep-link
-  ƒ-trigger="--btnListClicked"
+  fn-trigger="--btnListClicked"
   service="projectservice.ProjectService"
   @-hts-out="--hts"
 ></furo-deep-link>
 <furo-collection-agent
   service="projectservice.ProjectService"
-  ƒ-hts-in="--hts"
-  ƒ-list="--changeDataClicked"
+  fn-hts-in="--hts"
+  fn-list="--changeDataClicked"
   list-on-hts-in
   @-response="--collectionResponse"
 >
 </furo-collection-agent>
 <furo-data-object
   type="project.ProjectCollection"
-  ƒ-inject-raw="--collectionResponse"
+  fn-inject-raw="--collectionResponse"
   @-object-ready="--projectDAO"
 ></furo-data-object>
 </template>
@@ -3822,7 +3818,7 @@ enabled: false,
   <strong>data-point-clicked</strong>
   <a class="anchor" href="#data-point-clicked">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-data-point-clicked</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-data-point-clicked</span>
 → <small><code>Fieldnode</code></small></p>
 <p>Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart
 <br><br></p>
@@ -3840,9 +3836,9 @@ enabled: false,
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

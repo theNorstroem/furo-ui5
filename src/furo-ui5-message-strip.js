@@ -14,7 +14,7 @@ import 'markdown-it/dist/markdown-it.js';
  *  ```html
  *  <!-- the display is placed where you want the message to appear -->
  *  <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
- *  <furo-ui5-message-strip ƒ-show-information="--wire"></furo-ui5-message-strip>
+ *  <furo-ui5-message-strip fn-show-information="--wire"></furo-ui5-message-strip>
  *  ```
  *
  * @fires {{Object}  payload} message-strip-closed -  Fired when the MessageStrip is closed
@@ -52,6 +52,8 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
     return {
       /**
        * Defines whether the MessageStrip renders close icon.
+       *
+       * @type Boolean
        */
       noCloseButton: {
         type: Boolean,
@@ -60,6 +62,8 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
 
       /**
        * Defines whether the MessageStrip will show an icon in the beginning. You can directly provide an icon with the icon slot. Otherwise, the default icon for the type will be used.
+       *
+       * @type Boolean
        */
       noIcon: {
         type: Boolean,
@@ -68,6 +72,8 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
 
       /**
        * define the width of ui5-messagestrip. e.g. 200px
+       *
+       * @type String
        */
       size: {
         type: String,
@@ -75,6 +81,8 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
 
       /**
        * the text message of the message strip
+       *
+       * @type String
        */
       message: {
         type: String,

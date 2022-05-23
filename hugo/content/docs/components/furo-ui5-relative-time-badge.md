@@ -25,7 +25,7 @@ You can bind a `string`, `google.protobuf.Timestamp`, `int32`, `int64`, `furo.ty
 
 ```html
  <furo-ui5-relative-time-badge
-    ƒ-bind-data="--dao(FIELDNODE)">
+    fn-bind-data="--dao(FIELDNODE)">
  </furo-ui5-relative-time-badge>
 ```
 
@@ -53,7 +53,7 @@ default values
 ### **colorSchemeNegative**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">color-scheme-negative</span> <small>**reflects**</small>
-<small>`string` default: **&#39;2&#39;**</small>
+<small>`String` default: **&#39;2&#39;**</small>
 
 Defines the color scheme of the component if the value is NEGATIVE. There are 10 predefined schemes.
 Each scheme applies different values for the background-color and border-color. To use one you can set a
@@ -65,7 +65,7 @@ Note: Color schemes have no visual representation in High Contrast Black (sap_be
 ### **optionStyle**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">option-style</span>
-<small>`string` default: **&#39;long&#39;**</small>
+<small>`String` default: **&#39;long&#39;**</small>
 
 Defines the output style
 long, short, narrow
@@ -75,7 +75,7 @@ Default: long
 ### **optionNumeric**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">option-numeric</span>
-<small>`string` default: **&#39;auto&#39;**</small>
+<small>`String` default: **&#39;auto&#39;**</small>
 
 Defines the output format
 always, auto
@@ -90,7 +90,7 @@ Default: auto
 <small>**bindData**(*fieldNode* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a fieldNode to the component
 Overridden bindData of FieldNodeAdapter

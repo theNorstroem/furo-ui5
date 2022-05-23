@@ -20,8 +20,8 @@ the available options by using the ui5-mcb-item component. Use the function bind
 
 ```html
 <furo-ui5-multi-combobox
-   ƒ-bind-data="--entity(*.data.description)"
-   ƒ-bind-options="--collection(*.entities)">
+   fn-bind-data="--entity(*.data.description)"
+   fn-bind-options="--collection(*.entities)">
 </furo-ui5-multi-combobox>
 ```
 
@@ -120,13 +120,13 @@ This attribute is related to the bound FieldNode.
 {{% api "_furo-ui5-multi-combobox-events.md" %}}
 
 ### **options-updated**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-options-updated</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-options-updated</span>
 → <small>`optionNodeList`</small>
 
 Fired  after the option list was rebuilt.
 <br><br>
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`[string]`</small>
 
 Fires the field value when it changes.
@@ -140,7 +140,7 @@ Fires the field value when it changes.
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 those attributes can be set. `value-state`, `required`,`readonly`,`disabled`, `value-field-path`, `display-field-path`
@@ -152,7 +152,7 @@ Use this after manual or scripted update of the attributes.
 <small>**bindOptions**(*repeaterNode* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-options</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-options</span>
 
 Here a RepeaterNode can be connected to the component as an option list.
 
@@ -163,7 +163,7 @@ Here a RepeaterNode can be connected to the component as an option list.
 <small>**bindData**(*repeaterNode* `RepeaterNode` ) ⟹ `boolean`</small>
 
 <small>`RepeaterNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Overridden bindData of FieldNodeAdapter
 
@@ -180,7 +180,7 @@ Overridden bindData of FieldNodeAdapter
 <small>**selectOptionsByIds**(*ids* `[]` ) ⟹ `void`</small>
 
 <small>`[]` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-options-by-ids</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-options-by-ids</span>
 
 Selects an option by id.
 The id field must be comparable.

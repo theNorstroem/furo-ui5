@@ -10,11 +10,11 @@ bookHidden: true
 <template>
 <furo-form-layouter four>
 <furo-ui5-time-picker
-    ƒ-bind-data="--dataObject(*.furo_data_time_input)"
+    fn-bind-data="--dataObject(*.furo_data_time_input)"
  ></furo-ui5-time-picker>
 <furo-ui5-time-picker
     value-state="Information" 
-    ƒ-bind-data="--dataObject(*.furo_data_time_input)"
+    fn-bind-data="--dataObject(*.furo_data_time_input)"
  ></furo-ui5-time-picker>
 </furo-form-layouter>
 <furo-data-object
@@ -26,11 +26,11 @@ bookHidden: true
 
 ```html
 <furo-ui5-time-picker
-  ƒ-bind-data="--dataObject(*.furo_data_time_input)"
+  fn-bind-data="--dataObject(*.furo_data_time_input)"
 ></furo-ui5-time-picker>
 <furo-ui5-time-picker
   value-state="Information"
-  ƒ-bind-data="--dataObject(*.furo_data_time_input)"
+  fn-bind-data="--dataObject(*.furo_data_time_input)"
 ></furo-ui5-time-picker>
 </furo-form-layouter>
 ```

@@ -73,18 +73,26 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
     return {
       /**
        * Heading title of the section
+       *
+       * @type String
        */
       heading: { type: String, attribute: 'heading' },
       /**
        * Collapsed state of the `read more` section
+       *
+       * @type Boolean
        */
       collapsed: { type: Boolean, reflect: true },
       /**
        * Defines the text that will be displayed for `show more`
+       *
+       * @type String
        */
       showMoreDataText: { type: String, attribute: 'show-more-data-text' },
       /**
        * Defines the text that will be displayed for `show less`
+       *
+       * @type String
        */
       showLessDataText: { type: String, attribute: 'show-less-data-text' },
     };
@@ -175,7 +183,7 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
       <slot></slot>
       <furo-horizontal-flex class="more">
         <furo-empty-spacer flex></furo-empty-spacer>
-        <ui5-link @-click="--collapserClicked" ?hidden=${!this.hasMoreContent}
+        <ui5-link at-click="--collapserClicked" ?hidden=${!this.hasMoreContent}
           >${this.showMoreDataText}</ui5-link
         >
       </furo-horizontal-flex>
@@ -184,7 +192,7 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
 
       <furo-horizontal-flex class="less">
         <furo-empty-spacer flex></furo-empty-spacer>
-        <ui5-link @-click="--collapserClicked"
+        <ui5-link at-click="--collapserClicked"
           >${this.showLessDataText}</ui5-link
         >
       </furo-horizontal-flex>

@@ -46,7 +46,7 @@ It can be collapsed to save space on the screen.
 ### **icon**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 icon
 <br><br>
@@ -54,7 +54,7 @@ icon
 ### **iconSize**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon-size</span>
-<small>`string` default: **&#39;S&#39;**</small>
+<small>`String` default: **&#39;S&#39;**</small>
 
 size of the icon. Available options are: XS S M L XL. Default is S.
 <br><br>
@@ -62,7 +62,7 @@ size of the icon. Available options are: XS S M L XL. Default is S.
 ### **headerText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-text</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 Header Text
 <br><br>
@@ -70,7 +70,7 @@ Header Text
 ### **secondaryText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">secondary-text</span>
-<small>`string` default: **&#39;&#39;**</small>
+<small>`String` default: **&#39;&#39;**</small>
 
 sub title
 <br><br>
@@ -78,21 +78,21 @@ sub title
 ### **collapsed**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">collapsed</span> <small>**reflects**</small>
-<small>`boolean` default: **false**</small>
+<small>`Boolean` default: **false**</small>
 
-
+Collapsed
 <br><br>
 ## Events
 {{% api "_furo-ui5-header-panel-events.md" %}}
 
 ### **collapsed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-collapsed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-collapsed</span>
 → <small>`Event`</small>
 
 Fired when panel is collapsed by user interaction.
 <br><br>
 ### **expanded**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-expanded</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-expanded</span>
 → <small>`Event`</small>
 
 Fired when panel is expanded by user interaction.
@@ -106,7 +106,7 @@ Fired when panel is expanded by user interaction.
 <small>**bindHeaderText**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-header-text</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-header-text</span>
 
 Bind any **scalar** field to set the title of the panel.
 Supported types: scalar types
@@ -118,7 +118,7 @@ Supported types: scalar types
 <small>**bindSecondaryText**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-secondary-text</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-secondary-text</span>
 
 Bind any **scalar** field to set the secondaryText of the panel.
 
@@ -129,7 +129,7 @@ Bind any **scalar** field to set the secondaryText of the panel.
 <small>**bindNavNode**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-nav-node</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-nav-node</span>
 
 bind a furo.navigation.Navigationnode field
 
@@ -140,7 +140,7 @@ bind a furo.navigation.Navigationnode field
 <small>**bindIcon**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-icon</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-icon</span>
 
 Bind any **scalar** field to set the title of the panel.
 Do not forget to import the icon you will use in your component.
@@ -152,7 +152,7 @@ Do not forget to import the icon you will use in your component.
 <small>**toggleCollapse**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-toggle-collapse</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-toggle-collapse</span>
 
 toggles the collapse state
 

@@ -12,7 +12,7 @@ import { Events } from './lib/Events.js';
  *
  *```html
  *  <furo-ui5-toggle-button
- *     ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
+ *     fn-bind-data="--daoCountry(*.data.classified_as_risk_area)"
  *  ></furo-ui5-toggle-button>
  *```
  *
