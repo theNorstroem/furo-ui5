@@ -42,6 +42,10 @@
                 "required": {
                   "is": "true",
                   "message": "Please register a value!"
+                },
+                "min": {
+                  "is": "5",
+                  "message": "to small"
                 }
               },
               "meta": {
@@ -226,10 +230,24 @@
         "code": "option",
         "meta": {
           "fields": {
-            "data": {
+            "data.value": {
               "meta": {
                 "label": "fat string",
                 "hint": "Type in fat string"
+              },
+              "constraints": {
+                "required": {
+                  "is": "true",
+                  "message": "Please register a value!"
+                },
+                "min": {
+                  "is": "5",
+                  "message": "to small"
+                }
+              },
+              "meta": {
+                "label": "Custom label",
+                "readonly": false
               }
             }
           }
