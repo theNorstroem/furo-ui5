@@ -20,7 +20,7 @@ The furo-ui5-pagination-bar element loops the hateoas array and finds out the pa
 information like prev, next, first and last
 
 ```
-  <furo-ui5-pagination-bar ƒ-inject="--hateoas"></furo-ui5-pagination-bar>
+  <furo-ui5-pagination-bar fn-inject="--hateoas"></furo-ui5-pagination-bar>
 ```
 
 {{% api "_furo-ui5-pagination-bar-head.md" %}}
@@ -77,31 +77,31 @@ information like prev, next, first and last
 {{% api "_furo-ui5-pagination-bar-events.md" %}}
 
 ### **hts-injected**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-hts-injected</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-hts-injected</span>
 → <small>`CustomEvent`</small>
 
 
 <br><br>
 ### **pagination-first**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-pagination-first</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-pagination-first</span>
 → <small>``</small>
 
  Is fired if the pagination button 'sys_first_page' was clicked
 <br><br>
 ### **pagination-last**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-pagination-last</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-pagination-last</span>
 → <small>``</small>
 
  Is fired if the pagination button 'sys_last_page' was clicked
 <br><br>
 ### **pagination-prev**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-pagination-prev</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-pagination-prev</span>
 → <small>``</small>
 
  Is fired if the pagination button 'sys_prev_page' was clicked
 <br><br>
 ### **pagination-next**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-pagination-next</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-pagination-next</span>
 → <small>``</small>
 
  Is fired if the pagination button 'sys_next_page' was clicked Tags: pagination
@@ -115,7 +115,7 @@ information like prev, next, first and last
 <small>**inject**(*hts* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-inject</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-inject</span>
 
 init pagination attributes
 Supported type: furo.Link

@@ -15,10 +15,10 @@ bookHidden: true
 <ui5-button @-click="--errorClicked"  design="Negative">Error</ui5-button>
 <ui5-button @-click="--warningClicked"  design="Attention">Warning</ui5-button>
 <furo-ui5-message-strip 
-  ƒ-show-information="--infoClicked" 
-  ƒ-show-success="--successClicked" 
-  ƒ-show-error="--errorClicked"
-  ƒ-show-warning="--warningClicked" 
+  fn-show-information="--infoClicked" 
+  fn-show-success="--successClicked" 
+  fn-show-error="--errorClicked"
+  fn-show-warning="--warningClicked" 
   message="static message"></furo-ui5-message-strip>
 <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
 </template>
@@ -30,10 +30,10 @@ bookHidden: true
 <ui5-button @-click="--errorClicked"  design="Negative">Error</ui5-button>
 <ui5-button @-click="--warningClicked"  design="Warning">Warning</ui5-button>
 <furo-ui5-message-strip 
-  ƒ-show-information="--infoClicked" 
-  ƒ-show-success="--successClicked" 
-  ƒ-show-error="--errorClicked" 
-  ƒ-show-warning="--warningClicked" 
+  fn-show-information="--infoClicked" 
+  fn-show-success="--successClicked" 
+  fn-show-error="--errorClicked" 
+  fn-show-warning="--warningClicked" 
   message="static message"></furo-ui5-message-strip>
 <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
 ```

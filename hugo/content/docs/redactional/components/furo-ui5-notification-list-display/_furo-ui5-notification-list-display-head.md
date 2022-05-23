@@ -17,14 +17,14 @@ bookHidden: true
 <div flex scroll>
 <furo-ui5-notification-list-display 
   header-text="Notifications &amp; Errors" 
-  ƒ-clear-all="--clearRequested" 
+  fn-clear-all="--clearRequested" 
   group-title-message="Localized Messages" 
   group-title-help="Helpful information" group-title-bad-request="Field Violations" @-notification-counter-update="--notificationCounterUpdated"></furo-ui5-notification-list-display>
-  <furo-ui5-notification ƒ-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
+  <furo-ui5-notification fn-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
 </div>
 </furo-vertical-flex>
 <furo-fetch-json
-  ƒ-fetch="--showStatusClicked"
+  fn-fetch="--showStatusClicked"
   src="/notification/grpc.json"
   @-data="--grpcStatus"
 ></furo-fetch-json>
@@ -38,11 +38,11 @@ bookHidden: true
 ```html
 <furo-ui5-notification-list-display 
   header-text="Notifications &amp; Errors" 
-  ƒ-clear-all="--clearRequested" 
+  fn-clear-all="--clearRequested" 
   group-title-message="Localized Messages" 
   group-title-help="Helpful information" 
   group-title-bad-request="Field Violations" 
   @-notification-counter-update="--ncUpdated"></furo-ui5-notification-list-display>
 <furo-ui5-notification 
-  ƒ-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
+  fn-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
 ```

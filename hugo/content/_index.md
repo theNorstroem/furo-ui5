@@ -20,7 +20,7 @@ The extension of the UI5 components with the data-bind interface makes it possib
   ```
   furoUi5Select.bindData(dataModel.field) (imperative)
   or
-  <furo-ui5-select ƒ-bind-data="" (declarative)
+  <furo-ui5-select fn-bind-data="" (declarative)
   ```
 <--->
 

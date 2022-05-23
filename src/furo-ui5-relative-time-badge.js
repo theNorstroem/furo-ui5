@@ -15,7 +15,7 @@ import '@ui5/webcomponents/dist/Badge.js';
  *
  * ```html
  *  <furo-ui5-relative-time-badge
- *     ƒ-bind-data="--dao(FIELDNODE)">
+ *     fn-bind-data="--dao(FIELDNODE)">
  *  </furo-ui5-relative-time-badge>
  * ```
  *

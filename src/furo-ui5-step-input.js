@@ -16,7 +16,7 @@ import '@ui5/webcomponents-icons/dist/error.js';
  *
  * ```html
  *  <furo-ui5-number-input
- *     ƒ-bind-data="--dao(FIELDNODE)"
+ *     fn-bind-data="--dao(FIELDNODE)"
  *  ></furo-ui5-number-input>
  * ```
  *
@@ -45,7 +45,7 @@ import '@ui5/webcomponents-icons/dist/error.js';
  * **bind-data(fieldNode)**
  * Bind an entity field. You can use the entity even when no data was received.
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+ * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {`number`} change -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {} input -  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.

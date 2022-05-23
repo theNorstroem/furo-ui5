@@ -68,7 +68,7 @@ allow unsafe md. (writing html, components,...)
 <small>**fetchMd**(*src* `` ) ⟹ `Promise&lt;string | never&gt;`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-fetch-md</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-fetch-md</span>
 
 fetch markdown from a url or path
 
@@ -79,7 +79,7 @@ fetch markdown from a url or path
 <small>**parseMarkdown**(*markdown* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-markdown</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-parse-markdown</span>
 
 Parse markdown string to html content
 
@@ -90,7 +90,7 @@ Parse markdown string to html content
 <small>**bindData**(*stringField* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 
 

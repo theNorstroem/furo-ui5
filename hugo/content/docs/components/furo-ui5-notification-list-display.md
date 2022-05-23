@@ -106,13 +106,13 @@ Defines if the close button would be displayed.
 {{% api "_furo-ui5-notification-list-display-events.md" %}}
 
 ### **notification-counter-update**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-notification-counter-update</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-notification-counter-update</span>
 → <small>`CustomEvent`</small>
 
 
 <br><br>
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`Number`</small>
 
 Fires a notification counter changed. Use this event to show the amount of notifications to the user.
@@ -127,7 +127,7 @@ Fires a notification counter changed. Use this event to show the amount of notif
 <small>**parseGrpcStatus**(*d* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-grpc-status</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-parse-grpc-status</span>
 
 parse grpc status object and set the notification text according to the LocalizedMessage in status.
 https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto.
@@ -139,7 +139,7 @@ https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto.
 <small>**parseNotificationMessage**(*message* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-notification-message</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-parse-notification-message</span>
 
 parse notification message and set the ui5 notification properties like priority, actions, heading..
 the notification message should be a furo.notification type:
@@ -172,7 +172,7 @@ the notification message should be a furo.notification type:
 <small>**_show**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--show</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--show</span>
 
 shows grpc status notifications
 implemented types are:
@@ -185,7 +185,7 @@ implemented types are:
 <small>**_dispatchNotificationCounterUpdates**(*count* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--dispatch-notification-counter-updates</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--dispatch-notification-counter-updates</span>
 
 
 
@@ -199,7 +199,7 @@ implemented types are:
 <small>**clearAll**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-clear-all</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-clear-all</span>
 
 clear all notifications
 

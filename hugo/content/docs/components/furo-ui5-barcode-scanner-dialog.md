@@ -25,9 +25,9 @@ It supports all features from the [SAP ui5 Barcode Scanner Dialog element](https
 You can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.
 
 ```html
- <furo-ui5-button @-click=--openClicked>Open Scanner</furo-ui5-button>
- <furo-ui5-barcode-scanner-dialog ƒ-show="--openClicked"
-                                  ƒ-bind-data="--dao(*.field)"></furo-ui5-barcode-scanner-dialog>
+ <furo-ui5-button at-click=--openClicked>Open Scanner</furo-ui5-button>
+ <furo-ui5-barcode-scanner-dialog fn-show="--openClicked"
+                                  fn-bind-data="--dao(*.field)"></furo-ui5-barcode-scanner-dialog>
 
 ```
 
@@ -35,7 +35,7 @@ You can bind any `string` type, like `furo.fat.String` type or the `google.proto
 **bindData(fieldNode)**
 Bind an entity field. You can use the entity even when no data was received.
 
-When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
 {{% api "_furo-ui5-barcode-scanner-dialog-head.md" %}}
 
@@ -49,19 +49,19 @@ When you use @-object-ready from a furo-data-object which emits a EntityNode, ju
 {{% api "_furo-ui5-barcode-scanner-dialog-events.md" %}}
 
 ### **scan-success**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-scan-success</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-scan-success</span>
 → <small>`String`</small>
 
  Fires when the scan is completed successfuuly.
 <br><br>
 ### **scan-error**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-scan-error</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-scan-error</span>
 → <small>`String`</small>
 
  Fires when the scan fails with error.
 <br><br>
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`String`</small>
 
 Fires the field value when it changes.

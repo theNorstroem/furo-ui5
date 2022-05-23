@@ -20,7 +20,7 @@ The furo-ui5-date-picker-labeled is a composition to easily use a complete input
 to the design specification of SAP Fiori Design System.
 
 ```html
-<furo-ui5-date-picker-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-date-picker-labeled>
+<furo-ui5-date-picker-labeled fn-bind-data="--dao(FIELDNODE)"></furo-ui5-date-picker-labeled>
 ```
 
 {{% api "_furo-ui5-date-picker-labeled-head.md" %}}
@@ -67,7 +67,7 @@ A Boolean attribute which, if present, means this field is readonly.
 {{% api "_furo-ui5-date-picker-labeled-events.md" %}}
 
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`String`</small>
 
 Fires the field value when it changes in ISO 8601 format.
@@ -82,7 +82,7 @@ Fires the field value when it changes in ISO 8601 format.
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Orchestrates the data field connection to the inside
 

@@ -23,7 +23,7 @@ You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue
 
 ```html
  <furo-ui5-toggle-button
-    ƒ-bind-data="--daoCountry(*.data.classified_as_risk_area)"
+    fn-bind-data="--daoCountry(*.data.classified_as_risk_area)"
  ></furo-ui5-toggle-button>
 ```
 
@@ -80,13 +80,13 @@ default: **&#39;Default&#39;**</small>
 {{% api "_furo-ui5-toggle-button-events.md" %}}
 
 ### **click**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-click</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-click</span>
 → <small>``</small>
 
  Fired when the input operation has finished by pressing Enter or on focusout.
 <br><br>
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`Boolean`</small>
 
 Fires the value of pressed when value changed.
@@ -100,7 +100,7 @@ Fires the value of pressed when value changed.
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 

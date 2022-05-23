@@ -26,9 +26,9 @@ It consists of
  ways have priority : currencies > options as attribute > options in meta.
 
 ```html
- <furo-ui5-money-input ƒ-bind-data="--dao(google.type.Money)" options='{"list": [ "CHF","EUR","USD" ]}'></furo-ui5-money-input>
- <furo-ui5-money-input ƒ-bind-data="--dao(google.type.Money)" options='{"list": [ {"id":"CHF","label":"Schweiz"},{"id":"EUR","label":"Europa", "selected": true}'></furo-ui5-money-input>
- <furo-ui5-money-input ƒ-bind-data="--dao(google.type.Money)" currencies="CHF,EUR,USD"></furo-ui5-money-input>
+ <furo-ui5-money-input fn-bind-data="--dao(google.type.Money)" options='{"list": [ "CHF","EUR","USD" ]}'></furo-ui5-money-input>
+ <furo-ui5-money-input fn-bind-data="--dao(google.type.Money)" options='{"list": [ {"id":"CHF","label":"Schweiz"},{"id":"EUR","label":"Europa", "selected": true}'></furo-ui5-money-input>
+ <furo-ui5-money-input fn-bind-data="--dao(google.type.Money)" currencies="CHF,EUR,USD"></furo-ui5-money-input>
 ```
 
 ## supported meta and constraints
@@ -111,7 +111,7 @@ A Boolean attribute which, if present, means this field is readonly.
 {{% api "_furo-ui5-money-input-events.md" %}}
 
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`Money`</small>
 
  Fired when the input operation has finished by pressing Enter or on focusout.
@@ -127,7 +127,7 @@ A Boolean attribute which, if present, means this field is readonly.
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a fieldNode.
 
@@ -140,7 +140,7 @@ Supported types: `google.type.Money`
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 Attributes that can be se are   `required`,`readonly`,`disabled` ,
@@ -153,7 +153,7 @@ Use this after manual or scripted update of the attributes.
 <small>**onFnaOptionsChanged**(*options* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-options-changed</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-options-changed</span>
 
 Checks if options.flags has an entry `currency_list`
 In this case the option list is applied to the currency field as suggestion items.
@@ -189,7 +189,7 @@ options:
 <small>**_convertDataToMoneyObj**(*currency* `` *amount* `` *obj* `` ) ⟹ `void`</small>
 
 <small>`` `` `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--convert-data-to-money-obj</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--convert-data-to-money-obj</span>
 
 
 
@@ -206,7 +206,7 @@ options:
 <small>**_getElements**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ--get-elements</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--get-elements</span>
 
 
 

@@ -20,7 +20,7 @@ The furo-ui5-step-input-labeled is a composition to easily use a complete input 
 to the design specification of SAP Fiori Design System.
 
 ```html
-<furo-ui5-step-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-step-input>
+<furo-ui5-step-input fn-bind-data="--dao(FIELDNODE)"></furo-ui5-step-input>
 ```
 
 {{% api "_furo-ui5-step-input-labeled-head.md" %}}
@@ -101,7 +101,7 @@ A Boolean attribute which, if present, means this field is readonly.
 {{% api "_furo-ui5-step-input-labeled-events.md" %}}
 
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`Step`</small>
 
 Fires the field value when it changes.
@@ -115,7 +115,7 @@ Fires the field value when it changes.
 <small>**focus**(*options* `Object` ) ⟹ `void`</small>
 
 <small>`Object` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span>
 
 Focuses the underlying ui5 input element
 
@@ -127,7 +127,7 @@ Focuses the underlying ui5 input element
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Orchestrates the data field connection to the inside
 Supported types:

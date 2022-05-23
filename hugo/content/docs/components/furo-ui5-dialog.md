@@ -25,12 +25,12 @@ It supports all features from the [SAP ui5 Dialog element](https://sap.github.io
 **important:** Place a furo-ui5-dialog-display in any dom parent of the component where you use furo-ui5-dialog. Your app-shell or body is a good place to do that.
 
 ```html
-<furo-ui5-dialog header-text="Dialog title" ƒ-show="--openDialogClicked" ƒ-close="--closeDialogClicked">
+<furo-ui5-dialog header-text="Dialog title" fn-show="--openDialogClicked" fn-close="--closeDialogClicked">
   <p>Content</p>
-  <div slot="footer"> <button @-click="--closeDialogClicked">close dialog</button></div>
+  <div slot="footer"> <button at-click="--closeDialogClicked">close dialog</button></div>
 </furo-ui5-dialog>
 
-<button @-click="--openDialogClicked">Open dialog</button>
+<button at-click="--openDialogClicked">Open dialog</button>
 ```
 
 {{% api "_furo-ui5-dialog-head.md" %}}
@@ -50,7 +50,7 @@ It supports all features from the [SAP ui5 Dialog element](https://sap.github.io
 <small>**show**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-show</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-show</span>
 
 shows the dialog
 

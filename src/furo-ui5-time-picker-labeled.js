@@ -111,7 +111,7 @@ export class FuroUi5TimePickerLabeled extends FBP(LitElement) {
           format-pattern="${this.formatPattern}"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
-          ƒ-bind-data="--data"
+          fn-bind-data="--data"
         ></furo-ui5-time-picker>
       </furo-ui5-form-field-container>
     `;

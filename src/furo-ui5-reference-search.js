@@ -24,7 +24,7 @@ import './furo-ui5-dialog.js';
  *  *default usage*
  * ```html
  *   <furo-ui5-reference-search
- *   ƒ-bind-data="--data(*.is_person)"
+ *   fn-bind-data="--data(*.is_person)"
  *   ></furo-ui5-reference-search>
  * ```
  *
@@ -32,7 +32,7 @@ import './furo-ui5-dialog.js';
  * ```html
  *   <furo-ui5-reference-search
  *   extended-searcher="country-filter"
- *   ƒ-bind-data="--data(*.is_person)"
+ *   fn-bind-data="--data(*.is_person)"
  *   ></furo-ui5-reference-search>
  * ```
  *
@@ -43,7 +43,7 @@ import './furo-ui5-dialog.js';
  *   search-response-path="xx_entities"
  *   value-field-path="data.xx_id"
  *   display-field-path="data.xx_display_name"
- *   ƒ-bind-data="--data(*.is_person)"
+ *   fn-bind-data="--data(*.is_person)"
  *   ></furo-ui5-reference-search-labeled>
  * ```
  *
@@ -59,7 +59,7 @@ import './furo-ui5-dialog.js';
  *
  * If you bind a scalar field, the value which is set in 'valueFieldPath' will be set.
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+ * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * ## Specs
  * Define a proper default value on the reference type.
@@ -493,7 +493,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
 
       /**
        * Register hook on wire --BackdropFocus , |--htsIn, --hts to pass it to the value helper
-       * This is done so, because we can not set @-xxx attributes in js
+       * This is done so, because we can not set at-xxx attributes in js
        */
       this._FBPAddWireHook('--BackdropFocus', () => {
         this._valueHelperComponent.focus();
@@ -1131,16 +1131,16 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
         ?readonly="${this.readonly}"
         ?disabled="${this.disabled}"
         value-state="${this.valueState}"
-        ƒ-.value="--displayValue"
-        @-blur="--blured"
-        @-focus="--focused"
-        @-click="--focused"
+        set-value="--displayValue"
+        at-blur="--blured"
+        at-focus="--focused"
+        at-click="--focused"
         placeholder="${this.placeholder}"
       >
         <ui5-icon
           slot="icon"
           name="${this.icon}"
-          @-click="^^search-icon-clicked,--expandIconClicked"
+          at-click="^^search-icon-clicked,--expandIconClicked"
         ></ui5-icon>
       </ui5-input>
       <ui5-busy-indicator
@@ -1150,68 +1150,68 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
       <ui5-list
         mode="SingleSelect"
         class="list"
-        @-item-selected="--itemSelected"
+        at-item-selected="--itemSelected"
         growing="${this._hasmore}"
-        @-load-more="--loadMore"
-        @-last-element-selected="--lastListElementReached"
+        at-load-more="--loadMore"
+        at-last-element-selected="--lastListElementReached"
       >
         <flow-repeat
-          ƒ-inject-items="--resultList"
-          ƒ-select="--listOpened"
-          ƒ-deselect-all="--listDeselectAll"
-          ƒ-select-next-index="--arrowDownPressed"
-          ƒ-select-previous-index="--arrowUpPressed"
-          ƒ-trigger-selected="--enterPressedForSelect"
+          fn-inject-items="--resultList"
+          fn-select="--listOpened"
+          fn-deselect-all="--listDeselectAll"
+          fn-select-next-index="--arrowDownPressed"
+          fn-select-previous-index="--arrowUpPressed"
+          fn-trigger-selected="--enterPressedForSelect"
         >
           <template>
             <ui5-reference-search-item
               display-field="data.display_name"
-              ƒ-deselect="--itemDeSelected"
-              ƒ-select="--trigger"
-              ƒ-preselect="--itemSelected"
-              ƒ-inject-item="--item"
+              fn-deselect="--itemDeSelected"
+              fn-select="--trigger"
+              fn-preselect="--itemSelected"
+              fn-inject-item="--item"
             ></ui5-reference-search-item>
           </template>
         </flow-repeat>
       </ui5-list>
       <furo-ui5-dialog
-        ƒ-show="--valueHelperRequested"
-        @-after-open="--BackdropFocus"
-        ƒ-close="--closeRequested, --recordSelected"
-        @-after-close="--backdropClosed"
+        fn-show="--valueHelperRequested"
+        at-after-open="--BackdropFocus"
+        fn-close="--closeRequested, --recordSelected"
+        at-after-close="--backdropClosed"
         stretch
         header-text="${this.label}"
-        @-escape-filter-panel="--closeRequested"
-        @-record-selected="--recordSelected"
+        at-escape-filter-panel="--closeRequested"
+        at-record-selected="--recordSelected"
         id="dialog"
       >
       </furo-ui5-dialog>
       <furo-de-bounce
-        ƒ-trigger="--searchTerm"
-        @-debounced="--debouncedSrch"
+        fn-trigger="--searchTerm"
+        at-debounced="--debouncedSrch"
         wait="${this.debounceTimeout}"
       ></furo-de-bounce>
 
       <furo-deep-link
-        ƒ-.service="--detectedService, |--service"
-        ƒ-qp-in="|--qpIn"
-        @-hts-out="--hts"
+        set-service="--detectedService, |--service"
+        fn-qp-in="|--qpIn"
+        at-hts-out="--hts"
       >
       </furo-deep-link>
 
-      <!-- todo: ƒ-cancel-request="--searchTerm" -->
+      <!-- todo: fn-cancel-request="--searchTerm" -->
       <furo-collection-agent
-        ƒ-.service="--detectedService, |--service"
-        ƒ-set-filter="--filter"
-        ƒ-search="--debouncedSrch"
-        ƒ-next="--loadMore"
+        set-service="--detectedService, |--service"
+        fn-set-filter="--filter"
+        fn-search="--debouncedSrch"
+        fn-next="--loadMore"
         page-size="${this.maxItemsToDisplay}"
-        ƒ-hts-in="|--htsIn, --hts"
-        @-search-success="--searchResponse"
-        @-next-success="--nextSearchResponse"
-        @-next-rejected="--nextRejected"
-        @-response="--responseReceived"
-        @-response-error="--responseReceived, --responseError"
+        fn-hts-in="|--htsIn, --hts"
+        at-search-success="--searchResponse"
+        at-next-success="--nextSearchResponse"
+        at-next-rejected="--nextRejected"
+        at-response="--responseReceived"
+        at-response-error="--responseReceived, --responseError"
       ></furo-collection-agent>
     `;
   }

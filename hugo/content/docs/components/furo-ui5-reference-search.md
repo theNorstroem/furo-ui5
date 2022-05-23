@@ -25,7 +25,7 @@ Do not forget to specify.
  *default usage*
 ```html
   <furo-ui5-reference-search
-  ƒ-bind-data="--data(*.is_person)"
+  fn-bind-data="--data(*.is_person)"
   ></furo-ui5-reference-search>
 ```
 
@@ -33,7 +33,7 @@ Do not forget to specify.
 ```html
   <furo-ui5-reference-search
   extended-searcher="country-filter"
-  ƒ-bind-data="--data(*.is_person)"
+  fn-bind-data="--data(*.is_person)"
   ></furo-ui5-reference-search>
 ```
 
@@ -44,7 +44,7 @@ Do not forget to specify.
   search-response-path="xx_entities"
   value-field-path="data.xx_id"
   display-field-path="data.xx_display_name"
-  ƒ-bind-data="--data(*.is_person)"
+  fn-bind-data="--data(*.is_person)"
   ></furo-ui5-reference-search-labeled>
 ```
 
@@ -60,7 +60,7 @@ the link part of your type.
 
 If you bind a scalar field, the value which is set in 'valueFieldPath' will be set.
 
-When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
 ## Specs
 Define a proper default value on the reference type.
@@ -338,19 +338,19 @@ Define the extended searcher. Do not forget to import the searcher you want to u
 {{% api "_furo-ui5-reference-search-events.md" %}}
 
 ### **item-selected**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-item-selected</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-item-selected</span>
 → <small>``Object` the complete item`</small>
 
  Fired when a item was selected from the list.
 <br><br>
 ### **change**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-change</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-change</span>
 → <small>``text``</small>
 
  Fired when the input operation has finished by pressing Enter or on focusout.
 <br><br>
 ### **input**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-input</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-input</span>
 → <small>``</small>
 
  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
@@ -367,7 +367,7 @@ Define the extended searcher. Do not forget to import the searcher you want to u
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a FieldNode to the component.
 
@@ -384,7 +384,7 @@ the furo.Reference type.
 <small>**focus**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span>
 
 focuses the input field
 
@@ -394,7 +394,7 @@ focuses the input field
 <small>**triggerSearch**(*term* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-trigger-search</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-trigger-search</span>
 
 triggerSearch search for a term
 
@@ -415,7 +415,7 @@ triggerSearch search for a term
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 
@@ -437,7 +437,7 @@ Use this after manual or scripted update of the attributes.
 <small>**htsIn**(*hts* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-hts-in</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-hts-in</span>
 
 htsIn sets the HTS for the collection-agent.
 
@@ -450,7 +450,7 @@ This is only needed if you want to have fine grained control over the hts
 <small>**qpIn**(*qp* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-qp-in</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-qp-in</span>
 
 qpIn Use this to set query params manualy
 
@@ -461,7 +461,7 @@ qpIn Use this to set query params manualy
 <small>**setFilter**(*filter* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-filter</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-set-filter</span>
 
 Sets the filter.
 Hint: use the FieldNode._base64 property to send complex objects as a filter and decode it on the server side
@@ -474,7 +474,7 @@ or do btoa(JSON.stringify(FILTER))
 <small>**clearResultList**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-clear-result-list</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-clear-result-list</span>
 
 clears the result set
 

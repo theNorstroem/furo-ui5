@@ -32,8 +32,8 @@ A disabled furo-ui5-button appears inactive and cannot be pressed.
 
 What is different from ui5-button?
 With flow based programming it's usual to address functions. So we added two convenience functions for
-- disabling => ƒ-disable
-- enabling => ƒ-enable
+- disabling => fn-disable
+- enabling => fn-enable
 
 https://sap.github.io/ui5-webcomponents/playground/components/Button/
 
@@ -59,7 +59,7 @@ https://sap.github.io/ui5-webcomponents/playground/components/Button/
 <small>**disable**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-disable</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-disable</span>
 
 Sets the button state to disabled
 
@@ -69,7 +69,7 @@ Sets the button state to disabled
 <small>**enable**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-enable</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-enable</span>
 
 Sets the button state to enabled
 
@@ -79,7 +79,7 @@ Sets the button state to enabled
 <small>**show**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-show</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-show</span>
 
 shows the button, when it was hidden before
 
@@ -89,7 +89,7 @@ shows the button, when it was hidden before
 <small>**hide**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-hide</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-hide</span>
 
 hides the button
 

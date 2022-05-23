@@ -90,7 +90,7 @@ A Boolean attribute which, if present, means this field is readonly.
 {{% api "_furo-ui5-text-input-labeled-events.md" %}}
 
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`String`</small>
 
 Fires the field value when it changes.
@@ -104,7 +104,7 @@ Fires the field value when it changes.
 <small>**focus**(*options* `Object` ) ⟹ `void`</small>
 
 <small>`Object` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span>
 
 Focuses the underlying ui5 input element
 
@@ -116,7 +116,7 @@ Focuses the underlying ui5 input element
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Orchestrates the data field connection to the inside
 
@@ -127,7 +127,7 @@ Orchestrates the data field connection to the inside
 <small>**bindOptions**(*repeaterNode* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-options</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-options</span>
 
 Binds a repeaterNode to the furo-ui5-combobox component
 

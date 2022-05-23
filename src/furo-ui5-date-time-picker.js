@@ -21,7 +21,7 @@ import { Events } from './lib/Events.js';
  *
  * ```html
  *  <furo-ui5-date-time-picker
- *     ƒ-bind-data="--dao(FIELDNODE)">
+ *     fn-bind-data="--dao(FIELDNODE)">
  *  </furo-ui5-date-time-picker>
  * ```
  *
@@ -42,7 +42,7 @@ import { Events } from './lib/Events.js';
  * **bind-data(fieldNode)**
  * Bind a entity field. You can use the entity even when no data was received.
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+ * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {String} furo-value-changed - Fires the field value when it changes in ISO 8601 format.
  * @fires change - Fired when the input operation has finished by pressing Enter or on focusout.

@@ -11,7 +11,7 @@ import './furo-ui5-multi-input.js';
  * to the design specification of SAP Fiori Design System.
  *
  * ```html
- * <furo-ui5-multi-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input-labeled>
+ * <furo-ui5-multi-input-labeled fn-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input-labeled>
  * ```
  *
  * @fires furo-value-changed - Fires the field value when it changes.
@@ -115,7 +115,7 @@ export class FuroUi5MultiInputLabeled extends FBP(LitElement) {
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
           ?show-value-help-icon=${this.showValueHelpIcon}
-          ƒ-bind-data="--data"
+          fn-bind-data="--data"
         ></furo-ui5-multi-input>
       </furo-ui5-form-field-container>
     `;

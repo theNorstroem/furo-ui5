@@ -11,7 +11,7 @@ import { Events } from './lib/Events.js';
  *
  * ```html
  *  <furo-ui5-rating-indicator
- *     ƒ-bind-data="--dao(FIELDNODE)"
+ *     fn-bind-data="--dao(FIELDNODE)"
  *  ></furo-ui5-rating-indicator>
  * ```
  *
@@ -35,7 +35,7 @@ import { Events } from './lib/Events.js';
  * **bind-data(fieldNode)**
  * Bind aa entity field. You can use the entity even when no data was received.
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+ * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {`number`} change -  Fired when the values changes.
  * @fires {`number`} furo-value-changed - Fires the field value when it changes.

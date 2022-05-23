@@ -149,8 +149,8 @@ export class FuroUi5TextareaInputLabeled extends FBP(LitElement) {
           ?growing="${this.growing}"
           .rows="${this.rows}"
           .growing-max-lines="${this.growingMaxLines}"
-          ƒ-bind-data="--data"
-          ƒ-focus="--focus"
+          fn-bind-data="--data"
+          fn-focus="--focus"
         ></furo-ui5-textarea-input>
       </furo-ui5-form-field-container>
     `;

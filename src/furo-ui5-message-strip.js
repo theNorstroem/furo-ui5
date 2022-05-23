@@ -14,7 +14,7 @@ import 'markdown-it/dist/markdown-it.js';
  *  ```html
  *  <!-- the display is placed where you want the message to appear -->
  *  <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
- *  <furo-ui5-message-strip ƒ-show-information="--wire"></furo-ui5-message-strip>
+ *  <furo-ui5-message-strip fn-show-information="--wire"></furo-ui5-message-strip>
  *  ```
  *
  * @fires {{Object}  payload} message-strip-closed -  Fired when the MessageStrip is closed

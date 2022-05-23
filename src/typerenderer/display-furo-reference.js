@@ -80,7 +80,7 @@ class DisplayFuroReference extends FBP(LitElement) {
    */
   render() {
     // language=HTML
-    return html`<ui5-link wrap @-click="-^selected"
+    return html`<ui5-link wrap at-click="-^selected"
       >${this._displayValue}</ui5-link
     >`;
   }

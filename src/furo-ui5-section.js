@@ -21,7 +21,7 @@ import '@ui5/webcomponents/dist/BusyIndicator.js';
  *
  * ```html
  * <furo-ui5-section
- *    ƒ-bind-data="--dao(*.field_of_type_string)">
+ *    fn-bind-data="--dao(*.field_of_type_string)">
  *    <furo-ui5-subsection></furo-ui5-subsection>
  *    <furo-ui5-subsection></furo-ui5-subsection>
  * </furo-ui5-section>

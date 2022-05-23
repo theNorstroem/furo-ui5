@@ -157,9 +157,9 @@ export class FuroUi5MultiComboboxLabeled extends FBP(LitElement) {
           id-field-path=${this.idFieldPath}
           display-field-path=${this.displayFieldPath}
           value-field-path=${this.valueFieldPath}
-          ƒ-bind-data="--data"
-          ƒ-bind-options="--options"
-          ƒ-focus="--focus"
+          fn-bind-data="--data"
+          fn-bind-options="--options"
+          fn-focus="--focus"
         >
         </furo-ui5-multi-combobox>
       </furo-ui5-form-field-container>

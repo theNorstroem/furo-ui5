@@ -22,8 +22,8 @@ The display component can be controlled by several furo-ui5-message-strip compon
 ```
  <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
 
- <furo-ui5-message-strip ƒ-show-information="--wire"></furo-ui5-message-strip>
- <furo-ui5-message-strip ƒ-show-warning="--wire" message="Static warning message"></furo-ui5-message-strip>
+ <furo-ui5-message-strip fn-show-information="--wire"></furo-ui5-message-strip>
+ <furo-ui5-message-strip fn-show-warning="--wire" message="Static warning message"></furo-ui5-message-strip>
 ```
 
 ## CSS Style Vars
@@ -51,7 +51,7 @@ The display component can be controlled by several furo-ui5-message-strip compon
 <small>**clearAll**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-clear-all</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-clear-all</span>
 
 Removes all strips
 

@@ -12,7 +12,7 @@ import ApexCharts from 'apexcharts/dist/apexcharts.esm.js';
  *  ```html
  *  <furo-ui5-chart-display chart-type="bar">
  *     <furo-ui5-chart
- *         ƒ-bind-data="--projectDAO(*.entities)"
+ *         fn-bind-data="--projectDAO(*.entities)"
  *         data-field="data.cost_limit.units"
  *         category-field="data.description"
  *     ></furo-ui5-chart>

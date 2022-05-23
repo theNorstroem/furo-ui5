@@ -34,7 +34,7 @@ You can bind a `string` or `google.type.TimeOfDay` (https://github.com/googleapi
 
 ```html
  <furo-ui5-time-picker
-    ƒ-bind-data="--data(*.start_time)">
+    fn-bind-data="--data(*.start_time)">
  </furo-ui5-time-picker>
 ```
 
@@ -51,7 +51,7 @@ The constraint **required** will mark the element as required
 **bind-data(fieldNode)**
 Bind a entity field. You can use the entity even when no data was received.
 
-When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
 
 {{% api "_furo-ui5-time-picker-head.md" %}}
 
@@ -87,13 +87,13 @@ default: **&#39;&#39;**</small>
 {{% api "_furo-ui5-time-picker-events.md" %}}
 
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`String`</small>
 
 Fires the field value when it changes in ISO 8601 format.
 <br><br>
 ### **change**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-change</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-change</span>
 → <small>``</small>
 
 Fired when the input operation has finished by pressing Enter or on focusout.
@@ -109,7 +109,7 @@ Fired when the input operation has finished by pressing Enter or on focusout.
 <small>**onFnaFieldValueChanged**(*value* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-on-fna-field-value-changed</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-field-value-changed</span>
 
 FieldNodeAdapter callback function to
 handle changes on the model.
@@ -123,7 +123,7 @@ handle changes on the model.
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 those attributes can be set. `value-state`, `value-state-message`,  `icon`, `placeholder`, `required`,`readonly`,`disabled`

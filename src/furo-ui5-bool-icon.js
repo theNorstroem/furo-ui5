@@ -12,7 +12,7 @@ import '@ui5/webcomponents-icons/dist/navigation-right-arrow.js';
  * https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html
  *
  * ```html
- * <furo-ui5-bool-icon ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-bool-icon>
+ * <furo-ui5-bool-icon fn-bind-data="--dao(FIELDNODE)"></furo-ui5-bool-icon>
  * ```
  *
  * Only `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.

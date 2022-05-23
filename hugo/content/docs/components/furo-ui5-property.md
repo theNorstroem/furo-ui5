@@ -22,7 +22,7 @@ weight: 50
  `furo-ui5-property` works with repeated types and non repeating property types.
 
  ```html
- <furo-ui5-property ƒ-bind-data="--entity(*.single_type_property)"></furo-ui5-property>
+ <furo-ui5-property fn-bind-data="--entity(*.single_type_property)"></furo-ui5-property>
  ```
 
  **Example data for the data-object looks like this**
@@ -82,7 +82,7 @@ Set the context, for the renderers.
 <small>**bindData**(*propertyField* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 
 

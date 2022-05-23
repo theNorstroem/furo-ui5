@@ -11,7 +11,7 @@ import './furo-ui5-number-input.js';
  * to the design specification of SAP Fiori Design System.
  *
  * ```html
- * <furo-ui5-number-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-number-input>
+ * <furo-ui5-number-input fn-bind-data="--dao(FIELDNODE)"></furo-ui5-number-input>
  * ```
  *
  * @fires {Number} furo-value-changed - Fires the field value when it changes.
@@ -122,8 +122,8 @@ export class FuroUi5NumberInputLabeled extends FBP(LitElement) {
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
           icon="${this.icon}"
-          ƒ-bind-data="--data"
-          ƒ-focus="--focus"
+          fn-bind-data="--data"
+          fn-focus="--focus"
         >
         </furo-ui5-number-input>
       </furo-ui5-form-field-container>

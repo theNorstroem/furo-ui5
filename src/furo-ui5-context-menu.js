@@ -12,8 +12,8 @@ import '@furo/util/src/furo-keydown';
  * `furo-ui5-context-menu` uses **diplay:inline**, do not forget to change it to display:block if you place it around a block level element.
  *
  * ```html
- *  <furo-ui5-context-menu  ƒ-trigger="--menuClkd" ƒ-bind-data="--menuObject" @-menu-item-selected="--menuItem">
- *      <ui5-icon name="menu" @-click="--menuClkd"></ui5-icon>
+ *  <furo-ui5-context-menu  fn-trigger="--menuClkd" fn-bind-data="--menuObject" at-menu-item-selected="--menuItem">
+ *      <ui5-icon name="menu" at-click="--menuClkd"></ui5-icon>
  *  </furo-ui5-context-menu>
  * ```
  *
@@ -183,7 +183,7 @@ export class FuroUi5ContextMenu extends FBP(LitElement) {
     // language=HTML
     return html`
       <slot></slot>
-      <furo-keydown shift key="F10" @-key="--keynav"></furo-keydown>
+      <furo-keydown shift key="F10" at-key="--keynav"></furo-keydown>
     `;
   }
 }

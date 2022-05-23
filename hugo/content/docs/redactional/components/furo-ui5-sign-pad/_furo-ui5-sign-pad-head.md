@@ -10,18 +10,18 @@ bookHidden: true
 <template>
 <button @-click="--clearClicked">clear</button>
 <furo-form-layouter four >
-<furo-ui5-sign-pad ƒ-clear="--clearClicked" @-sign-updated="--signed"></furo-ui5-sign-pad>
-<furo-ui5-sign-pad ƒ-clear="--clearClicked" ƒ-put-image="--signed"></furo-ui5-sign-pad>
+<furo-ui5-sign-pad fn-clear="--clearClicked" @-sign-updated="--signed"></furo-ui5-sign-pad>
+<furo-ui5-sign-pad fn-clear="--clearClicked" fn-put-image="--signed"></furo-ui5-sign-pad>
 </furo-form-layouter>
-<img ƒ-.src="--signed" alt="" width="100px">
+<img set-src="--signed" alt="" width="100px">
 </template>
 </furo-demo-snippet>
  
 ```html
 <button @-click="--clearClicked">clear</button>
 <furo-form-layouter four >
-  <furo-ui5-sign-pad ƒ-clear="--clearClicked" @-sign-updated="--signed"></furo-ui5-sign-pad>
-  <furo-ui5-sign-pad ƒ-clear="--clearClicked" ƒ-put-image="--signed"></furo-ui5-sign-pad>
+  <furo-ui5-sign-pad fn-clear="--clearClicked" @-sign-updated="--signed"></furo-ui5-sign-pad>
+  <furo-ui5-sign-pad fn-clear="--clearClicked" fn-put-image="--signed"></furo-ui5-sign-pad>
 </furo-form-layouter>
-<img ƒ-.src="--signed" alt="" width="100px">
+<img set-src="--signed" alt="" width="100px">
 ```

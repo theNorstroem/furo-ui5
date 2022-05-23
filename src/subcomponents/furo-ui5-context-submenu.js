@@ -332,27 +332,27 @@ export class FuroUi5ContextSubmenu extends FBP(LitElement) {
         tabindex="0"
         ?start="${this._start}"
         ?show="${this._show}"
-        @-mousefocus="--mousefocus"
+        at-mousefocus="--mousefocus"
       >
         <!-- the wires --itemSelected and --itemDeSelected means focus, they come from flow-repeat -->
         <flow-repeat
           id="repeater"
-          ƒ-inject-items="--menuObject"
-          ƒ-select="--mousefocus"
+          fn-inject-items="--menuObject"
+          fn-select="--mousefocus"
         >
           <template>
             <div>
               <furo-ui5-context-menu-item
-                ƒ-index="--index"
-                ƒ-select="--trigger"
-                ƒ-set-focused="--itemSelected"
-                ƒ-unset-focused="--itemDeSelected"
-                ƒ-bind-data="--itemInjected(*.item)"
+                fn-index="--index"
+                fn-select="--trigger"
+                fn-set-focused="--itemSelected"
+                fn-unset-focused="--itemDeSelected"
+                fn-bind-data="--itemInjected(*.item)"
               ></furo-ui5-context-menu-item>
             </div>
           </template>
         </flow-repeat>
-        <furo-navigation-pad @-navigated="--nav"></furo-navigation-pad>
+        <furo-navigation-pad at-navigated="--nav"></furo-navigation-pad>
       </div>
     `;
   }

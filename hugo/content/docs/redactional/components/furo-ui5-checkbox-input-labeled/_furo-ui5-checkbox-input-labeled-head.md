@@ -9,13 +9,13 @@ bookHidden: true
 <template>
 <furo-form-layouter four>
 <furo-ui5-checkbox-input-labeled
-    ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+    fn-bind-data="--doExp(*.furo_data_checkbox_input)"
  ></furo-ui5-checkbox-input-labeled>
 <furo-ui5-checkbox-input-labeled
     value-state="Success"
     label="label"
     placeholder="placeholder"
-    ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+    fn-bind-data="--doExp(*.furo_data_checkbox_input)"
  ></furo-ui5-checkbox-input-labeled>
 </furo-form-layouter>
 <furo-data-object
@@ -28,12 +28,12 @@ bookHidden: true
 ```html
 <furo-form-layouter four>
   <furo-ui5-checkbox-input-labeled
-    ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+    fn-bind-data="--doExp(*.furo_data_checkbox_input)"
   ></furo-ui5-checkbox-input-labeled>
   <furo-ui5-checkbox-input-labeled
       value-state="Success"
       text="Override"
-      ƒ-bind-data="--doExp(*.furo_data_checkbox_input)"
+      fn-bind-data="--doExp(*.furo_data_checkbox_input)"
    ></furo-ui5-checkbox-input-labeled>
 </furo-form-layouter>
 ```

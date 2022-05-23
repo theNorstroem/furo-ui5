@@ -10,11 +10,11 @@ bookHidden: true
 <template>
 <furo-form-layouter four>
 <furo-ui5-date-time-picker
-    ƒ-bind-data="--dataObject(*.google_timestamp)"
+    fn-bind-data="--dataObject(*.google_timestamp)"
  ></furo-ui5-date-time-picker>
 <furo-ui5-date-time-picker
     value-state="Information" 
-    ƒ-bind-data="--dataObject(*.google_timestamp)"
+    fn-bind-data="--dataObject(*.google_timestamp)"
  ></furo-ui5-date-time-picker>
 </furo-form-layouter>
 <furo-data-object
@@ -27,11 +27,11 @@ bookHidden: true
 ```html
 <furo-form-layouter four>
   <furo-ui5-date-time-picker
-    ƒ-bind-data="--dataObject(*.google_timestamp)"
+    fn-bind-data="--dataObject(*.google_timestamp)"
   ></furo-ui5-date-time-picker>
   <furo-ui5-date-time-picker
     value-state="Information"
-    ƒ-bind-data="--dataObject(*.google_timestamp)"
+    fn-bind-data="--dataObject(*.google_timestamp)"
   ></furo-ui5-date-time-picker>
 </furo-form-layouter>
 ```

@@ -21,8 +21,8 @@ Use the function bindOptions to bind a RepeaterNode as an option list.
 
 ```html
 <furo-ui5-combobox
-   ƒ-bind-data="--entity(*.data.description)"
-   ƒ-bind-options="--collection(*.entities)">
+   fn-bind-data="--entity(*.data.description)"
+   fn-bind-options="--collection(*.entities)">
 </furo-ui5-combobox>
 ```
 
@@ -99,25 +99,25 @@ Default value: 250
 {{% api "_furo-ui5-combobox-events.md" %}}
 
 ### **search-requested**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-search-requested</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-search-requested</span>
 → <small>`value`</small>
 
 Fired when typing in input (debounced, default 250ms)
 <br><br>
 ### **options-updated**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-options-updated</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-options-updated</span>
 → <small>`optionNodeList`</small>
 
 Fired after the option list was rebuilt.
 <br><br>
 ### **selection-change**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-selection-change</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-selection-change</span>
 → <small>`selectedOption`</small>
 
 Fired when selection is changed by user interaction
 <br><br>
 ### **furo-value-changed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small>`selectedOption`</small>
 
 Fired after the field value was changed.
@@ -133,7 +133,7 @@ Fired after the field value was changed.
 <small>**readAttributes**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span>
 
 Reads the attributes which are set on the component dom.
 those attributes can be set. `value-state`, `required`,`readonly`,`disabled`, `value-field-path`, `display-field-path`
@@ -145,7 +145,7 @@ Use this after manual or scripted update of the attributes.
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `boolean`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Overridden bindData of FieldNodeAdapter
 
@@ -156,7 +156,7 @@ Overridden bindData of FieldNodeAdapter
 <small>**bindOptions**(*repeaterNode* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-options</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-options</span>
 
 Here a RepeaterNode can be connected to the component as an option list.
 

@@ -11,11 +11,11 @@ bookHidden: true
 <template>
 <furo-form-layouter four>
 <furo-ui5-date-picker-labeled
-    ƒ-bind-data="--dataObject(*.furo_data_date_input_google)"
+    fn-bind-data="--dataObject(*.furo_data_date_input_google)"
  ></furo-ui5-date-picker-labeled>
 <furo-ui5-date-picker-labeled
     value-state="Information" 
-    ƒ-bind-data="--dataObject(*.furo_data_date_input_google)"
+    fn-bind-data="--dataObject(*.furo_data_date_input_google)"
  ></furo-ui5-date-picker-labeled>
 </furo-form-layouter>
 <furo-data-object
@@ -28,12 +28,12 @@ bookHidden: true
 ```html
 <furo-form-layouter four>
   <furo-ui5-date-picker-labeled
-    ƒ-bind-data="--dataObject(*.furo_data_date_input_google)"
+    fn-bind-data="--dataObject(*.furo_data_date_input_google)"
   ></furo-ui5-date-picker-labeled>
   <furo-ui5-date-picker-labeled
       value-state="Success"
       text="Override"
-      ƒ-bind-data="--dataObject(*.furo_data_date_input_google)"
+      fn-bind-data="--dataObject(*.furo_data_date_input_google)"
    ></furo-ui5-date-picker-labeled>
 </furo-form-layouter>
 ```
@@ -45,11 +45,11 @@ bookHidden: true
 <template>
 <furo-form-layouter two>
 <furo-ui5-date-picker-labeled
-    ƒ-bind-data="--dataObject(*.furo_data_date_input_google)"
+    fn-bind-data="--dataObject(*.furo_data_date_input_google)"
  ></furo-ui5-date-picker-labeled>
 <furo-ui5-date-picker-labeled
     value-state="Information" 
-    ƒ-bind-data="--dataObject(*.furo_data_date_input_google)"
+    fn-bind-data="--dataObject(*.furo_data_date_input_google)"
  ></furo-ui5-date-picker-labeled>
 </furo-form-layouter>
 <furo-data-object
@@ -62,12 +62,12 @@ bookHidden: true
 ```html
 <furo-form-layouter two>
   <furo-ui5-date-picker-labeled
-    ƒ-bind-data="--dataObject(*.furo_data_date_input_google)"
+    fn-bind-data="--dataObject(*.furo_data_date_input_google)"
   ></furo-ui5-date-picker-labeled>
   <furo-ui5-date-picker-labeled
       value-state="Success"
       text="Override"
-      ƒ-bind-data="--dataObject(*.furo_data_date_input_google)"
+      fn-bind-data="--dataObject(*.furo_data_date_input_google)"
    ></furo-ui5-date-picker-labeled>
 </furo-form-layouter>
 ```

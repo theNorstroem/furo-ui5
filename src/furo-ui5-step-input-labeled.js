@@ -11,7 +11,7 @@ import './furo-ui5-step-input.js';
  * to the design specification of SAP Fiori Design System.
  *
  * ```html
- * <furo-ui5-step-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-step-input>
+ * <furo-ui5-step-input fn-bind-data="--dao(FIELDNODE)"></furo-ui5-step-input>
  * ```
  *
  * @fires {Step} furo-value-changed - Fires the field value when it changes.
@@ -134,8 +134,8 @@ export class FuroUi5StepInputLabeled extends FBP(LitElement) {
           step="${this.step}"
           min="${this.min}"
           max="${this.max}"
-          ƒ-bind-data="--data"
-          ƒ-focus="--focus"
+          fn-bind-data="--data"
+          fn-focus="--focus"
         >
         </furo-ui5-step-input>
       </furo-ui5-form-field-container>

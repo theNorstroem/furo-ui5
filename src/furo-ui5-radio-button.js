@@ -13,11 +13,11 @@ import { Events } from './lib/Events.js';
  * ```html
  *  <furo-ui5-radio-button
  *     name="groupA"
- *     ƒ-bind-data="--dao(FIELDNODE)"
+ *     fn-bind-data="--dao(FIELDNODE)"
  *  ></furo-ui5-radio-button>
  *  <furo-ui5-radio-button
  *     name="groupA"
- *     ƒ-bind-data="--dao(OTHERFIELDNODE)"
+ *     fn-bind-data="--dao(OTHERFIELDNODE)"
  *  ></furo-ui5-radio-button>
  * ```
  *
@@ -41,7 +41,7 @@ import { Events } from './lib/Events.js';
  *
  * The constraint **required** will mark the element as required
  *
- * When you use @-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+ * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
  * @fires {} change -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {Boolean} furo-value-changed - Fired when value changed

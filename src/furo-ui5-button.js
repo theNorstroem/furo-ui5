@@ -19,8 +19,8 @@ import * as Button from '@ui5/webcomponents/dist/Button.js';
  *
  * What is different from ui5-button?
  * With flow based programming it's usual to address functions. So we added two convenience functions for
- * - disabling => ƒ-disable
- * - enabling => ƒ-enable
+ * - disabling => fn-disable
+ * - enabling => fn-enable
  *
  * https://sap.github.io/ui5-webcomponents/playground/components/Button/
  *

@@ -11,7 +11,7 @@ import './furo-ui5-checkbox-input.js';
  * to the design specification of SAP Fiori Design System.
  *
  * ```html
- * <furo-ui5-checkbox-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-checkbox-labeled>
+ * <furo-ui5-checkbox-input-labeled fn-bind-data="--dao(FIELDNODE)"></furo-ui5-checkbox-labeled>
  * ```
  *
  * @summary labeled input field
@@ -123,8 +123,8 @@ export class FuroUi5CheckboxInputLabeled extends FBP(LitElement) {
           id="Input"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
-          ƒ-.text="--placeholder"
-          ƒ-bind-data="--data"
+          set-text="--placeholder"
+          fn-bind-data="--data"
         ></furo-ui5-checkbox-input>
       </furo-ui5-form-field-container>
     `;

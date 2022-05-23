@@ -53,7 +53,7 @@ Distance for the sub menus in pixel. This value is used to calculate if the menu
 <small>**hideMenu**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-hide-menu</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-hide-menu</span>
 
 Hides the menu witout selecting anything.
 

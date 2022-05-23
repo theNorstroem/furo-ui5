@@ -151,9 +151,9 @@ export class FuroUi5TextInputLabeled extends FBP(LitElement) {
           ?readonly=${this.readonly}
           display-field-path=${this.displayFieldPath}
           desc-field-path=${this.descFieldPath}
-          ƒ-bind-data="--data"
-          ƒ-bind-options="--options"
-          ƒ-focus="--focus"
+          fn-bind-data="--data"
+          fn-bind-options="--options"
+          fn-focus="--focus"
         >
           <div slot="icon"><slot name="icon"></slot></div>
         </furo-ui5-text-input>

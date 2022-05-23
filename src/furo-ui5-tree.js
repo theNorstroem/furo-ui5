@@ -493,18 +493,18 @@ export class FuroUi5Tree extends FBP(LitElement) {
       /**
        * Query param to watch.  Set `qp` to have a deep linkable tree.
        *
-       * If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.
+       * If you set this attribute, the node-selected event will only be fired on `fn-qp-in` or `fn-select-by-id`.
        *
        * If you select an item the `qp-change-request` will be fired instead. With the qp-change-request event, you should update the url.
        * A `furo-location` should watch the url and update the location on the tree, which will trigger a node-selected event.
        *
        * ```html
-       * <furo-location @-location-query-changed="--qp"></furo-location>
+       * <furo-location at-location-query-changed="--qp"></furo-location>
        * <furo-ui5-tree
        *    qp="panel"
-       *    ƒ-location-in="--qp" @-qp-change-requested="--qpchangerequest"></furo-ui5-tree>
+       *    fn-location-in="--qp" at-qp-change-requested="--qpchangerequest"></furo-ui5-tree>
        * <!-- update the location with the selected tree item -->
-       * <furo-location-updater ƒ-set-qp="--qpchangerequest"></furo-location-updater>
+       * <furo-location-updater fn-set-qp="--qpchangerequest"></furo-location-updater>
        * ```
        */
       qp: { type: String },
@@ -695,9 +695,9 @@ export class FuroUi5Tree extends FBP(LitElement) {
       <furo-vertical-flex>
         <div class='tablewrapper' flex>
           <table>
-            <flow-repeat ƒ-inject-items='--treeChanged' ƒ-trigger-all='--searchRequested' identity-path='id._value'>
+            <flow-repeat fn-inject-items='--treeChanged' fn-trigger-all='--searchRequested' identity-path='id._value'>
               <template><tr><td>
-                <furo-ui5-tree-item ƒ-bind-data="--itemInjected(*.item)" ƒ-search="--trigger"></furo-ui5-tree-item>
+                <furo-ui5-tree-item fn-bind-data="--itemInjected(*.item)" fn-search="--trigger"></furo-ui5-tree-item>
               </td></tr></template>
             </flow-repeat>
 

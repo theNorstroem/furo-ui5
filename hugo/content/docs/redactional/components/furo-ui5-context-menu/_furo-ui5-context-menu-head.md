@@ -11,17 +11,17 @@ bookHidden: true
 <script type="module" src="/init.js"></script>
 <furo-demo-snippet>
 <template>
-<furo-ui5-context-menu ƒ-trigger="--menuClkd" ƒ-bind-data="--menuDO" @-menu-item-selected="--menuItemSelected"
+<furo-ui5-context-menu fn-trigger="--menuClkd" fn-bind-data="--menuDO" @-menu-item-selected="--menuItemSelected"
 ><ui5-icon name="meal" @-click="--menuClkd">open menu</ui5-icon>
 </furo-ui5-context-menu>
 <!-- data for the menu -->
 <furo-data-object
   type="menu.Menuitem"
-  ƒ-inject-raw="--data"
+  fn-inject-raw="--data"
   @-object-ready="--menuDO"
 ></furo-data-object>
 <furo-fetch-json
-  ƒ-fetch="--menuClkd"
+  fn-fetch="--menuClkd"
   src="/mockdata/menu/samplectxmenu.json"
   @-data="--data"
 ></furo-fetch-json>
@@ -36,8 +36,8 @@ bookHidden: true
     <div>
       <article>
         <furo-ui5-context-menu
-          ƒ-trigger="--menuClkd"
-          ƒ-bind-data="--menuDO"
+          fn-trigger="--menuClkd"
+          fn-bind-data="--menuDO"
           @-menu-item-selected="--menuItemSelected"
         ><ui5-icon name="meal" @-click="--menuClkd">open menu</ui5-icon>
         </furo-ui5-context-menu>

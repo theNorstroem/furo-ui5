@@ -137,7 +137,7 @@ export class FuroUi5TyperendererLabeled extends FBP(LitElement) {
         <furo-type-renderer
           content
           context="${this.context}"
-          ƒ-bind-data="--data"
+          fn-bind-data="--data"
           value-state=${this.valueState}
         ></furo-type-renderer>
       </furo-ui5-form-field-container>

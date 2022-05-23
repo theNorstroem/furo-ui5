@@ -206,10 +206,10 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
           display-field-path="${this.displayFieldPath}"
           extended-value-field-path="${this.extendedValueFieldPath}"
           extended-display-field-path="${this.extendedDisplayFieldPath}"
-          ƒ-bind-data="--data"
-          ƒ-focus="--focus"
-          ƒ-set-filter="--filter"
-          ƒ-clear-result-list="|--clearResultList"
+          fn-bind-data="--data"
+          fn-focus="--focus"
+          fn-set-filter="--filter"
+          fn-clear-result-list="|--clearResultList"
         ></furo-ui5-reference-search>
       </furo-ui5-form-field-container>
     `;

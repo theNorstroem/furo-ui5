@@ -12,7 +12,7 @@ import { Events } from './lib/Events.js';
  * Supported type: repeated string
  *
  * ```html
- * <furo-ui5-multi-input ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input>
+ * <furo-ui5-multi-input fn-bind-data="--dao(FIELDNODE)"></furo-ui5-multi-input>
  * ```
  *
  * @summary repeated strings

@@ -40,7 +40,7 @@ https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
 <small>**activate**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-activate</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-activate</span>
 
 Sets the busy indicator state to active
 
@@ -50,7 +50,7 @@ Sets the busy indicator state to active
 <small>**deactivate**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-deactivate</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-deactivate</span>
 
 Sets the busy indicator state to inactive
 

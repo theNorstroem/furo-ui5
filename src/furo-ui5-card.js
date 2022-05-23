@@ -262,7 +262,7 @@ export class FuroUi5Card extends FBP(LitElement) {
     return html`
       <ui5-card ?no-content-padding="${this.noContentPadding}">
         <ui5-card-header
-          @-click="^^header-clicked"
+          at-click="^^header-clicked"
           slot="header"
           ?interactive="${this.headerInteractive}"
           title-text="${this.heading}"

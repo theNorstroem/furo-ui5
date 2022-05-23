@@ -10,20 +10,20 @@ bookHidden: true
 <furo-ui5-busy-indicator
   active 
   size="Small" 
-  ƒ-activate="--start"
-  ƒ-deactivate="--stop"
+  fn-activate="--start"
+  fn-deactivate="--stop"
 ></furo-ui5-busy-indicator><br>
 <furo-ui5-busy-indicator
   active 
   size="Medium" 
-  ƒ-activate="--start"
-  ƒ-deactivate="--stop"
+  fn-activate="--start"
+  fn-deactivate="--stop"
 ></furo-ui5-busy-indicator><br>
 <furo-ui5-busy-indicator
   active 
   size="Large" 
-  ƒ-activate="--start"
-  ƒ-deactivate="--stop"
+  fn-activate="--start"
+  fn-deactivate="--stop"
 ></furo-ui5-busy-indicator>
 <hr>
 <button @-click="--start">activate</button>

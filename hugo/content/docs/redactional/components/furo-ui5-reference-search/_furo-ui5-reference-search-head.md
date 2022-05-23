@@ -13,9 +13,9 @@ bookHidden: true
 <furo-demo-snippet>
 <template>
 <furo-form-layouter four="">
-<furo-ui5-reference-search ƒ-bind-data="--entityReady(*.owner)">
+<furo-ui5-reference-search fn-bind-data="--entityReady(*.owner)">
 </furo-ui5-reference-search>
-<furo-ui5-reference-search ƒ-bind-data="--entityReady(*.owner)">
+<furo-ui5-reference-search fn-bind-data="--entityReady(*.owner)">
 </furo-ui5-reference-search>
 </furo-form-layouter>
 <furo-data-object type="task.Task" @-object-ready="--entityReady">
@@ -26,7 +26,7 @@ bookHidden: true
 ```html
 <furo-form-layouter four="">
   <furo-ui5-reference-search 
-    ƒ-bind-data="--entityReady(*.owner)">
+    fn-bind-data="--entityReady(*.owner)">
   </furo-ui5-reference-search>
 </furo-form-layouter>
 ```
@@ -39,9 +39,9 @@ The min-term-length in this demo is set to 1 character.
 <furo-demo-snippet>
 <template>
 <furo-form-layouter four="">
-      <furo-ui5-reference-search ƒ-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
+      <furo-ui5-reference-search fn-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
       </furo-ui5-reference-search>
-      <furo-ui5-reference-search ƒ-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
+      <furo-ui5-reference-search fn-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
       </furo-ui5-reference-search>
 </furo-form-layouter>
             <furo-data-object type="task.Task" @-object-ready="--entityReady">
@@ -52,7 +52,7 @@ The min-term-length in this demo is set to 1 character.
 
 ```html
 <furo-ui5-reference-search 
-  ƒ-bind-data="--entityReady(*.owner)" 
+  fn-bind-data="--entityReady(*.owner)" 
   extended-searcher="demo-extended-searcher" 
   min-term-length="1">
 </furo-ui5-reference-search>

@@ -23,7 +23,7 @@ to display charts with apex the apex charts lib (https://github.com/apexcharts/a
  ```html
  <furo-ui5-chart-display chart-type="bar">
     <furo-ui5-chart
-        ƒ-bind-data="--projectDAO(*.entities)"
+        fn-bind-data="--projectDAO(*.entities)"
         data-field="data.cost_limit.units"
         category-field="data.description"
     ></furo-ui5-chart>
@@ -353,7 +353,7 @@ default: **{
 {{% api "_furo-ui5-chart-display-events.md" %}}
 
 ### **data-point-clicked**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-data-point-clicked</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-data-point-clicked</span>
 → <small>`Fieldnode`</small>
 
  Fired when a marker for this data source was clicked. Note: the event is fired from the furo-ui5-chart

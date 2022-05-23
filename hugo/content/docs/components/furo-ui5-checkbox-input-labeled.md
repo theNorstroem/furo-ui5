@@ -20,7 +20,7 @@ The furo-ui5-checkbox-input-labeled is a composition to easily use a complete in
 to the design specification of SAP Fiori Design System.
 
 ```html
-<furo-ui5-checkbox-input-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-checkbox-labeled>
+<furo-ui5-checkbox-input-labeled fn-bind-data="--dao(FIELDNODE)"></furo-ui5-checkbox-labeled>
 ```
 
 {{% api "_furo-ui5-checkbox-input-labeled-head.md" %}}
@@ -81,7 +81,7 @@ A Boolean attribute which, if present, means this field is readonly.
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
 <small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a FieldNode to the component.
 

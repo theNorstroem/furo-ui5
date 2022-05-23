@@ -12,7 +12,7 @@ import './furo-ui5-form-field-container.js';
  * to the design specification of SAP Fiori Design System.
  *
  * ```html
- * <furo-ui5-date-time-picker-labeled ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-date-time-picker-labeled>
+ * <furo-ui5-date-time-picker-labeled fn-bind-data="--dao(FIELDNODE)"></furo-ui5-date-time-picker-labeled>
  * ```
  *
  * @fires {String} furo-value-changed - Fires the field value when it changes in ISO 8601 format.
@@ -107,7 +107,7 @@ export class FuroUi5DateTimePickerLabeled extends FBP(LitElement) {
           id="Input"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
-          ƒ-bind-data="--data"
+          fn-bind-data="--data"
         ></furo-ui5-date-time-picker>
       </furo-ui5-form-field-container>
     `;

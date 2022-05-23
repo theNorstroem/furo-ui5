@@ -125,18 +125,18 @@ Maximal depth for the tree. Default is infinite.
 
 Query param to watch.  Set `qp` to have a deep linkable tree.
 
-If you set this attribute, the node-selected event will only be fired on `ƒ-qp-in` or `ƒ-select-by-id`.
+If you set this attribute, the node-selected event will only be fired on `fn-qp-in` or `fn-select-by-id`.
 
 If you select an item the `qp-change-request` will be fired instead. With the qp-change-request event, you should update the url.
 A `furo-location` should watch the url and update the location on the tree, which will trigger a node-selected event.
 
 ```html
-<furo-location @-location-query-changed="--qp"></furo-location>
+<furo-location at-location-query-changed="--qp"></furo-location>
 <furo-ui5-tree
    qp="panel"
-   ƒ-location-in="--qp" @-qp-change-requested="--qpchangerequest"></furo-ui5-tree>
+   fn-location-in="--qp" at-qp-change-requested="--qpchangerequest"></furo-ui5-tree>
 <!-- update the location with the selected tree item -->
-<furo-location-updater ƒ-set-qp="--qpchangerequest"></furo-location-updater>
+<furo-location-updater fn-set-qp="--qpchangerequest"></furo-location-updater>
 ```
 <br><br>
 
@@ -183,67 +183,67 @@ indicates that the element is focused
 {{% api "_furo-ui5-tree-events.md" %}}
 
 ### **node-focused**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-focused</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-node-focused</span>
 → <small>`focused field`</small>
 
  Fired when
 <br><br>
 ### **branch-focused**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-branch-focused</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-branch-focused</span>
 → <small>`focused field`</small>
 
  Fired when
 <br><br>
 ### **leaf-focused**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-leaf-focused</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-leaf-focused</span>
 → <small>``</small>
 
  Fired when
 <br><br>
 ### **node-selected**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-selected</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-node-selected</span>
 → <small>`selected field`</small>
 
  Fired when the item gets selected, does not fire when you work with query params
 <br><br>
 ### **qp-change-requested**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-qp-change-requested</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-qp-change-requested</span>
 → <small>`Object {&#34;this.qp&#34;: this._selectedField.id._value}`</small>
 
  Fired when qp mode is enabled. Nodes are only selectable with qpIn or selectById
 <br><br>
 ### **branch-selected**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-branch-selected</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-branch-selected</span>
 → <small>`selected field`</small>
 
  Fired when
 <br><br>
 ### **leaf-selected**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-leaf-selected</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-leaf-selected</span>
 → <small>`selected field`</small>
 
  Fired when
 <br><br>
 ### **node-opened**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-opened</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-node-opened</span>
 → <small>``</small>
 
  Fired when a node is opened
 <br><br>
 ### **node-closed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-closed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-node-closed</span>
 → <small>``</small>
 
  Fired when a node is closed
 <br><br>
 ### **nodes-expanded**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-nodes-expanded</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-nodes-expanded</span>
 → <small>``</small>
 
  Fired when nodes are expanded recursive
 <br><br>
 ### **nodes-collapsed**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-nodes-collapsed</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-nodes-collapsed</span>
 → <small>``</small>
 
  Fired when nodes are collapsed recursive.
@@ -257,7 +257,7 @@ indicates that the element is focused
 <small>**collapseFocused**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-focused</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-collapse-focused</span>
 
 collapses the focused element. If it is closed the parent will be focused.
 
@@ -267,7 +267,7 @@ collapses the focused element. If it is closed the parent will be focused.
 <small>**expandFocused**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-focused</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-expand-focused</span>
 
 expands the focused node, if it is opened the first child will be focused
 
@@ -277,7 +277,7 @@ expands the focused node, if it is opened the first child will be focused
 <small>**expandFocusedRecursive**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-focused-recursive</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-expand-focused-recursive</span>
 
 expands the focused node recursive
 
@@ -287,7 +287,7 @@ expands the focused node recursive
 <small>**collapseFocusedRecursive**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-focused-recursive</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-collapse-focused-recursive</span>
 
 collapses the focused node recursive
 
@@ -297,7 +297,7 @@ collapses the focused node recursive
 <small>**selectFocused**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-focused</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-focused</span>
 
 selects the focused element.
 
@@ -307,7 +307,7 @@ selects the focused element.
 <small>**search**(*term* `` ) ⟹ `[]`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-search</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-search</span>
 
 Search in the visible nodes
 
@@ -318,7 +318,7 @@ Search in the visible nodes
 <small>**searchOpenTree**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-search-open-tree</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-search-open-tree</span>
 
 
 
@@ -328,7 +328,7 @@ Search in the visible nodes
 <small>**resetSearch**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-reset-search</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-reset-search</span>
 
 Disables the search mode and clears the term
 
@@ -339,7 +339,7 @@ Disables the search mode and clears the term
 <small>**focusParent**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-parent</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-parent</span>
 
 Focuses the parent tree node without selecting it.
 
@@ -351,7 +351,7 @@ The tree item will also scrollIntoViewIfNeeded() (on all platforms which support
 <small>**focusPrevious**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-previous</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-previous</span>
 
 focus the previous visible node.
 
@@ -363,7 +363,7 @@ The tree item will also scrollIntoViewIfNeeded() (on all platforms which support
 <small>**qpIn**(*qpObject* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-qp-in</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-qp-in</span>
 
 Selects the node which is defined on `qp`
 
@@ -376,7 +376,7 @@ Use this, if you do not have a location object.
 <small>**locationIn**(*locationObject* `` ) ⟹ `*|boolean`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-location-in</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-location-in</span>
 
 Inject a location object, which contains a query param property to select the current node.
 
@@ -387,7 +387,7 @@ Inject a location object, which contains a query param property to select the cu
 <small>**selectById**(*nodeID* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-by-id</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-by-id</span>
 
 
 
@@ -398,7 +398,7 @@ Inject a location object, which contains a query param property to select the cu
 <small>**selectPrev**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-prev</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-prev</span>
 
 select the previous visible item
 
@@ -408,7 +408,7 @@ select the previous visible item
 <small>**expandNodeRecursive**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-node-recursive</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-expand-node-recursive</span>
 
 expands the currently selected node recursive
 
@@ -418,7 +418,7 @@ expands the currently selected node recursive
 <small>**expandAll**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-all</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-expand-all</span>
 
 
 
@@ -428,7 +428,7 @@ expands the currently selected node recursive
 <small>**collapseAll**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-all</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-collapse-all</span>
 
 
 
@@ -438,7 +438,7 @@ expands the currently selected node recursive
 <small>**collapseNodeRecursive**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-node-recursive</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-collapse-node-recursive</span>
 
 expands the currently selected node recursive
 
@@ -448,7 +448,7 @@ expands the currently selected node recursive
 <small>**toggle**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-toggle</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-toggle</span>
 
 toggles the currently selected node
 
@@ -458,7 +458,7 @@ toggles the currently selected node
 <small>**addSubNode**(*rawNode* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-add-sub-node</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-add-sub-node</span>
 
 
 
@@ -469,7 +469,7 @@ toggles the currently selected node
 <small>**deleteNode**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-delete-node</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-delete-node</span>
 
 
 
@@ -479,7 +479,7 @@ toggles the currently selected node
 <small>**selectNext**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-next</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-next</span>
 
 select the next visible item
 
@@ -489,7 +489,7 @@ select the next visible item
 <small>**triggerNavigation**(*key* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-trigger-navigation</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-trigger-navigation</span>
 
 
 
@@ -500,7 +500,7 @@ select the next visible item
 <small>**focusFirst**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-first</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-first</span>
 
 Focuses the first node in the tree without selecting it.
 
@@ -514,7 +514,7 @@ The tree item will also scrollIntoViewIfNeeded() (on all platforms which support
 <small>**focusLast**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-last</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-last</span>
 
 Focuses the last node in the tree without selecting it.
 
@@ -528,7 +528,7 @@ The tree item will also scrollIntoViewIfNeeded() (on all platforms which support
 <small>**focusNext**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-next</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-next</span>
 
 focuses the next visible tree node.
 
@@ -540,7 +540,7 @@ The tree item will also scrollIntoViewIfNeeded() (on all platforms which support
 <small>**focus**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span>
 
 focuses the tree itself. You can use this in combination with keyboard navigation (furo-navigation-pad)
 
@@ -551,7 +551,7 @@ focuses the tree itself. You can use this in combination with keyboard navigatio
 <small>**bindData**(*treeNode* `NavigationNode|Tree` ) ⟹ `void`</small>
 
 <small>`NavigationNode|Tree` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Binds a FieldNode.
 
@@ -565,7 +565,7 @@ Supported types: everything with a `tree.Tree` or `tree.Navigationnode` signatur
 <small>**focusSelected**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-selected</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-selected</span>
 
 Focuses the currently selected tree item.
 

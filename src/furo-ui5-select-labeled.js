@@ -167,10 +167,10 @@ export class FuroUi5SelectLabeled extends FBP(LitElement) {
           id-field-path=${this.idFieldPath}
           display-field-path=${this.displayFieldPath}
           value-field-path=${this.valueFieldPath}
-          ƒ-bind-data="--data"
-          ƒ-bind-options="--options"
-          ƒ-focus="--focus"
-          ƒ-set-options="|--setOptions"
+          fn-bind-data="--data"
+          fn-bind-options="--options"
+          fn-focus="--focus"
+          fn-set-options="|--setOptions"
         >
         </furo-ui5-select>
       </furo-ui5-form-field-container>

@@ -10,7 +10,7 @@ import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
  * Supported type: You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types
  *
  * ```html
- * <furo-ui5-progress-indicator ƒ-bind-data="--dao(FIELDNODE)"></furo-ui5-progress-indicator>
+ * <furo-ui5-progress-indicator fn-bind-data="--dao(FIELDNODE)"></furo-ui5-progress-indicator>
  * ```
  *
  * @summary repeated strings

@@ -20,7 +20,7 @@ weight: 50
 
 ```html
 <furo-ui5-table
- ƒ-bind-data="--data(*.entities)"
+ fn-bind-data="--data(*.entities)"
 >
  <!-- The column label is evaluated from the specs -->
   <ui5-table-column
@@ -108,31 +108,31 @@ Busy state
 {{% api "_furo-ui5-table-events.md" %}}
 
 ### **data-loaded**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-data-loaded</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-data-loaded</span>
 → <small>`HTMLElement`</small>
 
 Fired when the data is loaded into data table. The event detail contains the data table self.
 <br><br>
 ### **arrow-down-on-last-row**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-arrow-down-on-last-row</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-arrow-down-on-last-row</span>
 → <small>`entity`</small>
 
 Fired when the ArrowDown is pressed on the last row. The event detail is the original entity of the row
 <br><br>
 ### **tablerow-selected**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-tablerow-selected</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-tablerow-selected</span>
 → <small>`entity`</small>
 
 Fired when the row is selected. The event detail is the original entity of the row.
 <br><br>
 ### **arrow-up-on-first-row**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-arrow-up-on-first-row</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-arrow-up-on-first-row</span>
 → <small>`entity`</small>
 
 Fired when the ArrowUp is pressed on the first row. The event detail is the original entity of the row
 <br><br>
 ### **rows-selected**
-<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-rows-selected</span>
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-rows-selected</span>
 → <small>`Array with the selected items`</small>
 
 Fired when the row selection in MultiSelect mode was changed
@@ -147,7 +147,7 @@ Fired when the row selection in MultiSelect mode was changed
 <small>**bindData**(*data* `` ) ⟹ `void`</small>
 
 <small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
 
 Bind a repeated data node.
 
@@ -158,7 +158,7 @@ Bind a repeated data node.
 <small>**focus**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span>
 
 Focuses the header of the table
 
@@ -168,7 +168,7 @@ Focuses the header of the table
 <small>**focusLast**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-last</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-last</span>
 
 Focuses the last row.
 
@@ -178,7 +178,7 @@ Focuses the last row.
 <small>**focusFirst**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-first</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-first</span>
 
 Focuses the first row.
 
@@ -191,7 +191,7 @@ Focuses the first row.
 <small>**setBusy**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-busy</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-set-busy</span>
 
 setBusy Sets the busy state
 
@@ -201,7 +201,7 @@ setBusy Sets the busy state
 <small>**unsetBusy**() ⟹ `void`</small>
 
 <small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-unset-busy</span>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-unset-busy</span>
 
 unsetBusy Unsets the busy state
 

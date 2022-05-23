@@ -151,9 +151,9 @@ export class FuroUi5ComboboxLabeled extends FBP(LitElement) {
           ?readonly=${this.readonly}
           display-field-path=${this.displayFieldPath}
           desc-field-path=${this.descFieldPath}
-          ƒ-bind-data="--data"
-          ƒ-bind-options="--options"
-          ƒ-focus="--focus"
+          fn-bind-data="--data"
+          fn-bind-options="--options"
+          fn-focus="--focus"
         >
         </furo-ui5-combobox>
       </furo-ui5-form-field-container>
