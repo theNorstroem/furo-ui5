@@ -46,16 +46,22 @@ export class FuroUi5TyperendererLabeled extends FBP(LitElement) {
     return {
       /**
        * the label for the data-text-input
+       * @private
        */
       label: { type: String },
       /**
        * Value State
+       * @private
        */
       valueState: { type: String, reflect: true, attribute: 'value-state' },
       /**
        * Disabled State
        */
       disabled: { type: Boolean, reflect: true, attribute: 'disabled' },
+      /**
+       * Set the render context. Default is **display**, the type renderer set of @furo/ui5 supports
+       * **cell**, **form**, **celledit**
+       */
       context: { type: String },
     };
   }

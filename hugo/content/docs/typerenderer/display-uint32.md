@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-uint32
-**@furo/ui5** <small>v1.4.1</small>
+**@furo/ui5** <small>v1.4.3</small>
 <br>`import '@furo/ui5/src/typerenderer/display-uint32.js';`<small>
 <br>exports *DisplayUint32* js
 <br>exports `<display-uint32>` custom-element-definition

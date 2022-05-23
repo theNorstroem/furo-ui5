@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-multi-combobox-labeled
-**@furo/ui5** <small>v1.4.1</small>
+**@furo/ui5** <small>v1.4.3</small>
 <br>`import '@furo/ui5/src/furo-ui5-multi-combobox-labeled.js';`<small>
 <br>exports *FuroUi5MultiComboboxLabeled* js
 <br>exports `<furo-ui5-multi-combobox-labeled>` custom-element-definition

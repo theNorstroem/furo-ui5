@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-typerenderer-labeled
-**@furo/ui5** <small>v1.4.1</small>
+**@furo/ui5** <small>v1.4.3</small>
 <br>`import '@furo/ui5/src/furo-ui5-typerenderer-labeled.js';`<small>
 <br>exports *FuroUi5TyperendererLabeled* js
 <br>exports `<furo-ui5-typerenderer-labeled>` custom-element-definition
@@ -29,28 +29,15 @@ to the design specification of SAP Fiori Design System.
 
 
 
-### **label**
 
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small>`string` default: **&#39;&#39;**</small>
-
-the label for the data-text-input
-<br><br>
-
-### **valueState**
-
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">value-state</span> <small>**reflects**</small>
-<small>`string` default: **&#39;&#39;**</small>
-
-Value State
-<br><br>
 
 ### **context**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">context</span>
 <small>`string` default: **&#39;display&#39;**</small>
 
-
+Set the render context. Default is **display**, the type renderer set of @furo/ui5 supports
+**cell**, **form**, **celledit**
 <br><br>
 
 ### **disabled**

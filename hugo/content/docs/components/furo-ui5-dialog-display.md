@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-dialog-display
-**@furo/ui5** <small>v1.4.1</small>
+**@furo/ui5** <small>v1.4.3</small>
 <br>`import '@furo/ui5/src/furo-ui5-dialog-display.js';`<small>
 <br>exports `<furo-ui5-dialog-display>` custom-element-definition
 <br>superclass *LitElement*</small>
