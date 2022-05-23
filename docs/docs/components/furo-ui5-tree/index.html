@@ -12,12 +12,12 @@
 <meta property="og:description" content="tree navigation menu" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-tree/" />
-<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
+<meta property="article:modified_time" content="2022-05-23T14:15:38+02:00" />
 <title>furo-ui5-tree | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
+<script defer src="/en.search.min.b79e4e78cd1fd218e3a634af08373ef458c45cfcec2f302742ab9d21651370c4.js" integrity="sha256-t55OeM0f0hjjpjSvCDc&#43;9FjEXPzsLzAnQqudIWUTcMQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3663,7 +3663,7 @@ renders a tree structure</p>
   <a class="anchor" href="#depth">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">depth</span>
-</small></p>
+<small><code>Number</code> </small></p>
 <p>Maximal depth for the tree. Default is infinite.
 <br><br></p>
 <h3 id="qp">
@@ -3671,7 +3671,7 @@ renders a tree structure</p>
   <a class="anchor" href="#qp">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">qp</span>
-</small></p>
+<small><code>String</code> </small></p>
 <p>Query param to watch.  Set <code>qp</code> to have a deep linkable tree.</p>
 <p>If you set this attribute, the node-selected event will only be fired on <code>fn-qp-in</code> or <code>fn-select-by-id</code>.</p>
 <p>If you select an item the <code>qp-change-request</code> will be fired instead. With the qp-change-request event, you should update the url.
@@ -3700,7 +3700,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <a class="anchor" href="#rootasheader">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">root-as-header</span>
-</small></p>
+<small><code>Boolean</code> </small></p>
 <p>Set this flag if you do not want a header-text section.
 <br><br></p>
 <h3 id="hiderootnode">
@@ -3708,7 +3708,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <a class="anchor" href="#hiderootnode">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">hide-root-node</span>
-</small></p>
+<small><code>Boolean</code> </small></p>
 <p>Set this flag if you do not want to see the root node
 <br><br></p>
 <h3 id="headertext">
@@ -3716,7 +3716,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <a class="anchor" href="#headertext">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-text</span>
-</small></p>
+<small><code>String</code> </small></p>
 <p>Override display name from root object
 <br><br></p>
 <h3 id="secondarytext">
@@ -3724,7 +3724,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <a class="anchor" href="#secondarytext">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">secondary-text</span>
-</small></p>
+<small><code>String</code> </small></p>
 <p>Override description from root object.
 <br><br></p>
 <h3 id="focused">
@@ -3732,7 +3732,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <a class="anchor" href="#focused">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">focused</span> <small><strong>reflects</strong></small>
-</small></p>
+<small><code>Boolean</code> </small></p>
 <p>indicates that the element is focused
 <br><br></p>
 <h2 id="events">
@@ -4197,7 +4197,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/a92fd11a7de230af60807c5df04c78dcfc10cafb" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>May 23, 2022</span>
     </a>

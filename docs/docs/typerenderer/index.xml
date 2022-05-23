@@ -229,7 +229,7 @@ Every cell-xxx component should implement the following API:
  Summary: cell display renderer for furo.Property
  Description #  cell-furo-property The cell-furo-property component displays a FieldNode of type furo.Property in read only mode.
 Every cell-xxx component should implement the following API:
- function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  noDataText #  noDataText string default: &#39;&#39;
+ function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  noDataText #  noDataText String default: &#39;&#39;
 Defines the empty state display With a furo.</description>
     </item>
     
@@ -690,7 +690,7 @@ Binds a field node to the component</description>
  Summary: celledit renderer for furo.Property
  Description #  celledit-furo-property The celledit-furo-property component displays a FieldNode of type furo.Property in read only mode.
 Every celledit-xxx component should implement the following API:
- function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  noDataText #  noDataText string default: &#39;&#39;
+ function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  noDataText #  noDataText String default: &#39;&#39;
 Defines the empty state display With a furo.</description>
     </item>
     
@@ -1040,7 +1040,7 @@ Every display-xxx component should implement the following API:
  Summary: display renderer for furo.Property
  Description #  display-furo-property The display-furo-property component displays a FieldNode of type furo.Property in read only mode.
 Every display-xxx component should implement the following API:
- function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  noDataText #  noDataText string default: &#39;&#39;
+ function: bindData(fieldNode){&amp;hellip;}  Attributes and Properties #  noDataText #  noDataText String default: &#39;&#39;
 Defines the empty state display With a furo.</description>
     </item>
     

@@ -28,7 +28,7 @@
  Description #  Displays a icon/symbol for a boolean value
 This component uses the SAP Ui5 icons. https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html
 1  &amp;lt;furo-ui5-bool-icon fn-bind-data=&amp;#34;--dao(FIELDNODE)&amp;#34;&amp;gt;&amp;lt;/furo-ui5-bool-icon&amp;gt;   Only @ui5/webcomponents-icons/dist/navigation-down-arrow.js and @ui5/webcomponents-icons/dist/navigation-right-arrow.js are imported. If you set other icons, please do not forget to import them.
-Example #    Attributes and Properties #  symboltrue #  symboltrue string default: &#39;navigation-down-arrow&#39;</description>
+Example #    Attributes and Properties #  symboltrue #  symboltrue String default: &#39;navigation-down-arrow&#39;</description>
     </item>
     
     <item>
@@ -92,7 +92,7 @@ Use multiple binders if you need more then one series per chart.
  Summary: Display charts with data objects
  Description #  The furo-ui5-chart-display is the render component to display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).
 Use furo-ui5-chart to connect your data.
-1 2 3 4 5 6 7  &amp;lt;furo-ui5-chart-display chart-type=&amp;#34;bar&amp;#34;&amp;gt; &amp;lt;furo-ui5-chart fn-bind-data=&amp;#34;--projectDAO(*.entities)&amp;#34; data-field=&amp;#34;data.cost_limit.units&amp;#34; category-field=&amp;#34;data.description&amp;#34; &amp;gt;&amp;lt;/furo-ui5-chart&amp;gt; &amp;lt;/furo-ui5-chart-display&amp;gt;   Example mixed charts #     load data change data            Attributes and Properties #  sparkline #  sparkline</description>
+1 2 3 4 5 6 7  &amp;lt;furo-ui5-chart-display chart-type=&amp;#34;bar&amp;#34;&amp;gt; &amp;lt;furo-ui5-chart fn-bind-data=&amp;#34;--projectDAO(*.entities)&amp;#34; data-field=&amp;#34;data.cost_limit.units&amp;#34; category-field=&amp;#34;data.description&amp;#34; &amp;gt;&amp;lt;/furo-ui5-chart&amp;gt; &amp;lt;/furo-ui5-chart-display&amp;gt;   Example mixed charts #     load data change data            Attributes and Properties #  sparkline #  sparkline Boolean</description>
     </item>
     
     <item>
@@ -182,8 +182,8 @@ There is nothing more to do. The menu creates a transparent &amp;ldquo;backdrop&
 It is not intended for direct usage
 Attributes and Properties #  icon #  default: &#39;border&#39;
 
-focused #  focused reflects 
-focused state disabled #  disabled reflects 
+focused #  focused reflects Boolean 
+focused state disabled #  disabled reflects Boolean 
 disabled state Events #  mousefocus #  at-mousefocus → index</description>
     </item>
     
@@ -199,7 +199,7 @@ disabled state Events #  mousefocus #  at-mousefocus → index</description>
 Use furo-ui5-context-menu to show a context menu.
 Attributes and Properties #  borderDistance #  default: 48
 
-depth #  depth 
+depth #  depth Number 
 Depth of the submenu Methods #  init #  init(e *display* byKeyboard `` ) ⟹ void</description>
     </item>
     
@@ -374,8 +374,7 @@ bindSection Bind a fieldnode of type launchpad.Section
       <description>furo-ui5-launchpad-tile-grid #  @furo/ui5 v1.4.3 import &#39;@furo/ui5/src/spaces/furo-ui5-launchpad-tile-grid.js&#39;; exports &amp;lt;furo-ui5-launchpad-tile-grid&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Summary: tile layout component
  Description #  furo-ui5-launchpad-tile-grid Layout component used in sections.
-Attributes and Properties #  myBool #  myBool 
-Description Methods #  _FBPReady #  _FBPReady() ⟹ void
+Attributes and Properties #  Methods #  _FBPReady #  _FBPReady() ⟹ void
 * → fn&amp;ndash;fbp-ready</description>
     </item>
     
@@ -388,11 +387,9 @@ Description Methods #  _FBPReady #  _FBPReady() ⟹ void
       <description>furo-ui5-markdown #  @furo/ui5 v1.4.3 import &#39;@furo/ui5/src/furo-ui5-markdown.js&#39;; exports &amp;lt;furo-ui5-markdown&amp;gt; custom-element-definition superclass LitElement
  Summary: renders markdown data
  Description #  furo-markdown Renders given md data with parseMarkdown or loads a md file with mdsrc=&amp;quot;source.md&amp;quot;
-  render    Attributes and Properties #  mdsrc #  mdsrc 
-source of the md markdown #  markdown 
-markdown string markdownRendered #  default: undefined
-
-unsafe #  unsafe</description>
+  render    Attributes and Properties #  mdsrc #  mdsrc String 
+source of the md markdown #  markdown String 
+markdown string markdownRendered #  default: undefined</description>
     </item>
     
     <item>
@@ -439,8 +436,8 @@ unsafe #  unsafe</description>
       <description>furo-ui5-money-input-labeled #  @furo/ui5 v1.4.3 import &#39;@furo/ui5/src/furo-ui5-money-input-labeled.js&#39;; exports FuroUi5MoneyInputLabeled js exports &amp;lt;furo-ui5-money-input-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Summary: labeled input field
  Description #  The furo-ui5-money-input-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
-1  &amp;lt;furo-ui5-money-input-labeled fn-bind-data=&amp;#34;--dao(FIELDNODE)&amp;#34;&amp;gt;&amp;lt;/furo-ui5-money-input-labeled&amp;gt;   Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-money-input required #  required</description>
+1  &amp;lt;furo-ui5-money-input-labeled fn-bind-data=&amp;#34;--dao(FIELDNODE)&amp;#34;&amp;gt;&amp;lt;/furo-ui5-money-input-labeled&amp;gt;   Attributes and Properties #  label #  label String default: &#39;&#39;
+the label for the data-money-input required #  required Boolean</description>
     </item>
     
     <item>
@@ -464,7 +461,7 @@ the label for the data-money-input required #  required</description>
       <description>furo-ui5-multi-combobox-labeled #  @furo/ui5 v1.4.3 import &#39;@furo/ui5/src/furo-ui5-multi-combobox-labeled.js&#39;; exports FuroUi5MultiComboboxLabeled js exports &amp;lt;furo-ui5-multi-combobox-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Summary: labeled multi-combobox
  Description #  furo-ui5-multi-combobox-labeled The furo-ui5-multi-combobox-labeled is a composition to easily use a complete data multi-combobox with label according to the design specification of SAP Fiori Design System.
- Choose your countries             Attributes and Properties #  label #  label string default: &#39;&#39;</description>
+ Choose your countries             Attributes and Properties #  label #  label String default: &#39;&#39;</description>
     </item>
     
     <item>
@@ -770,8 +767,8 @@ You can bind any number type, any furo.</description>
       <description>furo-ui5-step-input-labeled #  @furo/ui5 v1.4.3 import &#39;@furo/ui5/src/furo-ui5-step-input-labeled.js&#39;; exports FuroUi5StepInputLabeled js exports &amp;lt;furo-ui5-step-input-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
  Summary: labeled input field
  Description #  The furo-ui5-step-input-labeled is a composition to easily use a complete input field with label according to the design specification of SAP Fiori Design System.
-1  &amp;lt;furo-ui5-step-input fn-bind-data=&amp;#34;--dao(FIELDNODE)&amp;#34;&amp;gt;&amp;lt;/furo-ui5-step-input&amp;gt;   Attributes and Properties #  label #  label string default: &#39;&#39;
-the label for the data-step-input icon #  icon string default: &#39;&#39;</description>
+1  &amp;lt;furo-ui5-step-input fn-bind-data=&amp;#34;--dao(FIELDNODE)&amp;#34;&amp;gt;&amp;lt;/furo-ui5-step-input&amp;gt;   Attributes and Properties #  label #  label String default: &#39;&#39;
+the label for the data-step-input icon #  icon String default: &#39;&#39;</description>
     </item>
     
     <item>
@@ -938,10 +935,11 @@ Description isGroupLabel #  is-group-label reflects boolean default: false</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-typerenderer-labeled/</guid>
-      <description>furo-ui5-typerenderer-labeled #  @furo/ui5 v1.4.3 import &#39;@furo/ui5/src/furo-ui5-typerenderer-labeled.js&#39;; exports FuroUi5TyperendererLabeled js exports &amp;lt;furo-ui5-typerenderer-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
- Summary: labeled input field
- Description #  furo-ui5-typerenderer-labeled The furo-ui5-typerenderer-labeled is a composition to easily use a display field with label according to the design specification of SAP Fiori Design System.
-Example #             Attributes and Properties #  context #  context string default: &#39;display&#39;</description>
+      <description>furo-ui5-typerenderer-labeled #  @furo/ui5 v1.4.3 import &#39;@furo/ui5/src/furo-ui5-propertylist-display.js&#39;; exports FuroUi5PropertylistDisplay js exports &amp;lt;furo-ui5-propertylist-display&amp;gt; custom-element-definition superclass LitElement
+ Summary:
+ Description #  furo-ui5-propertylist-display allows the user to show repeated properties (furo.Property) in a readonly mode. For all other types you can use furo-ui5-typerenderer-labeled.
+The type information of the property is used for the display of the individual attributes. E.g.
+[ { &amp;quot;code&amp;quot;: &amp;quot;c0a7f550-0fbe-4046-8fa9-60c86327b6b1&amp;quot;, &amp;quot;data&amp;quot;: { &amp;quot;@type&amp;quot;: &amp;quot;type.googleapis.com/furo.StringProperty&amp;quot;, &amp;quot;data&amp;quot;: &amp;quot;01032020&amp;quot; }, &amp;quot;flags&amp;quot;: [], &amp;quot;display_name&amp;quot;: &amp;quot;Vertragsbeginn&amp;quot;, &amp;quot;id&amp;quot;: &amp;quot;246d79a0-0a15-43c5-b18f-ac8a4a449df1&amp;quot;, &amp;quot;meta&amp;quot;: {} } ] You can bind the furo.</description>
     </item>
     
     <item>

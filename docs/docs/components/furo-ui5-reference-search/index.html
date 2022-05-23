@@ -12,12 +12,12 @@
 <meta property="og:description" content="furo ui5 data reference search" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-reference-search/" />
-<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
+<meta property="article:modified_time" content="2022-05-23T14:15:38+02:00" />
 <title>furo-ui5-reference-search | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
+<script defer src="/en.search.min.b79e4e78cd1fd218e3a634af08373ef458c45cfcec2f302742ab9d21651370c4.js" integrity="sha256-t55OeM0f0hjjpjSvCDc&#43;9FjEXPzsLzAnQqudIWUTcMQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3630,7 +3630,7 @@ Fire a <strong>escape-filter-panel</strong> to close the extended search.</p>
   <a class="anchor" href="#service">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">service</span>
-<small><code>string</code> default: <strong>''</strong></small></p>
+<small><code>String</code> default: <strong>''</strong></small></p>
 <p>Set the service. This is only needed when you do not use a bind or bind a scalar value.
 <br><br></p>
 <h3 id="searchresponsepath">
@@ -3638,7 +3638,7 @@ Fire a <strong>escape-filter-panel</strong> to close the extended search.</p>
   <a class="anchor" href="#searchresponsepath">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">search-response-path</span>
-<small><code>string</code> default: <strong>'entities'</strong></small></p>
+<small><code>String</code> default: <strong>'entities'</strong></small></p>
 <p>Path to the node in the response value which contains the array with the selection items.
 By default this goes to <em>entitites</em>
 <br><br></p>
@@ -3647,7 +3647,7 @@ By default this goes to <em>entitites</em>
   <a class="anchor" href="#valuefieldpath">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">value-field-path</span>
-<small><code>string</code> default: <strong>'data.id'</strong></small></p>
+<small><code>String</code> default: <strong>'data.id'</strong></small></p>
 <p>Path to response value item which is used for the id.
 By default this goes to <em>data.id</em>
 <br><br></p>
@@ -3656,7 +3656,7 @@ By default this goes to <em>data.id</em>
   <a class="anchor" href="#displayfieldpath">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">display-field-path</span>
-<small><code>string</code> default: <strong>'data.display_name'</strong></small></p>
+<small><code>String</code> default: <strong>'data.display_name'</strong></small></p>
 <p>Path to selection value node which is used for the display.
 By default this goes to <em>data.display_name</em>
 <br><br></p>
@@ -3665,7 +3665,7 @@ By default this goes to <em>data.display_name</em>
   <a class="anchor" href="#extendedvaluefieldpath">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">extended-value-field-path</span>
-<small><code>string</code> default: <strong>'data.id'</strong></small></p>
+<small><code>String</code> default: <strong>'data.id'</strong></small></p>
 <p>Path to response value item of the extended search which is used for the id.
 By default this goes to <em>data.id</em>.
 Only needed when your extended searcher does not have the id, display_name signature in the response.
@@ -3675,7 +3675,7 @@ Only needed when your extended searcher does not have the id, display_name signa
   <a class="anchor" href="#extendeddisplayfieldpath">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">extended-display-field-path</span>
-<small><code>string</code> default: <strong>'data.display_name'</strong></small></p>
+<small><code>String</code> default: <strong>'data.display_name'</strong></small></p>
 <p>Path to response value item of the exteded search which is used for the display.
 By default this goes to <em>data.display_name</em>.
 Only needed when your extended searcher does not have the id, display_name signature in the response.
@@ -3685,7 +3685,7 @@ Only needed when your extended searcher does not have the id, display_name signa
   <a class="anchor" href="#maxitemstodisplay">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">max-items-to-display</span>
-<small><code>number</code> default: <strong>8</strong></small></p>
+<small><code>Number</code> default: <strong>8</strong></small></p>
 <p>The maximal number of items to display.</p>
 <p>This value will be set as page-size query-param for the backend.</p>
 <p>If the response contains hts information with rel <em>next</em> a &ldquo;load more&rdquo; button will be displayed at the end
@@ -3702,7 +3702,7 @@ of the list.
   <a class="anchor" href="#mintermlength">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">min-term-length</span>
-<small><code>number</code> default: <strong>2</strong></small></p>
+<small><code>Number</code> default: <strong>2</strong></small></p>
 <p>The minimal length of search term to trigger a search.
 <br><br></p>
 <h3 id="debouncetimeout">
@@ -3710,7 +3710,7 @@ of the list.
   <a class="anchor" href="#debouncetimeout">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">debounce-timeout</span>
-<small><code>number</code> default: <strong>250</strong></small></p>
+<small><code>Number</code> default: <strong>250</strong></small></p>
 <p>wait for this time between keystrokes to trigger a search to the service
 <br><br></p>
 <h3 id="placeholder">
@@ -3718,7 +3718,7 @@ of the list.
   <a class="anchor" href="#placeholder">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">placeholder</span>
-<small><code>string</code> default: <strong>''</strong></small></p>
+<small><code>String</code> default: <strong>''</strong></small></p>
 <p>Overrides the hint text from the <strong>specs</strong>.</p>
 <p>Use with caution, normally the specs defines this value.
 <br><br></p>
@@ -3727,7 +3727,7 @@ of the list.
   <a class="anchor" href="#label">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small><code>string</code> default: <strong>''</strong></small></p>
+<small><code>String</code> default: <strong>''</strong></small></p>
 <p>Overrides the label text from the <strong>specs</strong>.</p>
 <p>Use with caution, normally the specs defines this value.
 <br><br></p>
@@ -3736,7 +3736,7 @@ of the list.
   <a class="anchor" href="#nodatatext">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-data-text</span>
-<small><code>string</code> default: <strong>'no result found'</strong></small></p>
+<small><code>String</code> default: <strong>'no result found'</strong></small></p>
 <p>hint text when result not found by search
 <br><br></p>
 <h3 id="disablesearchlist">
@@ -3744,7 +3744,7 @@ of the list.
   <a class="anchor" href="#disablesearchlist">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disable-search-list</span>
-<small><code>boolean</code> default: <strong>false</strong></small></p>
+<small><code>Boolean</code> default: <strong>false</strong></small></p>
 <p>A Boolean attribute which, if present, means this field can not be searched.</p>
 <p>This is very useful when you want enforce the usage of the extended search
 <br><br></p>
@@ -3753,7 +3753,7 @@ of the list.
   <a class="anchor" href="#icon">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon</span>
-<small><code>string</code> default: <strong>'search'</strong></small></p>
+<small><code>String</code> default: <strong>'search'</strong></small></p>
 <p>Use this attribute to set a custom icon for your searcher
 <br><br></p>
 <h3 id="valuestate">
@@ -3761,7 +3761,7 @@ of the list.
   <a class="anchor" href="#valuestate">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">value-state</span>
-<small><code>string</code> default: <strong>'None'</strong></small></p>
+<small><code>String</code> default: <strong>'None'</strong></small></p>
 <p>Value State of the input field
 <br><br></p>
 <h3 id="required">
@@ -3769,7 +3769,7 @@ of the list.
   <a class="anchor" href="#required">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">required</span> <small><strong>reflects</strong></small>
-</small></p>
+<small><code>Boolean</code> </small></p>
 <p>Overrides the required value from the <strong>specs</strong>.</p>
 <p>Use with caution, normally the specs defines this value.
 <br><br></p>
@@ -3778,7 +3778,7 @@ of the list.
   <a class="anchor" href="#searchonenteronly">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">search-on-enter-only</span>
-</small></p>
+<small><code>Boolean</code> </small></p>
 <p>Enable this, to avoid the automatic triggering of &ldquo;search&rdquo;.</p>
 <p>The user have to press enter to trigger the search. Min-term-length is respected.
 <br><br></p>
@@ -3787,7 +3787,7 @@ of the list.
   <a class="anchor" href="#readonly">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">readonly</span>
-</small></p>
+<small><code>Boolean</code> </small></p>
 <p>Overrides the readonly value from the <strong>specs</strong>.</p>
 <p>Use with caution, normally the specs defines this value.
 <br><br></p>
@@ -3796,7 +3796,7 @@ of the list.
   <a class="anchor" href="#disabled">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span>
-</small></p>
+<small><code>Boolean</code> </small></p>
 <p>Disable
 <br><br></p>
 <h3 id="busy">
@@ -3804,7 +3804,7 @@ of the list.
   <a class="anchor" href="#busy">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">busy</span>
-</small></p>
+<small><code>Boolean</code> </small></p>
 <p>This is used to activate the loading indicator.
 <br><br></p>
 <h3 id="extendedsearcher">
@@ -3812,7 +3812,7 @@ of the list.
   <a class="anchor" href="#extendedsearcher">#</a>
 </h3>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">extended-searcher</span>
-</small></p>
+<small><code>String</code> </small></p>
 <p>Define the extended searcher. Do not forget to import the searcher you want to use.
 <br><br></p>
 <h2 id="events">
@@ -3980,7 +3980,7 @@ or do btoa(JSON.stringify(FILTER))</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/a92fd11a7de230af60807c5df04c78dcfc10cafb" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>May 23, 2022</span>
     </a>
