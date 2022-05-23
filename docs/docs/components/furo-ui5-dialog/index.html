@@ -12,12 +12,12 @@
 <meta property="og:description" content="Dialog element" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-dialog/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-dialog | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3348,7 +3344,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-dialog
   <a class="anchor" href="#furo-ui5-dialog">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-dialog.js';</code><small>
 <br>exports <em>FuroUi5Dialog</em> js
 <br>extends <em>src/furo-ui5-dialog.js</em></small></p>
@@ -3375,12 +3371,12 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-dialog</span> <span style="color:#008080">header-text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Dialog title&#34;</span> <span style="color:#008080">ƒ-show</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--openDialogClicked&#34;</span> <span style="color:#008080">ƒ-close</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeDialogClicked&#34;</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-dialog</span> <span style="color:#008080">header-text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Dialog title&#34;</span> <span style="color:#008080">fn-show</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--openDialogClicked&#34;</span> <span style="color:#008080">fn-close</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeDialogClicked&#34;</span>&gt;
   &lt;<span style="color:#000080">p</span>&gt;Content&lt;/<span style="color:#000080">p</span>&gt;
-  &lt;<span style="color:#000080">div</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;footer&#34;</span>&gt; &lt;<span style="color:#000080">button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeDialogClicked&#34;</span>&gt;close dialog&lt;/<span style="color:#000080">button</span>&gt;&lt;/<span style="color:#000080">div</span>&gt;
+  &lt;<span style="color:#000080">div</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;footer&#34;</span>&gt; &lt;<span style="color:#000080">button</span> <span style="color:#008080">at-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeDialogClicked&#34;</span>&gt;close dialog&lt;/<span style="color:#000080">button</span>&gt;&lt;/<span style="color:#000080">div</span>&gt;
 &lt;/<span style="color:#000080">furo-ui5-dialog</span>&gt;
 
-&lt;<span style="color:#000080">button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--openDialogClicked&#34;</span>&gt;Open dialog&lt;/<span style="color:#000080">button</span>&gt;
+&lt;<span style="color:#000080">button</span> <span style="color:#008080">at-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--openDialogClicked&#34;</span>&gt;Open dialog&lt;/<span style="color:#000080">button</span>&gt;
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="sample">
@@ -3389,7 +3385,7 @@ https://github.com/alex-shpak/hugo-book
 </h4>
 <furo-demo-snippet>
 <template>
-<furo-ui5-dialog header-text="Dialog title" ƒ-show="--openDialogClicked" ƒ-close="--closeDialogClicked">
+<furo-ui5-dialog header-text="Dialog title" fn-show="--openDialogClicked" fn-close="--closeDialogClicked">
 <p>Content</p>
 <div slot="footer"> <button @-click="--closeDialogClicked">close dialog</button></div>
 </furo-ui5-dialog>
@@ -3413,8 +3409,8 @@ https://github.com/alex-shpak/hugo-book
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-dialog</span> 
   <span style="color:#008080">header-text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Dialog title&#34;</span> 
-  <span style="color:#008080">ƒ-show</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--openDialogClicked&#34;</span> 
-  <span style="color:#008080">ƒ-close</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeDialogClicked&#34;</span>&gt;
+  <span style="color:#008080">fn-show</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--openDialogClicked&#34;</span> 
+  <span style="color:#008080">fn-close</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeDialogClicked&#34;</span>&gt;
   &lt;<span style="color:#000080">p</span>&gt;Content&lt;/<span style="color:#000080">p</span>&gt;
   &lt;<span style="color:#000080">div</span> <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;footer&#34;</span>&gt;
     &lt;<span style="color:#000080">button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeDialogClicked&#34;</span>&gt;close dialog&lt;/<span style="color:#000080">button</span>&gt;
@@ -3438,7 +3434,7 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p><small><strong>show</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-show</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-show</span></p>
 <p>shows the dialog</p>
 <p><br><br></p>
 </article>
@@ -3451,9 +3447,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

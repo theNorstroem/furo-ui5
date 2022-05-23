@@ -12,12 +12,12 @@
 <meta property="og:description" content="ui5 notification list" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-notification-list-display/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-notification-list-display | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3369,7 +3365,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-notification-list-display
   <a class="anchor" href="#furo-ui5-notification-list-display">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-notification-list-display.js';</code><small>
 <br>exports <em>FuroUi5NotificationListDisplay</em> js
 <br>exports <code>&lt;furo-ui5-notification-list-display&gt;</code> custom-element-definition
@@ -3403,14 +3399,14 @@ But you have to be sure the furo-ui5-notification-list-display can receive the n
 <div flex scroll>
 <furo-ui5-notification-list-display 
   header-text="Notifications &amp; Errors" 
-  ƒ-clear-all="--clearRequested" 
+  fn-clear-all="--clearRequested" 
   group-title-message="Localized Messages" 
   group-title-help="Helpful information" group-title-bad-request="Field Violations" @-notification-counter-update="--notificationCounterUpdated"></furo-ui5-notification-list-display>
-  <furo-ui5-notification ƒ-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
+  <furo-ui5-notification fn-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
 </div>
 </furo-vertical-flex>
 <furo-fetch-json
-  ƒ-fetch="--showStatusClicked"
+  fn-fetch="--showStatusClicked"
   src="/notification/grpc.json"
   @-data="--grpcStatus"
 ></furo-fetch-json>
@@ -3436,13 +3432,13 @@ But you have to be sure the furo-ui5-notification-list-display can receive the n
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-notification-list-display</span> 
   <span style="color:#008080">header-text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Notifications &amp;amp; Errors&#34;</span> 
-  <span style="color:#008080">ƒ-clear-all</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearRequested&#34;</span> 
+  <span style="color:#008080">fn-clear-all</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearRequested&#34;</span> 
   <span style="color:#008080">group-title-message</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Localized Messages&#34;</span> 
   <span style="color:#008080">group-title-help</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Helpful information&#34;</span> 
   <span style="color:#008080">group-title-bad-request</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Field Violations&#34;</span> 
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-notification-counter-update</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--ncUpdated&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification-list-display</span>&gt;
 &lt;<span style="color:#000080">furo-ui5-notification</span> 
-  <span style="color:#008080">ƒ-parse-grpc-status</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--grpcStatus&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification</span>&gt;
+  <span style="color:#008080">fn-parse-grpc-status</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--grpcStatus&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification</span>&gt;
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -3521,14 +3517,14 @@ But you have to be sure the furo-ui5-notification-list-display can receive the n
   <strong>notification-counter-update</strong>
   <a class="anchor" href="#notification-counter-update">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-notification-counter-update</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-notification-counter-update</span>
 → <small><code>CustomEvent</code></small></p>
 <p><br><br></p>
 <h3 id="furo-value-changed">
   <strong>furo-value-changed</strong>
   <a class="anchor" href="#furo-value-changed">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small><code>Number</code></small></p>
 <p>Fires a notification counter changed. Use this event to show the amount of notifications to the user.
 <br><br></p>
@@ -3542,7 +3538,7 @@ But you have to be sure the furo-ui5-notification-list-display can receive the n
 </h3>
 <p><small><strong>parseGrpcStatus</strong>(<em>d</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-grpc-status</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-parse-grpc-status</span></p>
 <p>parse grpc status object and set the notification text according to the LocalizedMessage in status.
 <a href="https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto">https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto</a>.</p>
 <ul>
@@ -3555,7 +3551,7 @@ But you have to be sure the furo-ui5-notification-list-display can receive the n
 </h3>
 <p><small><strong>parseNotificationMessage</strong>(<em>message</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-parse-notification-message</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-parse-notification-message</span></p>
 <p>parse notification message and set the ui5 notification properties like priority, actions, heading..
 the notification message should be a furo.notification type:
 {
@@ -3589,7 +3585,7 @@ the notification message should be a furo.notification type:
 </h3>
 <p><small><strong>_show</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;show</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn&ndash;show</span></p>
 <p>shows grpc status notifications
 implemented types are:</p>
 <ul>
@@ -3603,7 +3599,7 @@ implemented types are:</p>
 </h3>
 <p><small><strong>_dispatchNotificationCounterUpdates</strong>(<em>count</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ&ndash;dispatch-notification-counter-updates</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn&ndash;dispatch-notification-counter-updates</span></p>
 <ul>
 <li><small>count </small>
 <br><br></li>
@@ -3614,7 +3610,7 @@ implemented types are:</p>
 </h3>
 <p><small><strong>clearAll</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-clear-all</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-clear-all</span></p>
 <p>clear all notifications</p>
 <p><br><br></p>
 </article>
@@ -3627,9 +3623,9 @@ implemented types are:</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

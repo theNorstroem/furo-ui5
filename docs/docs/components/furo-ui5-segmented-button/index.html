@@ -12,12 +12,12 @@
 <meta property="og:description" content="segmented button" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-segmented-button/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-segmented-button | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3365,7 +3361,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-segmented-button
   <a class="anchor" href="#furo-ui5-segmented-button">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-segmented-button.js';</code><small>
 <br>exports <em>FuroUi5SegmentedButton</em> js
 <br>extends <em>src/furo-ui5-segmented-button.js</em>
@@ -3387,7 +3383,7 @@ options by using the furo-ui5-segmented-button component.</p>
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-segmented-button</span>
-   <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoPerson(*.field_with_meta_options)&#34;</span>&gt;
+   <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoPerson(*.field_with_meta_options)&#34;</span>&gt;
 &lt;/<span style="color:#000080">furo-ui5-segmented-button</span>&gt;
 </code></pre></td></tr></table>
 </div>
@@ -3403,14 +3399,14 @@ the tag name.</p>
 <furo-demo-snippet>
 <template>
 <furo-form-layouter four>
-<furo-ui5-segmented-button full ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-segmented-button>
+<furo-ui5-segmented-button full fn-bind-data="--daoPerson(*.sex)"></furo-ui5-segmented-button>
 <furo-ui5-select-labeled
   label="Use with select"
   value-state="Success" 
-  ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-select-labeled>
+  fn-bind-data="--daoPerson(*.sex)"></furo-ui5-select-labeled>
 <furo-ui5-text-input-labeled
   label="use with text-input"
-  value-state="Success" ƒ-bind-data="--daoPerson(*.sex)"></furo-ui5-text-input-labeled>
+  value-state="Success" fn-bind-data="--daoPerson(*.sex)"></furo-ui5-text-input-labeled>
 </furo-form-layouter>
 <furo-data-object type="person.Person" @-object-ready="--daoPerson"></furo-data-object>
 </template>
@@ -3432,10 +3428,10 @@ the tag name.</p>
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-segmented-button</span> 
-  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoPerson(*.sex)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-segmented-button</span>&gt;
+  <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoPerson(*.sex)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-segmented-button</span>&gt;
 &lt;<span style="color:#000080">furo-ui5-text-input</span> 
   <span style="color:#008080">value-state</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Success&#34;</span> 
-  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoPerson(*.sex)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
+  <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoPerson(*.sex)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-text-input</span>&gt;
 &lt;<span style="color:#000080">furo-data-object</span> 
   <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;person.Person&#34;</span> 
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-object-ready</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--daoPerson&#34;</span>&gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;
@@ -3555,18 +3551,18 @@ the tag name.</p>
 <button @-click="--read1">get options</button>
 <furo-form-layouter one>
   <furo-ui5-segmented-button  
-      value-field-path="data.id" id-field-path="data.id" display-field-path="data.display_name" ƒ-bind-options="--collection(*.entities)" 
-      ƒ-bind-data="--entity(*.owner.id)">
+      value-field-path="data.id" id-field-path="data.id" display-field-path="data.display_name" fn-bind-options="--collection(*.entities)" 
+      fn-bind-data="--entity(*.owner.id)">
   </furo-ui5-segmented-button>
-  <furo-ui5-segmented-button value-field-path="data.id" id-field-path="data.id" display-field-path="data.first_name" ƒ-bind-options="--collection(*.entities)" ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-segmented-button>
-  <furo-ui5-segmented-button value-field-path="data.id" id-field-path="data.id" display-field-path="data.phone_nr" ƒ-bind-options="--collection(*.entities)" ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-segmented-button>
-<furo-ui5-number-input-labeled label="Selected option" ƒ-bind-data="--entity(*.owner.id)"></furo-ui5-number-input-labeled>
+  <furo-ui5-segmented-button value-field-path="data.id" id-field-path="data.id" display-field-path="data.first_name" fn-bind-options="--collection(*.entities)" fn-bind-data="--entity(*.owner.id)"></furo-ui5-segmented-button>
+  <furo-ui5-segmented-button value-field-path="data.id" id-field-path="data.id" display-field-path="data.phone_nr" fn-bind-options="--collection(*.entities)" fn-bind-data="--entity(*.owner.id)"></furo-ui5-segmented-button>
+<furo-ui5-number-input-labeled label="Selected option" fn-bind-data="--entity(*.owner.id)"></furo-ui5-number-input-labeled>
 </furo-form-layouter>
 <!-- this object contains the list -->
-<furo-data-object type="person.PersonCollection" @-object-ready="--collection" ƒ-inject-raw="--response"></furo-data-object>
+<furo-data-object type="person.PersonCollection" @-object-ready="--collection" fn-inject-raw="--response"></furo-data-object>
 <furo-data-object type="task.Task" @-object-ready="--entity"></furo-data-object>
 <furo-fetch-json
-  ƒ-fetch="--read1"
+  fn-fetch="--read1"
   src="/mockdata/persons/list.json"
   @-data="--response"
 ></furo-fetch-json>
@@ -3614,27 +3610,27 @@ the tag name.</p>
     <span style="color:#008080">value-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span> 
     <span style="color:#008080">id-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span> 
     <span style="color:#008080">display-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.display_name&#34;</span> 
-    <span style="color:#008080">ƒ-bind-options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span>
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;
+    <span style="color:#008080">fn-bind-options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span>
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;
   &lt;/<span style="color:#000080">furo-ui5-segmented-button</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-segmented-button</span> 
     <span style="color:#008080">value-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span> 
     <span style="color:#008080">id-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span> 
     <span style="color:#008080">display-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.first_name&#34;</span> 
-    <span style="color:#008080">ƒ-bind-options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span> 
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-segmented-button</span>&gt;
+    <span style="color:#008080">fn-bind-options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span> 
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-segmented-button</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-segmented-button</span> 
     <span style="color:#008080">value-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span> 
     <span style="color:#008080">id-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.id&#34;</span> 
     <span style="color:#008080">display-field-path</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;data.phone_nr&#34;</span> 
-    <span style="color:#008080">ƒ-bind-options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span> 
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-segmented-button</span>&gt;
+    <span style="color:#008080">fn-bind-options</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--collection(*.entities)&#34;</span> 
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-segmented-button</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-number-input-labeled</span> 
     <span style="color:#008080">label</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Selected option&#34;</span> 
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-number-input-labeled</span>&gt;
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.owner.id)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-number-input-labeled</span>&gt;
 &lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
 <p><span style="color:#998;font-style:italic">&lt;!&ndash; this data object contains the list &ndash;&gt;</span>
-&lt;<span style="color:#000080">furo-data-object</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;person.PersonCollection&quot;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-object-ready</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;collection&quot;</span> <span style="color:#008080">ƒ-inject-raw</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;response&quot;</span>&gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;
+&lt;<span style="color:#000080">furo-data-object</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;person.PersonCollection&quot;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-object-ready</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;collection&quot;</span> <span style="color:#008080">fn-inject-raw</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;response&quot;</span>&gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;
 <span style="color:#998;font-style:italic">&lt;!&ndash; this data object contains the field, you want to update &ndash;&gt;</span>
 &lt;<span style="color:#000080">furo-data-object</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;task.Task&quot;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-object-ready</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;entity&quot;</span>&gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;
 </code></pre></td></tr></table></p>
@@ -3690,7 +3686,7 @@ default: id
   <strong>options-updated</strong>
   <a class="anchor" href="#options-updated">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-options-updated</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-options-updated</span>
 → <small><code>optionNodeList</code></small></p>
 <p>Fired  after the option list was rebuilt
 <br><br></p>
@@ -3698,7 +3694,7 @@ default: id
   <strong>furo-value-changed</strong>
   <a class="anchor" href="#furo-value-changed">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-furo-value-changed</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-furo-value-changed</span>
 → <small><code>{*} the value from the value-field. By default the value field is &amp;#34;id&amp;#34;</code></small></p>
 <p>Fired when value has changed from the component inside. <strong>bubbles</strong>
 <br><br></p>
@@ -3706,7 +3702,7 @@ default: id
   <strong>item-selected</strong>
   <a class="anchor" href="#item-selected">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-item-selected</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-item-selected</span>
 → <small><code>selectedOption</code></small></p>
 <p>Fired when the toggle button was clicked. Payload: - if no option binding is active: ui5-segmented-button-item - if a RepeaterNode is bound: FieldNode
 <br><br></p>
@@ -3720,7 +3716,7 @@ default: id
 </h3>
 <p><small><strong>bindData</strong>(<em>fieldNode</em> `` ) ⟹ <code>boolean</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span></p>
 <p>Binds a FieldNode to the component.</p>
 <p>Supported types:</p>
 <ul>
@@ -3733,7 +3729,7 @@ default: id
 </h3>
 <p><small><strong>bindOptions</strong>(<em>repeaterNode</em> <code>RepeaterNode</code> ) ⟹ <code>void</code></small></p>
 <p><small><code>RepeaterNode</code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-options</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-options</span></p>
 <p>Bind a <code>RepeaterNode</code> that will be used to build up the option list.</p>
 <p>Use <code>idFieldPath</code> and <code>displayFieldPath</code> if your structrure does not match the following signature:</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -3760,7 +3756,7 @@ default: id
 </h3>
 <p><small><strong>readAttributes</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-read-attributes</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-read-attributes</span></p>
 <p>Reads the attributes which are set on the component dom.
 those attributes can be set. <code>readonly</code>,<code>disabled</code>, <code>value-field-path</code>, <code>display-field-path</code>
 Use this after manual or scripted update of the attributes.</p>
@@ -3771,7 +3767,7 @@ Use this after manual or scripted update of the attributes.</p>
 </h3>
 <p><small><strong>selectOptionById</strong>(<em>val</em> <code>Id</code> ) ⟹ <code>void</code></small></p>
 <p><small><code>Id</code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-option-by-id</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-option-by-id</span></p>
 <p>Selects an option by id</p>
 <ul>
 <li><small>val The id</small>
@@ -3787,9 +3783,9 @@ Use this after manual or scripted update of the attributes.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

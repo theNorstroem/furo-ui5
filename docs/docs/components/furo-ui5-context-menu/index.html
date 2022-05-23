@@ -12,12 +12,12 @@
 <meta property="og:description" content="Context menu" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-context-menu/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-context-menu | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3363,7 +3359,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-context-menu
   <a class="anchor" href="#furo-ui5-context-menu">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-context-menu.js';</code><small>
 <br>exports <em>FuroUi5ContextMenu</em> js
 <br>exports <code>&lt;furo-ui5-context-menu&gt;</code> custom-element-definition
@@ -3387,8 +3383,8 @@ use the <code>furo-ui5-context-menu</code>. The app-shell or even body is a good
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-context-menu</span>  <span style="color:#008080">ƒ-trigger</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuClkd&#34;</span> <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuObject&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-menu-item-selected</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuItem&#34;</span>&gt;
-     &lt;<span style="color:#000080">ui5-icon</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;menu&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuClkd&#34;</span>&gt;&lt;/<span style="color:#000080">ui5-icon</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#000080">furo-ui5-context-menu</span>  <span style="color:#008080">fn-trigger</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuClkd&#34;</span> <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuObject&#34;</span> <span style="color:#008080">at-menu-item-selected</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuItem&#34;</span>&gt;
+     &lt;<span style="color:#000080">ui5-icon</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;menu&#34;</span> <span style="color:#008080">at-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuClkd&#34;</span>&gt;&lt;/<span style="color:#000080">ui5-icon</span>&gt;
  &lt;/<span style="color:#000080">furo-ui5-context-menu</span>&gt;
 </code></pre></td></tr></table>
 </div>
@@ -3447,17 +3443,17 @@ documentation system. Scroll up to see the menu after you opened it.</p>
 <script type="module" src="/init.js"></script>
 <furo-demo-snippet>
 <template>
-<furo-ui5-context-menu ƒ-trigger="--menuClkd" ƒ-bind-data="--menuDO" @-menu-item-selected="--menuItemSelected"
+<furo-ui5-context-menu fn-trigger="--menuClkd" fn-bind-data="--menuDO" @-menu-item-selected="--menuItemSelected"
 ><ui5-icon name="meal" @-click="--menuClkd">open menu</ui5-icon>
 </furo-ui5-context-menu>
 <!-- data for the menu -->
 <furo-data-object
   type="menu.Menuitem"
-  ƒ-inject-raw="--data"
+  fn-inject-raw="--data"
   @-object-ready="--menuDO"
 ></furo-data-object>
 <furo-fetch-json
-  ƒ-fetch="--menuClkd"
+  fn-fetch="--menuClkd"
   src="/mockdata/menu/samplectxmenu.json"
   @-data="--data"
 ></furo-fetch-json>
@@ -3489,8 +3485,8 @@ documentation system. Scroll up to see the menu after you opened it.</p>
     &lt;<span style="color:#000080">div</span>&gt;
       &lt;<span style="color:#000080">article</span>&gt;
         &lt;<span style="color:#000080">furo-ui5-context-menu</span>
-          <span style="color:#008080">ƒ-trigger</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuClkd&#34;</span>
-          <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuDO&#34;</span>
+          <span style="color:#008080">fn-trigger</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuClkd&#34;</span>
+          <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuDO&#34;</span>
           <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-menu-item-selected</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuItemSelected&#34;</span>
         &gt;&lt;<span style="color:#000080">ui5-icon</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;meal&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--menuClkd&#34;</span>&gt;open menu&lt;/<span style="color:#000080">ui5-icon</span>&gt;
         &lt;/<span style="color:#000080">furo-ui5-context-menu</span>&gt;
@@ -3512,7 +3508,7 @@ documentation system. Scroll up to see the menu after you opened it.</p>
   <strong>menu-item-selected</strong>
   <a class="anchor" href="#menu-item-selected">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-menu-item-selected</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-menu-item-selected</span>
 → <small><code>{context, menuitem}</code></small></p>
 <p>Fired when a menu item is selected.
 <br><br></p>
@@ -3526,7 +3522,7 @@ documentation system. Scroll up to see the menu after you opened it.</p>
 </h3>
 <p><small><strong>bindData</strong>(<em>menu</em> `` ** <code>Fieldnode</code> ) ⟹ <code>void</code></small></p>
 <p><small>`` <code>Fieldnode</code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span></p>
 <p>Bind your menu object.</p>
 <ul>
 <li><small>menu </small></li>
@@ -3539,7 +3535,7 @@ documentation system. Scroll up to see the menu after you opened it.</p>
 </h3>
 <p><small><strong>setContext</strong>(<em>ctx</em> <code>*</code> ) ⟹ <code>void</code></small></p>
 <p><small><code>*</code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-set-context</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-set-context</span></p>
 <p>Sets the context. Use this if you want to set a Object as context</p>
 <ul>
 <li><small>ctx Can be anything, will be returned at the menu-item-selected method</small>
@@ -3551,7 +3547,7 @@ documentation system. Scroll up to see the menu after you opened it.</p>
 </h3>
 <p><small><strong>trigger</strong>(<em>byKeyboard</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-trigger</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-trigger</span></p>
 <p>Triggers the context menu. Set by keyboard to true to focus the first element for keyboard navigation</p>
 <ul>
 <li><small>byKeyboard </small>
@@ -3563,7 +3559,7 @@ documentation system. Scroll up to see the menu after you opened it.</p>
 </h3>
 <p><small><strong>triggerContext</strong>(<em>context</em> <code>Object</code> <em>byKeyboard</em> `` ) ⟹ <code>void</code></small></p>
 <p><small><code>Object</code> `` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-trigger-context</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-trigger-context</span></p>
 <p>triggers the menu with context</p>
 <ul>
 <li><small>context </small></li>
@@ -3591,9 +3587,9 @@ documentation system. Scroll up to see the menu after you opened it.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

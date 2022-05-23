@@ -12,12 +12,12 @@
 <meta property="og:description" content="tree navigation menu" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-tree/" />
-<meta property="article:modified_time" content="2022-05-10T16:08:48+02:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>furo-ui5-tree | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3405,7 +3401,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-tree
   <a class="anchor" href="#furo-ui5-tree">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.4.1</small>
+<p><strong>@furo/ui5</strong> <small>v1.4.3</small>
 <br><code>import '@furo/ui5/src/furo-ui5-tree.js';</code><small>
 <br>exports <em>FuroUi5Tree</em> js
 <br>exports <code>&lt;furo-ui5-tree&gt;</code> custom-element-definition
@@ -3482,24 +3478,24 @@ renders a tree structure</p>
           <furo-split-view>
             <furo-ui5-tree
               slot="master" 
-              ƒ-bind-data="--entityObj(*.data)"
+              fn-bind-data="--entityObj(*.data)"
               @-node-selected="--nodeSelected" 
-              ƒ-trigger-navigation="--navigation"
+              fn-trigger-navigation="--navigation"
             >
               <!-- add the furo-navigation-pad for keyboard navigation -->
               <furo-navigation-pad @-navigated="--navigation"></furo-navigation-pad>
             </furo-ui5-tree>
             <furo-pretty-json scroll
-                              ƒ-inject-data="--nodeSelected(*._value)"
+                              fn-inject-data="--nodeSelected(*._value)"
             ></furo-pretty-json>
           </furo-split-view>
         <furo-data-object
             type="tree.TreeEntity"
-            ƒ-inject-raw="--data"
+            fn-inject-raw="--data"
             @-object-ready="--entityObj"
           ></furo-data-object>
           <furo-fetch-json
-            ƒ-fetch="--entityObj"
+            fn-fetch="--entityObj"
             src="/mockdata/trees/1/testdata.json"
             @-data="--data"
           ></furo-fetch-json>
@@ -3525,16 +3521,16 @@ renders a tree structure</p>
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#000080">furo-ui5-tree</span>
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entityObj(*.data)&#34;</span>
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entityObj(*.data)&#34;</span>
     <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-node-selected</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--nodeSelected&#34;</span> 
-    <span style="color:#008080">ƒ-trigger-navigation</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--navigation&#34;</span>
+    <span style="color:#008080">fn-trigger-navigation</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--navigation&#34;</span>
   &gt;
     <span style="color:#998;font-style:italic">&lt;!-- add the furo-navigation-pad for keyboard navigation --&gt;</span>
     &lt;<span style="color:#000080">furo-navigation-pad</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-navigated</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--navigation&#34;</span>&gt;&lt;/<span style="color:#000080">furo-navigation-pad</span>&gt;
   &lt;/<span style="color:#000080">furo-ui5-tree</span>&gt;
 <p>&lt;<span style="color:#000080">furo-data-object</span>
 <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;tree.TreeEntity&quot;</span>
-<span style="color:#008080">ƒ-inject-raw</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;data&quot;</span>
+<span style="color:#008080">fn-inject-raw</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;data&quot;</span>
 <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-object-ready</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;entityObj&quot;</span>
 &gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;
 </code></pre></td></tr></table></p>
@@ -3550,29 +3546,29 @@ renders a tree structure</p>
             <furo-ui5-tree
               slot="master"
               root-as-header
-              ƒ-bind-data="--entityObj(*.data)"
+              fn-bind-data="--entityObj(*.data)"
               qp="panel"
-              ƒ-location-in="--qp"
+              fn-location-in="--qp"
               @-node-selected="--nodeSelected"
               @-qp-change-requested="--qpchangerequest"
-              ƒ-trigger-navigation="--navigation"
+              fn-trigger-navigation="--navigation"
             >
               <!-- add the furo-navigation-pad for keyboard navigation -->
               <furo-navigation-pad @-navigated="--navigation"></furo-navigation-pad>
             </furo-ui5-tree>
             <furo-pretty-json scroll
-                              ƒ-inject-data="--nodeSelected(*._value)"
+                              fn-inject-data="--nodeSelected(*._value)"
             ></furo-pretty-json>
           </furo-split-view>
-          <furo-location-updater ƒ-set-qp="--qpchangerequest"></furo-location-updater>
+          <furo-location-updater fn-set-qp="--qpchangerequest"></furo-location-updater>
           <furo-location @-location-query-changed="--qp"></furo-location>
           <furo-data-object
             type="tree.TreeEntity"
-            ƒ-inject-raw="--data"
+            fn-inject-raw="--data"
             @-object-ready="--entityObj"
           ></furo-data-object>
           <furo-fetch-json
-            ƒ-fetch="--entityObj"
+            fn-fetch="--entityObj"
             src="/mockdata/trees/1/testdata.json"
             @-data="--data"
           ></furo-fetch-json>
@@ -3614,27 +3610,27 @@ renders a tree structure</p>
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-tree</span>
   <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;master&#34;</span>
   <span style="color:#008080">root-as-header</span>
-  <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entityObj(*.data)&#34;</span>
+  <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entityObj(*.data)&#34;</span>
   <span style="color:#008080">qp</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;panel&#34;</span>
-  <span style="color:#008080">ƒ-location-in</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qp&#34;</span>
+  <span style="color:#008080">fn-location-in</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qp&#34;</span>
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-node-selected</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--nodeSelected&#34;</span>
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-qp-change-requested</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qpchangerequest&#34;</span>
-  <span style="color:#008080">ƒ-trigger-navigation</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--navigation&#34;</span>
+  <span style="color:#008080">fn-trigger-navigation</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--navigation&#34;</span>
 &gt;
   <span style="color:#998;font-style:italic">&lt;!-- add the furo-navigation-pad for keyboard navigation --&gt;</span>
   &lt;<span style="color:#000080">furo-navigation-pad</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-navigated</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--navigation&#34;</span>&gt;&lt;/<span style="color:#000080">furo-navigation-pad</span>&gt;
 &lt;/<span style="color:#000080">furo-ui5-tree</span>&gt;
 <p><span style="color:#998;font-style:italic">&lt;!&ndash; update the location &ndash;&gt;</span>
-&lt;<span style="color:#000080">furo-location-updater</span> <span style="color:#008080">ƒ-set-qp</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;qpchangerequest&quot;</span>&gt;&lt;/<span style="color:#000080">furo-location-updater</span>&gt;
+&lt;<span style="color:#000080">furo-location-updater</span> <span style="color:#008080">fn-set-qp</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;qpchangerequest&quot;</span>&gt;&lt;/<span style="color:#000080">furo-location-updater</span>&gt;
 <span style="color:#998;font-style:italic">&lt;!&ndash; track location changes &ndash;&gt;</span>
 &lt;<span style="color:#000080">furo-location</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-location-query-changed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;qp&quot;</span>&gt;&lt;/<span style="color:#000080">furo-location</span>&gt;</p>
 <p>&lt;<span style="color:#000080">furo-data-object</span>
 <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;tree.TreeEntity&quot;</span>
-<span style="color:#008080">ƒ-inject-raw</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;data&quot;</span>
+<span style="color:#008080">fn-inject-raw</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;data&quot;</span>
 <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-object-ready</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;entityObj&quot;</span>
 &gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;
 &lt;<span style="color:#000080">furo-fetch-json</span>
-<span style="color:#008080">ƒ-fetch</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;entityObj&quot;</span>
+<span style="color:#008080">fn-fetch</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;entityObj&quot;</span>
 <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;/mockdata/trees/1/testdata.json&quot;</span>
 <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&quot;&ndash;data&quot;</span>
 &gt;&lt;/<span style="color:#000080">furo-fetch-json</span>&gt;
@@ -3677,7 +3673,7 @@ renders a tree structure</p>
 <p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">qp</span>
 </small></p>
 <p>Query param to watch.  Set <code>qp</code> to have a deep linkable tree.</p>
-<p>If you set this attribute, the node-selected event will only be fired on <code>ƒ-qp-in</code> or <code>ƒ-select-by-id</code>.</p>
+<p>If you set this attribute, the node-selected event will only be fired on <code>fn-qp-in</code> or <code>fn-select-by-id</code>.</p>
 <p>If you select an item the <code>qp-change-request</code> will be fired instead. With the qp-change-request event, you should update the url.
 A <code>furo-location</code> should watch the url and update the location on the tree, which will trigger a node-selected event.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -3690,12 +3686,12 @@ A <code>furo-location</code> should watch the url and update the location on the
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-location</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-location-query-changed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qp&#34;</span>&gt;&lt;/<span style="color:#000080">furo-location</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-location</span> <span style="color:#008080">at-location-query-changed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qp&#34;</span>&gt;&lt;/<span style="color:#000080">furo-location</span>&gt;
 &lt;<span style="color:#000080">furo-ui5-tree</span>
    <span style="color:#008080">qp</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;panel&#34;</span>
-   <span style="color:#008080">ƒ-location-in</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qp&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-qp-change-requested</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qpchangerequest&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-tree</span>&gt;
+   <span style="color:#008080">fn-location-in</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qp&#34;</span> <span style="color:#008080">at-qp-change-requested</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qpchangerequest&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-tree</span>&gt;
 <span style="color:#998;font-style:italic">&lt;!-- update the location with the selected tree item --&gt;</span>
-&lt;<span style="color:#000080">furo-location-updater</span> <span style="color:#008080">ƒ-set-qp</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qpchangerequest&#34;</span>&gt;&lt;/<span style="color:#000080">furo-location-updater</span>&gt;
+&lt;<span style="color:#000080">furo-location-updater</span> <span style="color:#008080">fn-set-qp</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--qpchangerequest&#34;</span>&gt;&lt;/<span style="color:#000080">furo-location-updater</span>&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p><br><br></p>
@@ -3747,7 +3743,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>node-focused</strong>
   <a class="anchor" href="#node-focused">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-focused</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-node-focused</span>
 → <small><code>focused field</code></small></p>
 <p>Fired when
 <br><br></p>
@@ -3755,7 +3751,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>branch-focused</strong>
   <a class="anchor" href="#branch-focused">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-branch-focused</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-branch-focused</span>
 → <small><code>focused field</code></small></p>
 <p>Fired when
 <br><br></p>
@@ -3763,7 +3759,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>leaf-focused</strong>
   <a class="anchor" href="#leaf-focused">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-leaf-focused</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-leaf-focused</span>
 → <small>``</small></p>
 <p>Fired when
 <br><br></p>
@@ -3771,7 +3767,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>node-selected</strong>
   <a class="anchor" href="#node-selected">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-selected</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-node-selected</span>
 → <small><code>selected field</code></small></p>
 <p>Fired when the item gets selected, does not fire when you work with query params
 <br><br></p>
@@ -3779,7 +3775,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>qp-change-requested</strong>
   <a class="anchor" href="#qp-change-requested">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-qp-change-requested</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-qp-change-requested</span>
 → <small><code>Object {&amp;#34;this.qp&amp;#34;: this._selectedField.id._value}</code></small></p>
 <p>Fired when qp mode is enabled. Nodes are only selectable with qpIn or selectById
 <br><br></p>
@@ -3787,7 +3783,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>branch-selected</strong>
   <a class="anchor" href="#branch-selected">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-branch-selected</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-branch-selected</span>
 → <small><code>selected field</code></small></p>
 <p>Fired when
 <br><br></p>
@@ -3795,7 +3791,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>leaf-selected</strong>
   <a class="anchor" href="#leaf-selected">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-leaf-selected</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-leaf-selected</span>
 → <small><code>selected field</code></small></p>
 <p>Fired when
 <br><br></p>
@@ -3803,7 +3799,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>node-opened</strong>
   <a class="anchor" href="#node-opened">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-opened</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-node-opened</span>
 → <small>``</small></p>
 <p>Fired when a node is opened
 <br><br></p>
@@ -3811,7 +3807,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>node-closed</strong>
   <a class="anchor" href="#node-closed">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-node-closed</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-node-closed</span>
 → <small>``</small></p>
 <p>Fired when a node is closed
 <br><br></p>
@@ -3819,7 +3815,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>nodes-expanded</strong>
   <a class="anchor" href="#nodes-expanded">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-nodes-expanded</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-nodes-expanded</span>
 → <small>``</small></p>
 <p>Fired when nodes are expanded recursive
 <br><br></p>
@@ -3827,7 +3823,7 @@ A <code>furo-location</code> should watch the url and update the location on the
   <strong>nodes-collapsed</strong>
   <a class="anchor" href="#nodes-collapsed">#</a>
 </h3>
-<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">@-nodes-collapsed</span>
+<p><span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-nodes-collapsed</span>
 → <small>``</small></p>
 <p>Fired when nodes are collapsed recursive.
 <br><br></p>
@@ -3841,7 +3837,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>collapseFocused</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-focused</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-collapse-focused</span></p>
 <p>collapses the focused element. If it is closed the parent will be focused.</p>
 <p><br><br></p>
 <h3 id="expandfocused">
@@ -3850,7 +3846,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>expandFocused</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-focused</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-expand-focused</span></p>
 <p>expands the focused node, if it is opened the first child will be focused</p>
 <p><br><br></p>
 <h3 id="expandfocusedrecursive">
@@ -3859,7 +3855,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>expandFocusedRecursive</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-focused-recursive</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-expand-focused-recursive</span></p>
 <p>expands the focused node recursive</p>
 <p><br><br></p>
 <h3 id="collapsefocusedrecursive">
@@ -3868,7 +3864,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>collapseFocusedRecursive</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-focused-recursive</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-collapse-focused-recursive</span></p>
 <p>collapses the focused node recursive</p>
 <p><br><br></p>
 <h3 id="selectfocused">
@@ -3877,7 +3873,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>selectFocused</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-focused</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-focused</span></p>
 <p>selects the focused element.</p>
 <p><br><br></p>
 <h3 id="search">
@@ -3886,7 +3882,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>search</strong>(<em>term</em> `` ) ⟹ <code>[]</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-search</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-search</span></p>
 <p>Search in the visible nodes</p>
 <ul>
 <li><small>term </small>
@@ -3898,7 +3894,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>searchOpenTree</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-search-open-tree</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-search-open-tree</span></p>
 <p><br><br></p>
 <h3 id="resetsearch">
   <strong>resetSearch</strong>
@@ -3906,7 +3902,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>resetSearch</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-reset-search</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-reset-search</span></p>
 <p>Disables the search mode and clears the term</p>
 <p><br><br></p>
 <h3 id="focusparent">
@@ -3915,7 +3911,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>focusParent</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-parent</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-parent</span></p>
 <p>Focuses the parent tree node without selecting it.</p>
 <p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
 <p><br><br></p>
@@ -3925,7 +3921,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>focusPrevious</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-previous</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-previous</span></p>
 <p>focus the previous visible node.</p>
 <p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
 <p><br><br></p>
@@ -3935,7 +3931,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>qpIn</strong>(<em>qpObject</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-qp-in</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-qp-in</span></p>
 <p>Selects the node which is defined on <code>qp</code></p>
 <p>Use this, if you do not have a location object.</p>
 <ul>
@@ -3948,7 +3944,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>locationIn</strong>(<em>locationObject</em> `` ) ⟹ <code>*|boolean</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-location-in</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-location-in</span></p>
 <p>Inject a location object, which contains a query param property to select the current node.</p>
 <ul>
 <li><small>locationObject </small>
@@ -3960,7 +3956,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>selectById</strong>(<em>nodeID</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-by-id</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-by-id</span></p>
 <ul>
 <li><small>nodeID </small>
 <br><br></li>
@@ -3971,7 +3967,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>selectPrev</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-prev</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-prev</span></p>
 <p>select the previous visible item</p>
 <p><br><br></p>
 <h3 id="expandnoderecursive">
@@ -3980,7 +3976,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>expandNodeRecursive</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-node-recursive</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-expand-node-recursive</span></p>
 <p>expands the currently selected node recursive</p>
 <p><br><br></p>
 <h3 id="expandall">
@@ -3989,7 +3985,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>expandAll</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-expand-all</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-expand-all</span></p>
 <p><br><br></p>
 <h3 id="collapseall">
   <strong>collapseAll</strong>
@@ -3997,7 +3993,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>collapseAll</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-all</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-collapse-all</span></p>
 <p><br><br></p>
 <h3 id="collapsenoderecursive">
   <strong>collapseNodeRecursive</strong>
@@ -4005,7 +4001,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>collapseNodeRecursive</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-collapse-node-recursive</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-collapse-node-recursive</span></p>
 <p>expands the currently selected node recursive</p>
 <p><br><br></p>
 <h3 id="toggle">
@@ -4014,7 +4010,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>toggle</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-toggle</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-toggle</span></p>
 <p>toggles the currently selected node</p>
 <p><br><br></p>
 <h3 id="addsubnode">
@@ -4023,7 +4019,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>addSubNode</strong>(<em>rawNode</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-add-sub-node</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-add-sub-node</span></p>
 <ul>
 <li><small>rawNode </small>
 <br><br></li>
@@ -4034,7 +4030,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>deleteNode</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-delete-node</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-delete-node</span></p>
 <p><br><br></p>
 <h3 id="selectnext">
   <strong>selectNext</strong>
@@ -4042,7 +4038,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>selectNext</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-select-next</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-select-next</span></p>
 <p>select the next visible item</p>
 <p><br><br></p>
 <h3 id="triggernavigation">
@@ -4051,7 +4047,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>triggerNavigation</strong>(<em>key</em> `` ) ⟹ <code>void</code></small></p>
 <p><small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-trigger-navigation</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-trigger-navigation</span></p>
 <ul>
 <li><small>key </small>
 <br><br></li>
@@ -4062,7 +4058,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>focusFirst</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-first</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-first</span></p>
 <p>Focuses the first node in the tree without selecting it.</p>
 <p>Use selectFocused to select the focused node.</p>
 <p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
@@ -4073,7 +4069,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>focusLast</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-last</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-last</span></p>
 <p>Focuses the last node in the tree without selecting it.</p>
 <p>Use selectFocused to select the focused node.</p>
 <p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
@@ -4084,7 +4080,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>focusNext</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-next</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-next</span></p>
 <p>focuses the next visible tree node.</p>
 <p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
 <p><br><br></p>
@@ -4094,7 +4090,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>focus</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span></p>
 <p>focuses the tree itself. You can use this in combination with keyboard navigation (furo-navigation-pad)</p>
 <p><br><br></p>
 <h3 id="binddata">
@@ -4103,7 +4099,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>bindData</strong>(<em>treeNode</em> <code>NavigationNode|Tree</code> ) ⟹ <code>void</code></small></p>
 <p><small><code>NavigationNode|Tree</code> </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-bind-data</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span></p>
 <p>Binds a FieldNode.</p>
 <p>Supported types: everything with a <code>tree.Tree</code> or <code>tree.Navigationnode</code> signature.</p>
 <ul>
@@ -4116,7 +4112,7 @@ A <code>furo-location</code> should watch the url and update the location on the
 </h3>
 <p><small><strong>focusSelected</strong>() ⟹ <code>void</code></small></p>
 <p><small><code>*</code></small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">ƒ-focus-selected</span></p>
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus-selected</span></p>
 <p>Focuses the currently selected tree item.</p>
 <p>The tree item will also scrollIntoViewIfNeeded() (on all platforms which support this method).</p>
 <p><br><br></p>
@@ -4201,9 +4197,9 @@ A <code>furo-location</code> should watch the url and update the location on the
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/607e656355dc9b98bc2e1112de5f58c54b37af52" title='Last modified by maltenorstroem | May 10, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

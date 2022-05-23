@@ -7,17 +7,17 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Example with context=&ldquo;display&rdquo; #        load record 1 load record 2 load record 3        1 2 3 4 5 6 7 8  &lt;furo-form-layouter four&gt; &lt;furo-ui5-propertylist-display ƒ-bind-data=&#34;--entity(*.data.type_property)&#34;&gt;&lt;/furo-ui5-propertylist-display&gt; &lt;/furo-form-layouter&gt; &lt;furo-data-object type=&#34;experiment.ExperimentEntity&#34; @-object-ready=&#34;--entity&#34; ƒ-inject-raw=&#34;--response&#34;&gt;&lt;/furo-data-object&gt;   ">
+<meta name="description" content="Example with context=&ldquo;display&rdquo; #        load record 1 load record 2 load record 3        1 2 3 4 5 6 7 8  &lt;furo-form-layouter four&gt; &lt;furo-ui5-propertylist-display fn-bind-data=&#34;--entity(*.data.type_property)&#34;&gt;&lt;/furo-ui5-propertylist-display&gt; &lt;/furo-form-layouter&gt; &lt;furo-data-object type=&#34;experiment.ExperimentEntity&#34; @-object-ready=&#34;--entity&#34; fn-inject-raw=&#34;--response&#34;&gt;&lt;/furo-data-object&gt;   ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="Example with context=&ldquo;display&rdquo; #        load record 1 load record 2 load record 3        1 2 3 4 5 6 7 8  &lt;furo-form-layouter four&gt; &lt;furo-ui5-propertylist-display ƒ-bind-data=&#34;--entity(*.data.type_property)&#34;&gt;&lt;/furo-ui5-propertylist-display&gt; &lt;/furo-form-layouter&gt; &lt;furo-data-object type=&#34;experiment.ExperimentEntity&#34; @-object-ready=&#34;--entity&#34; ƒ-inject-raw=&#34;--response&#34;&gt;&lt;/furo-data-object&gt;   " />
+<meta property="og:description" content="Example with context=&ldquo;display&rdquo; #        load record 1 load record 2 load record 3        1 2 3 4 5 6 7 8  &lt;furo-form-layouter four&gt; &lt;furo-ui5-propertylist-display fn-bind-data=&#34;--entity(*.data.type_property)&#34;&gt;&lt;/furo-ui5-propertylist-display&gt; &lt;/furo-form-layouter&gt; &lt;furo-data-object type=&#34;experiment.ExperimentEntity&#34; @-object-ready=&#34;--entity&#34; fn-inject-raw=&#34;--response&#34;&gt;&lt;/furo-data-object&gt;   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/redactional/components/furo-ui5-propertylist-display/_furo-ui5-propertylist-display-head/" />
-<meta property="article:modified_time" content="2021-11-30T11:15:25+01:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>Furo Ui5 Propertylist Display Head | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3334,24 +3330,24 @@ https://github.com/alex-shpak/hugo-book
 <template>
 <furo-vertical-scroller> 
 <furo-form-layouter four>
-  <furo-ui5-propertylist-display  ƒ-bind-data="--entity(*.data.type_property)"></furo-ui5-propertylist-display>
+  <furo-ui5-propertylist-display  fn-bind-data="--entity(*.data.type_property)"></furo-ui5-propertylist-display>
 </furo-form-layouter>
 <button @-click="--read">load record 1</button>
 <button @-click="--readless">load record 2</button>
 <button @-click="--readmore">load record 3</button>
-<furo-data-object type="experiment.ExperimentEntity" @-object-ready="--entity"  ƒ-inject-raw="--response"></furo-data-object>
+<furo-data-object type="experiment.ExperimentEntity" @-object-ready="--entity"  fn-inject-raw="--response"></furo-data-object>
 <furo-fetch-json
-  ƒ-fetch="--read1"
+  fn-fetch="--read1"
   src="/mockdata/experiments/1/get.json"
   @-data="--response"
 ></furo-fetch-json>
 <furo-fetch-json
-  ƒ-fetch="--readless"
+  fn-fetch="--readless"
   src="/mockdata/experiments/1/get-less-props.json"
   @-data="--response"
 ></furo-fetch-json>
 <furo-fetch-json
-  ƒ-fetch="--readmore"
+  fn-fetch="--readmore"
   src="/mockdata/experiments/1/get-more-props.json"
   @-data="--response"
 ></furo-fetch-json>
@@ -3372,12 +3368,12 @@ https://github.com/alex-shpak/hugo-book
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-form-layouter</span> <span style="color:#008080">four</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-propertylist-display</span>  
-    <span style="color:#008080">ƒ-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.type_property)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-propertylist-display</span>&gt;
+    <span style="color:#008080">fn-bind-data</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity(*.data.type_property)&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-propertylist-display</span>&gt;
 &lt;/<span style="color:#000080">furo-form-layouter</span>&gt;
 &lt;<span style="color:#000080">furo-data-object</span> 
   <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;experiment.ExperimentEntity&#34;</span> 
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-object-ready</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--entity&#34;</span>  
-  <span style="color:#008080">ƒ-inject-raw</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--response&#34;</span>&gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;
+  <span style="color:#008080">fn-inject-raw</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--response&#34;</span>&gt;&lt;/<span style="color:#000080">furo-data-object</span>&gt;
 </code></pre></td></tr></table>
 </div>
 </div></article>
@@ -3390,9 +3386,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/b25649e9d9a161348e46b0c1d110c4ba178b4dfa" title='Last modified by veith | November 30, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 30, 2021</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

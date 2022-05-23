@@ -9,19 +9,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Example with defaults #       show google rpc status messages clear messages          The Status type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by gRPC. Each Status message contains three pieces of data: error code, error message, and error details.
 github.com/googleapis/&hellip;
- 1 2 3 4 5 6 7 8  &lt;body&gt; &lt;furo-ui5-notification-list-display ƒ-clear-all=&#34;--clearRequested&#34;&gt;&lt;/furo-ui5-notification-list-display&gt; &lt;main&gt; &lt;furo-ui5-notification ƒ-parse-grpc-status=&#34;--grpcStatus&#34;&gt;&lt;/furo-ui5-notification&gt; &lt;/main&gt; &lt;/body&gt;   ">
+ 1 2 3 4 5 6 7 8  &lt;body&gt; &lt;furo-ui5-notification-list-display fn-clear-all=&#34;--clearRequested&#34;&gt;&lt;/furo-ui5-notification-list-display&gt; &lt;main&gt; &lt;furo-ui5-notification fn-parse-grpc-status=&#34;--grpcStatus&#34;&gt;&lt;/furo-ui5-notification&gt; &lt;/main&gt; &lt;/body&gt;   ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
 <meta property="og:description" content="Example with defaults #       show google rpc status messages clear messages          The Status type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by gRPC. Each Status message contains three pieces of data: error code, error message, and error details.
 github.com/googleapis/&hellip;
- 1 2 3 4 5 6 7 8  &lt;body&gt; &lt;furo-ui5-notification-list-display ƒ-clear-all=&#34;--clearRequested&#34;&gt;&lt;/furo-ui5-notification-list-display&gt; &lt;main&gt; &lt;furo-ui5-notification ƒ-parse-grpc-status=&#34;--grpcStatus&#34;&gt;&lt;/furo-ui5-notification&gt; &lt;/main&gt; &lt;/body&gt;   " />
+ 1 2 3 4 5 6 7 8  &lt;body&gt; &lt;furo-ui5-notification-list-display fn-clear-all=&#34;--clearRequested&#34;&gt;&lt;/furo-ui5-notification-list-display&gt; &lt;main&gt; &lt;furo-ui5-notification fn-parse-grpc-status=&#34;--grpcStatus&#34;&gt;&lt;/furo-ui5-notification&gt; &lt;/main&gt; &lt;/body&gt;   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/redactional/components/furo-ui5-notification/_furo-ui5-notification-head/" />
-<meta property="article:modified_time" content="2021-11-25T11:34:11+01:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>Furo Ui5 Notification Head | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3258,10 +3258,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3343,12 +3339,12 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <div flex scroll>
 <furo-ui5-notification-list-display
-  ƒ-clear-all="--clearRequested"></furo-ui5-notification-list-display>
-  <furo-ui5-notification ƒ-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
+  fn-clear-all="--clearRequested"></furo-ui5-notification-list-display>
+  <furo-ui5-notification fn-parse-grpc-status="--grpcStatus"></furo-ui5-notification>
 </div>
 </furo-vertical-flex>
 <furo-fetch-json
-  ƒ-fetch="--showStatusClicked"
+  fn-fetch="--showStatusClicked"
   src="/notification/grpc.json"
   @-data="--grpcStatus"
 ></furo-fetch-json>
@@ -3373,10 +3369,10 @@ https://github.com/alex-shpak/hugo-book
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">body</span>&gt;
 &lt;<span style="color:#000080">furo-ui5-notification-list-display</span>
-  <span style="color:#008080">ƒ-clear-all</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearRequested&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification-list-display</span>&gt;
+  <span style="color:#008080">fn-clear-all</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--clearRequested&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification-list-display</span>&gt;
 &lt;<span style="color:#000080">main</span>&gt;
   &lt;<span style="color:#000080">furo-ui5-notification</span>
-    <span style="color:#008080">ƒ-parse-grpc-status</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--grpcStatus&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification</span>&gt;
+    <span style="color:#008080">fn-parse-grpc-status</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--grpcStatus&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-notification</span>&gt;
 &lt;/<span style="color:#000080">main</span>&gt;
 &lt;/<span style="color:#000080">body</span>&gt;
 </code></pre></td></tr></table>
@@ -3391,9 +3387,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/cedf839279c8434a407c29b41f9bff726203db62" title='Last modified by veith | November 25, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 25, 2021</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

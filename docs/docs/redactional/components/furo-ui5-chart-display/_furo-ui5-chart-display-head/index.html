@@ -12,12 +12,12 @@
 <meta property="og:description" content="Example mixed charts #     load data change data            " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/redactional/components/furo-ui5-chart-display/_furo-ui5-chart-display-head/" />
-<meta property="article:modified_time" content="2022-02-02T11:50:27+01:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>Furo Ui5 Chart Display Head | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3333,8 +3329,8 @@ https://github.com/alex-shpak/hugo-book
 <furo-demo-snippet style="height: 525px">
 <template>
 <furo-vertical-flex>
-<div><furo-ui5-button @-click="--btnListClicked" ƒ-hide="--btnListClicked"> load data</furo-ui5-button>
-<furo-ui5-button hidden ƒ-show="--btnListClicked" @-click="--changeDataClicked"> change  data</furo-ui5-button>
+<div><furo-ui5-button @-click="--btnListClicked" fn-hide="--btnListClicked"> load data</furo-ui5-button>
+<furo-ui5-button hidden fn-show="--btnListClicked" @-click="--changeDataClicked"> change  data</furo-ui5-button>
 </div>
 <furo-ui5-chart-display
     flex scroll
@@ -3350,7 +3346,7 @@ https://github.com/alex-shpak/hugo-book
     toolbar-download
   >
     <furo-ui5-chart
-      ƒ-bind-data="--projectDAO(*.entities)"
+      fn-bind-data="--projectDAO(*.entities)"
       data-field="data.cost_limit.units"
       category-field="data.description"
       chart-type="line"
@@ -3362,7 +3358,7 @@ https://github.com/alex-shpak/hugo-book
       axis-tooltip
     ></furo-ui5-chart>
     <furo-ui5-chart
-      ƒ-bind-data="--projectDAO(*.entities)"
+      fn-bind-data="--projectDAO(*.entities)"
       data-field="data.cost_limit.units"
       category-field="data.description"
       legend-label="Cost"
@@ -3380,7 +3376,7 @@ https://github.com/alex-shpak/hugo-book
       axis-tooltip
     ></furo-ui5-chart>
     <furo-ui5-chart
-      ƒ-bind-data="--projectDAO(*.entities)"
+      fn-bind-data="--projectDAO(*.entities)"
       data-field="data.start.day"
       category-field="data.description"
       chart-type="area"
@@ -3403,21 +3399,21 @@ https://github.com/alex-shpak/hugo-book
   </furo-ui5-chart-display>
 </furo-vertical-flex>
 <furo-deep-link
-  ƒ-trigger="--btnListClicked"
+  fn-trigger="--btnListClicked"
   service="projectservice.ProjectService"
   @-hts-out="--hts"
 ></furo-deep-link>
 <furo-collection-agent
   service="projectservice.ProjectService"
-  ƒ-hts-in="--hts"
-  ƒ-list="--changeDataClicked"
+  fn-hts-in="--hts"
+  fn-list="--changeDataClicked"
   list-on-hts-in
   @-response="--collectionResponse"
 >
 </furo-collection-agent>
 <furo-data-object
   type="project.ProjectCollection"
-  ƒ-inject-raw="--collectionResponse"
+  fn-inject-raw="--collectionResponse"
   @-object-ready="--projectDAO"
 ></furo-data-object>
 </template>
@@ -3432,9 +3428,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/03c9d0aa3022f46600bd846ac1ea01a3a9d06b76" title='Last modified by veith | February 2, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>February 2, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 

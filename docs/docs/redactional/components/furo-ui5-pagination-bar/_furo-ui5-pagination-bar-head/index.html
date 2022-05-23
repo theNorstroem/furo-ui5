@@ -7,17 +7,17 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Example #     load collection      1 2 3 4 5 6 7 8 9 10 11  &lt;furo-ui5-pagination-bar ƒ-inject=&#34;--responseHts&#34; @-pagination-next=&#34;--next&#34; @-pagination-last=&#34;--last&#34;&gt;&lt;/furo-ui5-pagination-bar&gt; &lt;furo-collection-agent service=&#34;projectservice.ProjectService&#34; ƒ-hts-in=&#34;--hts&#34; ƒ-next=&#34;--next&#34; ƒ-last=&#34;--last&#34; @-response-hts-updated=&#34;--responseHts&#34;&gt; &lt;/furo-collection-agent&gt;   ">
+<meta name="description" content="Example #     load collection      1 2 3 4 5 6 7 8 9 10 11  &lt;furo-ui5-pagination-bar fn-inject=&#34;--responseHts&#34; @-pagination-next=&#34;--next&#34; @-pagination-last=&#34;--last&#34;&gt;&lt;/furo-ui5-pagination-bar&gt; &lt;furo-collection-agent service=&#34;projectservice.ProjectService&#34; fn-hts-in=&#34;--hts&#34; fn-next=&#34;--next&#34; fn-last=&#34;--last&#34; @-response-hts-updated=&#34;--responseHts&#34;&gt; &lt;/furo-collection-agent&gt;   ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="Example #     load collection      1 2 3 4 5 6 7 8 9 10 11  &lt;furo-ui5-pagination-bar ƒ-inject=&#34;--responseHts&#34; @-pagination-next=&#34;--next&#34; @-pagination-last=&#34;--last&#34;&gt;&lt;/furo-ui5-pagination-bar&gt; &lt;furo-collection-agent service=&#34;projectservice.ProjectService&#34; ƒ-hts-in=&#34;--hts&#34; ƒ-next=&#34;--next&#34; ƒ-last=&#34;--last&#34; @-response-hts-updated=&#34;--responseHts&#34;&gt; &lt;/furo-collection-agent&gt;   " />
+<meta property="og:description" content="Example #     load collection      1 2 3 4 5 6 7 8 9 10 11  &lt;furo-ui5-pagination-bar fn-inject=&#34;--responseHts&#34; @-pagination-next=&#34;--next&#34; @-pagination-last=&#34;--last&#34;&gt;&lt;/furo-ui5-pagination-bar&gt; &lt;furo-collection-agent service=&#34;projectservice.ProjectService&#34; fn-hts-in=&#34;--hts&#34; fn-next=&#34;--next&#34; fn-last=&#34;--last&#34; @-response-hts-updated=&#34;--responseHts&#34;&gt; &lt;/furo-collection-agent&gt;   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/redactional/components/furo-ui5-pagination-bar/_furo-ui5-pagination-bar-head/" />
-<meta property="article:modified_time" content="2022-02-02T11:50:27+01:00" />
+<meta property="article:modified_time" content="2022-05-23T09:38:35+02:00" />
 <title>Furo Ui5 Pagination Bar Head | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.ab21aaf927e96dbbfd63e9bbf70bca9383188641900db2ca8198c5677840bfa4.js" integrity="sha256-qyGq&#43;Sfpbbv9Y&#43;m79wvKk4MYhkGQDbLKgZjFZ3hAv6Q="></script>
+<script defer src="/en.search.min.1e9133b47ca20393bf24d395c2b51eaebe353e8631b41cce5e4431ded001b095.js" integrity="sha256-HpEztHyiA5O/JNOVwrUerr41PoYxtBzOXkQx3tABsJU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3254,10 +3254,6 @@ https://github.com/alex-shpak/hugo-book
     
       
     
-      
-    
-      
-    
   </ul>
 
 
@@ -3333,9 +3329,9 @@ https://github.com/alex-shpak/hugo-book
 <furo-demo-snippet>
 <template>
 <furo-ui5-button @-click="--btnListClicked">load collection</furo-ui5-button>
-<furo-ui5-pagination-bar ƒ-inject="--responseHts" @-pagination-next="--next" @-pagination-last="--last"></furo-ui5-pagination-bar>
-<furo-deep-link ƒ-trigger="--btnListClicked" service="projectservice.ProjectService" @-hts-out="--hts"></furo-deep-link>
-<furo-collection-agent service="projectservice.ProjectService" ƒ-hts-in="--hts" ƒ-next="--next" ƒ-last="--last" list-on-hts-in="" @-response-hts-updated="--responseHts">
+<furo-ui5-pagination-bar fn-inject="--responseHts" @-pagination-next="--next" @-pagination-last="--last"></furo-ui5-pagination-bar>
+<furo-deep-link fn-trigger="--btnListClicked" service="projectservice.ProjectService" @-hts-out="--hts"></furo-deep-link>
+<furo-collection-agent service="projectservice.ProjectService" fn-hts-in="--hts" fn-next="--next" fn-last="--last" list-on-hts-in="" @-response-hts-updated="--responseHts">
 </furo-collection-agent>
 </template>
 </furo-demo-snippet>
@@ -3355,14 +3351,14 @@ https://github.com/alex-shpak/hugo-book
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-ui5-pagination-bar</span> 
-  <span style="color:#008080">ƒ-inject</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--responseHts&#34;</span> 
+  <span style="color:#008080">fn-inject</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--responseHts&#34;</span> 
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-pagination-next</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--next&#34;</span> 
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-pagination-last</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--last&#34;</span>&gt;&lt;/<span style="color:#000080">furo-ui5-pagination-bar</span>&gt;
 &lt;<span style="color:#000080">furo-collection-agent</span> 
   <span style="color:#008080">service</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;projectservice.ProjectService&#34;</span> 
-  <span style="color:#008080">ƒ-hts-in</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--hts&#34;</span> 
-  <span style="color:#008080">ƒ-next</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--next&#34;</span> 
-  <span style="color:#008080">ƒ-last</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--last&#34;</span>
+  <span style="color:#008080">fn-hts-in</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--hts&#34;</span> 
+  <span style="color:#008080">fn-next</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--next&#34;</span> 
+  <span style="color:#008080">fn-last</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--last&#34;</span>
   <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-response-hts-updated</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--responseHts&#34;</span>&gt;
 &lt;/<span style="color:#000080">furo-collection-agent</span>&gt;
 </code></pre></td></tr></table>
@@ -3377,9 +3373,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/03c9d0aa3022f46600bd846ac1ea01a3a9d06b76" title='Last modified by veith | February 2, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/08a73589412cd99fbe74ba73074e4a310a81ea67" title='Last modified by veith | May 23, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>February 2, 2022</span>
+      <span>May 23, 2022</span>
     </a>
   </div>
 
