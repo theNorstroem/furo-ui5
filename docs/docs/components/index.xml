@@ -935,11 +935,10 @@ Description isGroupLabel #  is-group-label reflects boolean default: false</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/components/furo-ui5-typerenderer-labeled/</guid>
-      <description>furo-ui5-typerenderer-labeled #  @furo/ui5 v1.4.3 import &#39;@furo/ui5/src/furo-ui5-propertylist-display.js&#39;; exports FuroUi5PropertylistDisplay js exports &amp;lt;furo-ui5-propertylist-display&amp;gt; custom-element-definition superclass LitElement
- Summary:
- Description #  furo-ui5-propertylist-display allows the user to show repeated properties (furo.Property) in a readonly mode. For all other types you can use furo-ui5-typerenderer-labeled.
-The type information of the property is used for the display of the individual attributes. E.g.
-[ { &amp;quot;code&amp;quot;: &amp;quot;c0a7f550-0fbe-4046-8fa9-60c86327b6b1&amp;quot;, &amp;quot;data&amp;quot;: { &amp;quot;@type&amp;quot;: &amp;quot;type.googleapis.com/furo.StringProperty&amp;quot;, &amp;quot;data&amp;quot;: &amp;quot;01032020&amp;quot; }, &amp;quot;flags&amp;quot;: [], &amp;quot;display_name&amp;quot;: &amp;quot;Vertragsbeginn&amp;quot;, &amp;quot;id&amp;quot;: &amp;quot;246d79a0-0a15-43c5-b18f-ac8a4a449df1&amp;quot;, &amp;quot;meta&amp;quot;: {} } ] You can bind the furo.</description>
+      <description>furo-ui5-typerenderer-labeled #  @furo/ui5 v1.4.3 import &#39;@furo/ui5/src/furo-ui5-typerenderer-labeled.js&#39;; exports FuroUi5TyperendererLabeled js exports &amp;lt;furo-ui5-typerenderer-labeled&amp;gt; custom-element-definition superclass LitElement mixes FBP
+ Summary: labeled input field
+ Description #  furo-ui5-typerenderer-labeled The furo-ui5-typerenderer-labeled is a composition to easily use a display field with label according to the design specification of SAP Fiori Design System.
+Example #             Attributes and Properties #  context #  context String default: &#39;display&#39;</description>
     </item>
     
     <item>
