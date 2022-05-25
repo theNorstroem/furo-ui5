@@ -356,6 +356,10 @@ class FuroUi5Markdown extends LitElement {
       .token.entity {
         cursor: help;
       }
+
+      ul {
+        padding-left: 1rem;
+      }
     `;
   }
 
