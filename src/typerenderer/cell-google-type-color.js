@@ -26,7 +26,6 @@ class CellGoolgeTypeColor extends LitElement {
     return css`
       :host {
         display: block;
-        text-align: right;
       }
 
       :host([hidden]) {

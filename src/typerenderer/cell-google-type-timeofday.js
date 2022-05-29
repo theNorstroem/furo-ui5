@@ -31,7 +31,6 @@ class CellGoogleTypeTimeofday extends LitElement {
     return css`
       :host {
         display: block;
-        text-align: right;
         white-space: nowrap;
       }
 
