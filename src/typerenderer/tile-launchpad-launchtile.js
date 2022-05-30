@@ -120,6 +120,11 @@ class TileLaunchpadLaunchtile extends FieldNodeAdapter(FBP(LitElement)) {
         color: unset;
         outline: none;
       }
+
+      img {
+        max-width: 60px;
+        max-height: 60px;
+      }
     `;
   }
 
