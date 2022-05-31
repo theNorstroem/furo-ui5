@@ -85,7 +85,7 @@ class LineLaunchpadMonitortile extends FieldNodeAdapter(FBP(LitElement)) {
   render() {
     // language=HTML
     return html`
-      <a href="${this.target}"
+      <a href="${this.target}" at-click="^^tile-clicked"
         >${this.display_name}
         <span class="subheader"
           >${this.icon ? html`<ui5-icon name="${this.icon}"></ui5-icon>` : ''}
