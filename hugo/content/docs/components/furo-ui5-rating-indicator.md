@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-rating-indicator
-**@furo/ui5** <small>v1.4.3</small>
+**@furo/ui5** <small>v1.5.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-rating-indicator.js';`<small>
 <br>exports *FuroUi5RatingIndicator* js
 <br>extends *src/furo-ui5-rating-indicator.js*

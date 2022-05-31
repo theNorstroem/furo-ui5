@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-notification-list-display
-**@furo/ui5** <small>v1.4.3</small>
+**@furo/ui5** <small>v1.5.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-notification-list-display.js';`<small>
 <br>exports *FuroUi5NotificationListDisplay* js
 <br>exports `<furo-ui5-notification-list-display>` custom-element-definition

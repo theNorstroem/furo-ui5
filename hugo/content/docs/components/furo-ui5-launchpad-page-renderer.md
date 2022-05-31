@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-launchpad-page-renderer
-**@furo/ui5** <small>v1.4.3</small>
+**@furo/ui5** <small>v1.5.0</small>
 <br>`import '@furo/ui5/src/spaces/furo-ui5-launchpad-page-renderer.js';`<small>
 <br>exports `<furo-ui5-launchpad-page-renderer>` custom-element-definition
 <br>superclass *LitElement*
@@ -18,6 +18,8 @@ weight: 50
 `furo-ui5-launchpad-page-renderer`
  Renders a page of a space.
 
+ > **Hint**: when you build a custom tile, do not forget to trigger the tile-clicked event.
+
 {{% api "_furo-ui5-launchpad-page-renderer-head.md" %}}
 
 ## Attributes and Properties
@@ -27,6 +29,15 @@ weight: 50
 
 
 
+## Events
+{{% api "_furo-ui5-launchpad-page-renderer-events.md" %}}
+
+### **tile-clicked**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-tile-clicked</span>
+→ <small>`PointerEvent`</small>
+
+Fired from the default tiles inside of the rendered pages.
+<br><br>
 
 ## Methods
 {{% api "_furo-ui5-launchpad-page-renderer-methods.md" %}}
