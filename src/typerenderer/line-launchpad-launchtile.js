@@ -79,7 +79,7 @@ class LineLaunchpadLaunchtile extends FieldNodeAdapter(FBP(LitElement)) {
   render() {
     // language=HTML
     return html`
-      <a href="${this.target}" at-click="^^deep-dive"
+      <a href="${this.target}" at-click="^^tile-clicked"
         >${this.display_name}
         <span class="subheader">${this.subheader}</span>
       </a>

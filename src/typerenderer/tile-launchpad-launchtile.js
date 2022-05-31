@@ -136,7 +136,7 @@ class TileLaunchpadLaunchtile extends FieldNodeAdapter(FBP(LitElement)) {
   render() {
     // language=HTML
     return html`
-      <a href="${this.target}" fn-focus="|--focus">
+      <a href="${this.target}" at-click="^^tile-clicked" fn-focus="|--focus">
         <furo-vertical-flex>
           <div class="title">${this.display_name}</div>
           <div class="subheader">${this.subheader}</div>

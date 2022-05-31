@@ -6,6 +6,9 @@ import './furo-ui5-launchpad-section-renderer.js';
  * `furo-ui5-launchpad-page-renderer`
  *  Renders a page of a space.
  *
+ *  > **Hint**: when you build a custom tile, do not forget to trigger the tile-clicked event.
+ *
+ * @fires {PointerEvent} tile-clicked - Fired from the default tiles inside of the rendered pages.
  * @summary tile renderer
  * @customElement furo-ui5-launchpad-page-renderer
  * @appliesMixin FBP
