@@ -40,6 +40,13 @@ class FuroUi5LaunchpadNavigation extends FBP(LitElement) {
   }
 
   bindSpaces(fn) {
+    fn.addEventListener('this-repeated-field-changed', () => {
+      this._update(fn);
+    });
+    this._update(fn);
+  }
+
+  _update(fn) {
     const TC = this.shadowRoot.getElementById('TC');
 
     fn.repeats.forEach(space => {
