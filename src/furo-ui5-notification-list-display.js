@@ -6,6 +6,7 @@ import '@ui5/webcomponents-fiori/dist/NotificationListGroupItem.js';
 import '@ui5/webcomponents-fiori/dist/NotificationListItem.js';
 import '@ui5/webcomponents-fiori/dist/NotificationAction.js';
 import '@ui5/webcomponents/dist/List.js';
+import { i18n } from '@furo/framework';
 
 /**
  *  Notification display component that works together with furo-ui5-notification.
@@ -419,7 +420,7 @@ export class FuroUi5NotificationListDisplay extends FBP(LitElement) {
             notification.setAttribute('show-close', '');
             notification.setAttribute('priority', this.priority);
             notification.read = true;
-            notification.titleText = item.field;
+            notification.titleText = i18n.t(item.field);
             notification.target = this.target;
             // save the initial message for the later usage
             notification.message = this.message;

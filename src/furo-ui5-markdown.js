@@ -133,6 +133,10 @@ class FuroUi5Markdown extends LitElement {
         max-width: 100%;
       }
 
+      p:first-of-type {
+        margin-top: 0;
+      }
+
       h1,
       h2,
       h3,
