@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-fat-float
-**@furo/ui5** <small>v1.5.0</small>
+**@furo/ui5** <small>v1.5.1</small>
 <br>`import '@furo/ui5/src/typerenderer/display-furo-fat-float.js';`<small>
 <br>exports `<display-furo-fat-float>` custom-element-definition
 <br>extends */src/typerenderer/display-float.js*

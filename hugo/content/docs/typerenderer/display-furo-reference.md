@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-reference
-**@furo/ui5** <small>v1.5.0</small>
+**@furo/ui5** <small>v1.5.1</small>
 <br>`import '@furo/ui5/src/typerenderer/display-furo-reference.js';`<small>
 <br>exports `<display-furo-reference>` custom-element-definition
 <br>superclass *LitElement*

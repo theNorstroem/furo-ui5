@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-message-strip
-**@furo/ui5** <small>v1.5.0</small>
+**@furo/ui5** <small>v1.5.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-message-strip.js';`<small>
 <br>exports *FuroUi5MessageStrip* js
 <br>exports `<furo-ui5-message-strip>` custom-element-definition
@@ -44,17 +44,17 @@ https://experience.sap.com/fiori-design-web/message-strip/
 
 
 
-### **noCloseButton**
+### **hideCloseButton**
 
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-close-button</span>
-<small>`Boolean` default: **false**</small>
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">hide-close-button</span>
+<small>`boolean` default: **false**</small>
 
-Defines whether the MessageStrip renders close icon.
+Defines whether the MessageStrip renders close button.
 <br><br>
 
-### **noIcon**
+### **hideIcon**
 
-<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-icon</span>
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">hide-icon</span>
 <small>`Boolean` default: **false**</small>
 
 Defines whether the MessageStrip will show an icon in the beginning. You can directly provide an icon with the icon slot. Otherwise, the default icon for the type will be used.

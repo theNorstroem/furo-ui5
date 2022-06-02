@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-furo-fat-int64
-**@furo/ui5** <small>v1.5.0</small>
+**@furo/ui5** <small>v1.5.1</small>
 <br>`import '@furo/ui5/src/typerenderer/form-furo-fat-int64.js';`<small>
 <br>exports *FormFuroFatInt64* js
 <br>exports `<form-furo-fat-int64>` custom-element-definition

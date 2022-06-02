@@ -6,7 +6,7 @@ weight: 100
 ---
 
 # @furo/ui5
-**@furo/ui5** <small>v1.5.0</small>
+**@furo/ui5** <small>v1.5.1</small>
 SAP UI5 Web Components data bindings for furo
 
 {{% api "_typerenderer-head.md" %}}
