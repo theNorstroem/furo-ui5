@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
+    }
+    furo-demo-snippet{
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import { html, render } from 'lit';
+  import './initEnv.js';
+  import '../src/furo-ui5-message-strip.js';
+  import '../src/furo-ui5-message-strip-display.js';
+  import '../src/furo-ui5-button.js';
+
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+
+
+  render(
+    html`
+
+        <furo-demo-snippet>
+          <template>
+
+
+            <furo-form-layouter one>
+              <furo-ui5-message-strip-display></furo-ui5-message-strip-display>
+              <furo-ui5-message-strip hide-close-button hide-icon
+                                      message="Default message text." ƒ-show-error="--clicked"></furo-ui5-message-strip>
+
+              <furo-ui5-button at-click="--clicked">Show Error</furo-ui5-button>
+            </furo-form-layouter>
+
+          </template>
+        </furo-demo-snippet>
+
+
+      `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>

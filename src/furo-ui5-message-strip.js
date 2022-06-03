@@ -26,8 +26,8 @@ import 'markdown-it/dist/markdown-it.js';
 export class FuroUi5MessageStrip extends FBP(LitElement) {
   constructor() {
     super();
-    this.noCloseButton = false;
-    this.noIcon = false;
+    this.hideCloseButton = false;
+    this.hideIcon = false;
     /**
      * @private
      * @type {string}
@@ -51,13 +51,15 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
   static get properties() {
     return {
       /**
-       * Defines whether the MessageStrip renders close icon.
+       * Defines whether the MessageStrip renders close button.
        *
-       * @type Boolean
+       * @type {boolean}
+       * @defaultvalue false
+       * @public
        */
-      noCloseButton: {
+      hideCloseButton: {
         type: Boolean,
-        attribute: 'no-close-button',
+        attribute: 'hide-close-button',
       },
 
       /**
@@ -65,9 +67,9 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
        *
        * @type Boolean
        */
-      noIcon: {
+      hideIcon: {
         type: Boolean,
-        attribute: 'no-icon',
+        attribute: 'hide-icon',
       },
 
       /**
@@ -93,7 +95,6 @@ export class FuroUi5MessageStrip extends FBP(LitElement) {
   /**
    * request display message strip.
    * trigger `open-furo-ui5-message-strip-requested` event
-   * @param p
    * @private
    */
   _requestDisplay() {

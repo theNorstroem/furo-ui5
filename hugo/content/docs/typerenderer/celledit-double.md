@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-double
-**@furo/ui5** <small>v1.5.0</small>
+**@furo/ui5** <small>v1.5.1</small>
 <br>`import '@furo/ui5/src/typerenderer/celledit-double.js';`<small>
 <br>exports *CelleditDouble* js
 <br>extends */src/typerenderer/celledit-int32.js*
