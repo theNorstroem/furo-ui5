@@ -557,6 +557,11 @@ export class FuroUi5MultiCombobox extends FieldNodeAdapter(ComboBox.default) {
         this.options.pop();
       });
 
+      // init options for elements which are created on the fly (i.e. type renderers)
+      if (this.options === undefined) {
+        this.options = [];
+      }
+
       optionNodeList.forEach(newOpt => {
         this.appendChild(newOpt);
         this.options.push(newOpt);
