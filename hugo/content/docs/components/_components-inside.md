@@ -67,6 +67,8 @@ bookHidden: true
 - [furo-ui5-textarea-input](furo-ui5-textarea-input.md) data textarea input field
 - [furo-ui5-time-picker-labeled](furo-ui5-time-picker-labeled.md) labeled input field
 - [furo-ui5-time-picker](furo-ui5-time-picker.md) furo data time picker field
+- [furo-ui5-toast-display](furo-ui5-toast-display.md) Display element for furo-ui5-toast
+- [furo-ui5-toast](furo-ui5-toast.md) Toast element
 - [furo-ui5-toggle-button](furo-ui5-toggle-button.md) boolean toggle button
 - [furo-ui5-tree](furo-ui5-tree.md) tree navigation menu
 - [furo-ui5-typerenderer-labeled](furo-ui5-typerenderer-labeled.md) labeled input field

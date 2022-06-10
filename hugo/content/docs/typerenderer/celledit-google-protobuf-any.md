@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-google-protobuf-any
-**@furo/ui5** <small>v1.5.1</small>
+**@furo/ui5** <small>v1.5.2</small>
 <br>`import '@furo/ui5/src/typerenderer/celledit-google-protobuf-any.js';`<small>
 <br>exports `<celledit-google-protobuf-any>` custom-element-definition
 <br>superclass *LitElement*</small>
