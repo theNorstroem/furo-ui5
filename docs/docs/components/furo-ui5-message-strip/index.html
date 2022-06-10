@@ -12,12 +12,12 @@
 <meta property="og:description" content="furo ui5 message strip" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-message-strip/" />
-<meta property="article:modified_time" content="2022-05-31T14:05:39+02:00" />
+<meta property="article:modified_time" content="2022-06-10T09:57:20+02:00" />
 <title>furo-ui5-message-strip | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.6a7d0de8436833c3603a6f1a22134334d4704c44eae47f808b0ec8d713c3cb12.js" integrity="sha256-an0N6ENoM8NgOm8aIhNDNNRwTETq5H&#43;Aiw7I1xPDyxI="></script>
+<script defer src="/en.search.min.1f37157b348f9b4b361e4450d6cfec2a0c9d3aac63ac12db0f98b07f3d2ee15e.js" integrity="sha256-HzcVezSPm0s2HkRQ1s/sKgydOqxjrBLbD5iwfz0u4V4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -31,6 +31,7 @@ https://github.com/alex-shpak/hugo-book
 <body dir=>
 <furo-ui5-context-menu-display style="z-index: 8"></furo-ui5-context-menu-display>
 <fixed-tooltip-display></fixed-tooltip-display>
+<furo-ui5-toast-display></furo-ui5-toast-display>
 <furo-ui5-dialog-display></furo-ui5-dialog-display>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
@@ -977,6 +978,32 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-time-picker-labeled/" class="">furo-ui5-time-picker-labeled</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-toast/" class="">furo-ui5-toast</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-toast-display/" class="">furo-ui5-toast-display</a>
   
 
         </li>
@@ -3254,6 +3281,8 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
   </ul>
 
 
@@ -3325,8 +3354,8 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#description">Description</a></li>
     <li><a href="#attributes-and-properties">Attributes and Properties</a>
       <ul>
-        <li><a href="#noclosebutton"><strong>noCloseButton</strong></a></li>
-        <li><a href="#noicon"><strong>noIcon</strong></a></li>
+        <li><a href="#hideclosebutton"><strong>hideCloseButton</strong></a></li>
+        <li><a href="#hideicon"><strong>hideIcon</strong></a></li>
         <li><a href="#size"><strong>size</strong></a></li>
         <li><a href="#message"><strong>message</strong></a></li>
       </ul>
@@ -3360,7 +3389,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-message-strip
   <a class="anchor" href="#furo-ui5-message-strip">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.5.0</small>
+<p><strong>@furo/ui5</strong> <small>v1.5.2</small>
 <br><code>import '@furo/ui5/src/furo-ui5-message-strip.js';</code><small>
 <br>exports <em>FuroUi5MessageStrip</em> js
 <br>exports <code>&lt;furo-ui5-message-strip&gt;</code> custom-element-definition
@@ -3443,19 +3472,19 @@ A good place for placing the furo-ui5-message-strip-display is on the app-shell.
   Attributes and Properties
   <a class="anchor" href="#attributes-and-properties">#</a>
 </h2>
-<h3 id="noclosebutton">
-  <strong>noCloseButton</strong>
-  <a class="anchor" href="#noclosebutton">#</a>
+<h3 id="hideclosebutton">
+  <strong>hideCloseButton</strong>
+  <a class="anchor" href="#hideclosebutton">#</a>
 </h3>
-<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-close-button</span>
-<small><code>Boolean</code> default: <strong>false</strong></small></p>
-<p>Defines whether the MessageStrip renders close icon.
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">hide-close-button</span>
+<small><code>boolean</code> default: <strong>false</strong></small></p>
+<p>Defines whether the MessageStrip renders close button.
 <br><br></p>
-<h3 id="noicon">
-  <strong>noIcon</strong>
-  <a class="anchor" href="#noicon">#</a>
+<h3 id="hideicon">
+  <strong>hideIcon</strong>
+  <a class="anchor" href="#hideicon">#</a>
 </h3>
-<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-icon</span>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">hide-icon</span>
 <small><code>Boolean</code> default: <strong>false</strong></small></p>
 <p>Defines whether the MessageStrip will show an icon in the beginning. You can directly provide an icon with the icon slot. Otherwise, the default icon for the type will be used.
 <br><br></p>
@@ -3608,9 +3637,9 @@ which can be attached to an RPC error.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/e1cb1f80b3b9b7884d4b574140f384da0ff23e8d" title='Last modified by veith | May 31, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/3c6458e0d50649ed8446f8f7f953bf77bf2bd5f4" title='Last modified by veith | June 10, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 31, 2022</span>
+      <span>June 10, 2022</span>
     </a>
   </div>
 
@@ -3641,8 +3670,8 @@ which can be attached to an RPC error.</p>
     <li><a href="#description">Description</a></li>
     <li><a href="#attributes-and-properties">Attributes and Properties</a>
       <ul>
-        <li><a href="#noclosebutton"><strong>noCloseButton</strong></a></li>
-        <li><a href="#noicon"><strong>noIcon</strong></a></li>
+        <li><a href="#hideclosebutton"><strong>hideCloseButton</strong></a></li>
+        <li><a href="#hideicon"><strong>hideIcon</strong></a></li>
         <li><a href="#size"><strong>size</strong></a></li>
         <li><a href="#message"><strong>message</strong></a></li>
       </ul>
