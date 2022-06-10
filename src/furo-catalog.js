@@ -53,6 +53,8 @@ import './furo-ui5-textarea-input.js';
 import './furo-ui5-textarea-input-labeled.js';
 import './furo-ui5-time-picker.js';
 import './furo-ui5-time-picker-labeled.js';
+import './furo-ui5-toast.js';
+import './furo-ui5-toast-display.js';
 import './furo-ui5-toggle-button.js';
 import './furo-ui5-tree.js';
 import './furo-ui5-typerenderer-labeled.js';

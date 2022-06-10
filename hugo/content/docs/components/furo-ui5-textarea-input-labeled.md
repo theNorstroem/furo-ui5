@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-textarea-input-labeled
-**@furo/ui5** <small>v1.5.2</small>
+**@furo/ui5** <small>v1.6.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-textarea-input-labeled.js';`<small>
 <br>exports *FuroUi5TextareaInputLabeled* js
 <br>exports `<furo-ui5-textarea-input-labeled>` custom-element-definition

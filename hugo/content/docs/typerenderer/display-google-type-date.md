@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-google-type-date
-**@furo/ui5** <small>v1.5.2</small>
+**@furo/ui5** <small>v1.6.0</small>
 <br>`import '@furo/ui5/src/typerenderer/display-google-type-date.js';`<small>
 <br>exports *DisplayGoogleTypeDate* js
 <br>exports `<display-google-type-date>` custom-element-definition

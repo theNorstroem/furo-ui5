@@ -12,9 +12,7 @@ import * as Toast from '@ui5/webcomponents/dist/Toast.js';
  * **important:** Place a furo-ui5-toast-display in any dom parent of the component where you use furo-ui5-toast. Your app-shell or body is a good place to do that.
  *
  *```html
- * <furo-ui5-toast  fn-show="--openToastClicked" placement="MiddleCenter">
- *   <p>Content</p>
- * </furo-ui5-toast>
+ * <furo-ui5-toast  fn-show="--openToastClicked" placement="MiddleCenter">Content</furo-ui5-toast>
  *
  * <button at-click="--openToastClicked">Open toast</button>
  * ```

@@ -9,18 +9,14 @@ bookHidden: true
 
 <furo-demo-snippet>
 <template>
-<furo-ui5-toast fn-show="--openToastClicked" placement="MiddleCenter">
-<p>Content</p>
-</furo-ui5-toast>
+<furo-ui5-toast fn-show="--openToastClicked" placement="MiddleCenter">Content</furo-ui5-toast>
 <button @-click="--openToastClicked">open toast</button>
 </template>
 </furo-demo-snippet>
 
 
 ```html
-<furo-ui5-toast fn-show="--openToastClicked" placement="MiddleCenter">
-  <p>Content</p>
-</furo-ui5-toast>
+<furo-ui5-toast fn-show="--openToastClicked" placement="MiddleCenter">Content</furo-ui5-toast>
 
 <button @-click="--openToastClicked">open toast</button>
 ```

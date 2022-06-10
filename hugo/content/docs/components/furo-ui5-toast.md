@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-toast
-**@furo/ui5** <small>v1.5.2</small>
+**@furo/ui5** <small>v1.6.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-toast.js';`<small>
 <br>exports *FuroUi5Toast* js
 <br>extends *src/furo-ui5-toast.js*</small>
@@ -25,9 +25,7 @@ It supports all features from the [SAP ui5 Toast element](https://sap.github.io/
 **important:** Place a furo-ui5-toast-display in any dom parent of the component where you use furo-ui5-toast. Your app-shell or body is a good place to do that.
 
 ```html
-<furo-ui5-toast  fn-show="--openToastClicked" placement="MiddleCenter">
-  <p>Content</p>
-</furo-ui5-toast>
+<furo-ui5-toast  fn-show="--openToastClicked" placement="MiddleCenter">Content</furo-ui5-toast>
 
 <button at-click="--openToastClicked">Open toast</button>
 ```
