@@ -590,7 +590,11 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
    */
   static getValueByPath(obj, path) {
     if (obj && path) {
-      return path.split('.').reduce((res, prop) => res[prop], obj) || obj;
+      const r = path.split('.').reduce((res, prop) => res[prop], obj);
+      if (r !== undefined) {
+        return r;
+      }
+      return obj;
     }
     return {};
   }
