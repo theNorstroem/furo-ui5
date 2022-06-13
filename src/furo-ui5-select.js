@@ -337,7 +337,8 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
     }
 
     if (this.options && this.options.length) {
-      const result = this.options.filter(elem => elem.dataset.id === id);
+      // eslint-disable-next-line
+      const result = this.options.filter(elem => elem.dataset.id == id);
       if (result && result.length) {
         if (this.selectedOption) {
           this.selectedOption.removeAttribute('selected');
@@ -590,7 +591,11 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
    */
   static getValueByPath(obj, path) {
     if (obj && path) {
-      return path.split('.').reduce((res, prop) => res[prop], obj) || obj;
+      const r = path.split('.').reduce((res, prop) => res[prop], obj);
+      if (r !== undefined) {
+        return r;
+      }
+      return obj;
     }
     return {};
   }
@@ -667,6 +672,9 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
         this.setFnaFieldValue(strOpt);
         return;
       } else {
+        if (this.getDataType() === 'enum') {
+          newValue = parseInt(newValue, 10);
+        }
         this._tmpValue = newValue;
         this.setFnaFieldValue(newValue === '' ? '' : newValue);
       }

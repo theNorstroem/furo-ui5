@@ -413,7 +413,7 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
       this._updateAttributesFromFat(this._tmpFAT.attributes);
       this._updateLabelsFromFat(this._tmpFAT.labels);
     } else if (this.getDataType() === 'furo.BigDecimal') {
-      if (val.scale === null && val.unscaled_value === null) {
+      if (val === null || (val.scale === null && val.unscaled_value === null)) {
         this.value = '';
       } else {
         // treat as strings, because

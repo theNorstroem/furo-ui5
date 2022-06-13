@@ -32,7 +32,8 @@ class CellFuroBigdecimal extends CellFloat {
     const val = this._field._value;
     let displayValue = '';
     this._displayValue = '';
-    if (!(val.scale === null || val.unscaled_value === null)) {
+
+    if (val !== null && !(val.scale === null || val.unscaled_value === null)) {
       const vstr = val.unscaled_value.toString(10);
       if (val.scale < 0) {
         displayValue = parseInt(vstr + ''.padEnd(Math.abs(val.scale), 0), 10);
