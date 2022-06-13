@@ -672,7 +672,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
         this.setFnaFieldValue(strOpt);
         return;
       } else {
-        if (this?.__fieldNode?._spec?.meta?.options?.flags?.includes('enum')) {
+        if (this.getDataType() === 'enum') {
           newValue = parseInt(newValue, 10);
         }
         this._tmpValue = newValue;
