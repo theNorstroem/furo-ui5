@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
+    }
+    furo-demo-snippet{
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import { html, render } from 'lit';
+  import './initEnv.js';
+  import '../src/furo-ui5-date-time-picker-labeled.js';
+  import '../src/furo-ui5-date-time-picker.js';
+
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+
+  import '@ui5/webcomponents/dist/Icon.js';
+  import '@ui5/webcomponents-icons/dist/search.js';
+
+
+  render(
+    html`
+
+        <furo-demo-snippet>
+          <template>
+
+            <furo-form-layouter two>
+              <p full>
+                FuroUi5-datePicker (string)
+              </p>
+
+              <furo-ui5-date-time-picker
+                label="Simple time"
+                ƒ-bind-data="--daoExp(*.google_timestamp)">
+              </furo-ui5-date-time-picker>
+
+              <furo-ui5-date-time-picker-labeled
+                newline
+                label="Simple time"
+                ƒ-bind-data="--daoExp(*.google_timestamp)">
+              </furo-ui5-date-time-picker-labeled>
+
+
+
+            </furo-form-layouter>
+            <furo-data-object type="experiment.Experiment" @-object-ready="--daoExp" ></furo-data-object>
+
+
+
+
+          </template>
+        </furo-demo-snippet>
+
+
+      `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>
