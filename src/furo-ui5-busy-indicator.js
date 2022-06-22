@@ -43,7 +43,7 @@ export class FuroUiBusyIndicator extends Busy.default {
       super.styles,
       {
         content:
-          ':host(:not([hidden])) {display: block}  .ui5-busy-indicator-root {height:100%}',
+          ':host(:not([hidden])) {display: block}  .ui5-busy-indicator-root {height:100%; display:block; align-items: unset; justify-content:unset; position: unset;',
       },
     ];
   }
