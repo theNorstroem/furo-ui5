@@ -86,46 +86,58 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
       formatPattern: null,
     };
 
+    // input event is needed to get the reset of the field.
+    // change is not fired if the user clears the input field.
     this.addEventListener('input', this._updateFNA);
 
     // changed is fired when the input operation has finished by pressing Enter or on focusout.
-    this.addEventListener('change', v => {
-      const e = v.detail;
-      const type = this.getDataType();
-      switch (type) {
-        case 'int32':
-        case 'int64':
-          if (e.value !== '' && e.valid) {
-            this.setFnaFieldValue(this.dateValue.getTime() / 1000);
-          } else {
-            this.setFnaFieldValue(0);
-          }
-          break;
+    this.addEventListener('change', this._updateFNA);
+  }
 
-        case 'google.protobuf.Timestamp':
-          if (e.value !== '' && e.valid) {
-            this.setFnaFieldValue(this.dateValue.toISOString());
-          } else {
-            this.setFnaFieldValue(null);
-          }
-          break;
-        case 'string':
-        default:
-          if (e.value !== '' && e.valid) {
-            this.setFnaFieldValue(this.dateValue.toISOString());
-          } else {
-            this.setFnaFieldValue('');
-          }
-      }
+  _updateFNA(v) {
+    const e = v.detail;
+    const type = this.getDataType();
+    switch (type) {
+      case 'int32':
+      case 'int64':
+        if (e.value !== '' && e.valid) {
+          this.setFnaFieldValue(
+            this.getFormat().parse(this.value).getTime() / 1000
+          );
+        } else {
+          this.setFnaFieldValue(0);
+        }
+        break;
 
-      /**
-       * Fired when value changed
-       *
-       * Payload: {Date}
-       * @type {Event}
-       */
-      this.dispatchEvent(Events.buildChangeEvent(this.dateValue));
-    });
+      case 'google.protobuf.Timestamp':
+        if (e.value !== '' && e.valid) {
+          this.setFnaFieldValue(
+            this.getFormat().parse(this.value).toISOString()
+          );
+        } else {
+          this.setFnaFieldValue(null);
+        }
+        break;
+      case 'string':
+      default:
+        if (e.value !== '' && e.valid) {
+          this.setFnaFieldValue(
+            this.getFormat().parse(this.value).toISOString()
+          );
+        } else {
+          this.setFnaFieldValue('');
+        }
+    }
+
+    /**
+     * Fired when value changed
+     *
+     * Payload: {Date}
+     * @type {Event}
+     */
+    this.dispatchEvent(
+      Events.buildChangeEvent(this.getFormat().parse(this.value))
+    );
   }
 
   /**
