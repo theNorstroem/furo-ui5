@@ -69,6 +69,13 @@ export class FuroUi5DateTimePickerLabeled extends FBP(LitElement) {
       readonly: {
         type: Boolean,
       },
+      /**
+       * Determines the format, displayed in the input field.
+       */
+      formatPattern: {
+        type: String,
+        attribute: 'format-pattern',
+      },
     };
   }
 
@@ -78,6 +85,7 @@ export class FuroUi5DateTimePickerLabeled extends FBP(LitElement) {
       :host {
         display: block;
       }
+
       :host([hidden]) {
         display: none;
       }
@@ -108,13 +116,14 @@ export class FuroUi5DateTimePickerLabeled extends FBP(LitElement) {
           for="Input"
           show-colon
           ?required=${this.required}
-          >${this.label}</ui5-label
-        >
+          >${this.label}
+        </ui5-label>
         <furo-ui5-date-time-picker
           content
           id="Input"
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
+          format-pattern="${this.formatPattern}"
           fn-bind-data="--data"
         ></furo-ui5-date-time-picker>
       </furo-ui5-form-field-container>
