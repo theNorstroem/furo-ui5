@@ -131,11 +131,11 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
       }
 
       furo-horizontal-flex.heading {
-        padding-bottom: var(--spacing-s, 0.625rem);
+        padding-bottom: var(--FuroUi5MediaSizeIndentationBottom, 0.625rem);
       }
 
       furo-horizontal-flex.more {
-        padding-top: var(--spacing-s, 0.625rem);
+        padding-top: var(--FuroUi5MediaSizeIndentationBottom, 0.625rem);
       }
     `;
   }
