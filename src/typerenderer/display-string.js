@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { nl2br } from '../directives/nl2br.js';
 
 /**
  * `display-string`
@@ -74,7 +75,7 @@ export class DisplayString extends LitElement {
   render() {
     // language=HTML
     // prettier-ignore
-    return html`${this._text}`;
+    return html`${nl2br(this._text)}`;
   }
 }
 

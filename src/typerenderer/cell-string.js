@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { nl2br } from '../directives/nl2br.js';
 
 /**
  * `cell-string`
@@ -72,7 +73,9 @@ export class CellString extends LitElement {
    */
   render() {
     // language=HTML
-    return html` ${this._field ? html` ${this._field._value} ` : html``} `;
+    return html`
+      ${this._field ? html` ${nl2br(this._field._value)} ` : html``}
+    `;
   }
 }
 
