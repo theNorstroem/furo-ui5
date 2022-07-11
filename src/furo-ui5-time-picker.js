@@ -128,11 +128,15 @@ export class FuroUi5TimePicker extends FieldNodeAdapter(TimePicker.default) {
             seconds: null,
             nanos: null,
           };
-          timeOfDay.hours = this.dateValue.getHours();
-          timeOfDay.minutes = this.dateValue.getMinutes();
-          timeOfDay.seconds = this.dateValue.getSeconds();
-          timeOfDay.nanos = this.dateValue.getMilliseconds();
-          this.setFnaFieldValue(timeOfDay);
+          // update only if there is a dateValue
+          // becaus during typying there is no value at the beginning
+          if (this.dateValue) {
+            timeOfDay.hours = this.dateValue.getHours();
+            timeOfDay.minutes = this.dateValue.getMinutes();
+            timeOfDay.seconds = this.dateValue.getSeconds();
+            timeOfDay.nanos = this.dateValue.getMilliseconds();
+            this.setFnaFieldValue(timeOfDay);
+          }
         } else {
           this.setFnaFieldValue(null);
         }
