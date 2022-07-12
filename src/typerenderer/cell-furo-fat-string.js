@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { nl2br } from '../directives/nl2br.js';
 
 /**
  * `cell-furo-fat-string`
@@ -113,7 +114,7 @@ class CellFuroFatString extends LitElement {
    */
   render() {
     // language=HTML
-    return html` ${this._displayValue} `;
+    return html`${nl2br(this._displayValue)}`;
   }
 }
 
