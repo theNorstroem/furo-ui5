@@ -24,6 +24,7 @@
   import '../src/furo-ui5-text-input-labeled.js';
   import '../src/furo-ui5-text-input.js';
   import '../src/furo-ui5-button.js';
+  import '../x/furo-message-container-handler.js';
 
   import '@furo/route/src/furo-location.js';
   import '@furo/data/src/furo-deep-link.js';
@@ -63,9 +64,10 @@
             <furo-entity-agent service="messagecontainer.MessagecontainerService" fn-hts-in="--hts"
                                load-on-hts-in
                                fn-save="--saveClicked"
+                               fn-bind-request-data="--mcDO"
                                at-response="--response">
             </furo-entity-agent>
-
+            <furo-message-container-handler fn-inject-raw="--response._messagecontainer"></furo-message-container-handler>
 
             <hr>
             <ui5-button at-click="--validation">Trigger validation</ui5-button>

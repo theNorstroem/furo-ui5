@@ -1,3 +1,11 @@
 {
-  "name": "me"
+  "name": "me",
+  "_links": [
+    {
+      "rel": "update",
+      "service": "messagecontainer.MessagecontainerService",
+      "href": "/mockdata/messagecontainers/1/update.json",
+      "method": "POST"
+    }
+  ]
 }

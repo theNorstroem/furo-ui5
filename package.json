@@ -19,7 +19,7 @@
   "main": "src/furo-catalog.js",
   "scripts": {
     "analyze": "cem analyze --globs \"src/**/*.js\" --exclude **/furo-catalog.js --litelement",
-    "start": "web-dev-server --app-index demos --open",
+    "start": "web-dev-server --app-index demos",
     "lint": "eslint --ext .js,.html . --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*' --ignore-path .gitignore && prettier \"**/*.js\" --check  --ignore-path .prettierignore",
     "format": "eslint --ext .js,.html . --fix --ignore-path .prettierignore && prettier \"**/*.js\" --write --ignore-path .prettierignore",
     "test": "web-test-runner  --coverage",

@@ -1,3 +1,4 @@
+
 export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
 
   watch: true,
@@ -7,8 +8,11 @@ export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
   },
   preserveSymlinks: true,
 
-  plugins: [
+  middleware: [function rewriteMethod(context, next) {
+    // convert every request to a get request
+    context.req.method = "GET"
+    return next();
+  },
   ],
-
 
 });
