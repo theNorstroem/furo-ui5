@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
+    }
+    furo-demo-snippet{
+      height: 90vh;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import { html, render } from 'lit';
+  import './initEnv.js';
+  import '../src/furo-ui5-text-input-labeled.js';
+  import '../src/furo-ui5-text-input.js';
+  import '../src/furo-ui5-button.js';
+
+  import '@furo/route/src/furo-location.js';
+  import '@furo/data/src/furo-deep-link.js';
+  import '@furo/data/src/furo-entity-agent.js';
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+
+  import '@ui5/webcomponents/dist/Icon.js';
+  import '@ui5/webcomponents-icons/dist/search.js';
+
+
+  render(
+    html`
+
+        <furo-demo-snippet>
+          <template>
+
+            <furo-form-layouter two>
+              <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.name)"></furo-ui5-text-input-labeled>
+
+            </furo-form-layouter>
+            <br>
+            <furo-ui5-button at-click="--saveClicked">save</furo-ui5-button>
+
+            <furo-data-object
+              type="messagecontainer.TestObject"
+              at-object-ready="--mcDO"
+              fn-inject-raw="--response"
+              fn-validate-all-fields="--validation"></furo-data-object>
+
+
+
+            <furo-location at-location-changed="--locationChanged"></furo-location>
+            <furo-deep-link service="messagecontainer.MessagecontainerService" at-hts-out="--hts" fn-qp-in="--locationChanged(*.query)"></furo-deep-link>
+
+            <furo-entity-agent service="messagecontainer.MessagecontainerService" fn-hts-in="--hts"
+                               load-on-hts-in
+                               fn-save="--saveClicked"
+                               at-response="--response">
+            </furo-entity-agent>
+
+
+            <hr>
+            <ui5-button at-click="--validation">Trigger validation</ui5-button>
+          </template>
+        </furo-demo-snippet>
+
+
+      `,
+    document.querySelector('#demo')
+  );
+</script>
+</body>
+</html>

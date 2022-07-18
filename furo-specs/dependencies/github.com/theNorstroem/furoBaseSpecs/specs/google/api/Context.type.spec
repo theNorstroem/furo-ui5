@@ -37,6 +37,7 @@ description: |-
 
      You can also specify extension ID instead of fully qualified extension name
      here.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: context.proto
@@ -56,14 +57,10 @@ fields:
              **NOTE:** All service configuration rules follow "last one wins" order.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Context.rules
             options:

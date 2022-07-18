@@ -115,6 +115,7 @@ description: |-
          };
 
          // ...
+lifecycle: null
 __proto:
     package: google.type
     targetfile: color.proto
@@ -132,14 +133,10 @@ fields:
         description: The amount of red in the color as a value in the interval [0, 1].
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Color.red
             options:
@@ -154,14 +151,10 @@ fields:
         description: The amount of green in the color as a value in the interval [0, 1].
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Color.green
             options:
@@ -176,14 +169,10 @@ fields:
         description: The amount of blue in the color as a value in the interval [0, 1].
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Color.blue
             options:
@@ -209,14 +198,10 @@ fields:
              (as if the alpha value had been explicitly given with a value of 1.0).
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Color.alpha
             options:

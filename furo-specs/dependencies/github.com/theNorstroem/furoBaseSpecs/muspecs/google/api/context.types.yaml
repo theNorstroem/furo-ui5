@@ -1,0 +1,60 @@
+- type: |-
+    google.api.ContextRule #A context rule provides information about the context for an individual API
+     element.
+  fields:
+    selector: |-
+        string:1 #Selects the methods to which this rule applies.
+
+         Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
+    requested: '[] string:2 #A list of full type names of requested contexts.'
+    provided: '[] string:3 #A list of full type names of provided contexts.'
+    allowed_request_extensions: |-
+        [] string:4 #A list of full type names or extension IDs of extensions allowed in grpc
+         side channel from client to backend.
+    allowed_response_extensions: |-
+        [] string:5 #A list of full type names or extension IDs of extensions allowed in grpc
+         side channel from backend to client.
+  target: context.proto
+- type: |-
+    google.api.Context #`Context` defines which contexts an API requests.
+
+     Example:
+
+         context:
+           rules:
+           - selector: "*"
+             requested:
+             - google.rpc.context.ProjectContext
+             - google.rpc.context.OriginContext
+
+     The above specifies that all methods in the API request
+     `google.rpc.context.ProjectContext` and
+     `google.rpc.context.OriginContext`.
+
+     Available context types are defined in package
+     `google.rpc.context`.
+
+     This also provides mechanism to allowlist any protobuf message extension that
+     can be sent in grpc metadata using “x-goog-ext-<extension_id>-bin” and
+     “x-goog-ext-<extension_id>-jspb” format. For example, list any service
+     specific protobuf types that can appear in grpc metadata as follows in your
+     yaml file:
+
+     Example:
+
+         context:
+           rules:
+            - selector: "google.example.library.v1.LibraryService.CreateBook"
+              allowed_request_extensions:
+              - google.foo.v1.NewExtension
+              allowed_response_extensions:
+              - google.foo.v1.NewExtension
+
+     You can also specify extension ID instead of fully qualified extension name
+     here.
+  fields:
+    rules: |-
+        [] google.api.ContextRule:1 #A list of RPC context rules that apply to individual API methods.
+
+         **NOTE:** All service configuration rules follow "last one wins" order.
+  target: context.proto

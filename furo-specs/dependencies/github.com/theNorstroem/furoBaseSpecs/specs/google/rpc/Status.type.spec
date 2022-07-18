@@ -8,6 +8,7 @@ description: |-
 
      You can find out more about this error model and how to work with it in the
      [API Design Guide](https://cloud.google.com/apis/design/errors).
+lifecycle: null
 __proto:
     package: google.rpc
     targetfile: status.proto
@@ -26,14 +27,10 @@ fields:
         description: The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Status.code
             options:
@@ -51,14 +48,10 @@ fields:
              [google.rpc.Status.details][google.rpc.Status.details] field, or localized by the client.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Status.message
             options:
@@ -75,14 +68,10 @@ fields:
              message types for APIs to use.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Status.details
             options:

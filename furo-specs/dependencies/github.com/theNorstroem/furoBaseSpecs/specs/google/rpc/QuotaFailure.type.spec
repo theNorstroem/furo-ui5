@@ -12,11 +12,12 @@ description: |-
 
      Also see RetryInfo and Help types for other details about handling a
      quota failure.
+lifecycle: null
 __proto:
     package: google.rpc
     targetfile: error_details.proto
     imports:
-        - google/protobuf/duration.proto
+        - google/rpc/QuotaFailure/error_details.proto
     options:
         go_package: google.golang.org/genproto/googleapis/rpc/errdetails;errdetails
         java_multiple_files: "true"
@@ -29,14 +30,10 @@ fields:
         description: Describes all quota violations.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaFailure.violations
             options:

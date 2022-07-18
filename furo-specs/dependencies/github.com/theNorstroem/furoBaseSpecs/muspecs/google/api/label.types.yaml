@@ -1,0 +1,6 @@
+- type: 'google.api.LabelDescriptor #A description of a label.'
+  fields:
+    key: 'string:1 #The label key.'
+    value_type: 'unknown:2 #The type of data that can be assigned to the label.'
+    description: 'string:3 #A human-readable description for the label.'
+  target: label.proto

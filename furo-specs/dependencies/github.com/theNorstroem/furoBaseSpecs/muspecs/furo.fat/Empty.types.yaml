@@ -1,0 +1,5 @@
+- type: 'furo.fat.Empty #Furo annotated type wrapper message for `empty`. Empty has no values and only contains the labels and attributes'
+  fields:
+    labels: 'map<string,bool>:2 #Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...'
+    attributes: 'map<string,string>:3 #Attributes for a value, something like confidential-msg: you are not allowed to see this value '
+  target: fat.proto

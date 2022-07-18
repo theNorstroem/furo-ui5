@@ -9,6 +9,7 @@ description: |-
            labels:
            - key: /customer_id
              description: Identifier of a library customer
+lifecycle: null
 __proto:
     package: google.api
     targetfile: log.proto
@@ -30,14 +31,10 @@ fields:
              slash, underscore, hyphen, period [/_-.].
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LogDescriptor.name
             options:
@@ -55,14 +52,10 @@ fields:
              considered invalid.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LogDescriptor.labels
             options:
@@ -79,14 +72,10 @@ fields:
              the documentation and can contain details.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LogDescriptor.description
             options:
@@ -103,14 +92,10 @@ fields:
              the user interface and should be concise.
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LogDescriptor.display_name
             options:

@@ -1,0 +1,11 @@
+- type: 'furo.FieldMeta #Metas for a field'
+  fields:
+    default: 'string:3 #The default value as JSON string, this must match with the data structure of your type'
+    placeholder: 'string:8 #Informative text which can be displayed on the ui'
+    hint: 'string:2 #A hint'
+    label: 'string:1 #Informative text which can be displayed on the ui'
+    options: 'furo.Fieldoption:6 #Fieldoptions'
+    readonly: 'bool:4 #Marks the field as readonly. Used for validations.'
+    repeated: 'bool:5 #repeated'
+    typespecific: 'google.protobuf.Any:7 #Put in type specific metas for your fields here'
+  target: furo.proto

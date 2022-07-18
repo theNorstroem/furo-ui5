@@ -40,6 +40,7 @@ description: |-
          assert (0.0, -170.0) == NormalizeLatLng(180.0, 10.0)
          assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.0)
          assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
+lifecycle: null
 __proto:
     package: google.type
     targetfile: latlng.proto
@@ -56,14 +57,10 @@ fields:
         description: The latitude in degrees. It must be in the range [-90.0, +90.0].
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LatLng.latitude
             options:
@@ -78,14 +75,10 @@ fields:
         description: The longitude in degrees. It must be in the range [-180.0, +180.0].
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LatLng.longitude
             options:

@@ -1,0 +1,9 @@
+- type: 'furo.filter.Condition #Filter condition'
+  fields:
+    fld: '* string:1 #Field'
+    is: 'string:2 #The comparator like gt, eq,...'
+    val: 'string:3 #The value as string, parse and convert this for your field'
+    aoc: |-
+        [] furo.filter.Condition:4 #And bracket with ors inside
+        Nesting means and, siblings means or
+  target: filter.proto

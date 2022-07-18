@@ -1,0 +1,6 @@
+- type: 'messagecontainer.TestObject #MC test object'
+  fields:
+    name: 'string:1 #Name field'
+    _messagecontainer: 'furo.MessageContainer:9 #MessageContainer'
+    _links: '-[] furo.Link:2 #Hateoas links'
+  target: mc.proto

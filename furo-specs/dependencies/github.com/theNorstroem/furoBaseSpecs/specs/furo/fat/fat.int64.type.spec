@@ -1,4 +1,4 @@
-name: int64
+name: Int64
 type: Int64
 description: Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
 lifecycle: null
@@ -61,7 +61,7 @@ fields:
         constraints: {}
     attributes:
         type: map<string,string>
-        description: 'Attributes for a value, something like confidential-msg: you are not allowed to see this value '
+        description: 'Attributes for a value, something like confidential-msg: you are not allowed to see this value'
         __proto:
             number: 3
         __ui:

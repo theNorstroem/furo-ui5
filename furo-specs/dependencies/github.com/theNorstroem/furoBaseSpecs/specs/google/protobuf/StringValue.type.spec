@@ -4,6 +4,7 @@ description: |-
     Wrapper message for `string`.
 
      The JSON representation for `StringValue` is JSON string.
+lifecycle: null
 __proto:
     package: google.protobuf
     targetfile: wrappers.proto
@@ -22,14 +23,10 @@ fields:
         description: The string value.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.StringValue.value
             options:

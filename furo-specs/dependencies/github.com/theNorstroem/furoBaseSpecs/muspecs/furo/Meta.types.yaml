@@ -1,0 +1,4 @@
+- type: 'furo.Meta #meta info'
+  fields:
+    fields: 'map<string, furo.MetaField>:1 #fields of meta info'
+  target: furo.proto

@@ -1,0 +1,5 @@
+- type: 'furo.MetaField #fields of meta info'
+  fields:
+    meta: 'furo.FieldMeta:1 #meta informatioxn of a field'
+    constraints: 'map<string,furo.FieldConstraint>:2 #constraints for a field'
+  target: furo.proto

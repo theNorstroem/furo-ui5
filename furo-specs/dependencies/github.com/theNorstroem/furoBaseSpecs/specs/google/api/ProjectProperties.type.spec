@@ -17,6 +17,7 @@ description: |-
             description: Allows usage of the API without watermarks.
           - name: EXTENDED_TILE_CACHE_PERIOD
             type: INT64
+lifecycle: null
 __proto:
     package: google.api
     targetfile: consumer.proto
@@ -32,14 +33,10 @@ fields:
         description: List of per consumer project-specific properties.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ProjectProperties.properties
             options:

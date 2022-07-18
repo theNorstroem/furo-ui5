@@ -1,0 +1,39 @@
+- type: |-
+    google.protobuf.ListValue #`ListValue` is a wrapper around a repeated field of values.
+
+     The JSON representation for `ListValue` is JSON array.
+  fields:
+    values: '[] google.protobuf.Value:1 #Repeated field of dynamically typed values.'
+  target: struct.proto
+- type: |-
+    google.protobuf.Value #`Value` represents a dynamically typed value which can be either
+     null, a number, a string, a boolean, a recursive struct value, or a
+     list of values. A producer of value is expected to set one of that
+     variants, absence of any variant indicates an error.
+
+     The JSON representation for `Value` is JSON value.
+  fields:
+    null_value: 'unknown:1 [kind] #Represents a null value.'
+    number_value: 'double:2 [kind] #Represents a double value.'
+    string_value: 'string:3 [kind] #Represents a string value.'
+    bool_value: 'bool:4 [kind] #Represents a boolean value.'
+    struct_value: 'google.protobuf.Struct:5 [kind] #Represents a structured value.'
+    list_value: 'google.protobuf.ListValue:6 [kind] #Represents a repeated `Value`.'
+  target: struct.proto
+- type: 'google.protobuf.Struct.FieldsEntry #'
+  fields:
+    key: 'string:1 #no description'
+    value: 'google.protobuf.Value:2 #no description'
+  target: struct.proto
+- type: |-
+    google.protobuf.Struct #`Struct` represents a structured data value, consisting of fields
+     which map to dynamically typed values. In some languages, `Struct`
+     might be supported by a native representation. For example, in
+     scripting languages like JS a struct is represented as an
+     object. The details of that representation are described together
+     with the proto support for the language.
+
+     The JSON representation for `Struct` is JSON object.
+  fields:
+    fields: 'map<string,google.protobuf.Value>:1 #Unordered map of dynamically typed values.'
+  target: struct.proto

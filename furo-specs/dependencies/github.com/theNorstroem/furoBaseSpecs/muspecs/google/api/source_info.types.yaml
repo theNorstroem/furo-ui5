@@ -1,0 +1,4 @@
+- type: 'google.api.SourceInfo #Source information used to create a Service Config'
+  fields:
+    source_files: '[] google.protobuf.Any:1 #All files used during config generation.'
+  target: source_info.proto

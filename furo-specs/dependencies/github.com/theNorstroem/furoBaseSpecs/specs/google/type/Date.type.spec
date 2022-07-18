@@ -8,6 +8,7 @@ description: |-
      expiration date. The year may be 0 to represent a month and day independent
      of year, e.g. anniversary date. Related types are [google.type.TimeOfDay][google.type.TimeOfDay]
      and `google.protobuf.Timestamp`.
+lifecycle: null
 __proto:
     package: google.type
     targetfile: date.proto
@@ -27,14 +28,10 @@ fields:
              a year.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Date.year
             options:
@@ -49,14 +46,10 @@ fields:
         description: Month of year. Must be from 1 to 12.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Date.month
             options:
@@ -73,14 +66,10 @@ fields:
              if specifying a year/month where the day is not significant.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Date.day
             options:

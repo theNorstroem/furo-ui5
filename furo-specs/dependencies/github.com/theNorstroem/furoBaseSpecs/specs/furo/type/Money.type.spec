@@ -3,7 +3,7 @@ type: Money
 description: Represents an amount of money with its currency type.
 lifecycle:
     deprecated: true
-    info: "Please switch to google.type.Money"
+    info: Please switch to google.type.Money
 __proto:
     package: furo.type
     targetfile: type.proto

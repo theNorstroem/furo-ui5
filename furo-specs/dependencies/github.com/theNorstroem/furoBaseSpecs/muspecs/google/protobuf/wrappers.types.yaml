@@ -1,0 +1,63 @@
+- type: |-
+    google.protobuf.StringValue #Wrapper message for `string`.
+
+     The JSON representation for `StringValue` is JSON string.
+  fields:
+    value: 'string:1 #The string value.'
+  target: wrappers.proto
+- type: |-
+    google.protobuf.BoolValue #Wrapper message for `bool`.
+
+     The JSON representation for `BoolValue` is JSON `true` and `false`.
+  fields:
+    value: 'bool:1 #The bool value.'
+  target: wrappers.proto
+- type: |-
+    google.protobuf.UInt32Value #Wrapper message for `uint32`.
+
+     The JSON representation for `UInt32Value` is JSON number.
+  fields:
+    value: 'uint32:1 #The uint32 value.'
+  target: wrappers.proto
+- type: |-
+    google.protobuf.BytesValue #Wrapper message for `bytes`.
+
+     The JSON representation for `BytesValue` is JSON string.
+  fields:
+    value: 'bytes:1 #The bytes value.'
+  target: wrappers.proto
+- type: |-
+    google.protobuf.Int32Value #Wrapper message for `int32`.
+
+     The JSON representation for `Int32Value` is JSON number.
+  fields:
+    value: 'int32:1 #The int32 value.'
+  target: wrappers.proto
+- type: |-
+    google.protobuf.FloatValue #Wrapper message for `float`.
+
+     The JSON representation for `FloatValue` is JSON number.
+  fields:
+    value: 'float:1 #The float value.'
+  target: wrappers.proto
+- type: |-
+    google.protobuf.Int64Value #Wrapper message for `int64`.
+
+     The JSON representation for `Int64Value` is JSON string.
+  fields:
+    value: 'int64:1 #The int64 value.'
+  target: wrappers.proto
+- type: |-
+    google.protobuf.UInt64Value #Wrapper message for `uint64`.
+
+     The JSON representation for `UInt64Value` is JSON string.
+  fields:
+    value: 'uint64:1 #The uint64 value.'
+  target: wrappers.proto
+- type: |-
+    google.protobuf.DoubleValue #Wrapper message for `double`.
+
+     The JSON representation for `DoubleValue` is JSON number.
+  fields:
+    value: 'double:1 #The double value.'
+  target: wrappers.proto

@@ -1,6 +1,7 @@
 name: Usage
 type: Usage
 description: Configuration controlling usage of a service.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: usage.proto
@@ -20,14 +21,10 @@ fields:
              for example 'serviceusage.googleapis.com/billing-enabled'.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Usage.requirements
             options:
@@ -45,14 +42,10 @@ fields:
              **NOTE:** All service configuration rules follow "last one wins" order.
         __proto:
             number: 6
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Usage.rules
             options:
@@ -75,14 +68,10 @@ fields:
              documented in https://cloud.google.com/pubsub/docs/overview.
         __proto:
             number: 7
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Usage.producer_notification_channel
             options:

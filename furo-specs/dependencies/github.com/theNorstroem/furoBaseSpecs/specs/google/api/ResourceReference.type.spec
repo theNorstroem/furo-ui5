@@ -3,11 +3,11 @@ type: ResourceReference
 description: |-
     Defines a proto annotation that describes a string field that refers to
      an API resource.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: resource.proto
-    imports:
-        - google/protobuf/descriptor.proto
+    imports: []
     options:
         cc_enable_arenas: "true"
         go_package: google.golang.org/genproto/googleapis/api/annotations;annotations
@@ -41,14 +41,10 @@ fields:
                  }
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceReference.type
             options:
@@ -74,14 +70,10 @@ fields:
                  }
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceReference.child_type
             options:

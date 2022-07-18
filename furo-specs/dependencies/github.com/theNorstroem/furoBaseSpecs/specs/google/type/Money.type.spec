@@ -1,6 +1,7 @@
 name: Money
 type: Money
 description: Represents an amount of money with its currency type.
+lifecycle: null
 __proto:
     package: google.type
     targetfile: money.proto
@@ -17,14 +18,10 @@ fields:
         description: The 3-letter currency code defined in ISO 4217.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Money.currency_code
             options:
@@ -41,14 +38,10 @@ fields:
              For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Money.units
             options:
@@ -69,14 +62,10 @@ fields:
              For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Money.nanos
             options:

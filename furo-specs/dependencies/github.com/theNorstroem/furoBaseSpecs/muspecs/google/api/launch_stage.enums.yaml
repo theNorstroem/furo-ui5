@@ -1,0 +1,13 @@
+- enum: |-
+    google.api.LaunchStage #The launch stage as defined by [Google Cloud Platform
+     Launch Stages](http://cloud.google.com/terms/launch-stages).
+  values:
+    LAUNCH_STAGE_UNSPECIFIED: 0
+    UNIMPLEMENTED: 6
+    PRELAUNCH: 7
+    EARLY_ACCESS: 1
+    ALPHA: 2
+    BETA: 3
+    GA: 4
+    DEPRECATED: 5
+  target: ENUM_launch_stage.proto

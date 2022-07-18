@@ -1,0 +1,5 @@
+- type: 'furo.StringOptionProperty #String type to use in property'
+  fields:
+    display_name: '- string:1 #String representation of val'
+    id: 'string:2 #The value, Id is used to make working with data-inputs easier'
+  target: property.proto

@@ -1,6 +1,6 @@
 name: Timestamp
 type: Timestamp
-description: |+
+description: |-
     A Timestamp represents a point in time independent of any time zone or local
      calendar, encoded as a count of seconds and fractions of seconds at
      nanosecond resolution. The count is relative to an epoch at UTC midnight on
@@ -92,7 +92,7 @@ description: |+
      the Joda Time's [`ISODateTimeFormat.dateTime()`](
      http://www.joda.org/joda-time/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime%2D%2D
      ) to obtain a formatter capable of generating timestamps in this format.
-
+lifecycle: null
 __proto:
     package: google.protobuf
     targetfile: timestamp.proto
@@ -114,14 +114,10 @@ fields:
              9999-12-31T23:59:59Z inclusive.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Timestamp.seconds
             options:
@@ -140,14 +136,10 @@ fields:
              inclusive.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Timestamp.nanos
             options:

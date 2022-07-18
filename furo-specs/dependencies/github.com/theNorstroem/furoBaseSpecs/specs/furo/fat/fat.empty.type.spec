@@ -1,4 +1,4 @@
-name: empty
+name: Empty
 type: Empty
 description: Furo annotated type wrapper message for `empty`. Empty has no values and only contains the labels and attributes
 lifecycle: null
@@ -39,7 +39,7 @@ fields:
         constraints: {}
     attributes:
         type: map<string,string>
-        description: 'Attributes for a value, something like confidential-msg: you are not allowed to see this value '
+        description: 'Attributes for a value, something like confidential-msg: you are not allowed to see this value'
         __proto:
             number: 3
         __ui:

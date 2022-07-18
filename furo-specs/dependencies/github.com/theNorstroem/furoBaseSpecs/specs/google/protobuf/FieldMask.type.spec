@@ -200,6 +200,7 @@ description: |-
      The implementation of any API method which has a FieldMask type field in the
      request should verify the included field paths, and return an
      `INVALID_ARGUMENT` error if any path is unmappable.
+lifecycle: null
 __proto:
     package: google.protobuf
     targetfile: field_mask.proto
@@ -218,14 +219,10 @@ fields:
         description: The set of field mask paths.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.FieldMask.paths
             options:

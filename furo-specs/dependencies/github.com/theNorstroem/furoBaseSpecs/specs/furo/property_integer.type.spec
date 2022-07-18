@@ -1,4 +1,4 @@
-name: integer_property
+name: IntegerProperty
 type: IntegerProperty
 description: Integer type with embedded meta
 lifecycle: null
@@ -21,7 +21,15 @@ fields:
         __proto:
             number: 1
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints:
             step:
                 is: "1"

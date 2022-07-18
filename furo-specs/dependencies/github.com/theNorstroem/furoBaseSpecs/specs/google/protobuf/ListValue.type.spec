@@ -4,6 +4,7 @@ description: |-
     `ListValue` is a wrapper around a repeated field of values.
 
      The JSON representation for `ListValue` is JSON array.
+lifecycle: null
 __proto:
     package: google.protobuf
     targetfile: struct.proto
@@ -22,14 +23,10 @@ fields:
         description: Repeated field of dynamically typed values.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ListValue.values
             options:

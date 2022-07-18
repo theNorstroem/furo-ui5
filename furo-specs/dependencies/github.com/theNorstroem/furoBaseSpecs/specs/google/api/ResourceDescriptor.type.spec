@@ -109,11 +109,11 @@ description: |-
                parent_type: "cloudresourcemanager.googleapis.com/Project"
              - pattern: "shelves/{shelf}"
                parent_type: "cloudresourcemanager.googleapis.com/Folder"
+lifecycle: null
 __proto:
     package: google.api
     targetfile: resource.proto
-    imports:
-        - google/protobuf/descriptor.proto
+    imports: []
     options:
         cc_enable_arenas: "true"
         go_package: google.golang.org/genproto/googleapis/api/annotations;annotations
@@ -137,14 +137,10 @@ fields:
              characters allowed for the `resource_type_kind` is 100.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceDescriptor.type
             options:
@@ -178,14 +174,10 @@ fields:
              type of resource.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceDescriptor.pattern
             options:
@@ -202,14 +194,10 @@ fields:
              field. If omitted, this is assumed to be "name".
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceDescriptor.name_field
             options:
@@ -239,14 +227,10 @@ fields:
                  }
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceDescriptor.history
             options:
@@ -269,14 +253,10 @@ fields:
              https://aip.dev/156
         __proto:
             number: 5
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceDescriptor.plural
             options:
@@ -294,14 +274,10 @@ fields:
              Such as "project" for the `resourcemanager.googleapis.com/Project` type.
         __proto:
             number: 6
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceDescriptor.singular
             options:
@@ -319,14 +295,10 @@ fields:
              style. See the specific style flags for additional information.
         __proto:
             number: 10
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceDescriptor.style
             options:

@@ -1,0 +1,47 @@
+- type: 'furo.MessageContainer #The `MessageContainer` type defines a logical message model.'
+  fields:
+    details: '[] google.protobuf.Any:3 #A list of messages that carry the message details. There is a common set of message types for APIs to use.'
+    success: 'bool:15 # Use this field to notify a success. Even when a action was successful, it can have information and warning states.'
+  target: furo.proto
+
+- type: 'furo.ConfirmationMessage #'
+  fields:
+    id: 'string:1 #Id of the confirmation message'
+    readable_id: '-string:2 #A readable version of the id.'
+    user_response: 'google.protobuf.Any:3 #Reason why the warning was not followed, can be a text, checkbox,... is displayed as typerenderer'
+    fields: '-[] google.rpc.BadRequest.FieldViolation:5 #Describes all warnings related to an attribute'
+    message: '-google.rpc.LocalizedMessage:6 #A general localized warning message.'
+  target: furo.proto
+
+- type: 'furo.ErrorMessage #'
+  fields:
+    id: '-string:1 #Id of the error message'
+    readable_id: '-string:2 #A readable version of the id.'
+    fields: '-[] google.rpc.BadRequest.FieldViolation:3 #Describes all errors related to an attribute'
+    message: '-google.rpc.LocalizedMessage:4 #A general localized error message.'
+  target: furo.proto
+
+- type: 'furo.WarningMessage #'
+  fields:
+    id: '-string:1 #Id of the warning message'
+    readable_id: '-string:2 #A readable version of the id.'
+    fields: '-[] google.rpc.BadRequest.FieldViolation:3 #Describes all warnings related to an attribute'
+    message: '-google.rpc.LocalizedMessage:4 #A general localized error message.'
+  target: furo.proto
+
+- type: 'furo.InformationMessage #'
+  fields:
+    id: '-string:1 #Id of the information, extension of google.rpc.LocalizedMessage'
+    readable_id: '-string:2 #A readable version of the id.'
+    fields: '-[] google.rpc.BadRequest.FieldViolation:3 #Describes all information items related to an attribute'
+    message: '-google.rpc.LocalizedMessage:4 #A general localized information message.'
+  target: furo.proto
+
+- type: 'furo.SuccessMessage #'
+  fields:
+    id: '-string:1 #Id of the success, extension of google.rpc.LocalizedMessage'
+    readable_id: '-string:2 #A readable version of the id.'
+    fields: '-[] google.rpc.BadRequest.FieldViolation:3 #Describes all success items related to an attribute'
+    message: '-google.rpc.LocalizedMessage:4 #A general localized success message.'
+  target: furo.proto
+

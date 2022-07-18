@@ -1,4 +1,4 @@
-name: property
+name: Property
 type: Property
 description: Type to define property values with type information
 lifecycle: null
@@ -58,7 +58,15 @@ fields:
         __proto:
             number: 3
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}
     meta:
         type: furo.Meta
@@ -66,7 +74,15 @@ fields:
         __proto:
             number: 4
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}
     code:
         type: string
@@ -74,7 +90,15 @@ fields:
         __proto:
             number: 5
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}
     flags:
         type: string

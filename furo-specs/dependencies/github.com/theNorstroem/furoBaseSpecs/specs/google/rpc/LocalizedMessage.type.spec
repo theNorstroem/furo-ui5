@@ -3,11 +3,11 @@ type: LocalizedMessage
 description: |-
     Provides a localized error message that is safe to return to the user
      which can be attached to an RPC error.
+lifecycle: null
 __proto:
     package: google.rpc
     targetfile: error_details.proto
-    imports:
-        - google/protobuf/duration.proto
+    imports: []
     options:
         go_package: google.golang.org/genproto/googleapis/rpc/errdetails;errdetails
         java_multiple_files: "true"
@@ -23,14 +23,10 @@ fields:
              Examples are: "en-US", "fr-CH", "es-MX"
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LocalizedMessage.locale
             options:
@@ -45,14 +41,10 @@ fields:
         description: The localized error message in the above locale.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LocalizedMessage.message
             options:

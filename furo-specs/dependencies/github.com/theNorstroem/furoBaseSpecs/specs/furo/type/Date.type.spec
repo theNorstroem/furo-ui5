@@ -10,7 +10,7 @@ description: |-
      and `google.protobuf.Timestamp`.
 lifecycle:
     deprecated: true
-    info: "Please switch to google.type.Date"
+    info: Please switch to google.type.Date
 __proto:
     package: furo.type
     targetfile: type.proto

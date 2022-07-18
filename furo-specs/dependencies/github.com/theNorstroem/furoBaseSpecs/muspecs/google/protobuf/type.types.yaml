@@ -1,0 +1,55 @@
+- type: 'google.protobuf.Enum #Enum type definition.'
+  fields:
+    name: 'string:1 #Enum type name.'
+    enumvalue: '[] google.protobuf.EnumValue:2 #Enum value definitions.'
+    options: '[] google.protobuf.Option:3 #Protocol buffer options.'
+    source_context: 'google.protobuf.SourceContext:4 #The source context.'
+    syntax: 'google.protobuf.Syntax:5 #The source syntax.'
+  target: type.proto
+- type: |-
+    google.protobuf.Option #A protocol buffer option, which can be attached to a message, field,
+     enumeration, etc.
+  fields:
+    name: |-
+        string:1 #The option's name. For protobuf built-in options (options defined in
+         descriptor.proto), this is the short name. For example, `"map_entry"`.
+         For custom options, it should be the fully-qualified name. For example,
+         `"google.api.http"`.
+    value: |-
+        google.protobuf.Any:2 #The option's value packed in an Any message. If the value is a primitive,
+         the corresponding wrapper type defined in google/protobuf/wrappers.proto
+         should be used. If the value is an enum, it should be stored as an int32
+         value using the google.protobuf.Int32Value type.
+  target: type.proto
+- type: 'google.protobuf.EnumValue #Enum value definition.'
+  fields:
+    name: 'string:1 #Enum value name.'
+    number: 'int32:2 #Enum value number.'
+    options: '[] google.protobuf.Option:3 #Protocol buffer options.'
+  target: type.proto
+- type: 'google.protobuf.Field #A single field of a message type.'
+  fields:
+    kind: 'google.protobuf.Field.Kind:1 #The field type.'
+    cardinality: 'google.protobuf.Field.Cardinality:2 #The field cardinality.'
+    number: 'int32:3 #The field number.'
+    name: 'string:4 #The field name.'
+    type_url: |-
+        string:6 #The field type URL, without the scheme, for message or enumeration
+         types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
+    oneof_index: |-
+        int32:7 #The index of the field type in `Type.oneofs`, for message or enumeration
+         types. The first type has index 1; zero means the type is not in the list.
+    packed: 'bool:8 #Whether to use alternative packed wire representation.'
+    options: '[] google.protobuf.Option:9 #The protocol buffer options.'
+    json_name: 'string:10 #The field JSON name.'
+    default_value: 'string:11 #The string value of the default value of this field. Proto2 syntax only.'
+  target: type.proto
+- type: 'google.protobuf.Type #A protocol buffer message type.'
+  fields:
+    name: 'string:1 #The fully qualified message name.'
+    fields: '[] google.protobuf.Field:2 #The list of fields.'
+    oneofs: '[] string:3 #The list of types appearing in `oneof` definitions in this type.'
+    options: '[] google.protobuf.Option:4 #The protocol buffer options.'
+    source_context: 'google.protobuf.SourceContext:5 #The source context.'
+    syntax: 'google.protobuf.Syntax:6 #The source syntax.'
+  target: type.proto

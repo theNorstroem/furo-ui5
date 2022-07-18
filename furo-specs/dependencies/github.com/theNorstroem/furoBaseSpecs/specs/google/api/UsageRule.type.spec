@@ -26,6 +26,7 @@ description: |-
            rules:
            - selector: "google.example.library.v1.LibraryService.CreateBook"
              allow_unregistered_calls: true
+lifecycle: null
 __proto:
     package: google.api
     targetfile: usage.proto
@@ -46,14 +47,10 @@ fields:
              Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.UsageRule.selector
             options:
@@ -70,14 +67,10 @@ fields:
              that don't identify any user or application.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.UsageRule.allow_unregistered_calls
             options:
@@ -96,14 +89,10 @@ fields:
              methods, such as service health check methods.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.UsageRule.skip_service_control
             options:

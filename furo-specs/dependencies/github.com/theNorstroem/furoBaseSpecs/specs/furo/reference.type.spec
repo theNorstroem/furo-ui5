@@ -1,4 +1,4 @@
-name: reference
+name: Reference
 type: Reference
 description: reference
 lifecycle: null
@@ -37,7 +37,15 @@ fields:
         __proto:
             number: 2
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}
     link:
         type: furo.Link
@@ -45,5 +53,13 @@ fields:
         __proto:
             number: 3
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}

@@ -1,0 +1,8 @@
+- name: MessagecontainerService
+  description: service specs for the messagecontainer api
+  package: messagecontainer
+  target: mcservice.proto
+  methods:
+    - md: 'Get: GET /mockdata/messagecontainers/{mc}/get.json google.protobuf.Empty , messagecontainer.TestObject #The Get method takes zero or more parameters, and returns a MessagecontainerEntity which contains a Messagecontainer'
+    - md: 'Update: PATCH /mockdata/messagecontainers/{mc}/update.json messagecontainer.TestObject , messagecontainer.TestObject #Updates a Messagecontainer, partial updates are supported'
+

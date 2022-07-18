@@ -1,0 +1,4 @@
+- type: 'furo.StringProperty #String type to use in property'
+  fields:
+    data: 'string:1 #data part'
+  target: property.proto

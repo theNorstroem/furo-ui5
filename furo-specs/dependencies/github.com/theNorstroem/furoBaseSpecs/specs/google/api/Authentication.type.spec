@@ -15,6 +15,7 @@ description: |-
            - selector: "*"
              requirements:
                provider_id: google_calendar_auth
+lifecycle: null
 __proto:
     package: google.api
     targetfile: auth.proto
@@ -34,14 +35,10 @@ fields:
              **NOTE:** All service configuration rules follow "last one wins" order.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Authentication.rules
             options:
@@ -56,14 +53,10 @@ fields:
         description: Defines a set of authentication providers that a service supports.
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Authentication.providers
             options:

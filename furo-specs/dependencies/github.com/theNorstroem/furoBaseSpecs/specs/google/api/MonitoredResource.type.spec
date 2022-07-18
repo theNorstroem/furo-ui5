@@ -14,13 +14,11 @@ description: |-
          { "type": "gce_instance",
            "labels": { "instance_id": "12345678901234",
                        "zone": "us-central1-a" }}
+lifecycle: null
 __proto:
     package: google.api
     targetfile: monitored_resource.proto
-    imports:
-        - google/api/label.proto
-        - google/api/launch_stage.proto
-        - google/protobuf/struct.proto
+    imports: []
     options:
         cc_enable_arenas: "true"
         go_package: google.golang.org/genproto/googleapis/api/monitoredres;monitoredres
@@ -37,14 +35,10 @@ fields:
              example, the type of a Compute Engine VM instance is `gce_instance`.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MonitoredResource.type
             options:
@@ -62,14 +56,10 @@ fields:
              labels `"project_id"`, `"instance_id"`, and `"zone"`.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MonitoredResource.labels
             options:

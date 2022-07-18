@@ -1,0 +1,6 @@
+- type: 'furo.fat.Int32 #Furo annotated type wrapper message for `int32`.'
+  fields:
+    value: 'int32:1 #The JSON representation for `Int32Value` is JSON number'
+    labels: 'map<string,bool>:2 #Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...'
+    attributes: 'map<string,string>:3 #Attributes for a value, something like confidential-msg: you are not allowed to see this value '
+  target: fat.proto

@@ -1,4 +1,4 @@
-name: any
+name: Any
 type: Any
 description: "Furo annotated type wrapper message for `any`. \n// Any contains an arbitrary serialized protocol buffer message along with a\n// URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto"
 lifecycle: null
@@ -61,7 +61,7 @@ fields:
         constraints: {}
     attributes:
         type: map<string,string>
-        description: 'Attributes for a value, something like confidential-msg: you are not allowed to see this value '
+        description: 'Attributes for a value, something like confidential-msg: you are not allowed to see this value'
         __proto:
             number: 3
         __ui:

@@ -11,6 +11,7 @@ description: |-
 
      These values can be set via API producer console. Only API providers can
      define and set these properties.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: consumer.proto
@@ -26,14 +27,10 @@ fields:
         description: The name of the property (a.k.a key).
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Property.name
             options:
@@ -48,14 +45,10 @@ fields:
         description: The type of this property.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Property.type
             options:
@@ -70,14 +63,10 @@ fields:
         description: The description of the property
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Property.description
             options:

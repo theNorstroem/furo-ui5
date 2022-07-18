@@ -1,4 +1,4 @@
-name: number_property
+name: NumberProperty
 type: NumberProperty
 description: Number type with embedded meta
 lifecycle: null
@@ -21,5 +21,13 @@ fields:
         __proto:
             number: 1
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}

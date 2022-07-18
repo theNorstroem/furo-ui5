@@ -3,6 +3,7 @@ type: Advice
 description: |-
     Generated advice about this change, used for providing more
      information about how a change will affect the existing service.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: config_change.proto
@@ -21,14 +22,10 @@ fields:
              be taken to mitigate any implied risks.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Advice.description
             options:

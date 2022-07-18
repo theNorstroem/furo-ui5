@@ -1,6 +1,6 @@
-name: big_decimal
+name: BigDecimal
 type: BigDecimal
-description: |
+description: |-
     A BigDecimal is defined by two values: an arbitrary precision integer and a 32-bit integer scale.
     The value of the BigDecimal is defined to be unscaledValue*10^{-scale}.'
 
@@ -39,8 +39,7 @@ fields:
         constraints: {}
     scale:
         type: int32
-        description: |
-            Number of digits to the right of the decimal point.
+        description: Number of digits to the right of the decimal point.
         __proto:
             number: 2
         __ui: null

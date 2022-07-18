@@ -1,0 +1,6 @@
+- type: 'furo.Reference #reference'
+  fields:
+    display_name: '- string:1 #String representation of the reference'
+    id: 'string:2 #Id of the reference'
+    link: 'furo.Link:3 #Hateoas link'
+  target: furo.proto

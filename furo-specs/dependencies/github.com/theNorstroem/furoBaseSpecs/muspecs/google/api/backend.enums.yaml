@@ -1,0 +1,6 @@
+- enum: 'google.api.BackendRule.PathTranslation #A backend rule provides configuration for an individual API element.'
+  values:
+    PATH_TRANSLATION_UNSPECIFIED: 0
+    CONSTANT_ADDRESS: 1
+    APPEND_PATH_TO_ADDRESS: 2
+  target: ENUM_backend.proto

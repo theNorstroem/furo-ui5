@@ -1,0 +1,90 @@
+- type: 'google.api.Distribution.Range #'
+  fields:
+    min: 'double:1 #no description'
+    max: 'double:2 #no description'
+  target: distribution.proto
+- type: 'google.api.Distribution.BucketOptions.Explicit #'
+  fields:
+    bounds: '[] double:1 #no description'
+  target: distribution.proto
+- type: 'google.api.Distribution.Exemplar #'
+  fields:
+    value: 'double:1 #no description'
+    timestamp: 'google.protobuf.Timestamp:2 #no description'
+    attachments: '[] google.protobuf.Any:3 #no description'
+  target: distribution.proto
+- type: |-
+    google.api.Distribution #`Distribution` contains summary statistics for a population of values. It
+     optionally contains a histogram representing the distribution of those values
+     across a set of buckets.
+
+     The summary statistics are the count, mean, sum of the squared deviation from
+     the mean, the minimum, and the maximum of the set of population of values.
+     The histogram is based on a sequence of buckets and gives a count of values
+     that fall into each bucket. The boundaries of the buckets are given either
+     explicitly or by formulas for buckets of fixed or exponentially increasing
+     widths.
+
+     Although it is not forbidden, it is generally a bad idea to include
+     non-finite values (infinities or NaNs) in the population of values, as this
+     will render the `mean` and `sum_of_squared_deviation` fields meaningless.
+  fields:
+    count: |-
+        int64:1 #The number of values in the population. Must be non-negative. This value
+         must equal the sum of the values in `bucket_counts` if a histogram is
+         provided.
+    mean: |-
+        double:2 #The arithmetic mean of the values in the population. If `count` is zero
+         then this field must be zero.
+    sum_of_squared_deviation: |-
+        double:3 #The sum of squared deviations from the mean of the values in the
+         population. For values x_i this is:
+
+             Sum[i=1..n]((x_i - mean)^2)
+
+         Knuth, "The Art of Computer Programming", Vol. 2, page 232, 3rd edition
+         describes Welford's method for accumulating this sum in one pass.
+
+         If `count` is zero then this field must be zero.
+    range: |-
+        google.api.Distribution.Range:4 #If specified, contains the range of the population values. The field
+         must not be present if the `count` is zero.
+    bucket_options: |-
+        google.api.Distribution.BucketOptions:6 #Defines the histogram bucket boundaries. If the distribution does not
+         contain a histogram, then omit this field.
+    bucket_counts: |-
+        [] int64:7 #The number of values in each bucket of the histogram, as described in
+         `bucket_options`. If the distribution does not have a histogram, then omit
+         this field. If there is a histogram, then the sum of the values in
+         `bucket_counts` must equal the value in the `count` field of the
+         distribution.
+
+         If present, `bucket_counts` should contain N values, where N is the number
+         of buckets specified in `bucket_options`. If you supply fewer than N
+         values, the remaining values are assumed to be 0.
+
+         The order of the values in `bucket_counts` follows the bucket numbering
+         schemes described for the three bucket types. The first value must be the
+         count for the underflow bucket (number 0). The next N-2 values are the
+         counts for the finite buckets (number 1 through N-2). The N'th value in
+         `bucket_counts` is the count for the overflow bucket (number N-1).
+    exemplars: '[] google.api.Distribution.Exemplar:10 #Must be in increasing order of `value` field.'
+  target: distribution.proto
+- type: 'google.api.Distribution.BucketOptions.Linear #'
+  fields:
+    num_finite_buckets: 'int32:1 #no description'
+    width: 'double:2 #no description'
+    offset: 'double:3 #no description'
+  target: distribution.proto
+- type: 'google.api.Distribution.BucketOptions.Exponential #'
+  fields:
+    num_finite_buckets: 'int32:1 #no description'
+    growth_factor: 'double:2 #no description'
+    scale: 'double:3 #no description'
+  target: distribution.proto
+- type: 'google.api.Distribution.BucketOptions #'
+  fields:
+    linear_buckets: 'google.api.Distribution.BucketOptions.Linear:1 #no description'
+    exponential_buckets: 'google.api.Distribution.BucketOptions.Exponential:2 #no description'
+    explicit_buckets: 'google.api.Distribution.BucketOptions.Explicit:3 #no description'
+  target: distribution.proto

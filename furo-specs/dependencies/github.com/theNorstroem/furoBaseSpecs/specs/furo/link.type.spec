@@ -1,4 +1,4 @@
-name: link
+name: Link
 type: Link
 description: link
 lifecycle: null
@@ -21,7 +21,15 @@ fields:
         __proto:
             number: 1
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}
     method:
         type: string
@@ -29,7 +37,15 @@ fields:
         __proto:
             number: 2
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}
     href:
         type: string
@@ -37,7 +53,15 @@ fields:
         __proto:
             number: 3
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}
     type:
         type: string
@@ -45,7 +69,15 @@ fields:
         __proto:
             number: 4
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}
     service:
         type: string
@@ -53,5 +85,13 @@ fields:
         __proto:
             number: 5
         __ui: null
-        meta: null
+        meta:
+            default: ""
+            placeholder: ""
+            hint: ""
+            label: ""
+            options: null
+            readonly: false
+            repeated: false
+            typespecific: null
         constraints: {}

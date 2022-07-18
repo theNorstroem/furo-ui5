@@ -14,6 +14,7 @@ description: |-
      the delay between retries based on `retry_delay`, until either a maximum
      number of retries have been reached or a maximum retry delay cap has been
      reached.
+lifecycle: null
 __proto:
     package: google.rpc
     targetfile: error_details.proto
@@ -31,14 +32,10 @@ fields:
         description: Clients should wait at least this long between retrying the same request.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.RetryInfo.retry_delay
             options:
