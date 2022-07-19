@@ -147,18 +147,29 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
     // language=HTML
     return html`
       <div class="head">
-        <ui5-segmented-button>
-          <ui5-segmented-button-item pressed>All</ui5-segmented-button-item>
-          <ui5-segmented-button-item icon="message-error" class="Negative"
+        <ui5-segmented-button at-click="--filterClicked(*.target.id)">
+          <ui5-segmented-button-item id="all" pressed
+            >All</ui5-segmented-button-item
+          >
+          <ui5-segmented-button-item
+            id="error"
+            icon="message-error"
+            class="Negative"
             >0</ui5-segmented-button-item
           >
-          <ui5-segmented-button-item icon="message-warning" class="Attention"
+          <ui5-segmented-button-item
+            id="warning"
+            icon="message-warning"
+            class="Attention"
             >2</ui5-segmented-button-item
           >
-          <ui5-segmented-button-item icon="message-success" class="Positive"
+          <ui5-segmented-button-item
+            id="success"
+            icon="message-success"
+            class="Positive"
             >0</ui5-segmented-button-item
           >
-          <ui5-segmented-button-item icon="message-information"
+          <ui5-segmented-button-item id="information" icon="message-information"
             >1</ui5-segmented-button-item
           >
         </ui5-segmented-button>
@@ -166,11 +177,13 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
 
       <furo-data-flow-repeat
         fn-bind-data="|--bindData(*.details)"
+        fn-trigger-all="--filterClicked"
         indentity-path="id"
       >
         <template>
           <furo-ui5-message-container-item
             fn-bind-data="--init"
+            fn-filter="--trigger"
           ></furo-ui5-message-container-item>
         </template>
       </furo-data-flow-repeat>

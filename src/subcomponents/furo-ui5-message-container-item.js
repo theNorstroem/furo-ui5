@@ -28,8 +28,35 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
    */
   bindData(fieldnode) {
     this._field = fieldnode;
-
     this._FBPTriggerWire('|--bindData', fieldnode);
+  }
+
+  filter(kind) {
+    const type = this._field['@type']._value.replace(/.*\//, '');
+    switch (kind) {
+      case 'all':
+        this.hidden = false;
+        break;
+
+      case 'error':
+        this.hidden = type !== 'furo.ErrorMessage';
+        break;
+
+      case 'warning':
+        this.hidden = type !== 'furo.WarningMessage';
+        break;
+
+      case 'success':
+        this.hidden = type !== 'furo.SuccessMessage';
+        break;
+
+      case 'information':
+        this.hidden = type !== 'furo.InformationMessage';
+        break;
+
+      default:
+        this.hidden = false;
+    }
   }
 
   /**
@@ -148,7 +175,9 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         // eslint-disable-next-line
         break;
       case 'furo.SuccessMessage':
-        return html`<furo-data-flow-repeat fn-bind-data="|--bindData(*.fields)">
+        return html` <furo-data-flow-repeat
+          fn-bind-data="|--bindData(*.fields)"
+        >
           <template>
             <furo-horizontal-flex space>
               <ui5-icon name="message-success" class="Positive"></ui5-icon>
@@ -174,7 +203,9 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         break;
 
       case 'furo.WarningMessage':
-        return html`<furo-data-flow-repeat fn-bind-data="|--bindData(*.fields)">
+        return html` <furo-data-flow-repeat
+          fn-bind-data="|--bindData(*.fields)"
+        >
           <template>
             <furo-horizontal-flex space>
               <ui5-icon name="message-warning" class="Attention"></ui5-icon>
@@ -200,7 +231,9 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         break;
 
       case 'furo.InformationMessage':
-        return html`<furo-data-flow-repeat fn-bind-data="|--bindData(*.fields)">
+        return html` <furo-data-flow-repeat
+          fn-bind-data="|--bindData(*.fields)"
+        >
           <template>
             <furo-horizontal-flex space>
               <ui5-icon
