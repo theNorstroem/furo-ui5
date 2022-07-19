@@ -1,6 +1,9 @@
 import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
 import '@ui5/webcomponents-icons/dist/message-warning.js';
+import '@ui5/webcomponents-icons/dist/message-success.js';
+import '@ui5/webcomponents-icons/dist/message-information.js';
+import '@ui5/webcomponents-icons/dist/message-error.js';
 import '@ui5/webcomponents-icons/dist/navigation-left-arrow.js';
 import '@ui5/webcomponents-icons/dist/navigation-right-arrow.js';
 import '@ui5/webcomponents-icons/dist/approvals.js';
@@ -75,7 +78,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
     this.addEventListener('field-focus-requested', e => {
       const field = e.detail.field._value;
 
-      const target = this._pathGet(this.rootNode, field);
+      const target = this.rootNode._getPath(field);
       target.dispatchNodeEvent(
         new NodeEvent('this-focus-requested', e.detail, false)
       );

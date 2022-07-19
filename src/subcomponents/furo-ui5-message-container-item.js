@@ -125,7 +125,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
           <furo-data-flow-repeat fn-bind-data="|--bindData(*.fields)">
             <template>
               <furo-horizontal-flex space>
-                <ui5-icon name="message-warning" class="Negative"></ui5-icon>
+                <ui5-icon name="message-error" class="Negative"></ui5-icon>
 
                 <furo-form-layouter flex one>
                   <ui5-link
@@ -148,66 +148,83 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         // eslint-disable-next-line
         break;
       case 'furo.SuccessMessage':
-        return html` <furo-horizontal-flex space>
-          <ui5-icon name="message-warning" class="Positive"></ui5-icon>
-          <furo-form-layouter flex one>
-            <div>Other Warning</div>
-            <ui5-label>Fieldname from field.label</ui5-label>
-            <ui5-checkbox
-              text="Waffles"
-              checked
-              value-state="Error"
-            ></ui5-checkbox>
-            <furo-ui5-markdown
-              markdown="This is the message of an error,
+        return html`<furo-data-flow-repeat fn-bind-data="|--bindData(*.fields)">
+          <template>
+            <furo-horizontal-flex space>
+              <ui5-icon name="message-success" class="Positive"></ui5-icon>
 
- **this** is optional and will be displayed like this"
-            ></furo-ui5-markdown>
-          </furo-form-layouter>
-        </furo-horizontal-flex>`;
+              <furo-form-layouter flex one>
+                <ui5-link
+                  set-inner-text="--init(*.description)"
+                  at-ui5-click="^^field-focus-requested(item)"
+                ></ui5-link>
+                <ui5-label set-inner-text="--init(*.field)"></ui5-label>
+                <furo-type-renderer
+                  context="celledit"
+                  fn-bind-data="--init(*.user_response)"
+                ></furo-type-renderer>
+                <furo-ui5-markdown
+                  fn-bind-data="--init(*.message.message)"
+                ></furo-ui5-markdown>
+              </furo-form-layouter>
+            </furo-horizontal-flex>
+          </template>
+        </furo-data-flow-repeat>`;
         // eslint-disable-next-line
         break;
 
       case 'furo.WarningMessage':
-        return html` <furo-horizontal-flex space>
-          <ui5-icon name="message-warning" class="Attention"></ui5-icon>
-          <furo-form-layouter flex one>
-            <div>Other Warning</div>
-            <ui5-label>Fieldname from field.label</ui5-label>
-            <ui5-checkbox
-              text="Waffles"
-              checked
-              value-state="Error"
-            ></ui5-checkbox>
-            <furo-ui5-markdown
-              markdown="This is the message of an error,
+        return html`<furo-data-flow-repeat fn-bind-data="|--bindData(*.fields)">
+          <template>
+            <furo-horizontal-flex space>
+              <ui5-icon name="message-warning" class="Attention"></ui5-icon>
 
- **this** is optional and will be displayed like this"
-            ></furo-ui5-markdown>
-          </furo-form-layouter>
-        </furo-horizontal-flex>`;
+              <furo-form-layouter flex one>
+                <ui5-link
+                  set-inner-text="--init(*.description)"
+                  at-ui5-click="^^field-focus-requested(item)"
+                ></ui5-link>
+                <ui5-label set-inner-text="--init(*.field)"></ui5-label>
+                <furo-type-renderer
+                  context="celledit"
+                  fn-bind-data="--init(*.user_response)"
+                ></furo-type-renderer>
+                <furo-ui5-markdown
+                  fn-bind-data="--init(*.message.message)"
+                ></furo-ui5-markdown>
+              </furo-form-layouter>
+            </furo-horizontal-flex>
+          </template>
+        </furo-data-flow-repeat>`;
         // eslint-disable-next-line
         break;
 
       case 'furo.InformationMessage':
-        return html` <furo-horizontal-flex space>
-          <ui5-icon name="message-warning"></ui5-icon>
+        return html`<furo-data-flow-repeat fn-bind-data="|--bindData(*.fields)">
+          <template>
+            <furo-horizontal-flex space>
+              <ui5-icon
+                name="message-information"
+                class="Information"
+              ></ui5-icon>
 
-          <furo-form-layouter flex one>
-            <div>Other Warning</div>
-            <ui5-label>Fieldname from field.label</ui5-label>
-            <ui5-checkbox
-              text="Waffles"
-              checked
-              value-state="Error"
-            ></ui5-checkbox>
-            <furo-ui5-markdown
-              markdown="This is the message of an error,
-
- **this** is optional and will be displayed like this"
-            ></furo-ui5-markdown>
-          </furo-form-layouter>
-        </furo-horizontal-flex>`;
+              <furo-form-layouter flex one>
+                <ui5-link
+                  set-inner-text="--init(*.description)"
+                  at-ui5-click="^^field-focus-requested(item)"
+                ></ui5-link>
+                <ui5-label set-inner-text="--init(*.field)"></ui5-label>
+                <furo-type-renderer
+                  context="celledit"
+                  fn-bind-data="--init(*.user_response)"
+                ></furo-type-renderer>
+                <furo-ui5-markdown
+                  fn-bind-data="--init(*.message.message)"
+                ></furo-ui5-markdown>
+              </furo-form-layouter>
+            </furo-horizontal-flex>
+          </template>
+        </furo-data-flow-repeat>`;
         // eslint-disable-next-line
         break;
       default:
