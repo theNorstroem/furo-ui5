@@ -149,16 +149,16 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
       <div class="head">
         <ui5-segmented-button>
           <ui5-segmented-button-item pressed>All</ui5-segmented-button-item>
-          <ui5-segmented-button-item icon="decline" class="Negative"
+          <ui5-segmented-button-item icon="message-error" class="Negative"
             >0</ui5-segmented-button-item
           >
           <ui5-segmented-button-item icon="message-warning" class="Attention"
             >2</ui5-segmented-button-item
           >
-          <ui5-segmented-button-item icon="accept" class="Positive"
+          <ui5-segmented-button-item icon="message-success" class="Positive"
             >0</ui5-segmented-button-item
           >
-          <ui5-segmented-button-item icon="information"
+          <ui5-segmented-button-item icon="message-information"
             >1</ui5-segmented-button-item
           >
         </ui5-segmented-button>

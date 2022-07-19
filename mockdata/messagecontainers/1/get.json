@@ -12,6 +12,11 @@
   "_messagecontainer": {
     "details": [
       {
+        "@type": "x/furo.MessageContainerGrouplabel",
+        "id": "xxxxxccc",
+        "title": "Group Title"
+      },
+      {
         "@type": "x/furo.ConfirmationMessage",
         "id": "dsf2",
         "readable_id": "id:2",
@@ -22,6 +27,18 @@
         "message": {
           "locale": "de-CH",
           "message": "Confirmation message....."
+        }
+      },{
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "dsf2",
+        "readable_id": "id:2",
+        "user_response": {
+          "@type": "x/furo.fat.Bool",
+          "value": true
+        },
+        "message": {
+          "locale": "de-CH",
+          "message": "Bool Confirmation message....."
         }
       },
       {
@@ -39,18 +56,19 @@
               "locale": "de-CH",
               "message": "**The**  _localized_ \n\n error message in the above locale"
             }
-          },{
+          },
+          {
             "field": "name",
             "description": "Name needed"
           }
         ],
-
         "@type": "x/furo.ErrorMessage"
       },
+
       {
         "@type": "x/furo.MessageContainerGrouplabel",
         "id": "xxxxxccc",
-        "title": "Group Title"
+        "title": "Other Title"
       },
       {
         "id": "23",
@@ -66,7 +84,6 @@
             }
           }
         ],
-
         "@type": "x/furo.ErrorMessage"
       }
     ],
