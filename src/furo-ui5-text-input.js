@@ -574,6 +574,10 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
     }
   }
 
+  onFnaFieldStateChanged(state) {
+    this._setValueStateMessage(state.state, state.description);
+  }
+
   /**
    * overwrite onFnaFieldNodeBecameValid function
    * @private

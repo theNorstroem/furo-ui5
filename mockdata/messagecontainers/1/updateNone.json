@@ -1,0 +1,26 @@
+{
+  "name": "updated",
+  "array": [
+    "aaa",
+    "bbb",
+    "ccc"
+  ],
+  "person": {
+    "name": "name",
+    "first_name": "first_name"
+  },
+  "_messagecontainer": {
+    "success": true,
+    "details": [
+
+    ]
+  },
+  "_links": [
+    {
+      "rel": "update",
+      "service": "messagecontainer.MessagecontainerService",
+      "href": "/mockdata/messagecontainers/1/update.json",
+      "method": "POST"
+    }
+  ]
+}

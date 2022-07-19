@@ -31,6 +31,6 @@
      define and set these properties.
   fields:
     name: 'string:1 #The name of the property (a.k.a key).'
-    type: 'unknown:2 #The type of this property.'
+    type: 'google.api.Property.PropertyType:2 #The type of this property.'
     description: 'string:3 #The description of the property'
   target: consumer.proto

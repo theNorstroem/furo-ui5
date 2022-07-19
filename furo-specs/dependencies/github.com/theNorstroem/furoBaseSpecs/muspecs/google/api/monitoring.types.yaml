@@ -1,8 +1,3 @@
-- type: 'google.api.Monitoring.MonitoringDestination #'
-  fields:
-    monitored_resource: 'string:1 #no description'
-    metrics: '[] string:2 #no description'
-  target: monitoring.proto
 - type: |-
     google.api.Monitoring #Monitoring configuration of the service.
 
@@ -71,4 +66,9 @@
          needed for different sets of metrics associated with that monitored
          resource type. A monitored resource and metric pair may only be used once
          in the Monitoring configuration.
+  target: monitoring.proto
+- type: 'google.api.Monitoring.MonitoringDestination # '
+  fields:
+    monitored_resource: 'string:1 #'
+    metrics: '[] string:2 #'
   target: monitoring.proto

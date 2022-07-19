@@ -11,7 +11,8 @@ lifecycle: null
 __proto:
     package: google.api
     targetfile: config_change.proto
-    imports: []
+    imports:
+        - google/api/ENUM_config_change.proto
     options:
         go_package: google.golang.org/genproto/googleapis/api/configchange;configchange
         java_multiple_files: "true"
@@ -87,7 +88,7 @@ fields:
             typespecific: null
         constraints: {}
     change_type:
-        type: unknown
+        type: google.api.ChangeType
         description: The type for this change, either ADDED, REMOVED, or MODIFIED.
         __proto:
             number: 4

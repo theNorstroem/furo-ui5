@@ -1,8 +1,3 @@
-- type: 'google.api.Billing.BillingDestination #'
-  fields:
-    monitored_resource: 'string:1 #no description'
-    metrics: '[] string:2 #no description'
-  target: billing.proto
 - type: |-
     google.api.Billing #Billing related configuration of the service.
 
@@ -42,4 +37,9 @@
          There can be multiple consumer destinations per service, each one must have
          a different monitored resource type. A metric can be used in at most
          one consumer destination.
+  target: billing.proto
+- type: 'google.api.Billing.BillingDestination # '
+  fields:
+    monitored_resource: 'string:1 #'
+    metrics: '[] string:2 #'
   target: billing.proto

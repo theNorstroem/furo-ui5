@@ -40,8 +40,8 @@
          different monitored resource type. A log can be used in at most
          one consumer destination.
   target: logging.proto
-- type: 'google.api.Logging.LoggingDestination #'
+- type: 'google.api.Logging.LoggingDestination # '
   fields:
-    monitored_resource: 'string:3 #no description'
-    logs: '[] string:1 #no description'
+    monitored_resource: 'string:3 #'
+    logs: '[] string:1 #'
   target: logging.proto

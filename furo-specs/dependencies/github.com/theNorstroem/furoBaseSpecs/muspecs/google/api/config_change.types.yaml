@@ -1,12 +1,4 @@
 - type: |-
-    google.api.Advice #Generated advice about this change, used for providing more
-     information about how a change will affect the existing service.
-  fields:
-    description: |-
-        string:2 #Useful description for why this advice was applied and what actions should
-         be taken to mitigate any implied risks.
-  target: config_change.proto
-- type: |-
     google.api.ConfigChange #Output generated from semantically comparing two versions of a service
      configuration.
 
@@ -30,8 +22,16 @@
     new_value: |-
         string:3 #Value of the changed object in the new Service configuration,
          in JSON format. This field will not be populated if ChangeType == REMOVED.
-    change_type: 'unknown:4 #The type for this change, either ADDED, REMOVED, or MODIFIED.'
+    change_type: 'google.api.ChangeType:4 #The type for this change, either ADDED, REMOVED, or MODIFIED.'
     advices: |-
         [] google.api.Advice:5 #Collection of advice provided for this change, useful for determining the
          possible impact of this change.
+  target: config_change.proto
+- type: |-
+    google.api.Advice #Generated advice about this change, used for providing more
+     information about how a change will affect the existing service.
+  fields:
+    description: |-
+        string:2 #Useful description for why this advice was applied and what actions should
+         be taken to mitigate any implied risks.
   target: config_change.proto

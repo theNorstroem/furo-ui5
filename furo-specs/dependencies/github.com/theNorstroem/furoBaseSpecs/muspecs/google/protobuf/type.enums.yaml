@@ -3,13 +3,6 @@
     SYNTAX_PROTO2: 0
     SYNTAX_PROTO3: 1
   target: ENUM_type.proto
-- enum: 'google.protobuf.Field.Cardinality #A single field of a message type.'
-  values:
-    CARDINALITY_UNKNOWN: 0
-    CARDINALITY_OPTIONAL: 1
-    CARDINALITY_REQUIRED: 2
-    CARDINALITY_REPEATED: 3
-  target: ENUM_type.proto
 - enum: 'google.protobuf.Field.Kind #A single field of a message type.'
   values:
     TYPE_UNKNOWN: 0
@@ -31,4 +24,11 @@
     TYPE_SFIXED64: 16
     TYPE_SINT32: 17
     TYPE_SINT64: 18
+  target: ENUM_type.proto
+- enum: 'google.protobuf.Field.Cardinality #A single field of a message type.'
+  values:
+    CARDINALITY_UNKNOWN: 0
+    CARDINALITY_OPTIONAL: 1
+    CARDINALITY_REQUIRED: 2
+    CARDINALITY_REPEATED: 3
   target: ENUM_type.proto

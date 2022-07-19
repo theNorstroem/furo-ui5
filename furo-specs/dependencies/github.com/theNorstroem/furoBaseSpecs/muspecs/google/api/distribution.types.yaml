@@ -1,18 +1,3 @@
-- type: 'google.api.Distribution.Range #'
-  fields:
-    min: 'double:1 #no description'
-    max: 'double:2 #no description'
-  target: distribution.proto
-- type: 'google.api.Distribution.BucketOptions.Explicit #'
-  fields:
-    bounds: '[] double:1 #no description'
-  target: distribution.proto
-- type: 'google.api.Distribution.Exemplar #'
-  fields:
-    value: 'double:1 #no description'
-    timestamp: 'google.protobuf.Timestamp:2 #no description'
-    attachments: '[] google.protobuf.Any:3 #no description'
-  target: distribution.proto
 - type: |-
     google.api.Distribution #`Distribution` contains summary statistics for a population of values. It
      optionally contains a histogram representing the distribution of those values
@@ -70,21 +55,36 @@
          `bucket_counts` is the count for the overflow bucket (number N-1).
     exemplars: '[] google.api.Distribution.Exemplar:10 #Must be in increasing order of `value` field.'
   target: distribution.proto
-- type: 'google.api.Distribution.BucketOptions.Linear #'
+- type: 'google.api.Distribution.Range # '
   fields:
-    num_finite_buckets: 'int32:1 #no description'
-    width: 'double:2 #no description'
-    offset: 'double:3 #no description'
+    min: 'double:1 #'
+    max: 'double:2 #'
   target: distribution.proto
-- type: 'google.api.Distribution.BucketOptions.Exponential #'
+- type: 'google.api.Distribution.BucketOptions # '
   fields:
-    num_finite_buckets: 'int32:1 #no description'
-    growth_factor: 'double:2 #no description'
-    scale: 'double:3 #no description'
+    linear_buckets: 'google.api.Distribution.BucketOptions.Linear:1 #'
+    exponential_buckets: 'google.api.Distribution.BucketOptions.Exponential:2 #'
+    explicit_buckets: 'google.api.Distribution.BucketOptions.Explicit:3 #'
   target: distribution.proto
-- type: 'google.api.Distribution.BucketOptions #'
+- type: 'google.api.Distribution.BucketOptions.Linear # '
   fields:
-    linear_buckets: 'google.api.Distribution.BucketOptions.Linear:1 #no description'
-    exponential_buckets: 'google.api.Distribution.BucketOptions.Exponential:2 #no description'
-    explicit_buckets: 'google.api.Distribution.BucketOptions.Explicit:3 #no description'
+    num_finite_buckets: 'int32:1 #'
+    width: 'double:2 #'
+    offset: 'double:3 #'
+  target: distribution.proto
+- type: 'google.api.Distribution.BucketOptions.Exponential # '
+  fields:
+    num_finite_buckets: 'int32:1 #'
+    growth_factor: 'double:2 #'
+    scale: 'double:3 #'
+  target: distribution.proto
+- type: 'google.api.Distribution.BucketOptions.Explicit # '
+  fields:
+    bounds: '[] double:1 #'
+  target: distribution.proto
+- type: 'google.api.Distribution.Exemplar # '
+  fields:
+    value: 'double:1 #'
+    timestamp: 'google.protobuf.Timestamp:2 #'
+    attachments: '[] google.protobuf.Any:3 #'
   target: distribution.proto

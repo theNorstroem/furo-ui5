@@ -15,7 +15,8 @@ lifecycle: null
 __proto:
     package: google.api
     targetfile: consumer.proto
-    imports: []
+    imports:
+        - google/api/Property/ENUM_consumer.proto
     options:
         go_package: google.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig
         java_multiple_files: "true"
@@ -41,7 +42,7 @@ fields:
             typespecific: null
         constraints: {}
     type:
-        type: unknown
+        type: google.api.Property.PropertyType
         description: The type of this property.
         __proto:
             number: 2

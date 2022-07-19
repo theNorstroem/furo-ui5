@@ -89,6 +89,7 @@ class FuroUi5Markdown extends LitElement {
     stringField.addEventListener('field-value-changed', () => {
       this.parseMarkdown(stringField._value);
     });
+    this.parseMarkdown(stringField._value);
   }
 
   /**
@@ -123,6 +124,8 @@ class FuroUi5Markdown extends LitElement {
     return css`
       :host {
         display: block;
+        font-family: '72override', var(--sapFontFamily);
+        font-size: var(--sapFontSize);
       }
 
       :host([hidden]) {
@@ -163,32 +166,32 @@ class FuroUi5Markdown extends LitElement {
 
       /* Level H1 */
       h1 {
-        font-size: var(--ui5_title_level_1Size);
+        font-size: var(--sapFontHeader1Size);
       }
 
       /* Level H2 */
       h2 {
-        font-size: var(--ui5_title_level_2Size);
+        font-size: var(--sapFontHeader2Size);
       }
 
       /* Level H3 */
       h3 {
-        font-size: var(--ui5_title_level_3Size);
+        font-size: var(--sapFontHeader3Size);
       }
 
       /* Level H4 */
       h4 {
-        font-size: var(--ui5_title_level_4Size);
+        font-size: var(--sapFontHeader4Size);
       }
 
       /* Level H5 */
       h5 {
-        font-size: var(--ui5_title_level_5Size);
+        font-size: var(--sapFontHeader5Sizee);
       }
 
       /* Level H6 */
       h6 {
-        font-size: var(--ui5_title_level_6Size);
+        font-size: var(sapFontHeader6Size);
       }
 
       a {

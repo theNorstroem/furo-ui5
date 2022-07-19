@@ -1,8 +1,6 @@
 name: FieldViolation
 type: FieldViolation
-description: |-
-    Describes violations in a client request. This error type focuses on the
-     syntactic aspects of the request.
+description: ""
 lifecycle: null
 __proto:
     package: google.rpc.BadRequest
@@ -17,10 +15,7 @@ __proto:
 fields:
     field:
         type: string
-        description: |-
-            A path leading to a field in the request body. The value will be a
-            sequence of dot-separated identifiers that identify a protocol buffer
-            field. E.g., "field_violations.field" would identify this field.
+        description: no description
         __proto:
             number: 1
         __ui:
@@ -42,7 +37,7 @@ fields:
         constraints: {}
     description:
         type: string
-        description: A description of why the request element is bad.
+        description: no description
         __proto:
             number: 2
         __ui:

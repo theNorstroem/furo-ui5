@@ -9,7 +9,8 @@
       --furo-form-layouter-row-gap: var(--spacing-s, 16px);
       --furo-form-layouter-column-gap: var(--spacing-s, 16px);
     }
-    furo-demo-snippet{
+
+    furo-demo-snippet {
       height: 90vh;
       box-sizing: border-box;
     }
@@ -19,15 +20,17 @@
 <div id="demo"></div>
 
 <script type="module">
-  import { html, render } from 'lit';
+  import {html, render} from 'lit';
   import './initEnv.js';
   import '../src/furo-ui5-text-input-labeled.js';
   import '../src/furo-ui5-text-input.js';
   import '../src/furo-ui5-button.js';
+  import '../src/furo-ui5-message-container-display.js';
   import '../x/furo-message-container-handler.js';
 
   import '@furo/route/src/furo-location.js';
   import '@furo/data/src/furo-deep-link.js';
+  import '@furo/data/src/furo-data-flow-repeat.js';
   import '@furo/data/src/furo-entity-agent.js';
   import '@furo/data/src/furo-data-object.js';
   import '@furo/util/src/doc/furo-demo-snippet.js';
@@ -40,42 +43,61 @@
   render(
     html`
 
-        <furo-demo-snippet>
-          <template>
-
-            <furo-form-layouter two>
-              <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.name)"></furo-ui5-text-input-labeled>
-
-            </furo-form-layouter>
-            <br>
-            <furo-ui5-button at-click="--saveClicked">save</furo-ui5-button>
-
-            <furo-data-object
-              type="messagecontainer.TestObject"
-              at-object-ready="--mcDO"
-              fn-inject-raw="--response"
-              fn-validate-all-fields="--validation"></furo-data-object>
+      <furo-demo-snippet>
+        <template>
+          <furo-vertical-flex>
+            <div scroll flex>
+              <furo-ui5-message-container-display
+                fn-bind-data="--mcDO(*._messagecontainer)"></furo-ui5-message-container-display>
+              <furo-form-layouter two>
+                <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.name)"></furo-ui5-text-input-labeled>
 
 
+                <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.person.name)"></furo-ui5-text-input-labeled>
+                <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.person.first_name)"></furo-ui5-text-input-labeled>
 
-            <furo-location at-location-changed="--locationChanged"></furo-location>
-            <furo-deep-link service="messagecontainer.MessagecontainerService" at-hts-out="--hts" fn-qp-in="--locationChanged(*.query)"></furo-deep-link>
+                <furo-data-flow-repeat fn-bind-data="--mcDO(*.array)">
+                  <template>
+                    <furo-ui5-text-input-labeled fn-bind-data="--init"></furo-ui5-text-input-labeled>
+                  </template>
+                </furo-data-flow-repeat>
 
-            <furo-entity-agent service="messagecontainer.MessagecontainerService" fn-hts-in="--hts"
-                               load-on-hts-in
-                               fn-save="--saveClicked"
-                               fn-bind-request-data="--mcDO"
-                               at-response="--response">
-            </furo-entity-agent>
-            <furo-message-container-handler fn-inject-raw="--response._messagecontainer"></furo-message-container-handler>
-
-            <hr>
-            <ui5-button at-click="--validation">Trigger validation</ui5-button>
-          </template>
-        </furo-demo-snippet>
+              </furo-form-layouter>
 
 
-      `,
+              <furo-location at-location-changed="--locationChanged"></furo-location>
+              <furo-deep-link service="messagecontainer.MessagecontainerService" at-hts-out="--hts"
+                              fn-qp-in="--locationChanged(*.query)"></furo-deep-link>
+
+              <furo-entity-agent service="messagecontainer.MessagecontainerService" fn-hts-in="--hts"
+                                 load-on-hts-in
+                                 fn-save="--saveClicked"
+                                 fn-bind-request-data="--mcDO"
+                                 at-response="--response">
+              </furo-entity-agent>
+              <furo-message-container-handler fn-bind-mc="--mcDO(*._messagecontainer)"
+                                              fn-inject-raw="--response(*._messagecontainer)"></furo-message-container-handler>
+
+              <hr>
+
+              <furo-ui5-button at-click="--saveClicked">save</furo-ui5-button>
+              <ui5-button at-click="--validation">Trigger validation</ui5-button>
+
+
+              <div>[DO]
+                <furo-data-object
+                  type="messagecontainer.TestObject"
+                  at-object-ready="--mcDO"
+                  fn-inject-raw="--response"
+                  fn-validate-all-fields="--validation"></furo-data-object>
+              </div>
+            </div>
+          </furo-vertical-flex>
+        </template>
+      </furo-demo-snippet>
+
+
+    `,
     document.querySelector('#demo')
   );
 </script>

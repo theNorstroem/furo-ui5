@@ -1,31 +1,59 @@
 - type: |-
-    google.api.OAuthRequirements #OAuth scopes are a way to define data and permissions on data. For example,
-     there are scopes defined for "Read-only access to Google Calendar" and
-     "Access to Cloud Platform". Users can consent to a scope for an application,
-     giving it permission to access that data on their behalf.
+    google.api.Authentication #`Authentication` defines the authentication configuration for an API.
 
-     OAuth scope specifications should be fairly coarse grained; a user will need
-     to see and understand the text description of what your scope means.
+     Example for an API targeted for external use:
 
-     In most cases: use one or at most two OAuth scopes for an entire family of
-     products. If your product has multiple APIs, you should probably be sharing
-     the OAuth scope across all of those APIs.
-
-     When you need finer grained OAuth consent screens: talk with your product
-     management about how developers will use them in practice.
-
-     Please note that even though each of the canonical scopes is enough for a
-     request to be accepted and passed to the backend, a request can still fail
-     due to the backend requiring additional scopes or permissions.
+         name: calendar.googleapis.com
+         authentication:
+           providers:
+           - id: google_calendar_auth
+             jwks_uri: https://www.googleapis.com/oauth2/v1/certs
+             issuer: https://securetoken.google.com
+           rules:
+           - selector: "*"
+             requirements:
+               provider_id: google_calendar_auth
   fields:
-    canonical_scopes: |-
-        string:1 #The list of publicly documented OAuth scopes that are allowed access. An
-         OAuth token containing any of these scopes will be accepted.
+    rules: |-
+        [] google.api.AuthenticationRule:3 #A list of authentication rules that apply to individual API methods.
 
-         Example:
+         **NOTE:** All service configuration rules follow "last one wins" order.
+    providers: '[] google.api.AuthProvider:4 #Defines a set of authentication providers that a service supports.'
+  target: auth.proto
+- type: |-
+    google.api.AuthenticationRule #Authentication rules for the service.
 
-              canonical_scopes: https://www.googleapis.com/auth/calendar,
-                                https://www.googleapis.com/auth/calendar.read
+     By default, if a method has any authentication requirements, every request
+     must include a valid credential matching one of the requirements.
+     It's an error to include more than one kind of credential in a single
+     request.
+
+     If a method doesn't have any auth requirements, request credentials will be
+     ignored.
+  fields:
+    selector: |-
+        string:1 #Selects the methods to which this rule applies.
+
+         Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
+    oauth: 'google.api.OAuthRequirements:2 #The requirements for OAuth credentials.'
+    allow_without_credential: |-
+        bool:5 #If true, the service accepts API keys without any other credential.
+         This flag only applies to HTTP and gRPC requests.
+    requirements: '[] google.api.AuthRequirement:7 #Requirements for additional authentication providers.'
+  target: auth.proto
+- type: 'google.api.JwtLocation #Specifies a location to extract JWT from an API request.'
+  fields:
+    header: 'string:1 [in] #Specifies HTTP header name to extract JWT token.'
+    query: 'string:2 [in] #Specifies URL query parameter name to extract JWT token.'
+    value_prefix: |-
+        string:3 #The value prefix. The value format is "value_prefix{token}"
+         Only applies to "in" header type. Must be empty for "in" query type.
+         If not empty, the header value has to match (case sensitive) this prefix.
+         If not matched, JWT will not be extracted. If matched, JWT will be
+         extracted after the prefix is removed.
+
+         For example, for "Authorization: Bearer {JWT}",
+         value_prefix="Bearer " with a space at the end.
   target: auth.proto
 - type: |-
     google.api.AuthProvider #Configuration for an authentication provider, including support for
@@ -98,47 +126,33 @@
             - query: access_token
   target: auth.proto
 - type: |-
-    google.api.Authentication #`Authentication` defines the authentication configuration for an API.
+    google.api.OAuthRequirements #OAuth scopes are a way to define data and permissions on data. For example,
+     there are scopes defined for "Read-only access to Google Calendar" and
+     "Access to Cloud Platform". Users can consent to a scope for an application,
+     giving it permission to access that data on their behalf.
 
-     Example for an API targeted for external use:
+     OAuth scope specifications should be fairly coarse grained; a user will need
+     to see and understand the text description of what your scope means.
 
-         name: calendar.googleapis.com
-         authentication:
-           providers:
-           - id: google_calendar_auth
-             jwks_uri: https://www.googleapis.com/oauth2/v1/certs
-             issuer: https://securetoken.google.com
-           rules:
-           - selector: "*"
-             requirements:
-               provider_id: google_calendar_auth
+     In most cases: use one or at most two OAuth scopes for an entire family of
+     products. If your product has multiple APIs, you should probably be sharing
+     the OAuth scope across all of those APIs.
+
+     When you need finer grained OAuth consent screens: talk with your product
+     management about how developers will use them in practice.
+
+     Please note that even though each of the canonical scopes is enough for a
+     request to be accepted and passed to the backend, a request can still fail
+     due to the backend requiring additional scopes or permissions.
   fields:
-    rules: |-
-        [] google.api.AuthenticationRule:3 #A list of authentication rules that apply to individual API methods.
+    canonical_scopes: |-
+        string:1 #The list of publicly documented OAuth scopes that are allowed access. An
+         OAuth token containing any of these scopes will be accepted.
 
-         **NOTE:** All service configuration rules follow "last one wins" order.
-    providers: '[] google.api.AuthProvider:4 #Defines a set of authentication providers that a service supports.'
-  target: auth.proto
-- type: |-
-    google.api.AuthenticationRule #Authentication rules for the service.
+         Example:
 
-     By default, if a method has any authentication requirements, every request
-     must include a valid credential matching one of the requirements.
-     It's an error to include more than one kind of credential in a single
-     request.
-
-     If a method doesn't have any auth requirements, request credentials will be
-     ignored.
-  fields:
-    selector: |-
-        string:1 #Selects the methods to which this rule applies.
-
-         Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
-    oauth: 'google.api.OAuthRequirements:2 #The requirements for OAuth credentials.'
-    allow_without_credential: |-
-        bool:5 #If true, the service accepts API keys without any other credential.
-         This flag only applies to HTTP and gRPC requests.
-    requirements: '[] google.api.AuthRequirement:7 #Requirements for additional authentication providers.'
+              canonical_scopes: https://www.googleapis.com/auth/calendar,
+                                https://www.googleapis.com/auth/calendar.read
   target: auth.proto
 - type: |-
     google.api.AuthRequirement #User-defined authentication requirements, including support for
@@ -168,18 +182,4 @@
 
              audiences: bookstore_android.apps.googleusercontent.com,
                         bookstore_web.apps.googleusercontent.com
-  target: auth.proto
-- type: 'google.api.JwtLocation #Specifies a location to extract JWT from an API request.'
-  fields:
-    header: 'string:1 [in] #Specifies HTTP header name to extract JWT token.'
-    query: 'string:2 [in] #Specifies URL query parameter name to extract JWT token.'
-    value_prefix: |-
-        string:3 #The value prefix. The value format is "value_prefix{token}"
-         Only applies to "in" header type. Must be empty for "in" query type.
-         If not empty, the header value has to match (case sensitive) this prefix.
-         If not matched, JWT will not be extracted. If matched, JWT will be
-         extracted after the prefix is removed.
-
-         For example, for "Authorization: Bearer {JWT}",
-         value_prefix="Bearer " with a space at the end.
   target: auth.proto

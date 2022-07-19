@@ -9,6 +9,8 @@ __proto:
     package: google.api
     targetfile: metric.proto
     imports:
+        - google/api/ENUM_launch_stage.proto
+        - google/api/MetricDescriptor/ENUM_metric.proto
         - google/api/MetricDescriptor/metric.proto
         - google/api/label.proto
     options:
@@ -87,7 +89,7 @@ fields:
             typespecific: null
         constraints: {}
     metric_kind:
-        type: unknown
+        type: google.api.MetricDescriptor.MetricKind
         description: |-
             Whether the metric records instantaneous values, changes to a value, etc.
              Some combinations of `metric_kind` and `value_type` might not be supported.
@@ -107,7 +109,7 @@ fields:
             typespecific: null
         constraints: {}
     value_type:
-        type: unknown
+        type: google.api.MetricDescriptor.ValueType
         description: |-
             Whether the measurement is an integer, a floating-point number, etc.
              Some combinations of `metric_kind` and `value_type` might not be supported.
@@ -305,7 +307,7 @@ fields:
             typespecific: null
         constraints: {}
     launch_stage:
-        type: unknown
+        type: google.api.LaunchStage
         description: Optional. The launch stage of the metric definition.
         __proto:
             number: 12

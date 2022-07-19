@@ -1,21 +1,4 @@
 - type: |-
-    google.api.ContextRule #A context rule provides information about the context for an individual API
-     element.
-  fields:
-    selector: |-
-        string:1 #Selects the methods to which this rule applies.
-
-         Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
-    requested: '[] string:2 #A list of full type names of requested contexts.'
-    provided: '[] string:3 #A list of full type names of provided contexts.'
-    allowed_request_extensions: |-
-        [] string:4 #A list of full type names or extension IDs of extensions allowed in grpc
-         side channel from client to backend.
-    allowed_response_extensions: |-
-        [] string:5 #A list of full type names or extension IDs of extensions allowed in grpc
-         side channel from backend to client.
-  target: context.proto
-- type: |-
     google.api.Context #`Context` defines which contexts an API requests.
 
      Example:
@@ -57,4 +40,21 @@
         [] google.api.ContextRule:1 #A list of RPC context rules that apply to individual API methods.
 
          **NOTE:** All service configuration rules follow "last one wins" order.
+  target: context.proto
+- type: |-
+    google.api.ContextRule #A context rule provides information about the context for an individual API
+     element.
+  fields:
+    selector: |-
+        string:1 #Selects the methods to which this rule applies.
+
+         Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
+    requested: '[] string:2 #A list of full type names of requested contexts.'
+    provided: '[] string:3 #A list of full type names of provided contexts.'
+    allowed_request_extensions: |-
+        [] string:4 #A list of full type names or extension IDs of extensions allowed in grpc
+         side channel from client to backend.
+    allowed_response_extensions: |-
+        [] string:5 #A list of full type names or extension IDs of extensions allowed in grpc
+         side channel from backend to client.
   target: context.proto

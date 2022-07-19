@@ -5,7 +5,8 @@ lifecycle: null
 __proto:
     package: google.api
     targetfile: backend.proto
-    imports: []
+    imports:
+        - google/api/BackendRule/ENUM_backend.proto
     options:
         go_package: google.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig
         java_multiple_files: "true"
@@ -133,7 +134,7 @@ fields:
             typespecific: null
         constraints: {}
     path_translation:
-        type: unknown
+        type: google.api.BackendRule.PathTranslation
         description: no description
         __proto:
             number: 6

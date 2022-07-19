@@ -15,6 +15,7 @@ __proto:
     package: google.api
     targetfile: monitored_resource.proto
     imports:
+        - google/api/ENUM_launch_stage.proto
         - google/api/label.proto
     options:
         cc_enable_arenas: "true"
@@ -132,7 +133,7 @@ fields:
             typespecific: null
         constraints: {}
     launch_stage:
-        type: unknown
+        type: google.api.LaunchStage
         description: Optional. The launch stage of the monitored resource definition.
         __proto:
             number: 7

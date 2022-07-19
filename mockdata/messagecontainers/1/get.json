@@ -1,5 +1,74 @@
 {
   "name": "me",
+  "array": [
+    "aaa",
+    "bbb",
+    "ccc"
+  ],
+  "person": {
+    "name": "name",
+    "first_name": "first_name"
+  },
+  "_messagecontainer": {
+    "details": [
+      {
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "dsf2",
+        "readable_id": "id:2",
+        "user_response": {
+          "@type": "x/furo.fat.String",
+          "value": "String..."
+        },
+        "message": {
+          "locale": "de-CH",
+          "message": "Confirmation message....."
+        }
+      },
+      {
+        "id": "2",
+        "readable_id": "id:2",
+        "fields": [
+          {
+            "field": "person.first_name",
+            "description": "First Name needed",
+            "user_response": {
+              "@type": "x/furo.fat.String",
+              "value": ""
+            },
+            "message": {
+              "locale": "de-CH",
+              "message": "**The**  _localized_ \n\n error message in the above locale"
+            }
+          }
+        ],
+
+        "@type": "x/furo.ErrorMessage"
+      },
+      {
+        "@type": "x/furo.MessageContainerGrouplabel",
+        "id": "xxxxxccc",
+        "title": "Group Title"
+      },
+      {
+        "id": "23",
+        "readable_id": "id:2",
+        "fields": [
+          {
+            "field": "person.name",
+            "description": "First Name needed",
+            "user_response": null,
+            "message": {
+              "locale": "de-CH",
+              "message": "The localized error message in the above locale"
+            }
+          }
+        ],
+
+        "@type": "x/furo.ErrorMessage"
+      }
+    ],
+    "success": false
+  },
   "_links": [
     {
       "rel": "update",

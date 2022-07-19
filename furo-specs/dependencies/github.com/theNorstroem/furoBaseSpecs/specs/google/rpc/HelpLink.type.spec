@@ -1,6 +1,6 @@
 name: Link
 type: Link
-description: Describes a URL link.
+description: ""
 lifecycle: null
 __proto:
     package: google.rpc.Help
@@ -15,7 +15,7 @@ __proto:
 fields:
     description:
         type: string
-        description: Describes what the link offers.
+        description: no description
         __proto:
             number: 1
         __ui:
@@ -37,7 +37,7 @@ fields:
         constraints: {}
     url:
         type: string
-        description: The URL of the link.
+        description: no description
         __proto:
             number: 2
         __ui:

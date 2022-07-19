@@ -1,6 +1,8 @@
 - type: 'messagecontainer.TestObject #MC test object'
   fields:
     name: 'string:1 #Name field'
+    array: '[]string:3 #repeated string'
+    person: 'person.Person:4 #deep value state'
     _messagecontainer: 'furo.MessageContainer:9 #MessageContainer'
     _links: '-[] furo.Link:2 #Hateoas links'
   target: mc.proto

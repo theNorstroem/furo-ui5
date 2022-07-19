@@ -1,3 +1,23 @@
+- type: 'google.api.Usage #Configuration controlling usage of a service.'
+  fields:
+    requirements: |-
+        [] string:1 #Requirements that must be satisfied before a consumer project can use the
+         service. Each requirement is of the form <service.name>/<requirement-id>;
+         for example 'serviceusage.googleapis.com/billing-enabled'.
+    rules: |-
+        [] google.api.UsageRule:6 #A list of usage rules that apply to individual API methods.
+
+         **NOTE:** All service configuration rules follow "last one wins" order.
+    producer_notification_channel: |-
+        string:7 #The full resource name of a channel used for sending notifications to the
+         service producer.
+
+         Google Service Management currently only supports
+         [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification
+         channel. To use Google Cloud Pub/Sub as the channel, this must be the name
+         of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format
+         documented in https://cloud.google.com/pubsub/docs/overview.
+  target: usage.proto
 - type: |-
     google.api.UsageRule #Usage configuration rules for the service.
 
@@ -38,24 +58,4 @@
          plane features, such as quota and billing, will not be available.
          This flag is used by Google Cloud Endpoints to bypass checks for internal
          methods, such as service health check methods.
-  target: usage.proto
-- type: 'google.api.Usage #Configuration controlling usage of a service.'
-  fields:
-    requirements: |-
-        [] string:1 #Requirements that must be satisfied before a consumer project can use the
-         service. Each requirement is of the form <service.name>/<requirement-id>;
-         for example 'serviceusage.googleapis.com/billing-enabled'.
-    rules: |-
-        [] google.api.UsageRule:6 #A list of usage rules that apply to individual API methods.
-
-         **NOTE:** All service configuration rules follow "last one wins" order.
-    producer_notification_channel: |-
-        string:7 #The full resource name of a channel used for sending notifications to the
-         service producer.
-
-         Google Service Management currently only supports
-         [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification
-         channel. To use Google Cloud Pub/Sub as the channel, this must be the name
-         of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format
-         documented in https://cloud.google.com/pubsub/docs/overview.
   target: usage.proto

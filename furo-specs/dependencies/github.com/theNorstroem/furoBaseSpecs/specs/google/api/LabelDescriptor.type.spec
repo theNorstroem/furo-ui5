@@ -5,7 +5,8 @@ lifecycle: null
 __proto:
     package: google.api
     targetfile: label.proto
-    imports: []
+    imports:
+        - google/api/LabelDescriptor/ENUM_label.proto
     options:
         cc_enable_arenas: "true"
         go_package: google.golang.org/genproto/googleapis/api/label;label
@@ -33,7 +34,7 @@ fields:
             typespecific: null
         constraints: {}
     value_type:
-        type: unknown
+        type: google.api.LabelDescriptor.ValueType
         description: The type of data that can be assigned to the label.
         __proto:
             number: 2

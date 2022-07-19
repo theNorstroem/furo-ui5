@@ -143,7 +143,7 @@
         string:3 #Optional. The field on the resource that designates the resource name
          field. If omitted, this is assumed to be "name".
     history: |-
-        unknown:4 #Optional. The historical or future-looking state of the resource pattern.
+        google.api.ResourceDescriptor.History:4 #Optional. The historical or future-looking state of the resource pattern.
 
          Example:
 
@@ -172,7 +172,7 @@
          https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
          Such as "project" for the `resourcemanager.googleapis.com/Project` type.
     style: |-
-        [] unknown:10 #Style flag(s) for this resource.
+        [] google.api.ResourceDescriptor.Style:10 #Style flag(s) for this resource.
          These indicate that a resource is expected to conform to a given
          style. See the specific style flags for additional information.
   target: resource.proto

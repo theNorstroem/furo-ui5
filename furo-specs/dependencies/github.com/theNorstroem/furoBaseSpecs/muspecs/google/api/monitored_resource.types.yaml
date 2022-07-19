@@ -31,7 +31,7 @@
         [] google.api.LabelDescriptor:4 #Required. A set of labels used to describe instances of this monitored
          resource type. For example, an individual Google Cloud SQL database is
          identified by values for the labels `"database_id"` and `"zone"`.
-    launch_stage: 'unknown:7 #Optional. The launch stage of the monitored resource definition.'
+    launch_stage: 'google.api.LaunchStage:7 #Optional. The launch stage of the monitored resource definition.'
   target: monitored_resource.proto
 - type: |-
     google.api.MonitoredResource #An object representing a resource that can be used for monitoring, logging,
@@ -57,6 +57,11 @@
          resource descriptor. For example, Compute Engine VM instances use the
          labels `"project_id"`, `"instance_id"`, and `"zone"`.
   target: monitored_resource.proto
+- type: 'google.api.MonitoredResource.LabelsEntry # '
+  fields:
+    key: 'string:1 #'
+    value: 'string:2 #'
+  target: monitored_resource.proto
 - type: |-
     google.api.MonitoredResourceMetadata #Auxiliary metadata for a [MonitoredResource][google.api.MonitoredResource] object.
      [MonitoredResource][google.api.MonitoredResource] objects contain the minimum set of information to
@@ -78,13 +83,8 @@
                "spot_instance": false }
     user_labels: '[] google.api.MonitoredResourceMetadata.UserLabelsEntry:2 #Output only. A map of user-defined metadata labels.'
   target: monitored_resource.proto
-- type: 'google.api.MonitoredResourceMetadata.UserLabelsEntry #'
+- type: 'google.api.MonitoredResourceMetadata.UserLabelsEntry # '
   fields:
-    key: 'string:1 #no description'
-    value: 'string:2 #no description'
-  target: monitored_resource.proto
-- type: 'google.api.MonitoredResource.LabelsEntry #'
-  fields:
-    key: 'string:1 #no description'
-    value: 'string:2 #no description'
+    key: 'string:1 #'
+    value: 'string:2 #'
   target: monitored_resource.proto

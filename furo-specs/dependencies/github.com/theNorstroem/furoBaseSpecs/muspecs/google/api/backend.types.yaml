@@ -41,7 +41,7 @@
     operation_deadline: |-
         double:5 #The number of seconds to wait for the completion of a long running
          operation. The default is no deadline.
-    path_translation: 'unknown:6 #'
+    path_translation: 'google.api.BackendRule.PathTranslation:6 #'
     jwt_audience: |-
         string:7 [authentication] #The JWT audience is used when generating a JWT ID token for the backend.
          This ID token will be added in the HTTP "authorization" header, and sent

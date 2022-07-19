@@ -1,6 +1,6 @@
 name: ConfirmationMessage
 type: ConfirmationMessage
-description: ""
+description: Put required responses which are not associated to a field in this type.
 lifecycle: null
 __proto:
     package: furo
@@ -28,10 +28,13 @@ fields:
             options:
                 flags: []
                 list: []
-            readonly: false
+            readonly: true
             repeated: false
             typespecific: null
-        constraints: {}
+        constraints:
+            required:
+                is: "true"
+                message: furo.confirmationmessage.id.constraint.required.message
     readable_id:
         type: string
         description: A readable version of the id.
@@ -48,24 +51,6 @@ fields:
                 list: []
             readonly: true
             repeated: false
-            typespecific: null
-        constraints: {}
-    fields:
-        type: google.rpc.BadRequest.FieldViolation
-        description: Describes all warnings related to an attribute
-        __proto:
-            number: 5
-        __ui: null
-        meta:
-            default: ""
-            placeholder: furo.confirmationmessage.fields.placeholder
-            hint: ""
-            label: furo.confirmationmessage.fields.label
-            options:
-                flags: []
-                list: []
-            readonly: true
-            repeated: true
             typespecific: null
         constraints: {}
     message:
