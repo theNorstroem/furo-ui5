@@ -128,10 +128,11 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                 <ui5-icon name="message-warning" class="Negative"></ui5-icon>
 
                 <furo-form-layouter flex one>
-                  <ui5-link>Other Warning</ui5-link>
-                  <ui5-label set-inner-text="--init(*.field)"
-                    >Fieldname from field.label</ui5-label
-                  >
+                  <ui5-link
+                    set-inner-text="--init(*.description)"
+                    at-ui5-click="^^field-focus-requested(item)"
+                  ></ui5-link>
+                  <ui5-label set-inner-text="--init(*.field)"></ui5-label>
                   <furo-type-renderer
                     context="celledit"
                     fn-bind-data="--init(*.user_response)"
@@ -158,7 +159,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               value-state="Error"
             ></ui5-checkbox>
             <furo-ui5-markdown
-              markdown="This is the message of an error, 
+              markdown="This is the message of an error,
 
  **this** is optional and will be displayed like this"
             ></furo-ui5-markdown>
@@ -179,7 +180,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               value-state="Error"
             ></ui5-checkbox>
             <furo-ui5-markdown
-              markdown="This is the message of an error, 
+              markdown="This is the message of an error,
 
  **this** is optional and will be displayed like this"
             ></furo-ui5-markdown>
@@ -201,7 +202,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               value-state="Error"
             ></ui5-checkbox>
             <furo-ui5-markdown
-              markdown="This is the message of an error, 
+              markdown="This is the message of an error,
 
  **this** is optional and will be displayed like this"
             ></furo-ui5-markdown>

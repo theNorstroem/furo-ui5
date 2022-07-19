@@ -39,6 +39,9 @@
               "locale": "de-CH",
               "message": "**The**  _localized_ \n\n error message in the above locale"
             }
+          },{
+            "field": "name",
+            "description": "Name needed"
           }
         ],
 

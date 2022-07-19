@@ -12,6 +12,7 @@ import '@furo/layout/src/furo-horizontal-flex.js';
 import './furo-ui5-checkbox-input.js';
 import './furo-ui5-markdown.js';
 import './subcomponents/furo-ui5-message-container-item.js';
+import { NodeEvent } from '@furo/framework/src/EventTreeNode';
 
 /**
  * `furo-ui5-message-container-display`
@@ -38,6 +39,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    * @param mcfieldnode
    */
   bindData(mcfieldnode) {
+    this.rootNode = mcfieldnode.__parentNode;
     // eslint-disable-next-line
     mcfieldnode.details.clearListOnNewData = true;
     mcfieldnode.addEventListener('data-injected', () => {
@@ -68,6 +70,16 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
   _FBPReady() {
     super._FBPReady();
     // this._FBPTraceWires()
+
+    // dispatch a focus event for the field
+    this.addEventListener('field-focus-requested', e => {
+      const field = e.detail.field._value;
+
+      const target = this._pathGet(this.rootNode, field);
+      target.dispatchNodeEvent(
+        new NodeEvent('this-focus-requested', e.detail, false)
+      );
+    });
   }
 
   /**
