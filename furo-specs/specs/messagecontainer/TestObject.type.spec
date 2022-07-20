@@ -104,3 +104,39 @@ fields:
             repeated: false
             typespecific: null
         constraints: {}
+    bool:
+        type: bool
+        description: Boolean value
+        __proto:
+            number: 10
+        __ui: null
+        meta:
+            default: ""
+            placeholder: messagecontainer.testobject.bool.placeholder
+            hint: ""
+            label: messagecontainer.testobject.bool.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints: {}
+    numeric:
+        type: int32
+        description: Numeric value
+        __proto:
+            number: 11
+        __ui: null
+        meta:
+            default: ""
+            placeholder: messagecontainer.testobject.numeric.placeholder
+            hint: ""
+            label: messagecontainer.testobject.numeric.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints: {}

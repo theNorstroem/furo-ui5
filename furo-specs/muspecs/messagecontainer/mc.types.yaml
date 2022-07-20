@@ -5,4 +5,6 @@
     person: 'person.Person:4 #deep value state'
     _messagecontainer: 'furo.MessageContainer:9 #MessageContainer'
     _links: '-[] furo.Link:2 #Hateoas links'
+    bool: 'bool:10 #Boolean value'
+    numeric: 'int32:11 #Numeric value'
   target: mc.proto
