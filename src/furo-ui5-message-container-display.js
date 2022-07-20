@@ -59,6 +59,45 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
 
     if (details.repeats.length > 0) {
       this.hidden = false;
+      // count items of each type
+      let errs = 0;
+      let warn = 0;
+      let success = 0;
+      let info = 0;
+      let confirm = 0;
+
+      details.repeats.forEach(item => {
+        const type = item['@type']._value.replace(/.*\//, '');
+        switch (type) {
+          case 'furo.ErrorMessage':
+            errs += item.fields.repeats.length;
+            break;
+
+          case 'furo.WarningMessage':
+            warn += item.fields.repeats.length;
+            break;
+
+          case 'furo.SuccessMessage':
+            success += item.fields.repeats.length;
+            break;
+
+          case 'furo.InformationMessage':
+            info += item.fields.repeats.length;
+            break;
+
+          case 'furo.ConfirmationMessage':
+            confirm += 1;
+            break;
+          default:
+        }
+      });
+
+      this._FBPTriggerWire('|--numOfErrs', errs);
+      this._FBPTriggerWire('|--numOfWarnings', warn);
+      this._FBPTriggerWire('|--numOfSuccess', success);
+      this._FBPTriggerWire('|--numOfInformation', info);
+      this._FBPTriggerWire('|--numOfConfirmation', confirm);
+
       this.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
 
@@ -149,10 +188,13 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
       <div class="head">
         <ui5-segmented-button at-click="--filterClicked(*.target.id)">
           <ui5-segmented-button-item id="all" pressed fn-click="|--newData"
-            >All</ui5-segmented-button-item
-          >
+            >All
+          </ui5-segmented-button-item>
 
-          <ui5-segmented-button-item id="confirmation" icon="approvals"
+          <ui5-segmented-button-item
+            id="confirmation"
+            icon="approvals"
+            set-inner-text="|--numOfConfirmation"
             >0</ui5-segmented-button-item
           >
 
@@ -160,22 +202,31 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
             id="error"
             icon="message-error"
             class="Negative"
+            set-inner-text="|--numOfErrs"
             >0</ui5-segmented-button-item
           >
+
           <ui5-segmented-button-item
             id="warning"
             icon="message-warning"
             class="Attention"
-            >2</ui5-segmented-button-item
+            set-inner-text="|--numOfWarnings"
+            >0</ui5-segmented-button-item
           >
+
           <ui5-segmented-button-item
             id="success"
             icon="message-success"
             class="Positive"
+            set-inner-text="|--numOfSuccess"
             >0</ui5-segmented-button-item
           >
-          <ui5-segmented-button-item id="information" icon="message-information"
-            >1</ui5-segmented-button-item
+
+          <ui5-segmented-button-item
+            id="information"
+            icon="message-information"
+            set-inner-text="|--numOfInformation"
+            >0</ui5-segmented-button-item
           >
         </ui5-segmented-button>
       </div>
