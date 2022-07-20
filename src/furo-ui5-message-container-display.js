@@ -42,6 +42,17 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    * @param mcfieldnode
    */
   bindData(mcfieldnode) {
+    this._segmentedButton = this.shadowRoot.querySelector(
+      'ui5-segmented-button'
+    );
+
+    this._allButton = this.shadowRoot.getElementById('all');
+    this._confirmationButton = this.shadowRoot.getElementById('confirmation');
+    this._warningButton = this.shadowRoot.getElementById('warning');
+    this._errorButton = this.shadowRoot.getElementById('error');
+    this._successButton = this.shadowRoot.getElementById('success');
+    this._informationButton = this.shadowRoot.getElementById('information');
+
     this.rootNode = mcfieldnode.__parentNode;
     mcfieldnode.addEventListener('data-injected', () => {
       this._updateDisplay(mcfieldnode.details);
@@ -55,7 +66,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    * @private
    */
   _updateDisplay(details) {
-    this._FBPTriggerWire('|--newData', null);
+    this._allButton.pressed = true;
 
     if (details.repeats.length > 0) {
       this.hidden = false;
@@ -103,11 +114,39 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         }
       });
 
+      this._FBPTriggerWire('|--numOfConfirmation', confirm);
       this._FBPTriggerWire('|--numOfErrs', errs);
       this._FBPTriggerWire('|--numOfWarnings', warn);
       this._FBPTriggerWire('|--numOfSuccess', success);
       this._FBPTriggerWire('|--numOfInformation', info);
-      this._FBPTriggerWire('|--numOfConfirmation', confirm);
+
+      if (confirm === 0) {
+        this._confirmationButton.remove();
+      } else {
+        this._segmentedButton.appendChild(this._confirmationButton);
+      }
+      if (errs === 0) {
+        this._errorButton.remove();
+      } else {
+        this._segmentedButton.appendChild(this._errorButton);
+      }
+      if (warn === 0) {
+        this._warningButton.remove();
+      } else {
+        this._segmentedButton.appendChild(this._warningButton);
+      }
+
+      if (success === 0) {
+        this._successButton.remove();
+      } else {
+        this._segmentedButton.appendChild(this._successButton);
+      }
+
+      if (info === 0) {
+        this._informationButton.remove();
+      } else {
+        this._segmentedButton.appendChild(this._informationButton);
+      }
 
       // scroll to top of this element
       this.scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -198,7 +237,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
     return html`
       <div class="head">
         <ui5-segmented-button at-click="--filterClicked(*.target.id)">
-          <ui5-segmented-button-item id="all" pressed fn-click="|--newData"
+          <ui5-segmented-button-item id="all" pressed
             >All
           </ui5-segmented-button-item>
 
