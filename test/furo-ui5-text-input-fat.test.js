@@ -152,7 +152,7 @@ describe('furo-ui5-text-input-fat', () => {
     setTimeout(() => {
       assert.equal(input.value, 'Set data in the inner input element');
       done();
-    });
+    }, 32);
   });
 
   it('should apply meta and constraints to the bound field (fat)', done => {
