@@ -19,7 +19,7 @@ message ConfirmationMessage {
     // Id of the confirmation message
     string id = 1;
 
-    // A readable version of the id.
+    // A localized description of the confirmation.
     string readable_id = 2;
 
     // A general localized warning message.
@@ -27,6 +27,9 @@ message ConfirmationMessage {
 
     // Reason why the warning was not followed, can be a text, checkbox,... is displayed as typerenderer
     google.protobuf.Any user_response = 3;
+
+    // A localized description of the confirmation.
+    string description = 2;
 }
 
 

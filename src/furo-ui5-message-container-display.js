@@ -220,7 +220,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         color: var(--sapGroup_TitleTextColor);
         height: 3rem;
         line-height: 3rem;
-        padding: 0px 1rem;
+        padding: 0 1rem;
         background-color: var(--sapGroup_TitleBackground);
         border-bottom: 1px solid var(--sapGroup_TitleBorderColor);
       }

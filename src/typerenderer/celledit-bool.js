@@ -14,6 +14,7 @@ export class CelleditBool extends FuroUi5CheckboxInput {
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();
     this.style.display = 'block';
+    this.style.padding = '2px 0';
     this.style.setProperty('--_ui5_checkbox_width_height', '0');
   }
 
@@ -25,7 +26,13 @@ export class CelleditBool extends FuroUi5CheckboxInput {
   }
 
   static get styles() {
-    return super.styles;
+    return [
+      super.styles,
+      {
+        content:
+          '.ui5-checkbox-root:focus:before{top:-1px;height:100%;display:var(--_ui5_checkbox_focus_outline_display)',
+      },
+    ];
   }
 }
 

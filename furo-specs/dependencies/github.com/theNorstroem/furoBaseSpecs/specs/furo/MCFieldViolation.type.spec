@@ -61,9 +61,9 @@ fields:
         __ui: null
         meta:
             default: ""
-            placeholder: furo.mcfieldviolation.userresponse.placeholder
+            placeholder: ""
             hint: ""
-            label: furo.mcfieldviolation.userresponse.label
+            label: ""
             options:
                 flags: []
                 list: []

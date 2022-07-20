@@ -37,7 +37,7 @@ fields:
                 message: furo.confirmationmessage.id.constraint.required.message
     readable_id:
         type: string
-        description: A readable version of the id.
+        description: A localized description of the confirmation.
         __proto:
             number: 2
         __ui: null
@@ -49,7 +49,7 @@ fields:
             options:
                 flags: []
                 list: []
-            readonly: true
+            readonly: false
             repeated: false
             typespecific: null
         constraints: {}
@@ -79,9 +79,27 @@ fields:
         __ui: null
         meta:
             default: ""
-            placeholder: furo.confirmationmessage.reason.placeholder
+            placeholder: ""
             hint: ""
-            label: furo.confirmationmessage.reason.label
+            label: ""
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints: {}
+    description:
+        type: string
+        description: A localized description of the confirmation.
+        __proto:
+            number: 2
+        __ui: null
+        meta:
+            default: ""
+            placeholder: furo.confirmationmessage.readableid.placeholder
+            hint: ""
+            label: furo.confirmationmessage.readableid.label
             options:
                 flags: []
                 list: []

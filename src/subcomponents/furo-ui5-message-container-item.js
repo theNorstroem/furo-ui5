@@ -177,13 +177,13 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                     set-title="--init(*.field)"
                     set-inner-text="--init(*._targetlabel)"
                   ></ui5-label>
+                  <furo-ui5-markdown
+                    fn-bind-data="--init(*.message.message)"
+                  ></furo-ui5-markdown>
                   <furo-type-renderer
                     context="celledit"
                     fn-bind-data="--init(*.user_response)"
                   ></furo-type-renderer>
-                  <furo-ui5-markdown
-                    fn-bind-data="--init(*.message.message)"
-                  ></furo-ui5-markdown>
                 </furo-form-layouter>
               </furo-horizontal-flex>
             </template>
@@ -208,13 +208,13 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-title="--init(*.field)"
                   set-inner-text="--init(*._targetlabel)"
                 ></ui5-label>
+                <furo-ui5-markdown
+                  fn-bind-data="--init(*.message.message)"
+                ></furo-ui5-markdown>
                 <furo-type-renderer
                   context="celledit"
                   fn-bind-data="--init(*.user_response)"
                 ></furo-type-renderer>
-                <furo-ui5-markdown
-                  fn-bind-data="--init(*.message.message)"
-                ></furo-ui5-markdown>
               </furo-form-layouter>
             </furo-horizontal-flex>
           </template>
@@ -239,13 +239,13 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-title="--init(*.field)"
                   set-inner-text="--init(*._targetlabel)"
                 ></ui5-label>
+                <furo-ui5-markdown
+                  fn-bind-data="--init(*.message.message)"
+                ></furo-ui5-markdown>
                 <furo-type-renderer
                   context="celledit"
                   fn-bind-data="--init(*.user_response)"
                 ></furo-type-renderer>
-                <furo-ui5-markdown
-                  fn-bind-data="--init(*.message.message)"
-                ></furo-ui5-markdown>
               </furo-form-layouter>
             </furo-horizontal-flex>
           </template>
@@ -273,13 +273,13 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-title="--init(*.field)"
                   set-inner-text="--init(*._targetlabel)"
                 ></ui5-label>
+                <furo-ui5-markdown
+                  fn-bind-data="--init(*.message.message)"
+                ></furo-ui5-markdown>
                 <furo-type-renderer
                   context="celledit"
                   fn-bind-data="--init(*.user_response)"
                 ></furo-type-renderer>
-                <furo-ui5-markdown
-                  fn-bind-data="--init(*.message.message)"
-                ></furo-ui5-markdown>
               </furo-form-layouter>
             </furo-horizontal-flex>
           </template>

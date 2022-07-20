@@ -15,6 +15,7 @@
     id: '-* string:1 #Id of the confirmation message'
     readable_id: '- string:2 #A readable version of the id.'
     user_response: 'google.protobuf.Any:3 #Reason why the warning was not followed, can be a text, checkbox,... is displayed as typerenderer'
+    description: 'string:2 #A localized description of the confirmation.'
     message: '- google.rpc.LocalizedMessage:6 #A general localized warning message.'
   target: furo.proto
 

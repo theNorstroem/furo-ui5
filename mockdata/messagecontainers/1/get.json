@@ -22,11 +22,30 @@
         "readable_id": "id:2",
         "user_response": {
           "@type": "x/furo.fat.String",
-          "value": "String..."
+          "value": "",
+          "attributes": {
+            "placeholder": "placeholder"
+          }
         },
         "message": {
           "locale": "de-CH",
-          "message": "Confirmation message....."
+          "message": "FAt String Confirmation message....."
+        }
+      },{
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "dsf2",
+        "readable_id": "id:2",
+        "user_response": {
+          "@type": "x/furo.fat.Bool",
+          "value": true,
+          "attributes": {
+            "placeholder": "placeholder",
+            "label": "label"
+          }
+        },
+        "message": {
+          "locale": "de-CH",
+          "message": "fat.Bool with label ATTR Confirmation message....."
         }
       },{
         "@type": "x/furo.ConfirmationMessage",
@@ -54,7 +73,7 @@
             },
             "message": {
               "locale": "de-CH",
-              "message": "**The**  _localized_ \n\n error message in the above locale"
+              "message": "The name _does not look_ correct, please re enter the name , to **confirm** that you are correct."
             }
           },
           {
