@@ -43,8 +43,6 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    */
   bindData(mcfieldnode) {
     this.rootNode = mcfieldnode.__parentNode;
-    // eslint-disable-next-line
-    mcfieldnode.details.clearListOnNewData = true;
     mcfieldnode.addEventListener('data-injected', () => {
       this._updateDisplay(mcfieldnode.details);
     });
@@ -57,6 +55,8 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    * @private
    */
   _updateDisplay(details) {
+    this._FBPTriggerWire('|--newData', null);
+
     if (details.repeats.length > 0) {
       this.hidden = false;
       this.scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -148,9 +148,14 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
     return html`
       <div class="head">
         <ui5-segmented-button at-click="--filterClicked(*.target.id)">
-          <ui5-segmented-button-item id="all" pressed
+          <ui5-segmented-button-item id="all" pressed fn-click="|--newData"
             >All</ui5-segmented-button-item
           >
+
+          <ui5-segmented-button-item id="confirmation" icon="approvals"
+            >0</ui5-segmented-button-item
+          >
+
           <ui5-segmented-button-item
             id="error"
             icon="message-error"

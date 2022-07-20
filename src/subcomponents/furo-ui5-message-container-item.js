@@ -39,19 +39,33 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         break;
 
       case 'error':
-        this.hidden = type !== 'furo.ErrorMessage';
+        this.hidden =
+          type !== 'furo.ErrorMessage' &&
+          type !== 'furo.MessageContainerGrouplabel';
+        break;
+
+      case 'confirmation':
+        this.hidden =
+          type !== 'furo.ConfirmationMessage' &&
+          type !== 'furo.MessageContainerGrouplabel';
         break;
 
       case 'warning':
-        this.hidden = type !== 'furo.WarningMessage';
+        this.hidden =
+          type !== 'furo.WarningMessage' &&
+          type !== 'furo.MessageContainerGrouplabel';
         break;
 
       case 'success':
-        this.hidden = type !== 'furo.SuccessMessage';
+        this.hidden =
+          type !== 'furo.SuccessMessage' &&
+          type !== 'furo.MessageContainerGrouplabel';
         break;
 
       case 'information':
-        this.hidden = type !== 'furo.InformationMessage';
+        this.hidden =
+          type !== 'furo.InformationMessage' &&
+          type !== 'furo.MessageContainerGrouplabel';
         break;
 
       default:
