@@ -173,7 +173,10 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                     set-inner-text="--init(*.description)"
                     at-ui5-click="^^field-focus-requested(item)"
                   ></ui5-link>
-                  <ui5-label set-inner-text="--init(*.field)"></ui5-label>
+                  <ui5-label
+                    set-title="--init(*.field)"
+                    set-inner-text="--init(*._targetlabel)"
+                  ></ui5-label>
                   <furo-type-renderer
                     context="celledit"
                     fn-bind-data="--init(*.user_response)"
@@ -201,7 +204,10 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-inner-text="--init(*.description)"
                   at-ui5-click="^^field-focus-requested(item)"
                 ></ui5-link>
-                <ui5-label set-inner-text="--init(*.field)"></ui5-label>
+                <ui5-label
+                  set-title="--init(*.field)"
+                  set-inner-text="--init(*._targetlabel)"
+                ></ui5-label>
                 <furo-type-renderer
                   context="celledit"
                   fn-bind-data="--init(*.user_response)"
@@ -229,7 +235,10 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-inner-text="--init(*.description)"
                   at-ui5-click="^^field-focus-requested(item)"
                 ></ui5-link>
-                <ui5-label set-inner-text="--init(*.field)"></ui5-label>
+                <ui5-label
+                  set-title="--init(*.field)"
+                  set-inner-text="--init(*._targetlabel)"
+                ></ui5-label>
                 <furo-type-renderer
                   context="celledit"
                   fn-bind-data="--init(*.user_response)"
@@ -260,7 +269,10 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-inner-text="--init(*.description)"
                   at-ui5-click="^^field-focus-requested(item)"
                 ></ui5-link>
-                <ui5-label set-inner-text="--init(*.field)"></ui5-label>
+                <ui5-label
+                  set-title="--init(*.field)"
+                  set-inner-text="--init(*._targetlabel)"
+                ></ui5-label>
                 <furo-type-renderer
                   context="celledit"
                   fn-bind-data="--init(*.user_response)"

@@ -59,13 +59,24 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
 
     if (details.repeats.length > 0) {
       this.hidden = false;
+
+      // resolve the target fields
+      details.repeats.forEach(message => {
+        if (message.fields) {
+          message.fields.repeats.forEach(item => {
+            const target = this.rootNode._getPath(item.field._value);
+            // eslint-disable-next-line
+            item._targetlabel = target._meta.label;
+          });
+        }
+      });
+
       // count items of each type
       let errs = 0;
       let warn = 0;
       let success = 0;
       let info = 0;
       let confirm = 0;
-
       details.repeats.forEach(item => {
         const type = item['@type']._value.replace(/.*\//, '');
         switch (type) {
@@ -98,6 +109,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
       this._FBPTriggerWire('|--numOfInformation', info);
       this._FBPTriggerWire('|--numOfConfirmation', confirm);
 
+      // scroll to top of this element
       this.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
 
@@ -116,7 +128,6 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
     // dispatch a focus event for the field
     this.addEventListener('field-focus-requested', e => {
       const field = e.detail.field._value;
-
       const target = this.rootNode._getPath(field);
       target.dispatchNodeEvent(
         new NodeEvent('this-focus-requested', e.detail, false)
