@@ -7,4 +7,15 @@
     _links: '-[] furo.Link:2 #Hateoas links'
     bool: 'bool:10 #Boolean value'
     numeric: 'int32:11 #Numeric value'
+    date: 'google.type.Date:18 #field for furo-data-date-input for testing'
+    money: 'google.type.Money:29 #furo Money'
+    reference: |-
+      furo.Reference:5
+      = {"link" :
+          { "rel": "list",
+            "href": "/mockdata/persons/list.json",
+            "method": "GET",
+            "type": "person.Person",
+            "service": "personservice.PersonService"}}
+      #Reference type'
   target: mc.proto

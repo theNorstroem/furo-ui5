@@ -24,7 +24,12 @@
   import './initEnv.js';
   import '../src/furo-ui5-text-input-labeled.js';
   import '../src/furo-ui5-text-input.js';
+  import '../src/furo-ui5-textarea-input-labeled.js';
+  import '../src/furo-ui5-password-input-labeled.js';
+  import '../src/furo-ui5-step-input-labeled.js';
+  import '../src/furo-ui5-money-input-labeled.js';
   import '../src/furo-ui5-button.js';
+  import '../src/furo-ui5-reference-search-labeled.js';
   import '../src/furo-ui5-message-container-display.js';
   import '@furo/data/src/furo-message-container-handler.js';
 
@@ -48,13 +53,21 @@
           <furo-vertical-flex>
             <div scroll flex>
               <furo-ui5-message-container-display
+                set-no-filter="--hideFilterClicked"
                 fn-bind-data="--mcDO(*._messagecontainer)"></furo-ui5-message-container-display>
               <furo-form-layouter two>
                 <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.name)"></furo-ui5-text-input-labeled>
+                <furo-ui5-password-input-labeled fn-bind-data="--mcDO(*.name)"></furo-ui5-password-input-labeled>
 
-
+                <furo-ui5-textarea-input-labeled rows="8" fn-bind-data="--mcDO(*.person.name)"></furo-ui5-textarea-input-labeled>
                 <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.person.name)"></furo-ui5-text-input-labeled>
                 <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.person.first_name)"></furo-ui5-text-input-labeled>
+                <furo-ui5-number-input-labeled fn-bind-data="--mcDO(*.numeric)"></furo-ui5-number-input-labeled>
+                <furo-ui5-step-input-labeled  fn-bind-data="--mcDO(*.numeric)"></furo-ui5-step-input-labeled>
+                <furo-ui5-checkbox-input-labeled fn-bind-data="--mcDO(*.bool)"></furo-ui5-checkbox-input-labeled>
+
+                <furo-ui5-reference-search-labeled fn-bind-data="--mcDO(*.reference)"></furo-ui5-reference-search-labeled>
+                <furo-ui5-money-input-labeled fn-bind-data="--mcDO(*.money)" ></furo-ui5-money-input-labeled>
 
                 <furo-data-flow-repeat fn-bind-data="--mcDO(*.array)">
                   <template>
@@ -82,15 +95,16 @@
 
               <furo-ui5-button at-click="--saveClicked">save</furo-ui5-button>
               <ui5-button at-click="--validation">Trigger validation</ui5-button>
+              <ui5-button at-click="--hideFilterClicked">Hide Filter Bar</ui5-button>
 
 
-              <div>[DO]
+
                 <furo-data-object
                   type="messagecontainer.TestObject"
                   at-object-ready="--mcDO"
                   fn-inject-raw="--response"
                   fn-validate-all-fields="--validation"></furo-data-object>
-              </div>
+
             </div>
           </furo-vertical-flex>
         </template>
