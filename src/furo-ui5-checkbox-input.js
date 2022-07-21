@@ -283,6 +283,14 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
   }
 
   /**
+   * set the value state
+   * @param state
+   */
+  onFnaFieldStateChanged(state) {
+    this._setValueState(state.state);
+  }
+
+  /**
    * overwrite onFnaFieldNodeBecameInvalid function
    * @private
    */
