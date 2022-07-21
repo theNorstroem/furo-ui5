@@ -561,6 +561,14 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
   }
 
   /**
+   * set the value state
+   * @param state
+   */
+  onFnaFieldStateChanged(state) {
+    this._setValueStateMessage(state.state, state.description);
+  }
+
+  /**
    * overwrite onFnaFieldNodeBecameInvalid function
    * @private
    * @param validity
@@ -572,10 +580,6 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
     } else {
       this.valueState = 'Error';
     }
-  }
-
-  onFnaFieldStateChanged(state) {
-    this._setValueStateMessage(state.state, state.description);
   }
 
   /**

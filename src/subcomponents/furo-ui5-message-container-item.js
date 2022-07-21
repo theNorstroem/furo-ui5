@@ -151,7 +151,13 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         return html` <furo-horizontal-flex space>
           <ui5-icon name="approvals"></ui5-icon>
           <furo-form-layouter flex one>
-            <div set-inner-text="|--bindData(*.message.message)"></div>
+            <ui5-title
+              level="H5"
+              set-inner-text="|--bindData(*.description)"
+            ></ui5-title>
+            <furo-ui5-markdown
+              fn-bind-data="|--bindData(*.message.message)"
+            ></furo-ui5-markdown>
             <furo-type-renderer
               context="celledit"
               fn-bind-data="|--bindData(*.user_response)"

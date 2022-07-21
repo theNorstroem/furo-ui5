@@ -33,6 +33,16 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
   static get properties() {
     return {
       hidden: { type: Boolean, reflect: true },
+      /**
+       * Removes the filter tabs on top.
+       * @type Boolean
+       */
+      noFilter: { type: Boolean, attribute: 'no-filter', reflect: true },
+      /**
+       * Disable the scrolling to the element, when the container receives data.
+       * @type Boolean
+       */
+      disableScrolling: { type: Boolean, attribute: 'disable-scrolling' },
     };
   }
 
@@ -76,8 +86,11 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         if (message.fields) {
           message.fields.repeats.forEach(item => {
             const target = this.rootNode._getPath(item.field._value);
-            // eslint-disable-next-line
-            item._targetlabel = target._meta.label;
+
+            if (target._meta) {
+              // eslint-disable-next-line
+              item._targetlabel = target._meta.label;
+            }
           });
         }
       });
@@ -148,8 +161,10 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         this._segmentedButton.appendChild(this._informationButton);
       }
 
-      // scroll to top of this element
-      this.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      if (!this.disableScrolling) {
+        // scroll to top of this element
+        this.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      }
     }
 
     if (details.repeats.length === 0) {
@@ -224,6 +239,9 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         background-color: var(--sapGroup_TitleBackground);
         border-bottom: 1px solid var(--sapGroup_TitleBorderColor);
       }
+      :host([no-filter]) .head {
+        display: none;
+      }
     `;
   }
 
@@ -245,39 +263,39 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
             id="confirmation"
             icon="approvals"
             set-inner-text="|--numOfConfirmation"
-            >0</ui5-segmented-button-item
-          >
+            >0
+          </ui5-segmented-button-item>
 
           <ui5-segmented-button-item
             id="error"
             icon="message-error"
             class="Negative"
             set-inner-text="|--numOfErrs"
-            >0</ui5-segmented-button-item
-          >
+            >0
+          </ui5-segmented-button-item>
 
           <ui5-segmented-button-item
             id="warning"
             icon="message-warning"
             class="Attention"
             set-inner-text="|--numOfWarnings"
-            >0</ui5-segmented-button-item
-          >
+            >0
+          </ui5-segmented-button-item>
 
           <ui5-segmented-button-item
             id="success"
             icon="message-success"
             class="Positive"
             set-inner-text="|--numOfSuccess"
-            >0</ui5-segmented-button-item
-          >
+            >0
+          </ui5-segmented-button-item>
 
           <ui5-segmented-button-item
             id="information"
             icon="message-information"
             set-inner-text="|--numOfInformation"
-            >0</ui5-segmented-button-item
-          >
+            >0
+          </ui5-segmented-button-item>
         </ui5-segmented-button>
       </div>
 

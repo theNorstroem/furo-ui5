@@ -39,20 +39,40 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   constructor() {
     super();
 
-    // used to restore the state after a invalidation -> validation change
+    /**
+     * used to restore the state after a invalidation -> validation change
+     *
+     * @type {{state: string, message: string}}
+     * @private
+     */
     this._previousValueState = { state: 'None', message: '' };
 
+    /**
+     *
+     * @type {{readonly: undefined}}
+     * @private
+     */
     this._attributesFromFNA = {
       readonly: undefined,
     };
 
+    /**
+     *
+     * @type {{required: undefined}}
+     * @private
+     */
     this._constraintsFromFNA = {
       required: undefined,
     };
 
-    // a list of privileged attributes. when those attributes are set in number-input components initially.
-    // they can not be modified later via response or spec
-    // null is used because getAttribute returns null or value
+    /**
+     * A list of privileged attributes. when those attributes are set in number-input components initially.
+     * they can not be modified later via response or spec
+     * null is used because getAttribute returns null or value
+     *
+     * @type {{readonly: null, disabled: null, required: null}}
+     * @private
+     */
     this._privilegedAttributes = {
       readonly: null,
       required: null,
@@ -383,6 +403,14 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
+   * set the value state
+   * @param state
+   */
+  onFnaFieldStateChanged(state) {
+    this._setValueStateMessage(state.state, state.description);
+  }
+
+  /**
    * overwrite onFnaFieldNodeBecameInvalid function
    * @private
    * @param validity
@@ -405,6 +433,10 @@ export class FuroUi5MoneyInput extends FBP(FieldNodeAdapter(LitElement)) {
     this._resetValueStateMessage();
   }
 
+  /**
+   *
+   * @private
+   */
   _getElements() {
     if (!this.amount) {
       this.amount = this.shadowRoot.getElementById('amount');
