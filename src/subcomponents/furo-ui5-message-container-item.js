@@ -173,7 +173,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                 <furo-form-layouter flex one>
                   <ui5-link
                     set-inner-text="--init(*.description)"
-                    at-ui5-click="^^field-focus-requested(item)"
+                    at-ui5-click="^^field-focus-requested(item), ^^message-item-clicked(item)"
                   ></ui5-link>
                   <ui5-label
                     set-title="--init(*.field)"
@@ -203,7 +203,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               <furo-form-layouter flex one>
                 <ui5-link
                   set-inner-text="--init(*.description)"
-                  at-ui5-click="^^field-focus-requested(item)"
+                  at-ui5-click="^^field-focus-requested(item), ^^message-item-clicked(item)"
                 ></ui5-link>
                 <ui5-label
                   set-title="--init(*.field)"
@@ -232,7 +232,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               <furo-form-layouter flex one>
                 <ui5-link
                   set-inner-text="--init(*.description)"
-                  at-ui5-click="^^field-focus-requested(item)"
+                  at-ui5-click="^^field-focus-requested(item), ^^message-item-clicked(item)"
                 ></ui5-link>
                 <ui5-label
                   set-title="--init(*.field)"
@@ -264,7 +264,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               <furo-form-layouter flex one>
                 <ui5-link
                   set-inner-text="--init(*.description)"
-                  at-ui5-click="^^field-focus-requested(item)"
+                  at-ui5-click="^^field-focus-requested(item), ^^message-item-clicked(item)"
                 ></ui5-link>
                 <ui5-label
                   set-title="--init(*.field)"
@@ -293,7 +293,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               <furo-form-layouter flex one>
                 <ui5-link
                   set-inner-text="--init(*.description)"
-                  at-ui5-click="^^field-focus-requested(item)"
+                  at-ui5-click="^^field-focus-requested(item), ^^message-item-clicked(item)"
                 ></ui5-link>
                 <ui5-label
                   set-title="--init(*.field)"

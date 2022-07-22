@@ -19,8 +19,9 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode';
 
 /**
  * `furo-ui5-message-container-display`
- * todo Describe your element
+ *  Renders the contenst of a `furo.MessageContainer` or `google.rpc.Status` message.
  *
+ * @fires {Object} message-item-clicked - fired when a
  * @summary todo shortdescription
  * @customElement
  * @appliesMixin FBP
@@ -32,6 +33,9 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    */
   static get properties() {
     return {
+      /**
+       * @private
+       */
       hidden: { type: Boolean, reflect: true },
       /**
        * Removes the filter tabs on top.
@@ -86,7 +90,9 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         if (message.fields) {
           message.fields.repeats.forEach(item => {
             const target = this.rootNode._getPath(item.field._value);
-
+            // this is a fallback, if the field was not found
+            // eslint-disable-next-line
+            item._targetlabel = item.field._value;
             if (target._meta) {
               // eslint-disable-next-line
               item._targetlabel = target._meta.label;
@@ -96,7 +102,9 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         if (message.field_violations) {
           message.field_violations.repeats.forEach(item => {
             const target = this.rootNode._getPath(item.field._value);
-
+            // this is a fallback, if the field was not found
+            // eslint-disable-next-line
+            item._targetlabel = item.field._value;
             if (target._meta) {
               // eslint-disable-next-line
               item._targetlabel = target._meta.label;

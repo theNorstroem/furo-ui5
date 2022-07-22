@@ -39,6 +39,7 @@
   import '@furo/data/src/furo-message-container-handler.js';
 
   import '@furo/route/src/furo-location.js';
+  import '@furo/util/src/furo-fetch-json.js';
   import '@furo/data/src/furo-deep-link.js';
   import '@furo/data/src/furo-data-flow-repeat.js';
   import '@furo/data/src/furo-entity-agent.js';
@@ -48,7 +49,6 @@
 
   import '@ui5/webcomponents/dist/Icon.js';
   import '@ui5/webcomponents-icons/dist/search.js';
-
 
   render(
     html`
@@ -96,32 +96,30 @@
                                  at-response="--response">
               </furo-entity-agent>
               <furo-message-container-handler fn-bind-mc="--mcDO(*._messagecontainer)"
-                                              fn-inject-raw="--response(*._messagecontainer)"></furo-message-container-handler>
+                                              fn-inject-raw="--response(*._messagecontainer),--grpcStatus"></furo-message-container-handler>
 
               <hr>
 
               <furo-ui5-button at-click="--saveClicked">save</furo-ui5-button>
               <ui5-button at-click="--validation">Trigger validation</ui5-button>
               <ui5-button at-click="--hideFilterClicked">Hide Filter Bar</ui5-button>
-
+              <ui5-button at-click="--grpcStatusClicked">Show grpcStatus</ui5-button>
 
               <furo-data-object
                 type="messagecontainer.TestObject"
                 at-object-ready="--mcDO"
                 fn-inject-raw="--response"
                 fn-validate-all-fields="--validation"></furo-data-object>
-
             </div>
           </furo-vertical-flex>
-          <br>
-          <br>
+
+          <furo-fetch-json ƒ-fetch="--grpcStatusClicked" src="/mockdata/tasks/1/error.json" @-data="--grpcStatus"></furo-fetch-json>
         </template>
       </furo-demo-snippet>
 
 
-    `,
-    document.querySelector('#demo')
-  );
+    `, document.querySelector('#demo'));
+
 </script>
 </body>
 </html>
