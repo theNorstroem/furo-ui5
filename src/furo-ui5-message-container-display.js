@@ -114,6 +114,10 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
       details.repeats.forEach(item => {
         const type = item['@type']._value.replace(/.*\//, '');
         switch (type) {
+          case 'google.rpc.BadRequest':
+            errs += item.field_violations.repeats.length;
+            break;
+
           case 'furo.ErrorMessage':
             errs += item.fields.repeats.length;
             break;

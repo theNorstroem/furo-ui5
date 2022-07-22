@@ -40,7 +40,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
 
       case 'error':
         this.hidden =
-          type !== 'furo.ErrorMessage' &&
+          !(type === 'furo.ErrorMessage' || type === 'google.rpc.BadRequest') &&
           type !== 'furo.MessageContainerGrouplabel';
         break;
 
