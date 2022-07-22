@@ -93,6 +93,16 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
             }
           });
         }
+        if (message.field_violations) {
+          message.field_violations.repeats.forEach(item => {
+            const target = this.rootNode._getPath(item.field._value);
+
+            if (target._meta) {
+              // eslint-disable-next-line
+              item._targetlabel = target._meta.label;
+            }
+          });
+        }
       });
 
       // count items of each type

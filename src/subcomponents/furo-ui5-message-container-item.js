@@ -144,8 +144,6 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
           class="groupheader"
           set-inner-text="|--bindData(*.title)"
         ></div>`;
-        // eslint-disable-next-line
-        break;
 
       case 'furo.ConfirmationMessage':
         return html` <furo-horizontal-flex space>
@@ -164,8 +162,6 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
             ></furo-type-renderer>
           </furo-form-layouter>
         </furo-horizontal-flex>`;
-        // eslint-disable-next-line
-        break;
 
       case 'furo.ErrorMessage':
         return html`
@@ -195,8 +191,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
             </template>
           </furo-data-flow-repeat>
         `;
-        // eslint-disable-next-line
-        break;
+
       case 'furo.SuccessMessage':
         return html` <furo-data-flow-repeat
           fn-bind-data="|--bindData(*.fields)"
@@ -225,8 +220,6 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
             </furo-horizontal-flex>
           </template>
         </furo-data-flow-repeat>`;
-        // eslint-disable-next-line
-        break;
 
       case 'furo.WarningMessage':
         return html` <furo-data-flow-repeat
@@ -256,8 +249,6 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
             </furo-horizontal-flex>
           </template>
         </furo-data-flow-repeat>`;
-        // eslint-disable-next-line
-        break;
 
       case 'furo.InformationMessage':
         return html` <furo-data-flow-repeat
@@ -290,8 +281,29 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
             </furo-horizontal-flex>
           </template>
         </furo-data-flow-repeat>`;
-        // eslint-disable-next-line
-        break;
+
+      case 'google.rpc.BadRequest':
+        return html` <furo-data-flow-repeat
+          fn-bind-data="|--bindData(*.field_violations)"
+        >
+          <template>
+            <furo-horizontal-flex space>
+              <ui5-icon name="message-error" class="Negative"></ui5-icon>
+
+              <furo-form-layouter flex one>
+                <ui5-link
+                  set-inner-text="--init(*.description)"
+                  at-ui5-click="^^field-focus-requested(item)"
+                ></ui5-link>
+                <ui5-label
+                  set-title="--init(*.field)"
+                  set-inner-text="--init(*._targetlabel)"
+                ></ui5-label>
+              </furo-form-layouter>
+            </furo-horizontal-flex>
+          </template>
+        </furo-data-flow-repeat>`;
+
       default:
         return html``;
     }
