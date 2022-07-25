@@ -334,6 +334,14 @@ export class FuroUi5Combobox extends FieldNodeAdapter(ComboBox.default) {
   }
 
   /**
+   * set the value state
+   * @param state
+   */
+  onFnaFieldStateChanged(state) {
+    this._setValueStateMessage(state.state, state.description);
+  }
+
+  /**
    * Overridden onFnaFieldNodeBecameInvalid function
    * @private
    * @param validity

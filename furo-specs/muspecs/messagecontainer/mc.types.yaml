@@ -1,0 +1,21 @@
+- type: 'messagecontainer.TestObject #MC test object'
+  fields:
+    name: 'string:1 #Name field'
+    array: '[]string:3 #repeated string'
+    person: 'person.Person:4 #deep value state'
+    _messagecontainer: 'furo.MessageContainer:9 #MessageContainer'
+    _links: '-[] furo.Link:2 #Hateoas links'
+    bool: 'bool:10 #Boolean value'
+    numeric: 'int32:11 #Numeric value'
+    date: 'google.type.Date:18 #field for furo-data-date-input for testing'
+    money: 'google.type.Money:29 #furo Money'
+    reference: |-
+      furo.Reference:5
+      = {"link" :
+          { "rel": "list",
+            "href": "/mockdata/persons/list.json",
+            "method": "GET",
+            "type": "person.Person",
+            "service": "personservice.PersonService"}}
+      #Reference type'
+  target: mc.proto

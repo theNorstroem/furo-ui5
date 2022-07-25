@@ -33,11 +33,12 @@ description: |-
            - monitored_resource: library.googleapis.com/billing_branch
              metrics:
              - library.googleapis.com/book/borrowed_count
+lifecycle: null
 __proto:
     package: google.api
     targetfile: billing.proto
     imports:
-        - google/api/metric.proto
+        - google/api/Billing/billing.proto
     options:
         go_package: google.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig
         java_multiple_files: "true"
@@ -54,14 +55,10 @@ fields:
              one consumer destination.
         __proto:
             number: 8
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Billing.consumer_destinations
             options:

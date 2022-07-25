@@ -148,7 +148,7 @@ describe('furo-ui5-text-input-wrapper', () => {
     setTimeout(() => {
       assert.equal(input._state.value, 'Set data in the inner input element');
       done();
-    });
+    }, 16);
   });
 
   it('should apply meta and constraints to the bound field (wrapper)', done => {

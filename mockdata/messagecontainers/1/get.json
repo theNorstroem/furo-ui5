@@ -1,0 +1,157 @@
+{
+  "name": "me",
+  "array": [
+    "aaa",
+    "bbb",
+    "ccc"
+  ],
+  "person": {
+    "name": "name",
+    "first_name": "first_name"
+  },
+  "_messagecontainer": {
+    "details": [
+      {
+        "@type": "x/furo.MessageContainerGrouplabel",
+        "id": "xxxxxccc",
+        "title": "Note"
+      },
+      {
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "dsf2",
+        "readable_id": "id:2",
+        "description": "description description ddd",
+        "user_response": {
+          "@type": "x/google.protobuf.Timestamp",
+          "value": "2022-07-04T01:30:15.01Z",
+          "attributes": {
+            "placeholder": "placeholder",
+            "label": "label"
+          }
+        },
+        "message": {
+          "locale": "de-CH",
+          "message": "**google.protobuf.Timestamp** Confirmation message....."
+
+        }
+      },
+      {
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "eee",
+        "readable_id": "id:2",
+        "user_response": {
+          "@type": "x/google.protobuf.UInt32Value"
+        },
+        "message": {
+          "locale": "de-CH",
+          "message": "google.protobuf.UInt32Value Confirmation message....."
+        }
+      },
+      {
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "eee",
+        "readable_id": "id:2",
+        "user_response": {
+          "@type": "x/google.protobuf.Int32Value"
+        },
+        "message": {
+          "locale": "de-CH",
+          "message": "google.protobuf.Int32Value Confirmation message....."
+        }
+      },
+      {
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "eee",
+        "readable_id": "id:2",
+        "user_response": {
+          "@type": "x/google.protobuf.FloatValue"
+        },
+        "message": {
+          "locale": "de-CH",
+          "message": "google.protobuf.FloatValue Confirmation message....."
+        }
+      },
+      {
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "dsf2",
+        "readable_id": "id:2",
+        "user_response": {
+          "@type": "x/google.type.TimeOfDay"
+        },
+        "description": "description description",
+        "message": {
+          "locale": "de-CH",
+          "message": "google.type.TimeOfDay Confirmation message....."
+        }
+      },
+      {
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "dsf2",
+        "readable_id": "id:2",
+        "user_response": {
+          "@type": "x/google.protobuf.BoolValue",
+          "value": false
+        },
+        "message": {
+          "locale": "de-CH",
+          "message": "google.protobuf.BoolValue Confirmation message....."
+        }
+      },
+      {
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "eee",
+        "readable_id": "id:2",
+        "user_response": {
+          "@type": "x/google.protobuf.StringValue"
+        },
+        "message": {
+          "locale": "de-CH",
+          "message": "google.protobuf.StringValue Confirmation message....."
+        }
+      },
+      {
+        "@type": "x/furo.ConfirmationMessage",
+        "id": "dsf2",
+        "readable_id": "id:2",
+        "user_response": {
+          "@type": "x/furo.Reference",
+          "link": {
+            "rel": "list",
+            "href": "/mockdata/persons/list.json",
+            "method": "GET",
+            "type": "person.Person",
+            "service": "personservice.PersonService"
+          }
+        },
+        "message": {
+          "locale": "de-CH",
+          "message": "Reference searcher for person.Person....."
+        }
+      },
+      {
+        "@type": "x/furo.InformationMessage",
+        "id": "223",
+        "readable_id": "id:2",
+        "fields": [
+          {
+            "field": "array.2",
+            "description": "Low stocks, only 2 items per order",
+            "message": {
+              "locale": "de-CH",
+              "message": "The stocks are low. Material is already reordered and should be delivered in 2 months."
+            }
+          }
+        ]
+      }
+    ],
+    "success": false
+  },
+  "_links": [
+    {
+      "rel": "update",
+      "service": "messagecontainer.MessagecontainerService",
+      "href": "/mockdata/messagecontainers/1/update.json",
+      "method": "POST"
+    }
+  ]
+}

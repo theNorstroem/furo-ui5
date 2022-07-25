@@ -6,11 +6,11 @@ description: |-
      For example, if a quota check failed with an error indicating the calling
      project hasn't enabled the accessed service, this can contain a URL pointing
      directly to the right place in the developer console to flip the bit.
+lifecycle: null
 __proto:
     package: google.rpc
     targetfile: error_details.proto
-    imports:
-        - google/protobuf/duration.proto
+    imports: []
     options:
         go_package: google.golang.org/genproto/googleapis/rpc/errdetails;errdetails
         java_multiple_files: "true"
@@ -23,14 +23,10 @@ fields:
         description: URL(s) pointing to additional information on handling the current error.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Help.links
             options:

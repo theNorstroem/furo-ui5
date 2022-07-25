@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+      margin: 0;
+      --furo-form-layouter-row-gap: var(--spacing-s, 16px);
+      --furo-form-layouter-column-gap: var(--spacing-s, 16px);
+    }
+
+    #demo {
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    furo-demo-snippet {
+      height: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div id="demo"></div>
+
+<script type="module">
+  import {html, render} from 'lit';
+  import './initEnv.js';
+  import '../src/furo-ui5-text-input-labeled.js';
+  import '../src/furo-ui5-text-input.js';
+  import '../src/furo-ui5-textarea-input-labeled.js';
+  import '../src/furo-ui5-password-input-labeled.js';
+  import '../src/furo-ui5-step-input-labeled.js';
+  import '../src/furo-ui5-money-input-labeled.js';
+  import '../src/furo-ui5-button.js';
+  import '../src/furo-ui5-reference-search-labeled.js';
+  import '../src/furo-ui5-message-container-display.js';
+  import '@furo/data/src/furo-message-container-handler.js';
+
+  import '@furo/route/src/furo-location.js';
+  import '@furo/util/src/furo-fetch-json.js';
+  import '@furo/data/src/furo-deep-link.js';
+  import '@furo/data/src/furo-data-flow-repeat.js';
+  import '@furo/data/src/furo-entity-agent.js';
+  import '@furo/data/src/furo-data-object.js';
+  import '@furo/util/src/doc/furo-demo-snippet.js';
+  import '@furo/layout/src/furo-form-layouter.js';
+
+  import '@ui5/webcomponents/dist/Icon.js';
+  import '@ui5/webcomponents-icons/dist/search.js';
+
+  render(
+    html`
+
+      <furo-demo-snippet>
+        <template>
+          <furo-vertical-flex>
+            <div scroll flex>
+              <furo-ui5-message-container-display
+                set-no-filter="--hideFilterClicked"
+                fn-bind-data="--mcDO(*._messagecontainer)"></furo-ui5-message-container-display>
+              <furo-form-layouter two>
+                <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.name)"></furo-ui5-text-input-labeled>
+                <furo-ui5-password-input-labeled fn-bind-data="--mcDO(*.name)"></furo-ui5-password-input-labeled>
+
+                <furo-ui5-textarea-input-labeled rows="8"
+                                                 fn-bind-data="--mcDO(*.person.name)"></furo-ui5-textarea-input-labeled>
+                <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.person.name)"></furo-ui5-text-input-labeled>
+                <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.person.first_name)"></furo-ui5-text-input-labeled>
+                <furo-ui5-number-input-labeled fn-bind-data="--mcDO(*.numeric)"></furo-ui5-number-input-labeled>
+                <furo-ui5-step-input-labeled fn-bind-data="--mcDO(*.numeric)"></furo-ui5-step-input-labeled>
+                <furo-ui5-checkbox-input-labeled fn-bind-data="--mcDO(*.bool)"></furo-ui5-checkbox-input-labeled>
+
+                <furo-ui5-reference-search-labeled
+                  fn-bind-data="--mcDO(*.reference)"></furo-ui5-reference-search-labeled>
+                <furo-ui5-money-input-labeled fn-bind-data="--mcDO(*.money)"></furo-ui5-money-input-labeled>
+
+                <furo-data-flow-repeat fn-bind-data="--mcDO(*.array)">
+                  <template>
+                    <furo-ui5-text-input-labeled fn-bind-data="--init"></furo-ui5-text-input-labeled>
+                  </template>
+                </furo-data-flow-repeat>
+
+              </furo-form-layouter>
+
+
+              <furo-location at-location-changed="--locationChanged"></furo-location>
+              <furo-deep-link service="messagecontainer.MessagecontainerService" at-hts-out="--hts"
+                              fn-qp-in="--locationChanged(*.query)"></furo-deep-link>
+
+              <furo-entity-agent service="messagecontainer.MessagecontainerService" fn-hts-in="--hts"
+                                 load-on-hts-in
+                                 fn-save="--saveClicked"
+                                 fn-bind-request-data="--mcDO"
+                                 at-response="--response">
+              </furo-entity-agent>
+              <furo-message-container-handler fn-bind-mc="--mcDO(*._messagecontainer)"
+                                              fn-inject-raw="--response(*._messagecontainer),--grpcStatus"></furo-message-container-handler>
+
+              <hr>
+
+              <furo-ui5-button at-click="--saveClicked">save</furo-ui5-button>
+              <ui5-button at-click="--validation">Trigger validation</ui5-button>
+              <ui5-button at-click="--hideFilterClicked">Hide Filter Bar</ui5-button>
+              <ui5-button at-click="--grpcStatusClicked">Show grpcStatus</ui5-button>
+
+              <furo-data-object
+                type="messagecontainer.TestObject"
+                at-object-ready="--mcDO"
+                fn-inject-raw="--response"
+                fn-validate-all-fields="--validation"></furo-data-object>
+            </div>
+          </furo-vertical-flex>
+
+          <furo-fetch-json ƒ-fetch="--grpcStatusClicked" src="/mockdata/tasks/1/error.json" @-data="--grpcStatus"></furo-fetch-json>
+        </template>
+      </furo-demo-snippet>
+
+
+    `, document.querySelector('#demo'));
+
+</script>
+</body>
+</html>

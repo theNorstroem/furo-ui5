@@ -3,11 +3,11 @@ type: RequestInfo
 description: |-
     Contains metadata about the request that clients can attach when filing a bug
      or providing other forms of feedback.
+lifecycle: null
 __proto:
     package: google.rpc
     targetfile: error_details.proto
-    imports:
-        - google/protobuf/duration.proto
+    imports: []
     options:
         go_package: google.golang.org/genproto/googleapis/rpc/errdetails;errdetails
         java_multiple_files: "true"
@@ -22,14 +22,10 @@ fields:
              it. For example, it can be used to identify requests in the service's logs.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.RequestInfo.request_id
             options:
@@ -46,14 +42,10 @@ fields:
              stack trace that can be sent back to the service provider for debugging.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.RequestInfo.serving_data
             options:

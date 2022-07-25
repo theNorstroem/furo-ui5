@@ -452,6 +452,14 @@ export class FuroUi5TextareaInput extends FieldNodeAdapter(TextArea.default) {
   }
 
   /**
+   * set the value state
+   * @param state
+   */
+  onFnaFieldStateChanged(state) {
+    this._setValueStateMessage(state.state, state.description);
+  }
+
+  /**
    * overwrite onFnaFieldNodeBecameInvalid function
    * @private
    * @param validity

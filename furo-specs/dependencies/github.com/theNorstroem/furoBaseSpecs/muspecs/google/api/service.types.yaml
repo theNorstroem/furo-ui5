@@ -1,0 +1,84 @@
+- type: |-
+    google.api.Service #`Service` is the root object of Google service configuration schema. It
+     describes basic information about a service, such as the name and the
+     title, and delegates other aspects to sub-sections. Each sub-section is
+     either a proto message or a repeated proto message that configures a
+     specific aspect, such as auth. See each proto message definition for details.
+
+     Example:
+
+         type: google.api.Service
+         config_version: 3
+         name: calendar.googleapis.com
+         title: Google Calendar API
+         apis:
+         - name: google.calendar.v3.Calendar
+         authentication:
+           providers:
+           - id: google_calendar_auth
+             jwks_uri: https://www.googleapis.com/oauth2/v1/certs
+             issuer: https://securetoken.google.com
+           rules:
+           - selector: "*"
+             requirements:
+               provider_id: google_calendar_auth
+  fields:
+    config_version: 'google.protobuf.UInt32Value:20 #This field is obsolete. Its value must be set to `3`.'
+    name: |-
+        string:1 #The service name, which is a DNS-like logical identifier for the
+         service, such as `calendar.googleapis.com`. The service name
+         typically goes through DNS verification to make sure the owner
+         of the service also owns the DNS name.
+    id: |-
+        string:33 #A unique ID for a specific instance of this message, typically assigned
+         by the client for tracking purpose. Must be no longer than 63 characters
+         and only lower case letters, digits, '.', '_' and '-' are allowed. If
+         empty, the server may choose to generate one instead.
+    title: 'string:2 #The product title for this service.'
+    producer_project_id: 'string:22 #The Google project that owns this service.'
+    apis: |-
+        [] google.protobuf.Api:3 #A list of API interfaces exported by this service. Only the `name` field
+         of the [google.protobuf.Api][google.protobuf.Api] needs to be provided by the configuration
+         author, as the remaining fields will be derived from the IDL during the
+         normalization process. It is an error to specify an API interface here
+         which cannot be resolved against the associated IDL files.
+    types: |-
+        [] google.protobuf.Type:4 #A list of all proto message types included in this API service.
+         Types referenced directly or indirectly by the `apis` are
+         automatically included.  Messages which are not referenced but
+         shall be included, such as types used by the `google.protobuf.Any` type,
+         should be listed here by name. Example:
+
+             types:
+             - name: google.protobuf.Int32
+    enums: |-
+        [] google.protobuf.Enum:5 #A list of all enum types included in this API service.  Enums
+         referenced directly or indirectly by the `apis` are automatically
+         included.  Enums which are not referenced but shall be included
+         should be listed here by name. Example:
+
+             enums:
+             - name: google.someapi.v1.SomeEnum
+    documentation: 'google.api.Documentation:6 #Additional API documentation.'
+    backend: 'google.api.Backend:8 #API backend configuration.'
+    http: 'google.api.Http:9 #HTTP configuration.'
+    quota: 'google.api.Quota:10 #Quota configuration.'
+    authentication: 'google.api.Authentication:11 #Auth configuration.'
+    context: 'google.api.Context:12 #Context configuration.'
+    usage: 'google.api.Usage:15 #Configuration controlling usage of this service.'
+    endpoints: |-
+        [] google.api.Endpoint:18 #Configuration for network endpoints.  If this is empty, then an endpoint
+         with the same name as the service is automatically generated to service all
+         defined APIs.
+    control: 'google.api.Control:21 #Configuration for the service control plane.'
+    logs: '[] google.api.LogDescriptor:23 #Defines the logs used by this service.'
+    metrics: '[] google.api.MetricDescriptor:24 #Defines the metrics used by this service.'
+    monitored_resources: |-
+        [] google.api.MonitoredResourceDescriptor:25 #Defines the monitored resources used by this service. This is required
+         by the [Service.monitoring][google.api.Service.monitoring] and [Service.logging][google.api.Service.logging] configurations.
+    billing: 'google.api.Billing:26 #Billing configuration.'
+    logging: 'google.api.Logging:27 #Logging configuration.'
+    monitoring: 'google.api.Monitoring:28 #Monitoring configuration.'
+    system_parameters: 'google.api.SystemParameters:29 #System parameter configuration.'
+    source_info: 'google.api.SourceInfo:37 #Output only. The source information for this configuration if available.'
+  target: service.proto

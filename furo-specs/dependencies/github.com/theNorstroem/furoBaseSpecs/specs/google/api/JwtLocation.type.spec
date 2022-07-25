@@ -1,6 +1,7 @@
 name: JwtLocation
 type: JwtLocation
 description: Specifies a location to extract JWT from an API request.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: auth.proto
@@ -17,14 +18,11 @@ fields:
         description: Specifies HTTP header name to extract JWT token.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: in
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.JwtLocation.header
             options:
@@ -39,14 +37,11 @@ fields:
         description: Specifies URL query parameter name to extract JWT token.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: in
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.JwtLocation.query
             options:
@@ -69,14 +64,10 @@ fields:
              value_prefix="Bearer " with a space at the end.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.JwtLocation.value_prefix
             options:

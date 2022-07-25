@@ -1,4 +1,4 @@
-name: fieldmeta
+name: FieldMeta
 type: FieldMeta
 description: Metas for a field
 lifecycle: null

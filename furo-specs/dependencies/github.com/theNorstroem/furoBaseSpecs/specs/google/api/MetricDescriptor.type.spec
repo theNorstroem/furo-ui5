@@ -1,16 +1,18 @@
 name: MetricDescriptor
 type: MetricDescriptor
-description: |
+description: |-
     Defines a metric type and its schema. Once a metric descriptor is created,
      deleting or altering it stops data collection and makes the metric type's
      existing data unusable.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: metric.proto
     imports:
+        - google/api/ENUM_launch_stage.proto
+        - google/api/MetricDescriptor/ENUM_metric.proto
+        - google/api/MetricDescriptor/metric.proto
         - google/api/label.proto
-        - google/api/launch_stage.proto
-        - google/protobuf/duration.proto
     options:
         go_package: google.golang.org/genproto/googleapis/api/metric;metric
         java_multiple_files: "true"
@@ -23,14 +25,10 @@ fields:
         description: The resource name of the metric descriptor.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.name
             options:
@@ -53,14 +51,10 @@ fields:
                  "appengine.googleapis.com/http/server/response_latencies"
         __proto:
             number: 8
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.type
             options:
@@ -81,14 +75,10 @@ fields:
              for responses that failed.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.labels
             options:
@@ -99,20 +89,16 @@ fields:
             typespecific: null
         constraints: {}
     metric_kind:
-        type: unknown
+        type: google.api.MetricDescriptor.MetricKind
         description: |-
             Whether the metric records instantaneous values, changes to a value, etc.
              Some combinations of `metric_kind` and `value_type` might not be supported.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.metric_kind
             options:
@@ -123,20 +109,16 @@ fields:
             typespecific: null
         constraints: {}
     value_type:
-        type: unknown
+        type: google.api.MetricDescriptor.ValueType
         description: |-
             Whether the measurement is an integer, a floating-point number, etc.
              Some combinations of `metric_kind` and `value_type` might not be supported.
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.value_type
             options:
@@ -253,14 +235,10 @@ fields:
                 (so a metric value `0.03` means "3 percent").
         __proto:
             number: 5
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.unit
             options:
@@ -275,14 +253,10 @@ fields:
         description: A detailed description of the metric, which can be used in documentation.
         __proto:
             number: 6
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.description
             options:
@@ -301,14 +275,10 @@ fields:
              associated with user-visible concepts, such as Quota.
         __proto:
             number: 7
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.display_name
             options:
@@ -323,14 +293,10 @@ fields:
         description: Optional. Metadata which can be used to guide usage of the metric.
         __proto:
             number: 10
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.metadata
             options:
@@ -341,18 +307,14 @@ fields:
             typespecific: null
         constraints: {}
     launch_stage:
-        type: unknown
+        type: google.api.LaunchStage
         description: Optional. The launch stage of the metric definition.
         __proto:
             number: 12
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.launch_stage
             options:
@@ -372,14 +334,10 @@ fields:
              resource types listed here.
         __proto:
             number: 13
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MetricDescriptor.monitored_resource_types
             options:

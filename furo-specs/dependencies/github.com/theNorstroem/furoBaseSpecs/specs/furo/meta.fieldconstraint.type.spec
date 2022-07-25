@@ -1,4 +1,4 @@
-name: fieldconstraint
+name: FieldConstraint
 type: FieldConstraint
 description: a single fieldconstraint
 lifecycle: null

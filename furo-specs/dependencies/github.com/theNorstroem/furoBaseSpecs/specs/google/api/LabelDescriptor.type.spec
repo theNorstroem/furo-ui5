@@ -1,10 +1,12 @@
 name: LabelDescriptor
 type: LabelDescriptor
 description: A description of a label.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: label.proto
-    imports: []
+    imports:
+        - google/api/LabelDescriptor/ENUM_label.proto
     options:
         cc_enable_arenas: "true"
         go_package: google.golang.org/genproto/googleapis/api/label;label
@@ -18,14 +20,10 @@ fields:
         description: The label key.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LabelDescriptor.key
             options:
@@ -36,18 +34,14 @@ fields:
             typespecific: null
         constraints: {}
     value_type:
-        type: unknown
+        type: google.api.LabelDescriptor.ValueType
         description: The type of data that can be assigned to the label.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LabelDescriptor.value_type
             options:
@@ -62,14 +56,10 @@ fields:
         description: A human-readable description for the label.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.LabelDescriptor.description
             options:

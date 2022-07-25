@@ -1,4 +1,4 @@
-name: uint32
+name: Uint32
 type: Uint32
 description: Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
 lifecycle: null
@@ -61,7 +61,7 @@ fields:
         constraints: {}
     attributes:
         type: map<string,string>
-        description: 'Attributes for a value, something like confidential-msg: you are not allowed to see this value '
+        description: 'Attributes for a value, something like confidential-msg: you are not allowed to see this value'
         __proto:
             number: 3
         __ui:

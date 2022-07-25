@@ -3,6 +3,7 @@ type: SystemParameterRule
 description: |-
     Define a system parameter rule mapping system parameter definitions to
      methods.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: system_parameter.proto
@@ -23,14 +24,10 @@ fields:
              Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.SystemParameterRule.selector
             options:
@@ -50,14 +47,10 @@ fields:
              parameter-dependent.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.SystemParameterRule.parameters
             options:

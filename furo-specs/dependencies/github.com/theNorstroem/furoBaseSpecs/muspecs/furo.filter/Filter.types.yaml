@@ -1,0 +1,4 @@
+- type: 'furo.filter.Filter #Filter root object'
+  fields:
+    clause: '[] filter.Condition:1 #Root bracket with ors inside, this is the most complex but most flexible way to define a filter'
+  target: filter.proto

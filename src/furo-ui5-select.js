@@ -304,6 +304,14 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
   }
 
   /**
+   * set the value state
+   * @param state
+   */
+  onFnaFieldStateChanged(state) {
+    this._setValueStateMessage(state.state, state.description);
+  }
+
+  /**
    * Overridden onFnaFieldNodeBecameInvalid function
    * @private
    * @param validity

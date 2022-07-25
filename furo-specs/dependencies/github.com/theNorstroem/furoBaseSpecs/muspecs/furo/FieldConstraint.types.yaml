@@ -1,0 +1,5 @@
+- type: 'furo.FieldConstraint #a single fieldconstraint'
+  fields:
+    is: 'string:1 #the constraint value as string, even it is a number'
+    message: 'string:2 #The message to display on constraint violation'
+  target: furo.proto

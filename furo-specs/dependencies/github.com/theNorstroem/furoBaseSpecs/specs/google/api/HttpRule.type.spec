@@ -270,6 +270,7 @@ description: |-
      If an API needs to use a JSON array for request or response body, it can map
      the request or response body to a repeated field. However, some gRPC
      Transcoding implementations may not support this feature.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: http.proto
@@ -290,14 +291,10 @@ fields:
              Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.HttpRule.selector
             options:
@@ -314,14 +311,11 @@ fields:
              resources.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: pattern
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.HttpRule.get
             options:
@@ -336,14 +330,11 @@ fields:
         description: Maps to HTTP PUT. Used for replacing a resource.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: pattern
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.HttpRule.put
             options:
@@ -358,14 +349,11 @@ fields:
         description: Maps to HTTP POST. Used for creating a resource or performing an action.
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: pattern
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.HttpRule.post
             options:
@@ -380,14 +368,11 @@ fields:
         description: Maps to HTTP DELETE. Used for deleting a resource.
         __proto:
             number: 5
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: pattern
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.HttpRule.delete
             options:
@@ -402,14 +387,11 @@ fields:
         description: Maps to HTTP PATCH. Used for updating a resource.
         __proto:
             number: 6
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: pattern
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.HttpRule.patch
             options:
@@ -428,14 +410,11 @@ fields:
              for services that provide content to Web (HTML) clients.
         __proto:
             number: 8
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: pattern
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.HttpRule.custom
             options:
@@ -456,14 +435,10 @@ fields:
              message type.
         __proto:
             number: 7
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.HttpRule.body
             options:
@@ -484,14 +459,10 @@ fields:
              message type.
         __proto:
             number: 12
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.HttpRule.response_body
             options:
@@ -509,14 +480,10 @@ fields:
              the nesting may only be one level deep).
         __proto:
             number: 11
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.HttpRule.additional_bindings
             options:

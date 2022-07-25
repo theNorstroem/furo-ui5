@@ -1,0 +1,10 @@
+- type: 'furo.Property #Type to define property values with type information'
+  fields:
+    id: '* string:1 #Id of the property'
+    display_name: '- string:2 #String representation of the property'
+    data: 'google.protobuf.Any:3 #data part of the property'
+    meta: 'furo.Meta:4 #Meta for the response'
+    code: 'string:5 #property code for additional settings'
+    flags: '- [] string:6 #Optional attribute flags e.g. is-overwritable'
+    is_overwritten: 'bool:7 #Optional flag indicating that the property differs from the original value'
+  target: property.proto

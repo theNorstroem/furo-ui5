@@ -1,0 +1,9 @@
+- enum: |-
+    google.api.ChangeType #Classifies set of possible modifications to an object in the service
+     configuration.
+  values:
+    CHANGE_TYPE_UNSPECIFIED: 0
+    ADDED: 1
+    REMOVED: 2
+    MODIFIED: 3
+  target: ENUM_config_change.proto

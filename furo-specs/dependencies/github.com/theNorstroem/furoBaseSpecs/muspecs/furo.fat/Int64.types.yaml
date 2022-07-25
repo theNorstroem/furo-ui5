@@ -1,0 +1,6 @@
+- type: 'furo.fat.Int64 #Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations'
+  fields:
+    value: 'int64:1 #The JSON representation for `Int64Value` is JSON number, range is set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER'
+    labels: 'map<string,bool>:2 #Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...'
+    attributes: 'map<string,string>:3 #Attributes for a value, something like confidential-msg: you are not allowed to see this value '
+  target: fat.proto

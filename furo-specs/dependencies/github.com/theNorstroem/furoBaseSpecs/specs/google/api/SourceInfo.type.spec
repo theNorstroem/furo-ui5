@@ -1,6 +1,7 @@
 name: SourceInfo
 type: SourceInfo
 description: Source information used to create a Service Config
+lifecycle: null
 __proto:
     package: google.api
     targetfile: source_info.proto
@@ -18,14 +19,10 @@ fields:
         description: All files used during config generation.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.SourceInfo.source_files
             options:

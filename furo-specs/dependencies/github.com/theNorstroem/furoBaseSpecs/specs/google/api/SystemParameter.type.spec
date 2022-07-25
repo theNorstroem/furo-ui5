@@ -4,6 +4,7 @@ description: |-
     Define a parameter's name and location. The parameter may be passed as either
      an HTTP header or a URL query parameter, and if both are passed the behavior
      is implementation-dependent.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: system_parameter.proto
@@ -20,14 +21,10 @@ fields:
         description: Define the name of the parameter, such as "api_key" . It is case sensitive.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.SystemParameter.name
             options:
@@ -44,14 +41,10 @@ fields:
              insensitive.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.SystemParameter.http_header
             options:
@@ -68,14 +61,10 @@ fields:
              sensitive.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.SystemParameter.url_query_parameter
             options:

@@ -1,0 +1,4 @@
+- type: 'furo.IntegerProperty #Integer type with embedded meta'
+  fields:
+    data: 'int32:1 #Integer data part'
+  target: property.proto

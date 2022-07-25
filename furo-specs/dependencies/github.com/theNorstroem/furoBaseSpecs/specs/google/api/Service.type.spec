@@ -24,6 +24,7 @@ description: |-
            - selector: "*"
              requirements:
                provider_id: google_calendar_auth
+lifecycle: null
 __proto:
     package: google.api
     targetfile: service.proto
@@ -36,18 +37,15 @@ __proto:
         - google/api/documentation.proto
         - google/api/endpoint.proto
         - google/api/http.proto
-        - google/api/label.proto
         - google/api/log.proto
         - google/api/logging.proto
         - google/api/metric.proto
         - google/api/monitored_resource.proto
         - google/api/monitoring.proto
         - google/api/quota.proto
-        - google/api/resource.proto
         - google/api/source_info.proto
         - google/api/system_parameter.proto
         - google/api/usage.proto
-        - google/protobuf/any.proto
         - google/protobuf/api.proto
         - google/protobuf/type.proto
         - google/protobuf/wrappers.proto
@@ -63,14 +61,10 @@ fields:
         description: This field is obsolete. Its value must be set to `3`.
         __proto:
             number: 20
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.config_version
             options:
@@ -89,14 +83,10 @@ fields:
              of the service also owns the DNS name.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.name
             options:
@@ -115,14 +105,10 @@ fields:
              empty, the server may choose to generate one instead.
         __proto:
             number: 33
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.id
             options:
@@ -137,14 +123,10 @@ fields:
         description: The product title for this service.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.title
             options:
@@ -159,14 +141,10 @@ fields:
         description: The Google project that owns this service.
         __proto:
             number: 22
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.producer_project_id
             options:
@@ -186,14 +164,10 @@ fields:
              which cannot be resolved against the associated IDL files.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.apis
             options:
@@ -216,14 +190,10 @@ fields:
                  - name: google.protobuf.Int32
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.types
             options:
@@ -245,14 +215,10 @@ fields:
                  - name: google.someapi.v1.SomeEnum
         __proto:
             number: 5
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.enums
             options:
@@ -267,14 +233,10 @@ fields:
         description: Additional API documentation.
         __proto:
             number: 6
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.documentation
             options:
@@ -289,14 +251,10 @@ fields:
         description: API backend configuration.
         __proto:
             number: 8
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.backend
             options:
@@ -311,14 +269,10 @@ fields:
         description: HTTP configuration.
         __proto:
             number: 9
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.http
             options:
@@ -333,14 +287,10 @@ fields:
         description: Quota configuration.
         __proto:
             number: 10
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.quota
             options:
@@ -355,14 +305,10 @@ fields:
         description: Auth configuration.
         __proto:
             number: 11
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.authentication
             options:
@@ -377,14 +323,10 @@ fields:
         description: Context configuration.
         __proto:
             number: 12
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.context
             options:
@@ -399,14 +341,10 @@ fields:
         description: Configuration controlling usage of this service.
         __proto:
             number: 15
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.usage
             options:
@@ -424,14 +362,10 @@ fields:
              defined APIs.
         __proto:
             number: 18
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.endpoints
             options:
@@ -446,14 +380,10 @@ fields:
         description: Configuration for the service control plane.
         __proto:
             number: 21
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.control
             options:
@@ -468,14 +398,10 @@ fields:
         description: Defines the logs used by this service.
         __proto:
             number: 23
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.logs
             options:
@@ -490,14 +416,10 @@ fields:
         description: Defines the metrics used by this service.
         __proto:
             number: 24
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.metrics
             options:
@@ -514,14 +436,10 @@ fields:
              by the [Service.monitoring][google.api.Service.monitoring] and [Service.logging][google.api.Service.logging] configurations.
         __proto:
             number: 25
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.monitored_resources
             options:
@@ -536,14 +454,10 @@ fields:
         description: Billing configuration.
         __proto:
             number: 26
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.billing
             options:
@@ -558,14 +472,10 @@ fields:
         description: Logging configuration.
         __proto:
             number: 27
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.logging
             options:
@@ -580,14 +490,10 @@ fields:
         description: Monitoring configuration.
         __proto:
             number: 28
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.monitoring
             options:
@@ -602,14 +508,10 @@ fields:
         description: System parameter configuration.
         __proto:
             number: 29
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.system_parameters
             options:
@@ -624,14 +526,10 @@ fields:
         description: Output only. The source information for this configuration if available.
         __proto:
             number: 37
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Service.source_info
             options:

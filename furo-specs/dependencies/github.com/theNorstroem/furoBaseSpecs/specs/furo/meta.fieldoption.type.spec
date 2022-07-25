@@ -1,4 +1,4 @@
-name: fieldoption
+name: Fieldoption
 type: Fieldoption
 description: Metas for a field
 lifecycle: null
@@ -18,7 +18,7 @@ __proto:
 fields:
     flags:
         type: string
-        description: "Add flags for your field. This can be something like \"searchable\". \n//The flags can be used by generators, ui components,...\n"
+        description: "Add flags for your field. This can be something like \"searchable\". \n//The flags can be used by generators, ui components,..."
         __proto:
             number: 2
         __ui:

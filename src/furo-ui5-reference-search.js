@@ -978,6 +978,14 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
+   * set the value state
+   * @param state
+   */
+  onFnaFieldStateChanged(state) {
+    this._setValueStateMessage(state.state, state.description);
+  }
+
+  /**
    * Updates the error state from FNA
    * @private
    * @param validity

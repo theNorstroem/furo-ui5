@@ -1,6 +1,6 @@
 name: Quota
 type: Quota
-description: |+
+description: |-
     Quota configuration helps to achieve fairness and budgeting in service
      usage.
 
@@ -50,7 +50,7 @@ description: |+
             display_name: Write requests
             metric_kind: DELTA
             value_type: INT64
-
+lifecycle: null
 __proto:
     package: google.api
     targetfile: quota.proto
@@ -67,14 +67,10 @@ fields:
         description: List of `QuotaLimit` definitions for the service.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Quota.limits
             options:
@@ -91,14 +87,10 @@ fields:
              or more metrics.
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Quota.metric_rules
             options:

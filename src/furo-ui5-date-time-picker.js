@@ -102,7 +102,7 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
       case 'int64':
         if (e.value !== '' && e.valid) {
           this.setFnaFieldValue(
-            this.getFormat().parse(this.value).getTime() / 1000
+            this.getFormat().parse(e.value).getTime() / 1000
           );
         } else {
           this.setFnaFieldValue(0);
@@ -111,9 +111,7 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
 
       case 'google.protobuf.Timestamp':
         if (e.value !== '' && e.valid) {
-          this.setFnaFieldValue(
-            this.getFormat().parse(this.value).toISOString()
-          );
+          this.setFnaFieldValue(this.getFormat().parse(e.value).toISOString());
         } else {
           this.setFnaFieldValue(null);
         }
@@ -121,9 +119,7 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
       case 'string':
       default:
         if (e.value !== '' && e.valid) {
-          this.setFnaFieldValue(
-            this.getFormat().parse(this.value).toISOString()
-          );
+          this.setFnaFieldValue(this.getFormat().parse(e.value).toISOString());
         } else {
           this.setFnaFieldValue('');
         }
@@ -223,6 +219,14 @@ export class FuroUi5DateTimePicker extends FieldNodeAdapter(
     Object.keys(this._privilegedAttributes).forEach(attr => {
       this._privilegedAttributes[attr] = this.getAttribute(attr);
     });
+  }
+
+  /**
+   * set the value state
+   * @param state
+   */
+  onFnaFieldStateChanged(state) {
+    this._setValueStateMessage(state.state, state.description);
   }
 
   /**

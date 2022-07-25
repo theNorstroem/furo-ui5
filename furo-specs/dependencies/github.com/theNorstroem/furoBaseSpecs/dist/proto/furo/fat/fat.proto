@@ -22,7 +22,7 @@ message Any {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }
 
@@ -35,7 +35,7 @@ message Bool {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }
 
@@ -48,7 +48,7 @@ message Bytes {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }
 
@@ -61,7 +61,7 @@ message Double {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }
 
@@ -71,7 +71,7 @@ message Empty {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }
 
@@ -84,7 +84,7 @@ message Float {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }
 
@@ -97,7 +97,7 @@ message Int32 {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }
 
@@ -110,7 +110,7 @@ message Int64 {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }
 
@@ -123,7 +123,7 @@ message String {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }
 
@@ -136,7 +136,7 @@ message Uint32 {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }
 
@@ -149,6 +149,6 @@ message Uint64 {
     // Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
     map<string,bool> labels = 2;
 
-    // Attributes for a value, something like confidential-msg: you are not allowed to see this value 
+    // Attributes for a value, something like confidential-msg: you are not allowed to see this value
     map<string,string> attributes = 3;
 }

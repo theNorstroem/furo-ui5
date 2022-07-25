@@ -1,0 +1,8 @@
+- type: 'furo.Link #link'
+  fields:
+    rel: 'string:1 #the relationship like self...'
+    method: 'string:2 #method of curl v1.0.0'
+    href: 'string:3 #link'
+    type: 'string:4 #mime type'
+    service: 'string:5 #name of the service which can handle this link'
+  target: furo.proto

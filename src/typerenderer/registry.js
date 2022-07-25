@@ -114,6 +114,8 @@ import './celledit-google-protobuf-doublevalue.js';
 import './celledit-google-protobuf-floatvalue.js';
 import './celledit-google-protobuf-int32value.js';
 import './celledit-google-protobuf-int64value.js';
+import './celledit-google-protobuf-uint32value.js';
+import './celledit-google-protobuf-uint64value.js';
 import './celledit-google-protobuf-stringvalue.js';
 import './celledit-google-protobuf-timestamp.js';
 import './celledit-google-protobuf-any.js';

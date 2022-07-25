@@ -3,13 +3,11 @@ type: Metric
 description: |-
     A specific metric, identified by specifying values for all of the
      labels of a [`MetricDescriptor`][google.api.MetricDescriptor].
+lifecycle: null
 __proto:
     package: google.api
     targetfile: metric.proto
-    imports:
-        - google/api/label.proto
-        - google/api/launch_stage.proto
-        - google/protobuf/duration.proto
+    imports: []
     options:
         go_package: google.golang.org/genproto/googleapis/api/metric;metric
         java_multiple_files: "true"
@@ -24,14 +22,10 @@ fields:
              For example, `custom.googleapis.com/invoice/paid/amount`.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Metric.type
             options:
@@ -48,14 +42,10 @@ fields:
              labels listed in the `MetricDescriptor` must be assigned values.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Metric.labels
             options:

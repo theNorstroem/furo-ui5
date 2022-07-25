@@ -7,6 +7,7 @@ description: |-
      system, not by an individual API. It is typically mapped to an HTTP header
      and/or a URL query parameter. This configuration specifies which methods
      change the names of the system parameters.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: system_parameter.proto
@@ -52,14 +53,10 @@ fields:
              **NOTE:** All service configuration rules follow "last one wins" order.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.SystemParameters.rules
             options:

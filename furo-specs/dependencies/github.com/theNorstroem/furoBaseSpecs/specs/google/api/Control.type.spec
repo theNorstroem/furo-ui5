@@ -4,6 +4,7 @@ description: |-
     Selects and configures the service controller used by the service.  The
      service controller handles features like abuse, quota, billing, logging,
      monitoring, etc.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: control.proto
@@ -22,14 +23,10 @@ fields:
              feature (like quota and billing) will be enabled.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Control.environment
             options:

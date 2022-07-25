@@ -17,13 +17,11 @@ option objc_class_prefix = "FPB";
 // If zero or positive, the scale is the number of digits to the right of the decimal point.
 // If negative, the unscaled value of the number is multiplied by ten to the power of the
 // negation of the scale. For example, a scale of -3 means the unscaled value is multiplied by 1000.
-// 
 message BigDecimal {  
 
     // Arbitrary precision integer unscaled value.
     sint64 unscaled_value = 1;
 
     // Number of digits to the right of the decimal point.
-// 
     int32 scale = 2;
 }

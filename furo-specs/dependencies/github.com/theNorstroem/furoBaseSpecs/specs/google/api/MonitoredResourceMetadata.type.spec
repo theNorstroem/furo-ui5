@@ -7,12 +7,12 @@ description: |-
      auxiliary metadata. Monitoring and Logging use an ingestion
      pipeline to extract metadata for cloud resources of all types, and store
      the metadata in this message.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: monitored_resource.proto
     imports:
-        - google/api/label.proto
-        - google/api/launch_stage.proto
+        - google/api/MonitoredResourceMetadata/monitored_resource.proto
         - google/protobuf/struct.proto
     options:
         cc_enable_arenas: "true"
@@ -37,14 +37,10 @@ fields:
                    "spot_instance": false }
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MonitoredResourceMetadata.system_labels
             options:
@@ -59,14 +55,10 @@ fields:
         description: Output only. A map of user-defined metadata labels.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.MonitoredResourceMetadata.user_labels
             options:

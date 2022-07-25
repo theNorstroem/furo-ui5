@@ -1,6 +1,7 @@
 name: CustomHttpPattern
 type: CustomHttpPattern
 description: A custom pattern is used for defining custom HTTP verb.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: http.proto
@@ -18,14 +19,10 @@ fields:
         description: The name of this custom HTTP verb.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.CustomHttpPattern.kind
             options:
@@ -40,14 +37,10 @@ fields:
         description: The path matched by this custom verb.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.CustomHttpPattern.path
             options:

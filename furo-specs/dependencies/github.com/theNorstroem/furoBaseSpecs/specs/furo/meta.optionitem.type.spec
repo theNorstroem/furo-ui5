@@ -1,4 +1,4 @@
-name: optionitem
+name: Optionitem
 type: Optionitem
 description: Items for fieldoption.list
 lifecycle: null

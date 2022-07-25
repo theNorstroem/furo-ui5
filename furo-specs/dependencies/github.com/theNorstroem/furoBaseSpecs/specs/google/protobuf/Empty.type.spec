@@ -1,6 +1,7 @@
-name: empty
+name: Empty
 type: Empty
 description: https://github.com/protocolbuffers/protobuf/blob/master/src/protobuf/empty.proto
+lifecycle: null
 __proto:
     package: google.protobuf
     targetfile: empty.proto

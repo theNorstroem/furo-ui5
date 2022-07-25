@@ -1,0 +1,6 @@
+- enum: 'google.api.LabelDescriptor.ValueType #A description of a label.'
+  values:
+    STRING: 0
+    BOOL: 1
+    INT64: 2
+  target: ENUM_label.proto

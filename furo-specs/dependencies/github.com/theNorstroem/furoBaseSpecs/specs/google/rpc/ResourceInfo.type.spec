@@ -1,11 +1,11 @@
 name: ResourceInfo
 type: ResourceInfo
 description: Describes the resource that is being accessed.
+lifecycle: null
 __proto:
     package: google.rpc
     targetfile: error_details.proto
-    imports:
-        - google/protobuf/duration.proto
+    imports: []
     options:
         go_package: google.golang.org/genproto/googleapis/rpc/errdetails;errdetails
         java_multiple_files: "true"
@@ -21,14 +21,10 @@ fields:
              of the resource: e.g. "type.googleapis.com/google.pubsub.v1.Topic".
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceInfo.resource_type
             options:
@@ -46,14 +42,10 @@ fields:
              error is [google.rpc.Code.PERMISSION_DENIED][google.rpc.Code.PERMISSION_DENIED].
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceInfo.resource_name
             options:
@@ -71,14 +63,10 @@ fields:
              id>".
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceInfo.owner
             options:
@@ -96,14 +84,10 @@ fields:
              on the developer console project.
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.ResourceInfo.description
             options:

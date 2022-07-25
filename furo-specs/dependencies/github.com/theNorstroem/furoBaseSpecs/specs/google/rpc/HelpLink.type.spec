@@ -1,12 +1,11 @@
 name: Link
 type: Link
-description: |-
-    Describes a URL link.
+description: ""
+lifecycle: null
 __proto:
     package: google.rpc.Help
     targetfile: error_details.proto
-    imports:
-        - google/protobuf/duration.proto
+    imports: []
     options:
         go_package: google.golang.org/genproto/googleapis/rpc/errdetails;errdetails
         java_multiple_files: "true"
@@ -16,10 +15,9 @@ __proto:
 fields:
     description:
         type: string
-        description: Describes what the link offers.
+        description: no description
         __proto:
             number: 1
-            oneof: ""
         __ui:
             component: ""
             flags: []
@@ -27,6 +25,7 @@ fields:
             noskip: false
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Help.links
             options:
@@ -38,10 +37,9 @@ fields:
         constraints: {}
     url:
         type: string
-        description: The URL of the link.
+        description: no description
         __proto:
             number: 2
-            oneof: ""
         __ui:
             component: ""
             flags: []
@@ -49,6 +47,7 @@ fields:
             noskip: false
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Help.links
             options:

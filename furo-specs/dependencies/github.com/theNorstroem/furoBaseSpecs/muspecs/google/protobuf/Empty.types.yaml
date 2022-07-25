@@ -1,0 +1,3 @@
+- type: 'google.protobuf.Empty #https://github.com/protocolbuffers/protobuf/blob/master/src/protobuf/empty.proto'
+  fields: {}
+  target: empty.proto

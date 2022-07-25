@@ -7,10 +7,12 @@ description: |-
      variants, absence of any variant indicates an error.
 
      The JSON representation for `Value` is JSON value.
+lifecycle: null
 __proto:
     package: google.protobuf
     targetfile: struct.proto
-    imports: []
+    imports:
+        - google/protobuf/ENUM_struct.proto
     options:
         cc_enable_arenas: "true"
         csharp_namespace: Google.Protobuf.WellKnownTypes
@@ -21,18 +23,15 @@ __proto:
         objc_class_prefix: GPB
 fields:
     null_value:
-        type: unknown
+        type: google.protobuf.NullValue
         description: Represents a null value.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: kind
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Value.null_value
             options:
@@ -47,14 +46,11 @@ fields:
         description: Represents a double value.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: kind
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Value.number_value
             options:
@@ -69,14 +65,11 @@ fields:
         description: Represents a string value.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: kind
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Value.string_value
             options:
@@ -91,14 +84,11 @@ fields:
         description: Represents a boolean value.
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: kind
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Value.bool_value
             options:
@@ -113,14 +103,11 @@ fields:
         description: Represents a structured value.
         __proto:
             number: 5
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: kind
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Value.struct_value
             options:
@@ -135,14 +122,11 @@ fields:
         description: Represents a repeated `Value`.
         __proto:
             number: 6
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+            oneof: kind
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.Value.list_value
             options:

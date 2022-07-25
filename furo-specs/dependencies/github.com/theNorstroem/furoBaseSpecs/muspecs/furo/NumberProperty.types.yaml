@@ -1,0 +1,4 @@
+- type: 'furo.NumberProperty #Number type with embedded meta'
+  fields:
+    data: 'float:1 #data part'
+  target: property.proto

@@ -4,6 +4,7 @@ description: |-
     `QuotaLimit` defines a specific limit that applies over a specified duration
      for a limit type. There can be at most one limit for a duration and limit
      type combination defined within a `QuotaGroup`.
+lifecycle: null
 __proto:
     package: google.api
     targetfile: quota.proto
@@ -26,14 +27,10 @@ fields:
              The maximum length of the limit name is 64 characters.
         __proto:
             number: 6
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaLimit.name
             options:
@@ -51,14 +48,10 @@ fields:
              than provided by the limit's display name (see: `display_name`).
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaLimit.description
             options:
@@ -83,14 +76,10 @@ fields:
              Used by group-based quotas only.
         __proto:
             number: 3
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaLimit.default_limit
             options:
@@ -114,14 +103,10 @@ fields:
              Used by group-based quotas only.
         __proto:
             number: 4
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaLimit.max_limit
             options:
@@ -144,14 +129,10 @@ fields:
              Used by group-based quotas only.
         __proto:
             number: 7
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaLimit.free_tier
             options:
@@ -169,14 +150,10 @@ fields:
              Used by group-based quotas only.
         __proto:
             number: 5
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaLimit.duration
             options:
@@ -194,14 +171,10 @@ fields:
              defined within the service config.
         __proto:
             number: 8
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaLimit.metric
             options:
@@ -225,14 +198,10 @@ fields:
              The "1" at the beginning is required to follow the metric unit syntax.
         __proto:
             number: 9
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaLimit.unit
             options:
@@ -250,14 +219,10 @@ fields:
              specified unit. Currently only STANDARD is supported.
         __proto:
             number: 10
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaLimit.values
             options:
@@ -276,14 +241,10 @@ fields:
              display name generated from the configuration.
         __proto:
             number: 12
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.QuotaLimit.display_name
             options:

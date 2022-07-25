@@ -1,11 +1,11 @@
 name: DebugInfo
 type: DebugInfo
 description: Describes additional debugging info.
+lifecycle: null
 __proto:
     package: google.rpc
     targetfile: error_details.proto
-    imports:
-        - google/protobuf/duration.proto
+    imports: []
     options:
         go_package: google.golang.org/genproto/googleapis/rpc/errdetails;errdetails
         java_multiple_files: "true"
@@ -18,14 +18,10 @@ fields:
         description: The stack trace entries indicating where the error occurred.
         __proto:
             number: 1
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.DebugInfo.stack_entries
             options:
@@ -40,14 +36,10 @@ fields:
         description: Additional debugging information provided by the server.
         __proto:
             number: 2
-            oneof: ""
-        __ui:
-            component: ""
-            flags: []
-            noinit: false
-            noskip: false
+        __ui: null
         meta:
             default: ""
+            placeholder: ""
             hint: ""
             label: label.DebugInfo.detail
             options:
