@@ -19,7 +19,7 @@ message ConfirmationMessage {
     // Id of the confirmation message
     string id = 1;
 
-    // A localized description of the confirmation.
+    // A readable version of the id.
     string readable_id = 2;
 
     // A general localized warning message.
@@ -29,7 +29,7 @@ message ConfirmationMessage {
     google.protobuf.Any user_response = 3;
 
     // A localized description of the confirmation.
-    string description = 2;
+    string description = 4;
 }
 
 
