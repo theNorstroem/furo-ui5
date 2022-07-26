@@ -51,11 +51,23 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
   }
 
   /**
+   *  Bind your "root node" for the messages.
+   *
+   * The state updates from the injected raw messagecontainer are applied to the fields of the root node.
+   *
+   * @public
+   * @param fieldNode {FieldNode} Any custom fieldnode
+   */
+  bindRootNode(fieldNode) {
+    this.rootNode = fieldNode;
+  }
+
+  /**
    * bindData bind a furo.messagecontainer field node
    * @public
    * @param mcfieldnode
    */
-  bindData(mcfieldnode) {
+  bindMessageContainer(mcfieldnode) {
     this._segmentedButton = this.shadowRoot.querySelector(
       'ui5-segmented-button'
     );
@@ -67,10 +79,14 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
     this._successButton = this.shadowRoot.getElementById('success');
     this._informationButton = this.shadowRoot.getElementById('information');
 
-    this.rootNode = mcfieldnode.__parentNode;
     mcfieldnode.addEventListener('data-injected', () => {
       this._updateDisplay(mcfieldnode.details);
     });
+
+    mcfieldnode.addEventListener('new-data-injected', () => {
+      this._updateDisplay(mcfieldnode.details);
+    });
+
     this._FBPTriggerWire('|--bindData', mcfieldnode);
   }
 
@@ -89,13 +105,17 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
       details.repeats.forEach(message => {
         if (message.fields) {
           message.fields.repeats.forEach(item => {
-            const target = this.rootNode._getPath(item.field._value);
-            // this is a fallback, if the field was not found
             // eslint-disable-next-line
-            item._targetlabel = item.field._value;
-            if (target._meta) {
+            item._targetlabel = '';
+            if (this.rootNode) {
+              const target = this.rootNode._getPath(item.field._value);
+              // this is a fallback, if the field was not found
               // eslint-disable-next-line
-              item._targetlabel = target._meta.label;
+              item._targetlabel = item.field._value;
+              if (target._meta) {
+                // eslint-disable-next-line
+                item._targetlabel = target._meta.label;
+              }
             }
           });
         }
@@ -198,6 +218,8 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    * flow is ready lifecycle method
    */
   _FBPReady() {
+    this.hidden = true;
+
     super._FBPReady();
     // this._FBPTraceWires()
 
