@@ -34,6 +34,14 @@ export class FuroUi5CheckboxInputLabeled extends FBP(LitElement) {
     // this._FBPTraceWires();
   }
 
+  /**
+   * Focuses the underlying ui5 input element
+   * @param {Object} options https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus
+   */
+  focus(options) {
+    this._FBPTriggerWire('|--focus', options);
+  }
+
   static get properties() {
     return {
       /**
@@ -135,6 +143,7 @@ export class FuroUi5CheckboxInputLabeled extends FBP(LitElement) {
           ?readonly=${this.readonly}
           set-text="--placeholder"
           fn-bind-data="--data"
+          fn-focus="|--focus"
         ></furo-ui5-checkbox-input>
       </furo-ui5-form-field-container>
     `;
