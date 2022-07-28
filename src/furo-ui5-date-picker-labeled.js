@@ -38,6 +38,14 @@ export class FuroUi5DatePickerLabeled extends FBP(LitElement) {
   }
 
   /**
+   * Focuses the underlying ui5 input element
+   * @param {Object} options https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus
+   */
+  focus(options) {
+    this._FBPTriggerWire('|--focus', options);
+  }
+
+  /**
    *
    * @return {{readonly: {type: BooleanConstructor}, disabled: {reflect: boolean, attribute: string, type: BooleanConstructor}, label: {type: StringConstructor}, required: {type: BooleanConstructor}}}
    */
@@ -118,6 +126,7 @@ export class FuroUi5DatePickerLabeled extends FBP(LitElement) {
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
           fn-bind-data="--data"
+          fn-focus="|--focus"
         ></furo-ui5-date-picker>
       </furo-ui5-form-field-container>
     `;
