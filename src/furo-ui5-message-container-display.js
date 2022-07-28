@@ -162,6 +162,10 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
             info += item.fields.repeats.length;
             break;
 
+          case 'google.rpc.LocalizedMessage':
+            info += 1;
+            break;
+
           case 'furo.ConfirmationMessage':
             confirm += 1;
             break;

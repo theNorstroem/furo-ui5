@@ -64,8 +64,10 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
 
       case 'information':
         this.hidden =
-          type !== 'furo.InformationMessage' &&
-          type !== 'furo.MessageContainerGrouplabel';
+          !(
+            type === 'furo.InformationMessage' ||
+            type === 'google.rpc.LocalizedMessage'
+          ) && type !== 'furo.MessageContainerGrouplabel';
         break;
 
       default:
@@ -303,6 +305,15 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
             </furo-horizontal-flex>
           </template>
         </furo-data-flow-repeat>`;
+
+      case 'google.rpc.LocalizedMessage':
+        return html` <furo-horizontal-flex space>
+          <ui5-icon name="message-information" class="Information"></ui5-icon>
+
+          <furo-ui5-markdown
+            fn-bind-data="|--bindData(*.message)"
+          ></furo-ui5-markdown>
+        </furo-horizontal-flex>`;
 
       default:
         return html``;
