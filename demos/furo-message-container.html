@@ -59,7 +59,10 @@
             <div scroll flex>
               <furo-ui5-message-container-display
                 set-no-filter="--hideFilterClicked"
-                fn-bind-data="--mcDO(*._messagecontainer)"></furo-ui5-message-container-display>
+                fn-bind-message-container="--mcDO(*._messagecontainer)"
+                fn-bind-root-node="--mcDO"
+
+              ></furo-ui5-message-container-display>
               <furo-form-layouter two>
                 <furo-ui5-text-input-labeled fn-bind-data="--mcDO(*.name)"></furo-ui5-text-input-labeled>
                 <furo-ui5-password-input-labeled fn-bind-data="--mcDO(*.name)"></furo-ui5-password-input-labeled>
@@ -95,8 +98,10 @@
                                  fn-bind-request-data="--mcDO"
                                  at-response="--response">
               </furo-entity-agent>
-              <furo-message-container-handler fn-bind-mc="--mcDO(*._messagecontainer)"
-                                              fn-inject-raw="--response(*._messagecontainer),--grpcStatus"></furo-message-container-handler>
+              <furo-message-container-handler
+                fn-bind-message-container="--mcDO(*._messagecontainer)"
+                fn-bind-root-node="--mcDO"
+                fn-inject-raw="--response(*._messagecontainer),--grpcStatus"></furo-message-container-handler>
 
               <hr>
 
@@ -113,7 +118,8 @@
             </div>
           </furo-vertical-flex>
 
-          <furo-fetch-json ƒ-fetch="--grpcStatusClicked" src="/mockdata/tasks/1/error.json" @-data="--grpcStatus"></furo-fetch-json>
+          <furo-fetch-json ƒ-fetch="--grpcStatusClicked" src="/mockdata/tasks/1/error.json"
+                           @-data="--grpcStatus"></furo-fetch-json>
         </template>
       </furo-demo-snippet>
 
