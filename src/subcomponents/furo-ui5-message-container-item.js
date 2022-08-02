@@ -40,8 +40,11 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
 
       case 'error':
         this.hidden =
-          !(type === 'furo.ErrorMessage' || type === 'google.rpc.BadRequest') &&
-          type !== 'furo.MessageContainerGrouplabel';
+          !(
+            type === 'furo.ErrorMessage' ||
+            type === 'google.rpc.BadRequest' ||
+            type === 'google.rpc.LocalizedMessage'
+          ) && type !== 'furo.MessageContainerGrouplabel';
         break;
 
       case 'confirmation':
@@ -64,10 +67,8 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
 
       case 'information':
         this.hidden =
-          !(
-            type === 'furo.InformationMessage' ||
-            type === 'google.rpc.LocalizedMessage'
-          ) && type !== 'furo.MessageContainerGrouplabel';
+          !(type === 'furo.InformationMessage') &&
+          type !== 'furo.MessageContainerGrouplabel';
         break;
 
       default:
@@ -308,7 +309,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
 
       case 'google.rpc.LocalizedMessage':
         return html` <furo-horizontal-flex space>
-          <ui5-icon name="message-information" class="Information"></ui5-icon>
+          <ui5-icon name="error" class="Negative"></ui5-icon>
 
           <furo-ui5-markdown
             fn-bind-data="|--bindData(*.message)"
