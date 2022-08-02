@@ -80,7 +80,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
     this._informationButton = this.shadowRoot.getElementById('information');
 
     mcfieldnode.addEventListener('data-injected', () => {
-      this._updateDisplay(mcfieldnode.details);
+      // this._updateDisplay(mcfieldnode.details);
     });
 
     mcfieldnode.addEventListener('new-data-injected', () => {
@@ -99,8 +99,6 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
     this._allButton.pressed = true;
 
     if (details.repeats.length > 0) {
-      this.hidden = false;
-
       // resolve the target fields
       details.repeats.forEach(message => {
         if (message.fields) {
@@ -121,13 +119,17 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         }
         if (message.field_violations) {
           message.field_violations.repeats.forEach(item => {
-            const target = this.rootNode._getPath(item.field._value);
-            // this is a fallback, if the field was not found
             // eslint-disable-next-line
-            item._targetlabel = item.field._value;
-            if (target._meta) {
+            item._targetlabel = '';
+            if (this.rootNode) {
+              const target = this.rootNode._getPath(item.field._value);
+              // this is a fallback, if the field was not found
               // eslint-disable-next-line
-              item._targetlabel = target._meta.label;
+              item._targetlabel = item.field._value;
+              if (target._meta) {
+                // eslint-disable-next-line
+                item._targetlabel = target._meta.label;
+              }
             }
           });
         }
@@ -163,7 +165,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
             break;
 
           case 'google.rpc.LocalizedMessage':
-            info += 1;
+            errs += 1;
             break;
 
           case 'furo.ConfirmationMessage':
@@ -207,6 +209,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         this._segmentedButton.appendChild(this._informationButton);
       }
 
+      this.hidden = false;
       if (!this.disableScrolling) {
         // scroll to top of this element
         this.scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -274,16 +277,12 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
       }
 
       .head {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
         box-sizing: border-box;
         font-size: var(--sapFontHeader4Size);
         font-family: '72override', var(--sapFontFamily);
         color: var(--sapGroup_TitleTextColor);
         height: 3rem;
         line-height: 3rem;
-        padding: 0 1rem;
         background-color: var(--sapGroup_TitleBackground);
         border-bottom: 1px solid var(--sapGroup_TitleBorderColor);
       }
