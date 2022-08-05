@@ -41,7 +41,13 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
        * Removes the filter tabs on top.
        * @type Boolean
        */
-      noFilter: { type: Boolean, attribute: 'no-filter', reflect: true },
+      noFilter: { type: Boolean, attribute: 'no-filter' },
+      /**
+       * helper var to hide the filter head section
+       * @private
+       */
+      _hideFilterSection: { type: Boolean },
+
       /**
        * Disable the scrolling to the element, when the container receives data.
        * @type Boolean
@@ -180,33 +186,48 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
       this._FBPTriggerWire('|--numOfWarnings', warn);
       this._FBPTriggerWire('|--numOfSuccess', success);
       this._FBPTriggerWire('|--numOfInformation', info);
-
+      /**
+       * If ther is more than one kind of info, show the filter
+       * @type {number}
+       */
+      let filterOptions = 0;
       if (confirm === 0) {
         this._confirmationButton.remove();
       } else {
         this._segmentedButton.appendChild(this._confirmationButton);
+        filterOptions += 1;
       }
       if (errs === 0) {
         this._errorButton.remove();
       } else {
         this._segmentedButton.appendChild(this._errorButton);
+        filterOptions += 1;
       }
       if (warn === 0) {
         this._warningButton.remove();
       } else {
         this._segmentedButton.appendChild(this._warningButton);
+        filterOptions += 1;
       }
 
       if (success === 0) {
         this._successButton.remove();
       } else {
         this._segmentedButton.appendChild(this._successButton);
+        filterOptions += 1;
       }
 
       if (info === 0) {
         this._informationButton.remove();
       } else {
         this._segmentedButton.appendChild(this._informationButton);
+        filterOptions += 1;
+      }
+
+      if (filterOptions > 1 && !this.noFilter) {
+        this._hideFilterSection = false;
+      } else {
+        this._hideFilterSection = true;
       }
 
       this.hidden = false;
@@ -286,7 +307,8 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         background-color: var(--sapGroup_TitleBackground);
         border-bottom: 1px solid var(--sapGroup_TitleBorderColor);
       }
-      :host([no-filter]) .head {
+
+      .head[hidden] {
         display: none;
       }
     `;
@@ -300,7 +322,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <div class="head">
+      <div class="head" ?hidden="${this._hideFilterSection}">
         <ui5-segmented-button at-click="--filterClicked(*.target.id)">
           <ui5-segmented-button-item id="all" pressed
             >All
