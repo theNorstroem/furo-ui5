@@ -377,11 +377,10 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <furo-horizontal-flex space class="header">
+      <furo-form-layouter two>
         <ui5-title>${this.headerText}</ui5-title>
-        <div flex></div>
         <slot name="action"></slot>
-      </furo-horizontal-flex>
+      </furo-form-layouter>
       <ui5-label>${this.secondaryText}</ui5-label>
       <div class="wrapper">
         ${this.icon
