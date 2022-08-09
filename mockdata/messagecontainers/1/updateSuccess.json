@@ -20,10 +20,7 @@
           {
             "field": "name",
             "description": "SuccessMessage goes here",
-            "message": {
-              "locale": "de-CH",
-              "message": "The localized error message in the above locale"
-            }
+            "message": "The localized error message in the above locale"
           },
           {
             "field": "person.first_name",
@@ -36,10 +33,7 @@
           {
             "field": "array.2",
             "description": "SuccessMessage goes here",
-            "message": {
-              "locale": "de-CH",
-              "message": "The localized error message in the above locale"
-            }
+            "message": "The localized error message in the above locale"
           }
         ]
       },
@@ -51,10 +45,7 @@
           {
             "field": "person.name",
             "description": "InformationMessage goes here",
-            "message": {
-              "locale": "de-CH",
-              "message": "The localized error message in the above locale"
-            }
+            "message": "The localized error message in the above locale"
           }
         ]
       },
@@ -67,10 +58,7 @@
           {
             "field": "array.1",
             "description": "SuccessMessage goes here",
-            "message": {
-              "locale": "de-CH",
-              "message": "The localized error message in the above locale"
-            }
+            "message": "The localized error message in the above locale"
           }
         ]
       }

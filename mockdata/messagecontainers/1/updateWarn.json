@@ -24,10 +24,7 @@
           {
             "field": "person.first_name",
             "description": "WarningMessage goes here",
-            "message": {
-              "locale": "de-CH",
-              "message": "The localized error message in the above locale"
-            }
+            "message": "The localized error message in the above locale"
           },
           {
             "field": "array.2",

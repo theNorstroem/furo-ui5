@@ -157,7 +157,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               set-inner-text="|--bindData(*.description)"
             ></ui5-title>
             <furo-ui5-markdown
-              fn-bind-data="|--bindData(*.message.message)"
+              fn-bind-data="|--bindData(*.message)"
             ></furo-ui5-markdown>
             <furo-type-renderer
               context="celledit"
@@ -183,7 +183,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                     set-inner-text="--init(*._targetlabel)"
                   ></ui5-label>
                   <furo-ui5-markdown
-                    fn-bind-data="--init(*.message.message)"
+                    fn-bind-data="--init(*.message)"
                   ></furo-ui5-markdown>
                   <furo-type-renderer
                     context="celledit"
@@ -213,7 +213,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-inner-text="--init(*._targetlabel)"
                 ></ui5-label>
                 <furo-ui5-markdown
-                  fn-bind-data="--init(*.message.message)"
+                  fn-bind-data="--init(*.message)"
                 ></furo-ui5-markdown>
                 <furo-type-renderer
                   context="celledit"
@@ -242,7 +242,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-inner-text="--init(*._targetlabel)"
                 ></ui5-label>
                 <furo-ui5-markdown
-                  fn-bind-data="--init(*.message.message)"
+                  fn-bind-data="--init(*.message)"
                 ></furo-ui5-markdown>
                 <furo-type-renderer
                   context="celledit"
@@ -274,7 +274,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-inner-text="--init(*._targetlabel)"
                 ></ui5-label>
                 <furo-ui5-markdown
-                  fn-bind-data="--init(*.message.message)"
+                  fn-bind-data="--init(*.message)"
                 ></furo-ui5-markdown>
                 <furo-type-renderer
                   context="celledit"

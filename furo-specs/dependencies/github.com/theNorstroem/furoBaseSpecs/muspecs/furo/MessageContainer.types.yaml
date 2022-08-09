@@ -16,7 +16,7 @@
     readable_id: '- string:2 #A readable version of the id.'
     user_response: 'google.protobuf.Any:3 #Reason why the warning was not followed, can be a text, checkbox,... is displayed as typerenderer'
     description: 'string:4 #A localized description of the confirmation.'
-    message: '- google.rpc.LocalizedMessage:6 #A general localized warning message.'
+    message: '- string:6 #A general localized message.'
   target: furo.proto
 
 - type: 'furo.ErrorMessage #'
@@ -24,6 +24,7 @@
     id: '-* string:1 #Id of the error message'
     readable_id: '- string:2 #A readable version of the id.'
     fields: '[] furo.MCFieldViolation:3 #Describes all errors related to an attribute'
+    message: '- string:4 #A general localized message.'
   target: furo.proto
 
 - type: 'furo.WarningMessage #'
@@ -31,6 +32,7 @@
     id: '- string:1 #Id of the warning message'
     readable_id: '- string:2 #A readable version of the id.'
     fields: '[] furo.MCFieldViolation:3 #Describes all warnings related to an attribute'
+    message: '- string:4 #A general localized message.'
   target: furo.proto
 
 - type: 'furo.InformationMessage #'
@@ -38,6 +40,7 @@
     id: '- string:1 #Id of the information, extension of google.rpc.LocalizedMessage'
     readable_id: '- string:2 #A readable version of the id.'
     fields: '[] furo.MCFieldViolation:3 #Describes all information items related to an attribute'
+    message: '- string:4 #A general localized message.'
   target: furo.proto
 
 - type: 'furo.SuccessMessage #'
@@ -45,6 +48,7 @@
     id: '- string:1 #Id of the success, extension of google.rpc.LocalizedMessage'
     readable_id: '- string:2 #A readable version of the id.'
     fields: '[] furo.MCFieldViolation:3 #Describes all success items related to an attribute'
+    message: '- string:4 #A general localized message.'
   target: furo.proto
 
 - type: 'furo.MCFieldViolation # Field violation with user response'
@@ -52,9 +56,9 @@
     field: |-
      string:1 #A path leading to a field in the request body. The value will be a
      sequence of dot-separated identifiers that identify a protocol buffer
-     field. E.g., "field_violations.field" would identify this field.
+     field.
     description: |-
      string:2 #A localized description of why the request element is bad.
     user_response: 'google.protobuf.Any:3 #Optional user confirmation response, can be a text, checkbox,... is displayed as typerenderer'
-    message: '- google.rpc.LocalizedMessage:4 #Extended message for the violation.'
+    message: '- string:4 #Extended message for the field violation.'
   target: furo.proto

@@ -20,10 +20,7 @@
           "@type": "x/furo.fat.String",
           "value": "String..."
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "The localized error message in the above locale"
-        }
+        "message": "The localized error message in the above locale"
       },
       {
         "@type": "x/furo.InformationMessage",
@@ -33,10 +30,7 @@
           {
             "field": "name",
             "description": "InformationMessage goes here",
-            "message": {
-              "locale": "de-CH",
-              "message": "The localized error message in the above locale"
-            }
+            "message": "The localized error message in the above locale"
           }
         ]
       }

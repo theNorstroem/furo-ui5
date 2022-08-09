@@ -66,3 +66,21 @@ fields:
             repeated: true
             typespecific: null
         constraints: {}
+    message:
+        type: string
+        description: A general localized message.
+        __proto:
+            number: 4
+        __ui: null
+        meta:
+            default: ""
+            placeholder: furo.warningmessage.message.placeholder
+            hint: ""
+            label: furo.warningmessage.message.label
+            options:
+                flags: []
+                list: []
+            readonly: true
+            repeated: false
+            typespecific: null
+        constraints: {}

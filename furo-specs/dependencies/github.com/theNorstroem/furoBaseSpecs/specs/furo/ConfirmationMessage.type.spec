@@ -7,7 +7,6 @@ __proto:
     targetfile: furo.proto
     imports:
         - google/protobuf/any.proto
-        - google/rpc/error_details.proto
     options:
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo;furopb
         java_multiple_files: "true"
@@ -54,8 +53,8 @@ fields:
             typespecific: null
         constraints: {}
     message:
-        type: google.rpc.LocalizedMessage
-        description: A general localized warning message.
+        type: string
+        description: A general localized message.
         __proto:
             number: 6
         __ui: null

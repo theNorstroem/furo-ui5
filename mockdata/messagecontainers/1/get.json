@@ -11,10 +11,14 @@
   },
   "_messagecontainer": {
     "details": [
-      {
+     {
         "@type": "x/furo.MessageContainerGrouplabel",
         "id": "xxxxxccc",
         "title": "Note"
+      }, {
+        "@type": "x/google.rpc.LocalizedMessage",
+        "locale": "de-CH",
+        "message": "**This** is a type  x/google.rpc.LocalizedMessage"
       },
       {
         "@type": "x/furo.ConfirmationMessage",
@@ -29,11 +33,7 @@
             "label": "label"
           }
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "**google.protobuf.Timestamp** Confirmation message....."
-
-        }
+        "message": "**google.protobuf.Timestamp** Confirmation message....."
       },
       {
         "@type": "x/furo.ConfirmationMessage",
@@ -42,10 +42,7 @@
         "user_response": {
           "@type": "x/google.protobuf.UInt32Value"
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "google.protobuf.UInt32Value Confirmation message....."
-        }
+        "message": "google.protobuf.UInt32Value Confirmation message....."
       },
       {
         "@type": "x/furo.ConfirmationMessage",
@@ -54,10 +51,7 @@
         "user_response": {
           "@type": "x/google.protobuf.Int32Value"
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "google.protobuf.Int32Value Confirmation message....."
-        }
+        "message": "google.protobuf.Int32Value Confirmation message....."
       },
       {
         "@type": "x/furo.ConfirmationMessage",
@@ -66,10 +60,7 @@
         "user_response": {
           "@type": "x/google.protobuf.FloatValue"
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "google.protobuf.FloatValue Confirmation message....."
-        }
+        "message": "google.protobuf.Int32Value Confirmation message....."
       },
       {
         "@type": "x/furo.ConfirmationMessage",
@@ -79,10 +70,7 @@
           "@type": "x/google.type.TimeOfDay"
         },
         "description": "description description",
-        "message": {
-          "locale": "de-CH",
-          "message": "google.type.TimeOfDay Confirmation message....."
-        }
+        "message": "google.type.TimeOfDay Confirmation message....."
       },
       {
         "@type": "x/furo.ConfirmationMessage",
@@ -92,10 +80,7 @@
           "@type": "x/google.protobuf.BoolValue",
           "value": false
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "google.protobuf.BoolValue Confirmation message....."
-        }
+        "message": "google.protobuf.BoolValue Confirmation message....."
       },
       {
         "@type": "x/furo.ConfirmationMessage",
@@ -104,10 +89,7 @@
         "user_response": {
           "@type": "x/google.protobuf.StringValue"
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "google.protobuf.StringValue Confirmation message....."
-        }
+        "message": "google.protobuf.StringValue Confirmation message....."
       },
       {
         "@type": "x/furo.ConfirmationMessage",
@@ -123,10 +105,7 @@
             "service": "personservice.PersonService"
           }
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "Reference searcher for person.Person....."
-        }
+        "message": "Reference searcher for person.Person....."
       },
       {
         "@type": "x/furo.InformationMessage",
@@ -136,10 +115,7 @@
           {
             "field": "array.2",
             "description": "Low stocks, only 2 items per order",
-            "message": {
-              "locale": "de-CH",
-              "message": "The stocks are low. Material is already reordered and should be delivered in 2 months."
-            }
+            "message": "The stocks are low. Material is already reordered and should be delivered in 2 months."
           }
         ]
       }

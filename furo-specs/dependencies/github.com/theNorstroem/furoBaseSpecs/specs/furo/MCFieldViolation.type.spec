@@ -7,7 +7,6 @@ __proto:
     targetfile: furo.proto
     imports:
         - google/protobuf/any.proto
-        - google/rpc/error_details.proto
     options:
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo;furopb
         java_multiple_files: "true"
@@ -19,7 +18,7 @@ fields:
         description: |-
             A path leading to a field in the request body. The value will be a
             sequence of dot-separated identifiers that identify a protocol buffer
-            field. E.g., "field_violations.field" would identify this field.
+            field.
         __proto:
             number: 1
         __ui: null
@@ -72,8 +71,8 @@ fields:
             typespecific: null
         constraints: {}
     message:
-        type: google.rpc.LocalizedMessage
-        description: Extended message for the violation.
+        type: string
+        description: Extended message for the field violation.
         __proto:
             number: 4
         __ui: null

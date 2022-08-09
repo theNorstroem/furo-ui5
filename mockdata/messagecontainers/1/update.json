@@ -27,10 +27,7 @@
             "placeholder": "placeholder from fat"
           }
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "FAt String Confirmation message....."
-        }
+        "message": "FAt String Confirmation message....."
       },{
         "@type": "x/furo.ConfirmationMessage",
         "id": "dsf2",
@@ -43,10 +40,7 @@
             "label": "label"
           }
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "fat.Bool with label ATTR Confirmation message....."
-        }
+        "message": "fat.Bool with label ATTR Confirmation message....."
       },{
         "@type": "x/furo.ConfirmationMessage",
         "id": "dsf2",
@@ -55,10 +49,7 @@
           "@type": "x/furo.fat.Bool",
           "value": true
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "Bool Confirmation message....."
-        }
+        "message": "Bool Confirmation message....."
       },
       {
         "id": "2",
@@ -71,10 +62,7 @@
               "@type": "x/furo.fat.String",
               "value": ""
             },
-            "message": {
-              "locale": "de-CH",
-              "message": "The name _does not look_ correct, please re enter the name , to **confirm** that you are correct."
-            }
+            "message": "The name _does not look_ correct, please re enter the name , to **confirm** that you are correct."
           },
           {
             "field": "name",
@@ -97,10 +85,7 @@
             "field": "person.name",
             "description": "First Name needed",
             "user_response": null,
-            "message": {
-              "locale": "de-CH",
-              "message": "The localized error message in the above locale"
-            }
+            "message": "The localized error message in the above locale"
           }
         ],
         "@type": "x/furo.ErrorMessage"
@@ -114,10 +99,7 @@
             "field": "numeric",
             "description": "Number is way to small",
             "user_response": null,
-            "message": {
-              "locale": "de-CH",
-              "message": "Optional message for this field"
-            }
+            "message": "Optional message for this field"
           }
         ]
       },
@@ -130,28 +112,19 @@
             "field": "bool",
             "description": "must be true",
             "user_response": null,
-            "message": {
-              "locale": "de-CH",
-              "message": "Optional message for this field"
-            }
+            "message": "Optional message for this field"
           },
           {
             "field": "reference",
             "description": "Not a ideal choice",
             "user_response": null,
-            "message": {
-              "locale": "de-CH",
-              "message": "Optional message for this field"
-            }
+            "message": "Optional message for this field"
           },
           {
             "field": "numeric",
             "description": "Not a ideal choice",
             "user_response": null,
-            "message": {
-              "locale": "de-CH",
-              "message": "Optional message for this field"
-            }
+            "message": "Optional message for this field"
           }
         ]
       },
@@ -163,10 +136,7 @@
           {
             "field": "array.2",
             "description": "SuccessMessage goes here",
-            "message": {
-              "locale": "de-CH",
-              "message": "The localized error message in the above locale"
-            }
+            "message": "The localized error message in the above locale"
           }
 
         ]
