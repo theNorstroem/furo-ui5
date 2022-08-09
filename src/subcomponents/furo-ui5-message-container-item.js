@@ -108,6 +108,10 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         color: var(--sapButton_Attention_BorderColor);
       }
 
+      .Information {
+        color: var(--sapButton_Information_BorderColor);
+      }
+
       .Positive {
         color: var(--sapButton_Accept_TextColor);
       }
@@ -175,7 +179,6 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
             ></furo-ui5-markdown>
           </furo-horizontal-flex>`;
         }
-
         return html`
           <furo-data-flow-repeat fn-bind-data="|--bindData(*.fields)">
             <template>
@@ -205,6 +208,14 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         `;
 
       case 'furo.SuccessMessage':
+        if (this._field.fields.repeats.length === 0) {
+          return html`<furo-horizontal-flex space>
+            <ui5-icon name="message-success" class="Positive"></ui5-icon>
+            <furo-ui5-markdown
+              fn-bind-data="|--bindData(*.message)"
+            ></furo-ui5-markdown>
+          </furo-horizontal-flex>`;
+        }
         return html` <furo-data-flow-repeat
           fn-bind-data="|--bindData(*.fields)"
         >
@@ -234,6 +245,14 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         </furo-data-flow-repeat>`;
 
       case 'furo.WarningMessage':
+        if (this._field.fields.repeats.length === 0) {
+          return html`<furo-horizontal-flex space>
+            <ui5-icon name="message-warning" class="Attention"></ui5-icon>
+            <furo-ui5-markdown
+              fn-bind-data="|--bindData(*.message)"
+            ></furo-ui5-markdown>
+          </furo-horizontal-flex>`;
+        }
         return html` <furo-data-flow-repeat
           fn-bind-data="|--bindData(*.fields)"
         >
@@ -263,6 +282,14 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         </furo-data-flow-repeat>`;
 
       case 'furo.InformationMessage':
+        if (this._field.fields.repeats.length === 0) {
+          return html`<furo-horizontal-flex space>
+            <ui5-icon name="message-information" class="Information"></ui5-icon>
+            <furo-ui5-markdown
+              fn-bind-data="|--bindData(*.message)"
+            ></furo-ui5-markdown>
+          </furo-horizontal-flex>`;
+        }
         return html` <furo-data-flow-repeat
           fn-bind-data="|--bindData(*.fields)"
         >
