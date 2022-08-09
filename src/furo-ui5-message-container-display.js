@@ -151,23 +151,23 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         const type = item['@type']._value.replace(/.*\//, '');
         switch (type) {
           case 'google.rpc.BadRequest':
-            errs += item.field_violations.repeats.length;
+            errs += Math.max(item.field_violations.repeats.length, 1);
             break;
 
           case 'furo.ErrorMessage':
-            errs += item.fields.repeats.length;
+            errs += Math.max(item.fields.repeats.length, 1);
             break;
 
           case 'furo.WarningMessage':
-            warn += item.fields.repeats.length;
+            warn += Math.max(item.fields.repeats.length, 1);
             break;
 
           case 'furo.SuccessMessage':
-            success += item.fields.repeats.length;
+            success += Math.max(item.fields.repeats.length, 1);
             break;
 
           case 'furo.InformationMessage':
-            info += item.fields.repeats.length;
+            info += Math.max(item.fields.repeats.length, 1);
             break;
 
           case 'google.rpc.LocalizedMessage':

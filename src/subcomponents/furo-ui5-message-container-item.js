@@ -167,6 +167,15 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         </furo-horizontal-flex>`;
 
       case 'furo.ErrorMessage':
+        if (this._field.fields.repeats.length === 0) {
+          return html`<furo-horizontal-flex space>
+            <ui5-icon name="error" class="Negative"></ui5-icon>
+            <furo-ui5-markdown
+              fn-bind-data="|--bindData(*.message)"
+            ></furo-ui5-markdown>
+          </furo-horizontal-flex>`;
+        }
+
         return html`
           <furo-data-flow-repeat fn-bind-data="|--bindData(*.fields)">
             <template>
