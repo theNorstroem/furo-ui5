@@ -151,22 +151,34 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         const type = item['@type']._value.replace(/.*\//, '');
         switch (type) {
           case 'google.rpc.BadRequest':
-            errs += item.field_violations.repeats.length;
+            errs += Math.max(item.field_violations.repeats.length, 1);
             break;
 
           case 'furo.ErrorMessage':
+            if (item.message._value !== '') {
+              errs += 1;
+            }
             errs += item.fields.repeats.length;
             break;
 
           case 'furo.WarningMessage':
+            if (item.message._value !== '') {
+              warn += 1;
+            }
             warn += item.fields.repeats.length;
             break;
 
           case 'furo.SuccessMessage':
+            if (item.message._value !== '') {
+              success += 1;
+            }
             success += item.fields.repeats.length;
             break;
 
           case 'furo.InformationMessage':
+            if (item.message._value !== '') {
+              info += 1;
+            }
             info += item.fields.repeats.length;
             break;
 
@@ -337,7 +349,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
 
           <ui5-segmented-button-item
             id="error"
-            icon="message-error"
+            icon="error"
             class="Negative"
             set-inner-text="|--numOfErrs"
             >0
@@ -345,7 +357,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
 
           <ui5-segmented-button-item
             id="warning"
-            icon="message-warning"
+            icon="alert"
             class="Attention"
             set-inner-text="|--numOfWarnings"
             >0
@@ -353,7 +365,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
 
           <ui5-segmented-button-item
             id="success"
-            icon="message-success"
+            icon="sys-enter-2"
             class="Positive"
             set-inner-text="|--numOfSuccess"
             >0
@@ -361,7 +373,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
 
           <ui5-segmented-button-item
             id="information"
-            icon="message-information"
+            icon="information"
             set-inner-text="|--numOfInformation"
             >0
           </ui5-segmented-button-item>

@@ -108,6 +108,10 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         color: var(--sapButton_Attention_BorderColor);
       }
 
+      .Information {
+        color: var(--sapButton_Information_BorderColor);
+      }
+
       .Positive {
         color: var(--sapButton_Accept_TextColor);
       }
@@ -141,6 +145,8 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
   render() {
     // language=HTML
     const type = this._field['@type']._value.replace(/.*\//, '');
+    const ret = [];
+
     switch (type) {
       case 'furo.MessageContainerGrouplabel':
         return html` <div
@@ -157,7 +163,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               set-inner-text="|--bindData(*.description)"
             ></ui5-title>
             <furo-ui5-markdown
-              fn-bind-data="|--bindData(*.message.message)"
+              fn-bind-data="|--bindData(*.message)"
             ></furo-ui5-markdown>
             <furo-type-renderer
               context="celledit"
@@ -167,12 +173,19 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         </furo-horizontal-flex>`;
 
       case 'furo.ErrorMessage':
-        return html`
+        if (this._field.message._value !== '') {
+          ret.push(html`<furo-horizontal-flex space>
+            <ui5-icon name="error" class="Negative"></ui5-icon>
+            <furo-ui5-markdown
+              fn-bind-data="|--bindData(*.message)"
+            ></furo-ui5-markdown>
+          </furo-horizontal-flex>`);
+        }
+        ret.push(html`
           <furo-data-flow-repeat fn-bind-data="|--bindData(*.fields)">
             <template>
               <furo-horizontal-flex space>
                 <ui5-icon name="message-error" class="Negative"></ui5-icon>
-
                 <furo-form-layouter flex one>
                   <ui5-link
                     set-inner-text="--init(*.description)"
@@ -183,7 +196,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                     set-inner-text="--init(*._targetlabel)"
                   ></ui5-label>
                   <furo-ui5-markdown
-                    fn-bind-data="--init(*.message.message)"
+                    fn-bind-data="--init(*.message)"
                   ></furo-ui5-markdown>
                   <furo-type-renderer
                     context="celledit"
@@ -193,10 +206,19 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               </furo-horizontal-flex>
             </template>
           </furo-data-flow-repeat>
-        `;
+        `);
+        return ret;
 
       case 'furo.SuccessMessage':
-        return html` <furo-data-flow-repeat
+        if (this._field.message._value !== '') {
+          ret.push(html`<furo-horizontal-flex space>
+            <ui5-icon name="sys-enter-2" class="Positive"></ui5-icon>
+            <furo-ui5-markdown
+              fn-bind-data="|--bindData(*.message)"
+            ></furo-ui5-markdown>
+          </furo-horizontal-flex>`);
+        }
+        ret.push(html` <furo-data-flow-repeat
           fn-bind-data="|--bindData(*.fields)"
         >
           <template>
@@ -213,7 +235,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-inner-text="--init(*._targetlabel)"
                 ></ui5-label>
                 <furo-ui5-markdown
-                  fn-bind-data="--init(*.message.message)"
+                  fn-bind-data="--init(*.message)"
                 ></furo-ui5-markdown>
                 <furo-type-renderer
                   context="celledit"
@@ -222,10 +244,19 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               </furo-form-layouter>
             </furo-horizontal-flex>
           </template>
-        </furo-data-flow-repeat>`;
+        </furo-data-flow-repeat>`);
+        return ret;
 
       case 'furo.WarningMessage':
-        return html` <furo-data-flow-repeat
+        if (this._field.message._value !== '') {
+          ret.push(html`<furo-horizontal-flex space>
+            <ui5-icon name="alert" class="Attention"></ui5-icon>
+            <furo-ui5-markdown
+              fn-bind-data="|--bindData(*.message)"
+            ></furo-ui5-markdown>
+          </furo-horizontal-flex>`);
+        }
+        ret.push(html` <furo-data-flow-repeat
           fn-bind-data="|--bindData(*.fields)"
         >
           <template>
@@ -242,7 +273,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-inner-text="--init(*._targetlabel)"
                 ></ui5-label>
                 <furo-ui5-markdown
-                  fn-bind-data="--init(*.message.message)"
+                  fn-bind-data="--init(*.message)"
                 ></furo-ui5-markdown>
                 <furo-type-renderer
                   context="celledit"
@@ -251,10 +282,19 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               </furo-form-layouter>
             </furo-horizontal-flex>
           </template>
-        </furo-data-flow-repeat>`;
+        </furo-data-flow-repeat>`);
+        return ret;
 
       case 'furo.InformationMessage':
-        return html` <furo-data-flow-repeat
+        if (this._field.message._value !== '') {
+          ret.push(html`<furo-horizontal-flex space>
+            <ui5-icon name="information" class="Information"></ui5-icon>
+            <furo-ui5-markdown
+              fn-bind-data="|--bindData(*.message)"
+            ></furo-ui5-markdown>
+          </furo-horizontal-flex>`);
+        }
+        ret.push(html` <furo-data-flow-repeat
           fn-bind-data="|--bindData(*.fields)"
         >
           <template>
@@ -274,7 +314,7 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
                   set-inner-text="--init(*._targetlabel)"
                 ></ui5-label>
                 <furo-ui5-markdown
-                  fn-bind-data="--init(*.message.message)"
+                  fn-bind-data="--init(*.message)"
                 ></furo-ui5-markdown>
                 <furo-type-renderer
                   context="celledit"
@@ -283,7 +323,8 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
               </furo-form-layouter>
             </furo-horizontal-flex>
           </template>
-        </furo-data-flow-repeat>`;
+        </furo-data-flow-repeat>`);
+        return ret;
 
       case 'google.rpc.BadRequest':
         return html` <furo-data-flow-repeat

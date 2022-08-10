@@ -15,7 +15,6 @@
       {
         "@type": "x/furo.WarningMessage",
         "id": "2",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "name",
@@ -24,10 +23,7 @@
           {
             "field": "person.first_name",
             "description": "WarningMessage goes here",
-            "message": {
-              "locale": "de-CH",
-              "message": "The localized error message in the above locale"
-            }
+            "message": "The localized error message in the above locale"
           },
           {
             "field": "array.2",
@@ -38,7 +34,6 @@
       {
         "@type": "x/furo.SuccessMessage",
         "id": "72",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "array.0",

@@ -15,28 +15,20 @@
       {
         "@type": "x/furo.ConfirmationMessage",
         "id": "2",
-        "readable_id": "id:2",
         "user_response": {
           "@type": "x/furo.fat.String",
           "value": "String..."
         },
-        "message": {
-          "locale": "de-CH",
-          "message": "The localized error message in the above locale"
-        }
+        "message": "The localized error message in the above locale"
       },
       {
         "@type": "x/furo.InformationMessage",
         "id": "26",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "name",
             "description": "InformationMessage goes here",
-            "message": {
-              "locale": "de-CH",
-              "message": "The localized error message in the above locale"
-            }
+            "message": "The localized error message in the above locale"
           }
         ]
       }

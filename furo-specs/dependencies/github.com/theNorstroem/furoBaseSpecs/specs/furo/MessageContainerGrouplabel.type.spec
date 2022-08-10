@@ -12,24 +12,6 @@ __proto:
         java_outer_classname: FuroProto
         java_package: furo
 fields:
-    title:
-        type: string
-        description: Title of the group, should be a localized string.
-        __proto:
-            number: 2
-        __ui: null
-        meta:
-            default: ""
-            placeholder: furo.messagecontainergrouplabel.title.placeholder
-            hint: ""
-            label: furo.messagecontainergrouplabel.title.label
-            options:
-                flags: []
-                list: []
-            readonly: false
-            repeated: false
-            typespecific: null
-        constraints: {}
     id:
         type: string
         description: Id
@@ -51,3 +33,21 @@ fields:
             required:
                 is: "true"
                 message: furo.messagecontainergrouplabel.id.constraint.required.message
+    title:
+        type: string
+        description: Title of the group, should be a localized string.
+        __proto:
+            number: 2
+        __ui: null
+        meta:
+            default: ""
+            placeholder: furo.messagecontainergrouplabel.title.placeholder
+            hint: ""
+            label: furo.messagecontainergrouplabel.title.label
+            options:
+                flags: []
+                list: []
+            readonly: false
+            repeated: false
+            typespecific: null
+        constraints: {}
