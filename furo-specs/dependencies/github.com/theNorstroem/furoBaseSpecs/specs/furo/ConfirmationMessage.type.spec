@@ -34,53 +34,17 @@ fields:
             required:
                 is: "true"
                 message: furo.confirmationmessage.id.constraint.required.message
-    readable_id:
-        type: string
-        description: A readable version of the id.
+    user_response:
+        type: google.protobuf.Any
+        description: Reason why the warning was not followed, can be a text, checkbox,... is displayed as typerenderer
         __proto:
             number: 2
         __ui: null
         meta:
             default: ""
-            placeholder: furo.confirmationmessage.readableid.placeholder
+            placeholder: furo.confirmationmessage.userresponse.placeholder
             hint: ""
-            label: furo.confirmationmessage.readableid.label
-            options:
-                flags: []
-                list: []
-            readonly: true
-            repeated: false
-            typespecific: null
-        constraints: {}
-    message:
-        type: string
-        description: A general localized message.
-        __proto:
-            number: 6
-        __ui: null
-        meta:
-            default: ""
-            placeholder: furo.confirmationmessage.message.placeholder
-            hint: ""
-            label: furo.confirmationmessage.message.label
-            options:
-                flags: []
-                list: []
-            readonly: true
-            repeated: false
-            typespecific: null
-        constraints: {}
-    user_response:
-        type: google.protobuf.Any
-        description: Reason why the warning was not followed, can be a text, checkbox,... is displayed as typerenderer
-        __proto:
-            number: 3
-        __ui: null
-        meta:
-            default: ""
-            placeholder: ""
-            hint: ""
-            label: ""
+            label: furo.confirmationmessage.userresponse.label
             options:
                 flags: []
                 list: []
@@ -92,17 +56,35 @@ fields:
         type: string
         description: A localized description of the confirmation.
         __proto:
-            number: 4
+            number: 3
         __ui: null
         meta:
             default: ""
-            placeholder: furo.confirmationmessage.readableid.placeholder
+            placeholder: furo.confirmationmessage.description.placeholder
             hint: ""
-            label: furo.confirmationmessage.readableid.label
+            label: furo.confirmationmessage.description.label
             options:
                 flags: []
                 list: []
             readonly: false
+            repeated: false
+            typespecific: null
+        constraints: {}
+    message:
+        type: string
+        description: A general localized message.
+        __proto:
+            number: 4
+        __ui: null
+        meta:
+            default: ""
+            placeholder: furo.confirmationmessage.message.placeholder
+            hint: ""
+            label: furo.confirmationmessage.message.label
+            options:
+                flags: []
+                list: []
+            readonly: true
             repeated: false
             typespecific: null
         constraints: {}

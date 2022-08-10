@@ -33,29 +33,11 @@ fields:
             required:
                 is: "true"
                 message: furo.errormessage.id.constraint.required.message
-    readable_id:
-        type: string
-        description: A readable version of the id.
-        __proto:
-            number: 2
-        __ui: null
-        meta:
-            default: ""
-            placeholder: furo.errormessage.readableid.placeholder
-            hint: ""
-            label: furo.errormessage.readableid.label
-            options:
-                flags: []
-                list: []
-            readonly: true
-            repeated: false
-            typespecific: null
-        constraints: {}
     fields:
         type: furo.MCFieldViolation
         description: Describes all errors related to an attribute
         __proto:
-            number: 3
+            number: 2
         __ui: null
         meta:
             default: ""
@@ -73,7 +55,7 @@ fields:
         type: string
         description: A general localized message.
         __proto:
-            number: 4
+            number: 3
         __ui: null
         meta:
             default: ""

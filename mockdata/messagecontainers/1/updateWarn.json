@@ -15,7 +15,6 @@
       {
         "@type": "x/furo.WarningMessage",
         "id": "2",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "name",
@@ -35,7 +34,6 @@
       {
         "@type": "x/furo.SuccessMessage",
         "id": "72",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "array.0",

@@ -15,17 +15,14 @@ message ConfirmationMessage {
     // Id of the confirmation message
     string id = 1;
 
-    // A readable version of the id.
-    string readable_id = 2;
-
-    // A general localized message.
-    string message = 6;
-
     // Reason why the warning was not followed, can be a text, checkbox,... is displayed as typerenderer
-    google.protobuf.Any user_response = 3;
+    google.protobuf.Any user_response = 2;
 
     // A localized description of the confirmation.
-    string description = 4;
+    string description = 3;
+
+    // A general localized message.
+    string message = 4;
 }
 
 
@@ -34,14 +31,11 @@ message ErrorMessage {
     // Id of the error message
     string id = 1;
 
-    // A readable version of the id.
-    string readable_id = 2;
-
     // Describes all errors related to an attribute
-    repeated furo.MCFieldViolation fields = 3;
+    repeated furo.MCFieldViolation fields = 2;
 
     // A general localized message.
-    string message = 4;
+    string message = 3;
 }
 
 // a single fieldconstraint
@@ -99,14 +93,11 @@ message InformationMessage {
     // Id of the information, extension of google.rpc.LocalizedMessage
     string id = 1;
 
-    // A readable version of the id.
-    string readable_id = 2;
-
     // Describes all information items related to an attribute
-    repeated furo.MCFieldViolation fields = 3;
+    repeated furo.MCFieldViolation fields = 2;
 
     // A general localized message.
-    string message = 4;
+    string message = 3;
 }
 
 // link
@@ -149,6 +140,12 @@ message MCFieldViolation {
 // The `MessageContainer` type defines a logical message model.
 message MessageContainer {  
 
+    // This field is for compatibility with google.rpc.Status.
+    int32 code = 1;
+
+    // This field is for compatibility with google.rpc.Status.
+    string message = 2;
+
     // A list of messages that carry the message details. There is a common set of message types for APIs to use.
     repeated google.protobuf.Any details = 3;
 
@@ -159,11 +156,11 @@ message MessageContainer {
 // MessageContainerGrouplabel Helps you to structure the errors and warnings for the UI.
 message MessageContainerGrouplabel {  
 
-    // Title of the group, should be a localized string.
-    string title = 2;
-
     // Id
     string id = 1;
+
+    // Title of the group, should be a localized string.
+    string title = 2;
 }
 
 // meta info
@@ -215,14 +212,11 @@ message SuccessMessage {
     // Id of the success, extension of google.rpc.LocalizedMessage
     string id = 1;
 
-    // A readable version of the id.
-    string readable_id = 2;
-
     // Describes all success items related to an attribute
-    repeated furo.MCFieldViolation fields = 3;
+    repeated furo.MCFieldViolation fields = 2;
 
     // A general localized message.
-    string message = 4;
+    string message = 3;
 }
 
 
@@ -231,12 +225,9 @@ message WarningMessage {
     // Id of the warning message
     string id = 1;
 
-    // A readable version of the id.
-    string readable_id = 2;
-
     // Describes all warnings related to an attribute
-    repeated furo.MCFieldViolation fields = 3;
+    repeated furo.MCFieldViolation fields = 2;
 
     // A general localized message.
-    string message = 4;
+    string message = 3;
 }

@@ -19,7 +19,6 @@
       {
         "@type": "x/furo.ConfirmationMessage",
         "id": "dsf2",
-        "readable_id": "id:2",
         "user_response": {
           "@type": "x/furo.fat.String",
           "value": "",
@@ -31,7 +30,6 @@
       },{
         "@type": "x/furo.ConfirmationMessage",
         "id": "dsf2",
-        "readable_id": "id:2",
         "user_response": {
           "@type": "x/furo.fat.Bool",
           "value": true,
@@ -44,7 +42,6 @@
       },{
         "@type": "x/furo.ConfirmationMessage",
         "id": "dsf2",
-        "readable_id": "id:2",
         "user_response": {
           "@type": "x/furo.fat.Bool",
           "value": true
@@ -53,7 +50,6 @@
       },
       {
         "id": "2",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "person.first_name",
@@ -79,7 +75,6 @@
       },
       {
         "id": "23",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "person.name",
@@ -93,7 +88,6 @@
       {
         "@type": "x/furo.WarningMessage",
         "id": "223",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "numeric",
@@ -106,7 +100,6 @@
       {
         "@type": "x/furo.WarningMessage",
         "id": "223",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "bool",
@@ -131,7 +124,6 @@
       {
         "@type": "x/furo.SuccessMessage",
         "id": "223",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "array.2",

@@ -15,7 +15,6 @@
       {
         "@type": "x/furo.ConfirmationMessage",
         "id": "2",
-        "readable_id": "id:2",
         "user_response": {
           "@type": "x/furo.fat.String",
           "value": "String..."
@@ -25,7 +24,6 @@
       {
         "@type": "x/furo.InformationMessage",
         "id": "26",
-        "readable_id": "id:2",
         "fields": [
           {
             "field": "name",
