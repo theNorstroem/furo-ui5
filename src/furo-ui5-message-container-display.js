@@ -74,21 +74,6 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    * @param mcfieldnode
    */
   bindMessageContainer(mcfieldnode) {
-    this._segmentedButton = this.shadowRoot.querySelector(
-      'ui5-segmented-button'
-    );
-
-    this._allButton = this.shadowRoot.getElementById('all');
-    this._confirmationButton = this.shadowRoot.getElementById('confirmation');
-    this._warningButton = this.shadowRoot.getElementById('warning');
-    this._errorButton = this.shadowRoot.getElementById('error');
-    this._successButton = this.shadowRoot.getElementById('success');
-    this._informationButton = this.shadowRoot.getElementById('information');
-
-    mcfieldnode.addEventListener('data-injected', () => {
-      // this._updateDisplay(mcfieldnode.details);
-    });
-
     mcfieldnode.addEventListener('new-data-injected', () => {
       this._updateDisplay(mcfieldnode.details);
     });
@@ -259,9 +244,19 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    */
   _FBPReady() {
     this.hidden = true;
-
     super._FBPReady();
     // this._FBPTraceWires()
+
+    this._segmentedButton = this.shadowRoot.querySelector(
+      'ui5-segmented-button'
+    );
+
+    this._allButton = this.shadowRoot.getElementById('all');
+    this._confirmationButton = this.shadowRoot.getElementById('confirmation');
+    this._warningButton = this.shadowRoot.getElementById('warning');
+    this._errorButton = this.shadowRoot.getElementById('error');
+    this._successButton = this.shadowRoot.getElementById('success');
+    this._informationButton = this.shadowRoot.getElementById('information');
 
     // dispatch a focus event for the field
     this.addEventListener('field-focus-requested', e => {
