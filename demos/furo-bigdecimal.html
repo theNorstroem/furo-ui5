@@ -22,6 +22,7 @@
   import { html, render } from 'lit';
   import './initEnv.js';
   import '../src/furo-ui5-number-input.js';
+  import '../src/furo-ui5-step-input.js';
   import '../src/furo-ui5-number-input-labeled.js';
   import '../src/typerenderer/cell-furo-bigdecimal.js';
   import '../src/typerenderer/celledit-furo-bigdecimal.js';
@@ -61,21 +62,23 @@
               </furo-ui5-number-input-labeled>
 
 
+
+
               <furo-ui5-number-input-labeled
                 ƒ-bind-data="--numT(*.bigdecimal)">
               </furo-ui5-number-input-labeled>
-              <div >cell:</div>
-              <cell-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></cell-furo-bigdecimal>
-
-              <div >celledit:</div>
-              <celledit-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></celledit-furo-bigdecimal>
+              <div >cell: <cell-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></cell-furo-bigdecimal></div>
 
 
-              <div >display:</div>
-              <display-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></display-furo-bigdecimal>
+              <div >celledit: <celledit-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></celledit-furo-bigdecimal></div>
 
-              <div >form:</div>
-              <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></form-furo-bigdecimal>
+
+
+              <div >display: <display-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></display-furo-bigdecimal></div>
+
+
+              <div >form: <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal)"></form-furo-bigdecimal></div>
+
 
               <div newline full >REQUIRED:</div>
               <form-furo-bigdecimal ƒ-bind-data="--numT(*.bigdecimal_req)"></form-furo-bigdecimal>
