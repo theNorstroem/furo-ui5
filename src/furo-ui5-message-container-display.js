@@ -74,7 +74,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    * @param mcfieldnode
    */
   bindMessageContainer(mcfieldnode) {
-    mcfieldnode.addEventListener('new-data-injected', () => {
+    mcfieldnode.addEventListener('new-mc-data-injected', () => {
       this._updateDisplay(mcfieldnode.details);
     });
 
