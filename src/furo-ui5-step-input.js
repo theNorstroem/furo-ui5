@@ -226,7 +226,7 @@ export class FuroUi5StepInput extends FieldNodeAdapter(StepInput.default) {
     } else if (this.getDataType() === 'furo.BigDecimal') {
       const v = { unscaled_value: null, scale: null };
       if (value !== '') {
-        const matches = value.match(/(\d*)\D(\d*)/);
+        const matches = `${value}`.match(/(.\d*)\D(\d*)/);
         if (matches !== null) {
           v.scale = matches[2].length;
           v.unscaled_value = parseInt(matches[1] + matches[2], 10);

@@ -22,7 +22,7 @@
   import { html, render } from 'lit';
   import './initEnv.js';
   import '../src/furo-ui5-number-input.js';
-  import '../src/furo-ui5-step-input.js';
+  import '../src/furo-ui5-step-input-labeled.js';
   import '../src/furo-ui5-number-input-labeled.js';
   import '../src/typerenderer/cell-furo-bigdecimal.js';
   import '../src/typerenderer/celledit-furo-bigdecimal.js';
@@ -61,7 +61,7 @@
                 ƒ-bind-data="--numT(*.bigdecimal)">
               </furo-ui5-number-input-labeled>
 
-
+              <furo-ui5-step-input step="0.5"  ƒ-bind-data="--numT(*.bigdecimal)"></furo-ui5-step-input>
 
 
               <furo-ui5-number-input-labeled
