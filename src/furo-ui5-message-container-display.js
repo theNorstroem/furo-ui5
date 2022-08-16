@@ -74,7 +74,7 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
    * @param mcfieldnode
    */
   bindMessageContainer(mcfieldnode) {
-    mcfieldnode.addEventListener('new-mc-data-injected', () => {
+    mcfieldnode.addEventListener('new-data-injected', () => {
       this._updateDisplay(mcfieldnode.details);
     });
 
@@ -313,6 +313,9 @@ class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
         line-height: 3rem;
         background-color: var(--sapGroup_TitleBackground);
         border-bottom: 1px solid var(--sapGroup_TitleBorderColor);
+
+        padding-left: var(--FuroUi5MediaSizeIndentationLeft, 1rem);
+        padding-right: var(--FuroUi5MediaSizeIndentationRight, 1rem);
       }
 
       .head[hidden] {

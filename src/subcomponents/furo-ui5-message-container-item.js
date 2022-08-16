@@ -124,6 +124,9 @@ class FuroUi5MessageContainerItem extends FBP(LitElement) {
         background: var(--ui5-listitem-background-color);
         border-bottom: var(--ui5-listitem-border-bottom);
         color: var(--sapList_TextColor);
+
+        padding-left: var(--FuroUi5MediaSizeIndentationLeft, 1rem);
+        padding-right: var(--FuroUi5MediaSizeIndentationRight, 1rem);
       }
 
       .groupheader {
