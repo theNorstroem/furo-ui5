@@ -11,7 +11,7 @@ import '@ui5/webcomponents/dist/Title.js';
 import '@ui5/webcomponents/dist/Label.js';
 import '@ui5/webcomponents/dist/Icon.js';
 
-import '@furo/layout/src/furo-horizontal-flex.js';
+import '@furo/layout/src/furo-form-layouter.js';
 
 /**
  *  A bindable **header** panel.
@@ -93,6 +93,14 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
        * @type Boolean
        */
       collapsed: { type: Boolean, reflect: true },
+      /**
+       * Set to true to have a bigger action area (50:50).
+       *
+       * The default ratio for title:action slot is 75:25
+       *
+       * @type Boolean
+       */
+      bigAction: { type: Boolean, attribute: 'big-action' },
     };
   }
 
@@ -377,9 +385,13 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <furo-form-layouter two>
-        <ui5-title>${this.headerText}</ui5-title>
-        <slot name="action"></slot>
+      <furo-form-layouter four style="align-items: center;">
+        <ui5-title ?tripple="${!this.bigAction}" ?double="${this.bigAction}"
+          >${this.headerText}</ui5-title
+        >
+        <div end>
+          <slot name="action"></slot>
+        </div>
       </furo-form-layouter>
       <ui5-label>${this.secondaryText}</ui5-label>
       <div class="wrapper">
