@@ -5,7 +5,7 @@ import { html } from 'lit';
 // Define directive
 class DirectiveNl2br extends Directive {
   render(str) {
-    if (str !== undefined) {
+    if (typeof str === 'string') {
       const lines = str.split('\n');
       return html`${map(lines, line => html`${line}<br />`)}`;
     }
