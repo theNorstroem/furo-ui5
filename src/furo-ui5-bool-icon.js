@@ -42,7 +42,7 @@ class FuroDataBoolIcon extends FBP(LitElement) {
      */
     this._state = false;
 
-    this.addEventListener('click', () => {
+    this.addEventListener('toggle', () => {
       this.toggle();
     });
   }
@@ -149,7 +149,11 @@ class FuroDataBoolIcon extends FBP(LitElement) {
    */
   render() {
     // language=HTML
-    return html`<ui5-icon name="${this._ocSymbol}"></ui5-icon>`;
+    return html`<ui5-icon
+      interactive
+      name="${this._ocSymbol}"
+      at-click="^^toggle"
+    ></ui5-icon>`;
   }
 }
 
