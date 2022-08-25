@@ -58,6 +58,10 @@ export class FuroUi5DatePickerLabeled extends FBP(LitElement) {
        */
       label: { type: String },
       /**
+       * This is only used to forward the state to the form-field-container
+       */
+      full: { type: Boolean },
+      /**
        * A Boolean attribute which, if present, means this field is required and marked with *.
        *
        * @type Boolean
@@ -111,7 +115,7 @@ export class FuroUi5DatePickerLabeled extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <furo-ui5-form-field-container>
+      <furo-ui5-form-field-container ?full="${this.full}">
         <ui5-label
           label
           slot="label"

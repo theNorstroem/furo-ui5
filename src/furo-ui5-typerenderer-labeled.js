@@ -52,6 +52,10 @@ export class FuroUi5TyperendererLabeled extends FBP(LitElement) {
        */
       label: { type: String },
       /**
+       * This is only used to forward the state to the form-field-container
+       */
+      full: { type: Boolean },
+      /**
        * Value State
        * @private
        */

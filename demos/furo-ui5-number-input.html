@@ -33,16 +33,19 @@
         <furo-demo-snippet>
           <template>
 
-            <furo-form-layouter two>
+            <furo-form-layouter four>
 
-              <furo-ui5-number-input
+              <furo-ui5-number-input-labeled
                 label="use with text-input"
                 ƒ-bind-data="--daoPerson(*.bmi)">
-              </furo-ui5-number-input>
+              </furo-ui5-number-input-labeled>
 
-            <furo-ui5-number-input ƒ-bind-data="--daoPerson(*.bmi)"></furo-ui5-number-input>
+            <furo-ui5-number-input-labeled newline double ƒ-bind-data="--daoPerson(*.bmi)"></furo-ui5-number-input-labeled>
+              <furo-ui5-number-input-labeled newline tripple ƒ-bind-data="--daoPerson(*.bmi_req)"></furo-ui5-number-input-labeled>
+              <furo-ui5-number-input-labeled full ƒ-bind-data="--daoPerson(*.bmi)"></furo-ui5-number-input-labeled>
             <furo-ui5-number-input-labeled ƒ-bind-data="--daoPerson(*.bmi_req)"></furo-ui5-number-input-labeled>
-            <ui5-input type="Number" ></ui5-input-labeled>
+
+
             </furo-form-layouter>
 
             <furo-data-object type="person.Person" @-object-ready="--daoPerson"  fn-validate-all-fields="--validation" ></furo-data-object>

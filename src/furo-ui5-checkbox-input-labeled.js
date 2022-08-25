@@ -50,6 +50,10 @@ export class FuroUi5CheckboxInputLabeled extends FBP(LitElement) {
        * @type String
        */
       label: { type: String },
+      /**
+       * This is only used to forward the state to the form-field-container
+       */
+      full: { type: Boolean },
 
       /**
        * the placeholder is the additional information beside the label. it will be showed on the right side of the checkbox.
@@ -126,7 +130,7 @@ export class FuroUi5CheckboxInputLabeled extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <furo-ui5-form-field-container>
+      <furo-ui5-form-field-container ?full="${this.full}">
         <ui5-label
           label
           slot="label"

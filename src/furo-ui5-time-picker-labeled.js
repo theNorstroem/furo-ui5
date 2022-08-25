@@ -55,6 +55,10 @@ export class FuroUi5TimePickerLabeled extends FBP(LitElement) {
        */
       label: { type: String },
       /**
+       * This is only used to forward the state to the form-field-container
+       */
+      full: { type: Boolean },
+      /**
        * forwards the format-pattern to the furo-ui5-time-picker component.
        *
        * @type String
@@ -114,7 +118,7 @@ export class FuroUi5TimePickerLabeled extends FBP(LitElement) {
   render() {
     // language=HTML
     return html`
-      <furo-ui5-form-field-container>
+      <furo-ui5-form-field-container ?full="${this.full}">
         <ui5-label
           label
           slot="label"
