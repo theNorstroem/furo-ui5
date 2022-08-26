@@ -106,6 +106,10 @@ class FuroUi5FlexibleGrid extends FBP(LitElement) {
    * @private
    */
   _checkSize(size) {
+    // do nothing on invisible
+    if (size === 0) {
+      return;
+    }
     if (size <= 600) {
       this.setAttribute('size', 'size-s');
     } else if (size > 600 && size <= 1023) {
@@ -145,6 +149,7 @@ class FuroUi5FlexibleGrid extends FBP(LitElement) {
 
         box-sizing: border-box;
       }
+
       :host([size='size-l']) #grid {
         grid-template-columns: repeat(auto-fill, minmax(6.6rem, 1fr)) [last-col];
       }
@@ -193,6 +198,7 @@ class FuroUi5FlexibleGrid extends FBP(LitElement) {
       :host([size='size-xl']) ::slotted(*[hspan-on-size-xlarge='7']) {
         grid-column: auto / span 7;
       }
+
       ::slotted(*[hspan='8']),
       :host([size='size-l']) ::slotted(*[hspan-on-size-large='8']),
       :host([size='size-xl']) ::slotted(*[hspan-on-size-xlarge='8']) {
@@ -212,9 +218,11 @@ class FuroUi5FlexibleGrid extends FBP(LitElement) {
       ::slotted(*[hstart='3']) {
         grid-column-start: 3;
       }
+
       ::slotted(*[hstart='4']) {
         grid-column-start: 4;
       }
+
       ::slotted(*[hstart='5']) {
         grid-column-start: 5;
       }
@@ -222,12 +230,15 @@ class FuroUi5FlexibleGrid extends FBP(LitElement) {
       ::slotted(*[hstart='6']) {
         grid-column-start: 6;
       }
+
       ::slotted(*[hstart='7']) {
         grid-column-start: 7;
       }
+
       ::slotted(*[hstart='8']) {
         grid-column-start: 8;
       }
+
       ::slotted(*[hstart='9']) {
         grid-column-start: 9;
       }
@@ -247,6 +258,7 @@ class FuroUi5FlexibleGrid extends FBP(LitElement) {
         grid-column-start: 1;
         grid-column-end: last-col;
       }
+
       /* Place the cell on a new line*/
       ::slotted([newline]) {
         grid-column-start: 1;

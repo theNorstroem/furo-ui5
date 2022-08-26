@@ -107,6 +107,10 @@ export class FuroUi5FormFieldContainer extends FBP(LitElement) {
    * @private
    */
   _checkSize(size) {
+    // do nothing on invisible
+    if (size === 0) {
+      return;
+    }
     if (size <= 600 || this.getAttribute('full') != null) {
       this._setSizeAttribute('size-s');
     } else if (size > 600 && size <= 1023) {
