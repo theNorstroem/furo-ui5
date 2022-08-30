@@ -7,7 +7,7 @@ import '@ui5/webcomponents-icons/dist/message-error.js';
 import '@ui5/webcomponents-icons/dist/navigation-left-arrow.js';
 import '@ui5/webcomponents-icons/dist/navigation-right-arrow.js';
 import '@ui5/webcomponents-icons/dist/approvals.js';
-
+import '@furo/data/src/furo-data-flow-repeat.js';
 import '@ui5/webcomponents/dist/Link.js';
 import '@ui5/webcomponents/dist/SegmentedButton.js';
 import '@ui5/webcomponents/dist/Badge.js';
