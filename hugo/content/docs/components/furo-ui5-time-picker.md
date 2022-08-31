@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-time-picker
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-time-picker.js';`<small>
 <br>exports *FuroUi5TimePicker* js
 <br>extends *src/furo-ui5-time-picker.js*
@@ -57,6 +57,7 @@ When you use at-object-ready from a furo-data-object which emits a EntityNode, j
 
 ## Attributes and Properties
 {{% api "_furo-ui5-time-picker-properties.md" %}}
+
 
 
 
@@ -130,6 +131,17 @@ those attributes can be set. `value-state`, `value-state-message`,  `icon`, `pla
 
 Use this after manual or scripted update of the attributes.
 
+<br><br>
+
+### **onFnaFieldStateChanged**
+<small>**onFnaFieldStateChanged**(*state* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-field-state-changed</span>
+
+set the value state
+
+- <small>state </small>
 <br><br>
 
 

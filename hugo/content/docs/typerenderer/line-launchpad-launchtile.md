@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # line-launchpad-launchtile
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/typerenderer/line-launchpad-launchtile.js';`<small>
 <br>exports `<line-launchpad-launchtile>` custom-element-definition
 <br>superclass *LitElement*

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-pagination-bar
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-pagination-bar.js';`<small>
 <br>exports *FuroUi5PaginationBar* js
 <br>exports `<furo-ui5-pagination-bar>` custom-element-definition
@@ -104,7 +104,7 @@ information like prev, next, first and last
 <span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-pagination-next</span>
 → <small>``</small>
 
- Is fired if the pagination button 'sys_next_page' was clicked Tags: pagination
+ Is fired if the pagination button 'sys_next_page' was clicked
 <br><br>
 
 ## Methods
@@ -133,6 +133,19 @@ Supported type: furo.Link
 
 
 
+## Slots
+{{% api "_furo-ui5-pagination-bar-slots.md" %}}
+
+### **start**
+Type: `HTMLElement`
+
+Defines the content at the start of the bar
+<br><br>
+### **default**
+Type: `HTMLElement`
+
+Defines the content in the middle of the bar Tags: pagination
+<br><br>
 ## Styling
 {{% api "_furo-ui5-pagination-bar-styling.md" %}}
 

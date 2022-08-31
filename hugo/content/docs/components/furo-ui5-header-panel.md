@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-header-panel
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-header-panel.js';`<small>
 <br>exports *FuroUi5HeaderPanel* js
 <br>exports `<furo-ui5-header-panel>` custom-element-definition
@@ -82,6 +82,16 @@ sub title
 
 Collapsed
 <br><br>
+
+### **bigAction**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">big-action</span>
+<small>`Boolean` </small>
+
+Set to true to have a bigger action area (50:50).
+
+The default ratio for title:action slot is 75:25
+<br><br>
 ## Events
 {{% api "_furo-ui5-header-panel-events.md" %}}
 
@@ -157,6 +167,7 @@ Do not forget to import the icon you will use in your component.
 toggles the collapse state
 
 <br><br>
+
 
 
 

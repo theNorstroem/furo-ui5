@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-google-protobuf-doublevalue
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/typerenderer/form-google-protobuf-doublevalue.js';`<small>
 <br>exports `<form-google-protobuf-doublevalue>` custom-element-definition
 <br>extends */src/typerenderer/form-int32.js*

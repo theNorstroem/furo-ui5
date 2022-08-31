@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-multi-input-labeled
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-multi-input-labeled.js';`<small>
 <br>exports *FuroUi5MultiInputLabeled* js
 <br>exports `<furo-ui5-multi-input-labeled>` custom-element-definition
@@ -32,12 +32,21 @@ to the design specification of SAP Fiori Design System.
 
 
 
+
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
 <small>`String` default: **&#39;&#39;**</small>
 
 the label for the data-multi-input
+<br><br>
+
+### **full**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">full</span>
+</small>
+
+This is only used to forward the state to the form-field-container
 <br><br>
 
 ### **required**
@@ -88,6 +97,17 @@ Fires the field value when it changes.
 
 
 
+### **focus**
+<small>**focus**(*options* `Object` ) ⟹ `void`</small>
+
+<small>`Object` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span>
+
+Focuses the underlying ui5 input element
+
+- <small>options https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus</small>
+<br><br>
+
 ### **bindData**
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
 
@@ -99,6 +119,7 @@ Supported types: repeated string
 
 - <small>fieldNode </small>
 <br><br>
+
 
 
 

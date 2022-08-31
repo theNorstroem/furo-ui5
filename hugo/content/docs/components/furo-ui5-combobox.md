@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-combobox
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-combobox.js';`<small>
 <br>exports *FuroUi5Combobox* js
 <br>extends *src/furo-ui5-combobox.js*
@@ -30,6 +30,7 @@ Use the function bindOptions to bind a RepeaterNode as an option list.
 
 ## Attributes and Properties
 {{% api "_furo-ui5-combobox-properties.md" %}}
+
 
 
 
@@ -166,6 +167,17 @@ Here a RepeaterNode can be connected to the component as an option list.
 
 
 
+
+### **onFnaFieldStateChanged**
+<small>**onFnaFieldStateChanged**(*state* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-field-state-changed</span>
+
+set the value state
+
+- <small>state </small>
+<br><br>
 
 
 

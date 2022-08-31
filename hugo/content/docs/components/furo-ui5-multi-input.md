@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-multi-input
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-multi-input.js';`<small>
 <br>exports *FuroUi5MultiInput* js
 <br>extends *src/furo-ui5-multi-input.js*
@@ -56,6 +56,7 @@ Supported type: repeated string
 
 
 
+
 ## Methods
 {{% api "_furo-ui5-multi-input-methods.md" %}}
 
@@ -77,6 +78,17 @@ Supported types: repeated string
 
 
 
+
+### **onFnaFieldStateChanged**
+<small>**onFnaFieldStateChanged**(*state* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-field-state-changed</span>
+
+set the value state
+
+- <small>state </small>
+<br><br>
 
 
 

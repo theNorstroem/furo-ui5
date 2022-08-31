@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-step-input-labeled
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-step-input-labeled.js';`<small>
 <br>exports *FuroUi5StepInputLabeled* js
 <br>exports `<furo-ui5-step-input-labeled>` custom-element-definition
@@ -47,6 +47,14 @@ the label for the data-step-input
 <small>`String` default: **&#39;&#39;**</small>
 
 icon on the right
+<br><br>
+
+### **full**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">full</span>
+</small>
+
+This is only used to forward the state to the form-field-container
 <br><br>
 
 ### **required**
@@ -137,6 +145,7 @@ furo.fat.Doube, furo.fat.Float, furo.fat.Int32, etc.
 
 - <small>fieldNode </small>
 <br><br>
+
 
 
 

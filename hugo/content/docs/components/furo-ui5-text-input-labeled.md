@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-text-input-labeled
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-text-input-labeled.js';`<small>
 <br>exports *FuroUi5TextInputLabeled* js
 <br>exports `<furo-ui5-text-input-labeled>` custom-element-definition
@@ -60,6 +60,14 @@ This attribute is related to the option list
 Defines the field path that is used from the injected RepeaterNode to display the option items.
 Point-separated path to the field
 E.g. data.partner.display_name
+<br><br>
+
+### **full**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">full</span>
+</small>
+
+This is only used to forward the state to the form-field-container
 <br><br>
 
 ### **required**
@@ -133,6 +141,7 @@ Binds a repeaterNode to the furo-ui5-combobox component
 
 - <small>repeaterNode </small>
 <br><br>
+
 
 
 
