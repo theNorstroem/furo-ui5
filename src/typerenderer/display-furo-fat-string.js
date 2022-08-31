@@ -110,7 +110,7 @@ class DisplayFuroFatString extends LitElement {
    */
   render() {
     // language=HTML
-    return html` ${nl2br(this._displayValue)} `;
+    return html` ${nl2br(this._displayValue)}`;
   }
 }
 

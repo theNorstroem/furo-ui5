@@ -7,8 +7,12 @@ class DirectiveNl2br extends Directive {
   render(str) {
     if (typeof str === 'string') {
       const lines = str.split('\n');
-      return html`${map(lines, line => html`${line}<br />`)}`;
+      if (lines.length > 1) {
+        return html`${map(lines, line => html`${line}<br />`)}`;
+      }
+      return html`${str}`;
     }
+
     return html``;
   }
 }
