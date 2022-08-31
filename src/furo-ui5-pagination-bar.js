@@ -2,11 +2,10 @@ import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
 
-import '@furo/layout/src/furo-horizontal-flex.js';
-import '@furo/layout/src/furo-empty-spacer.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/util/src/furo-navigation-pad.js';
 import '@ui5/webcomponents/dist/Button.js';
+import '@ui5/webcomponents-fiori/dist/Bar.js';
 import '@ui5/webcomponents-icons/dist/sys-first-page.js';
 import '@ui5/webcomponents-icons/dist/sys-last-page.js';
 import '@ui5/webcomponents-icons/dist/sys-next-page.js';
@@ -31,6 +30,9 @@ import { i18n } from '@furo/framework/src/i18n.js';
  * @fires {} pagination-prev -  Is fired if the pagination button 'sys_prev_page' was clicked
  * @fires {} pagination-next -  Is fired if the pagination button 'sys_next_page' was clicked
  *
+ * @slot {HTMLElement} start - Defines the content at the start of the bar
+ * @slot {HTMLElement} default - Defines the content in the middle of the bar
+ *
  * Tags: pagination
  * @summary Pagination Bar
  * @element furo-ui5-pagination-bar
@@ -49,13 +51,6 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
       :host {
         width: 100%;
         display: block;
-        padding: 0.25rem var(--furo-ui5-pagination-bar-padding-right, 1rem)
-          0.25rem 1rem;
-        box-sizing: border-box;
-        background-color: var(
-          --furo-ui5-pagination-bar-background-color,
-          var(--sapPageHeader_Background, #fff)
-        );
       }
 
       :host([hidden]) {
@@ -214,9 +209,11 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
    */
   render() {
     return html`
-      <furo-horizontal-flex>
-        <furo-empty-spacer></furo-empty-spacer>
+      <ui5-bar design="Footer">
+        <div slot="startContent"><slot name="start"></slot></div>
+        <div slot><slot></slot></div>
         <ui5-button
+          slot="endContent"
           title="${i18n.t('sys_first_page')}"
           design="Transparent"
           at-click="^^pagination-first"
@@ -224,6 +221,7 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
           ?disabled="${!this.first}"
         ></ui5-button>
         <ui5-button
+          slot="endContent"
           title="${i18n.t('sys_prev_page')}"
           design="Transparent"
           at-click="^^pagination-prev"
@@ -232,6 +230,7 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
         ></ui5-button>
         ${this.currentPage ? html` <span>${this.currentPage}</span> ` : html``}
         <ui5-button
+          slot="endContent"
           title="${i18n.t('sys_next_page')}"
           design="Transparent"
           at-click="^^pagination-next"
@@ -239,13 +238,14 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
           ?disabled="${!this.next}"
         ></ui5-button>
         <ui5-button
+          slot="endContent"
           title="${i18n.t('sys_last_page')}"
           design="Transparent"
           at-click="^^pagination-last"
           icon="sys-last-page"
           ?disabled="${!this.last}"
         ></ui5-button>
-      </furo-horizontal-flex>
+      </ui5-bar>
       <furo-navigation-pad at-navigated="--navigated"></furo-navigation-pad>
     `;
   }

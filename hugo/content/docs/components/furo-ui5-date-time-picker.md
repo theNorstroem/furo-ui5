@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-date-time-picker
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-date-time-picker.js';`<small>
 <br>exports *FuroUi5DateTimePicker* js
 <br>extends *src/furo-ui5-date-time-picker.js*
@@ -58,6 +58,8 @@ When you use at-object-ready from a furo-data-object which emits a EntityNode, j
 
 ## Attributes and Properties
 {{% api "_furo-ui5-date-time-picker-properties.md" %}}
+
+
 
 
 
@@ -140,6 +142,17 @@ Fired when the input operation has finished by pressing Enter or on focusout.
 {{% api "_furo-ui5-date-time-picker-methods.md" %}}
 
 
+### **_updateFNA**
+<small>**_updateFNA**(*v* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--update-fna</span>
+
+
+
+- <small>v </small>
+<br><br>
+
 
 ### **onFnaFieldValueChanged**
 <small>**onFnaFieldValueChanged**(*value* `` ) ⟹ `void`</small>
@@ -175,6 +188,17 @@ Supported types: `string`, `google.protobuf.Timestamp`, `int32`, `int64`
 
 
 
+<br><br>
+
+### **onFnaFieldStateChanged**
+<small>**onFnaFieldStateChanged**(*state* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-field-state-changed</span>
+
+set the value state
+
+- <small>state </small>
 <br><br>
 
 ### **onFnaFieldNodeBecameInvalid**

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-section
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-section.js';`<small>
 <br>exports *FuroUi5Section* js
 <br>exports `<furo-ui5-section>` custom-element-definition

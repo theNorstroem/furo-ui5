@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-textarea-input-labeled
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-textarea-input-labeled.js';`<small>
 <br>exports *FuroUi5TextareaInputLabeled* js
 <br>exports `<furo-ui5-textarea-input-labeled>` custom-element-definition
@@ -52,6 +52,14 @@ Defines the number of visible text lines for the component.
 <small>`Number` default: **0**</small>
 
 Defines the maximum number of lines that the Web Component can grow.
+<br><br>
+
+### **full**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">full</span>
+</small>
+
+This is only used to forward the state to the form-field-container
 <br><br>
 
 ### **required**
@@ -124,6 +132,7 @@ Orchestrates the data field connection to the inside
 
 - <small>fieldNode </small>
 <br><br>
+
 
 
 

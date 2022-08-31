@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-typerenderer-labeled
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-typerenderer-labeled.js';`<small>
 <br>exports *FuroUi5TyperendererLabeled* js
 <br>exports `<furo-ui5-typerenderer-labeled>` custom-element-definition
@@ -40,6 +40,14 @@ Set the render context. Default is **display**, the type renderer set of @furo/u
 **cell**, **form**, **celledit**
 <br><br>
 
+### **full**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">full</span>
+</small>
+
+This is only used to forward the state to the form-field-container
+<br><br>
+
 ### **disabled**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disabled</span> <small>**reflects**</small>
@@ -64,6 +72,7 @@ binding set can be customised here otherwise the standard bindData in the ui5-da
 
 - <small>fieldNode </small>
 <br><br>
+
 
 
 

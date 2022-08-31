@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-money-input
-**@furo/ui5** <small>v1.6.0</small>
+**@furo/ui5** <small>v1.9.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-money-input.js';`<small>
 <br>exports *FuroUi5MoneyInput* js
 <br>exports `<furo-ui5-money-input>` custom-element-definition
@@ -60,37 +60,10 @@ Tags: money input
 
 
 
-### **_previousValueState**
-default: **{ state: &#39;None&#39;, message: &#39;&#39; }**</small>
 
 
-<br><br>
-
-### **_attributesFromFNA**
-default: **{
-      readonly: undefined,
-    }**</small>
 
 
-<br><br>
-
-### **_constraintsFromFNA**
-default: **{
-      required: undefined,
-    }**</small>
-
-
-<br><br>
-
-### **_privilegedAttributes**
-default: **{
-      readonly: null,
-      required: null,
-      disabled: null,
-    }**</small>
-
-
-<br><br>
 
 ### **disabled**
 
@@ -200,17 +173,19 @@ options:
 
 
 
+### **onFnaFieldStateChanged**
+<small>**onFnaFieldStateChanged**(*state* `` ) ⟹ `void`</small>
 
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-field-state-changed</span>
 
-### **_getElements**
-<small>**_getElements**() ⟹ `void`</small>
+set the value state
 
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--get-elements</span>
-
-
-
+- <small>state </small>
 <br><br>
+
+
+
 
 
 
