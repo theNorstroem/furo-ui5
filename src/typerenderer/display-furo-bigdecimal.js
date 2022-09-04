@@ -21,6 +21,42 @@ export class DisplayFuroBigdecimal extends LitElement {
      * @private
      */
     this._displayValue = '';
+    this._options = {};
+  }
+
+  /**
+   * @private
+   * @return {Object}
+   */
+  static get properties() {
+    return {
+      /**
+       * Currency definition,
+       * The currency to use in currency formatting.
+       * Possible values are the ISO 4217 currency codes, such as "USD" for the US dollar, "EUR" for the euro, or "CNY"
+       * for the Chinese RMB.
+       *
+       */
+      currency: { type: String },
+    };
+  }
+
+  /**
+   * Set currency formating
+   * @param c
+   */
+  set currency(c) {
+    if (c) {
+      this._options = {
+        style: 'currency',
+        currency: c,
+        currencySign: 'accounting',
+      };
+      // render if data was already set
+      if (this._field) {
+        this._formatDisplay();
+      }
+    }
   }
 
   static get styles() {
@@ -101,6 +137,9 @@ export class DisplayFuroBigdecimal extends LitElement {
 
     if (val !== null && !(val.scale === null || val.unscaled_value === null)) {
       const vstr = val.unscaled_value.toString(10);
+      if (val.scale === undefined) {
+        val.scale = 0;
+      }
       if (val.scale < 0) {
         displayValue = parseInt(vstr + ''.padEnd(Math.abs(val.scale), 0), 10);
       } else {
@@ -110,9 +149,12 @@ export class DisplayFuroBigdecimal extends LitElement {
           )}`
         );
       }
-      this._displayValue = new Intl.NumberFormat(Env.locale, {}).format(
-        displayValue
-      );
+      if (val !== null) {
+        this._displayValue = new Intl.NumberFormat(
+          Env.locale,
+          this._options
+        ).format(displayValue);
+      }
     }
 
     this.requestUpdate();
