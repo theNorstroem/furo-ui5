@@ -28,6 +28,7 @@ import '@furo/layout/src/furo-form-layouter.js';
  *
  * @event collapsed Fired when panel is collapsed by user interaction.
  * @event expanded Fired when panel is expanded by user interaction.
+ * @event header-icon-clicked {buttonRef} Fired when the header icon was clicked.
  *
  * @slot {HTMLElement [0..n]} action - defines an action, displayed in the right most part of the header panel.
  * @slot {HTMLElement [0..n]} - defines the content of the panel
@@ -66,6 +67,10 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
        * @type String
        */
       headerText: { type: String, attribute: 'header-text' },
+      /**
+       * Set this to have a clickable icon on the header line
+       */
+      headerIcon: { type: String, attribute: 'header-icon' },
 
       /**
        * sub title
@@ -374,6 +379,9 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
       :host(:not([fixed])) {
         padding-bottom: 0;
       }
+      ui5-button[hidden] {
+        display: none;
+      }
     `;
   }
 
@@ -387,8 +395,15 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
     return html`
       <furo-form-layouter four style="align-items: center;">
         <ui5-title ?tripple="${!this.bigAction}" ?double="${this.bigAction}"
-          >${this.headerText}</ui5-title
-        >
+          >${this.headerText}
+          <ui5-button
+            ?hidden="${!this.headerIcon}"
+            at-click="^^header-icon-clicked(*.target)"
+            style="height: 1.25rem"
+            design="Transparent"
+            icon="${this.headerIcon}"
+          ></ui5-button
+        ></ui5-title>
         <div end>
           <slot name="action"></slot>
         </div>
