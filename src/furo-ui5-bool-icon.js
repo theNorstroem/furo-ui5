@@ -48,6 +48,26 @@ class FuroDataBoolIcon extends FBP(LitElement) {
   }
 
   /**
+   * flow is ready lifecycle method
+   */
+  _FBPReady() {
+    super._FBPReady();
+    /**
+     * open close symbol
+     * @type {string}
+     * @private
+     */
+    this._ocSymbol = this.symbolfalse;
+    /**
+     *
+     * @type {boolean}
+     * @private
+     */
+    this._state = false;
+    this.requestUpdate();
+  }
+
+  /**
    * Binds a FieldNode
    *
    * Supported types: `bool`
