@@ -51,6 +51,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
     this.icon = '';
     this.iconSize = 'S';
     this.headerText = '';
+    this.headerTextLevel = 'H2';
     this.secondaryText = '';
     this.collapsed = false;
   }
@@ -71,6 +72,11 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
        * Set this to have a clickable icon on the header line
        */
       headerIcon: { type: String, attribute: 'header-icon' },
+
+      /**
+       * Set the level of the header text, default is H2
+       */
+      headerTextLevel: { type: String, attribute: 'header-text-level' },
 
       /**
        * sub title
@@ -394,16 +400,22 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
     // language=HTML
     return html`
       <furo-form-layouter four style="align-items: center;">
-        <ui5-title ?tripple="${!this.bigAction}" ?double="${this.bigAction}"
-          >${this.headerText}
+        <furo-horizontal-flex
+          style="align-items: center"
+          ?tripple="${!this.bigAction}"
+          ?double="${this.bigAction}"
+        >
+          <ui5-title level="${this.headerTextLevel}">
+            ${this.headerText}</ui5-title
+          >
           <ui5-button
             ?hidden="${!this.headerIcon}"
             at-click="^^header-icon-clicked(*.target)"
-            style="height: 1.25rem"
             design="Transparent"
             icon="${this.headerIcon}"
-          ></ui5-button
-        ></ui5-title>
+          ></ui5-button>
+        </furo-horizontal-flex>
+
         <div end>
           <slot name="action"></slot>
         </div>

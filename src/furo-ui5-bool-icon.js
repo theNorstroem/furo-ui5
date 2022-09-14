@@ -52,19 +52,12 @@ class FuroDataBoolIcon extends FBP(LitElement) {
    */
   _FBPReady() {
     super._FBPReady();
-    /**
-     * open close symbol
-     * @type {string}
-     * @private
-     */
-    this._ocSymbol = this.symbolfalse;
-    /**
-     *
-     * @type {boolean}
-     * @private
-     */
-    this._state = false;
-    this.requestUpdate();
+
+    if (!this._field) {
+      this._ocSymbol = this.symbolfalse;
+      this._state = false;
+      this.requestUpdate();
+    }
   }
 
   /**
@@ -169,7 +162,7 @@ class FuroDataBoolIcon extends FBP(LitElement) {
    */
   render() {
     // language=HTML
-    return html`<ui5-icon
+    return html` <ui5-icon
       interactive
       name="${this._ocSymbol}"
       at-click="^^toggle"

@@ -14,7 +14,12 @@ class CelleditGoogleProtobufTimestamp extends FuroUi5DateTimePicker {
   }
 
   static get styles() {
-    return super.styles;
+    return [
+      super.styles,
+      {
+        content: ':host{width:100%}',
+      },
+    ];
   }
 }
 

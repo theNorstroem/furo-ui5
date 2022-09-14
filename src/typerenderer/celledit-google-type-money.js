@@ -9,7 +9,16 @@ import { FuroUi5MoneyInput } from '../furo-ui5-money-input.js';
  * @summary celledit renderer for `google.type.Money`
  * @element celledit-google-type-money
  */
-class CelleditGoogleTypeMoney extends FuroUi5MoneyInput {}
+class CelleditGoogleTypeMoney extends FuroUi5MoneyInput {
+  static get styles() {
+    return [
+      super.styles,
+      {
+        content: ':host{width:100%}',
+      },
+    ];
+  }
+}
 
 window.customElements.define(
   'celledit-google-type-money',

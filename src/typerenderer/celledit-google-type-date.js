@@ -26,7 +26,12 @@ class CelleditGoogleTypeDate extends FuroUi5DatePicker {
   }
 
   static get styles() {
-    return super.styles;
+    return [
+      super.styles,
+      {
+        content: ':host{width:100%}',
+      },
+    ];
   }
 }
 
