@@ -233,15 +233,19 @@ export class FuroUi5Table extends FBP(LitElement) {
       this.shadowRoot.querySelector('ui5-table').appendChild(col);
     });
 
+    this._initRepeatTemplate(fieldPaths);
+
+    this._showNoData = !!this.noDataText;
+
+    this.requestUpdate();
+  }
+
+  _initRepeatTemplate(fieldPaths) {
     this._rowRepeatTemplate = statichtml`<template>
         <furo-ui5-table-row fn-set-data='--init(*)' fn-focus='--trigger'>
           ${this._cellMap(fieldPaths)}
         </furo-ui5-table-row>
     </template>`;
-
-    this._showNoData = !!this.noDataText;
-
-    this.requestUpdate();
   }
 
   /**
