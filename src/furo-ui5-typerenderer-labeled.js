@@ -31,6 +31,15 @@ export class FuroUi5TyperendererLabeled extends FBP(LitElement) {
   }
 
   /**
+   * focus Focuses the field
+   * @public
+   * @param null
+   */
+  focus() {
+    this._FBPTriggerWire('|--focus', null);
+  }
+
+  /**
    * flow is ready lifecycle method
    * @private
    */
