@@ -100,6 +100,7 @@ bookHidden: true
 - [display-google-protobuf-uint64value](display-google-protobuf-uint64value.md) display renderer for `google.protobuf.Uint64Value`
 - [display-google-type-color](display-google-type-color.md) display renderer for `google.type.Color`
 - [display-google-type-date](display-google-type-date.md) display renderer for `google.type.Date`
+- [display-google-type-datetime](display-google-type-datetime.md) 
 - [display-google-type-money](display-google-type-money.md) display renderer for `google.type.Money`
 - [display-google-type-timeofday](display-google-type-timeofday.md) display renderer for `google.type.TimeOfDay`
 - [display-int32](display-int32.md) display renderer for `int32`

@@ -1,4 +1,4 @@
-import { DisplayInt64 } from './display-int64.js';
+import { DisplayInt32 } from './display-int32.js';
 /**
  * `display-uint64`
  * The display-uint64 component displays a FieldNode of type `uint64` in read only mode.
@@ -12,6 +12,6 @@ import { DisplayInt64 } from './display-int64.js';
  * @summary display renderer for `uint64`
  * @element display-uint64
  */
-export class DisplayUint64 extends DisplayInt64 {}
+export class DisplayUint64 extends DisplayInt32 {}
 
 window.customElements.define('display-uint64', DisplayUint64);

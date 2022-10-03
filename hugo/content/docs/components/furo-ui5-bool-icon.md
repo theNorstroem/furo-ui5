@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-bool-icon
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-bool-icon.js';`<small>
 <br>exports `<furo-ui5-bool-icon>` custom-element-definition
 <br>superclass *LitElement*
@@ -36,10 +36,11 @@ If you set other icons, please do not forget to import them.
 
 
 
+
 ### **symboltrue**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">symboltrue</span>
-<small>`String` default: **&#39;navigation-down-arrow&#39;**</small>
+<small>`string` default: **&#39;navigation-down-arrow&#39;**</small>
 
 Defines the icon for the true state.
 <br><br>
@@ -47,7 +48,7 @@ Defines the icon for the true state.
 ### **symbolfalse**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">symbolfalse</span>
-<small>`String` default: **&#39;navigation-right-arrow&#39;**</small>
+<small>`string` default: **&#39;navigation-right-arrow&#39;**</small>
 
 Defines the icon for the false state.
 <br><br>
@@ -63,6 +64,16 @@ default: **{}**</small>
 ## Methods
 {{% api "_furo-ui5-bool-icon-methods.md" %}}
 
+
+### **_FBPReady**
+<small>**_FBPReady**() ⟹ `void`</small>
+
+<small>`*`</small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--fbp-ready</span>
+
+flow is ready lifecycle method
+
+<br><br>
 
 ### **bindData**
 <small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>

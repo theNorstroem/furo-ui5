@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 
 import '@ui5/webcomponents/dist/Icon.js';
 import '@ui5/webcomponents-icons/dist/accept.js';
@@ -15,7 +16,7 @@ import '@ui5/webcomponents-icons/dist/less.js';
  * @summary display renderer for `bool`
  * @element display-bool
  */
-export class DisplayBool extends LitElement {
+export class DisplayBool extends FieldNodeAdapter(LitElement) {
   static get styles() {
     // language=CSS
     return css`
@@ -40,14 +41,17 @@ export class DisplayBool extends LitElement {
       :host([value-state='Success']) ui5-icon {
         color: var(--sapPositiveColor, #107e3e);
       }
+
       :host([value-state='Informative']) ui5-icon,
       :host([value-state='Information']) ui5-icon {
         color: var(--sapInformativeColor, #0a6ed1);
       }
+
       :host([value-state='Negative']) ui5-icon,
       :host([value-state='Error']) ui5-icon {
         color: var(--sapNegativeColor, #b00);
       }
+
       :host([value-state='Critical']) ui5-icon,
       :host([value-state='Warning']) ui5-icon {
         color: var(--sapCrticalColor, #e9730c);
@@ -55,18 +59,9 @@ export class DisplayBool extends LitElement {
     `;
   }
 
-  /**
-   * Binds a field node to the component
-   * @param {FieldNode} fieldNode
-   */
-  bindData(fieldNode) {
-    this._field = fieldNode;
-    if (this._field) {
-      this._field.addEventListener('field-value-changed', () => {
-        this.requestUpdate();
-      });
-      this.requestUpdate();
-    }
+  onFnaFieldValueChanged(value) {
+    this._fieldValue = value;
+    this.requestUpdate();
   }
 
   /**
@@ -76,14 +71,12 @@ export class DisplayBool extends LitElement {
    */
   _getTemplate() {
     let tmpl = '';
-    if (this._field) {
-      if (this._field._value === null) {
-        tmpl = html` <ui5-icon name="less"></ui5-icon> `;
-      } else if (!this._field._value || this._field._value === 'false') {
-        tmpl = html` <ui5-icon name="border"></ui5-icon> `;
-      } else {
-        tmpl = html` <ui5-icon name="accept"></ui5-icon> `;
-      }
+    if (this._fieldValue === null) {
+      tmpl = html` <ui5-icon name="less"></ui5-icon> `;
+    } else if (!this._fieldValue || this._fieldValue === 'false') {
+      tmpl = html` <ui5-icon name="border"></ui5-icon> `;
+    } else {
+      tmpl = html` <ui5-icon name="accept"></ui5-icon> `;
     }
     return tmpl;
   }

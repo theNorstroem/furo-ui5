@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-date-picker-labeled
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-date-picker-labeled.js';`<small>
 <br>exports *FuroUi5DatePickerLabeled* js
 <br>exports `<furo-ui5-date-picker-labeled>` custom-element-definition
@@ -36,7 +36,7 @@ to the design specification of SAP Fiori Design System.
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 the label for the data-date-picker
 <br><br>

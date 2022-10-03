@@ -36,6 +36,7 @@ import './display-google-type-date.js';
 import './display-google-type-money.js';
 import './display-google-type-timeofday.js';
 import './display-google-type-color.js';
+import './display-google-type-datetime.js';
 import './display-google-protobuf-boolvalue.js';
 import './display-google-protobuf-doublevalue.js';
 import './display-google-protobuf-floatvalue.js';

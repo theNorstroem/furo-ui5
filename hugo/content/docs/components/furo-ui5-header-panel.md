@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-header-panel
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-header-panel.js';`<small>
 <br>exports *FuroUi5HeaderPanel* js
 <br>exports `<furo-ui5-header-panel>` custom-element-definition
@@ -46,7 +46,7 @@ It can be collapsed to save space on the screen.
 ### **icon**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 icon
 <br><br>
@@ -54,7 +54,7 @@ icon
 ### **iconSize**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon-size</span>
-<small>`String` default: **&#39;S&#39;**</small>
+<small>`string` default: **&#39;S&#39;**</small>
 
 size of the icon. Available options are: XS S M L XL. Default is S.
 <br><br>
@@ -62,15 +62,23 @@ size of the icon. Available options are: XS S M L XL. Default is S.
 ### **headerText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-text</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 Header Text
+<br><br>
+
+### **headerTextLevel**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-text-level</span>
+<small>`string` default: **&#39;H2&#39;**</small>
+
+Set the level of the header text, default is H2
 <br><br>
 
 ### **secondaryText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">secondary-text</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 sub title
 <br><br>
@@ -78,9 +86,17 @@ sub title
 ### **collapsed**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">collapsed</span> <small>**reflects**</small>
-<small>`Boolean` default: **false**</small>
+<small>`boolean` default: **false**</small>
 
 Collapsed
+<br><br>
+
+### **headerIcon**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-icon</span>
+</small>
+
+Set this to have a clickable icon on the header line
 <br><br>
 
 ### **bigAction**
@@ -106,6 +122,12 @@ Fired when panel is collapsed by user interaction.
 → <small>`Event`</small>
 
 Fired when panel is expanded by user interaction.
+<br><br>
+### **header-icon-clicked**
+<span  style="border-width:2px 10px 2px 2px; border-style: solid;border-color:  rgb(2, 168, 244);font-family:monospace; padding:2px 4px;">at-header-icon-clicked</span>
+→ <small>``</small>
+
+{buttonRef} Fired when the header icon was clicked.
 <br><br>
 
 ## Methods
@@ -167,6 +189,8 @@ Do not forget to import the icon you will use in your component.
 toggles the collapse state
 
 <br><br>
+
+
 
 
 

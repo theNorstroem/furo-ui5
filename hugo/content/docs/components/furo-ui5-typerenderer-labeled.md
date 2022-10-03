@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-typerenderer-labeled
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-typerenderer-labeled.js';`<small>
 <br>exports *FuroUi5TyperendererLabeled* js
 <br>exports `<furo-ui5-typerenderer-labeled>` custom-element-definition
@@ -31,10 +31,11 @@ to the design specification of SAP Fiori Design System.
 
 
 
+
 ### **context**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">context</span>
-<small>`String` default: **&#39;display&#39;**</small>
+<small>`string` default: **&#39;display&#39;**</small>
 
 Set the render context. Default is **display**, the type renderer set of @furo/ui5 supports
 **cell**, **form**, **celledit**
@@ -59,6 +60,17 @@ Disabled State
 ## Methods
 {{% api "_furo-ui5-typerenderer-labeled-methods.md" %}}
 
+
+### **focus**
+<small>**focus**(*null* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-focus</span>
+
+focus Focuses the field
+
+- <small>null </small>
+<br><br>
 
 
 ### **bindData**

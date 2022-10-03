@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-chart
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-chart.js';`<small>
 <br>exports `<furo-ui5-chart>` custom-element-definition
 <br>superclass *LitElement*</small>
@@ -124,7 +124,7 @@ Label the Series for the legend. This text is also shown on the tooltips. This i
 ### **strokeWidth**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">chart-stroke-width</span>
-<small>`Number` default: **1**</small>
+<small>`number` default: **1**</small>
 
 Define the thickness of the lines in px.
 <br><br>
@@ -132,7 +132,7 @@ Define the thickness of the lines in px.
 ### **markerSize**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">chart-marker-size</span>
-<small>`Number` default: **0**</small>
+<small>`number` default: **0**</small>
 
 Set the size of the markers (hover state) in px.
 <br><br>
@@ -140,7 +140,7 @@ Set the size of the markers (hover state) in px.
 ### **strokeCurve**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">chart-curve</span>
-<small>`String` default: **&#39;straight&#39;**</small>
+<small>`string` default: **&#39;straight&#39;**</small>
 
 Define the curve style for line and area charts.
 

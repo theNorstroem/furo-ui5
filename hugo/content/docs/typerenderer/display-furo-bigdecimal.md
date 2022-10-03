@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-bigdecimal
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/typerenderer/display-furo-bigdecimal.js';`<small>
 <br>exports *DisplayFuroBigdecimal* js
 <br>exports `<display-furo-bigdecimal>` custom-element-definition
@@ -28,11 +28,26 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/In
 
 
 
+### **currency**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">currency</span>
+</small>
+
+Set currency formating
+<br><br>
 
 
+
+
+### **_options**
+default: **{}**</small>
+
+
+<br><br>
 
 ## Methods
 {{% api "_display-furo-bigdecimal-methods.md" %}}
+
 
 
 ### **bindData**
@@ -55,6 +70,7 @@ Binds a field node to the component
 
 
 <br><br>
+
 
 
 

@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-
+import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { Env } from '@furo/framework/src/furo.js';
 /**
  * `display-double`
@@ -11,7 +11,7 @@ import { Env } from '@furo/framework/src/furo.js';
  * @summary display renderer for `double`
  * @element display-double
  */
-export class DisplayDouble extends LitElement {
+export class DisplayDouble extends FieldNodeAdapter(LitElement) {
   constructor() {
     super();
     /**
@@ -65,24 +65,15 @@ export class DisplayDouble extends LitElement {
     `;
   }
 
-  /**
-   * Binds a field node to the component
-   * @param {FieldNode} fieldNode
-   */
-  bindData(fieldNode) {
-    this._field = fieldNode;
-    if (this._field) {
-      this._field.addEventListener('field-value-changed', () => {
-        this._formatDisplay();
-      });
-      this._formatDisplay();
-    }
+  onFnaFieldValueChanged(value) {
+    this._fieldValue = value;
+    this._formatDisplay(value);
   }
 
-  _formatDisplay() {
-    if (this._field._value !== null) {
+  _formatDisplay(fieldValue) {
+    if (fieldValue !== null) {
       const displayValue = new Intl.NumberFormat(Env.locale, {}).format(
-        this._field._value
+        fieldValue
       );
       if (displayValue !== 'NaN') {
         this._displayValue = displayValue;

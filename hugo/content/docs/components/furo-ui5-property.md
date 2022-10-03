@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-property
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-property.js';`<small>
 <br>exports *FuroUi5Property* js
 <br>exports `<furo-ui5-property>` custom-element-definition
@@ -69,7 +69,7 @@ weight: 50
 ### **context**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">context</span>
-<small>`String` default: **&#39;form&#39;**</small>
+<small>`string` default: **&#39;form&#39;**</small>
 
 Set the context, for the renderers.
 <br><br>

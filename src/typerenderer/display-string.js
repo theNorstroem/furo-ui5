@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { FieldNodeAdapter } from '@furo/data/src/lib/FieldNodeAdapter.js';
 import { nl2br } from '../directives/nl2br.js';
 
 /**
@@ -11,7 +12,18 @@ import { nl2br } from '../directives/nl2br.js';
  * @summary display renderer for `string`
  * @element display-string
  */
-export class DisplayString extends LitElement {
+export class DisplayString extends FieldNodeAdapter(LitElement) {
+  constructor() {
+    super();
+    this._text = '';
+  }
+
+  static get properties() {
+    return {
+      _text: { type: 'String' },
+    };
+  }
+
   static get styles() {
     // language=CSS
     return css`
@@ -51,20 +63,9 @@ export class DisplayString extends LitElement {
     `;
   }
 
-  /**
-   * Binds a field node to the component
-   * @param {FieldNode} fieldNode
-   */
-  bindData(fieldNode) {
-    this._field = fieldNode;
-    if (this._field) {
-      this._field.addEventListener('field-value-changed', () => {
-        this._text = this._field._value;
-        this.requestUpdate();
-      });
-      this._text = this._field._value;
-      this.requestUpdate();
-    }
+  onFnaFieldValueChanged(value) {
+    this._fieldValue = value;
+    this._text = value;
   }
 
   /**

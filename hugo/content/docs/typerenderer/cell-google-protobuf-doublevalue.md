@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-google-protobuf-doublevalue
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-google-protobuf-doublevalue.js';`<small>
 <br>exports `<cell-google-protobuf-doublevalue>` custom-element-definition
 <br>extends */src/typerenderer/cell-double.js*
