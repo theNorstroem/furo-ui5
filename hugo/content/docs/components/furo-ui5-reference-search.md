@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-reference-search
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-reference-search.js';`<small>
 <br>exports *FuroUi5ReferenceSearch* js
 <br>exports `<furo-ui5-reference-search>` custom-element-definition
@@ -116,9 +116,9 @@ Fire a **escape-filter-panel** to close the extended search.
 ### **service**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">service</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
-Set the service. This is only needed when you do not use a bind or bind a scalar value.
+setter for the service
 <br><br>
 
 
@@ -143,7 +143,7 @@ Set the service. This is only needed when you do not use a bind or bind a scalar
 ### **searchResponsePath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">search-response-path</span>
-<small>`String` default: **&#39;entities&#39;**</small>
+<small>`string` default: **&#39;entities&#39;**</small>
 
 Path to the node in the response value which contains the array with the selection items.
 By default this goes to *entitites*
@@ -152,7 +152,7 @@ By default this goes to *entitites*
 ### **valueFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">value-field-path</span>
-<small>`String` default: **&#39;data.id&#39;**</small>
+<small>`string` default: **&#39;data.id&#39;**</small>
 
 Path to response value item which is used for the id.
 By default this goes to *data.id*
@@ -161,7 +161,7 @@ By default this goes to *data.id*
 ### **displayFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">display-field-path</span>
-<small>`String` default: **&#39;data.display_name&#39;**</small>
+<small>`string` default: **&#39;data.display_name&#39;**</small>
 
 Path to selection value node which is used for the display.
 By default this goes to *data.display_name*
@@ -170,7 +170,7 @@ By default this goes to *data.display_name*
 ### **extendedValueFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">extended-value-field-path</span>
-<small>`String` default: **&#39;data.id&#39;**</small>
+<small>`string` default: **&#39;data.id&#39;**</small>
 
 Path to response value item of the extended search which is used for the id.
 By default this goes to *data.id*.
@@ -180,7 +180,7 @@ Only needed when your extended searcher does not have the id, display_name signa
 ### **extendedDisplayFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">extended-display-field-path</span>
-<small>`String` default: **&#39;data.display_name&#39;**</small>
+<small>`string` default: **&#39;data.display_name&#39;**</small>
 
 Path to response value item of the exteded search which is used for the display.
 By default this goes to *data.display_name*.
@@ -190,7 +190,7 @@ Only needed when your extended searcher does not have the id, display_name signa
 ### **maxItemsToDisplay**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">max-items-to-display</span>
-<small>`Number` default: **8**</small>
+<small>`number` default: **8**</small>
 
 The maximal number of items to display.
 
@@ -209,7 +209,7 @@ default: **{ id: &#39;&#39;, display_name: &#39;&#39; }**</small>
 ### **minTermLength**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">min-term-length</span>
-<small>`Number` default: **2**</small>
+<small>`number` default: **2**</small>
 
 The minimal length of search term to trigger a search.
 <br><br>
@@ -217,7 +217,7 @@ The minimal length of search term to trigger a search.
 ### **debounceTimeout**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">debounce-timeout</span>
-<small>`Number` default: **250**</small>
+<small>`number` default: **250**</small>
 
 wait for this time between keystrokes to trigger a search to the service
 <br><br>
@@ -225,7 +225,7 @@ wait for this time between keystrokes to trigger a search to the service
 ### **placeholder**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">placeholder</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 Overrides the hint text from the **specs**.
 
@@ -235,7 +235,7 @@ Use with caution, normally the specs defines this value.
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 Overrides the label text from the **specs**.
 
@@ -245,7 +245,7 @@ Use with caution, normally the specs defines this value.
 ### **noDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">no-data-text</span>
-<small>`String` default: **&#39;no result found&#39;**</small>
+<small>`string` default: **&#39;no result found&#39;**</small>
 
 hint text when result not found by search
 <br><br>
@@ -255,7 +255,7 @@ hint text when result not found by search
 ### **disableSearchList**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">disable-search-list</span>
-<small>`Boolean` default: **false**</small>
+<small>`boolean` default: **false**</small>
 
 A Boolean attribute which, if present, means this field can not be searched.
 
@@ -265,7 +265,7 @@ This is very useful when you want enforce the usage of the extended search
 ### **icon**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">icon</span>
-<small>`String` default: **&#39;search&#39;**</small>
+<small>`string` default: **&#39;search&#39;**</small>
 
 Use this attribute to set a custom icon for your searcher
 <br><br>
@@ -274,7 +274,7 @@ Use this attribute to set a custom icon for your searcher
 ### **valueState**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">value-state</span>
-<small>`String` default: **&#39;None&#39;**</small>
+<small>`string` default: **&#39;None&#39;**</small>
 
 Value State of the input field
 <br><br>

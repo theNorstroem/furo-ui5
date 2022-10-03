@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-select-labeled
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-select-labeled.js';`<small>
 <br>exports *FuroUi5SelectLabeled* js
 <br>exports `<furo-ui5-select-labeled>` custom-element-definition
@@ -35,7 +35,7 @@ to the design specification of SAP Fiori Design System.
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 the label for the data-number-input
 <br><br>
@@ -43,7 +43,7 @@ the label for the data-number-input
 ### **idFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">id-field-path</span>
-<small>`String` default: **&#39;id&#39;**</small>
+<small>`string` default: **&#39;id&#39;**</small>
 
 Defines the field path that is used from the injected RepeaterNode to identify the option items.
 Point-separated path to the field
@@ -53,7 +53,7 @@ E.g. data.partner.ulid
 ### **valueFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">value-field-path</span>
-<small>`String` default: **&#39;id&#39;**</small>
+<small>`string` default: **&#39;id&#39;**</small>
 
 Defines the field path that is used to update the bound component if the user has selected an option.
 Point-separated path to the field
@@ -63,7 +63,7 @@ Must be set if a data binding is specified.
 ### **displayFieldPath**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">display-field-path</span>
-<small>`String` default: **&#39;display_name&#39;**</small>
+<small>`string` default: **&#39;display_name&#39;**</small>
 
 Defines the field path that is used from the injected RepeaterNode to display the option items.
 Point-separated path to the field

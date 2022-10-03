@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-float.js';`<small>
 <br>exports *CellFloat* js
 <br>exports `<cell-float>` custom-element-definition

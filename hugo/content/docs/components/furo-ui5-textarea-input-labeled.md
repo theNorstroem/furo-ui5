@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-textarea-input-labeled
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-textarea-input-labeled.js';`<small>
 <br>exports *FuroUi5TextareaInputLabeled* js
 <br>exports `<furo-ui5-textarea-input-labeled>` custom-element-definition
@@ -33,7 +33,7 @@ to the design specification of SAP Fiori Design System.
 ### **label**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">label</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 the label for the data-textarea-input
 <br><br>
@@ -41,7 +41,7 @@ the label for the data-textarea-input
 ### **rows**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">rows</span>
-<small>`Number` default: **0**</small>
+<small>`number` default: **0**</small>
 
 Defines the number of visible text lines for the component.
 <br><br>
@@ -49,7 +49,7 @@ Defines the number of visible text lines for the component.
 ### **growingMaxLines**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">growing-max-lines</span>
-<small>`Number` default: **0**</small>
+<small>`number` default: **0**</small>
 
 Defines the maximum number of lines that the Web Component can grow.
 <br><br>

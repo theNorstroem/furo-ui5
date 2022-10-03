@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-notification-group-display
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-notification-group-display.js';`<small>
 <br>exports *FuroUi5NotificationGroupDisplay* js
 <br>exports `<furo-ui5-notification-group-display>` custom-element-definition
@@ -34,7 +34,7 @@ you can also use more furo-ui5-notification-group-display's for special needs. B
 ### **headerText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-text</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 the header text of the notification
 <br><br>

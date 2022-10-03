@@ -1,31 +1,28 @@
 ---
-title: display-double
-description: display renderer for `double`
+title: display-google-type-datetime
+description: 
 weight: 50
 ---
 
-# display-double
+# display-google-type-datetime
 **@furo/ui5** <small>v1.12.1</small>
-<br>`import '@furo/ui5/src/typerenderer/display-double.js';`<small>
-<br>exports *DisplayDouble* js
-<br>exports `<display-double>` custom-element-definition
+<br>`import '@furo/ui5/src/typerenderer/display-google-type-datetime.js';`<small>
+<br>exports `<display-google-type-datetime>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FieldNodeAdapter*</small>
 
-> **Summary:** display renderer for `double`
+> **Summary:** 
 
 ## Description
 
-`display-double`
-The display-double component displays a FieldNode of type `double` in read only mode.
+`display-google-type-datetime`
+Component description here!
 
-Every display-xxx component should implement the following API:
-- function: bindData(fieldNode){...}
-
-{{% api "_display-double-head.md" %}}
+{{% api "_display-google-type-datetime-head.md" %}}
 
 ## Attributes and Properties
-{{% api "_display-double-properties.md" %}}
+{{% api "_display-google-type-datetime-properties.md" %}}
+
 
 
 
@@ -33,7 +30,7 @@ Every display-xxx component should implement the following API:
 
 
 ## Methods
-{{% api "_display-double-methods.md" %}}
+{{% api "_display-google-type-datetime-methods.md" %}}
 
 
 ### **onFnaFieldValueChanged**
@@ -46,6 +43,7 @@ Every display-xxx component should implement the following API:
 
 - <small>value </small>
 <br><br>
+
 
 ### **_formatDisplay**
 <small>**_formatDisplay**(*fieldValue* `` ) ⟹ `void`</small>
@@ -62,5 +60,5 @@ Every display-xxx component should implement the following API:
 
 
 
-{{% api "_display-double-footer.md" %}}
-{{% api "_display-double-scripts.md" %}}
+{{% api "_display-google-type-datetime-footer.md" %}}
+{{% api "_display-google-type-datetime-scripts.md" %}}

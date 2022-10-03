@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-textarea-input
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-textarea-input.js';`<small>
 <br>exports *FuroUi5TextareaInput* js
 <br>extends *src/furo-ui5-textarea-input.js*

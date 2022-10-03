@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-subsection
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-subsection.js';`<small>
 <br>exports *FuroUi5Subsection* js
 <br>exports `<furo-ui5-subsection>` custom-element-definition
@@ -50,7 +50,7 @@ Binds an entity field to the heading. You can use the entity even when no data w
 ### **heading**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">heading</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 Heading title of the section
 <br><br>
@@ -58,7 +58,7 @@ Heading title of the section
 ### **showMoreDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">show-more-data-text</span>
-<small>`String` default: **&#39;Show More&#39;**</small>
+<small>`string` default: **&#39;Show More&#39;**</small>
 
 Defines the text that will be displayed for `show more`
 <br><br>
@@ -66,7 +66,7 @@ Defines the text that will be displayed for `show more`
 ### **showLessDataText**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">show-less-data-text</span>
-<small>`String` default: **&#39;Show Less&#39;**</small>
+<small>`string` default: **&#39;Show Less&#39;**</small>
 
 Defines the text that will be displayed for `show less`
 <br><br>
@@ -74,7 +74,7 @@ Defines the text that will be displayed for `show less`
 ### **collapsed**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">collapsed</span> <small>**reflects**</small>
-<small>`Boolean` default: **false**</small>
+<small>`boolean` default: **false**</small>
 
 Collapsed state of the `read more` section
 <br><br>

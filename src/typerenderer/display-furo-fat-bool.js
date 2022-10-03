@@ -19,31 +19,34 @@ class DisplayFuroFatBool extends DisplayBool {
    */
   _getTemplate() {
     let tmpl = '';
-    if (this._field) {
+    if (this._fieldValue) {
       /**
        * Sets the attributes from the field node
        */
-      if (this._field.attributes['value-state']) {
-        const state = this._field.attributes['value-state']._value;
+      if (this._fieldValue.attributes['value-state']) {
+        const state = this._fieldValue.attributes['value-state']._value;
         this.setAttribute('value-state', state);
-        if (state !== 'None' && this._field.attributes['value-state-message']) {
+        if (
+          state !== 'None' &&
+          this._fieldValue.attributes['value-state-message']
+        ) {
           this.setAttribute(
             'title',
-            this._field.attributes['value-state-message']._value
+            this._fieldValue.attributes['value-state-message']._value
           );
         }
       }
 
       if (
-        this._field.labels &&
-        this._field.labels.empty &&
-        this._field.labels.empty._value === true &&
-        this._field.value._value === false
+        this._fieldValue.labels &&
+        this._fieldValue.labels.empty &&
+        this._fieldValue.labels.empty._value === true &&
+        this._fieldValue.value._value === false
       ) {
         tmpl = html` <ui5-icon name="less"></ui5-icon> `;
       } else if (
-        !this._field.value._value ||
-        this._field.value._value === 'false'
+        !this._fieldValue.value._value ||
+        this._fieldValue.value._value === 'false'
       ) {
         tmpl = html` <ui5-icon name="border"></ui5-icon> `;
       } else {

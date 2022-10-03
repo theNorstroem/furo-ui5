@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-table
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-table.js';`<small>
 <br>exports *FuroUi5Table* js
 <br>exports `<furo-ui5-table>` custom-element-definition
@@ -67,10 +67,11 @@ Set a specific renderer component for the column. If not set, the renderer is ev
 
 
 
+
 ### **mode**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">mode</span>
-<small>`String` default: **&#39;None&#39;**</small>
+<small>`string` default: **&#39;None&#39;**</small>
 
 Defines the mode of the component.
 
@@ -184,6 +185,17 @@ Focuses the first row.
 
 <br><br>
 
+
+### **_initRepeatTemplate**
+<small>**_initRepeatTemplate**(*fieldPaths* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--init-repeat-template</span>
+
+
+
+- <small>fieldPaths </small>
+<br><br>
 
 
 

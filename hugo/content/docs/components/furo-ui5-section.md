@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-section
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-section.js';`<small>
 <br>exports *FuroUi5Section* js
 <br>exports `<furo-ui5-section>` custom-element-definition
@@ -54,7 +54,7 @@ Binds an entity field to the heading. You can use the entity even when no data w
 ### **heading**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">heading</span>
-<small>`String` default: **&#39;&#39;**</small>
+<small>`string` default: **&#39;&#39;**</small>
 
 Heading title of the section
 <br><br>

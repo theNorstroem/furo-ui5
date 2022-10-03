@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-stringoptionproperty
-**@furo/ui5** <small>v1.9.2</small>
+**@furo/ui5** <small>v1.12.1</small>
 <br>`import '@furo/ui5/src/typerenderer/display-furo-stringoptionproperty.js';`<small>
 <br>exports *DisplayFuroStringoptionproperty* js
 <br>exports `<display-furo-stringoptionproperty>` custom-element-definition
@@ -30,20 +30,29 @@ Every display-xxx component should implement the following API:
 
 
 
+### **_text**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">_text</span>
+<small>`string` default: **&#39;&#39;**</small>
+
+
+<br><br>
+
 ## Methods
 {{% api "_display-furo-stringoptionproperty-methods.md" %}}
 
 
-### **bindData**
-<small>**bindData**(*fieldNode* `FieldNode` ) ⟹ `void`</small>
+### **onFnaFieldValueChanged**
+<small>**onFnaFieldValueChanged**(*value* `` ) ⟹ `void`</small>
 
-<small>`FieldNode` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-bind-data</span>
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-on-fna-field-value-changed</span>
 
-Binds a field node to the component
 
-- <small>fieldNode </small>
+
+- <small>value </small>
 <br><br>
+
 
 
 
