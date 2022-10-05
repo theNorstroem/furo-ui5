@@ -75,12 +75,23 @@ bookHidden: true
 - [furo-ui5-typerenderer-labeled](furo-ui5-typerenderer-labeled.md) labeled input field
 - [furo-ui5-z-grid](furo-ui5-z-grid.md) grid with a z pattern
 - [ui5-reference-search-item](ui5-reference-search-item.md) representation of a result item
-- [furo-ui5-launchpad-navigation](furo-ui5-launchpad-navigation.md) Spaces navigation tabs
-- [furo-ui5-launchpad-page-renderer](furo-ui5-launchpad-page-renderer.md) tile renderer
-- [furo-ui5-launchpad-section-renderer](furo-ui5-launchpad-section-renderer.md) section renderer for a tile page
-- [furo-ui5-launchpad-tile-grid](furo-ui5-launchpad-tile-grid.md) tile layout component
+- [dialog-manage-views-deletebutton](dialog-manage-views-deletebutton.md) todo shortdescription
+- [dialog-manage-views](dialog-manage-views.md) todo shortdescription
+- [furo-ui5-filtered-table](furo-ui5-filtered-table.md) todo shortdescription
+- [furo-ui5-views-filter-settings](furo-ui5-views-filter-settings.md) todo shortdescription
+- [furo-ui5-views-table-settings](furo-ui5-views-table-settings.md) todo shortdescription
+- [furo-ui5-views](furo-ui5-views.md) Manage views
 - [furo-ui5-context-menu-item](furo-ui5-context-menu-item.md) context menu item
 - [furo-ui5-context-submenu](furo-ui5-context-submenu.md) helper
 - [furo-ui5-message-container-item](furo-ui5-message-container-item.md) todo shortdescription
 - [furo-ui5-table-row](furo-ui5-table-row.md) 
 - [furo-ui5-tree-item](furo-ui5-tree-item.md) tree item
+- [furo-ui5-launchpad-navigation](furo-ui5-launchpad-navigation.md) Spaces navigation tabs
+- [furo-ui5-launchpad-page-renderer](furo-ui5-launchpad-page-renderer.md) tile renderer
+- [furo-ui5-launchpad-section-renderer](furo-ui5-launchpad-section-renderer.md) section renderer for a tile page
+- [furo-ui5-launchpad-tile-grid](furo-ui5-launchpad-tile-grid.md) tile layout component
+- [dialog-filter-settings](dialog-filter-settings.md) Helper component
+- [furo-ui5-set-fieldorder](furo-ui5-set-fieldorder.md) Helper component
+- [furo-ui5-set-groupby](furo-ui5-set-groupby.md) todo shortdescription
+- [furo-ui5-set-orderby-row](furo-ui5-set-orderby-row.md) todo shortdescription
+- [furo-ui5-set-orderby](furo-ui5-set-orderby.md) todo shortdescription

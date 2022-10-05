@@ -132,7 +132,7 @@ class PageActivityListReport extends FBP(LitElement) {
         fn-deactivate="--noSearchResults, --hasSearchResults, --grpcError"
       >
         <furo-vertical-flex>
-          <activity-listreport-filter-options
+          <listreport-filter-options
             fn-focus="|--focus,--escapeResults"
             at-search-triggered="--filterSearchTriggered"
             at-reset-clicked="--filterResetClicked"
@@ -140,7 +140,7 @@ class PageActivityListReport extends FBP(LitElement) {
             at-collapsed="--panelCollapsed"
             at-filter-object-ready="--FilterObjectDO"
             at-current-view="--CurrentViewSettingDO"
-          ></activity-listreport-filter-options>
+          ></listreport-filter-options>
 
           <furo-ui5-message-container-display
             fn-bind-message-container="--MsgContainerDO"

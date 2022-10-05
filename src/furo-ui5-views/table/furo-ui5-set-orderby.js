@@ -3,10 +3,10 @@ import { FBP } from '@furo/fbp';
 import './furo-ui5-set-orderby-row.js';
 
 /**
- * `furo-ui5-set-orderby`
- * todo Describe your element
+ * `FuroUi5SetOrderby` is a helper component
  *
- * @summary todo shortdescription
+ *
+ * @summary Helper component
  * @customElement
  * @appliesMixin FBP
  */

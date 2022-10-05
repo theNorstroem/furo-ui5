@@ -9,10 +9,10 @@ import '@ui5/webcomponents/dist/TableCell.js';
 import '../../furo-ui5-dialog.js';
 
 /**
- * `set-filter`
- * todo Describe your element
+ * `DialogFilterSettings`
+ * is a helper component for `FuroUi5ViewsFilterSettings`
  *
- * @summary todo shortdescription
+ * @summary Helper component
  * @customElement
  * @appliesMixin FBP
  */
@@ -83,8 +83,8 @@ class DialogFilterSettings extends FBP(LitElement) {
         this._initialSortedList.push(s);
       });
 
-      // hide search if less then 10 items are in list
-      if (this._initialSortedList.length < 1) {
+      // hide search if less than 10 items are in list
+      if (this._initialSortedList.length < 10) {
         this._hideSearch = true;
         this.requestUpdate();
       } else {

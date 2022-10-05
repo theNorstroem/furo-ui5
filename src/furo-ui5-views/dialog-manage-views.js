@@ -5,10 +5,10 @@ import '../furo-ui5-radio-button.js';
 
 import './dialog-manage-views-deletebutton.js';
 /**
- * `dialog-manage-views`
- * todo Describe your element
+ * `DialogManageViews` is a helper component
  *
- * @summary todo shortdescription
+ *
+ * @summary Helper component
  * @customElement
  * @appliesMixin FBP
  */

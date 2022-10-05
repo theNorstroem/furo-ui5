@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-time-picker-labeled
-**@furo/ui5** <small>v1.12.1</small>
+**@furo/ui5** <small>v1.12.3</small>
 <br>`import '@furo/ui5/src/furo-ui5-time-picker-labeled.js';`<small>
 <br>exports *FuroUi5TimePickerLabeled* js
 <br>exports `<furo-ui5-time-picker-labeled>` custom-element-definition

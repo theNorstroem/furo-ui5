@@ -2,10 +2,10 @@ import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
 
 /**
- * `dialog-manage-views-deletebutton`
- * todo Describe your element
+ * `DialogManageViewsDeletebutton` is a helper component
  *
- * @summary todo shortdescription
+ *
+ * @summary Helper component
  * @customElement
  * @appliesMixin FBP
  */

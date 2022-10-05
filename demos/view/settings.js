@@ -6,7 +6,7 @@ export const Settings = {
       "is_favorite": true,
       "is_standard": true,
       "auto_apply": true,
-      "created_by": "Adcubum",
+      "created_by": "Furo",
       "editable": false,
       "filter_settings": [
 

@@ -45,6 +45,10 @@ class FuroUi5FilteredTable extends FuroUi5Table {
     return literal([items.join('')]);
   }
 
+  /**
+   *
+   * @private
+   */
   _initRepeatTemplate() {
     if (this._tableSettings) {
       this._rowRepeatTemplate = statichtml`<template>

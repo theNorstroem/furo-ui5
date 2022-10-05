@@ -2,10 +2,10 @@ import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
 
 /**
- * `furo-ui5-set-fieldorder`
- * todo Describe your element
+ * `FuroUi5SetFieldorder` is a helper component
  *
- * @summary todo shortdescription
+ *
+ * @summary Helper component
  * @customElement
  * @appliesMixin FBP
  */

@@ -16,12 +16,12 @@ import '@furo/util/src/furo-keydown.js';
 import {Settings} from './settings.js';
 
 /**
- * `activity-listreport-filter-options` contains a search field and also the filter options for the search.
+ * `listreport-filter-options` contains a search field and also the filter options for the search.
  *
  * @fires reset-clicked {MouseEvent} Fired when the reset button of the list-report panel was clicked.
  * @fires search-triggered {String} Fired when the search button of the list-report panel was clicked. Detail payload: the base64 value of the list-report data object.
  *
- * @customElement activity-listreport-filter-options
+ * @customElement listreport-filter-options
  */
 class ListreportFilterOptions extends FBP(LitElement) {
   constructor() {
@@ -138,13 +138,9 @@ class ListreportFilterOptions extends FBP(LitElement) {
         at-current-view="--CurrentViewSettingDO"
         at-raw-filter-data="--filterData"
         fn-show-at="--showViewDialogClicked"
-
-
       ></furo-ui5-views>
 
       <furo-ui5-views-filter-settings
-
-
         fn-show="--setFilterClicked"
         fn-bind-settings="--CurrentViewSettingDO"
         fn-bind-filter="--filterDO"
@@ -162,4 +158,4 @@ class ListreportFilterOptions extends FBP(LitElement) {
   }
 }
 
-customElements.define('activity-listreport-filter-options', ListreportFilterOptions);
+customElements.define('listreport-filter-options', ListreportFilterOptions);

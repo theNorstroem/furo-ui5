@@ -12,15 +12,187 @@ import '../furo-ui5-dialog.js';
  *
  * Tab orders are not implemented at the moment.
  *
+ * The user settings are stored in the `local storage`, session data in the `session storage`. Feel free to extend the `furo-ui5-views`
+ * component to store the settings anywhere else by overriding the `saveData` method.
  *
+ * `furo-ui5-views` manages the view data
+ *
+ *
+ * ```html
+ * <furo-ui5-views
+ *         view-id="vid.list-report"
+ *         fn-inject-default="|--defaultData"
+ *         fn-set-filter-ref="|--formRef"
+ *         at-current-view="--CurrentViewSettingDO"
+ *         at-raw-filter-data="--filterData"
+ *         fn-show-at="--showViewDialogClicked"
+ * ></furo-ui5-views>
+ *
+ * <furo-ui5-views-filter-settings
+ *         fn-show="--setFilterClicked"
+ *         fn-bind-settings="--CurrentViewSettingDO"
+ *         fn-bind-filter="--filterDO"
+ * ></furo-ui5-views-filter-settings>
+ *
+ *  <furo-ui5-views-table-settings
+ *         row-type="project.Project"
+ *         fn-show="--ShowTableSettingsClicked"
+ *         fn-bind-settings="--CurrentViewSettingDO"
+ *         at-fields-changed="--reqFieldsChanged"
+ *         at-order-by-changed="--fieldSortChanged"
+ *         at-order-changed="--columnOrderChanged"
+ *         required-fields="id"
+ *         sortable
+ *       ></furo-ui5-views-table-settings>
+ * ```
+ * Inject the default
+ *
+ * ## Specs
+ *
+ * You have to import the furo-ui5-specs or add the following muspec to your spec project.
+ *
+ * *.furo*
+ * ```yaml
+ * dependencies:
+ * - "https://github.com/theNorstroem/furo-ui5-specs.git v1.0.0"
+ *```
+ *
+ * *µSpecs*
+ * ```yaml
+ * - type: 'furo.view.PersonalView #'
+ *   fields:
+ *     id: 'string:1 #'
+ *     views: '[] furo.view.ViewSettings:2'
+ *
+ * - type: 'furo.view.ViewSettings #'
+ *   fields:
+ *     id: 'string:1 #id'
+ *     name: 'string:2 #Textual identifier'
+ *     is_favorite: 'bool:3'
+ *     is_standard: 'bool:4'
+ *     auto_apply: 'bool:5'
+ *     created_by: 'string:6'
+ *     editable: 'bool:7 #'
+ *     filter_settings: '[] furo.view.FilterItem:8'
+ *     filter_object: 'google.protobuf.Any:9 #Contains the filter Object'
+ *     table_settings: '[] furo.view.TableColumn:10'
+ *     order_by: 'string:11 # sort order, comma separated list of field names'
+ *     group_by: 'string:11 # group by'
+ *
+ *
+ * - type: 'furo.view.FilterItem #Filter object'
+ *   fields:
+ *     field_name: 'string:1'
+ *     show: 'bool:2 #show hide'
+ *
+ * - type: 'furo.view.TableColumnSortRow #TableColumn '
+ *   fields:
+ *     id: 'string:1'
+ *     display_name: 'string:2 #'
+ *     descending: 'bool:3 #'
+ *     options: '[] furo.Optionitem:4'
+ *
+ * - type: 'furo.view.TableColumn #TableColumn '
+ *   fields:
+ *     field_name: 'string:1'
+ *     show: 'bool:2 #show hide'
+ *     sortable: 'bool:3 # set this to true if the field is sortable'
+ *     groupable: 'bool:4 # set this to true if the field is groupable'
+ *     label: 'string:5 # set this to true if the field is groupable'
+ *
+ * - type: 'furo.view.SaveAsDialog #Filter object'
+ *   fields:
+ *     name: '* string:1'
+ *     is_favorite: 'bool:3'
+ *     is_standard: 'bool:4'
+ *     auto_apply: 'bool:5'
+ * ```
+ *
+ * Describe the filterable fields and sortable table columns.
+ *
+ * *sample data*
+ * ```js
+ * export const Settings = {
+ *   "views": [
+ *     {
+ *       "id": "default",
+ *       "name": "Standard",
+ *       "is_favorite": true,
+ *       "is_standard": true,
+ *       "auto_apply": true,
+ *       "created_by": "Furo",
+ *       "editable": false,
+ *       "filter_settings": [
+ *
+ *
+ *         {
+ *           "field_name": "description",
+ *           "show": true
+ *         },
+ *         {
+ *           "field_name": "start",
+ *           "show": true
+ *         },
+ *         {
+ *           "field_name": "end",
+ *           "show": true
+ *         },
+ *         {
+ *           "field_name": "members",
+ *           "show": true
+ *         }
+ *       ],
+ *       "filter_object": {
+ *         "description": null,
+ *         "start": null,
+ *         "end": null,
+ *         "members": null
+ *       },
+ *       "table_settings": [
+ *         {
+ *           "field_name": "id",
+ *           "show": false,
+ *           "sortable" : true
+ *         },
+ *         {
+ *           "field_name": "display_name",
+ *           "show": true,
+ *           "sortable" : true
+ *         },
+ *         {
+ *           "field_name": "description",
+ *           "show": true,
+ *           "sortable" : true
+ *         },
+ *         {
+ *           "field_name": "start",
+ *           "show": false
+ *         },
+ *         {
+ *           "field_name": "end",
+ *           "show": false
+ *         },
+ *         {
+ *           "field_name": "members",
+ *           "show": true,
+ *           "sortable" : true
+ *         }
+ *       ],
+ *       "order_by": "",
+ *       "group_by": ""
+ *     }
+ *   ]
+ * }
+ *
+ * ```
  *
  *
  *
  * @summary Manage views
- * @customElement
+ * @customElement furo-ui5-views
  * @appliesMixin FBP
  */
-class FuroUi5Views extends FBP(LitElement) {
+export class FuroUi5Views extends FBP(LitElement) {
   constructor() {
     super();
     this.headerText = 'My Views';
@@ -138,7 +310,7 @@ class FuroUi5Views extends FBP(LitElement) {
   }
 
   /**
-   * inject the default settings.
+   * Inject the default settings. This is a set of predefined filters and columns.
    * @param data
    */
   injectDefault(data) {
@@ -195,6 +367,7 @@ class FuroUi5Views extends FBP(LitElement) {
 
   /**
    * flow is ready lifecycle method
+   * @private
    */
   _FBPReady() {
     super._FBPReady();
@@ -345,6 +518,10 @@ class FuroUi5Views extends FBP(LitElement) {
     });
   }
 
+  /**
+   *
+   * @private
+   */
   _updateFilterForm() {
     let lastE;
     this.CurrentViewSettings.filter_settings._value.forEach(n => {
@@ -360,10 +537,20 @@ class FuroUi5Views extends FBP(LitElement) {
     });
   }
 
+  /**
+   * Loads the stored data. Extend and override, if you need another storage mechanism.
+   * The data is stored in local storage under the defined view-id.
+   * @returns {string}
+   */
   loadData() {
     return localStorage.getItem(this.viewId);
   }
 
+  /**
+   * Stores the settings. Extend and override, if you need another storage mechanism.
+   * The data is stored in local storage under the defined view-id.
+   * @returns {string}
+   */
   saveData(data) {
     localStorage.setItem(this.viewId, JSON.stringify(data));
   }
