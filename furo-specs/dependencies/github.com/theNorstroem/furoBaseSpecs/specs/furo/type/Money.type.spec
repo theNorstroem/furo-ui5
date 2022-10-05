@@ -9,7 +9,7 @@ __proto:
     targetfile: type.proto
     imports: []
     options:
-        cc_enable_arenas: "true"
+        csharp_namespace: Furo.Type
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo/type;furotypepb
         java_multiple_files: "true"
         java_outer_classname: FuroTypeProto

@@ -8,5 +8,5 @@
   fields:
     unscaled_value: 'sint64:1 #Arbitrary precision integer unscaled value.'
     scale: |
-        int32:2 #Number of digits to the right of the decimal point.
+        int32:2#Number of digits to the right of the decimal point.
   target: bigdecimal.proto

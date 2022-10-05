@@ -15,7 +15,6 @@ __proto:
         - google/api/MonitoredResourceMetadata/monitored_resource.proto
         - google/protobuf/struct.proto
     options:
-        cc_enable_arenas: "true"
         go_package: google.golang.org/genproto/googleapis/api/monitoredres;monitoredres
         java_multiple_files: "true"
         java_outer_classname: MonitoredResourceProto

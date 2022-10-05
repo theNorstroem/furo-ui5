@@ -8,7 +8,6 @@ __proto:
     imports:
         - google/api/LabelDescriptor/ENUM_label.proto
     options:
-        cc_enable_arenas: "true"
         go_package: google.golang.org/genproto/googleapis/api/label;label
         java_multiple_files: "true"
         java_outer_classname: LabelProto

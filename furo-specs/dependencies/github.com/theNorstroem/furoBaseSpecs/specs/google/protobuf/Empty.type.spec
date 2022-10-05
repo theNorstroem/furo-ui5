@@ -7,7 +7,6 @@ __proto:
     targetfile: empty.proto
     imports: []
     options:
-        cc_enable_arenas: "true"
         csharp_namespace: Google.Protobuf.WellKnownTypes
         go_package: google.golang.org/protobuf/types/known/emptypb
         java_multiple_files: "true"

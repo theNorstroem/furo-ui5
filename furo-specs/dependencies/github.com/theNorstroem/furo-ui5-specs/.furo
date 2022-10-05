@@ -1,0 +1,44 @@
+furo: "1.36.0" # the minimal version of furo
+module: github.com/theNorstroem/FuroBaseSpecs
+specDir: "./specs"
+specFormat: "yaml" #set to yaml or json
+dependencies:
+  - "https://github.com/theNorstroem/furoBaseSpecs.git v1.30.0-rc18" # The importer looks for all **/*.type.spec files recursive The importer looks for all **/*.service.spec files recursive
+
+dependenciesDir: installedSpecs
+muSpec:
+  types: # define a set of globs which matches your type definitions
+    - "./muspecs/**/*types.yaml"
+    - "./muspecs/*types.yaml"
+  enums: # define a set of globs which matches your type definitions
+    - "./muspecs/**/*enums.yaml"
+    - "./muspecs/*enums.yaml"
+  services: # define a set of globs which matches your service definitions
+    - "./muspecs/**/*services.yaml"
+    - "./muspecs/*services.yaml"
+  goPackageBase: "github.com/theNorstroem/furo-ui5-specs/dist/pb/" #this is used to prefix the go package option
+  javaPackagePrefix: "pro.furo.ui5."
+  dir: "muspecs"
+  forceSync: true # This will delete specs which are deleted in muSpec, this is very useful during prototyping
+  forceLabels: true # This will overwrite the label and placeholder texts during muSpec2Spec command
+  requestTypeSuffix: "Request" # Suffix for the generated request type specs
+commands:
+
+flows:
+  default:
+    - muSpec2Spec
+    - genMessageProtos #we only have messages
+    - cleandist
+
+build:
+  proto:
+    targetDir: "dist/proto" #Hint: add this to your proto include path
+  esModule:
+    targetFile: "./dist/es6/env.js"
+dist:
+  files: # enter a list of files and directories which should be installed by other projects
+    - dist/proto
+    - specs
+    - muspecs
+    - README.md
+    - .furo

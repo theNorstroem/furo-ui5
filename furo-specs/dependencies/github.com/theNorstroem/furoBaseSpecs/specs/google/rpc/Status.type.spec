@@ -15,7 +15,6 @@ __proto:
     imports:
         - google/protobuf/any.proto
     options:
-        cc_enable_arenas: "true"
         go_package: google.golang.org/genproto/googleapis/rpc/status;status
         java_multiple_files: "true"
         java_outer_classname: StatusProto

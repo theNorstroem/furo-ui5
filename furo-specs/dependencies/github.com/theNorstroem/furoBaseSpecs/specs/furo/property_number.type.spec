@@ -7,7 +7,6 @@ __proto:
     targetfile: property.proto
     imports: []
     options:
-        cc_enable_arenas: "true"
         csharp_namespace: Furo.Property
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo/property;propertypb
         java_multiple_files: "true"

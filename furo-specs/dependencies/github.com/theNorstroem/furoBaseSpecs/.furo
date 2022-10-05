@@ -18,8 +18,11 @@ muSpec:
     - "./muspecs/google/**/*services.yaml"
     - "./muspecs/*services.yaml"
   goPackageBase: "github.com/theNorstroem/FuroBaseSpecs/dist/pb/" #this is used to prefix the go package option
+  javaPackagePrefix: "pro.furo."
   dir: "muspecs"
   forceSync: true # This will delete specs which are deleted in muSpec, this is very useful during prototyping
+  #forceLabels: true # This will overwrite the label and placeholder texts during muSpec2Spec command
+  #requestTypeSuffix: "Request" # Suffix for the generated request type specs
 commands:
   publishNpm: "scripts/test.sh"
   buildPb: "scripts/buildPb.sh"

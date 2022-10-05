@@ -9,7 +9,6 @@ __proto:
         - furo/furo.proto
         - google/protobuf/any.proto
     options:
-        cc_enable_arenas: "true"
         csharp_namespace: Furo.Property
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo/property;propertypb
         java_multiple_files: "true"
