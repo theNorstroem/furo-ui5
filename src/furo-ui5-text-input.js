@@ -300,10 +300,8 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
         this._tmpFAT.labels.modified = true;
       }
       this.setFnaFieldValue(this._tmpFAT);
-    } else if (this.isWrapper()) {
-      this.setFnaFieldValue(value === '' ? null : value);
     } else {
-      this.setFnaFieldValue(value === '' ? '' : value);
+      this.setFnaFieldValue(value);
     }
 
     this.dispatchEvent(Events.buildChangeEvent(this.value));

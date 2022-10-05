@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components data bindings for furo",
-  "version": "1.12.2",
+  "version": "1.12.3",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": "git@github.com:eclipse/eclipsefuro-web.git",
   "author": {
@@ -38,10 +38,10 @@
     "@furo/data": "^2.10.3",
     "@furo/util": "^2.1.3",
     "@furo/route": "^2.3.0",
-    "@ui5/webcomponents": "^1.7.0",
-    "@ui5/webcomponents-base": "^1.7.0",
-    "@ui5/webcomponents-fiori": "^1.7.0",
-    "@ui5/webcomponents-icons": "^1.7.0",
+    "@ui5/webcomponents": "^1.8.0",
+    "@ui5/webcomponents-base": "^1.8.0",
+    "@ui5/webcomponents-fiori": "^1.8.0",
+    "@ui5/webcomponents-icons": "^1.8.0",
     "lit": "^2.2.3"
   },
   "dependencies": {
@@ -51,17 +51,16 @@
     "signature_pad": "4.0.2"
   },
   "devDependencies": {
-    "lit-html": "2.0.1",
+    "lit": "2.2.4",
     "@custom-elements-manifest/analyzer": "^0.6.4",
     "@open-wc/eslint-config": "^7.0.0",
     "@open-wc/testing": "^3.0.3",
-    "@web/dev-server": "^0.1.28",
+    "@web/dev-server": "^0.1.34",
     "@web/test-runner": "^0.13.21",
     "@esm-bundle/chai": "^4.3.4-fix.0",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
-    "lerna": "^4.0.0",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1"
   },
@@ -69,7 +68,7 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=14.0"
   },
   "customElements": "tmp/typerenderer/custom-elements.json",
   "eslintConfig": {

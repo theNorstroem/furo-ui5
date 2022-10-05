@@ -63,7 +63,7 @@ import './ui5-reference-search-item.js';
 import './furo-ui5-combobox.js';
 import './furo-ui5-combobox-labeled.js';
 import './furo-ui5-rating-indicator.js';
-import './furo-ui5-barcode-scanner-dialog.js';
+// import './furo-ui5-barcode-scanner-dialog.js'; removed until https://github.com/SAP/ui5-webcomponents/issues/5884 is fixed
 import './furo-ui5-section.js';
 import './furo-ui5-subsection.js';
 import './furo-ui5-relative-time-badge.js';

@@ -63,13 +63,8 @@
                 @-search-requested="--searchRequest">
               </furo-ui5-multi-combobox>
 
-              <p full>
-                Required
-              </p>
 
-              <furo-ui5-combobox-labeled
-                ƒ-bind-data="--daoPerson(*.sex_req)">
-              </furo-ui5-combobox-labeled>
+
 
             </furo-form-layouter>
             <furo-data-object type="person.Person" @-object-ready="--daoPerson" fn-validate-all-fields="--validation"></furo-data-object>
