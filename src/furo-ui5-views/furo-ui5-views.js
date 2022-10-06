@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
 import '@ui5/webcomponents/dist/ResponsivePopover.js';
-import './dialog-manage-views.js';
+import './helper/dialog-manage-views.js';
 import '@furo/data/src/furo-data-flow-repeat.js';
 import '@ui5/webcomponents/dist/List.js';
 import '@ui5/webcomponents/dist/StandardListItem.js';
@@ -44,6 +44,14 @@ import '../furo-ui5-dialog.js';
  *         required-fields="id"
  *         sortable
  *       ></furo-ui5-views-table-settings>
+ *
+ *        <furo-ui5-filtered-table
+ *             fn-bind-data="--collectionDao(*.entities)"
+ *             fn-set-columns="--columnOrderChanged"
+ *             mode="SingleSelect"
+ *           >
+ *           ...
+ *        </furo-ui5-filtered-table>
  * ```
  * Inject the default
  *

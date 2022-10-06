@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
-import '../furo-ui5-bool-icon.js';
-import '../furo-ui5-radio-button.js';
+import '../../furo-ui5-bool-icon.js';
+import '../../furo-ui5-radio-button.js';
 
 import './dialog-manage-views-deletebutton.js';
 /**

@@ -7,14 +7,13 @@ import '@ui5/webcomponents/dist/TableColumn.js';
 import '@ui5/webcomponents/dist/TableRow.js';
 import '@ui5/webcomponents/dist/TableCell.js';
 import '../furo-ui5-dialog.js';
-import './filter/dialog-filter-settings.js';
+import './helper/filter/helper-dialog-filter-settings.js';
 
 /**
- * `set-filter`
- * todo Describe your element
+ * `furo-ui5-views-filter-settings` contains the dialog for the filter settings for a `furo-ui5-views`.
  *
- * @summary todo shortdescription
- * @customElement
+ * @summary filter dialog
+ * @customElement furo-ui5-views-filter-settings
  * @appliesMixin FBP
  */
 class FuroUi5ViewsFilterSettings extends FBP(LitElement) {
@@ -33,16 +32,31 @@ class FuroUi5ViewsFilterSettings extends FBP(LitElement) {
    */
   static get properties() {
     return {
+      /**
+       * Title for the field column.
+       */
       colheaderField: { type: String, attribute: 'colheader-field' },
+      /**
+       * Title for the position column.
+       */
       colheaderPosition: { type: String, attribute: 'colheader-position' },
+      /**
+       * Title for the value column.
+       */
       colheaderValue: { type: String, attribute: 'colheader-value' },
+      /**
+       * Placeholder text for the searcher.
+       */
       placeholderSearch: { type: String, attribute: 'placeholder-search' },
+      /**
+       * Title for the dialog.
+       */
       headerText: { type: String, attribute: 'filtersettings-header-text' },
     };
   }
 
   /**
-   * bindFilter
+   * Bind the filter DO.
    * @public
    * @param fieldnode
    */
@@ -51,7 +65,7 @@ class FuroUi5ViewsFilterSettings extends FBP(LitElement) {
   }
 
   /**
-   * bindSettings
+   * Bind the settings DO from `furo-ui5-views`.
    * @public
    * @param fieldnode
    */
@@ -60,7 +74,7 @@ class FuroUi5ViewsFilterSettings extends FBP(LitElement) {
   }
 
   /**
-   * show
+   * Opens the filter dialog.
    * @public
    */
   show() {

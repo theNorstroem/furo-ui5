@@ -233,8 +233,7 @@ export class ListreportFilterResults extends FBP(LitElement) {
             ></ui5-button>
           </furo-horizontal-flex>
 
-          <!-- Table cards are a type of object group card, and display a set of items in a table format. -->
-          <furo-ui5-filtered-table
+           <furo-ui5-filtered-table
             at-arrow-down-on-last-row="--nextPageRequested"
             at-arrow-up-on-first-row="--prevPageRequested"
             fn-focus="|--focus"

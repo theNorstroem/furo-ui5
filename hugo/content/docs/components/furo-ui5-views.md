@@ -52,6 +52,14 @@ component to store the settings anywhere else by overriding the `saveData` metho
         required-fields="id"
         sortable
       ></furo-ui5-views-table-settings>
+
+       <furo-ui5-filtered-table
+            fn-bind-data="--collectionDao(*.entities)"
+            fn-set-columns="--columnOrderChanged"
+            mode="SingleSelect"
+          >
+          ...
+       </furo-ui5-filtered-table>
 ```
 Inject the default
 
@@ -128,7 +136,7 @@ export const Settings = {
       "is_favorite": true,
       "is_standard": true,
       "auto_apply": true,
-      "created_by": "Adcubum",
+      "created_by": "Furo",
       "editable": false,
       "filter_settings": [
 
@@ -189,8 +197,6 @@ export const Settings = {
       "order_by": "",
       "group_by": ""
     }
-
-
   ]
 }
 
@@ -379,48 +385,32 @@ set the ref to the filter form
 <small>`` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-inject-default</span>
 
-inject the default settings.
+Inject the default settings. This is a set of predefined filters and columns.
 
 - <small>data </small>
 <br><br>
 
-### **_FBPReady**
-<small>**_FBPReady**() ⟹ `void`</small>
 
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--fbp-ready</span>
-
-flow is ready lifecycle method
-
-<br><br>
-
-### **_updateFilterForm**
-<small>**_updateFilterForm**() ⟹ `void`</small>
-
-<small>`*`</small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--update-filter-form</span>
-
-
-
-<br><br>
 
 ### **loadData**
-<small>**loadData**() ⟹ `void`</small>
+<small>**loadData**() ⟹ `string`</small>
 
 <small>`*`</small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-load-data</span>
 
-
+Loads the stored data. Extend and override, if you need another storage mechanism.
+The data is stored in local storage under the defined view-id.
 
 <br><br>
 
 ### **saveData**
-<small>**saveData**(*data* `` ) ⟹ `void`</small>
+<small>**saveData**(*data* `` ) ⟹ `string`</small>
 
 <small>`` </small> →
 <span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-save-data</span>
 
-
+Stores the settings. Extend and override, if you need another storage mechanism.
+The data is stored in local storage under the defined view-id.
 
 - <small>data </small>
 <br><br>

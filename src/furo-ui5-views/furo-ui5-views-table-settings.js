@@ -5,16 +5,15 @@ import '@furo/fbp/src/flow-repeat.js';
 import '@ui5/webcomponents/dist/TabContainer.js';
 import '@ui5/webcomponents/dist/Tab.js';
 import { i18n } from '@furo/framework/src/i18n.js';
-import './table/furo-ui5-set-fieldorder.js';
-import './table/furo-ui5-set-orderby.js';
-import './table/furo-ui5-set-groupby.js';
+import './helper/table/furo-ui5-set-fieldorder.js';
+import './helper/table/furo-ui5-set-orderby.js';
+import './helper/table/furo-ui5-set-groupby.js';
 
 /**
- * `FuroManageTables`
- * todo Describe your element
+ * `furo-ui5-views-table-settings`  contains the dialog for the table settings for a `furo-ui5-views`.
  *
- * @summary todo shortdescription
- * @customElement furo-manage-tables
+ * @summary table settings dialog
+ * @customElement furo-ui5-views-table-settings
  * @appliesMixin FBP
  */
 class FuroUi5ViewsTableSettings extends FBP(LitElement) {
@@ -49,26 +48,57 @@ class FuroUi5ViewsTableSettings extends FBP(LitElement) {
        * Define the type for a row
        */
       rowType: { type: String, attribute: 'row-type' },
+      /**
+       * Define fields that are required for your business logic. Required fields are always requested from the server
+       * even when they are not displayed.
+       */
       requiredFields: { type: String, attribute: 'required-fields' },
+      /**
+       * Set this to true to enable the sorting view in the dialog.
+       */
       sortable: { type: Boolean },
       // groupable: {type: Boolean},
+      /**
+       * Title of the dialog.
+       */
       headerText: { type: String, attribute: 'tablesettings-header-text' },
+      /**
+       * Label for the column tab.
+       */
       tabColumnsLabel: { type: String, attribute: 'tab-columns-label' },
+      /**
+       * Label for the sorter tab.
+       */
       tabSortLabel: { type: String, attribute: 'tab-sort-label' },
+      /**
+       * Label for the OK button.
+       */
       okButtonText: { type: String, attribute: 'ok-button-text' },
+      /**
+       * Label for the cancel button.
+       */
       cancelButtonText: { type: String, attribute: 'cancel-button-text' },
+      /**
+       * Titel for the field column.
+       */
       colheaderField: { type: String, attribute: 'colheader-field' },
+      /**
+       * Titel for the Position column.
+       */
       colheaderPosition: { type: String, attribute: 'colheader-position' },
+      /**
+       * Text for the "pleace select" dropdown entry.
+       */
       labelEmptySelect: { type: String, attribute: 'label-empty-select' },
       /**
-       * placeholder for search fields.
+       * Placeholder for the searcher field.
        */
       placeholderSearch: { type: String, attribute: 'placeholder-search' },
     };
   }
 
   /**
-   * bindSettings
+   * Bind the settings component from `furo-ui5-views`.
    * @public
    * @param e complete event
    */
@@ -144,6 +174,12 @@ class FuroUi5ViewsTableSettings extends FBP(LitElement) {
     });
   }
 
+  /**
+   *
+   * @param fromIndex
+   * @param toIndex
+   * @private
+   */
   moveNode(fromIndex, toIndex) {
     const itemRemoved = this.sortedList.splice(fromIndex, 1); // assign the removed item as an array
     this.sortedList.splice(toIndex, 0, itemRemoved[0]); // insert itemRemoved into the target index

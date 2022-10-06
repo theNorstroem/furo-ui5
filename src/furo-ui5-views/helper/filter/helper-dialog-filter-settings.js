@@ -6,7 +6,7 @@ import '@ui5/webcomponents/dist/Table.js';
 import '@ui5/webcomponents/dist/TableColumn.js';
 import '@ui5/webcomponents/dist/TableRow.js';
 import '@ui5/webcomponents/dist/TableCell.js';
-import '../../furo-ui5-dialog.js';
+import '../../../furo-ui5-dialog.js';
 
 /**
  * `DialogFilterSettings`
@@ -16,7 +16,7 @@ import '../../furo-ui5-dialog.js';
  * @customElement
  * @appliesMixin FBP
  */
-class DialogFilterSettings extends FBP(LitElement) {
+class HelperDialogFilterSettings extends FBP(LitElement) {
   constructor() {
     super();
     this.colheaderField = 'Field';
@@ -328,4 +328,7 @@ class DialogFilterSettings extends FBP(LitElement) {
   }
 }
 
-window.customElements.define('dialog-filter-settings', DialogFilterSettings);
+window.customElements.define(
+  'dialog-filter-settings',
+  HelperDialogFilterSettings
+);

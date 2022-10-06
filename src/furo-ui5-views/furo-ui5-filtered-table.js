@@ -2,11 +2,38 @@ import { literal, html as statichtml } from 'lit/static-html.js';
 import { FuroUi5Table } from '../furo-ui5-table.js';
 
 /**
- * `furo-ui5-filtered-table`
- * todo Describe your element
+ * `furo-ui5-filtered-table` is a table which work with `furo-ui5-views`. It accepts field orders and a set of visible fields.
  *
- * @summary todo shortdescription
- * @customElement
+ * It works like a `furo-ui5-table` but has the ability to reorder the columns. The only action you have to take is to set
+ * the `id` attribute on the `ui5-table-column`. The id must match to the `field_name` attribute on the table_settings.
+ *
+ * ```html
+ *           <furo-ui5-filtered-table*
+ *             fn-bind-data="--collectionDao(*.entities)"
+ *             fn-set-columns="|--setColumns"
+ *           >
+ *             <ui5-table-column
+ *               slot="columns"
+ *               field="*.data.id"
+ *               id="id"
+ *               min-width="650"
+ *               demand-popin
+ *               popin-text="id"
+ *               ><span>id</span></ui5-table-column
+ *             >
+ *             <ui5-table-column
+ *               slot="columns"
+ *               field="*.data.display_name"
+ *               id="display_name"
+ *               min-width="400"
+ *               demand-popin
+ *               popin-text="display_name"
+ *               ><span>display_name</span></ui5-table-column
+ *             >
+ * ```
+ *
+ * @summary table with flexible columns
+ * @customElement furo-ui5-filtered-table
  * @appliesMixin FBP
  */
 class FuroUi5FilteredTable extends FuroUi5Table {

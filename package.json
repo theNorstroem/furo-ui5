@@ -27,7 +27,7 @@
     "docs:start": "cd hugo && hugo serve",
     "docs:generate": "npm run analyze:components && npm run analyze:typerenderer && ./scripts/cem.sh",
     "docs:publish": "./scripts/publishDocs.sh",
-    "analyze:components": "cem analyze --globs \"src/**/*.js\" --exclude **/typerenderer/* --litelement --outdir tmp/components",
+    "analyze:components": "cem analyze --globs \"src/**/*.js\" --exclude **/typerenderer/* --exclude **/helper/** --litelement --outdir tmp/components",
     "analyze:typerenderer": "cem analyze --globs \"src/typerenderer/*.js\" --exclude --litelement --outdir tmp/typerenderer",
     "prepare": "husky install"
   },

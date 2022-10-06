@@ -1,6 +1,6 @@
 ---
 title: furo-ui5-filtered-table
-description: todo shortdescription
+description: table with flexible columns
 weight: 50
 ---
 
@@ -11,12 +11,39 @@ weight: 50
 <br>extends */src/furo-ui5-table.js*
 <br>superclass *FuroUi5Table*</small>
 
-> **Summary:** todo shortdescription
+> **Summary:** table with flexible columns
 
 ## Description
 
-`furo-ui5-filtered-table`
-todo Describe your element
+`furo-ui5-filtered-table` is a table which work with `furo-ui5-views`. It accepts field orders and a set of visible fields.
+
+It works like a `furo-ui5-table` but has the ability to reorder the columns. The only action you have to take is to set
+the `id` attribute on the `ui5-table-column`. The id must match to the `field_name` attribute on the table_settings.
+
+```html
+          <furo-ui5-filtered-table*
+            fn-bind-data="--collectionDao(*.entities)"
+            fn-set-columns="|--setColumns"
+          >
+            <ui5-table-column
+              slot="columns"
+              field="*.data.id"
+              id="id"
+              min-width="650"
+              demand-popin
+              popin-text="id"
+              ><span>id</span></ui5-table-column
+            >
+            <ui5-table-column
+              slot="columns"
+              field="*.data.display_name"
+              id="display_name"
+              min-width="400"
+              demand-popin
+              popin-text="display_name"
+              ><span>display_name</span></ui5-table-column
+            >
+```
 
 {{% api "_furo-ui5-filtered-table-head.md" %}}
 
@@ -122,16 +149,6 @@ Fired when the row selection in MultiSelect mode was changed
 
 
 
-### **_initRepeatTemplate**
-<small>**_initRepeatTemplate**(*fieldPaths* `` ) ⟹ `void`</small>
-
-<small>`` </small> →
-<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn--init-repeat-template</span>
-
-
-
-- <small>fieldPaths </small>
-<br><br>
 
 ### **setColumns**
 <small>**setColumns**(*sortedlist* `` ) ⟹ `void`</small>
