@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-money-input
-**@furo/ui5** <small>v1.12.3</small>
+**@furo/ui5** <small>v1.13.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-money-input.js';`<small>
 <br>exports *FuroUi5MoneyInput* js
 <br>exports `<furo-ui5-money-input>` custom-element-definition

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-fat-int32
-**@furo/ui5** <small>v1.12.3</small>
+**@furo/ui5** <small>v1.13.0</small>
 <br>`import '@furo/ui5/src/typerenderer/celledit-furo-fat-int32.js';`<small>
 <br>exports *CelleditFuroFatInt32* js
 <br>extends */src/typerenderer/celledit-int32.js*

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-double
-**@furo/ui5** <small>v1.12.3</small>
+**@furo/ui5** <small>v1.13.0</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-double.js';`<small>
 <br>exports *CellDouble* js
 <br>exports `<cell-double>` custom-element-definition

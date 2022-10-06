@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-google-type-timeofday
-**@furo/ui5** <small>v1.12.3</small>
+**@furo/ui5** <small>v1.13.0</small>
 <br>`import '@furo/ui5/src/typerenderer/display-google-type-timeofday.js';`<small>
 <br>exports `<display-google-type-timeofday>` custom-element-definition
 <br>superclass *LitElement*</small>

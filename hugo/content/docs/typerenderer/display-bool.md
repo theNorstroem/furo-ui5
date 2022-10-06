@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-bool
-**@furo/ui5** <small>v1.12.3</small>
+**@furo/ui5** <small>v1.13.0</small>
 <br>`import '@furo/ui5/src/typerenderer/display-bool.js';`<small>
 <br>exports *DisplayBool* js
 <br>exports `<display-bool>` custom-element-definition
