@@ -283,6 +283,15 @@ close dialog  open dialog   1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-dialog hea
     
     <item>
       <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-filtered-table/_furo-ui5-filtered-table-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-filtered-table/_furo-ui5-filtered-table-head/</guid>
+      <description>Example #   </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-flexible-grid/_furo-ui5-flexible-grid-head/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -352,6 +361,24 @@ close dialog  open dialog   1 2 3 4 5 6 7 8 9 10 11  &amp;lt;furo-ui5-dialog hea
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-markdown/_furo-ui5-markdown-head/</guid>
       <description>  render    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-message-container-display/_furo-ui5-message-container-display-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-message-container-display/_furo-ui5-message-container-display-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-message-container-item/_furo-ui5-message-container-item-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-message-container-item/_furo-ui5-message-container-item-head/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -786,6 +813,33 @@ The labels in the demo are not translated for better readability.
       
       <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-typerenderer-labeled/_furo-ui5-typerenderer-labeled-head/</guid>
       <description>Example #             </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-views-filter-settings/_furo-ui5-views-filter-settings-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-views-filter-settings/_furo-ui5-views-filter-settings-head/</guid>
+      <description>Example #   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-views-table-settings/_furo-ui5-views-table-settings-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-views-table-settings/_furo-ui5-views-table-settings-head/</guid>
+      <description>Example #   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/components/furo-ui5-views/_furo-ui5-views-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/components/furo-ui5-views/_furo-ui5-views-head/</guid>
+      <description>Example #   </description>
     </item>
     
     <item>
@@ -1678,6 +1732,15 @@ Look at furo-ui5-flexible-grid for more examples.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ui5.furo.pro/docs/redactional/typerenderer/display-google-type-date/_display-google-type-date-head/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ui5.furo.pro/docs/redactional/typerenderer/display-google-type-datetime/_display-google-type-datetime-head/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ui5.furo.pro/docs/redactional/typerenderer/display-google-type-datetime/_display-google-type-datetime-head/</guid>
       <description></description>
     </item>
     
