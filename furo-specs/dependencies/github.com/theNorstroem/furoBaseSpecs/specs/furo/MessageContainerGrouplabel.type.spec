@@ -7,10 +7,12 @@ __proto:
     targetfile: furo.proto
     imports: []
     options:
+        csharp_namespace: Furo
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo;furopb
         java_multiple_files: "true"
         java_outer_classname: FuroProto
-        java_package: furo
+        java_package: pro.furo
+        objc_class_prefix: FPB
 fields:
     id:
         type: string
@@ -26,13 +28,10 @@ fields:
             options:
                 flags: []
                 list: []
-            readonly: true
+            readonly: false
             repeated: false
             typespecific: null
-        constraints:
-            required:
-                is: "true"
-                message: furo.messagecontainergrouplabel.id.constraint.required.message
+        constraints: {}
     title:
         type: string
         description: Title of the group, should be a localized string.

@@ -8,7 +8,6 @@ __proto:
     imports:
         - google/protobuf/any.proto
     options:
-        cc_enable_arenas: "true"
         csharp_namespace: Furo
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo;furopb
         java_multiple_files: "true"

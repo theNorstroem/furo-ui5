@@ -1,0 +1,9 @@
+- type: 'google.type.LocalizedText #Localized variant of a text in a particular language.'
+  fields:
+    text: 'string:1 #Localized string in the language corresponding to `language_code'' below.'
+    language_code: |-
+        string:2 #The text's BCP-47 language code, such as "en-US" or "sr-Latn".
+
+         For more information, see
+         http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+  target: localized_text.proto

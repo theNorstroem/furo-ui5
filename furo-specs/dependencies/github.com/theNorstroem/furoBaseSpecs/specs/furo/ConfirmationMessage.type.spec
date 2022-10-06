@@ -8,10 +8,12 @@ __proto:
     imports:
         - google/protobuf/any.proto
     options:
+        csharp_namespace: Furo
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo;furopb
         java_multiple_files: "true"
         java_outer_classname: FuroProto
-        java_package: furo
+        java_package: pro.furo
+        objc_class_prefix: FPB
 fields:
     id:
         type: string
@@ -27,13 +29,10 @@ fields:
             options:
                 flags: []
                 list: []
-            readonly: true
+            readonly: false
             repeated: false
             typespecific: null
-        constraints:
-            required:
-                is: "true"
-                message: furo.confirmationmessage.id.constraint.required.message
+        constraints: {}
     user_response:
         type: google.protobuf.Any
         description: Reason why the warning was not followed, can be a text, checkbox,... is displayed as typerenderer
@@ -84,7 +83,7 @@ fields:
             options:
                 flags: []
                 list: []
-            readonly: true
+            readonly: false
             repeated: false
             typespecific: null
         constraints: {}

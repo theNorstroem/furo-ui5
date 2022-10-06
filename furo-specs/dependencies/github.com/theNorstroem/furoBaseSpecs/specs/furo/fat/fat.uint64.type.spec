@@ -7,13 +7,12 @@ __proto:
     targetfile: fat.proto
     imports: []
     options:
-        cc_enable_arenas: "true"
         csharp_namespace: Furo.Fat
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo/fat;fatpb
         java_multiple_files: "true"
         java_outer_classname: FatProto
         java_package: pro.furo.fat
-        objc_class_prefix: FPB
+        objc_class_prefix: FAT
 fields:
     value:
         type: uint64

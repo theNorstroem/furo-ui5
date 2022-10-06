@@ -7,13 +7,12 @@ __proto:
     targetfile: filter.proto
     imports: []
     options:
-        cc_enable_arenas: "true"
         csharp_namespace: Furo.Filter
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo/filter;filterpb
         java_multiple_files: "true"
         java_outer_classname: FilterProto
         java_package: pro.furo.filter
-        objc_class_prefix: FPB
+        objc_class_prefix: FIL
 fields:
     clause:
         type: filter.Condition

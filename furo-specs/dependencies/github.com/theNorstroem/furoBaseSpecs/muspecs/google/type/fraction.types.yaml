@@ -1,0 +1,7 @@
+- type: 'google.type.Fraction #Represents a fraction in terms of a numerator divided by a denominator.'
+  fields:
+    numerator: 'int64:1 #The numerator in the fraction, e.g. 2 in 2/3.'
+    denominator: |-
+        int64:2 #The value by which the numerator is divided, e.g. 3 in 2/3. Must be
+         positive.
+  target: fraction.proto

@@ -14,7 +14,6 @@ __proto:
     targetfile: date.proto
     imports: []
     options:
-        cc_enable_arenas: "true"
         go_package: google.golang.org/genproto/googleapis/type/date;date
         java_multiple_files: "true"
         java_outer_classname: DateProto

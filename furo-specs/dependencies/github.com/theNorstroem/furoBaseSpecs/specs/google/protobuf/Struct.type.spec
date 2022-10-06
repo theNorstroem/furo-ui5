@@ -15,7 +15,6 @@ __proto:
     targetfile: struct.proto
     imports: []
     options:
-        cc_enable_arenas: "true"
         csharp_namespace: Google.Protobuf.WellKnownTypes
         go_package: google.golang.org/protobuf/types/known/structpb
         java_multiple_files: "true"

@@ -11,7 +11,6 @@ __proto:
     imports:
         - furo/furo.proto
     options:
-        cc_enable_arenas: "true"
         csharp_namespace: Furo.Signatures
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo/signatures;signaturespb
         java_multiple_files: "true"

@@ -13,7 +13,6 @@ __proto:
     targetfile: bigdecimal.proto
     imports: []
     options:
-        cc_enable_arenas: "true"
         csharp_namespace: Furo.Bigdecimal
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo/bigdecimal;bigdecimalpb
         java_multiple_files: "true"

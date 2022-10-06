@@ -1,0 +1,48 @@
+- type: 'furo.view.PersonalView #'
+  fields:
+    id: 'string:1 #'
+    views: '[] furo.view.ViewSettings:2'
+
+- type: 'furo.view.ViewSettings #'
+  fields:
+    id: 'string:1 #id'
+    name: 'string:2 #Textual identifier'
+    is_favorite: 'bool:3'
+    is_standard: 'bool:4'
+    auto_apply: 'bool:5'
+    created_by: 'string:6'
+    editable: 'bool:7 #'
+    filter_settings: '[] furo.view.FilterItem:8'
+    filter_object: 'google.protobuf.Any:9 #Contains the filter Object'
+    table_settings: '[] furo.view.TableColumn:10'
+    order_by: 'string:11 # sort order, comma separated list of field names'
+    group_by: 'string:11 # group by'
+
+
+- type: 'furo.view.FilterItem #Filter object'
+  fields:
+    field_name: 'string:1'
+    show: 'bool:2 #show hide'
+
+- type: 'furo.view.TableColumnSortRow #TableColumn '
+  fields:
+    id: 'string:1'
+    display_name: 'string:2 #'
+    descending: 'bool:3 #'
+    options: '[] furo.Optionitem:4'
+
+- type: 'furo.view.TableColumn #TableColumn '
+  fields:
+    field_name: 'string:1'
+    show: 'bool:2 #show hide'
+    sortable: 'bool:3 # set this to true if the field is sortable'
+    groupable: 'bool:4 # set this to true if the field is groupable'
+    label: 'string:5 # set this to true if the field is groupable'
+
+- type: 'furo.view.SaveAsDialog #Filter object'
+  fields:
+    name: '* string:1'
+    is_favorite: 'bool:3'
+    is_standard: 'bool:4'
+    auto_apply: 'bool:5'
+

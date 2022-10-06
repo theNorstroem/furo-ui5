@@ -8,10 +8,12 @@ __proto:
     imports:
         - google/protobuf/any.proto
     options:
+        csharp_namespace: Furo
         go_package: github.com/theNorstroem/FuroBaseSpecs/dist/pb/furo;furopb
         java_multiple_files: "true"
         java_outer_classname: FuroProto
-        java_package: furo
+        java_package: pro.furo
+        objc_class_prefix: FPB
 fields:
     code:
         type: int32
@@ -20,7 +22,7 @@ fields:
             number: 1
         __ui: null
         meta:
-            default: ""
+            default: "0"
             placeholder: furo.messagecontainer.code.placeholder
             hint: ""
             label: furo.messagecontainer.code.label

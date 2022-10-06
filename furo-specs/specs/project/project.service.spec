@@ -12,6 +12,7 @@ __proto:
         - google/protobuf/empty.proto
         - google/api/annotations.proto
         - projectservice/reqmsgs.proto
+        - projectfilter/projectfilter.proto
     options:
         go_package: /projectservice
         java_multiple_files: "true"
@@ -21,13 +22,13 @@ services:
     List:
         description: The List method takes zero or more parameters as input, and returns a ProjectCollection of ProjectEntity that match the input parameters.
         data:
-            request: google.protobuf.Empty
+            request: projectfilter.Projectfilter
             response: project.ProjectCollection
             bodyfield: body
         deeplink:
-            description: 'List: GET /mockdata/projects/list.json google.protobuf.Empty , project.ProjectCollection #The List method takes zero or more parameters as input, and returns a ProjectCollection of ProjectEntity that match the input parameters.'
+            description: 'List: POST /mockdata/projects/list.json projectfilter.Projectfilter , project.ProjectCollection #The List method takes zero or more parameters as input, and returns a ProjectCollection of ProjectEntity that match the input parameters.'
             href: /mockdata/projects/list.json
-            method: GET
+            method: POST
             rel: list
         query:
             q:
