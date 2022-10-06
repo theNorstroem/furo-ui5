@@ -39,7 +39,11 @@ import { FuroUi5Table } from '../furo-ui5-table.js';
 class FuroUi5FilteredTable extends FuroUi5Table {
   constructor() {
     super();
-    // parkplatz
+    /**
+     * Parkplatz
+     * @type {{}}
+     * @private
+     */
     this._colheaders = {};
   }
 
