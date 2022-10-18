@@ -213,6 +213,19 @@ class FuroUi5ViewsTableSettings extends FBP(LitElement) {
     // this._FBPTraceWires()
 
     /**
+     * Register hook on wire --sortChanged to
+     * dispatch a order-by-changed which comes from the dialog
+     */
+    this._FBPAddWireHook('--sortChanged', e => {
+      const oby = new Event('order-by-changed', {
+        composed: true,
+        bubbles: true,
+      });
+      oby.detail = e;
+      this.dispatchEvent(oby);
+    });
+
+    /**
      * Register hook on wire --showstateChanged to
      * re render the form if a show state was toggled
      */
