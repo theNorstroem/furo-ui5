@@ -163,6 +163,13 @@ class FuroUi5SetOrderby extends FBP(LitElement) {
           this._orderBy._value += `,${field}`;
         }
       }
+
+      const oby = new Event('order-by-changed', {
+        composed: true,
+        bubbles: true,
+      });
+      oby.detail = this._orderBy._value;
+      this.dispatchEvent(oby);
     });
   }
 

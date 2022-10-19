@@ -1,5 +1,6 @@
 import { literal, html as statichtml } from 'lit/static-html.js';
 import { FuroUi5Table } from '../furo-ui5-table.js';
+import './furo-ui5-views-column-header.js';
 
 /**
  * `furo-ui5-filtered-table` is a table which work with `furo-ui5-views`. It accepts field orders and a set of visible fields.
@@ -89,6 +90,49 @@ class FuroUi5FilteredTable extends FuroUi5Table {
     </template>`;
     } else {
       this._rowRepeatTemplate = statichtml`<template><furo-ui5-table-row></furo-ui5-table-row></template>`;
+    }
+  }
+
+  /**
+   * This is only used to set the order icons on the table headers. You have to use a `furo-ui5-views-column-header` in the
+   * header slot for this.
+   *
+   * ```html
+   * <ui5-table-column
+   *               slot="columns"
+   *               field="*.nr"
+   *               id="nr"
+   *               popin-text="${i18n.t('activity_nr')}"
+   *               ><furo-ui5-views-column-header><span>${i18n.t('activity_nr')}</span></furo-ui5-views-column-header>
+   *               </ui5-table-column>
+   * ```
+   *
+   * The value comes from the event `order-by-changed`, which is emited by the component `furo-ui5-views-table-settings`.
+   * @param sort
+   */
+  setOrderBy(sort) {
+    this._orderBy = {};
+    sort.split(',').forEach(s => {
+      const item = s.trim().split(' ');
+      this._orderBy[item[0]] = item.length > 1;
+    });
+
+    const { children } = this.shadowRoot.querySelector('ui5-table');
+    // loop all headers
+    for (const item of children) {
+      if (item.id) {
+        const headerComponent = item.querySelector(
+          'furo-ui5-views-column-header'
+        );
+        if (headerComponent) {
+          // if sort is used, apply sort, else clear the sort
+          if (this._orderBy[item.id] !== null) {
+            headerComponent.showSort(this._orderBy[item.id]);
+          } else {
+            headerComponent.clear();
+          }
+        }
+      }
     }
   }
 
