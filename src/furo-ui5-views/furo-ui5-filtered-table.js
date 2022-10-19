@@ -126,7 +126,8 @@ class FuroUi5FilteredTable extends FuroUi5Table {
         );
         if (headerComponent) {
           // if sort is used, apply sort, else clear the sort
-          if (this._orderBy[item.id] !== null) {
+
+          if (this._orderBy[item.id] !== undefined) {
             headerComponent.showSort(this._orderBy[item.id]);
           } else {
             headerComponent.clear();
