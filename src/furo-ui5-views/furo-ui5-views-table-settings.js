@@ -385,6 +385,7 @@ class FuroUi5ViewsTableSettings extends FBP(LitElement) {
             label-empty-select="${this.labelEmptySelect}"
             fn-bind-data="|--bindSettings"
             fn-bind-table="--tableDO"
+            at-order-by-changed="--sortChanged"
             name="sort"
           ></furo-ui5-set-orderby>
           <furo-ui5-set-groupby
