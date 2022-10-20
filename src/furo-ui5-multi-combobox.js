@@ -229,7 +229,7 @@ export class FuroUi5MultiCombobox extends FieldNodeAdapter(ComboBox.default) {
    * @private
    * @param val
    */
-  onFnaFieldValueChanged(val) {
+  onFnaRepeatedFieldChanged(val) {
     if (this.isFat()) {
       this._fatValue = val;
       this._tmpValue = this._fatValue.value;
@@ -347,6 +347,12 @@ export class FuroUi5MultiCombobox extends FieldNodeAdapter(ComboBox.default) {
         }
       });
     }
+
+    // recalculate the ui5 tokenizer
+    setTimeout(() => {
+      this._tokenizer._resizeHandler();
+    }, 64);
+
     return true;
   }
 
@@ -593,11 +599,6 @@ export class FuroUi5MultiCombobox extends FieldNodeAdapter(ComboBox.default) {
         composed: true,
       })
     );
-
-    // recalculate the ui5 tokenizer
-    setTimeout(() => {
-      this._tokenizer._resizeHandler();
-    }, 64);
   }
 
   /**

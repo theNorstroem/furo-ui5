@@ -38,61 +38,74 @@
   render(
     html`
 
-        <furo-demo-snippet>
-          <template>
+      <furo-demo-snippet>
+        <template>
 
-            <furo-form-layouter two>
-              <p full>
-                Basic usage of FuroUi5MultiCombobox
-              </p>
-              <furo-ui5-multi-combobox
-                ƒ-bind-data="--daoPerson(*.skills)">
-              </furo-ui5-multi-combobox>
+          <furo-form-layouter two>
+            <p full>
+              Basic usage of FuroUi5MultiCombobox
+            </p>
+            <furo-ui5-multi-combobox
+              ƒ-bind-data="--daoPerson2(*.skills)" value-state="Success">
+              <ui5-mcb-item data-id="2" text="Fortune"></ui5-mcb-item>
+              <ui5-mcb-item  data-id="3" text="Luck"></ui5-mcb-item>
+              <ui5-mcb-item  data-id="4" selected text="Success"></ui5-mcb-item>
+            </furo-ui5-multi-combobox>
 
-              <p full>
-                Lazy loaded multi combobox items
-              </p>
-
-
-              <furo-ui5-multi-combobox
-
-                id-field-path="data.id"
-                display-field-path="data.name"
-                desc-field-path="data.display_name"
-                ƒ-bind-data="--daoPerson(*.skills)"
-                ƒ-bind-options="--collection(*.entities)"
-                @-search-requested="--searchRequest">
-              </furo-ui5-multi-combobox>
+            <furo-ui5-multi-combobox
+              ƒ-bind-data="--daoPerson2(*.skills)">
+              <ui5-mcb-item data-id="2" text="Fortune"></ui5-mcb-item>
+              <ui5-mcb-item  data-id="3" text="Luck"></ui5-mcb-item>
+              <ui5-mcb-item  data-id="4" text="Success"></ui5-mcb-item>
+            </furo-ui5-multi-combobox>
 
 
+            <p full>
+              Lazy loaded multi combobox items
+            </p>
 
 
-            </furo-form-layouter>
+            <furo-ui5-multi-combobox
 
-            <furo-data-object type="person.Person" @-object-ready="--daoPerson" fn-validate-all-fields="--validation" fn-inject-raw="--response(*.entities.0.data)"></furo-data-object>
-
-            <furo-data-object type="person.PersonCollection" @-object-ready="--collection" ƒ-inject-raw="--response"></furo-data-object>
-
-            <furo-location @-location-changed="--locationChanged"></furo-location>
-            <furo-deep-link service="personservice.PersonService" @-hts-out="--hts" ƒ-qp-in="--locationChanged(*.query)"></furo-deep-link>
-
-            <furo-collection-agent service="personservice.PersonService"
-                                   ƒ-hts-in="--hts"
-                                   list-on-hts-in
-                                   ƒ-search="--searchRequest"
-                                   @-response="--response">
-            </furo-collection-agent>
+              id-field-path="data.id"
+              display-field-path="data.name"
+              desc-field-path="data.display_name"
+              ƒ-bind-data="--daoPerson(*.skills)"
+              ƒ-bind-options="--collection(*.entities)"
+              @-search-requested="--searchRequest">
+            </furo-ui5-multi-combobox>
 
 
+          </furo-form-layouter>
 
-            <hr>
-            <ui5-button at-click="--validation">Trigger validation</ui5-button>
+          <furo-data-object type="person.Person" @-object-ready="--daoPerson" fn-validate-all-fields="--validation"
+                            fn-inject-raw="--response(*.entities.0.data)"></furo-data-object>
 
-          </template>
-        </furo-demo-snippet>
+          <furo-data-object type="person.Person" @-object-ready="--daoPerson2" ></furo-data-object>
+
+          <furo-data-object type="person.PersonCollection" @-object-ready="--collection"
+                            ƒ-inject-raw="--response"></furo-data-object>
+
+          <furo-location @-location-changed="--locationChanged"></furo-location>
+          <furo-deep-link service="personservice.PersonService" @-hts-out="--hts"
+                          ƒ-qp-in="--locationChanged(*.query)"></furo-deep-link>
+
+          <furo-collection-agent service="personservice.PersonService"
+                                 ƒ-hts-in="--hts"
+                                 list-on-hts-in
+                                 ƒ-search="--searchRequest"
+                                 @-response="--response">
+          </furo-collection-agent>
 
 
-      `,
+
+
+
+        </template>
+      </furo-demo-snippet>
+
+
+    `,
     document.querySelector('#demo')
   );
 </script>
