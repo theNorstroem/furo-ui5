@@ -593,6 +593,11 @@ export class FuroUi5MultiCombobox extends FieldNodeAdapter(ComboBox.default) {
         composed: true,
       })
     );
+
+    // recalculate the ui5 tokenizer
+    setTimeout(() => {
+      this._tokenizer._resizeHandler();
+    }, 64);
   }
 
   /**

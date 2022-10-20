@@ -55,6 +55,7 @@
 
 
               <furo-ui5-multi-combobox
+
                 id-field-path="data.id"
                 display-field-path="data.name"
                 desc-field-path="data.display_name"
@@ -67,7 +68,8 @@
 
 
             </furo-form-layouter>
-            <furo-data-object type="person.Person" @-object-ready="--daoPerson" fn-validate-all-fields="--validation"></furo-data-object>
+
+            <furo-data-object type="person.Person" @-object-ready="--daoPerson" fn-validate-all-fields="--validation" fn-inject-raw="--response(*.entities.0.data)"></furo-data-object>
 
             <furo-data-object type="person.PersonCollection" @-object-ready="--collection" ƒ-inject-raw="--response"></furo-data-object>
 

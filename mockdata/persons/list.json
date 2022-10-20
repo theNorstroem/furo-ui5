@@ -7,7 +7,7 @@
         "id": "1",
         "name": "Doe",
         "phone_nr": "+41783332244",
-        "skills": []
+        "skills": ["2","3"]
       },
       "links": [
         {
