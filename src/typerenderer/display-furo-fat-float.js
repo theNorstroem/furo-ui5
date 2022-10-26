@@ -15,7 +15,10 @@ class DisplayFuroFatFloat extends DisplayFloat {
     /**
      * Sets the attributes from the field node
      */
-    if (this._fieldValue.attributes['value-state']) {
+    if (
+      this._fieldValue.attributes &&
+      this._fieldValue.attributes['value-state']
+    ) {
       const state = this._fieldValue.attributes['value-state']._value;
       this.setAttribute('value-state', state);
       if (
@@ -30,6 +33,7 @@ class DisplayFuroFatFloat extends DisplayFloat {
     }
 
     if (
+      this._fieldValue.value &&
       this._fieldValue.value._value !== null &&
       !(this._fieldValue.labels?.empty && this._fieldValue.labels.empty._value)
     ) {

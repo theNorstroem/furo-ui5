@@ -23,7 +23,10 @@ class DisplayFuroFatBool extends DisplayBool {
       /**
        * Sets the attributes from the field node
        */
-      if (this._fieldValue.attributes['value-state']) {
+      if (
+        this._fieldValue.attributes &&
+        this._fieldValue.attributes['value-state']
+      ) {
         const state = this._fieldValue.attributes['value-state']._value;
         this.setAttribute('value-state', state);
         if (
@@ -38,6 +41,7 @@ class DisplayFuroFatBool extends DisplayBool {
       }
 
       if (
+        this._fieldValue.value &&
         this._fieldValue.labels &&
         this._fieldValue.labels.empty &&
         this._fieldValue.labels.empty._value === true &&
@@ -45,6 +49,7 @@ class DisplayFuroFatBool extends DisplayBool {
       ) {
         tmpl = html` <ui5-icon name="less"></ui5-icon> `;
       } else if (
+        !this._fieldValue.value ||
         !this._fieldValue.value._value ||
         this._fieldValue.value._value === 'false'
       ) {
