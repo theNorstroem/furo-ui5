@@ -20,6 +20,7 @@ export class DisplayFuroFatInt32 extends DisplayInt32 {
      * Sets the attributes from the field node
      */
     if (
+      this._fieldValue &&
       this._fieldValue.attributes &&
       this._fieldValue.attributes['value-state']
     ) {

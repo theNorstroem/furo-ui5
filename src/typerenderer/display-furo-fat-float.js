@@ -16,6 +16,7 @@ class DisplayFuroFatFloat extends DisplayFloat {
      * Sets the attributes from the field node
      */
     if (
+      this._fieldValue &&
       this._fieldValue.attributes &&
       this._fieldValue.attributes['value-state']
     ) {
