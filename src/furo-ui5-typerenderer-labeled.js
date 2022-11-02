@@ -26,7 +26,7 @@ export class FuroUi5TyperendererLabeled extends FBP(LitElement) {
   constructor() {
     super();
     this.label = '';
-    this.valueState = '';
+    this.valueState = 'None';
     this.context = 'display';
   }
 
