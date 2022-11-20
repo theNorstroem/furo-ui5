@@ -41,6 +41,7 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
     this.showLessDataText = 'Show Less';
     this.collapsed = false;
     this.hasMoreContent = false;
+    this.level = 'H4';
   }
 
   /**
@@ -95,6 +96,10 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
        * @type String
        */
       showLessDataText: { type: String, attribute: 'show-less-data-text' },
+      /**
+       * Defines the component level. Available options are: "H6" to "H1".
+       */
+      level: { type: String },
     };
   }
 
