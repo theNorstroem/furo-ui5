@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-bigdecimal
-**@furo/ui5** <small>v1.13.0</small>
+**@furo/ui5** <small>v1.14.4</small>
 <br>`import '@furo/ui5/src/typerenderer/celledit-furo-bigdecimal.js';`<small>
 <br>exports *CelleditFuroBigdecimal* js
 <br>extends */src/typerenderer/celledit-int32.js*

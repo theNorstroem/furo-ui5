@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-subsection
-**@furo/ui5** <small>v1.13.0</small>
+**@furo/ui5** <small>v1.14.4</small>
 <br>`import '@furo/ui5/src/furo-ui5-subsection.js';`<small>
 <br>exports *FuroUi5Subsection* js
 <br>exports `<furo-ui5-subsection>` custom-element-definition
@@ -85,6 +85,14 @@ default: **false**</small>
 
 <br><br>
 
+### **level**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">level</span>
+<small>`string` default: **&#39;H4&#39;**</small>
+
+Defines the heading level. Available options are: "H6" to "H1".
+<br><br>
+
 ## Methods
 {{% api "_furo-ui5-subsection-methods.md" %}}
 
@@ -109,6 +117,7 @@ Furo flow is ready lifecycle method
 toggles the collapse state
 
 <br><br>
+
 
 
 

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-google-type-datetime
-**@furo/ui5** <small>v1.13.0</small>
+**@furo/ui5** <small>v1.14.4</small>
 <br>`import '@furo/ui5/src/typerenderer/display-google-type-datetime.js';`<small>
 <br>exports `<display-google-type-datetime>` custom-element-definition
 <br>superclass *LitElement*

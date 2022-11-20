@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-views-filter-settings
-**@furo/ui5** <small>v1.13.0</small>
+**@furo/ui5** <small>v1.14.4</small>
 <br>`import '@furo/ui5/src/furo-ui5-views/furo-ui5-views-filter-settings.js';`<small>
 <br>exports `<furo-ui5-views-filter-settings>` custom-element-definition
 <br>superclass *LitElement*

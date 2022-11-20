@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-dialog
-**@furo/ui5** <small>v1.13.0</small>
+**@furo/ui5** <small>v1.14.4</small>
 <br>`import '@furo/ui5/src/furo-ui5-dialog.js';`<small>
 <br>exports *FuroUi5Dialog* js
 <br>extends *src/furo-ui5-dialog.js*</small>

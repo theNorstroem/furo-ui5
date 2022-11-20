@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-message-container-item
-**@furo/ui5** <small>v1.13.0</small>
+**@furo/ui5** <small>v1.14.4</small>
 <br>`import '@furo/ui5/src/subcomponents/furo-ui5-message-container-item.js';`<small>
 <br>exports `<furo-ui5-message-container-item>` custom-element-definition
 <br>superclass *LitElement*

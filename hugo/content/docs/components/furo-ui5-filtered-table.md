@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-filtered-table
-**@furo/ui5** <small>v1.13.0</small>
+**@furo/ui5** <small>v1.14.4</small>
 <br>`import '@furo/ui5/src/furo-ui5-views/furo-ui5-filtered-table.js';`<small>
 <br>exports `<furo-ui5-filtered-table>` custom-element-definition
 <br>extends */src/furo-ui5-table.js*
@@ -49,6 +49,7 @@ the `id` attribute on the `ui5-table-column`. The id must match to the `field_na
 
 ## Attributes and Properties
 {{% api "_furo-ui5-filtered-table-properties.md" %}}
+
 
 
 
@@ -144,6 +145,30 @@ Fired when the row selection in MultiSelect mode was changed
 
 
 
+
+### **setOrderBy**
+<small>**setOrderBy**(*sort* `` ) ⟹ `void`</small>
+
+<small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-set-order-by</span>
+
+This is only used to set the order icons on the table headers. You have to use a `furo-ui5-views-column-header` in the
+header slot for this.
+
+```html
+<ui5-table-column
+              slot="columns"
+              field="*.nr"
+              id="nr"
+              popin-text="${i18n.t('activity_nr')}"
+              ><furo-ui5-views-column-header><span>${i18n.t('activity_nr')}</span></furo-ui5-views-column-header>
+              </ui5-table-column>
+```
+
+The value comes from the event `order-by-changed`, which is emited by the component `furo-ui5-views-table-settings`.
+
+- <small>sort </small>
+<br><br>
 
 ### **setColumns**
 <small>**setColumns**(*sortedlist* `` ) ⟹ `void`</small>

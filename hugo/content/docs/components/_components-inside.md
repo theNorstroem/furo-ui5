@@ -76,6 +76,7 @@ bookHidden: true
 - [furo-ui5-z-grid](furo-ui5-z-grid.md) grid with a z pattern
 - [ui5-reference-search-item](ui5-reference-search-item.md) representation of a result item
 - [furo-ui5-filtered-table](furo-ui5-filtered-table.md) table with flexible columns
+- [furo-ui5-views-column-header](furo-ui5-views-column-header.md) Shows a sort direction icon
 - [furo-ui5-views-filter-settings](furo-ui5-views-filter-settings.md) filter dialog
 - [furo-ui5-views-table-settings](furo-ui5-views-table-settings.md) table settings dialog
 - [furo-ui5-views](furo-ui5-views.md) Manage views
