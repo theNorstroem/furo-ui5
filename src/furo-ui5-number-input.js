@@ -663,6 +663,107 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
   static get styles() {
     return super.styles;
   }
+
+  /**
+   * WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed
+   * @param event
+   * @private
+   */
+  _handleInput(event) {
+    const inputDomRef = this.getInputDOMRefSync();
+    const emptyValueFiredOnNumberInput =
+      this.value && this.isTypeNumber && !inputDomRef.value;
+    const eventType =
+      event.inputType || (event.detail && event.detail.inputType);
+    this._keepInnerValue = false;
+
+    const allowedEventTypes = [
+      'deleteWordBackward',
+      'deleteWordForward',
+      'deleteSoftLineBackward',
+      'deleteSoftLineForward',
+      'deleteEntireSoftLine',
+      'deleteHardLineBackward',
+      'deleteHardLineForward',
+      'deleteByDrag',
+      'deleteByCut',
+      'deleteContent',
+      'deleteContentBackward',
+      'deleteContentForward',
+      'historyUndo',
+    ];
+
+    this._shouldAutocomplete =
+      !allowedEventTypes.includes(eventType) && !this.noTypeahead;
+    this.suggestionSelectionCanceled = false;
+
+    // ---- Special cases of numeric Input ----
+    // ---------------- Start -----------------
+
+    // When the last character after the delimiter is removed.
+    // In such cases, we want to skip the re-rendering of the
+    // component as this leads to cursor repositioning and causes user experience issues.
+
+    // There are few scenarios:
+    // Example: type "123.4" and press BACKSPACE - the native input is firing event with the whole part as value (123).
+    // Pressing BACKSPACE again will remove the delimiter and the native input will fire event with the whole part as value again (123).
+    // Example: type "123.456", select/mark "456" and press BACKSPACE - the native input is firing event with the whole part as value (123).
+    // Example: type "123.456", select/mark "123.456" and press BACKSPACE - the native input is firing event with empty value.
+    const delimiterCase =
+      this.isTypeNumber &&
+      (event.inputType === 'deleteContentForward' ||
+        event.inputType === 'deleteContentBackward') &&
+      !event.target.value.includes('.') &&
+      this.value.includes('.');
+
+    // Handle special numeric notation with "e", example "12.5e12"
+    const eNotationCase = emptyValueFiredOnNumberInput && event.data === 'e';
+
+    // Handle special numeric notation with "-", example "-3"
+    // When pressing BACKSPACE, the native input fires event with empty value
+    const minusRemovalCase =
+      emptyValueFiredOnNumberInput &&
+      this.value.startsWith('-') &&
+      this.value.length === 2 &&
+      (event.inputType === 'deleteContentForward' ||
+        event.inputType === 'deleteContentBackward');
+
+    if (delimiterCase || eNotationCase || minusRemovalCase) {
+      this.value = event.target.value;
+      this._keepInnerValue = true;
+    }
+    // ----------------- End ------------------
+
+    if (event.target === inputDomRef) {
+      this.focused = true;
+
+      // stop the native event, as the semantic "input" would be fired.
+      event.stopImmediatePropagation();
+    }
+
+    // Keep inner value during typing of numbers with dots as decimal separator
+    if (
+      this.isTypeNumber &&
+      Number.isNaN(event.target.valueAsNumber) &&
+      !(
+        event.inputType === 'deleteContentForward' ||
+        event.inputType === 'deleteContentBackward'
+      )
+    ) {
+      this._keepInnerValue = true;
+    }
+
+    this.fireEventByAction(this.ACTION_USER_INPUT, event);
+
+    this.hasSuggestionItemSelected = false;
+    this._isValueStateFocused = false;
+
+    if (this.Suggestions) {
+      this.Suggestions.updateSelectedItemPosition(null);
+    }
+
+    this.isTyping = true;
+  }
 }
 
 FuroUi5NumberInput.define();
