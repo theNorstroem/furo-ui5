@@ -95,6 +95,7 @@ class FuroUi5LaunchpadPageRenderer extends FBP(LitElement) {
 
       <furo-data-object
         type="launchpad.Page"
+        fn-init="|--injectPage"
         fn-inject-raw="|--injectPage"
         at-object-ready="--pageDO"
       ></furo-data-object>
