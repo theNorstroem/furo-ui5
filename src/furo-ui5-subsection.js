@@ -181,7 +181,9 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
     return html`
       <furo-horizontal-flex class="heading" space>
         ${this.heading.length
-          ? html` <ui5-title flex level="H4">${this.heading}</ui5-title> `
+          ? html`
+              <ui5-title flex level="${this.level}">${this.heading}</ui5-title>
+            `
           : html``}
         <furo-empty-spacer flex></furo-empty-spacer>
         <div><slot name="action"></slot></div>
