@@ -389,6 +389,15 @@ export class FuroUi5Table extends FBP(LitElement) {
         attribute: 'no-data-text',
       },
       /**
+       * Identity path of a single item.
+       * Use this if you have a field which identifies the item. Bind the value, not the fieldnode => `id._value`.
+       * @type {*string}
+       */
+      identityPath: {
+        type: String,
+        attribute: 'identity-path',
+      },
+      /**
        * Determines whether the column headers remain fixed at the top of the page during vertical scrolling as long as the Web Component is in the viewport.
        *
        * @type Boolean
@@ -423,6 +432,7 @@ export class FuroUi5Table extends FBP(LitElement) {
           fn-inject-items="--data"
           fn-trigger-first="--triggerFirst"
           fn-trigger-last="--triggerLast"
+          identity-path="${this.identityPath}"
         >
           ${this._rowRepeatTemplate}
         </flow-repeat>
