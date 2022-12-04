@@ -47,11 +47,11 @@ class FuroUi5LaunchpadTileGrid extends FBP(LitElement) {
       }
 
       ::slotted(*) {
-        grid-row: auto / span 6;
+        grid-row: auto / span 7;
       }
 
       ::slotted(*[doubleheight]) {
-        grid-row: auto / span 12;
+        grid-row: auto / span 14;
       }
 
       ::slotted(*[double]) {
@@ -98,7 +98,8 @@ class FuroUi5LaunchpadTileGrid extends FBP(LitElement) {
         grid-column-end: last-col;
       }
 
-      @media screen and (max-width: 687px) {
+      /* matches media-size S */
+      @media screen and (max-width: 598px) {
         ::slotted([main]) {
           grid-column: auto / span 1;
         }
@@ -109,6 +110,10 @@ class FuroUi5LaunchpadTileGrid extends FBP(LitElement) {
 
         ::slotted([minimain]) {
           grid-column: auto / span 1;
+        }
+
+        ::slotted(*) {
+          grid-row: auto / span 6;
         }
       }
     `;
