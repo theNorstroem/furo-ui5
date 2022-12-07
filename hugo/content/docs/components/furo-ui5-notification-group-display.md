@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-notification-group-display
-**@furo/ui5** <small>v1.14.4</small>
+**@furo/ui5** <small>v1.15.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-notification-group-display.js';`<small>
 <br>exports *FuroUi5NotificationGroupDisplay* js
 <br>exports `<furo-ui5-notification-group-display>` custom-element-definition

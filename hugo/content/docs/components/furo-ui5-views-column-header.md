@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-views-column-header
-**@furo/ui5** <small>v1.14.4</small>
+**@furo/ui5** <small>v1.15.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-views/furo-ui5-views-column-header.js';`<small>
 <br>exports `<furo-ui5-views-column-header>` custom-element-definition
 <br>superclass *LitElement*

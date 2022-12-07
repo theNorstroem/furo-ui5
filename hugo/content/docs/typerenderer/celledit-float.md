@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-float
-**@furo/ui5** <small>v1.14.4</small>
+**@furo/ui5** <small>v1.15.0</small>
 <br>`import '@furo/ui5/src/typerenderer/celledit-float.js';`<small>
 <br>exports *CelleditFloat* js
 <br>extends */src/typerenderer/celledit-int32.js*

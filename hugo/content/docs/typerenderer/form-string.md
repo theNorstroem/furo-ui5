@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-string
-**@furo/ui5** <small>v1.14.4</small>
+**@furo/ui5** <small>v1.15.0</small>
 <br>`import '@furo/ui5/src/typerenderer/form-string.js';`<small>
 <br>exports *FormString* js
 <br>exports `<form-string>` custom-element-definition

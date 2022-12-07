@@ -6,7 +6,7 @@ weight: 100
 
 # Ui5LabelDataBinding
 
-**@furo/components** <small>v1.14.4</small>
+**@furo/components** <small>v1.15.0</small>
 <br>`import '@furo/components/src/src/lib/Ui5LabelDataBinding.js';`<small>
 <br>exports *Ui5LabelDataBinding* js</small>
 

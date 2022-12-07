@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-google-protobuf-timestamp
-**@furo/ui5** <small>v1.14.4</small>
+**@furo/ui5** <small>v1.15.0</small>
 <br>`import '@furo/ui5/src/typerenderer/display-google-protobuf-timestamp.js';`<small>
 <br>exports `<display-google-protobuf-timestamp>` custom-element-definition
 <br>superclass *LitElement*</small>

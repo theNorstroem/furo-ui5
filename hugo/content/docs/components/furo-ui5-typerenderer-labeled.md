@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-typerenderer-labeled
-**@furo/ui5** <small>v1.14.4</small>
+**@furo/ui5** <small>v1.15.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-typerenderer-labeled.js';`<small>
 <br>exports *FuroUi5TyperendererLabeled* js
 <br>exports `<furo-ui5-typerenderer-labeled>` custom-element-definition

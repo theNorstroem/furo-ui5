@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-double
-**@furo/ui5** <small>v1.14.4</small>
+**@furo/ui5** <small>v1.15.0</small>
 <br>`import '@furo/ui5/src/typerenderer/display-double.js';`<small>
 <br>exports *DisplayDouble* js
 <br>exports `<display-double>` custom-element-definition

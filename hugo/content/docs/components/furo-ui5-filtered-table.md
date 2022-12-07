@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-filtered-table
-**@furo/ui5** <small>v1.14.4</small>
+**@furo/ui5** <small>v1.15.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-views/furo-ui5-filtered-table.js';`<small>
 <br>exports `<furo-ui5-filtered-table>` custom-element-definition
 <br>extends */src/furo-ui5-table.js*
@@ -89,6 +89,14 @@ Available options are:
 
 Defines the text that will be displayed when there is no data.
 string
+<br><br>
+
+### **identityPath**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">identity-path</span>
+<small>`*` </small>
+
+string}
 <br><br>
 
 ### **stickyColumnHeader**
@@ -245,6 +253,7 @@ setBusy Sets the busy state
 unsetBusy Unsets the busy state
 
 <br><br>
+
 
 
 
