@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-fat-Uint32
-**@furo/ui5** <small>v1.15.0</small>
+**@furo/ui5** <small>v1.15.1</small>
 <br>`import '@furo/ui5/src/typerenderer/display-furo-fat-uint32.js';`<small>
 <br>exports `<display-furo-fat-uint32>` custom-element-definition
 <br>extends */src/typerenderer/display-furo-fat-int32.js*

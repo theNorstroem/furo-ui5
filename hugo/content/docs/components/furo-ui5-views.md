@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-views
-**@furo/ui5** <small>v1.15.0</small>
+**@furo/ui5** <small>v1.15.1</small>
 <br>`import '@furo/ui5/src/furo-ui5-views/furo-ui5-views.js';`<small>
 <br>exports *FuroUi5Views* js
 <br>exports `<furo-ui5-views>` custom-element-definition
