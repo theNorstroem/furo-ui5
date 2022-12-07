@@ -46,14 +46,17 @@ class DisplayFuroFatString extends LitElement {
       :host([value-state='Success']) {
         color: var(--sapPositiveColor, #107e3e);
       }
+
       :host([value-state='Informative']),
       :host([value-state='Information']) {
         color: var(--sapInformativeColor, #0a6ed1);
       }
+
       :host([value-state='Negative']),
       :host([value-state='Error']) {
         color: var(--sapNegativeColor, #b00);
       }
+
       :host([value-state='Critical']),
       :host([value-state='Warning']) {
         color: var(--sapCrticalColor, #e9730c);
@@ -87,9 +90,9 @@ class DisplayFuroFatString extends LitElement {
      * Sets the attributes from the field node
      */
     if (
-      this._fieldValue &&
-      this._fieldValue.attributes &&
-      this._fieldValue.attributes['value-state']
+      this._field &&
+      this._field.attributes &&
+      this._field.attributes['value-state']
     ) {
       const state = this._field.attributes['value-state']._value;
       this.setAttribute('value-state', state);
