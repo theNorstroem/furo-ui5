@@ -7,25 +7,25 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="furo-ui5-subsection #  @furo/ui5 v1.13.0 import &#39;@furo/ui5/src/furo-ui5-subsection.js&#39;; exports FuroUi5Subsection js exports &lt;furo-ui5-subsection&gt; custom-element-definition superclass LitElement mixes FBP mixes FieldNodeAdapter
+<meta name="description" content="furo-ui5-subsection #  @furo/ui5 v1.15.1 import &#39;@furo/ui5/src/furo-ui5-subsection.js&#39;; exports FuroUi5Subsection js exports &lt;furo-ui5-subsection&gt; custom-element-definition superclass LitElement mixes FBP mixes FieldNodeAdapter
  Summary:
  Description #  furo-ui5-subsection The furo-ui5-subsection component is a containers for actual content. It is envisaged that this component will be used within a furo-ui5-section Subsections have a progressive disclosure mechanism to show and hide content
 https://experience.sap.com/fiori-design-web/object-page/#content-area
 1 2 3 4 5 6 7  &lt;furo-ui5-section heading=&#34;STRING&#34;&gt; &lt;furo-ui5-subsection heading=&#34;Subsection Title&#34;&gt; &lt;furo-horizontal-flex slot=&#34;action&#34;&gt;.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo-ui5-subsection" />
-<meta property="og:description" content="furo-ui5-subsection #  @furo/ui5 v1.13.0 import &#39;@furo/ui5/src/furo-ui5-subsection.js&#39;; exports FuroUi5Subsection js exports &lt;furo-ui5-subsection&gt; custom-element-definition superclass LitElement mixes FBP mixes FieldNodeAdapter
+<meta property="og:description" content="furo-ui5-subsection #  @furo/ui5 v1.15.1 import &#39;@furo/ui5/src/furo-ui5-subsection.js&#39;; exports FuroUi5Subsection js exports &lt;furo-ui5-subsection&gt; custom-element-definition superclass LitElement mixes FBP mixes FieldNodeAdapter
  Summary:
  Description #  furo-ui5-subsection The furo-ui5-subsection component is a containers for actual content. It is envisaged that this component will be used within a furo-ui5-section Subsections have a progressive disclosure mechanism to show and hide content
 https://experience.sap.com/fiori-design-web/object-page/#content-area
 1 2 3 4 5 6 7  &lt;furo-ui5-section heading=&#34;STRING&#34;&gt; &lt;furo-ui5-subsection heading=&#34;Subsection Title&#34;&gt; &lt;furo-horizontal-flex slot=&#34;action&#34;&gt;." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-subsection/" />
-<meta property="article:modified_time" content="2022-10-06T11:55:13+02:00" />
+<meta property="article:modified_time" content="2022-12-07T13:56:47+01:00" />
 <title>furo-ui5-subsection | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.5001d3e82ab8e8b3086c668fbde96a36cb3e60ec664f24ddfca22b537a8ad6d3.js" integrity="sha256-UAHT6Cq46LMIbGaPvelqNss&#43;YOxmTyTd/KIrU3qK1tM="></script>
+<script defer src="/en.search.min.15fcee29269c41a8d7b596ee8e18222eb0272457a5c9f50d5798da5493476fed.js" integrity="sha256-FfzuKSacQajXtZbujhgiLrAnJFelyfUNV5jaVJNHb&#43;0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1116,6 +1116,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-views/" class="">furo-ui5-views</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-views-column-header/" class="">furo-ui5-views-column-header</a>
   
 
         </li>
@@ -3401,6 +3414,8 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
   </ul>
 
 
@@ -3478,6 +3493,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#showlessdatatext"><strong>showLessDataText</strong></a></li>
         <li><a href="#collapsed"><strong>collapsed</strong></a></li>
         <li><a href="#hasmorecontent"><strong>hasMoreContent</strong></a></li>
+        <li><a href="#level"><strong>level</strong></a></li>
       </ul>
     </li>
     <li><a href="#methods-1">Methods</a>
@@ -3508,7 +3524,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-subsection
   <a class="anchor" href="#furo-ui5-subsection">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.13.0</small>
+<p><strong>@furo/ui5</strong> <small>v1.15.1</small>
 <br><code>import '@furo/ui5/src/furo-ui5-subsection.js';</code><small>
 <br>exports <em>FuroUi5Subsection</em> js
 <br>exports <code>&lt;furo-ui5-subsection&gt;</code> custom-element-definition
@@ -3595,6 +3611,14 @@ Binds an entity field to the heading. You can use the entity even when no data w
 </h3>
 <p>default: <strong>false</strong></small></p>
 <p><br><br></p>
+<h3 id="level">
+  <strong>level</strong>
+  <a class="anchor" href="#level">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">level</span>
+<small><code>string</code> default: <strong>'H4'</strong></small></p>
+<p>Defines the heading level. Available options are: &ldquo;H6&rdquo; to &ldquo;H1&rdquo;.
+<br><br></p>
 <h2 id="methods-1">
   Methods
   <a class="anchor" href="#methods-1">#</a>
@@ -3652,9 +3676,9 @@ Binds an entity field to the heading. You can use the entity even when no data w
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/d885029b38d9b03630cb26c88ea00ea52364aef6" title='Last modified by veith | October 6, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/bfa519c4e2e9f6ef3526f099a87e5c53eefbc695" title='Last modified by veith | December 7, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>October 6, 2022</span>
+      <span>December 7, 2022</span>
     </a>
   </div>
 
@@ -3691,6 +3715,7 @@ Binds an entity field to the heading. You can use the entity even when no data w
         <li><a href="#showlessdatatext"><strong>showLessDataText</strong></a></li>
         <li><a href="#collapsed"><strong>collapsed</strong></a></li>
         <li><a href="#hasmorecontent"><strong>hasMoreContent</strong></a></li>
+        <li><a href="#level"><strong>level</strong></a></li>
       </ul>
     </li>
     <li><a href="#methods-1">Methods</a>

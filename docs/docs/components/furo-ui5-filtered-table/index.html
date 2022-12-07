@@ -12,12 +12,12 @@
 <meta property="og:description" content="table with flexible columns" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ui5.furo.pro/docs/components/furo-ui5-filtered-table/" />
-<meta property="article:modified_time" content="2022-10-06T11:55:13+02:00" />
+<meta property="article:modified_time" content="2022-12-07T13:56:47+01:00" />
 <title>furo-ui5-filtered-table | フロー Furo UI5</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.570701e68eff9e67612647b1df15e165d0fb35a390d92124787b2364b8a61e0e.css" integrity="sha256-VwcB5o7/nmdhJkex3xXhZdD7NaOQ2SEkeHsjZLimHg4=">
-<script defer src="/en.search.min.5001d3e82ab8e8b3086c668fbde96a36cb3e60ec664f24ddfca22b537a8ad6d3.js" integrity="sha256-UAHT6Cq46LMIbGaPvelqNss&#43;YOxmTyTd/KIrU3qK1tM="></script>
+<script defer src="/en.search.min.15fcee29269c41a8d7b596ee8e18222eb0272457a5c9f50d5798da5493476fed.js" integrity="sha256-FfzuKSacQajXtZbujhgiLrAnJFelyfUNV5jaVJNHb&#43;0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1108,6 +1108,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://ui5.furo.pro/docs/components/furo-ui5-views/" class="">furo-ui5-views</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://ui5.furo.pro/docs/components/furo-ui5-views-column-header/" class="">furo-ui5-views-column-header</a>
   
 
         </li>
@@ -3393,6 +3406,8 @@ https://github.com/alex-shpak/hugo-book
     
       
     
+      
+    
   </ul>
 
 
@@ -3466,6 +3481,7 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#mode"><strong>mode</strong></a></li>
         <li><a href="#nodatatext"><strong>noDataText</strong></a></li>
+        <li><a href="#identitypath"><strong>identityPath</strong></a></li>
         <li><a href="#stickycolumnheader"><strong>stickyColumnHeader</strong></a></li>
         <li><a href="#busy"><strong>busy</strong></a></li>
       </ul>
@@ -3481,6 +3497,7 @@ https://github.com/alex-shpak/hugo-book
     </li>
     <li><a href="#methods">Methods</a>
       <ul>
+        <li><a href="#setorderby"><strong>setOrderBy</strong></a></li>
         <li><a href="#setcolumns"><strong>setColumns</strong></a></li>
         <li><a href="#binddata"><strong>bindData</strong></a></li>
         <li><a href="#focus"><strong>focus</strong></a></li>
@@ -3505,7 +3522,7 @@ https://github.com/alex-shpak/hugo-book
   furo-ui5-filtered-table
   <a class="anchor" href="#furo-ui5-filtered-table">#</a>
 </h1>
-<p><strong>@furo/ui5</strong> <small>v1.13.0</small>
+<p><strong>@furo/ui5</strong> <small>v1.15.1</small>
 <br><code>import '@furo/ui5/src/furo-ui5-views/furo-ui5-filtered-table.js';</code><small>
 <br>exports <code>&lt;furo-ui5-filtered-table&gt;</code> custom-element-definition
 <br>extends <em>/src/furo-ui5-table.js</em>
@@ -3605,6 +3622,14 @@ the <code>id</code> attribute on the <code>ui5-table-column</code>. The id must 
 <p>Defines the text that will be displayed when there is no data.
 string
 <br><br></p>
+<h3 id="identitypath">
+  <strong>identityPath</strong>
+  <a class="anchor" href="#identitypath">#</a>
+</h3>
+<p><span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">identity-path</span>
+<small><code>*</code> </small></p>
+<p>string}
+<br><br></p>
 <h3 id="stickycolumnheader">
   <strong>stickyColumnHeader</strong>
   <a class="anchor" href="#stickycolumnheader">#</a>
@@ -3669,6 +3694,40 @@ string
   Methods
   <a class="anchor" href="#methods">#</a>
 </h2>
+<h3 id="setorderby">
+  <strong>setOrderBy</strong>
+  <a class="anchor" href="#setorderby">#</a>
+</h3>
+<p><small><strong>setOrderBy</strong>(<em>sort</em> `` ) ⟹ <code>void</code></small></p>
+<p><small>`` </small> →
+<span  style="border-width:2px 2px 2px 10px; border-style: solid;border-color:  rgb(76, 175, 80);font-family:monospace; padding:2px 4px;">fn-set-order-by</span></p>
+<p>This is only used to set the order icons on the table headers. You have to use a <code>furo-ui5-views-column-header</code> in the
+header slot for this.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">ui5-table-column</span>
+              <span style="color:#008080">slot</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;columns&#34;</span>
+              <span style="color:#008080">field</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;*.nr&#34;</span>
+              <span style="color:#008080">id</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;nr&#34;</span>
+              <span style="color:#008080">popin-text</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;${i18n.t(&#39;activity_nr&#39;)}&#34;</span>
+              &gt;&lt;<span style="color:#000080">furo-ui5-views-column-header</span>&gt;&lt;<span style="color:#000080">span</span>&gt;${i18n.t(&#39;activity_nr&#39;)}&lt;/<span style="color:#000080">span</span>&gt;&lt;/<span style="color:#000080">furo-ui5-views-column-header</span>&gt;
+              &lt;/<span style="color:#000080">ui5-table-column</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>The value comes from the event <code>order-by-changed</code>, which is emited by the component <code>furo-ui5-views-table-settings</code>.</p>
+<ul>
+<li><small>sort </small>
+<br><br></li>
+</ul>
 <h3 id="setcolumns">
   <strong>setColumns</strong>
   <a class="anchor" href="#setcolumns">#</a>
@@ -3748,9 +3807,9 @@ string
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/d885029b38d9b03630cb26c88ea00ea52364aef6" title='Last modified by veith | October 6, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/bfa519c4e2e9f6ef3526f099a87e5c53eefbc695" title='Last modified by veith | December 7, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>October 6, 2022</span>
+      <span>December 7, 2022</span>
     </a>
   </div>
 
@@ -3783,6 +3842,7 @@ string
       <ul>
         <li><a href="#mode"><strong>mode</strong></a></li>
         <li><a href="#nodatatext"><strong>noDataText</strong></a></li>
+        <li><a href="#identitypath"><strong>identityPath</strong></a></li>
         <li><a href="#stickycolumnheader"><strong>stickyColumnHeader</strong></a></li>
         <li><a href="#busy"><strong>busy</strong></a></li>
       </ul>
@@ -3798,6 +3858,7 @@ string
     </li>
     <li><a href="#methods">Methods</a>
       <ul>
+        <li><a href="#setorderby"><strong>setOrderBy</strong></a></li>
         <li><a href="#setcolumns"><strong>setColumns</strong></a></li>
         <li><a href="#binddata"><strong>bindData</strong></a></li>
         <li><a href="#focus"><strong>focus</strong></a></li>
