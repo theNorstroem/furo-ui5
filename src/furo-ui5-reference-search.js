@@ -1132,12 +1132,16 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
         );
       }
 
+      ui5-list:not([hidden]) {
+        width: unset;
+        max-width: unset;
+      }
+
       :host([show-list]) .list {
         display: block;
       }
 
-      ui5-input,
-      ui5-list {
+      ui5-input {
         width: inherit;
       }
 
