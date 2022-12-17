@@ -1181,6 +1181,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
     return html`
       <ui5-input
         id="input"
+        style="min-width: inherit;"
         ?required="${this.required}"
         ?readonly="${this.readonly}"
         ?disabled="${this.disabled}"
