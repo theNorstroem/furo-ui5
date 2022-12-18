@@ -54,6 +54,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
     this.headerTextLevel = 'H2';
     this.secondaryText = '';
     this.collapsed = false;
+    this.nonInteractive = false;
   }
 
   /**
@@ -112,6 +113,10 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
        * @type Boolean
        */
       bigAction: { type: Boolean, attribute: 'big-action' },
+      /**
+       * Disables the toggler tabindex.
+       */
+      nonInteractive: { type: Boolean, attribute: 'non-interactive' },
     };
   }
 
@@ -443,7 +448,7 @@ export class FuroUi5HeaderPanel extends FBP(LitElement) {
           at-click="--collapserClicked"
           class="collapser-button"
           name="slim-arrow-up"
-          interactive=""
+          ?interactive="${!this.nonInteractive}"
         ></ui5-icon>
         <div class="splitter after"></div>
       </div>
