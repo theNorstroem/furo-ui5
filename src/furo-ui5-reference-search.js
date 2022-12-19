@@ -515,6 +515,43 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
   }
 
   /**
+   * Appends the searcher
+   * @private
+   */
+  _appendExtendedSearcher() {
+    if (this._addedd) {
+      return;
+    }
+
+    this._dialog = this.shadowRoot.getElementById('dialog');
+    this._valueHelperComponent = document.createElement(this.extendedSearcher);
+    this._valueHelperComponent.style.height = '100%';
+
+    /**
+     * Register hook on wire --BackdropFocus , |--htsIn, --hts to pass it to the value helper
+     * This is done so, because we can not set at-xxx attributes in js
+     */
+    this._FBPAddWireHook('--BackdropFocus', () => {
+      this._valueHelperComponent.focus();
+      // trigger the search method if it is available
+      if (this._valueHelperComponent.search !== undefined) {
+        this._valueHelperComponent.search(
+          this._searchTerm || this.value.display_name
+        );
+      }
+    });
+    this._FBPAddWireHook('|--htsIn', hts => {
+      this._valueHelperComponent.htsIn(hts);
+    });
+    this._FBPAddWireHook('--hts', hts => {
+      this._valueHelperComponent.htsIn(hts);
+    });
+
+    this._dialog.appendChild(this._valueHelperComponent);
+    this._addedd = true;
+  }
+
+  /**
    * @private
    */
   _FBPReady() {
@@ -523,37 +560,12 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
      */
     if (this.extendedSearcher) {
       if (this.icon === 'search') {
-        this.icon = 'value-help';
+        this.updateComplete.then(() => {
+          this.icon = 'value-help';
+        });
       }
 
-      this._dialog = this.shadowRoot.getElementById('dialog');
       this._hasExtendedSearcher = true;
-      this._valueHelperComponent = document.createElement(
-        this.extendedSearcher
-      );
-      this._valueHelperComponent.style.height = '100%';
-
-      /**
-       * Register hook on wire --BackdropFocus , |--htsIn, --hts to pass it to the value helper
-       * This is done so, because we can not set at-xxx attributes in js
-       */
-      this._FBPAddWireHook('--BackdropFocus', () => {
-        this._valueHelperComponent.focus();
-        // trigger the search method if it is available
-        if (this._valueHelperComponent.search !== undefined) {
-          this._valueHelperComponent.search(
-            this._searchTerm || this.value.display_name
-          );
-        }
-      });
-      this._FBPAddWireHook('|--htsIn', hts => {
-        this._valueHelperComponent.htsIn(hts);
-      });
-      this._FBPAddWireHook('--hts', hts => {
-        this._valueHelperComponent.htsIn(hts);
-      });
-
-      this._dialog.appendChild(this._valueHelperComponent);
     }
 
     // the input field
@@ -779,6 +791,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
      */
     this._FBPAddWireHook('--expandIconClicked', () => {
       if (this._hasExtendedSearcher) {
+        this._appendExtendedSearcher();
         this._closeList();
         this._FBPTriggerWire('--valueHelperRequested', null);
       } else {
@@ -796,6 +809,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
 
       if (key === 'F4') {
         if (this._hasExtendedSearcher) {
+          this._appendExtendedSearcher();
           this._closeList();
           this._FBPTriggerWire('--valueHelperRequested', null);
         }
