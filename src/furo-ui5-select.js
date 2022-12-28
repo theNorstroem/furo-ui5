@@ -534,6 +534,10 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
       // applies static option list items from spec or
       // option list items from meta
       list.forEach(item => {
+        if (item.id === undefined) {
+          // eslint-disable-next-line no-param-reassign
+          item.id = '';
+        }
         const optionItem = document.createElement('ui5-option');
         optionItem.setAttribute(
           'data-id',
@@ -669,9 +673,6 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
           this._fatValue.labels.modified = true;
         }
         this.setFnaFieldValue(this._fatValue);
-      } else if (this.isWrapper()) {
-        this._tmpValue = newValue === '' ? null : newValue;
-        this.setFnaFieldValue(newValue === '' ? null : newValue);
       } else if (this.getDataType() === 'furo.StringOptionProperty') {
         const strOpt = {
           id: newValue,
@@ -679,6 +680,9 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
         };
         this.setFnaFieldValue(strOpt);
         return;
+      } else if (this.isWrapper()) {
+        this._tmpValue = newValue === '' ? null : newValue;
+        this.setFnaFieldValue(newValue === '' ? null : newValue);
       } else {
         if (this.getDataType() === 'enum') {
           newValue = parseInt(newValue, 10);
