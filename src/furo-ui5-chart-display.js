@@ -70,8 +70,10 @@ class FuroUi5ChartDisplay extends FBP(LitElement) {
       chart: {
         // height: 550,
         fontFamily: 'var(--sapFontFamily, Helvetica, Arial, sans-serif)',
+        foreColor: 'var(--sapTextColor)',
         type: 'line',
         stacked: false,
+        background: 'unset',
         events: {},
         toolbar: {
           show: false, // disable by default
