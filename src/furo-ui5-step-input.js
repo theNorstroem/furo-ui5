@@ -86,6 +86,7 @@ export class FuroUi5StepInput extends FieldNodeAdapter(StepInput.default) {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
+      hidden: undefined,
     };
     /**
      * @private

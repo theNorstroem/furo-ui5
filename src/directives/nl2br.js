@@ -3,7 +3,7 @@ import { map } from 'lit/directives/map.js';
 import { html } from 'lit';
 
 // Define directive
-class DirectiveNl2br extends Directive {
+export class DirectiveNl2br extends Directive {
   render(str) {
     if (typeof str === 'string') {
       const lines = str.split('\n');

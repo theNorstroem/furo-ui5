@@ -13,7 +13,7 @@ import '@ui5/webcomponents/dist/ColorPalette.js';
  * @summary cell display renderer for `google.type.Color`
  * @element cell-google-type-color
  */
-class CellGoolgeTypeColor extends LitElement {
+export class CellGoolgeTypeColor extends LitElement {
   constructor() {
     super();
     this._red = '';

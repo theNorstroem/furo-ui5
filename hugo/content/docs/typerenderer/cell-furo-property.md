@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-furo-property
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-furo-property.js';`<small>
 <br>exports *CellFuroProperty* js
 <br>exports `<cell-furo-property>` custom-element-definition

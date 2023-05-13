@@ -11,7 +11,7 @@ import '@furo/data/src/furo-type-renderer.js';
  * @customElement furo-ui5-launchpad-section-renderer
  * @appliesMixin FBP
  */
-class FuroUi5LaunchpadSectionRenderer extends FBP(LitElement) {
+export class FuroUi5LaunchpadSectionRenderer extends FBP(LitElement) {
   /**
    * bindSection Bind a fieldnode of type launchpad.Section
    * @public

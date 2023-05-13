@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-views-column-header
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-views/furo-ui5-views-column-header.js';`<small>
+<br>exports *FuroUi5ViewsColumnHeader* js
 <br>exports `<furo-ui5-views-column-header>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
@@ -50,7 +51,7 @@ weight: 50
 ### **_hidesort**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">_hidesort</span>
-</small>
+<small>`boolean` </small>
 
 Description
 <br><br>

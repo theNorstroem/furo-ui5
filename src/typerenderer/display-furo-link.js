@@ -10,7 +10,7 @@ import { LitElement, html, css } from 'lit';
  * @summary display renderer for `furo.Link`
  * @element display-furo-link
  */
-class DisplayFuroLink extends LitElement {
+export class DisplayFuroLink extends LitElement {
   static get styles() {
     // language=CSS
     return css`

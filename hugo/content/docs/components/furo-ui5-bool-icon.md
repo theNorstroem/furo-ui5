@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-bool-icon
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-bool-icon.js';`<small>
+<br>exports *FuroDataBoolIcon* js
 <br>exports `<furo-ui5-bool-icon>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>

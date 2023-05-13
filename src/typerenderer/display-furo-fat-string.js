@@ -11,7 +11,7 @@ import { nl2br } from '../directives/nl2br.js';
  * @summary display renderer for `furo.fat.String`
  * @element display-furo-fat-string
  */
-class DisplayFuroFatString extends LitElement {
+export class DisplayFuroFatString extends LitElement {
   constructor() {
     super();
     /**

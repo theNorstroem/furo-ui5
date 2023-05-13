@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # cell-google-protobuf-any
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-google-protobuf-any.js';`<small>
+<br>exports *CellGoolgeProtobufAny* js
 <br>exports `<cell-google-protobuf-any>` custom-element-definition
 <br>superclass *LitElement*</small>
 

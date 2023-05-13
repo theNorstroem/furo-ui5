@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-views
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-views/furo-ui5-views.js';`<small>
 <br>exports *FuroUi5Views* js
 <br>exports `<furo-ui5-views>` custom-element-definition
@@ -339,7 +339,7 @@ Button label for "Ok" action
 ### **viewId**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">view-id</span>
-</small>
+<small>`string` </small>
 
 This is the id vor the view, this key is used to store the search filters in the session storage.
 <br><br>

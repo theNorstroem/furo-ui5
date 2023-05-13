@@ -6,6 +6,6 @@ import { FuroUi5ReferenceSearchLabeled } from '../furo-ui5-reference-search-labe
  * @summary form renderer for `furo.Reference`
  * @element form-furo-reference
  */
-class FormFuroReference extends FuroUi5ReferenceSearchLabeled {}
+export class FormFuroReference extends FuroUi5ReferenceSearchLabeled {}
 
 window.customElements.define('form-furo-reference', FormFuroReference);

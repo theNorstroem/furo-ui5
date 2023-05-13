@@ -10,7 +10,7 @@ import { FBP } from '@furo/fbp';
  * @customElement tile-launchpad-launchtile
  * @appliesMixin FBP
  */
-class TileLaunchpadLaunchtile extends FieldNodeAdapter(FBP(LitElement)) {
+export class TileLaunchpadLaunchtile extends FieldNodeAdapter(FBP(LitElement)) {
   onFnaFieldValueChanged(val) {
     this.target = val.target_url;
     this.display_name = val.display_name;

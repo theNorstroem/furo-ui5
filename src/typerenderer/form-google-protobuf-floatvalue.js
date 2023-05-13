@@ -8,7 +8,7 @@ import { FormInt32 } from './form-int32.js';
  * @summary form renderer for `google.protobuf.FloatValue`
  * @element form-google-protobuf-floatvalue
  */
-class FormGoolgeProtobufFloatvalue extends FormInt32 {}
+export class FormGoolgeProtobufFloatvalue extends FormInt32 {}
 
 window.customElements.define(
   'form-google-protobuf-floatvalue',

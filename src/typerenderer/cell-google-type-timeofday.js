@@ -15,7 +15,7 @@ import { Env } from '@furo/framework/src/furo.js';
  * @summary cell display renderer for `google.type.TimeOfDay`
  * @element cell-google-type-timeofday
  */
-class CellGoogleTypeTimeofday extends LitElement {
+export class CellGoogleTypeTimeofday extends LitElement {
   constructor() {
     super();
     /**

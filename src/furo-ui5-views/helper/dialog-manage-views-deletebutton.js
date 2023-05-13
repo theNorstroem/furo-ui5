@@ -9,7 +9,7 @@ import { FBP } from '@furo/fbp';
  * @customElement
  * @appliesMixin FBP
  */
-class DialogManageViewsDeletebutton extends FBP(LitElement) {
+export class DialogManageViewsDeletebutton extends FBP(LitElement) {
   bindData(fn) {
     this.row = fn;
     if (this.row.is_standard._value === true) {

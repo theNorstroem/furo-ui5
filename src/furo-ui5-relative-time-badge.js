@@ -22,7 +22,7 @@ import '@ui5/webcomponents/dist/Badge.js';
  * @summary bindable relative time badge
  * @customElement
  */
-class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
+export class FuroUi5RelativeTimeBadge extends FieldNodeAdapter(LitElement) {
   constructor() {
     super();
     /**

@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # cell-google-protobuf-
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-google-protobuf-floatvalue.js';`<small>
+<br>exports *CellGoolgeProtobufFloatvalue* js
 <br>exports `<cell-google-protobuf-floatvalue>` custom-element-definition
 <br>extends */src/typerenderer/cell-float.js*
 <br>superclass *CellFloat*</small>

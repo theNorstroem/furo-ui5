@@ -8,6 +8,6 @@ import { FormBool } from './form-bool.js';
  * @summary form renderer for `furo.fat.Bool`
  * @element form-furo-fat-bool
  */
-class FormFuroFatBool extends FormBool {}
+export class FormFuroFatBool extends FormBool {}
 
 window.customElements.define('form-furo-fat-bool', FormFuroFatBool);

@@ -62,6 +62,7 @@ export class FuroUi5MultiInput extends FieldNodeAdapter(MultiInput.default) {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
+      hidden: undefined,
     };
 
     /**

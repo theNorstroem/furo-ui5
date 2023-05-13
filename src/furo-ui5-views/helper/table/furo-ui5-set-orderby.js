@@ -10,7 +10,7 @@ import './furo-ui5-set-orderby-row.js';
  * @customElement
  * @appliesMixin FBP
  */
-class FuroUi5SetOrderby extends FBP(LitElement) {
+export class FuroUi5SetOrderby extends FBP(LitElement) {
   /**
    * @private
    * @return {Object}

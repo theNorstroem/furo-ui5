@@ -103,6 +103,7 @@ export class FuroUi5SegmentedButton extends FieldNodeAdapter(
       readonly: undefined,
       disabled: undefined,
       required: undefined,
+      hidden: undefined,
     };
     /**
      * @private

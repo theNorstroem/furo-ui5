@@ -10,7 +10,7 @@ import { LitElement, css } from 'lit';
  * @summary celledit renderer for `google.protobuf.Any`
  * @element celledit-google-protobuf-any
  */
-class CelleditGoolgeProtobufAny extends LitElement {
+export class CelleditGoolgeProtobufAny extends LitElement {
   constructor() {
     super();
 

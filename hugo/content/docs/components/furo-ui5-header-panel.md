@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-header-panel
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-header-panel.js';`<small>
 <br>exports *FuroUi5HeaderPanel* js
 <br>exports `<furo-ui5-header-panel>` custom-element-definition
@@ -91,10 +91,18 @@ sub title
 Collapsed
 <br><br>
 
+### **nonInteractive**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">non-interactive</span>
+<small>`boolean` default: **false**</small>
+
+Disables the toggler tabindex.
+<br><br>
+
 ### **headerIcon**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">header-icon</span>
-</small>
+<small>`string` </small>
 
 Set this to have a clickable icon on the header line
 <br><br>
@@ -189,6 +197,7 @@ Do not forget to import the icon you will use in your component.
 toggles the collapse state
 
 <br><br>
+
 
 
 

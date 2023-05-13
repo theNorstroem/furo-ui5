@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # cell-furo-fat-uint64
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-furo-fat-uint64.js';`<small>
+<br>exports *CellFuroFatUint64* js
 <br>exports `<cell-furo-fat-uint64>` custom-element-definition
 <br>extends */src/typerenderer/cell-furo-fat-int64.js*
 <br>superclass *CellFuroFatInt64*</small>

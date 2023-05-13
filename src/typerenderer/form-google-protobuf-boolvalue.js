@@ -9,7 +9,7 @@ import { FormBool } from './form-bool.js';
  * @element form-google-protobuf-boolvalue
  */
 
-class FormGoogleProtobufBoolvalue extends FormBool {}
+export class FormGoogleProtobufBoolvalue extends FormBool {}
 
 window.customElements.define(
   'form-google-protobuf-boolvalue',

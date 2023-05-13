@@ -37,7 +37,7 @@ import './furo-ui5-views-column-header.js';
  * @customElement furo-ui5-filtered-table
  * @appliesMixin FBP
  */
-class FuroUi5FilteredTable extends FuroUi5Table {
+export class FuroUi5FilteredTable extends FuroUi5Table {
   constructor() {
     super();
     /**

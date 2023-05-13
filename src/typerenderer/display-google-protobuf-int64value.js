@@ -9,7 +9,7 @@ import { DisplayInt64 } from './display-int64.js';
  * @summary display renderer for `google.protobuf.Int64Value`
  * @element display-google-protobuf-int64Value
  */
-class DisplayGoolgeProtobufIn64value extends DisplayInt64 {}
+export class DisplayGoolgeProtobufIn64value extends DisplayInt64 {}
 
 window.customElements.define(
   'display-google-protobuf-int64value',

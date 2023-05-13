@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-time-picker
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-time-picker.js';`<small>
 <br>exports *FuroUi5TimePicker* js
-<br>extends *src/furo-ui5-time-picker.js*
 <br> mixes *FieldNodeAdapter*</small>
 
 > **Summary:** furo data time picker field

@@ -12,7 +12,7 @@ import { CellBool } from './cell-bool.js';
  * @summary cell display renderer for `furo.fat.Bool`
  * @element cell-furo-fat-bool
  */
-class CellFuroFatBool extends CellBool {
+export class CellFuroFatBool extends CellBool {
   /**
    * Template logic
    * @returns {*}

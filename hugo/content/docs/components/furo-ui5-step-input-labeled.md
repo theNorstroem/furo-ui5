@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-step-input-labeled
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-step-input-labeled.js';`<small>
 <br>exports *FuroUi5StepInputLabeled* js
 <br>exports `<furo-ui5-step-input-labeled>` custom-element-definition
@@ -52,7 +52,7 @@ icon on the right
 ### **full**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">full</span>
-</small>
+<small>`boolean` </small>
 
 This is only used to forward the state to the form-field-container
 <br><br>

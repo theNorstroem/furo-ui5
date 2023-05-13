@@ -12,6 +12,6 @@ import { DisplayFuroFatInt64 } from './display-furo-fat-int64.js';
  * @summary display renderer for `furo.fat.Uint64`
  * @element display-furo-fat-uint64
  */
-class DisplayFuroFatUint64 extends DisplayFuroFatInt64 {}
+export class DisplayFuroFatUint64 extends DisplayFuroFatInt64 {}
 
 window.customElements.define('display-furo-fat-uint64', DisplayFuroFatUint64);

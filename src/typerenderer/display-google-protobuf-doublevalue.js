@@ -9,7 +9,7 @@ import { DisplayDouble } from './display-double.js';
  * @summary display renderer for `google.protobuf.DoubleValue`
  * @element display-google-protobuf-doublevalue
  */
-class DisplayGoogleProtobufDoublevalue extends DisplayDouble {}
+export class DisplayGoogleProtobufDoublevalue extends DisplayDouble {}
 
 window.customElements.define(
   'display-google-protobuf-doublevalue',

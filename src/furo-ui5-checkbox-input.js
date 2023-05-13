@@ -84,6 +84,7 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
+      hidden: undefined,
     };
 
     /**

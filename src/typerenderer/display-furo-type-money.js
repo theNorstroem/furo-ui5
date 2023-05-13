@@ -16,7 +16,7 @@ import { DisplayGoogleTypeMoney } from './display-google-type-money.js';
  * @summary display renderer for `furo.type.Money`
  * @element display-furo-type-money
  */
-class DisplayFuroTypeMoney extends DisplayGoogleTypeMoney {
+export class DisplayFuroTypeMoney extends DisplayGoogleTypeMoney {
   _formatDisplay() {
     this._valueObject.amount = DisplayGoogleTypeMoney._convertTypeToNumber(
       this._field

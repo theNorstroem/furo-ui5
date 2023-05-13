@@ -108,7 +108,7 @@ import { FBP } from '@furo/fbp';
  * @demo demo-furo-z-grid
  * @appliesMixin FBP
  */
-class FuroUi5ZGrid extends FBP(LitElement) {
+export class FuroUi5ZGrid extends FBP(LitElement) {
   /**
    * flow is ready lifecycle method
    * @private

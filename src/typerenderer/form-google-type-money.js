@@ -9,6 +9,6 @@ import { FuroUi5MoneyInputLabeled } from '../furo-ui5-money-input-labeled.js';
  * @summary form renderer for `google.type.Money`
  * @element form-google-type-money
  */
-class FormGoogleTypeMoney extends FuroUi5MoneyInputLabeled {}
+export class FormGoogleTypeMoney extends FuroUi5MoneyInputLabeled {}
 
 window.customElements.define('form-google-type-money', FormGoogleTypeMoney);

@@ -10,7 +10,7 @@ import { LitElement, html, css } from 'lit';
  * @summary cell display renderer for `google.protobuf.StringValue`
  * @element cell-google-protobuf-stringvalue
  */
-class CellGoogleProtobufStringvalue extends LitElement {
+export class CellGoogleProtobufStringvalue extends LitElement {
   constructor() {
     super();
     /**

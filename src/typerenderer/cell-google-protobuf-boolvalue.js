@@ -9,7 +9,7 @@ import { CellBool } from './cell-bool.js';
  * @summary cell display renderer for `google.protobuf.BoolValue`
  * @element cell-google-protobuf-boolvalue
  */
-class CellGoolgeProtobufBoolvalue extends CellBool {}
+export class CellGoolgeProtobufBoolvalue extends CellBool {}
 
 window.customElements.define(
   'cell-google-protobuf-boolvalue',

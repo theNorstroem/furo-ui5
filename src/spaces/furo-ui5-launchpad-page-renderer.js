@@ -13,7 +13,7 @@ import './furo-ui5-launchpad-section-renderer.js';
  * @customElement furo-ui5-launchpad-page-renderer
  * @appliesMixin FBP
  */
-class FuroUi5LaunchpadPageRenderer extends FBP(LitElement) {
+export class FuroUi5LaunchpadPageRenderer extends FBP(LitElement) {
   /**
    * flow is ready lifecycle method
    */

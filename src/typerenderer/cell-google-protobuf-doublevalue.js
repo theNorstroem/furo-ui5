@@ -9,7 +9,7 @@ import { CellDouble } from './cell-double.js';
  * @summary cell display renderer for `google.protobuf.DoubleValue`
  * @element cell-google-protobuf-doublevalue
  */
-class CellGoogleProtobufDoublevalue extends CellDouble {}
+export class CellGoogleProtobufDoublevalue extends CellDouble {}
 
 window.customElements.define(
   'cell-google-protobuf-doublevalue',

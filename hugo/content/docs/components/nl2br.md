@@ -6,7 +6,7 @@ weight: 100
 
 # nl2br
 
-**@furo/components** <small>v1.15.1</small>
+**@furo/components** <small>v1.16.2</small>
 <br>`import '@furo/components/src/src/directives/nl2br.js';`<small>
 <br>exports *nl2br* js</small>
 

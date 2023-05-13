@@ -10,7 +10,7 @@ import { LitElement, css } from 'lit';
  * @summary cell display renderer for `google.protobuf.Any`
  * @element cell-google-protobuf-any
  */
-class CellGoolgeProtobufAny extends LitElement {
+export class CellGoolgeProtobufAny extends LitElement {
   constructor() {
     super();
 

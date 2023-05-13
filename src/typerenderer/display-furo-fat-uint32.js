@@ -13,6 +13,6 @@ import { DisplayFuroFatInt32 } from './display-furo-fat-int32.js';
  * @summary display renderer for `furo.fat.Uint32`
  * @element display-furo-fat-Uint32
  */
-class DisplayFuroFatUint32 extends DisplayFuroFatInt32 {}
+export class DisplayFuroFatUint32 extends DisplayFuroFatInt32 {}
 
 window.customElements.define('display-furo-fat-uint32', DisplayFuroFatUint32);

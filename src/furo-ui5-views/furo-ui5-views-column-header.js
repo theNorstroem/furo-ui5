@@ -21,7 +21,7 @@ import { FBP } from '@furo/fbp';
  * @customElement
  * @appliesMixin FBP
  */
-class FuroUi5ViewsColumnHeader extends FBP(LitElement) {
+export class FuroUi5ViewsColumnHeader extends FBP(LitElement) {
   constructor() {
     super();
 

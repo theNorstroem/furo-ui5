@@ -9,7 +9,7 @@ import { DisplayUint32 } from './display-uint32.js';
  * @summary display renderer for `google.protobuf.Uint32Value`
  * @element display-google-protobuf-uint32value
  */
-class DisplayGoolgeProtobufUin32value extends DisplayUint32 {}
+export class DisplayGoolgeProtobufUin32value extends DisplayUint32 {}
 
 window.customElements.define(
   'display-google-protobuf-uint32value',

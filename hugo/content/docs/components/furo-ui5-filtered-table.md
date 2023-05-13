@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-filtered-table
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-views/furo-ui5-filtered-table.js';`<small>
+<br>exports *FuroUi5FilteredTable* js
 <br>exports `<furo-ui5-filtered-table>` custom-element-definition
 <br>extends */src/furo-ui5-table.js*
 <br>superclass *FuroUi5Table*</small>

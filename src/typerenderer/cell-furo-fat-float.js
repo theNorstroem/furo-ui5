@@ -11,7 +11,7 @@ import { CellFloat } from './cell-float.js';
  * @element cell-furo-fat-float
  * @demo demo cell-furo-fat-float Basic Usage
  */
-class CellFuroFatFloat extends CellFloat {
+export class CellFuroFatFloat extends CellFloat {
   /**
    *
    * @private

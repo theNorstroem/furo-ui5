@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-chart-display
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-chart-display.js';`<small>
+<br>exports *FuroUi5ChartDisplay* js
 <br>exports `<furo-ui5-chart-display>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
@@ -159,7 +160,7 @@ Enables the download option in the toolbar (svg,csv,png)
 ### **plotHorizontal**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">plot-horizontal</span>
-</small>
+<small>`boolean` </small>
 
 Enable this to draw the bars horizontally
 <br><br>
@@ -274,8 +275,10 @@ default: **{
       chart: {
         // height: 550,
         fontFamily: &#39;var(--sapFontFamily, Helvetica, Arial, sans-serif)&#39;,
+        foreColor: &#39;var(--sapTextColor)&#39;,
         type: &#39;line&#39;,
         stacked: false,
+        background: &#39;unset&#39;,
         events: {},
         toolbar: {
           show: false, // disable by default

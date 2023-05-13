@@ -10,7 +10,7 @@ import { CellFloat } from './cell-float.js';
  * @summary cell display renderer for `google.protobuf.`
  * @element cell-google-protobuf-
  */
-class CellGoolgeProtobufFloatvalue extends CellFloat {}
+export class CellGoolgeProtobufFloatvalue extends CellFloat {}
 
 window.customElements.define(
   'cell-google-protobuf-floatvalue',

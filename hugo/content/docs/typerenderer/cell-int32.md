@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-int32
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-int32.js';`<small>
 <br>exports *CellInt32* js
 <br>exports `<cell-int32>` custom-element-definition

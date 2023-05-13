@@ -62,6 +62,7 @@ export class FuroUi5RatingIndicator extends FieldNodeAdapter(
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
+      hidden: undefined,
     };
 
     /**

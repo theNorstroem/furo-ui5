@@ -8,7 +8,7 @@ import { FormInt32 } from './form-int32.js';
  * @summary form renderer for `google.protobuf.Double`
  * @element form-google-protobuf-doublevalue
  */
-class FormGoogleProtobufDoublevalue extends FormInt32 {}
+export class FormGoogleProtobufDoublevalue extends FormInt32 {}
 
 window.customElements.define(
   'form-google-protobuf-doublevalue',

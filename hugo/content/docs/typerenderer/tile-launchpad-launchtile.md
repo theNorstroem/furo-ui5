@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # tile-launchpad-launchtile
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/tile-launchpad-launchtile.js';`<small>
+<br>exports *TileLaunchpadLaunchtile* js
 <br>exports `<tile-launchpad-launchtile>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FieldNodeAdapter*

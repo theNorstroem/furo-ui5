@@ -8,7 +8,7 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @summary celledit renderer for `furo.Integerproperty`
  * @element celledit-furo-integerproperty
  */
-class CelleditFuroIntegerproperty extends CelleditInt32 {
+export class CelleditFuroIntegerproperty extends CelleditInt32 {
   /**
    * @private
    */

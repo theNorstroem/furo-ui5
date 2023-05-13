@@ -16,7 +16,7 @@ import { CellGoogleTypeMoney } from './cell-google-type-money.js';
  * @summary cell display renderer for `furo.type.Money`
  * @element cell-furo-type-money
  */
-class CellFuroTypeMoney extends CellGoogleTypeMoney {
+export class CellFuroTypeMoney extends CellGoogleTypeMoney {
   /**
    *
    * @private

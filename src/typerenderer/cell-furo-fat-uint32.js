@@ -13,6 +13,6 @@ import { CellFuroFatInt32 } from './cell-furo-fat-int32.js';
  * @summary cell display renderer for `furo.fat.Uint32`
  * @element cell-furo-fat-uint32
  */
-class CellFuroFatUint32 extends CellFuroFatInt32 {}
+export class CellFuroFatUint32 extends CellFuroFatInt32 {}
 
 window.customElements.define('cell-furo-fat-uint32', CellFuroFatUint32);

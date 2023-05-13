@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # cell-google-type-color
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-google-type-color.js';`<small>
+<br>exports *CellGoolgeTypeColor* js
 <br>exports `<cell-google-type-color>` custom-element-definition
 <br>superclass *LitElement*</small>
 

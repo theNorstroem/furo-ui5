@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-launchpad-navigation
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/spaces/furo-ui5-launchpad-navigation.js';`<small>
+<br>exports *FuroUi5LaunchpadNavigation* js
 <br>exports `<furo-ui5-launchpad-navigation>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>

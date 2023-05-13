@@ -9,7 +9,7 @@ import { FBP } from '@furo/fbp';
  * @customElement
  * @appliesMixin FBP
  */
-class FuroUi5SetGroupby extends FBP(LitElement) {
+export class FuroUi5SetGroupby extends FBP(LitElement) {
   /**
    * bindData
    * @public

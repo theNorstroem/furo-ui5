@@ -10,7 +10,9 @@ import { FBP } from '@furo/fbp';
  * @customElement tile-launchpad-monitortile
  * @appliesMixin FBP
  */
-class TileLaunchpadMonitortile extends FieldNodeAdapter(FBP(LitElement)) {
+export class TileLaunchpadMonitortile extends FieldNodeAdapter(
+  FBP(LitElement)
+) {
   bindData(fieldNode) {
     this._FBPTriggerWire('|-val', fieldNode.value);
     return super.bindData(fieldNode);

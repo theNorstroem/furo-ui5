@@ -120,6 +120,7 @@ export class FuroUi5MultiCombobox extends FieldNodeAdapter(ComboBox.default) {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
+      hidden: undefined,
     };
     /**
      * @private

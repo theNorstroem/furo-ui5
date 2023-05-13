@@ -53,7 +53,7 @@ import { FBP } from '@furo/fbp';
  * @element furo-ui5-flexible-grid
  * @appliesMixin FBP
  */
-class FuroUi5FlexibleGrid extends FBP(LitElement) {
+export class FuroUi5FlexibleGrid extends FBP(LitElement) {
   /**
    * @private
    * @return {Object}

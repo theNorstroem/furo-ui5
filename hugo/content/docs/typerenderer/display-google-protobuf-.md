@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # display-google-protobuf-
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/display-google-protobuf-any.js';`<small>
+<br>exports *DisplayGoolgeProtobufAny* js
 <br>exports `<display-google-protobuf-any>` custom-element-definition
 <br>superclass *LitElement*</small>
 

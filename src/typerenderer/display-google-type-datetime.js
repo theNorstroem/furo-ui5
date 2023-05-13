@@ -10,7 +10,7 @@ import { Env } from '@furo/framework';
  * @customElement
  * @appliesMixin FBP
  */
-class DisplayGoogleTypeDatetime extends FieldNodeAdapter(LitElement) {
+export class DisplayGoogleTypeDatetime extends FieldNodeAdapter(LitElement) {
   constructor() {
     super();
     /**

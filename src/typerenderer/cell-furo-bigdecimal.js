@@ -10,7 +10,7 @@ import { CellFloat } from './cell-float.js';
  * @summary cell display renderer for type `furo.BigDecimal`
  * @element cell-furo-bigdecimal
  */
-class CellFuroBigdecimal extends CellFloat {
+export class CellFuroBigdecimal extends CellFloat {
   /**
    *
    * @private

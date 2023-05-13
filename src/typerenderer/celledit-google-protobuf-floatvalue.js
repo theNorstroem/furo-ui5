@@ -8,7 +8,7 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @summary celledit renderer for `google.protobuf.FloatValue`
  * @element celledit-google-protobuf-floatvalue
  */
-class CelleditGoolgeProtobufFloatvalue extends CelleditInt32 {
+export class CelleditGoolgeProtobufFloatvalue extends CelleditInt32 {
   /**
    * @private
    */

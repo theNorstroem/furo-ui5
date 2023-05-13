@@ -16,7 +16,7 @@ import '../../../furo-ui5-dialog.js';
  * @customElement
  * @appliesMixin FBP
  */
-class HelperDialogFilterSettings extends FBP(LitElement) {
+export class HelperDialogFilterSettings extends FBP(LitElement) {
   constructor() {
     super();
     this.colheaderField = 'Field';

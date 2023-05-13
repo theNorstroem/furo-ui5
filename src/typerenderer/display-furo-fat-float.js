@@ -10,7 +10,7 @@ import { DisplayFloat } from './display-float.js';
  * @summary display renderer for `furo.fat.Float`
  * @element display-furo-fat-float
  */
-class DisplayFuroFatFloat extends DisplayFloat {
+export class DisplayFuroFatFloat extends DisplayFloat {
   _formatDisplay() {
     /**
      * Sets the attributes from the field node
