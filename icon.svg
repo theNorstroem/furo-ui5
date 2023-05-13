@@ -1,6 +1,6 @@
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
 
   <circle fill="rgb(255, 97, 22)" cx="50" cy="50" r="50"></circle>
-  <text font-size="300%" font-weight="900" x="5" y="28" >フ</text>
+  <text font-size="360%" font-weight="900" x="5" y="30" >フ</text>
   <text font-size="500%" font-weight="900" x="5" y="75" >ui5</text>
 </svg>
