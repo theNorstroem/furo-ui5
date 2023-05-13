@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # cell-furo-reference
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-furo-reference.js';`<small>
+<br>exports *CellFuroReference* js
 <br>exports `<cell-furo-reference>` custom-element-definition
 <br>superclass *LitElement*</small>
 

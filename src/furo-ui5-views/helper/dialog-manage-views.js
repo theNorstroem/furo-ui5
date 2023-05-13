@@ -12,7 +12,7 @@ import './dialog-manage-views-deletebutton.js';
  * @customElement
  * @appliesMixin FBP
  */
-class DialogManageViews extends FBP(LitElement) {
+export class DialogManageViews extends FBP(LitElement) {
   constructor() {
     super();
     this.manageViewHeaderText = 'Manage Views';

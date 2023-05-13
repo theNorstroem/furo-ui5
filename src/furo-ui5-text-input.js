@@ -126,6 +126,7 @@ export class FuroUi5TextInput extends FieldNodeAdapter(Input.default) {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
+      hidden: undefined,
     };
 
     /**

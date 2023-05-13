@@ -11,7 +11,7 @@ import { LitElement, html, css } from 'lit';
  * @element cell-furo-link
  *
  */
-class CellFuroLink extends LitElement {
+export class CellFuroLink extends LitElement {
   static get styles() {
     // language=CSS
     return css`

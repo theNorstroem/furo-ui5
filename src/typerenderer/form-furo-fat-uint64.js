@@ -9,6 +9,6 @@ import { FormInt32 } from './form-int32.js';
  * @element form-furo-fat-uint64
  */
 
-class FormFuroFatUint64 extends FormInt32 {}
+export class FormFuroFatUint64 extends FormInt32 {}
 
 window.customElements.define('form-furo-fat-uint64', FormFuroFatUint64);

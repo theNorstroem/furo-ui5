@@ -8,7 +8,7 @@ import { LitElement } from 'lit';
  * @summary Display element for furo-ui5-dialog
  * @element furo-ui5-dialog-display
  */
-class FuroUi5DialogDisplay extends LitElement {
+export class FuroUi5DialogDisplay extends LitElement {
   connectedCallback() {
     this.parentNode.addEventListener('register-furo-ui5-dialog', e => {
       e.stopPropagation();

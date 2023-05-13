@@ -76,6 +76,7 @@ export class FuroUi5PasswordInput extends FieldNodeAdapter(Input.default) {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
+      hidden: undefined,
     };
 
     this._attributesFromFAT = {

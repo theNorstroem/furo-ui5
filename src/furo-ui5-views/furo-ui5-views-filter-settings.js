@@ -16,7 +16,7 @@ import './helper/filter/helper-dialog-filter-settings.js';
  * @customElement furo-ui5-views-filter-settings
  * @appliesMixin FBP
  */
-class FuroUi5ViewsFilterSettings extends FBP(LitElement) {
+export class FuroUi5ViewsFilterSettings extends FBP(LitElement) {
   constructor() {
     super();
     this.colheaderField = 'Field';

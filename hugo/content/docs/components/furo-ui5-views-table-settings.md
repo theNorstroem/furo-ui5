@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-views-table-settings
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-views/furo-ui5-views-table-settings.js';`<small>
+<br>exports *FuroUi5ViewsTableSettings* js
 <br>exports `<furo-ui5-views-table-settings>` custom-element-definition
 <br>superclass *LitElement*
 <br> mixes *FBP*</small>
@@ -104,7 +105,7 @@ Placeholder for the searcher field.
 ### **rowType**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">row-type</span>
-</small>
+<small>`string` </small>
 
 Define the type for a row
 <br><br>
@@ -112,7 +113,7 @@ Define the type for a row
 ### **requiredFields**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">required-fields</span>
-</small>
+<small>`string` </small>
 
 Define fields that are required for your business logic. Required fields are always requested from the server
 even when they are not displayed.
@@ -121,7 +122,7 @@ even when they are not displayed.
 ### **sortable**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">sortable</span>
-</small>
+<small>`boolean` </small>
 
 Set this to true to enable the sorting view in the dialog.
 <br><br>

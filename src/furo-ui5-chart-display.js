@@ -32,7 +32,7 @@ import ApexCharts from 'apexcharts/dist/apexcharts.esm.js';
  * @demo demo-furo-ui5-chart-bubble Bubble
  * @appliesMixin FBP
  */
-class FuroUi5ChartDisplay extends FBP(LitElement) {
+export class FuroUi5ChartDisplay extends FBP(LitElement) {
   constructor() {
     super();
 

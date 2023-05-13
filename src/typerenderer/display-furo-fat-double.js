@@ -10,7 +10,7 @@ import { DisplayDouble } from './display-double.js';
  * @summary display renderer for `furo.fat.Double`
  * @element display-furo-fat-double
  */
-class DisplayFuroFatDouble extends DisplayDouble {
+export class DisplayFuroFatDouble extends DisplayDouble {
   _formatDisplay() {
     /**
      * Sets the attributes from the field node

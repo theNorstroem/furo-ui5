@@ -8,7 +8,7 @@ import { CelleditBool } from './celledit-bool.js';
  * @summary celledit renderer for `bool`
  * @element celledit-furo-fat-bool
  */
-class CelleditFuroFatBool extends CelleditBool {
+export class CelleditFuroFatBool extends CelleditBool {
   /**
    * @private
    */

@@ -8,7 +8,7 @@ import { FormInt32 } from './form-int32.js';
  * @summary form renderer for `furo.Integerproperty`
  * @element form-furo-integerproperty
  */
-class FormFuroIntegerproperty extends FormInt32 {
+export class FormFuroIntegerproperty extends FormInt32 {
   bindData(fieldNode) {
     super.bindData(fieldNode.data);
   }

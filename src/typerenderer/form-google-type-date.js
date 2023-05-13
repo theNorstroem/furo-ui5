@@ -9,6 +9,6 @@ import { FuroUi5DatePickerLabeled } from '../furo-ui5-date-picker-labeled.js';
  * @summary form renderer for `google.type.Date`
  * @element form-google-type-date
  */
-class FormGoogleTypeDate extends FuroUi5DatePickerLabeled {}
+export class FormGoogleTypeDate extends FuroUi5DatePickerLabeled {}
 
 window.customElements.define('form-google-type-date', FormGoogleTypeDate);

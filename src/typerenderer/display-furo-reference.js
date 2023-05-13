@@ -16,7 +16,7 @@ import '@ui5/webcomponents/dist/Link.js';
  * @summary display renderer for `furo.Reference`
  * @element display-furo-reference
  */
-class DisplayFuroReference extends FBP(LitElement) {
+export class DisplayFuroReference extends FBP(LitElement) {
   constructor() {
     super();
     /**

@@ -8,7 +8,7 @@ import { LitElement } from 'lit';
  * @summary Display element for furo-ui5-toast
  * @element furo-ui5-toast-display
  */
-class FuroUi5ToastDisplay extends LitElement {
+export class FuroUi5ToastDisplay extends LitElement {
   connectedCallback() {
     this.parentNode.addEventListener('register-furo-ui5-toast', e => {
       e.stopPropagation();

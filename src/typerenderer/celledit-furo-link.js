@@ -10,7 +10,7 @@ import { LitElement, html, css } from 'lit';
  * @summary celledit renderer for `furo.Link`
  * @element celledit-furo-link
  */
-class CelleditFuroLink extends LitElement {
+export class CelleditFuroLink extends LitElement {
   static get styles() {
     // language=CSS
     return css`

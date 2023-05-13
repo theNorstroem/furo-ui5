@@ -12,6 +12,6 @@ import { CellFuroFatInt64 } from './cell-furo-fat-int64.js';
  * @summary cell display renderer for `furo.fat.Uint64`
  * @element cell-furo-fat-uint64
  */
-class CellFuroFatUint64 extends CellFuroFatInt64 {}
+export class CellFuroFatUint64 extends CellFuroFatInt64 {}
 
 window.customElements.define('cell-furo-fat-uint64', CellFuroFatUint64);

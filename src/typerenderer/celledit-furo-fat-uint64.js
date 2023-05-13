@@ -9,7 +9,7 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @element celledit-furo-fat-uint64
  */
 
-class CelleditFuroFatUint64 extends CelleditInt32 {
+export class CelleditFuroFatUint64 extends CelleditInt32 {
   /**
    * @private
    */

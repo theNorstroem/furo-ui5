@@ -15,7 +15,7 @@ import { Env } from '@furo/framework/src/furo.js';
  * @summary cell display renderer for `google.protobuf.Timestamp`
  * @element cell-google-protobuf-timestamp
  */
-class CellGoogleProtobufTimestamp extends LitElement {
+export class CellGoogleProtobufTimestamp extends LitElement {
   constructor() {
     super();
     /**

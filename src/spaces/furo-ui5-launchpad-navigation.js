@@ -13,7 +13,7 @@ import '@ui5/webcomponents/dist/Tab.js';
  * @customElement furo-ui5-launchpad-navigation
  * @appliesMixin FBP
  */
-class FuroUi5LaunchpadNavigation extends FBP(LitElement) {
+export class FuroUi5LaunchpadNavigation extends FBP(LitElement) {
   constructor() {
     super();
     const urlParams = new URLSearchParams(window.location.search);

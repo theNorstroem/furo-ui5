@@ -75,6 +75,7 @@ export class FuroUi5RadioButton extends FieldNodeAdapter(RadioButton.default) {
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
+      hidden: undefined,
     };
 
     // a list of privileged attributes. when those attributes are set in number-input components initially.

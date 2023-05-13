@@ -111,6 +111,7 @@ export class FuroUi5Select extends FieldNodeAdapter(Select.default) {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
+      hidden: undefined,
     };
     /**
      * @private

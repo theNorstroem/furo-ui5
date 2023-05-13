@@ -8,7 +8,7 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @summary celledit renderer for `furo.fat.Float`
  * @element celledit-furo-fat-float
  */
-class CelleditFuroFatFloat extends CelleditInt32 {
+export class CelleditFuroFatFloat extends CelleditInt32 {
   /**
    * @private
    */

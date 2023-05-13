@@ -15,7 +15,7 @@ import { CellGoogleTypeDate } from './cell-google-type-date.js';
  * @summary cell display renderer for `furo.type.Date`
  * @element cell-furo-type-date
  */
-class CellFuroTypeDate extends CellGoogleTypeDate {
+export class CellFuroTypeDate extends CellGoogleTypeDate {
   /**
    *
    * @private

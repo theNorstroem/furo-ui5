@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-tree-item
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/subcomponents/furo-ui5-tree-item.js';`<small>
 <br>exports *FuroUi5TreeItem* js
 <br>exports `<furo-ui5-tree-item>` custom-element-definition
@@ -66,7 +66,7 @@ default: **&#39;border&#39;**</small>
 ### **focused**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">focused</span> <small>**reflects**</small>
-</small>
+<small>`boolean` </small>
 
 
 <br><br>
@@ -74,7 +74,7 @@ default: **&#39;border&#39;**</small>
 ### **searchmatch**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">searchmatch</span> <small>**reflects**</small>
-</small>
+<small>`boolean` </small>
 
 
 <br><br>
@@ -82,7 +82,7 @@ default: **&#39;border&#39;**</small>
 ### **inedit**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">inedit</span> <small>**reflects**</small>
-</small>
+<small>`boolean` </small>
 
 
 <br><br>
@@ -90,7 +90,7 @@ default: **&#39;border&#39;**</small>
 ### **haserror**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">haserror</span> <small>**reflects**</small>
-</small>
+<small>`boolean` </small>
 
 
 <br><br>
@@ -98,7 +98,7 @@ default: **&#39;border&#39;**</small>
 ### **selected**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">selected</span> <small>**reflects**</small>
-</small>
+<small>`boolean` </small>
 
 
 <br><br>
@@ -106,7 +106,7 @@ default: **&#39;border&#39;**</small>
 ### **noicon**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">noicon</span>
-</small>
+<small>`boolean` </small>
 
 
 <br><br>

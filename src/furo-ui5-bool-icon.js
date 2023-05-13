@@ -22,7 +22,7 @@ import '@ui5/webcomponents-icons/dist/navigation-right-arrow.js';
  * @element furo-ui5-bool-icon
  * @appliesMixin FBP
  */
-class FuroDataBoolIcon extends FBP(LitElement) {
+export class FuroDataBoolIcon extends FBP(LitElement) {
   constructor() {
     super();
 

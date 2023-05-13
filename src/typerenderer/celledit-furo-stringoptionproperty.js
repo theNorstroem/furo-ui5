@@ -6,7 +6,7 @@ import { FuroUi5Select } from '../furo-ui5-select.js';
  * @summary celledit renderer for `furo.Stringoptionproperty`
  * @element celledit-furo-stringoptionproperty
  */
-class CelleditFuroStringoptionproperty extends FuroUi5Select {
+export class CelleditFuroStringoptionproperty extends FuroUi5Select {
   /**
    * @private
    */

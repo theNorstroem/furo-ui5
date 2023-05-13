@@ -10,7 +10,7 @@ import '@furo/data/src/furo-type-renderer.js';
  * @customElement
  * @appliesMixin FBP
  */
-class FuroUi5MessageContainerItem extends FBP(LitElement) {
+export class FuroUi5MessageContainerItem extends FBP(LitElement) {
   /**
    * @private
    * @return {Object}

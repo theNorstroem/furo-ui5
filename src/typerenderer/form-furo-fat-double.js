@@ -8,6 +8,6 @@ import { FormInt32 } from './form-int32.js';
  * @summary form renderer for `furo.fat.Double`
  * @element form-furo-fat-double
  */
-class FormFuroFatDouble extends FormInt32 {}
+export class FormFuroFatDouble extends FormInt32 {}
 
 window.customElements.define('form-furo-fat-double', FormFuroFatDouble);

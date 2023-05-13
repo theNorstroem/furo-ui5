@@ -9,7 +9,7 @@ import { DisplayBool } from './display-bool.js';
  * @summary display renderer for `google.protobuf.BoolValue`
  * @element display-google-protobuf-boolvalue
  */
-class DisplayGoolgeProtobufBoolvalue extends DisplayBool {}
+export class DisplayGoolgeProtobufBoolvalue extends DisplayBool {}
 
 window.customElements.define(
   'display-google-protobuf-boolvalue',

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-property-labeled
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/display-furo-property-repeats-labeled.js';`<small>
 <br>exports *DisplayFuroPropertyRepeatsLabeled* js
 <br>exports `<display-furo-property-repeats-labeled>` custom-element-definition

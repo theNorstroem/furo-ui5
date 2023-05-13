@@ -8,7 +8,7 @@ import { FormInt32 } from './form-int32.js';
  * @summary form renderer for `google.protobuf.Int64Value`
  * @element form-google-protobuf-int64value
  */
-class FormGoolgeProtobufIn64value extends FormInt32 {}
+export class FormGoolgeProtobufIn64value extends FormInt32 {}
 
 window.customElements.define(
   'form-google-protobuf-int64value',

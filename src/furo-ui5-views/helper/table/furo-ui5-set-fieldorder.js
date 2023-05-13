@@ -9,7 +9,7 @@ import { FBP } from '@furo/fbp';
  * @customElement
  * @appliesMixin FBP
  */
-class FuroUi5SetFieldorder extends FBP(LitElement) {
+export class FuroUi5SetFieldorder extends FBP(LitElement) {
   /**
    * bindData
    * @public

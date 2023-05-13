@@ -29,7 +29,7 @@ import { LitElement, css } from 'lit';
  * @demo demo-furo-ui5-chart-bubble Bubble
  * @appliesMixin FBP
  */
-class FuroUi5Chart extends LitElement {
+export class FuroUi5Chart extends LitElement {
   constructor() {
     super();
     this.strokeWidth = 1;

@@ -14,7 +14,7 @@ import '@ui5/webcomponents/dist/Link.js';
  * @element cell-furo-reference
  *
  */
-class CellFuroReference extends LitElement {
+export class CellFuroReference extends LitElement {
   constructor() {
     super();
     /**

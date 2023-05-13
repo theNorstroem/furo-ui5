@@ -6,7 +6,7 @@ import { FuroUi5DatePicker } from '../furo-ui5-date-picker.js';
  * @summary celledit renderer for `furo.type.Date`
  * @element celledit-furo-type-date
  */
-class CelleditFuroTypeDate extends FuroUi5DatePicker {
+export class CelleditFuroTypeDate extends FuroUi5DatePicker {
   /**
    * @private
    */

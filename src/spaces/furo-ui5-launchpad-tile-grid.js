@@ -10,7 +10,7 @@ import { FBP } from '@furo/fbp';
  * @customElement furo-ui5-launchpad-tile-grid
  * @appliesMixin FBP
  */
-class FuroUi5LaunchpadTileGrid extends FBP(LitElement) {
+export class FuroUi5LaunchpadTileGrid extends FBP(LitElement) {
   _FBPReady() {
     super._FBPReady();
   }

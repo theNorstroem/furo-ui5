@@ -15,7 +15,7 @@ import { DisplayGoogleTypeDate } from './display-google-type-date.js';
  * @summary display renderer for `furo.type.Date`
  * @element display-furo-type-date
  */
-class DisplayFuroTypeDate extends DisplayGoogleTypeDate {
+export class DisplayFuroTypeDate extends DisplayGoogleTypeDate {
   _formatDisplay() {
     if (
       this._field.display_name._value &&

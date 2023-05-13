@@ -11,7 +11,7 @@ import { CellDouble } from './cell-double.js';
  * @summary cell display renderer for `furo.fat.Double`
  * @element cell-furo-fat-double
  */
-class CellFuroFatDouble extends CellDouble {
+export class CellFuroFatDouble extends CellDouble {
   /**
    *
    * @private

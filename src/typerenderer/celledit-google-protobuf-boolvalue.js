@@ -9,7 +9,7 @@ import { CelleditBool } from './celledit-bool.js';
  * @element celledit-google-protobuf-boolvalue
  */
 
-class CelleditGoogleProtobufBoolvalue extends CelleditBool {
+export class CelleditGoogleProtobufBoolvalue extends CelleditBool {
   /**
    * @private
    */

@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # form-google-type-date
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/form-google-type-date.js';`<small>
+<br>exports *FormGoogleTypeDate* js
 <br>exports `<form-google-type-date>` custom-element-definition
 <br>extends */src/furo-ui5-date-picker-labeled.js*
 <br>superclass *FuroUi5DatePickerLabeled*</small>

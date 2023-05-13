@@ -11,7 +11,7 @@ import { DisplayBool } from './display-bool.js';
  * @summary display renderer for `furo.fat.Bool`
  * @element display-furo-fat-bool
  */
-class DisplayFuroFatBool extends DisplayBool {
+export class DisplayFuroFatBool extends DisplayBool {
   /**
    * Template logic
    * @returns {*}

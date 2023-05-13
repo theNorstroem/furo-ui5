@@ -10,7 +10,7 @@ import { LitElement, css } from 'lit';
  * @summary display renderer for `google.protobuf.`
  * @element display-google-protobuf-
  */
-class DisplayGoolgeProtobufAny extends LitElement {
+export class DisplayGoolgeProtobufAny extends LitElement {
   constructor() {
     super();
     this._typeResolved = false;

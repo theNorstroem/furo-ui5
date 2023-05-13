@@ -5,8 +5,9 @@ weight: 50
 ---
 
 # cell-google-protobuf-uint32value
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-google-protobuf-uint32value.js';`<small>
+<br>exports *CellGoolgeProtobufUin32value* js
 <br>exports `<cell-google-protobuf-uint32value>` custom-element-definition
 <br>extends */src/typerenderer/cell-uint32.js*
 <br>superclass *CellUint32*</small>

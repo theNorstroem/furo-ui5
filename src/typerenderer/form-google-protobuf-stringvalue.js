@@ -5,7 +5,7 @@ import { FuroUi5TextInputLabeled } from '../furo-ui5-text-input-labeled.js';
  * @summary form renderer for `google.protobuf.StringValue`
  * @element form-google-protobuf-stringValue
  */
-class FormGoogleProtobufStringvalue extends FuroUi5TextInputLabeled {
+export class FormGoogleProtobufStringvalue extends FuroUi5TextInputLabeled {
   bindData(fieldNode) {
     super.bindData(fieldNode);
   }

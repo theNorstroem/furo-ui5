@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-pagination-bar
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-pagination-bar.js';`<small>
 <br>exports *FuroUi5PaginationBar* js
 <br>exports `<furo-ui5-pagination-bar>` custom-element-definition
@@ -45,7 +45,7 @@ information like prev, next, first and last
 ### **first**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">first</span>
-</small>
+<small>`boolean` </small>
 
 
 <br><br>
@@ -53,7 +53,7 @@ information like prev, next, first and last
 ### **prev**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">prev</span>
-</small>
+<small>`boolean` </small>
 
 
 <br><br>
@@ -61,7 +61,7 @@ information like prev, next, first and last
 ### **next**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">next</span>
-</small>
+<small>`boolean` </small>
 
 
 <br><br>
@@ -69,7 +69,7 @@ information like prev, next, first and last
 ### **last**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">last</span>
-</small>
+<small>`boolean` </small>
 
 
 <br><br>

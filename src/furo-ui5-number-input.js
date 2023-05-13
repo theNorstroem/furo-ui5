@@ -79,6 +79,7 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
       readonly: undefined,
       disabled: undefined,
       required: undefined,
+      hidden: undefined,
     };
     /**
      * @private

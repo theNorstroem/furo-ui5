@@ -8,7 +8,7 @@ import { CelleditString } from './celledit-string.js';
  * @summary celledit renderer for `furo.fat.String`
  * @element celledit-furo-fat-string
  */
-class CelleditFuroFatString extends CelleditString {
+export class CelleditFuroFatString extends CelleditString {
   /**
    * @private
    */

@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-segmented-button
-**@furo/ui5** <small>v1.15.1</small>
+**@furo/ui5** <small>v1.16.2</small>
 <br>`import '@furo/ui5/src/furo-ui5-segmented-button.js';`<small>
 <br>exports *FuroUi5SegmentedButton* js
-<br>extends *src/furo-ui5-segmented-button.js*
 <br> mixes *FieldNodeAdapter*</small>
 
 > **Summary:** segmented button

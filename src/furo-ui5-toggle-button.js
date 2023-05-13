@@ -86,6 +86,7 @@ export class FuroUi5ToggleButton extends FieldNodeAdapter(
     this._labelsFromFAT = {
       readonly: undefined,
       disabled: undefined,
+      hidden: undefined,
     };
 
     /**

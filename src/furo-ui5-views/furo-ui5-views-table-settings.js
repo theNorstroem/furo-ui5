@@ -16,7 +16,7 @@ import './helper/table/furo-ui5-set-groupby.js';
  * @customElement furo-ui5-views-table-settings
  * @appliesMixin FBP
  */
-class FuroUi5ViewsTableSettings extends FBP(LitElement) {
+export class FuroUi5ViewsTableSettings extends FBP(LitElement) {
   constructor() {
     super();
     this.headerText = 'View Settings';

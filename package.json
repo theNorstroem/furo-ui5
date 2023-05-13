@@ -4,6 +4,7 @@
   "version": "1.16.2",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": "git@github.com:eclipse/eclipsefuro-web.git",
+  "web-types": "web-types.json",
   "author": {
     "name": "theNorstroem",
     "email": "",
@@ -51,7 +52,7 @@
     "signature_pad": "4.0.2"
   },
   "devDependencies": {
-    "@custom-elements-manifest/analyzer": "^0.6.4",
+    "@custom-elements-manifest/analyzer": "^0.8.2",
     "@open-wc/eslint-config": "^7.0.0",
     "@open-wc/testing": "^3.0.3",
     "@web/dev-server": "^0.1.34",

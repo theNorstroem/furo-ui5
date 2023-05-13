@@ -26,7 +26,7 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode';
  * @customElement
  * @appliesMixin FBP
  */
-class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
+export class FuroUi5MessageContainerDisplay extends FBP(LitElement) {
   /**
    * @private
    * @return {Object}
