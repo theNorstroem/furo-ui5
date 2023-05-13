@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.8.2",
+    "@furo/web-types": "^0.0.4",
     "@open-wc/eslint-config": "^7.0.0",
     "@open-wc/testing": "^3.0.3",
     "@web/dev-server": "^0.1.34",
