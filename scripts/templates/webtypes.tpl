@@ -21,7 +21,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "{{if $declaration.description}}{{$declaration.description  | replace "\n" "\\n" | replace "\t" "  " | replace "\"" "\\\"" | replace "\\" "\\\\"  | replace "\\\"" "\""   | replace "\\\\" "\\" | replace "\\c" " / c" | noescape}}{{end}}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/{{$name | replace "@" "" | replace "/" "-"}}/{{$declaration.tagName}}/",
+          "doc-url": "https://ui5.furo.pro/docs/{{if regexMatch ".*typerenderer/.*" $mod.path}}typerenderer{{else}}components{{end}}/{{$declaration.tagName}}/",
           "attributes": [
                     {{- $mc := -1}}
                     {{- range $field := $declaration.attributes}}

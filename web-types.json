@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "@furo/ui5",
-  "version": "1.16.2",
+  "version": "1.17.1",
   "description-markup": "markdown",
   "js-types-syntax": "typescript",
   "default-icon": "icon.svg",
@@ -17,7 +17,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The 'furo-ui5-barcode-scanner-dialog' component  provides barcode scanning functionality for all devices that\nsupport the MediaDevices.getUserMedia() native API. Opening the dialog launches the device camera and scans for known barcode formats.\nInternally, the component uses the zxing-js/library third party OSS. For a list of supported barcode formats, see the\nzxing-js/library documentation. https://github.com/zxing-js/library\n\nIt supports all features from the [SAP ui5 Barcode Scanner Dialog element](https://sap.github.io/ui5-webcomponents/playground/components/BarcodeScannerDialog/).\n\nYou can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.\n\n```html\n <furo-ui5-button at-click=--openClicked>Open Scanner</furo-ui5-button>\n <furo-ui5-barcode-scanner-dialog fn-show=\"--openClicked\"\n                                  fn-bind-data=\"--dao(*.field)\"></furo-ui5-barcode-scanner-dialog>\n\n```\n\n## Methods\n**bindData(fieldNode)**\nBind an entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-barcode-scanner-dialog/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-barcode-scanner-dialog/",
           "attributes": [
                     ]
           ,
@@ -64,7 +64,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "Displays a icon/symbol for a boolean value\n\nThis component uses the SAP Ui5 icons.\nhttps://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\n\n```html\n<furo-ui5-bool-icon fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-bool-icon>\n```\n\nOnly `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are imported.\nIf you set other icons, please do not forget to import them.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-bool-icon/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-bool-icon/",
           "attributes": [{
                         "name": "symboltrue",
                         "type": "string",
@@ -132,7 +132,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-button component represents a simple push button. It enables users to trigger actions by clicking or\ntapping the furo-ui5-button, or by pressing certain keyboard keys, such as Enter.\nUsage\nFor the furo-ui5-button UI, you can define text, icon, or both. You can also specify whether the text or the icon is displayed first.\n\n```html\n<furo-ui5-button>Register</furo-ui5-button>\n```\n\nYou can choose from a set of predefined types that offer different styling to correspond to the triggered action.\n\nYou can set the furo-ui5-button as enabled or disabled.\nAn enabled ui5-button can be pressed by clicking or tapping it.\nThe button changes its style to provide visual feedback to the user that it is pressed or hovered over with the mouse cursor.\nA disabled furo-ui5-button appears inactive and cannot be pressed.\n\nWhat is different from ui5-button?\nWith flow based programming it's usual to address functions. So we added two convenience functions for\n- disabling => fn-disable\n- enabling => fn-enable\n\nhttps://sap.github.io/ui5-webcomponents/playground/components/Button/",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-button/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-button/",
           "attributes": [
                     ]
           ,
@@ -183,7 +183,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-card is a bindable card that represents information in the form of a tile with\nseparate header and content areas.\n\n```html\n <furo-ui5-card\n   heading=\"Title\"\n   subheading=\"Secondary text\"\n   icon=\"card\"\n >\n     <div slot=\"action\"><furo-ui5-button>Action</furo-ui5-button></div>\n     <div slot=\"content\">content goes here</div>\n </furo-ui5-card>\n```\n\n## How To Use Semantic Colors\nYou can use semantic colors to visualize the status or state. Set the attribute design=\"\" with the following values:\n- Positive (--sapPositiveColor)\n- Negative (--sapNegativeColor)\n- Critical (--sapCriticalColor)\n- Neutral (--sapCriticalColor)\n\n```html\n <furo-ui5-card\n   design=\"Positive\"\n   icon=\"card\"\n >\n     <div slot=\"content\">content goes here</div>\n </furo-ui5-card>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-card/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-card/",
           "attributes": [{
                         "name": "heading",
                         "type": "string",
@@ -322,7 +322,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-chart-display is the render component\nto display charts with apex the apex charts lib (https://github.com/apexcharts/apexcharts.js).\n\n Use `furo-ui5-chart` to connect your data.\n\n ```html\n <furo-ui5-chart-display chart-type=\"bar\">\n    <furo-ui5-chart\n        fn-bind-data=\"--projectDAO(*.entities)\"\n        data-field=\"data.cost_limit.units\"\n        category-field=\"data.description\"\n    ></furo-ui5-chart>\n </furo-ui5-chart-display>\n ```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-chart-display/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-chart-display/",
           "attributes": [{
                         "name": "chart-type",
                         "type": "String",
@@ -540,7 +540,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "furo-ui5-chart connects data objects (repeaterNodes) with the charting lib.\n\n Use multiple binders if you need more then one series per chart.\n\n ```html\n <furo-ui5-chart-display chart-type=\"bar\">\n    <furo-ui5-chart\n        fn-bind-data=\"--projectDAO(*.entities)\"\n        data-field=\"data.cost_limit.units\"\n        category-field=\"data.description\"\n    ></furo-ui5-chart>\n </furo-ui5-chart-display>\n ```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-chart/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-chart/",
           "attributes": [{
                         "name": "data-field",
                         "type": "String",
@@ -736,7 +736,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-checkbox-input-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.\n\n```html\n<furo-ui5-checkbox-input-labeled fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-checkbox-labeled>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-checkbox-input-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-checkbox-input-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -821,7 +821,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The 'furo-ui5-checkbox-input' component allows the user to switch true and false for type Bool with data binding.\n\nIt supports all features from the [SAP ui5 checkbox element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).\n\nBindable FieldNodes: `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.\n\n```html\n <furo-ui5-checkbox-input\n    fn-bind-data=\"--dao(FIELDNODE)\"\n ></furo-ui5-checkbox-input>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n| meta   | fat   | html   |\n|------  |-----  |------  |\n| 1      | 10    | 100    |\n\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n\nThe constraint **required** will mark the element as required.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-checkbox-input/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-checkbox-input/",
           "attributes": [
                     ]
           ,
@@ -899,7 +899,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-combobox-labeled`\nThe furo-ui5-combobox-labeled is a composition to easily use a complete data combobox with label according\nto the design specification of SAP Fiori Design System.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-combobox-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-combobox-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -1019,7 +1019,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-combobox component represents a drop-down menu with a list of the available options and a text input field\nto narrow down the options. It is commonly used to enable users to select an option from a predefined list.\nUse the function bindOptions to bind a RepeaterNode as an option list.\n\n```html\n<furo-ui5-combobox\n   fn-bind-data=\"--entity(*.data.description)\"\n   fn-bind-options=\"--collection(*.entities)\">\n</furo-ui5-combobox>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-combobox/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-combobox/",
           "attributes": [
                     ]
           ,
@@ -1127,7 +1127,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-context-menu-display is the display element for furo-ui5-context-menu and submenus.\nPlace this component as high as needed in your dom.\n\nYou should not interact with this component directly. Use [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.\n\nThere is nothing more to do. The menu creates a transparent \"backdrop\" with absolute positions 0 0 0 0\n\n```html\n <furo-ui5-context-menu-display></furo-ui5-context-menu-display>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-context-menu-display/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-context-menu-display/",
           "attributes": [
                     ]
           ,
@@ -1159,7 +1159,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "furo-ui5-context-menu is a context menu or menu element.\n\nA `furo-ui5-context-menu-display` element must be inserted in one of the parent elements of the element where you\nuse the `furo-ui5-context-menu`. The app-shell or even body is a good place for that.\n\n`furo-ui5-context-menu` uses **diplay:inline**, do not forget to change it to display:block if you place it around a block level element.\n\n```html\n <furo-ui5-context-menu  fn-trigger=\"--menuClkd\" fn-bind-data=\"--menuObject\" at-menu-item-selected=\"--menuItem\">\n     <ui5-icon name=\"menu\" at-click=\"--menuClkd\"></ui5-icon>\n </furo-ui5-context-menu>\n```\n\n## Data signature\n\n```yaml\n- type: 'menu.Menuitem #Item signature for a context menu'\n fields:\n   icon: 'string:1 #Leading icon of the menu'\n   display_name: 'string:2 #String representation of the menu item. Menu item text'\n   disabled: 'bool:3 #Display actions as disabled when they can only be used sometimes and under certain conditions.'\n   command: 'string:4 #Keyboard command hint'\n   leading_divider: 'bool:5 #Item has a leading divider line'\n   children: '[] menu.Menuitem:6 #Children of this item'\n```\n\n## Minimal data signature\n\n```yaml\n- type: 'menu.Menuitem #Item signature for a context menu'\n fields:\n   id: 'string:1 #Id of the menu item'\n   display_name: 'string:2 #String representation of the menu item. Menu item text'\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-context-menu/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-context-menu/",
           "attributes": [{
                         "name": "context",
                         "type": "string",
@@ -1229,7 +1229,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-date-picker-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.\n\n```html\n<furo-ui5-date-picker-labeled fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-date-picker-labeled>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-date-picker-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-date-picker-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -1316,7 +1316,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-date-picker component allows the user to bind an date object like google.type.Date or a date string\nwith ISO 8061 format like \"2020-12-31\" to the ui5 datepicker and edit it.\n\nIt supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/ui5-webcomponents/playground/components/DatePicker/).\n\nYou can define the formatPattern (e.g. 'dd.MM.yyyy' ) to show the date according to format pattern.\n\nYou can bind a `string`, `furo.type.Date` or `google.type.Date`.\n\n```html\n <furo-ui5-date-picker\n    fn-bind-data=\"--dao(FIELDNODE)\">\n </furo-ui5-date-picker>\n```\n\nThe text field can be editable or read-only (readonly property), and it can be enabled or disabled (enabled property).\nTo visualize semantic states, such as \"error\" or \"warning\", the valueState property is provided.\nWhen the user makes changes to the date, the change event is fired, which enables you to react on any date change.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **min:\"1999-12-31\"** set the minDate for the element (use iso date in the constraint)\n- **max:\"1999-12-31\"** set the maxDate for the element (use iso date in the constraint)\n- **pattern:\"1999-12-31\"** set the pattern for the element\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-date-picker/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-date-picker/",
           "attributes": [
                     ]
           ,
@@ -1383,7 +1383,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-date-time-picker-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.\n\n```html\n<furo-ui5-date-time-picker-labeled fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-date-time-picker-labeled>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-date-time-picker-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-date-time-picker-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -1478,7 +1478,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-date-time-picker component allows the user to bind a date string\nwith IOS 8061 standard in [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format likes \"2017-01-15T01:30:15.01Z\" to the ui5 date time picker and edit it.\n\nyou can define the formatPattern (e.g. 'dd.MM.yyyy hh:mm aa' ) to show the date according to format pattern. but the data in\nthe payload will still be in format [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt)  (2017-01-15T01:30:15.01Z)\n\nThe text field can be editable or read-only (readonly property), and it can be enabled or disabled (enabled property).\nTo visualize semantic states, such as \"error\" or \"warning\", the valueState property is provided.\nWhen the user makes changes to the datetime, the change event is fired, which enables you to react on any date change.\n\nYou can bind a `string`, `google.protobuf.Timestamp`, `int32`, `int64`.\n\n`int32`, `int64` will be handled as unix timestamps (seconds since epoc) and can not be *empty*.\n\n```html\n <furo-ui5-date-time-picker\n    fn-bind-data=\"--dao(FIELDNODE)\">\n </furo-ui5-date-time-picker>\n```\n\nThe field can be editable or read-only (readonly property), and it can be enabled or disabled (enabled property).\nTo visualize semantic states, such as \"error\" or \"warning\", the valueState property is provided.\nWhen the user makes changes to the date, the change event is fired, which enables you to react on any date change.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **min:\"1999-12-31\"** set the minDate for the element (use iso date in the constraint)\n- **max:\"1999-12-31\"** set the maxDate for the element (use iso date in the constraint)\n- **pattern:\"1999-12-31\"** set the pattern for the element\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-date-time-picker/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-date-time-picker/",
           "attributes": [
                     ]
           ,
@@ -1589,7 +1589,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-dialog-display will catch furo-ui5-dialog elements, to display it in the dom of his parent element.\n\nThe first furo-ui5-dialog-display will catch the `furo-ui5-dialog-register` request from a underlying furo-ui5-dialog.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-dialog-display/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-dialog-display/",
           "attributes": [
                     ]
           ,
@@ -1608,7 +1608,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-dialog is a extended ui5-dialog which can attach itself to a parent dom element.\n\nThis is helpful, when you have used z-indexes in one of the parents, which put the original ui5-dialog behind the backdrop.\n\nUse this component like a regular ui5-dialog and do not forget to place the furo-ui5-dialog-display in one of the parent elements.\n\nIt supports all features from the [SAP ui5 Dialog element](https://sap.github.io/ui5-webcomponents/playground/components/Dialog/).\n\n**important:** Place a furo-ui5-dialog-display in any dom parent of the component where you use furo-ui5-dialog. Your app-shell or body is a good place to do that.\n\n```html\n<furo-ui5-dialog header-text=\"Dialog title\" fn-show=\"--openDialogClicked\" fn-close=\"--closeDialogClicked\">\n  <p>Content</p>\n  <div slot=\"footer\"> <button at-click=\"--closeDialogClicked\">close dialog</button></div>\n</furo-ui5-dialog>\n\n<button at-click=\"--openDialogClicked\">Open dialog</button>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-dialog/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-dialog/",
           "attributes": [
                     ]
           ,
@@ -1635,7 +1635,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-flexible-grid will split your screen contents horizontally (in cols) and put them vertically (left at top)\nwhen the available space is to small.\n\n```html\n <!-- a simple layout manager with two columns  -->\n<furo-ui5-flexible-grid>\n  <div hspan=\"2\" full-on-size-medium full-on-size-small class=\"left\">\n     <slot name=\"left\"></slot>\n  </div>\n  <!-- this will start at pos 3 and goes to the end of the screen -->\n  <furo-z-grid hstart=\"3\" fill>\n    <slot></slot>\n  </furo-z-grid>\n</furo-ui5-flexible-grid>\n```\n\n## Setting column width\nTo set the width of a column use the `hspan` attribute.\n\n## Fill column to the end of the screen\nTo make a column that uses the available space you have to set a starting point. This can be done with `hstart=\"3\"`\n(begin on cell 3) and the attribute `fill` (fill to the right)\n\n ## full-on-[size]\n To set full width on a specific current size, use `full-on-size-small` , `full-on-size-medium` , `full-on-size-large` ,`full-on-size-xlarge`.\n\n When the available space has the given size, the default hspan are overridden and the full width is used.\n\n ## hstart\n Set the starting point of a filling row with `hstart=\"3\"`.\n\n Available values are `hstart=\"2\"`,...,`hstart=\"9\"`\n\n ## hspan\n Set the horizontal space (the width) with the *hspan* attribute.\n\n Available ranges are from 1 to 9.\n\n `hspan=\"1\"`, `hspan=\"2\"`,...,`hspan=\"9\"`\n\n## Named lines and columns\n**last-col** refers to the last column.\nThere is no line name available",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-flexible-grid/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-flexible-grid/",
           "attributes": [{
                         "name": "size-small",
                         "type": "Number",
@@ -1671,7 +1671,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-form-field-container gives the user a layout to manage\ninput field and labels according to the design specification of SAP Fiori.\n\nExample\n\n```html\n<furo-ui5-form-field-container>\n  <ui5-label label slot=\"label\" for=\"Custom\" show-colon>Currency / Units (custom)</ui5-label>\n  <furo-horizontal-flex id=\"Custom\" content space>\n    <furo-ui5-text-input flex fn-bind-data=\"--entity(*.data.furo_data_money_input.currency_code)\"></furo-ui5-text-input>\n    <furo-ui5-number-input flex fn-bind-data=\"--entity(*.data.furo_data_money_input.units)\"></furo-ui5-number-input>\n </furo-horizontal-flex>\n</furo-ui5-form-field-container>\n```\n\nThe form and simple form in size L use a two-column layout within the responsive grid layout by default.\nThat means that the form groups are placed next to each other to have all the information on one screen and to\navoid scrolling. In these columns, the labels are positioned in the same row as the corresponding input field or value.\nSo the form groups adopt the Z layout (reading direction in rows, not in columns).\n\nThe label-field ratio is 4:8:0 by default:\n\n4 grid columns of the responsive grid layout are used by the labels.\n8 grid columns of the responsive grid layout are used by fields.\n0 grid columns of the responsive grid layout are used by empty columns.\n\n\nSize M of the form and simple form also has a single-column layout within the responsive grid layout by default.\nHowever, in size M the labels are positioned in the same row as the corresponding input field or value, and form\ngroups are positioned below each other.\n\nThe label-field ratio is 3:9:0 by default:\n\n2 grid columns of the responsive grid layout are used by the labels.\n10 grid columns of the responsive grid layout are used by the fields.\n0 columns of the responsive grid layout are used by empty columns.\n\n\nSize S (Smartphones and Dialogs)\nThe form and simple form use a single-column layout within the responsive grid layout in size S by default.\nThis means that the form groups are positioned below each other in a single column and the labels are positioned\n`above` the fields to avoid truncation of the labels.\n\nThe label-field ratio is 12:12:0 by default:\n\n12 grid columns of the responsive grid layout are used by the labels.\n(A label handles the space of a whole row.)\n12 grid columns of the responsive grid layout are used by the fields.\n(A field handles the space of a whole row.)\n0 grid columns of the responsive grid layout are used by empty columns.\n(There is no empty space on the right of the field.)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-form-field-container/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-form-field-container/",
           "attributes": [
                     ],
                   "slots": [
@@ -1705,7 +1705,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "A bindable **header** panel.\n\n**Info**: This component is intended to use as a header panel, if you need panels in your view, consider to use\na ui5-panel directly. That is also the reason that the api does not match with ui5-panel.\n\nThis component is a container which has a header and a content area and is used for grouping and displaying information.\nIt can be collapsed to save space on the screen.\n\n```html\n <furo-ui5-header-panel header-text=\"Header Text\" secondary-text=\"Subtitle Text\" icon=\"task\"></furo-ui5-header-panel>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-header-panel/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-header-panel/",
           "attributes": [{
                         "name": "header-text",
                         "type": "string",
@@ -1893,7 +1893,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-markdown`\n Renders given md data with parseMarkdown or loads a md file with `mdsrc=\"source.md\"`",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-markdown/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-markdown/",
           "attributes": [{
                         "name": "unsafe",
                         "type": "Boolean",
@@ -1965,7 +1965,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-message-container-display`\n Renders the contenst of a `furo.MessageContainer` or `google.rpc.Status` message.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-message-container-display/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-message-container-display/",
           "attributes": [{
                         "name": "hidden",
                         "type": "boolean",
@@ -2042,7 +2042,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-message-strip-display is the render component for the furo-ui5-message-strip component.\nThe display component can be controlled by several furo-ui5-message-strip components.\n\n```\n <furo-ui5-message-strip-display></furo-ui5-message-strip-display>\n\n <furo-ui5-message-strip fn-show-information=\"--wire\"></furo-ui5-message-strip>\n <furo-ui5-message-strip fn-show-warning=\"--wire\" message=\"Static warning message\"></furo-ui5-message-strip>\n```\n\n## CSS Style Vars\n- margin-top: var(--FuroUi5MediaSizeIndentationTop, 0);\n- margin-bottom: var(--FuroUi5MediaSizeIndentationBottom, 0);",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-message-strip-display/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-message-strip-display/",
           "attributes": [
                     ]
           ,
@@ -2069,7 +2069,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-message-strip component enables the embedding of app-related messages. It displays 4 types of messages,\neach with corresponding semantic color and icon: Information, Positive, Warning and Negative.\nEach message can have a Close button, so that it can be removed from the UI, if needed.\n\nIt should be used together witch furo-ui5-message-strip-display. You can place those two components into different places.\nA good place for placing the furo-ui5-message-strip-display is on the app-shell.\nhttps://experience.sap.com/fiori-design-web/message-strip/\n\n ```html\n <!-- the display is placed where you want the message to appear -->\n <furo-ui5-message-strip-display></furo-ui5-message-strip-display>\n <furo-ui5-message-strip fn-show-information=\"--wire\"></furo-ui5-message-strip>\n ```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-message-strip/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-message-strip/",
           "attributes": [{
                         "name": "hide-close-button",
                         "type": "boolean",
@@ -2174,7 +2174,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-money-input-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.\n\n```html\n<furo-ui5-money-input-labeled fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-money-input-labeled>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-money-input-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-money-input-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -2253,7 +2253,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-money-input is a input element composition for FieldNodes of type google.type.Money.\nIt consists of\n- ui5-input of type Number\n- furo-ui5-text-input\n\n You can set currencies dropdown with options in meta or set options attribute as json in element or set currencies as string in element. the three\n ways have priority : currencies > options as attribute > options in meta.\n\n```html\n <furo-ui5-money-input fn-bind-data=\"--dao(google.type.Money)\" options='{\"list\": [ \"CHF\",\"EUR\",\"USD\" ]}'></furo-ui5-money-input>\n <furo-ui5-money-input fn-bind-data=\"--dao(google.type.Money)\" options='{\"list\": [ {\"id\":\"CHF\",\"label\":\"Schweiz\"},{\"id\":\"EUR\",\"label\":\"Europa\", \"selected\": true}'></furo-ui5-money-input>\n <furo-ui5-money-input fn-bind-data=\"--dao(google.type.Money)\" currencies=\"CHF,EUR,USD\"></furo-ui5-money-input>\n```\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **required: true** , set the element to required\n\nTags: money input",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-money-input/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-money-input/",
           "attributes": [{
                         "name": "disabled",
                         "type": "Boolean",
@@ -2338,7 +2338,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-multi-combobox-labeled`\nThe furo-ui5-multi-combobox-labeled is a composition to easily use a complete data multi-combobox with label according\nto the design specification of SAP Fiori Design System.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-multi-combobox-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-multi-combobox-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -2468,7 +2468,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-ui5-multi-combobox define\nthe available options by using the ui5-mcb-item component. Use the function bindOptions to bind a RepeaterNode as a option list.\n\n```html\n<furo-ui5-multi-combobox\n   fn-bind-data=\"--entity(*.data.description)\"\n   fn-bind-options=\"--collection(*.entities)\">\n</furo-ui5-multi-combobox>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-multi-combobox/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-multi-combobox/",
           "attributes": [
                     ]
           ,
@@ -2576,7 +2576,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-multi-input-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.\n\n```html\n<furo-ui5-multi-input-labeled fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-multi-input-labeled>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-multi-input-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-multi-input-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -2671,7 +2671,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "A furo-ui5-multi-input field allows the user to enter multiple values, which are displayed as ui5-token.\nhttps://sap.github.io/ui5-webcomponents/playground/components/MultiInput/\n\nSupported type: repeated string\n\n```html\n<furo-ui5-multi-input fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-multi-input>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-multi-input/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-multi-input/",
           "attributes": [
                     ]
           ,
@@ -2706,7 +2706,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "Notification display component that works together with furo-ui5-notification.\nBest place the furo-ui5-notification-group-display on the main site. then you only need one furo-ui5-notification-group-display.\nyou can also use more furo-ui5-notification-group-display's for special needs. But You have to be sure the furo-ui5-notification-group-display can receive the notification events.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-notification-group-display/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-notification-group-display/",
           "attributes": [{
                         "name": "header-text",
                         "type": "string",
@@ -2775,7 +2775,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "Notification display component that works together with furo-ui5-notification.\nDisplays google.rpc.Status messages in a grouped list.\nhttps://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto.\n\nBest place the furo-ui5-notification-list-display on the main site. then you only need one furo-ui5-notification-list-display.\nyou can also use more than one furo-ui5-notification-list-display for special needs.\nBut you have to be sure the furo-ui5-notification-list-display can receive the notification events from furo-ui5-notification.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-notification-list-display/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-notification-list-display/",
           "attributes": [{
                         "name": "header-text",
                         "type": "string",
@@ -2920,7 +2920,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "furo-ui5-notification should be used together witch furo-ui5-notification-list-display or furo-ui5-notification-group-display. you can place those two components into different places.\nbest place the furo-ui5-notification-list(or group)-display on the main site. then you only need one furo-ui5-notification-list(or group)-display. it can work with n furo-ui5-notification.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-notification/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-notification/",
           "attributes": [{
                         "name": "text",
                         "type": "String",
@@ -3034,7 +3034,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-number-input-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.\n\n```html\n<furo-ui5-number-input fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-number-input>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-number-input-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-number-input-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -3131,7 +3131,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.\nIt supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).\n\nYou can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.\n\n```html\n <furo-ui5-number-input\n    fn-bind-data=\"--dao(FIELDNODE)\"\n ></furo-ui5-number-input>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n| meta  | fat  | html  |\n|------  |-----  |------  |\n| 1      | 10    | 100    |\n\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"placeholder\":\"string\"** set the placeholder for the element\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-number-input/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-number-input/",
           "attributes": [
                     ]
           ,
@@ -3211,7 +3211,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-pagination-bar element loops the hateoas array and finds out the pagination\ninformation like prev, next, first and last\n\n```\n  <furo-ui5-pagination-bar fn-inject=\"--hateoas\"></furo-ui5-pagination-bar>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-pagination-bar/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-pagination-bar/",
           "attributes": [{
                         "name": "currentPage",
                         "type": "number",
@@ -3341,7 +3341,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-password-input-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.\n\n```html\n<furo-ui5-password-input-labeled fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-password-input>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-password-input-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-password-input-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -3433,7 +3433,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The 'furo-ui5-password-input' component allows the user to enter and edit password with data binding.\nIt supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).\n\nYou can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.\n\n```html\n <furo-ui5-password-input\n    fn-bind-data=\"--dao(FIELDNODE)\"\n ></furo-ui5-password-input>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n** meta   <  fat   < html   **\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"icon\":\"home\"** set the icon\n - **\"placeholder\":\"string\"** set the placeholder for the element\n - **\"max\":\"number\"** set the maximum number of characters available in the input field.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **max:\"number\"** set the maximum number of characters available in the input field.\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-password-input/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-password-input/",
           "attributes": [
                     ]
           ,
@@ -3466,7 +3466,7 @@
                 "name": "_labelsFromFAT",
                 "type": "object",
                 "description": "",
-                "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+                "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
               }, {
                 "name": "_attributesFromFAT",
                 "type": "object",
@@ -3594,7 +3594,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "A furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..\nhttps://sap.github.io/ui5-webcomponents/playground/components/ProgressIndicator/\n\nSupported type: You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types\n\n```html\n<furo-ui5-progress-indicator fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-progress-indicator>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-progress-indicator/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-progress-indicator/",
           "attributes": [
                     ]
           ,
@@ -3621,7 +3621,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-property`\n Field for type **furo.Property**. This can be used to display \"dynamic\" fields aka properties.\n\n `furo-ui5-property` works with repeated types and non repeating property types.\n\n ```html\n <furo-ui5-property fn-bind-data=\"--entity(*.single_type_property)\"></furo-ui5-property>\n ```\n\n **Example data for the data-object looks like this**\n\n ```json\n \"single_type_property\": {\n   \"data\": {\n     \"@type\": \"google.type.Date\",\n     \"day\": 8,\n     \"month\":  11,\n     \"year\": 2022\n   },\n   \"display_name\": \"a date\",\n   \"id\": \"date\",\n   \"code\": \"date\",\n   \"meta\": {\n     \"fields\": {\n       \"data\": {\n         \"meta\": {\n           \"label\": \"Additional fields\",\n           \"hint\": \"this is data\"\n         },\n         \"constraints\": {\n           \"min\": {\n             \"value\": \"2019-09-09\",\n             \"message\": \"to small\"\n           }\n         }\n       }\n     }\n   }\n }\n ```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-property/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-property/",
           "attributes": [{
                         "name": "context",
                         "type": "string",
@@ -3658,7 +3658,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-propertylist-display` allows the user to show repeated properties (furo.Property) in a readonly mode.\nFor all other types you can use furo-ui5-typerenderer-labeled.\n\nThe type information of the property is used for the display of the individual attributes.\nE.g.\n```\n[\n {\n   \"code\": \"c0a7f550-0fbe-4046-8fa9-60c86327b6b1\",\n   \"data\": {\n      \"@type\": \"type.googleapis.com/furo.StringProperty\",\n     \"data\": \"01032020\"\n   },\n   \"flags\": [],\n   \"display_name\": \"Vertragsbeginn\",\n   \"id\": \"246d79a0-0a15-43c5-b18f-ac8a4a449df1\",\n   \"meta\": {}\n }\n]\n```\n\nYou can bind the furo.Property type (single and repeated).\n\n```html\n <furo-ui5-propertylist-display\n    fn-bind-data=\"--daoCountry(*.data.additional_data)\"\n ></furo-ui5-propertylist-display>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-typerenderer-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-typerenderer-labeled/",
           "attributes": [
                     ]
           ,
@@ -3685,7 +3685,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The 'furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.\n\nIt supports all features from the [SAP ui5 toggleButton element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).\n\nYou can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.\n\n```html\n <furo-ui5-radio-button\n    name=\"groupA\"\n    fn-bind-data=\"--dao(FIELDNODE)\"\n ></furo-ui5-radio-button>\n <furo-ui5-radio-button\n    name=\"groupA\"\n    fn-bind-data=\"--dao(OTHERFIELDNODE)\"\n ></furo-ui5-radio-button>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n| meta  | fat  | html  |\n|------  |-----  |------  |\n| 1      | 10    | 100    |\n\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"icon\":\"\"** set the icon\n - **\"value-state\":\"\"** set the value-state\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n\nThe constraint **required** will mark the element as required\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-radio-button/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-radio-button/",
           "attributes": [
                     ]
           ,
@@ -3719,7 +3719,7 @@
                 "name": "_labelsFromFAT",
                 "type": "object",
                 "description": "",
-                "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden:undefined,\n    }"
+                "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden: undefined,\n    }"
               }, {
                 "name": "_privilegedAttributes",
                 "type": "object",
@@ -3798,7 +3798,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-rating-indicator  is used to display a specific number of icons that are used to rate an item.\nAdditionally, it is also used to display the average and overall ratings.\nhttps://sap.github.io/ui5-webcomponents/playground/components/RatingIndicator/\n\nYou can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.\n\n```html\n <furo-ui5-rating-indicator\n    fn-bind-data=\"--dao(FIELDNODE)\"\n ></furo-ui5-rating-indicator>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n| meta  | fat  | html  |\n|------  |-----  |------  |\n| 1      | 10    | 100    |\n\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n\n## Methods\n**bind-data(fieldNode)**\nBind aa entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-rating-indicator/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-rating-indicator/",
           "attributes": [
                     ]
           ,
@@ -3852,7 +3852,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-reference-search-labeled`\nThe furo-ui5-reference-search-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-reference-search/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-reference-search/",
           "attributes": [{
                         "name": "service",
                         "type": "string",
@@ -4051,7 +4051,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-reference-search is a search input field with the capability to open and extended search component.\n\nBound data must fullfill the furo.Reference signature. The service, deeplink,... is taken from the spec of your field.\nDo not forget to specify.\n\n *default usage*\n```html\n  <furo-ui5-reference-search\n  fn-bind-data=\"--data(*.is_person)\"\n  ></furo-ui5-reference-search>\n```\n\n *usage with an extended searcher*\n```html\n  <furo-ui5-reference-search\n  extended-searcher=\"country-filter\"\n  fn-bind-data=\"--data(*.is_person)\"\n  ></furo-ui5-reference-search>\n```\n\n *usage example for a non default response*\n```html\n  <furo-ui5-reference-search\n  extended-searcher=\"contact-filter\"\n  search-response-path=\"xx_entities\"\n  value-field-path=\"data.xx_id\"\n  display-field-path=\"data.xx_display_name\"\n  fn-bind-data=\"--data(*.is_person)\"\n  ></furo-ui5-reference-search-labeled>\n```\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **max:\"number\"** set the maximum number of characters available in the input field.\n\nThe constraint **required** will mark the element as required\n\nIf your type has a *reference* type signature ('id','display_name', 'link'), the service, and initial deep link is extracted from\nthe link part of your type.\n\nIf you bind a scalar field, the value which is set in 'valueFieldPath' will be set.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)\n\n## Specs\nDefine a proper default value on the reference type.\n\n```yaml\nlink:\ntype: furo.Link\ndescription: HTS for the initial search (the default works on root resources only)\n__proto:\n   number: 3\n__ui: null\nmeta:\n  default: |\n    {\n         \"rel\": \"list\",\n         \"href\": \"/contacts\",\n         \"method\": \"GET\",\n         \"type\": \"contact.Contact\",\n         \"service\": \"contact.Contacts\"\n     }\n  placeholder: \"\"\n  hint: \"\"\n  label: contact.Reference.link.label\n  options:\n    flags: []\n    list: []\n  readonly: false\n  repeated: false\n  typespecific: null\n\n```\n### API of an extended searcher\n### Searcher Methods\nThe only method you have to implement is **htsIn**. The reference-search will pass its own hts to the extended\nsearcher. A call on qpIn on the searcher will also pass the resulting hts to the extended searcher.\n\n### Extended Searcher Events\nFire a **record-selected** to set the item on the reference-search.\nFire a **escape-filter-panel** to close the extended search.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-reference-search/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-reference-search/",
           "attributes": [{
                         "name": "search-response-path",
                         "type": "string",
@@ -4379,7 +4379,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-relative-time-badge`\nThe furo-ui5-relative-time-badge is a small non-interactive component which contains relative time\ninformation (i.e. in 2 days, 5 days ago) and color chosen from a list of predefined color schemes.\nIt serves the purpose to attract the user attention to some piece of information.\n\nYou can bind a `string`, `google.protobuf.Timestamp`, `int32`, `int64`, `furo.type.Date` or `google.type.Date`.\n`int32`, `int64` will be handled as unix timestamps (seconds since epoc) and can not be *empty*.\n\n```html\n <furo-ui5-relative-time-badge\n    fn-bind-data=\"--dao(FIELDNODE)\">\n </furo-ui5-relative-time-badge>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-relative-time-badge/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-relative-time-badge/",
           "attributes": [{
                         "name": "color-scheme-positive",
                         "type": "string",
@@ -4446,7 +4446,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-section`\nThe object page content according to the SAP Design System Fiori guidelines consists of sections and subsections\narranged in a column layout.\nThe furo-ui5-section is basically a layout manager component to structure object pages. Sections can only\ncontain subsections, not content.\n\n```html\n <furo-ui5-section heading=\"STRING\">\n   <furo-ui5-subsection></furo-ui5-subsection>\n   <furo-ui5-subsection></furo-ui5-subsection>\n </furo-ui5-section>\n```\n\n```html\n<furo-ui5-section\n   fn-bind-data=\"--dao(*.field_of_type_string)\">\n   <furo-ui5-subsection></furo-ui5-subsection>\n   <furo-ui5-subsection></furo-ui5-subsection>\n</furo-ui5-section>\n```\n\n## Methods\n**bindData(fieldNode)**\nBinds an entity field to the heading. You can use the entity even when no data was received.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-section/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-section/",
           "attributes": [{
                         "name": "heading",
                         "type": "string",
@@ -4496,7 +4496,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-segmented-button component represents a drop-down list. The items inside define the available\noptions by using the furo-ui5-segmented-button component.\n\n```html\n<furo-ui5-segmented-button\n   fn-bind-data=\"--daoPerson(*.field_with_meta_options)\">\n</furo-ui5-segmented-button>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-segmented-button/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-segmented-button/",
           "attributes": [
                     ]
           ,
@@ -4595,7 +4595,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-select-labeled`\nThe furo-ui5-select-labeled is a composition to easily use a complete data select with label according\nto the design specification of SAP Fiori Design System.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-select-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-select-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -4733,7 +4733,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define\nthe available options by using the ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.\n\n```html\n<furo-ui5-select\n   fn-bind-data=\"--entity(*.data.description)\"\n   fn-bind-options=\"--collection(*.entities)\">\n</furo-ui5-select>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-select/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-select/",
           "attributes": [
                     ]
           ,
@@ -4853,7 +4853,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-sign-pad`\n Simple pad to sign or draw something",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-sign-pad/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-sign-pad/",
           "attributes": [
                     ]
           ,
@@ -4938,7 +4938,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-step-input-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.\n\n```html\n<furo-ui5-step-input fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-step-input>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-step-input-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-step-input-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -5059,7 +5059,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-step-input component allows the user to enter and edit numbers with data binding. It consists of an\ninput field and buttons with icons to increase/decrease the value with the predefined step.\nIt supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/StepInput/).\n\nYou can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.\n\n```html\n <furo-ui5-number-input\n    fn-bind-data=\"--dao(FIELDNODE)\"\n ></furo-ui5-number-input>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n| meta  | fat  | html  |\n|------  |-----  |------  |\n| 1      | 10    | 100    |\n\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"placeholder\":\"string\"** set the placeholder for the element\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind an entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-step-input/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-step-input/",
           "attributes": [
                     ]
           ,
@@ -5139,7 +5139,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-subsection`\nThe furo-ui5-subsection component is a containers for actual content. It is envisaged that this component will be\nused within a furo-ui5-section\nSubsections have a progressive disclosure mechanism to show and hide content\n\nhttps://experience.sap.com/fiori-design-web/object-page/#content-area\n\n```html\n <furo-ui5-section heading=\"STRING\">\n   <furo-ui5-subsection heading=\"Subsection Title\">\n     <furo-horizontal-flex slot=\"action\">...</furo-horizontal-flex>\n     <my-content></my-content>\n     <more-content slot=\"more\"></more-content>\n   </furo-ui5-subsection>\n </furo-ui5-section>\n```\n## Methods\n**bindData(fieldNode)**\nBinds an entity field to the heading. You can use the entity even when no data was received.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-subsection/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-subsection/",
           "attributes": [{
                         "name": "heading",
                         "type": "string",
@@ -5242,7 +5242,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-table` display entities in a ui5-table\n\n```html\n<furo-ui5-table\n fn-bind-data=\"--data(*.entities)\"\n>\n <!-- The column label is evaluated from the specs -->\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.fieldname\"\n  ></ui5-table-column>\n\n  <ui5-table-column\n    slot=\"columns\"\n    field=\"*.data.display_name\"\n  ><span>Custom Title</span></ui5-table-column>\n\n</furo-ui5-table>\n```\n\n## Attributes which are taken from `ui5-table-column`\n\n**field**\nDefine the field you want to bind. `*` is the root of the repeated field.\n\n**context**\nSet a context for the type renderer. The default value is `cell`.\n\n**renderer**\nSet a specific renderer component for the column. If not set, the renderer is evaluated from the type of the bound field.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-table/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-table/",
           "attributes": [{
                         "name": "mode",
                         "type": "string",
@@ -5405,7 +5405,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-text-input-labeled`\nThe furo-ui5-text-input-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-text-input-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-text-input-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -5529,7 +5529,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The 'furo-ui5-text-input' component allows the user to enter and edit texts with data binding.\n\nIt supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).\n\nYou can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.\n\n```html\n <furo-ui5-text-input\n    fn-bind-data=\"--daoCountry(*.data.name)\"\n ></furo-ui5-text-input>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n** meta  <  fat  < html  **\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"icon\":\"home\"** set the icon\n - **\"placeholder\":\"string\"** set the placeholder for the element\n - **\"max\":\"number\"** set the maximum number of characters available in the input field.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **max:\"number\"** set the maximum number of characters available in the input field.\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bindData(fieldNode)**\nBind an entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-text-input/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-text-input/",
           "attributes": [
                     ]
           ,
@@ -5633,7 +5633,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-textarea-input-labeled`\nThe furo-ui5-textarea-input-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-textarea-input-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-textarea-input-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -5746,7 +5746,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The 'furo-ui5-textarea-input' component allows the user to enter and edit texts with data binding.\n\nIt supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).\n\nYou can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.\n\n```html\n <furo-ui5-textarea-input\n    fn-bind-data=\"--daoCountry(*.data.name)\"\n ></furo-ui5-textarea-input>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n** meta   <  fat   < html   **\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"placeholder\":\"string\"** set the placeholder for the element\n - **\"rows\":\"number\"** set the number of rows.\n - **\"growing\":\"true\"** Enables the ui5-textarea to automatically grow and shrink dynamically with its content.\n - **\"show-exceeded-text\":\"true\"** if set to true. the characters exceeding the maxlength value are selected on paste and the counter below the ui5-textarea displays their number. If set to false, the user is not allowed to enter more characters than what is set in the maxlength property.\n - **\"growing-max-lines\":\"number\"** Defines the maximum number of lines that the Web Component can grow.\n - **\"max\":\"number\"** set the maximum number of characters available in the input field.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **max:\"number\"** set the maximum number of characters available in the input field.\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-ui5-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-textarea-input/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-textarea-input/",
           "attributes": [
                     ]
           ,
@@ -5818,7 +5818,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-time-picker-labeled`\nThe furo-ui5-time-picker-labeled is a composition to easily use a complete input field with label according\nto the design specification of SAP Fiori Design System.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-time-picker-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-time-picker-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -5913,7 +5913,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-time-picker component allows the user to bind a field of type google.type.TimeOfDay.\nRepresents a time of day. The date and time zone are either not significant\nor are specified elsewhere.\n\nhttps://sap.github.io/ui5-webcomponents/playground/components/TimePicker/\n\nSupported format options are pattern-based on Unicode LDML Date Format notation. For more information, see\nUTS #35: Unicode Locale Data Markup Language.\n\nFor example, if the format-pattern is \"hh:mm:ss\", a valid value string is \"11:42:35\" and the same is displayed in the input.\n\nThe text field can be editable or read-only (readonly property), and it can be enabled or disabled (enabled property).\nTo visualize semantic states, such as \"error\" or \"warning\", the valueState property is provided.\nWhen the user makes changes to the time, the change event is fired, which enables you to react on any time change.\n\nYou can bind a `string` or `google.type.TimeOfDay` (https://github.com/googleapis/googleapis/blob/master/google/type/timeofday.proto).\n\n```html\n <furo-ui5-time-picker\n    fn-bind-data=\"--data(*.start_time)\">\n </furo-ui5-time-picker>\n```\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **min:\"11:42:35\"** set the minDate for the element (use iso date in the constraint)\n- **max:\"23:59:59\"** set the maxDate for the element (use iso date in the constraint)\n- **pattern:\"HH:mm:ss\"** set the pattern for the element\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-time-picker/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-time-picker/",
           "attributes": [
                     ]
           ,
@@ -5980,7 +5980,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-toast-display will catch furo-ui5-toast elements, to display it in the dom of his parent element.\n\nThe first furo-ui5-toast-display on the event path will catch the `furo-ui5-toast-register` request from a underlying furo-ui5-toast.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-toast-display/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-toast-display/",
           "attributes": [
                     ]
           ,
@@ -5999,7 +5999,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The furo-ui5-toast is a extended ui5-toast which can attach itself to a parent dom element.\n\nThis is helpful, when you have used z-indexes in one of the parents, which put the original ui5-toast behind the backdrop.\n\nUse this component like a regular ui5-toast and do not forget to place the furo-ui5-toast-display in one of the parent elements.\n\nIt supports all features from the [SAP ui5 Toast element](https://sap.github.io/ui5-webcomponents/playground/components/Toast/).\n\n**important:** Place a furo-ui5-toast-display in any dom parent of the component where you use furo-ui5-toast. Your app-shell or body is a good place to do that.\n\n```html\n<furo-ui5-toast  fn-show=\"--openToastClicked\" placement=\"MiddleCenter\">Content</furo-ui5-toast>\n\n<button at-click=\"--openToastClicked\">Open toast</button>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-toast/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-toast/",
           "attributes": [
                     ]
           ,
@@ -6026,7 +6026,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The 'furo-ui5-toggle-button' component allows the user to switch true and false for Bool with data binding.\n\nIt supports all features from the [SAP ui5 toggleButton element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).\n\nYou can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.\n\n```html\n <furo-ui5-toggle-button\n    fn-bind-data=\"--daoCountry(*.data.classified_as_risk_area)\"\n ></furo-ui5-toggle-button>\n```\n\n### Specificity\n1. Attributes which are set in the html source will have the highest specificity and will never get overwritten by metas or fat.\n2. Attributes set in meta will have the lowest specificity and will be overwritten by attributes from fat.\n\n| meta  | fat  | html  |\n|------  |-----  |------  |\n| 1      | 10    | 100    |\n\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"icon\":\"\"** set the icon\n - **\"design\":\"\"** set the design\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n\nThe constraint **required** will mark the element as required",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-toggle-button/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-toggle-button/",
           "attributes": [
                     ]
           ,
@@ -6077,7 +6077,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-tree`\nrenders a tree structure\n\n## Data signature\n\n```yaml\n- type: 'tree.Tree #Navigation tree type with recursive navigation nodes'\n  fields:\n    root: 'tree.Navigationnode:1 #Root node of the tree'\n    id: 'string:2 #[optional] Id of the tree'\n    display_name: '- string:3 #[optional] String representation of the tree'\n    description: 'string:4 #[optional] description of the tree'\n```\n\n\n```yaml\n- type: 'tree.Navigationnode #Item of the navigationtree'\n  fields:\n    id: 'string:1 #Id of the node'\n    display_name: '- string:2 #String representation of the node'\n    children: '[] tree.Navigationnode:3 #Children of this node'\n    open: 'bool:4 #node is open or not'\n    secondary_text: 'string:5 #[optional] Secondary text of the node'\n    description: 'string:6 #[optional] Searchable description of the node'\n    icon: 'string:7 #[optional] icon of the node'\n    key_words: 'string:8 #[optional] searchable key words of the node'\n    has_error: 'bool:9 #[optional] error indicator'\n    is_group_label: 'bool:10 #[optional] Mark node as group label'\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-tree/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-tree/",
           "attributes": [{
                         "name": "depth",
                         "type": "Number",
@@ -6515,7 +6515,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-typerenderer-labeled`\nThe furo-ui5-typerenderer-labeled is a composition to easily use a display field with label according\nto the design specification of SAP Fiori Design System.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-typerenderer-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-typerenderer-labeled/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -6586,7 +6586,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`z-grid`\nis a grid which places your elements in a **z** pattern.\nIt creates a grid which can be imagined as a grid with cells of the size *8rem x 8rem*.~\n\nThe size on the x-axis can vary a little bit, according to the the available space.\n\n\nThis component is nestable.\n\n```html\n\n <furo-z-grid>\n   <your-component hspace=\"2\" vspace=\"4\"></your-component>\n   <your-component hspace=\"2\" vspace=\"2\"></your-component>\n </furo-z-grid>\n\n <!-- with automatic padding -->\n <furo-z-grid padding>\n   <your-component hspan=\"2\" vspan=\"4\"></your-component>\n   <your-component hspan=\"2\" vspan=\"2\"></your-component>\n </furo-z-grid>\n```\n\n\n ## sizes\n The sizes are calculated from the available space that the grid becomes from its parent.\n\n ### Sizes are calculated as following\n\n ```\n  |  small  |   medium   |    large    |    xlarge   |\n  |         |            |             |             |\n  | 0...599 | 600...1023 | 1024...1439 | 1440...nnnn |\n\n ```\n\n ## hspan\n Set the horizontal space (the width) with the *hspan* attribute.\n\n Available ranges are from 1 to 9 and full.\n\n To tell a element that it has to use the full width use `hspan=\"full\"` or use the alias `full` or `full-width`.\n\n `hspan=\"1\"`, `hspan=\"2\"`,...,`hspan=\"9\"`, `hspan=\"full\"`\n\n ## vspan\n Set the vertical space (the height) with the *vspan* attribute.\n\n Available ranges are from 1 to 9.\n\n `vspan=\"1\"`, `vspan=\"2\"`,...,`vspan=\"9\"`\n\n ## newline\n To force a placement on a new line use `newline`\n\n ## padding\n Set the attribute *padding* to add paddings according to the size of the furo-z-grid automatically.\n\n :host([size='size-s']) ==> **0.25rem 1rem;**\n\n :host([size='size-m'] ==> **0.25rem 2rem;**\n\n :host([size='size-l'] ==> **1rem 2rem;**\n\n :host([size='size-xl'] ==> **1rem 3rem;**\n\n ## full-on-[size]\n To set full width on a specific current size, use `full-on-size-small` , `full-on-size-medium` , `full-on-size-large` ,`full-on-size-xlarge`.\n\n When the available space has the given size, the default hspan are overridden and the full width is used.\n\n ## hide-on-[size]\n To hide a element on a specific current size, use `hide-on-size-small` , `hide-on-size-medium` , `hide-on-size-large` ,`hide-on-size-xlarge`.\n\n ## show-on-[size]\n To show a element only on a specific current size, use `show-on-size-small` , `show-on-size-medium` , `show-on-size-large` ,`show-on-size-xlarge`.\n\n ## custom span sizes on different sizes (hspan-on-[size])\n To set a specific width (hspan) on a specific current size, use `hspan-on-size-small=\"1...9\"` , `hspan-on-size-medium=\"1...9\"` , `hspan-on-size-large=\"1...9\"` , `hspan-on-size-xlarge=\"1...9\"` .\n\n ## Ohter attributes\n\n The attributes *full* and *full-width* are aliases for `hspan=\"full\"`.\n\n## Named lines and columns\n**last-col** refers to the last column.\n**last-row** refers to the last line/row.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-z-grid/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-z-grid/",
           "attributes": [
                     ],
                   "slots": [
@@ -6616,7 +6616,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`reference-search-item`\nRepeated item to display the search result set",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/ui5-reference-search-item/",
+          "doc-url": "https://ui5.furo.pro/docs/components/ui5-reference-search-item/",
           "attributes": [
                     ]
           ,
@@ -6687,7 +6687,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-filtered-table` is a table which work with `furo-ui5-views`. It accepts field orders and a set of visible fields.\n\nIt works like a `furo-ui5-table` but has the ability to reorder the columns. The only action you have to take is to set\nthe `id` attribute on the `ui5-table-column`. The id must match to the `field_name` attribute on the table_settings.\n\n```html\n          <furo-ui5-filtered-table*\n            fn-bind-data=\"--collectionDao(*.entities)\"\n            fn-set-columns=\"|--setColumns\"\n          >\n            <ui5-table-column\n              slot=\"columns\"\n              field=\"*.data.id\"\n              id=\"id\"\n              min-width=\"650\"\n              demand-popin\n              popin-text=\"id\"\n              ><span>id</span></ui5-table-column\n            >\n            <ui5-table-column\n              slot=\"columns\"\n              field=\"*.data.display_name\"\n              id=\"display_name\"\n              min-width=\"400\"\n              demand-popin\n              popin-text=\"display_name\"\n              ><span>display_name</span></ui5-table-column\n            >\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-filtered-table/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-filtered-table/",
           "attributes": [{
                         "name": "mode",
                         "type": "string",
@@ -6858,7 +6858,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-views-column-header`\n\n Displays a sort direction icon in the table header.\n\n ```html\n<ui5-table-column\n              slot=\"columns\"\n              field=\"*.nr\"\n              id=\"nr\"\n              popin-text=\"${i18n.t('activity_nr')}\"\n              ><furo-ui5-views-column-header><span>${i18n.t('activity_nr')}</span></furo-ui5-views-column-header>\n              </ui5-table-column>\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-views-column-header/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-views-column-header/",
           "attributes": [{
                         "name": "_hidesort",
                         "type": "boolean",
@@ -6919,7 +6919,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-views-filter-settings` contains the dialog for the filter settings for a `furo-ui5-views`.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-views-filter-settings/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-views-filter-settings/",
           "attributes": [{
                         "name": "colheader-field",
                         "type": "string",
@@ -7020,7 +7020,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-views-table-settings`  contains the dialog for the table settings for a `furo-ui5-views`.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-views-table-settings/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-views-table-settings/",
           "attributes": [{
                         "name": "row-type",
                         "type": "string",
@@ -7177,7 +7177,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-views` allows you to manage custom views. This includes filter settings and table orders.\n\nTab orders are not implemented at the moment.\n\nThe user settings are stored in the `local storage`, session data in the `session storage`. Feel free to extend the `furo-ui5-views`\ncomponent to store the settings anywhere else by overriding the `saveData` method.\n\n`furo-ui5-views` manages the view data\n\n\n```html\n<furo-ui5-views\n        view-id=\"vid.list-report\"\n        fn-inject-default=\"|--defaultData\"\n        fn-set-filter-ref=\"|--formRef\"\n        at-current-view=\"--CurrentViewSettingDO\"\n        at-raw-filter-data=\"--filterData\"\n        fn-show-at=\"--showViewDialogClicked\"\n></furo-ui5-views>\n\n<furo-ui5-views-filter-settings\n        fn-show=\"--setFilterClicked\"\n        fn-bind-settings=\"--CurrentViewSettingDO\"\n        fn-bind-filter=\"--filterDO\"\n></furo-ui5-views-filter-settings>\n\n <furo-ui5-views-table-settings\n        row-type=\"project.Project\"\n        fn-show=\"--ShowTableSettingsClicked\"\n        fn-bind-settings=\"--CurrentViewSettingDO\"\n        at-fields-changed=\"--reqFieldsChanged\"\n        at-order-by-changed=\"--fieldSortChanged\"\n        at-order-changed=\"--columnOrderChanged\"\n        required-fields=\"id\"\n        sortable\n      ></furo-ui5-views-table-settings>\n\n       <furo-ui5-filtered-table\n            fn-bind-data=\"--collectionDao(*.entities)\"\n            fn-set-columns=\"--columnOrderChanged\"\n            mode=\"SingleSelect\"\n          >\n          ...\n       </furo-ui5-filtered-table>\n```\nInject the default\n\n## Specs\n\nYou have to import the furo-ui5-specs or add the following muspec to your spec project.\n\n*.furo*\n```yaml\ndependencies:\n- \"https://github.com/theNorstroem/furo-ui5-specs.git v1.0.0\"\n```\n\n*µSpecs*\n```yaml\n- type: 'furo.view.PersonalView #'\n  fields:\n    id: 'string:1 #'\n    views: '[] furo.view.ViewSettings:2'\n\n- type: 'furo.view.ViewSettings #'\n  fields:\n    id: 'string:1 #id'\n    name: 'string:2 #Textual identifier'\n    is_favorite: 'bool:3'\n    is_standard: 'bool:4'\n    auto_apply: 'bool:5'\n    created_by: 'string:6'\n    editable: 'bool:7 #'\n    filter_settings: '[] furo.view.FilterItem:8'\n    filter_object: 'google.protobuf.Any:9 #Contains the filter Object'\n    table_settings: '[] furo.view.TableColumn:10'\n    order_by: 'string:11 # sort order, comma separated list of field names'\n    group_by: 'string:11 # group by'\n\n\n- type: 'furo.view.FilterItem #Filter object'\n  fields:\n    field_name: 'string:1'\n    show: 'bool:2 #show hide'\n\n- type: 'furo.view.TableColumnSortRow #TableColumn '\n  fields:\n    id: 'string:1'\n    display_name: 'string:2 #'\n    descending: 'bool:3 #'\n    options: '[] furo.Optionitem:4'\n\n- type: 'furo.view.TableColumn #TableColumn '\n  fields:\n    field_name: 'string:1'\n    show: 'bool:2 #show hide'\n    sortable: 'bool:3 # set this to true if the field is sortable'\n    groupable: 'bool:4 # set this to true if the field is groupable'\n    label: 'string:5 # set this to true if the field is groupable'\n\n- type: 'furo.view.SaveAsDialog #Filter object'\n  fields:\n    name: '* string:1'\n    is_favorite: 'bool:3'\n    is_standard: 'bool:4'\n    auto_apply: 'bool:5'\n```\n\nDescribe the filterable fields and sortable table columns.\n\n*sample data*\n```js\nexport const Settings = {\n  \"views\": [\n    {\n      \"id\": \"default\",\n      \"name\": \"Standard\",\n      \"is_favorite\": true,\n      \"is_standard\": true,\n      \"auto_apply\": true,\n      \"created_by\": \"Furo\",\n      \"editable\": false,\n      \"filter_settings\": [\n\n\n        {\n          \"field_name\": \"description\",\n          \"show\": true\n        },\n        {\n          \"field_name\": \"start\",\n          \"show\": true\n        },\n        {\n          \"field_name\": \"end\",\n          \"show\": true\n        },\n        {\n          \"field_name\": \"members\",\n          \"show\": true\n        }\n      ],\n      \"filter_object\": {\n        \"description\": null,\n        \"start\": null,\n        \"end\": null,\n        \"members\": null\n      },\n      \"table_settings\": [\n        {\n          \"field_name\": \"id\",\n          \"show\": false,\n          \"sortable\" : true\n        },\n        {\n          \"field_name\": \"display_name\",\n          \"show\": true,\n          \"sortable\" : true\n        },\n        {\n          \"field_name\": \"description\",\n          \"show\": true,\n          \"sortable\" : true\n        },\n        {\n          \"field_name\": \"start\",\n          \"show\": false\n        },\n        {\n          \"field_name\": \"end\",\n          \"show\": false\n        },\n        {\n          \"field_name\": \"members\",\n          \"show\": true,\n          \"sortable\" : true\n        }\n      ],\n      \"order_by\": \"\",\n      \"group_by\": \"\"\n    }\n  ]\n}\n\n```",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-views/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-views/",
           "attributes": [{
                         "name": "view-id",
                         "type": "string",
@@ -7404,7 +7404,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-launchpad-navigation`\n\nIs used to navigate between spaces and pages.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-launchpad-navigation/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-navigation/",
           "attributes": [
                     ]
           ,
@@ -7469,7 +7469,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-launchpad-page-renderer`\n Renders a page of a space.\n\n > **Hint**: when you build a custom tile, do not forget to trigger the tile-clicked event.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-launchpad-page-renderer/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-page-renderer/",
           "attributes": [
                     ]
           ,
@@ -7522,7 +7522,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-launchpad-section-renderer`\n Renders a section of a page",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-launchpad-section-renderer/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-section-renderer/",
           "attributes": [
                     ]
           ,
@@ -7565,7 +7565,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-launchpad-tile-grid`\n Layout component used in sections.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-launchpad-tile-grid/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-tile-grid/",
           "attributes": [
                     ]
           ,
@@ -7592,7 +7592,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-context-menu-item` is a helper component for `furo-ui5-context-menu`.\n\nIt is not intended for direct usage",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-context-menu-item/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-context-menu-item/",
           "attributes": [{
                         "name": "focused",
                         "type": "Boolean",
@@ -7692,7 +7692,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-context-submenu` is a helper component for `furo-ui5-context-menu`.\n\nUse [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-context-submenu/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-context-submenu/",
           "attributes": [{
                         "name": "depth",
                         "type": "Number",
@@ -7748,7 +7748,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-ui5-message-container-item`\ntodo Describe your element",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-message-container-item/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-message-container-item/",
           "attributes": [{
                         "name": "hidden",
                         "type": "boolean",
@@ -7799,7 +7799,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "# INTERNAL COMPONENT\nThis is a helper component to send `tablerow-selected` event by clicking the row or pressing the enter on the row.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-table-row/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-table-row/",
           "attributes": [
                     ]
           ,
@@ -7900,7 +7900,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`furo-tree-item`\n/**\n# INTERNAL COMPONENT\nThis is a helper component to send `tablerow-selected` event by clicking the row or pressing the enter on the row.",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-tree-item/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-tree-item/",
           "attributes": [{
                         "name": "hidden",
                         "type": "boolean",
@@ -8035,7 +8035,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-bool`\nThe cell-bool component displays a FieldNode of type `bool` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-bool/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-bool/",
           "attributes": [
                     ]
           ,
@@ -8062,7 +8062,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-double`\nThe cell-double component displays a FieldNode of type `double` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-double/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-double/",
           "attributes": [
                     ]
           ,
@@ -8089,7 +8089,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-float`\nThe cell-float component displays a FieldNode of type `float` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell/",
           "attributes": [
                     ]
           ,
@@ -8121,7 +8121,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "The `cell-furo-bigdecimal`  component displays a FieldNode of type `furo.BigDecimal` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-bigdecimal/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-bigdecimal/",
           "attributes": [
                     ]
           ,
@@ -8153,7 +8153,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-fat-bool`\nThe cell-furo-fat-bool component displays a FieldNode of type `furo.fat.bool` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-fat-bool/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-fat-bool/",
           "attributes": [
                     ]
           ,
@@ -8180,7 +8180,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-fat-double`\nThe cell-furo-fat-double component displays a FieldNode of type `furo.fat.Double` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-fat-double/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-fat-double/",
           "attributes": [
                     ]
           ,
@@ -8207,7 +8207,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-fat-float`\nThe cell-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-fat-float/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-fat-float/",
           "attributes": [
                     ]
           ,
@@ -8239,7 +8239,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-int32`\nThe cell-int32 component displays a FieldNode of type `furo.fat.Int32` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-fat-int32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-fat-int32/",
           "attributes": [
                     ]
           ,
@@ -8266,7 +8266,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-fat-int64`\nThe cell-furo-fat-int64 component displays a FieldNode of type `furo.fat.int64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-fat-int64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-fat-int64/",
           "attributes": [
                     ]
           ,
@@ -8293,7 +8293,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-fat-string`\nThe cell-furo-fat-string component displays a FieldNode of type `furo.fat.String` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-fat-string/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-fat-string/",
           "attributes": [
                     ]
           ,
@@ -8328,7 +8328,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-fat-uint32`\nThe cell-furo-fat-uint32 component displays a FieldNode of type `furo.fat.Uint32` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-fat-uint32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-fat-uint32/",
           "attributes": [
                     ]
           ,
@@ -8355,7 +8355,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-fat-uint64`\nThe cell-furo-fat-uint64 component displays a FieldNode of type `furo.fat.uint64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-fat-uint64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-fat-uint64/",
           "attributes": [
                     ]
           ,
@@ -8382,7 +8382,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-integerproperty`\nThe cell-furo-integerproperty component displays a FieldNode of type `furo.Integerproperty` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-integerproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-integerproperty/",
           "attributes": [
                     ]
           ,
@@ -8409,7 +8409,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-link`\nThe cell-furo-link component displays a FieldNode of type `furo.Link` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-link/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-link/",
           "attributes": [
                     ]
           ,
@@ -8436,7 +8436,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-numberproperty`\nThe cell-furo-numberrproperty component displays a FieldNode of type `furo.Numberproperty` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-numberproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-numberproperty/",
           "attributes": [
                     ]
           ,
@@ -8463,7 +8463,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-property-repeats`\nThe cell-furo-property-repeats component displays a FieldNode of type `furo.Property` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-property-repeated/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-property-repeated/",
           "attributes": [{
                         "name": "noDataText",
                         "type": "String",
@@ -8516,7 +8516,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-property`\nThe cell-furo-property component displays a FieldNode of type `furo.Property` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-property/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-property/",
           "attributes": [{
                         "name": "noDataText",
                         "type": "string",
@@ -8558,7 +8558,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-reference`\nThe cell-furo-reference component displays a FieldNode of type `furo.Reference` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-reference/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-reference/",
           "attributes": [
                     ]
           ,
@@ -8585,7 +8585,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-stringoptionproperty`\nThe cell-furo-numberrproperty component displays a FieldNode of type `furo.Stringoptionproperty` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-stringoptionproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-stringoptionproperty/",
           "attributes": [
                     ]
           ,
@@ -8612,7 +8612,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-stringproperty`\nThe cell-furo-stringproperty component displays a FieldNode of type `furo.Stringproperty` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-stringproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-stringproperty/",
           "attributes": [
                     ]
           ,
@@ -8639,7 +8639,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-type-date`\nThe cell-furo-type-date component displays a FieldNode of type `furo.type.Date` in read only mode.\n\nif the field `display_name` is set, the component will use that value for the display.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-type-date/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-type-date/",
           "attributes": [
                     ]
           ,
@@ -8666,7 +8666,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-furo-type-money`\nThe cell-furo-type-money component displays a FieldNode of type `furo.type.Money` in read only mode.\n\nif the field `display_name` is set, the component will use that value for the display.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-furo-type-money/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-furo-type-money/",
           "attributes": [
                     ]
           ,
@@ -8693,7 +8693,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-protobuf-any`\nThe cell-google-protobuf-any component is a wrapper displays of type `google.protobuf.Any` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-protobuf-any/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-any/",
           "attributes": [
                     ]
           ,
@@ -8725,7 +8725,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-protobuf-boolvalue`\nThe cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-protobuf-boolvalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-boolvalue/",
           "attributes": [
                     ]
           ,
@@ -8752,7 +8752,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-double`\nThe cell-double component displays a FieldNode of type `google.protobuf.DoubleValue` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-protobuf-doublevalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-doublevalue/",
           "attributes": [
                     ]
           ,
@@ -8779,7 +8779,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-protobuf-floatvalue`\nThe cell-google-protobuf-floatvalue component displays a FieldNode of type `google.protobuf.FloatValue` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-protobuf-/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-/",
           "attributes": [
                     ]
           ,
@@ -8811,7 +8811,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-protobuf-boolvalue`\nThe cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Int32Value` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-protobuf-int32value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-int32value/",
           "attributes": [
                     ]
           ,
@@ -8838,7 +8838,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-protobuf-boolvalue`\nThe cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Int64Value` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-protobuf-int64value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-int64value/",
           "attributes": [
                     ]
           ,
@@ -8865,7 +8865,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-protobuf-stringvalue`\nThe cell-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.StringValue` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-protobuf-stringvalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-stringvalue/",
           "attributes": [
                     ]
           ,
@@ -8892,7 +8892,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-protobuf-timestamp`\nThe cell-google-protobuf-timestamp component displays a FieldNode of type `google.prtobuf.Timestamp` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-protobuf-timestamp/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-timestamp/",
           "attributes": [
                     ]
           ,
@@ -8919,7 +8919,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-protobuf-boolvalue`\nThe cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Uint32Value` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-protobuf-uint32value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-uint32value/",
           "attributes": [
                     ]
           ,
@@ -8946,7 +8946,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-protobuf-boolvalue`\nThe cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Uint64Value` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-protobuf-uint64value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-protobuf-uint64value/",
           "attributes": [
                     ]
           ,
@@ -8973,7 +8973,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-type-color`\nThe cell-google-type-color component displays a FieldNode of type `google.type.Color` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-type-color/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-type-color/",
           "attributes": [
                     ]
           ,
@@ -9015,7 +9015,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-type-date`\nThe cell-google-type-date component displays a FieldNode of type `google.type.Date` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-type-date/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-type-date/",
           "attributes": [
                     ]
           ,
@@ -9042,7 +9042,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-type-money`\nThe cell-google-type-money component displays a FieldNode of type `google.type.Money` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-type-money/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-type-money/",
           "attributes": [
                     ]
           ,
@@ -9069,7 +9069,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-google-type-timeofday`\nThe cell-google-type-timeofday component displays a FieldNode of type `google.type.TimeOfDay` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-google-type-timeofday/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-google-type-timeofday/",
           "attributes": [
                     ]
           ,
@@ -9096,7 +9096,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-int32`\nThe cell-int32 component displays a FieldNode of type `int32` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-int32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-int32/",
           "attributes": [
                     ]
           ,
@@ -9123,7 +9123,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-int64`\nThe cell-int64 component displays a FieldNode of type `int64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-int64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-int64/",
           "attributes": [
                     ]
           ,
@@ -9150,7 +9150,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-string`\nThe cell-string component displays a FieldNode of type `string` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-string/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-string/",
           "attributes": [
                     ]
           ,
@@ -9177,7 +9177,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-uint32`\nThe cell-uint32 component displays a FieldNode of type `uint32` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-uint32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-uint32/",
           "attributes": [
                     ]
           ,
@@ -9204,7 +9204,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`cell-uint64`\nThe cell-uint64 component displays a FieldNode of type `uint64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/cell-uint64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/cell-uint64/",
           "attributes": [
                     ]
           ,
@@ -9231,7 +9231,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-bool` is a `celledit` context renderer.\n\nIt uses furo-ui5-checkbox-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-bool/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-bool/",
           "attributes": [
                     ]
           ,
@@ -9309,7 +9309,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-double` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-double/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-double/",
           "attributes": [
                     ]
           ,
@@ -9389,7 +9389,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-float` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-float/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-float/",
           "attributes": [
                     ]
           ,
@@ -9469,7 +9469,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-bigdecimal/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-bigdecimal/",
           "attributes": [
                     ]
           ,
@@ -9549,7 +9549,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-fat-bool` is a `celledit` context renderer.\n\nIt uses furo-ui5-checkbox-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-fat-bool/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-bool/",
           "attributes": [
                     ]
           ,
@@ -9627,7 +9627,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-fat-double` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-fat-double/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-double/",
           "attributes": [
                     ]
           ,
@@ -9707,7 +9707,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-fat-float` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-fat-float/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-float/",
           "attributes": [
                     ]
           ,
@@ -9787,7 +9787,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-fat-int32` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-fat-int32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-int32/",
           "attributes": [
                     ]
           ,
@@ -9867,7 +9867,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-fat-int64` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-fat-int64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-int64/",
           "attributes": [
                     ]
           ,
@@ -9947,7 +9947,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-fat-string` is a `celledit` context renderer.\n\nIt uses furo-ui5-text-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-fat-string/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-string/",
           "attributes": [
                     ]
           ,
@@ -10051,7 +10051,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-fat-uint32` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-fat-uint32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-uint32/",
           "attributes": [
                     ]
           ,
@@ -10131,7 +10131,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-fat-uint64` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-fat-uint64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-fat-uint64/",
           "attributes": [
                     ]
           ,
@@ -10211,7 +10211,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-integerproperty` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-integerproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-integerproperty/",
           "attributes": [
                     ]
           ,
@@ -10291,7 +10291,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-link`\nThe celledit-furo-link component displays a FieldNode of type `furo.Link` in read only mode.\n\nEvery celledit-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-link/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-link/",
           "attributes": [
                     ]
           ,
@@ -10318,7 +10318,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-numberproperty` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-inumberproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-inumberproperty/",
           "attributes": [
                     ]
           ,
@@ -10398,7 +10398,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-property-repeats`\nThe celledit-furo-property-repeats component displays a FieldNode of type `furo.Property` in read only mode.\n\nEvery celledit-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-property-repeated/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-property-repeated/",
           "attributes": [{
                         "name": "noDataText",
                         "type": "String",
@@ -10451,7 +10451,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-furo-property`\nThe celledit-furo-property component displays a FieldNode of type `furo.Property` in read only mode.\n\nEvery celledit-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-property/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-property/",
           "attributes": [{
                         "name": "noDataText",
                         "type": "string",
@@ -10501,7 +10501,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-reference/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-reference/",
           "attributes": [{
                         "name": "search-response-path",
                         "type": "string",
@@ -10823,7 +10823,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-stringoptionproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-stringoptionproperty/",
           "attributes": [
                     ]
           ,
@@ -10943,7 +10943,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-stringproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-stringproperty/",
           "attributes": [
                     ]
           ,
@@ -11047,7 +11047,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-type-date/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-type-date/",
           "attributes": [
                     ]
           ,
@@ -11114,7 +11114,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-furo-type-money/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-furo-type-money/",
           "attributes": [{
                         "name": "disabled",
                         "type": "Boolean",
@@ -11199,7 +11199,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-protobuf-any`\nThe celledit-google-protobuf-any component is a wrapper displays of type `google.protobuf.Any` in read only mode.\n\nEvery celledit-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-protobuf-any/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-any/",
           "attributes": [
                     ]
           ,
@@ -11231,7 +11231,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-protobuf-boolvalue` is a `celledit` context renderer.\n\nIt uses furo-ui5-checkbox-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-protobuf-boolvalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-boolvalue/",
           "attributes": [
                     ]
           ,
@@ -11309,7 +11309,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-protobuf-doublevalue` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-protobuf-doublevalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-doublevalue/",
           "attributes": [
                     ]
           ,
@@ -11389,7 +11389,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-protobuf-floatvalue` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-protobuf-floatvalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-floatvalue/",
           "attributes": [
                     ]
           ,
@@ -11469,7 +11469,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-protobuf-int32value` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-protobuf-int32value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-int32value/",
           "attributes": [
                     ]
           ,
@@ -11549,7 +11549,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-protobuf-int64value` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-protobuf-int64value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-int64value/",
           "attributes": [
                     ]
           ,
@@ -11629,7 +11629,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-protobuf-stringvalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-stringvalue/",
           "attributes": [
                     ]
           ,
@@ -11733,7 +11733,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-protobuf-timestamp/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-timestamp/",
           "attributes": [
                     ]
           ,
@@ -11844,7 +11844,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-protobuf-uint32value` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-protobuf-uint32value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-uint32value/",
           "attributes": [
                     ]
           ,
@@ -11924,7 +11924,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-protobuf-uint64value` is a `celledit` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-protobuf-uint64value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-protobuf-uint64value/",
           "attributes": [
                     ]
           ,
@@ -12004,7 +12004,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-type-date` is a `celledit` context renderer.\n\nIt uses furo-ui5-date-picker as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-type-date/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-type-date/",
           "attributes": [
                     ]
           ,
@@ -12071,7 +12071,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-type-money` is a `celledit` context renderer.\n\nIt uses furo-ui5-money-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-type-money/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-type-money/",
           "attributes": [{
                         "name": "disabled",
                         "type": "Boolean",
@@ -12156,7 +12156,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`celledit-google-type-timeofday` is a `celledit` context renderer.\n\nIt uses furo-ui5-time-picker as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-google-type-timeofday/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-google-type-timeofday/",
           "attributes": [
                     ]
           ,
@@ -12223,7 +12223,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-int32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-int32/",
           "attributes": [
                     ]
           ,
@@ -12303,7 +12303,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-int64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-int64/",
           "attributes": [
                     ]
           ,
@@ -12383,7 +12383,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-string/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-string/",
           "attributes": [
                     ]
           ,
@@ -12487,7 +12487,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-uint32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-uint32/",
           "attributes": [
                     ]
           ,
@@ -12567,7 +12567,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/celledit-uint64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/celledit-uint64/",
           "attributes": [
                     ]
           ,
@@ -12647,7 +12647,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-bool`\nThe display-bool component displays a FieldNode of type `bool` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-bool/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-bool/",
           "attributes": [
                     ]
           ,
@@ -12674,7 +12674,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-double`\nThe display-double component displays a FieldNode of type `double` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-double/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-double/",
           "attributes": [
                     ]
           ,
@@ -12709,7 +12709,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-float`\nThe display-float component displays a FieldNode of type `float` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-float/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-float/",
           "attributes": [
                     ]
           ,
@@ -12744,7 +12744,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-bigdecimal`\nThe display-furo-bigdecimal component displays a FieldNode of type `furo.BigDecimal` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-bigdecimal/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-bigdecimal/",
           "attributes": [{
                         "name": "currency",
                         "type": "string",
@@ -12792,7 +12792,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-fat-bool`\nThe display-furo-fat-bool component displays a FieldNode of type `furo.fat.bool` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-fat-bool/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-fat-bool/",
           "attributes": [
                     ]
           ,
@@ -12819,7 +12819,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-fat-double`\nThe display-furo-fat-double component displays a FieldNode of type `furo.fat.Double` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-fat-double/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-fat-double/",
           "attributes": [
                     ]
           ,
@@ -12854,7 +12854,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-fat-float`\nThe display-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-fat-float/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-fat-float/",
           "attributes": [
                     ]
           ,
@@ -12889,7 +12889,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-int32`\nThe display-int32 component displays a FieldNode of type `furo.fat.Int32` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-fat-int32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-fat-int32/",
           "attributes": [
                     ]
           ,
@@ -12924,7 +12924,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-fat-int64`\nThe display-furo-fat-int64 component displays a FieldNode of type `furo.fat.int64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-fat-int64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-fat-int64/",
           "attributes": [
                     ]
           ,
@@ -12959,7 +12959,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-fat-string`\nThe display-furo-fat-string component displays a FieldNode of type `furo.fat.String` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-fat-string/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-fat-string/",
           "attributes": [
                     ]
           ,
@@ -13002,7 +13002,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-fat-uint32`\nThe display-furo-fat-uint32 component displays a FieldNode of type `furo.fat.Uint32` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-fat-Uint32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-fat-Uint32/",
           "attributes": [
                     ]
           ,
@@ -13037,7 +13037,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-fat-uint64`\nThe display-furo-fat-uint64 component displays a FieldNode of type `furo.fat.uint64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-fat-uint64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-fat-uint64/",
           "attributes": [
                     ]
           ,
@@ -13072,7 +13072,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-integerproperty`\nThe display-furo-integerproperty component displays a FieldNode of type `furo.Integerproperty` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-/",
           "attributes": [
                     ]
           ,
@@ -13107,7 +13107,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-link`\nThe display-furo-link component displays a FieldNode of type `furo.Link` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-link/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-link/",
           "attributes": [
                     ]
           ,
@@ -13134,7 +13134,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-numberproperty`\nThe display-furo-numberrproperty component displays a FieldNode of type `furo.Numberproperty` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-numberproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-numberproperty/",
           "attributes": [
                     ]
           ,
@@ -13169,7 +13169,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-property-repeats`\nThe display-furo-property-repeats component displays a FieldNode of type `furo.Property` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-property-repeated/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-property-repeated/",
           "attributes": [{
                         "name": "noDataText",
                         "type": "String",
@@ -13222,7 +13222,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-property-repeats-labeled`\nThe display-furo-property-repeats-labeled component displays a RepeaterNode of type `furo.Property` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-property-labeled/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-property-labeled/",
           "attributes": [{
                         "name": "noDataText",
                         "type": "String",
@@ -13267,7 +13267,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-property`\nThe display-furo-property component displays a FieldNode of type `furo.Property` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-property/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-property/",
           "attributes": [{
                         "name": "noDataText",
                         "type": "string",
@@ -13309,7 +13309,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-reference`\nThe display-furo-reference component displays a FieldNode of type `furo.Reference` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-reference/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-reference/",
           "attributes": [
                     ]
           ,
@@ -13346,7 +13346,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-stringoptionproperty`\nThe display-furo-numberrproperty component displays a FieldNode of type `furo.Stringoptionproperty` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-stringoptionproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-stringoptionproperty/",
           "attributes": [{
                         "name": "_text",
                         "type": "string",
@@ -13383,7 +13383,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-stringproperty`\nThe display-furo-stringproperty component displays a FieldNode of type `furo.Stringproperty` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-stringproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-stringproperty/",
           "attributes": [{
                         "name": "_text",
                         "type": "string",
@@ -13420,7 +13420,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-type-date`\nThe display-furo-type-date component displays a FieldNode of type `furo.type.Date` in read only mode.\n\nif the field `display_name` is set, the component will use that value for the display.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-type-date/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-type-date/",
           "attributes": [
                     ]
           ,
@@ -13455,7 +13455,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-furo-type-money`\nThe display-furo-type-money component displays a FieldNode of type `furo.type.Money` in read only mode.\n\nif the field `display_name` is set, the component will use that value for the display.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-furo-type-money/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-furo-type-money/",
           "attributes": [
                     ]
           ,
@@ -13490,7 +13490,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-protobuf-any`\nThe display-google-protobuf-any component is a wrapper displays of type `google.protobuf.Any` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-protobuf-/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-protobuf-/",
           "attributes": [
                     ]
           ,
@@ -13522,7 +13522,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-protobuf-boolvalue`\nThe display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-protobuf-boolvalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-protobuf-boolvalue/",
           "attributes": [
                     ]
           ,
@@ -13549,7 +13549,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-double`\nThe display-double component displays a FieldNode of type `google.protobuf.DoubleValue` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-protobuf-doublevalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-protobuf-doublevalue/",
           "attributes": [
                     ]
           ,
@@ -13584,7 +13584,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-protobuf-floatvalue`\nThe display-google-protobuf-floatvalue component displays a FieldNode of type `google.protobuf.FloatValue` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-protobuf-floatvalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-protobuf-floatvalue/",
           "attributes": [
                     ]
           ,
@@ -13619,7 +13619,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-protobuf-boolvalue`\nThe display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Int32Value` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-protobuf-int32Value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int32Value/",
           "attributes": [
                     ]
           ,
@@ -13654,7 +13654,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-protobuf-boolvalue`\nThe display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Int64Value` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-protobuf-int64Value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-protobuf-int64Value/",
           "attributes": [
                     ]
           ,
@@ -13689,7 +13689,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-protobuf-stringvalue`\nThe display-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.StringValue` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-protobuf-stringvalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-protobuf-stringvalue/",
           "attributes": [{
                         "name": "_text",
                         "type": "string",
@@ -13726,7 +13726,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-protobuf-timestamp`\nThe display-google-protobuf-timestamp component displays a FieldNode of type `google.prtobuf.Timestamp` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-protobuf-timestamp/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-protobuf-timestamp/",
           "attributes": [
                     ]
           ,
@@ -13761,7 +13761,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-protobuf-boolvalue`\nThe display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Uint32Value` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-protobuf-uint32value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-protobuf-uint32value/",
           "attributes": [
                     ]
           ,
@@ -13796,7 +13796,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-protobuf-boolvalue`\nThe display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Uint64Value` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-protobuf-uint64value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-protobuf-uint64value/",
           "attributes": [
                     ]
           ,
@@ -13831,7 +13831,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-type-color`\nThe display-google-type-color component displays a FieldNode of type `google.type.Color` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-type-color/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-type-color/",
           "attributes": [
                     ]
           ,
@@ -13873,7 +13873,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-type-date`\nThe display-google-type-date component displays a FieldNode of type `google.type.Date` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-type-date/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-type-date/",
           "attributes": [
                     ]
           ,
@@ -13908,7 +13908,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-type-datetime`\nComponent description here!",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-type-datetime/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-type-datetime/",
           "attributes": [
                     ]
           ,
@@ -13943,7 +13943,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-type-money`\nThe display-google-type-money component displays a FieldNode of type `google.type.Money` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-type-money/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-type-money/",
           "attributes": [
                     ]
           ,
@@ -13978,7 +13978,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-google-type-timeofday`\nThe display-google-type-timeofday component displays a FieldNode of type `google.type.TimeOfDay` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-google-type-timeofday/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-google-type-timeofday/",
           "attributes": [
                     ]
           ,
@@ -14013,7 +14013,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-int32`\nThe display-int32 component displays a FieldNode of type `int32` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-int32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-int32/",
           "attributes": [
                     ]
           ,
@@ -14048,7 +14048,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-int64`\nThe display-int64 component displays a FieldNode of type `int64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-int64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-int64/",
           "attributes": [
                     ]
           ,
@@ -14083,7 +14083,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-string`\nThe display-string component displays a FieldNode of type `string` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-string/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-string/",
           "attributes": [{
                         "name": "_text",
                         "type": "string",
@@ -14120,7 +14120,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-uint32`\nThe display-uint32 component displays a FieldNode of type `uint32` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-uint32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-uint32/",
           "attributes": [
                     ]
           ,
@@ -14155,7 +14155,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`display-uint64`\nThe display-uint64 component displays a FieldNode of type `uint64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/display-uint64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/display-uint64/",
           "attributes": [
                     ]
           ,
@@ -14190,7 +14190,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-bool` is a `form` context renderer.\n\nIt uses furo-ui5-checkbox-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-bool/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-bool/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -14275,7 +14275,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-double/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-double/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -14372,7 +14372,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-float/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-float/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -14469,7 +14469,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-bigdecimal/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-bigdecimal/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -14566,7 +14566,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-furo-fat-bool` is a `form` context renderer.\n\nIt uses furo-ui5-checkbox-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-fat-bool/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-fat-bool/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -14651,7 +14651,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-furo-fat-double` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-fat-double/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-fat-double/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -14748,7 +14748,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-furo-fat-float` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-fat-float/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-fat-float/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -14845,7 +14845,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-furo-fat-int32` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-fat-int32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-fat-int32/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -14942,7 +14942,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-furo-fat-int64` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-fat-int64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-fat-int64/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -15039,7 +15039,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-fat-string/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-fat-string/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -15154,7 +15154,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-furo-fat-uint32` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-fat-uint32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-fat-uint32/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -15251,7 +15251,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-furo-fat-uint64` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-fat-uint64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-fat-uint64/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -15348,7 +15348,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-furo-integerproperty` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-integerproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-integerproperty/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -15445,7 +15445,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-furo-integerproperty` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-integerproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-integerproperty/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -15542,7 +15542,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-reference/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-reference/",
           "attributes": [{
                         "name": "service",
                         "type": "string",
@@ -15741,7 +15741,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-stringoptionproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-stringoptionproperty/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -15874,7 +15874,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-stringproperty/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-stringproperty/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -15989,7 +15989,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-type-date/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-type-date/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -16076,7 +16076,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-furo-type-money/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-furo-type-money/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -16155,7 +16155,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-google-protobuf-boolvalue` is a `form` context renderer.\n\nIt uses furo-ui5-checkbox-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-google-protobuf-boolvalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-google-protobuf-boolvalue/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -16240,7 +16240,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-google-protobuf-doublevalue` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-google-protobuf-doublevalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-google-protobuf-doublevalue/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -16337,7 +16337,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-google-protobuf-floatvalue` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-google-protobuf-floatvalue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-google-protobuf-floatvalue/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -16434,7 +16434,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-google-protobuf-int32value` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-google-protobuf-int32value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-google-protobuf-int32value/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -16531,7 +16531,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-google-protobuf-int64value` is a `form` context renderer.\n\nIt uses furo-ui5-number-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-google-protobuf-int64value/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-google-protobuf-int64value/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -16628,7 +16628,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-google-protobuf-stringValue/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-google-protobuf-stringValue/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -16743,7 +16743,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-google-protobuf-timestamp/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-google-protobuf-timestamp/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -16838,7 +16838,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-google-type-date` is a `form` context renderer.\n\nIt uses furo-ui5-date-picker as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-google-type-date/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-google-type-date/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -16925,7 +16925,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-google-type-money` is a `form` context renderer.\n\nIt uses furo-ui5-money-input as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-google-type-money/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-google-type-money/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -17004,7 +17004,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`form-google-type-timeofday` is a `form` context renderer.\n\nIt uses furo-ui5-time-picker as the renderer",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-google-type-timeofday/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-google-type-timeofday/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -17099,7 +17099,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-int32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-int32/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -17196,7 +17196,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-int64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-int64/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -17293,7 +17293,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-string/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-string/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -17408,7 +17408,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-uint32/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-uint32/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -17505,7 +17505,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/form-uint64/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/form-uint64/",
           "attributes": [{
                         "name": "label",
                         "type": "string",
@@ -17602,7 +17602,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`line-launchpad-launchtile`\ntodo Describe your element",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/line-launchpad-launchtile/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/line-launchpad-launchtile/",
           "attributes": [
                     ]
           ,
@@ -17637,7 +17637,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`line-launchpad-monitortile`\ntodo Describe your element",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/line-launchpad-monitortile/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/line-launchpad-monitortile/",
           "attributes": [
                     ]
           ,
@@ -17680,7 +17680,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`tile-launchpad-launchtile`\ntodo Describe your element",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/tile-launchpad-launchtile/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/tile-launchpad-launchtile/",
           "attributes": [
                     ]
           ,
@@ -17723,7 +17723,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`tile-launchpad-monitortile`\ntodo Describe your element",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/tile-launchpad-monitortile/",
+          "doc-url": "https://ui5.furo.pro/docs/typerenderer/tile-launchpad-monitortile/",
           "attributes": [
                     ]
           ,
@@ -17774,7 +17774,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`DialogManageViewsDeletebutton` is a helper component",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/dialog-manage-views-deletebutton/",
+          "doc-url": "https://ui5.furo.pro/docs/components/dialog-manage-views-deletebutton/",
           "attributes": [{
                         "name": "myBool",
                         "type": "boolean",
@@ -17827,7 +17827,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`DialogManageViews` is a helper component",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/dialog-manage-views/",
+          "doc-url": "https://ui5.furo.pro/docs/components/dialog-manage-views/",
           "attributes": [{
                         "name": "cancel-button-text",
                         "type": "string",
@@ -17958,7 +17958,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`DialogFilterSettings`\nis a helper component for `FuroUi5ViewsFilterSettings`",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/dialog-filter-settings/",
+          "doc-url": "https://ui5.furo.pro/docs/components/dialog-filter-settings/",
           "attributes": [{
                         "name": "colheader-field",
                         "type": "string",
@@ -18075,7 +18075,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`FuroUi5SetFieldorder` is a helper component",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-set-fieldorder/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-fieldorder/",
           "attributes": [{
                         "name": "placeholder-search",
                         "type": "string",
@@ -18134,7 +18134,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`FuroUi5SetGroupby` is a helper component",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-set-groupby/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-groupby/",
           "attributes": [{
                         "name": "myBool",
                         "type": "boolean",
@@ -18177,7 +18177,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`FuroUi5SetOrderbyRow` is a helper component",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-set-orderby-row/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-orderby-row/",
           "attributes": [
                     ]
           ,
@@ -18212,7 +18212,7 @@
           "deprecated": false,
           "experimental": false,
           "description": "`FuroUi5SetOrderby` is a helper component",
-          "doc-url": "https://web-components.furo.pro/docs/modules/furo-ui5/furo-ui5-set-orderby/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-orderby/",
           "attributes": [{
                         "name": "label-empty-select",
                         "type": "string",

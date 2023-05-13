@@ -1971,7 +1971,7 @@
                 "text": "{readonly: undefined, disabled: undefined}"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -2580,7 +2580,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -6083,7 +6083,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -6574,7 +6574,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -7793,7 +7793,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -8580,7 +8580,7 @@
               "type": {
                 "text": "object"
               },
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -9101,7 +9101,7 @@
               "type": {
                 "text": "object"
               },
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -10998,7 +10998,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -11697,7 +11697,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -12403,7 +12403,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -13599,7 +13599,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -14168,7 +14168,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -14906,7 +14906,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden:undefined,\n    }"
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden: undefined,\n    }"
             },
             {
               "kind": "field",
@@ -17550,6 +17550,196 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/lib/Events.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Events",
+          "members": [
+            {
+              "kind": "method",
+              "name": "buildChangeEvent",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "detail"
+                }
+              ],
+              "description": "Creates an universal `furo-value-changed` event\nAll extended ui5 components should use this builder function to create\nthe change event",
+              "return": {
+                "type": {
+                  "text": "Event"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Events",
+          "declaration": {
+            "name": "Events",
+            "module": "src/lib/Events.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/lib/MediaSize.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "# MediaSize resolver\n\nReturns the **media size** from S to XXL according to the screen width.\n\nUse this to set style vars according to the current media size.\n\n\n## Usage\n\nApply the media-size attribute to your main-stage or component.\n\n```js\nwindow.addEventListener('resize',   MediaSize.DebounceBuilder(() => {\n      this.setAttribute(\"media-size\", MediaSize.GetMediaSize())\n    }, MediaSize.HANDLE_RESIZE_DEBOUNCE_RATE)\n);\n// initial size\nthis.setAttribute(\"media-size\", MediaSize.GetMediaSize())\n\n```\n\nSet media-size related values for your variables.\n```css\n :host([media-size='XXL']) {\n         --FuroUi5MediaSizeIndentation: 2rem 3rem 1rem 3rem;\n         --FuroUi5MediaSizeIndentationTop: 2rem;\n         --FuroUi5MediaSizeIndentationRight: 3rem;\n         --FuroUi5MediaSizeIndentationBottom: 1;\n         --FuroUi5MediaSizeIndentationLeft: 3rem;\n       }\n\n:host([media-size='XL']) {\n         --FuroUi5MediaSizeIndentation: 2rem 3rem 1rem 3rem;\n         --FuroUi5MediaSizeIndentationTop: 2rem;\n         --FuroUi5MediaSizeIndentationRight: 3rem;\n         --FuroUi5MediaSizeIndentationBottom: 1;\n         --FuroUi5MediaSizeIndentationLeft: 3rem;\n       }\n\n:host([media-size='L']) {\n         --FuroUi5MediaSizeIndentation: 1rem 2rem 0 2rem;\n         --FuroUi5MediaSizeIndentationTop: 1rem;\n         --FuroUi5MediaSizeIndentationRight: 2rem;\n         --FuroUi5MediaSizeIndentationBottom: 0;\n         --FuroUi5MediaSizeIndentationLeft: 2rem;\n       }\n\n:host([media-size='M']) {\n         --FuroUi5MediaSizeIndentation: 0.625rem 2rem 0 2rem;\n         --FuroUi5MediaSizeIndentationTop: 0.625rem;\n         --FuroUi5MediaSizeIndentationRight: 2rem;\n         --FuroUi5MediaSizeIndentationBottom: 0;\n         --FuroUi5MediaSizeIndentationLeft: 2rem;\n       }\n\n:host([media-size='S']) {\n         --FuroUi5MediaSizeIndentation: 0.625rem 1rem 0 1rem;\n         --FuroUi5MediaSizeIndentationTop: 0.625rem;\n         --FuroUi5MediaSizeIndentationRight: 1rem;\n         --FuroUi5MediaSizeIndentationBottom: 0;\n         --FuroUi5MediaSizeIndentationLeft: 1rem;\n     }\n```",
+          "name": "MediaSize",
+          "members": [
+            {
+              "kind": "field",
+              "name": "HANDLE_RESIZE_DEBOUNCE_RATE",
+              "static": true,
+              "description": "Default debounce rate for resize updates.",
+              "return": {
+                "type": {
+                  "text": "number"
+                }
+              },
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "GetMediaSize",
+              "static": true,
+              "description": "Returns the media size.\n\nSizes:\nS,M,L,XL,XXl",
+              "return": {
+                "type": {
+                  "text": "String"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "BREAKPOINTS",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "BREAKPOINTS_MAP",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "DebounceBuilder",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "func"
+                },
+                {
+                  "name": "delay"
+                }
+              ],
+              "description": "Generates a debounced function.",
+              "return": {
+                "type": {
+                  "text": "(function(...[*]): void)|*"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MediaSize",
+          "declaration": {
+            "name": "MediaSize",
+            "module": "src/lib/MediaSize.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/lib/Ui5LabelDataBinding.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Helper class for binding ui5 labeled elements",
+          "name": "Ui5LabelDataBinding",
+          "members": [
+            {
+              "kind": "method",
+              "name": "bindData",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "element"
+                },
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FieldNode"
+                  }
+                }
+              ],
+              "description": "bind data for labeled element"
+            },
+            {
+              "kind": "method",
+              "name": "isFatType",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "field"
+                }
+              ],
+              "description": "check whether it is a fat type",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Ui5LabelDataBinding",
+          "declaration": {
+            "name": "Ui5LabelDataBinding",
+            "module": "src/lib/Ui5LabelDataBinding.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/lib/init.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/lib/localeData.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/lib/ui5-icons.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/spaces/furo-ui5-launchpad-navigation.js",
       "declarations": [
         {
@@ -17835,196 +18025,6 @@
           }
         }
       ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/lib/Events.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "Events",
-          "members": [
-            {
-              "kind": "method",
-              "name": "buildChangeEvent",
-              "static": true,
-              "parameters": [
-                {
-                  "name": "detail"
-                }
-              ],
-              "description": "Creates an universal `furo-value-changed` event\nAll extended ui5 components should use this builder function to create\nthe change event",
-              "return": {
-                "type": {
-                  "text": "Event"
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Events",
-          "declaration": {
-            "name": "Events",
-            "module": "src/lib/Events.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/lib/MediaSize.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "# MediaSize resolver\n\nReturns the **media size** from S to XXL according to the screen width.\n\nUse this to set style vars according to the current media size.\n\n\n## Usage\n\nApply the media-size attribute to your main-stage or component.\n\n```js\nwindow.addEventListener('resize',   MediaSize.DebounceBuilder(() => {\n      this.setAttribute(\"media-size\", MediaSize.GetMediaSize())\n    }, MediaSize.HANDLE_RESIZE_DEBOUNCE_RATE)\n);\n// initial size\nthis.setAttribute(\"media-size\", MediaSize.GetMediaSize())\n\n```\n\nSet media-size related values for your variables.\n```css\n :host([media-size='XXL']) {\n         --FuroUi5MediaSizeIndentation: 2rem 3rem 1rem 3rem;\n         --FuroUi5MediaSizeIndentationTop: 2rem;\n         --FuroUi5MediaSizeIndentationRight: 3rem;\n         --FuroUi5MediaSizeIndentationBottom: 1;\n         --FuroUi5MediaSizeIndentationLeft: 3rem;\n       }\n\n:host([media-size='XL']) {\n         --FuroUi5MediaSizeIndentation: 2rem 3rem 1rem 3rem;\n         --FuroUi5MediaSizeIndentationTop: 2rem;\n         --FuroUi5MediaSizeIndentationRight: 3rem;\n         --FuroUi5MediaSizeIndentationBottom: 1;\n         --FuroUi5MediaSizeIndentationLeft: 3rem;\n       }\n\n:host([media-size='L']) {\n         --FuroUi5MediaSizeIndentation: 1rem 2rem 0 2rem;\n         --FuroUi5MediaSizeIndentationTop: 1rem;\n         --FuroUi5MediaSizeIndentationRight: 2rem;\n         --FuroUi5MediaSizeIndentationBottom: 0;\n         --FuroUi5MediaSizeIndentationLeft: 2rem;\n       }\n\n:host([media-size='M']) {\n         --FuroUi5MediaSizeIndentation: 0.625rem 2rem 0 2rem;\n         --FuroUi5MediaSizeIndentationTop: 0.625rem;\n         --FuroUi5MediaSizeIndentationRight: 2rem;\n         --FuroUi5MediaSizeIndentationBottom: 0;\n         --FuroUi5MediaSizeIndentationLeft: 2rem;\n       }\n\n:host([media-size='S']) {\n         --FuroUi5MediaSizeIndentation: 0.625rem 1rem 0 1rem;\n         --FuroUi5MediaSizeIndentationTop: 0.625rem;\n         --FuroUi5MediaSizeIndentationRight: 1rem;\n         --FuroUi5MediaSizeIndentationBottom: 0;\n         --FuroUi5MediaSizeIndentationLeft: 1rem;\n     }\n```",
-          "name": "MediaSize",
-          "members": [
-            {
-              "kind": "field",
-              "name": "HANDLE_RESIZE_DEBOUNCE_RATE",
-              "static": true,
-              "description": "Default debounce rate for resize updates.",
-              "return": {
-                "type": {
-                  "text": "number"
-                }
-              },
-              "readonly": true
-            },
-            {
-              "kind": "method",
-              "name": "GetMediaSize",
-              "static": true,
-              "description": "Returns the media size.\n\nSizes:\nS,M,L,XL,XXl",
-              "return": {
-                "type": {
-                  "text": "String"
-                }
-              }
-            },
-            {
-              "kind": "field",
-              "name": "BREAKPOINTS",
-              "static": true,
-              "readonly": true
-            },
-            {
-              "kind": "field",
-              "name": "BREAKPOINTS_MAP",
-              "static": true,
-              "readonly": true
-            },
-            {
-              "kind": "method",
-              "name": "DebounceBuilder",
-              "static": true,
-              "parameters": [
-                {
-                  "name": "func"
-                },
-                {
-                  "name": "delay"
-                }
-              ],
-              "description": "Generates a debounced function.",
-              "return": {
-                "type": {
-                  "text": "(function(...[*]): void)|*"
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MediaSize",
-          "declaration": {
-            "name": "MediaSize",
-            "module": "src/lib/MediaSize.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/lib/Ui5LabelDataBinding.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "Helper class for binding ui5 labeled elements",
-          "name": "Ui5LabelDataBinding",
-          "members": [
-            {
-              "kind": "method",
-              "name": "bindData",
-              "static": true,
-              "parameters": [
-                {
-                  "name": "element"
-                },
-                {
-                  "name": "fieldNode",
-                  "type": {
-                    "text": "FieldNode"
-                  }
-                }
-              ],
-              "description": "bind data for labeled element"
-            },
-            {
-              "kind": "method",
-              "name": "isFatType",
-              "static": true,
-              "parameters": [
-                {
-                  "name": "field"
-                }
-              ],
-              "description": "check whether it is a fat type",
-              "return": {
-                "type": {
-                  "text": "boolean"
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Ui5LabelDataBinding",
-          "declaration": {
-            "name": "Ui5LabelDataBinding",
-            "module": "src/lib/Ui5LabelDataBinding.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/lib/init.js",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/lib/localeData.js",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/lib/ui5-icons.js",
-      "declarations": [],
-      "exports": []
     },
     {
       "kind": "javascript-module",
@@ -22276,7 +22276,7 @@
                 "text": "{readonly: undefined, disabled: undefined}"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5CheckboxInput",
                 "module": "src/furo-ui5-checkbox-input.js"
@@ -22762,7 +22762,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -23269,7 +23269,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -23776,7 +23776,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -24146,7 +24146,7 @@
                 "text": "{readonly: undefined, disabled: undefined}"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5CheckboxInput",
                 "module": "src/furo-ui5-checkbox-input.js"
@@ -24632,7 +24632,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -25139,7 +25139,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -25646,7 +25646,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -26153,7 +26153,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -26771,7 +26771,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5TextInput",
                 "module": "src/furo-ui5-text-input.js"
@@ -27319,7 +27319,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -27826,7 +27826,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -28333,7 +28333,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -28891,7 +28891,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -30725,7 +30725,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5Select",
                 "module": "src/furo-ui5-select.js"
@@ -31346,7 +31346,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5TextInput",
                 "module": "src/furo-ui5-text-input.js"
@@ -32552,7 +32552,7 @@
                 "text": "{readonly: undefined, disabled: undefined}"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5CheckboxInput",
                 "module": "src/furo-ui5-checkbox-input.js"
@@ -33038,7 +33038,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -33545,7 +33545,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -34052,7 +34052,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -34559,7 +34559,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -35177,7 +35177,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5TextInput",
                 "module": "src/furo-ui5-text-input.js"
@@ -36046,7 +36046,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -36553,7 +36553,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -38086,7 +38086,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -38593,7 +38593,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -39211,7 +39211,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5TextInput",
                 "module": "src/furo-ui5-text-input.js"
@@ -39759,7 +39759,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
@@ -40266,7 +40266,7 @@
                 "text": "object"
               },
               "privacy": "private",
-              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden:undefined,\n    }",
+              "default": "{\n      readonly: undefined,\n      disabled: undefined,\n      required: undefined,\n      hidden: undefined,\n    }",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
                 "module": "src/furo-ui5-number-input.js"
