@@ -1,0 +1,15 @@
+{
+  "name": "@furo/web-types-ui5",
+  "version": "0.0.2",
+  "description": "Web-types for @ui5/webcomponents",
+  "keywords": [
+    "web-types",
+    "ui5"
+  ],
+  "author": "veith",
+  "license": "MIT",
+  "web-types": "web-types.json",
+  "publishConfig": {
+    "access": "public"
+  }
+}

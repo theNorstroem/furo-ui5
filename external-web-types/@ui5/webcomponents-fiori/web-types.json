@@ -1,0 +1,2056 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
+  "name": "@ui5/webcomponents-fiori",
+  "version": "1.13.1",
+  "description-markup": "markdown",
+  "js-types-syntax": "typescript",
+  "default-icon": "icon.svg",
+  "contributions": {
+    "html": {
+      "elements": [
+          {
+          "name": "ui5-bar",
+          "source": {
+            "module": "./Bar.js",
+            "symbol": "Bar"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The Bar is a container which is primarily used to hold titles, buttons and input elements and its design and functionality is the basis for page headers and footers. The component consists of three areas to hold its content - startContent slot, default slot and endContent slot. It has the capability to center content, such as a title, while having other components on the left and right side.\n\n<h3>Usage</h3> With the use of the design property, you can set the style of the Bar to appear designed like a Header, Subheader, Footer and FloatingFooter. <br> <b>Note:</b> Do not place a Bar inside another Bar or inside any bar-like component. Doing so may cause unpredictable behavior.\n\n<h3>Responsive Behavior</h3> The default slot will be centered in the available space between the startContent and the endContent areas, therefore it might not always be centered in the entire bar.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-bar</code> exposes the following CSS Shadow Parts: <ul> <li>bar - Used to style the wrapper of the content of the component</li> </ul>\n\n<h3>Keyboard Handling</h3>\n\n<h4>Fast Navigation</h4> This component provides a build in fast navigation group which can be used via <code>F6 / Shift + F6</code> or <code> Ctrl + Alt(Option) + Down / Ctrl + Alt(Option) + Up</code>. In order to use this functionality, you need to import the following module: <code>import \"@ui5/webcomponents-base/dist/features/F6Navigation.js\"</code> <br><br>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/Bar.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/Bar/",
+          "attributes": [{
+              "name": "design",
+              "type": "sap.ui.webc.fiori.types.BarDesign",
+              "description": "Defines the component's design.\n\n<br><br> <b>Note:</b> Available options are: <ul> <li><code>Header</code></li> <li><code>Subheader</code></li> <li><code>Footer</code></li> <li><code>FloatingFooter</code></li> </ul>",
+              "default": "\"Header\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the content in the middle of the bar"
+            }
+            , {
+              "name": "endContent",
+              "description": "Defines the content at the end of the bar"
+            }
+            , {
+              "name": "startContent",
+              "description": "Defines the content at the start of the bar"
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "design",
+                "type": "sap.ui.webc.fiori.types.BarDesign",
+                "description": "Defines the component's design.\n\n<br><br> <b>Note:</b> Available options are: <ul> <li><code>Header</code></li> <li><code>Subheader</code></li> <li><code>Footer</code></li> <li><code>FloatingFooter</code></li> </ul>",
+                "default": "\"Header\""
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-barcode-scanner-dialog",
+          "source": {
+            "module": "./BarcodeScannerDialog.js",
+            "symbol": "BarcodeScannerDialog"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>BarcodeScannerDialog</code> component provides barcode scanning functionality for all devices that support the <code>MediaDevices.getUserMedia()</code> native API. Opening the dialog launches the device camera and scans for known barcode formats. <br> <br> A <code>scanSuccess</code> event fires whenever a barcode is identified and a <code>scanError</code> event fires when the scan failed (for example, due to missing permisions). <br> <br> Internally, the component uses the zxing-js/library third party OSS.\n\nFor a list of supported barcode formats, see the <ui5-link target=\"_blank\" href=\"https://github.com/zxing-js/library\">zxing-js/library</ui5-link> documentation.",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/BarcodeScannerDialog/",
+          "attributes": [
+          ]
+          ,
+          "js": {
+            "properties": [
+            ],
+            "methods": [
+            {
+              "name": "close",
+              "description": "Closes the dialog and the scan session.",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "show",
+              "description": "Shows a dialog with the camera videostream. Starts a scan session.",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }],
+            "events": [
+              
+              {
+                "name": "scan-error",
+                "priority": "highest",
+                "description": "Fires when the scan fails with error.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "scan-success",
+                "priority": "highest",
+                "description": "Fires when the scan is completed successfuuly.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-dynamic-side-content",
+          "source": {
+            "module": "./DynamicSideContent.js",
+            "symbol": "DynamicSideContent"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe DynamicSideContent (<code>ui5-dynamic-side-content</code>) is a layout component that allows additional content to be displayed in a way that flexibly adapts to different screen sizes. The side content appears in a container next to or directly below the main content (it doesn't overlay). When the side content is triggered, the main content becomes narrower (if appearing side-by-side). The side content contains a separate scrollbar when appearing next to the main content.\n\n<h3>Usage</h3>\n\n<i>When to use?</i>\n\nUse this component if you want to display relevant information that is not critical for users to complete a task. Users should have access to all the key functions and critical information in the app even if they do not see the side content. This is important because on smaller screen sizes it may be difficult to display the side content in a way that is easily accessible for the user.\n\n<i>When not to use?</i>\n\nDon't use it if you want to display navigation or critical information that prevents users from completing a task when they have no access to the side content.\n\n<h3>Responsive Behavior</h3>\n\nScreen width > 1440px\n\n<ul><li>Main vs. side content ratio is 75 vs. 25 percent (with a minimum of 320px each).</li> <li>If the application defines a trigger, the side content can be hidden.</li></ul>\n\nScreen width <= 1440px and > 1024px\n\n<ul><li>Main vs. side content ratio is 66.666 vs. 33.333 percent (with a minimum of 320px each). If the side content width falls below 320 px, it automatically slides under the main content, unless the app development team specifies that it should disappear.</li></ul>\n\nScreen width <= 1024px and > 720px\n\n<ul><li>The side content ratio is fixed to 340px, and the main content takes the rest of the width. Only if the <code>sideContentFallDown</code> is set to <code>OnMinimumWidth</code> and screen width is <= 960px and > 720px the side content falls below the main content.</li></ul>\n\nScreen width <= 720px (for example on a mobile device)\n\n<ul><li>In this case, the side content automatically disappears from the screen (unless specified to stay under the content by setting of <code>sideContentVisibility</code> property to <code>AlwaysShow</code>) and can be triggered from a pre-set trigger (specified within the app). When the side content is triggered, it replaces the main content. We recommend that you always place the trigger for the side content in the same location, such as in the app footer.</li></ul>\n\nA special case allows switching the comparison mode between the main and side content. In this case, the screen is split into 50:50 percent for main vs. side content. The responsive behavior of the equal split is the same as in the standard view - the side content disappears on screen widths of less than 720 px and can only be viewed by triggering it.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/DynamicSideContent\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/DynamicSideContent/",
+          "attributes": [{
+              "name": "equal-split",
+              "type": "boolean",
+              "description": "Defines whether the component is in equal split mode. In this mode, the side and the main content take 50:50 percent of the container on all screen sizes except for phone, where the main and side contents are switching visibility using the toggle method.",
+              "default": "false"
+            }, {
+              "name": "hide-main-content",
+              "type": "boolean",
+              "description": "Defines the visibility of the main content.",
+              "default": "false"
+            }, {
+              "name": "hide-side-content",
+              "type": "boolean",
+              "description": "Defines the visibility of the side content.",
+              "default": "false"
+            }, {
+              "name": "side-content-fall-down",
+              "type": "sap.ui.webc.fiori.types.SideContentFallDown",
+              "description": "Defines on which breakpoints the side content falls down below the main content.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>BelowXL</code></li> <li><code>BelowL</code></li> <li><code>BelowM</code></li> <li><code>OnMinimumWidth</code></li> </ul>",
+              "default": "\"OnMinimumWidth\""
+            }, {
+              "name": "side-content-position",
+              "type": "sap.ui.webc.fiori.types.SideContentPosition",
+              "description": "Defines whether the side content is positioned before the main content (left side in LTR mode), or after the the main content (right side in LTR mode).\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>Start</code></li> <li><code>End</code></li> </ul>",
+              "default": "\"End\""
+            }, {
+              "name": "side-content-visibility",
+              "type": "sap.ui.webc.fiori.types.SideContentVisibility",
+              "description": "Defines on which breakpoints the side content is visible.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>AlwaysShow</code></li> <li><code>ShowAboveL</code></li> <li><code>ShowAboveM</code></li> <li><code>ShowAboveS</code></li> <li><code>NeverShow</code></li> </ul>",
+              "default": "\"ShowAboveS\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the main content."
+            }
+            , {
+              "name": "sideContent",
+              "description": "Defines the side content."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "equalSplit",
+                "type": "boolean",
+                "description": "Defines whether the component is in equal split mode. In this mode, the side and the main content take 50:50 percent of the container on all screen sizes except for phone, where the main and side contents are switching visibility using the toggle method.",
+                "default": "false"
+              }, {
+                "name": "hideMainContent",
+                "type": "boolean",
+                "description": "Defines the visibility of the main content.",
+                "default": "false"
+              }, {
+                "name": "hideSideContent",
+                "type": "boolean",
+                "description": "Defines the visibility of the side content.",
+                "default": "false"
+              }, {
+                "name": "sideContentFallDown",
+                "type": "sap.ui.webc.fiori.types.SideContentFallDown",
+                "description": "Defines on which breakpoints the side content falls down below the main content.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>BelowXL</code></li> <li><code>BelowL</code></li> <li><code>BelowM</code></li> <li><code>OnMinimumWidth</code></li> </ul>",
+                "default": "\"OnMinimumWidth\""
+              }, {
+                "name": "sideContentPosition",
+                "type": "sap.ui.webc.fiori.types.SideContentPosition",
+                "description": "Defines whether the side content is positioned before the main content (left side in LTR mode), or after the the main content (right side in LTR mode).\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>Start</code></li> <li><code>End</code></li> </ul>",
+                "default": "\"End\""
+              }, {
+                "name": "sideContentVisibility",
+                "type": "sap.ui.webc.fiori.types.SideContentVisibility",
+                "description": "Defines on which breakpoints the side content is visible.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>AlwaysShow</code></li> <li><code>ShowAboveL</code></li> <li><code>ShowAboveM</code></li> <li><code>ShowAboveS</code></li> <li><code>NeverShow</code></li> </ul>",
+                "default": "\"ShowAboveS\""
+              }
+            ],
+            "methods": [
+            {
+              "name": "toggle-contents",
+              "description": "Toggles visibility of main and side contents on S screen size (mobile device).",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }],
+            "events": [
+              
+              {
+                "name": "layout-change",
+                "priority": "highest",
+                "description": "Fires when the current breakpoint has been changed.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-filter-item",
+          "source": {
+            "module": "./FilterItem.js",
+            "symbol": "FilterItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\n<h3>Usage</h3>\n\nFor the <code>ui5-filter-item</code> <h3>ES6 Module Import</h3>\n\n<code>import @ui5/webcomponents-fiori/dist/FilterItem.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/FilterItem/",
+          "attributes": [{
+              "name": "additional-text",
+              "type": "string",
+              "description": "Defines the additional text of the component.",
+              "default": "\"\""
+            }, {
+              "name": "text",
+              "type": "string",
+              "description": "Defines the text of the component.",
+              "default": "\"\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "values",
+              "description": "Defines the &lt;code&gt;values&lt;/code&gt; list."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "additionalText",
+                "type": "string",
+                "description": "Defines the additional text of the component.",
+                "default": "\"\""
+              }, {
+                "name": "text",
+                "type": "string",
+                "description": "Defines the text of the component.",
+                "default": "\"\""
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-filter-item-option",
+          "source": {
+            "module": "./FilterItemOption.js",
+            "symbol": "FilterItemOption"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\n<h3>Usage</h3>\n\nFor the <code>ui5-filter-item-option</code> <h3>ES6 Module Import</h3>\n\n<code>import @ui5/webcomponents-fiori/dist/FilterItemOption.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/FilterItemOption/",
+          "attributes": [{
+              "name": "selected",
+              "type": "boolean",
+              "description": "Defines if the component is selected.",
+              "default": "false"
+            }, {
+              "name": "text",
+              "type": "string",
+              "description": "Defines the text of the component.",
+              "default": "\"\""
+            }
+          ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "selected",
+                "type": "boolean",
+                "description": "Defines if the component is selected.",
+                "default": "false"
+              }, {
+                "name": "text",
+                "type": "string",
+                "description": "Defines the text of the component.",
+                "default": "\"\""
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-flexible-column-layout",
+          "source": {
+            "module": "./FlexibleColumnLayout.js",
+            "symbol": "FlexibleColumnLayout"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>FlexibleColumnLayout</code> implements the list-detail-detail paradigm by displaying up to three pages in separate columns. There are several possible layouts that can be changed either with the component API, or by pressing the arrows, displayed between the columns.\n\n<h3>Usage</h3>\n\nUse this component for applications that need to display several logical levels of related information side by side (e.g. list of items, item, sub-item, etc.). The Component is flexible in a sense that the application can focus the user's attention on one particular column.\n\n<h3>Responsive Behavior</h3>\n\nThe <code>FlexibleColumnLayout</code> automatically displays the maximum possible number of columns based on <code>layout</code> property and the window size. The component would display 1 column for window size smaller than 599px, up to two columns between 599px and 1023px, and 3 columns for sizes bigger than 1023px.\n\n<br><br> <h3>Keyboard Handling</h3>\n\n<h4>Basic Navigation</h4> <ul> <li>[SPACE, ENTER, RETURN] - If focus is on the layout toggle button (arrow button), once activated, it triggers the associated action (such as expand/collapse the column).</li> <li>This component provides a build in fast navigation group which can be used via <code>F6 / Shift + F6</code> or <code> Ctrl + Alt(Option) + Down / Ctrl + Alt(Option) + Up</code>. In order to use this functionality, you need to import the following module: <code>import \"@ui5/webcomponents-base/dist/features/F6Navigation.js\"</code></li> </ul>\n\n<h4>Fast Navigation</h4> This component provides a build in fast navigation group which can be used via <code>F6 / Shift + F6</code> or <code> Ctrl + Alt(Option) + Down / Ctrl + Alt(Option) + Up</code>. In order to use this functionality, you need to import the following module: <code>import \"@ui5/webcomponents-base/dist/features/F6Navigation.js\"</code> <br><br>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/FlexibleColumnLayout.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/FlexibleColumnLayout/",
+          "attributes": [{
+              "name": "hide-arrows",
+              "type": "boolean",
+              "description": "Defines the visibility of the arrows, used for expanding and shrinking the columns.",
+              "default": "false"
+            }, {
+              "name": "layout",
+              "type": "sap.ui.webc.fiori.types.FCLLayout",
+              "description": "Defines the columns layout and their proportion. <br><br> <b>Note:</b> The layout also depends on the screen size - one column for screens smaller than 599px, two columns between 599px and 1023px and three columns for sizes bigger than 1023px. <br><br> Available options are: <ul> <li><code>OneColumn</code></li> <li><code>TwoColumnsStartExpanded</code></li> <li><code>TwoColumnsMidExpanded</code></li> <li><code>ThreeColumnsMidExpanded</code></li> <li><code>ThreeColumnsEndExpanded</code></li> <li><code>ThreeColumnsStartExpandedEndHidden</code></li> <li><code>ThreeColumnsMidExpandedEndHidden</code></li> <li><code>MidColumnFullScreen</code></li> <li><code>EndColumnFullScreen</code></li> </ul> <br><br> <b>For example:</b> layout=<code>TwoColumnsStartExpanded</code> means the layout will display up to two columns in 67%/33% proportion.",
+              "default": "\"OneColumn\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "endColumn",
+              "description": "Defines the content in the end column."
+            }
+            , {
+              "name": "midColumn",
+              "description": "Defines the content in the middle column."
+            }
+            , {
+              "name": "startColumn",
+              "description": "Defines the content in the start column."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "accessibilityRoles",
+                "type": "object",
+                "description": "An object of strings that defines additional accessibility roles for further customization.\n\nIt supports the following fields: - <code>startColumnRole</code>: the accessibility role for the <code>startColumn</code> - <code>startArrowContainerRole</code>: the accessibility role for the first arrow container (between the <code>begin</code> and <code>mid</code> columns) - <code>midColumnRole</code>: the accessibility role for the <code>midColumn</code> - <code>endArrowContainerRole</code>: the accessibility role for the second arrow container (between the <code>mid</code> and <code>end</code> columns) - <code>endColumnRole</code>: the accessibility role for the <code>endColumn</code>"
+              }, {
+                "name": "accessibilityTexts",
+                "type": "object",
+                "description": "An object of strings that defines several additional accessibility texts for even further customization.\n\nIt supports the following fields: - <code>startColumnAccessibleName</code>: the accessibility name for the <code>startColumn</code> region - <code>midColumnAccessibleName</code>: the accessibility name for the <code>midColumn</code> region - <code>endColumnAccessibleName</code>: the accessibility name for the <code>endColumn</code> region - <code>startArrowLeftText</code>: the text that the first arrow (between the <code>begin</code> and <code>mid</code> columns) will have when pointing to the left - <code>startArrowRightText</code>: the text that the first arrow (between the <code>begin</code> and <code>mid</code> columns) will have when pointing to the right - <code>endArrowLeftText</code>: the text that the second arrow (between the <code>mid</code> and <code>end</code> columns) will have when pointing to the left - <code>endArrowRightText</code>: the text that the second arrow (between the <code>mid</code> and <code>end</code> columns) will have when pointing to the right - <code>startArrowContainerAccessibleName</code>: the text that the first arrow container (between the <code>begin</code> and <code>mid</code> columns) will have as <code>aria-label</code> - <code>endArrowContainerAccessibleName</code>: the text that the second arrow container (between the <code>mid</code> and <code>end</code> columns) will have as <code>aria-label</code>"
+              }, {
+                "name": "columnLayout",
+                "type": "array",
+                "description": "Returns the current column layout, based on both the <code>layout</code> property and the screen size. <br><br> <b>For example:</b> [\"67%\", \"33%\", 0], [\"100%\", 0, 0], [\"25%\", \"50%\", \"25%\"], etc, where the numbers represents the width of the start, middle and end columns.",
+                "default": "[\"100%\", 0, 0]"
+              }, {
+                "name": "endColumnVisible",
+                "type": "boolean",
+                "description": "Returns if the <code>end</code> column is visible.",
+                "default": "false"
+              }, {
+                "name": "hideArrows",
+                "type": "boolean",
+                "description": "Defines the visibility of the arrows, used for expanding and shrinking the columns.",
+                "default": "false"
+              }, {
+                "name": "layout",
+                "type": "sap.ui.webc.fiori.types.FCLLayout",
+                "description": "Defines the columns layout and their proportion. <br><br> <b>Note:</b> The layout also depends on the screen size - one column for screens smaller than 599px, two columns between 599px and 1023px and three columns for sizes bigger than 1023px. <br><br> Available options are: <ul> <li><code>OneColumn</code></li> <li><code>TwoColumnsStartExpanded</code></li> <li><code>TwoColumnsMidExpanded</code></li> <li><code>ThreeColumnsMidExpanded</code></li> <li><code>ThreeColumnsEndExpanded</code></li> <li><code>ThreeColumnsStartExpandedEndHidden</code></li> <li><code>ThreeColumnsMidExpandedEndHidden</code></li> <li><code>MidColumnFullScreen</code></li> <li><code>EndColumnFullScreen</code></li> </ul> <br><br> <b>For example:</b> layout=<code>TwoColumnsStartExpanded</code> means the layout will display up to two columns in 67%/33% proportion.",
+                "default": "\"OneColumn\""
+              }, {
+                "name": "midColumnVisible",
+                "type": "boolean",
+                "description": "Returns if the <code>middle</code> column is visible.",
+                "default": "false"
+              }, {
+                "name": "startColumnVisible",
+                "type": "boolean",
+                "description": "Returns if the <code>start</code> column is visible.",
+                "default": "true"
+              }, {
+                "name": "visibleColumns",
+                "type": "sap.ui.webc.base.types.Integer",
+                "description": "Returns the number of currently visible columns.",
+                "default": "1"
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "layout-change",
+                "priority": "highest",
+                "description": "Fired when the layout changes via user interaction by clicking the arrows or by changing the component size due to resizing.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-illustrated-message",
+          "source": {
+            "module": "./IllustratedMessage.js",
+            "symbol": "IllustratedMessage"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> An IllustratedMessage is a recommended combination of a solution-oriented message, an engaging illustration, and conversational tone to better communicate an empty or a success state than just show a message alone.\n\nEach illustration has default internationalised title and subtitle texts. Also they can be managed with <code>titleText</code> and <code>subtitleText</code> properties.\n\nTo display the desired illustration, use the <code>name</code> property, where you can find the list of all available illustrations. <br><br> <b>Note:</b> By default the “BeforeSearch” illustration is loaded. To use other illustrations, make sure you import them in addition, for example: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/NoData.js\"</code> <br> <b>Note:</b> Illustrations starting with the “Tnt” prefix are part of another illustration set. For example to use the “TntSuccess” illustration, add the following import:: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/tnt/Success.js\"</code>\n\n<h3>Structure</h3> The IllustratedMessage consists of the following elements, which are displayed below each other in the following order: <br> <ul> <li>Illustration</li> <li>Title</li> <li>Subtitle</li> <li>Actions</li> </ul>\n\n<h3>Usage</h3> <code>ui5-illustrated-message</code> is meant to be used inside container component, for example a <code>ui5-card</code>, a <code>ui5-dialog</code> or a <code>ui5-page</code>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/IllustratedMessage.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/IllustratedMessage/",
+          "attributes": [{
+              "name": "accessible-name-ref",
+              "type": "string",
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "default": "\"\""
+            }, {
+              "name": "name",
+              "type": "sap.ui.webc.fiori.types.IllustrationMessageType",
+              "description": "Defines the illustration name that will be displayed in the component. <br><br> Available illustrations are: <ul> <li><code>AddColumn</code></li> <li><code>AddPeople</code></li> <li><code>AddDimensions</code></li> <li><code>BalloonSky</code></li> <li><code>BeforeSearch</code></li> <li><code>Connection</code></li> <li><code>EmptyCalendar</code></li> <li><code>EmptyList</code></li> <li><code>EmptyPlanningCalendar</code></li> <li><code>ErrorScreen</code></li> <li><code>FilterTable</code></li> <li><code>GroupTable</code></li> <li><code>NoActivities</code></li> <li><code>NoColumnsSet</code></li> <li><code>NoData</code></li> <li><code>NoEntries</code></li> <li><code>NoFilterResults</code></li> <li><code>NoMail_v1</code></li> <li><code>NoMail</code></li> <li><code>NoNotifications</code></li> <li><code>NoSavedItems_v1</code></li> <li><code>NoSavedItems</code></li> <li><code>NoSearchResults</code></li> <li><code>NoTasks_v1</code></li> <li><code>NoTasks</code></li> <li><code>NoDimensionsSet</code></li> <li><code>PageNotFound</code></li> <li><code>ReloadScreen</code></li> <li><code>ResizeColumn</code></li> <li><code>SearchEarth</code></li> <li><code>SearchFolder</code></li> <li><code>SimpleBalloon</code></li> <li><code>SimpleBell</code></li> <li><code>SimpleCalendar</code></li> <li><code>SimpleCheckMark</code></li> <li><code>SimpleConnection</code></li> <li><code>SimpleEmptyDoc</code></li> <li><code>SimpleEmptyList</code></li> <li><code>SimpleError</code></li> <li><code>SimpleMagnifier</code></li> <li><code>SimpleMail</code></li> <li><code>SimpleNoSavedItems</code></li> <li><code>SimpleNotFoundMagnifier</code></li> <li><code>SimpleReload</code></li> <li><code>SimpleTask</code></li> <li><code>SleepingBell</code></li> <li><code>SortColumn</code></li> <li><code>SuccessBalloon</code></li> <li><code>SuccessCheckMark</code></li> <li><code>SuccessHighFive</code></li> <li><code>SuccessScreen</code></li> <li><code>Survey</code></li> <li><code>Tent</code></li> <li><code>UnableToLoad</code></li> <li><code>UnableToLoadImage</code></li> <li><code>UnableToUpload</code></li> <li><code>UploadToCloud</code></li> <li><code>UploadCollection</code></li> <li><code>TntChartArea</code></li> <li><code>TntChartArea2</code></li> <li><code>TntChartBar</code></li> <li><code>TntChartBPMNFlow</code></li> <li><code>TntChartBullet</code></li> <li><code>TntChartDoughnut</code></li> <li><code>TntChartFlow</code></li> <li><code>TntChartGantt</code></li> <li><code>TntChartOrg</code></li> <li><code>TntChartPie</code></li> <li><code>TntCodePlaceholder</code></li> <li><code>TntCompany</code></li> <li><code>TntComponents</code></li> <li><code>TntExternalLink</code></li> <li><code>TntFaceID</code></li> <li><code>TntFingerprint</code></li> <li><code>TntLock</code></li> <li><code>TntMission</code></li> <li><code>TntNoApplications</code></li> <li><code>TntNoFlows</code></li> <li><code>TntNoUsers</code></li> <li><code>TntRadar</code></li> <li><code>TntSecrets</code></li> <li><code>TntServices</code></li> <li><code>TntSessionExpired</code></li> <li><code>TntSessionExpiring</code></li> <li><code>TntSuccess</code></li> <li><code>TntSuccessfulAuth</code></li> <li><code>TntSystems</code></li> <li><code>TntTeams</code></li> <li><code>TntTools</code></li> <li><code>TntUnableToLoad</code></li> <li><code>TntUnlock</code></li> <li><code>TntUnsuccessfulAuth</code></li> <li><code>TntUser2</code></li> </ul> <br><br> <b>Note:</b> By default the <code>BeforeSearch</code> illustration is loaded. <br> When using an illustration type, other than the default, it should be loaded in addition: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/NoData.js\";</code> <br><br> <b>Note:</b> TNT illustrations cointain <code>Tnt</code> prefix in their name. You can import them removing the <code>Tnt</code> prefix like this: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/tnt/SessionExpired.js\";</code>",
+              "default": "\"BeforeSearch\""
+            }, {
+              "name": "size",
+              "type": "sap.ui.webc.fiori.types.IllustrationMessageSize",
+              "description": "Determines which illustration breakpoint variant is used. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Base</code></li> <li><code>Spot</code></li> <li><code>Dialog</code></li> <li><code>Scene</code></li> </ul>\n\nAs <code>IllustratedMessage</code> adapts itself around the <code>Illustration</code>, the other elements of the component are displayed differently on the different breakpoints/illustration sizes.",
+              "default": "\"Auto\""
+            }, {
+              "name": "subtitle-text",
+              "type": "string",
+              "description": "Defines the subtitle of the component. <br><br> <b>Note:</b> Using this property, the default subtitle text of illustration will be overwritten. <br><br> <b>Note:</b> Using <code>subtitle</code> slot, the default of this property will be overwritten.",
+              "default": "\"\""
+            }, {
+              "name": "title-text",
+              "type": "string",
+              "description": "Defines the title of the component. <br><br> <b>Note:</b> Using this property, the default title text of illustration will be overwritten.",
+              "default": "\"\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the component actions."
+            }
+            , {
+              "name": "subtitle",
+              "description": "Defines the subtitle of the component. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Using this slot, the default subtitle text of illustration and the value of &lt;code&gt;subtitleText&lt;/code&gt; property will be overwritten."
+            }
+            , {
+              "name": "title",
+              "description": "Defines the title of the component. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Using this slot, the default title text of illustration and the value of &lt;code&gt;title&lt;/code&gt; property will be overwritten."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "accessibleNameRef",
+                "type": "string",
+                "description": "Receives id(or many ids) of the elements that label the component.",
+                "default": "\"\""
+              }, {
+                "name": "name",
+                "type": "sap.ui.webc.fiori.types.IllustrationMessageType",
+                "description": "Defines the illustration name that will be displayed in the component. <br><br> Available illustrations are: <ul> <li><code>AddColumn</code></li> <li><code>AddPeople</code></li> <li><code>AddDimensions</code></li> <li><code>BalloonSky</code></li> <li><code>BeforeSearch</code></li> <li><code>Connection</code></li> <li><code>EmptyCalendar</code></li> <li><code>EmptyList</code></li> <li><code>EmptyPlanningCalendar</code></li> <li><code>ErrorScreen</code></li> <li><code>FilterTable</code></li> <li><code>GroupTable</code></li> <li><code>NoActivities</code></li> <li><code>NoColumnsSet</code></li> <li><code>NoData</code></li> <li><code>NoEntries</code></li> <li><code>NoFilterResults</code></li> <li><code>NoMail_v1</code></li> <li><code>NoMail</code></li> <li><code>NoNotifications</code></li> <li><code>NoSavedItems_v1</code></li> <li><code>NoSavedItems</code></li> <li><code>NoSearchResults</code></li> <li><code>NoTasks_v1</code></li> <li><code>NoTasks</code></li> <li><code>NoDimensionsSet</code></li> <li><code>PageNotFound</code></li> <li><code>ReloadScreen</code></li> <li><code>ResizeColumn</code></li> <li><code>SearchEarth</code></li> <li><code>SearchFolder</code></li> <li><code>SimpleBalloon</code></li> <li><code>SimpleBell</code></li> <li><code>SimpleCalendar</code></li> <li><code>SimpleCheckMark</code></li> <li><code>SimpleConnection</code></li> <li><code>SimpleEmptyDoc</code></li> <li><code>SimpleEmptyList</code></li> <li><code>SimpleError</code></li> <li><code>SimpleMagnifier</code></li> <li><code>SimpleMail</code></li> <li><code>SimpleNoSavedItems</code></li> <li><code>SimpleNotFoundMagnifier</code></li> <li><code>SimpleReload</code></li> <li><code>SimpleTask</code></li> <li><code>SleepingBell</code></li> <li><code>SortColumn</code></li> <li><code>SuccessBalloon</code></li> <li><code>SuccessCheckMark</code></li> <li><code>SuccessHighFive</code></li> <li><code>SuccessScreen</code></li> <li><code>Survey</code></li> <li><code>Tent</code></li> <li><code>UnableToLoad</code></li> <li><code>UnableToLoadImage</code></li> <li><code>UnableToUpload</code></li> <li><code>UploadToCloud</code></li> <li><code>UploadCollection</code></li> <li><code>TntChartArea</code></li> <li><code>TntChartArea2</code></li> <li><code>TntChartBar</code></li> <li><code>TntChartBPMNFlow</code></li> <li><code>TntChartBullet</code></li> <li><code>TntChartDoughnut</code></li> <li><code>TntChartFlow</code></li> <li><code>TntChartGantt</code></li> <li><code>TntChartOrg</code></li> <li><code>TntChartPie</code></li> <li><code>TntCodePlaceholder</code></li> <li><code>TntCompany</code></li> <li><code>TntComponents</code></li> <li><code>TntExternalLink</code></li> <li><code>TntFaceID</code></li> <li><code>TntFingerprint</code></li> <li><code>TntLock</code></li> <li><code>TntMission</code></li> <li><code>TntNoApplications</code></li> <li><code>TntNoFlows</code></li> <li><code>TntNoUsers</code></li> <li><code>TntRadar</code></li> <li><code>TntSecrets</code></li> <li><code>TntServices</code></li> <li><code>TntSessionExpired</code></li> <li><code>TntSessionExpiring</code></li> <li><code>TntSuccess</code></li> <li><code>TntSuccessfulAuth</code></li> <li><code>TntSystems</code></li> <li><code>TntTeams</code></li> <li><code>TntTools</code></li> <li><code>TntUnableToLoad</code></li> <li><code>TntUnlock</code></li> <li><code>TntUnsuccessfulAuth</code></li> <li><code>TntUser2</code></li> </ul> <br><br> <b>Note:</b> By default the <code>BeforeSearch</code> illustration is loaded. <br> When using an illustration type, other than the default, it should be loaded in addition: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/NoData.js\";</code> <br><br> <b>Note:</b> TNT illustrations cointain <code>Tnt</code> prefix in their name. You can import them removing the <code>Tnt</code> prefix like this: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/tnt/SessionExpired.js\";</code>",
+                "default": "\"BeforeSearch\""
+              }, {
+                "name": "size",
+                "type": "sap.ui.webc.fiori.types.IllustrationMessageSize",
+                "description": "Determines which illustration breakpoint variant is used. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Base</code></li> <li><code>Spot</code></li> <li><code>Dialog</code></li> <li><code>Scene</code></li> </ul>\n\nAs <code>IllustratedMessage</code> adapts itself around the <code>Illustration</code>, the other elements of the component are displayed differently on the different breakpoints/illustration sizes.",
+                "default": "\"Auto\""
+              }, {
+                "name": "subtitleText",
+                "type": "string",
+                "description": "Defines the subtitle of the component. <br><br> <b>Note:</b> Using this property, the default subtitle text of illustration will be overwritten. <br><br> <b>Note:</b> Using <code>subtitle</code> slot, the default of this property will be overwritten.",
+                "default": "\"\""
+              }, {
+                "name": "titleText",
+                "type": "string",
+                "description": "Defines the title of the component. <br><br> <b>Note:</b> Using this property, the default title text of illustration will be overwritten.",
+                "default": "\"\""
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-media-gallery",
+          "source": {
+            "module": "./MediaGallery.js",
+            "symbol": "MediaGallery"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-media-gallery</code> component allows the user to browse through multimedia items. Currently, the supported items are images and videos. The items should be defined using the <code>ui5-media-gallery-item</code> component.\n\nThe items are initially displayed as thumbnails. When the user selects a thumbnail, the corresponding item is displayed in larger size. <br> The component is responsive by default and adjusts the position of the menu with respect to viewport size, but the application is able to further customize the layout via the provided API.\n\n<h3>Keyboard Handling</h3> The <code>ui5-media-gallery</code> provides advanced keyboard handling. <br> When the thumbnails menu is focused the following keyboard shortcuts allow the user to navigate through the thumbnail items: <br>\n\n<ul> <li>[UP/DOWN] - Navigates up and down the items</li> <li>[HOME] - Navigates to first item</li> <li>[END] - Navigates to the last item</li> <li>[SPACE/ENTER] - Select an item</li> </ul> <br>\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents-fiori/dist/MediaGallery\";</code> <br> <code>import \"@ui5/webcomponents-fiori/dist/MediaGalleryItem\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/MediaGallery/",
+          "attributes": [{
+              "name": "interactive-display-area",
+              "type": "boolean",
+              "description": "If enabled, a <code>display-area-click</code> event is fired when the user clicks or taps on the display area. <br> The display area is the central area that contains the enlarged content of the currently selected item.",
+              "default": "false"
+            }, {
+              "name": "layout",
+              "type": "sap.ui.webc.fiori.types.MediaGalleryLayout",
+              "description": "Determines the layout of the component. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Vertical</code></li> <li><code>Horizontal</code></li> </ul>",
+              "default": "\"Auto\""
+            }, {
+              "name": "menu-horizontal-align",
+              "type": "sap.ui.webc.fiori.types.MediaGalleryMenuHorizontalAlign",
+              "description": "Determines the horizontal alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Left</code></li> <li><code>Right</code></li> </ul>",
+              "default": "\"Left\""
+            }, {
+              "name": "menu-vertical-align",
+              "type": "sap.ui.webc.fiori.types.MediaGalleryMenuVerticalAlign",
+              "description": "Determines the vertical alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Top</code></li> <li><code>Bottom</code></li> </ul>",
+              "default": "\"Bottom\""
+            }, {
+              "name": "show-all-thumbnails",
+              "type": "boolean",
+              "description": "If set to <code>true</code>, all thumbnails are rendered in a scrollable container. If <code>false</code>, only up to five thumbnails are rendered, followed by an overflow button that shows the count of the remaining thumbnails.",
+              "default": "false"
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the component items.\n\n&lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Only one selected item is allowed.\n\n&lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Use the &lt;code&gt;ui5-media-gallery-item&lt;/code&gt; component to define the desired items."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "interactiveDisplayArea",
+                "type": "boolean",
+                "description": "If enabled, a <code>display-area-click</code> event is fired when the user clicks or taps on the display area. <br> The display area is the central area that contains the enlarged content of the currently selected item.",
+                "default": "false"
+              }, {
+                "name": "layout",
+                "type": "sap.ui.webc.fiori.types.MediaGalleryLayout",
+                "description": "Determines the layout of the component. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Vertical</code></li> <li><code>Horizontal</code></li> </ul>",
+                "default": "\"Auto\""
+              }, {
+                "name": "menuHorizontalAlign",
+                "type": "sap.ui.webc.fiori.types.MediaGalleryMenuHorizontalAlign",
+                "description": "Determines the horizontal alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Left</code></li> <li><code>Right</code></li> </ul>",
+                "default": "\"Left\""
+              }, {
+                "name": "menuVerticalAlign",
+                "type": "sap.ui.webc.fiori.types.MediaGalleryMenuVerticalAlign",
+                "description": "Determines the vertical alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Top</code></li> <li><code>Bottom</code></li> </ul>",
+                "default": "\"Bottom\""
+              }, {
+                "name": "showAllThumbnails",
+                "type": "boolean",
+                "description": "If set to <code>true</code>, all thumbnails are rendered in a scrollable container. If <code>false</code>, only up to five thumbnails are rendered, followed by an overflow button that shows the count of the remaining thumbnails.",
+                "default": "false"
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "display-area-click",
+                "priority": "highest",
+                "description": "Fired when the display area is clicked.<br> The display area is the central area that contains the enlarged content of the currently selected item.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "overflow-click",
+                "priority": "highest",
+                "description": "Fired when the thumbnails overflow button is clicked.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "selection-change",
+                "priority": "highest",
+                "description": "Fired when selection is changed by user interaction.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-media-gallery-item",
+          "source": {
+            "module": "./MediaGalleryItem.js",
+            "symbol": "MediaGalleryItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-media-gallery-item</code> web component represents the items displayed in the <code>ui5-media-gallery</code> web component. <br><br> <b>Note:</b> <code>ui5-media-gallery-item</code> is not supported when used outside of <code>ui5-media-gallery</code>. <br><br>\n\n<h3>Keyboard Handling</h3> The <code>ui5-media-gallery</code> provides advanced keyboard handling. When focused, the user can use the following keyboard shortcuts in order to perform a navigation: <br> <ul> <li>[SPACE/ENTER/RETURN] - Trigger <code>ui5-click</code> event</li> </ul>\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents-fiori/dist/MediaGalleryItem.js\";</code> (comes with <code>ui5-media-gallery</code>)",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/MediaGalleryItem/",
+          "attributes": [{
+              "name": "disabled",
+              "type": "boolean",
+              "description": "Defines whether the component is in disabled state.",
+              "default": "false"
+            }, {
+              "name": "layout",
+              "type": "sap.ui.webc.fiori.types.MediaGalleryItemLayout",
+              "description": "Determines the layout of the item container. <br><br> Available options are: <ul> <li><code>Square</code></li> <li><code>Wide</code></li> </ul>",
+              "default": "\"Square\""
+            }, {
+              "name": "selected",
+              "type": "boolean",
+              "description": "Defines the selected state of the component.",
+              "default": "false"
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the content of the component."
+            }
+            , {
+              "name": "thumbnail",
+              "description": "Defines the content of the thumbnail."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "disabled",
+                "type": "boolean",
+                "description": "Defines whether the component is in disabled state.",
+                "default": "false"
+              }, {
+                "name": "layout",
+                "type": "sap.ui.webc.fiori.types.MediaGalleryItemLayout",
+                "description": "Determines the layout of the item container. <br><br> Available options are: <ul> <li><code>Square</code></li> <li><code>Wide</code></li> </ul>",
+                "default": "\"Square\""
+              }, {
+                "name": "selected",
+                "type": "boolean",
+                "description": "Defines the selected state of the component.",
+                "default": "false"
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-notification-action",
+          "source": {
+            "module": "./NotificationAction.js",
+            "symbol": "NotificationAction"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "The <code>ui5-notification-action</code> represents an abstract action, used in the <code>ui5-li-notification</code> and the <code>ui5-li-notification-group</code> items.",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/NotificationAction/",
+          "attributes": [{
+              "name": "design",
+              "type": "sap.ui.webc.main.types.ButtonDesign",
+              "description": "Defines the action design.\n\n<br><br> <b>Note:</b> <ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> </ul>",
+              "default": "\"Transparent\""
+            }, {
+              "name": "disabled",
+              "type": "boolean",
+              "description": "Defines if the action is disabled. <br><br> <b>Note:</b> a disabled action can't be pressed or focused, and it is not in the tab chain.",
+              "default": "false"
+            }, {
+              "name": "icon",
+              "type": "string",
+              "description": "Defines the <code>icon</code> source URI. <br><br> <b>Note:</b> SAP-icons font provides numerous built-in icons. To find all the available icons, see the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+              "default": "\"\""
+            }, {
+              "name": "text",
+              "type": "string",
+              "description": "Defines the text of the <code>ui5-notification-action</code>.",
+              "default": "\"\""
+            }
+          ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "design",
+                "type": "sap.ui.webc.main.types.ButtonDesign",
+                "description": "Defines the action design.\n\n<br><br> <b>Note:</b> <ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> </ul>",
+                "default": "\"Transparent\""
+              }, {
+                "name": "disabled",
+                "type": "boolean",
+                "description": "Defines if the action is disabled. <br><br> <b>Note:</b> a disabled action can't be pressed or focused, and it is not in the tab chain.",
+                "default": "false"
+              }, {
+                "name": "icon",
+                "type": "string",
+                "description": "Defines the <code>icon</code> source URI. <br><br> <b>Note:</b> SAP-icons font provides numerous built-in icons. To find all the available icons, see the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+                "default": "\"\""
+              }, {
+                "name": "text",
+                "type": "string",
+                "description": "Defines the text of the <code>ui5-notification-action</code>.",
+                "default": "\"\""
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "click",
+                "priority": "highest",
+                "description": "Fired, when the action is pressed.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-li-notification-group",
+          "source": {
+            "module": "./NotificationListGroupItem.js",
+            "symbol": "NotificationListGroupItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-li-notification-group</code> is a special type of list item, that unlike others can group items within self, usually <code>ui5-li-notification</code> items. <br>\n\nThe component consists of: <ul> <li><code>Toggle</code> button to expand and collapse the group</li> <li><code>Priority</code> icon to display the priority of the group</li> <li><code>TitleText</code> to entitle the group</li> <li>Custom actions - with the use of <code>ui5-notification-action</code></li> <li>Items of the group</li> </ul>\n\n<h3>Usage</h3> The component can be used in a standard <code>ui5-list</code>.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-li-notification-group</code> exposes the following CSS Shadow Parts: <ul> <li>title-text - Used to style the titleText of the notification list group item</li> </ul>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/NotificationListGroupItem.js\";</code> <br> <code>import \"@ui5/webcomponents/dist/NotificationAction.js\";</code> (optional)",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/NotificationListGroupItem/",
+          "attributes": [{
+              "name": "collapsed",
+              "type": "boolean",
+              "description": "Defines if the group is collapsed or expanded.",
+              "default": "false"
+            }, {
+              "name": "show-counter",
+              "type": "boolean",
+              "description": "Defines if the items <code>counter</code> would be displayed.",
+              "default": "false"
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the items of the &lt;code&gt;ui5-li-notification-group&lt;/code&gt;, usually &lt;code&gt;ui5-li-notification&lt;/code&gt; items."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "collapsed",
+                "type": "boolean",
+                "description": "Defines if the group is collapsed or expanded.",
+                "default": "false"
+              }, {
+                "name": "showCounter",
+                "type": "boolean",
+                "description": "Defines if the items <code>counter</code> would be displayed.",
+                "default": "false"
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "toggle",
+                "priority": "highest",
+                "description": "Fired when the <code>ui5-li-notification-group</code> is expanded/collapsed by user interaction.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-li-notification",
+          "source": {
+            "module": "./NotificationListItem.js",
+            "symbol": "NotificationListItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-li-notification</code> is a type of list item, meant to display notifications. <br>\n\nThe component has a rich set of various properties that allows the user to set <code>avatar</code>, <code>titleText</code>, descriptive <code>content</code> and <code>footnotes</code> to fully describe a notification. <br>\n\nThe user can: <ul> <li>display a <code>Close</code> button</li> <li>can control whether the <code>titleText</code> and <code>description</code> should wrap or truncate and display a <code>ShowMore</code> button to switch between less and more information</li> <li>add custom actions by using the <code>ui5-notification-action</code> component</li> </ul>\n\n<h3>Usage</h3> The component can be used in a standard <code>ui5-list</code>.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-li-notification</code> exposes the following CSS Shadow Parts: <ul> <li>title-text - Used to style the titleText of the notification list item</li> </ul>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/NotificationListItem.js\";</code> <br> <code>import \"@ui5/webcomponents/dist/NotificationAction.js\";</code> (optional)",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/NotificationListItem/",
+          "attributes": [{
+              "name": "wrapping-type",
+              "type": "sap.ui.webc.main.types.WrappingType",
+              "description": "Defines if the <code>titleText</code> and <code>description</code> should wrap, they truncate by default.\n\n<br><br> <b>Note:</b> by default the <code>titleText</code> and <code>description</code>, and a <code>ShowMore/Less</code> button would be displayed.",
+              "default": "\"None\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "avatar",
+              "description": "Defines the avatar, displayed in the &lt;code&gt;ui5-li-notification&lt;/code&gt;.\n\n&lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Consider using the &lt;code&gt;ui5-avatar&lt;/code&gt; to display icons, initials or images. &lt;br&gt; &lt;b&gt;Note:&lt;/b&gt;In order to be complaint with the UX guidlines and for best experience, we recommend using avatars with 2rem X 2rem in size (32px X 32px). In case you are using the &lt;code&gt;ui5-avatar&lt;/code&gt; you can set its &lt;code&gt;size&lt;/code&gt; property to &lt;code&gt;XS&lt;/code&gt; to get the required size - &lt;code&gt;&amp;lt;ui5-avatar size=&#34;XS&#34;&gt;&amp;lt;/ui5-avatar&gt;&lt;/code&gt;."
+            }
+            , {
+              "name": "default",
+              "description": "Defines the content of the &lt;code&gt;ui5-li-notification&lt;/code&gt;, usually a description of the notification.\n\n&lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design."
+            }
+            , {
+              "name": "footnotes",
+              "description": "Defines the elements, displayed in the footer of the of the component."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "wrappingType",
+                "type": "sap.ui.webc.main.types.WrappingType",
+                "description": "Defines if the <code>titleText</code> and <code>description</code> should wrap, they truncate by default.\n\n<br><br> <b>Note:</b> by default the <code>titleText</code> and <code>description</code>, and a <code>ShowMore/Less</code> button would be displayed.",
+                "default": "\"None\""
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-page",
+          "source": {
+            "module": "./Page.js",
+            "symbol": "Page"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-page</code> is a container component that holds one whole screen of an application. The page has three distinct areas that can hold content - a header, content area and a footer. <h3>Structure</h3> <h4>Header</h4> The top most area of the page is occupied by the header. The standard header includes a navigation button and a title. <h4>Content</h4> The content occupies the main part of the page. Only the content area is scrollable by default. This can be prevented by setting <code>enableScrolling</code> to <code>false</code>. <h4>Footer</h4> The footer is optional and occupies the fixed bottom part of the page. Alternatively, the footer can be floating above the bottom part of the content. This is enabled with the <code>floatingFooter</code> property.\n\n<b>Note:</b> <code>ui5-page</code> occipues the whole available space of its parent. In order to achieve the intended design you have to make sure that there is enough space for the <code>ui5-page</code> to be rendered. <b>Note:</b> In order for the <code>ui5-page</code> to be displayed, the parent element should have fixed height.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/Page.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/Page/",
+          "attributes": [{
+              "name": "background-design",
+              "type": "sap.ui.webc.fiori.types.PageBackgroundDesign",
+              "description": "Defines the background color of the <code>ui5-page</code>. <br><br> <b>Note:</b> When a ui5-list is placed inside the page, we recommend using “List” to ensure better color contrast. <br><br> Available options are: <ul> <li><code>Solid</code></li> (default) <li><code>Transparent</code></li> <li><code>List</code></li> </ul>",
+              "default": "\"Solid\""
+            }, {
+              "name": "disable-scrolling",
+              "type": "boolean",
+              "description": "Disables vertical scrolling of page content. If set to true, there will be no vertical scrolling at all.",
+              "default": "false"
+            }, {
+              "name": "floating-footer",
+              "type": "boolean",
+              "description": "Defines if the footer should float over the content. <br><br> <b>Note:</b> When set to true the footer floats over the content with a slight offset from the bottom, otherwise it is fixed at the very bottom of the page.",
+              "default": "true"
+            }, {
+              "name": "hide-footer",
+              "type": "boolean",
+              "description": "Defines the footer visibility.",
+              "default": "false"
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the content HTML Element."
+            }
+            , {
+              "name": "footer",
+              "description": "Defines the footer HTML Element."
+            }
+            , {
+              "name": "header",
+              "description": "Defines the header HTML Element."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "backgroundDesign",
+                "type": "sap.ui.webc.fiori.types.PageBackgroundDesign",
+                "description": "Defines the background color of the <code>ui5-page</code>. <br><br> <b>Note:</b> When a ui5-list is placed inside the page, we recommend using “List” to ensure better color contrast. <br><br> Available options are: <ul> <li><code>Solid</code></li> (default) <li><code>Transparent</code></li> <li><code>List</code></li> </ul>",
+                "default": "\"Solid\""
+              }, {
+                "name": "disableScrolling",
+                "type": "boolean",
+                "description": "Disables vertical scrolling of page content. If set to true, there will be no vertical scrolling at all.",
+                "default": "false"
+              }, {
+                "name": "floatingFooter",
+                "type": "boolean",
+                "description": "Defines if the footer should float over the content. <br><br> <b>Note:</b> When set to true the footer floats over the content with a slight offset from the bottom, otherwise it is fixed at the very bottom of the page.",
+                "default": "true"
+              }, {
+                "name": "hideFooter",
+                "type": "boolean",
+                "description": "Defines the footer visibility.",
+                "default": "false"
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-product-switch",
+          "source": {
+            "module": "./ProductSwitch.js",
+            "symbol": "ProductSwitch"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-product-switch</code> is an SAP Fiori specific web component that is used in <code>ui5-shellbar</code> and allows the user to easily switch between products. <br><br>\n\n<h3>Keyboard Handling</h3> The <code>ui5-product-switch</code> provides advanced keyboard handling. When focused, the user can use the following keyboard shortcuts in order to perform a navigation: <br> <ul> <li>[TAB] - Move focus to the next interactive element after the <code>ui5-product-switch</code></li> <li>[UP/DOWN] - Navigates up and down the items </li> <li>[LEFT/RIGHT] - Navigates left and right the items</li> </ul> <br> <br>\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents-fiori/dist/ProductSwitch.js\";</code> <br> <code>import \"@ui5/webcomponents-fiori/dist/ProductSwitchItem.js\";</code> (for <code>ui5-product-switch-item</code>)",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ProductSwitch/",
+          "attributes": [
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the items of the &lt;code&gt;ui5-product-switch&lt;/code&gt;."
+            } ]
+          ,
+          "js": {
+            "properties": [
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-product-switch-item",
+          "source": {
+            "module": "./ProductSwitchItem.js",
+            "symbol": "ProductSwitchItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-product-switch-item</code> web component represents the items displayed in the <code>ui5-product-switch</code> web component. <br><br> <b>Note:</b> <code>ui5-product-switch-item</code> is not supported when used outside of <code>ui5-product-switch</code>. <br><br>\n\n<h3>Keyboard Handling</h3> The <code>ui5-product-switch</code> provides advanced keyboard handling. When focused, the user can use the following keyboard shortcuts in order to perform a navigation: <br> <ul> <li>[SPACE/ENTER/RETURN] - Trigger <code>ui5-click</code> event</li> </ul>\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents-fiori/dist/ProductSwitchItem.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ProductSwitchItem/",
+          "attributes": [{
+              "name": "icon",
+              "type": "string",
+              "description": "Defines the icon to be displayed as a graphical element within the component. <br><br> Example: <br> <pre>ui5-product-switch-item icon=\"palette\"</pre>\n\nSee all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+              "default": "\"\""
+            }, {
+              "name": "subtitle-text",
+              "type": "string",
+              "description": "Defines the subtitle of the component.",
+              "default": "\"\""
+            }, {
+              "name": "target",
+              "type": "string",
+              "description": "Defines a target where the <code>targetSrc</code> content must be open. <br><br> Available options are: <ul> <li><code>_self</code></li> <li><code>_top</code></li> <li><code>_blank</code></li> <li><code>_parent</code></li> <li><code>_search</code></li> </ul>"
+            }, {
+              "name": "target-src",
+              "type": "string",
+              "description": "Defines the component target URI. Supports standard hyperlink behavior.",
+              "default": "\"\""
+            }, {
+              "name": "title-text",
+              "type": "string",
+              "description": "Defines the title of the component.",
+              "default": "\"\""
+            }
+          ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "icon",
+                "type": "string",
+                "description": "Defines the icon to be displayed as a graphical element within the component. <br><br> Example: <br> <pre>ui5-product-switch-item icon=\"palette\"</pre>\n\nSee all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+                "default": "\"\""
+              }, {
+                "name": "subtitleText",
+                "type": "string",
+                "description": "Defines the subtitle of the component.",
+                "default": "\"\""
+              }, {
+                "name": "target",
+                "type": "string",
+                "description": "Defines a target where the <code>targetSrc</code> content must be open. <br><br> Available options are: <ul> <li><code>_self</code></li> <li><code>_top</code></li> <li><code>_blank</code></li> <li><code>_parent</code></li> <li><code>_search</code></li> </ul>"
+              }, {
+                "name": "targetSrc",
+                "type": "string",
+                "description": "Defines the component target URI. Supports standard hyperlink behavior.",
+                "default": "\"\""
+              }, {
+                "name": "titleText",
+                "type": "string",
+                "description": "Defines the title of the component.",
+                "default": "\"\""
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "click",
+                "priority": "highest",
+                "description": "Fired when the <code>ui5-product-switch-item</code> is activated either with a click/tap or by using the Enter or Space key.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-shellbar",
+          "source": {
+            "module": "./ShellBar.js",
+            "symbol": "ShellBar"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-shellbar</code> is meant to serve as an application header and includes numerous built-in features, such as: logo, profile image/icon, title, search field, notifications and so on. <br><br>\n\n<h3>Stable DOM Refs</h3>\n\nYou can use the following stable DOM refs for the <code>ui5-shellbar</code>: <ul> <li>logo</li> <li>copilot</li> <li>notifications</li> <li>overflow</li> <li>profile</li> <li>product-switch</li> </ul>\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-shellbar</code> exposes the following CSS Shadow Parts: <ul> <li>root - Used to style the outermost wrapper of the <code>ui5-shellbar</code></li> </ul>\n\n<h3>Keyboard Handling</h3>\n\n<h4>Fast Navigation</h4> This component provides a build in fast navigation group which can be used via <code>F6 / Shift + F6</code> or <code> Ctrl + Alt(Option) + Down / Ctrl + Alt(Option) + Up</code>. In order to use this functionality, you need to import the following module: <code>import \"@ui5/webcomponents-base/dist/features/F6Navigation.js\"</code> <br><br>\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents-fiori/dist/ShellBar\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ShellBar/",
+          "attributes": [{
+              "name": "notifications-count",
+              "type": "string",
+              "description": "Defines the <code>notificationsCount</code>, displayed in the notification icon top-right corner.",
+              "default": "\"\""
+            }, {
+              "name": "primary-title",
+              "type": "string",
+              "description": "Defines the <code>primaryTitle</code>. <br><br> <b>Note:</b> The <code>primaryTitle</code> would be hidden on S screen size (less than approx. 700px).",
+              "default": "\"\""
+            }, {
+              "name": "secondary-title",
+              "type": "string",
+              "description": "Defines the <code>secondaryTitle</code>. <br><br> <b>Note:</b> The <code>secondaryTitle</code> would be hidden on S and M screen sizes (less than approx. 1300px).",
+              "default": "\"\""
+            }, {
+              "name": "show-co-pilot",
+              "type": "boolean",
+              "description": "Defines, if the product CoPilot icon would be displayed. <br><b>Note:</b> By default the co-pilot is displayed as static SVG. If you need an animated co-pilot, you can import the <code>\"@ui5/webcomponents-fiori/dist/features/CoPilotAnimation.js\"</code> module as add-on feature.",
+              "default": "false"
+            }, {
+              "name": "show-notifications",
+              "type": "boolean",
+              "description": "Defines, if the notification icon would be displayed.",
+              "default": "false"
+            }, {
+              "name": "show-product-switch",
+              "type": "boolean",
+              "description": "Defines, if the product switch icon would be displayed.",
+              "default": "false"
+            }, {
+              "name": "show-search-field",
+              "type": "boolean",
+              "description": "Defines, if the Search Field would be displayed when there is a valid <code>searchField</code> slot. <br><b>Note:</b> By default the Search Field is not displayed.",
+              "default": "false"
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the &lt;code&gt;ui5-shellbar&lt;/code&gt; aditional items. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; You can use the &amp;nbsp;&amp;lt;ui5-shellbar-item&gt;&amp;lt;/ui5-shellbar-item&gt;."
+            }
+            , {
+              "name": "logo",
+              "description": "Defines the logo of the &lt;code&gt;ui5-shellbar&lt;/code&gt;. For example, you can use &lt;code&gt;ui5-avatar&lt;/code&gt; or &lt;code&gt;img&lt;/code&gt; elements as logo."
+            }
+            , {
+              "name": "menuItems",
+              "description": "Defines the items displayed in menu after a click on the primary title. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; You can use the &amp;nbsp;&amp;lt;ui5-li&gt;&amp;lt;/ui5-li&gt; and its ancestors."
+            }
+            , {
+              "name": "profile",
+              "description": "You can pass &lt;code&gt;ui5-avatar&lt;/code&gt; to set the profile image/icon. If no profile slot is set - profile will be excluded from actions.\n\nNote: We recommend not using the &lt;code&gt;size&lt;/code&gt; attribute of &lt;code&gt;ui5-avatar&lt;/code&gt; because it should have specific size by design in the context of &lt;code&gt;ui5-shellbar&lt;/code&gt; profile."
+            }
+            , {
+              "name": "searchField",
+              "description": "Defines the &lt;code&gt;ui5-input&lt;/code&gt;, that will be used as a search field."
+            }
+            , {
+              "name": "startButton",
+              "description": "Defines a &lt;code&gt;ui5-button&lt;/code&gt; in the bar that will be placed in the beginning. We encourage this slot to be used for a back or home button. It gets overstyled to match ShellBar&#39;s styling."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "accessibilityAttributes",
+                "type": "object",
+                "description": "An object of strings that defines several additional accessibility attribute values for customization depending on the use case.\n\nIt supports the following fields:\n\n<ul> <li><code>expanded</code>: Indicates whether the anchor element, or another grouping element it controls, is currently expanded or collapsed. Accepts the following string values: <ul> <li><code>true</code></li> <li><code>false</code></li> </ul> </li> <li><code>hasPopup</code>: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the anchor element. Accepts the following string values: <ul> <li><code>Dialog</code></li> <li><code>Grid</code></li> <li><code>ListBox</code></li> <li><code>Menu</code></li> <li><code>Tree</code></li> </ul> </li> </ul>"
+              }, {
+                "name": "accessibilityRoles",
+                "type": "object",
+                "description": "An object of strings that defines additional accessibility roles for further customization.\n\nIt supports the following fields: - <code>logoRole</code>: the accessibility role for the <code>logo</code>"
+              }, {
+                "name": "accessibilityTexts",
+                "type": "object",
+                "description": "An object of strings that defines several additional accessibility texts for even further customization.\n\nIt supports the following fields: - <code>profileButtonTitle</code>: defines the tooltip for the profile button - <code>logoTitle</code>: defines the tooltip for the logo"
+              }, {
+                "name": "copilotDomRef",
+                "type": "HTMLElement",
+                "description": "Returns the <code>copilot</code> DOM ref."
+              }, {
+                "name": "logoDomRef",
+                "type": "HTMLElement",
+                "description": "Returns the <code>logo</code> DOM ref."
+              }, {
+                "name": "notificationsCount",
+                "type": "string",
+                "description": "Defines the <code>notificationsCount</code>, displayed in the notification icon top-right corner.",
+                "default": "\"\""
+              }, {
+                "name": "notificationsDomRef",
+                "type": "HTMLElement",
+                "description": "Returns the <code>notifications</code> icon DOM ref."
+              }, {
+                "name": "overflowDomRef",
+                "type": "HTMLElement",
+                "description": "Returns the <code>overflow</code> icon DOM ref."
+              }, {
+                "name": "primaryTitle",
+                "type": "string",
+                "description": "Defines the <code>primaryTitle</code>. <br><br> <b>Note:</b> The <code>primaryTitle</code> would be hidden on S screen size (less than approx. 700px).",
+                "default": "\"\""
+              }, {
+                "name": "productSwitchDomRef",
+                "type": "HTMLElement",
+                "description": "Returns the <code>product-switch</code> icon DOM ref."
+              }, {
+                "name": "profileDomRef",
+                "type": "HTMLElement",
+                "description": "Returns the <code>profile</code> icon DOM ref."
+              }, {
+                "name": "secondaryTitle",
+                "type": "string",
+                "description": "Defines the <code>secondaryTitle</code>. <br><br> <b>Note:</b> The <code>secondaryTitle</code> would be hidden on S and M screen sizes (less than approx. 1300px).",
+                "default": "\"\""
+              }, {
+                "name": "showCoPilot",
+                "type": "boolean",
+                "description": "Defines, if the product CoPilot icon would be displayed. <br><b>Note:</b> By default the co-pilot is displayed as static SVG. If you need an animated co-pilot, you can import the <code>\"@ui5/webcomponents-fiori/dist/features/CoPilotAnimation.js\"</code> module as add-on feature.",
+                "default": "false"
+              }, {
+                "name": "showNotifications",
+                "type": "boolean",
+                "description": "Defines, if the notification icon would be displayed.",
+                "default": "false"
+              }, {
+                "name": "showProductSwitch",
+                "type": "boolean",
+                "description": "Defines, if the product switch icon would be displayed.",
+                "default": "false"
+              }, {
+                "name": "showSearchField",
+                "type": "boolean",
+                "description": "Defines, if the Search Field would be displayed when there is a valid <code>searchField</code> slot. <br><b>Note:</b> By default the Search Field is not displayed.",
+                "default": "false"
+              }
+            ],
+            "methods": [
+            {
+              "name": "close-overflow",
+              "description": "Closes the overflow area. Useful to manually close the overflow after having suppressed automatic closing with preventDefault() of ShellbarItem's press event",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }],
+            "events": [
+              
+              {
+                "name": "co-pilot-click",
+                "priority": "highest",
+                "description": "Fired, when the co pilot is activated.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "logo-click",
+                "priority": "highest",
+                "description": "Fired, when the logo is activated.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "menu-item-click",
+                "priority": "highest",
+                "description": "Fired, when a menu item is activated <b>Note:</b> You can prevent closing of overflow popover by calling <code>event.preventDefault()</code>.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "notifications-click",
+                "priority": "highest",
+                "description": "Fired, when the notification icon is activated.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "product-switch-click",
+                "priority": "highest",
+                "description": "Fired, when the product switch icon is activated. <b>Note:</b> You can prevent closing of overflow popover by calling <code>event.preventDefault()</code>.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "profile-click",
+                "priority": "highest",
+                "description": "Fired, when the profile slot is present.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-shellbar-item",
+          "source": {
+            "module": "./ShellBarItem.js",
+            "symbol": "ShellBarItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "The <code>ui5-shellbar-item</code> represents a custom item, that might be added to the <code>ui5-shellbar</code>. <br><br> <h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents-fiori/dist/ShellBarItem\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ShellBarItem/",
+          "attributes": [{
+              "name": "count",
+              "type": "string",
+              "description": "Defines the count displayed in the top-right corner.",
+              "default": "\"\""
+            }, {
+              "name": "icon",
+              "type": "string",
+              "description": "Defines the name of the item's icon.",
+              "default": "\"\""
+            }, {
+              "name": "text",
+              "type": "string",
+              "description": "Defines the item text.",
+              "default": "\"\""
+            }
+          ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "count",
+                "type": "string",
+                "description": "Defines the count displayed in the top-right corner.",
+                "default": "\"\""
+              }, {
+                "name": "icon",
+                "type": "string",
+                "description": "Defines the name of the item's icon.",
+                "default": "\"\""
+              }, {
+                "name": "text",
+                "type": "string",
+                "description": "Defines the item text.",
+                "default": "\"\""
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "click",
+                "priority": "highest",
+                "description": "Fired, when the item is pressed.",
+                 "value": {
+                      "type": "NativeEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-side-navigation",
+          "source": {
+            "module": "./SideNavigation.js",
+            "symbol": "SideNavigation"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>SideNavigation</code> is used as a standard menu in applications. It consists of three containers: header (top-aligned), main navigation section (top-aligned) and the secondary section (bottom-aligned). <ul> <li>The header is meant for displaying user related information - profile data, avatar, etc.</li> <li>The main navigation section is related to the user’s current work context</li> <li>The secondary section is mostly used to link additional information that may be of interest (legal information, developer communities, external help, contact information and so on). </li> </ul>\n\n<h3>Usage</h3>\n\nUse the available <code>ui5-side-navigation-item</code> and <code>ui5-side-navigation-sub-item</code> components to build your menu. The items can consist of text only or an icon with text. The use or non-use of icons must be consistent for all items on one level. You must not combine entries with and without icons on the same level. We strongly recommend that you do not use icons on the second level.\n\n<h3>Keyboard Handling</h3>\n\n<h4>Fast Navigation</h4> This component provides a build in fast navigation group which can be used via <code>F6 / Shift + F6</code> or <code> Ctrl + Alt(Option) + Down / Ctrl + Alt(Option) + Up</code>. In order to use this functionality, you need to import the following module: <code>import \"@ui5/webcomponents-base/dist/features/F6Navigation.js\"</code> <br><br>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/SideNavigation.js\";</code> <br> <code>import \"@ui5/webcomponents-fiori/dist/SideNavigationItem.js\";</code> (for <code>ui5-side-navigation-item</code>) <br> <code>import \"@ui5/webcomponents-fiori/dist/SideNavigationSubItem.js\";</code> (for <code>ui5-side-navigation-sub-item</code>)",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/SideNavigation/",
+          "attributes": [{
+              "name": "collapsed",
+              "type": "boolean",
+              "description": "Defines whether the <code>ui5-side-navigation</code> is expanded or collapsed.",
+              "default": "false"
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the main items of the &lt;code&gt;ui5-side-navigation&lt;/code&gt;. Use the &lt;code&gt;ui5-side-navigation-item&lt;/code&gt; component for the top-level items, and the &lt;code&gt;ui5-side-navigation-sub-item&lt;/code&gt; component for second-level items, nested inside the items."
+            }
+            , {
+              "name": "fixedItems",
+              "description": "Defines the fixed items at the bottom of the &lt;code&gt;ui5-side-navigation&lt;/code&gt;. Use the &lt;code&gt;ui5-side-navigation-item&lt;/code&gt; component for the fixed items, and optionally the &lt;code&gt;ui5-side-navigation-sub-item&lt;/code&gt; component to provide second-level items inside them.\n\n&lt;b&gt;Note:&lt;/b&gt; In order to achieve the best user experience, it is recommended that you keep the fixed items &#34;flat&#34; (do not pass sub-items)"
+            }
+            , {
+              "name": "header",
+              "description": "Defines the header of the &lt;code&gt;ui5-side-navigation&lt;/code&gt;.\n\n&lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; The header is displayed when the component is expanded - the property &lt;code&gt;collapsed&lt;/code&gt; is false;"
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "collapsed",
+                "type": "boolean",
+                "description": "Defines whether the <code>ui5-side-navigation</code> is expanded or collapsed.",
+                "default": "false"
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "selection-change",
+                "priority": "highest",
+                "description": "Fired when the selection has changed via user interaction",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-side-navigation-item",
+          "source": {
+            "module": "./SideNavigationItem.js",
+            "symbol": "SideNavigationItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-side-navigation-item</code> is used within <code>ui5-side-navigation</code> only. Via the <code>ui5-side-navigation-item</code> you control the content of the <code>SideNavigation</code>.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/SideNavigationItem.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/SideNavigationItem/",
+          "attributes": [{
+              "name": "expanded",
+              "type": "boolean",
+              "description": "Defines if the item is expanded",
+              "default": "false"
+            }, {
+              "name": "icon",
+              "type": "string",
+              "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+              "default": "\"\""
+            }, {
+              "name": "selected",
+              "type": "boolean",
+              "description": "Defines whether the subitem is selected",
+              "default": "false"
+            }, {
+              "name": "text",
+              "type": "string",
+              "description": "Defines the text of the item.",
+              "default": "\"\""
+            }, {
+              "name": "whole-item-toggleable",
+              "type": "boolean",
+              "description": "Defines whether pressing the whole item or only pressing the icon will show/hide the items's sub items(if present). If set to true, pressing the whole item will toggle the sub items, and it won't fire the <code>click</code> event. By default, only pressing the arrow icon will toggle the sub items & the click event will be fired if the item is pressed outside of the icon.",
+              "default": "false"
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines nested items by passing &lt;code&gt;ui5-side-navigation-sub-item&lt;/code&gt; to the default slot."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "expanded",
+                "type": "boolean",
+                "description": "Defines if the item is expanded",
+                "default": "false"
+              }, {
+                "name": "icon",
+                "type": "string",
+                "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+                "default": "\"\""
+              }, {
+                "name": "selected",
+                "type": "boolean",
+                "description": "Defines whether the subitem is selected",
+                "default": "false"
+              }, {
+                "name": "text",
+                "type": "string",
+                "description": "Defines the text of the item.",
+                "default": "\"\""
+              }, {
+                "name": "wholeItemToggleable",
+                "type": "boolean",
+                "description": "Defines whether pressing the whole item or only pressing the icon will show/hide the items's sub items(if present). If set to true, pressing the whole item will toggle the sub items, and it won't fire the <code>click</code> event. By default, only pressing the arrow icon will toggle the sub items & the click event will be fired if the item is pressed outside of the icon.",
+                "default": "false"
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "click",
+                "priority": "highest",
+                "description": "Fired when the component is activated either with a click/tap or by using the Enter or Space key.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-side-navigation-sub-item",
+          "source": {
+            "module": "./SideNavigationSubItem.js",
+            "symbol": "SideNavigationSubItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-side-navigation-sub-item</code> is intended to be used inside a <code>ui5-side-navigation-item</code> only.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/SideNavigationSubItem.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/SideNavigationSubItem/",
+          "attributes": [{
+              "name": "icon",
+              "type": "string",
+              "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+              "default": "\"\""
+            }, {
+              "name": "selected",
+              "type": "boolean",
+              "description": "Defines whether the subitem is selected.",
+              "default": "false"
+            }, {
+              "name": "text",
+              "type": "string",
+              "description": "Defines the text of the item.",
+              "default": "\"\""
+            }
+          ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "icon",
+                "type": "string",
+                "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+                "default": "\"\""
+              }, {
+                "name": "selected",
+                "type": "boolean",
+                "description": "Defines whether the subitem is selected.",
+                "default": "false"
+              }, {
+                "name": "text",
+                "type": "string",
+                "description": "Defines the text of the item.",
+                "default": "\"\""
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "click",
+                "priority": "highest",
+                "description": "Fired when the component is activated either with a click/tap or by using the Enter or Space key.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-sort-item",
+          "source": {
+            "module": "./SortItem.js",
+            "symbol": "SortItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\n<h3>Usage</h3>\n\nFor the <code>ui5-sort-item</code> <h3>ES6 Module Import</h3>\n\n<code>import @ui5/webcomponents-fiori/dist/SortItem.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/SortItem/",
+          "attributes": [{
+              "name": "selected",
+              "type": "boolean",
+              "description": "Defines if the component is selected.",
+              "default": "false"
+            }, {
+              "name": "text",
+              "type": "string",
+              "description": "Defines the text of the component.",
+              "default": "\"\""
+            }
+          ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "selected",
+                "type": "boolean",
+                "description": "Defines if the component is selected.",
+                "default": "false"
+              }, {
+                "name": "text",
+                "type": "string",
+                "description": "Defines the text of the component.",
+                "default": "\"\""
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-timeline",
+          "source": {
+            "module": "./Timeline.js",
+            "symbol": "Timeline"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-timeline</code> component shows entries (such as objects, events, or posts) in chronological order. A common use case is to provide information about changes to an object, or events related to an object. These entries can be generated by the system (for example, value XY changed from A to B), or added manually. There are two distinct variants of the timeline: basic and social. The basic timeline is read-only, while the social timeline offers a high level of interaction and collaboration, and is integrated within SAP Jam.",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/Timeline/",
+          "attributes": [{
+              "name": "accessible-name",
+              "type": "string",
+              "description": "Defines the accessible ARIA name of the component."
+            }, {
+              "name": "layout",
+              "type": "sap.ui.webc.fiori.types.TimelineLayout",
+              "description": "Defines the items orientation.\n\n<br><br> <b>Note:</b> Available options are: <ul> <li><code>Vertical</code></li> <li><code>Horizontal</code></li> </ul>",
+              "default": "\"Vertical\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Determines the content of the &lt;code&gt;ui5-timeline&lt;/code&gt;."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "accessibleName",
+                "type": "string",
+                "description": "Defines the accessible ARIA name of the component."
+              }, {
+                "name": "layout",
+                "type": "sap.ui.webc.fiori.types.TimelineLayout",
+                "description": "Defines the items orientation.\n\n<br><br> <b>Note:</b> Available options are: <ul> <li><code>Vertical</code></li> <li><code>Horizontal</code></li> </ul>",
+                "default": "\"Vertical\""
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-timeline-item",
+          "source": {
+            "module": "./TimelineItem.js",
+            "symbol": "TimelineItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nAn entry posted on the timeline.",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/TimelineItem/",
+          "attributes": [{
+              "name": "icon",
+              "type": "string",
+              "description": "Defines the icon to be displayed as graphical element within the <code>ui5-timeline-item</code>. SAP-icons font provides numerous options. <br><br>\n\nSee all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+              "default": "\"\""
+            }, {
+              "name": "name",
+              "type": "string",
+              "description": "Defines the name of the item, displayed before the <code>title-text</code>.",
+              "default": "\"\""
+            }, {
+              "name": "name-clickable",
+              "type": "boolean",
+              "description": "Defines if the <code>name</code> is clickable.",
+              "default": "false"
+            }, {
+              "name": "subtitle-text",
+              "type": "string",
+              "description": "Defines the subtitle text of the component.",
+              "default": "\"\""
+            }, {
+              "name": "title-text",
+              "type": "string",
+              "description": "Defines the title text of the component.",
+              "default": "\"\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Determines the description of the &lt;code&gt;ui5-timeline-item&lt;/code&gt;."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "icon",
+                "type": "string",
+                "description": "Defines the icon to be displayed as graphical element within the <code>ui5-timeline-item</code>. SAP-icons font provides numerous options. <br><br>\n\nSee all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+                "default": "\"\""
+              }, {
+                "name": "name",
+                "type": "string",
+                "description": "Defines the name of the item, displayed before the <code>title-text</code>.",
+                "default": "\"\""
+              }, {
+                "name": "nameClickable",
+                "type": "boolean",
+                "description": "Defines if the <code>name</code> is clickable.",
+                "default": "false"
+              }, {
+                "name": "subtitleText",
+                "type": "string",
+                "description": "Defines the subtitle text of the component.",
+                "default": "\"\""
+              }, {
+                "name": "titleText",
+                "type": "string",
+                "description": "Defines the title text of the component.",
+                "default": "\"\""
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "name-click",
+                "priority": "highest",
+                "description": "Fired when the item name is pressed either with a click/tap or by using the Enter or Space key. <br><br> <b>Note:</b> The event will not be fired if the <code>name-clickable</code> attribute is not set.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-upload-collection",
+          "source": {
+            "module": "./UploadCollection.js",
+            "symbol": "UploadCollection"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> This component allows you to represent files before uploading them to a server, with the help of <code>ui5-upload-collection-item</code>. It also allows you to show already uploaded files.\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents-fiori/dist/UploadCollection.js\";</code> <br> <code>import \"@ui5/webcomponents-fiori/dist/UploadCollectionItem.js\";</code> (for <code>ui5-upload-collection-item</code>)",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/UploadCollection/",
+          "attributes": [{
+              "name": "accessible-name",
+              "type": "string",
+              "description": "Defines the accessible ARIA name of the component.",
+              "default": "\"\""
+            }, {
+              "name": "hide-drag-overlay",
+              "type": "boolean",
+              "description": "By default there will be drag and drop overlay shown over the <code>ui5-upload-collection</code> when files are dragged. If you don't intend to use drag and drop, set this property. <br><br> <b>Note:</b> It is up to the application developer to add handler for <code>drop</code> event and handle it. <code>ui5-upload-collection</code> only displays an overlay.",
+              "default": "false"
+            }, {
+              "name": "mode",
+              "type": "sap.ui.webc.main.types.ListMode",
+              "description": "Defines the mode of the <code>ui5-upload-collection</code>.\n\n<br><br> <b>Note:</b> <ul> <li><code>None</code></li> <li><code>SingleSelect</code></li> <li><code>MultiSelect</code></li> <li><code>Delete</code></li> </ul>",
+              "default": "\"None\""
+            }, {
+              "name": "no-data-description",
+              "type": "string",
+              "description": "Allows you to set your own text for the 'No data' description.",
+              "default": "\"\""
+            }, {
+              "name": "no-data-text",
+              "type": "string",
+              "description": "Allows you to set your own text for the 'No data' text.",
+              "default": "\"\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the items of the &lt;code&gt;ui5-upload-collection&lt;/code&gt;. &lt;br&gt;&lt;b&gt;Note:&lt;/b&gt; Use &lt;code&gt;ui5-upload-collection-item&lt;/code&gt; for the intended design."
+            }
+            , {
+              "name": "header",
+              "description": "Defines the &lt;code&gt;ui5-upload-collection&lt;/code&gt; header. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; If &lt;code&gt;header&lt;/code&gt; slot is provided, the labelling of the &lt;code&gt;UploadCollection&lt;/code&gt; is a responsibility of the application developer. &lt;code&gt;accessibleName&lt;/code&gt; should be used."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "accessibleName",
+                "type": "string",
+                "description": "Defines the accessible ARIA name of the component.",
+                "default": "\"\""
+              }, {
+                "name": "hideDragOverlay",
+                "type": "boolean",
+                "description": "By default there will be drag and drop overlay shown over the <code>ui5-upload-collection</code> when files are dragged. If you don't intend to use drag and drop, set this property. <br><br> <b>Note:</b> It is up to the application developer to add handler for <code>drop</code> event and handle it. <code>ui5-upload-collection</code> only displays an overlay.",
+                "default": "false"
+              }, {
+                "name": "mode",
+                "type": "sap.ui.webc.main.types.ListMode",
+                "description": "Defines the mode of the <code>ui5-upload-collection</code>.\n\n<br><br> <b>Note:</b> <ul> <li><code>None</code></li> <li><code>SingleSelect</code></li> <li><code>MultiSelect</code></li> <li><code>Delete</code></li> </ul>",
+                "default": "\"None\""
+              }, {
+                "name": "noDataDescription",
+                "type": "string",
+                "description": "Allows you to set your own text for the 'No data' description.",
+                "default": "\"\""
+              }, {
+                "name": "noDataText",
+                "type": "string",
+                "description": "Allows you to set your own text for the 'No data' text.",
+                "default": "\"\""
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "drop",
+                "priority": "highest",
+                "description": "Fired when an element is dropped inside the drag and drop overlay. <br><br> <b>Note:</b> The <code>drop</code> event is fired only when elements are dropped within the drag and drop overlay and ignored for the other parts of the <code>ui5-upload-collection</code>.",
+                 "value": {
+                      "type": "NativeEvent"
+                }
+              }
+              , 
+              {
+                "name": "item-delete",
+                "priority": "highest",
+                "description": "Fired when the Delete button of any item is pressed. <br><br> <b>Note:</b> A Delete button is displayed on each item, when the <code>ui5-upload-collection</code> <code>mode</code> property is set to <code>Delete</code>.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "selection-change",
+                "priority": "highest",
+                "description": "Fired when selection is changed by user interaction in <code>SingleSelect</code> and <code>MultiSelect</code> modes.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-upload-collection-item",
+          "source": {
+            "module": "./UploadCollectionItem.js",
+            "symbol": "UploadCollectionItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> A component to be used within the <code>ui5-upload-collection</code>.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/UploadCollectionItem.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/UploadCollectionItem/",
+          "attributes": [{
+              "name": "disable-delete-button",
+              "type": "boolean",
+              "description": "Disables the delete button.",
+              "default": "false"
+            }, {
+              "name": "file",
+              "type": "File",
+              "description": "Holds an instance of <code>File</code> associated with this item.",
+              "default": "null"
+            }, {
+              "name": "file-name",
+              "type": "string",
+              "description": "The name of the file.",
+              "default": "\"\""
+            }, {
+              "name": "file-name-clickable",
+              "type": "boolean",
+              "description": "If set to <code>true</code> the file name will be clickable and it will fire <code>file-name-click</code> event upon click.",
+              "default": "false"
+            }, {
+              "name": "hide-retry-button",
+              "type": "boolean",
+              "description": "Hides the retry button when <code>uploadState</code> property is <code>Error</code>.",
+              "default": "false"
+            }, {
+              "name": "hide-terminate-button",
+              "type": "boolean",
+              "description": "Hides the terminate button when <code>uploadState</code> property is <code>Uploading</code>.",
+              "default": "false"
+            }, {
+              "name": "progress",
+              "type": "sap.ui.webc.base.types.Integer",
+              "description": "The upload progress in percentage. <br><br> <b>Note:</b> Expected values are in the interval [0, 100].",
+              "default": "0"
+            }, {
+              "name": "upload-state",
+              "type": "sap.ui.webc.fiori.types.UploadState",
+              "description": "If set to <code>Uploading</code> or <code>Error</code>, a progress indicator showing the <code>progress</code> is displayed. Also if set to <code>Error</code>, a refresh button is shown. When this icon is pressed <code>retry</code> event is fired. If set to <code>Uploading</code>, a terminate button is shown. When this icon is pressed <code>terminate</code> event is fired.",
+              "default": "\"Ready\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Hold the description of the &lt;code&gt;ui5-upload-collection-item&lt;/code&gt;. Will be shown below the file name."
+            }
+            , {
+              "name": "thumbnail",
+              "description": "A thumbnail, which will be shown in the beginning of the &lt;code&gt;ui5-upload-collection-item&lt;/code&gt;. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Use &lt;code&gt;ui5-icon&lt;/code&gt; or &lt;code&gt;img&lt;/code&gt; for the intended design."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "disableDeleteButton",
+                "type": "boolean",
+                "description": "Disables the delete button.",
+                "default": "false"
+              }, {
+                "name": "file",
+                "type": "File",
+                "description": "Holds an instance of <code>File</code> associated with this item.",
+                "default": "null"
+              }, {
+                "name": "fileName",
+                "type": "string",
+                "description": "The name of the file.",
+                "default": "\"\""
+              }, {
+                "name": "fileNameClickable",
+                "type": "boolean",
+                "description": "If set to <code>true</code> the file name will be clickable and it will fire <code>file-name-click</code> event upon click.",
+                "default": "false"
+              }, {
+                "name": "hideRetryButton",
+                "type": "boolean",
+                "description": "Hides the retry button when <code>uploadState</code> property is <code>Error</code>.",
+                "default": "false"
+              }, {
+                "name": "hideTerminateButton",
+                "type": "boolean",
+                "description": "Hides the terminate button when <code>uploadState</code> property is <code>Uploading</code>.",
+                "default": "false"
+              }, {
+                "name": "progress",
+                "type": "sap.ui.webc.base.types.Integer",
+                "description": "The upload progress in percentage. <br><br> <b>Note:</b> Expected values are in the interval [0, 100].",
+                "default": "0"
+              }, {
+                "name": "uploadState",
+                "type": "sap.ui.webc.fiori.types.UploadState",
+                "description": "If set to <code>Uploading</code> or <code>Error</code>, a progress indicator showing the <code>progress</code> is displayed. Also if set to <code>Error</code>, a refresh button is shown. When this icon is pressed <code>retry</code> event is fired. If set to <code>Uploading</code>, a terminate button is shown. When this icon is pressed <code>terminate</code> event is fired.",
+                "default": "\"Ready\""
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "file-name-click",
+                "priority": "highest",
+                "description": "Fired when the file name is clicked. <br><br> <b>Note:</b> This event is only available when <code>fileNameClickable</code> property is <code>true</code>.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "rename",
+                "priority": "highest",
+                "description": "Fired when the <code>fileName</code> property gets changed. <br><br> <b>Note:</b> An edit button is displayed on each item, when the <code>ui5-upload-collection-item</code> <code>type</code> property is set to <code>Detail</code>.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "retry",
+                "priority": "highest",
+                "description": "Fired when the retry button is pressed. <br><br> <b>Note:</b> Retry button is displayed when <code>uploadState</code> property is set to <code>Error</code>.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "terminate",
+                "priority": "highest",
+                "description": "Fired when the terminate button is pressed. <br><br> <b>Note:</b> Terminate button is displayed when <code>uploadState</code> property is set to <code>Uploading</code>.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-view-settings-dialog",
+          "source": {
+            "module": "./ViewSettingsDialog.js",
+            "symbol": "ViewSettingsDialog"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-view-settings-dialog</code> component helps the user to sort data within a list or a table. It consists of several lists like <code>Sort order</code> which is built-in and <code>Sort By</code> and <code>Filter By</code> lists, for which you must be provide items(<code>ui5-sort-item</code> & <code>ui5-filter-item</code> respectively) These options can be used to create sorters for a table.\n\nThe <code>ui5-view-settings-dialog</code> interrupts the current application processing as it is the only focused UI element and the main screen is dimmed/blocked. The <code>ui5-view-settings-dialog</code> is modal, which means that user action is required before returning to the parent window is possible.\n\n<h3>Structure</h3> A <code>ui5-view-settings-dialog</code> consists of a header, content, and a footer for action buttons. The <code>ui5-view-settings-dialog</code> is usually displayed at the center of the screen.\n\n<h3>Responsive Behavior</h3> <code>ui5-view-settings-dialog</code> stretches on full screen on phones.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/ViewSettingsDialog\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ViewSettingsDialog/",
+          "attributes": [{
+              "name": "sort-descending",
+              "type": "boolean",
+              "description": "Defines the initial sort order.",
+              "default": "false"
+            }
+          ],
+        "slots": [
+            {
+              "name": "filterItems",
+              "description": "Defines the &lt;code&gt;filterItems&lt;/code&gt; list. &lt;b&gt;Note:&lt;/b&gt; If you want to use this slot, you need to import used item: &lt;code&gt;import &#34;@ui5/webcomponents-fiori/dist/FilterItem&#34;;&lt;/code&gt;"
+            }
+            , {
+              "name": "sortItems",
+              "description": "Defines the list of items against which the user could sort data. &lt;b&gt;Note:&lt;/b&gt; If you want to use this slot, you need to import used item: &lt;code&gt;import &#34;@ui5/webcomponents-fiori/dist/SortItem&#34;;&lt;/code&gt;"
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "sortDescending",
+                "type": "boolean",
+                "description": "Defines the initial sort order.",
+                "default": "false"
+              }
+            ],
+            "methods": [
+            {
+              "name": "set-confirmed-settings",
+              "description": "Sets a JavaScript object, as settings to the <code>ui5-view-settings-dialog</code>. This method can be used after the dialog is initially open, as the dialog need to set its initial settings. The <code>ui5-view-settings-dialog</code> throws an event called  before-open , this can be used as trigger point. The object should have the following format: <code> {sortOrder:  Ascending , sortBy:  Name , filters: [{ Filter 1 : [ Some filter 1 ,  Some filter 2 ]}, { Filter 2 : [ Some filter 4 ]}]} </code>",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "show",
+              "description": "Shows the dialog.",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }],
+            "events": [
+              
+              {
+                "name": "before-open",
+                "priority": "highest",
+                "description": "Fired before the component is opened. <b>This event does not bubble.</b>",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "cancel",
+                "priority": "highest",
+                "description": "Fired when cancel button is activated.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "confirm",
+                "priority": "highest",
+                "description": "Fired when confirmation button is activated.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-wizard",
+          "source": {
+            "module": "./Wizard.js",
+            "symbol": "Wizard"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-wizard</code> helps users to complete a complex task by dividing it into sections and guiding them through it. It has two main areas - a navigation area at the top showing the step sequence and a content area below it.\n\n<h3>Structure</h3> <h4>Navigation area</h4> The top most area of the <code>ui5-wizard</code> is occupied by the navigation area. It shows the sequence of steps, where the recommended number of steps is between 3 and 8 steps. <ul> <li> Steps can have different visual representations - numbers or icons.</li> <li> Steps might have labels for better readability - titleText and subTitleText.</li> <li> Steps are defined by using the <code>ui5-wizard-step</code> as slotted element within the <code>ui5-wizard</code>.</li> </ul>\n\n<b>Note:</b> If no selected step is defined, the first step will be auto selected. <br> <b>Note:</b> If multiple selected steps are defined, the last step will be selected.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-wizard</code> exposes the following CSS Shadow Parts: <ul> <li>navigator - Used to style the progress navigator of the <code>ui5-wizard</code>.</li> <li>step-content - Used to style a <code>ui5-wizard-step</code> container.</li> </ul>\n\n<h3>Keyboard Handling</h3> The user can navigate using the following keyboard shortcuts: <br>\n\n<h4>Wizard Progress Navigation</h4> <ul> <li>[LEFT], [DOWN] - Focus moves backward to the WizardProgressNavAnchors.</li> <li>[UP], [RIGHT] - Focus moves forward to the WizardProgressNavAnchor.</li> <li>[SPACE] or [ENTER], [RETURN] - Selects an active step</li> <li>[HOME] or [PAGE UP] - Focus goes to the first step</li> <li>[END] or [PAGE DOWN] - Focus goes to the last step</li> </ul>\n\n<h4>Fast Navigation</h4> This component provides a build in fast navigation group which can be used via <code>F6 / Shift + F6</code> or <code> Ctrl + Alt(Option) + Down / Ctrl + Alt(Option) + Up</code>. In order to use this functionality, you need to import the following module: <code>import \"@ui5/webcomponents-base/dist/features/F6Navigation.js\"</code>\n\n<h4>Content</h4> The content occupies the main part of the page. It can hold any type of HTML elements. It's defined by using the <code>ui5-wizard-step</code> as slotted element within the <code>ui5-wizard</code>.\n\n<h3>Scrolling</h3> The component handles user scrolling by selecting the closest step, based on the current scroll position and scrolls to particular place, when the user clicks on the step within the navigation area. <br><br>\n\n<b>Important:</b> In order the component's scrolling behaviour to work, it has to be limited from the outside parent element in terms of height. The component or its parent has to be given percentage or absolute height. Otherwise, the component will be scrolled out with the entire page. <br><br> <b>For example:</b> <br><br> <code>&lt;ui5-dialog style=\"height: 80%\"&gt;<br></code> <code>&#9;&lt;ui5-wizard&gt;&lt;/ui5-wizard&gt;<br></code> <code>&lt;/ui5-dialog&gt;</code>\n\n<h4>Moving to next step</h4> The <code>ui5-wizard-step</code> provides the necessary API and it's up to the user of the component to use it to move to the next step. You have to set its <code>selected</code> property (and remove the <code>disabled</code> one if set) to <code>true</code>. The <code>ui5-wizard</code> will automatically scroll to the content of the newly selected step. <br><br>\n\nThe Fiori 3 guidelines recommends having a \"nextStep\" button in the content area. You can place a button, or any other type of element to trigger step change, inside the <code>ui5-wizard-step</code>, and show/hide it when certain fields are filled or user defined criteria is met.\n\n<h3>Usage</h3> <h4>When to use:</h4> When the user has to accomplish a long or unfamiliar task.\n\n<h4>When not to use:</h4> When the task has less than 3 steps.\n\n<h3>Responsive Behavior</h3> On small widths the step's titleText, subtitleText and separators in the navigation area shrink and from particular point the steps are grouped together and overlap. Tapping on them will show a popover to select the step to navigate to. On mobile device, the grouped steps are presented within a dialog.\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents-fiori/dist/Wizard.js\";</code> (includes &lt;ui5-wizard-step/&gt;)",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/Wizard/",
+          "attributes": [
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the steps. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Use the available &lt;code&gt;ui5-wizard-step&lt;/code&gt; component."
+            } ]
+          ,
+          "js": {
+            "properties": [
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "step-change",
+                "priority": "highest",
+                "description": "Fired when the step is changed by user interaction - either with scrolling, or by clicking on the steps within the component header.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-wizard-step",
+          "source": {
+            "module": "./WizardStep.js",
+            "symbol": "WizardStep"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nA component that represents a logical step as part of the <code>ui5-wizard</code>. It is meant to aggregate arbitrary HTML elements that form the content of a single step.\n\n<h3>Structure</h3> <ul> <li>Each wizard step has arbitrary content.</li> <li>Each wizard step might have texts - defined by the <code>titleText</code> and <code>subtitleText</code> properties.</li> <li>Each wizard step might have an icon - defined by the <code>icon</code> property.</li> <li>Each wizard step might display a number in place of the <code>icon</code>, when it's missing.</li> </ul>\n\n<h3>Usage</h3> The <code>ui5-wizard-step</code> component should be used only as slot of the <code>ui5-wizard</code> component and should not be used standalone.",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/WizardStep/",
+          "attributes": [{
+              "name": "branching",
+              "type": "boolean",
+              "description": "When <code>branching</code> is enabled a dashed line would be displayed after the step, meant to indicate that the next step is not yet known and depends on user choice in the current step. <br><br>\n\n<b>Note:</b> It is recommended to use <code>branching</code> on the last known step and later add new steps when it becomes clear how the wizard flow should continue.",
+              "default": "false"
+            }, {
+              "name": "disabled",
+              "type": "boolean",
+              "description": "Defines if the step is <code>disabled</code>. When disabled the step is displayed, but the user can't select the step by clicking or navigate to it with scrolling. <br><br>\n\n<b>Note:</b> Step can't be <code>selected</code> and <code>disabled</code> at the same time. In this case the <code>selected</code> property would take precedence.",
+              "default": "false"
+            }, {
+              "name": "icon",
+              "type": "string",
+              "description": "Defines the <code>icon</code> of the step. <br><br>\n\n<b>Note:</b> The icon is displayed in the <code>ui5-wizard</code> navigation header. <br><br>\n\nThe SAP-icons font provides numerous options. See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+              "default": "\"\""
+            }, {
+              "name": "selected",
+              "type": "boolean",
+              "description": "Defines the step's <code>selected</code> state - the step that is currently active. <br><br>\n\n<b>Note:</b> Step can't be <code>selected</code> and <code>disabled</code> at the same time. In this case the <code>selected</code> property would take precedence.",
+              "default": "false"
+            }, {
+              "name": "subtitle-text",
+              "type": "string",
+              "description": "Defines the <code>subtitleText</code> of the step. <br><br>\n\n<b>Note:</b> the text is displayed in the <code>ui5-wizard</code> navigation header.",
+              "default": "\"\""
+            }, {
+              "name": "title-text",
+              "type": "string",
+              "description": "Defines the <code>titleText</code> of the step. <br><br>\n\n<b>Note:</b> The text is displayed in the <code>ui5-wizard</code> navigation header.",
+              "default": "\"\""
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the step content."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "branching",
+                "type": "boolean",
+                "description": "When <code>branching</code> is enabled a dashed line would be displayed after the step, meant to indicate that the next step is not yet known and depends on user choice in the current step. <br><br>\n\n<b>Note:</b> It is recommended to use <code>branching</code> on the last known step and later add new steps when it becomes clear how the wizard flow should continue.",
+                "default": "false"
+              }, {
+                "name": "disabled",
+                "type": "boolean",
+                "description": "Defines if the step is <code>disabled</code>. When disabled the step is displayed, but the user can't select the step by clicking or navigate to it with scrolling. <br><br>\n\n<b>Note:</b> Step can't be <code>selected</code> and <code>disabled</code> at the same time. In this case the <code>selected</code> property would take precedence.",
+                "default": "false"
+              }, {
+                "name": "icon",
+                "type": "string",
+                "description": "Defines the <code>icon</code> of the step. <br><br>\n\n<b>Note:</b> The icon is displayed in the <code>ui5-wizard</code> navigation header. <br><br>\n\nThe SAP-icons font provides numerous options. See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+                "default": "\"\""
+              }, {
+                "name": "selected",
+                "type": "boolean",
+                "description": "Defines the step's <code>selected</code> state - the step that is currently active. <br><br>\n\n<b>Note:</b> Step can't be <code>selected</code> and <code>disabled</code> at the same time. In this case the <code>selected</code> property would take precedence.",
+                "default": "false"
+              }, {
+                "name": "subtitleText",
+                "type": "string",
+                "description": "Defines the <code>subtitleText</code> of the step. <br><br>\n\n<b>Note:</b> the text is displayed in the <code>ui5-wizard</code> navigation header.",
+                "default": "\"\""
+              }, {
+                "name": "titleText",
+                "type": "string",
+                "description": "Defines the <code>titleText</code> of the step. <br><br>\n\n<b>Note:</b> The text is displayed in the <code>ui5-wizard</code> navigation header.",
+                "default": "\"\""
+              }
+            ],
+            "methods": []
+        }
+      }]
+    }
+  }
+}
