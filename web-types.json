@@ -1687,13 +1687,23 @@
           "js": {
             "properties": [
             ],
-            "methods": [],"css": {
-            "properties": [
-              {
-
-              }
-            ]
-          }
+            "methods": [],
+            "css": {
+               "properties": [ 
+                 {
+                 "name": "--furo-ui5-form-field-container-grid-row-gap",
+                 "description": "grid row gap"
+                 } , 
+                 {
+                 "name": "--furo-ui5-form-field-container-grid-column-gap",
+                 "description": "grid column gap"
+                 } , 
+                 {
+                 "name": "--furo-ui5-form-field-container-label-justify-gap",
+                 "description": "label alignment (start, end)"
+                 }
+               ]
+             }
         }
       }, 
           {
@@ -1875,13 +1885,27 @@
                  "value": {
                       "type": ""
                 }
-              } ],"css": {
-            "properties": [
-              {
-
-              }
-            ]
-          }
+              } ],
+            "css": {
+               "properties": [ 
+                 {
+                 "name": "--furo-ui5-header-panel-icon-color",
+                 "description": "Color of the icon"
+                 } , 
+                 {
+                 "name": "--furo-ui5-header-panel-icon-background-color",
+                 "description": "background Color of the icon"
+                 } , 
+                 {
+                 "name": "--furo-ui5-header-panel-splitter-start-color",
+                 "description": "the gradient-start hex-Color of the splitter"
+                 } , 
+                 {
+                 "name": "--furo-ui5-header-panel-splitter-end-rgba-color",
+                 "description": "the gradient-end rgba-Color of the splitter"
+                 }
+               ]
+             }
         }
       }, 
           {
@@ -3323,13 +3347,19 @@
                  "value": {
                       "type": ""
                 }
-              } ],"css": {
-            "properties": [
-              {
-
-              }
-            ]
-          }
+              } ],
+            "css": {
+               "properties": [ 
+                 {
+                 "name": "--furo-ui5-pagination-bar-padding-right",
+                 "description": "Right padding definition"
+                 } , 
+                 {
+                 "name": "--furo-ui5-pagination-bar-background-color",
+                 "description": "Background color"
+                 }
+               ]
+             }
         }
       }, 
           {
@@ -4361,13 +4391,15 @@
                  "value": {
                       "type": ""
                 }
-              } ],"css": {
-            "properties": [
-              {
-
-              }
-            ]
-          }
+              } ],
+            "css": {
+               "properties": [ 
+                 {
+                 "name": "--furo-ui5-reference-search-list-background",
+                 "description": "background color of the result list"
+                 }
+               ]
+             }
         }
       }, 
           {
@@ -6497,13 +6529,67 @@
                  "value": {
                       "type": ""
                 }
-              } ],"css": {
-            "properties": [
-              {
-
-              }
-            ]
-          }
+              } ],
+            "css": {
+               "properties": [ 
+                 {
+                 "name": "--surface",
+                 "description": "background color"
+                 } , 
+                 {
+                 "name": "--on-surface",
+                 "description": "foreground color"
+                 } , 
+                 {
+                 "name": "--tree-indentation-1",
+                 "description": "tree indention level 1"
+                 } , 
+                 {
+                 "name": "--tree-indentation-2",
+                 "description": "tree indention level 2"
+                 } , 
+                 {
+                 "name": "--tree-indentation-3",
+                 "description": "tree indention level 3"
+                 } , 
+                 {
+                 "name": "--tree-indentation-4",
+                 "description": "tree indention level 4"
+                 } , 
+                 {
+                 "name": "--tree-indentation-5",
+                 "description": "tree indention level 5"
+                 } , 
+                 {
+                 "name": "--tree-indentation-6",
+                 "description": "tree indention level 6"
+                 } , 
+                 {
+                 "name": "--tree-indentation-7",
+                 "description": "tree indention level 7"
+                 } , 
+                 {
+                 "name": "--tree-indentation-8",
+                 "description": "tree indention level 8"
+                 } , 
+                 {
+                 "name": "--tree-indentation-9",
+                 "description": "tree indention level 9"
+                 } , 
+                 {
+                 "name": "--tree-indentation-10",
+                 "description": "tree indention level 10"
+                 } , 
+                 {
+                 "name": "--tree-indentation-11",
+                 "description": "tree indention level 11"
+                 } , 
+                 {
+                 "name": "--tree-indentation-12",
+                 "description": "tree indention level 12"
+                 }
+               ]
+             }
         }
       }, 
           {
@@ -6598,13 +6684,47 @@
           "js": {
             "properties": [
             ],
-            "methods": [],"css": {
-            "properties": [
-              {
-
-              }
-            ]
-          }
+            "methods": [],
+            "css": {
+               "properties": [ 
+                 {
+                 "name": "--furo-ui5-cardContentHeight",
+                 "description": "card content height with vspan=1, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight"
+                 } , 
+                 {
+                 "name": "--furo-ui5-cardContentHeight",
+                 "description": "card content height with vspan=2, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight"
+                 } , 
+                 {
+                 "name": "--furo-ui5-cardContentHeight",
+                 "description": "card content height with vspan=3, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight"
+                 } , 
+                 {
+                 "name": "--furo-ui5-cardContentHeight",
+                 "description": "card content height with vspan=4, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight"
+                 } , 
+                 {
+                 "name": "--furo-ui5-cardContentHeight",
+                 "description": "card content height with vspan=5, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight"
+                 } , 
+                 {
+                 "name": "--furo-ui5-cardContentHeight",
+                 "description": "card content height with vspan=6, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight"
+                 } , 
+                 {
+                 "name": "--furo-ui5-cardContentHeight",
+                 "description": "card content height with vspan=7, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight"
+                 } , 
+                 {
+                 "name": "--furo-ui5-cardContentHeight",
+                 "description": "card content height with vspan=8, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight"
+                 } , 
+                 {
+                 "name": "--furo-ui5-cardContentHeight",
+                 "description": "card content height with vspan=9, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight"
+                 }
+               ]
+             }
         }
       }, 
           {
@@ -7396,194 +7516,6 @@
         }
       }, 
           {
-          "name": "furo-ui5-launchpad-navigation",
-          "source": {
-            "module": "./src/spaces/furo-ui5-launchpad-navigation.js",
-            "symbol": "FuroUi5LaunchpadNavigation"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`furo-ui5-launchpad-navigation`\n\nIs used to navigate between spaces and pages.",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-navigation/",
-          "attributes": [
-                    ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "_currentTab",
-                "type": "",
-                "description": ""
-              }
-            ],
-            "methods": [
-            {
-              "name": "focus",
-              "description": "focus Focuses the first tab",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "bind-spaces",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-update",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-fbp-ready",
-              "description": "flow is ready lifecycle method",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }],
-            "events": [
-              
-              {
-                "name": "page-selected",
-                "priority": "highest",
-                "description": "{Object} Fired when a page was selected. The object contains the page:id",
-                 "value": {
-                      "type": ""
-                }
-              } ]
-        }
-      }, 
-          {
-          "name": "furo-ui5-launchpad-page-renderer",
-          "source": {
-            "module": "./src/spaces/furo-ui5-launchpad-page-renderer.js",
-            "symbol": "FuroUi5LaunchpadPageRenderer"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`furo-ui5-launchpad-page-renderer`\n Renders a page of a space.\n\n > **Hint**: when you build a custom tile, do not forget to trigger the tile-clicked event.",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-page-renderer/",
-          "attributes": [
-                    ]
-          ,
-          "js": {
-            "properties": [
-            ],
-            "methods": [
-            {
-              "name": "-fbp-ready",
-              "description": "flow is ready lifecycle method",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "inject-page",
-              "description": "injectPage to render a page",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "focus",
-              "description": "focus Focuses the first tile in the first section",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }],
-            "events": [
-              
-              {
-                "name": "tile-clicked",
-                "priority": "highest",
-                "description": "Fired from the default tiles inside of the rendered pages.",
-                 "value": {
-                      "type": "PointerEvent"
-                }
-              } ]
-        }
-      }, 
-          {
-          "name": "furo-ui5-launchpad-section-renderer",
-          "source": {
-            "module": "./src/spaces/furo-ui5-launchpad-section-renderer.js",
-            "symbol": "FuroUi5LaunchpadSectionRenderer"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`furo-ui5-launchpad-section-renderer`\n Renders a section of a page",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-section-renderer/",
-          "attributes": [
-                    ]
-          ,
-          "js": {
-            "properties": [
-            ],
-            "methods": [
-            {
-              "name": "bind-section",
-              "description": "bindSection Bind a fieldnode of type launchpad.Section",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-fbp-ready",
-              "description": "flow is ready lifecycle method",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "focus",
-              "description": "focus Focuses the first tile in the first section",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }]
-        }
-      }, 
-          {
-          "name": "furo-ui5-launchpad-tile-grid",
-          "source": {
-            "module": "./src/spaces/furo-ui5-launchpad-tile-grid.js",
-            "symbol": "FuroUi5LaunchpadTileGrid"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`furo-ui5-launchpad-tile-grid`\n Layout component used in sections.",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-tile-grid/",
-          "attributes": [
-                    ]
-          ,
-          "js": {
-            "properties": [
-            ],
-            "methods": [
-            {
-              "name": "-fbp-ready",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }]
-        }
-      }, 
-          {
           "name": "furo-ui5-context-menu-item",
           "source": {
             "module": "./src/subcomponents/furo-ui5-context-menu-item.js",
@@ -8017,13 +7949,247 @@
                 "type": "string",
                 "required": true
               }
-            }],"css": {
-            "properties": [
-              {
-
+            }],
+            "css": {
+               "properties": [ 
+                 {
+                 "name": "--tree-indentation-1",
+                 "description": "tree indention level 1"
+                 } , 
+                 {
+                 "name": "--tree-indentation-2",
+                 "description": "tree indention level 2"
+                 } , 
+                 {
+                 "name": "--tree-indentation-3",
+                 "description": "tree indention level 3"
+                 } , 
+                 {
+                 "name": "--tree-indentation-4",
+                 "description": "tree indention level 4"
+                 } , 
+                 {
+                 "name": "--tree-indentation-5",
+                 "description": "tree indention level 5"
+                 } , 
+                 {
+                 "name": "--tree-indentation-6",
+                 "description": "tree indention level 6"
+                 } , 
+                 {
+                 "name": "--tree-indentation-7",
+                 "description": "tree indention level 7"
+                 } , 
+                 {
+                 "name": "--tree-indentation-8",
+                 "description": "tree indention level 8"
+                 } , 
+                 {
+                 "name": "--tree-indentation-9",
+                 "description": "tree indention level 9"
+                 } , 
+                 {
+                 "name": "--tree-indentation-10",
+                 "description": "tree indention level 10"
+                 } , 
+                 {
+                 "name": "--tree-indentation-11",
+                 "description": "tree indention level 11"
+                 } , 
+                 {
+                 "name": "--tree-indentation-12",
+                 "description": "tree indention level 12"
+                 }
+               ]
+             }
+        }
+      }, 
+          {
+          "name": "furo-ui5-launchpad-navigation",
+          "source": {
+            "module": "./src/spaces/furo-ui5-launchpad-navigation.js",
+            "symbol": "FuroUi5LaunchpadNavigation"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`furo-ui5-launchpad-navigation`\n\nIs used to navigate between spaces and pages.",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-navigation/",
+          "attributes": [
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "_currentTab",
+                "type": "",
+                "description": ""
               }
-            ]
-          }
+            ],
+            "methods": [
+            {
+              "name": "focus",
+              "description": "focus Focuses the first tab",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "bind-spaces",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-update",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }],
+            "events": [
+              
+              {
+                "name": "page-selected",
+                "priority": "highest",
+                "description": "{Object} Fired when a page was selected. The object contains the page:id",
+                 "value": {
+                      "type": ""
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "furo-ui5-launchpad-page-renderer",
+          "source": {
+            "module": "./src/spaces/furo-ui5-launchpad-page-renderer.js",
+            "symbol": "FuroUi5LaunchpadPageRenderer"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`furo-ui5-launchpad-page-renderer`\n Renders a page of a space.\n\n > **Hint**: when you build a custom tile, do not forget to trigger the tile-clicked event.",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-page-renderer/",
+          "attributes": [
+                    ]
+          ,
+          "js": {
+            "properties": [
+            ],
+            "methods": [
+            {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "inject-page",
+              "description": "injectPage to render a page",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "focus",
+              "description": "focus Focuses the first tile in the first section",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }],
+            "events": [
+              
+              {
+                "name": "tile-clicked",
+                "priority": "highest",
+                "description": "Fired from the default tiles inside of the rendered pages.",
+                 "value": {
+                      "type": "PointerEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "furo-ui5-launchpad-section-renderer",
+          "source": {
+            "module": "./src/spaces/furo-ui5-launchpad-section-renderer.js",
+            "symbol": "FuroUi5LaunchpadSectionRenderer"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`furo-ui5-launchpad-section-renderer`\n Renders a section of a page",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-section-renderer/",
+          "attributes": [
+                    ]
+          ,
+          "js": {
+            "properties": [
+            ],
+            "methods": [
+            {
+              "name": "bind-section",
+              "description": "bindSection Bind a fieldnode of type launchpad.Section",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "focus",
+              "description": "focus Focuses the first tile in the first section",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
+        }
+      }, 
+          {
+          "name": "furo-ui5-launchpad-tile-grid",
+          "source": {
+            "module": "./src/spaces/furo-ui5-launchpad-tile-grid.js",
+            "symbol": "FuroUi5LaunchpadTileGrid"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`furo-ui5-launchpad-tile-grid`\n Layout component used in sections.",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-launchpad-tile-grid/",
+          "attributes": [
+                    ]
+          ,
+          "js": {
+            "properties": [
+            ],
+            "methods": [
+            {
+              "name": "-fbp-ready",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
         }
       }, 
           {

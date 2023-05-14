@@ -17740,294 +17740,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/spaces/furo-ui5-launchpad-navigation.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "`furo-ui5-launchpad-navigation`\n\nIs used to navigate between spaces and pages.",
-          "name": "FuroUi5LaunchpadNavigation",
-          "members": [
-            {
-              "kind": "method",
-              "name": "_checkInitialTab",
-              "parameters": [
-                {
-                  "name": "tab"
-                }
-              ],
-              "description": "check if the current tab is selected",
-              "return": {
-                "type": {
-                  "text": "boolean"
-                }
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "description": "focus Focuses the first tab",
-              "privacy": "public"
-            },
-            {
-              "kind": "method",
-              "name": "bindSpaces",
-              "parameters": [
-                {
-                  "name": "fn"
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "_update",
-              "parameters": [
-                {
-                  "name": "fn"
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "_FBPReady",
-              "description": "flow is ready lifecycle method"
-            },
-            {
-              "kind": "field",
-              "name": "_currentTab"
-            }
-          ],
-          "events": [
-            {
-              "description": "{Object} Fired when a page was selected. The object contains the page:id",
-              "name": "page-selected"
-            }
-          ],
-          "mixins": [
-            {
-              "name": "FBP",
-              "package": "@furo/fbp"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "summary": "Spaces navigation tabs",
-          "tagName": "furo-ui5-launchpad-navigation",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "FuroUi5LaunchpadNavigation",
-          "declaration": {
-            "name": "FuroUi5LaunchpadNavigation",
-            "module": "src/spaces/furo-ui5-launchpad-navigation.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "furo-ui5-launchpad-navigation",
-          "declaration": {
-            "name": "FuroUi5LaunchpadNavigation",
-            "module": "src/spaces/furo-ui5-launchpad-navigation.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/spaces/furo-ui5-launchpad-page-renderer.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "`furo-ui5-launchpad-page-renderer`\n Renders a page of a space.\n\n > **Hint**: when you build a custom tile, do not forget to trigger the tile-clicked event.",
-          "name": "FuroUi5LaunchpadPageRenderer",
-          "members": [
-            {
-              "kind": "method",
-              "name": "_FBPReady",
-              "description": "flow is ready lifecycle method"
-            },
-            {
-              "kind": "method",
-              "name": "injectPage",
-              "parameters": [
-                {
-                  "name": "rawPage"
-                }
-              ],
-              "description": "injectPage to render a page",
-              "privacy": "public"
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "description": "focus Focuses the first tile in the first section",
-              "privacy": "public"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "PointerEvent"
-              },
-              "description": "Fired from the default tiles inside of the rendered pages.",
-              "name": "tile-clicked"
-            }
-          ],
-          "mixins": [
-            {
-              "name": "FBP",
-              "package": "@furo/fbp"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "summary": "tile renderer",
-          "tagName": "furo-ui5-launchpad-page-renderer",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "FuroUi5LaunchpadPageRenderer",
-          "declaration": {
-            "name": "FuroUi5LaunchpadPageRenderer",
-            "module": "src/spaces/furo-ui5-launchpad-page-renderer.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "furo-ui5-launchpad-page-renderer",
-          "declaration": {
-            "name": "FuroUi5LaunchpadPageRenderer",
-            "module": "src/spaces/furo-ui5-launchpad-page-renderer.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/spaces/furo-ui5-launchpad-section-renderer.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "`furo-ui5-launchpad-section-renderer`\n Renders a section of a page",
-          "name": "FuroUi5LaunchpadSectionRenderer",
-          "members": [
-            {
-              "kind": "method",
-              "name": "bindSection",
-              "parameters": [
-                {
-                  "name": "fieldNode"
-                }
-              ],
-              "description": "bindSection Bind a fieldnode of type launchpad.Section",
-              "privacy": "public"
-            },
-            {
-              "kind": "method",
-              "name": "_FBPReady",
-              "description": "flow is ready lifecycle method"
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "description": "focus Focuses the first tile in the first section",
-              "privacy": "public"
-            }
-          ],
-          "mixins": [
-            {
-              "name": "FBP",
-              "package": "@furo/fbp"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "summary": "section renderer for a tile page",
-          "tagName": "furo-ui5-launchpad-section-renderer",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "FuroUi5LaunchpadSectionRenderer",
-          "declaration": {
-            "name": "FuroUi5LaunchpadSectionRenderer",
-            "module": "src/spaces/furo-ui5-launchpad-section-renderer.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "furo-ui5-launchpad-section-renderer",
-          "declaration": {
-            "name": "FuroUi5LaunchpadSectionRenderer",
-            "module": "src/spaces/furo-ui5-launchpad-section-renderer.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/spaces/furo-ui5-launchpad-tile-grid.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "`furo-ui5-launchpad-tile-grid`\n Layout component used in sections.",
-          "name": "FuroUi5LaunchpadTileGrid",
-          "members": [
-            {
-              "kind": "method",
-              "name": "_FBPReady"
-            }
-          ],
-          "mixins": [
-            {
-              "name": "FBP",
-              "package": "@furo/fbp"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "summary": "tile layout component",
-          "tagName": "furo-ui5-launchpad-tile-grid",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "FuroUi5LaunchpadTileGrid",
-          "declaration": {
-            "name": "FuroUi5LaunchpadTileGrid",
-            "module": "src/spaces/furo-ui5-launchpad-tile-grid.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "furo-ui5-launchpad-tile-grid",
-          "declaration": {
-            "name": "FuroUi5LaunchpadTileGrid",
-            "module": "src/spaces/furo-ui5-launchpad-tile-grid.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/subcomponents/furo-ui5-context-menu-item.js",
       "declarations": [
         {
@@ -18855,6 +18567,294 @@
           "declaration": {
             "name": "FuroUi5TreeItem",
             "module": "src/subcomponents/furo-ui5-tree-item.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/spaces/furo-ui5-launchpad-navigation.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`furo-ui5-launchpad-navigation`\n\nIs used to navigate between spaces and pages.",
+          "name": "FuroUi5LaunchpadNavigation",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_checkInitialTab",
+              "parameters": [
+                {
+                  "name": "tab"
+                }
+              ],
+              "description": "check if the current tab is selected",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "description": "focus Focuses the first tab",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "bindSpaces",
+              "parameters": [
+                {
+                  "name": "fn"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_update",
+              "parameters": [
+                {
+                  "name": "fn"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_FBPReady",
+              "description": "flow is ready lifecycle method"
+            },
+            {
+              "kind": "field",
+              "name": "_currentTab"
+            }
+          ],
+          "events": [
+            {
+              "description": "{Object} Fired when a page was selected. The object contains the page:id",
+              "name": "page-selected"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "FBP",
+              "package": "@furo/fbp"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "summary": "Spaces navigation tabs",
+          "tagName": "furo-ui5-launchpad-navigation",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5LaunchpadNavigation",
+          "declaration": {
+            "name": "FuroUi5LaunchpadNavigation",
+            "module": "src/spaces/furo-ui5-launchpad-navigation.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "furo-ui5-launchpad-navigation",
+          "declaration": {
+            "name": "FuroUi5LaunchpadNavigation",
+            "module": "src/spaces/furo-ui5-launchpad-navigation.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/spaces/furo-ui5-launchpad-page-renderer.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`furo-ui5-launchpad-page-renderer`\n Renders a page of a space.\n\n > **Hint**: when you build a custom tile, do not forget to trigger the tile-clicked event.",
+          "name": "FuroUi5LaunchpadPageRenderer",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_FBPReady",
+              "description": "flow is ready lifecycle method"
+            },
+            {
+              "kind": "method",
+              "name": "injectPage",
+              "parameters": [
+                {
+                  "name": "rawPage"
+                }
+              ],
+              "description": "injectPage to render a page",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "description": "focus Focuses the first tile in the first section",
+              "privacy": "public"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "PointerEvent"
+              },
+              "description": "Fired from the default tiles inside of the rendered pages.",
+              "name": "tile-clicked"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "FBP",
+              "package": "@furo/fbp"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "summary": "tile renderer",
+          "tagName": "furo-ui5-launchpad-page-renderer",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5LaunchpadPageRenderer",
+          "declaration": {
+            "name": "FuroUi5LaunchpadPageRenderer",
+            "module": "src/spaces/furo-ui5-launchpad-page-renderer.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "furo-ui5-launchpad-page-renderer",
+          "declaration": {
+            "name": "FuroUi5LaunchpadPageRenderer",
+            "module": "src/spaces/furo-ui5-launchpad-page-renderer.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/spaces/furo-ui5-launchpad-section-renderer.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`furo-ui5-launchpad-section-renderer`\n Renders a section of a page",
+          "name": "FuroUi5LaunchpadSectionRenderer",
+          "members": [
+            {
+              "kind": "method",
+              "name": "bindSection",
+              "parameters": [
+                {
+                  "name": "fieldNode"
+                }
+              ],
+              "description": "bindSection Bind a fieldnode of type launchpad.Section",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "_FBPReady",
+              "description": "flow is ready lifecycle method"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "description": "focus Focuses the first tile in the first section",
+              "privacy": "public"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "FBP",
+              "package": "@furo/fbp"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "summary": "section renderer for a tile page",
+          "tagName": "furo-ui5-launchpad-section-renderer",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5LaunchpadSectionRenderer",
+          "declaration": {
+            "name": "FuroUi5LaunchpadSectionRenderer",
+            "module": "src/spaces/furo-ui5-launchpad-section-renderer.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "furo-ui5-launchpad-section-renderer",
+          "declaration": {
+            "name": "FuroUi5LaunchpadSectionRenderer",
+            "module": "src/spaces/furo-ui5-launchpad-section-renderer.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/spaces/furo-ui5-launchpad-tile-grid.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`furo-ui5-launchpad-tile-grid`\n Layout component used in sections.",
+          "name": "FuroUi5LaunchpadTileGrid",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_FBPReady"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "FBP",
+              "package": "@furo/fbp"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "summary": "tile layout component",
+          "tagName": "furo-ui5-launchpad-tile-grid",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5LaunchpadTileGrid",
+          "declaration": {
+            "name": "FuroUi5LaunchpadTileGrid",
+            "module": "src/spaces/furo-ui5-launchpad-tile-grid.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "furo-ui5-launchpad-tile-grid",
+          "declaration": {
+            "name": "FuroUi5LaunchpadTileGrid",
+            "module": "src/spaces/furo-ui5-launchpad-tile-grid.js"
           }
         }
       ]
