@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "@furo/ui5",
-  "version": "1.17.3",
+  "version": "1.17.4",
   "description-markup": "markdown",
   "js-types-syntax": "typescript",
   "default-icon": "icon.svg",
@@ -6834,495 +6834,6 @@
         }
       }, 
           {
-          "name": "furo-ui5-context-menu-item",
-          "source": {
-            "module": "./src/subcomponents/furo-ui5-context-menu-item.js",
-            "symbol": "FuroUi5ContextMenuItem"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`furo-ui5-context-menu-item` is a helper component for `furo-ui5-context-menu`.\n\nIt is not intended for direct usage",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-context-menu-item/",
-          "attributes": [{
-                        "name": "focused",
-                        "type": "Boolean",
-                        "description": "focused state"
-                      }, {
-                        "name": "disabled",
-                        "type": "Boolean",
-                        "description": "disabled state"
-                      }
-                    ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "icon",
-                "type": "string",
-                "description": "",
-                "default": "'border'"
-              }, {
-                "name": "focused",
-                "type": "Boolean",
-                "description": "focused state"
-              }, {
-                "name": "disabled",
-                "type": "Boolean",
-                "description": "disabled state"
-              }
-            ],
-            "methods": [
-            {
-              "name": "bind-data",
-              "description": "Bind a single menu node with a `menu.Menuitem` signature.",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "index",
-              "description": "store the index for mouseover focus",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "set-focused",
-              "description": "mark item as focused",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "unset-focused",
-              "description": "mark item as unfocused",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }],
-            "events": [
-              
-              {
-                "name": "mousefocus",
-                "priority": "highest",
-                "description": " Fired when hovered with mouse",
-                 "value": {
-                      "type": "index"
-                }
-              }
-              , 
-              {
-                "name": "opensub-requested",
-                "priority": "highest",
-                "description": " Fired when submenu should be opened",
-                 "value": {
-                      "type": "menu: this.menuitem, initiator: this"
-                }
-              }
-              , 
-              {
-                "name": "item-selected",
-                "priority": "highest",
-                "description": " Fired when item was selected",
-                 "value": {
-                      "type": "item"
-                }
-              } ]
-        }
-      }, 
-          {
-          "name": "furo-ui5-context-submenu",
-          "source": {
-            "module": "./src/subcomponents/furo-ui5-context-submenu.js",
-            "symbol": "FuroUi5ContextSubmenu"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`furo-ui5-context-submenu` is a helper component for `furo-ui5-context-menu`.\n\nUse [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-context-submenu/",
-          "attributes": [{
-                        "name": "depth",
-                        "type": "Number",
-                        "description": "Depth of the submenu"
-                      }
-                    ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "borderDistance",
-                "type": "number",
-                "description": "",
-                "default": "48"
-              }, {
-                "name": "depth",
-                "type": "Number",
-                "description": "Depth of the submenu"
-              }
-            ],
-            "methods": [
-            {
-              "name": "init",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "hide-menu",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "trigger-navigation",
-              "description": "Interface for the furo navigation pad",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }]
-        }
-      }, 
-          {
-          "name": "furo-ui5-message-container-item",
-          "source": {
-            "module": "./src/subcomponents/furo-ui5-message-container-item.js",
-            "symbol": "FuroUi5MessageContainerItem"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`furo-ui5-message-container-item`\ntodo Describe your element",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-message-container-item/",
-          "attributes": [{
-                        "name": "hidden",
-                        "type": "boolean",
-                        "description": ""
-                      }
-                    ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "hidden",
-                "type": "boolean",
-                "description": ""
-              }
-            ],
-            "methods": [
-            {
-              "name": "bind-data",
-              "description": "bindData Bind a fielNode",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "filter",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-fbp-ready",
-              "description": "flow is ready lifecycle method",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }]
-        }
-      }, 
-          {
-          "name": "furo-ui5-table-row",
-          "source": {
-            "module": "./src/subcomponents/furo-ui5-table-row.js",
-            "symbol": "FuroUi5TableRow"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "# INTERNAL COMPONENT\nThis is a helper component to send `tablerow-selected` event by clicking the row or pressing the enter on the row.",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-table-row/",
-          "attributes": [
-                    ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "_data",
-                "type": "object",
-                "description": "",
-                "default": "{}"
-              }
-            ],
-            "methods": [
-            {
-              "name": "focus",
-              "description": "focus this row",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "set-data",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-select",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-arrow-down-pressed",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-arrow-up-pressed",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }],
-            "events": [
-              
-              {
-                "name": "ui5-selection-requested",
-                "priority": "highest",
-                "description": "",
-                 "value": {
-                      "type": "Event"
-                }
-              }
-              , 
-              {
-                "name": "tablerow-selected",
-                "priority": "highest",
-                "description": "",
-                 "value": {
-                      "type": "CustomEvent"
-                }
-              }
-              , 
-              {
-                "name": "arrow-down-on-last-row",
-                "priority": "highest",
-                "description": "",
-                 "value": {
-                      "type": "CustomEvent"
-                }
-              }
-              , 
-              {
-                "name": "arrow-up-on-first-row",
-                "priority": "highest",
-                "description": "",
-                 "value": {
-                      "type": "CustomEvent"
-                }
-              } ]
-        }
-      }, 
-          {
-          "name": "furo-ui5-tree-item",
-          "source": {
-            "module": "./src/subcomponents/furo-ui5-tree-item.js",
-            "symbol": "FuroUi5TreeItem"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`furo-tree-item`\n/**\n# INTERNAL COMPONENT\nThis is a helper component to send `tablerow-selected` event by clicking the row or pressing the enter on the row.",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-tree-item/",
-          "attributes": [{
-                        "name": "hidden",
-                        "type": "boolean",
-                        "description": "Description",
-                        "default": "true"
-                      }, {
-                        "name": "focused",
-                        "type": "boolean",
-                        "description": ""
-                      }, {
-                        "name": "searchmatch",
-                        "type": "boolean",
-                        "description": ""
-                      }, {
-                        "name": "inedit",
-                        "type": "boolean",
-                        "description": ""
-                      }, {
-                        "name": "haserror",
-                        "type": "boolean",
-                        "description": ""
-                      }, {
-                        "name": "selected",
-                        "type": "boolean",
-                        "description": ""
-                      }, {
-                        "name": "noicon",
-                        "type": "boolean",
-                        "description": ""
-                      }, {
-                        "name": "is-group-label",
-                        "type": "boolean",
-                        "description": "",
-                        "default": "false"
-                      }
-                    ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "hidden",
-                "type": "boolean",
-                "description": "Description",
-                "default": "true"
-              }, {
-                "name": "isGroupLabel",
-                "type": "boolean",
-                "description": "",
-                "default": "false"
-              }, {
-                "name": "indentation",
-                "type": "number",
-                "description": "",
-                "default": "0"
-              }, {
-                "name": "_icon",
-                "type": "string",
-                "description": "",
-                "default": "'border'"
-              }, {
-                "name": "focused",
-                "type": "boolean",
-                "description": ""
-              }, {
-                "name": "searchmatch",
-                "type": "boolean",
-                "description": ""
-              }, {
-                "name": "inedit",
-                "type": "boolean",
-                "description": ""
-              }, {
-                "name": "haserror",
-                "type": "boolean",
-                "description": ""
-              }, {
-                "name": "selected",
-                "type": "boolean",
-                "description": ""
-              }, {
-                "name": "noicon",
-                "type": "boolean",
-                "description": ""
-              }
-            ],
-            "methods": [
-            {
-              "name": "search",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-update-item",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "bind-data",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "--add-node-selected-listener",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }],
-            "css": {
-               "properties": [ 
-                 {
-                 "name": "--tree-indentation-1",
-                 "description": "tree indention level 1"
-                 } , 
-                 {
-                 "name": "--tree-indentation-2",
-                 "description": "tree indention level 2"
-                 } , 
-                 {
-                 "name": "--tree-indentation-3",
-                 "description": "tree indention level 3"
-                 } , 
-                 {
-                 "name": "--tree-indentation-4",
-                 "description": "tree indention level 4"
-                 } , 
-                 {
-                 "name": "--tree-indentation-5",
-                 "description": "tree indention level 5"
-                 } , 
-                 {
-                 "name": "--tree-indentation-6",
-                 "description": "tree indention level 6"
-                 } , 
-                 {
-                 "name": "--tree-indentation-7",
-                 "description": "tree indention level 7"
-                 } , 
-                 {
-                 "name": "--tree-indentation-8",
-                 "description": "tree indention level 8"
-                 } , 
-                 {
-                 "name": "--tree-indentation-9",
-                 "description": "tree indention level 9"
-                 } , 
-                 {
-                 "name": "--tree-indentation-10",
-                 "description": "tree indention level 10"
-                 } , 
-                 {
-                 "name": "--tree-indentation-11",
-                 "description": "tree indention level 11"
-                 } , 
-                 {
-                 "name": "--tree-indentation-12",
-                 "description": "tree indention level 12"
-                 }
-               ]
-             }
-        }
-      }, 
-          {
           "name": "furo-ui5-filtered-table",
           "source": {
             "module": "./src/furo-ui5-views/furo-ui5-filtered-table.js",
@@ -8040,32 +7551,196 @@
         }
       }, 
           {
-          "name": "dialog-manage-views-deletebutton",
+          "name": "furo-ui5-context-menu-item",
           "source": {
-            "module": "./src/furo-ui5-views/helper/dialog-manage-views-deletebutton.js",
-            "symbol": "DialogManageViewsDeletebutton"
+            "module": "./src/subcomponents/furo-ui5-context-menu-item.js",
+            "symbol": "FuroUi5ContextMenuItem"
           },
           "deprecated": false,
           "experimental": false,
-          "description": "`DialogManageViewsDeletebutton` is a helper component",
-          "doc-url": "https://ui5.furo.pro/docs/components/dialog-manage-views-deletebutton/",
+          "description": "`furo-ui5-context-menu-item` is a helper component for `furo-ui5-context-menu`.\n\nIt is not intended for direct usage",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-context-menu-item/",
           "attributes": [{
-                        "name": "myBool",
-                        "type": "boolean",
-                        "description": "Description"
+                        "name": "focused",
+                        "type": "Boolean",
+                        "description": "focused state"
+                      }, {
+                        "name": "disabled",
+                        "type": "Boolean",
+                        "description": "disabled state"
                       }
                     ]
           ,
           "js": {
             "properties": [{
-                "name": "myBool",
-                "type": "boolean",
-                "description": "Description"
+                "name": "icon",
+                "type": "string",
+                "description": "",
+                "default": "'border'"
+              }, {
+                "name": "focused",
+                "type": "Boolean",
+                "description": "focused state"
+              }, {
+                "name": "disabled",
+                "type": "Boolean",
+                "description": "disabled state"
               }
             ],
             "methods": [
             {
               "name": "bind-data",
+              "description": "Bind a single menu node with a `menu.Menuitem` signature.",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "index",
+              "description": "store the index for mouseover focus",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "set-focused",
+              "description": "mark item as focused",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "unset-focused",
+              "description": "mark item as unfocused",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }],
+            "events": [
+              
+              {
+                "name": "mousefocus",
+                "priority": "highest",
+                "description": " Fired when hovered with mouse",
+                 "value": {
+                      "type": "index"
+                }
+              }
+              , 
+              {
+                "name": "opensub-requested",
+                "priority": "highest",
+                "description": " Fired when submenu should be opened",
+                 "value": {
+                      "type": "menu: this.menuitem, initiator: this"
+                }
+              }
+              , 
+              {
+                "name": "item-selected",
+                "priority": "highest",
+                "description": " Fired when item was selected",
+                 "value": {
+                      "type": "item"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "furo-ui5-context-submenu",
+          "source": {
+            "module": "./src/subcomponents/furo-ui5-context-submenu.js",
+            "symbol": "FuroUi5ContextSubmenu"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`furo-ui5-context-submenu` is a helper component for `furo-ui5-context-menu`.\n\nUse [`furo-ui5-context-menu`](?t=FuroUi5ContextMenu) to show a context menu.",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-context-submenu/",
+          "attributes": [{
+                        "name": "depth",
+                        "type": "Number",
+                        "description": "Depth of the submenu"
+                      }
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "borderDistance",
+                "type": "number",
+                "description": "",
+                "default": "48"
+              }, {
+                "name": "depth",
+                "type": "Number",
+                "description": "Depth of the submenu"
+              }
+            ],
+            "methods": [
+            {
+              "name": "init",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "hide-menu",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "trigger-navigation",
+              "description": "Interface for the furo navigation pad",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
+        }
+      }, 
+          {
+          "name": "furo-ui5-message-container-item",
+          "source": {
+            "module": "./src/subcomponents/furo-ui5-message-container-item.js",
+            "symbol": "FuroUi5MessageContainerItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`furo-ui5-message-container-item`\ntodo Describe your element",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-message-container-item/",
+          "attributes": [{
+                        "name": "hidden",
+                        "type": "boolean",
+                        "description": ""
+                      }
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "hidden",
+                "type": "boolean",
+                "description": ""
+              }
+            ],
+            "methods": [
+            {
+              "name": "bind-data",
+              "description": "bindData Bind a fielNode",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "filter",
               "description": "",
               "value": {
                 "type": "string",
@@ -8079,127 +7754,216 @@
                 "type": "string",
                 "required": true
               }
-            }],
-            "events": [
-              
-              {
-                "name": "standard-deleted",
-                "priority": "highest",
-                "description": "",
-                 "value": {
-                      "type": "Event"
-                }
-              } ]
+            }]
         }
       }, 
           {
-          "name": "dialog-manage-views",
+          "name": "furo-ui5-table-row",
           "source": {
-            "module": "./src/furo-ui5-views/helper/dialog-manage-views.js",
-            "symbol": "DialogManageViews"
+            "module": "./src/subcomponents/furo-ui5-table-row.js",
+            "symbol": "FuroUi5TableRow"
           },
           "deprecated": false,
           "experimental": false,
-          "description": "`DialogManageViews` is a helper component",
-          "doc-url": "https://ui5.furo.pro/docs/components/dialog-manage-views/",
-          "attributes": [{
-                        "name": "cancel-button-text",
-                        "type": "string",
-                        "description": "Description",
-                        "default": "'Cancel'"
-                      }, {
-                        "name": "manage-view-header-text",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Manage Views'"
-                      }, {
-                        "name": "placeholder-search",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Search'"
-                      }, {
-                        "name": "colheader-default",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Default'"
-                      }, {
-                        "name": "colheader-apply",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Apply Automatically'"
-                      }, {
-                        "name": "colheader-creator",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Created By'"
-                      }, {
-                        "name": "colheader-view",
-                        "type": "string",
-                        "description": "",
-                        "default": "'View'"
-                      }, {
-                        "name": "ok-button-text",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Ok'"
-                      }
+          "description": "# INTERNAL COMPONENT\nThis is a helper component to send `tablerow-selected` event by clicking the row or pressing the enter on the row.",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-table-row/",
+          "attributes": [
                     ]
           ,
           "js": {
             "properties": [{
-                "name": "manageViewHeaderText",
-                "type": "string",
+                "name": "_data",
+                "type": "object",
                 "description": "",
-                "default": "'Manage Views'"
-              }, {
-                "name": "placeholderSearch",
-                "type": "string",
-                "description": "",
-                "default": "'Search'"
-              }, {
-                "name": "colheaderDefault",
-                "type": "string",
-                "description": "",
-                "default": "'Default'"
-              }, {
-                "name": "colheaderApply",
-                "type": "string",
-                "description": "",
-                "default": "'Apply Automatically'"
-              }, {
-                "name": "colheaderCreator",
-                "type": "string",
-                "description": "",
-                "default": "'Created By'"
-              }, {
-                "name": "colheaderView",
-                "type": "string",
-                "description": "",
-                "default": "'View'"
-              }, {
-                "name": "okButtonText",
-                "type": "string",
-                "description": "",
-                "default": "'Ok'"
-              }, {
-                "name": "cancelButtonText",
-                "type": "string",
-                "description": "Description",
-                "default": "'Cancel'"
+                "default": "{}"
               }
             ],
             "methods": [
             {
-              "name": "show",
-              "description": "show",
+              "name": "focus",
+              "description": "focus this row",
               "value": {
                 "type": "string",
                 "required": true
               }
             }
             , {
-              "name": "close",
-              "description": "close",
+              "name": "set-data",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-select",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-arrow-down-pressed",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-arrow-up-pressed",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }],
+            "events": [
+              
+              {
+                "name": "ui5-selection-requested",
+                "priority": "highest",
+                "description": "",
+                 "value": {
+                      "type": "Event"
+                }
+              }
+              , 
+              {
+                "name": "tablerow-selected",
+                "priority": "highest",
+                "description": "",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "arrow-down-on-last-row",
+                "priority": "highest",
+                "description": "",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "arrow-up-on-first-row",
+                "priority": "highest",
+                "description": "",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "furo-ui5-tree-item",
+          "source": {
+            "module": "./src/subcomponents/furo-ui5-tree-item.js",
+            "symbol": "FuroUi5TreeItem"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`furo-tree-item`\n/**\n# INTERNAL COMPONENT\nThis is a helper component to send `tablerow-selected` event by clicking the row or pressing the enter on the row.",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-tree-item/",
+          "attributes": [{
+                        "name": "hidden",
+                        "type": "boolean",
+                        "description": "Description",
+                        "default": "true"
+                      }, {
+                        "name": "focused",
+                        "type": "boolean",
+                        "description": ""
+                      }, {
+                        "name": "searchmatch",
+                        "type": "boolean",
+                        "description": ""
+                      }, {
+                        "name": "inedit",
+                        "type": "boolean",
+                        "description": ""
+                      }, {
+                        "name": "haserror",
+                        "type": "boolean",
+                        "description": ""
+                      }, {
+                        "name": "selected",
+                        "type": "boolean",
+                        "description": ""
+                      }, {
+                        "name": "noicon",
+                        "type": "boolean",
+                        "description": ""
+                      }, {
+                        "name": "is-group-label",
+                        "type": "boolean",
+                        "description": "",
+                        "default": "false"
+                      }
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "hidden",
+                "type": "boolean",
+                "description": "Description",
+                "default": "true"
+              }, {
+                "name": "isGroupLabel",
+                "type": "boolean",
+                "description": "",
+                "default": "false"
+              }, {
+                "name": "indentation",
+                "type": "number",
+                "description": "",
+                "default": "0"
+              }, {
+                "name": "_icon",
+                "type": "string",
+                "description": "",
+                "default": "'border'"
+              }, {
+                "name": "focused",
+                "type": "boolean",
+                "description": ""
+              }, {
+                "name": "searchmatch",
+                "type": "boolean",
+                "description": ""
+              }, {
+                "name": "inedit",
+                "type": "boolean",
+                "description": ""
+              }, {
+                "name": "haserror",
+                "type": "boolean",
+                "description": ""
+              }, {
+                "name": "selected",
+                "type": "boolean",
+                "description": ""
+              }, {
+                "name": "noicon",
+                "type": "boolean",
+                "description": ""
+              }
+            ],
+            "methods": [
+            {
+              "name": "search",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-update-item",
+              "description": "",
               "value": {
                 "type": "string",
                 "required": true
@@ -8207,20 +7971,72 @@
             }
             , {
               "name": "bind-data",
-              "description": "bindData",
+              "description": "",
               "value": {
                 "type": "string",
                 "required": true
               }
             }
             , {
-              "name": "-fbp-ready",
-              "description": "flow is ready lifecycle method",
+              "name": "--add-node-selected-listener",
+              "description": "",
               "value": {
                 "type": "string",
                 "required": true
               }
-            }]
+            }],
+            "css": {
+               "properties": [ 
+                 {
+                 "name": "--tree-indentation-1",
+                 "description": "tree indention level 1"
+                 } , 
+                 {
+                 "name": "--tree-indentation-2",
+                 "description": "tree indention level 2"
+                 } , 
+                 {
+                 "name": "--tree-indentation-3",
+                 "description": "tree indention level 3"
+                 } , 
+                 {
+                 "name": "--tree-indentation-4",
+                 "description": "tree indention level 4"
+                 } , 
+                 {
+                 "name": "--tree-indentation-5",
+                 "description": "tree indention level 5"
+                 } , 
+                 {
+                 "name": "--tree-indentation-6",
+                 "description": "tree indention level 6"
+                 } , 
+                 {
+                 "name": "--tree-indentation-7",
+                 "description": "tree indention level 7"
+                 } , 
+                 {
+                 "name": "--tree-indentation-8",
+                 "description": "tree indention level 8"
+                 } , 
+                 {
+                 "name": "--tree-indentation-9",
+                 "description": "tree indention level 9"
+                 } , 
+                 {
+                 "name": "--tree-indentation-10",
+                 "description": "tree indention level 10"
+                 } , 
+                 {
+                 "name": "--tree-indentation-11",
+                 "description": "tree indention level 11"
+                 } , 
+                 {
+                 "name": "--tree-indentation-12",
+                 "description": "tree indention level 12"
+                 }
+               ]
+             }
         }
       }, 
           {
@@ -8403,335 +8219,6 @@
             "methods": [
             {
               "name": "-fbp-ready",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }]
-        }
-      }, 
-          {
-          "name": "dialog-filter-settings",
-          "source": {
-            "module": "./src/furo-ui5-views/helper/filter/helper-dialog-filter-settings.js",
-            "symbol": "HelperDialogFilterSettings"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`DialogFilterSettings`\nis a helper component for `FuroUi5ViewsFilterSettings`",
-          "doc-url": "https://ui5.furo.pro/docs/components/dialog-filter-settings/",
-          "attributes": [{
-                        "name": "colheader-field",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Field'"
-                      }, {
-                        "name": "colheader-position",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Position'"
-                      }, {
-                        "name": "colheader-value",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Value'"
-                      }, {
-                        "name": "placeholder-search",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Search'"
-                      }, {
-                        "name": "filtersettings-header-text",
-                        "type": "string",
-                        "description": "",
-                        "default": "'Adapt Filter'"
-                      }
-                    ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "colheaderField",
-                "type": "string",
-                "description": "",
-                "default": "'Field'"
-              }, {
-                "name": "colheaderPosition",
-                "type": "string",
-                "description": "",
-                "default": "'Position'"
-              }, {
-                "name": "colheaderValue",
-                "type": "string",
-                "description": "",
-                "default": "'Value'"
-              }, {
-                "name": "placeholderSearch",
-                "type": "string",
-                "description": "",
-                "default": "'Search'"
-              }, {
-                "name": "headerText",
-                "type": "string",
-                "description": "",
-                "default": "'Adapt Filter'"
-              }
-            ],
-            "methods": [
-            {
-              "name": "bind-filter",
-              "description": "bindFilter",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "dialog-opened",
-              "description": "Trigger this method after the dialog (parent) is opened.",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "bind-settings",
-              "description": "bindSettings",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "move-node",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-update-settings",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-fbp-ready",
-              "description": "flow is ready lifecycle method",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }]
-        }
-      }, 
-          {
-          "name": "furo-ui5-set-fieldorder",
-          "source": {
-            "module": "./src/furo-ui5-views/helper/table/furo-ui5-set-fieldorder.js",
-            "symbol": "FuroUi5SetFieldorder"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`FuroUi5SetFieldorder` is a helper component",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-fieldorder/",
-          "attributes": [{
-                        "name": "placeholder-search",
-                        "type": "string",
-                        "description": ""
-                      }, {
-                        "name": "colheader-field",
-                        "type": "string",
-                        "description": ""
-                      }, {
-                        "name": "colheader-position",
-                        "type": "string",
-                        "description": ""
-                      }
-                    ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "placeholderSearch",
-                "type": "string",
-                "description": ""
-              }, {
-                "name": "colheaderField",
-                "type": "string",
-                "description": ""
-              }, {
-                "name": "colheaderPosition",
-                "type": "string",
-                "description": ""
-              }
-            ],
-            "methods": [
-            {
-              "name": "inject-items",
-              "description": "bindData",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-fbp-ready",
-              "description": "flow is ready lifecycle method",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }]
-        }
-      }, 
-          {
-          "name": "furo-ui5-set-groupby",
-          "source": {
-            "module": "./src/furo-ui5-views/helper/table/furo-ui5-set-groupby.js",
-            "symbol": "FuroUi5SetGroupby"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`FuroUi5SetGroupby` is a helper component",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-groupby/",
-          "attributes": [{
-                        "name": "myBool",
-                        "type": "boolean",
-                        "description": "Description"
-                      }
-                    ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "myBool",
-                "type": "boolean",
-                "description": "Description"
-              }
-            ],
-            "methods": [
-            {
-              "name": "bind-data",
-              "description": "bindData",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-fbp-ready",
-              "description": "flow is ready lifecycle method",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }]
-        }
-      }, 
-          {
-          "name": "furo-ui5-set-orderby-row",
-          "source": {
-            "module": "./src/furo-ui5-views/helper/table/furo-ui5-set-orderby-row.js",
-            "symbol": "FuroUi5SetOrderbyRow"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`FuroUi5SetOrderbyRow` is a helper component",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-orderby-row/",
-          "attributes": [
-                    ]
-          ,
-          "js": {
-            "properties": [
-            ],
-            "methods": [
-            {
-              "name": "inject-data",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-fbp-ready",
-              "description": "flow is ready lifecycle method",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }]
-        }
-      }, 
-          {
-          "name": "furo-ui5-set-orderby",
-          "source": {
-            "module": "./src/furo-ui5-views/helper/table/furo-ui5-set-orderby.js",
-            "symbol": "FuroUi5SetOrderby"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "`FuroUi5SetOrderby` is a helper component",
-          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-orderby/",
-          "attributes": [{
-                        "name": "label-empty-select",
-                        "type": "string",
-                        "description": ""
-                      }
-                    ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "labelEmptySelect",
-                "type": "string",
-                "description": ""
-              }
-            ],
-            "methods": [
-            {
-              "name": "bind-data",
-              "description": "bindData",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-parse-order-by",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "bind-table",
-              "description": "bindTable",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-fbp-ready",
-              "description": "flow is ready lifecycle method",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "-update-order",
-              "description": "",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-            , {
-              "name": "move-node",
               "description": "",
               "value": {
                 "type": "string",
@@ -18472,6 +17959,519 @@
             , {
               "name": "focus",
               "description": "focus focuses the table",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
+        }
+      }, 
+          {
+          "name": "dialog-manage-views-deletebutton",
+          "source": {
+            "module": "./src/furo-ui5-views/helper/dialog-manage-views-deletebutton.js",
+            "symbol": "DialogManageViewsDeletebutton"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`DialogManageViewsDeletebutton` is a helper component",
+          "doc-url": "https://ui5.furo.pro/docs/components/dialog-manage-views-deletebutton/",
+          "attributes": [{
+                        "name": "myBool",
+                        "type": "boolean",
+                        "description": "Description"
+                      }
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "myBool",
+                "type": "boolean",
+                "description": "Description"
+              }
+            ],
+            "methods": [
+            {
+              "name": "bind-data",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }],
+            "events": [
+              
+              {
+                "name": "standard-deleted",
+                "priority": "highest",
+                "description": "",
+                 "value": {
+                      "type": "Event"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "dialog-manage-views",
+          "source": {
+            "module": "./src/furo-ui5-views/helper/dialog-manage-views.js",
+            "symbol": "DialogManageViews"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`DialogManageViews` is a helper component",
+          "doc-url": "https://ui5.furo.pro/docs/components/dialog-manage-views/",
+          "attributes": [{
+                        "name": "cancel-button-text",
+                        "type": "string",
+                        "description": "Description",
+                        "default": "'Cancel'"
+                      }, {
+                        "name": "manage-view-header-text",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Manage Views'"
+                      }, {
+                        "name": "placeholder-search",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Search'"
+                      }, {
+                        "name": "colheader-default",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Default'"
+                      }, {
+                        "name": "colheader-apply",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Apply Automatically'"
+                      }, {
+                        "name": "colheader-creator",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Created By'"
+                      }, {
+                        "name": "colheader-view",
+                        "type": "string",
+                        "description": "",
+                        "default": "'View'"
+                      }, {
+                        "name": "ok-button-text",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Ok'"
+                      }
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "manageViewHeaderText",
+                "type": "string",
+                "description": "",
+                "default": "'Manage Views'"
+              }, {
+                "name": "placeholderSearch",
+                "type": "string",
+                "description": "",
+                "default": "'Search'"
+              }, {
+                "name": "colheaderDefault",
+                "type": "string",
+                "description": "",
+                "default": "'Default'"
+              }, {
+                "name": "colheaderApply",
+                "type": "string",
+                "description": "",
+                "default": "'Apply Automatically'"
+              }, {
+                "name": "colheaderCreator",
+                "type": "string",
+                "description": "",
+                "default": "'Created By'"
+              }, {
+                "name": "colheaderView",
+                "type": "string",
+                "description": "",
+                "default": "'View'"
+              }, {
+                "name": "okButtonText",
+                "type": "string",
+                "description": "",
+                "default": "'Ok'"
+              }, {
+                "name": "cancelButtonText",
+                "type": "string",
+                "description": "Description",
+                "default": "'Cancel'"
+              }
+            ],
+            "methods": [
+            {
+              "name": "show",
+              "description": "show",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "close",
+              "description": "close",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "bind-data",
+              "description": "bindData",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
+        }
+      }, 
+          {
+          "name": "dialog-filter-settings",
+          "source": {
+            "module": "./src/furo-ui5-views/helper/filter/helper-dialog-filter-settings.js",
+            "symbol": "HelperDialogFilterSettings"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`DialogFilterSettings`\nis a helper component for `FuroUi5ViewsFilterSettings`",
+          "doc-url": "https://ui5.furo.pro/docs/components/dialog-filter-settings/",
+          "attributes": [{
+                        "name": "colheader-field",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Field'"
+                      }, {
+                        "name": "colheader-position",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Position'"
+                      }, {
+                        "name": "colheader-value",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Value'"
+                      }, {
+                        "name": "placeholder-search",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Search'"
+                      }, {
+                        "name": "filtersettings-header-text",
+                        "type": "string",
+                        "description": "",
+                        "default": "'Adapt Filter'"
+                      }
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "colheaderField",
+                "type": "string",
+                "description": "",
+                "default": "'Field'"
+              }, {
+                "name": "colheaderPosition",
+                "type": "string",
+                "description": "",
+                "default": "'Position'"
+              }, {
+                "name": "colheaderValue",
+                "type": "string",
+                "description": "",
+                "default": "'Value'"
+              }, {
+                "name": "placeholderSearch",
+                "type": "string",
+                "description": "",
+                "default": "'Search'"
+              }, {
+                "name": "headerText",
+                "type": "string",
+                "description": "",
+                "default": "'Adapt Filter'"
+              }
+            ],
+            "methods": [
+            {
+              "name": "bind-filter",
+              "description": "bindFilter",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "dialog-opened",
+              "description": "Trigger this method after the dialog (parent) is opened.",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "bind-settings",
+              "description": "bindSettings",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "move-node",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-update-settings",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
+        }
+      }, 
+          {
+          "name": "furo-ui5-set-fieldorder",
+          "source": {
+            "module": "./src/furo-ui5-views/helper/table/furo-ui5-set-fieldorder.js",
+            "symbol": "FuroUi5SetFieldorder"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`FuroUi5SetFieldorder` is a helper component",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-fieldorder/",
+          "attributes": [{
+                        "name": "placeholder-search",
+                        "type": "string",
+                        "description": ""
+                      }, {
+                        "name": "colheader-field",
+                        "type": "string",
+                        "description": ""
+                      }, {
+                        "name": "colheader-position",
+                        "type": "string",
+                        "description": ""
+                      }
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "placeholderSearch",
+                "type": "string",
+                "description": ""
+              }, {
+                "name": "colheaderField",
+                "type": "string",
+                "description": ""
+              }, {
+                "name": "colheaderPosition",
+                "type": "string",
+                "description": ""
+              }
+            ],
+            "methods": [
+            {
+              "name": "inject-items",
+              "description": "bindData",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
+        }
+      }, 
+          {
+          "name": "furo-ui5-set-groupby",
+          "source": {
+            "module": "./src/furo-ui5-views/helper/table/furo-ui5-set-groupby.js",
+            "symbol": "FuroUi5SetGroupby"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`FuroUi5SetGroupby` is a helper component",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-groupby/",
+          "attributes": [{
+                        "name": "myBool",
+                        "type": "boolean",
+                        "description": "Description"
+                      }
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "myBool",
+                "type": "boolean",
+                "description": "Description"
+              }
+            ],
+            "methods": [
+            {
+              "name": "bind-data",
+              "description": "bindData",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
+        }
+      }, 
+          {
+          "name": "furo-ui5-set-orderby-row",
+          "source": {
+            "module": "./src/furo-ui5-views/helper/table/furo-ui5-set-orderby-row.js",
+            "symbol": "FuroUi5SetOrderbyRow"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`FuroUi5SetOrderbyRow` is a helper component",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-orderby-row/",
+          "attributes": [
+                    ]
+          ,
+          "js": {
+            "properties": [
+            ],
+            "methods": [
+            {
+              "name": "inject-data",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
+        }
+      }, 
+          {
+          "name": "furo-ui5-set-orderby",
+          "source": {
+            "module": "./src/furo-ui5-views/helper/table/furo-ui5-set-orderby.js",
+            "symbol": "FuroUi5SetOrderby"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`FuroUi5SetOrderby` is a helper component",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-set-orderby/",
+          "attributes": [{
+                        "name": "label-empty-select",
+                        "type": "string",
+                        "description": ""
+                      }
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "labelEmptySelect",
+                "type": "string",
+                "description": ""
+              }
+            ],
+            "methods": [
+            {
+              "name": "bind-data",
+              "description": "bindData",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-parse-order-by",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "bind-table",
+              "description": "bindTable",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-update-order",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "move-node",
+              "description": "",
               "value": {
                 "type": "string",
                 "required": true
