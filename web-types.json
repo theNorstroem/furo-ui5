@@ -124,6 +124,41 @@
         }
       }, 
           {
+          "name": "furo-ui5-busy-indicator",
+          "source": {
+            "module": "./src/furo-ui5-busy-indicator.js",
+            "symbol": "FuroUiBusyIndicator"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "The furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.\n\n```html\n<furo-ui5-busy-indicator></furo-ui5-busy-indicator>\n```\n\nhttps://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-busy-indicator/",
+          "attributes": [
+                    ]
+          ,
+          "js": {
+            "properties": [
+            ],
+            "methods": [
+            {
+              "name": "activate",
+              "description": "Sets the busy indicator state to active",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "deactivate",
+              "description": "Sets the busy indicator state to inactive",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
+        }
+      }, 
+          {
           "name": "furo-ui5-button",
           "source": {
             "module": "./src/furo-ui5-button.js",

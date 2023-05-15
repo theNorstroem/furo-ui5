@@ -30,6 +30,7 @@
             {
               "name": "{{$field.name}}",
               "type": "{{$field.type.text | replace "\"" "\\\""}}",
+              "priority": "high",
               "description": "{{if $field.description}}{{$field.description  | replace "\n" "\\n" | replace "\t" "  " | replace "\"" "\\\"" | replace "\\" "\\\\"  | replace "\\\"" "\""   | replace "\\\\" "\\" | replace "\\c" " / c" | noescape}}{{end}}"
               {{- if $field.default}},
               "default": "{{$field.default  | replace "\n" "\\n" | replace "\t" "  " | replace "\"" "\\\"" | replace "\\" "\\\\"  | replace "\\\"" "\""   | replace "\\\\" "\\" | noescape}}"{{end}}

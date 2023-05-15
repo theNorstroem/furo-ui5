@@ -10,7 +10,7 @@ import * as Busy from '@ui5/webcomponents/dist/BusyIndicator.js';
  * https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
  *
  * @summary ui5 busy indicator with methods
- * @element
+ * @element furo-ui5-busy-indicator
  */
 export class FuroUiBusyIndicator extends Busy.default {
   /**
