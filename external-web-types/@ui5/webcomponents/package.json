@@ -1,6 +1,6 @@
 {
   "name": "@furo/web-types-ui5",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Web-types for @ui5/webcomponents",
   "keywords": [
     "web-types",
