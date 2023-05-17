@@ -21,7 +21,7 @@
           "attributes": [{
               "name": "design",
               "type": "sap.ui.webc.fiori.types.BarDesign",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the component's design.\n\n<br><br> <b>Note:</b> Available options are: <ul> <li><code>Header</code></li> <li><code>Subheader</code></li> <li><code>Footer</code></li> <li><code>FloatingFooter</code></li> </ul>",
               "default": "\"Header\""
             }
@@ -44,6 +44,7 @@
             "properties": [{
                 "name": "design",
                 "type": "sap.ui.webc.fiori.types.BarDesign",
+                "priority": "high",
                 "description": "Defines the component's design.\n\n<br><br> <b>Note:</b> Available options are: <ul> <li><code>Header</code></li> <li><code>Subheader</code></li> <li><code>Footer</code></li> <li><code>FloatingFooter</code></li> </ul>",
                 "default": "\"Header\""
               }
@@ -118,37 +119,37 @@
           "attributes": [{
               "name": "equal-split",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines whether the component is in equal split mode. In this mode, the side and the main content take 50:50 percent of the container on all screen sizes except for phone, where the main and side contents are switching visibility using the toggle method.",
               "default": "false"
             }, {
               "name": "hide-main-content",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the visibility of the main content.",
               "default": "false"
             }, {
               "name": "hide-side-content",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the visibility of the side content.",
               "default": "false"
             }, {
               "name": "side-content-fall-down",
               "type": "sap.ui.webc.fiori.types.SideContentFallDown",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines on which breakpoints the side content falls down below the main content.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>BelowXL</code></li> <li><code>BelowL</code></li> <li><code>BelowM</code></li> <li><code>OnMinimumWidth</code></li> </ul>",
               "default": "\"OnMinimumWidth\""
             }, {
               "name": "side-content-position",
               "type": "sap.ui.webc.fiori.types.SideContentPosition",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines whether the side content is positioned before the main content (left side in LTR mode), or after the the main content (right side in LTR mode).\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>Start</code></li> <li><code>End</code></li> </ul>",
               "default": "\"End\""
             }, {
               "name": "side-content-visibility",
               "type": "sap.ui.webc.fiori.types.SideContentVisibility",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines on which breakpoints the side content is visible.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>AlwaysShow</code></li> <li><code>ShowAboveL</code></li> <li><code>ShowAboveM</code></li> <li><code>ShowAboveS</code></li> <li><code>NeverShow</code></li> </ul>",
               "default": "\"ShowAboveS\""
             }
@@ -167,31 +168,37 @@
             "properties": [{
                 "name": "equalSplit",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines whether the component is in equal split mode. In this mode, the side and the main content take 50:50 percent of the container on all screen sizes except for phone, where the main and side contents are switching visibility using the toggle method.",
                 "default": "false"
               }, {
                 "name": "hideMainContent",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines the visibility of the main content.",
                 "default": "false"
               }, {
                 "name": "hideSideContent",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines the visibility of the side content.",
                 "default": "false"
               }, {
                 "name": "sideContentFallDown",
                 "type": "sap.ui.webc.fiori.types.SideContentFallDown",
+                "priority": "high",
                 "description": "Defines on which breakpoints the side content falls down below the main content.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>BelowXL</code></li> <li><code>BelowL</code></li> <li><code>BelowM</code></li> <li><code>OnMinimumWidth</code></li> </ul>",
                 "default": "\"OnMinimumWidth\""
               }, {
                 "name": "sideContentPosition",
                 "type": "sap.ui.webc.fiori.types.SideContentPosition",
+                "priority": "high",
                 "description": "Defines whether the side content is positioned before the main content (left side in LTR mode), or after the the main content (right side in LTR mode).\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>Start</code></li> <li><code>End</code></li> </ul>",
                 "default": "\"End\""
               }, {
                 "name": "sideContentVisibility",
                 "type": "sap.ui.webc.fiori.types.SideContentVisibility",
+                "priority": "high",
                 "description": "Defines on which breakpoints the side content is visible.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>AlwaysShow</code></li> <li><code>ShowAboveL</code></li> <li><code>ShowAboveM</code></li> <li><code>ShowAboveS</code></li> <li><code>NeverShow</code></li> </ul>",
                 "default": "\"ShowAboveS\""
               }
@@ -230,13 +237,13 @@
           "attributes": [{
               "name": "additional-text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the additional text of the component.",
               "default": "\"\""
             }, {
               "name": "text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the text of the component.",
               "default": "\"\""
             }
@@ -251,11 +258,13 @@
             "properties": [{
                 "name": "additionalText",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the additional text of the component.",
                 "default": "\"\""
               }, {
                 "name": "text",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the text of the component.",
                 "default": "\"\""
               }
@@ -276,13 +285,13 @@
           "attributes": [{
               "name": "selected",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines if the component is selected.",
               "default": "false"
             }, {
               "name": "text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the text of the component.",
               "default": "\"\""
             }
@@ -292,11 +301,13 @@
             "properties": [{
                 "name": "selected",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines if the component is selected.",
                 "default": "false"
               }, {
                 "name": "text",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the text of the component.",
                 "default": "\"\""
               }
@@ -317,13 +328,13 @@
           "attributes": [{
               "name": "hide-arrows",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the visibility of the arrows, used for expanding and shrinking the columns.",
               "default": "false"
             }, {
               "name": "layout",
               "type": "sap.ui.webc.fiori.types.FCLLayout",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the columns layout and their proportion. <br><br> <b>Note:</b> The layout also depends on the screen size - one column for screens smaller than 599px, two columns between 599px and 1023px and three columns for sizes bigger than 1023px. <br><br> Available options are: <ul> <li><code>OneColumn</code></li> <li><code>TwoColumnsStartExpanded</code></li> <li><code>TwoColumnsMidExpanded</code></li> <li><code>ThreeColumnsMidExpanded</code></li> <li><code>ThreeColumnsEndExpanded</code></li> <li><code>ThreeColumnsStartExpandedEndHidden</code></li> <li><code>ThreeColumnsMidExpandedEndHidden</code></li> <li><code>MidColumnFullScreen</code></li> <li><code>EndColumnFullScreen</code></li> </ul> <br><br> <b>For example:</b> layout=<code>TwoColumnsStartExpanded</code> means the layout will display up to two columns in 67%/33% proportion.",
               "default": "\"OneColumn\""
             }
@@ -346,44 +357,53 @@
             "properties": [{
                 "name": "accessibilityRoles",
                 "type": "object",
+                "priority": "high",
                 "description": "An object of strings that defines additional accessibility roles for further customization.\n\nIt supports the following fields: - <code>startColumnRole</code>: the accessibility role for the <code>startColumn</code> - <code>startArrowContainerRole</code>: the accessibility role for the first arrow container (between the <code>begin</code> and <code>mid</code> columns) - <code>midColumnRole</code>: the accessibility role for the <code>midColumn</code> - <code>endArrowContainerRole</code>: the accessibility role for the second arrow container (between the <code>mid</code> and <code>end</code> columns) - <code>endColumnRole</code>: the accessibility role for the <code>endColumn</code>"
               }, {
                 "name": "accessibilityTexts",
                 "type": "object",
+                "priority": "high",
                 "description": "An object of strings that defines several additional accessibility texts for even further customization.\n\nIt supports the following fields: - <code>startColumnAccessibleName</code>: the accessibility name for the <code>startColumn</code> region - <code>midColumnAccessibleName</code>: the accessibility name for the <code>midColumn</code> region - <code>endColumnAccessibleName</code>: the accessibility name for the <code>endColumn</code> region - <code>startArrowLeftText</code>: the text that the first arrow (between the <code>begin</code> and <code>mid</code> columns) will have when pointing to the left - <code>startArrowRightText</code>: the text that the first arrow (between the <code>begin</code> and <code>mid</code> columns) will have when pointing to the right - <code>endArrowLeftText</code>: the text that the second arrow (between the <code>mid</code> and <code>end</code> columns) will have when pointing to the left - <code>endArrowRightText</code>: the text that the second arrow (between the <code>mid</code> and <code>end</code> columns) will have when pointing to the right - <code>startArrowContainerAccessibleName</code>: the text that the first arrow container (between the <code>begin</code> and <code>mid</code> columns) will have as <code>aria-label</code> - <code>endArrowContainerAccessibleName</code>: the text that the second arrow container (between the <code>mid</code> and <code>end</code> columns) will have as <code>aria-label</code>"
               }, {
                 "name": "columnLayout",
                 "type": "array",
+                "priority": "high",
                 "description": "Returns the current column layout, based on both the <code>layout</code> property and the screen size. <br><br> <b>For example:</b> [\"67%\", \"33%\", 0], [\"100%\", 0, 0], [\"25%\", \"50%\", \"25%\"], etc, where the numbers represents the width of the start, middle and end columns.",
                 "default": "[\"100%\", 0, 0]"
               }, {
                 "name": "endColumnVisible",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Returns if the <code>end</code> column is visible.",
                 "default": "false"
               }, {
                 "name": "hideArrows",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines the visibility of the arrows, used for expanding and shrinking the columns.",
                 "default": "false"
               }, {
                 "name": "layout",
                 "type": "sap.ui.webc.fiori.types.FCLLayout",
+                "priority": "high",
                 "description": "Defines the columns layout and their proportion. <br><br> <b>Note:</b> The layout also depends on the screen size - one column for screens smaller than 599px, two columns between 599px and 1023px and three columns for sizes bigger than 1023px. <br><br> Available options are: <ul> <li><code>OneColumn</code></li> <li><code>TwoColumnsStartExpanded</code></li> <li><code>TwoColumnsMidExpanded</code></li> <li><code>ThreeColumnsMidExpanded</code></li> <li><code>ThreeColumnsEndExpanded</code></li> <li><code>ThreeColumnsStartExpandedEndHidden</code></li> <li><code>ThreeColumnsMidExpandedEndHidden</code></li> <li><code>MidColumnFullScreen</code></li> <li><code>EndColumnFullScreen</code></li> </ul> <br><br> <b>For example:</b> layout=<code>TwoColumnsStartExpanded</code> means the layout will display up to two columns in 67%/33% proportion.",
                 "default": "\"OneColumn\""
               }, {
                 "name": "midColumnVisible",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Returns if the <code>middle</code> column is visible.",
                 "default": "false"
               }, {
                 "name": "startColumnVisible",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Returns if the <code>start</code> column is visible.",
                 "default": "true"
               }, {
                 "name": "visibleColumns",
                 "type": "sap.ui.webc.base.types.Integer",
+                "priority": "high",
                 "description": "Returns the number of currently visible columns.",
                 "default": "1"
               }
@@ -414,31 +434,31 @@
           "attributes": [{
               "name": "accessible-name-ref",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Receives id(or many ids) of the elements that label the component.",
               "default": "\"\""
             }, {
               "name": "name",
               "type": "sap.ui.webc.fiori.types.IllustrationMessageType",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the illustration name that will be displayed in the component. <br><br> Available illustrations are: <ul> <li><code>AddColumn</code></li> <li><code>AddPeople</code></li> <li><code>AddDimensions</code></li> <li><code>BalloonSky</code></li> <li><code>BeforeSearch</code></li> <li><code>Connection</code></li> <li><code>EmptyCalendar</code></li> <li><code>EmptyList</code></li> <li><code>EmptyPlanningCalendar</code></li> <li><code>ErrorScreen</code></li> <li><code>FilterTable</code></li> <li><code>GroupTable</code></li> <li><code>NoActivities</code></li> <li><code>NoColumnsSet</code></li> <li><code>NoData</code></li> <li><code>NoEntries</code></li> <li><code>NoFilterResults</code></li> <li><code>NoMail_v1</code></li> <li><code>NoMail</code></li> <li><code>NoNotifications</code></li> <li><code>NoSavedItems_v1</code></li> <li><code>NoSavedItems</code></li> <li><code>NoSearchResults</code></li> <li><code>NoTasks_v1</code></li> <li><code>NoTasks</code></li> <li><code>NoDimensionsSet</code></li> <li><code>PageNotFound</code></li> <li><code>ReloadScreen</code></li> <li><code>ResizeColumn</code></li> <li><code>SearchEarth</code></li> <li><code>SearchFolder</code></li> <li><code>SimpleBalloon</code></li> <li><code>SimpleBell</code></li> <li><code>SimpleCalendar</code></li> <li><code>SimpleCheckMark</code></li> <li><code>SimpleConnection</code></li> <li><code>SimpleEmptyDoc</code></li> <li><code>SimpleEmptyList</code></li> <li><code>SimpleError</code></li> <li><code>SimpleMagnifier</code></li> <li><code>SimpleMail</code></li> <li><code>SimpleNoSavedItems</code></li> <li><code>SimpleNotFoundMagnifier</code></li> <li><code>SimpleReload</code></li> <li><code>SimpleTask</code></li> <li><code>SleepingBell</code></li> <li><code>SortColumn</code></li> <li><code>SuccessBalloon</code></li> <li><code>SuccessCheckMark</code></li> <li><code>SuccessHighFive</code></li> <li><code>SuccessScreen</code></li> <li><code>Survey</code></li> <li><code>Tent</code></li> <li><code>UnableToLoad</code></li> <li><code>UnableToLoadImage</code></li> <li><code>UnableToUpload</code></li> <li><code>UploadToCloud</code></li> <li><code>UploadCollection</code></li> <li><code>TntChartArea</code></li> <li><code>TntChartArea2</code></li> <li><code>TntChartBar</code></li> <li><code>TntChartBPMNFlow</code></li> <li><code>TntChartBullet</code></li> <li><code>TntChartDoughnut</code></li> <li><code>TntChartFlow</code></li> <li><code>TntChartGantt</code></li> <li><code>TntChartOrg</code></li> <li><code>TntChartPie</code></li> <li><code>TntCodePlaceholder</code></li> <li><code>TntCompany</code></li> <li><code>TntComponents</code></li> <li><code>TntExternalLink</code></li> <li><code>TntFaceID</code></li> <li><code>TntFingerprint</code></li> <li><code>TntLock</code></li> <li><code>TntMission</code></li> <li><code>TntNoApplications</code></li> <li><code>TntNoFlows</code></li> <li><code>TntNoUsers</code></li> <li><code>TntRadar</code></li> <li><code>TntSecrets</code></li> <li><code>TntServices</code></li> <li><code>TntSessionExpired</code></li> <li><code>TntSessionExpiring</code></li> <li><code>TntSuccess</code></li> <li><code>TntSuccessfulAuth</code></li> <li><code>TntSystems</code></li> <li><code>TntTeams</code></li> <li><code>TntTools</code></li> <li><code>TntUnableToLoad</code></li> <li><code>TntUnlock</code></li> <li><code>TntUnsuccessfulAuth</code></li> <li><code>TntUser2</code></li> </ul> <br><br> <b>Note:</b> By default the <code>BeforeSearch</code> illustration is loaded. <br> When using an illustration type, other than the default, it should be loaded in addition: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/NoData.js\";</code> <br><br> <b>Note:</b> TNT illustrations cointain <code>Tnt</code> prefix in their name. You can import them removing the <code>Tnt</code> prefix like this: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/tnt/SessionExpired.js\";</code>",
               "default": "\"BeforeSearch\""
             }, {
               "name": "size",
               "type": "sap.ui.webc.fiori.types.IllustrationMessageSize",
-              "priority": "high",
+              "priority": "highest",
               "description": "Determines which illustration breakpoint variant is used. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Base</code></li> <li><code>Spot</code></li> <li><code>Dialog</code></li> <li><code>Scene</code></li> </ul>\n\nAs <code>IllustratedMessage</code> adapts itself around the <code>Illustration</code>, the other elements of the component are displayed differently on the different breakpoints/illustration sizes.",
               "default": "\"Auto\""
             }, {
               "name": "subtitle-text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the subtitle of the component. <br><br> <b>Note:</b> Using this property, the default subtitle text of illustration will be overwritten. <br><br> <b>Note:</b> Using <code>subtitle</code> slot, the default of this property will be overwritten.",
               "default": "\"\""
             }, {
               "name": "title-text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the title of the component. <br><br> <b>Note:</b> Using this property, the default title text of illustration will be overwritten.",
               "default": "\"\""
             }
@@ -461,26 +481,31 @@
             "properties": [{
                 "name": "accessibleNameRef",
                 "type": "string",
+                "priority": "high",
                 "description": "Receives id(or many ids) of the elements that label the component.",
                 "default": "\"\""
               }, {
                 "name": "name",
                 "type": "sap.ui.webc.fiori.types.IllustrationMessageType",
+                "priority": "high",
                 "description": "Defines the illustration name that will be displayed in the component. <br><br> Available illustrations are: <ul> <li><code>AddColumn</code></li> <li><code>AddPeople</code></li> <li><code>AddDimensions</code></li> <li><code>BalloonSky</code></li> <li><code>BeforeSearch</code></li> <li><code>Connection</code></li> <li><code>EmptyCalendar</code></li> <li><code>EmptyList</code></li> <li><code>EmptyPlanningCalendar</code></li> <li><code>ErrorScreen</code></li> <li><code>FilterTable</code></li> <li><code>GroupTable</code></li> <li><code>NoActivities</code></li> <li><code>NoColumnsSet</code></li> <li><code>NoData</code></li> <li><code>NoEntries</code></li> <li><code>NoFilterResults</code></li> <li><code>NoMail_v1</code></li> <li><code>NoMail</code></li> <li><code>NoNotifications</code></li> <li><code>NoSavedItems_v1</code></li> <li><code>NoSavedItems</code></li> <li><code>NoSearchResults</code></li> <li><code>NoTasks_v1</code></li> <li><code>NoTasks</code></li> <li><code>NoDimensionsSet</code></li> <li><code>PageNotFound</code></li> <li><code>ReloadScreen</code></li> <li><code>ResizeColumn</code></li> <li><code>SearchEarth</code></li> <li><code>SearchFolder</code></li> <li><code>SimpleBalloon</code></li> <li><code>SimpleBell</code></li> <li><code>SimpleCalendar</code></li> <li><code>SimpleCheckMark</code></li> <li><code>SimpleConnection</code></li> <li><code>SimpleEmptyDoc</code></li> <li><code>SimpleEmptyList</code></li> <li><code>SimpleError</code></li> <li><code>SimpleMagnifier</code></li> <li><code>SimpleMail</code></li> <li><code>SimpleNoSavedItems</code></li> <li><code>SimpleNotFoundMagnifier</code></li> <li><code>SimpleReload</code></li> <li><code>SimpleTask</code></li> <li><code>SleepingBell</code></li> <li><code>SortColumn</code></li> <li><code>SuccessBalloon</code></li> <li><code>SuccessCheckMark</code></li> <li><code>SuccessHighFive</code></li> <li><code>SuccessScreen</code></li> <li><code>Survey</code></li> <li><code>Tent</code></li> <li><code>UnableToLoad</code></li> <li><code>UnableToLoadImage</code></li> <li><code>UnableToUpload</code></li> <li><code>UploadToCloud</code></li> <li><code>UploadCollection</code></li> <li><code>TntChartArea</code></li> <li><code>TntChartArea2</code></li> <li><code>TntChartBar</code></li> <li><code>TntChartBPMNFlow</code></li> <li><code>TntChartBullet</code></li> <li><code>TntChartDoughnut</code></li> <li><code>TntChartFlow</code></li> <li><code>TntChartGantt</code></li> <li><code>TntChartOrg</code></li> <li><code>TntChartPie</code></li> <li><code>TntCodePlaceholder</code></li> <li><code>TntCompany</code></li> <li><code>TntComponents</code></li> <li><code>TntExternalLink</code></li> <li><code>TntFaceID</code></li> <li><code>TntFingerprint</code></li> <li><code>TntLock</code></li> <li><code>TntMission</code></li> <li><code>TntNoApplications</code></li> <li><code>TntNoFlows</code></li> <li><code>TntNoUsers</code></li> <li><code>TntRadar</code></li> <li><code>TntSecrets</code></li> <li><code>TntServices</code></li> <li><code>TntSessionExpired</code></li> <li><code>TntSessionExpiring</code></li> <li><code>TntSuccess</code></li> <li><code>TntSuccessfulAuth</code></li> <li><code>TntSystems</code></li> <li><code>TntTeams</code></li> <li><code>TntTools</code></li> <li><code>TntUnableToLoad</code></li> <li><code>TntUnlock</code></li> <li><code>TntUnsuccessfulAuth</code></li> <li><code>TntUser2</code></li> </ul> <br><br> <b>Note:</b> By default the <code>BeforeSearch</code> illustration is loaded. <br> When using an illustration type, other than the default, it should be loaded in addition: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/NoData.js\";</code> <br><br> <b>Note:</b> TNT illustrations cointain <code>Tnt</code> prefix in their name. You can import them removing the <code>Tnt</code> prefix like this: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/tnt/SessionExpired.js\";</code>",
                 "default": "\"BeforeSearch\""
               }, {
                 "name": "size",
                 "type": "sap.ui.webc.fiori.types.IllustrationMessageSize",
+                "priority": "high",
                 "description": "Determines which illustration breakpoint variant is used. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Base</code></li> <li><code>Spot</code></li> <li><code>Dialog</code></li> <li><code>Scene</code></li> </ul>\n\nAs <code>IllustratedMessage</code> adapts itself around the <code>Illustration</code>, the other elements of the component are displayed differently on the different breakpoints/illustration sizes.",
                 "default": "\"Auto\""
               }, {
                 "name": "subtitleText",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the subtitle of the component. <br><br> <b>Note:</b> Using this property, the default subtitle text of illustration will be overwritten. <br><br> <b>Note:</b> Using <code>subtitle</code> slot, the default of this property will be overwritten.",
                 "default": "\"\""
               }, {
                 "name": "titleText",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the title of the component. <br><br> <b>Note:</b> Using this property, the default title text of illustration will be overwritten.",
                 "default": "\"\""
               }
@@ -501,31 +526,31 @@
           "attributes": [{
               "name": "interactive-display-area",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "If enabled, a <code>display-area-click</code> event is fired when the user clicks or taps on the display area. <br> The display area is the central area that contains the enlarged content of the currently selected item.",
               "default": "false"
             }, {
               "name": "layout",
               "type": "sap.ui.webc.fiori.types.MediaGalleryLayout",
-              "priority": "high",
+              "priority": "highest",
               "description": "Determines the layout of the component. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Vertical</code></li> <li><code>Horizontal</code></li> </ul>",
               "default": "\"Auto\""
             }, {
               "name": "menu-horizontal-align",
               "type": "sap.ui.webc.fiori.types.MediaGalleryMenuHorizontalAlign",
-              "priority": "high",
+              "priority": "highest",
               "description": "Determines the horizontal alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Left</code></li> <li><code>Right</code></li> </ul>",
               "default": "\"Left\""
             }, {
               "name": "menu-vertical-align",
               "type": "sap.ui.webc.fiori.types.MediaGalleryMenuVerticalAlign",
-              "priority": "high",
+              "priority": "highest",
               "description": "Determines the vertical alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Top</code></li> <li><code>Bottom</code></li> </ul>",
               "default": "\"Bottom\""
             }, {
               "name": "show-all-thumbnails",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "If set to <code>true</code>, all thumbnails are rendered in a scrollable container. If <code>false</code>, only up to five thumbnails are rendered, followed by an overflow button that shows the count of the remaining thumbnails.",
               "default": "false"
             }
@@ -540,26 +565,31 @@
             "properties": [{
                 "name": "interactiveDisplayArea",
                 "type": "boolean",
+                "priority": "high",
                 "description": "If enabled, a <code>display-area-click</code> event is fired when the user clicks or taps on the display area. <br> The display area is the central area that contains the enlarged content of the currently selected item.",
                 "default": "false"
               }, {
                 "name": "layout",
                 "type": "sap.ui.webc.fiori.types.MediaGalleryLayout",
+                "priority": "high",
                 "description": "Determines the layout of the component. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Vertical</code></li> <li><code>Horizontal</code></li> </ul>",
                 "default": "\"Auto\""
               }, {
                 "name": "menuHorizontalAlign",
                 "type": "sap.ui.webc.fiori.types.MediaGalleryMenuHorizontalAlign",
+                "priority": "high",
                 "description": "Determines the horizontal alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Left</code></li> <li><code>Right</code></li> </ul>",
                 "default": "\"Left\""
               }, {
                 "name": "menuVerticalAlign",
                 "type": "sap.ui.webc.fiori.types.MediaGalleryMenuVerticalAlign",
+                "priority": "high",
                 "description": "Determines the vertical alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Top</code></li> <li><code>Bottom</code></li> </ul>",
                 "default": "\"Bottom\""
               }, {
                 "name": "showAllThumbnails",
                 "type": "boolean",
+                "priority": "high",
                 "description": "If set to <code>true</code>, all thumbnails are rendered in a scrollable container. If <code>false</code>, only up to five thumbnails are rendered, followed by an overflow button that shows the count of the remaining thumbnails.",
                 "default": "false"
               }
@@ -608,19 +638,19 @@
           "attributes": [{
               "name": "disabled",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines whether the component is in disabled state.",
               "default": "false"
             }, {
               "name": "layout",
               "type": "sap.ui.webc.fiori.types.MediaGalleryItemLayout",
-              "priority": "high",
+              "priority": "highest",
               "description": "Determines the layout of the item container. <br><br> Available options are: <ul> <li><code>Square</code></li> <li><code>Wide</code></li> </ul>",
               "default": "\"Square\""
             }, {
               "name": "selected",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the selected state of the component.",
               "default": "false"
             }
@@ -639,16 +669,19 @@
             "properties": [{
                 "name": "disabled",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines whether the component is in disabled state.",
                 "default": "false"
               }, {
                 "name": "layout",
                 "type": "sap.ui.webc.fiori.types.MediaGalleryItemLayout",
+                "priority": "high",
                 "description": "Determines the layout of the item container. <br><br> Available options are: <ul> <li><code>Square</code></li> <li><code>Wide</code></li> </ul>",
                 "default": "\"Square\""
               }, {
                 "name": "selected",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines the selected state of the component.",
                 "default": "false"
               }
@@ -669,25 +702,25 @@
           "attributes": [{
               "name": "design",
               "type": "sap.ui.webc.main.types.ButtonDesign",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the action design.\n\n<br><br> <b>Note:</b> <ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> </ul>",
               "default": "\"Transparent\""
             }, {
               "name": "disabled",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines if the action is disabled. <br><br> <b>Note:</b> a disabled action can't be pressed or focused, and it is not in the tab chain.",
               "default": "false"
             }, {
               "name": "icon",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the <code>icon</code> source URI. <br><br> <b>Note:</b> SAP-icons font provides numerous built-in icons. To find all the available icons, see the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
               "default": "\"\""
             }, {
               "name": "text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the text of the <code>ui5-notification-action</code>.",
               "default": "\"\""
             }
@@ -697,21 +730,25 @@
             "properties": [{
                 "name": "design",
                 "type": "sap.ui.webc.main.types.ButtonDesign",
+                "priority": "high",
                 "description": "Defines the action design.\n\n<br><br> <b>Note:</b> <ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> </ul>",
                 "default": "\"Transparent\""
               }, {
                 "name": "disabled",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines if the action is disabled. <br><br> <b>Note:</b> a disabled action can't be pressed or focused, and it is not in the tab chain.",
                 "default": "false"
               }, {
                 "name": "icon",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the <code>icon</code> source URI. <br><br> <b>Note:</b> SAP-icons font provides numerous built-in icons. To find all the available icons, see the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
                 "default": "\"\""
               }, {
                 "name": "text",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the text of the <code>ui5-notification-action</code>.",
                 "default": "\"\""
               }
@@ -742,13 +779,13 @@
           "attributes": [{
               "name": "collapsed",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines if the group is collapsed or expanded.",
               "default": "false"
             }, {
               "name": "show-counter",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines if the items <code>counter</code> would be displayed.",
               "default": "false"
             }
@@ -763,11 +800,13 @@
             "properties": [{
                 "name": "collapsed",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines if the group is collapsed or expanded.",
                 "default": "false"
               }, {
                 "name": "showCounter",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines if the items <code>counter</code> would be displayed.",
                 "default": "false"
               }
@@ -798,7 +837,7 @@
           "attributes": [{
               "name": "wrapping-type",
               "type": "sap.ui.webc.main.types.WrappingType",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines if the <code>titleText</code> and <code>description</code> should wrap, they truncate by default.\n\n<br><br> <b>Note:</b> by default the <code>titleText</code> and <code>description</code>, and a <code>ShowMore/Less</code> button would be displayed.",
               "default": "\"None\""
             }
@@ -821,6 +860,7 @@
             "properties": [{
                 "name": "wrappingType",
                 "type": "sap.ui.webc.main.types.WrappingType",
+                "priority": "high",
                 "description": "Defines if the <code>titleText</code> and <code>description</code> should wrap, they truncate by default.\n\n<br><br> <b>Note:</b> by default the <code>titleText</code> and <code>description</code>, and a <code>ShowMore/Less</code> button would be displayed.",
                 "default": "\"None\""
               }
@@ -841,25 +881,25 @@
           "attributes": [{
               "name": "background-design",
               "type": "sap.ui.webc.fiori.types.PageBackgroundDesign",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the background color of the <code>ui5-page</code>. <br><br> <b>Note:</b> When a ui5-list is placed inside the page, we recommend using “List” to ensure better color contrast. <br><br> Available options are: <ul> <li><code>Solid</code></li> (default) <li><code>Transparent</code></li> <li><code>List</code></li> </ul>",
               "default": "\"Solid\""
             }, {
               "name": "disable-scrolling",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Disables vertical scrolling of page content. If set to true, there will be no vertical scrolling at all.",
               "default": "false"
             }, {
               "name": "floating-footer",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines if the footer should float over the content. <br><br> <b>Note:</b> When set to true the footer floats over the content with a slight offset from the bottom, otherwise it is fixed at the very bottom of the page.",
               "default": "true"
             }, {
               "name": "hide-footer",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the footer visibility.",
               "default": "false"
             }
@@ -882,21 +922,25 @@
             "properties": [{
                 "name": "backgroundDesign",
                 "type": "sap.ui.webc.fiori.types.PageBackgroundDesign",
+                "priority": "high",
                 "description": "Defines the background color of the <code>ui5-page</code>. <br><br> <b>Note:</b> When a ui5-list is placed inside the page, we recommend using “List” to ensure better color contrast. <br><br> Available options are: <ul> <li><code>Solid</code></li> (default) <li><code>Transparent</code></li> <li><code>List</code></li> </ul>",
                 "default": "\"Solid\""
               }, {
                 "name": "disableScrolling",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Disables vertical scrolling of page content. If set to true, there will be no vertical scrolling at all.",
                 "default": "false"
               }, {
                 "name": "floatingFooter",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines if the footer should float over the content. <br><br> <b>Note:</b> When set to true the footer floats over the content with a slight offset from the bottom, otherwise it is fixed at the very bottom of the page.",
                 "default": "true"
               }, {
                 "name": "hideFooter",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines the footer visibility.",
                 "default": "false"
               }
@@ -941,30 +985,30 @@
           "attributes": [{
               "name": "icon",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the icon to be displayed as a graphical element within the component. <br><br> Example: <br> <pre>ui5-product-switch-item icon=\"palette\"</pre>\n\nSee all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
               "default": "\"\""
             }, {
               "name": "subtitle-text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the subtitle of the component.",
               "default": "\"\""
             }, {
               "name": "target",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines a target where the <code>targetSrc</code> content must be open. <br><br> Available options are: <ul> <li><code>_self</code></li> <li><code>_top</code></li> <li><code>_blank</code></li> <li><code>_parent</code></li> <li><code>_search</code></li> </ul>"
             }, {
               "name": "target-src",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the component target URI. Supports standard hyperlink behavior.",
               "default": "\"\""
             }, {
               "name": "title-text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the title of the component.",
               "default": "\"\""
             }
@@ -974,25 +1018,30 @@
             "properties": [{
                 "name": "icon",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the icon to be displayed as a graphical element within the component. <br><br> Example: <br> <pre>ui5-product-switch-item icon=\"palette\"</pre>\n\nSee all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
                 "default": "\"\""
               }, {
                 "name": "subtitleText",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the subtitle of the component.",
                 "default": "\"\""
               }, {
                 "name": "target",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines a target where the <code>targetSrc</code> content must be open. <br><br> Available options are: <ul> <li><code>_self</code></li> <li><code>_top</code></li> <li><code>_blank</code></li> <li><code>_parent</code></li> <li><code>_search</code></li> </ul>"
               }, {
                 "name": "targetSrc",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the component target URI. Supports standard hyperlink behavior.",
                 "default": "\"\""
               }, {
                 "name": "titleText",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the title of the component.",
                 "default": "\"\""
               }
@@ -1023,43 +1072,43 @@
           "attributes": [{
               "name": "notifications-count",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the <code>notificationsCount</code>, displayed in the notification icon top-right corner.",
               "default": "\"\""
             }, {
               "name": "primary-title",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the <code>primaryTitle</code>. <br><br> <b>Note:</b> The <code>primaryTitle</code> would be hidden on S screen size (less than approx. 700px).",
               "default": "\"\""
             }, {
               "name": "secondary-title",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the <code>secondaryTitle</code>. <br><br> <b>Note:</b> The <code>secondaryTitle</code> would be hidden on S and M screen sizes (less than approx. 1300px).",
               "default": "\"\""
             }, {
               "name": "show-co-pilot",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines, if the product CoPilot icon would be displayed. <br><b>Note:</b> By default the co-pilot is displayed as static SVG. If you need an animated co-pilot, you can import the <code>\"@ui5/webcomponents-fiori/dist/features/CoPilotAnimation.js\"</code> module as add-on feature.",
               "default": "false"
             }, {
               "name": "show-notifications",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines, if the notification icon would be displayed.",
               "default": "false"
             }, {
               "name": "show-product-switch",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines, if the product switch icon would be displayed.",
               "default": "false"
             }, {
               "name": "show-search-field",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines, if the Search Field would be displayed when there is a valid <code>searchField</code> slot. <br><b>Note:</b> By default the Search Field is not displayed.",
               "default": "false"
             }
@@ -1094,72 +1143,88 @@
             "properties": [{
                 "name": "accessibilityAttributes",
                 "type": "object",
+                "priority": "high",
                 "description": "An object of strings that defines several additional accessibility attribute values for customization depending on the use case.\n\nIt supports the following fields:\n\n<ul> <li><code>expanded</code>: Indicates whether the anchor element, or another grouping element it controls, is currently expanded or collapsed. Accepts the following string values: <ul> <li><code>true</code></li> <li><code>false</code></li> </ul> </li> <li><code>hasPopup</code>: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the anchor element. Accepts the following string values: <ul> <li><code>Dialog</code></li> <li><code>Grid</code></li> <li><code>ListBox</code></li> <li><code>Menu</code></li> <li><code>Tree</code></li> </ul> </li> </ul>"
               }, {
                 "name": "accessibilityRoles",
                 "type": "object",
+                "priority": "high",
                 "description": "An object of strings that defines additional accessibility roles for further customization.\n\nIt supports the following fields: - <code>logoRole</code>: the accessibility role for the <code>logo</code>"
               }, {
                 "name": "accessibilityTexts",
                 "type": "object",
+                "priority": "high",
                 "description": "An object of strings that defines several additional accessibility texts for even further customization.\n\nIt supports the following fields: - <code>profileButtonTitle</code>: defines the tooltip for the profile button - <code>logoTitle</code>: defines the tooltip for the logo"
               }, {
                 "name": "copilotDomRef",
                 "type": "HTMLElement",
+                "priority": "high",
                 "description": "Returns the <code>copilot</code> DOM ref."
               }, {
                 "name": "logoDomRef",
                 "type": "HTMLElement",
+                "priority": "high",
                 "description": "Returns the <code>logo</code> DOM ref."
               }, {
                 "name": "notificationsCount",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the <code>notificationsCount</code>, displayed in the notification icon top-right corner.",
                 "default": "\"\""
               }, {
                 "name": "notificationsDomRef",
                 "type": "HTMLElement",
+                "priority": "high",
                 "description": "Returns the <code>notifications</code> icon DOM ref."
               }, {
                 "name": "overflowDomRef",
                 "type": "HTMLElement",
+                "priority": "high",
                 "description": "Returns the <code>overflow</code> icon DOM ref."
               }, {
                 "name": "primaryTitle",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the <code>primaryTitle</code>. <br><br> <b>Note:</b> The <code>primaryTitle</code> would be hidden on S screen size (less than approx. 700px).",
                 "default": "\"\""
               }, {
                 "name": "productSwitchDomRef",
                 "type": "HTMLElement",
+                "priority": "high",
                 "description": "Returns the <code>product-switch</code> icon DOM ref."
               }, {
                 "name": "profileDomRef",
                 "type": "HTMLElement",
+                "priority": "high",
                 "description": "Returns the <code>profile</code> icon DOM ref."
               }, {
                 "name": "secondaryTitle",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the <code>secondaryTitle</code>. <br><br> <b>Note:</b> The <code>secondaryTitle</code> would be hidden on S and M screen sizes (less than approx. 1300px).",
                 "default": "\"\""
               }, {
                 "name": "showCoPilot",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines, if the product CoPilot icon would be displayed. <br><b>Note:</b> By default the co-pilot is displayed as static SVG. If you need an animated co-pilot, you can import the <code>\"@ui5/webcomponents-fiori/dist/features/CoPilotAnimation.js\"</code> module as add-on feature.",
                 "default": "false"
               }, {
                 "name": "showNotifications",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines, if the notification icon would be displayed.",
                 "default": "false"
               }, {
                 "name": "showProductSwitch",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines, if the product switch icon would be displayed.",
                 "default": "false"
               }, {
                 "name": "showSearchField",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines, if the Search Field would be displayed when there is a valid <code>searchField</code> slot. <br><b>Note:</b> By default the Search Field is not displayed.",
                 "default": "false"
               }
@@ -1243,19 +1308,19 @@
           "attributes": [{
               "name": "count",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the count displayed in the top-right corner.",
               "default": "\"\""
             }, {
               "name": "icon",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the name of the item's icon.",
               "default": "\"\""
             }, {
               "name": "text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the item text.",
               "default": "\"\""
             }
@@ -1265,16 +1330,19 @@
             "properties": [{
                 "name": "count",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the count displayed in the top-right corner.",
                 "default": "\"\""
               }, {
                 "name": "icon",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the name of the item's icon.",
                 "default": "\"\""
               }, {
                 "name": "text",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the item text.",
                 "default": "\"\""
               }
@@ -1305,7 +1373,7 @@
           "attributes": [{
               "name": "collapsed",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines whether the <code>ui5-side-navigation</code> is expanded or collapsed.",
               "default": "false"
             }
@@ -1328,6 +1396,7 @@
             "properties": [{
                 "name": "collapsed",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines whether the <code>ui5-side-navigation</code> is expanded or collapsed.",
                 "default": "false"
               }
@@ -1358,31 +1427,31 @@
           "attributes": [{
               "name": "expanded",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines if the item is expanded",
               "default": "false"
             }, {
               "name": "icon",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
               "default": "\"\""
             }, {
               "name": "selected",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines whether the subitem is selected",
               "default": "false"
             }, {
               "name": "text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the text of the item.",
               "default": "\"\""
             }, {
               "name": "whole-item-toggleable",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines whether pressing the whole item or only pressing the icon will show/hide the items's sub items(if present). If set to true, pressing the whole item will toggle the sub items, and it won't fire the <code>click</code> event. By default, only pressing the arrow icon will toggle the sub items & the click event will be fired if the item is pressed outside of the icon.",
               "default": "false"
             }
@@ -1397,26 +1466,31 @@
             "properties": [{
                 "name": "expanded",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines if the item is expanded",
                 "default": "false"
               }, {
                 "name": "icon",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
                 "default": "\"\""
               }, {
                 "name": "selected",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines whether the subitem is selected",
                 "default": "false"
               }, {
                 "name": "text",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the text of the item.",
                 "default": "\"\""
               }, {
                 "name": "wholeItemToggleable",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines whether pressing the whole item or only pressing the icon will show/hide the items's sub items(if present). If set to true, pressing the whole item will toggle the sub items, and it won't fire the <code>click</code> event. By default, only pressing the arrow icon will toggle the sub items & the click event will be fired if the item is pressed outside of the icon.",
                 "default": "false"
               }
@@ -1447,19 +1521,19 @@
           "attributes": [{
               "name": "icon",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
               "default": "\"\""
             }, {
               "name": "selected",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines whether the subitem is selected.",
               "default": "false"
             }, {
               "name": "text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the text of the item.",
               "default": "\"\""
             }
@@ -1469,16 +1543,19 @@
             "properties": [{
                 "name": "icon",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
                 "default": "\"\""
               }, {
                 "name": "selected",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines whether the subitem is selected.",
                 "default": "false"
               }, {
                 "name": "text",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the text of the item.",
                 "default": "\"\""
               }
@@ -1509,13 +1586,13 @@
           "attributes": [{
               "name": "selected",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines if the component is selected.",
               "default": "false"
             }, {
               "name": "text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the text of the component.",
               "default": "\"\""
             }
@@ -1525,11 +1602,13 @@
             "properties": [{
                 "name": "selected",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines if the component is selected.",
                 "default": "false"
               }, {
                 "name": "text",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the text of the component.",
                 "default": "\"\""
               }
@@ -1550,12 +1629,12 @@
           "attributes": [{
               "name": "accessible-name",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the accessible ARIA name of the component."
             }, {
               "name": "layout",
               "type": "sap.ui.webc.fiori.types.TimelineLayout",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the items orientation.\n\n<br><br> <b>Note:</b> Available options are: <ul> <li><code>Vertical</code></li> <li><code>Horizontal</code></li> </ul>",
               "default": "\"Vertical\""
             }
@@ -1570,10 +1649,12 @@
             "properties": [{
                 "name": "accessibleName",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the accessible ARIA name of the component."
               }, {
                 "name": "layout",
                 "type": "sap.ui.webc.fiori.types.TimelineLayout",
+                "priority": "high",
                 "description": "Defines the items orientation.\n\n<br><br> <b>Note:</b> Available options are: <ul> <li><code>Vertical</code></li> <li><code>Horizontal</code></li> </ul>",
                 "default": "\"Vertical\""
               }
@@ -1594,31 +1675,31 @@
           "attributes": [{
               "name": "icon",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the icon to be displayed as graphical element within the <code>ui5-timeline-item</code>. SAP-icons font provides numerous options. <br><br>\n\nSee all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
               "default": "\"\""
             }, {
               "name": "name",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the name of the item, displayed before the <code>title-text</code>.",
               "default": "\"\""
             }, {
               "name": "name-clickable",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines if the <code>name</code> is clickable.",
               "default": "false"
             }, {
               "name": "subtitle-text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the subtitle text of the component.",
               "default": "\"\""
             }, {
               "name": "title-text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the title text of the component.",
               "default": "\"\""
             }
@@ -1633,26 +1714,31 @@
             "properties": [{
                 "name": "icon",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the icon to be displayed as graphical element within the <code>ui5-timeline-item</code>. SAP-icons font provides numerous options. <br><br>\n\nSee all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
                 "default": "\"\""
               }, {
                 "name": "name",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the name of the item, displayed before the <code>title-text</code>.",
                 "default": "\"\""
               }, {
                 "name": "nameClickable",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines if the <code>name</code> is clickable.",
                 "default": "false"
               }, {
                 "name": "subtitleText",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the subtitle text of the component.",
                 "default": "\"\""
               }, {
                 "name": "titleText",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the title text of the component.",
                 "default": "\"\""
               }
@@ -1683,31 +1769,31 @@
           "attributes": [{
               "name": "accessible-name",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the accessible ARIA name of the component.",
               "default": "\"\""
             }, {
               "name": "hide-drag-overlay",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "By default there will be drag and drop overlay shown over the <code>ui5-upload-collection</code> when files are dragged. If you don't intend to use drag and drop, set this property. <br><br> <b>Note:</b> It is up to the application developer to add handler for <code>drop</code> event and handle it. <code>ui5-upload-collection</code> only displays an overlay.",
               "default": "false"
             }, {
               "name": "mode",
               "type": "sap.ui.webc.main.types.ListMode",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the mode of the <code>ui5-upload-collection</code>.\n\n<br><br> <b>Note:</b> <ul> <li><code>None</code></li> <li><code>SingleSelect</code></li> <li><code>MultiSelect</code></li> <li><code>Delete</code></li> </ul>",
               "default": "\"None\""
             }, {
               "name": "no-data-description",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Allows you to set your own text for the 'No data' description.",
               "default": "\"\""
             }, {
               "name": "no-data-text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Allows you to set your own text for the 'No data' text.",
               "default": "\"\""
             }
@@ -1726,26 +1812,31 @@
             "properties": [{
                 "name": "accessibleName",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the accessible ARIA name of the component.",
                 "default": "\"\""
               }, {
                 "name": "hideDragOverlay",
                 "type": "boolean",
+                "priority": "high",
                 "description": "By default there will be drag and drop overlay shown over the <code>ui5-upload-collection</code> when files are dragged. If you don't intend to use drag and drop, set this property. <br><br> <b>Note:</b> It is up to the application developer to add handler for <code>drop</code> event and handle it. <code>ui5-upload-collection</code> only displays an overlay.",
                 "default": "false"
               }, {
                 "name": "mode",
                 "type": "sap.ui.webc.main.types.ListMode",
+                "priority": "high",
                 "description": "Defines the mode of the <code>ui5-upload-collection</code>.\n\n<br><br> <b>Note:</b> <ul> <li><code>None</code></li> <li><code>SingleSelect</code></li> <li><code>MultiSelect</code></li> <li><code>Delete</code></li> </ul>",
                 "default": "\"None\""
               }, {
                 "name": "noDataDescription",
                 "type": "string",
+                "priority": "high",
                 "description": "Allows you to set your own text for the 'No data' description.",
                 "default": "\"\""
               }, {
                 "name": "noDataText",
                 "type": "string",
+                "priority": "high",
                 "description": "Allows you to set your own text for the 'No data' text.",
                 "default": "\"\""
               }
@@ -1794,49 +1885,49 @@
           "attributes": [{
               "name": "disable-delete-button",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Disables the delete button.",
               "default": "false"
             }, {
               "name": "file",
               "type": "File",
-              "priority": "high",
+              "priority": "highest",
               "description": "Holds an instance of <code>File</code> associated with this item.",
               "default": "null"
             }, {
               "name": "file-name",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "The name of the file.",
               "default": "\"\""
             }, {
               "name": "file-name-clickable",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "If set to <code>true</code> the file name will be clickable and it will fire <code>file-name-click</code> event upon click.",
               "default": "false"
             }, {
               "name": "hide-retry-button",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Hides the retry button when <code>uploadState</code> property is <code>Error</code>.",
               "default": "false"
             }, {
               "name": "hide-terminate-button",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Hides the terminate button when <code>uploadState</code> property is <code>Uploading</code>.",
               "default": "false"
             }, {
               "name": "progress",
               "type": "sap.ui.webc.base.types.Integer",
-              "priority": "high",
+              "priority": "highest",
               "description": "The upload progress in percentage. <br><br> <b>Note:</b> Expected values are in the interval [0, 100].",
               "default": "0"
             }, {
               "name": "upload-state",
               "type": "sap.ui.webc.fiori.types.UploadState",
-              "priority": "high",
+              "priority": "highest",
               "description": "If set to <code>Uploading</code> or <code>Error</code>, a progress indicator showing the <code>progress</code> is displayed. Also if set to <code>Error</code>, a refresh button is shown. When this icon is pressed <code>retry</code> event is fired. If set to <code>Uploading</code>, a terminate button is shown. When this icon is pressed <code>terminate</code> event is fired.",
               "default": "\"Ready\""
             }
@@ -1855,41 +1946,49 @@
             "properties": [{
                 "name": "disableDeleteButton",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Disables the delete button.",
                 "default": "false"
               }, {
                 "name": "file",
                 "type": "File",
+                "priority": "high",
                 "description": "Holds an instance of <code>File</code> associated with this item.",
                 "default": "null"
               }, {
                 "name": "fileName",
                 "type": "string",
+                "priority": "high",
                 "description": "The name of the file.",
                 "default": "\"\""
               }, {
                 "name": "fileNameClickable",
                 "type": "boolean",
+                "priority": "high",
                 "description": "If set to <code>true</code> the file name will be clickable and it will fire <code>file-name-click</code> event upon click.",
                 "default": "false"
               }, {
                 "name": "hideRetryButton",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Hides the retry button when <code>uploadState</code> property is <code>Error</code>.",
                 "default": "false"
               }, {
                 "name": "hideTerminateButton",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Hides the terminate button when <code>uploadState</code> property is <code>Uploading</code>.",
                 "default": "false"
               }, {
                 "name": "progress",
                 "type": "sap.ui.webc.base.types.Integer",
+                "priority": "high",
                 "description": "The upload progress in percentage. <br><br> <b>Note:</b> Expected values are in the interval [0, 100].",
                 "default": "0"
               }, {
                 "name": "uploadState",
                 "type": "sap.ui.webc.fiori.types.UploadState",
+                "priority": "high",
                 "description": "If set to <code>Uploading</code> or <code>Error</code>, a progress indicator showing the <code>progress</code> is displayed. Also if set to <code>Error</code>, a refresh button is shown. When this icon is pressed <code>retry</code> event is fired. If set to <code>Uploading</code>, a terminate button is shown. When this icon is pressed <code>terminate</code> event is fired.",
                 "default": "\"Ready\""
               }
@@ -1947,7 +2046,7 @@
           "attributes": [{
               "name": "sort-descending",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the initial sort order.",
               "default": "false"
             }
@@ -1966,6 +2065,7 @@
             "properties": [{
                 "name": "sortDescending",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines the initial sort order.",
                 "default": "false"
               }
@@ -2064,37 +2164,37 @@
           "attributes": [{
               "name": "branching",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "When <code>branching</code> is enabled a dashed line would be displayed after the step, meant to indicate that the next step is not yet known and depends on user choice in the current step. <br><br>\n\n<b>Note:</b> It is recommended to use <code>branching</code> on the last known step and later add new steps when it becomes clear how the wizard flow should continue.",
               "default": "false"
             }, {
               "name": "disabled",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines if the step is <code>disabled</code>. When disabled the step is displayed, but the user can't select the step by clicking or navigate to it with scrolling. <br><br>\n\n<b>Note:</b> Step can't be <code>selected</code> and <code>disabled</code> at the same time. In this case the <code>selected</code> property would take precedence.",
               "default": "false"
             }, {
               "name": "icon",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the <code>icon</code> of the step. <br><br>\n\n<b>Note:</b> The icon is displayed in the <code>ui5-wizard</code> navigation header. <br><br>\n\nThe SAP-icons font provides numerous options. See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
               "default": "\"\""
             }, {
               "name": "selected",
               "type": "boolean",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the step's <code>selected</code> state - the step that is currently active. <br><br>\n\n<b>Note:</b> Step can't be <code>selected</code> and <code>disabled</code> at the same time. In this case the <code>selected</code> property would take precedence.",
               "default": "false"
             }, {
               "name": "subtitle-text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the <code>subtitleText</code> of the step. <br><br>\n\n<b>Note:</b> the text is displayed in the <code>ui5-wizard</code> navigation header.",
               "default": "\"\""
             }, {
               "name": "title-text",
               "type": "string",
-              "priority": "high",
+              "priority": "highest",
               "description": "Defines the <code>titleText</code> of the step. <br><br>\n\n<b>Note:</b> The text is displayed in the <code>ui5-wizard</code> navigation header.",
               "default": "\"\""
             }
@@ -2109,31 +2209,37 @@
             "properties": [{
                 "name": "branching",
                 "type": "boolean",
+                "priority": "high",
                 "description": "When <code>branching</code> is enabled a dashed line would be displayed after the step, meant to indicate that the next step is not yet known and depends on user choice in the current step. <br><br>\n\n<b>Note:</b> It is recommended to use <code>branching</code> on the last known step and later add new steps when it becomes clear how the wizard flow should continue.",
                 "default": "false"
               }, {
                 "name": "disabled",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines if the step is <code>disabled</code>. When disabled the step is displayed, but the user can't select the step by clicking or navigate to it with scrolling. <br><br>\n\n<b>Note:</b> Step can't be <code>selected</code> and <code>disabled</code> at the same time. In this case the <code>selected</code> property would take precedence.",
                 "default": "false"
               }, {
                 "name": "icon",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the <code>icon</code> of the step. <br><br>\n\n<b>Note:</b> The icon is displayed in the <code>ui5-wizard</code> navigation header. <br><br>\n\nThe SAP-icons font provides numerous options. See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
                 "default": "\"\""
               }, {
                 "name": "selected",
                 "type": "boolean",
+                "priority": "high",
                 "description": "Defines the step's <code>selected</code> state - the step that is currently active. <br><br>\n\n<b>Note:</b> Step can't be <code>selected</code> and <code>disabled</code> at the same time. In this case the <code>selected</code> property would take precedence.",
                 "default": "false"
               }, {
                 "name": "subtitleText",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the <code>subtitleText</code> of the step. <br><br>\n\n<b>Note:</b> the text is displayed in the <code>ui5-wizard</code> navigation header.",
                 "default": "\"\""
               }, {
                 "name": "titleText",
                 "type": "string",
+                "priority": "high",
                 "description": "Defines the <code>titleText</code> of the step. <br><br>\n\n<b>Note:</b> The text is displayed in the <code>ui5-wizard</code> navigation header.",
                 "default": "\"\""
               }

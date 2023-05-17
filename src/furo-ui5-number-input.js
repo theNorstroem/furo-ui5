@@ -114,7 +114,6 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();
     this.type = 'Number';
-
     this.readAttributes();
   }
 
@@ -670,14 +669,12 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
    * @param event
    * @private
    */
-  _handleInput(event) {
+  _handleInput(e) {
     const inputDomRef = this.getInputDOMRefSync();
     const emptyValueFiredOnNumberInput =
       this.value && this.isTypeNumber && !inputDomRef.value;
-    const eventType =
-      event.inputType || (event.detail && event.detail.inputType);
+    const eventType = e.inputType || (e.detail && e.detail.inputType) || '';
     this._keepInnerValue = false;
-
     const allowedEventTypes = [
       'deleteWordBackward',
       'deleteWordForward',
@@ -693,76 +690,60 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
       'deleteContentForward',
       'historyUndo',
     ];
-
     this._shouldAutocomplete =
       !allowedEventTypes.includes(eventType) && !this.noTypeahead;
     this.suggestionSelectionCanceled = false;
-
-    // ---- Special cases of numeric Input ----
-    // ---------------- Start -----------------
-
-    // When the last character after the delimiter is removed.
-    // In such cases, we want to skip the re-rendering of the
-    // component as this leads to cursor repositioning and causes user experience issues.
-
-    // There are few scenarios:
-    // Example: type "123.4" and press BACKSPACE - the native input is firing event with the whole part as value (123).
-    // Pressing BACKSPACE again will remove the delimiter and the native input will fire event with the whole part as value again (123).
-    // Example: type "123.456", select/mark "456" and press BACKSPACE - the native input is firing event with the whole part as value (123).
-    // Example: type "123.456", select/mark "123.456" and press BACKSPACE - the native input is firing event with empty value.
-    const delimiterCase =
-      this.isTypeNumber &&
-      (event.inputType === 'deleteContentForward' ||
-        event.inputType === 'deleteContentBackward') &&
-      !event.target.value.includes('.') &&
-      this.value.includes('.');
-
-    // Handle special numeric notation with "e", example "12.5e12"
-    const eNotationCase = emptyValueFiredOnNumberInput && event.data === 'e';
-
-    // Handle special numeric notation with "-", example "-3"
-    // When pressing BACKSPACE, the native input fires event with empty value
-    const minusRemovalCase =
-      emptyValueFiredOnNumberInput &&
-      this.value.startsWith('-') &&
-      this.value.length === 2 &&
-      (event.inputType === 'deleteContentForward' ||
-        event.inputType === 'deleteContentBackward');
-
-    if (delimiterCase || eNotationCase || minusRemovalCase) {
-      this.value = event.target.value;
-      this._keepInnerValue = true;
+    if (e instanceof InputEvent) {
+      // ---- Special cases of numeric Input ----
+      // ---------------- Start -----------------
+      // When the last character after the delimiter is removed.
+      // In such cases, we want to skip the re-rendering of the
+      // component as this leads to cursor repositioning and causes user experience issues.
+      // There are few scenarios:
+      // Example: type "123.4" and press BACKSPACE - the native input is firing event with the whole part as value (123).
+      // Pressing BACKSPACE again will remove the delimiter and the native input will fire event with the whole part as value again (123).
+      // Example: type "123.456", select/mark "456" and press BACKSPACE - the native input is firing event with the whole part as value (123).
+      // Example: type "123.456", select/mark "123.456" and press BACKSPACE - the native input is firing event with empty value.
+      const delimiterCase =
+        this.isTypeNumber &&
+        (e.inputType === 'deleteContentForward' ||
+          e.inputType === 'deleteContentBackward') &&
+        !e.target.value.includes('.') &&
+        this.value.includes('.');
+      // Handle special numeric notation with "e", example "12.5e12"
+      const eNotationCase = emptyValueFiredOnNumberInput && e.data === 'e';
+      // Handle special numeric notation with "-", example "-3"
+      // When pressing BACKSPACE, the native input fires event with empty value
+      const minusRemovalCase =
+        emptyValueFiredOnNumberInput &&
+        this.value.startsWith('-') &&
+        this.value.length === 2 &&
+        (e.inputType === 'deleteContentForward' ||
+          e.inputType === 'deleteContentBackward');
+      if (delimiterCase || eNotationCase || minusRemovalCase) {
+        this.value = e.target.value;
+        this._keepInnerValue = true;
+      }
+      // ----------------- End ------------------
     }
-    // ----------------- End ------------------
-
-    if (event.target === inputDomRef) {
+    if (e.target === inputDomRef) {
       this.focused = true;
-
       // stop the native event, as the semantic "input" would be fired.
-      event.stopImmediatePropagation();
+      e.stopImmediatePropagation();
     }
 
     // Keep inner value during typing of numbers with dots as decimal separator
-    if (
-      this.isTypeNumber &&
-      Number.isNaN(event.target.valueAsNumber) &&
-      !(
-        event.inputType === 'deleteContentForward' ||
-        event.inputType === 'deleteContentBackward'
-      )
-    ) {
+    if (this.isTypeNumber && Number.isNaN(e.target.valueAsNumber)) {
       this._keepInnerValue = true;
+    } else {
+      this.fireEventByAction('enter', e);
     }
-
-    this.fireEventByAction(this.ACTION_USER_INPUT, event);
 
     this.hasSuggestionItemSelected = false;
     this._isValueStateFocused = false;
-
     if (this.Suggestions) {
-      this.Suggestions.updateSelectedItemPosition(null);
+      this.Suggestions.updateSelectedItemPosition(-1);
     }
-
     this.isTyping = true;
   }
 }

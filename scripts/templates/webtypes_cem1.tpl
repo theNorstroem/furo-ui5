@@ -30,7 +30,7 @@
             {
               "name": "{{$field.name}}",
               "type": "{{$field.type.text | replace "\"" "\\\""}}",
-              "priority": "high",
+              "priority": "highest",
               "description": "{{if $field.description}}{{$field.description  | replace "\n" "\\n" | replace "\t" "  " | replace "\"" "\\\"" | replace "\\" "\\\\"  | replace "\\\"" "\""   | replace "\\\\" "\\" | replace "\\c" " / c" | noescape}}{{end}}"
               {{- if $field.default}},
               "default": "{{$field.default  | replace "\n" "\\n" | replace "\t" "  " | replace "\"" "\\\"" | replace "\\" "\\\\"  | replace "\\\"" "\""   | replace "\\\\" "\\" | noescape}}"{{end}}
@@ -58,6 +58,7 @@
               {
                 "name": "{{$field.name}}",
                 "type": "{{if $field.type.text}}{{$field.type.text | replace "\n" "\\n" | replace "\"" "\\\"" | noescape }}{{end}}",
+                "priority": "high",
                 "description": "{{if $field.description}}{{$field.description | replace "\n" "\\n" | replace "\t" "  " | replace "\"" "\\\"" | replace "\\" "\\\\"  | replace "\\\"" "\""   | replace "\\\\" "\\" | noescape}}{{end}}"
                 {{- if $field.default}},
                 "default": "{{$field.default | replace "\n" "\\n" | replace "\t" "  " | replace "\"" "\\\"" | replace "\\" "\\\\"  | replace "\\\"" "\""   | replace "\\\\" "\\" | noescape}}"{{end}}
