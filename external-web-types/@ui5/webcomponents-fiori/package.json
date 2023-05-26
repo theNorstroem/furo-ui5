@@ -1,6 +1,6 @@
 {
   "name": "@furo/web-types-ui5-fiori",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Web-types for @ui5/webcomponents-fiori",
   "keywords": [
     "web-types",

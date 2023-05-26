@@ -11,8 +11,8 @@
           {
           "name": "ui5-avatar",
           "source": {
-            "module": "./Avatar.js",
-            "symbol": "Avatar"
+            "module": "./Avatar.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -123,8 +123,8 @@
           {
           "name": "ui5-avatar-group",
           "source": {
-            "module": "./AvatarGroup.js",
-            "symbol": "AvatarGroup"
+            "module": "./AvatarGroup.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -194,8 +194,8 @@
           {
           "name": "ui5-badge",
           "source": {
-            "module": "./Badge.js",
-            "symbol": "Badge"
+            "module": "./Badge.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -234,8 +234,8 @@
           {
           "name": "ui5-breadcrumbs",
           "source": {
-            "module": "./Breadcrumbs.js",
-            "symbol": "Breadcrumbs"
+            "module": "./Breadcrumbs.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -292,8 +292,8 @@
           {
           "name": "ui5-breadcrumbs-item",
           "source": {
-            "module": "./BreadcrumbsItem.js",
-            "symbol": "BreadcrumbsItem"
+            "module": "./BreadcrumbsItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -352,8 +352,8 @@
           {
           "name": "ui5-busy-indicator",
           "source": {
-            "module": "./BusyIndicator.js",
-            "symbol": "BusyIndicator"
+            "module": "./BusyIndicator.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -424,8 +424,8 @@
           {
           "name": "ui5-button",
           "source": {
-            "module": "./Button.js",
-            "symbol": "Button"
+            "module": "./Button.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -559,8 +559,8 @@
           {
           "name": "ui5-calendar",
           "source": {
-            "module": "./Calendar.js",
-            "symbol": "Calendar"
+            "module": "./Calendar.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -617,8 +617,8 @@
           {
           "name": "ui5-date",
           "source": {
-            "module": "./CalendarDate.js",
-            "symbol": "CalendarDate"
+            "module": "./CalendarDate.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -646,8 +646,8 @@
           {
           "name": "ui5-card",
           "source": {
-            "module": "./Card.js",
-            "symbol": "Card"
+            "module": "./Card.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -698,8 +698,8 @@
           {
           "name": "ui5-card-header",
           "source": {
-            "module": "./CardHeader.js",
-            "symbol": "CardHeader"
+            "module": "./CardHeader.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -784,8 +784,8 @@
           {
           "name": "ui5-carousel",
           "source": {
-            "module": "./Carousel.js",
-            "symbol": "Carousel"
+            "module": "./Carousel.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -922,8 +922,8 @@
           {
           "name": "ui5-checkbox",
           "source": {
-            "module": "./CheckBox.js",
-            "symbol": "CheckBox"
+            "module": "./CheckBox.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1083,8 +1083,8 @@
           {
           "name": "ui5-color-palette",
           "source": {
-            "module": "./ColorPalette.js",
-            "symbol": "ColorPalette"
+            "module": "./ColorPalette.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1117,8 +1117,8 @@
           {
           "name": "ui5-color-palette-item",
           "source": {
-            "module": "./ColorPaletteItem.js",
-            "symbol": "ColorPaletteItem"
+            "module": "./ColorPaletteItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1146,8 +1146,8 @@
           {
           "name": "ui5-color-palette-popover",
           "source": {
-            "module": "./ColorPalettePopover.js",
-            "symbol": "ColorPalettePopover"
+            "module": "./ColorPalettePopover.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1242,8 +1242,8 @@
           {
           "name": "ui5-color-picker",
           "source": {
-            "module": "./ColorPicker.js",
-            "symbol": "ColorPicker"
+            "module": "./ColorPicker.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1281,8 +1281,8 @@
           {
           "name": "ui5-combobox",
           "source": {
-            "module": "./ComboBox.js",
-            "symbol": "ComboBox"
+            "module": "./ComboBox.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1459,8 +1459,8 @@
           {
           "name": "ui5-cb-group-item",
           "source": {
-            "module": "./ComboBoxGroupItem.js",
-            "symbol": "ComboBoxGroupItem"
+            "module": "./ComboBoxGroupItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1490,8 +1490,8 @@
           {
           "name": "ui5-cb-item",
           "source": {
-            "module": "./ComboBoxItem.js",
-            "symbol": "ComboBoxItem"
+            "module": "./ComboBoxItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1533,8 +1533,8 @@
           {
           "name": "ui5-li-custom",
           "source": {
-            "module": "./CustomListItem.js",
-            "symbol": "CustomListItem"
+            "module": "./CustomListItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1569,8 +1569,8 @@
           {
           "name": "ui5-date-picker",
           "source": {
-            "module": "./DatePicker.js",
-            "symbol": "DatePicker"
+            "module": "./DatePicker.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1785,8 +1785,8 @@
           {
           "name": "ui5-daterange-picker",
           "source": {
-            "module": "./DateRangePicker.js",
-            "symbol": "DateRangePicker"
+            "module": "./DateRangePicker.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1836,8 +1836,8 @@
           {
           "name": "ui5-datetime-picker",
           "source": {
-            "module": "./DateTimePicker.js",
-            "symbol": "DateTimePicker"
+            "module": "./DateTimePicker.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1855,8 +1855,8 @@
           {
           "name": "ui5-daypicker",
           "source": {
-            "module": "./DayPicker.js",
-            "symbol": "DayPicker"
+            "module": "./DayPicker.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1922,8 +1922,8 @@
           {
           "name": "ui5-dialog",
           "source": {
-            "module": "./Dialog.js",
-            "symbol": "Dialog"
+            "module": "./Dialog.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2018,8 +2018,8 @@
           {
           "name": "ui5-file-uploader",
           "source": {
-            "module": "./FileUploader.js",
-            "symbol": "FileUploader"
+            "module": "./FileUploader.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2157,8 +2157,8 @@
           {
           "name": "ui5-li-groupheader",
           "source": {
-            "module": "./GroupHeaderListItem.js",
-            "symbol": "GroupHeaderListItem"
+            "module": "./GroupHeaderListItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2193,8 +2193,8 @@
           {
           "name": "ui5-icon",
           "source": {
-            "module": "./Icon.js",
-            "symbol": "Icon"
+            "module": "./Icon.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2284,8 +2284,8 @@
           {
           "name": "ui5-input",
           "source": {
-            "module": "./Input.js",
-            "symbol": "Input"
+            "module": "./Input.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2530,8 +2530,8 @@
           {
           "name": "ui5-label",
           "source": {
-            "module": "./Label.js",
-            "symbol": "Label"
+            "module": "./Label.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2602,8 +2602,8 @@
           {
           "name": "ui5-link",
           "source": {
-            "module": "./Link.js",
-            "symbol": "Link"
+            "module": "./Link.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2737,8 +2737,8 @@
           {
           "name": "ui5-list",
           "source": {
-            "module": "./List.js",
-            "symbol": "List"
+            "module": "./List.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2964,8 +2964,8 @@
           {
           "name": "ui5-menu",
           "source": {
-            "module": "./Menu.js",
-            "symbol": "Menu"
+            "module": "./Menu.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -3110,8 +3110,8 @@
           {
           "name": "ui5-menu-item",
           "source": {
-            "module": "./MenuItem.js",
-            "symbol": "MenuItem"
+            "module": "./MenuItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -3228,8 +3228,8 @@
           {
           "name": "ui5-message-strip",
           "source": {
-            "module": "./MessageStrip.js",
-            "symbol": "MessageStrip"
+            "module": "./MessageStrip.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -3302,8 +3302,8 @@
           {
           "name": "ui5-monthpicker",
           "source": {
-            "module": "./MonthPicker.js",
-            "symbol": "MonthPicker"
+            "module": "./MonthPicker.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -3345,8 +3345,8 @@
           {
           "name": "ui5-multi-combobox",
           "source": {
-            "module": "./MultiComboBox.js",
-            "symbol": "MultiComboBox"
+            "module": "./MultiComboBox.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -3550,8 +3550,8 @@
           {
           "name": "ui5-mcb-group-item",
           "source": {
-            "module": "./MultiComboBoxGroupItem.js",
-            "symbol": "MultiComboBoxGroupItem"
+            "module": "./MultiComboBoxGroupItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -3581,8 +3581,8 @@
           {
           "name": "ui5-mcb-item",
           "source": {
-            "module": "./MultiComboBoxItem.js",
-            "symbol": "MultiComboBoxItem"
+            "module": "./MultiComboBoxItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -3612,8 +3612,8 @@
           {
           "name": "ui5-multi-input",
           "source": {
-            "module": "./MultiInput.js",
-            "symbol": "MultiInput"
+            "module": "./MultiInput.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -3667,8 +3667,8 @@
           {
           "name": "ui5-option",
           "source": {
-            "module": "./Option.js",
-            "symbol": "Option"
+            "module": "./Option.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -3745,8 +3745,8 @@
           {
           "name": "ui5-panel",
           "source": {
-            "module": "./Panel.js",
-            "symbol": "Panel"
+            "module": "./Panel.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -3867,8 +3867,8 @@
           {
           "name": "ui5-popover",
           "source": {
-            "module": "./Popover.js",
-            "symbol": "Popover"
+            "module": "./Popover.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4011,8 +4011,8 @@
           {
           "name": "ui5-progress-indicator",
           "source": {
-            "module": "./ProgressIndicator.js",
-            "symbol": "ProgressIndicator"
+            "module": "./ProgressIndicator.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4088,8 +4088,8 @@
           {
           "name": "ui5-radio-button",
           "source": {
-            "module": "./RadioButton.js",
-            "symbol": "RadioButton"
+            "module": "./RadioButton.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4249,8 +4249,8 @@
           {
           "name": "ui5-range-slider",
           "source": {
-            "module": "./RangeSlider.js",
-            "symbol": "RangeSlider"
+            "module": "./RangeSlider.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4292,8 +4292,8 @@
           {
           "name": "ui5-rating-indicator",
           "source": {
-            "module": "./RatingIndicator.js",
-            "symbol": "RatingIndicator"
+            "module": "./RatingIndicator.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4379,8 +4379,8 @@
           {
           "name": "ui5-responsive-popover",
           "source": {
-            "module": "./ResponsivePopover.js",
-            "symbol": "ResponsivePopover"
+            "module": "./ResponsivePopover.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4422,8 +4422,8 @@
           {
           "name": "ui5-segmented-button",
           "source": {
-            "module": "./SegmentedButton.js",
-            "symbol": "SegmentedButton"
+            "module": "./SegmentedButton.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4473,8 +4473,8 @@
           {
           "name": "ui5-segmented-button-item",
           "source": {
-            "module": "./SegmentedButtonItem.js",
-            "symbol": "SegmentedButtonItem"
+            "module": "./SegmentedButtonItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4528,8 +4528,8 @@
           {
           "name": "ui5-select",
           "source": {
-            "module": "./Select.js",
-            "symbol": "Select"
+            "module": "./Select.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4661,8 +4661,8 @@
           {
           "name": "ui5-slider",
           "source": {
-            "module": "./Slider.js",
-            "symbol": "Slider"
+            "module": "./Slider.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4692,8 +4692,8 @@
           {
           "name": "ui5-slider",
           "source": {
-            "module": "./SliderBase.js",
-            "symbol": "SliderBase"
+            "module": "./SliderBase.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4824,8 +4824,8 @@
           {
           "name": "ui5-split-button",
           "source": {
-            "module": "./SplitButton.js",
-            "symbol": "SplitButton"
+            "module": "./SplitButton.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -4925,8 +4925,8 @@
           {
           "name": "ui5-li",
           "source": {
-            "module": "./StandardListItem.js",
-            "symbol": "StandardListItem"
+            "module": "./StandardListItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -5029,8 +5029,8 @@
           {
           "name": "ui5-step-input",
           "source": {
-            "module": "./StepInput.js",
-            "symbol": "StepInput"
+            "module": "./StepInput.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -5213,8 +5213,8 @@
           {
           "name": "ui5-suggestion-group-item",
           "source": {
-            "module": "./SuggestionGroupItem.js",
-            "symbol": "SuggestionGroupItem"
+            "module": "./SuggestionGroupItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -5244,8 +5244,8 @@
           {
           "name": "ui5-suggestion-item",
           "source": {
-            "module": "./SuggestionItem.js",
-            "symbol": "SuggestionItem"
+            "module": "./SuggestionItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -5351,8 +5351,8 @@
           {
           "name": "ui5-switch",
           "source": {
-            "module": "./Switch.js",
-            "symbol": "Switch"
+            "module": "./Switch.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -5472,8 +5472,8 @@
           {
           "name": "ui5-tab",
           "source": {
-            "module": "./Tab.js",
-            "symbol": "Tab"
+            "module": "./Tab.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -5580,8 +5580,8 @@
           {
           "name": "ui5-tabcontainer",
           "source": {
-            "module": "./TabContainer.js",
-            "symbol": "TabContainer"
+            "module": "./TabContainer.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -5711,8 +5711,8 @@
           {
           "name": "ui5-table",
           "source": {
-            "module": "./Table.js",
-            "symbol": "Table"
+            "module": "./Table.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -5906,8 +5906,8 @@
           {
           "name": "ui5-table-cell",
           "source": {
-            "module": "./TableCell.js",
-            "symbol": "TableCell"
+            "module": "./TableCell.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -5930,8 +5930,8 @@
           {
           "name": "ui5-table-column",
           "source": {
-            "module": "./TableColumn.js",
-            "symbol": "TableColumn"
+            "module": "./TableColumn.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6002,8 +6002,8 @@
           {
           "name": "ui5-table-group-row",
           "source": {
-            "module": "./TableGroupRow.js",
-            "symbol": "TableGroupRow"
+            "module": "./TableGroupRow.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6026,8 +6026,8 @@
           {
           "name": "ui5-table-row",
           "source": {
-            "module": "./TableRow.js",
-            "symbol": "TableRow"
+            "module": "./TableRow.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6086,8 +6086,8 @@
           {
           "name": "ui5-tab-separator",
           "source": {
-            "module": "./TabSeparator.js",
-            "symbol": "TabSeparator"
+            "module": "./TabSeparator.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6113,8 +6113,8 @@
           {
           "name": "ui5-textarea",
           "source": {
-            "module": "./TextArea.js",
-            "symbol": "TextArea"
+            "module": "./TextArea.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6322,8 +6322,8 @@
           {
           "name": "ui5-time-picker",
           "source": {
-            "module": "./TimePicker.js",
-            "symbol": "TimePicker"
+            "module": "./TimePicker.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6370,8 +6370,8 @@
           {
           "name": "ui5-title",
           "source": {
-            "module": "./Title.js",
-            "symbol": "Title"
+            "module": "./Title.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6418,8 +6418,8 @@
           {
           "name": "ui5-toast",
           "source": {
-            "module": "./Toast.js",
-            "symbol": "Toast"
+            "module": "./Toast.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6474,8 +6474,8 @@
           {
           "name": "ui5-toggle-button",
           "source": {
-            "module": "./ToggleButton.js",
-            "symbol": "ToggleButton"
+            "module": "./ToggleButton.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6505,8 +6505,8 @@
           {
           "name": "ui5-token",
           "source": {
-            "module": "./Token.js",
-            "symbol": "Token"
+            "module": "./Token.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6575,8 +6575,8 @@
           {
           "name": "ui5-tree",
           "source": {
-            "module": "./Tree.js",
-            "symbol": "Tree"
+            "module": "./Tree.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6736,8 +6736,8 @@
           {
           "name": "ui5-tree-item",
           "source": {
-            "module": "./TreeItem.js",
-            "symbol": "TreeItem"
+            "module": "./TreeItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6791,8 +6791,8 @@
           {
           "name": "ui5-tree-item-custom",
           "source": {
-            "module": "./TreeItemCustom.js",
-            "symbol": "TreeItemCustom"
+            "module": "./TreeItemCustom.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6827,8 +6827,8 @@
           {
           "name": "ui5-wheelslider",
           "source": {
-            "module": "./WheelSlider.js",
-            "symbol": "WheelSlider"
+            "module": "./WheelSlider.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -6906,8 +6906,8 @@
           {
           "name": "ui5-yearpicker",
           "source": {
-            "module": "./YearPicker.js",
-            "symbol": "YearPicker"
+            "module": "./YearPicker.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,

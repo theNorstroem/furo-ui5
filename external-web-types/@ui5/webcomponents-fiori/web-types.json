@@ -11,8 +11,8 @@
           {
           "name": "ui5-bar",
           "source": {
-            "module": "./Bar.js",
-            "symbol": "Bar"
+            "module": "./Bar.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -55,8 +55,8 @@
           {
           "name": "ui5-barcode-scanner-dialog",
           "source": {
-            "module": "./BarcodeScannerDialog.js",
-            "symbol": "BarcodeScannerDialog"
+            "module": "./BarcodeScannerDialog.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -109,8 +109,8 @@
           {
           "name": "ui5-dynamic-side-content",
           "source": {
-            "module": "./DynamicSideContent.js",
-            "symbol": "DynamicSideContent"
+            "module": "./DynamicSideContent.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -227,8 +227,8 @@
           {
           "name": "ui5-filter-item",
           "source": {
-            "module": "./FilterItem.js",
-            "symbol": "FilterItem"
+            "module": "./FilterItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -275,8 +275,8 @@
           {
           "name": "ui5-filter-item-option",
           "source": {
-            "module": "./FilterItemOption.js",
-            "symbol": "FilterItemOption"
+            "module": "./FilterItemOption.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -318,8 +318,8 @@
           {
           "name": "ui5-flexible-column-layout",
           "source": {
-            "module": "./FlexibleColumnLayout.js",
-            "symbol": "FlexibleColumnLayout"
+            "module": "./FlexibleColumnLayout.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -424,8 +424,8 @@
           {
           "name": "ui5-illustrated-message",
           "source": {
-            "module": "./IllustratedMessage.js",
-            "symbol": "IllustratedMessage"
+            "module": "./IllustratedMessage.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -516,8 +516,8 @@
           {
           "name": "ui5-media-gallery",
           "source": {
-            "module": "./MediaGallery.js",
-            "symbol": "MediaGallery"
+            "module": "./MediaGallery.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -628,8 +628,8 @@
           {
           "name": "ui5-media-gallery-item",
           "source": {
-            "module": "./MediaGalleryItem.js",
-            "symbol": "MediaGalleryItem"
+            "module": "./MediaGalleryItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -692,8 +692,8 @@
           {
           "name": "ui5-notification-action",
           "source": {
-            "module": "./NotificationAction.js",
-            "symbol": "NotificationAction"
+            "module": "./NotificationAction.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -769,8 +769,8 @@
           {
           "name": "ui5-li-notification-group",
           "source": {
-            "module": "./NotificationListGroupItem.js",
-            "symbol": "NotificationListGroupItem"
+            "module": "./NotificationListGroupItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -827,8 +827,8 @@
           {
           "name": "ui5-li-notification",
           "source": {
-            "module": "./NotificationListItem.js",
-            "symbol": "NotificationListItem"
+            "module": "./NotificationListItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -871,8 +871,8 @@
           {
           "name": "ui5-page",
           "source": {
-            "module": "./Page.js",
-            "symbol": "Page"
+            "module": "./Page.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -951,8 +951,8 @@
           {
           "name": "ui5-product-switch",
           "source": {
-            "module": "./ProductSwitch.js",
-            "symbol": "ProductSwitch"
+            "module": "./ProductSwitch.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -975,8 +975,8 @@
           {
           "name": "ui5-product-switch-item",
           "source": {
-            "module": "./ProductSwitchItem.js",
-            "symbol": "ProductSwitchItem"
+            "module": "./ProductSwitchItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1062,8 +1062,8 @@
           {
           "name": "ui5-shellbar",
           "source": {
-            "module": "./ShellBar.js",
-            "symbol": "ShellBar"
+            "module": "./ShellBar.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1298,8 +1298,8 @@
           {
           "name": "ui5-shellbar-item",
           "source": {
-            "module": "./ShellBarItem.js",
-            "symbol": "ShellBarItem"
+            "module": "./ShellBarItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1363,8 +1363,8 @@
           {
           "name": "ui5-side-navigation",
           "source": {
-            "module": "./SideNavigation.js",
-            "symbol": "SideNavigation"
+            "module": "./SideNavigation.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1417,8 +1417,8 @@
           {
           "name": "ui5-side-navigation-item",
           "source": {
-            "module": "./SideNavigationItem.js",
-            "symbol": "SideNavigationItem"
+            "module": "./SideNavigationItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1511,8 +1511,8 @@
           {
           "name": "ui5-side-navigation-sub-item",
           "source": {
-            "module": "./SideNavigationSubItem.js",
-            "symbol": "SideNavigationSubItem"
+            "module": "./SideNavigationSubItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1576,8 +1576,8 @@
           {
           "name": "ui5-sort-item",
           "source": {
-            "module": "./SortItem.js",
-            "symbol": "SortItem"
+            "module": "./SortItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1619,8 +1619,8 @@
           {
           "name": "ui5-timeline",
           "source": {
-            "module": "./Timeline.js",
-            "symbol": "Timeline"
+            "module": "./Timeline.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1665,8 +1665,8 @@
           {
           "name": "ui5-timeline-item",
           "source": {
-            "module": "./TimelineItem.js",
-            "symbol": "TimelineItem"
+            "module": "./TimelineItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1759,8 +1759,8 @@
           {
           "name": "ui5-upload-collection",
           "source": {
-            "module": "./UploadCollection.js",
-            "symbol": "UploadCollection"
+            "module": "./UploadCollection.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -1875,8 +1875,8 @@
           {
           "name": "ui5-upload-collection-item",
           "source": {
-            "module": "./UploadCollectionItem.js",
-            "symbol": "UploadCollectionItem"
+            "module": "./UploadCollectionItem.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2036,8 +2036,8 @@
           {
           "name": "ui5-view-settings-dialog",
           "source": {
-            "module": "./ViewSettingsDialog.js",
-            "symbol": "ViewSettingsDialog"
+            "module": "./ViewSettingsDialog.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2120,8 +2120,8 @@
           {
           "name": "ui5-wizard",
           "source": {
-            "module": "./Wizard.js",
-            "symbol": "Wizard"
+            "module": "./Wizard.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
@@ -2154,8 +2154,8 @@
           {
           "name": "ui5-wizard-step",
           "source": {
-            "module": "./WizardStep.js",
-            "symbol": "WizardStep"
+            "module": "./WizardStep.d.ts",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,

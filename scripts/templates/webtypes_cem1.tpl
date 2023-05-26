@@ -15,8 +15,8 @@
           {
           "name": "{{$declaration.tagName}}",
           "source": {
-            "module": "./{{$mod.path}}",
-            "symbol": "{{$declaration.name}}"
+            "module": "./{{$mod.path | replace ".js" ".d.ts"}}",
+            "symbol": "default"
           },
           "deprecated": false,
           "experimental": false,
