@@ -363,16 +363,6 @@ export class FuroUi5CheckboxInput extends FieldNodeAdapter(CheckBox.default) {
     md.tag = 'furo-ui5-checkbox-input';
     return md;
   }
-
-  static get styles() {
-    return [
-      super.styles,
-      {
-        content:
-          ':host{ padding:2px 0; box-sizing: border-box } .ui5-checkbox-root{height:100%} .ui5-checkbox-root:focus:before{top:-1px; height:100%;display:var(--_ui5_checkbox_focus_outline_display)',
-      },
-    ];
-  }
 }
 
 FuroUi5CheckboxInput.define();
