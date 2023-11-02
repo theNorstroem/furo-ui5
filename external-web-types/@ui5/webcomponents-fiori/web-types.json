@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "@ui5/webcomponents-fiori",
-  "version": "1.13.2",
+  "version": "1.18.0",
   "description-markup": "markdown",
   "js-types-syntax": "typescript",
   "default-icon": "icon.svg",
@@ -22,22 +22,22 @@
               "name": "design",
               "type": "sap.ui.webc.fiori.types.BarDesign",
               "priority": "highest",
-              "description": "Defines the component's design.\n\n<br><br> <b>Note:</b> Available options are: <ul> <li><code>Header</code></li> <li><code>Subheader</code></li> <li><code>Footer</code></li> <li><code>FloatingFooter</code></li> </ul>",
+              "description": "Defines the component's design.",
               "default": "\"Header\""
             }
           ],
         "slots": [
             {
               "name": "default",
-              "description": "Defines the content in the middle of the bar"
+              "description": "Defines the content in the middle of the bar."
             }
             , {
               "name": "endContent",
-              "description": "Defines the content at the end of the bar"
+              "description": "Defines the content at the end of the bar."
             }
             , {
               "name": "startContent",
-              "description": "Defines the content at the start of the bar"
+              "description": "Defines the content at the start of the bar."
             } ]
           ,
           "js": {
@@ -45,7 +45,7 @@
                 "name": "design",
                 "type": "sap.ui.webc.fiori.types.BarDesign",
                 "priority": "high",
-                "description": "Defines the component's design.\n\n<br><br> <b>Note:</b> Available options are: <ul> <li><code>Header</code></li> <li><code>Subheader</code></li> <li><code>Footer</code></li> <li><code>FloatingFooter</code></li> </ul>",
+                "description": "Defines the component's design.",
                 "default": "\"Header\""
               }
             ],
@@ -703,7 +703,7 @@
               "name": "design",
               "type": "sap.ui.webc.main.types.ButtonDesign",
               "priority": "highest",
-              "description": "Defines the action design.\n\n<br><br> <b>Note:</b> <ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> </ul>",
+              "description": "Defines the action design.",
               "default": "\"Transparent\""
             }, {
               "name": "disabled",
@@ -731,7 +731,7 @@
                 "name": "design",
                 "type": "sap.ui.webc.main.types.ButtonDesign",
                 "priority": "high",
-                "description": "Defines the action design.\n\n<br><br> <b>Note:</b> <ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> </ul>",
+                "description": "Defines the action design.",
                 "default": "\"Transparent\""
               }, {
                 "name": "disabled",
@@ -876,13 +876,13 @@
           },
           "deprecated": false,
           "experimental": false,
-          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-page</code> is a container component that holds one whole screen of an application. The page has three distinct areas that can hold content - a header, content area and a footer. <h3>Structure</h3> <h4>Header</h4> The top most area of the page is occupied by the header. The standard header includes a navigation button and a title. <h4>Content</h4> The content occupies the main part of the page. Only the content area is scrollable by default. This can be prevented by setting <code>enableScrolling</code> to <code>false</code>. <h4>Footer</h4> The footer is optional and occupies the fixed bottom part of the page. Alternatively, the footer can be floating above the bottom part of the content. This is enabled with the <code>floatingFooter</code> property.\n\n<b>Note:</b> <code>ui5-page</code> occipues the whole available space of its parent. In order to achieve the intended design you have to make sure that there is enough space for the <code>ui5-page</code> to be rendered. <b>Note:</b> In order for the <code>ui5-page</code> to be displayed, the parent element should have fixed height.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/Page.js\";</code>",
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-page</code> is a container component that holds one whole screen of an application. The page has three distinct areas that can hold content - a header, content area and a footer. <h3>Structure</h3> <h4>Header</h4> The top most area of the page is occupied by the header. The standard header includes a navigation button and a title. <h4>Content</h4> The content occupies the main part of the page. Only the content area is scrollable by default. This can be prevented by setting <code>enableScrolling</code> to <code>false</code>. <h4>Footer</h4> The footer is optional and occupies the fixed bottom part of the page. Alternatively, the footer can be floating above the bottom part of the content. This is enabled with the <code>floatingFooter</code> property.\n\n<b>Note:</b> <code>ui5-page</code> occipues the whole available space of its parent. In order to achieve the intended design you have to make sure that there is enough space for the <code>ui5-page</code> to be rendered. <b>Note:</b> In order for the <code>ui5-page</code> to be displayed, the parent element should have fixed height.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-page</code> exposes the following CSS Shadow Parts: <ul> <li>content - Used to style the content section of the component</li> </ul>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/Page.js\";</code>",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/Page/",
           "attributes": [{
               "name": "background-design",
               "type": "sap.ui.webc.fiori.types.PageBackgroundDesign",
               "priority": "highest",
-              "description": "Defines the background color of the <code>ui5-page</code>. <br><br> <b>Note:</b> When a ui5-list is placed inside the page, we recommend using “List” to ensure better color contrast. <br><br> Available options are: <ul> <li><code>Solid</code></li> (default) <li><code>Transparent</code></li> <li><code>List</code></li> </ul>",
+              "description": "Defines the background color of the <code>ui5-page</code>. <br><br> <b>Note:</b> When a ui5-list is placed inside the page, we recommend using “List” to ensure better color contrast. <br><br>",
               "default": "\"Solid\""
             }, {
               "name": "disable-scrolling",
@@ -923,7 +923,7 @@
                 "name": "backgroundDesign",
                 "type": "sap.ui.webc.fiori.types.PageBackgroundDesign",
                 "priority": "high",
-                "description": "Defines the background color of the <code>ui5-page</code>. <br><br> <b>Note:</b> When a ui5-list is placed inside the page, we recommend using “List” to ensure better color contrast. <br><br> Available options are: <ul> <li><code>Solid</code></li> (default) <li><code>Transparent</code></li> <li><code>List</code></li> </ul>",
+                "description": "Defines the background color of the <code>ui5-page</code>. <br><br> <b>Note:</b> When a ui5-list is placed inside the page, we recommend using “List” to ensure better color contrast. <br><br>",
                 "default": "\"Solid\""
               }, {
                 "name": "disableScrolling",
@@ -1321,7 +1321,7 @@
               "name": "text",
               "type": "string",
               "priority": "highest",
-              "description": "Defines the item text.",
+              "description": "Defines the item text. <br><br> <b>Note:</b> The text is only displayed inside the overflow popover list view.",
               "default": "\"\""
             }
           ]
@@ -1343,7 +1343,7 @@
                 "name": "text",
                 "type": "string",
                 "priority": "high",
-                "description": "Defines the item text.",
+                "description": "Defines the item text. <br><br> <b>Note:</b> The text is only displayed inside the overflow popover list view.",
                 "default": "\"\""
               }
             ],
@@ -1355,7 +1355,7 @@
                 "priority": "highest",
                 "description": "Fired, when the item is pressed.",
                  "value": {
-                      "type": "NativeEvent"
+                      "type": "CustomEvent"
                 }
               } ]
         }
@@ -1782,7 +1782,7 @@
               "name": "mode",
               "type": "sap.ui.webc.main.types.ListMode",
               "priority": "highest",
-              "description": "Defines the mode of the <code>ui5-upload-collection</code>.\n\n<br><br> <b>Note:</b> <ul> <li><code>None</code></li> <li><code>SingleSelect</code></li> <li><code>MultiSelect</code></li> <li><code>Delete</code></li> </ul>",
+              "description": "Defines the mode of the <code>ui5-upload-collection</code>.\n\n<br><b>Note:</b> Mode \"Delete\" has no effect. The delete button is controlled by the <code>hideDeleteButton</code> property of UploadCollectionItem</li>",
               "default": "\"None\""
             }, {
               "name": "no-data-description",
@@ -1825,7 +1825,7 @@
                 "name": "mode",
                 "type": "sap.ui.webc.main.types.ListMode",
                 "priority": "high",
-                "description": "Defines the mode of the <code>ui5-upload-collection</code>.\n\n<br><br> <b>Note:</b> <ul> <li><code>None</code></li> <li><code>SingleSelect</code></li> <li><code>MultiSelect</code></li> <li><code>Delete</code></li> </ul>",
+                "description": "Defines the mode of the <code>ui5-upload-collection</code>.\n\n<br><b>Note:</b> Mode \"Delete\" has no effect. The delete button is controlled by the <code>hideDeleteButton</code> property of UploadCollectionItem</li>",
                 "default": "\"None\""
               }, {
                 "name": "noDataDescription",
@@ -1856,7 +1856,7 @@
               {
                 "name": "item-delete",
                 "priority": "highest",
-                "description": "Fired when the Delete button of any item is pressed. <br><br> <b>Note:</b> A Delete button is displayed on each item, when the <code>ui5-upload-collection</code> <code>mode</code> property is set to <code>Delete</code>.",
+                "description": "Fired when the delete button of any item is pressed.",
                  "value": {
                       "type": "CustomEvent"
                 }
@@ -1905,6 +1905,12 @@
               "type": "boolean",
               "priority": "highest",
               "description": "If set to <code>true</code> the file name will be clickable and it will fire <code>file-name-click</code> event upon click.",
+              "default": "false"
+            }, {
+              "name": "hide-delete-button",
+              "type": "boolean",
+              "priority": "highest",
+              "description": "By default, the delete button will always be shown, regardless of the <code>ui5-upload-collection</code>'s property <code>mode</code>. Setting this property to <code>true</code> will hide the delete button.",
               "default": "false"
             }, {
               "name": "hide-retry-button",
@@ -1966,6 +1972,12 @@
                 "type": "boolean",
                 "priority": "high",
                 "description": "If set to <code>true</code> the file name will be clickable and it will fire <code>file-name-click</code> event upon click.",
+                "default": "false"
+              }, {
+                "name": "hideDeleteButton",
+                "type": "boolean",
+                "priority": "high",
+                "description": "By default, the delete button will always be shown, regardless of the <code>ui5-upload-collection</code>'s property <code>mode</code>. Setting this property to <code>true</code> will hide the delete button.",
                 "default": "false"
               }, {
                 "name": "hideRetryButton",
@@ -2073,7 +2085,7 @@
             "methods": [
             {
               "name": "set-confirmed-settings",
-              "description": "Sets a JavaScript object, as settings to the <code>ui5-view-settings-dialog</code>. This method can be used after the dialog is initially open, as the dialog need to set its initial settings. The <code>ui5-view-settings-dialog</code> throws an event called  before-open , this can be used as trigger point. The object should have the following format: <code> {sortOrder:  Ascending , sortBy:  Name , filters: [{ Filter 1 : [ Some filter 1 ,  Some filter 2 ]}, { Filter 2 : [ Some filter 4 ]}]} </code>",
+              "description": "Sets a JavaScript object, as settings to the <code>ui5-view-settings-dialog</code>. This method can be used after the dialog is initially open, as the dialog needs to set its initial settings.<br> The <code>ui5-view-settings-dialog</code> throws an event called  before-open , which can be used as a trigger point.<br> The object should have the following format:<br> <pre>\n{\n	sortOrder:  Ascending ,\n	sortBy:  Name ,\n	filters: [\n		{ Filter 1 : [ Some filter 1 ,  Some filter 2 ]},\n		{ Filter 2 : [ Some filter 4 ]},\n	]\n}\n</pre>",
               "value": {
                 "type": "string",
                 "required": true
@@ -2127,7 +2139,13 @@
           "experimental": false,
           "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-wizard</code> helps users to complete a complex task by dividing it into sections and guiding them through it. It has two main areas - a navigation area at the top showing the step sequence and a content area below it.\n\n<h3>Structure</h3> <h4>Navigation area</h4> The top most area of the <code>ui5-wizard</code> is occupied by the navigation area. It shows the sequence of steps, where the recommended number of steps is between 3 and 8 steps. <ul> <li> Steps can have different visual representations - numbers or icons.</li> <li> Steps might have labels for better readability - titleText and subTitleText.</li> <li> Steps are defined by using the <code>ui5-wizard-step</code> as slotted element within the <code>ui5-wizard</code>.</li> </ul>\n\n<b>Note:</b> If no selected step is defined, the first step will be auto selected. <br> <b>Note:</b> If multiple selected steps are defined, the last step will be selected.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-wizard</code> exposes the following CSS Shadow Parts: <ul> <li>navigator - Used to style the progress navigator of the <code>ui5-wizard</code>.</li> <li>step-content - Used to style a <code>ui5-wizard-step</code> container.</li> </ul>\n\n<h3>Keyboard Handling</h3> The user can navigate using the following keyboard shortcuts: <br>\n\n<h4>Wizard Progress Navigation</h4> <ul> <li>[LEFT], [DOWN] - Focus moves backward to the WizardProgressNavAnchors.</li> <li>[UP], [RIGHT] - Focus moves forward to the WizardProgressNavAnchor.</li> <li>[SPACE] or [ENTER], [RETURN] - Selects an active step</li> <li>[HOME] or [PAGE UP] - Focus goes to the first step</li> <li>[END] or [PAGE DOWN] - Focus goes to the last step</li> </ul>\n\n<h4>Fast Navigation</h4> This component provides a build in fast navigation group which can be used via <code>F6 / Shift + F6</code> or <code> Ctrl + Alt(Option) + Down / Ctrl + Alt(Option) + Up</code>. In order to use this functionality, you need to import the following module: <code>import \"@ui5/webcomponents-base/dist/features/F6Navigation.js\"</code>\n\n<h4>Content</h4> The content occupies the main part of the page. It can hold any type of HTML elements. It's defined by using the <code>ui5-wizard-step</code> as slotted element within the <code>ui5-wizard</code>.\n\n<h3>Scrolling</h3> The component handles user scrolling by selecting the closest step, based on the current scroll position and scrolls to particular place, when the user clicks on the step within the navigation area. <br><br>\n\n<b>Important:</b> In order the component's scrolling behaviour to work, it has to be limited from the outside parent element in terms of height. The component or its parent has to be given percentage or absolute height. Otherwise, the component will be scrolled out with the entire page. <br><br> <b>For example:</b> <br><br> <code>&lt;ui5-dialog style=\"height: 80%\"&gt;<br></code> <code>&#9;&lt;ui5-wizard&gt;&lt;/ui5-wizard&gt;<br></code> <code>&lt;/ui5-dialog&gt;</code>\n\n<h4>Moving to next step</h4> The <code>ui5-wizard-step</code> provides the necessary API and it's up to the user of the component to use it to move to the next step. You have to set its <code>selected</code> property (and remove the <code>disabled</code> one if set) to <code>true</code>. The <code>ui5-wizard</code> will automatically scroll to the content of the newly selected step. <br><br>\n\nThe Fiori 3 guidelines recommends having a \"nextStep\" button in the content area. You can place a button, or any other type of element to trigger step change, inside the <code>ui5-wizard-step</code>, and show/hide it when certain fields are filled or user defined criteria is met.\n\n<h3>Usage</h3> <h4>When to use:</h4> When the user has to accomplish a long or unfamiliar task.\n\n<h4>When not to use:</h4> When the task has less than 3 steps.\n\n<h3>Responsive Behavior</h3> On small widths the step's titleText, subtitleText and separators in the navigation area shrink and from particular point the steps are grouped together and overlap. Tapping on them will show a popover to select the step to navigate to. On mobile device, the grouped steps are presented within a dialog.\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents-fiori/dist/Wizard.js\";</code> (includes &lt;ui5-wizard-step/&gt;)",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/Wizard/",
-          "attributes": [
+          "attributes": [{
+              "name": "content-layout",
+              "type": "sap.ui.webc.fiori.types.WizardContentLayout",
+              "priority": "highest",
+              "description": "Defines how the content of the <code>ui5-wizard</code> would be visualized.",
+              "default": "\"MultipleSteps\""
+            }
           ],
         "slots": [
             {
@@ -2136,7 +2154,13 @@
             } ]
           ,
           "js": {
-            "properties": [
+            "properties": [{
+                "name": "contentLayout",
+                "type": "sap.ui.webc.fiori.types.WizardContentLayout",
+                "priority": "high",
+                "description": "Defines how the content of the <code>ui5-wizard</code> would be visualized.",
+                "default": "\"MultipleSteps\""
+              }
             ],
             "methods": [],
             "events": [

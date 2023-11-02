@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "@furo/ui5",
-  "version": "1.17.6",
+  "version": "1.18.0-rc.2",
   "description-markup": "markdown",
   "js-types-syntax": "typescript",
   "default-icon": "icon.svg",
@@ -1819,6 +1819,206 @@
                 "required": true
               }
             }]
+        }
+      }, 
+          {
+          "name": "furo-ui5-dynamic-header",
+          "source": {
+            "module": "./src/furo-ui5-dynamic-header.js",
+            "symbol": "FuroUi5DynamicHeader"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`furo-ui5-dynamic-header`\n Header component with action slot",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-dynamic-header/",
+          "attributes": [{
+                        "name": "header-text",
+                        "type": "string",
+              "priority": "highest",
+              "description": "Defines the headerText of the component."
+                      }, {
+                        "name": "header-text-level",
+                        "type": "string",
+              "priority": "highest",
+              "description": "Defines the headerTextLevel of the component.",
+                        "default": "'H2'"
+                      }, {
+                        "name": "icon-size",
+                        "type": "string",
+              "priority": "highest",
+              "description": "Defines the icon-size of the icon / image.\n\nS, M, L, XL",
+                        "default": "'S'"
+                      }, {
+                        "name": "icon-shape",
+                        "type": "string",
+              "priority": "highest",
+              "description": "Defines the icon-shape of the icon / image.\nSquare | Circle",
+                        "default": "'Square'"
+                      }, {
+                        "name": "is-favorite",
+                        "type": "boolean",
+              "priority": "highest",
+              "description": "Shows the fovorite icon when set."
+                      }, {
+                        "name": "show-dropdown",
+                        "type": "boolean",
+              "priority": "highest",
+              "description": "Show the dropdown button icon after the header text."
+                      }, {
+                        "name": "object-icon",
+                        "type": "string",
+              "priority": "highest",
+              "description": "Set this value to display an object icon."
+                      }, {
+                        "name": "big-action",
+                        "type": "boolean",
+              "priority": "highest",
+              "description": "Set this attribute to get a bigger action slot."
+                      }, {
+                        "name": "collapsed",
+                        "type": "boolean",
+              "priority": "highest",
+              "description": "Set the collapsed attribute to start in a collapsed state. Header which are pinned by the user in collapsed or expanded state, will override\nthis attribute."
+                      }, {
+                        "name": "is-pinned",
+                        "type": "boolean",
+              "priority": "highest",
+              "description": "Set the is-pinned attribute to disable collapse and exand before unpin."
+                      }
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "headerTextLevel",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the headerTextLevel of the component.",
+                "default": "'H2'"
+              }, {
+                "name": "iconSize",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the icon-size of the icon / image.\n\nS, M, L, XL",
+                "default": "'S'"
+              }, {
+                "name": "iconShape",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the icon-shape of the icon / image.\nSquare | Circle",
+                "default": "'Square'"
+              }, {
+                "name": "headerText",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the headerText of the component."
+              }, {
+                "name": "isFavorite",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Shows the fovorite icon when set."
+              }, {
+                "name": "showDropdown",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Show the dropdown button icon after the header text."
+              }, {
+                "name": "objectIcon",
+                "type": "string",
+                "priority": "high",
+                "description": "Set this value to display an object icon."
+              }, {
+                "name": "bigAction",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Set this attribute to get a bigger action slot."
+              }, {
+                "name": "collapsed",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Set the collapsed attribute to start in a collapsed state. Header which are pinned by the user in collapsed or expanded state, will override\nthis attribute."
+              }, {
+                "name": "isPinned",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Set the is-pinned attribute to disable collapse and exand before unpin."
+              }
+            ],
+            "methods": [
+            {
+              "name": "collapse",
+              "description": "Collapses the header content.\nThis method will do nothing, if the header is  pinned .",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "expand",
+              "description": "Expands the header content.\nThis method will do nothing, if the header is  pinned .",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "bind-header-text",
+              "description": "Bind any **scalar** field to set the title of the panel.\nSupported types: scalar types",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "bind-secondary-text",
+              "description": "Bind any **scalar** field to set the secondaryText of the panel.",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-toggle",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-toggle-on-keyup",
+              "description": "",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "-fbp-ready",
+              "description": "flow is ready lifecycle method",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }],
+            "events": [
+              
+              {
+                "name": "pinned",
+                "priority": "highest",
+                "description": "",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "unpinned",
+                "priority": "highest",
+                "description": "",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
         }
       }, 
           {
@@ -5351,6 +5551,72 @@
                       "type": "selectedOption"
                 }
               } ]
+        }
+      }, 
+          {
+          "name": "furo-ui5-show-hide",
+          "source": {
+            "module": "./src/furo-ui5-show-hide.js",
+            "symbol": "FuroUi5ShowHide"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "`furo-ui5-show-hide`\nAnimated content hider",
+          "doc-url": "https://ui5.furo.pro/docs/components/furo-ui5-show-hide/",
+          "attributes": [
+                    ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "isHidden",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Set is-hiddden to start in a closed state. The name is used by intention, to avoid css trouble with\na global <code>[hidden]{display:none}</code>."
+              }, {
+                "name": "hideOnFalse",
+                "type": "boolean",
+                "priority": "high",
+                "description": "",
+                "default": "false"
+              }, {
+                "name": "_clientHeight",
+                "type": "number",
+                "priority": "high",
+                "description": "",
+                "default": "0"
+              }, {
+                "name": "_hidden",
+                "type": "boolean",
+                "priority": "high",
+                "description": "",
+                "default": "false"
+              }
+            ],
+            "methods": [
+            {
+              "name": "hide",
+              "description": "Hides the content.",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "show",
+              "description": "Shows the content.",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+            , {
+              "name": "toggle",
+              "description": "Toggle the current visibility state..",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }]
         }
       }, 
           {

@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "@ui5/webcomponents",
-  "version": "1.13.2",
+  "version": "1.18.0",
   "description-markup": "markdown",
   "js-types-syntax": "typescript",
   "default-icon": "icon.svg",
@@ -31,6 +31,18 @@
               "description": "Defines the background color of the desired image. <br><br> Available options are: <ul> <li><code>Accent1</code></li> <li><code>Accent2</code></li> <li><code>Accent3</code></li> <li><code>Accent4</code></li> <li><code>Accent5</code></li> <li><code>Accent6</code></li> <li><code>Accent7</code></li> <li><code>Accent8</code></li> <li><code>Accent9</code></li> <li><code>Accent10</code></li> <li><code>Placeholder</code></li> </ul>",
               "default": "\"Accent6\""
             }, {
+              "name": "disabled",
+              "type": "boolean",
+              "priority": "highest",
+              "description": "Defines whether the component is disabled. A disabled component can't be pressed or focused, and it is not in the tab chain.",
+              "default": "false"
+            }, {
+              "name": "fallback-icon",
+              "type": "string",
+              "priority": "highest",
+              "description": "Defines the name of the fallback icon, which should be displayed in the following cases: <ul> <li>If the initials are not valid (more than 3 letters, unsupported languages or empty initials).</li> <li>If there are three initials and they do not fit in the shape (e.g. WWW for some of the sizes).</li> <li>If the image src is wrong.</li> </ul>\n\n<br> <b>Note:</b> If not set, a default fallback icon \"employee\" is displayed. <br> <b>Note:</b> You should import the desired icon first, then use its name as \"fallback-icon\". <br><br> import \"@ui5/webcomponents-icons/dist/{icon_name}.js\" <br> <pre>&lt;ui5-avatar fallback-icon=\"alert\"></pre> <br>\n\nSee all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+              "default": "\"\""
+            }, {
               "name": "icon",
               "type": "string",
               "priority": "highest",
@@ -46,7 +58,7 @@
               "name": "interactive",
               "type": "boolean",
               "priority": "highest",
-              "description": "Defines if the avatar is interactive (focusable and pressable).",
+              "description": "Defines if the avatar is interactive (focusable and pressable). <b>Note:</b> This property won't have effect if the <code>disabled</code> property is set to <code>true</code>.",
               "default": "false"
             }, {
               "name": "shape",
@@ -86,6 +98,18 @@
                 "description": "Defines the background color of the desired image. <br><br> Available options are: <ul> <li><code>Accent1</code></li> <li><code>Accent2</code></li> <li><code>Accent3</code></li> <li><code>Accent4</code></li> <li><code>Accent5</code></li> <li><code>Accent6</code></li> <li><code>Accent7</code></li> <li><code>Accent8</code></li> <li><code>Accent9</code></li> <li><code>Accent10</code></li> <li><code>Placeholder</code></li> </ul>",
                 "default": "\"Accent6\""
               }, {
+                "name": "disabled",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Defines whether the component is disabled. A disabled component can't be pressed or focused, and it is not in the tab chain.",
+                "default": "false"
+              }, {
+                "name": "fallbackIcon",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the name of the fallback icon, which should be displayed in the following cases: <ul> <li>If the initials are not valid (more than 3 letters, unsupported languages or empty initials).</li> <li>If there are three initials and they do not fit in the shape (e.g. WWW for some of the sizes).</li> <li>If the image src is wrong.</li> </ul>\n\n<br> <b>Note:</b> If not set, a default fallback icon \"employee\" is displayed. <br> <b>Note:</b> You should import the desired icon first, then use its name as \"fallback-icon\". <br><br> import \"@ui5/webcomponents-icons/dist/{icon_name}.js\" <br> <pre>&lt;ui5-avatar fallback-icon=\"alert\"></pre> <br>\n\nSee all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
+                "default": "\"\""
+              }, {
                 "name": "icon",
                 "type": "string",
                 "priority": "high",
@@ -101,7 +125,7 @@
                 "name": "interactive",
                 "type": "boolean",
                 "priority": "high",
-                "description": "Defines if the avatar is interactive (focusable and pressable).",
+                "description": "Defines if the avatar is interactive (focusable and pressable). <b>Note:</b> This property won't have effect if the <code>disabled</code> property is set to <code>true</code>.",
                 "default": "false"
               }, {
                 "name": "shape",
@@ -128,7 +152,7 @@
           },
           "deprecated": false,
           "experimental": false,
-          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nDisplays a group of avatars arranged horizontally. It is useful to visually showcase a group of related avatars, such as, project team members or employees.\n\nThe component allows you to display the avatars in different sizes, depending on your use case.\n\nThe <code>AvatarGroup</code> component has two group types: <ul> <li><code>Group</code> type: The avatars are displayed as partially overlapped on top of each other and the entire group has one click/tap area.</li> <li><code>Individual</code> type: The avatars are displayed side-by-side and each avatar has its own click/tap area.</li> </ul>\n\n<h3>Responsive Behavior</h3>\n\nWhen the available space is less than the width required to display all avatars, an overflow visualization appears as a button placed at the end with the same shape and size as the avatars. The visualization displays the number of avatars that have overflowed and are not currently visible.\n\n<h3>Usage</h3>\n\nUse the <code>AvatarGroup</code> if: <ul> <li>You want to display a group of avatars.</li> <li>You want to display several avatars which have something in common.</li> </ul>\n\nDo not use the <code>AvatarGroup</code> if: <ul> <li>You want to display a single avatar.</li> <li>You want to display a gallery for simple images.</li> <li>You want to use it for other visual content than avatars.</li> </ul>\n\n<h3>Keyboard Handling</h3> The component provides advanced keyboard handling. When focused, the user can use the following keyboard shortcuts in order to perform a navigation: <br> - <code>type</code> Individual: <br> <ul> <li>[TAB] - Move focus to the overflow button</li> <li>[LEFT] - Navigate one avatar to the left</li> <li>[RIGHT] - Navigate one avatar to the right</li> <li>[HOME] - Navigate to the first avatar</li> <li>[END] - Navigate to the last avatar</li> <li>[SPACE],[ENTER],[RETURN] - Trigger <code>ui5-click</code> event</li> </ul> <br> - <code>type</code> Group: <br> <ul> <li>[TAB] - Move focus to the next interactive element after the component</li> <li>[SPACE],[ENTER],[RETURN] - Trigger <code>ui5-click</code> event</li> </ul> <br>",
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nDisplays a group of avatars arranged horizontally. It is useful to visually showcase a group of related avatars, such as, project team members or employees.\n\nThe component allows you to display the avatars in different sizes, depending on your use case.\n\nThe <code>AvatarGroup</code> component has two group types: <ul> <li><code>Group</code> type: The avatars are displayed as partially overlapped on top of each other and the entire group has one click/tap area.</li> <li><code>Individual</code> type: The avatars are displayed side-by-side and each avatar has its own click/tap area.</li> </ul>\n\n<h3>Responsive Behavior</h3>\n\nWhen the available space is less than the width required to display all avatars, an overflow visualization appears as a button placed at the end with the same shape and size as the avatars. The visualization displays the number of avatars that have overflowed and are not currently visible.\n\n<h3>Usage</h3>\n\nUse the <code>AvatarGroup</code> if: <ul> <li>You want to display a group of avatars.</li> <li>You want to display several avatars which have something in common.</li> </ul>\n\nDo not use the <code>AvatarGroup</code> if: <ul> <li>You want to display a single avatar.</li> <li>You want to display a gallery for simple images.</li> <li>You want to use it for other visual content than avatars.</li> </ul>\n\n<h3>Keyboard Handling</h3> The component provides advanced keyboard handling. When focused, the user can use the following keyboard shortcuts in order to perform a navigation:\n\n<br> <code>type</code> Individual: <br> <ul> <li>[TAB] - Move focus to the overflow button</li> <li>[LEFT] - Navigate one avatar to the left</li> <li>[RIGHT] - Navigate one avatar to the right</li> <li>[HOME] - Navigate to the first avatar</li> <li>[END] - Navigate to the last avatar</li> <li>[SPACE],[ENTER],[RETURN] - Trigger <code>ui5-click</code> event</li> </ul> <br> <code>type</code> Group: <br> <ul> <li>[TAB] - Move focus to the next interactive element after the component</li> <li>[SPACE],[ENTER],[RETURN] - Trigger <code>ui5-click</code> event</li> </ul> <br>",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/AvatarGroup/",
           "attributes": [{
               "name": "type",
@@ -205,7 +229,7 @@
               "name": "color-scheme",
               "type": "string",
               "priority": "highest",
-              "description": "Defines the color scheme of the component. There are 10 predefined schemes. Each scheme applies different values for the <code>background-color</code> and <code>border-color</code>. To use one you can set a number from <code>\"1\"</code> to <code>\"10\"</code>. The <code>colorScheme</code> <code>\"1\"</code> will be set by default. <br><br> <b>Note:</b> Color schemes have no visual representation in High Contrast Black (sap_belize_hcb) theme.",
+              "description": "Defines the color scheme of the component. There are 10 predefined schemes. To use one you can set a number from <code>\"1\"</code> to <code>\"10\"</code>. The <code>colorScheme</code> <code>\"1\"</code> will be set by default. <br><br> <b>Note:</b> Color schemes have no visual representation in High Contrast Black (sap_belize_hcb) theme.",
               "default": "\"1\""
             }
           ],
@@ -224,7 +248,7 @@
                 "name": "colorScheme",
                 "type": "string",
                 "priority": "high",
-                "description": "Defines the color scheme of the component. There are 10 predefined schemes. Each scheme applies different values for the <code>background-color</code> and <code>border-color</code>. To use one you can set a number from <code>\"1\"</code> to <code>\"10\"</code>. The <code>colorScheme</code> <code>\"1\"</code> will be set by default. <br><br> <b>Note:</b> Color schemes have no visual representation in High Contrast Black (sap_belize_hcb) theme.",
+                "description": "Defines the color scheme of the component. There are 10 predefined schemes. To use one you can set a number from <code>\"1\"</code> to <code>\"10\"</code>. The <code>colorScheme</code> <code>\"1\"</code> will be set by default. <br><br> <b>Note:</b> Color schemes have no visual representation in High Contrast Black (sap_belize_hcb) theme.",
                 "default": "\"1\""
               }
             ],
@@ -375,7 +399,7 @@
               "name": "size",
               "type": "sap.ui.webc.main.types.BusyIndicatorSize",
               "priority": "highest",
-              "description": "Defines the size of the component.\n\n<br><br> <b>Note:</b>\n\n<ul> <li><code>Small</code></li> <li><code>Medium</code></li> <li><code>Large</code></li> </ul>",
+              "description": "Defines the size of the component.",
               "default": "\"Medium\""
             }, {
               "name": "text",
@@ -408,7 +432,7 @@
                 "name": "size",
                 "type": "sap.ui.webc.main.types.BusyIndicatorSize",
                 "priority": "high",
-                "description": "Defines the size of the component.\n\n<br><br> <b>Note:</b>\n\n<ul> <li><code>Small</code></li> <li><code>Medium</code></li> <li><code>Large</code></li> </ul>",
+                "description": "Defines the size of the component.",
                 "default": "\"Medium\""
               }, {
                 "name": "text",
@@ -447,7 +471,7 @@
               "name": "design",
               "type": "sap.ui.webc.main.types.ButtonDesign",
               "priority": "highest",
-              "description": "Defines the component design.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> <li><code>Attention</code></li> </ul>",
+              "description": "Defines the component design.",
               "default": "\"Default\""
             }, {
               "name": "disabled",
@@ -479,6 +503,12 @@
               "priority": "highest",
               "description": "Defines the tooltip of the component. <br> <b>Note:</b> A tooltip attribute should be provided for icon-only buttons, in order to represent their exact meaning/function.",
               "default": "\"\""
+            }, {
+              "name": "type",
+              "type": "sap.ui.webc.main.types.ButtonType",
+              "priority": "highest",
+              "description": "Defines whether the button has special form-related functionality.\n\n<br><br> <b>Note:</b> For the <code>type</code> property to have effect, you must add the following import to your project: <code>import \"@ui5/webcomponents/dist/features/InputElementsFormSupport.js\";</code>",
+              "default": "\"Button\""
             }
           ],
         "slots": [
@@ -509,7 +539,7 @@
                 "name": "design",
                 "type": "sap.ui.webc.main.types.ButtonDesign",
                 "priority": "high",
-                "description": "Defines the component design.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> <li><code>Attention</code></li> </ul>",
+                "description": "Defines the component design.",
                 "default": "\"Default\""
               }, {
                 "name": "disabled",
@@ -541,6 +571,12 @@
                 "priority": "high",
                 "description": "Defines the tooltip of the component. <br> <b>Note:</b> A tooltip attribute should be provided for icon-only buttons, in order to represent their exact meaning/function.",
                 "default": "\"\""
+              }, {
+                "name": "type",
+                "type": "sap.ui.webc.main.types.ButtonType",
+                "priority": "high",
+                "description": "Defines whether the button has special form-related functionality.\n\n<br><br> <b>Note:</b> For the <code>type</code> property to have effect, you must add the following import to your project: <code>import \"@ui5/webcomponents/dist/features/InputElementsFormSupport.js\";</code>",
+                "default": "\"Button\""
               }
             ],
             "methods": [],
@@ -703,7 +739,7 @@
           },
           "deprecated": false,
           "experimental": false,
-          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-card-header</code> is a component, meant to be used as a header of the <code>ui5-card</code> component. It displays valuable information, that can be defined with several properties, such as: <code>titleText</code>, <code>subtitleText</code>, <code>status</code> and two slots: <code>avatar</code> and <code>action</code>.\n\n<h3>Keyboard handling</h3> In case you enable <code>interactive</code> property, you can press the <code>ui5-card-header</code> by Space and Enter keys.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-card</code> exposes the following CSS Shadow Parts: <ul> <li>root - Used to style the root DOM element of the CardHeader</li> <li>title - Used to style the title of the CardHeader</li> <li>subtitle - Used to style the subtitle of the CardHeader</li> <li>status - Used to style the status of the CardHeader</li> </ul>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/CardHeader\";</code>",
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-card-header</code> is a component, meant to be used as a header of the <code>ui5-card</code> component. It displays valuable information, that can be defined with several properties, such as: <code>titleText</code>, <code>subtitleText</code>, <code>status</code> and two slots: <code>avatar</code> and <code>action</code>.\n\n<h3>Keyboard handling</h3> In case you enable <code>interactive</code> property, you can press the <code>ui5-card-header</code> by Space and Enter keys.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-card-header</code> exposes the following CSS Shadow Parts: <ul> <li>root - Used to style the root DOM element of the CardHeader</li> <li>title - Used to style the title of the CardHeader</li> <li>subtitle - Used to style the subtitle of the CardHeader</li> <li>status - Used to style the status of the CardHeader</li> </ul>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/CardHeader\";</code>",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/CardHeader/",
           "attributes": [{
               "name": "interactive",
@@ -795,8 +831,14 @@
               "name": "arrows-placement",
               "type": "sap.ui.webc.main.types.CarouselArrowsPlacement",
               "priority": "highest",
-              "description": "Defines the position of arrows. <br><br> Available options are: <ul> <li><code>Content</code></li> <li><code>Navigation</code></li> </ul> <br> When set to \"Content\", the arrows are placed on the sides of the current page. <br> When set to \"Navigation\", the arrows are placed on the sides of the page indicator.",
+              "description": "Defines the position of arrows. <br><br> Available options are: <ul> <li><code>Content</code> - the arrows are placed on the sides of the current page.</li> <li><code>Navigation</code> - the arrows are placed on the sides of the page indicator.</li> </ul>",
               "default": "\"Content\""
+            }, {
+              "name": "background-design",
+              "type": "sap.ui.webc.main.types.BackgroundDesign",
+              "priority": "highest",
+              "description": "Defines the carousel's background design.",
+              "default": "\"Translucent\""
             }, {
               "name": "cyclic",
               "type": "boolean",
@@ -834,6 +876,18 @@
               "description": "Defines the number of items per page on small size (up to 640px). One item per page shown by default.",
               "default": "1"
             }, {
+              "name": "page-indicator-background-design",
+              "type": "sap.ui.webc.main.types.BackgroundDesign",
+              "priority": "highest",
+              "description": "Defines the page indicator background design.",
+              "default": "\"Solid\""
+            }, {
+              "name": "page-indicator-border-design",
+              "type": "sap.ui.webc.main.types.BorderDesign",
+              "priority": "highest",
+              "description": "Defines the page indicator border design.",
+              "default": "\"Solid\""
+            }, {
               "name": "page-indicator-style",
               "type": "sap.ui.webc.main.types.CarouselPageIndicatorStyle",
               "priority": "highest",
@@ -852,8 +906,14 @@
                 "name": "arrowsPlacement",
                 "type": "sap.ui.webc.main.types.CarouselArrowsPlacement",
                 "priority": "high",
-                "description": "Defines the position of arrows. <br><br> Available options are: <ul> <li><code>Content</code></li> <li><code>Navigation</code></li> </ul> <br> When set to \"Content\", the arrows are placed on the sides of the current page. <br> When set to \"Navigation\", the arrows are placed on the sides of the page indicator.",
+                "description": "Defines the position of arrows. <br><br> Available options are: <ul> <li><code>Content</code> - the arrows are placed on the sides of the current page.</li> <li><code>Navigation</code> - the arrows are placed on the sides of the page indicator.</li> </ul>",
                 "default": "\"Content\""
+              }, {
+                "name": "backgroundDesign",
+                "type": "sap.ui.webc.main.types.BackgroundDesign",
+                "priority": "high",
+                "description": "Defines the carousel's background design.",
+                "default": "\"Translucent\""
               }, {
                 "name": "cyclic",
                 "type": "boolean",
@@ -890,6 +950,18 @@
                 "priority": "high",
                 "description": "Defines the number of items per page on small size (up to 640px). One item per page shown by default.",
                 "default": "1"
+              }, {
+                "name": "pageIndicatorBackgroundDesign",
+                "type": "sap.ui.webc.main.types.BackgroundDesign",
+                "priority": "high",
+                "description": "Defines the page indicator background design.",
+                "default": "\"Solid\""
+              }, {
+                "name": "pageIndicatorBorderDesign",
+                "type": "sap.ui.webc.main.types.BorderDesign",
+                "priority": "high",
+                "description": "Defines the page indicator border design.",
+                "default": "\"Solid\""
               }, {
                 "name": "pageIndicatorStyle",
                 "type": "sap.ui.webc.main.types.CarouselPageIndicatorStyle",
@@ -993,7 +1065,7 @@
               "name": "wrapping-type",
               "type": "sap.ui.webc.main.types.WrappingType",
               "priority": "highest",
-              "description": "Defines whether the component text wraps when there is not enough space. <br><br> Available options are: <ul> <li><code>None</code> - The text will be truncated with an ellipsis.</li> <li><code>Normal</code> - The text will wrap. The words will not be broken based on hyphenation.</li> </ul>",
+              "description": "Defines whether the component text wraps when there is not enough space. <br><b>Note:</b> for option \"Normal\" the text will wrap and the words will not be broken based on hyphenation.",
               "default": "\"None\""
             }
           ]
@@ -1063,7 +1135,7 @@
                 "name": "wrappingType",
                 "type": "sap.ui.webc.main.types.WrappingType",
                 "priority": "high",
-                "description": "Defines whether the component text wraps when there is not enough space. <br><br> Available options are: <ul> <li><code>None</code> - The text will be truncated with an ellipsis.</li> <li><code>Normal</code> - The text will wrap. The words will not be broken based on hyphenation.</li> </ul>",
+                "description": "Defines whether the component text wraps when there is not enough space. <br><b>Note:</b> for option \"Normal\" the text will wrap and the words will not be broken based on hyphenation.",
                 "default": "\"None\""
               }
             ],
@@ -1292,7 +1364,8 @@
               "name": "accessible-name",
               "type": "string",
               "priority": "highest",
-              "description": "Defines the accessible ARIA name of the component."
+              "description": "Defines the accessible ARIA name of the component.",
+              "default": "\"\""
             }, {
               "name": "accessible-name-ref",
               "type": "string",
@@ -1307,9 +1380,9 @@
               "default": "false"
             }, {
               "name": "filter",
-              "type": "string",
+              "type": "sap.ui.webc.main.types.ComboBoxFilter",
               "priority": "highest",
-              "description": "Defines the filter type of the component. Available options are: <code>StartsWithPerTerm</code>, <code>StartsWith</code>, <code>Contains</code> and <code>None</code>.",
+              "description": "Defines the filter type of the component.",
               "default": "\"StartsWithPerTerm\""
             }, {
               "name": "loading",
@@ -1345,7 +1418,7 @@
               "name": "value-state",
               "type": "sap.ui.webc.base.types.ValueState",
               "priority": "highest",
-              "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+              "description": "Defines the value state of the component.",
               "default": "\"None\""
             }
           ],
@@ -1368,7 +1441,8 @@
                 "name": "accessibleName",
                 "type": "string",
                 "priority": "high",
-                "description": "Defines the accessible ARIA name of the component."
+                "description": "Defines the accessible ARIA name of the component.",
+                "default": "\"\""
               }, {
                 "name": "accessibleNameRef",
                 "type": "string",
@@ -1383,9 +1457,9 @@
                 "default": "false"
               }, {
                 "name": "filter",
-                "type": "string",
+                "type": "sap.ui.webc.main.types.ComboBoxFilter",
                 "priority": "high",
-                "description": "Defines the filter type of the component. Available options are: <code>StartsWithPerTerm</code>, <code>StartsWith</code>, <code>Contains</code> and <code>None</code>.",
+                "description": "Defines the filter type of the component.",
                 "default": "\"StartsWithPerTerm\""
               }, {
                 "name": "loading",
@@ -1421,7 +1495,7 @@
                 "name": "valueState",
                 "type": "sap.ui.webc.base.types.ValueState",
                 "priority": "high",
-                "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+                "description": "Defines the value state of the component.",
                 "default": "\"None\""
               }
             ],
@@ -1538,7 +1612,7 @@
           },
           "deprecated": false,
           "experimental": false,
-          "description": "A component to be used as custom list item within the <code>ui5-list</code> the same way as the standard <code>ui5-li</code>.\n\nThe component accepts arbitrary HTML content to allow full customization.",
+          "description": "A component to be used as custom list item within the <code>ui5-list</code> the same way as the standard <code>ui5-li</code>.\n\nThe component accepts arbitrary HTML content to allow full customization.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-li-custom</code> exposes the following CSS Shadow Parts: <ul> <li>native-li - Used to style the main li tag of the list item</li> <li>content - Used to style the content area of the list item</li> <li>detail-button - Used to style the button rendered when the list item is of type detail</li> <li>delete-button - Used to style the button rendered when the list item is in delete mode</li> <li>radio - Used to style the radio button rendered when the list item is in single selection mode</li> <li>checkbox - Used to style the checkbox rendered when the list item is in multiple selection mode</li> </ul>",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/CustomListItem/",
           "attributes": [{
               "name": "accessible-name",
@@ -1634,7 +1708,7 @@
               "name": "value-state",
               "type": "sap.ui.webc.base.types.ValueState",
               "priority": "highest",
-              "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+              "description": "Defines the value state of the component.",
               "default": "\"None\""
             }
           ],
@@ -1708,7 +1782,7 @@
                 "name": "valueState",
                 "type": "sap.ui.webc.base.types.ValueState",
                 "priority": "high",
-                "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+                "description": "Defines the value state of the component.",
                 "default": "\"None\""
               }
             ],
@@ -1927,7 +2001,7 @@
           },
           "deprecated": false,
           "experimental": false,
-          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-dialog</code> component is used to temporarily display some information in a size-limited window in front of the regular app screen. It is used to prompt the user for an action or a confirmation. The <code>ui5-dialog</code> interrupts the current app processing as it is the only focused UI element and the main screen is dimmed/blocked. The dialog combines concepts known from other technologies where the windows have names such as dialog box, dialog window, pop-up, pop-up window, alert box, or message box. <br><br> The <code>ui5-dialog</code> is modal, which means that an user action is required before it is possible to return to the parent window. To open multiple dialogs, each dialog element should be separate in the markup. This will ensure the correct modal behavior. Avoid nesting dialogs within each other. The content of the <code>ui5-dialog</code> is fully customizable.\n\n<h3>Structure</h3> A <code>ui5-dialog</code> consists of a header, content, and a footer for action buttons. The <code>ui5-dialog</code> is usually displayed at the center of the screen. Its position can be changed by the user. To enable this, you need to set the property <code>draggable</code> accordingly.\n\n<h3>Responsive Behavior</h3> The <code>stretch</code> property can be used to stretch the <code>ui5-dialog</code> on full screen.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-dialog</code> exposes the following CSS Shadow Parts: <ul> <li>header - Used to style the header of the component</li> <li>content - Used to style the content of the component</li> <li>footer - Used to style the footer of the component</li> </ul>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/Dialog\";</code>\n\n<b>Note:</b> We don't recommend nesting popup-like components (<code>ui5-dialog</code>, <code>ui5-popover</code>) inside <code>ui5-dialog</code>. Ideally you should create all popups on the same level inside your HTML page and just open them from one another, rather than nesting them.\n\n<b>Note:</b> We don't recommend nesting popup-like components (<code>ui5-dialog</code>, <code>ui5-popover</code>) inside other components containing z-index. This might break z-index management.",
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-dialog</code> component is used to temporarily display some information in a size-limited window in front of the regular app screen. It is used to prompt the user for an action or a confirmation. The <code>ui5-dialog</code> interrupts the current app processing as it is the only focused UI element and the main screen is dimmed/blocked. The dialog combines concepts known from other technologies where the windows have names such as dialog box, dialog window, pop-up, pop-up window, alert box, or message box. <br><br> The <code>ui5-dialog</code> is modal, which means that an user action is required before it is possible to return to the parent window. To open multiple dialogs, each dialog element should be separate in the markup. This will ensure the correct modal behavior. Avoid nesting dialogs within each other. The content of the <code>ui5-dialog</code> is fully customizable.\n\n<h3>Structure</h3> A <code>ui5-dialog</code> consists of a header, content, and a footer for action buttons. The <code>ui5-dialog</code> is usually displayed at the center of the screen. Its position can be changed by the user. To enable this, you need to set the property <code>draggable</code> accordingly.\n\n<h3>Responsive Behavior</h3> The <code>stretch</code> property can be used to stretch the <code>ui5-dialog</code> on full screen.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-dialog</code> exposes the following CSS Shadow Parts: <ul> <li>header - Used to style the header of the component</li> <li>content - Used to style the content of the component</li> <li>footer - Used to style the footer of the component</li> </ul> <b>Note:</b> When a <code>ui5-bar</code> is used in the header or in the footer, you should remove the default dialog's paddings. <br> For more information see the sample \"Bar in Header/Footer\".\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/Dialog\";</code>\n\n<b>Note:</b> We don't recommend nesting popup-like components (<code>ui5-dialog</code>, <code>ui5-popover</code>) inside <code>ui5-dialog</code>. Ideally you should create all popups on the same level inside your HTML page and just open them from one another, rather than nesting them.\n\n<b>Note:</b> We don't recommend nesting popup-like components (<code>ui5-dialog</code>, <code>ui5-popover</code>) inside other components containing z-index. This might break z-index management.",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/Dialog/",
           "attributes": [{
               "name": "draggable",
@@ -1951,7 +2025,7 @@
               "name": "state",
               "type": "sap.ui.webc.base.types.ValueState",
               "priority": "highest",
-              "description": "Defines the state of the <code>Dialog</code>. <br><br> Available options are: <code>\"None\"</code> (by default), <code>\"Success\"</code>, <code>\"Warning\"</code>, <code>\"Information\"</code> and <code>\"Error\"</code>. <br><br> <b>Note:</b> If <code>\"Error\"</code> and <code>\"Warning\"</code> state is set, it will change the accessibility role to \"alertdialog\", if the accessibleRole property is set to <code>\"Dialog\"</code>.",
+              "description": "Defines the state of the <code>Dialog</code>. <br><b>Note:</b> If <code>\"Error\"</code> and <code>\"Warning\"</code> state is set, it will change the accessibility role to \"alertdialog\", if the accessibleRole property is set to <code>\"Dialog\"</code>.",
               "default": "\"None\""
             }, {
               "name": "stretch",
@@ -1964,11 +2038,11 @@
         "slots": [
             {
               "name": "footer",
-              "description": "Defines the footer HTML Element."
+              "description": "Defines the footer HTML Element. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; When a &lt;code&gt;ui5-bar&lt;/code&gt; is used in the footer, you should remove the default dialog&#39;s paddings."
             }
             , {
               "name": "header",
-              "description": "Defines the header HTML Element. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; If &lt;code&gt;header&lt;/code&gt; slot is provided, the labelling of the dialog is a responsibility of the application developer. &lt;code&gt;accessibleName&lt;/code&gt; should be used."
+              "description": "Defines the header HTML Element. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; When a &lt;code&gt;ui5-bar&lt;/code&gt; is used in the header, you should remove the default dialog&#39;s paddings. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; If &lt;code&gt;header&lt;/code&gt; slot is provided, the labelling of the dialog is a responsibility of the application developer. &lt;code&gt;accessibleName&lt;/code&gt; should be used."
             } ]
           ,
           "js": {
@@ -1994,7 +2068,7 @@
                 "name": "state",
                 "type": "sap.ui.webc.base.types.ValueState",
                 "priority": "high",
-                "description": "Defines the state of the <code>Dialog</code>. <br><br> Available options are: <code>\"None\"</code> (by default), <code>\"Success\"</code>, <code>\"Warning\"</code>, <code>\"Information\"</code> and <code>\"Error\"</code>. <br><br> <b>Note:</b> If <code>\"Error\"</code> and <code>\"Warning\"</code> state is set, it will change the accessibility role to \"alertdialog\", if the accessibleRole property is set to <code>\"Dialog\"</code>.",
+                "description": "Defines the state of the <code>Dialog</code>. <br><b>Note:</b> If <code>\"Error\"</code> and <code>\"Warning\"</code> state is set, it will change the accessibility role to \"alertdialog\", if the accessibleRole property is set to <code>\"Dialog\"</code>.",
                 "default": "\"None\""
               }, {
                 "name": "stretch",
@@ -2071,14 +2145,14 @@
               "name": "value-state",
               "type": "sap.ui.webc.base.types.ValueState",
               "priority": "highest",
-              "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+              "description": "Defines the value state of the component.",
               "default": "\"None\""
             }
           ],
         "slots": [
             {
               "name": "default",
-              "description": "By default the component contains a single input field. With this slot you can pass any content that you wish to add. See the samples for more information."
+              "description": "By default the component contains a single input field. With this slot you can pass any content that you wish to add. See the samples for more information. &lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; If no content is provided in this slot, the component will only consist of an input field and will not be interactable using the keyboard.&lt;br&gt; Also it is not recommended to use any non-interactable components, as it may lead to poor accessibility experience."
             }
             , {
               "name": "valueStateMessage",
@@ -2137,7 +2211,7 @@
                 "name": "valueState",
                 "type": "sap.ui.webc.base.types.ValueState",
                 "priority": "high",
-                "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+                "description": "Defines the value state of the component.",
                 "default": "\"None\""
               }
             ],
@@ -2359,7 +2433,7 @@
               "name": "type",
               "type": "sap.ui.webc.main.types.InputType",
               "priority": "highest",
-              "description": "Defines the HTML type of the component. Available options are: <code>Text</code>, <code>Email</code>, <code>Number</code>, <code>Password</code>, <code>Tel</code>, and <code>URL</code>. <br><br> <b>Notes:</b> <ul> <li>The particular effect of this property differs depending on the browser and the current language settings, especially for type <code>Number</code>.</li> <li>The property is mostly intended to be used with touch devices that use different soft keyboard layouts depending on the given input type.</li> </ul>",
+              "description": "Defines the HTML type of the component. <br><br> <b>Notes:</b> <ul> <li>The particular effect of this property differs depending on the browser and the current language settings, especially for type <code>Number</code>.</li> <li>The property is mostly intended to be used with touch devices that use different soft keyboard layouts depending on the given input type.</li> </ul>",
               "default": "\"Text\""
             }, {
               "name": "value",
@@ -2371,7 +2445,7 @@
               "name": "value-state",
               "type": "sap.ui.webc.base.types.ValueState",
               "priority": "highest",
-              "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+              "description": "Defines the value state of the component.",
               "default": "\"None\""
             }
           ],
@@ -2463,7 +2537,7 @@
                 "name": "type",
                 "type": "sap.ui.webc.main.types.InputType",
                 "priority": "high",
-                "description": "Defines the HTML type of the component. Available options are: <code>Text</code>, <code>Email</code>, <code>Number</code>, <code>Password</code>, <code>Tel</code>, and <code>URL</code>. <br><br> <b>Notes:</b> <ul> <li>The particular effect of this property differs depending on the browser and the current language settings, especially for type <code>Number</code>.</li> <li>The property is mostly intended to be used with touch devices that use different soft keyboard layouts depending on the given input type.</li> </ul>",
+                "description": "Defines the HTML type of the component. <br><br> <b>Notes:</b> <ul> <li>The particular effect of this property differs depending on the browser and the current language settings, especially for type <code>Number</code>.</li> <li>The property is mostly intended to be used with touch devices that use different soft keyboard layouts depending on the given input type.</li> </ul>",
                 "default": "\"Text\""
               }, {
                 "name": "value",
@@ -2475,7 +2549,7 @@
                 "name": "valueState",
                 "type": "sap.ui.webc.base.types.ValueState",
                 "priority": "high",
-                "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+                "description": "Defines the value state of the component.",
                 "default": "\"None\""
               }
             ],
@@ -2535,7 +2609,7 @@
           },
           "deprecated": false,
           "experimental": false,
-          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-label</code> is a component used to represent a label, providing valuable information to the user. Usually it is placed next to a value holder, such as a text field. It informs the user about what data is displayed or expected in the value holder. <br><br> The <code>ui5-label</code> appearance can be influenced by properties, such as <code>required</code> and <code>wrappingType</code>. The appearance of the Label can be configured in a limited way by using the design property. For a broader choice of designs, you can use custom styles.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/Label\";</code>",
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-label</code> is a component used to represent a label for elements like input, textarea, select. <br><br> The <code>for</code> property of the <code>ui5-label</code> must be the same as the id attribute of the related input element.<br><br> Screen readers read out the label, when the user focuses the labelled control. <br><br> The <code>ui5-label</code> appearance can be influenced by properties, such as <code>required</code> and <code>wrappingType</code>. The appearance of the Label can be configured in a limited way by using the design property. For a broader choice of designs, you can use custom styles.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/Label\";</code>",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/Label/",
           "attributes": [{
               "name": "for",
@@ -2559,7 +2633,7 @@
               "name": "wrapping-type",
               "type": "sap.ui.webc.main.types.WrappingType",
               "priority": "highest",
-              "description": "Defines how the text of a component will be displayed when there is not enough space. Available options are: <ul> <li><code>None</code> - The text will be truncated with an ellipsis.</li> <li><code>Normal</code> - The text will wrap. The words will not be broken based on hyphenation.</li> </ul>",
+              "description": "Defines how the text of a component will be displayed when there is not enough space. <br><b>Note:</b> for option \"Normal\" the text will wrap and the words will not be broken based on hyphenation.",
               "default": "\"None\""
             }
           ],
@@ -2592,7 +2666,7 @@
                 "name": "wrappingType",
                 "type": "sap.ui.webc.main.types.WrappingType",
                 "priority": "high",
-                "description": "Defines how the text of a component will be displayed when there is not enough space. Available options are: <ul> <li><code>None</code> - The text will be truncated with an ellipsis.</li> <li><code>Normal</code> - The text will wrap. The words will not be broken based on hyphenation.</li> </ul>",
+                "description": "Defines how the text of a component will be displayed when there is not enough space. <br><b>Note:</b> for option \"Normal\" the text will wrap and the words will not be broken based on hyphenation.",
                 "default": "\"None\""
               }
             ],
@@ -2655,7 +2729,7 @@
               "name": "wrapping-type",
               "type": "sap.ui.webc.main.types.WrappingType",
               "priority": "highest",
-              "description": "Defines how the text of a component will be displayed when there is not enough space. Available options are: <ul> <li><code>None</code> - The text will be truncated with an ellipsis.</li> <li><code>Normal</code> - The text will wrap. The words will not be broken based on hyphenation.</li> </ul>",
+              "description": "Defines how the text of a component will be displayed when there is not enough space. <br><b>Note:</b> for option \"Normal\" the text will wrap and the words will not be broken based on hyphenation.",
               "default": "\"None\""
             }
           ],
@@ -2717,7 +2791,7 @@
                 "name": "wrappingType",
                 "type": "sap.ui.webc.main.types.WrappingType",
                 "priority": "high",
-                "description": "Defines how the text of a component will be displayed when there is not enough space. Available options are: <ul> <li><code>None</code> - The text will be truncated with an ellipsis.</li> <li><code>Normal</code> - The text will wrap. The words will not be broken based on hyphenation.</li> </ul>",
+                "description": "Defines how the text of a component will be displayed when there is not enough space. <br><b>Note:</b> for option \"Normal\" the text will wrap and the words will not be broken based on hyphenation.",
                 "default": "\"None\""
               }
             ],
@@ -3091,7 +3165,7 @@
               {
                 "name": "before-open",
                 "priority": "highest",
-                "description": "Fired before the menu is opened. This event can be cancelled, which will prevent the menu from opening. <b>This event does not bubble.</b>",
+                "description": "Fired before the menu is opened. This event can be cancelled, which will prevent the menu from opening. <b>This event does not bubble.</b> <b>Note:</b> Since 1.14.0 the event is also fired before a sub-menu opens.",
                  "value": {
                       "type": "CustomEvent"
                 }
@@ -3100,7 +3174,7 @@
               {
                 "name": "item-click",
                 "priority": "highest",
-                "description": "Fired when an item is being clicked.",
+                "description": "Fired when an item is being clicked. <b>Note:</b> Since 1.17.0 the event is preventable, allowing the menu to remain open after an item is pressed.",
                  "value": {
                       "type": "CustomEvent"
                 }
@@ -3239,7 +3313,7 @@
               "name": "design",
               "type": "sap.ui.webc.main.types.MessageStripDesign",
               "priority": "highest",
-              "description": "Defines the component type. <br><br> <b>Note:</b> Available options are <code>\"Information\"</code>, <code>\"Positive\"</code>, <code>\"Negative\"</code>, and <code>\"Warning\"</code>.",
+              "description": "Defines the component type.",
               "default": "\"Information\""
             }, {
               "name": "hide-close-button",
@@ -3270,7 +3344,7 @@
                 "name": "design",
                 "type": "sap.ui.webc.main.types.MessageStripDesign",
                 "priority": "high",
-                "description": "Defines the component type. <br><br> <b>Note:</b> Available options are <code>\"Information\"</code>, <code>\"Positive\"</code>, <code>\"Negative\"</code>, and <code>\"Warning\"</code>.",
+                "description": "Defines the component type.",
                 "default": "\"Information\""
               }, {
                 "name": "hideCloseButton",
@@ -3356,7 +3430,8 @@
               "name": "accessible-name",
               "type": "string",
               "priority": "highest",
-              "description": "Defines the accessible ARIA name of the component."
+              "description": "Defines the accessible ARIA name of the component.",
+              "default": "\"\""
             }, {
               "name": "accessible-name-ref",
               "type": "string",
@@ -3377,7 +3452,7 @@
               "default": "false"
             }, {
               "name": "filter",
-              "type": "string",
+              "type": "sap.ui.webc.main.types.ComboBoxFilter",
               "priority": "highest",
               "description": "Defines the filter type of the component. Available options are: <code>StartsWithPerTerm</code>, <code>StartsWith</code>, <code>Contains</code> and <code>None</code>.",
               "default": "\"StartsWithPerTerm\""
@@ -3415,7 +3490,7 @@
               "name": "value-state",
               "type": "sap.ui.webc.base.types.ValueState",
               "priority": "highest",
-              "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+              "description": "Defines the value state of the component. <br><br> Available options are:",
               "default": "\"None\""
             }
           ],
@@ -3438,7 +3513,8 @@
                 "name": "accessibleName",
                 "type": "string",
                 "priority": "high",
-                "description": "Defines the accessible ARIA name of the component."
+                "description": "Defines the accessible ARIA name of the component.",
+                "default": "\"\""
               }, {
                 "name": "accessibleNameRef",
                 "type": "string",
@@ -3459,7 +3535,7 @@
                 "default": "false"
               }, {
                 "name": "filter",
-                "type": "string",
+                "type": "sap.ui.webc.main.types.ComboBoxFilter",
                 "priority": "high",
                 "description": "Defines the filter type of the component. Available options are: <code>StartsWithPerTerm</code>, <code>StartsWith</code>, <code>Contains</code> and <code>None</code>.",
                 "default": "\"StartsWithPerTerm\""
@@ -3503,7 +3579,7 @@
                 "name": "valueState",
                 "type": "sap.ui.webc.base.types.ValueState",
                 "priority": "high",
-                "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+                "description": "Defines the value state of the component. <br><br> Available options are:",
                 "default": "\"None\""
               }
             ],
@@ -3794,6 +3870,12 @@
               "priority": "highest",
               "description": "Indicates whether the transition between the expanded and the collapsed state of the component is animated. By default the animation is enabled.",
               "default": "false"
+            }, {
+              "name": "sticky-header",
+              "type": "boolean",
+              "priority": "highest",
+              "description": "Indicates whether the Panel header is sticky or not. If stickyHeader is set to true, then whenever you scroll the content or the application, the header of the panel will be always visible and a solid color will be used for its design.",
+              "default": "false"
             }
           ],
         "slots": [
@@ -3849,6 +3931,12 @@
                 "priority": "high",
                 "description": "Indicates whether the transition between the expanded and the collapsed state of the component is animated. By default the animation is enabled.",
                 "default": "false"
+              }, {
+                "name": "stickyHeader",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Indicates whether the Panel header is sticky or not. If stickyHeader is set to true, then whenever you scroll the content or the application, the header of the panel will be always visible and a solid color will be used for its design.",
+                "default": "false"
               }
             ],
             "methods": [],
@@ -3902,7 +3990,7 @@
               "name": "horizontal-align",
               "type": "sap.ui.webc.main.types.PopoverHorizontalAlign",
               "priority": "highest",
-              "description": "Determines the horizontal alignment of the component. <br><br> Available options are: <ul> <li><code>Center</code></li> <li><code>Left</code></li> <li><code>Right</code></li> <li><code>Stretch</code></li> </ul>",
+              "description": "Determines the horizontal alignment of the component.",
               "default": "\"Center\""
             }, {
               "name": "modal",
@@ -3920,13 +4008,13 @@
               "name": "placement-type",
               "type": "sap.ui.webc.main.types.PopoverPlacementType",
               "priority": "highest",
-              "description": "Determines on which side the component is placed at. <br><br> Available options are: <ul> <li><code>Left</code></li> <li><code>Right</code></li> <li><code>Top</code></li> <li><code>Bottom</code></li> </ul>",
+              "description": "Determines on which side the component is placed at.",
               "default": "\"Right\""
             }, {
               "name": "vertical-align",
               "type": "sap.ui.webc.main.types.PopoverVerticalAlign",
               "priority": "highest",
-              "description": "Determines the vertical alignment of the component. <br><br> Available options are: <ul> <li><code>Center</code></li> <li><code>Top</code></li> <li><code>Bottom</code></li> <li><code>Stretch</code></li> </ul>",
+              "description": "Determines the vertical alignment of the component.",
               "default": "\"Center\""
             }
           ],
@@ -3969,7 +4057,7 @@
                 "name": "horizontalAlign",
                 "type": "sap.ui.webc.main.types.PopoverHorizontalAlign",
                 "priority": "high",
-                "description": "Determines the horizontal alignment of the component. <br><br> Available options are: <ul> <li><code>Center</code></li> <li><code>Left</code></li> <li><code>Right</code></li> <li><code>Stretch</code></li> </ul>",
+                "description": "Determines the horizontal alignment of the component.",
                 "default": "\"Center\""
               }, {
                 "name": "modal",
@@ -3987,13 +4075,13 @@
                 "name": "placementType",
                 "type": "sap.ui.webc.main.types.PopoverPlacementType",
                 "priority": "high",
-                "description": "Determines on which side the component is placed at. <br><br> Available options are: <ul> <li><code>Left</code></li> <li><code>Right</code></li> <li><code>Top</code></li> <li><code>Bottom</code></li> </ul>",
+                "description": "Determines on which side the component is placed at.",
                 "default": "\"Right\""
               }, {
                 "name": "verticalAlign",
                 "type": "sap.ui.webc.main.types.PopoverVerticalAlign",
                 "priority": "high",
-                "description": "Determines the vertical alignment of the component. <br><br> Available options are: <ul> <li><code>Center</code></li> <li><code>Top</code></li> <li><code>Bottom</code></li> <li><code>Stretch</code></li> </ul>",
+                "description": "Determines the vertical alignment of the component.",
                 "default": "\"Center\""
               }
             ],
@@ -4019,6 +4107,12 @@
           "description": "<h3 class=\"comment-api-title\">Overview</h3> Shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color.\n\n<h3>Responsive Behavior</h3> You can change the size of the Progress Indicator by changing its <code>width</code> or <code>height</code> CSS properties.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/ProgressIndicator.js\";</code>",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ProgressIndicator/",
           "attributes": [{
+              "name": "accessible-name",
+              "type": "string",
+              "priority": "highest",
+              "description": "Defines the accessible ARIA name of the component.",
+              "default": "\"\""
+            }, {
               "name": "disabled",
               "type": "boolean",
               "priority": "highest",
@@ -4052,6 +4146,12 @@
           ,
           "js": {
             "properties": [{
+                "name": "accessibleName",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the accessible ARIA name of the component.",
+                "default": "\"\""
+              }, {
                 "name": "disabled",
                 "type": "boolean",
                 "priority": "high",
@@ -4153,13 +4253,13 @@
               "name": "value-state",
               "type": "sap.ui.webc.base.types.ValueState",
               "priority": "highest",
-              "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+              "description": "Defines the value state of the component.",
               "default": "\"None\""
             }, {
               "name": "wrapping-type",
               "type": "sap.ui.webc.main.types.WrappingType",
               "priority": "highest",
-              "description": "Defines whether the component text wraps when there is not enough space. <br><br> Available options are: <ul> <li><code>None</code> - The text will be truncated with an ellipsis.</li> <li><code>Normal</code> - The text will wrap. The words will not be broken based on hyphenation.</li> </ul>",
+              "description": "Defines whether the component text wraps when there is not enough space. <br><b>Note:</b> for option \"Normal\" the text will wrap and the words will not be broken based on hyphenation.",
               "default": "\"None\""
             }
           ]
@@ -4223,13 +4323,13 @@
                 "name": "valueState",
                 "type": "sap.ui.webc.base.types.ValueState",
                 "priority": "high",
-                "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+                "description": "Defines the value state of the component.",
                 "default": "\"None\""
               }, {
                 "name": "wrappingType",
                 "type": "sap.ui.webc.main.types.WrappingType",
                 "priority": "high",
-                "description": "Defines whether the component text wraps when there is not enough space. <br><br> Available options are: <ul> <li><code>None</code> - The text will be truncated with an ellipsis.</li> <li><code>Normal</code> - The text will wrap. The words will not be broken based on hyphenation.</li> </ul>",
+                "description": "Defines whether the component text wraps when there is not enough space. <br><b>Note:</b> for option \"Normal\" the text will wrap and the words will not be broken based on hyphenation.",
                 "default": "\"None\""
               }
             ],
@@ -4305,6 +4405,12 @@
               "priority": "highest",
               "description": "Defines the accessible ARIA name of the component."
             }, {
+              "name": "accessible-name-ref",
+              "type": "string",
+              "priority": "highest",
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "default": "\"\""
+            }, {
               "name": "disabled",
               "type": "boolean",
               "priority": "highest",
@@ -4323,6 +4429,12 @@
               "description": "Defines whether the component is read-only. <br><br> <b>Note:</b> A read-only component is not editable, but still provides visual feedback upon user interaction.",
               "default": "false"
             }, {
+              "name": "required",
+              "type": "boolean",
+              "priority": "highest",
+              "description": "Defines whether the component is required.",
+              "default": "false"
+            }, {
               "name": "value",
               "type": "sap.ui.webc.base.types.Float",
               "priority": "highest",
@@ -4337,6 +4449,12 @@
                 "type": "string",
                 "priority": "high",
                 "description": "Defines the accessible ARIA name of the component."
+              }, {
+                "name": "accessibleNameRef",
+                "type": "string",
+                "priority": "high",
+                "description": "Receives id(or many ids) of the elements that label the component.",
+                "default": "\"\""
               }, {
                 "name": "disabled",
                 "type": "boolean",
@@ -4354,6 +4472,12 @@
                 "type": "boolean",
                 "priority": "high",
                 "description": "Defines whether the component is read-only. <br><br> <b>Note:</b> A read-only component is not editable, but still provides visual feedback upon user interaction.",
+                "default": "false"
+              }, {
+                "name": "required",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Defines whether the component is required.",
                 "default": "false"
               }, {
                 "name": "value",
@@ -4435,6 +4559,12 @@
               "priority": "highest",
               "description": "Defines the accessible ARIA name of the component.",
               "default": "undefined"
+            }, {
+              "name": "mode",
+              "type": "sap.ui.webc.main.types.SegmentedButtonMode",
+              "priority": "highest",
+              "description": "Defines the component selection mode.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>SingleSelect</code></li> <li><code>MultiSelect</code></li> </ul>",
+              "default": "\"SingleSelect\""
             }
           ],
         "slots": [
@@ -4451,10 +4581,21 @@
                 "description": "Defines the accessible ARIA name of the component.",
                 "default": "undefined"
               }, {
+                "name": "mode",
+                "type": "sap.ui.webc.main.types.SegmentedButtonMode",
+                "priority": "high",
+                "description": "Defines the component selection mode.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>SingleSelect</code></li> <li><code>MultiSelect</code></li> </ul>",
+                "default": "\"SingleSelect\""
+              }, {
                 "name": "selectedItem",
                 "type": "sap.ui.webc.main.ISegmentedButtonItem",
                 "priority": "high",
                 "description": "Currently selected item."
+              }, {
+                "name": "selectedItems",
+                "type": "sap.ui.webc.main.ISegmentedButtonItem[]",
+                "priority": "high",
+                "description": "Returns an array of the currently selected items."
               }
             ],
             "methods": [],
@@ -4533,7 +4674,7 @@
           },
           "deprecated": false,
           "experimental": false,
-          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-select</code> component is used to create a drop-down list. The items inside the <code>ui5-select</code> define the available options by using the <code>ui5-option</code> component.\n\n<h3>Keyboard Handling</h3> The <code>ui5-select</code> provides advanced keyboard handling. <br> <ul> <li>[F4, ALT+UP, ALT+DOWN, SPACE, ENTER] - Opens/closes the drop-down.</li> <li>[UP, DOWN] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.</li> <li>[SPACE, ENTER] - If the drop-down is opened - selects the focused option.</li> <li>[ESC] - Closes the drop-down without changing the selection.</li> <li>[HOME] - Navigates to first option</li> <li>[END] - Navigates to the last option</li> </ul> <br>\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents/dist/Select\";</code> <br> <code>import \"@ui5/webcomponents/dist/Option\";</code> (comes with <code>ui5-select</code>)",
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-select</code> component is used to create a drop-down list.\n\n<h3>Usage</h3>\n\nThere are two main usages of the <code>ui5-select></code>.\n\n1. With Option (<code>ui5-option</code>) web component: <br> The available options of the Select are defined by using the Option component. The Option comes with predefined design and layout, including <code>icon</code>, <code>text</code> and <code>additional-text</code>. <br><br>\n\n2. With SelectMenu (<code>ui5-select-menu</code>) and SelectMenuOption (<code>ui5-select-menu-option</code>) web components: <br> The SelectMenu can be used as alternative to define the Select's dropdown and can be used via the <code>menu</code> property of the Select to reference SelectMenu by its ID. The component gives the possibility to customize the Select's dropdown by slotting entirely custom options (via the SelectMenuOption component) and adding custom styles.\n\n<b>Note:</b> SelectMenu is a popover and placing it top-level in the HTML page is recommended, because some page styles (for example transitions) can misplace the SelectMenu.\n\n<h3>Keyboard Handling</h3> The <code>ui5-select</code> provides advanced keyboard handling. <br> <ul> <li>[F4, ALT+UP, ALT+DOWN, SPACE, ENTER] - Opens/closes the drop-down.</li> <li>[UP, DOWN] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.</li> <li>[SPACE, ENTER] - If the drop-down is opened - selects the focused option.</li> <li>[ESC] - Closes the drop-down without changing the selection.</li> <li>[HOME] - Navigates to first option</li> <li>[END] - Navigates to the last option</li> </ul> <br>\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents/dist/Select\";</code> <br> <code>import \"@ui5/webcomponents/dist/Option\";</code> (comes with <code>ui5-select</code>)",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/Select/",
           "attributes": [{
               "name": "accessible-name",
@@ -4553,6 +4694,12 @@
               "priority": "highest",
               "description": "Defines whether the component is in disabled state. <br><br> <b>Note:</b> A disabled component is noninteractive.",
               "default": "false"
+            }, {
+              "name": "menu",
+              "type": "sap.ui.webc.base.types.DOMReference",
+              "priority": "highest",
+              "description": "Defines a reference (ID or DOM element) of component's menu of options as alternative to define the select's dropdown. <br><br> <b>Note:</b> Usage of <code>ui5-select-menu</code> is recommended.",
+              "default": "undefined"
             }, {
               "name": "name",
               "type": "string",
@@ -4579,6 +4726,10 @@
               "description": "Defines the component options.\n\n&lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Only one selected option is allowed. If more than one option is defined as selected, the last one would be considered as the selected one.\n\n&lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Use the &lt;code&gt;ui5-option&lt;/code&gt; component to define the desired options."
             }
             , {
+              "name": "label",
+              "description": "Defines the HTML element that will be displayed in the component input part, representing the selected option. &lt;br&gt;&lt;br&gt;\n\n&lt;b&gt;Note:&lt;/b&gt; If not specified and &lt;code&gt;ui5-select-menu-option&lt;/code&gt; is used, either the option&#39;s &lt;code&gt;display-text&lt;/code&gt; or its textContent will be displayed. &lt;br&gt;&lt;br&gt;\n\n&lt;b&gt;Note:&lt;/b&gt; If not specified and &lt;code&gt;ui5-option&lt;/code&gt; is used, the option&#39;s textContent will be displayed."
+            }
+            , {
               "name": "valueStateMessage",
               "description": "Defines the value state message that will be displayed as pop up under the component. &lt;br&gt;&lt;br&gt;\n\n&lt;b&gt;Note:&lt;/b&gt; If not specified, a default text (in the respective language) will be displayed. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; The &lt;code&gt;valueStateMessage&lt;/code&gt; would be displayed, when the component is in &lt;code&gt;Information&lt;/code&gt;, &lt;code&gt;Warning&lt;/code&gt; or &lt;code&gt;Error&lt;/code&gt; value state. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; If the component has &lt;code&gt;suggestionItems&lt;/code&gt;, the &lt;code&gt;valueStateMessage&lt;/code&gt; would be displayed as part of the same popover, if used on desktop, or dialog - on phone."
             } ]
@@ -4602,6 +4753,12 @@
                 "priority": "high",
                 "description": "Defines whether the component is in disabled state. <br><br> <b>Note:</b> A disabled component is noninteractive.",
                 "default": "false"
+              }, {
+                "name": "menu",
+                "type": "sap.ui.webc.base.types.DOMReference",
+                "priority": "high",
+                "description": "Defines a reference (ID or DOM element) of component's menu of options as alternative to define the select's dropdown. <br><br> <b>Note:</b> Usage of <code>ui5-select-menu</code> is recommended.",
+                "default": "undefined"
               }, {
                 "name": "name",
                 "type": "string",
@@ -4649,6 +4806,15 @@
               }
               , 
               {
+                "name": "live-change",
+                "priority": "highest",
+                "description": "Fired when the user navigates through the options, but the selection is not finalized, or when pressing the ESC key to revert the current selection.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
                 "name": "open",
                 "priority": "highest",
                 "description": "Fired after the component's dropdown menu opens.",
@@ -4656,6 +4822,105 @@
                       "type": "CustomEvent"
                 }
               } ]
+        }
+      }, 
+          {
+          "name": "ui5-select-menu",
+          "source": {
+            "module": "./SelectMenu.d.ts",
+            "symbol": "default"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-select-menu</code> is meant to be used together with the <code>ui5-select</code> component as alternative to define the select's dropdown. It acts as a popover on desktop and tablet, and as a Dialog on phone. <br></br> The component gives the possibility to the user to customize the <code>ui5-select</code>'s dropdown by slotting custom options and adding custom styles.\n\n<h3>Usage</h3>\n\nTo use <code>ui5-select</code> with a <code>ui5-select-menu</code>, you need to set the <code>ui5-select</code> <code>menu</code> property to reference <code>ui5-select-menu</code> either by ID or DOM reference. <br></br>\n\nFor the <code>ui5-select-menu</code> <h3>ES6 Module Import</h3>\n\n<code>import @ui5/webcomponents/dist/SelectMenu.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/SelectMenu/",
+          "attributes": [
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the options of the component."
+            } ]
+          ,
+          "js": {
+            "properties": [
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-select-menu-option",
+          "source": {
+            "module": "./SelectMenuOption.d.ts",
+            "symbol": "default"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The code>ui5-select-menu-option</code> component represents an option in the <code>ui5-select-menu</code>.\n\n<h3>Usage</h3>\n\nFor the <code>ui5-select-menu-option</code> <h3>ES6 Module Import</h3>\n\n<code>import @ui5/webcomponents/dist/SelectMenuOption.js\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/SelectMenuOption/",
+          "attributes": [{
+              "name": "display-text",
+              "type": "string",
+              "priority": "highest",
+              "description": "Defines the text, displayed inside the <code>ui5-select</code> input filed when the option gets selected."
+            }, {
+              "name": "navigated",
+              "type": "boolean",
+              "priority": "highest",
+              "description": "<b>Note:</b> The property is inherited and not supported. If set, it won't take any effect."
+            }, {
+              "name": "type",
+              "type": "sap.ui.webc.main.types.ListItemType",
+              "priority": "highest",
+              "description": "<b>Note:</b> The property is inherited and not supported. If set, it won't take any effect.",
+              "default": "\"Active\""
+            }, {
+              "name": "value",
+              "type": "string",
+              "priority": "highest",
+              "description": "Defines the value of the <code>ui5-select</code> inside an HTML Form element when this component is selected. For more information on HTML Form support, see the <code>name</code> property of <code>ui5-select</code>."
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the content of the component. &lt;br&gt;&lt;br&gt;"
+            }
+            , {
+              "name": "deleteButton",
+              "description": "&lt;b&gt;Note:&lt;/b&gt; The slot is inherited and not supported. If set, it won&#39;t take any effect."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "accessibilityAttributes",
+                "type": "object",
+                "priority": "high",
+                "description": "<b>Note:</b> The property is inherited and not supported. If set, it won't take any effect."
+              }, {
+                "name": "displayText",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the text, displayed inside the <code>ui5-select</code> input filed when the option gets selected."
+              }, {
+                "name": "navigated",
+                "type": "boolean",
+                "priority": "high",
+                "description": "<b>Note:</b> The property is inherited and not supported. If set, it won't take any effect."
+              }, {
+                "name": "type",
+                "type": "sap.ui.webc.main.types.ListItemType",
+                "priority": "high",
+                "description": "<b>Note:</b> The property is inherited and not supported. If set, it won't take any effect.",
+                "default": "\"Active\""
+              }, {
+                "name": "value",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the value of the <code>ui5-select</code> inside an HTML Form element when this component is selected. For more information on HTML Form support, see the <code>name</code> property of <code>ui5-select</code>."
+              }
+            ],
+            "methods": []
         }
       }, 
           {
@@ -4690,138 +4955,6 @@
         }
       }, 
           {
-          "name": "ui5-slider",
-          "source": {
-            "module": "./SliderBase.d.ts",
-            "symbol": "default"
-          },
-          "deprecated": false,
-          "experimental": false,
-          "description": "<h3 class=\"comment-api-title\">Overview</h3>",
-          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/SliderBase/",
-          "attributes": [{
-              "name": "accessible-name",
-              "type": "string",
-              "priority": "highest",
-              "description": "Defines the accessible ARIA name of the component."
-            }, {
-              "name": "disabled",
-              "type": "boolean",
-              "priority": "highest",
-              "description": "Defines whether the slider is in disabled state.",
-              "default": "false"
-            }, {
-              "name": "label-interval",
-              "type": "sap.ui.webc.base.types.Integer",
-              "priority": "highest",
-              "description": "Displays a label with a value on every N-th step. <br><br> <b>Note:</b> The step and tickmarks properties must be enabled. Example - if the step value is set to 2 and the label interval is also specified to 2 - then every second tickmark will be labelled, which means every 4th value number.",
-              "default": "0"
-            }, {
-              "name": "max",
-              "type": "sap.ui.webc.base.types.Float",
-              "priority": "highest",
-              "description": "Defines the maximum value of the slider.",
-              "default": "100"
-            }, {
-              "name": "min",
-              "type": "sap.ui.webc.base.types.Float",
-              "priority": "highest",
-              "description": "Defines the minimum value of the slider.",
-              "default": "0"
-            }, {
-              "name": "show-tickmarks",
-              "type": "boolean",
-              "priority": "highest",
-              "description": "Enables tickmarks visualization for each step. <br><br> <b>Note:</b> The step must be a positive number.",
-              "default": "false"
-            }, {
-              "name": "show-tooltip",
-              "type": "boolean",
-              "priority": "highest",
-              "description": "Enables handle tooltip displaying the current value.",
-              "default": "false"
-            }, {
-              "name": "step",
-              "type": "sap.ui.webc.base.types.Integer",
-              "priority": "highest",
-              "description": "Defines the size of the slider's selection intervals (e.g. min = 0, max = 10, step = 5 would result in possible selection of the values 0, 5, 10). <br><br> <b>Note:</b> If set to 0 the slider handle movement is disabled. When negative number or value other than a number, the component fallbacks to its default value.",
-              "default": "1"
-            }
-          ]
-          ,
-          "js": {
-            "properties": [{
-                "name": "accessibleName",
-                "type": "string",
-                "priority": "high",
-                "description": "Defines the accessible ARIA name of the component."
-              }, {
-                "name": "disabled",
-                "type": "boolean",
-                "priority": "high",
-                "description": "Defines whether the slider is in disabled state.",
-                "default": "false"
-              }, {
-                "name": "labelInterval",
-                "type": "sap.ui.webc.base.types.Integer",
-                "priority": "high",
-                "description": "Displays a label with a value on every N-th step. <br><br> <b>Note:</b> The step and tickmarks properties must be enabled. Example - if the step value is set to 2 and the label interval is also specified to 2 - then every second tickmark will be labelled, which means every 4th value number.",
-                "default": "0"
-              }, {
-                "name": "max",
-                "type": "sap.ui.webc.base.types.Float",
-                "priority": "high",
-                "description": "Defines the maximum value of the slider.",
-                "default": "100"
-              }, {
-                "name": "min",
-                "type": "sap.ui.webc.base.types.Float",
-                "priority": "high",
-                "description": "Defines the minimum value of the slider.",
-                "default": "0"
-              }, {
-                "name": "showTickmarks",
-                "type": "boolean",
-                "priority": "high",
-                "description": "Enables tickmarks visualization for each step. <br><br> <b>Note:</b> The step must be a positive number.",
-                "default": "false"
-              }, {
-                "name": "showTooltip",
-                "type": "boolean",
-                "priority": "high",
-                "description": "Enables handle tooltip displaying the current value.",
-                "default": "false"
-              }, {
-                "name": "step",
-                "type": "sap.ui.webc.base.types.Integer",
-                "priority": "high",
-                "description": "Defines the size of the slider's selection intervals (e.g. min = 0, max = 10, step = 5 would result in possible selection of the values 0, 5, 10). <br><br> <b>Note:</b> If set to 0 the slider handle movement is disabled. When negative number or value other than a number, the component fallbacks to its default value.",
-                "default": "1"
-              }
-            ],
-            "methods": [],
-            "events": [
-              
-              {
-                "name": "change",
-                "priority": "highest",
-                "description": "Fired when the value changes and the user has finished interacting with the slider.",
-                 "value": {
-                      "type": "CustomEvent"
-                }
-              }
-              , 
-              {
-                "name": "input",
-                "priority": "highest",
-                "description": "Fired when the value changes due to user interaction that is not yet finished - during mouse/touch dragging.",
-                 "value": {
-                      "type": "CustomEvent"
-                }
-              } ]
-        }
-      }, 
-          {
           "name": "ui5-split-button",
           "source": {
             "module": "./SplitButton.d.ts",
@@ -4846,7 +4979,7 @@
               "name": "design",
               "type": "sap.ui.webc.main.types.ButtonDesign",
               "priority": "highest",
-              "description": "Defines the component design.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> <li><code>Attention</code></li> </ul>",
+              "description": "Defines the component design.",
               "default": "\"Default\""
             }, {
               "name": "disabled",
@@ -4884,7 +5017,7 @@
                 "name": "design",
                 "type": "sap.ui.webc.main.types.ButtonDesign",
                 "priority": "high",
-                "description": "Defines the component design.\n\n<br><br> <b>The available values are:</b>\n\n<ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> <li><code>Attention</code></li> </ul>",
+                "description": "Defines the component design.",
                 "default": "\"Default\""
               }, {
                 "name": "disabled",
@@ -4930,7 +5063,7 @@
           },
           "deprecated": false,
           "experimental": false,
-          "description": "The <code>ui5-li</code> represents the simplest type of item for a <code>ui5-list</code>.\n\nThis is a list item, providing the most common use cases such as <code>text</code>, <code>image</code> and <code>icon</code>.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-li</code> exposes the following CSS Shadow Parts: <ul> <li>title - Used to style the title of the list item</li> <li>description - Used to style the description of the list item</li> <li>additional-text - Used to style the additionalText of the list item</li> <li>icon - Used to style the icon of the list item</li> </ul>",
+          "description": "The <code>ui5-li</code> represents the simplest type of item for a <code>ui5-list</code>.\n\nThis is a list item, providing the most common use cases such as <code>text</code>, <code>image</code> and <code>icon</code>.\n\n<h3>CSS Shadow Parts</h3>\n\n<ui5-link target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::part\">CSS Shadow Parts</ui5-link> allow developers to style elements inside the Shadow DOM. <br> The <code>ui5-li</code> exposes the following CSS Shadow Parts: <ul> <li>title - Used to style the title of the list item</li> <li>description - Used to style the description of the list item</li> <li>additional-text - Used to style the additionalText of the list item</li> <li>icon - Used to style the icon of the list item</li> <li>native-li - Used to style the main li tag of the list item</li> <li>content - Used to style the content area of the list item</li> <li>detail-button - Used to style the button rendered when the list item is of type detail</li> <li>delete-button - Used to style the button rendered when the list item is in delete mode</li> <li>radio - Used to style the radio button rendered when the list item is in single selection mode</li> <li>checkbox - Used to style the checkbox rendered when the list item is in multiple selection mode</li> </ul>",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/StandardListItem/",
           "attributes": [{
               "name": "accessible-name",
@@ -5109,7 +5242,7 @@
               "name": "value-state",
               "type": "sap.ui.webc.base.types.ValueState",
               "priority": "highest",
-              "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+              "description": "Defines the value state of the component.",
               "default": "\"None\""
             }
           ],
@@ -5193,7 +5326,7 @@
                 "name": "valueState",
                 "type": "sap.ui.webc.base.types.ValueState",
                 "priority": "high",
-                "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul>",
+                "description": "Defines the value state of the component.",
                 "default": "\"None\""
               }
             ],
@@ -5388,16 +5521,28 @@
               "description": "Defines whether the component is disabled. <br><br> <b>Note:</b> A disabled component is noninteractive.",
               "default": "false"
             }, {
+              "name": "name",
+              "type": "string",
+              "priority": "highest",
+              "description": "Determines the name with which the component will be submitted in an HTML form.\n\n<br><br> <b>Important:</b> For the <code>name</code> property to have effect, you must add the following import to your project: <code>import \"@ui5/webcomponents/dist/features/InputElementsFormSupport.js\";</code>\n\n<br><br> <b>Note:</b> When set, a native <code>input</code> HTML element will be created inside the component so that it can be submitted as part of an HTML form. Do not use this property unless you need to submit a form.",
+              "default": "\"\""
+            }, {
+              "name": "required",
+              "type": "boolean",
+              "priority": "highest",
+              "description": "Defines whether the component is required.",
+              "default": "false"
+            }, {
               "name": "text-off",
               "type": "string",
               "priority": "highest",
-              "description": "Defines the text, displayed when the component is not checked. <br><br> <b>Note:</b> We recommend using short texts, up to 3 letters (larger texts would be cut off). <b>Note:</b> This property will have no effect if the theme is set to <code>sap_horizon</code>.",
+              "description": "Defines the text, displayed when the component is not checked. <br><br> <b>Note:</b> We recommend using short texts, up to 3 letters (larger texts would be cut off).",
               "default": "\"\""
             }, {
               "name": "text-on",
               "type": "string",
               "priority": "highest",
-              "description": "Defines the text, displayed when the component is checked.\n\n<br><br> <b>Note:</b> We recommend using short texts, up to 3 letters (larger texts would be cut off). <b>Note:</b> This property will have no effect if the theme is set to <code>sap_horizon</code>.",
+              "description": "Defines the text, displayed when the component is checked.\n\n<br><br> <b>Note:</b> We recommend using short texts, up to 3 letters (larger texts would be cut off).",
               "default": "\"\""
             }, {
               "name": "tooltip",
@@ -5438,16 +5583,28 @@
                 "description": "Defines whether the component is disabled. <br><br> <b>Note:</b> A disabled component is noninteractive.",
                 "default": "false"
               }, {
+                "name": "name",
+                "type": "string",
+                "priority": "high",
+                "description": "Determines the name with which the component will be submitted in an HTML form.\n\n<br><br> <b>Important:</b> For the <code>name</code> property to have effect, you must add the following import to your project: <code>import \"@ui5/webcomponents/dist/features/InputElementsFormSupport.js\";</code>\n\n<br><br> <b>Note:</b> When set, a native <code>input</code> HTML element will be created inside the component so that it can be submitted as part of an HTML form. Do not use this property unless you need to submit a form.",
+                "default": "\"\""
+              }, {
+                "name": "required",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Defines whether the component is required.",
+                "default": "false"
+              }, {
                 "name": "textOff",
                 "type": "string",
                 "priority": "high",
-                "description": "Defines the text, displayed when the component is not checked. <br><br> <b>Note:</b> We recommend using short texts, up to 3 letters (larger texts would be cut off). <b>Note:</b> This property will have no effect if the theme is set to <code>sap_horizon</code>.",
+                "description": "Defines the text, displayed when the component is not checked. <br><br> <b>Note:</b> We recommend using short texts, up to 3 letters (larger texts would be cut off).",
                 "default": "\"\""
               }, {
                 "name": "textOn",
                 "type": "string",
                 "priority": "high",
-                "description": "Defines the text, displayed when the component is checked.\n\n<br><br> <b>Note:</b> We recommend using short texts, up to 3 letters (larger texts would be cut off). <b>Note:</b> This property will have no effect if the theme is set to <code>sap_horizon</code>.",
+                "description": "Defines the text, displayed when the component is checked.\n\n<br><br> <b>Note:</b> We recommend using short texts, up to 3 letters (larger texts would be cut off).",
                 "default": "\"\""
               }, {
                 "name": "tooltip",
@@ -5621,13 +5778,13 @@
               "name": "tab-layout",
               "type": "sap.ui.webc.main.types.TabLayout",
               "priority": "highest",
-              "description": "Defines the alignment of the content and the <code>additionalText</code> of a tab.\n\n<br><br> <b>Note:</b> The content and the <code>additionalText</code> would be displayed vertically by default, but when set to <code>Inline</code>, they would be displayed horizontally.\n\n<br><br> Available options are: <ul> <li><code>Standard</code></li> <li><code>Inline</code></li> </ul>",
+              "description": "Defines the alignment of the content and the <code>additionalText</code> of a tab.\n\n<br> <b>Note:</b> The content and the <code>additionalText</code> would be displayed vertically by default, but when set to <code>Inline</code>, they would be displayed horizontally.",
               "default": "\"Standard\""
             }, {
               "name": "tabs-overflow-mode",
               "type": "sap.ui.webc.main.types.TabsOverflowMode",
               "priority": "highest",
-              "description": "Defines the overflow mode of the header (the tab strip). If you have a large number of tabs, only the tabs that can fit on screen will be visible. All other tabs that can 't fit on the screen are available in an overflow tab \"More\".\n\n<br><br> <b>Note:</b> Only one overflow at the end would be displayed by default, but when set to <code>StartAndEnd</code>, there will be two overflows on both ends, and tab order will not change on tab selection.\n\n<br><br> Available options are: <ul> <li><code>End</code></li> <li><code>StartAndEnd</code></li> </ul>",
+              "description": "Defines the overflow mode of the header (the tab strip). If you have a large number of tabs, only the tabs that can fit on screen will be visible. All other tabs that can 't fit on the screen are available in an overflow tab \"More\".\n\n<br> <b>Note:</b> Only one overflow at the end would be displayed by default, but when set to <code>StartAndEnd</code>, there will be two overflows on both ends, and tab order will not change on tab selection.",
               "default": "\"End\""
             }
           ],
@@ -5685,13 +5842,13 @@
                 "name": "tabLayout",
                 "type": "sap.ui.webc.main.types.TabLayout",
                 "priority": "high",
-                "description": "Defines the alignment of the content and the <code>additionalText</code> of a tab.\n\n<br><br> <b>Note:</b> The content and the <code>additionalText</code> would be displayed vertically by default, but when set to <code>Inline</code>, they would be displayed horizontally.\n\n<br><br> Available options are: <ul> <li><code>Standard</code></li> <li><code>Inline</code></li> </ul>",
+                "description": "Defines the alignment of the content and the <code>additionalText</code> of a tab.\n\n<br> <b>Note:</b> The content and the <code>additionalText</code> would be displayed vertically by default, but when set to <code>Inline</code>, they would be displayed horizontally.",
                 "default": "\"Standard\""
               }, {
                 "name": "tabsOverflowMode",
                 "type": "sap.ui.webc.main.types.TabsOverflowMode",
                 "priority": "high",
-                "description": "Defines the overflow mode of the header (the tab strip). If you have a large number of tabs, only the tabs that can fit on screen will be visible. All other tabs that can 't fit on the screen are available in an overflow tab \"More\".\n\n<br><br> <b>Note:</b> Only one overflow at the end would be displayed by default, but when set to <code>StartAndEnd</code>, there will be two overflows on both ends, and tab order will not change on tab selection.\n\n<br><br> Available options are: <ul> <li><code>End</code></li> <li><code>StartAndEnd</code></li> </ul>",
+                "description": "Defines the overflow mode of the header (the tab strip). If you have a large number of tabs, only the tabs that can fit on screen will be visible. All other tabs that can 't fit on the screen are available in an overflow tab \"More\".\n\n<br> <b>Note:</b> Only one overflow at the end would be displayed by default, but when set to <code>StartAndEnd</code>, there will be two overflows on both ends, and tab order will not change on tab selection.",
                 "default": "\"End\""
               }
             ],
@@ -5769,7 +5926,7 @@
               "name": "mode",
               "type": "sap.ui.webc.main.types.TableMode",
               "priority": "highest",
-              "description": "Defines the mode of the component. <br><br> Available options are: <ul> <li><code>MultiSelect</code></li> <li><code>SingleSelect</code></li> <li><code>None</code></li> <ul>",
+              "description": "Defines the mode of the component.",
               "default": "\"None\""
             }, {
               "name": "no-data-text",
@@ -5847,7 +6004,7 @@
                 "name": "mode",
                 "type": "sap.ui.webc.main.types.TableMode",
                 "priority": "high",
-                "description": "Defines the mode of the component. <br><br> Available options are: <ul> <li><code>MultiSelect</code></li> <li><code>SingleSelect</code></li> <li><code>None</code></li> <ul>",
+                "description": "Defines the mode of the component.",
                 "default": "\"None\""
               }, {
                 "name": "noDataText",
@@ -6201,7 +6358,7 @@
               "name": "value-state",
               "type": "sap.ui.webc.base.types.ValueState",
               "priority": "highest",
-              "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul> <br><br> <b>Note:</b> If <code>maxlength</code> property is set, the component turns into \"Warning\" state once the characters exceeds the limit. In this case, only the \"Error\" state is considered and can be applied.",
+              "description": "Defines the value state of the component. <br><br>\n\n<b>Note:</b> If <code>maxlength</code> property is set, the component turns into \"Warning\" state once the characters exceeds the limit. In this case, only the \"Error\" state is considered and can be applied.",
               "default": "\"None\""
             }
           ],
@@ -6293,7 +6450,7 @@
                 "name": "valueState",
                 "type": "sap.ui.webc.base.types.ValueState",
                 "priority": "high",
-                "description": "Defines the value state of the component. <br><br> Available options are: <ul> <li><code>None</code></li> <li><code>Error</code></li> <li><code>Warning</code></li> <li><code>Success</code></li> <li><code>Information</code></li> </ul> <br><br> <b>Note:</b> If <code>maxlength</code> property is set, the component turns into \"Warning\" state once the characters exceeds the limit. In this case, only the \"Error\" state is considered and can be applied.",
+                "description": "Defines the value state of the component. <br><br>\n\n<b>Note:</b> If <code>maxlength</code> property is set, the component turns into \"Warning\" state once the characters exceeds the limit. In this case, only the \"Error\" state is considered and can be applied.",
                 "default": "\"None\""
               }
             ],
@@ -6327,7 +6484,7 @@
           },
           "deprecated": false,
           "experimental": false,
-          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-time-picker</code> component provides an input field with assigned sliders which are opened on user action. The <code>ui5-time-picker</code> allows users to select a localized time using touch, mouse, or keyboard input. It consists of two parts: the time input field and the sliders.\n\n<h3>Usage</h3> The user can enter a time by: <ul> <li>Using the sliders that are displayed in a popup</li> <li>Typing it in directly in the input field</li> </ul> <br><br> When the user makes an entry and chooses the enter key, the sliders shows the corresponding time. When the user directly triggers the sliders display, the actual time is displayed. For the <code>ui5-time-picker</code>\n\n<h3>Formatting</h3>\n\nIf a time is entered by typing it into the input field, it must fit to the used time format. <br><br> Supported format options are pattern-based on Unicode LDML Date Format notation. For more information, see <ui5-link target=\"_blank\" href=\"http://unicode.org/reports/tr35/#Date_Field_Symbol_Table\">UTS #35: Unicode Locale Data Markup Language</ui5-link>. <br><br> For example, if the <code>format-pattern</code> is \"HH:mm:ss\", a valid value string is \"11:42:35\" and the same is displayed in the input.\n\n<h3>Keyboard handling</h3> [F4], [ALT]+[UP], [ALT]+[DOWN] Open/Close picker dialog and move focus to it. <br> When closed: <ul> <li>[PAGEUP] - Increments hours by 1. If 12 am is reached, increment hours to 1 pm and vice versa.</li> <li>[PAGEDOWN] - Decrements the corresponding field by 1. If 1 pm is reached, decrement hours to 12 am and vice versa.</li> <li>[SHIFT]+[PAGEUP] Increments minutes by 1.</li> <li>[SHIFT]+ [PAGEDOWN] Decrements minutes by 1.</li> <li>[SHIFT]+[CTRL]+[PAGEUP] Increments seconds by 1.</li> <li>[SHIFT]+[CTRL]+ [PAGEDOWN] Decrements seconds by 1.</li> </ul> When opened: <ul> <li>[UP] If focus is on one of the selection lists: Select the value which is above the current value. If the first value is selected, select the last value in the list. Exception: AM/ PM List: stay on the first item.</li> <li>[DOWN] If focus is on one of the selection lists: Select the value which is below the current value. If the last value is selected, select the first value in the list. Exception: AM/ PM List: stay on the last item.</li> <li>[LEFT] If focus is on one of the selection lists: Move focus to the selection list which is left of the current selection list. If focus is at the first selection list, move focus to the last selection list.</li> <li>[RIGHT] If focus is on one of the selection lists: Move focus to the selection list which is right of the current selection list. When focus is at the last selection list, move focus to the first selection list.</li> <li>[PAGEUP] If focus is on one of the selection lists: Move focus to the first entry of this list.</li> <li>[PAGEDOWN] If focus is on one of the selection lists: Move focus to the last entry of this list.</li> </ul>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/TimePicker.js\";</code>",
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-time-picker</code> component provides an input field with assigned clocks which are opened on user action. The <code>ui5-time-picker</code> allows users to select a localized time using touch, mouse, or keyboard input. It consists of two parts: the time input field and the clocks.\n\n<h3>Usage</h3> The user can enter a time by: <ul> <li>Using the clocks that are displayed in a popup</li> <li>Typing it in directly in the input field</li> </ul> <br><br> When the user makes an entry and chooses the enter key, the clocks show the corresponding time (hours, minutes and seconds separately). When the user directly triggers the clocks display, the actual time is displayed. For the <code>ui5-time-picker</code>\n\n<h3>Formatting</h3>\n\nIf a time is entered by typing it into the input field, it must fit to the used time format. <br><br> Supported format options are pattern-based on Unicode LDML Date Format notation. For more information, see <ui5-link target=\"_blank\" href=\"http://unicode.org/reports/tr35/#Date_Field_Symbol_Table\">UTS #35: Unicode Locale Data Markup Language</ui5-link>. <br><br> For example, if the <code>format-pattern</code> is \"HH:mm:ss\", a valid value string is \"11:42:35\" and the same is displayed in the input.\n\n<h3>Keyboard handling</h3> [F4], [ALT]+[UP], [ALT]+[DOWN] Open/Close picker dialog and move focus to it. <br> When closed: <ul> <li>[PAGEUP] - Increments hours by 1. If 12 am is reached, increment hours to 1 pm and vice versa.</li> <li>[PAGEDOWN] - Decrements the corresponding field by 1. If 1 pm is reached, decrement hours to 12 am and vice versa.</li> <li>[SHIFT]+[PAGEUP] - Increments minutes by 1.</li> <li>[SHIFT]+[PAGEDOWN] - Decrements minutes by 1.</li> <li>[SHIFT]+[CTRL]+[PAGEUP] - Increments seconds by 1.</li> <li>[SHIFT]+[CTRL]+[PAGEDOWN] - Decrements seconds by 1.</li> <li> </ul> When opened: <ul> <li>[PAGEUP] - Increments hours by 1. If 12 am is reached, increment hours to 1 pm and vice versa.</li> <li>[PAGEDOWN] - Decrements the corresponding field by 1. If 1 pm is reached, decrement hours to 12 am and vice versa.</li> <li>[SHIFT]+[PAGEUP] - Increments minutes by 1.</li> <li>[SHIFT]+[PAGEDOWN] - Decrements minutes by 1.</li> <li>[SHIFT]+[CTRL]+[PAGEUP] - Increments seconds by 1.</li> <li>[SHIFT]+[CTRL]+[PAGEDOWN] - Decrements seconds by 1.</li> <li>[A] or [P] - Selects AM or PM respectively.</li> <li>[0]-[9] - Allows direct time selecting (hours/minutes/seconds).</li> <li>[:] - Allows switching between hours/minutes/seconds clocks. If the last clock is displayed and [:] is pressed, the first clock is beind displayed.</li> </ul>\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents/dist/TimePicker.js\";</code>",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/TimePicker/",
           "attributes": [{
               "name": "format-pattern",
@@ -6387,7 +6544,7 @@
               "name": "wrapping-type",
               "type": "sap.ui.webc.main.types.WrappingType",
               "priority": "highest",
-              "description": "Defines how the text of a component will be displayed when there is not enough space. Available options are: <ul> <li><code>None</code> - The text will be truncated with an ellipsis.</li> <li><code>Normal</code> - The text will wrap. The words will not be broken based on hyphenation.</li> </ul>",
+              "description": "Defines how the text of a component will be displayed when there is not enough space. <br><b>Note:</b> for option \"Normal\" the text will wrap and the words will not be broken based on hyphenation.",
               "default": "\"None\""
             }
           ],
@@ -6408,7 +6565,7 @@
                 "name": "wrappingType",
                 "type": "sap.ui.webc.main.types.WrappingType",
                 "priority": "high",
-                "description": "Defines how the text of a component will be displayed when there is not enough space. Available options are: <ul> <li><code>None</code> - The text will be truncated with an ellipsis.</li> <li><code>Normal</code> - The text will wrap. The words will not be broken based on hyphenation.</li> </ul>",
+                "description": "Defines how the text of a component will be displayed when there is not enough space. <br><b>Note:</b> for option \"Normal\" the text will wrap and the words will not be broken based on hyphenation.",
                 "default": "\"None\""
               }
             ],
@@ -6435,7 +6592,7 @@
               "name": "placement",
               "type": "sap.ui.webc.main.types.ToastPlacement",
               "priority": "highest",
-              "description": "Defines the placement of the component. <br><br> Available options are: <ul> <li><code>TopStart</code></li> <li><code>TopCenter</code></li> <li><code>TopEnd</code></li> <li><code>MiddleStart</code></li> <li><code>MiddleCenter</code></li> <li><code>MiddleEnd</code></li> <li><code>BottomStart</code></li> <li><code>BottomCenter</code></li> <li><code>BottomEnd</code></li> </ul>",
+              "description": "Defines the placement of the component. <br><br>",
               "default": "\"BottomCenter\""
             }
           ],
@@ -6456,7 +6613,7 @@
                 "name": "placement",
                 "type": "sap.ui.webc.main.types.ToastPlacement",
                 "priority": "high",
-                "description": "Defines the placement of the component. <br><br> Available options are: <ul> <li><code>TopStart</code></li> <li><code>TopCenter</code></li> <li><code>TopEnd</code></li> <li><code>MiddleStart</code></li> <li><code>MiddleCenter</code></li> <li><code>MiddleEnd</code></li> <li><code>BottomStart</code></li> <li><code>BottomCenter</code></li> <li><code>BottomEnd</code></li> </ul>",
+                "description": "Defines the placement of the component. <br><br>",
                 "default": "\"BottomCenter\""
               }
             ],
@@ -6570,6 +6727,402 @@
                       "type": "CustomEvent"
                 }
               } ]
+        }
+      }, 
+          {
+          "name": "ui5-toolbar",
+          "source": {
+            "module": "./Toolbar.d.ts",
+            "symbol": "default"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-toolbar</code> component is used to create a horizontal layout with items. The items can be overflowing in a popover, when the space is not enough to show all of them.\n\n<h3>Keyboard Handling</h3> The <code>ui5-toolbar</code> provides advanced keyboard handling. <br> <ul> <li>The control is not interactive, but can contain of interactive elements </li> <li>[TAB] - iterates through elements</li> </ul> <br>\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents/dist/Toolbar\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/Toolbar/",
+          "attributes": [{
+              "name": "accessible-name",
+              "type": "string",
+              "priority": "highest",
+              "description": "Defines the accessible ARIA name of the component."
+            }, {
+              "name": "accessible-name-ref",
+              "type": "string",
+              "priority": "highest",
+              "description": "Receives id(or many ids) of the elements that label the input.",
+              "default": "\"\""
+            }, {
+              "name": "align-content",
+              "type": "sap.ui.webc.main.types.ToolbarAlign",
+              "priority": "highest",
+              "description": "Indicated the direction in which the Toolbar items will be aligned. Available options are: <ul> <li><code>End</code></li> <li><code>Start</code></li> </ul>"
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the items of the component.\n\n&lt;b&gt;Note:&lt;/b&gt; Currently only &lt;code&gt;ui5-toolbar-button&lt;/code&gt;, &lt;code&gt;ui5-toolbar-select&lt;/code&gt;, &lt;code&gt;ui5-toolbar-separator&lt;/code&gt; and &lt;code&gt;ui5-toolbar-spacer&lt;/code&gt; are allowed here."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "accessibleName",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the accessible ARIA name of the component."
+              }, {
+                "name": "accessibleNameRef",
+                "type": "string",
+                "priority": "high",
+                "description": "Receives id(or many ids) of the elements that label the input.",
+                "default": "\"\""
+              }, {
+                "name": "alignContent",
+                "type": "sap.ui.webc.main.types.ToolbarAlign",
+                "priority": "high",
+                "description": "Indicated the direction in which the Toolbar items will be aligned. Available options are: <ul> <li><code>End</code></li> <li><code>Start</code></li> </ul>"
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-toolbar-button",
+          "source": {
+            "module": "./ToolbarButton.d.ts",
+            "symbol": "default"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-toolbar-button</code> represents an abstract action, used in the <code>ui5-toolbar</code>.\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents/dist/ToolbarButton\";</code>",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ToolbarButton/",
+          "attributes": [{
+              "name": "accessible-name",
+              "type": "string",
+              "priority": "highest",
+              "description": "Defines the accessible ARIA name of the component.",
+              "default": "undefined"
+            }, {
+              "name": "accessible-name-ref",
+              "type": "string",
+              "priority": "highest",
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "default": "\"\""
+            }, {
+              "name": "design",
+              "type": "ButtonDesign",
+              "priority": "highest",
+              "description": "Defines the action design. <b>The available values are:</b>\n\n<ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> <li><code>Attention</code></li> </ul>",
+              "default": "\"Default\""
+            }, {
+              "name": "disabled",
+              "type": "boolean",
+              "priority": "highest",
+              "description": "Defines if the action is disabled. <br><br> <b>Note:</b> a disabled action can't be pressed or focused, and it is not in the tab chain.",
+              "default": "false"
+            }, {
+              "name": "icon",
+              "type": "string",
+              "priority": "highest",
+              "description": "Defines the <code>icon</code> source URI. <br><br> <b>Note:</b> SAP-icons font provides numerous buil-in icons. To find all the available icons, see the <ui5-link target=\"_blank\" href=\"https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\" class=\"api-table-content-cell-link\">Icon Explorer</ui5-link>.",
+              "default": "\"\""
+            }, {
+              "name": "icon-end",
+              "type": "boolean",
+              "priority": "highest",
+              "description": "Defines whether the icon should be displayed after the component text.",
+              "default": "false"
+            }, {
+              "name": "text",
+              "type": "string",
+              "priority": "highest",
+              "description": "Button text",
+              "default": "\"\""
+            }, {
+              "name": "tooltip",
+              "type": "string",
+              "priority": "highest",
+              "description": "Defines the tooltip of the component. <br> <b>Note:</b> A tooltip attribute should be provided for icon-only buttons, in order to represent their exact meaning/function.",
+              "default": "\"\""
+            }, {
+              "name": "width",
+              "type": "sap.ui.webc.base.types.CSSSize",
+              "priority": "highest",
+              "description": "Defines the width of the button. <br><br>\n\n<b>Note:</b> all CSS sizes are supported - 'percentage', 'px', 'rem', 'auto', etc.",
+              "default": "undefined"
+            }
+          ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "accessibilityAttributes",
+                "type": "object",
+                "priority": "high",
+                "description": "An object of strings that defines several additional accessibility attribute values for customization depending on the use case.\n\nIt supports the following fields:\n\n<ul> <li><code>expanded</code>: Indicates whether the button, or another grouping element it controls, is currently expanded or collapsed. Accepts the following string values: <ul> <li><code>true</code></li> <li><code>false</code></li> </ul> </li> <li><code>hasPopup</code>: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the button. Accepts the following string values: <ul> <li><code>Dialog</code></li> <li><code>Grid</code></li> <li><code>ListBox</code></li> <li><code>Menu</code></li> <li><code>Tree</code></li> </ul> </li> <li><code>controls</code>: Identifies the element (or elements) whose contents or presence are controlled by the button element. Accepts a string value.</li> </ul>"
+              }, {
+                "name": "accessibleName",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the accessible ARIA name of the component.",
+                "default": "undefined"
+              }, {
+                "name": "accessibleNameRef",
+                "type": "string",
+                "priority": "high",
+                "description": "Receives id(or many ids) of the elements that label the component.",
+                "default": "\"\""
+              }, {
+                "name": "design",
+                "type": "ButtonDesign",
+                "priority": "high",
+                "description": "Defines the action design. <b>The available values are:</b>\n\n<ul> <li><code>Default</code></li> <li><code>Emphasized</code></li> <li><code>Positive</code></li> <li><code>Negative</code></li> <li><code>Transparent</code></li> <li><code>Attention</code></li> </ul>",
+                "default": "\"Default\""
+              }, {
+                "name": "disabled",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Defines if the action is disabled. <br><br> <b>Note:</b> a disabled action can't be pressed or focused, and it is not in the tab chain.",
+                "default": "false"
+              }, {
+                "name": "icon",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the <code>icon</code> source URI. <br><br> <b>Note:</b> SAP-icons font provides numerous buil-in icons. To find all the available icons, see the <ui5-link target=\"_blank\" href=\"https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\" class=\"api-table-content-cell-link\">Icon Explorer</ui5-link>.",
+                "default": "\"\""
+              }, {
+                "name": "iconEnd",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Defines whether the icon should be displayed after the component text.",
+                "default": "false"
+              }, {
+                "name": "text",
+                "type": "string",
+                "priority": "high",
+                "description": "Button text",
+                "default": "\"\""
+              }, {
+                "name": "tooltip",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the tooltip of the component. <br> <b>Note:</b> A tooltip attribute should be provided for icon-only buttons, in order to represent their exact meaning/function.",
+                "default": "\"\""
+              }, {
+                "name": "width",
+                "type": "sap.ui.webc.base.types.CSSSize",
+                "priority": "high",
+                "description": "Defines the width of the button. <br><br>\n\n<b>Note:</b> all CSS sizes are supported - 'percentage', 'px', 'rem', 'auto', etc.",
+                "default": "undefined"
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "click",
+                "priority": "highest",
+                "description": "Fired when the component is activated either with a mouse/tap or by using the Enter or Space key. <br><br> <b>Note:</b> The event will not be fired if the <code>disabled</code> property is set to <code>true</code>.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-toolbar-select",
+          "source": {
+            "module": "./ToolbarSelect.d.ts",
+            "symbol": "default"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-toolbar-select</code> component is used to create a toolbar drop-down list. The items inside the <code>ui5-toolbar-select</code> define the available options by using the <code>ui5-toolbar-select-option</code> component.\n\n<h3>ES6 Module Import</h3> <code>import \"@ui5/webcomponents/dist/ToolbarSelect\";</code> <br> <code>import \"@ui5/webcomponents/dist/ToolbarSelectOption\";</code> (comes with <code>ui5-toolbar-select</code>)",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ToolbarSelect/",
+          "attributes": [{
+              "name": "accessible-name",
+              "type": "string",
+              "priority": "highest",
+              "description": "Defines the accessible ARIA name of the component.",
+              "default": "\"\""
+            }, {
+              "name": "accessible-name-ref",
+              "type": "string",
+              "priority": "highest",
+              "description": "Receives id(or many ids) of the elements that label the select.",
+              "default": "\"\""
+            }, {
+              "name": "disabled",
+              "type": "boolean",
+              "priority": "highest",
+              "description": "Defines whether the component is in disabled state. <br><br> <b>Note:</b> A disabled component is noninteractive.",
+              "default": "false"
+            }, {
+              "name": "value-state",
+              "type": "sap.ui.webc.base.types.ValueState",
+              "priority": "highest",
+              "description": "Defines the value state of the component. <br><br>",
+              "default": "\"None\""
+            }, {
+              "name": "width",
+              "type": "sap.ui.webc.base.types.CSSSize",
+              "priority": "highest",
+              "description": "Defines the width of the select. <br><br>\n\n<b>Note:</b> all CSS sizes are supported - 'percentage', 'px', 'rem', 'auto', etc.",
+              "default": "undefined"
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the component options.\n\n&lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Only one selected option is allowed. If more than one option is defined as selected, the last one would be considered as the selected one.\n\n&lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Use the &lt;code&gt;ui5-toolbar-select-option&lt;/code&gt; component to define the desired options."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "accessibleName",
+                "type": "string",
+                "priority": "high",
+                "description": "Defines the accessible ARIA name of the component.",
+                "default": "\"\""
+              }, {
+                "name": "accessibleNameRef",
+                "type": "string",
+                "priority": "high",
+                "description": "Receives id(or many ids) of the elements that label the select.",
+                "default": "\"\""
+              }, {
+                "name": "disabled",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Defines whether the component is in disabled state. <br><br> <b>Note:</b> A disabled component is noninteractive.",
+                "default": "false"
+              }, {
+                "name": "valueState",
+                "type": "sap.ui.webc.base.types.ValueState",
+                "priority": "high",
+                "description": "Defines the value state of the component. <br><br>",
+                "default": "\"None\""
+              }, {
+                "name": "width",
+                "type": "sap.ui.webc.base.types.CSSSize",
+                "priority": "high",
+                "description": "Defines the width of the select. <br><br>\n\n<b>Note:</b> all CSS sizes are supported - 'percentage', 'px', 'rem', 'auto', etc.",
+                "default": "undefined"
+              }
+            ],
+            "methods": [],
+            "events": [
+              
+              {
+                "name": "change",
+                "priority": "highest",
+                "description": "Fired when the selected option changes.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "close",
+                "priority": "highest",
+                "description": "Fired after the component's dropdown menu closes.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              }
+              , 
+              {
+                "name": "open",
+                "priority": "highest",
+                "description": "Fired after the component's dropdown menu opens.",
+                 "value": {
+                      "type": "CustomEvent"
+                }
+              } ]
+        }
+      }, 
+          {
+          "name": "ui5-toolbar-select-option",
+          "source": {
+            "module": "./ToolbarSelectOption.d.ts",
+            "symbol": "default"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-toolbar-select-option</code> component defines the content of an option in the <code>ui5-toolbar-select</code>.",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ToolbarSelectOption/",
+          "attributes": [{
+              "name": "selected",
+              "type": "boolean",
+              "priority": "highest",
+              "description": "Defines the selected state of the component.",
+              "default": "false"
+            }
+          ],
+        "slots": [
+            {
+              "name": "default",
+              "description": "Defines the text of the component. &lt;br&gt;&lt;br&gt; &lt;b&gt;Note:&lt;/b&gt; Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design."
+            } ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "selected",
+                "type": "boolean",
+                "priority": "high",
+                "description": "Defines the selected state of the component.",
+                "default": "false"
+              }
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-toolbar-separator",
+          "source": {
+            "module": "./ToolbarSeparator.d.ts",
+            "symbol": "default"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-toolbar-separator</code> is an element, used for visual separation between two elements. It takes no space in calculating toolbar items width.",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ToolbarSeparator/",
+          "attributes": [
+          ]
+          ,
+          "js": {
+            "properties": [
+            ],
+            "methods": []
+        }
+      }, 
+          {
+          "name": "ui5-toolbar-spacer",
+          "source": {
+            "module": "./ToolbarSpacer.d.ts",
+            "symbol": "default"
+          },
+          "deprecated": false,
+          "experimental": false,
+          "description": "<h3 class=\"comment-api-title\">Overview</h3> The <code>ui5-toolbar-spacer</code> is an element, used for taking needed space for toolbar items to take 100% width. It takes no space in calculating toolbar items width.",
+          "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/ToolbarSpacer/",
+          "attributes": [{
+              "name": "width",
+              "type": "sap.ui.webc.base.types.CSSSize",
+              "priority": "highest",
+              "description": "Defines the width of the spacer. <br><br>\n\n<b>Note:</b> all CSS sizes are supported - 'percentage', 'px', 'rem', 'auto', etc.",
+              "default": "undefined"
+            }
+          ]
+          ,
+          "js": {
+            "properties": [{
+                "name": "width",
+                "type": "sap.ui.webc.base.types.CSSSize",
+                "priority": "high",
+                "description": "Defines the width of the spacer. <br><br>\n\n<b>Note:</b> all CSS sizes are supported - 'percentage', 'px', 'rem', 'auto', etc.",
+                "default": "undefined"
+              }
+            ],
+            "methods": []
         }
       }, 
           {
