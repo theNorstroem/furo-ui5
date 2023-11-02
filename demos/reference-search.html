@@ -14,6 +14,11 @@
       box-sizing: border-box;
     }
   </style>
+  <script data-ui5-config type='application/json'>
+    {
+      "theme": "sap_horizon"
+    }
+  </script>
 </head>
 <body>
   <div id="demo"></div>
@@ -43,19 +48,19 @@
         <furo-demo-snippet>
           <template>
             <furo-form-layouter four="">
-              <furo-ui5-reference-search ƒ-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
+              <furo-ui5-reference-search fn-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
               </furo-ui5-reference-search>
 
-              <furo-ui5-reference-search ƒ-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
+              <furo-ui5-reference-search fn-bind-data="--entityReady(*.owner)" extended-searcher="demo-extended-searcher" min-term-length="1">
               </furo-ui5-reference-search>
 
-              <furo-ui5-reference-search-labeled  newline no-data-text="some" ƒ-bind-data="--entityReady(*.owner_req)" extended-searcher="demo-extended-searcher" min-term-length="1">
+              <furo-ui5-reference-search-labeled  newline no-data-text="some" fn-bind-data="--entityReady(*.owner_req)" extended-searcher="demo-extended-searcher" min-term-length="1">
               </furo-ui5-reference-search-labeled>
 
 
             </furo-form-layouter>
 
-            <furo-data-object type="task.Task" @-object-ready="--entityReady" fn-validate-all-fields="--validation">
+            <furo-data-object type="task.Task" at-object-ready="--entityReady" fn-validate-all-fields="--validation">
             </furo-data-object>
             <hr>
             <ui5-button at-click="--validation">Trigger validation</ui5-button>

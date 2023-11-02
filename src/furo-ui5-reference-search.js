@@ -1170,10 +1170,6 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
         color: var(--sapContent_IconColor);
         cursor: pointer;
         outline: none;
-        padding: var(--_ui5_input_icon_padding);
-        border-left: 1px solid transparent;
-        min-width: 1rem;
-        min-height: 1rem;
       }
 
       :host([readonly]) ui5-icon {
