@@ -236,6 +236,12 @@ class FuroUi5DynamicHeader extends FBP(LitElement) {
        */
       isFavorite: { type: Boolean, attribute: 'is-favorite' },
       /**
+       * Draw a shadow, this is useful when you do not have a `tab-container` after your `dynamic-header`
+       *
+       * @public
+       */
+      shadow: { type: Boolean, attribute: 'shadow' },
+      /**
        * Show the dropdown button icon after the header text.
        *
        * @public
@@ -297,6 +303,10 @@ class FuroUi5DynamicHeader extends FBP(LitElement) {
 
       #showHide {
         padding-bottom: 0.5rem;
+      }
+
+      :host([shadow]) {
+        box-shadow: var(--sapContent_HeaderShadow);
       }
 
       .splitter_bar {
