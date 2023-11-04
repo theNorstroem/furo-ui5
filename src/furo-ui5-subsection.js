@@ -26,6 +26,8 @@ import '@ui5/webcomponents/dist/Link.js';
  * Binds an entity field to the heading. You can use the entity even when no data was received.
  *
  * @slot {HTMLElement [0..n]} default - defines the content of the subsection.
+ * @slot {HTMLElement [0..n]} headline-start - defines the content right after the header.
+ * @slot {HTMLElement [0..n]} headline-end - defines the content before the action slot.
  * @slot {HTMLElement [0..n]} action - defines the heading bar of the subsection.
  * @slot {HTMLElement [0..n]} more - defines the additional content in the `show more` section.
  *
@@ -181,11 +183,11 @@ export class FuroUi5Subsection extends FBP(FieldNodeAdapter(LitElement)) {
     return html`
       <furo-horizontal-flex class="heading" space>
         ${this.heading.length
-          ? html`
-              <ui5-title flex level="${this.level}">${this.heading}</ui5-title>
-            `
+          ? html` <ui5-title level="${this.level}">${this.heading}</ui5-title> `
           : html``}
+        <slot name="headline-start"></slot>
         <furo-empty-spacer flex></furo-empty-spacer>
+        <slot name="headline-end"></slot>
         <div><slot name="action"></slot></div>
       </furo-horizontal-flex>
 
