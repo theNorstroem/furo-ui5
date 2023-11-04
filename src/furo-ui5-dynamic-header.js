@@ -11,6 +11,10 @@ import './furo-ui5-show-hide.js';
  * `furo-ui5-dynamic-header`
  *  Header component with action slot
  *
+ * @event variant-icon-clicked - Fired when the variant icon (enable with show-dropdown) was clicked.
+ * @event collapsed - Fired when the panel is collapsed.
+ * @event expanded - Fired when the panel is expanded.
+ *
  * @summary Dynamic Header
  * @customElement furo-ui5-dynamic-header
  * @appliesMixin FBP
@@ -145,6 +149,11 @@ class FuroUi5DynamicHeader extends FBP(LitElement) {
       }
       document.addEventListener('scroll', this._scrollhandler, true);
       this.addEventListener('mousewheel', this._wheelhandler, true);
+
+      // hide if inital state is collapsed
+      if (this.collapsed) {
+        this._showHideComponent.hide();
+      }
     });
   }
 
@@ -530,7 +539,14 @@ class FuroUi5DynamicHeader extends FBP(LitElement) {
           <slot name="action"></slot>
         </div>
       </furo-form-layouter>
-      <furo-ui5-show-hide animated="" id="showHide" ?hidden="${this.collapsed}">
+      <furo-ui5-show-hide
+        animated=""
+        id="showHide"
+        ?hidden="${this.collapsed}"
+        tabindex="${this.collapsed ? '-1' : ''}"
+        at-showed="-^expanded(null)"
+        at-hid="-^collapsed(null)"
+      >
         <ui5-label>${this.secondaryText}</ui5-label>
         <div class="wrapper">
           ${this.icon
