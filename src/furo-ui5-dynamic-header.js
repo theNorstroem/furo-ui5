@@ -311,7 +311,7 @@ class FuroUi5DynamicHeader extends FBP(LitElement) {
       }
 
       #showHide {
-        padding-bottom: 0.5rem;
+        padding-bottom: calc(0.75rem + var(--MediaSizeIndentationBottom, 1rem));
       }
 
       :host([shadow]) {
