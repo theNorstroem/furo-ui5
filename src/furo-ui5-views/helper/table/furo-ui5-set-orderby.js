@@ -40,7 +40,8 @@ export class FuroUi5SetOrderby extends FBP(LitElement) {
         if (e.sortable._value === true) {
           this._adderOptions.push({
             id: e.field_name._value,
-            display_name: this._tableDO[e.field_name._value]._meta.label,
+            display_name: this._pathGet(this._tableDO, e.field_name._value)
+              ._meta.label,
           });
         }
       });
@@ -63,11 +64,13 @@ export class FuroUi5SetOrderby extends FBP(LitElement) {
         ) {
           this._options.push({
             id: e.field_name._value,
-            display_name: this._tableDO[e.field_name._value]._meta.label,
+            display_name: this._pathGet(this._tableDO, e.field_name._value)
+              ._meta.label,
           });
           this._adderOptions.push({
             id: e.field_name._value,
-            display_name: this._tableDO[e.field_name._value]._meta.label,
+            display_name: this._pathGet(this._tableDO, e.field_name._value)
+              ._meta.label,
           });
         }
       });
