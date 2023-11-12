@@ -215,6 +215,7 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
         <ui5-button
           slot="endContent"
           title="${i18n.t('sys_first_page')}"
+          accessible-name="${i18n.t('sys_first_page')}"
           design="Transparent"
           at-click="^^pagination-first"
           icon="sys-first-page"
@@ -223,6 +224,7 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
         <ui5-button
           slot="endContent"
           title="${i18n.t('sys_prev_page')}"
+          accessible-name="${i18n.t('sys_prev_page')}"
           design="Transparent"
           at-click="^^pagination-prev"
           icon="sys-prev-page"
@@ -232,6 +234,7 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
         <ui5-button
           slot="endContent"
           title="${i18n.t('sys_next_page')}"
+          accessible-name="${i18n.t('sys_next_page')}"
           design="Transparent"
           at-click="^^pagination-next"
           icon="sys-next-page"
@@ -240,6 +243,7 @@ export class FuroUi5PaginationBar extends FBP(LitElement) {
         <ui5-button
           slot="endContent"
           title="${i18n.t('sys_last_page')}"
+          accessible-name="${i18n.t('sys_last_page')}"
           design="Transparent"
           at-click="^^pagination-last"
           icon="sys-last-page"

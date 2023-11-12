@@ -515,6 +515,7 @@ class FuroUi5DynamicHeader extends FBP(LitElement) {
             ?hidden="${!this.showDropdown}"
             at-click="^^variant-icon-clicked(*.target)"
             design="Transparent"
+            accessible-name="switch variant"
             interactive=""
             icon="navigation-down-arrow"
             style="height: 1.5rem; width: 1.5rem"
