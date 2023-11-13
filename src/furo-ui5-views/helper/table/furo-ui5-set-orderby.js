@@ -100,7 +100,7 @@ export class FuroUi5SetOrderby extends FBP(LitElement) {
         this._usedFields.push(item[0]);
         this._selection.push({
           id: item[0],
-          display_name: this._tableDO[item[0]]._meta.label,
+          display_name: this._pathGet(this._tableDO, item[0])._meta.label,
           descending: item.length > 1,
           // options are added above
         });
