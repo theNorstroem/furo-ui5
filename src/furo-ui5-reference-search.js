@@ -352,6 +352,13 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
        */
       service: { type: String },
       /**
+       * Set the method. This is only needed when your service is not named "List".
+       * This is not the http method.
+       *
+       * @type String
+       */
+      method: { type: String },
+      /**
        * Use this attribute to set a custom icon for your searcher
        *
        * @type String
@@ -1277,6 +1284,7 @@ export class FuroUi5ReferenceSearch extends FBP(FieldNodeAdapter(LitElement)) {
         at-next-rejected="--nextRejected"
         at-response="--responseReceived"
         at-response-error="--responseReceived, --responseError"
+        method="${this.method}"
       ></furo-collection-agent>
     `;
   }

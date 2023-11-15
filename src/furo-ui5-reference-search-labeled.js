@@ -22,6 +22,7 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
     super();
     this.service = '';
     this.label = '';
+    this.method = '';
     this.extendedSearcher = '';
     this.disableSearchList = false;
     this.icon = 'search';
@@ -66,6 +67,14 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
        * @type String
        */
       service: { type: String },
+      /**
+       * Set the method. This is only needed when your service is not named "List".
+       * This is not the http method.
+       *
+       * @type String
+       */
+      method: { type: String },
+
       /**
        * the label for the data-reference-search
        *
@@ -240,6 +249,7 @@ export class FuroUi5ReferenceSearchLabeled extends FBP(LitElement) {
           value-field-path="${this.valueFieldPath}"
           icon="${this.icon}"
           service="${this.service}"
+          method="${this.method}"
           display-field-path="${this.displayFieldPath}"
           extended-value-field-path="${this.extendedValueFieldPath}"
           extended-display-field-path="${this.extendedDisplayFieldPath}"
