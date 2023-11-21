@@ -238,6 +238,8 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
       this.setFnaFieldValue(v);
     } else if (this.isWrapper()) {
       this.setFnaFieldValue(value === '' ? null : parseFloat(value));
+    } else if (this.getDataType() === 'string') {
+      this.setFnaFieldValue(value === '' ? '' : value);
     } else {
       this.setFnaFieldValue(value === '' ? 0 : parseFloat(value));
     }
@@ -662,89 +664,6 @@ export class FuroUi5NumberInput extends FieldNodeAdapter(Input.default) {
 
   static get styles() {
     return super.styles;
-  }
-
-  /**
-   * WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed
-   * @param event
-   * @private
-   */
-  _handleInput(e) {
-    const inputDomRef = this.getInputDOMRefSync();
-    const emptyValueFiredOnNumberInput =
-      this.value && this.isTypeNumber && !inputDomRef.value;
-    const eventType = e.inputType || (e.detail && e.detail.inputType) || '';
-    this._keepInnerValue = false;
-    const allowedEventTypes = [
-      'deleteWordBackward',
-      'deleteWordForward',
-      'deleteSoftLineBackward',
-      'deleteSoftLineForward',
-      'deleteEntireSoftLine',
-      'deleteHardLineBackward',
-      'deleteHardLineForward',
-      'deleteByDrag',
-      'deleteByCut',
-      'deleteContent',
-      'deleteContentBackward',
-      'deleteContentForward',
-      'historyUndo',
-    ];
-    this._shouldAutocomplete =
-      !allowedEventTypes.includes(eventType) && !this.noTypeahead;
-    this.suggestionSelectionCanceled = false;
-    if (e instanceof InputEvent) {
-      // ---- Special cases of numeric Input ----
-      // ---------------- Start -----------------
-      // When the last character after the delimiter is removed.
-      // In such cases, we want to skip the re-rendering of the
-      // component as this leads to cursor repositioning and causes user experience issues.
-      // There are few scenarios:
-      // Example: type "123.4" and press BACKSPACE - the native input is firing event with the whole part as value (123).
-      // Pressing BACKSPACE again will remove the delimiter and the native input will fire event with the whole part as value again (123).
-      // Example: type "123.456", select/mark "456" and press BACKSPACE - the native input is firing event with the whole part as value (123).
-      // Example: type "123.456", select/mark "123.456" and press BACKSPACE - the native input is firing event with empty value.
-      const delimiterCase =
-        this.isTypeNumber &&
-        (e.inputType === 'deleteContentForward' ||
-          e.inputType === 'deleteContentBackward') &&
-        !e.target.value.includes('.') &&
-        this.value.includes('.');
-      // Handle special numeric notation with "e", example "12.5e12"
-      const eNotationCase = emptyValueFiredOnNumberInput && e.data === 'e';
-      // Handle special numeric notation with "-", example "-3"
-      // When pressing BACKSPACE, the native input fires event with empty value
-      const minusRemovalCase =
-        emptyValueFiredOnNumberInput &&
-        this.value.startsWith('-') &&
-        this.value.length === 2 &&
-        (e.inputType === 'deleteContentForward' ||
-          e.inputType === 'deleteContentBackward');
-      if (delimiterCase || eNotationCase || minusRemovalCase) {
-        this.value = e.target.value;
-        this._keepInnerValue = true;
-      }
-      // ----------------- End ------------------
-    }
-    if (e.target === inputDomRef) {
-      this.focused = true;
-      // stop the native event, as the semantic "input" would be fired.
-      e.stopImmediatePropagation();
-    }
-
-    // Keep inner value during typing of numbers with dots as decimal separator
-    if (this.isTypeNumber && Number.isNaN(e.target.valueAsNumber)) {
-      this._keepInnerValue = true;
-    } else {
-      this.fireEventByAction('enter', e);
-    }
-
-    this.hasSuggestionItemSelected = false;
-    this._isValueStateFocused = false;
-    if (this.Suggestions) {
-      this.Suggestions.updateSelectedItemPosition(-1);
-    }
-    this.isTyping = true;
   }
 }
 
