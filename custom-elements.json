@@ -8115,20 +8115,6 @@
               "readonly": true
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private"
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -9747,6 +9733,17 @@
             },
             {
               "kind": "field",
+              "name": "method",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Set the method. This is only needed when your service is not named \"List\".\nThis is not the http method.",
+              "default": "''",
+              "attribute": "method"
+            },
+            {
+              "kind": "field",
               "name": "extendedSearcher",
               "privacy": "public",
               "type": {
@@ -9893,6 +9890,15 @@
               "description": "the service name",
               "default": "''",
               "fieldName": "service"
+            },
+            {
+              "name": "method",
+              "type": {
+                "text": "string"
+              },
+              "description": "Set the method. This is only needed when your service is not named \"List\".\nThis is not the http method.",
+              "default": "''",
+              "fieldName": "method"
             },
             {
               "name": "label",
@@ -10531,6 +10537,16 @@
             },
             {
               "kind": "field",
+              "name": "method",
+              "privacy": "public",
+              "type": {
+                "text": "String"
+              },
+              "description": "Set the method. This is only needed when your service is not named \"List\".\nThis is not the http method.",
+              "attribute": "method"
+            },
+            {
+              "kind": "field",
               "name": "required",
               "privacy": "public",
               "type": {
@@ -10670,6 +10686,14 @@
               ],
               "default": "''",
               "fieldName": "service"
+            },
+            {
+              "name": "method",
+              "type": {
+                "text": "String"
+              },
+              "description": "Set the method. This is only needed when your service is not named \"List\".\nThis is not the http method.",
+              "fieldName": "method"
             },
             {
               "name": "icon",
@@ -23216,24 +23240,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -23726,24 +23732,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -24229,24 +24217,6 @@
                 }
               ],
               "description": "set ui5 icon",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
               "privacy": "private",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
@@ -25095,24 +25065,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -25598,24 +25550,6 @@
                 }
               ],
               "description": "set ui5 icon",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
               "privacy": "private",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
@@ -26115,24 +26049,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -26618,24 +26534,6 @@
                 }
               ],
               "description": "set ui5 icon",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
               "privacy": "private",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
@@ -27794,24 +27692,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -28304,24 +28184,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -28807,24 +28669,6 @@
                 }
               ],
               "description": "set ui5 icon",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
               "privacy": "private",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
@@ -29375,24 +29219,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -29822,6 +29648,18 @@
               ],
               "default": "''",
               "fieldName": "service",
+              "inheritedFrom": {
+                "name": "FuroUi5ReferenceSearch",
+                "module": "src/furo-ui5-reference-search.js"
+              }
+            },
+            {
+              "name": "method",
+              "type": {
+                "text": "String"
+              },
+              "description": "Set the method. This is only needed when your service is not named \"List\".\nThis is not the http method.",
+              "fieldName": "method",
               "inheritedFrom": {
                 "name": "FuroUi5ReferenceSearch",
                 "module": "src/furo-ui5-reference-search.js"
@@ -30653,6 +30491,20 @@
               "description": "a list of privileged attributes. when those attributes are set in text-input components initially.\nthey can not be modified later via response or spec\nnull is used because getAttribute returns null or value",
               "privacy": "private",
               "default": "{\n      readonly: null,\n      placeholder: null,\n      label: null,\n      required: null,\n      disabled: null,\n      icon: null,\n    }",
+              "inheritedFrom": {
+                "name": "FuroUi5ReferenceSearch",
+                "module": "src/furo-ui5-reference-search.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "method",
+              "privacy": "public",
+              "type": {
+                "text": "String"
+              },
+              "description": "Set the method. This is only needed when your service is not named \"List\".\nThis is not the http method.",
+              "attribute": "method",
               "inheritedFrom": {
                 "name": "FuroUi5ReferenceSearch",
                 "module": "src/furo-ui5-reference-search.js"
@@ -33525,24 +33377,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -34028,24 +33862,6 @@
                 }
               ],
               "description": "set ui5 icon",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
               "privacy": "private",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
@@ -34545,24 +34361,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -35048,24 +34846,6 @@
                 }
               ],
               "description": "set ui5 icon",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
               "privacy": "private",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
@@ -36545,24 +36325,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -37048,24 +36810,6 @@
                 }
               ],
               "description": "set ui5 icon",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
               "privacy": "private",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
@@ -38591,24 +38335,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -39094,24 +38820,6 @@
                 }
               ],
               "description": "set ui5 icon",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
               "privacy": "private",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
@@ -40270,24 +39978,6 @@
               }
             },
             {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
               "kind": "field",
               "name": "_previousValueState",
               "type": {
@@ -40773,24 +40463,6 @@
                 }
               ],
               "description": "set ui5 icon",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FuroUi5NumberInput",
-                "module": "src/furo-ui5-number-input.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_handleInput",
-              "parameters": [
-                {
-                  "name": "e"
-                },
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "WORKAROUND: TODO: Remove this when https://github.com/SAP/ui5-webcomponents/issues/5983 is fixed",
               "privacy": "private",
               "inheritedFrom": {
                 "name": "FuroUi5NumberInput",
@@ -48073,6 +47745,19 @@
               }
             },
             {
+              "name": "method",
+              "type": {
+                "text": "string"
+              },
+              "description": "Set the method. This is only needed when your service is not named \"List\".\nThis is not the http method.",
+              "default": "''",
+              "fieldName": "method",
+              "inheritedFrom": {
+                "name": "FuroUi5ReferenceSearchLabeled",
+                "module": "src/furo-ui5-reference-search-labeled.js"
+              }
+            },
+            {
               "name": "label",
               "type": {
                 "text": "string"
@@ -48371,6 +48056,21 @@
               "description": "the label for the data-reference-search",
               "default": "''",
               "attribute": "label",
+              "inheritedFrom": {
+                "name": "FuroUi5ReferenceSearchLabeled",
+                "module": "src/furo-ui5-reference-search-labeled.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "method",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Set the method. This is only needed when your service is not named \"List\".\nThis is not the http method.",
+              "default": "''",
+              "attribute": "method",
               "inheritedFrom": {
                 "name": "FuroUi5ReferenceSearchLabeled",
                 "module": "src/furo-ui5-reference-search-labeled.js"

@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components data bindings for furo-web",
-  "version": "1.18.0",
+  "version": "1.18.1",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": "git@github.com:eclipse/eclipsefuro-web.git",
   "web-types": "web-types.json",
@@ -28,6 +28,7 @@
     "docs:start": "cd hugo && hugo serve",
     "docs:generate": "npm run analyze:components && npm run analyze:typerenderer && ./scripts/cem.sh",
     "docs:publish": "./scripts/publishDocs.sh",
+    "webtypes": "./scripts/webtypes.sh",
     "analyze:components": "cem analyze --globs \"src/**/*.js\" --exclude **/typerenderer/* --exclude **/helper/** --litelement --outdir tmp/components",
     "analyze:typerenderer": "cem analyze --globs \"src/typerenderer/*.js\" --exclude --litelement --outdir tmp/typerenderer",
     "prepare": "husky install"

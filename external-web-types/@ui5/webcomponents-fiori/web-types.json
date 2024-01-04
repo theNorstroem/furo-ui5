@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "@ui5/webcomponents-fiori",
-  "version": "1.18.0",
+  "version": "1.20.1",
   "description-markup": "markdown",
   "js-types-syntax": "typescript",
   "default-icon": "icon.svg",
@@ -335,7 +335,7 @@
               "name": "layout",
               "type": "sap.ui.webc.fiori.types.FCLLayout",
               "priority": "highest",
-              "description": "Defines the columns layout and their proportion. <br><br> <b>Note:</b> The layout also depends on the screen size - one column for screens smaller than 599px, two columns between 599px and 1023px and three columns for sizes bigger than 1023px. <br><br> Available options are: <ul> <li><code>OneColumn</code></li> <li><code>TwoColumnsStartExpanded</code></li> <li><code>TwoColumnsMidExpanded</code></li> <li><code>ThreeColumnsMidExpanded</code></li> <li><code>ThreeColumnsEndExpanded</code></li> <li><code>ThreeColumnsStartExpandedEndHidden</code></li> <li><code>ThreeColumnsMidExpandedEndHidden</code></li> <li><code>MidColumnFullScreen</code></li> <li><code>EndColumnFullScreen</code></li> </ul> <br><br> <b>For example:</b> layout=<code>TwoColumnsStartExpanded</code> means the layout will display up to two columns in 67%/33% proportion.",
+              "description": "Defines the columns layout and their proportion. <br><br> <b>Note:</b> The layout also depends on the screen size - one column for screens smaller than 599px, two columns between 599px and 1023px and three columns for sizes bigger than 1023px. <br><br> <b>For example:</b> layout=<code>TwoColumnsStartExpanded</code> means the layout will display up to two columns in 67%/33% proportion.",
               "default": "\"OneColumn\""
             }
           ],
@@ -386,7 +386,7 @@
                 "name": "layout",
                 "type": "sap.ui.webc.fiori.types.FCLLayout",
                 "priority": "high",
-                "description": "Defines the columns layout and their proportion. <br><br> <b>Note:</b> The layout also depends on the screen size - one column for screens smaller than 599px, two columns between 599px and 1023px and three columns for sizes bigger than 1023px. <br><br> Available options are: <ul> <li><code>OneColumn</code></li> <li><code>TwoColumnsStartExpanded</code></li> <li><code>TwoColumnsMidExpanded</code></li> <li><code>ThreeColumnsMidExpanded</code></li> <li><code>ThreeColumnsEndExpanded</code></li> <li><code>ThreeColumnsStartExpandedEndHidden</code></li> <li><code>ThreeColumnsMidExpandedEndHidden</code></li> <li><code>MidColumnFullScreen</code></li> <li><code>EndColumnFullScreen</code></li> </ul> <br><br> <b>For example:</b> layout=<code>TwoColumnsStartExpanded</code> means the layout will display up to two columns in 67%/33% proportion.",
+                "description": "Defines the columns layout and their proportion. <br><br> <b>Note:</b> The layout also depends on the screen size - one column for screens smaller than 599px, two columns between 599px and 1023px and three columns for sizes bigger than 1023px. <br><br> <b>For example:</b> layout=<code>TwoColumnsStartExpanded</code> means the layout will display up to two columns in 67%/33% proportion.",
                 "default": "\"OneColumn\""
               }, {
                 "name": "midColumnVisible",
@@ -441,13 +441,13 @@
               "name": "name",
               "type": "sap.ui.webc.fiori.types.IllustrationMessageType",
               "priority": "highest",
-              "description": "Defines the illustration name that will be displayed in the component. <br><br> Available illustrations are: <ul> <li><code>AddColumn</code></li> <li><code>AddPeople</code></li> <li><code>AddDimensions</code></li> <li><code>BalloonSky</code></li> <li><code>BeforeSearch</code></li> <li><code>Connection</code></li> <li><code>EmptyCalendar</code></li> <li><code>EmptyList</code></li> <li><code>EmptyPlanningCalendar</code></li> <li><code>ErrorScreen</code></li> <li><code>FilterTable</code></li> <li><code>GroupTable</code></li> <li><code>NoActivities</code></li> <li><code>NoColumnsSet</code></li> <li><code>NoData</code></li> <li><code>NoEntries</code></li> <li><code>NoFilterResults</code></li> <li><code>NoMail_v1</code></li> <li><code>NoMail</code></li> <li><code>NoNotifications</code></li> <li><code>NoSavedItems_v1</code></li> <li><code>NoSavedItems</code></li> <li><code>NoSearchResults</code></li> <li><code>NoTasks_v1</code></li> <li><code>NoTasks</code></li> <li><code>NoDimensionsSet</code></li> <li><code>PageNotFound</code></li> <li><code>ReloadScreen</code></li> <li><code>ResizeColumn</code></li> <li><code>SearchEarth</code></li> <li><code>SearchFolder</code></li> <li><code>SimpleBalloon</code></li> <li><code>SimpleBell</code></li> <li><code>SimpleCalendar</code></li> <li><code>SimpleCheckMark</code></li> <li><code>SimpleConnection</code></li> <li><code>SimpleEmptyDoc</code></li> <li><code>SimpleEmptyList</code></li> <li><code>SimpleError</code></li> <li><code>SimpleMagnifier</code></li> <li><code>SimpleMail</code></li> <li><code>SimpleNoSavedItems</code></li> <li><code>SimpleNotFoundMagnifier</code></li> <li><code>SimpleReload</code></li> <li><code>SimpleTask</code></li> <li><code>SleepingBell</code></li> <li><code>SortColumn</code></li> <li><code>SuccessBalloon</code></li> <li><code>SuccessCheckMark</code></li> <li><code>SuccessHighFive</code></li> <li><code>SuccessScreen</code></li> <li><code>Survey</code></li> <li><code>Tent</code></li> <li><code>UnableToLoad</code></li> <li><code>UnableToLoadImage</code></li> <li><code>UnableToUpload</code></li> <li><code>UploadToCloud</code></li> <li><code>UploadCollection</code></li> <li><code>TntChartArea</code></li> <li><code>TntChartArea2</code></li> <li><code>TntChartBar</code></li> <li><code>TntChartBPMNFlow</code></li> <li><code>TntChartBullet</code></li> <li><code>TntChartDoughnut</code></li> <li><code>TntChartFlow</code></li> <li><code>TntChartGantt</code></li> <li><code>TntChartOrg</code></li> <li><code>TntChartPie</code></li> <li><code>TntCodePlaceholder</code></li> <li><code>TntCompany</code></li> <li><code>TntComponents</code></li> <li><code>TntExternalLink</code></li> <li><code>TntFaceID</code></li> <li><code>TntFingerprint</code></li> <li><code>TntLock</code></li> <li><code>TntMission</code></li> <li><code>TntNoApplications</code></li> <li><code>TntNoFlows</code></li> <li><code>TntNoUsers</code></li> <li><code>TntRadar</code></li> <li><code>TntSecrets</code></li> <li><code>TntServices</code></li> <li><code>TntSessionExpired</code></li> <li><code>TntSessionExpiring</code></li> <li><code>TntSuccess</code></li> <li><code>TntSuccessfulAuth</code></li> <li><code>TntSystems</code></li> <li><code>TntTeams</code></li> <li><code>TntTools</code></li> <li><code>TntUnableToLoad</code></li> <li><code>TntUnlock</code></li> <li><code>TntUnsuccessfulAuth</code></li> <li><code>TntUser2</code></li> </ul> <br><br> <b>Note:</b> By default the <code>BeforeSearch</code> illustration is loaded. <br> When using an illustration type, other than the default, it should be loaded in addition: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/NoData.js\";</code> <br><br> <b>Note:</b> TNT illustrations cointain <code>Tnt</code> prefix in their name. You can import them removing the <code>Tnt</code> prefix like this: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/tnt/SessionExpired.js\";</code>",
+              "description": "Defines the illustration name that will be displayed in the component. <br><br> <b>Note:</b> By default the <code>BeforeSearch</code> illustration is loaded. <br> When using an illustration type, other than the default, it should be loaded in addition: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/NoData.js\";</code> <br><br> <b>Note:</b> TNT illustrations cointain <code>Tnt</code> prefix in their name. You can import them removing the <code>Tnt</code> prefix like this: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/tnt/SessionExpired.js\";</code>",
               "default": "\"BeforeSearch\""
             }, {
               "name": "size",
               "type": "sap.ui.webc.fiori.types.IllustrationMessageSize",
               "priority": "highest",
-              "description": "Determines which illustration breakpoint variant is used. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Base</code></li> <li><code>Spot</code></li> <li><code>Dialog</code></li> <li><code>Scene</code></li> </ul>\n\nAs <code>IllustratedMessage</code> adapts itself around the <code>Illustration</code>, the other elements of the component are displayed differently on the different breakpoints/illustration sizes.",
+              "description": "Determines which illustration breakpoint variant is used. <br><br>\n\nAs <code>IllustratedMessage</code> adapts itself around the <code>Illustration</code>, the other elements of the component are displayed differently on the different breakpoints/illustration sizes.",
               "default": "\"Auto\""
             }, {
               "name": "subtitle-text",
@@ -455,6 +455,12 @@
               "priority": "highest",
               "description": "Defines the subtitle of the component. <br><br> <b>Note:</b> Using this property, the default subtitle text of illustration will be overwritten. <br><br> <b>Note:</b> Using <code>subtitle</code> slot, the default of this property will be overwritten.",
               "default": "\"\""
+            }, {
+              "name": "title-level",
+              "type": "sap.ui.webc.main.types.TitleLevel",
+              "priority": "highest",
+              "description": "Defines the semantic level of the title.\n\n<b>Note:</b> Used for accessibility purposes only.",
+              "default": "\"H2\""
             }, {
               "name": "title-text",
               "type": "string",
@@ -488,13 +494,13 @@
                 "name": "name",
                 "type": "sap.ui.webc.fiori.types.IllustrationMessageType",
                 "priority": "high",
-                "description": "Defines the illustration name that will be displayed in the component. <br><br> Available illustrations are: <ul> <li><code>AddColumn</code></li> <li><code>AddPeople</code></li> <li><code>AddDimensions</code></li> <li><code>BalloonSky</code></li> <li><code>BeforeSearch</code></li> <li><code>Connection</code></li> <li><code>EmptyCalendar</code></li> <li><code>EmptyList</code></li> <li><code>EmptyPlanningCalendar</code></li> <li><code>ErrorScreen</code></li> <li><code>FilterTable</code></li> <li><code>GroupTable</code></li> <li><code>NoActivities</code></li> <li><code>NoColumnsSet</code></li> <li><code>NoData</code></li> <li><code>NoEntries</code></li> <li><code>NoFilterResults</code></li> <li><code>NoMail_v1</code></li> <li><code>NoMail</code></li> <li><code>NoNotifications</code></li> <li><code>NoSavedItems_v1</code></li> <li><code>NoSavedItems</code></li> <li><code>NoSearchResults</code></li> <li><code>NoTasks_v1</code></li> <li><code>NoTasks</code></li> <li><code>NoDimensionsSet</code></li> <li><code>PageNotFound</code></li> <li><code>ReloadScreen</code></li> <li><code>ResizeColumn</code></li> <li><code>SearchEarth</code></li> <li><code>SearchFolder</code></li> <li><code>SimpleBalloon</code></li> <li><code>SimpleBell</code></li> <li><code>SimpleCalendar</code></li> <li><code>SimpleCheckMark</code></li> <li><code>SimpleConnection</code></li> <li><code>SimpleEmptyDoc</code></li> <li><code>SimpleEmptyList</code></li> <li><code>SimpleError</code></li> <li><code>SimpleMagnifier</code></li> <li><code>SimpleMail</code></li> <li><code>SimpleNoSavedItems</code></li> <li><code>SimpleNotFoundMagnifier</code></li> <li><code>SimpleReload</code></li> <li><code>SimpleTask</code></li> <li><code>SleepingBell</code></li> <li><code>SortColumn</code></li> <li><code>SuccessBalloon</code></li> <li><code>SuccessCheckMark</code></li> <li><code>SuccessHighFive</code></li> <li><code>SuccessScreen</code></li> <li><code>Survey</code></li> <li><code>Tent</code></li> <li><code>UnableToLoad</code></li> <li><code>UnableToLoadImage</code></li> <li><code>UnableToUpload</code></li> <li><code>UploadToCloud</code></li> <li><code>UploadCollection</code></li> <li><code>TntChartArea</code></li> <li><code>TntChartArea2</code></li> <li><code>TntChartBar</code></li> <li><code>TntChartBPMNFlow</code></li> <li><code>TntChartBullet</code></li> <li><code>TntChartDoughnut</code></li> <li><code>TntChartFlow</code></li> <li><code>TntChartGantt</code></li> <li><code>TntChartOrg</code></li> <li><code>TntChartPie</code></li> <li><code>TntCodePlaceholder</code></li> <li><code>TntCompany</code></li> <li><code>TntComponents</code></li> <li><code>TntExternalLink</code></li> <li><code>TntFaceID</code></li> <li><code>TntFingerprint</code></li> <li><code>TntLock</code></li> <li><code>TntMission</code></li> <li><code>TntNoApplications</code></li> <li><code>TntNoFlows</code></li> <li><code>TntNoUsers</code></li> <li><code>TntRadar</code></li> <li><code>TntSecrets</code></li> <li><code>TntServices</code></li> <li><code>TntSessionExpired</code></li> <li><code>TntSessionExpiring</code></li> <li><code>TntSuccess</code></li> <li><code>TntSuccessfulAuth</code></li> <li><code>TntSystems</code></li> <li><code>TntTeams</code></li> <li><code>TntTools</code></li> <li><code>TntUnableToLoad</code></li> <li><code>TntUnlock</code></li> <li><code>TntUnsuccessfulAuth</code></li> <li><code>TntUser2</code></li> </ul> <br><br> <b>Note:</b> By default the <code>BeforeSearch</code> illustration is loaded. <br> When using an illustration type, other than the default, it should be loaded in addition: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/NoData.js\";</code> <br><br> <b>Note:</b> TNT illustrations cointain <code>Tnt</code> prefix in their name. You can import them removing the <code>Tnt</code> prefix like this: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/tnt/SessionExpired.js\";</code>",
+                "description": "Defines the illustration name that will be displayed in the component. <br><br> <b>Note:</b> By default the <code>BeforeSearch</code> illustration is loaded. <br> When using an illustration type, other than the default, it should be loaded in addition: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/NoData.js\";</code> <br><br> <b>Note:</b> TNT illustrations cointain <code>Tnt</code> prefix in their name. You can import them removing the <code>Tnt</code> prefix like this: <br> <code>import \"@ui5/webcomponents-fiori/dist/illustrations/tnt/SessionExpired.js\";</code>",
                 "default": "\"BeforeSearch\""
               }, {
                 "name": "size",
                 "type": "sap.ui.webc.fiori.types.IllustrationMessageSize",
                 "priority": "high",
-                "description": "Determines which illustration breakpoint variant is used. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Base</code></li> <li><code>Spot</code></li> <li><code>Dialog</code></li> <li><code>Scene</code></li> </ul>\n\nAs <code>IllustratedMessage</code> adapts itself around the <code>Illustration</code>, the other elements of the component are displayed differently on the different breakpoints/illustration sizes.",
+                "description": "Determines which illustration breakpoint variant is used. <br><br>\n\nAs <code>IllustratedMessage</code> adapts itself around the <code>Illustration</code>, the other elements of the component are displayed differently on the different breakpoints/illustration sizes.",
                 "default": "\"Auto\""
               }, {
                 "name": "subtitleText",
@@ -502,6 +508,12 @@
                 "priority": "high",
                 "description": "Defines the subtitle of the component. <br><br> <b>Note:</b> Using this property, the default subtitle text of illustration will be overwritten. <br><br> <b>Note:</b> Using <code>subtitle</code> slot, the default of this property will be overwritten.",
                 "default": "\"\""
+              }, {
+                "name": "titleLevel",
+                "type": "sap.ui.webc.main.types.TitleLevel",
+                "priority": "high",
+                "description": "Defines the semantic level of the title.\n\n<b>Note:</b> Used for accessibility purposes only.",
+                "default": "\"H2\""
               }, {
                 "name": "titleText",
                 "type": "string",
@@ -533,19 +545,19 @@
               "name": "layout",
               "type": "sap.ui.webc.fiori.types.MediaGalleryLayout",
               "priority": "highest",
-              "description": "Determines the layout of the component. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Vertical</code></li> <li><code>Horizontal</code></li> </ul>",
+              "description": "Determines the layout of the component.",
               "default": "\"Auto\""
             }, {
               "name": "menu-horizontal-align",
               "type": "sap.ui.webc.fiori.types.MediaGalleryMenuHorizontalAlign",
               "priority": "highest",
-              "description": "Determines the horizontal alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Left</code></li> <li><code>Right</code></li> </ul>",
+              "description": "Determines the horizontal alignment of the thumbnails menu vs. the central display area.",
               "default": "\"Left\""
             }, {
               "name": "menu-vertical-align",
               "type": "sap.ui.webc.fiori.types.MediaGalleryMenuVerticalAlign",
               "priority": "highest",
-              "description": "Determines the vertical alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Top</code></li> <li><code>Bottom</code></li> </ul>",
+              "description": "Determines the vertical alignment of the thumbnails menu vs. the central display area.",
               "default": "\"Bottom\""
             }, {
               "name": "show-all-thumbnails",
@@ -572,19 +584,19 @@
                 "name": "layout",
                 "type": "sap.ui.webc.fiori.types.MediaGalleryLayout",
                 "priority": "high",
-                "description": "Determines the layout of the component. <br><br> Available options are: <ul> <li><code>Auto</code></li> <li><code>Vertical</code></li> <li><code>Horizontal</code></li> </ul>",
+                "description": "Determines the layout of the component.",
                 "default": "\"Auto\""
               }, {
                 "name": "menuHorizontalAlign",
                 "type": "sap.ui.webc.fiori.types.MediaGalleryMenuHorizontalAlign",
                 "priority": "high",
-                "description": "Determines the horizontal alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Left</code></li> <li><code>Right</code></li> </ul>",
+                "description": "Determines the horizontal alignment of the thumbnails menu vs. the central display area.",
                 "default": "\"Left\""
               }, {
                 "name": "menuVerticalAlign",
                 "type": "sap.ui.webc.fiori.types.MediaGalleryMenuVerticalAlign",
                 "priority": "high",
-                "description": "Determines the vertical alignment of the thumbnails menu vs. the central display area. <br><br> Available options are: <ul> <li><code>Top</code></li> <li><code>Bottom</code></li> </ul>",
+                "description": "Determines the vertical alignment of the thumbnails menu vs. the central display area.",
                 "default": "\"Bottom\""
               }, {
                 "name": "showAllThumbnails",
@@ -1431,28 +1443,10 @@
               "description": "Defines if the item is expanded",
               "default": "false"
             }, {
-              "name": "icon",
-              "type": "string",
-              "priority": "highest",
-              "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
-              "default": "\"\""
-            }, {
-              "name": "selected",
-              "type": "boolean",
-              "priority": "highest",
-              "description": "Defines whether the subitem is selected",
-              "default": "false"
-            }, {
-              "name": "text",
-              "type": "string",
-              "priority": "highest",
-              "description": "Defines the text of the item.",
-              "default": "\"\""
-            }, {
               "name": "whole-item-toggleable",
               "type": "boolean",
               "priority": "highest",
-              "description": "Defines whether pressing the whole item or only pressing the icon will show/hide the items's sub items(if present). If set to true, pressing the whole item will toggle the sub items, and it won't fire the <code>click</code> event. By default, only pressing the arrow icon will toggle the sub items & the click event will be fired if the item is pressed outside of the icon.",
+              "description": "Defines whether clicking the whole item or only pressing the icon will show/hide the sub items (if present). If set to true, clicking the whole item will toggle the sub items, and it won't fire the <code>click</code> event. By default, only clicking the arrow icon will toggle the sub items.",
               "default": "false"
             }
           ],
@@ -1470,42 +1464,14 @@
                 "description": "Defines if the item is expanded",
                 "default": "false"
               }, {
-                "name": "icon",
-                "type": "string",
-                "priority": "high",
-                "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
-                "default": "\"\""
-              }, {
-                "name": "selected",
-                "type": "boolean",
-                "priority": "high",
-                "description": "Defines whether the subitem is selected",
-                "default": "false"
-              }, {
-                "name": "text",
-                "type": "string",
-                "priority": "high",
-                "description": "Defines the text of the item.",
-                "default": "\"\""
-              }, {
                 "name": "wholeItemToggleable",
                 "type": "boolean",
                 "priority": "high",
-                "description": "Defines whether pressing the whole item or only pressing the icon will show/hide the items's sub items(if present). If set to true, pressing the whole item will toggle the sub items, and it won't fire the <code>click</code> event. By default, only pressing the arrow icon will toggle the sub items & the click event will be fired if the item is pressed outside of the icon.",
+                "description": "Defines whether clicking the whole item or only pressing the icon will show/hide the sub items (if present). If set to true, clicking the whole item will toggle the sub items, and it won't fire the <code>click</code> event. By default, only clicking the arrow icon will toggle the sub items.",
                 "default": "false"
               }
             ],
-            "methods": [],
-            "events": [
-              
-              {
-                "name": "click",
-                "priority": "highest",
-                "description": "Fired when the component is activated either with a click/tap or by using the Enter or Space key.",
-                 "value": {
-                      "type": "CustomEvent"
-                }
-              } ]
+            "methods": []
         }
       }, 
           {
@@ -1518,59 +1484,13 @@
           "experimental": false,
           "description": "<h3 class=\"comment-api-title\">Overview</h3>\n\nThe <code>ui5-side-navigation-sub-item</code> is intended to be used inside a <code>ui5-side-navigation-item</code> only.\n\n<h3>ES6 Module Import</h3>\n\n<code>import \"@ui5/webcomponents-fiori/dist/SideNavigationSubItem.js\";</code>",
           "doc-url": "https://sap.github.io/ui5-webcomponents/playground/components/SideNavigationSubItem/",
-          "attributes": [{
-              "name": "icon",
-              "type": "string",
-              "priority": "highest",
-              "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
-              "default": "\"\""
-            }, {
-              "name": "selected",
-              "type": "boolean",
-              "priority": "highest",
-              "description": "Defines whether the subitem is selected.",
-              "default": "false"
-            }, {
-              "name": "text",
-              "type": "string",
-              "priority": "highest",
-              "description": "Defines the text of the item.",
-              "default": "\"\""
-            }
+          "attributes": [
           ]
           ,
           "js": {
-            "properties": [{
-                "name": "icon",
-                "type": "string",
-                "priority": "high",
-                "description": "Defines the icon of the item. <br><br>\n\nThe SAP-icons font provides numerous options. <br> See all the available icons in the <ui5-link target=\"_blank\" href=\"https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\">Icon Explorer</ui5-link>.",
-                "default": "\"\""
-              }, {
-                "name": "selected",
-                "type": "boolean",
-                "priority": "high",
-                "description": "Defines whether the subitem is selected.",
-                "default": "false"
-              }, {
-                "name": "text",
-                "type": "string",
-                "priority": "high",
-                "description": "Defines the text of the item.",
-                "default": "\"\""
-              }
+            "properties": [
             ],
-            "methods": [],
-            "events": [
-              
-              {
-                "name": "click",
-                "priority": "highest",
-                "description": "Fired when the component is activated either with a click/tap or by using the Enter or Space key.",
-                 "value": {
-                      "type": "CustomEvent"
-                }
-              } ]
+            "methods": []
         }
       }, 
           {
