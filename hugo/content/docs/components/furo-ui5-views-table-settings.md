@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-views-table-settings
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-views/furo-ui5-views-table-settings.js';`<small>
 <br>exports *FuroUi5ViewsTableSettings* js
 <br>exports `<furo-ui5-views-table-settings>` custom-element-definition

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-context-menu-item
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/subcomponents/furo-ui5-context-menu-item.js';`<small>
 <br>exports *FuroUi5ContextMenuItem* js
 <br>exports `<furo-ui5-context-menu-item>` custom-element-definition

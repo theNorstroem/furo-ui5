@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-google-type-timeofday
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/form-google-type-timeofday.js';`<small>
 <br>exports *FormGoogleTypeTimeofday* js
 <br>exports `<form-google-type-timeofday>` custom-element-definition

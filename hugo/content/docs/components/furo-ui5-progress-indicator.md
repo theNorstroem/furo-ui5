@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-progress-indicator
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-progress-indicator.js';`<small>
 <br>exports *FuroUi5ProgressIndicator* js
 <br> mixes *FieldNodeAdapter*</small>

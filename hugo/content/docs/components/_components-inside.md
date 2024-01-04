@@ -8,6 +8,7 @@ bookHidden: true
 
 - [furo-ui5-barcode-scanner-dialog](furo-ui5-barcode-scanner-dialog.md) data barcode scanner dialog
 - [furo-ui5-bool-icon](furo-ui5-bool-icon.md) Displays a icon for a boolean value
+- [furo-ui5-busy-indicator](furo-ui5-busy-indicator.md) ui5 busy indicator with methods
 - [furo-ui5-button](furo-ui5-button.md) ui5 button with methods
 - [furo-ui5-card](furo-ui5-card.md) Ui5 card with data bindings
 - [furo-ui5-chart-display](furo-ui5-chart-display.md) Display charts with data objects
@@ -24,6 +25,7 @@ bookHidden: true
 - [furo-ui5-date-time-picker](furo-ui5-date-time-picker.md) furo data datetime picker field
 - [furo-ui5-dialog-display](furo-ui5-dialog-display.md) Display element for furo-ui5-dialog
 - [furo-ui5-dialog](furo-ui5-dialog.md) Dialog element
+- [furo-ui5-dynamic-header](furo-ui5-dynamic-header.md) Dynamic Header
 - [furo-ui5-flexible-grid](furo-ui5-flexible-grid.md) a grid splitter
 - [furo-ui5-form-field-container](furo-ui5-form-field-container.md) responsive labels for your input elements
 - [furo-ui5-header-panel](furo-ui5-header-panel.md) A bindable header panel
@@ -57,6 +59,7 @@ bookHidden: true
 - [furo-ui5-segmented-button](furo-ui5-segmented-button.md) segmented button
 - [furo-ui5-select-labeled](furo-ui5-select-labeled.md) labeled select
 - [furo-ui5-select](furo-ui5-select.md) data select field
+- [furo-ui5-show-hide](furo-ui5-show-hide.md) Animated content hider
 - [furo-ui5-sign-pad](furo-ui5-sign-pad.md) draw or sign
 - [furo-ui5-step-input-labeled](furo-ui5-step-input-labeled.md) labeled input field
 - [furo-ui5-step-input](furo-ui5-step-input.md) data step input field

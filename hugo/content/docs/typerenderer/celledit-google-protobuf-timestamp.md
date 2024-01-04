@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-google-protobuf-timestamp
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/celledit-google-protobuf-timestamp.js';`<small>
 <br>exports *CelleditGoogleProtobufTimestamp* js
 <br>extends */src/furo-ui5-date-time-picker.js*

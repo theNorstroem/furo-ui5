@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-google-protobuf-int32Value
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/display-google-protobuf-int32value.js';`<small>
 <br>exports *DisplayGoolgeProtobufIn32value* js
 <br>exports `<display-google-protobuf-int32value>` custom-element-definition

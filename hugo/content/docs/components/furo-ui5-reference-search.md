@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-reference-search
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-reference-search.js';`<small>
 <br>exports *FuroUi5ReferenceSearch* js
 <br>exports `<furo-ui5-reference-search>` custom-element-definition
@@ -283,6 +283,15 @@ Value State of the input field
 
 
 
+### **method**
+
+<span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">method</span>
+<small>`String` </small>
+
+Set the method. This is only needed when your service is not named "List".
+This is not the http method.
+<br><br>
+
 ### **required**
 
 <span  style="border-width:2px; border-style: solid;border-color:  rgb(255, 182, 91);font-family:monospace; padding:2px 4px;">required</span> <small>**reflects**</small>
@@ -493,6 +502,7 @@ or do btoa(JSON.stringify(FILTER))
 clears the result set
 
 <br><br>
+
 
 
 

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-furo-link
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-furo-link.js';`<small>
 <br>exports *CellFuroLink* js
 <br>exports `<cell-furo-link>` custom-element-definition

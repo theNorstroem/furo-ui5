@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-furo-fat-double
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/display-furo-fat-double.js';`<small>
 <br>exports *DisplayFuroFatDouble* js
 <br>exports `<display-furo-fat-double>` custom-element-definition

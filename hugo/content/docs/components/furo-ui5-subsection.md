@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-subsection
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-subsection.js';`<small>
 <br>exports *FuroUi5Subsection* js
 <br>exports `<furo-ui5-subsection>` custom-element-definition
@@ -133,6 +133,16 @@ toggles the collapse state
 Type: `HTMLElement [0..n]`
 
 defines the content of the subsection.
+<br><br>
+### **headline-start**
+Type: `HTMLElement [0..n]`
+
+defines the content right after the header.
+<br><br>
+### **headline-end**
+Type: `HTMLElement [0..n]`
+
+defines the content before the action slot.
 <br><br>
 ### **action**
 Type: `HTMLElement [0..n]`

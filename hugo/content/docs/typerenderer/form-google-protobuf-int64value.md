@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-google-protobuf-int64value
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/form-google-protobuf-int64value.js';`<small>
 <br>exports *FormGoolgeProtobufIn64value* js
 <br>exports `<form-google-protobuf-int64value>` custom-element-definition

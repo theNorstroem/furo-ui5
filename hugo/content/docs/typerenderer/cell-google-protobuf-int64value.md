@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-google-protobuf-int64value
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-google-protobuf-int64value.js';`<small>
 <br>exports *CellGoolgeProtobufIn64value* js
 <br>exports `<cell-google-protobuf-int64value>` custom-element-definition

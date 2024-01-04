@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-furo-reference
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/form-furo-reference.js';`<small>
 <br>exports *FormFuroReference* js
 <br>exports `<form-furo-reference>` custom-element-definition

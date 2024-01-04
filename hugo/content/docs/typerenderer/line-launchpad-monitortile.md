@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # line-launchpad-monitortile
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/line-launchpad-monitortile.js';`<small>
 <br>exports *LineLaunchpadMonitortile* js
 <br>exports `<line-launchpad-monitortile>` custom-element-definition

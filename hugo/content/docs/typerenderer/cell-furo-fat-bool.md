@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-furo-fat-bool
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-furo-fat-bool.js';`<small>
 <br>exports *CellFuroFatBool* js
 <br>exports `<cell-furo-fat-bool>` custom-element-definition

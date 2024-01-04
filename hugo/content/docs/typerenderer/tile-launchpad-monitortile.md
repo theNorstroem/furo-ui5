@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # tile-launchpad-monitortile
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/tile-launchpad-monitortile.js';`<small>
 <br>exports *TileLaunchpadMonitortile* js
 <br>exports `<tile-launchpad-monitortile>` custom-element-definition

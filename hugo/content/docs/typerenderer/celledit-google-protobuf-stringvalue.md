@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-google-protobuf-stringvalue
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/celledit-google-protobuf-stringvalue.js';`<small>
 <br>exports *CelleditGoogleProtobufStringvalue* js
 <br>extends */src/typerenderer/celledit-string.js*

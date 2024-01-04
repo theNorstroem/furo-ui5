@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-type-date
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/celledit-furo-type-date.js';`<small>
 <br>exports *CelleditFuroTypeDate* js
 <br>extends */src/furo-ui5-date-picker.js*

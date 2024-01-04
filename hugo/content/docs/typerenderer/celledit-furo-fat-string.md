@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-furo-fat-string
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/celledit-furo-fat-string.js';`<small>
 <br>exports *CelleditFuroFatString* js
 <br>extends */src/typerenderer/celledit-string.js*

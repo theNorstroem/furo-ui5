@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-furo-type-money
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/form-furo-type-money.js';`<small>
 <br>exports *FormFuroTypeMoney* js
 <br>exports `<form-furo-type-money>` custom-element-definition

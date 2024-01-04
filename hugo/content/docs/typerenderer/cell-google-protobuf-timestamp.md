@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # cell-google-protobuf-timestamp
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/cell-google-protobuf-timestamp.js';`<small>
 <br>exports *CellGoogleProtobufTimestamp* js
 <br>exports `<cell-google-protobuf-timestamp>` custom-element-definition

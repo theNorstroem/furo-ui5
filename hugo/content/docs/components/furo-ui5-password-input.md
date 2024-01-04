@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-password-input
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-password-input.js';`<small>
 <br>exports *FuroUi5PasswordInput* js
 <br> mixes *FieldNodeAdapter*</small>
@@ -127,7 +127,7 @@ default: **{
       readonly: undefined,
       disabled: undefined,
       required: undefined,
-      hidden:undefined,
+      hidden: undefined,
     }**</small>
 
 

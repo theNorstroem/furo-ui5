@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # display-google-protobuf-doublevalue
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/display-google-protobuf-doublevalue.js';`<small>
 <br>exports *DisplayGoogleProtobufDoublevalue* js
 <br>exports `<display-google-protobuf-doublevalue>` custom-element-definition

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # celledit-google-type-timeofday
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/celledit-google-type-timeofday.js';`<small>
 <br>exports *CelleditGoogleTypeTimeofday* js
 <br>extends */src/furo-ui5-time-picker.js*

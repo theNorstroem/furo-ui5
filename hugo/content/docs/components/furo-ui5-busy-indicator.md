@@ -5,10 +5,9 @@ weight: 50
 ---
 
 # furo-ui5-busy-indicator
-**@furo/ui5** <small>v1.0.0-rc.24</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-busy-indicator.js';`<small>
 <br>exports *FuroUiBusyIndicator* js
-<br>exports `<furo-ui5-busy-indicator>` custom-element-definition
 <br>extends *src/furo-ui5-busy-indicator.js*</small>
 
 > **Summary:** ui5 busy indicator with methods
@@ -27,6 +26,7 @@ https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
 
 ## Attributes and Properties
 {{% api "_furo-ui5-busy-indicator-properties.md" %}}
+
 
 
 
@@ -55,6 +55,7 @@ Sets the busy indicator state to active
 Sets the busy indicator state to inactive
 
 <br><br>
+
 
 
 

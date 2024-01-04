@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-combobox
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/furo-ui5-combobox.js';`<small>
 <br>exports *FuroUi5Combobox* js
 <br> mixes *FieldNodeAdapter*</small>

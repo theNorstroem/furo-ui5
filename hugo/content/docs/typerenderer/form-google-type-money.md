@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # form-google-type-money
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/typerenderer/form-google-type-money.js';`<small>
 <br>exports *FormGoogleTypeMoney* js
 <br>exports `<form-google-type-money>` custom-element-definition

@@ -5,7 +5,7 @@ weight: 50
 ---
 
 # furo-ui5-launchpad-section-renderer
-**@furo/ui5** <small>v1.16.2</small>
+**@furo/ui5** <small>v1.18.0</small>
 <br>`import '@furo/ui5/src/spaces/furo-ui5-launchpad-section-renderer.js';`<small>
 <br>exports *FuroUi5LaunchpadSectionRenderer* js
 <br>exports `<furo-ui5-launchpad-section-renderer>` custom-element-definition
