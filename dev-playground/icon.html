@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,  initial-scale=1.0">
+  <title>Icons</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+
+  <script type="module">
+
+    import "@/Assets"
+    import "@/furo-ui5-icon"
+    import "@furo/layout/ResponsiveLayout"
+    // import components here
+
+  </script>
+
+  <style>
+    body {
+      background-color: var(--sapBackgroundColor);
+      padding: 1rem;
+    }
+
+    furo-ui5-button:not(:defined) {
+      display: none;
+    }
+  </style>
+</head>
+<body class="sapUiSizeCompact">
+
+<main>
+  <h1>Icons</h1>
+  <furo-responsive-layout layout="six">
+
+    <furo-ui5-icon name="share"></furo-ui5-icon>
+    <furo-ui5-icon name="share" mode="Interactive"></furo-ui5-icon>
+    <furo-ui5-icon name="share" design="Positive"></furo-ui5-icon>
+    <furo-ui5-icon name="share" design="Critical"></furo-ui5-icon>
+    <furo-ui5-icon name="share" design="Information"></furo-ui5-icon>
+    <furo-ui5-icon name="share" design="Negative"></furo-ui5-icon>
+    <furo-ui5-icon name="share" design="Neutral"></furo-ui5-icon>
+    <furo-ui5-icon name="share" design="NonInteractive"></furo-ui5-icon>
+    <furo-ui5-icon name="share" design="Contrast"></furo-ui5-icon>
+    <furo-ui5-icon name="share" design="Default"></furo-ui5-icon>
+
+
+
+  </furo-responsive-layout>
+  <table>
+    <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Icon</th>
+    </tr>
+    </thead>
+    <tr>
+      <td>test</td>
+      <td>test</td>
+    </tr>
+  </table>
+</main>
+
+</body>
+
+
+<script type="module">
+  import {DOMFBP} from "@furo/fbp/src/DOMFBP";
+  // append fbp to the body
+  const fbproot = new DOMFBP(document.body);
+  fbproot._FBPTraceWires();
+</script>
+</html>

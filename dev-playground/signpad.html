@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,  initial-scale=1.0">
+  <title>FuroUi5SignPad</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+
+  <script type="module">
+import "@furo/layout/furo-responsive-layout"
+    import "@/Assets"
+    // import components here
+     import "@/furo-ui5-sign-pad";
+     import "@/furo-ui5-button";
+
+  </script>
+
+  <style>
+    body {
+      background-color: var(--sapBackgroundColor);
+      padding: 1rem;
+    }
+    *:not(:defined) {
+      display: none;
+    }
+  </style>
+</head>
+<body class="sapUiSizeCompact">
+
+<main>
+  <h1>FuroUi5SignPad</h1>
+  <furo-ui5-button at-click="--clear">clear</furo-ui5-button>
+  <furo-responsive-layout layout="two">
+    <furo-ui5-sign-pad fn-clear="--clear" at-sign-updated="--data"></furo-ui5-sign-pad>
+    <img   set-src="--data"  alt="">
+
+  </furo-responsive-layout>
+
+  <furo-ui5-sign-pad disabled at-sign-updated="--data"></furo-ui5-sign-pad>
+  <img set-src="--data"  alt="">
+</main>
+
+</body>
+
+
+<script type="module">
+  import { DOMFBP } from "@furo/fbp/src/DOMFBP";
+  // append fbp to the body
+  const fbproot = new DOMFBP(document.body);
+  fbproot._FBPTraceWires();
+</script>
+</html>

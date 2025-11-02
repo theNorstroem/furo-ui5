@@ -1,10 +1,9 @@
 {
   "name": "@furo/ui5",
-  "description": "SAP UI5 Web Components data bindings for furo-web",
-  "version": "1.18.1",
+  "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
+  "version": "2.0.0-RC.5",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": "git@github.com:eclipse/eclipsefuro-web.git",
-  "web-types": "web-types.json",
   "author": {
     "name": "theNorstroem",
     "email": "",
@@ -13,91 +12,126 @@
   "keywords": [
     "web-components",
     "flow based programming",
-    "flowbased",
-    "flow"
+    "fbp"
   ],
   "license": "MIT",
-  "main": "src/furo-catalog.js",
+  "main": "dist/index.js",
+  "type": "module",
+  "files": [
+    "./dist",
+    "icon.svg",
+    "README.md",
+    "custom-elements.json",
+    "web-types.json"
+  ],
   "scripts": {
-    "analyze": "cem analyze --globs \"src/**/*.js\" --exclude **/furo-catalog.js --litelement",
-    "start": "web-dev-server --app-index demos",
-    "lint": "eslint --ext .js,.html . --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*' --ignore-path .gitignore && prettier \"**/*.js\" --check  --ignore-path .prettierignore",
-    "format": "eslint --ext .js,.html . --fix --ignore-path .prettierignore && prettier \"**/*.js\" --write --ignore-path .prettierignore",
-    "test": "web-test-runner  --coverage",
-    "test:watch": "web-test-runner  --watch",
+    "start": "tsc && concurrently -k -r 'vite dev' 'tsc --watch'",
+    "test": "vitest run --coverage",
+    "test:debug": "vitest watch --inspect-brk --no-file-parallelism",
+    "test:watch": "vitest watch",
+    "test:ui": "vitest --ui",
+    "build": "rimraf dist && npm run analyze && npm run analyze:internal && npm run analyze:deep && npm run gen:intrinsic && tsc && tsc-alias",
+    "tsc": "tsc && tsc-alias",
+    "gen:intrinsic:pure": "node ./scripts/IntrinsicElements/main.js  && prettier src/JSX/*.ts --write",
+    "gen:intrinsic": "rimraf src/JSX/* && node ./scripts/IntrinsicElements/main.js @furo/ui5 && eslint --version && eslint --fix --ext .ts src/JSX && prettier src/JSX/*.ts --write",
+    "gen:contracts": "./scripts/protoc-gen-open-models.sh && eslint --ext .ts ./src/models --fix --ignore-path .gitignore && prettier --ext .ts ./src/models --write --ignore-path .gitignore",
+    "lint": "eslint --ext .ts,.html ./src --ignore-path .gitignore --ignore-pattern src/typerenderer",
+    "lint:fix": "eslint --ext .ts ./src --fix --ignore-path .gitignore --ignore-pattern src/typerenderer",
+    "lint:fix:tests": "eslint --ext .ts,.html ./test --fix --ignore-path .gitignore",
+    "format": "prettier './src/**/*.ts' --write --ignore-path .gitignore",
+    "format:tests": "prettier './test/**/*.ts' --write --ignore-path .gitignore",
     "docs:start": "cd hugo && hugo serve",
     "docs:generate": "npm run analyze:components && npm run analyze:typerenderer && ./scripts/cem.sh",
     "docs:publish": "./scripts/publishDocs.sh",
-    "webtypes": "./scripts/webtypes.sh",
-    "analyze:components": "cem analyze --globs \"src/**/*.js\" --exclude **/typerenderer/* --exclude **/helper/** --litelement --outdir tmp/components",
-    "analyze:typerenderer": "cem analyze --globs \"src/typerenderer/*.js\" --exclude --litelement --outdir tmp/typerenderer",
-    "prepare": "husky install"
+    "analyze": "cem analyze --litelement --globs ./src/* --outdir ./dist",
+    "analyze:internal": "cem analyze --config scripts/internal-cem.config.mjs && mv tmp/custom-elements.json dist/custom-elements-internal.json",
+    "analyze:deep": "cem analyze --config ./scripts/deep-cem.config.mjs &&  ./scripts/WebtypesPostprocessor.mjs && ./scripts/CheckWebtypes.mjs",
+    "prepare": "husky install",
+    "bootstrap": "npm install && npm link && npm link @furo/ui5"
   },
   "peerDependencies": {
-    "@furo/fbp": "^6.9.0",
-    "@furo/framework": "^2.4.10",
-    "@furo/layout": "^2.2.12",
-    "@furo/data": "^2.16.14",
-    "@furo/util": "^2.1.17",
-    "@furo/route": "^2.6.11",
-    "@ui5/webcomponents": "^1.19.0",
-    "@ui5/webcomponents-base": "^1.19.0",
-    "@ui5/webcomponents-fiori": "^1.19.0",
-    "@ui5/webcomponents-icons": "^1.19.0",
-    "lit": "^3.0.0"
+    "@furo/fbp": "^6.15.0",
+    "@furo/layout": "^3.0.0-RC.2",
+    "@furo/open-models": "^1.11.1",
+    "@furo/route": "^3.8.0",
+    "@furo/util": "^2.2.2",
+    "@ui5/webcomponents": "^2.15.1",
+    "@ui5/webcomponents-base": "^2.15.1",
+    "@ui5/webcomponents-compat": "^2.15.1",
+    "@ui5/webcomponents-fiori": "^2.15.1",
+    "@ui5/webcomponents-icons": "^2.15.1",
+    "@ui5/webcomponents-icons-business-suite": "^2.15.1",
+    "@ui5/webcomponents-icons-tnt": "^2.15.1",
+    "@ui5/webcomponents-localization": "^2.15.1",
+    "@ui5/webcomponents-theming": "^2.15.1",
+    "lit": "^3.3.1",
+    "react": "^19.1.1"
   },
   "dependencies": {
-    "markdown-it": "^13.0.2",
-    "prismjs": "^1.29.0",
-    "apexcharts": "^3.44.0",
-    "signature_pad": "^4.1.6"
+    "markdown-it": "^14.1.0",
+    "prismjs": "^1.30.0",
+    "signature_pad": "^5.1.1"
   },
   "devDependencies": {
-    "@ui5/webcomponents": "^1.19.0",
-    "@ui5/webcomponents-base": "^1.19.0",
-    "@ui5/webcomponents-fiori": "^1.19.0",
-    "@ui5/webcomponents-icons": "^1.19.0",
-    "@custom-elements-manifest/analyzer": "^0.9.0",
-    "@furo/web-types": "^0.0.5",
-    "@open-wc/eslint-config": "^7.0.0",
-    "@open-wc/testing": "^3.0.3",
-    "@web/dev-server": "^0.1.34",
-    "@web/test-runner": "^0.13.21",
-    "@esm-bundle/chai": "^4.3.4-fix.0",
-    "eslint": "^8.2.0",
-    "eslint-config-prettier": "^8.3.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^11.2.6",
-    "prettier": "^2.4.1",
-    "@rollup/plugin-json": "4.1.0"
+    "@axe-core/playwright": "^4.10.2",
+    "@axe-core/reporter-earl": "^4.10.2",
+    "@babel/preset-env": "^7.28.3",
+    "@custom-elements-manifest/analyzer": "^0.10.10",
+    "@furo/web-types": "^0.1.0",
+    "@open-wc/eslint-config": "^12.0.3",
+    "@open-wc/testing": "^4.0.0",
+    "@playwright/test": "1.56.1",
+    "@types/mocha": "^10.0.10",
+    "@types/react": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
+    "@vitest/browser": "^4.0.1",
+    "@vitest/browser-playwright": "^4.0.1",
+    "@vitest/coverage-istanbul": "^4.0.1",
+    "@vitest/ui": "^4.0.1",
+    "babel-plugin-template-html-minifier": "^4.1.0",
+    "cem-plugin-vs-code-custom-data-generator": "^1.4.2",
+    "concurrently": "^9.2.1",
+    "custom-element-jet-brains-integration": "^1.7.0",
+    "deepmerge": "^4.3.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-lit": "^2.1.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "husky": "^9.1.7",
+    "koa-bodyparser": "^4.4.1",
+    "koa-compress": "^5.1.1",
+    "koa-proxies": "^0.12.4",
+    "lint-staged": "^16.2.4",
+    "lit-analyzer": "^2.0.3",
+    "nano-staged": "^0.8.0",
+    "picocolors": "^1.1.1",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.52.5",
+    "rollup-plugin-workbox": "^8.1.2",
+    "@jackolope/ts-lit-plugin": "^3.1.6",
+    "ts-lit-plugin": "^2.0.2",
+    "tsc-alias": "^1.8.16",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.11",
+    "vite-plugin-devtools-json": "^1.0.0",
+    "vitest": "^4.0.1",
+    "@open-wc/testing-helpers": "^3.0.1",
+    "chai-a11y-axe": "^1.5.0"
   },
   "publishConfig": {
     "access": "public"
   },
+  "customElements": "custom-elements.json",
+  "web-types": "./web-types.json",
   "engines": {
-    "node": ">=14.0"
-  },
-  "customElements": "tmp/typerenderer/custom-elements.json",
-  "eslintConfig": {
-    "extends": [
-      "@open-wc",
-      "prettier"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "arrowParens": "avoid"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix --ignore-pattern 'hugo/*' --ignore-pattern 'docs/*' --ignore-pattern 'test--/*'",
-      "prettier --write",
-      "git add"
-    ]
+    "node": ">=21.7.3",
+    "npm": ">=10.2.5"
   }
 }

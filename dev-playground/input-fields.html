@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,  initial-scale=1.0">
+  <title>Title</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+
+  <script type="module">
+    import "@furo/layout/furo-vertical-flex.js"
+    import "@/Assets"
+    import "@/furo-ui5-shellbar"
+    import "@/furo-ui5-shellbar-search"
+    import "@/furo-ui5-shellbar-spacer"
+
+
+    // import components here
+
+import "./components/input-fields.js"
+
+  </script>
+
+  <style>
+    body {
+      background-color: var(--sapBackgroundColor);
+      padding: 0;
+      margin: 0;
+    }
+    *:not(:defined) {
+      display: none;
+    }
+    furo-vertical-flex{
+      height: 100vh;
+    }
+  </style>
+</head>
+<body class="sapUiSizeCompact">
+
+<main>
+<furo-vertical-flex>
+  <furo-ui5-shellbar shadow primary-title="Primary" secondary-title="Secondary" notifications-count="72" show-notifications show-product-switch>
+
+    <furo-ui5-button icon="menu" slot="startButton"></furo-ui5-button>
+    <furo-ui5-button icon="nav-back" slot="startButton"></furo-ui5-button>
+
+
+    <furo-ui5-shellbar-spacer slot="content"></furo-ui5-shellbar-spacer>
+    <div slot="content" style="display: flex; gap: 0 5px; align-items: center;">
+      <furo-ui5-switch></furo-ui5-switch>
+      <furo-ui5-label>Try Beta Version</furo-ui5-label>
+    </div>
+
+    <furo-ui5-shellbar-search slot="searchField" loading show-clear-icon placeholder="Search Apps, Products">
+
+    </furo-ui5-shellbar-search>
+
+    <furo-ui5-shellbar-item icon="sys-help" text="Help"></furo-ui5-shellbar-item>
+    <furo-ui5-toggle-button icon="sap-icon://da" tooltip="Joule" slot="assistant"></furo-ui5-toggle-button>
+    <furo-ui5-avatar slot="profile">
+      <img src="https://ui5.github.io/webcomponents/images/avatars/man_avatar_3.png"/>
+    </furo-ui5-avatar>
+  </furo-ui5-shellbar>
+  <input-fields flex scroll></input-fields>
+</furo-vertical-flex>
+
+</main>
+
+</body>
+
+
+<script type="module">
+  import { DOMFBP } from "@furo/fbp/src/DOMFBP";
+  // append fbp to the body
+  const fbproot = new DOMFBP(document.body);
+  fbproot._FBPTraceWires();
+</script>
+</html>

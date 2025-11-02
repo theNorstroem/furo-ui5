@@ -1,0 +1,11 @@
+export { XAny as FuroFatAny } from "./furo/fat/Any";
+export { Bool as FuroFatBool } from "./furo/fat/Bool";
+export { Bytes as FuroFatBytes } from "./furo/fat/Bytes";
+export { Double as FuroFatDouble } from "./furo/fat/Double";
+export { Empty as FuroFatEmpty } from "./furo/fat/Empty";
+export { Float as FuroFatFloat } from "./furo/fat/Float";
+export { Int32 as FuroFatInt32 } from "./furo/fat/Int32";
+export { Int64 as FuroFatInt64 } from "./furo/fat/Int64";
+export { XString as FuroFatString } from "./furo/fat/String";
+export { Uint32 as FuroFatUint32 } from "./furo/fat/Uint32";
+export { Uint64 as FuroFatUint64 } from "./furo/fat/Uint64";

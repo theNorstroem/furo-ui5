@@ -1,0 +1,9 @@
+import { FuroUi5ToggleButton } from "@/impl/FuroUi5ToggleButton";
+
+FuroUi5ToggleButton.define();
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "furo-ui5-toggle-button": FuroUi5ToggleButton;
+  }
+}

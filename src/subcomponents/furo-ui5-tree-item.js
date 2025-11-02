@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
 import '@furo/layout/src/furo-horizontal-flex';
-import '../furo-ui5-bool-icon.js';
+import '../impl/furo-ui5-bool-icon.js';
 import '@ui5/webcomponents/dist/Icon.js';
 import '@ui5/webcomponents-icons/dist/border.js';
 

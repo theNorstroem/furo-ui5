@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,  initial-scale=1.0">
+  <title>Html Table</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+
+  <script type="module">
+
+    import "@ui5/webcomponents/Assets";
+    import "@ui5/webcomponents-icons/AllIcons";
+    // import components here
+
+  </script>
+
+  <style>
+    body {
+      background-color: var(--sapBackgroundColor);
+      padding: 1rem;
+    }
+    furo-ui5-button:not(:defined) {
+      display: none;
+    }
+
+  </style>
+</head>
+<body class="sapUiSizeCompact">
+
+<main>
+  <h1>Html Table</h1>
+
+
+
+  <h4>Raw Table with thead, tbody, colspan</h4>
+
+  <table>
+    <caption>Table caption</caption>
+    <thead>
+    <tr value-state="Positive">
+      <th colspan="3">Invoice #123456789</th>
+      <th>14 January 2025
+    </tr>
+    <tr>
+      <td colspan="2"><strong>Pay to:</strong><br> Acme Billing Co.<br> 123 Main St.<br> Cityville, NA 12345<br> Cityville, NA 12345<br> Cityville, NA 12345</td>
+      <td colspan="2"><strong>Customer:</strong><br> John Smith<br> 321 Willow Way<br> Southeast Northwestershire, MA
+        54321
+      </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr value-state="Negative">
+      <th>Name / Description</th>
+      <th>Qty.</th>
+      <th>@</th>
+      <th>Cost</th>
+    </tr>
+    <tr value-state="Positive">
+      <td>Paperclips</td>
+      <td>1000 <br>ll</td>
+      <td><furo-ui5-rating-indicator value="3"></furo-ui5-rating-indicator></td>
+      <td>10.00</td>
+    </tr>
+    <tr>
+      <td>Staples (box)</td>
+      <td>100</td>
+      <td>1.00</td>
+      <td>100.00</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <th colspan="3">Subtotal</th>
+      <td> 110.00</td>
+    </tr>
+    <tr>
+      <th colspan="2">Tax</th>
+      <td> 8%</td>
+      <td>8.80</td>
+    </tr>
+    <tr>
+      <th colspan="3">Grand Total</th>
+      <td>$ 118.80</td>
+    </tr>
+    </tfoot>
+  </table>
+
+  <h4>Simple raw HTML Table</h4>
+
+  <div id="wrapper" style="overflow: auto; padding: 0;">
+    <table>
+      <th>Product</th>
+      <th>Supplier</th>
+      <th>Dimensions</th>
+      <th style="min-width:450px">Weight</th>
+      <th style="min-width:300px">Price</th>
+      <tr>
+        <td>Notebook Basic 15</td>
+        <td>Very Best Screens</td>
+        <td>30 x 18 x 3cm</td>
+        <td><span style="color: #2b7c2b"><b style="padding-right: 0.125rem">4.2</b>KG</span></td>
+        <td><span><b style="padding-right: 0.125rem">956</b>EUR</span></td>
+      </tr>
+      <tr>
+        <td>Notebook Basic 15</td>
+        <td>Very Best Screens</td>
+        <td>30 x 18 x 3cm</td>
+        <td><span style="color: #2b7c2b"><b style="padding-right: 0.125rem">4.2</b>KG</span></td>
+        <td><span><b style="padding-right: 0.125rem">956</b>EUR</span></td>
+      </tr>
+    </table>
+  </div>
+</main>
+
+</body>
+
+
+<script type="module">
+  import { DOMFBP } from "@furo/fbp/src/DOMFBP";
+  // append fbp to the body
+  const fbproot = new DOMFBP(document.body);
+  fbproot._FBPTraceWires();
+</script>
+</html>

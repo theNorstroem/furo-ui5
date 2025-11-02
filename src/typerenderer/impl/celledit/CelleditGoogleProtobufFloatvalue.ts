@@ -1,0 +1,31 @@
+import { CelleditInt32 } from './celledit-int32.js';
+
+/**
+ * `celledit-google-protobuf-floatvalue` is a `celledit` context renderer.
+ *
+ * It uses furo-ui5-number-input as the renderer
+ *
+ * @summary celledit renderer for `google.protobuf.FloatValue`
+ * @element celledit-google-protobuf-floatvalue
+ */
+export class CelleditGoolgeProtobufFloatvalue extends CelleditInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: 'celledit-google-protobuf-floatvalue' };
+  }
+
+  static get styles() {
+    return super.styles;
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "CelleditGoolgeProtobufFloatvalue": CelleditGoolgeProtobufFloatvalue;
+  }
+}
+
+import CelleditGoolgeProtobufFloatvalue from "@/typerenderer/impl/CelleditGoolgeProtobufFloatvalue
+CelleditGoolgeProtobufFloatvalue.define()

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,  initial-scale=1.0">
+  <title>Button</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+
+  <script type="module">
+
+    import "../src/Assets.ts"
+    import "@/models/init";
+    import "../src/furo-ui5-button.js";
+    import "../src/furo-ui5-icon.js";
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="./styles/Button.css">
+  <style>
+    body {
+      background-color: var(--sapBackgroundColor);
+      padding: 1rem;
+    }
+    furo-ui5-button:not(:defined) {
+      display: none;
+    }
+  </style>
+</head>
+<body class="sapUiSizeCompact">
+
+<main>
+  <h1>Buttons</h1>
+
+  <furo-ui5-responsive-layout layout="six">
+
+    <furo-ui5-button design="Default">Default</furo-ui5-button>
+    <furo-ui5-button design="Emphasized">Emphasized</furo-ui5-button>
+    <furo-ui5-button design="Positive">Positive</furo-ui5-button>
+    <furo-ui5-button design="Negative">Negative</furo-ui5-button>
+    <furo-ui5-button design="Transparent">Transparent</furo-ui5-button>
+    <furo-ui5-button design="Attention">Attention</furo-ui5-button>
+
+    <furo-ui5-button icon="addresses" design="Default">Default</furo-ui5-button>
+    <furo-ui5-button icon="addresses" design="Emphasized">Emphasized</furo-ui5-button>
+    <furo-ui5-button icon="addresses" design="Positive">Positive</furo-ui5-button>
+    <furo-ui5-button icon="addresses" design="Negative">Negative</furo-ui5-button>
+    <furo-ui5-button icon="addresses" design="Transparent">Transparent</furo-ui5-button>
+    <furo-ui5-button icon="addresses" design="Attention">Attention</furo-ui5-button>
+
+    <furo-ui5-button end-icon="addresses"   design="Default">Default</furo-ui5-button>
+    <furo-ui5-button end-icon="addresses" design="Emphasized">Emphasized</furo-ui5-button>
+    <furo-ui5-button end-icon="addresses" design="Positive">Positive</furo-ui5-button>
+    <furo-ui5-button end-icon="addresses" design="Negative">Negative</furo-ui5-button>
+    <furo-ui5-button end-icon="addresses" design="Transparent">Transparent</furo-ui5-button>
+    <furo-ui5-button end-icon="addresses" design="Attention">Attention</furo-ui5-button>
+
+
+    <furo-ui5-button disabled  icon="addresses" design="Default">Default</furo-ui5-button>
+    <furo-ui5-button disabled  icon="addresses" design="Emphasized">Emphasized</furo-ui5-button>
+    <furo-ui5-button disabled icon="addresses" design="Positive">Positive</furo-ui5-button>
+    <furo-ui5-button disabled icon="addresses" design="Negative">Negative</furo-ui5-button>
+    <furo-ui5-button disabled icon="addresses" design="Transparent">Transparent</furo-ui5-button>
+    <furo-ui5-button disabled icon="addresses" design="Attention">Attention</furo-ui5-button>
+
+  </furo-ui5-responsive-layout>
+
+  <br>
+  <br>
+  <h2>A11y tests</h2>
+  <p>Caution: Ui5 cheated on the a11y tests (shadow)</p>
+  <furo-ui5-responsive-layout layout="six">
+    <furo-ui5-button accessible-name="Outside" design="Default">Default</furo-ui5-button>
+    <furo-ui5-button accessible-name="Outside" design="Emphasized">Emphasize</furo-ui5-button>
+    <furo-ui5-button accessible-name="Outside" design="Positive">Positive</furo-ui5-button>
+    <furo-ui5-button accessible-name="Outside" design="Negative">Negative</furo-ui5-button>
+    <furo-ui5-button accessible-name="Outside" design="Transparent">Transparent</furo-ui5-button>
+    <furo-ui5-button accessible-name="Outside" design="Attention">Attention</furo-ui5-button>
+  </furo-ui5-responsive-layout>
+</main>
+
+</body>
+
+
+<script type="module">
+  import { DOMFBP } from "@furo/fbp/src/DOMFBP";
+  // append fbp to the body
+  const fbproot = new DOMFBP(document.body);
+  fbproot._FBPTraceWires();
+</script>
+</html>

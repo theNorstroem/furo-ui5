@@ -1,0 +1,45 @@
+import UserMenu from "@ui5/webcomponents-fiori/dist/UserMenu.js";
+
+/**
+ * @tagname furo-ui5-user-menu
+ */
+export class FuroUi5UserMenu extends UserMenu {
+  /**
+   * @private
+   */
+  static override get metadata() {
+    const md = super.metadata;
+    md.tag = "furo-ui5-user-menu";
+    return md;
+  }
+
+  /**
+   * Shows the user-menu at the opener position.
+   * Alternatively you can work with the attributes `opener` and `open` to achieve the same.
+   * @param opener
+   * @public
+   */
+  showAt(opener: HTMLElement | string) {
+    this.opener = opener;
+
+    this.open = true;
+  }
+
+  /**
+   * Shows the user-menu at the opener position defined with attribute opener.
+   * @public
+   */
+  show() {
+    this.open = true;
+  }
+
+  /**
+   * Closes the popup.
+   * @public
+   */
+  close(): void {
+    this.open = false;
+  }
+}
+
+FuroUi5UserMenu.define();

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+
+	<title>Button</title>
+
+
+  <script type="module">
+
+    import "@/Assets.ts"
+    import "@/furo-ui5-button-badge";
+    import "@/furo-ui5-button";
+    import "@/furo-ui5-text-input";
+    import "@/furo-ui5-icon";
+  </script>
+
+
+
+
+</head>
+
+<body class="button1auto">
+
+	<furo-ui5-button design="Negative" icon="decline">Reject</furo-ui5-button>
+	<furo-ui5-button design="Positive" icon="add">Add</furo-ui5-button>
+	<furo-ui5-button icon="home" id="icon-only-comment"><!----><!----></furo-ui5-button>
+	<furo-ui5-button icon="text" id="icon-only-blank-text"> </furo-ui5-button>
+	<furo-ui5-button accessible-role="Link" id="button-role-link"> Navigation Button </furo-ui5-button>
+	<furo-ui5-button>
+
+	</furo-ui5-button>
+	<furo-ui5-icon name="invalid_name"></furo-ui5-icon>
+	<furo-ui5-button design="Emphasized" icon="invalid_name">Press</furo-ui5-button>
+
+	<furo-ui5-button id="download" icon="download" accessible-name="Download application"></furo-ui5-button>
+	<furo-ui5-button id="button1" icon="home" design="Emphasized">Action Bar Button</furo-ui5-button>
+	<furo-ui5-button class="button2auto">Primary <br> button</furo-ui5-button>
+	<furo-ui5-button class="button2auto button3auto" design="Transparent">Secondary <span>button</span></furo-ui5-button>
+	<furo-ui5-button disabled id="button-disabled">Inactive</furo-ui5-button>
+	<furo-ui5-button design="Positive">Accept</furo-ui5-button>
+	<furo-ui5-button design="Negative" accessible-description="Decline the action">Decline</furo-ui5-button>
+
+	<br />
+	<br />
+
+	<div>
+		<furo-ui5-toggle-button design="Positive" icon="add"></furo-ui5-toggle-button>
+		<furo-ui5-toggle-button design="Negative" icon="add"></furo-ui5-toggle-button>
+	</div>
+
+	<br />
+	<br />
+
+	<furo-ui5-text-input id="click-counter"></furo-ui5-text-input>
+
+	<furo-ui5-button id="button-with-slot" class="button2auto" design="Emphasized">Action<br> <i>Bar</i><br>
+		Button</furo-ui5-button>
+	<furo-ui5-button>Primary button</furo-ui5-button>
+	<furo-ui5-button design="Transparent">Secondary button</furo-ui5-button>
+	<furo-ui5-button disabled>Inactive</furo-ui5-button>
+	<furo-ui5-button design="Positive">Agree</furo-ui5-button>
+	<furo-ui5-button design="Negative">Decline</furo-ui5-button>
+	<furo-ui5-button design="Attention">Warning</furo-ui5-button>
+	<furo-ui5-button id="attentionIconButton" design="Attention" icon="message-warning">Warning</furo-ui5-button>
+	<furo-ui5-button design="Attention" icon="message-warning"></furo-ui5-button>
+	<br />
+	<br />
+	<br />
+
+	<furo-ui5-button icon="download" accessible-name="Download application"></furo-ui5-button>
+	<furo-ui5-button icon="employee" accessible-name="Download book">Action Bar Button</furo-ui5-button>
+	<furo-ui5-button icon="download"></furo-ui5-button>
+
+	<furo-ui5-button icon="employee" accessible-name="Download book" class="button4auto">Action Bar Button</furo-ui5-button>
+	<furo-ui5-button end-icon="employee" accessible-name="Download book" class="button4auto">Action Bar Button</furo-ui5-button>
+
+	<furo-ui5-label>Button with accessibleDescription:</furo-ui5-label>
+	<furo-ui5-button icon="bar-code" accessible-description="Scan bar code">Scan</furo-ui5-button>
+
+	<br />
+	<br />
+
+	<furo-ui5-label id="1download-text">Download Application</furo-ui5-label>
+	<furo-ui5-label id="download-text2">From This Button</furo-ui5-label>
+
+	<furo-ui5-button icon="employee" accessible-name="Help me">Action Bar Button</furo-ui5-button>
+	<furo-ui5-button id="buttonAccNameRef" icon="download" accessible-name="Help me"
+		accessible-name-ref="1download-text"></furo-ui5-button>
+
+	<furo-ui5-button icon="employee" accessible-name-ref="1download-text download-text2">Action Bar Button</furo-ui5-button>
+	<furo-ui5-button icon="download" accessible-name-ref="1download-text"></furo-ui5-button>
+
+
+
+	<br />
+	<br />
+	<br />
+
+	<furo-ui5-button design="Default" icon="employee">Default</furo-ui5-button>
+	<furo-ui5-button disabled design="Default" icon="employee">Default</furo-ui5-button>
+	<br />
+	<br />
+
+	<furo-ui5-button design="Positive" icon="employee">Agree</furo-ui5-button>
+	<furo-ui5-button disabled design="Positive" icon="employee">Agree</furo-ui5-button>
+	<br />
+	<br />
+
+	<furo-ui5-button design="Negative" icon="employee">Decline</furo-ui5-button>
+	<furo-ui5-button disabled design="Negative" icon="employee">Decline</furo-ui5-button>
+	<br />
+	<br />
+
+	<furo-ui5-button design="Transparent" icon="employee">Transparent</furo-ui5-button>
+	<furo-ui5-button disabled design="Transparent" icon="employee">Transparent
+	</furo-ui5-button>
+	<br />
+	<br />
+
+	<furo-ui5-title>Cozy</furo-ui5-title>
+
+	<furo-ui5-button icon="employee">Emphasized
+		<furo-ui5-button-badge design="InlineText" text="72" slot="badge"></furo-ui5-button-badge>
+	</furo-ui5-button>
+
+	<furo-ui5-button design="Emphasized" icon="employee">Emphasized
+		<furo-ui5-button-badge design="OverlayText" text="999+" slot="badge"></furo-ui5-button-badge>
+	</furo-ui5-button>
+	<furo-ui5-button icon="employee">Emphasized
+		<furo-ui5-button-badge design="AttentionDot" slot="badge"></furo-ui5-button-badge>
+	</furo-ui5-button>
+
+	<br><br>
+
+	<furo-ui5-title>Compact</furo-ui5-title>
+
+	<div data-furo-ui5-compact-size>
+		<furo-ui5-button icon="employee">Emphasized
+			<furo-ui5-button-badge design="InlineText" text="72" slot="badge"></furo-ui5-button-badge>
+		</furo-ui5-button>
+
+		<furo-ui5-button design="Emphasized" icon="employee">Emphasized
+			<furo-ui5-button-badge design="OverlayText" text="999+" slot="badge"></furo-ui5-button-badge>
+		</furo-ui5-button>
+		<furo-ui5-button icon="employee">Emphasized
+			<furo-ui5-button-badge design="AttentionDot" slot="badge"></furo-ui5-button-badge>
+		</furo-ui5-button>
+	</div>
+
+	<div dir="rtl">
+		<furo-ui5-title>Cozy</furo-ui5-title>
+
+		<furo-ui5-button icon="employee">Emphasized
+			<furo-ui5-button-badge design="InlineText" text="72" slot="badge"></furo-ui5-button-badge>
+		</furo-ui5-button>
+
+		<furo-ui5-button design="Emphasized" icon="employee">Emphasized
+			<furo-ui5-button-badge design="OverlayText" text="999+" slot="badge"></furo-ui5-button-badge>
+		</furo-ui5-button>
+		<furo-ui5-button icon="employee">Emphasized
+			<furo-ui5-button-badge design="AttentionDot" slot="badge"></furo-ui5-button-badge>
+		</furo-ui5-button>
+
+		<br><br>
+
+		<furo-ui5-title>Compact</furo-ui5-title>
+
+		<div data-furo-ui5-compact-size>
+			<furo-ui5-button icon="employee">Emphasized
+				<furo-ui5-button-badge design="InlineText" text="72" slot="badge"></furo-ui5-button-badge>
+			</furo-ui5-button>
+
+			<furo-ui5-button design="Emphasized" icon="employee">Emphasized
+				<furo-ui5-button-badge design="OverlayText" text="999+" slot="badge"></furo-ui5-button-badge>
+			</furo-ui5-button>
+			<furo-ui5-button icon="employee">Emphasized
+				<furo-ui5-button-badge design="AttentionDot" slot="badge"></furo-ui5-button-badge>
+			</furo-ui5-button>
+		</div>
+	</div>
+
+	<br><br>
+
+	<furo-ui5-button disabled design="Emphasized" icon="employee">Emphasized</furo-ui5-button>
+
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<furo-ui5-button end-icon icon="employee">Icon last</furo-ui5-button>
+	<furo-ui5-button icon="employee" id="disabled-button-icon-only" disabled></furo-ui5-button>
+	<furo-ui5-button id="disabled-button-without-icon" disabled>Disabled Buton</furo-ui5-button>
+
+
+
+	<furo-ui5-checkbox text="Option A"></furo-ui5-checkbox>
+	<furo-ui5-checkbox disabled text="Option A"></furo-ui5-checkbox>
+	<br />
+	<furo-ui5-label>"This is a label, this is a label"</furo-ui5-label>
+
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<furo-ui5-toggle-button design="Emphasized">Action Bar Button</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button>Primary button</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button design="Transparent">Secondary button</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button disabled>Inactive</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button design="Positive">Agree</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button design="Negative">Decline</furo-ui5-toggle-button>
+
+	<br />
+	<br />
+	<br />
+
+	<furo-ui5-toggle-button icon="employee">Action Bar Button</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button icon="download"></furo-ui5-toggle-button>
+	<furo-ui5-toggle-button icon="download"></furo-ui5-toggle-button>
+
+	<br />
+	<br />
+	<br />
+
+	<furo-ui5-toggle-button design="Default" icon="employee">Default</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button disabled design="Default" icon="employee">Default</furo-ui5-toggle-button>
+	<br />
+	<br />
+
+	<furo-ui5-toggle-button design="Positive" icon="employee">Agree</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button disabled design="Positive" icon="employee">Agree</furo-ui5-toggle-button>
+	<br />
+	<br />
+
+	<furo-ui5-toggle-button design="Negative" icon="employee">Decline</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button disabled design="Negative" icon="employee">Decline</furo-ui5-toggle-button>
+	<br />
+	<br />
+
+	<furo-ui5-toggle-button design="Transparent" icon="employee">Transparent</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button disabled design="Transparent" icon="employee">Transparent</furo-ui5-toggle-button>
+	<br />
+	<br />
+
+	<furo-ui5-toggle-button design="Emphasized" icon="employee">Emphasized</furo-ui5-toggle-button>
+	<furo-ui5-toggle-button disabled design="Emphasized" icon="employee">Emphasized</furo-ui5-toggle-button>
+
+	<br />
+	<br />
+	<furo-ui5-button class="long-button long-button-begin" icon="download">Download</furo-ui5-button>
+	<furo-ui5-button class="long-button" icon="download">Download</furo-ui5-button>
+	<furo-ui5-button class="long-button long-button-end" icon="download">Download</furo-ui5-button>
+
+	<br />
+	<br />
+	<furo-ui5-title>Buttons with tooltip</furo-ui5-title>
+	<br />
+	<furo-ui5-button id="customTooltip" icon="message-information" tooltip="Go home"></furo-ui5-button>
+	<furo-ui5-button icon="accept" tooltip="Accept terms & conditions"></furo-ui5-button>
+	<furo-ui5-button icon="action-settings" tooltip="Go to settings"></furo-ui5-button>
+	<furo-ui5-button icon="alert" tooltip="Fire an alert"></furo-ui5-button>
+	<furo-ui5-button icon="arrow-down" tooltip="Go down"></furo-ui5-button>
+	<furo-ui5-button icon="arrow-down" disabled tooltip="Go down"></furo-ui5-button>
+
+	<br />
+	<br />
+	<furo-ui5-title>Buttons with busy indicator</furo-ui5-title>
+	<br />
+	<furo-ui5-button tooltip="Button with busy indicator" icon="accept" loading="true"></furo-ui5-button>
+	<furo-ui5-button tooltip="Button with busy indicator" loading="true">Busy Indicator</furo-ui5-button>
+	<furo-ui5-button design="Transparent" tooltip="Button with busy indicator" loading="true">Busy Indicator</furo-ui5-button>
+	<furo-ui5-button tooltip="Button with busy indicator" icon="home" design="Emphasized" loading="true">Busy Indicator</furo-ui5-button>
+	<furo-ui5-button design="Positive" tooltip="Button with busy indicator" loading="true">Busy Indicator</furo-ui5-button>
+	<furo-ui5-button design="Negative" tooltip="Button with busy indicator" loading="true">Busy Indicator</furo-ui5-button>
+	<furo-ui5-button design="Attention" tooltip="Button with busy indicator" loading="true">Busy Indicator</furo-ui5-button>
+
+	<br />
+	<br />
+	<furo-ui5-title>Menu Buttons</furo-ui5-title>
+	<br />
+	<furo-ui5-button id="menuButtonText" end-icon="navigation-down-arrow">Menu Button</furo-ui5-button>
+	<furo-ui5-button id="menuButtonIcon" icon="action-settings" end-icon="navigation-down-arrow"></furo-ui5-button>
+	<furo-ui5-button id="menuButtonTextIcon" icon="action-settings" end-icon="navigation-down-arrow">Menu Button</furo-ui5-button>
+	<furo-ui5-button id="menuButtonIconEnd" end-icon="navigation-down-arrow"
+		tooltip="Menu Button with End Icon only"></furo-ui5-button>
+
+	<furo-ui5-menu id="menu">
+		<furo-ui5-menu-item text="Item 1"></furo-ui5-menu-item>
+		<furo-ui5-menu-item text="Item 2"></furo-ui5-menu-item>
+		<furo-ui5-menu-item text="Item 3"></furo-ui5-menu-item>
+	</furo-ui5-menu>
+
+	<br />
+	<br />
+
+	<form>
+		<input value="Native input in a form">
+		<furo-ui5-input value="UI5 Input in a form"></furo-ui5-input>
+		<furo-ui5-button type="Submit">Submit</furo-ui5-button>
+		<furo-ui5-button type="Reset">Reset</furo-ui5-button>
+	</form>
+
+	<furo-ui5-button id="openDialogButton" design="Emphasized">Show Registration Dialog</furo-ui5-button>
+
+	<furo-ui5-dialog id="registration-dialog" header-text="Register Form">
+		<section class="login-form">
+			<div>
+				<furo-ui5-label for="username" required>Username: </furo-ui5-label>
+				<furo-ui5-input id="username"></furo-ui5-input>
+			</div>
+
+			<div>
+				<furo-ui5-label for="password" required>Password: </furo-ui5-label>
+				<furo-ui5-input id="password" type="Password" value-state="Negative"></furo-ui5-input>
+			</div>
+
+			<div>
+				<furo-ui5-label for="email" type="Email" required>Email: </furo-ui5-label>
+				<furo-ui5-input id="email"></furo-ui5-input>
+			</div>
+
+			<div>
+				<furo-ui5-label for="address">Address: </furo-ui5-label>
+				<furo-ui5-input id="address"></furo-ui5-input>
+			</div>
+		</section>
+
+		<div slot="footer">
+			<div style="flex: 1;"></div>
+			<furo-ui5-button id="closeDialogButton" design="Emphasized">Register</furo-ui5-button>
+		</div>
+	</furo-ui5-dialog>
+
+	<a href="#test2">
+		<furo-ui5-button id="btnInLink">Submit </furo-ui5-button>
+	</a>
+	<script>
+		var clickCounter = document.querySelector("#click-counter");
+		var button = document.querySelector("#button1");
+		var disabledButton = document.querySelector("#button-disabled");
+		var disabledButtonIconOnly = document.querySelector("#disabled-button-icon-only");
+		var disabledButtonWithoutIcon = document.querySelector("#disabled-button-without-icon")
+		var clickCount = 0;
+
+		[button, disabledButton, disabledButtonIconOnly, disabledButtonWithoutIcon].forEach(function (el) {
+			el.addEventListener("click", function(event) {
+				clickCount += 1;
+				clickCounter.value = clickCount;
+			});
+		});
+
+		button.accessibilityAttributes = {
+			expanded: "true"
+		};
+
+		button.addEventListener("click", function(event) {
+			button.accessibilityAttributes = {
+				expanded: button.accessibilityAttributes.expanded === "true" ? "false" : "true"
+			};
+		});
+
+		var dialogOpener = document.getElementById("openDialogButton");
+		var dialog = document.getElementById("registration-dialog");
+		var dialogCloser = document.getElementById("closeDialogButton");
+
+		dialogOpener.accessibilityAttributes = {
+			hasPopup: "dialog",
+			controls: dialog.id,
+		}
+
+
+		dialogOpener.addEventListener("furo-ui5-click", function() {
+			dialog.open = true;
+		});
+
+		dialogCloser.addEventListener("furo-ui5-click", function() {
+			dialog.open = false;
+		});
+
+		function showMenu(target) {
+			menu.opener = target;
+			menu.open = true;
+		}
+
+		menuButtonText.addEventListener("furo-ui5-click", function(event) {
+			showMenu(event.target);
+		});
+
+		menuButtonIcon.addEventListener("furo-ui5-click", function(event) {
+			showMenu(event.target);
+		});
+
+		menuButtonTextIcon.addEventListener("furo-ui5-click", function(event) {
+			showMenu(event.target);
+		});
+
+		menuButtonIconEnd.addEventListener("furo-ui5-click", function(event) {
+			showMenu(event.target);
+		});
+
+
+		const btnInLink = document.querySelector('#btnInLink');
+
+		btnInLink.addEventListener("furo-ui5-click", (e) => {
+			e.preventDefault();
+		});
+	</script>
+</body>
+
+</html>
