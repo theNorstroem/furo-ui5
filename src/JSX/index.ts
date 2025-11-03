@@ -25,6 +25,7 @@ import "./ShowHide";
 import "./SignPad";
 import "./Slider";
 import "./Subsection";
+import "./Switch";
 import "./TableToolbarSeparator";
 import "./Textarea";
 import "./TextInput";

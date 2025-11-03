@@ -18330,6 +18330,989 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5Switch.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The 'furo-furo-ui5-switch' component allows the user to switch true and false for type Bool with data binding.\n\n\nBindable FieldNodes: `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.\n\n\n## supported FAT attributes\n - **\"disabled\":\"true\"** set the element to disabled\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n\n### Overview\nThe `furo-ui5-switch` component is used for changing between binary states.\n\nThe component can display texts, that will be switched, based on the component state, via the `textOn` and `textOff` properties,\nbut texts longer than 3 letters will be cutted off.\n\nHowever, users are able to customize the width of `furo-ui5-switch` with pure CSS (`<furo-ui5-switch style=\"width: 200px\">`), and set widths, depending on the texts they would use.\n\nNote: the component would not automatically stretch to fit the whole text width.\n\n### Keyboard Handling\nThe state can be changed by pressing the Space and Enter keys.\n\n### ES6 Module Import\n\n`import \"@furo/ui5/dist/Switch\";`",
+          "name": "Switch",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_getModelReaders",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Map<string, () => void>"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "_getModelWriters",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Map<string, () => void>"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "BOOLEAN | FuroFatBool | BoolValue"
+              },
+              "privacy": "private",
+              "default": "new BOOLEAN()"
+            },
+            {
+              "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Sets the accessible ARIA name of the component.\n\n**Note**: We recommend that you set an accessibleNameRef pointing to an external label or at least an `accessibleName`.\nProviding an `accessibleNameRef` or an `accessibleName` is mandatory in the cases when `textOn` and `textOff` properties aren't set.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Receives id(or many ids) of the elements that label the component.\n\n**Note**: We recommend that you set an accessibleNameRef pointing to an external label or at least an `accessibleName`.\nProviding an `accessibleNameRef` or an `accessibleName` is mandatory in the cases when `textOn` and `textOff` properties aren't set.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "attachComponentStateFinalized",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "() => void"
+                  }
+                }
+              ],
+              "description": "Attach a callback that will be executed whenever the component's state is finalized",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "attachInvalidate",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "(param: InvalidationInfo) => void"
+                  }
+                }
+              ],
+              "description": "Attach a callback that will be executed whenever the component is invalidated",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "BOOLEAN | FuroFatBool | BoolValue",
+                    "references": [
+                      {
+                        "name": "BOOLEAN",
+                        "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "check",
+              "privacy": "public",
+              "description": "Checks the switch and updates the value"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines if the component is checked.\n\n**Note:** The property can be changed with user interaction,\neither by cliking the component, or by pressing the `Enter` or `Space` key.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "define",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "typeof UI5Element"
+                }
+              },
+              "description": "Registers a UI5 Web Component in the browser window object",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "design",
+              "type": {
+                "text": "SwitchDesign",
+                "references": [
+                  {
+                    "name": "SwitchDesign",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/SwitchDesign.js"
+                  }
+                ]
+              },
+              "default": "\"Textual\"",
+              "description": "Defines the component design.\n\n**Note:** If `Graphical` type is set,\npositive and negative icons will replace the `textOn` and `textOff`.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "detachComponentStateFinalized",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "() => void"
+                  }
+                }
+              ],
+              "description": "Detach the callback that is executed whenever the component's state is finalized",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "detachInvalidate",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "(param: InvalidationInfo) => void"
+                  }
+                }
+              ],
+              "description": "Detach the callback that is executed whenever the component is invalidated",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is disabled.\n\n**Note:** A disabled component is noninteractive.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "effectiveDir",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "privacy": "public",
+              "default": "undefined",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "fatHandler",
+              "type": {
+                "text": "FatHandler<FuroUi5Switch>"
+              },
+              "privacy": "private",
+              "default": "new FatHandler(this as FuroUi5Switch, [ \"disabled\" ])"
+            },
+            {
+              "kind": "method",
+              "name": "fireDecoratorEvent",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                },
+                "description": "false, if the event was cancelled (preventDefault called), true otherwise"
+              },
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": {
+                    "text": "N"
+                  },
+                  "description": "name of the event"
+                },
+                {
+                  "name": "data",
+                  "optional": true,
+                  "type": {
+                    "text": "this[\"eventDetails\"][N] | undefined"
+                  },
+                  "description": "additional data for the event"
+                }
+              ],
+              "description": "Fires a custom event, configured via the \"event\" decorator.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "fireEvent",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                },
+                "description": "false, if the event was cancelled (preventDefault called), true otherwise"
+              },
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": {
+                    "text": "string"
+                  },
+                  "description": "name of the event"
+                },
+                {
+                  "name": "data",
+                  "optional": true,
+                  "type": {
+                    "text": "T"
+                  },
+                  "description": "additional data for the event"
+                },
+                {
+                  "name": "cancelable",
+                  "default": "false",
+                  "description": "true, if the user can call preventDefault on the event object"
+                },
+                {
+                  "name": "bubbles",
+                  "default": "true",
+                  "description": "true, if the event bubbles"
+                }
+              ],
+              "privacy": "public",
+              "deprecated": "use fireDecoratorEvent instead",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "return": {
+                "type": {
+                  "text": "Promise<void>"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "focusOptions",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  },
+                  "description": "additional options for the focus"
+                }
+              ],
+              "description": "Set the focus to the element, returned by \"getFocusDomRef()\" (marked by \"data-sap-focus-ref\")",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getDomRef",
+              "return": {
+                "type": {
+                  "text": "HTMLElement | undefined"
+                }
+              },
+              "description": "Returns the DOM Element inside the Shadow Root that corresponds to the opening tag in the UI5 Web Component's template\n*Note:* For logical (abstract) elements (items, options, etc...), returns the part of the parent's DOM that represents this option\nUse this method instead of \"this.shadowRoot\" to read the Shadow DOM, if ever necessary",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusDomRef",
+              "return": {
+                "type": {
+                  "text": "HTMLElement | undefined"
+                }
+              },
+              "description": "Returns the DOM Element marked with \"data-sap-focus-ref\" inside the template.\nThis is the element that will receive the focus by default.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusDomRefAsync",
+              "return": {
+                "type": {
+                  "text": "Promise<HTMLElement | undefined>"
+                }
+              },
+              "description": "Waits for dom ref and then returns the DOM Element marked with \"data-sap-focus-ref\" inside the template.\nThis is the element that will receive the focus by default.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getMetadata",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "UI5ElementMetadata",
+                  "references": [
+                    {
+                      "name": "UI5ElementMetadata",
+                      "package": "@ui5/webcomponents-base",
+                      "module": "dist/UI5ElementMetadata.js"
+                    }
+                  ]
+                }
+              },
+              "description": "Returns an instance of UI5ElementMetadata.js representing this UI5 Web Component's full metadata (its and its parents')\nNote: not to be confused with the \"get metadata()\" method, which returns an object for this class's metadata only",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getSlottedNodes",
+              "return": {
+                "type": {
+                  "text": "Array<T>"
+                }
+              },
+              "description": "Returns the actual children, associated with a slot.\nUseful when there are transitive slots in nested component scenarios and you don't want to get a list of the slots, but rather of their content.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getUniqueDependencies",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "Array<typeof UI5Element>"
+                }
+              },
+              "description": "Returns a list of the unique dependencies for this UI5 Web Component",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleConstraints",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "fieldConstraints",
+                  "type": {
+                    "text": "FieldConstraints | undefined"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "isUI5Element",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "privacy": "public",
+              "default": "true",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "BOOLEAN | FuroFatBool | BoolValue",
+                "references": [
+                  {
+                    "name": "BOOLEAN",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
+                  {
+                    "name": "BoolValue",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
+                  {
+                    "name": "FuroFatBool",
+                    "package": "@/models",
+                    "module": "index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "FieldNode setter"
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines the name by which the component will be identified upon submission in an HTML form.\n\n**Note:** This property is only applicable within the context of an HTML Form element.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onAfterRendering",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called every time after the component renders.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onBeforeRendering",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called every time before the component renders.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onEnterDOM",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called on connectedCallback - added to the DOM.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onExitDOM",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called on disconnectedCallback - removed from the DOM.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onInvalidation",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "changeInfo",
+                  "type": {
+                    "text": "ChangeInfo",
+                    "references": [
+                      {
+                        "name": "ChangeInfo",
+                        "package": "@ui5/webcomponents-base",
+                        "module": "dist/UI5Element.js"
+                      }
+                    ]
+                  },
+                  "description": "An object with information about the change that caused invalidation.\nThe object can have the following properties:\n- type: (property|slot) tells what caused the invalidation\n1) property: a property value was changed either directly or as a result of changing the corresponding attribute\n2) slot: a slotted node(nodes) changed in one of several ways (see \"reason\")\n\n- name: the name of the property or slot that caused the invalidation\n\n- reason: (children|textcontent|childchange|slotchange) relevant only for type=\"slot\" only and tells exactly what changed in the slot\n1) children: immediate children (HTML elements or text nodes) were added, removed or reordered in the slot\n2) textcontent: text nodes in the slot changed value (or nested text nodes were added or changed value). Can only trigger for slots of \"type: Node\"\n3) slotchange: a slot element, slotted inside that slot had its \"slotchange\" event listener called. This practically means that transitively slotted children changed.\nCan only trigger if the child of a slot is a slot element itself.\n4) childchange: indicates that a UI5Element child in that slot was invalidated and in turn invalidated the component.\nCan only trigger for slots with \"invalidateOnChildChange\" metadata descriptor\n\n- newValue: the new value of the property (for type=\"property\" only)\n\n- oldValue: the old value of the property (for type=\"property\" only)\n\n- child the child that was changed (for type=\"slot\" and reason=\"childchange\" only)"
+                }
+              ],
+              "description": "A callback that is executed each time an already rendered component is invalidated (scheduled for re-rendering)",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "readFromModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is required.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "textOff",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the text, displayed when the component is not checked.\n\n**Note:** We recommend using short texts, up to 3 letters (larger texts would be cut off).",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "textOn",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the text, displayed when the component is checked.\n\n**Note:** We recommend using short texts, up to 3 letters (larger texts would be cut off).",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the tooltip of the component.\n\n**Note:** If applicable an external label reference should always be the preferred option to provide context to the `furo-ui5-switch` component over a tooltip.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "uncheck",
+              "privacy": "public",
+              "description": "Unhecks the switch and updates the value"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Defines the form value of the component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "writeToModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "change",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": " Fired when the switch checked state changes.",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "Switch",
+            "package": "@ui5/webcomponents",
+            "module": "dist/Switch.js"
+          },
+          "tagName": "furo-ui5-switch",
+          "customElement": true,
+          "summary": "data switch input field",
+          "cssParts": [
+            {
+              "description": "Used to style the track, where the handle is being slid",
+              "name": "slider",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Used to style the `textOn` property text",
+              "name": "text-on",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Used to style the `textOff` property text",
+              "name": "text-off",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Used to style the handle of the switch",
+              "name": "handle",
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Sets the accessible ARIA name of the component.\n\n**Note**: We recommend that you set an accessibleNameRef pointing to an external label or at least an `accessibleName`.\nProviding an `accessibleNameRef` or an `accessibleName` is mandatory in the cases when `textOn` and `textOff` properties aren't set.",
+              "name": "accessible-name",
+              "default": "undefined",
+              "fieldName": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Receives id(or many ids) of the elements that label the component.\n\n**Note**: We recommend that you set an accessibleNameRef pointing to an external label or at least an `accessibleName`.\nProviding an `accessibleNameRef` or an `accessibleName` is mandatory in the cases when `textOn` and `textOff` properties aren't set.",
+              "name": "accessible-name-ref",
+              "default": "undefined",
+              "fieldName": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Defines if the component is checked.\n\n**Note:** The property can be changed with user interaction,\neither by cliking the component, or by pressing the `Enter` or `Space` key.",
+              "name": "checked",
+              "default": "false",
+              "fieldName": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Defines the component design.\n\n**Note:** If `Graphical` type is set,\npositive and negative icons will replace the `textOn` and `textOff`.",
+              "name": "design",
+              "default": "\"Textual\"",
+              "fieldName": "design",
+              "type": {
+                "text": "\"Textual\" | \"Graphical\""
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is disabled.\n\n**Note:** A disabled component is noninteractive.",
+              "name": "disabled",
+              "default": "false",
+              "fieldName": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Determines the name by which the component will be identified upon submission in an HTML form.\n\n**Note:** This property is only applicable within the context of an HTML Form element.",
+              "name": "name",
+              "default": "undefined",
+              "fieldName": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is required.",
+              "name": "required",
+              "default": "false",
+              "fieldName": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Defines the text, displayed when the component is not checked.\n\n**Note:** We recommend using short texts, up to 3 letters (larger texts would be cut off).",
+              "name": "text-off",
+              "default": "undefined",
+              "fieldName": "textOff",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Defines the text, displayed when the component is checked.\n\n**Note:** We recommend using short texts, up to 3 letters (larger texts would be cut off).",
+              "name": "text-on",
+              "default": "undefined",
+              "fieldName": "textOn",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Defines the tooltip of the component.\n\n**Note:** If applicable an external label reference should always be the preferred option to provide context to the `furo-ui5-switch` component over a tooltip.",
+              "name": "tooltip",
+              "default": "undefined",
+              "fieldName": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            },
+            {
+              "description": "Defines the form value of the component.",
+              "name": "value",
+              "default": "\"\"",
+              "fieldName": "value",
+              "type": {
+                "text": "string"
+              },
+              "inheritedFrom": {
+                "name": "Switch",
+                "module": "dist/Switch.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5Switch",
+          "declaration": {
+            "name": "FuroUi5Switch",
+            "module": "src/impl/FuroUi5Switch.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/impl/FuroUi5TableToolbarSeparator.js",
       "declarations": [
         {

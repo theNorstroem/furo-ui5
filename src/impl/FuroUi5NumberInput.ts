@@ -247,8 +247,9 @@ export class FuroUi5NumberInput extends Input {
       if (fieldConstraints.read_only) {
         this.readonly = true;
       }
-      if (fieldConstraints.max_length) {
-        this.maxlength = fieldConstraints.max_length;
+      if (fieldConstraints.maximum) {
+        // todo fix
+        // this.maxlength = fieldConstraints.maximum;
       }
     }
   }
@@ -348,9 +349,5 @@ export class FuroUi5NumberInput extends Input {
     const md = super.metadata;
     md.tag = "furo-ui5-number-input";
     return md;
-  }
-
-  static override get styles() {
-    return super.styles;
   }
 }

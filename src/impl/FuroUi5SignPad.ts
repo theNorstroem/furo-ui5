@@ -1,9 +1,9 @@
 import { LitFBP } from "@furo/fbp/dist/LitFBP";
 import { css, html, LitElement } from "lit";
+import { property } from "lit/decorators.js";
 import SignaturePad from "signature_pad";
 
 import DebounceBuilder from "@/util/Debounce";
-import { property } from "lit/decorators.js";
 
 /**
  * `furo-sign-pad`

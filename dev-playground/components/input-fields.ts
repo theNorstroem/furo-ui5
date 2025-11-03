@@ -17,6 +17,7 @@ import "@/furo-ui5-form-layout";
 import "@/furo-ui5-radio-button";
 import "@/furo-ui5-section";
 import "@/furo-ui5-dialog";
+import "@/furo-ui5-switch";
 import "@/furo-ui5-subsection";
 import "@/furo-ui5-form-group";
 import "@furo/layout/furo-responsive-layout.js";
@@ -25,8 +26,8 @@ import {LitFBP} from "@furo/fbp/dist/LitFBP";
 import { css, html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
 
-import {  CubeEntity } from "@/models/furo/cube/CubeEntity";
-import {  Wrappers } from "@/models/furo/cube/Wrappers";
+import {  CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
+import {  Wrappers } from "@/models/furoui5test/cube/Wrappers";
 import { Bool as FuroFatBool } from "@/models/furo/fat/Bool";
 
 /**
@@ -119,6 +120,8 @@ export class InputFields extends  LitFBP(LitElement) {
           <furo-ui5-button at-click="--showDialog" slot="action" design="Transparent">Dialog</furo-ui5-button>
           <furo-ui5-checkbox slot="action" fn-check="" text="Override"
                              .model="${this.wrappers.boolValue}"></furo-ui5-checkbox>
+          <furo-ui5-switch slot="action" fn-check="" text="Override"
+                             .model="${this.wrappers.boolValue}"></furo-ui5-switch>
 
           <furo-horizontal-flex space>
 
