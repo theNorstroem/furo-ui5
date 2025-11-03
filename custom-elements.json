@@ -18599,7 +18599,7 @@
                 "text": "FatHandler<FuroUi5Switch>"
               },
               "privacy": "private",
-              "default": "new FatHandler(this as FuroUi5Switch, [ \"disabled\" ])"
+              "default": "new FatHandler(this as FuroUi5Switch, [\"disabled\"])"
             },
             {
               "kind": "method",
