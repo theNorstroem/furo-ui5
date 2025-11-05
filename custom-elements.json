@@ -597,7 +597,15 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "CustomEvent<BarcodeScannerDialogScanSuccessEventDetail>"
+                  }
+                }
+              ]
             }
           ],
           "events": [
@@ -732,6 +740,670 @@
           "declaration": {
             "name": "FuroUi5BarcodeScannerDialog",
             "module": "src/impl/FuroUi5BarcodeScannerDialog.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5BusyIndicator.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The furo-furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.\n\n```html\n<furo-furo-ui5-busy-indicator></furo-furo-ui5-busy-indicator>\n```\n\nhttps://sap.github.io/furo-ui5-webcomponents/playground/components/BusyIndicator/\n\n### Overview\n\nThe `furo-ui5-busy-indicator` signals that some operation is going on and that the\nuser must wait. It does not block the current UI screen so other operations could be triggered in parallel.\nIt displays 3 dots and each dot expands and shrinks at a different rate, resulting in a cascading flow of animation.\n\n### Usage\nFor the `furo-ui5-busy-indicator` you can define the size, the text and whether it is shown or hidden.\nIn order to hide it, use the \"active\" property.\n\nIn order to show busy state over an HTML element, simply nest the HTML element in a `furo-ui5-busy-indicator` instance.\n\n**Note:** Since `furo-ui5-busy-indicator` has `display: inline-block;` by default and no width of its own,\nwhenever you need to wrap a block-level element, you should set `display: block` to the busy indicator as well.\n\n#### When to use:\n\n- The user needs to be able to cancel the operation.\n- Only part of the application or a particular component is affected.\n\n#### When not to use:\n\n- The operation takes less than one second.\n- You need to block the screen and prevent the user from starting another activity.\n- Do not show multiple busy indicators at once.\n\n### ES6 Module Import\n\n`import \"@furo/ui5/dist/BusyIndicator.js\";`",
+          "name": "FuroUiBusyIndicator",
+          "members": [
+            {
+              "kind": "method",
+              "name": "activate",
+              "description": "Sets the busy indicator state to active"
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines if the busy indicator is visible on the screen. By default it is not.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "attachComponentStateFinalized",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "() => void"
+                  }
+                }
+              ],
+              "description": "Attach a callback that will be executed whenever the component's state is finalized",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "attachInvalidate",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "(param: InvalidationInfo) => void"
+                  }
+                }
+              ],
+              "description": "Attach a callback that will be executed whenever the component is invalidated",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "deactivate",
+              "description": "Sets the busy indicator state to inactive"
+            },
+            {
+              "kind": "method",
+              "name": "define",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "typeof UI5Element"
+                }
+              },
+              "description": "Registers a UI5 Web Component in the browser window object",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "delay",
+              "type": {
+                "text": "number"
+              },
+              "default": "1000",
+              "description": "Defines the delay in milliseconds, after which the busy indicator will be visible on the screen.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "detachComponentStateFinalized",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "() => void"
+                  }
+                }
+              ],
+              "description": "Detach the callback that is executed whenever the component's state is finalized",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "detachInvalidate",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "(param: InvalidationInfo) => void"
+                  }
+                }
+              ],
+              "description": "Detach the callback that is executed whenever the component is invalidated",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "effectiveDir",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "privacy": "public",
+              "default": "undefined",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "fireDecoratorEvent",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                },
+                "description": "false, if the event was cancelled (preventDefault called), true otherwise"
+              },
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": {
+                    "text": "N"
+                  },
+                  "description": "name of the event"
+                },
+                {
+                  "name": "data",
+                  "optional": true,
+                  "type": {
+                    "text": "this[\"eventDetails\"][N] | undefined"
+                  },
+                  "description": "additional data for the event"
+                }
+              ],
+              "description": "Fires a custom event, configured via the \"event\" decorator.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "fireEvent",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                },
+                "description": "false, if the event was cancelled (preventDefault called), true otherwise"
+              },
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": {
+                    "text": "string"
+                  },
+                  "description": "name of the event"
+                },
+                {
+                  "name": "data",
+                  "optional": true,
+                  "type": {
+                    "text": "T"
+                  },
+                  "description": "additional data for the event"
+                },
+                {
+                  "name": "cancelable",
+                  "default": "false",
+                  "description": "true, if the user can call preventDefault on the event object"
+                },
+                {
+                  "name": "bubbles",
+                  "default": "true",
+                  "description": "true, if the event bubbles"
+                }
+              ],
+              "privacy": "public",
+              "deprecated": "use fireDecoratorEvent instead",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "return": {
+                "type": {
+                  "text": "Promise<void>"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "focusOptions",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  },
+                  "description": "additional options for the focus"
+                }
+              ],
+              "description": "Set the focus to the element, returned by \"getFocusDomRef()\" (marked by \"data-sap-focus-ref\")",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getDomRef",
+              "return": {
+                "type": {
+                  "text": "HTMLElement | undefined"
+                }
+              },
+              "description": "Returns the DOM Element inside the Shadow Root that corresponds to the opening tag in the UI5 Web Component's template\n*Note:* For logical (abstract) elements (items, options, etc...), returns the part of the parent's DOM that represents this option\nUse this method instead of \"this.shadowRoot\" to read the Shadow DOM, if ever necessary",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusDomRef",
+              "return": {
+                "type": {
+                  "text": "HTMLElement | undefined"
+                }
+              },
+              "description": "Returns the DOM Element marked with \"data-sap-focus-ref\" inside the template.\nThis is the element that will receive the focus by default.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusDomRefAsync",
+              "return": {
+                "type": {
+                  "text": "Promise<HTMLElement | undefined>"
+                }
+              },
+              "description": "Waits for dom ref and then returns the DOM Element marked with \"data-sap-focus-ref\" inside the template.\nThis is the element that will receive the focus by default.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getMetadata",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "UI5ElementMetadata",
+                  "references": [
+                    {
+                      "name": "UI5ElementMetadata",
+                      "package": "@ui5/webcomponents-base",
+                      "module": "dist/UI5ElementMetadata.js"
+                    }
+                  ]
+                }
+              },
+              "description": "Returns an instance of UI5ElementMetadata.js representing this UI5 Web Component's full metadata (its and its parents')\nNote: not to be confused with the \"get metadata()\" method, which returns an object for this class's metadata only",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getSlottedNodes",
+              "return": {
+                "type": {
+                  "text": "Array<T>"
+                }
+              },
+              "description": "Returns the actual children, associated with a slot.\nUseful when there are transitive slots in nested component scenarios and you don't want to get a list of the slots, but rather of their content.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getUniqueDependencies",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "Array<typeof UI5Element>"
+                }
+              },
+              "description": "Returns a list of the unique dependencies for this UI5 Web Component",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isUI5Element",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "privacy": "public",
+              "default": "true",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "onAfterRendering",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called every time after the component renders.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onBeforeRendering",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called every time before the component renders.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onEnterDOM",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called on connectedCallback - added to the DOM.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onExitDOM",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called on disconnectedCallback - removed from the DOM.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onInvalidation",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "changeInfo",
+                  "type": {
+                    "text": "ChangeInfo",
+                    "references": [
+                      {
+                        "name": "ChangeInfo",
+                        "package": "@ui5/webcomponents-base",
+                        "module": "dist/UI5Element.js"
+                      }
+                    ]
+                  },
+                  "description": "An object with information about the change that caused invalidation.\nThe object can have the following properties:\n- type: (property|slot) tells what caused the invalidation\n1) property: a property value was changed either directly or as a result of changing the corresponding attribute\n2) slot: a slotted node(nodes) changed in one of several ways (see \"reason\")\n\n- name: the name of the property or slot that caused the invalidation\n\n- reason: (children|textcontent|childchange|slotchange) relevant only for type=\"slot\" only and tells exactly what changed in the slot\n1) children: immediate children (HTML elements or text nodes) were added, removed or reordered in the slot\n2) textcontent: text nodes in the slot changed value (or nested text nodes were added or changed value). Can only trigger for slots of \"type: Node\"\n3) slotchange: a slot element, slotted inside that slot had its \"slotchange\" event listener called. This practically means that transitively slotted children changed.\nCan only trigger if the child of a slot is a slot element itself.\n4) childchange: indicates that a UI5Element child in that slot was invalidated and in turn invalidated the component.\nCan only trigger for slots with \"invalidateOnChildChange\" metadata descriptor\n\n- newValue: the new value of the property (for type=\"property\" only)\n\n- oldValue: the old value of the property (for type=\"property\" only)\n\n- child the child that was changed (for type=\"slot\" and reason=\"childchange\" only)"
+                }
+              ],
+              "description": "A callback that is executed each time an already rendered component is invalidated (scheduled for re-rendering)",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "BusyIndicatorSize",
+                "references": [
+                  {
+                    "name": "BusyIndicatorSize",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/BusyIndicatorSize.js"
+                  }
+                ]
+              },
+              "default": "\"M\"",
+              "description": "Defines the size of the component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines text to be displayed below the component. It can be used to inform the user of the current operation.",
+              "privacy": "public",
+              "default": "undefined",
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "textPlacement",
+              "type": {
+                "text": "BusyIndicatorTextPlacement",
+                "references": [
+                  {
+                    "name": "BusyIndicatorTextPlacement",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/BusyIndicatorTextPlacement.js"
+                  }
+                ]
+              },
+              "default": "\"Bottom\"",
+              "description": "Defines the placement of the text.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "BusyIndicator",
+            "package": "@ui5/webcomponents",
+            "module": "dist/BusyIndicator.js"
+          },
+          "tagName": "furo-ui5-busy-indicator",
+          "customElement": true,
+          "summary": "ui5 busy indicator with methods",
+          "slots": [
+            {
+              "description": "Determines the content over which the component will appear.",
+              "name": "default",
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines if the busy indicator is visible on the screen. By default it is not.",
+              "name": "active",
+              "default": "false",
+              "fieldName": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            },
+            {
+              "description": "Defines the delay in milliseconds, after which the busy indicator will be visible on the screen.",
+              "name": "delay",
+              "default": "1000",
+              "fieldName": "delay",
+              "type": {
+                "text": "number"
+              },
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the size of the component.",
+              "name": "size",
+              "default": "\"M\"",
+              "fieldName": "size",
+              "type": {
+                "text": "\"S\" | \"M\" | \"L\""
+              },
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            },
+            {
+              "description": "Defines text to be displayed below the component. It can be used to inform the user of the current operation.",
+              "name": "text",
+              "default": "undefined",
+              "fieldName": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            },
+            {
+              "description": "Defines the placement of the text.",
+              "name": "text-placement",
+              "default": "\"Bottom\"",
+              "fieldName": "textPlacement",
+              "type": {
+                "text": "\"Top\" | \"Bottom\""
+              },
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUiBusyIndicator",
+          "declaration": {
+            "name": "FuroUiBusyIndicator",
+            "module": "src/impl/FuroUi5BusyIndicator.ts"
           }
         }
       ]
@@ -26776,7 +27448,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "`z-grid`\nis a grid which places your elements in a **z** pattern.\nIt creates a grid which can be imagined as a grid with cells of the size *8rem x 8rem*.~\n\nThe size on the x-axis can vary a little bit, according to the the available space.\n\n\nThis component is nestable.\n\n```html\n\n <furo-z-grid>\n   <your-component hspace=\"2\" vspace=\"4\"></your-component>\n   <your-component hspace=\"2\" vspace=\"2\"></your-component>\n </furo-z-grid>\n\n <!-- with automatic padding -->\n <furo-z-grid padding>\n   <your-component hspan=\"2\" vspan=\"4\"></your-component>\n   <your-component hspan=\"2\" vspan=\"2\"></your-component>\n </furo-z-grid>\n```\n\n\n ## sizes\n The sizes are calculated from the available space that the grid becomes from its parent.\n\n ### Sizes are calculated as following\n\n ```\n  |  small  |   medium   |    large    |    xlarge   |\n  |         |            |             |             |\n  | 0...599 | 600...1023 | 1024...1439 | 1440...nnnn |\n\n ```\n\n ## hspan\n Set the horizontal space (the width) with the *hspan* attribute.\n\n Available ranges are from 1 to 9 and full.\n\n To tell a element that it has to use the full width use `hspan=\"full\"` or use the alias `full` or `full-width`.\n\n `hspan=\"1\"`, `hspan=\"2\"`,...,`hspan=\"9\"`, `hspan=\"full\"`\n\n ## vspan\n Set the vertical space (the height) with the *vspan* attribute.\n\n Available ranges are from 1 to 9.\n\n `vspan=\"1\"`, `vspan=\"2\"`,...,`vspan=\"9\"`\n\n ## newline\n To force a placement on a new line use `newline`\n\n ## padding\n Set the attribute *padding* to add paddings according to the size of the furo-z-grid automatically.\n\n :host([size='size-s']) ==> **0.25rem 1rem;**\n\n :host([size='size-m'] ==> **0.25rem 2rem;**\n\n :host([size='size-l'] ==> **1rem 2rem;**\n\n :host([size='size-xl'] ==> **1rem 3rem;**\n\n ## full-on-[size]\n To set full width on a specific current size, use `full-on-size-small` , `full-on-size-medium` , `full-on-size-large` ,`full-on-size-xlarge`.\n\n When the available space has the given size, the default hspan are overridden and the full width is used.\n\n ## hide-on-[size]\n To hide a element on a specific current size, use `hide-on-size-small` , `hide-on-size-medium` , `hide-on-size-large` ,`hide-on-size-xlarge`.\n\n ## show-on-[size]\n To show a element only on a specific current size, use `show-on-size-small` , `show-on-size-medium` , `show-on-size-large` ,`show-on-size-xlarge`.\n\n ## custom span sizes on different sizes (hspan-on-[size])\n To set a specific width (hspan) on a specific current size, use `hspan-on-size-small=\"1...9\"` , `hspan-on-size-medium=\"1...9\"` , `hspan-on-size-large=\"1...9\"` , `hspan-on-size-xlarge=\"1...9\"` .\n\n ## Ohter attributes\n\n The attributes *full* and *full-width* are aliases for `hspan=\"full\"`.\n\n## Named lines and columns\n**last-col** refers to the last column.\n**last-row** refers to the last line/row.",
+          "description": "`z-grid`\nis a grid which places your elements in a **z** pattern.\nIt creates a grid which can be imagined as a grid with cells of the size *8rem x 8rem*.~\n\nThe size on the x-axis can vary a little bit, according to the the available space.\n\n\nThis component is nestable.\n\n```html\n\n <furo-furo-ui5-z-grid>\n   <your-component hspace=\"2\" vspace=\"4\"></your-component>\n   <your-component hspace=\"2\" vspace=\"2\"></your-component>\n </furo-furo-ui5-z-grid>\n\n <!-- with automatic padding -->\n <furo-furo-ui5-z-grid padding>\n   <your-component hspan=\"2\" vspan=\"4\"></your-component>\n   <your-component hspan=\"2\" vspan=\"2\"></your-component>\n </furo-furo-ui5-z-grid>\n```\n\n\n ## sizes\n The sizes are calculated from the available space that the grid becomes from its parent.\n\n ### Sizes are calculated as following\n\n ```\n  |  small  |   medium   |    large    |    xlarge   |\n  |         |            |             |             |\n  | 0...599 | 600...1023 | 1024...1439 | 1440...nnnn |\n\n ```\n\n ## hspan\n Set the horizontal space (the width) with the *hspan* attribute.\n\n Available ranges are from 1 to 9 and full.\n\n To tell a element that it has to use the full width use `hspan=\"full\"` or use the alias `full` or `full-width`.\n\n `hspan=\"1\"`, `hspan=\"2\"`,...,`hspan=\"9\"`, `hspan=\"full\"`\n\n ## vspan\n Set the vertical space (the height) with the *vspan* attribute.\n\n Available ranges are from 1 to 9.\n\n `vspan=\"1\"`, `vspan=\"2\"`,...,`vspan=\"9\"`\n\n ## newline\n To force a placement on a new line use `newline`\n\n ## padding\n Set the attribute *padding* to add paddings according to the size of the furo-z-grid automatically.\n\n :host([size='size-s']) ==> **0.25rem 1rem;**\n\n :host([size='size-m'] ==> **0.25rem 2rem;**\n\n :host([size='size-l'] ==> **1rem 2rem;**\n\n :host([size='size-xl'] ==> **1rem 3rem;**\n\n ## full-on-[size]\n To set full width on a specific current size, use `full-on-size-small` , `full-on-size-medium` , `full-on-size-large` ,`full-on-size-xlarge`.\n\n When the available space has the given size, the default hspan are overridden and the full width is used.\n\n ## hide-on-[size]\n To hide a element on a specific current size, use `hide-on-size-small` , `hide-on-size-medium` , `hide-on-size-large` ,`hide-on-size-xlarge`.\n\n ## show-on-[size]\n To show a element only on a specific current size, use `show-on-size-small` , `show-on-size-medium` , `show-on-size-large` ,`show-on-size-xlarge`.\n\n ## custom span sizes on different sizes (hspan-on-[size])\n To set a specific width (hspan) on a specific current size, use `hspan-on-size-small=\"1...9\"` , `hspan-on-size-medium=\"1...9\"` , `hspan-on-size-large=\"1...9\"` , `hspan-on-size-xlarge=\"1...9\"` .\n\n ## Ohter attributes\n\n The attributes *full* and *full-width* are aliases for `hspan=\"full\"`.\n\n## Named lines and columns\n**last-col** refers to the last column.\n**last-row** refers to the last line/row.",
           "name": "ZGrid",
           "cssProperties": [
             {

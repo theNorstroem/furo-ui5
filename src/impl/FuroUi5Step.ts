@@ -149,7 +149,7 @@ export class FuroUi5Step extends StepInput {
       | Int32Value
       | Int64Value
       | UInt32Value
-      | UInt64Value,
+      | UInt64Value
   ) {
     this.bindData(value);
   }
@@ -194,7 +194,7 @@ export class FuroUi5Step extends StepInput {
       | Int32Value
       | Int64Value
       | UInt32Value
-      | UInt64Value,
+      | UInt64Value
   ) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;

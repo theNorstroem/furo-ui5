@@ -1,4 +1,5 @@
 import "./BarcodeScannerDialog";
+import "./FuroUiBusyIndicator";
 import "./Button";
 import "./ButtonBadge";
 import "./Checkbox";

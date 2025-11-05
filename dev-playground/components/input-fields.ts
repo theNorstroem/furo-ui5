@@ -13,6 +13,7 @@ import "@/furo-ui5-checkbox";
 import "@/furo-ui5-barcode-scanner-dialog";
 import "@/furo-ui5-form-field-segmenter";
 import "@/furo-ui5-toggle-button";
+import "@/furo-ui5-busy-indicator";
 import "@/furo-ui5-label";
 import "@/furo-ui5-form-row";
 import "@/furo-ui5-rating-indicator";
@@ -120,7 +121,7 @@ export class InputFields extends  LitFBP(LitElement) {
       <furo-ui5-section heading="STRING">
 
         <furo-ui5-subsection heading="some">
-
+<furo-ui5-busy-indicator .model="${this.wrappers.boolValue}">
           <furo-ui5-markdown markdown="# kkl \n\n## kkl \n- a\n- b\n- http://www.golem.de <furo-ui5-button>Name</furo-ui5-button>\n\n| Month | Savings |\n| -------- | ------- |\n| January | $250  :-)   |\n| February | $80 |\n| March | $420 |\n"> </furo-ui5-markdown>
 
           <furo-ui5-number-input value-state="Positive" .model="${this.cube.cube.length}"></furo-ui5-number-input>
@@ -134,7 +135,7 @@ export class InputFields extends  LitFBP(LitElement) {
           <furo-ui5-switch slot="action" disabled design="Graphical"  .model="${this.FuroFatBool}">Hip</furo-ui5-switch>
           <furo-ui5-switch slot="action" design="Textual" text-off="aus" text-on="ein"  .model="${this.FuroFatBool}">Hip</furo-ui5-switch>
           <furo-horizontal-flex space>
-
+</furo-ui5-busy-indicator>
 
           <furo-ui5-radio-button slot="action" fn-check="" text="Override"
                                  .model="${this.wrappers.boolValue}"></furo-ui5-radio-button>

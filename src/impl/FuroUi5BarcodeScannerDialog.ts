@@ -1,7 +1,5 @@
-import {  STRING, StringValue } from "@furo/open-models/dist";
-import BarcodeScannerDialog, {
-  type BarcodeScannerDialogScanSuccessEventDetail,
-} from "@ui5/webcomponents-fiori/dist/BarcodeScannerDialog.js";
+import { STRING, StringValue } from "@furo/open-models/dist";
+import BarcodeScannerDialog, { type BarcodeScannerDialogScanSuccessEventDetail } from "@ui5/webcomponents-fiori/dist/BarcodeScannerDialog.js";
 
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
@@ -37,8 +35,7 @@ import { FuroFatString } from "@/models";
  * @summary data barcode scanner dialog
  * @tagname furo-ui5-barcode-scanner-dialog
  */
-export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog{
-
+export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
   private modelReaderWriter: ModelReaderWriter | undefined;
 
   // eslint-disable-next-line no-use-before-define
@@ -62,7 +59,7 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog{
     this.bindData(value);
   }
 
-  public code:string = ''
+  public code: string = "";
 
   /**
    * Connects your data model to this component.
@@ -99,18 +96,11 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog{
     this.addEventListener("scan-success", this.writeToModel.bind(this) as EventListener);
 
     // initial read
-    this.readFromModel();
 
     // constraints
-
   }
 
-  private readFromModel(): void {
-
-  }
-
-
-  private writeToModel(e:CustomEvent<BarcodeScannerDialogScanSuccessEventDetail>): void {
+  private writeToModel(e: CustomEvent<BarcodeScannerDialogScanSuccessEventDetail>): void {
     this.code = e.detail.text;
     this.modelReaderWriter!.writeModel();
     this.close();
@@ -146,7 +136,7 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog{
    */
   static override get metadata() {
     const md = super.metadata;
-    md.tag = 'furo-ui5-barcode-scanner-dialog';
+    md.tag = "furo-ui5-barcode-scanner-dialog";
     return md;
   }
 }

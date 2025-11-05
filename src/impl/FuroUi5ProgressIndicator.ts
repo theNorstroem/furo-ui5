@@ -1,17 +1,4 @@
-
-import {
-  DOUBLE,
-  FLOAT,
-  FloatValue,
-  INT32,
-  Int32Value,
-  INT64,
-  Int64Value,
-  UINT32,
-  UInt32Value,
-  UINT64,
-  UInt64Value,
-} from "@furo/open-models/dist";
+import { DOUBLE, FLOAT, FloatValue, INT32, Int32Value, INT64, Int64Value, UINT32, UInt32Value, UINT64, UInt64Value } from "@furo/open-models/dist";
 import ProgressIndicator from "@ui5/webcomponents/dist/ProgressIndicator.js";
 
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
@@ -117,7 +104,7 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
       | Int32Value
       | Int64Value
       | UInt32Value
-      | UInt64Value,
+      | UInt64Value
   ) {
     this.bindData(value);
   }
@@ -162,7 +149,7 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
       | Int32Value
       | Int64Value
       | UInt32Value
-      | UInt64Value,
+      | UInt64Value
   ) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
@@ -220,4 +207,3 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
     return md;
   }
 }
-
