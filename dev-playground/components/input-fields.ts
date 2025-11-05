@@ -5,7 +5,9 @@ import "@/furo-ui5-show-hide";
 import "@/furo-ui5-text-input";
 import "@/furo-ui5-textarea";
 import "@/furo-ui5-number-input";
+import "@/furo-ui5-step";
 import "@/furo-ui5-password-input";
+import "@/furo-ui5-progress-indicator";
 import "@/furo-ui5-slider";
 import "@/furo-ui5-checkbox";
 import "@/furo-ui5-form-field-segmenter";
@@ -121,6 +123,7 @@ export class InputFields extends  LitFBP(LitElement) {
           <furo-ui5-markdown markdown="# kkl \n\n## kkl \n- a\n- b\n- http://www.golem.de <furo-ui5-button>Name</furo-ui5-button>\n\n| Month | Savings |\n| -------- | ------- |\n| January | $250  :-)   |\n| February | $80 |\n| March | $420 |\n"> </furo-ui5-markdown>
 
           <furo-ui5-number-input value-state="Positive" .model="${this.cube.cube.length}"></furo-ui5-number-input>
+
           <furo-ui5-button @click="${this.validateCube}" slot="action" design="Transparent">Validate</furo-ui5-button>
           <furo-ui5-button at-click="--showDialog" slot="action" design="Transparent">Dialog</furo-ui5-button>
           <furo-ui5-checkbox slot="action" fn-check="" text="Override"
@@ -173,6 +176,12 @@ export class InputFields extends  LitFBP(LitElement) {
                 <furo-ui5-rating-indicator value-state="Information" .model="${this.cube.cube.rating}" id="rating" accessible-name="" value="4.3"></furo-ui5-rating-indicator>
               </furo-ui5-form-row>
               <furo-ui5-form-row>
+                <furo-ui5-label show-colon slot="label" for="rating">Step Input
+                </furo-ui5-label>
+                <furo-ui5-step value-state="Positive" .model="${this.cube.cube.length}"></furo-ui5-step>
+              </furo-ui5-form-row>
+
+              <furo-ui5-form-row>
                 <furo-ui5-label show-colon slot="label" for="rating">Rating indicator
                 </furo-ui5-label>
                 <furo-ui5-link href="">sfd</furo-ui5-link>
@@ -184,6 +193,8 @@ export class InputFields extends  LitFBP(LitElement) {
               <furo-ui5-number-input value-state="Positive" .model="${this.cube.cube.length}"></furo-ui5-number-input>
               <furo-ui5-slider show-tooltip show-tickmarks step="50" editable-tooltip
                                .model="${this.cube.cube.length}"></furo-ui5-slider>
+              <furo-ui5-progress-indicator value-state="Positive"
+                               .model="${this.cube.cube.length}"></furo-ui5-progress-indicator>
               <furo-ui5-textarea id="textarea" .model="${this.cube.cube.fatString}" rows="4"></furo-ui5-textarea>
             </furo-ui5-form-group>
             <furo-ui5-form-group label="Group 1">
@@ -293,6 +304,10 @@ export class InputFields extends  LitFBP(LitElement) {
                 Localised value state message comes here.
               </div>
             </furo-ui5-step-input>
+          </furo-ui5-form-row>   <furo-ui5-form-row>
+            <furo-ui5-label show-colon slot="label" required="" for="step">Progress
+            </furo-ui5-label>
+            <furo-ui5-progress-indicator id="step" value-state="Critical" value="23"></furo-ui5-progress-indicator>
           </furo-ui5-form-row>
           <furo-ui5-form-row>
             <furo-ui5-label show-colon slot="label" required="" for="time-picker">time-picker
