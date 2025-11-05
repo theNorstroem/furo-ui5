@@ -79,8 +79,6 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
      * - from ui: input, change
      */
 
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
-
     // connect the model
     this._model = fieldNode;
     // init model
@@ -90,7 +88,6 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
     // listen on state changes on the model
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
 
     // listen on changes from UI
     this.addEventListener("scan-success", this.writeToModel.bind(this) as EventListener);
