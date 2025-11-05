@@ -6,7 +6,7 @@ import * as React from "react";
 import type { FuroFatString } from "@/models/index.js";
 
 export interface Textarea extends React.HTMLAttributes<HTMLElement> {
-  "onsearch-requested"?: (d: CustomEvent<string>) => void;
+  // no events defined.
   // properties
 
   /**

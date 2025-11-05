@@ -4,6 +4,740 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5BarcodeScannerDialog.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The 'furo-furo-ui5-barcode-scanner-dialog' component  provides barcode scanning functionality for all devices that\nsupport the MediaDevices.getUserMedia() native API. Opening the dialog launches the device camera and scans for known barcode formats.\nInternally, the component uses the zxing-js/library third party OSS. For a list of supported barcode formats, see the\nzxing-js/library documentation. https://github.com/zxing-js/library\n\nIt supports all features from the [SAP ui5 Barcode Scanner Dialog element](https://sap.github.io/furo-ui5-webcomponents/playground/components/BarcodeScannerDialog/).\n\nYou can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.\n\n```html\n <furo-furo-ui5-button at-click=--openClicked>Open Scanner</furo-furo-ui5-button>\n <furo-furo-ui5-barcode-scanner-dialog fn-show=\"--openClicked\"\n                                  fn-bind-data=\"--dao(*.field)\"></furo-furo-ui5-barcode-scanner-dialog>\n\n```\n\n## Methods\n**bindData(fieldNode)**\nBind an entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)\n\n### Overview\n\nThe `BarcodeScannerDialog` component provides barcode scanning functionality for all devices that support the `MediaDevices.getUserMedia()` native API.\nOpening the dialog launches the device camera and scans for known barcode formats.\n\nA `scanSuccess` event fires whenever a barcode is identified\nand a `scanError` event fires when the scan failed (for example, due to missing permisions).\n\nInternally, the component  uses the zxing-js/library third party OSS.\n\nFor a list of supported barcode formats, see the [zxing-js/library](https://github.com/zxing-js/library) documentation.",
+          "name": "BarcodeScannerDialog",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_getModelReaders",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Map<string, () => void>"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "_getModelWriters",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Map<string, () => void>"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING | FuroFatString | StringValue"
+              },
+              "privacy": "private",
+              "default": "new STRING()"
+            },
+            {
+              "kind": "method",
+              "name": "attachComponentStateFinalized",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "() => void"
+                  }
+                }
+              ],
+              "description": "Attach a callback that will be executed whenever the component's state is finalized",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "attachInvalidate",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "(param: InvalidationInfo) => void"
+                  }
+                }
+              ],
+              "description": "Attach a callback that will be executed whenever the component is invalidated",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING | FuroFatString | StringValue",
+                    "references": [
+                      {
+                        "name": "STRING",
+                        "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component."
+            },
+            {
+              "kind": "method",
+              "name": "close",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Closes the popup.",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "code",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "''"
+            },
+            {
+              "kind": "method",
+              "name": "define",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "typeof UI5Element"
+                }
+              },
+              "description": "Registers a UI5 Web Component in the browser window object",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "detachComponentStateFinalized",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "() => void"
+                  }
+                }
+              ],
+              "description": "Detach the callback that is executed whenever the component's state is finalized",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "detachInvalidate",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "(param: InvalidationInfo) => void"
+                  }
+                }
+              ],
+              "description": "Detach the callback that is executed whenever the component is invalidated",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "effectiveDir",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "privacy": "public",
+              "default": "undefined",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "fireDecoratorEvent",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                },
+                "description": "false, if the event was cancelled (preventDefault called), true otherwise"
+              },
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": {
+                    "text": "N"
+                  },
+                  "description": "name of the event"
+                },
+                {
+                  "name": "data",
+                  "optional": true,
+                  "type": {
+                    "text": "this[\"eventDetails\"][N] | undefined"
+                  },
+                  "description": "additional data for the event"
+                }
+              ],
+              "description": "Fires a custom event, configured via the \"event\" decorator.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "fireEvent",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                },
+                "description": "false, if the event was cancelled (preventDefault called), true otherwise"
+              },
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": {
+                    "text": "string"
+                  },
+                  "description": "name of the event"
+                },
+                {
+                  "name": "data",
+                  "optional": true,
+                  "type": {
+                    "text": "T"
+                  },
+                  "description": "additional data for the event"
+                },
+                {
+                  "name": "cancelable",
+                  "default": "false",
+                  "description": "true, if the user can call preventDefault on the event object"
+                },
+                {
+                  "name": "bubbles",
+                  "default": "true",
+                  "description": "true, if the event bubbles"
+                }
+              ],
+              "privacy": "public",
+              "deprecated": "use fireDecoratorEvent instead",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "return": {
+                "type": {
+                  "text": "Promise<void>"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "focusOptions",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  },
+                  "description": "additional options for the focus"
+                }
+              ],
+              "description": "Set the focus to the element, returned by \"getFocusDomRef()\" (marked by \"data-sap-focus-ref\")",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getDomRef",
+              "return": {
+                "type": {
+                  "text": "HTMLElement | undefined"
+                }
+              },
+              "description": "Returns the DOM Element inside the Shadow Root that corresponds to the opening tag in the UI5 Web Component's template\n*Note:* For logical (abstract) elements (items, options, etc...), returns the part of the parent's DOM that represents this option\nUse this method instead of \"this.shadowRoot\" to read the Shadow DOM, if ever necessary",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusDomRef",
+              "return": {
+                "type": {
+                  "text": "HTMLElement | undefined"
+                }
+              },
+              "description": "Returns the DOM Element marked with \"data-sap-focus-ref\" inside the template.\nThis is the element that will receive the focus by default.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusDomRefAsync",
+              "return": {
+                "type": {
+                  "text": "Promise<HTMLElement | undefined>"
+                }
+              },
+              "description": "Waits for dom ref and then returns the DOM Element marked with \"data-sap-focus-ref\" inside the template.\nThis is the element that will receive the focus by default.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getMetadata",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "UI5ElementMetadata",
+                  "references": [
+                    {
+                      "name": "UI5ElementMetadata",
+                      "package": "@ui5/webcomponents-base",
+                      "module": "dist/UI5ElementMetadata.js"
+                    }
+                  ]
+                }
+              },
+              "description": "Returns an instance of UI5ElementMetadata.js representing this UI5 Web Component's full metadata (its and its parents')\nNote: not to be confused with the \"get metadata()\" method, which returns an object for this class's metadata only",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getSlottedNodes",
+              "return": {
+                "type": {
+                  "text": "Array<T>"
+                }
+              },
+              "description": "Returns the actual children, associated with a slot.\nUseful when there are transitive slots in nested component scenarios and you don't want to get a list of the slots, but rather of their content.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getUniqueDependencies",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "Array<typeof UI5Element>"
+                }
+              },
+              "description": "Returns a list of the unique dependencies for this UI5 Web Component",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isUI5Element",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "privacy": "public",
+              "default": "true",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING | FuroFatString | StringValue",
+                "references": [
+                  {
+                    "name": "STRING",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
+                  {
+                    "name": "StringValue",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
+                  {
+                    "name": "FuroFatString",
+                    "package": "@/models",
+                    "module": "index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a model field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "onAfterRendering",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called every time after the component renders.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onBeforeRendering",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called every time before the component renders.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onEnterDOM",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called on connectedCallback - added to the DOM.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onExitDOM",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called on disconnectedCallback - removed from the DOM.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onInvalidation",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "changeInfo",
+                  "type": {
+                    "text": "ChangeInfo",
+                    "references": [
+                      {
+                        "name": "ChangeInfo",
+                        "package": "@ui5/webcomponents-base",
+                        "module": "dist/UI5Element.js"
+                      }
+                    ]
+                  },
+                  "description": "An object with information about the change that caused invalidation.\nThe object can have the following properties:\n- type: (property|slot) tells what caused the invalidation\n1) property: a property value was changed either directly or as a result of changing the corresponding attribute\n2) slot: a slotted node(nodes) changed in one of several ways (see \"reason\")\n\n- name: the name of the property or slot that caused the invalidation\n\n- reason: (children|textcontent|childchange|slotchange) relevant only for type=\"slot\" only and tells exactly what changed in the slot\n1) children: immediate children (HTML elements or text nodes) were added, removed or reordered in the slot\n2) textcontent: text nodes in the slot changed value (or nested text nodes were added or changed value). Can only trigger for slots of \"type: Node\"\n3) slotchange: a slot element, slotted inside that slot had its \"slotchange\" event listener called. This practically means that transitively slotted children changed.\nCan only trigger if the child of a slot is a slot element itself.\n4) childchange: indicates that a UI5Element child in that slot was invalidated and in turn invalidated the component.\nCan only trigger for slots with \"invalidateOnChildChange\" metadata descriptor\n\n- newValue: the new value of the property (for type=\"property\" only)\n\n- oldValue: the old value of the property (for type=\"property\" only)\n\n- child the child that was changed (for type=\"slot\" and reason=\"childchange\" only)"
+                }
+              ],
+              "description": "A callback that is executed each time an already rendered component is invalidated (scheduled for re-rendering)",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether the dialog is open.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "BarcodeScannerDialog",
+                "module": "dist/BarcodeScannerDialog.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "readFromModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "description": "Shows the popover at the opener position defined with attribute opener.",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "stringReaderWriters",
+              "type": {
+                "text": "StringReaderWriters<FuroUi5BarcodeScannerDialog> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "writeToModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "close",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired when the user closes the component.",
+              "inheritedFrom": {
+                "name": "BarcodeScannerDialog",
+                "module": "dist/BarcodeScannerDialog.js"
+              }
+            },
+            {
+              "type": {
+                "text": "String"
+              },
+              "description": "Fires the field value when it changes.",
+              "name": "furo-value-changed"
+            },
+            {
+              "name": "scan-error",
+              "type": {
+                "text": "CustomEvent<BarcodeScannerDialogScanErrorEventDetail>",
+                "references": [
+                  {
+                    "name": "BarcodeScannerDialogScanErrorEventDetail",
+                    "package": "@ui5/webcomponents-fiori",
+                    "module": "dist/BarcodeScannerDialog.js"
+                  }
+                ]
+              },
+              "description": " Fires when the scan fails with error.",
+              "inheritedFrom": {
+                "name": "BarcodeScannerDialog",
+                "module": "dist/BarcodeScannerDialog.js"
+              }
+            },
+            {
+              "name": "scan-success",
+              "type": {
+                "text": "CustomEvent<BarcodeScannerDialogScanSuccessEventDetail>",
+                "references": [
+                  {
+                    "name": "BarcodeScannerDialogScanSuccessEventDetail",
+                    "package": "@ui5/webcomponents-fiori",
+                    "module": "dist/BarcodeScannerDialog.js"
+                  }
+                ]
+              },
+              "description": " Fires when the scan is completed successfuuly.",
+              "inheritedFrom": {
+                "name": "BarcodeScannerDialog",
+                "module": "dist/BarcodeScannerDialog.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "BarcodeScannerDialog",
+            "package": "@ui5/webcomponents-fiori",
+            "module": "dist/BarcodeScannerDialog.js"
+          },
+          "tagName": "furo-ui5-barcode-scanner-dialog",
+          "customElement": true,
+          "summary": "data barcode scanner dialog",
+          "slots": [
+            {
+              "name": "header",
+              "description": "Defines the header HTML Element.\n\n**Note:** If `header` slot is provided, the labelling of the dialog is a responsibility of the application developer.\n`accessibleName` should be used.",
+              "inheritedFrom": {
+                "name": "BarcodeScannerDialog",
+                "module": "dist/BarcodeScannerDialog.js"
+              }
+            },
+            {
+              "name": "footer",
+              "description": "Defines the footer HTML Element.\n\n**Note:** When you provide custom content for the `footer` slot, the default close button is not rendered.\nThis means you need to include your own mechanism within the custom `footer` to close the dialog,\nsuch as a button with an event listener that closes the dialog.\n\n**Note:** If the `footer` slot is not provided, a default footer with a close button is rendered automatically,\nallowing users to close the dialog without any additional implementation.",
+              "inheritedFrom": {
+                "name": "BarcodeScannerDialog",
+                "module": "dist/BarcodeScannerDialog.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Indicates whether the dialog is open.",
+              "name": "open",
+              "default": "false",
+              "fieldName": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "BarcodeScannerDialog",
+                "module": "dist/BarcodeScannerDialog.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5BarcodeScannerDialog",
+          "declaration": {
+            "name": "FuroUi5BarcodeScannerDialog",
+            "module": "src/impl/FuroUi5BarcodeScannerDialog.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/impl/FuroUi5Button.js",
       "declarations": [
         {
@@ -5953,896 +6687,523 @@
           "name": "Link",
           "members": [
             {
-              "kind": "method",
-              "name": "___fieldNameBuilder",
-              "parameters": [
-                {
-                  "name": "parts"
-                }
-              ],
-              "description": "Helper method to construct the __fieldPath",
-              "privacy": "protected",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "___getAllStates",
-              "parameters": [
-                {
-                  "name": "carrier"
-                }
-              ],
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
               "kind": "field",
-              "name": "___isEmpty",
+              "name": "accessibilityAttributes",
               "type": {
-                "text": "boolean"
-              },
-              "default": "true",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "___pathBuilder",
-              "parameters": [
-                {
-                  "name": "parts"
-                }
-              ],
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "___readonlyState",
-              "default": "new Map()",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "___updateNotEmptyPath",
-              "description": "if some child is not empty, set isEmpty to false, all the way up to the root node",
-              "privacy": "private",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__addCustomEventListener",
-              "parameters": [
-                {
-                  "name": "type"
-                },
-                {
-                  "name": "handler"
-                },
-                {
-                  "name": "options"
-                }
-              ],
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__addEventListener",
-              "parameters": [
-                {
-                  "name": "type",
-                  "description": "A case-sensitive string representing the event type to listen for.",
-                  "type": {
-                    "text": "string"
+                "text": "LinkAccessibilityAttributes",
+                "references": [
+                  {
+                    "name": "LinkAccessibilityAttributes",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/Link.js"
                   }
-                },
-                {
-                  "name": "listener",
-                  "description": "The object that receives a notification (an object that implements the Event interface) when an event of the specified type occurs. This must be null, an object with a handleEvent() method, or a JavaScript function. See The event listener callback for details on the callback itself.",
-                  "type": {
-                    "text": "function"
-                  }
-                },
-                {
-                  "name": "options",
-                  "description": "An object that specifies characteristics about the event listener. \\n\\nThe available option is `once:boolean`",
-                  "type": {
-                    "text": ""
-                  }
-                }
-              ],
-              "description": "Add a handler to a node",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__applyValueStates",
-              "parameters": [
-                {
-                  "name": "states"
-                }
-              ],
-              "description": "Applies a list of  states to a node and its children.\n\nKeep in mind, that the message must be already translated.\n\n```json\n{\n   \"field\": \"id\",\n   \"state\": \"Error\",\n   \"message\": \"This field is invalid\"\n}\n\n```",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__ariaDescription",
-              "description": "Returns the formated aria description using the `OPEN_MODELS_OPTIONS.labelFormatter`",
-              "readonly": true,
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__broadcastEvent",
-              "parameters": [
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "Broadcast an event to all child nodes of a field node.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__checkConstraints",
-              "parameters": [
-                {
-                  "name": "fieldConstraints"
-                }
-              ],
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__checkTypeBoundaries",
-              "description": "Additional \"constraint\" checker for primitive types, i.e. INT32 can only range from -2147483648 to 2147483647, but js uses always a float64 to handle numbers",
-              "privacy": "protected",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__childNodes",
-              "description": "Returns the child nodes of a node.",
-              "readonly": true,
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__clear",
-              "parameters": [
-                {
-                  "name": "withoutNotification",
-                  "default": "false"
-                }
-              ],
-              "description": "Clear clears the element downwards and set __isEmpty to true on all sub nodes.\n\nA cleared field is not populated on `__toLiteral` or `__toJson` when the option `EmitUnpopulated` or `EmitDefaultValues` is set to false.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__clearAllValueStates",
-              "description": "Clears all value states recursively",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__climbUpValidation",
-              "description": "Validates all parent nodes if a sub-field was changed.",
-              "privacy": "protected",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__defaultValues",
-              "type": {
-                "text": "object"
+                ]
               },
               "default": "{}",
+              "description": "Defines the additional accessibility attributes that will be applied to the component.\nThe following fields are supported:\n\n- **expanded**: Indicates whether the button, or another grouping element it controls, is currently expanded or collapsed.\nAccepts the following string values: `true` or `false`.\n\n- **hasPopup**: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the button.\nAccepts the following string values: `dialog`, `grid`, `listbox`, `menu` or `tree`.",
+              "privacy": "public",
               "inheritedFrom": {
                 "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__dispatchEvent",
-              "parameters": [
-                {
-                  "name": "event",
-                  "description": "A generic custom event.",
-                  "type": {
-                    "text": "CustomEvent"
-                  }
-                }
-              ],
-              "description": "Dispatches a custom event on a FieldNode",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
+                "module": "dist/Link.js"
               }
             },
             {
               "kind": "field",
-              "name": "__fieldPath",
+              "name": "accessibleDescription",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible description of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible ARIA name of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Receives id(or many ids) of the elements that label the input",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleRole",
+              "type": {
+                "text": "LinkAccessibleRole",
+                "references": [
+                  {
+                    "name": "LinkAccessibleRole",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/LinkAccessibleRole.js"
+                  }
+                ]
+              },
+              "default": "\"Link\"",
+              "description": "Defines the ARIA role of the component.\n\n**Note:** Use the <code>LinkAccessibleRole.Button</code> role in cases when navigation is not expected to occur and the href property is not defined.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "attachComponentStateFinalized",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "() => void"
+                  }
+                }
+              ],
+              "description": "Attach a callback that will be executed whenever the component's state is finalized",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "attachInvalidate",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "(param: InvalidationInfo) => void"
+                  }
+                }
+              ],
+              "description": "Attach a callback that will be executed whenever the component is invalidated",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "define",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "typeof UI5Element"
+                }
+              },
+              "description": "Registers a UI5 Web Component in the browser window object",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "design",
+              "type": {
+                "text": "LinkDesign",
+                "references": [
+                  {
+                    "name": "LinkDesign",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/LinkDesign.js"
+                  }
+                ]
+              },
+              "default": "\"Default\"",
+              "description": "Defines the component design.\n\n**Note:** Avaialble options are `Default`, `Subtle`, and `Emphasized`.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "detachComponentStateFinalized",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "() => void"
+                  }
+                }
+              ],
+              "description": "Detach the callback that is executed whenever the component's state is finalized",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "detachInvalidate",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "callback",
+                  "type": {
+                    "text": "(param: InvalidationInfo) => void"
+                  }
+                }
+              ],
+              "description": "Detach the callback that is executed whenever the component is invalidated",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is disabled.\n\n**Note:** When disabled, the click event cannot be triggered by the user.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "effectiveDir",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "privacy": "public",
+              "default": "undefined",
               "readonly": true,
               "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "endIcon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the icon, displayed as graphical element within the component after the link's text.\nThe SAP-icons font provides numerous options.\n\n**Note:** Usage of icon-only link is not supported, the link must always have a text.\n\n**Note:** We recommend using аn icon in the beginning or the end only, and with text.\n\nSee all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
               }
             },
             {
               "kind": "method",
-              "name": "__fromLiteral",
+              "name": "fireDecoratorEvent",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                },
+                "description": "false, if the event was cancelled (preventDefault called), true otherwise"
+              },
               "parameters": [
                 {
-                  "name": "literal",
-                  "description": "The literal type matches the interface from ITypeName.",
+                  "name": "name",
                   "type": {
-                    "text": ""
-                  }
-                }
-              ],
-              "description": "Build up the model with the literal type. The literal type matches the interface from ITypeName.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__fromProtoNameJson",
-              "parameters": [
+                    "text": "N"
+                  },
+                  "description": "name of the event"
+                },
                 {
                   "name": "data",
-                  "description": "Transport Json",
+                  "optional": true,
                   "type": {
-                    "text": "JSON"
-                  }
+                    "text": "this[\"eventDetails\"][N] | undefined"
+                  },
+                  "description": "additional data for the event"
                 }
               ],
-              "description": "Build up the model, using the transport Json. If UseProtoNames is set to false, lowerCamelCase is expected.",
+              "description": "Fires a custom event, configured via the \"event\" decorator.",
+              "privacy": "public",
               "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
               }
             },
             {
               "kind": "method",
-              "name": "__getAllStates",
-              "description": "Returns a list of all states of a node and its children.\n\n```json\n[\n  {\n     \"field\": \"id\",\n     \"state\": \"Error\",\n     \"message\": \"This field is invalid\"\n  },\n    {\n     \"field\": \"display_name\",\n     \"state\": \"Error\",\n     \"message\": \"This field is invalid\"\n  }\n]\n```",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__getBaseName",
-              "description": "Helper method to build up labels, placeholders,...",
-              "privacy": "protected",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__getConstraints",
-              "description": "Receives all constraints of a node. Use this in your custom validators or components.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__getFieldNodeByPath",
+              "name": "fireEvent",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                },
+                "description": "false, if the event was cancelled (preventDefault called), true otherwise"
+              },
               "parameters": [
                 {
-                  "name": "deepPath",
-                  "default": "''",
-                  "description": "Path of the field.",
+                  "name": "name",
                   "type": {
                     "text": "string"
-                  }
-                }
-              ],
-              "description": "Get a FieldNode by giving a field path using the proto names for the fields.\n\n\n\n- `email_addresses[3].type[2]` for the second `type` value in the third `email_addresses` message.\n- `user.location.street` for the street in location in user.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__isEmpty",
-              "description": "Empty state of the node",
-              "parameters": [
-                {
-                  "name": "empty"
-                }
-              ],
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__isPrimitive",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Marker for primitive types",
-              "default": "false",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__isPristine",
-              "description": "Initialized fields are pristine as long nothing changes inside the model.\n\nUse this on rootNodes only.",
-              "readonly": true,
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__isValid",
-              "description": "Returns the valid state of a node.\n- A node is valid when all children are valid.\n- A node is valid when freshly initialized, even when some children have invalid values.\n\nuse `validate()` to be sure to have the correct validity state.\n\nUse __meta.StateMessage to receive the state of a node. The `__meta.StateMessage` is only available on an explicit field, where the validity state is populated upwards.",
-              "readonly": true,
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__label",
-              "description": "Returns the formated label using the `OPEN_MODELS_OPTIONS.labelFormatter`",
-              "readonly": true,
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__labelRaw",
-              "description": "Returns the raw label without any translations, formatters applied.",
-              "readonly": true,
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__mapProtoNameJsonToJson",
-              "parameters": [
+                  },
+                  "description": "name of the event"
+                },
                 {
                   "name": "data",
-                  "description": "Transport Json",
+                  "optional": true,
                   "type": {
-                    "text": "JSON"
-                  }
+                    "text": "T"
+                  },
+                  "description": "additional data for the event"
+                },
+                {
+                  "name": "cancelable",
+                  "default": "false",
+                  "description": "true, if the user can call preventDefault on the event object"
+                },
+                {
+                  "name": "bubbles",
+                  "default": "true",
+                  "description": "true, if the event bubbles"
                 }
               ],
-              "description": "Helper function to create a literal type from a json type",
+              "privacy": "public",
+              "deprecated": "use fireDecoratorEvent instead",
               "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
               }
             },
             {
-              "kind": "field",
-              "name": "__meta",
-              "type": {
-                "text": "object"
+              "kind": "method",
+              "name": "focus",
+              "return": {
+                "type": {
+                  "text": "Promise<void>"
+                }
               },
-              "description": "Meta data of a field node.",
-              "default": "{ businessVaueState: ValueState.None, readonly: false, required: false, initialValue: undefined, isPristine: true, isValid: true, valueState: ValueState.None, stateMessage: '', typeName: '', nodeFields: [], isArrayNode: false, isRecursionNode: false, isAnyNode: false, eventListener: new Map(), }",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__notifyFieldValueChange",
               "parameters": [
                 {
-                  "name": "bubbles"
-                }
-              ],
-              "description": "Notifies field changes",
-              "privacy": "protected",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__parentNode",
-              "default": "parent",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__placeholder",
-              "description": "Returns the placeholder label using the `OPEN_MODELS_OPTIONS.labelFormatter`",
-              "readonly": true,
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__PrimitivesSetter",
-              "parameters": [
-                {
-                  "name": "targetNode",
-                  "description": "The field of a FieldNode",
+                  "name": "focusOptions",
+                  "optional": true,
                   "type": {
-                    "text": "FieldNode"
+                    "text": "FocusOptions"
+                  },
+                  "description": "additional options for the focus"
+                }
+              ],
+              "description": "Set the focus to the element, returned by \"getFocusDomRef()\" (marked by \"data-sap-focus-ref\")",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getDomRef",
+              "return": {
+                "type": {
+                  "text": "HTMLElement | undefined"
+                }
+              },
+              "description": "Returns the DOM Element inside the Shadow Root that corresponds to the opening tag in the UI5 Web Component's template\n*Note:* For logical (abstract) elements (items, options, etc...), returns the part of the parent's DOM that represents this option\nUse this method instead of \"this.shadowRoot\" to read the Shadow DOM, if ever necessary",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusDomRef",
+              "return": {
+                "type": {
+                  "text": "HTMLElement | undefined"
+                }
+              },
+              "description": "Returns the DOM Element marked with \"data-sap-focus-ref\" inside the template.\nThis is the element that will receive the focus by default.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusDomRefAsync",
+              "return": {
+                "type": {
+                  "text": "Promise<HTMLElement | undefined>"
+                }
+              },
+              "description": "Waits for dom ref and then returns the DOM Element marked with \"data-sap-focus-ref\" inside the template.\nThis is the element that will receive the focus by default.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getMetadata",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "UI5ElementMetadata",
+                  "references": [
+                    {
+                      "name": "UI5ElementMetadata",
+                      "package": "@ui5/webcomponents-base",
+                      "module": "dist/UI5ElementMetadata.js"
+                    }
+                  ]
+                }
+              },
+              "description": "Returns an instance of UI5ElementMetadata.js representing this UI5 Web Component's full metadata (its and its parents')\nNote: not to be confused with the \"get metadata()\" method, which returns an object for this class's metadata only",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getSlottedNodes",
+              "return": {
+                "type": {
+                  "text": "Array<T>"
+                }
+              },
+              "description": "Returns the actual children, associated with a slot.\nUseful when there are transitive slots in nested component scenarios and you don't want to get a list of the slots, but rather of their content.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getUniqueDependencies",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "Array<typeof UI5Element>"
+                }
+              },
+              "description": "Returns a list of the unique dependencies for this UI5 Web Component",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the component href.\n\n**Note:** Standard hyperlink behavior is supported.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the icon, displayed as graphical element within the component before the link's text.\nThe SAP-icons font provides numerous options.\n\n**Note:** Usage of icon-only link is not supported, the link must always have a text.\n\n**Note:** We recommend using аn icon in the beginning or the end only, and with text.\n\nSee all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "interactiveAreaSize",
+              "type": {
+                "text": "InteractiveAreaSize",
+                "references": [
+                  {
+                    "name": "InteractiveAreaSize",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/InteractiveAreaSize.js"
                   }
-                },
-                {
-                  "name": "value",
-                  "description": "The value you want to set",
-                  "type": {
-                    "text": "string | boolean | number"
-                  }
-                }
-              ],
-              "description": "Helper method to update a skalar / primitive field of a type. Used by the generated models.\nTriggers also the validation and clearance, if needed.",
-              "privacy": "protected",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__readonly",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__removeCustomEventListener",
-              "parameters": [
-                {
-                  "name": "type"
-                },
-                {
-                  "name": "handler"
-                },
-                {
-                  "name": "options"
-                }
-              ],
-              "description": "Removes the handler from a node",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__removeEventListener",
-              "parameters": [
-                {
-                  "name": "type"
-                },
-                {
-                  "name": "handler"
-                },
-                {
-                  "name": "options"
-                }
-              ],
-              "description": "Removes the handler from a node",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__reset",
-              "description": "Resets the node to the last inserted literal or to the initial state.\n// todo: reset to default values not just the empty state",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "__rootNode",
-              "description": "Root node of a node. Do not set this value by yourself.",
-              "parameters": [
-                {
-                  "name": "value"
-                }
-              ],
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__setModelValidStateTrue",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__setValidState",
-              "parameters": [
-                {
-                  "name": "valid"
-                }
-              ],
-              "description": "set the validity of the node. This will trigger no events, just set the __meta.isValid value.\n\nUse this in your customValidators.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__setValueState",
-              "parameters": [
-                {
-                  "name": "state",
-                  "description": "The state of the node.",
-                  "type": {
-                    "text": "ValueState"
-                  }
-                },
-                {
-                  "name": "messageAndParams",
-                  "description": "Description for the formatter.",
-                  "type": {
-                    "text": "string[]"
-                  }
-                }
-              ],
-              "description": "Set the value state",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__stringify",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__toJson",
-              "description": "Converts the model to a JSON struct wich matches the protobuf spec.\nIf the `UseProtoNames` option is set to false, lowerCamelCase is produced.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__toLiteral",
-              "description": "Converts the model to a literal type. The literal type matches the interface from ITypeName.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__toLowerCamelCase",
-              "parameters": [
-                {
-                  "name": "string"
-                }
-              ],
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__toLowerCamelCaseWithoutXPrefix",
-              "parameters": [
-                {
-                  "name": "string"
-                }
-              ],
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__toSnakeCase",
-              "parameters": [
-                {
-                  "name": "string"
-                }
-              ],
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__triggerNodeEvents",
-              "parameters": [
-                {
-                  "name": "event"
-                }
-              ],
-              "description": "Helper method to invoke/execute the event on the current node",
-              "privacy": "protected",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__TypeSetter",
-              "parameters": [
-                {
-                  "name": "targetNode",
-                  "description": "The field of a FieldNode",
-                  "type": {
-                    "text": "FieldNode"
-                  }
-                },
-                {
-                  "name": "literalData",
-                  "description": "The literal type matches the interface from ITypeName.",
-                  "type": {
-                    "text": ""
-                  }
-                }
-              ],
-              "description": "Helper method to update a field of a type. Used by the generated models.\nTriggers also the validation and clearance, if needed.",
-              "privacy": "protected",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__updateWithLiteral",
-              "parameters": [
-                {
-                  "name": "literal"
-                }
-              ],
-              "description": "Updates the model from literal data, without changing the validity and value state.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__validate",
-              "description": "Validate the node and all child nodes of it.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__validateBottomUp",
-              "parameters": [
-                {
-                  "name": "node",
-                  "description": "Any FieldNode",
-                  "type": {
-                    "text": "FieldNode"
-                  }
-                }
-              ],
-              "description": "Validates all parents of an element. This is done when you set a value on any child/attribute of a node directly",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "__validationExecuter",
-              "parameters": [
-                {
-                  "name": "node"
-                }
-              ],
-              "description": "Executes the validation process.",
-              "privacy": "protected",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "_description",
-              "default": "new STRING(undefined, this, 'description')",
+                ]
+              },
+              "default": "\"Normal\"",
+              "description": "Defines the target area size of the link:\n- **InteractiveAreaSize.Normal**: The default target area size.\n- **InteractiveAreaSize.Large**: The target area size is enlarged to 24px in height.\n\n**Note:**The property is designed to make links easier to activate and helps meet the WCAG 2.2 Target Size requirement. It is applicable only for the SAP Horizon themes.\n**Note:**To improve <code>furo-ui5-link</code>'s reliability and usability, it is recommended to use the <code>InteractiveAreaSize.Large</code> value in scenarios where the <code>furo-ui5-link</code> component is placed inside another interactive component, such as a list item or a table cell.\nSetting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.",
+              "privacy": "public",
               "inheritedFrom": {
                 "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
+                "module": "dist/Link.js"
               }
             },
             {
               "kind": "field",
-              "name": "_operationId",
-              "default": "new STRING(undefined, this, 'operationId')",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "_operationRef",
-              "default": "new STRING(undefined, this, 'operationRef')",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "_parameters",
-              "default": "new OpenapiV3AnyOrExpression(undefined, this, 'parameters')",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "_requestBody",
-              "default": "new OpenapiV3AnyOrExpression(undefined, this, 'requestBody')",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "_server",
-              "default": "new OpenapiV3Server(undefined, this, 'server')",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "_specificationExtension",
-              "default": "new ARRAY(undefined, this, 'specificationExtension')",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "description",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "fieldName",
-              "default": "parentAttributeName",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "fromLiteral",
-              "parameters": [
-                {
-                  "name": "data"
-                }
-              ],
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isPristine",
+              "name": "isUI5Element",
               "type": {
                 "text": "boolean"
               },
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "privacy": "public",
               "default": "true",
+              "readonly": true,
               "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
               }
             },
             {
@@ -6853,101 +7214,143 @@
               "readonly": true
             },
             {
-              "kind": "field",
-              "name": "nodeFields",
-              "type": {
-                "text": "array"
+              "kind": "method",
+              "name": "onAfterRendering",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
               },
-              "default": "[ { fieldName: 'operationRef', protoName: 'operation_ref', FieldConstructor: STRING, constraints: {}, }, { fieldName: 'operationId', protoName: 'operation_id', FieldConstructor: STRING, constraints: {}, }, { fieldName: 'parameters', protoName: 'parameters', FieldConstructor: OpenapiV3AnyOrExpression, constraints: {}, }, { fieldName: 'requestBody', protoName: 'request_body', FieldConstructor: OpenapiV3AnyOrExpression, constraints: {}, }, { fieldName: 'description', protoName: 'description', FieldConstructor: STRING, constraints: {}, }, { fieldName: 'server', protoName: 'server', FieldConstructor: OpenapiV3Server, constraints: {}, }, { fieldName: 'specificationExtension', protoName: 'specification_extension', FieldConstructor: OpenapiV3NamedAny, constraints: {}, }, ]",
+              "description": "Called every time after the component renders.",
+              "privacy": "public",
               "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "operationId",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "operationRef",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "parameters",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "requestBody",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "server",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "specificationExtension",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
               }
             },
             {
               "kind": "method",
-              "name": "toLiteral",
-              "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "toString",
-              "description": "The toString() method of Object instances returns a string representing this object. This method is meant to be overridden by `CustomPrototypes.ToString`.\nIf no `CustomPrototypes` is set, it will try to find a display_name attribute on the node and uses that for the output.\n\nIf there is no display_name `[object TypeName]` is returned.",
-              "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "typeName",
-              "type": {
-                "text": "string"
+              "name": "onBeforeRendering",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
               },
-              "default": "'openapi.v3.Link'",
+              "description": "Called every time before the component renders.",
+              "privacy": "public",
               "inheritedFrom": {
-                "name": "Link",
-                "module": "dist/protoc-gen-open-models/openapiv3/Link.js"
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
               }
             },
             {
               "kind": "method",
-              "name": "valueOf",
-              "description": "The valueOf() method of Object instances converts the this.value to an object.\nThis method is meant to be overridden by derived objects for custom type conversion logic.",
+              "name": "onEnterDOM",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called on connectedCallback - added to the DOM.",
+              "privacy": "public",
               "inheritedFrom": {
-                "name": "FieldNode",
-                "module": "dist/FieldNode.js"
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onExitDOM",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Called on disconnectedCallback - removed from the DOM.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onInvalidation",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "changeInfo",
+                  "type": {
+                    "text": "ChangeInfo",
+                    "references": [
+                      {
+                        "name": "ChangeInfo",
+                        "package": "@ui5/webcomponents-base",
+                        "module": "dist/UI5Element.js"
+                      }
+                    ]
+                  },
+                  "description": "An object with information about the change that caused invalidation.\nThe object can have the following properties:\n- type: (property|slot) tells what caused the invalidation\n1) property: a property value was changed either directly or as a result of changing the corresponding attribute\n2) slot: a slotted node(nodes) changed in one of several ways (see \"reason\")\n\n- name: the name of the property or slot that caused the invalidation\n\n- reason: (children|textcontent|childchange|slotchange) relevant only for type=\"slot\" only and tells exactly what changed in the slot\n1) children: immediate children (HTML elements or text nodes) were added, removed or reordered in the slot\n2) textcontent: text nodes in the slot changed value (or nested text nodes were added or changed value). Can only trigger for slots of \"type: Node\"\n3) slotchange: a slot element, slotted inside that slot had its \"slotchange\" event listener called. This practically means that transitively slotted children changed.\nCan only trigger if the child of a slot is a slot element itself.\n4) childchange: indicates that a UI5Element child in that slot was invalidated and in turn invalidated the component.\nCan only trigger for slots with \"invalidateOnChildChange\" metadata descriptor\n\n- newValue: the new value of the property (for type=\"property\" only)\n\n- oldValue: the old value of the property (for type=\"property\" only)\n\n- child the child that was changed (for type=\"slot\" and reason=\"childchange\" only)"
+                }
+              ],
+              "description": "A callback that is executed each time an already rendered component is invalidated (scheduled for re-rendering)",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the component target.\n\n**Notes:**\n\n- `_self`\n- `_top`\n- `_blank`\n- `_parent`\n- `_search`\n\n**This property must only be used when the `href` property is set.**",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the tooltip of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "wrappingType",
+              "type": {
+                "text": "WrappingType",
+                "references": [
+                  {
+                    "name": "WrappingType",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/WrappingType.js"
+                  }
+                ]
+              },
+              "default": "\"Normal\"",
+              "description": "Defines how the text of a component will be displayed when there is not enough space.\n\n**Note:** By default the text will wrap. If \"None\" is set - the text will truncate.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
               }
             }
           ],
@@ -6957,7 +7360,265 @@
             "module": "dist/Link.js"
           },
           "tagName": "furo-ui5-link",
-          "customElement": true
+          "customElement": true,
+          "slots": [
+            {
+              "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
+              "name": "default",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Used to style the provided icon within the link",
+              "name": "icon",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Used to style the provided endIcon within the link",
+              "name": "endIcon",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines the additional accessibility attributes that will be applied to the component.\nThe following fields are supported:\n\n- **expanded**: Indicates whether the button, or another grouping element it controls, is currently expanded or collapsed.\nAccepts the following string values: `true` or `false`.\n\n- **hasPopup**: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the button.\nAccepts the following string values: `dialog`, `grid`, `listbox`, `menu` or `tree`.",
+              "name": "accessibility-attributes",
+              "default": "{}",
+              "fieldName": "accessibilityAttributes",
+              "type": {
+                "text": "LinkAccessibilityAttributes"
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Defines the accessible description of the component.",
+              "name": "accessible-description",
+              "default": "undefined",
+              "fieldName": "accessibleDescription",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Defines the accessible ARIA name of the component.",
+              "name": "accessible-name",
+              "default": "undefined",
+              "fieldName": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Receives id(or many ids) of the elements that label the input",
+              "name": "accessible-name-ref",
+              "default": "undefined",
+              "fieldName": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Defines the ARIA role of the component.\n\n**Note:** Use the <code>LinkAccessibleRole.Button</code> role in cases when navigation is not expected to occur and the href property is not defined.",
+              "name": "accessible-role",
+              "default": "\"Link\"",
+              "fieldName": "accessibleRole",
+              "type": {
+                "text": "\"Button\" | \"Link\""
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Defines the component design.\n\n**Note:** Avaialble options are `Default`, `Subtle`, and `Emphasized`.",
+              "name": "design",
+              "default": "\"Default\"",
+              "fieldName": "design",
+              "type": {
+                "text": "\"Default\" | \"Emphasized\" | \"Subtle\""
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is disabled.\n\n**Note:** When disabled, the click event cannot be triggered by the user.",
+              "name": "disabled",
+              "default": "false",
+              "fieldName": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the icon, displayed as graphical element within the component after the link's text.\nThe SAP-icons font provides numerous options.\n\n**Note:** Usage of icon-only link is not supported, the link must always have a text.\n\n**Note:** We recommend using аn icon in the beginning or the end only, and with text.\n\nSee all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).",
+              "name": "end-icon",
+              "default": "undefined",
+              "fieldName": "endIcon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Defines the component href.\n\n**Note:** Standard hyperlink behavior is supported.",
+              "name": "href",
+              "default": "undefined",
+              "fieldName": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Defines the icon, displayed as graphical element within the component before the link's text.\nThe SAP-icons font provides numerous options.\n\n**Note:** Usage of icon-only link is not supported, the link must always have a text.\n\n**Note:** We recommend using аn icon in the beginning or the end only, and with text.\n\nSee all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).",
+              "name": "icon",
+              "default": "undefined",
+              "fieldName": "icon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Defines the target area size of the link:\n- **InteractiveAreaSize.Normal**: The default target area size.\n- **InteractiveAreaSize.Large**: The target area size is enlarged to 24px in height.\n\n**Note:**The property is designed to make links easier to activate and helps meet the WCAG 2.2 Target Size requirement. It is applicable only for the SAP Horizon themes.\n**Note:**To improve <code>furo-ui5-link</code>'s reliability and usability, it is recommended to use the <code>InteractiveAreaSize.Large</code> value in scenarios where the <code>furo-ui5-link</code> component is placed inside another interactive component, such as a list item or a table cell.\nSetting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.",
+              "name": "interactive-area-size",
+              "default": "\"Normal\"",
+              "fieldName": "interactiveAreaSize",
+              "type": {
+                "text": "\"Normal\" | \"Large\""
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the component target.\n\n**Notes:**\n\n- `_self`\n- `_top`\n- `_blank`\n- `_parent`\n- `_search`\n\n**This property must only be used when the `href` property is set.**",
+              "name": "target",
+              "default": "undefined",
+              "fieldName": "target",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Defines the tooltip of the component.",
+              "name": "tooltip",
+              "default": "undefined",
+              "fieldName": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            },
+            {
+              "description": "Defines how the text of a component will be displayed when there is not enough space.\n\n**Note:** By default the text will wrap. If \"None\" is set - the text will truncate.",
+              "name": "wrapping-type",
+              "default": "\"Normal\"",
+              "fieldName": "wrappingType",
+              "type": {
+                "text": "\"None\" | \"Normal\""
+              },
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "click",
+              "type": {
+                "text": "CustomEvent<LinkClickEventDetail>",
+                "references": [
+                  {
+                    "name": "LinkClickEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/Link.js"
+                  }
+                ]
+              },
+              "description": "Fired when the component is triggered either with a mouse/tap\nor by using the Enter key.",
+              "inheritedFrom": {
+                "name": "Link",
+                "module": "dist/Link.js"
+              }
+            }
+          ]
         }
       ],
       "exports": [
@@ -21514,11 +22175,6 @@
             },
             {
               "kind": "field",
-              "name": "debouncedSearch",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
               "name": "fatHandler",
               "type": {
                 "text": "FatHandler<FuroUi5Textarea>"
@@ -21626,15 +22282,6 @@
                   "text": "void"
                 }
               }
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "CustomEvent<String>"
-              },
-              "description": "Fired when typing in input (debounced, default 500ms)",
-              "name": "search-requested"
             }
           ],
           "superclass": {

@@ -1,3 +1,4 @@
+import "./BarcodeScannerDialog";
 import "./Button";
 import "./ButtonBadge";
 import "./Checkbox";

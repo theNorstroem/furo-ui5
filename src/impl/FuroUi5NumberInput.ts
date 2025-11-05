@@ -19,9 +19,9 @@ import Input from "@ui5/webcomponents/dist/Input.js";
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
+import { NumericReaderWriters } from "@/lib/open-models/NumericReaderWriters";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
-import { NumericReaderWriters } from "@/lib/open-models/NumericReaderWriters";
 
 /**
  * The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.

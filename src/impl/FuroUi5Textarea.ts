@@ -7,7 +7,6 @@ import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
 import { FuroFatString } from "@/models";
-import DebounceBuilder from "@/util/Debounce";
 
 /**
  * The 'furo-ui5-textarea' component allows the user to enter and edit texts with data binding.
@@ -28,7 +27,6 @@ import DebounceBuilder from "@/util/Debounce";
  * - **placeholder:"some string"** set the placeholder for the element
  * - **max:"number"** set the maximum number of characters available in the input field.
  *
- * @event {CustomEvent<String>} search-requested - Fired when typing in input (debounced, default 500ms)
  * @tagname furo-ui5-textarea
  */
 export class FuroUi5Textarea extends Textarea {
@@ -49,29 +47,6 @@ export class FuroUi5Textarea extends Textarea {
 
     this.fatHandler = new FatHandler(this as FuroUi5Textarea, ["placeholder", "maxlength", "rows"]);
     this.fatHandler.readAttributes();
-  }
-
-  private debouncedSearch = DebounceBuilder(() => {
-    this.dispatchEvent(
-      new CustomEvent<string>("search-requested", {
-        detail: this.value,
-        bubbles: true,
-        composed: true,
-      })
-    );
-  }, 500);
-
-  /**
-   * Listen on input event to trigger the search event.
-   */
-  override connectedCallback() {
-    this.addEventListener("input", this.debouncedSearch);
-
-    return super.connectedCallback();
-  }
-
-  override disconnectedCallback() {
-    this.removeEventListener("input", this.debouncedSearch);
   }
 
   private _model: STRING | FuroFatString | StringValue = new STRING();

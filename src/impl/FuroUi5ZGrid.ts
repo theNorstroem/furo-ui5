@@ -12,16 +12,16 @@ import { css, html, LitElement } from "lit";
  *
  * ```html
  *
- *  <furo-z-grid>
+ *  <furo-ui5-z-grid>
  *    <your-component hspace="2" vspace="4"></your-component>
  *    <your-component hspace="2" vspace="2"></your-component>
- *  </furo-z-grid>
+ *  </furo-ui5-z-grid>
  *
  *  <!-- with automatic padding -->
- *  <furo-z-grid padding>
+ *  <furo-ui5-z-grid padding>
  *    <your-component hspan="2" vspan="4"></your-component>
  *    <your-component hspan="2" vspan="2"></your-component>
- *  </furo-z-grid>
+ *  </furo-ui5-z-grid>
  * ```
  *
  *

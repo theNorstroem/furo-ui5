@@ -16,9 +16,8 @@ import ProgressIndicator from "@ui5/webcomponents/dist/ProgressIndicator.js";
 
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
-import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
 import { NumericReaderWriters } from "@/lib/open-models/NumericReaderWriters";
-
+import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
 
 /**
  * A furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..
@@ -41,10 +40,6 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
 
   // eslint-disable-next-line no-use-before-define
   private numericReaderWriters: NumericReaderWriters<FuroUi5ProgressIndicator> | undefined;
-
-  constructor() {
-    super();
-  }
 
   private _model:
     | INT32
@@ -181,7 +176,6 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
      */
     this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
 
-
     // connect the model
     this._model = fieldNode;
 
@@ -197,7 +191,6 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
 
     // listen on changes from UI
 
-
     // initial read
     this.readFromModel();
 
@@ -205,16 +198,15 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
     this.accessibleName = this._model.__label;
   }
 
-
   private readFromModel(): void {
     this.modelReaderWriter?.readModel();
   }
-
 
   private _getModelReaders(): Map<string, () => void> {
     return this.numericReaderWriters!.getReaders();
   }
 
+  // eslint-disable-next-line class-methods-use-this
   private _getModelWriters(): Map<string, () => void> {
     return new Map<string, () => void>();
   }
@@ -228,5 +220,4 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
     return md;
   }
 }
-
 

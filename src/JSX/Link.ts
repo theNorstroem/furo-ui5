@@ -14,63 +14,21 @@ export interface Link extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
-   * Defines whether the component is disabled.
+   * Defines the additional accessibility attributes that will be applied to the component.
+   * The following fields are supported:
    *
-   * **Note:** When disabled, the click event cannot be triggered by the user.
+   * - **expanded**: Indicates whether the button, or another grouping element it controls, is currently expanded or collapsed.
+   * Accepts the following string values: `true` or `false`.
+   *
+   * - **hasPopup**: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the button.
+   * Accepts the following string values: `dialog`, `grid`, `listbox`, `menu` or `tree`.
    */
-  disabled?: boolean;
+  accessibilityAttributes?: LinkAccessibilityAttributes;
 
   /**
-   * Defines the tooltip of the component.
+   * Defines the accessible description of the component.
    */
-  tooltip?: string | undefined;
-
-  /**
-   * Defines the component href.
-   *
-   * **Note:** Standard hyperlink behavior is supported.
-   */
-  href?: string | undefined;
-
-  /**
-   * Defines the component target.
-   *
-   * **Notes:**
-   *
-   * - `_self`
-   * - `_top`
-   * - `_blank`
-   * - `_parent`
-   * - `_search`
-   *
-   * **This property must only be used when the `href` property is set.**
-   */
-  target?: string | undefined;
-
-  /**
-   * Defines the component design.
-   *
-   * **Note:** Avaialble options are `Default`, `Subtle`, and `Emphasized`.
-   */
-  design?: LinkDesign | keyof typeof LinkDesign;
-
-  /**
-   * Defines the target area size of the link:
-   * - **InteractiveAreaSize.Normal**: The default target area size.
-   * - **InteractiveAreaSize.Large**: The target area size is enlarged to 24px in height.
-   *
-   * **Note:**The property is designed to make links easier to activate and helps meet the WCAG 2.2 Target Size requirement. It is applicable only for the SAP Horizon themes.
-   * **Note:**To improve <code>furo-ui5-link</code>'s reliability and usability, it is recommended to use the <code>InteractiveAreaSize.Large</code> value in scenarios where the <code>furo-ui5-link</code> component is placed inside another interactive component, such as a list item or a table cell.
-   * Setting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.
-   */
-  interactiveAreaSize?: InteractiveAreaSize | keyof typeof InteractiveAreaSize;
-
-  /**
-   * Defines how the text of a component will be displayed when there is not enough space.
-   *
-   * **Note:** By default the text will wrap. If "None" is set - the text will truncate.
-   */
-  wrappingType?: WrappingType | keyof typeof WrappingType;
+  accessibleDescription?: string | undefined;
 
   /**
    * Defines the accessible ARIA name of the component.
@@ -90,33 +48,24 @@ export interface Link extends React.HTMLAttributes<HTMLElement> {
   accessibleRole?: LinkAccessibleRole | keyof typeof LinkAccessibleRole;
 
   /**
-   * Defines the additional accessibility attributes that will be applied to the component.
-   * The following fields are supported:
+   * Defines the component design.
    *
-   * - **expanded**: Indicates whether the button, or another grouping element it controls, is currently expanded or collapsed.
-   * Accepts the following string values: `true` or `false`.
-   *
-   * - **hasPopup**: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the button.
-   * Accepts the following string values: `dialog`, `grid`, `listbox`, `menu` or `tree`.
+   * **Note:** Avaialble options are `Default`, `Subtle`, and `Emphasized`.
    */
-  accessibilityAttributes?: LinkAccessibilityAttributes;
+  design?: LinkDesign | keyof typeof LinkDesign;
 
   /**
-   * Defines the accessible description of the component.
+   * Defines whether the component is disabled.
+   *
+   * **Note:** When disabled, the click event cannot be triggered by the user.
    */
-  accessibleDescription?: string | undefined;
+  disabled?: boolean;
 
   /**
-   * Defines the icon, displayed as graphical element within the component before the link's text.
-   * The SAP-icons font provides numerous options.
-   *
-   * **Note:** Usage of icon-only link is not supported, the link must always have a text.
-   *
-   * **Note:** We recommend using аn icon in the beginning or the end only, and with text.
-   *
-   * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
    */
-  icon?: string | undefined;
+  effectiveDir?: string | undefined;
 
   /**
    * Defines the icon, displayed as graphical element within the component after the link's text.
@@ -131,15 +80,66 @@ export interface Link extends React.HTMLAttributes<HTMLElement> {
   endIcon?: string | undefined;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
+   * Defines the component href.
+   *
+   * **Note:** Standard hyperlink behavior is supported.
    */
-  effectiveDir?: any;
+  href?: string | undefined;
+
+  /**
+   * Defines the icon, displayed as graphical element within the component before the link's text.
+   * The SAP-icons font provides numerous options.
+   *
+   * **Note:** Usage of icon-only link is not supported, the link must always have a text.
+   *
+   * **Note:** We recommend using аn icon in the beginning or the end only, and with text.
+   *
+   * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
+   */
+  icon?: string | undefined;
+
+  /**
+   * Defines the target area size of the link:
+   * - **InteractiveAreaSize.Normal**: The default target area size.
+   * - **InteractiveAreaSize.Large**: The target area size is enlarged to 24px in height.
+   *
+   * **Note:**The property is designed to make links easier to activate and helps meet the WCAG 2.2 Target Size requirement. It is applicable only for the SAP Horizon themes.
+   * **Note:**To improve <code>furo-furo-ui5-link</code>'s reliability and usability, it is recommended to use the <code>InteractiveAreaSize.Large</code> value in scenarios where the <code>furo-furo-ui5-link</code> component is placed inside another interactive component, such as a list item or a table cell.
+   * Setting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.
+   */
+  interactiveAreaSize?: InteractiveAreaSize | keyof typeof InteractiveAreaSize;
 
   /**
    * Used to duck-type UI5 elements without using instanceof
    */
-  isUI5Element?: any;
+  isUI5Element?: boolean;
+
+  /**
+   * Defines the component target.
+   *
+   * **Notes:**
+   *
+   * - `_self`
+   * - `_top`
+   * - `_blank`
+   * - `_parent`
+   * - `_search`
+   *
+   * **This property must only be used when the `href` property is set.**
+   */
+  target?: string | undefined;
+
+  /**
+   * Defines the tooltip of the component.
+   */
+  tooltip?: string | undefined;
+
+  /**
+   * Defines how the text of a component will be displayed when there is not enough space.
+   *
+   * **Note:** By default the text will wrap. If "None" is set - the text will truncate.
+   */
+  wrappingType?: WrappingType | keyof typeof WrappingType;
 }
 
 declare module "react" {

@@ -10,6 +10,7 @@ import "@/furo-ui5-password-input";
 import "@/furo-ui5-progress-indicator";
 import "@/furo-ui5-slider";
 import "@/furo-ui5-checkbox";
+import "@/furo-ui5-barcode-scanner-dialog";
 import "@/furo-ui5-form-field-segmenter";
 import "@/furo-ui5-toggle-button";
 import "@/furo-ui5-label";
@@ -196,6 +197,8 @@ export class InputFields extends  LitFBP(LitElement) {
               <furo-ui5-progress-indicator value-state="Positive"
                                .model="${this.cube.cube.length}"></furo-ui5-progress-indicator>
               <furo-ui5-textarea id="textarea" .model="${this.cube.cube.fatString}" rows="4"></furo-ui5-textarea>
+              <furo-ui5-button design="Emphasized" at-click="--scan">Open The Scanner</furo-ui5-button>
+              <furo-ui5-barcode-scanner-dialog fn-show="--scan" id="textarea" .model="${this.cube.cube.fatString}" rows="4"></furo-ui5-barcode-scanner-dialog>
             </furo-ui5-form-group>
             <furo-ui5-form-group label="Group 1">
               <furo-ui5-form-row required>
