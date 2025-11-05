@@ -61,11 +61,4 @@ export class FuroUi5Dialog extends Dialog {
     md.tag = "furo-ui5-dialog";
     return md;
   }
-
-  /**
-   * @private
-   */
-  static override get styles() {
-    return super.styles;
-  }
 }

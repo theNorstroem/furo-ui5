@@ -18,6 +18,7 @@ import { FatHandler } from "@/lib/open-models/FatHandler";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
+import { NumericReaderWriters } from "@/lib/open-models/NumericReaderWriters";
 
 /**
  * The furo-ui5-slider component allows the user to enter and edit numbers with data binding.
@@ -46,6 +47,9 @@ export class FuroUi5Slider extends Slider {
 
   // eslint-disable-next-line no-use-before-define
   private fatHandler: FatHandler<FuroUi5Slider>;
+
+  // eslint-disable-next-line no-use-before-define
+  private numericReaderWriters: NumericReaderWriters<FuroUi5Slider> | undefined;
 
   private readonlyState: ReadonlyState = new ReadonlyState(this);
 
@@ -197,6 +201,7 @@ export class FuroUi5Slider extends Slider {
     this._model = fieldNode;
 
     // init model
+    this.numericReaderWriters = new NumericReaderWriters<FuroUi5Slider>(this, "value", this._model, this.fatHandler);
     this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
 
     // listen on state changes on the model
@@ -241,85 +246,12 @@ export class FuroUi5Slider extends Slider {
     this.modelReaderWriter!.writeModel();
   }
 
-  // Todo: implement all readers and writes
   private _getModelReaders(): Map<string, () => void> {
-    const readers = new Map<string, () => void>();
-
-    readers.set("primitives.DOUBLE", () => {
-      const intVal = (this._model as DOUBLE).value;
-      if (intVal !== this.value) {
-        this.value = intVal;
-      }
-    });
-
-    readers.set("primitives.FLOAT", () => {
-      const intVal = (this._model as FLOAT).value;
-      if (intVal !== this.value) {
-        this.value = intVal;
-      }
-    });
-
-    readers.set("primitives.INT32", () => {
-      const intVal = (this._model as INT32).value;
-      if (intVal !== this.value) {
-        this.value = intVal;
-      }
-    });
-    readers.set("primitives.INT64", () => {
-      const intVal = Number((this._model as INT64).value);
-      if (intVal !== this.value) {
-        this.value = intVal;
-      }
-    });
-    return readers;
+    return this.numericReaderWriters!.getReaders();
   }
 
   private _getModelWriters(): Map<string, () => void> {
-    const writers = new Map<string, () => void>();
-
-    writers.set("primitives.DOUBLE", () => {
-      const v = Number(this.value);
-      if (Number.isNaN(v)) {
-        (this._model as DOUBLE).value = 0;
-      } else {
-        (this._model as DOUBLE).value = v;
-      }
-    });
-
-    writers.set("primitives.FLOAT", () => {
-      const v = Number(this.value);
-      if (Number.isNaN(v)) {
-        (this._model as FLOAT).value = 0;
-      } else {
-        (this._model as FLOAT).value = v;
-      }
-    });
-
-    /**
-     * Updater for primitives.INT32
-     */
-    writers.set("primitives.INT32", () => {
-      const v = parseInt(String(Number(this.value)), 10);
-      if (Number.isNaN(v)) {
-        (this._model as INT32).value = 0;
-      } else {
-        (this._model as INT32).value = v;
-      }
-    });
-
-    /**
-     * Updater for primitives.INT64
-     */
-    writers.set("primitives.INT64", () => {
-      const v = parseInt(String(Number(this.value)), 10);
-      if (Number.isNaN(v)) {
-        (this._model as INT64).value = 0n;
-      } else {
-        (this._model as INT64).value = BigInt(v);
-      }
-    });
-
-    return writers;
+    return this.numericReaderWriters!.getWriters();
   }
 
   /**
@@ -329,9 +261,5 @@ export class FuroUi5Slider extends Slider {
     const md = super.metadata;
     md.tag = "furo-ui5-slider";
     return md;
-  }
-
-  static override get styles() {
-    return super.styles;
   }
 }

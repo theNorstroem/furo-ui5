@@ -1,6 +1,6 @@
 export * from "./impl/FuroUi5Button";
 export * from "./impl/FuroUi5Checkbox";
-export * from "./impl/FuroUi5DynamicHeader";
+export * from "./impl/FuroUi5HeaderPanel";
 export * from "./impl/FuroUi5Icon";
 export * from "./impl/FuroUi5Popover";
 export * from "./impl/FuroUi5ResponsivePopover";

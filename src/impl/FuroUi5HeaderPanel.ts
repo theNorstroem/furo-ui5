@@ -63,10 +63,10 @@ import Throttle from "@/util/Throttle";
  * @event {CustomEvent<HTMLElement>} object-icon-clicked - fired when the object icon is clicked, sends the node ref of the icon.
  * @event {CustomEvent<HTMLElement>} favorite-icon-clicked - fired when the favorite icon is clicked, sends the node ref of the icon.
  * @author Furo
- * @tagname furo-ui5-dynamic-header
+ * @tagname furo-ui5-header-panel
  * @public
  */
-export class FuroUi5DynamicHeader extends LitElement {
+export class FuroUi5HeaderPanel extends LitElement {
   /**
    * Defines the headerText of the component.
    *
@@ -325,7 +325,7 @@ export class FuroUi5DynamicHeader extends LitElement {
 
   override connectedCallback() {
     super.connectedCallback();
-    this.setAttribute("furo-ui5-dynamic-header", "");
+    this.setAttribute("furo-ui5-header-panel", "");
 
     this.updateComplete.then(() => {
       this._showHideComponent = this.shadowRoot!.getElementById("showHide") as FuroUi5ShowHide;

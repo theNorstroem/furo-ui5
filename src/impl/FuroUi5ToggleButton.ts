@@ -179,10 +179,5 @@ export class FuroUi5ToggleButton extends ToggleButton {
     md.tag = "furo-ui5-toggle-button";
     return md;
   }
-
-  static override get styles() {
-    return super.styles;
-  }
 }
-
 // 300

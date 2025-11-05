@@ -1,5 +1,5 @@
 import "@/Assets";
-import "@/furo-ui5-dynamic-header";
+import "@/furo-ui5-header-panel";
 
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";
@@ -7,12 +7,12 @@ import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5Button, FuroUi5DynamicHeader, FuroUi5Icon } from "../src";
+import { FuroUi5Button, FuroUi5HeaderPanel, FuroUi5Icon } from "../src";
 
 chai.use(chaiA11yAxe);
 
 describe("DynamicHeader Component", async () => {
-  let el: FuroUi5DynamicHeader;
+  let el: FuroUi5HeaderPanel;
 
   let elLocator: LocatorSelectors;
   let headerButton: FuroUi5Button;
@@ -21,7 +21,7 @@ describe("DynamicHeader Component", async () => {
 
   beforeAll(async () => {
     el = await fixture(html`
-      <furo-ui5-dynamic-header
+      <furo-ui5-header-panel
         is-favorite
         collapsed
         show-dropdown
@@ -29,7 +29,7 @@ describe("DynamicHeader Component", async () => {
         object-icon="product"
         header-text="Header">
         <div data-testid="content">CONTENT</div>
-      </furo-ui5-dynamic-header> `);
+      </furo-ui5-header-panel> `);
     elLocator = utils.getElementLocatorSelectors(el);
     // dummy method call, you can remove it as soon you use elLocator in the tests
     elLocator.getByTestId("header");
@@ -42,9 +42,9 @@ describe("DynamicHeader Component", async () => {
     fixtureCleanup();
   });
 
-  it("should be a furo-ui5-dynamic-header element", () => {
+  it("should be a furo-ui5-header-panel element", () => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(el.nodeName.toLowerCase(), "furo-ui5-dynamic-header");
+    assert.equal(el.nodeName.toLowerCase(), "furo-ui5-header-panel");
   });
 
   it("should be ok", () => {

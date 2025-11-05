@@ -4,7 +4,7 @@ import * as React from "react";
 import type IconShape from "../types/IconShape";
 import type IconSize from "../types/IconSize";
 
-export interface DynamicHeader extends React.HTMLAttributes<HTMLElement> {
+export interface HeaderPanel extends React.HTMLAttributes<HTMLElement> {
   "onfavorite-icon-clicked"?: (d: CustomEvent<HTMLElement>) => void;
   onhid?: (d: CustomEvent<boolean>) => void;
   "onobject-icon-clicked"?: (d: CustomEvent<HTMLElement>) => void;
@@ -129,7 +129,7 @@ declare module "react" {
        *
        * <a href="https://experience.sap.com/fiori-design-web/object-page/#dynamic-page-header-mandatory">Read more about the DynamicHeader in the ObjectPage floor plan.</a>
        */
-      "furo-ui5-dynamic-header": DynamicHeader;
+      "furo-ui5-header-panel": HeaderPanel;
     }
   }
 }

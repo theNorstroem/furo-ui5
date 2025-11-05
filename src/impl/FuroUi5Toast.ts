@@ -37,11 +37,4 @@ export class FuroUi5Toast extends Toast {
     md.tag = "furo-ui5-toast";
     return md;
   }
-
-  /**
-   * @private
-   */
-  static override get styles() {
-    return super.styles;
-  }
 }

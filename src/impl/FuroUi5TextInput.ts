@@ -5,6 +5,7 @@ import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
+import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
 import { FuroFatString } from "@/models";
 import DebounceBuilder from "@/util/Debounce";
 
@@ -37,6 +38,9 @@ export class FuroUi5TextInput extends Input {
 
   // eslint-disable-next-line no-use-before-define
   private fatHandler: FatHandler<FuroUi5TextInput>;
+
+  // eslint-disable-next-line no-use-before-define
+  private stringReaderWriters: StringReaderWriters<FuroUi5TextInput> | undefined;
 
   private readonlyState: ReadonlyState = new ReadonlyState(this);
 
@@ -113,8 +117,8 @@ export class FuroUi5TextInput extends Input {
 
     // connect the model
     this._model = fieldNode;
-
     // init model
+    this.stringReaderWriters = new StringReaderWriters<FuroUi5TextInput>(this, "value", this._model, this.fatHandler);
     this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
 
     // listen on state changes on the model
@@ -165,47 +169,11 @@ export class FuroUi5TextInput extends Input {
   }
 
   private _getModelReaders(): Map<string, () => void> {
-    const readers = new Map<string, () => void>();
-
-    readers.set("primitives.STRING", () => {
-      const v = (this._model as STRING).value;
-      if (v !== this.value) {
-        this.value = v;
-      }
-    });
-
-    readers.set("furo.fat.String", () => {
-      const v = (this._model as FuroFatString).value.value;
-      if (v !== this.value) {
-        this.value = v;
-      }
-      this.fatHandler.applyReceivedFatAttributesAndLabels(this._model as FuroFatString);
-    });
-
-    readers.set("google.protobuf.StringValue", () => {
-      const v = (this._model as StringValue).value;
-      if (v !== this.value) {
-        this.value = v;
-      }
-    });
-
-    return readers;
+    return this.stringReaderWriters!.getReaders();
   }
 
   private _getModelWriters(): Map<string, () => void> {
-    const writers = new Map<string, () => void>();
-
-    writers.set("primitives.STRING", () => {
-      (this._model as STRING).value = this.value;
-    });
-
-    writers.set("furo.fat.String", () => {
-      (this._model as FuroFatString).value.value = this.value;
-    });
-    writers.set("google.protobuf.StringValue", () => {
-      (this._model as StringValue).value = this.value;
-    });
-    return writers;
+    return this.stringReaderWriters!.getWriters();
   }
 
   /**

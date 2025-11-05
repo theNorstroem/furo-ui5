@@ -3662,12 +3662,336 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/impl/FuroUi5DynamicHeader.js",
+      "path": "dist/impl/FuroUi5FormFieldSegmenter.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "### Description\nIf you need to place some units for the fields or want to have a small field followed by a large field, you should use this component.\n\n### ES6 Module Import",
+          "name": "FormFieldSegmenter",
+          "slots": [
+            {
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "description": "slot description",
+              "name": "slot-name"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "pattern",
+              "type": {
+                "text": "FormFieldSegmentationPatterns",
+                "references": [
+                  {
+                    "name": "FormFieldSegmentationPatterns",
+                    "package": "@furo/ui5",
+                    "module": "dist/types/FormFieldSegmentationPatterns.js"
+                  }
+                ]
+              },
+              "description": "Field patterns, defaults to a single field with optional value.",
+              "privacy": "public",
+              "attribute": "pattern",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "unit",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Optional unit for the form field.",
+              "privacy": "public",
+              "attribute": "unit"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "pattern",
+              "type": {
+                "text": "FormFieldSegmentationPatterns",
+                "references": [
+                  {
+                    "name": "FormFieldSegmentationPatterns",
+                    "package": "@furo/ui5",
+                    "module": "dist/types/FormFieldSegmentationPatterns.js"
+                  }
+                ]
+              },
+              "description": "Field patterns, defaults to a single field with optional value.",
+              "fieldName": "pattern"
+            },
+            {
+              "name": "unit",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Optional unit for the form field.",
+              "fieldName": "unit"
+            }
+          ],
+          "tagName": "furo-ui5-form-field-segmenter",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5FormFieldSegmenter",
+          "declaration": {
+            "name": "FuroUi5FormFieldSegmenter",
+            "module": "src/impl/FuroUi5FormFieldSegmenter.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5FormGroup.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "### Description",
+          "name": "FormGroup",
+          "slots": [
+            {
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "description": "Slot for `FormRows`.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The label of the form-group.",
+              "privacy": "public",
+              "attribute": "label"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The label of the form-group.",
+              "fieldName": "label"
+            }
+          ],
+          "tagName": "furo-ui5-form-group",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "FuroUi5FormGroup",
+            "module": "src/impl/FuroUi5FormGroup.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5FormLayout.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "### Description\nA form is used to present data to the user and to allow users to enter data in a structured way. The `FormLayout` component is a container for `FormGroup`s.\n\nIt controls the layout according to the number of groups and content width according to the rules from the [guidelines](https://experience.sap.com/fiori-design-web/form/).\n\n### Types\nThere are three types of forms:\n\n- Display-only: the data is presented only as label-value field pairs without editable fields.\n- Editable: the data is presented as label-input field pairs, so users can enter data.\n- Mixed: some fields are editable and some are not.\n\n### Breakpoints for the group handling\nThe breakpoints are referenced by the container size of the `FormLayout` component, not by the screen size.\n\n#### Single group\nIf there is only one group used or the available space is below 1024px, the width for the group is always full width.\n<img src=\"assets/Form-singlecolumn-1.92-1.png\">\n\n#### Multiple groups\nIf the space is 1024px and higher, the groups are displayed side by side with a fraction of 50:50.\n<img src=\"assets/form-sizexl-1.92-1-1100x211.png\">\n\n\nIf the space is 1440px and higher, the groups are displayed with a fraction of 33:33:33.\n<img src=\"assets/Form_with_three_form_groups__three_columns_sizexl-1.92-1100x225.png\">\n<img src=\"assets/Form_with_two_form_groups__three_columns_sizexl-1.92-1100x225.png\">\n\n### Breakpoints for the form rows**\n\n#### Size S (Smartphones, small Dialogs, Sidepanel,...)\nSize S reaches up to 600 px. This means that as soon as the width of the form reaches 601 px, it changes from S to M, because the default value of breakpointM is 600.\nThis means that the form groups are positioned below each other in a single column and the labels are positioned above the fields to avoid truncation of the labels.\n\nThe label-field ratio is 12:12:0 by default:\n\n12 grid columns of the responsive grid layout are used by the labels.\n(A label handles the space of a whole row.)\n12 grid columns of the responsive grid layout are used by the fields.\n(A field handles the space of a whole row.)\n0 grid columns of the responsive grid layout are used by empty columns.\n(There is no empty space on the right of the field.)*\n<img src=\"assets/03-form-BreakpointM_023n_Belize.png\">\n\n####  Size M\nSize M of the form also has a single-column layout within the responsive grid layout by default.\nHowever, in size M the labels are positioned in the same row as the corresponding input field or value, and form groups are positioned below each other.\n\nThe label-field ratio is 4:8:0 by default:\n\n4 grid columns of the responsive grid layout are used by the labels.\n8 grid columns of the responsive grid layout are used by the fields.\n0 columns of the responsive grid layout are used by empty columns.\n\n<img src=\"assets/04-form-BreakpointM_014n_Belize-1.png\">\n\n#### Size L\nThe form in size L use a two-column layout within the responsive grid layout by default.\nThat means that the form groups are placed next to each other to have all the information on one screen and to avoid scrolling.\nIn these columns, the labels are positioned in the same row as the corresponding input field or value.\nSo the form groups adopt the Z layout (reading direction in rows, not in columns).\n\nThe label-field ratio is 4:7:1 by default:\n\n4 grid columns of the responsive grid layout are used by the labels.\n7 grid columns of the responsive grid layout are used by fields.\n1 grid columns of the responsive grid layout are used by empty columns.\n\n<img src=\"assets/05-form-BreakpointL_023_Belize.png\">\n\n#### Size XL\nTo avoid the stretching of the form field on large screens, the form uses extra empty columns for the layout.\n\nThe label-field ratio for size XL is 3:5:4\n\n3 grid columns of the responsive grid layout are used by labels.\n5 grid columns of the responsive grid layout are used by fields.\n4 grid columns of the responsive grid layout are used by empty columns.\n\n<img src=\"assets/06-form-BreakpointL_014_Belize.png\">\n\n### Segmented fields\nWith the help of the `FormFieldSegmenter` you can have segmented fields with the patterns `SmallBig` and `BigSmall`.\n<img src=\"assets/form_segmented_field.png\">\n\n### Units of measurement\nThe `FormFieldSegmenter` is also used to display units right to the input.\n\n<img src=\"assets/Form_units.png\">\n\n### Text content\nIf you want to add text content instead of input elements (for readonly forms), you should use the **text** slot of the `FormRow` component.",
+          "name": "FormLayout",
+          "slots": [
+            {
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "description": "Slot for action items, prefer transparent design on buttons.",
+              "name": "action"
+            },
+            {
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "description": "Slot for form groups. Not limited to form groups, when you know what you do.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "firdstUpdated",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "formTitle",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"\"",
+              "description": "Title of the form.",
+              "attribute": "form-title"
+            },
+            {
+              "kind": "field",
+              "name": "headingLevel",
+              "type": {
+                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+              },
+              "privacy": "public",
+              "default": "\"H5\"",
+              "description": "Level for the heading.",
+              "attribute": "heading-level"
+            },
+            {
+              "kind": "field",
+              "name": "multiColumns",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
+              "description": "Private auto calculated attribute, do not set.",
+              "attribute": "multi-columns",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "form-title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Title of the form.",
+              "fieldName": "formTitle",
+              "attribute": "form-title"
+            },
+            {
+              "name": "heading-level",
+              "type": {
+                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+              },
+              "default": "\"H5\"",
+              "description": "Level for the heading.",
+              "fieldName": "headingLevel",
+              "attribute": "heading-level"
+            },
+            {
+              "name": "multi-columns",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Private auto calculated attribute, do not set.",
+              "fieldName": "multiColumns",
+              "attribute": "multi-columns"
+            }
+          ],
+          "tagName": "furo-ui5-form-layout",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "FuroUi5FormLayout",
+            "module": "src/impl/FuroUi5FormLayout.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5FormRow.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The furo-furo-ui5-form-row gives the user a layout to manage\ninput field and labels according to the design specification of SAP Fiori.",
+          "name": "FormRow",
+          "slots": [
+            {
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "description": "Slot for form elements.",
+              "name": ""
+            },
+            {
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "description": "Slot for the label.",
+              "name": "label"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "privacy": "public",
+              "description": "Label for the form",
+              "attribute": "label"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Label for the form",
+              "fieldName": "label"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "LitFBP",
+              "package": "@furo/fbp/dist/LitFBP"
+            }
+          ],
+          "tagName": "furo-ui5-form-row",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "FuroUi5FormRow",
+            "module": "src/impl/FuroUi5FormRow.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5HeaderPanel.js",
       "declarations": [
         {
           "kind": "class",
           "description": "\n### Overview\n The dynamic page header contains key information about the object and provides the user with the necessary context. The header initially expands in display mode. It also contains global actions for the object, such as Edit or Delete.\n\n### Usage\n#### Header Content (default slot)\nThe header content displays app-specific contextual information. You build the content using containers, called facets.\n\nThe facets are arranged inline with a left float. Each facet adapts its size to the content and makes optimal use of the space without truncating the texts. If the facets do not all fit on one line, those on the right wrap to the line below.\n\n<strong>Note:</strong> The Breadcrumb and the TabContainer is not part of the DynamicHeader component.\n\n <a href=\"https://experience.sap.com/fiori-design-web/dynamic-page-layout/#components\">Read more about the DynamicHeader in the DynamicPage page layout.</a>\n\n <a href=\"https://experience.sap.com/fiori-design-web/object-page/#dynamic-page-header-mandatory\">Read more about the DynamicHeader in the ObjectPage floor plan.</a>",
-          "name": "DynamicHeader",
+          "name": "HeaderPanel",
           "cssProperties": [
             {
               "description": "the gradient-start color of the splitter",
@@ -4294,341 +4618,17 @@
               "attribute": "show-dropdown"
             }
           ],
-          "tagName": "furo-ui5-dynamic-header",
+          "tagName": "furo-ui5-header-panel",
           "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "FuroUi5DynamicHeader",
+          "name": "FuroUi5HeaderPanel",
           "declaration": {
-            "name": "FuroUi5DynamicHeader",
-            "module": "src/impl/FuroUi5DynamicHeader.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/impl/FuroUi5FormFieldSegmenter.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "### Description\nIf you need to place some units for the fields or want to have a small field followed by a large field, you should use this component.\n\n### ES6 Module Import",
-          "name": "FormFieldSegmenter",
-          "slots": [
-            {
-              "type": {
-                "text": "HTMLElement[]"
-              },
-              "description": "slot description",
-              "name": "slot-name"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "pattern",
-              "type": {
-                "text": "FormFieldSegmentationPatterns",
-                "references": [
-                  {
-                    "name": "FormFieldSegmentationPatterns",
-                    "package": "@furo/ui5",
-                    "module": "dist/types/FormFieldSegmentationPatterns.js"
-                  }
-                ]
-              },
-              "description": "Field patterns, defaults to a single field with optional value.",
-              "privacy": "public",
-              "attribute": "pattern",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "unit",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Optional unit for the form field.",
-              "privacy": "public",
-              "attribute": "unit"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "pattern",
-              "type": {
-                "text": "FormFieldSegmentationPatterns",
-                "references": [
-                  {
-                    "name": "FormFieldSegmentationPatterns",
-                    "package": "@furo/ui5",
-                    "module": "dist/types/FormFieldSegmentationPatterns.js"
-                  }
-                ]
-              },
-              "description": "Field patterns, defaults to a single field with optional value.",
-              "fieldName": "pattern"
-            },
-            {
-              "name": "unit",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Optional unit for the form field.",
-              "fieldName": "unit"
-            }
-          ],
-          "tagName": "furo-ui5-form-field-segmenter",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "FuroUi5FormFieldSegmenter",
-          "declaration": {
-            "name": "FuroUi5FormFieldSegmenter",
-            "module": "src/impl/FuroUi5FormFieldSegmenter.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/impl/FuroUi5FormGroup.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "### Description",
-          "name": "FormGroup",
-          "slots": [
-            {
-              "type": {
-                "text": "HTMLElement[]"
-              },
-              "description": "Slot for `FormRows`.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The label of the form-group.",
-              "privacy": "public",
-              "attribute": "label"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The label of the form-group.",
-              "fieldName": "label"
-            }
-          ],
-          "tagName": "furo-ui5-form-group",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "FuroUi5FormGroup",
-            "module": "src/impl/FuroUi5FormGroup.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/impl/FuroUi5FormLayout.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "### Description\nA form is used to present data to the user and to allow users to enter data in a structured way. The `FormLayout` component is a container for `FormGroup`s.\n\nIt controls the layout according to the number of groups and content width according to the rules from the [guidelines](https://experience.sap.com/fiori-design-web/form/).\n\n### Types\nThere are three types of forms:\n\n- Display-only: the data is presented only as label-value field pairs without editable fields.\n- Editable: the data is presented as label-input field pairs, so users can enter data.\n- Mixed: some fields are editable and some are not.\n\n### Breakpoints for the group handling\nThe breakpoints are referenced by the container size of the `FormLayout` component, not by the screen size.\n\n#### Single group\nIf there is only one group used or the available space is below 1024px, the width for the group is always full width.\n<img src=\"assets/Form-singlecolumn-1.92-1.png\">\n\n#### Multiple groups\nIf the space is 1024px and higher, the groups are displayed side by side with a fraction of 50:50.\n<img src=\"assets/form-sizexl-1.92-1-1100x211.png\">\n\n\nIf the space is 1440px and higher, the groups are displayed with a fraction of 33:33:33.\n<img src=\"assets/Form_with_three_form_groups__three_columns_sizexl-1.92-1100x225.png\">\n<img src=\"assets/Form_with_two_form_groups__three_columns_sizexl-1.92-1100x225.png\">\n\n### Breakpoints for the form rows**\n\n#### Size S (Smartphones, small Dialogs, Sidepanel,...)\nSize S reaches up to 600 px. This means that as soon as the width of the form reaches 601 px, it changes from S to M, because the default value of breakpointM is 600.\nThis means that the form groups are positioned below each other in a single column and the labels are positioned above the fields to avoid truncation of the labels.\n\nThe label-field ratio is 12:12:0 by default:\n\n12 grid columns of the responsive grid layout are used by the labels.\n(A label handles the space of a whole row.)\n12 grid columns of the responsive grid layout are used by the fields.\n(A field handles the space of a whole row.)\n0 grid columns of the responsive grid layout are used by empty columns.\n(There is no empty space on the right of the field.)*\n<img src=\"assets/03-form-BreakpointM_023n_Belize.png\">\n\n####  Size M\nSize M of the form also has a single-column layout within the responsive grid layout by default.\nHowever, in size M the labels are positioned in the same row as the corresponding input field or value, and form groups are positioned below each other.\n\nThe label-field ratio is 4:8:0 by default:\n\n4 grid columns of the responsive grid layout are used by the labels.\n8 grid columns of the responsive grid layout are used by the fields.\n0 columns of the responsive grid layout are used by empty columns.\n\n<img src=\"assets/04-form-BreakpointM_014n_Belize-1.png\">\n\n#### Size L\nThe form in size L use a two-column layout within the responsive grid layout by default.\nThat means that the form groups are placed next to each other to have all the information on one screen and to avoid scrolling.\nIn these columns, the labels are positioned in the same row as the corresponding input field or value.\nSo the form groups adopt the Z layout (reading direction in rows, not in columns).\n\nThe label-field ratio is 4:7:1 by default:\n\n4 grid columns of the responsive grid layout are used by the labels.\n7 grid columns of the responsive grid layout are used by fields.\n1 grid columns of the responsive grid layout are used by empty columns.\n\n<img src=\"assets/05-form-BreakpointL_023_Belize.png\">\n\n#### Size XL\nTo avoid the stretching of the form field on large screens, the form uses extra empty columns for the layout.\n\nThe label-field ratio for size XL is 3:5:4\n\n3 grid columns of the responsive grid layout are used by labels.\n5 grid columns of the responsive grid layout are used by fields.\n4 grid columns of the responsive grid layout are used by empty columns.\n\n<img src=\"assets/06-form-BreakpointL_014_Belize.png\">\n\n### Segmented fields\nWith the help of the `FormFieldSegmenter` you can have segmented fields with the patterns `SmallBig` and `BigSmall`.\n<img src=\"assets/form_segmented_field.png\">\n\n### Units of measurement\nThe `FormFieldSegmenter` is also used to display units right to the input.\n\n<img src=\"assets/Form_units.png\">\n\n### Text content\nIf you want to add text content instead of input elements (for readonly forms), you should use the **text** slot of the `FormRow` component.",
-          "name": "FormLayout",
-          "slots": [
-            {
-              "type": {
-                "text": "HTMLElement[]"
-              },
-              "description": "Slot for action items, prefer transparent design on buttons.",
-              "name": "action"
-            },
-            {
-              "type": {
-                "text": "HTMLElement[]"
-              },
-              "description": "Slot for form groups. Not limited to form groups, when you know what you do.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "method",
-              "name": "firdstUpdated",
-              "privacy": "public"
-            },
-            {
-              "kind": "field",
-              "name": "formTitle",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "public",
-              "default": "\"\"",
-              "description": "Title of the form.",
-              "attribute": "form-title"
-            },
-            {
-              "kind": "field",
-              "name": "headingLevel",
-              "type": {
-                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
-              },
-              "privacy": "public",
-              "default": "\"H5\"",
-              "description": "Level for the heading.",
-              "attribute": "heading-level"
-            },
-            {
-              "kind": "field",
-              "name": "multiColumns",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false",
-              "description": "Private auto calculated attribute, do not set.",
-              "attribute": "multi-columns",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "form-title",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Title of the form.",
-              "fieldName": "formTitle",
-              "attribute": "form-title"
-            },
-            {
-              "name": "heading-level",
-              "type": {
-                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
-              },
-              "default": "\"H5\"",
-              "description": "Level for the heading.",
-              "fieldName": "headingLevel",
-              "attribute": "heading-level"
-            },
-            {
-              "name": "multi-columns",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Private auto calculated attribute, do not set.",
-              "fieldName": "multiColumns",
-              "attribute": "multi-columns"
-            }
-          ],
-          "tagName": "furo-ui5-form-layout",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "FuroUi5FormLayout",
-            "module": "src/impl/FuroUi5FormLayout.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/impl/FuroUi5FormRow.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "The furo-furo-ui5-form-row gives the user a layout to manage\ninput field and labels according to the design specification of SAP Fiori.",
-          "name": "FormRow",
-          "slots": [
-            {
-              "type": {
-                "text": "HTMLElement[]"
-              },
-              "description": "Slot for form elements.",
-              "name": ""
-            },
-            {
-              "type": {
-                "text": "HTMLElement[]"
-              },
-              "description": "Slot for the label.",
-              "name": "label"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string | undefined"
-              },
-              "privacy": "public",
-              "description": "Label for the form",
-              "attribute": "label"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Label for the form",
-              "fieldName": "label"
-            }
-          ],
-          "mixins": [
-            {
-              "name": "LitFBP",
-              "package": "@furo/fbp/dist/LitFBP"
-            }
-          ],
-          "tagName": "furo-ui5-form-row",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "FuroUi5FormRow",
-            "module": "src/impl/FuroUi5FormRow.ts"
+            "name": "FuroUi5HeaderPanel",
+            "module": "src/impl/FuroUi5HeaderPanel.ts"
           }
         }
       ]
@@ -7717,6 +7717,14 @@
               }
             },
             {
+              "kind": "field",
+              "name": "numericReaderWriters",
+              "type": {
+                "text": "NumericReaderWriters<FuroUi5NumberInput> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
               "kind": "method",
               "name": "onAfterRendering",
               "return": {
@@ -9174,8 +9182,16 @@
               }
             },
             {
+              "kind": "field",
+              "name": "stringReaderWriters",
+              "type": {
+                "text": "StringReaderWriters<FuroUi5PasswordInput> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
               "kind": "method",
-              "name": "toggleVisibility",
+              "name": "togglePasswordVisibility",
               "privacy": "public",
               "description": "toggle visibility of the password. (show/hide) password"
             },
@@ -17827,6 +17843,14 @@
               }
             },
             {
+              "kind": "field",
+              "name": "numericReaderWriters",
+              "type": {
+                "text": "NumericReaderWriters<FuroUi5Slider> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
               "kind": "method",
               "name": "onAfterRendering",
               "return": {
@@ -19622,6 +19646,14 @@
             },
             {
               "kind": "field",
+              "name": "stringReaderWriters",
+              "type": {
+                "text": "StringReaderWriters<FuroUi5Textarea> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
               "name": "valueStateManager",
               "type": {
                 "text": "FieldNodeValueState"
@@ -20452,6 +20484,14 @@
                 "name": "Input",
                 "module": "dist/Input.js"
               }
+            },
+            {
+              "kind": "field",
+              "name": "stringReaderWriters",
+              "type": {
+                "text": "StringReaderWriters<FuroUi5TextInput> | undefined"
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",

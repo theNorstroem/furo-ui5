@@ -1,6 +1,6 @@
 import { BOOLEAN, type JSONValue, STRING, ValueState } from "@furo/open-models";
 
-import { type FuroFatBool, type FuroFatString } from "@/models";
+import { type FuroFatBool, FuroFatFloat, FuroFatInt32, FuroFatInt64, type FuroFatString, FuroFatUint32, FuroFatUint64 } from "@/models";
 
 export class FatHandler<T> {
   private target: T;
@@ -24,7 +24,7 @@ export class FatHandler<T> {
     this.fatAttributesToMap = fatAttributesToMap;
   }
 
-  private applyAttributes(fat: FuroFatBool | FuroFatString) {
+  private applyAttributes(fat: FuroFatBool | FuroFatString | FuroFatInt32 | FuroFatInt64 | FuroFatUint32 | FuroFatUint64 | FuroFatFloat) {
     if (fat.attributes.has("value-state") && this._initialAttributes.indexOf("value-state") === -1) {
       if (fat.attributes.has("value-state-message")) {
         const stateMap: Record<string, ValueState> = {
@@ -111,7 +111,7 @@ export class FatHandler<T> {
     this._initialAttributes = [...(this.target as HTMLElement).attributes].map(item => item.name);
   }
 
-  applyReceivedFatAttributesAndLabels(fat: FuroFatBool | FuroFatString) {
+  applyReceivedFatAttributesAndLabels(fat: FuroFatBool | FuroFatString | FuroFatInt32 | FuroFatInt64 | FuroFatUint32 | FuroFatUint64 | FuroFatFloat) {
     this.applyLabels(fat.labels.value);
     this.applyAttributes(fat);
   }
