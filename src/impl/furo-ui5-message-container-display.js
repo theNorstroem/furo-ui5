@@ -13,7 +13,7 @@ import '@ui5/webcomponents/dist/SegmentedButton.js';
 import '@ui5/webcomponents/dist/Badge.js';
 import '@furo/layout/src/furo-horizontal-flex.js';
 import './FuroUi5Checkbox.ts';
-import './furo-ui5-markdown.js';
+import './FuroUi5Markdown.ts';
 import '../subcomponents/furo-ui5-message-container-item.js';
 import { NodeEvent } from '@furo/framework/src/EventTreeNode';
 

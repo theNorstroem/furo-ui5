@@ -1,6 +1,7 @@
 import { BOOLEAN, BoolValue, type FieldConstraints } from "@furo/open-models";
 import RadioButton from "@ui5/webcomponents/dist/RadioButton.js";
 
+import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
@@ -49,6 +50,9 @@ export class FuroUi5RadioButton extends RadioButton {
   // eslint-disable-next-line no-use-before-define
   private fatHandler: FatHandler<FuroUi5RadioButton>;
 
+  // eslint-disable-next-line no-use-before-define
+  private boolReaderWriters: BoolReaderWriters<FuroUi5RadioButton> | undefined;
+
   constructor() {
     super();
     this.valueStateManager = new FieldNodeValueState(this);
@@ -88,9 +92,9 @@ export class FuroUi5RadioButton extends RadioButton {
     // from ui: input, change
     // from model: "this-field-value-changed",listenToStateChanged
 
-    this._model = fieldNode;
-
     // init model
+    this._model = fieldNode;
+    this.boolReaderWriters = new BoolReaderWriters<FuroUi5RadioButton>(this, "checked", this._model, this.fatHandler);
     this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
 
     // listen on state changes on the model
@@ -150,47 +154,11 @@ export class FuroUi5RadioButton extends RadioButton {
   }
 
   private _getModelReaders(): Map<string, () => void> {
-    const readers = new Map<string, () => void>();
-
-    readers.set("primitives.BOOLEAN", () => {
-      const v = (this._model as BOOLEAN).value;
-      if (v !== this.checked) {
-        this.checked = v;
-      }
-    });
-
-    readers.set("furo.fat.Bool", () => {
-      const v = (this._model as FuroFatBool).value.value;
-      if (v !== this.checked) {
-        this.checked = v;
-      }
-      this.fatHandler.applyReceivedFatAttributesAndLabels(this._model as FuroFatBool);
-    });
-
-    readers.set("google.protobuf.BoolValue", () => {
-      const v = (this._model as BoolValue).value;
-      if (v !== this.checked) {
-        this.checked = v;
-      }
-    });
-
-    return readers;
+    return this.boolReaderWriters!.getReaders();
   }
 
   private _getModelWriters(): Map<string, () => void> {
-    const writers = new Map<string, () => void>();
-
-    writers.set("primitives.BOOLEAN", () => {
-      (this._model as BOOLEAN).value = this.checked;
-    });
-
-    writers.set("furo.fat.String", () => {
-      (this._model as FuroFatBool).value.value = this.checked;
-    });
-    writers.set("google.protobuf.BoolValue", () => {
-      (this._model as BoolValue).value = this.checked;
-    });
-    return writers;
+    return this.boolReaderWriters!.getWriters();
   }
 
   /**

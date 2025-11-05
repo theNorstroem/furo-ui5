@@ -1,6 +1,7 @@
 import { BOOLEAN, BoolValue, type FieldConstraints } from "@furo/open-models";
 import ToggleButton from "@ui5/webcomponents/dist/ToggleButton.js";
 
+import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import type { FuroFatBool } from "@/models";
@@ -32,6 +33,9 @@ export class FuroUi5ToggleButton extends ToggleButton {
 
   // eslint-disable-next-line no-use-before-define
   private fatHandler: FatHandler<FuroUi5ToggleButton>;
+
+  // eslint-disable-next-line no-use-before-define
+  private boolReaderWriters: BoolReaderWriters<FuroUi5ToggleButton> | undefined;
 
   constructor() {
     super();
@@ -79,9 +83,9 @@ export class FuroUi5ToggleButton extends ToggleButton {
     // from ui: input, change
     // from model: "this-field-value-changed",listenToStateChanged
 
-    this._model = fieldNode;
-
     // init model
+    this._model = fieldNode;
+    this.boolReaderWriters = new BoolReaderWriters<FuroUi5ToggleButton>(this, "pressed", this._model, this.fatHandler);
     this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
 
     // listen on changes from the model
@@ -127,47 +131,11 @@ export class FuroUi5ToggleButton extends ToggleButton {
   }
 
   private _getModelReaders(): Map<string, () => void> {
-    const readers = new Map<string, () => void>();
-
-    readers.set("primitives.BOOLEAN", () => {
-      const v = (this._model as BOOLEAN).value;
-      if (v !== this.pressed) {
-        this.pressed = v;
-      }
-    });
-
-    readers.set("furo.fat.Bool", () => {
-      const v = (this._model as FuroFatBool).value.value;
-      if (v !== this.pressed) {
-        this.pressed = v;
-      }
-      this.fatHandler.applyReceivedFatAttributesAndLabels(this._model as FuroFatBool);
-    });
-
-    readers.set("google.protobuf.BoolValue", () => {
-      const v = (this._model as BoolValue).value;
-      if (v !== this.pressed) {
-        this.pressed = v;
-      }
-    });
-
-    return readers;
+    return this.boolReaderWriters!.getReaders();
   }
 
   private _getModelWriters(): Map<string, () => void> {
-    const writers = new Map<string, () => void>();
-
-    writers.set("primitives.BOOLEAN", () => {
-      (this._model as BOOLEAN).value = this.pressed;
-    });
-
-    writers.set("furo.fat.Bool", () => {
-      (this._model as FuroFatBool).value.value = this.pressed;
-    });
-    writers.set("google.protobuf.BoolValue", () => {
-      (this._model as BoolValue).value = this.pressed;
-    });
-    return writers;
+    return this.boolReaderWriters!.getWriters();
   }
 
   /**

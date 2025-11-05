@@ -5,6 +5,7 @@ import { css, html, LitElement } from "lit";
 // eslint-disable-next-line import/extensions
 import { property } from "lit/decorators.js";
 
+import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import { FuroFatBool } from "@/models";
@@ -49,6 +50,9 @@ export class FuroUi5ShowHide extends LitElement {
 
   private _hidden = false;
 
+  // eslint-disable-next-line no-use-before-define
+  private boolReaderWriters: BoolReaderWriters<FuroUi5ShowHide> | undefined;
+
   private _model: BOOLEAN | FuroFatBool | BoolValue = new BOOLEAN();
 
   public get model(): BOOLEAN | FuroFatBool | BoolValue {
@@ -88,9 +92,9 @@ export class FuroUi5ShowHide extends LitElement {
     this._model.__removeEventListener("this-field-value-changed", this.readFromModel.bind(this));
 
     // connect the model
-    this._model = fieldNode;
-
     // init model
+    this._model = fieldNode;
+    this.boolReaderWriters = new BoolReaderWriters<FuroUi5ShowHide>(this, "value", this._model);
     this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
 
     // listen on state changes on the model
@@ -124,40 +128,11 @@ export class FuroUi5ShowHide extends LitElement {
   }
 
   private _getModelReaders(): Map<string, () => void> {
-    const readers = new Map<string, () => void>();
-
-    readers.set("primitives.BOOLEAN", () => {
-      const v = (this._model as BOOLEAN).value;
-      this.value = v;
-    });
-
-    readers.set("furo.fat.Bool", () => {
-      const v = (this._model as FuroFatBool).value.value;
-      this.value = v;
-    });
-
-    readers.set("google.protobuf.BoolValue", () => {
-      const v = (this._model as BoolValue).value;
-      this.value = v;
-    });
-
-    return readers;
+    return this.boolReaderWriters!.getReaders();
   }
 
   private _getModelWriters(): Map<string, () => void> {
-    const writers = new Map<string, () => void>();
-
-    writers.set("primitives.BOOLEAN", () => {
-      (this._model as BOOLEAN).value = this.value;
-    });
-
-    writers.set("furo.fat.Bool", () => {
-      (this._model as FuroFatBool).value.value = this.value;
-    });
-    writers.set("google.protobuf.BoolValue", () => {
-      (this._model as BoolValue).value = this.value;
-    });
-    return writers;
+    return this.boolReaderWriters!.getWriters();
   }
 
   /**

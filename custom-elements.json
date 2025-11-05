@@ -1708,6 +1708,14 @@
               ]
             },
             {
+              "kind": "field",
+              "name": "boolReaderWriters",
+              "type": {
+                "text": "BoolReaderWriters<FuroUi5Checkbox> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
               "kind": "method",
               "name": "check",
               "privacy": "public",
@@ -6965,6 +6973,107 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5Markdown.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`furo-furo-ui5-markdown`\n\n Renders given md data html.",
+          "name": "Markdown",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_markdown",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "_renderedMarkdown",
+              "type": {
+                "text": "TemplateResult | typeof nothing"
+              },
+              "privacy": "private",
+              "default": "nothing"
+            },
+            {
+              "kind": "field",
+              "name": "markdown",
+              "privacy": "public",
+              "description": "The markdown string to render",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "markdown"
+            },
+            {
+              "kind": "method",
+              "name": "parseMarkdown",
+              "parameters": [
+                {
+                  "name": "markdown",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Parse markdown string to html content."
+            },
+            {
+              "kind": "field",
+              "name": "unsafe",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "description": "allow unsafe md. (writing html, components,...)",
+              "attribute": "unsafe"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "markdown",
+              "description": "The markdown string to render",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "markdown"
+            },
+            {
+              "name": "unsafe",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "allow unsafe md. (writing html, components,...)",
+              "fieldName": "unsafe"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "furo-ui5-markdown",
+          "customElement": true,
+          "summary": "renders markdown data"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5Markdown",
+          "declaration": {
+            "name": "FuroUi5Markdown",
+            "module": "src/impl/FuroUi5Markdown.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/impl/FuroUi5NumberInput.js",
       "declarations": [
         {
@@ -10822,6 +10931,14 @@
                   }
                 }
               ]
+            },
+            {
+              "kind": "field",
+              "name": "boolReaderWriters",
+              "type": {
+                "text": "BoolReaderWriters<FuroUi5RadioButton> | undefined"
+              },
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -16728,6 +16845,14 @@
               "description": "Connects your data model to this component."
             },
             {
+              "kind": "field",
+              "name": "boolReaderWriters",
+              "type": {
+                "text": "BoolReaderWriters<FuroUi5ShowHide> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
               "kind": "method",
               "name": "handleConstraints",
               "privacy": "private",
@@ -18459,6 +18584,14 @@
                   }
                 }
               ]
+            },
+            {
+              "kind": "field",
+              "name": "boolReaderWriters",
+              "type": {
+                "text": "BoolReaderWriters<FuroUi5Switch> | undefined"
+              },
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -22234,6 +22367,14 @@
                   }
                 }
               ]
+            },
+            {
+              "kind": "field",
+              "name": "boolReaderWriters",
+              "type": {
+                "text": "BoolReaderWriters<FuroUi5ToggleButton> | undefined"
+              },
+              "privacy": "private"
             },
             {
               "kind": "method",

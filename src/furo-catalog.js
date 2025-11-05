@@ -17,7 +17,7 @@ import './impl/furo-ui5-dialog-display.js';
 import './impl/furo-ui5-flexible-grid.js';
 import './impl/FuroUi5FormRow.ts';
 import './impl/FuroUi5DynamicHeader.ts';
-import './impl/furo-ui5-markdown.js';
+import './impl/FuroUi5Markdown.ts';
 import './impl/furo-ui5-message-strip.js';
 import './impl/furo-ui5-message-strip-display.js';
 import './impl/furo-ui5-money-input.js';

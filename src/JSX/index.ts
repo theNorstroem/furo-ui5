@@ -10,6 +10,7 @@ import "./FormRow";
 import "./Icon";
 import "./Label";
 import "./Link";
+import "./Markdown";
 import "./NumberInput";
 import "./PasswordInput";
 import "./Popover";
