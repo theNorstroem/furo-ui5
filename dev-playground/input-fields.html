@@ -8,16 +8,14 @@
   <link rel="icon" type="image/svg+xml" href="./icon.svg">
 
   <script type="module">
-    import "@furo/layout/furo-vertical-flex.js"
+    import "@furo/layout/dist/furo-vertical-flex.js"
     import "@/Assets"
     import "@/furo-ui5-shellbar"
     import "@/furo-ui5-shellbar-search"
-    import "@/furo-ui5-shellbar-spacer"
 
+    // import playground-components here
 
-    // import components here
-
-import "./components/input-fields.js"
+import "../src/playground-components/input-fields.js"
 
   </script>
 
@@ -40,7 +38,6 @@ import "./components/input-fields.js"
 <main>
 <furo-vertical-flex>
   <furo-ui5-shellbar shadow primary-title="Primary" secondary-title="Secondary" notifications-count="72" show-notifications show-product-switch>
-
     <furo-ui5-button icon="menu" slot="startButton"></furo-ui5-button>
     <furo-ui5-button icon="nav-back" slot="startButton"></furo-ui5-button>
 

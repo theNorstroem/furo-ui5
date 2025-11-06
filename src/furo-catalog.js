@@ -1,4 +1,4 @@
-import './impl/furo-ui5-bool-icon.js';
+import './impl/FuroUi5BoolIcon.ts';
 import './impl/FuroUi5BusyIndicator.ts';
 import './impl/FuroUi5Button.ts';
 import './impl/furo-ui5-card.js';

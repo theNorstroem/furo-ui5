@@ -9,7 +9,7 @@ interface FieldNodeWithDisabledOnly extends HTMLElement {
 }
 
 /**
- * Manage readonly state for your bindable components
+ * Manage readonly state for your bindable playground-components
  */
 export class ReadonlyState {
   private inputElement: FieldNodeWithReadonly | FieldNodeWithDisabledOnly;

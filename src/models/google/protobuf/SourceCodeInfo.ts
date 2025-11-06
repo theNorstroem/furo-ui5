@@ -55,7 +55,7 @@ export interface ISourceCodeInfo {
    *  - Just because a location's span is a subset of some other location's span
    *    does not mean that it is a descendant.  For example, a "group" defines
    *    both a type and a field in a single declaration.  Thus, the locations
-   *    corresponding to the type and field and their components will overlap.
+   *    corresponding to the type and field and their playground-components will overlap.
    *  - Code which tries to interpret locations should probably be designed to
    *    ignore those that it doesn't understand, as more types of locations could
    *    be recorded in the future.
@@ -109,7 +109,7 @@ export interface TSourceCodeInfo {
    *  - Just because a location's span is a subset of some other location's span
    *    does not mean that it is a descendant.  For example, a "group" defines
    *    both a type and a field in a single declaration.  Thus, the locations
-   *    corresponding to the type and field and their components will overlap.
+   *    corresponding to the type and field and their playground-components will overlap.
    *  - Code which tries to interpret locations should probably be designed to
    *    ignore those that it doesn't understand, as more types of locations could
    *    be recorded in the future.
@@ -162,7 +162,7 @@ export class SourceCodeInfo extends FieldNode {
   //  - Just because a location's span is a subset of some other location's span
   //    does not mean that it is a descendant.  For example, a "group" defines
   //    both a type and a field in a single declaration.  Thus, the locations
-  //    corresponding to the type and field and their components will overlap.
+  //    corresponding to the type and field and their playground-components will overlap.
   //  - Code which tries to interpret locations should probably be designed to
   //    ignore those that it doesn't understand, as more types of locations could
   //    be recorded in the future.
@@ -223,7 +223,7 @@ export class SourceCodeInfo extends FieldNode {
     //  - Just because a location's span is a subset of some other location's span
     //    does not mean that it is a descendant.  For example, a "group" defines
     //    both a type and a field in a single declaration.  Thus, the locations
-    //    corresponding to the type and field and their components will overlap.
+    //    corresponding to the type and field and their playground-components will overlap.
     //  - Code which tries to interpret locations should probably be designed to
     //    ignore those that it doesn't understand, as more types of locations could
     //    be recorded in the future.
@@ -291,7 +291,7 @@ export class SourceCodeInfo extends FieldNode {
   //  - Just because a location's span is a subset of some other location's span
   //    does not mean that it is a descendant.  For example, a "group" defines
   //    both a type and a field in a single declaration.  Thus, the locations
-  //    corresponding to the type and field and their components will overlap.
+  //    corresponding to the type and field and their playground-components will overlap.
   //  - Code which tries to interpret locations should probably be designed to
   //    ignore those that it doesn't understand, as more types of locations could
   //    be recorded in the future.

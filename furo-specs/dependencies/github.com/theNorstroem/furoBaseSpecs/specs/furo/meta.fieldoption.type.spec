@@ -17,7 +17,7 @@ __proto:
 fields:
     flags:
         type: string
-        description: "Add flags for your field. This can be something like \"searchable\". \n//The flags can be used by generators, ui components,..."
+        description: "Add flags for your field. This can be something like \"searchable\". \n//The flags can be used by generators, ui playground-components,..."
         __proto:
             number: 2
         __ui:

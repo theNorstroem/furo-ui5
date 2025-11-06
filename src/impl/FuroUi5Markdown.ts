@@ -25,7 +25,7 @@ const md: MarkdownIt = MarkdownIt({
  */
 export class FuroUi5Markdown extends LitElement {
   /**
-   * allow unsafe md. (writing html, components,...)
+   * allow unsafe md. (writing html, playground-components,...)
    *
    */
   @property({ type: Boolean })

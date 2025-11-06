@@ -116,7 +116,7 @@ export class FuroUi5Select extends Select {
     this._attributesFromFAT = {};
 
     /**
-     * a list of privileged attributes. when those attributes are set in furo-ui5-select components initially.
+     * a list of privileged attributes. when those attributes are set in furo-ui5-select playground-components initially.
      * they can not be modified later via response or spec
      * null is used because getAttribute returns null or value
      *
@@ -169,7 +169,7 @@ export class FuroUi5Select extends Select {
       ? this.getAttribute('value-state')
       : 'None';
 
-    // save the original attribute for later usages, we do this, because some components reflect
+    // save the original attribute for later usages, we do this, because some playground-components reflect
     Object.keys(this._privilegedAttributes).forEach(attr => {
       if (this.getAttribute(attr) !== null) {
         this._privilegedAttributes[attr] = this.getAttribute(attr);

@@ -1,13 +1,13 @@
 /* eslint-disable lit/binding-positions, lit/no-invalid-html */
-import "@ui5/webcomponents/dist/Title.js";
 import "@ui5/webcomponents/dist/Icon.js";
 import "@ui5/webcomponents/dist/Avatar.js";
 import "@ui5/webcomponents/dist/Label.js";
-import "@furo/layout/furo-responsive-layout";
-import "@furo/layout/furo-horizontal-flex";
-import "@furo/layout/furo-vertical-flex";
+import "@furo/layout/dist/furo-responsive-layout";
+import "@furo/layout/dist/furo-horizontal-flex";
+import "@furo/layout/dist/furo-vertical-flex";
 import "../furo-ui5-show-hide";
 import "../furo-ui5-button";
+import "../furo-ui5-title";
 import "@ui5/webcomponents-icons/dist/slim-arrow-up.js";
 import "@ui5/webcomponents-icons/dist/slim-arrow-down.js";
 import "@ui5/webcomponents-icons/dist/pushpin-off.js";
@@ -625,7 +625,7 @@ export class FuroUi5HeaderPanel extends LitElement {
       display: none;
     }
 
-    ui5-title {
+    furo-ui5-title {
       font-size: var(--sapObjectHeader_Title_FontSize, 1.5rem);
     }
 
@@ -659,7 +659,7 @@ export class FuroUi5HeaderPanel extends LitElement {
     // language=HTML
     return html`
       <furo-responsive-layout layout="four" style="align-items: start">
-        <div data-sap-ui-fastnavgroup="${this.showDropdown ? "true" : "false"}" ?tripple="${!this.bigAction}" ?double="${this.bigAction}" space id="titleblock">
+        <div data-sap-ui-fastnavgroup="${this.showDropdown ? "true" : "false"}" ?tripple="${!this.bigAction}" ?double="${this.bigAction}" id="titleblock">
           ${this.showDropdown
             ? html` <furo-ui5-button
                 @click="${this._fireVariantIconClicked}"
@@ -667,7 +667,7 @@ export class FuroUi5HeaderPanel extends LitElement {
                 design="Transparent"
                 style="margin-left:-0.5rem;--sapButton_Lite_Hover_Background:none;height:2rem;"
               >
-                <ui5-title level="${this.headerTextLevel}" wrapping-type="None" style="display: inline-block;cursor: pointer;">
+                <furo-ui5-title level="${this.headerTextLevel}" wrapping-type="None" style="display: inline-block;cursor: pointer;">
                   <span style="display: flex;align-items: center;"
                     >${this.headerText}
 
@@ -678,9 +678,9 @@ export class FuroUi5HeaderPanel extends LitElement {
                       style="margin-left: 0.25rem; height: 1.5rem; width: 1.5rem"
                     ></furo-ui5-icon>
                   </span>
-                </ui5-title>
+                </furo-ui5-title>
               </furo-ui5-button>`
-            : html`<ui5-title wrapping-type="None" style="display: inline-block" level="${this.headerTextLevel}"> ${this.headerText} </ui5-title> `}
+            : html`<furo-ui5-title wrapping-type="None" style="display: inline-block" level="${this.headerTextLevel}"> ${this.headerText} </furo-ui5-title> `}
           ${this.objectIcon !== ""
             ? html` <furo-ui5-icon @click="${this._fireObjectIconClicked}" design="Transparent" mode="Interactive" name="${this.objectIcon}"></furo-ui5-icon>`
             : ""}

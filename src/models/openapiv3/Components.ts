@@ -69,7 +69,7 @@ export interface IComponents {
 
 /**
  * @interface TComponents
- *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.
+ *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the playground-components object will have no effect on the API unless they are explicitly referenced from properties outside the playground-components object.
  */
 export interface TComponents {
   schemas?: TOpenapiV3SchemasOrReferences;
@@ -86,7 +86,7 @@ export interface TComponents {
 
 /**
  * Components
- *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.
+ *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the playground-components object will have no effect on the API unless they are explicitly referenced from properties outside the playground-components object.
  */
 export class Components extends FieldNode {
   private _schemas: OpenapiV3SchemasOrReferences;

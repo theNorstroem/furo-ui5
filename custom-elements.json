@@ -125,7 +125,7 @@
                 "text": "string"
               },
               "privacy": "public",
-              "default": "''"
+              "default": "\"\""
             },
             {
               "kind": "method",
@@ -567,16 +567,6 @@
             },
             {
               "kind": "method",
-              "name": "readFromModel",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
-            },
-            {
-              "kind": "method",
               "name": "show",
               "description": "Shows the popover at the opener position defined with attribute opener.",
               "privacy": "public"
@@ -746,6 +736,277 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5BoolIcon.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Displays a icon/symbol for a boolean value\n\nThis component uses the SAP Ui5 icons.\nhttps://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\n\n```html\n<furo-furo-ui5-bool-icon fn-bind-data=\"--dao(FIELDNODE)\"></furo-furo-ui5-bool-icon>\n```\n\nOnly `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are auto imported.\nIf you set other icons, please do not forget to import them.",
+          "name": "BoolIcon",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_getModelReaders",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Map<string, () => void>"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "_getModelWriters",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Map<string, () => void>"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "BOOLEAN | FuroFatBool | BoolValue"
+              },
+              "privacy": "private",
+              "default": "new BOOLEAN()"
+            },
+            {
+              "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"Toggle\"",
+              "attribute": "accesible-name"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "BOOLEAN | FuroFatBool | BoolValue",
+                    "references": [
+                      {
+                        "name": "BOOLEAN",
+                        "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "boolReaderWriters",
+              "type": {
+                "text": "BoolReaderWriters<FuroUi5BoolIcon> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "design",
+              "type": {
+                "text": "\"Contrast\" | \"Critical\" | \"Default\" | \"Information\" | \"Negative\" | \"Neutral\" | \"NonInteractive\" | \"Positive\""
+              },
+              "privacy": "private",
+              "default": "\"Default\"",
+              "description": "Defines the component semantic design.",
+              "attribute": "design"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "description": "Disable the pointer interaction",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "fatHandler",
+              "type": {
+                "text": "FatHandler<FuroUi5BoolIcon>"
+              },
+              "privacy": "private",
+              "default": "new FatHandler(this as FuroUi5BoolIcon, [\"disabled\"])"
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "BOOLEAN | FuroFatBool | BoolValue",
+                "references": [
+                  {
+                    "name": "BOOLEAN",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
+                  {
+                    "name": "BoolValue",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
+                  {
+                    "name": "FuroFatBool",
+                    "package": "@/models",
+                    "module": "index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "FieldNode setter"
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "readFromModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "symbolfalse",
+              "type": {
+                "text": "String"
+              },
+              "privacy": "public",
+              "default": "'navigation-right-arrow'",
+              "description": "Defines the icon for the false state.",
+              "attribute": "symbolfalse"
+            },
+            {
+              "kind": "field",
+              "name": "symboltrue",
+              "type": {
+                "text": "String"
+              },
+              "privacy": "public",
+              "default": "'navigation-down-arrow'",
+              "description": "Defines the icon for the true state.",
+              "attribute": "symboltrue"
+            },
+            {
+              "kind": "method",
+              "name": "toggle",
+              "description": "Toggles the icon."
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "description": "Set to true or false",
+              "attribute": "value"
+            },
+            {
+              "kind": "method",
+              "name": "writeToModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "accesible-name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"Toggle\"",
+              "fieldName": "accessibleName"
+            },
+            {
+              "name": "design",
+              "type": {
+                "text": "\"Contrast\" | \"Critical\" | \"Default\" | \"Information\" | \"Negative\" | \"Neutral\" | \"NonInteractive\" | \"Positive\""
+              },
+              "default": "\"Default\"",
+              "description": "Defines the component semantic design.",
+              "fieldName": "design"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable the pointer interaction",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "symbolfalse",
+              "type": {
+                "text": "String"
+              },
+              "default": "'navigation-right-arrow'",
+              "description": "Defines the icon for the false state.",
+              "fieldName": "symbolfalse"
+            },
+            {
+              "name": "symboltrue",
+              "type": {
+                "text": "String"
+              },
+              "default": "'navigation-down-arrow'",
+              "description": "Defines the icon for the true state.",
+              "fieldName": "symboltrue"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Set to true or false",
+              "fieldName": "value"
+            }
+          ],
+          "tagName": "furo-ui5-bool-icon",
+          "customElement": true,
+          "summary": "Displays an icon for a boolean value"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5BoolIcon",
+          "declaration": {
+            "name": "FuroUi5BoolIcon",
+            "module": "src/impl/FuroUi5BoolIcon.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/impl/FuroUi5BusyIndicator.js",
       "declarations": [
         {
@@ -753,6 +1014,35 @@
           "description": "The furo-furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.\n\n```html\n<furo-furo-ui5-busy-indicator></furo-furo-ui5-busy-indicator>\n```\n\nhttps://sap.github.io/furo-ui5-webcomponents/playground/components/BusyIndicator/\n\n### Overview\n\nThe `furo-ui5-busy-indicator` signals that some operation is going on and that the\nuser must wait. It does not block the current UI screen so other operations could be triggered in parallel.\nIt displays 3 dots and each dot expands and shrinks at a different rate, resulting in a cascading flow of animation.\n\n### Usage\nFor the `furo-ui5-busy-indicator` you can define the size, the text and whether it is shown or hidden.\nIn order to hide it, use the \"active\" property.\n\nIn order to show busy state over an HTML element, simply nest the HTML element in a `furo-ui5-busy-indicator` instance.\n\n**Note:** Since `furo-ui5-busy-indicator` has `display: inline-block;` by default and no width of its own,\nwhenever you need to wrap a block-level element, you should set `display: block` to the busy indicator as well.\n\n#### When to use:\n\n- The user needs to be able to cancel the operation.\n- Only part of the application or a particular component is affected.\n\n#### When not to use:\n\n- The operation takes less than one second.\n- You need to block the screen and prevent the user from starting another activity.\n- Do not show multiple busy indicators at once.\n\n### ES6 Module Import\n\n`import \"@furo/ui5/dist/BusyIndicator.js\";`",
           "name": "FuroUiBusyIndicator",
           "members": [
+            {
+              "kind": "method",
+              "name": "_getModelReaders",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Map<string, () => void>"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "_getModelWriters",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Map<string, () => void>"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "BOOLEAN | FuroFatBool | BoolValue"
+              },
+              "privacy": "private",
+              "default": "new BOOLEAN()"
+            },
             {
               "kind": "method",
               "name": "activate",
@@ -817,6 +1107,34 @@
                 "name": "UI5Element",
                 "module": "dist/UI5Element.js"
               }
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "BOOLEAN | FuroFatBool | BoolValue",
+                    "references": [
+                      {
+                        "name": "BOOLEAN",
+                        "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "boolReaderWriters",
+              "type": {
+                "text": "BoolReaderWriters<FuroUiBusyIndicator> | undefined"
+              },
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -1137,6 +1455,40 @@
               "readonly": true
             },
             {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "BOOLEAN | FuroFatBool | BoolValue",
+                "references": [
+                  {
+                    "name": "BOOLEAN",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
+                  {
+                    "name": "BoolValue",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
+                  {
+                    "name": "FuroFatBool",
+                    "package": "@/models",
+                    "module": "index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "FieldNode setter"
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
               "kind": "method",
               "name": "onAfterRendering",
               "return": {
@@ -1225,6 +1577,16 @@
               "inheritedFrom": {
                 "name": "UI5Element",
                 "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "readFromModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
               }
             },
             {
@@ -8362,7 +8724,7 @@
               },
               "privacy": "public",
               "default": "false",
-              "description": "allow unsafe md. (writing html, components,...)",
+              "description": "allow unsafe md. (writing html, playground-components,...)",
               "attribute": "unsafe"
             }
           ],
@@ -8381,7 +8743,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "allow unsafe md. (writing html, components,...)",
+              "description": "allow unsafe md. (writing html, playground-components,...)",
               "fieldName": "unsafe"
             }
           ],
@@ -23890,11 +24252,11 @@
               }
             },
             {
+              "description": "Fired when typing in input (debounced, default 500ms).",
+              "name": "search-requested",
               "type": {
                 "text": "CustomEvent<String>"
-              },
-              "description": "Fired when typing in input (debounced, default 500ms)",
-              "name": "search-requested"
+              }
             },
             {
               "name": "select",

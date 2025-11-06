@@ -13,7 +13,7 @@ export interface Markdown extends React.HTMLAttributes<HTMLElement> {
   markdown?: string;
 
   /**
-   * allow unsafe md. (writing html, components,...)
+   * allow unsafe md. (writing html, playground-components,...)
    */
   unsafe?: boolean;
 }

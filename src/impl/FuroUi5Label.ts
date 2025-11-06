@@ -1,7 +1,7 @@
 import Label from "@ui5/webcomponents/dist/Label.js";
 
 export * from "@ui5/webcomponents/dist/Label.js";
-
+// todo add model binding
 /**
  *
  *
