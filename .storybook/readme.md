@@ -6,6 +6,6 @@ https://github.com/break-stuff/wc-storybook-helpers?tab=readme-ov-file
 
 https://github.com/storybookjs/storybook/tree/next/code/addons/docs
 
-[ ] todo: CEM description on the docs page would be nice
-[ ] todo: move redactional content from hugo docs to storybook
+- [ ] todo: CEM description on the docs page would be nice
+- [ ] todo: move redactional content from hugo docs to storybook
 
