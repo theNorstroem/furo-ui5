@@ -25,3 +25,6 @@ test-results.json
 
 /tmp/
 /out-tsc/
+
+*storybook.log
+storybook-static

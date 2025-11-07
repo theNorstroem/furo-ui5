@@ -892,7 +892,7 @@
                 "text": "String"
               },
               "privacy": "public",
-              "default": "'navigation-right-arrow'",
+              "default": "\"navigation-right-arrow\"",
               "description": "Defines the icon for the false state.",
               "attribute": "symbolfalse"
             },
@@ -903,7 +903,7 @@
                 "text": "String"
               },
               "privacy": "public",
-              "default": "'navigation-down-arrow'",
+              "default": "\"navigation-down-arrow\"",
               "description": "Defines the icon for the true state.",
               "attribute": "symboltrue"
             },
@@ -966,7 +966,7 @@
               "type": {
                 "text": "String"
               },
-              "default": "'navigation-right-arrow'",
+              "default": "\"navigation-right-arrow\"",
               "description": "Defines the icon for the false state.",
               "fieldName": "symbolfalse"
             },
@@ -975,7 +975,7 @@
               "type": {
                 "text": "String"
               },
-              "default": "'navigation-down-arrow'",
+              "default": "\"navigation-down-arrow\"",
               "description": "Defines the icon for the true state.",
               "fieldName": "symboltrue"
             },

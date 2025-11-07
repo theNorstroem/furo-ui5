@@ -48,7 +48,9 @@
     "analyze:internal": "cem analyze --config scripts/internal-cem.config.mjs && mv tmp/custom-elements.json dist/custom-elements-internal.json",
     "analyze:deep": "cem analyze --config ./scripts/deep-cem.config.mjs &&  ./scripts/WebtypesPostprocessor.mjs && ./scripts/CheckWebtypes.mjs",
     "prepare": "husky install",
-    "bootstrap": "npm install && npm link && npm link @furo/ui5"
+    "bootstrap": "npm install && npm link && npm link @furo/ui5",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "@furo/fbp": "^6.15.0",
@@ -73,16 +75,21 @@
     "signature_pad": "^5.1.1"
   },
   "devDependencies": {
-    "@shikijs/markdown-it": "^3.14.0",
-    "@types/markdown-it": "^14.1.2",
     "@axe-core/playwright": "^4.10.2",
     "@axe-core/reporter-earl": "^4.10.2",
     "@babel/preset-env": "^7.28.3",
     "@custom-elements-manifest/analyzer": "^0.10.10",
     "@furo/web-types": "^0.1.0",
+    "@jackolope/ts-lit-plugin": "^3.1.6",
     "@open-wc/eslint-config": "^12.0.3",
     "@open-wc/testing": "^4.0.0",
+    "@open-wc/testing-helpers": "^3.0.1",
     "@playwright/test": "1.56.1",
+    "@shikijs/markdown-it": "^3.14.0",
+    "@storybook/addon-docs": "^10.0.5",
+    "@storybook/addon-onboarding": "^10.0.5",
+    "@storybook/react-vite": "^10.0.5",
+    "@types/markdown-it": "^14.1.2",
     "@types/mocha": "^10.0.10",
     "@types/react": "^19.2.2",
     "@typescript-eslint/eslint-plugin": "^8.46.1",
@@ -93,17 +100,19 @@
     "@vitest/ui": "^4.0.1",
     "babel-plugin-template-html-minifier": "^4.1.0",
     "cem-plugin-vs-code-custom-data-generator": "^1.4.2",
+    "chai-a11y-axe": "^1.5.0",
     "concurrently": "^9.2.1",
     "custom-element-jet-brains-integration": "^1.7.0",
     "deepmerge": "^4.3.1",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-lit": "^2.1.1",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-storybook": "^10.0.5",
     "eslint-plugin-unused-imports": "^4.2.0",
-    "eslint-import-resolver-alias": "^1.1.2",
     "husky": "^9.1.7",
     "koa-bodyparser": "^4.4.1",
     "koa-compress": "^5.1.1",
@@ -116,15 +125,18 @@
     "rimraf": "^6.0.1",
     "rollup": "^4.52.5",
     "rollup-plugin-workbox": "^8.1.2",
-    "@jackolope/ts-lit-plugin": "^3.1.6",
+    "storybook": "^10.0.5",
     "tsc-alias": "^1.8.16",
     "tslib": "^2.8.1",
     "typescript": "^5.9.3",
     "vite": "^7.1.11",
     "vite-plugin-devtools-json": "^1.0.0",
     "vitest": "^4.0.1",
-    "@open-wc/testing-helpers": "^3.0.1",
-    "chai-a11y-axe": "^1.5.0"
+    "@storybook/web-components-vite": "^10.0.5",
+    "@wc-toolkit/storybook-helpers": "^10.0.0",
+    "@storybook/addon-actions": "^9.0.8",
+    "@storybook/addon-a11y": "^10.0.6",
+    "remark-gfm": "^4.0.1"
   },
   "publishConfig": {
     "access": "public"
@@ -134,5 +146,10 @@
   "engines": {
     "node": ">=21.7.3",
     "npm": ">=10.2.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }

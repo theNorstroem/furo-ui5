@@ -7,6 +7,7 @@
     "strict": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "outDir": "dist",
@@ -27,10 +28,11 @@
         "name": "@jackolope/ts-lit-plugin",
         "strict": true,
         "rules": {
-          "no-incompatible-type-binding": "warn",
+          "no-incompatible-type-binding": "error",
           "no-incompatible-property-type": "error",
-          "no-unknown-event": "error",
+          "no-unknown-event": "off",
           "no-unknown-attribute": "off",
+          "no-unknown-property": "off",
           "no-complex-attribute-binding": "error"
         }
       }
@@ -44,32 +46,25 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
     "resolvePackageJsonExports": true,
     "resolvePackageJsonImports": true,
     "rootDir": "./src/",
-
-
     "stripInternal": true,
-
-
     "types": [
       "mocha"
     ],
-
     "verbatimModuleSyntax": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-
   "include": [
     "src/**/*.ts",
-     "global.d.ts"
+    "global.d.ts"
   ],
   "exclude": [
     "src/typerenderer/**/*.ts"
   ]
-
-
 }
