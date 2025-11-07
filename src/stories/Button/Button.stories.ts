@@ -38,10 +38,10 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  args:{
+  args: {
     ...args,
-      design: "Default",
-      loadingDelay: 1000
+    design: "Default",
+    loadingDelay: 1000,
   },
   render: argTypes =>
     html`<furo-ui5-button
@@ -53,4 +53,3 @@ export const Default: StoryObj = {
       >dfg</furo-ui5-button
     >`,
 };
-
