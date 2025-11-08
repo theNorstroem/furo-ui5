@@ -1,7 +1,13 @@
 // @ts-ignore
 import React from "react";
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 import { Description, Primary,  Subtitle, Title,Controls } from "@storybook/addon-docs/blocks";
+import {getCustomElements } from "@storybook/web-components-vite";
+
+
+
 
 
 interface DocsPageArgs {
@@ -9,28 +15,63 @@ interface DocsPageArgs {
   since?: string;
   guideline?: string;
   warning?: string;
+  originalComponent?: string;
+}
+
+interface Module {
+  declarations: Declaration[];
+}
+
+interface Declaration {
+  tagName?: string;
+  description?: string;
 }
 
 const DocumentationTemplate = (args: DocsPageArgs) => {
+  function resolveDescription(component:string):string {
+    let description = "";
+     getCustomElements().modules.find((m:Module)=> {
+      return m.declarations.find((d:Declaration)=>{
+      if(d?.tagName === component){
+        description = d.description || "No description found.";
+        return true
+      }
+      return false
+      })
+    })
 
+    return description
+  }
 
+  const markdown = resolveDescription(args.component)
   return () => (
     <>
       <header>
 
           <Title />
 
-        {args.since && (
-          <span className="sb-ui5-component-heading-since">
-            since: <b>{args.since?`v${args.since}`:"14.08.2020"}</b>
-          </span>
-        )}
+<table width="100%">
+<tbody>
+  <tr>
+    <td width={"*"}> <b>@furo/ui5/dist/{args.component}.js</b></td>
+    <td width={"120"}><b>since:</b> {args.since?`v${args.since}`:`14.08.2020`}</td>
+    <td width={"120"}> {args.originalComponent && (
+      <a className="extlink" href={args.originalComponent} target="_blank">
+        ORIGINAL
+      </a>
+    )}</td>
+    <td width={"120"}> {args.guideline && (
+      <a className="extlink" href={args.guideline} target="_blank">
+        GUIDELINE
+      </a>
+    )}</td>
+  </tr>
+</tbody>
+</table>
 
-        {args.guideline && (
-          <a className="extlink" href={args.guideline} target="_blank">
-            GUIDELINE
-          </a>
-        )}
+
+
+
       </header>
       {args.warning && (
         <div>
@@ -38,9 +79,11 @@ const DocumentationTemplate = (args: DocsPageArgs) => {
         </div>
       )}
 
-        <b>@furo/ui5/dist/{args.component}.js</b>
+
       <Subtitle />
-      <Description />
+      <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
+
+        <Description  />
       <br />
       <Primary />
 <Controls />

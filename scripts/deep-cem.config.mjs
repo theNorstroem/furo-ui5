@@ -105,7 +105,6 @@ export default {
               });
             });
 
-
             node.members?.forEach((member, memberIndex) => {
               switch (member.kind) {
                 case ts.SyntaxKind.MethodDeclaration:
@@ -255,7 +254,7 @@ export default {
 
         // superclass
         if (decl.superclass?.name) {
-          if (decl.superclass.name === "LitElement") {
+          if (decl.superclass.name === "LitElement"  ) {
             delete (decl.superclass);
           } else {
             const matches = /^(@[^\/]+\/[^\/]+)\/(.*)$/.exec(decl.superclass.package);
@@ -277,7 +276,7 @@ export default {
           if (decl === undefined || decl.kind !== "class") {
             continue;
           }
-          // The filenames do not start with Furo, the wrapper generator would create FuroXxxxComponents
+          // The filenames do not start with Furo, the jsx generator would create FuroXxxxComponents
           if (decl.name.startsWith("FuroUi5")) {
             decl.name = decl.name.replace(/^FuroUi5/, "");
           }
@@ -310,7 +309,10 @@ export default {
           decl.description = decl.description
             .replaceAll("ui5-", "furo-ui5-")
             .replaceAll("@ui5/webcomponents/", "@furo/ui5/")
-            .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/");
+            .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/")
+            .replaceAll(/(### ES6 Module .*\n)/g,"")
+            .replaceAll(/(`import .*`)/g,"");
+
 
           // Replace inherited ui5 descriptions with furo in attributes description
           decl.attributes?.map(attribute => {
@@ -318,6 +320,13 @@ export default {
               .replaceAll("@ui5/webcomponents/", "@furo/ui5/")
               .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/")
           });
+
+
+          // Filter out UI5Element methods
+          decl.members = decl.members.filter((member)=>{
+              return !(member.inheritedFrom?.name === "UI5Element")
+          })
+
 
           // Replace inherited ui5 descriptions with furo/ui5 in members description
           decl.members?.map(member => {

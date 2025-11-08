@@ -7,7 +7,6 @@
     "strict": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "allowImportingTsExtensions": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "outDir": "dist",
@@ -65,6 +64,7 @@
     "global.d.ts"
   ],
   "exclude": [
+    "src/stories/**/*.tsx",
     "src/typerenderer/**/*.ts"
   ]
 }

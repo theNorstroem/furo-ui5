@@ -1,21 +1,12 @@
 import type { StorybookConfig } from '@storybook/web-components-vite';
 import remarkGfm from "remark-gfm";
-import { mergeConfig } from "vite";
-
 
 const config: StorybookConfig = {
-  // @ts-expect-error configtype is needed
-  async viteFinal(config, { configType }) {
-    return mergeConfig(config, {
-      build: {
-        target: "esnext",
-      },
-    });
-  },
   stories: [
     "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
+
   addons: [
     {
       name: '@storybook/addon-docs',
@@ -40,6 +31,11 @@ const config: StorybookConfig = {
   framework: {
     name: "@storybook/web-components-vite",
     options: {}
+  },
+  features:{
+    backgrounds:false,
+  },
+  docs:{
   }
 };
 export default config;

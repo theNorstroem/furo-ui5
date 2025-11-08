@@ -1,16 +1,17 @@
 import "@/Assets";
 import "@/furo-ui5-button";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
-import { html, nothing } from "lit";
+import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import ButtonDesign from "@ui5/webcomponents/dist/types/ButtonDesign.js";
-import DocumentationTemplate from "../DocumentationTemplate.tsx";
-import { ArgsSetEnum, ArgsTransormer, ArgTypesTransormer } from "@/stories/ArgTypesTransormer.ts";
+import DocumentationTemplate from "../DocumentationTemplate";
+import { ArgsSetEnum, ArgsTransormer, ArgTypesTransormer } from "@/stories/ArgTypesTransormer";
 const component = "furo-ui5-button";
 const componentInfo = {
-  guideline: "https://experience.sap.com/fiori-design-web/button/",
+  guideline: "https://www.sap.com/design-system/fiori-design-web/v1-139/ui-elements/button/",
+  originalComponent:"https://ui5.github.io/webcomponents/components/main/Button/"
 };
 
 const { events, args, argTypes, template } = getStorybookHelpers(component);

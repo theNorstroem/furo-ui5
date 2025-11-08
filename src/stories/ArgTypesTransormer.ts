@@ -5,6 +5,29 @@ function removeUnwanted(argTypesOrArgs: (Partial<unknown> & { [p: string]: any }
   delete argTypesOrArgs["accessibility-attributes"];
   delete argTypesOrArgs["is-ui5-element"];
   delete argTypesOrArgs["effective-dir"];
+
+  // disable control
+  if (argTypesOrArgs["model"]) {
+    argTypesOrArgs["model"].control = "none";
+  }
+}
+
+/**
+ * Transforms all args and argTypes to propper camel case.
+ *
+ * @param argTypes
+ * @param args
+ * @param deleteList - List of args to remove from the controls
+ * @constructor
+ */
+export function ArgsTransormAll(argTypes: ArgTypes<Args>, args: Partial<unknown> & { [p: string]: any }, deleteList:string[]){
+  ArgTypesTransormer(argTypes)
+  ArgsTransormer(args)
+
+  deleteList.forEach((item) => {
+    delete argTypes[item];
+    delete args[item];
+  })
 }
 
 export function ArgTypesTransormer(argTypes: ArgTypes<Args>): void {
@@ -12,12 +35,22 @@ export function ArgTypesTransormer(argTypes: ArgTypes<Args>): void {
   removeUnwanted(argTypes);
 
   Object.keys(argTypes).forEach(key => {
+    // remove controls from styles
+    if (argTypes[key].table?.category === "css shadow parts") {
+      if (argTypes[key]) {
+        // @ts-expect-error undocumented feature
+        argTypes[key].control = "none";
+        argTypes[key].name = `::part(${key})`;
+      }
+    }
+
     const match = key.match(/(.*)-(.*)/);
     if (match) {
       argTypes[camelCase(key)] = argTypes[key];
       delete argTypes[key];
     }
   });
+
 }
 
 export function ArgsTransormer(args: Partial<unknown> & { [p: string]: any }): void {
@@ -38,12 +71,17 @@ export function ArgsTransormer(args: Partial<unknown> & { [p: string]: any }): v
 }
 
 export function ArgsSetEnum(argTypes: ArgTypes<Args>, field: string, values: string[]): void {
-  argTypes[field].control = "select";
-  argTypes[field].options = values;
+  if(argTypes[field]){
+    argTypes[field].control = "select";
+    argTypes[field].options = values;
+  }else{
+    console.error(`Unknown field ${field}`);
+  }
+
 }
 
 function camelCase(input: string): string {
-  return input.toLowerCase().replace(/-(.)/g, function (match, group1) {
+  return input.toLowerCase().replace(/-(.)/g, function(_match, group1) {
     return group1.toUpperCase();
   });
 }

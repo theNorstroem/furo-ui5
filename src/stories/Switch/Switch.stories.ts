@@ -1,16 +1,11 @@
-import "@/furo-ui5-switch";
+import "@/furo-ui5-switch.ts";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { html } from "lit";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
-import DocumentationTemplate from "../DocumentationTemplate.tsx";
-import { ArgsSetEnum, ArgsTransormer, ArgTypesTransormer } from "@/stories/ArgTypesTransormer.ts";
-import SwitchDesign from "@ui5/webcomponents/types/SwitchDesign";
+import DocumentationTemplate from "../DocumentationTemplate";
+import { ArgsSetEnum, ArgsTransormer, ArgTypesTransormer } from "@/stories/ArgTypesTransormer";
+import SwitchDesign from "@ui5/webcomponents/types/SwitchDesign.js";
 const component = "furo-ui5-switch";
-
-const componentInfo = {
-  since: "2.0.0",
-  guideline: "https://experience.sap.com/fiori-design-web/button/",
-};
 
 const { events, args, argTypes, template } = getStorybookHelpers(component);
 ArgTypesTransormer(argTypes);
@@ -26,12 +21,18 @@ const meta: Meta = {
   argTypes,
   render: args => template(args),
   parameters: {
-    actions: {
-      handles: events,
-    },
 
+    parameters: {
+      actions: {
+        handles: events,
+      },
+    },
     docs: {
-      page: DocumentationTemplate({ ...componentInfo, component }),
+      page: DocumentationTemplate({
+        component,
+        since: "0.8.0",
+        originalComponent:"https://ui5.github.io/webcomponents/components/Switch/",
+        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-139/ui-elements/switch/"}),
     },
   },
 };

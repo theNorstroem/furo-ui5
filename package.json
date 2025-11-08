@@ -9,11 +9,7 @@
     "email": "",
     "url": "https://github.com/theNorstroem/"
   },
-  "keywords": [
-    "web-components",
-    "flow based programming",
-    "fbp"
-  ],
+  "keywords": ["web-components", "flow based programming", "fbp"],
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",
@@ -86,9 +82,6 @@
     "@open-wc/testing-helpers": "^3.0.1",
     "@playwright/test": "1.56.1",
     "@shikijs/markdown-it": "^3.14.0",
-    "@storybook/addon-docs": "^10.0.5",
-    "@storybook/addon-onboarding": "^10.0.5",
-    "@storybook/react-vite": "^10.0.5",
     "@types/markdown-it": "^14.1.2",
     "@types/mocha": "^10.0.10",
     "@types/react": "^19.2.2",
@@ -132,11 +125,14 @@
     "vite": "^7.1.11",
     "vite-plugin-devtools-json": "^1.0.0",
     "vitest": "^4.0.1",
-    "@storybook/web-components-vite": "^10.0.5",
-    "@wc-toolkit/storybook-helpers": "^10.0.0",
-    "@storybook/addon-actions": "^9.0.8",
+    "@storybook/web-components-vite": "^10.0.6",
+    "@storybook/web-components": "^10.0.6",
+    "@storybook/addon-docs": "^10.0.6",
+    "@storybook/react-vite": "^10.0.6",
     "@storybook/addon-a11y": "^10.0.6",
-    "remark-gfm": "^4.0.1"
+    "@wc-toolkit/storybook-helpers": "^10.0.0",
+    "remark-gfm": "^4.0.1",
+    "react-markdown": "^10.1.0"
   },
   "publishConfig": {
     "access": "public"
@@ -148,8 +144,6 @@
     "npm": ">=10.2.5"
   },
   "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
+    "extends": ["plugin:storybook/recommended"]
   }
 }

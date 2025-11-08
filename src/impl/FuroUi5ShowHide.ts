@@ -9,6 +9,7 @@ import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import { FuroFatBool } from "@/models";
+import type { Timeout } from "@ui5/webcomponents-base";
 
 /**
  * @class
@@ -44,7 +45,7 @@ export class FuroUi5ShowHide extends LitElement {
   @property({ type: Boolean, attribute: "hide-on-false" })
   public hideOnFalse = false;
 
-  private _timeout: number | undefined;
+  private _timeout: number | Timeout | undefined;
 
   private _clientHeight = 0;
 

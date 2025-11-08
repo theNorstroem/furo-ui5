@@ -1,30 +1,26 @@
-import  { type Preview, setCustomElementsManifest } from '@storybook/web-components-vite'
-import customElements from "../dist/custom-elements-internal.json";
+import  { type Preview, setCustomElementsManifest } from '@storybook/web-components'
+import customElements from "../custom-elements.json";
 import { setStorybookHelpersConfig, type Options } from "@wc-toolkit/storybook-helpers";
 
 const options: Options = {renderDefaultValues: true };
 
 setStorybookHelpersConfig(options);
 
+// filter private members
+customElements.modules.forEach((module: any) => {
+  module.declarations.forEach((declaration: any) => {
+    declaration.members!.forEach((member: any,i:number ) => {
+      if(member.privacy === "private"){
+        delete declaration.members[i]
+
+      }
+    })
+  })
+})
+
 setCustomElementsManifest(customElements);
 
 
-const preview: Preview = {
-  parameters: {
-    //👇 Enables auto-generated documentation for all stories
-    tags: ['autodocs'],
-    parameters: {
-
-      controls: {
-        expanded: true,
-        matchers: {
-          color: /(background|color)$/i,
-          date: /Date$/i,
-        },
-      },
-    },
-
-  },
-};
+const preview: Preview = {};
 
 export default preview;
