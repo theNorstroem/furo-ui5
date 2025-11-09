@@ -23,7 +23,7 @@ const componentInfo = {
 };
 
 const { events, args, argTypes } = getStorybookHelpers(component);
-ArgsTransormAll(argTypes, args, ["type", "maxlength", "minlength"]);
+ArgsTransormAll(argTypes, args, ["type", "maxlength", "minlength", "modelValue"]);
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 // models

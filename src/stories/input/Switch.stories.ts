@@ -40,7 +40,6 @@ const meta: Meta = {
 };
 export default meta;
 
-console.log(`${component} Args`, args);
 export const Default: StoryObj = {
   args: { ...args, accessibleName: "demo" },
   render: renderArgs => html` <furo-ui5-switch accessible-name="${renderArgs.accessibleName}"> </furo-ui5-switch>`,

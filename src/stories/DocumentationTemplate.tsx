@@ -47,7 +47,6 @@ const DocumentationTemplate = (args: DocsPageArgs) => {
       <header>
 
           <Title />
-
 <table width="100%">
 <tbody>
   <tr>

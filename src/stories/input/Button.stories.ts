@@ -3,9 +3,11 @@ import "@/furo-ui5-button";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import ButtonDesign from "@ui5/webcomponents/dist/types/ButtonDesign.js";
+import ButtonType from "@ui5/webcomponents/dist/types/ButtonType.js";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 import { ArgsSetEnum, ArgsTransormer, ArgTypesTransormer } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
@@ -20,6 +22,7 @@ const { events, args, argTypes } = getStorybookHelpers(component);
 ArgTypesTransormer(argTypes);
 ArgsTransormer(args);
 ArgsSetEnum(argTypes, "design", Object.values(ButtonDesign));
+ArgsSetEnum(argTypes, "type", Object.values(ButtonType));
 
 const meta: Meta = {
   title: "input/Button",
@@ -42,16 +45,21 @@ export default meta;
 export const Default: StoryObj = {
   args: {
     ...args,
-    design: "Default",
-    loadingDelay: 1000,
+    design: "Emphasized",
+    defaultSlot: "Click me",
   },
   render: renderArgs =>
     html`<furo-ui5-button
       ?disabled="${renderArgs.disabled}"
       ?loading="${renderArgs.loading}"
+      ?submits="${renderArgs.submits}"
       end-icon="${ifDefined(renderArgs.endIcon)}"
-      design="${renderArgs.design}"
+      loading-delay="${ifDefined(renderArgs.loadingDelay)}"
+      accessible-name="${ifDefined(renderArgs.accessibleName)}"
+      type="${ifDefined(renderArgs.type)}"
+      tooltip="${ifDefined(renderArgs.tooltip)}"
+      design="${ifDefined(renderArgs.design)}"
       icon="${ifDefined(renderArgs.icon)}"
-      >dfg</furo-ui5-button
+      >${unsafeHTML(renderArgs.defaultSlot)}</furo-ui5-button
     >`,
 };

@@ -1,11 +1,15 @@
 /* eslint-disable no-param-reassign */
 import type { Args, ArgTypes } from "storybook/internal/csf";
 
+interface Model {
+  control: string;
+}
+
 function camelCase(input: string): string {
   return input.toLowerCase().replace(/-(.)/g, (_match, group1) => group1.toUpperCase());
 }
 
-function removeUnwanted(argTypesOrArgs: (Partial<unknown> & { [p: string]: any }) | ArgTypes<Args>): void {
+function removeUnwanted(argTypesOrArgs: Record<string, unknown> | ArgTypes<Args>): void {
   // remove
   delete argTypesOrArgs["accessibility-attributes"];
   delete argTypesOrArgs["is-ui5-element"];
@@ -13,7 +17,7 @@ function removeUnwanted(argTypesOrArgs: (Partial<unknown> & { [p: string]: any }
 
   // disable control
   if (argTypesOrArgs.model) {
-    argTypesOrArgs.model.control = "none";
+    (argTypesOrArgs.model as Model).control = "none";
   }
 }
 
@@ -39,7 +43,7 @@ export function ArgTypesTransormer(argTypes: ArgTypes<Args>): void {
   });
 }
 
-export function ArgsTransormer(args: Partial<unknown> & { [p: string]: any }): void {
+export function ArgsTransormer(args: Record<string, unknown>): void {
   removeUnwanted(args);
 
   Object.keys(args).forEach(key => {
@@ -73,7 +77,7 @@ export function ArgsSetEnum(argTypes: ArgTypes<Args>, field: string, values: str
  * @param deleteList - List of args to remove from the controls
  * @constructor
  */
-export function ArgsTransormAll(argTypes: ArgTypes<Args>, args: Partial<unknown> & { [p: string]: any }, deleteList: string[]) {
+export function ArgsTransormAll(argTypes: ArgTypes<Args>, args: Record<string, unknown>, deleteList: string[]) {
   ArgTypesTransormer(argTypes);
   ArgsTransormer(args);
 
