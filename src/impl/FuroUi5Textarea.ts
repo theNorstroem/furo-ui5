@@ -1,5 +1,5 @@
 import { type FieldConstraints, STRING, StringValue } from "@furo/open-models/dist";
-import Textarea from "@ui5/webcomponents/dist/TextArea.js";
+import TextArea from "@ui5/webcomponents/dist/TextArea.js";
 
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
@@ -29,7 +29,7 @@ import { FuroFatString } from "@/models";
  *
  * @tagname furo-ui5-textarea
  */
-export class FuroUi5Textarea extends Textarea {
+export class FuroUi5Textarea extends TextArea {
   private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
 
   private modelReaderWriter: ModelReaderWriter | undefined;
