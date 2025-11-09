@@ -9,7 +9,11 @@
     "email": "",
     "url": "https://github.com/theNorstroem/"
   },
-  "keywords": ["web-components", "flow based programming", "fbp"],
+  "keywords": [
+    "web-components",
+    "flow based programming",
+    "fbp"
+  ],
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",
@@ -144,6 +148,8 @@
     "npm": ">=10.2.5"
   },
   "eslintConfig": {
-    "extends": ["plugin:storybook/recommended"]
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }

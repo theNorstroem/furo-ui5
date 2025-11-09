@@ -1,5 +1,6 @@
 // import AnimationMode from "@ui5/webcomponents-base/dist/types/AnimationMode.js";
 import { BOOLEAN, BoolValue, type FieldConstraints } from "@furo/open-models";
+import type { Timeout } from "@ui5/webcomponents-base";
 import { getAnimationMode } from "@ui5/webcomponents-base/dist/config/AnimationMode.js";
 import { css, html, LitElement } from "lit";
 // eslint-disable-next-line import/extensions
@@ -9,7 +10,6 @@ import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import { FuroFatBool } from "@/models";
-import type { Timeout } from "@ui5/webcomponents-base";
 
 /**
  * @class

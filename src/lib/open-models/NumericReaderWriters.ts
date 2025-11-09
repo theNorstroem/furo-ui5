@@ -6,7 +6,7 @@ import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 
 /**
  * Generic readeer and writers for string like models
  */
-type NumericKeys<T> = { [k in keyof T]: T[k] extends number ? k : never }[keyof T];
+type NumericKeys<T> = { [k in keyof T]: T[k] extends number | string ? k : never }[keyof T];
 // type ModelKeys<T> = { [k in keyof T]: T[k] extends STRING | FuroFatString | StringValue ? k : never }[keyof T];
 // type OnlyBooleanValuesOfT<T> = { [k in BooleanKeys<T>]: boolean };
 // type OnlyBooleanModels<T> = { [k in ModelKeys<T>]: STRING | FuroFatString | StringValue };
@@ -87,6 +87,7 @@ export class NumericReaderWriters<T> {
         (this.clazz[this.valueField] as number) = intVal;
       }
     });
+
     readers.set("primitives.INT64", () => {
       const intVal = Number((this.modelField as INT64).value);
       if (intVal !== this.clazz[this.valueField]) {
@@ -132,6 +133,12 @@ export class NumericReaderWriters<T> {
       this.fatHandler?.applyReceivedFatAttributesAndLabels(this.modelField as FuroFatUint64);
     });
 
+    readers.set("google.protobuf.Int32Value", () => {
+      const intVal = (this.modelField as Int32Value).value;
+      if (intVal !== this.clazz[this.valueField]) {
+        (this.clazz[this.valueField] as number) = intVal;
+      }
+    });
     return readers;
   }
 
@@ -207,6 +214,17 @@ export class NumericReaderWriters<T> {
       }
     });
 
+    /**
+     * Updater for primitives.INT32
+     */
+    writers.set("google.protobuf.Int32Value", () => {
+      const v = parseInt(String(Number(this.clazz[this.valueField])), 10);
+      if (Number.isNaN(v)) {
+        (this.modelField as Int32Value).value = 0;
+      } else {
+        (this.modelField as Int32Value).value = v;
+      }
+    });
     return writers;
   }
 }

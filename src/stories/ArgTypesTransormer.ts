@@ -1,4 +1,9 @@
+/* eslint-disable no-param-reassign */
 import type { Args, ArgTypes } from "storybook/internal/csf";
+
+function camelCase(input: string): string {
+  return input.toLowerCase().replace(/-(.)/g, (_match, group1) => group1.toUpperCase());
+}
 
 function removeUnwanted(argTypesOrArgs: (Partial<unknown> & { [p: string]: any }) | ArgTypes<Args>): void {
   // remove
@@ -7,27 +12,9 @@ function removeUnwanted(argTypesOrArgs: (Partial<unknown> & { [p: string]: any }
   delete argTypesOrArgs["effective-dir"];
 
   // disable control
-  if (argTypesOrArgs["model"]) {
-    argTypesOrArgs["model"].control = "none";
+  if (argTypesOrArgs.model) {
+    argTypesOrArgs.model.control = "none";
   }
-}
-
-/**
- * Transforms all args and argTypes to propper camel case.
- *
- * @param argTypes
- * @param args
- * @param deleteList - List of args to remove from the controls
- * @constructor
- */
-export function ArgsTransormAll(argTypes: ArgTypes<Args>, args: Partial<unknown> & { [p: string]: any }, deleteList:string[]){
-  ArgTypesTransormer(argTypes)
-  ArgsTransormer(args)
-
-  deleteList.forEach((item) => {
-    delete argTypes[item];
-    delete args[item];
-  })
 }
 
 export function ArgTypesTransormer(argTypes: ArgTypes<Args>): void {
@@ -50,7 +37,6 @@ export function ArgTypesTransormer(argTypes: ArgTypes<Args>): void {
       delete argTypes[key];
     }
   });
-
 }
 
 export function ArgsTransormer(args: Partial<unknown> & { [p: string]: any }): void {
@@ -71,17 +57,28 @@ export function ArgsTransormer(args: Partial<unknown> & { [p: string]: any }): v
 }
 
 export function ArgsSetEnum(argTypes: ArgTypes<Args>, field: string, values: string[]): void {
-  if(argTypes[field]){
+  if (argTypes[field]) {
     argTypes[field].control = "select";
     argTypes[field].options = values;
-  }else{
+  } else {
     console.error(`Unknown field ${field}`);
   }
-
 }
 
-function camelCase(input: string): string {
-  return input.toLowerCase().replace(/-(.)/g, function(_match, group1) {
-    return group1.toUpperCase();
+/**
+ * Transforms all args and argTypes to propper camel case.
+ *
+ * @param argTypes
+ * @param args
+ * @param deleteList - List of args to remove from the controls
+ * @constructor
+ */
+export function ArgsTransormAll(argTypes: ArgTypes<Args>, args: Partial<unknown> & { [p: string]: any }, deleteList: string[]) {
+  ArgTypesTransormer(argTypes);
+  ArgsTransormer(args);
+
+  deleteList.forEach(item => {
+    delete argTypes[item];
+    delete args[item];
   });
 }

@@ -3,10 +3,8 @@ import React from "react";
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-import { Description, Primary,  Subtitle, Title,Controls } from "@storybook/addon-docs/blocks";
+import { Primary,  Subtitle, Title,Controls } from "@storybook/addon-docs/blocks";
 import {getCustomElements } from "@storybook/web-components-vite";
-
-
 
 
 
@@ -82,8 +80,6 @@ const DocumentationTemplate = (args: DocsPageArgs) => {
 
       <Subtitle />
       <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
-
-        <Description  />
       <br />
       <Primary />
 <Controls />

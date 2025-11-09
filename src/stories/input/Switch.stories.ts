@@ -1,13 +1,16 @@
-import "@/furo-ui5-switch.ts";
+import "@/furo-ui5-switch";
+
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
-import { html } from "lit";
-import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
-import DocumentationTemplate from "../DocumentationTemplate";
-import { ArgsSetEnum, ArgsTransormer, ArgTypesTransormer } from "@/stories/ArgTypesTransormer";
 import SwitchDesign from "@ui5/webcomponents/types/SwitchDesign.js";
+import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
+import { html } from "lit";
+
+import { ArgsSetEnum, ArgsTransormer, ArgTypesTransormer } from "@/stories/ArgTypesTransormer";
+import DocumentationTemplate from "@/stories/DocumentationTemplate";
+
 const component = "furo-ui5-switch";
 
-const { events, args, argTypes, template } = getStorybookHelpers(component);
+const { events, args, argTypes } = getStorybookHelpers(component);
 ArgTypesTransormer(argTypes);
 ArgsTransormer(args);
 ArgsSetEnum(argTypes, "design", Object.values(SwitchDesign));
@@ -19,9 +22,7 @@ const meta: Meta = {
   tags: ["autodocs"],
   args,
   argTypes,
-  render: args => template(args),
   parameters: {
-
     parameters: {
       actions: {
         handles: events,
@@ -31,8 +32,9 @@ const meta: Meta = {
       page: DocumentationTemplate({
         component,
         since: "0.8.0",
-        originalComponent:"https://ui5.github.io/webcomponents/components/Switch/",
-        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-139/ui-elements/switch/"}),
+        originalComponent: "https://ui5.github.io/webcomponents/components/Switch/",
+        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-139/ui-elements/switch/",
+      }),
     },
   },
 };
@@ -41,5 +43,5 @@ export default meta;
 console.log(`${component} Args`, args);
 export const Default: StoryObj = {
   args: { ...args, accessibleName: "demo" },
-  render: argTypes => html` <furo-ui5-switch accessible-name="${argTypes.accessibleName}"> </furo-ui5-switch>`,
+  render: renderArgs => html` <furo-ui5-switch accessible-name="${renderArgs.accessibleName}"> </furo-ui5-switch>`,
 };

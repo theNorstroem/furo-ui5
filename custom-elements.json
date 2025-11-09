@@ -5181,7 +5181,7 @@
               "kind": "field",
               "name": "modelValue",
               "type": {
-                "text": "number"
+                "text": "number | string"
               }
             },
             {
