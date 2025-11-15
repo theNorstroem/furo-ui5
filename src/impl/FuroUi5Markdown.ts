@@ -1,35 +1,130 @@
+import { STRING } from "@furo/open-models";
 import { css, html, LitElement, nothing, type TemplateResult } from "lit";
 import { property } from "lit/decorators.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import MarkdownIt from "markdown-it";
-
 import { TableCss } from "@/styles/table.css";
-
-const md: MarkdownIt = MarkdownIt({
-  html: true,
-  linkify: true,
-  typographer: true,
-  breaks: true,
-  xhtmlOut: false,
-});
 
 /**
  * `furo-ui5-markdown`
  *
- *  Renders given md data html.
+ *  Renders given md data directly to html.
  *
+ *  #### Stream rendering
+ *  The stream rendering mode renders the pure markdown while the stream is running and makes a final render with all added plugins.
+ *  This save a lot of resources by not rendering incomplete mermaid, svg or any other custom renderers.
+ *
+ *  ##### In combination with field nodes
+ *  - To notify the stream started, send a `FieldNode` event `stream-begins`.
+ *  - To notify the stream has ended send a `FieldNode` event `stream-ends`.
+ *
+ *  ##### When using the properties directly (html with js)
+ *  - Enable the streaming mode with setting the attribute `streaming` to true.
+ *  - To notify the stream has ended set the attribute `streaming` to false and the final markdown to the property `markdown`
+ *
+ * #### Adding custom renderers
  *
  * @summary renders markdown data
  * @tagname furo-ui5-markdown
  * @appliesMixin FBP
  */
 export class FuroUi5Markdown extends LitElement {
+  private mdFinal: MarkdownIt = MarkdownIt({
+    html: true,
+    linkify: true,
+    typographer: true,
+    breaks: true,
+  });
+
+  private mdStream: MarkdownIt = MarkdownIt({
+    html: true,
+    linkify: true,
+    typographer: false,
+    breaks: true,
+  });
+
+  private _model: STRING = new STRING();
+
+  // used to decide which md renderer we use
+  private streaming = false;
+
+  get model(): STRING {
+    return this._model;
+  }
+
   /**
-   * allow unsafe md. (writing html, playground-components,...)
-   *
+   * Connect the model
+   * @param value
    */
-  @property({ type: Boolean })
-  public unsafe: boolean = false;
+  set model(value: STRING) {
+    this.bindData(value);
+  }
+
+  constructor() {
+    super();
+  }
+
+  override disconnectedCallback(): void {
+    super.disconnectedCallback();
+    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__removeCustomEventListener("stream-begins", this.setStreamBegins.bind(this));
+    this._model.__removeCustomEventListener("stream-ends", this.setStreamEnds.bind(this));
+  }
+
+  bindData(fieldNode: STRING) {
+    if (fieldNode === undefined || fieldNode === this._model) {
+      return;
+    }
+
+    /**
+     * remove existing listeners
+     * - from readonly watcher
+     * - from model: "this-field-value-changed",listenToStateChanged
+     * - from ui: input, change
+     */
+
+    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+
+    this._model.__removeCustomEventListener("stream-begins", this.setStreamBegins.bind(this));
+
+    this._model.__removeCustomEventListener("stream-ends", this.setStreamEnds.bind(this));
+
+    // connect the model
+    this._model = fieldNode;
+
+    // listen on state changes on the model
+
+    // listen on changes from the model
+    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+
+    this._model.__addCustomEventListener("stream-begins", this.setStreamBegins.bind(this));
+
+    this._model.__addCustomEventListener("stream-ends", this.setStreamEnds.bind(this));
+
+    // initial read
+    this.readFromModel();
+  }
+
+  /**
+   * Notify that a stream has started
+   */
+  private setStreamBegins = () => {
+    this.streaming = true;
+  };
+
+  /**
+   * Notify that a stream is completed.
+   * This will trigger the final render.
+   */
+  private setStreamEnds = () => {
+    this.streaming = false;
+    // final non streaming render
+    this.readFromModel();
+  };
+
+  private readFromModel() {
+    this.markdown = this._model.value;
+  }
 
   private _renderedMarkdown: TemplateResult | typeof nothing = nothing;
 
@@ -42,7 +137,12 @@ export class FuroUi5Markdown extends LitElement {
   @property({ type: String })
   public set markdown(markdown: string) {
     this._markdown = markdown;
-    this._renderedMarkdown = html`${unsafeHTML(md.render(markdown))}`;
+    if (this.streaming) {
+      this._renderedMarkdown = html`${unsafeHTML(this.mdStream.render(markdown))}`;
+    } else {
+      this._renderedMarkdown = html`${unsafeHTML(this.mdFinal.render(markdown))}`;
+    }
+
     this.requestUpdate();
   }
 
@@ -79,6 +179,11 @@ export class FuroUi5Markdown extends LitElement {
         }
 
         :host([hidden]) {
+          display: none;
+        }
+
+        /* do not show components which are not defined */
+        *:not(:defined) {
           display: none;
         }
 
@@ -139,7 +244,7 @@ export class FuroUi5Markdown extends LitElement {
 
         /* Level H6 */
         h6 {
-          font-size: var(sapFontHeader6Size);
+          font-size: var(--sapFontHeader6Size);
         }
 
         a {

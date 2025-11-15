@@ -31,7 +31,7 @@ const meta: Meta = {
   component,
   subcomponents: {},
   tags: ["autodocs"],
-  args,
+  // args,
   argTypes,
 
   parameters: {
@@ -66,9 +66,7 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  args: {
-    ...args,
-  },
+  args: {},
   render: renderArgs => html`
     <furo-ui5-form-layout form-title="Text Input Element">
       ${cube.description}

@@ -31,9 +31,8 @@ const meta: Meta = {
   component,
   subcomponents: {},
   tags: ["autodocs"],
-  args,
+  // args,
   argTypes,
-
   parameters: {
     parameters: {
       actions: {
@@ -112,7 +111,7 @@ export const Default: StoryObj = {
           maxlength="${ifDefined(renderArgs.maxlength)}"
           growing-max-rows="${ifDefined(renderArgs.growingMaxRows)}"
           rows="${ifDefined(renderArgs.rows)}"
-        >${unsafeHTML(renderArgs.valueStateMessageSlot)}
+          >${unsafeHTML(renderArgs.valueStateMessageSlot)}
         </furo-ui5-textarea>
       </furo-ui5-form-row>
     </furo-ui5-form-layout>
@@ -120,9 +119,7 @@ export const Default: StoryObj = {
 };
 
 export const Minimal: StoryObj = {
-  args: {
-    ...args,
-  },
+  args: {},
   render: renderArgs => html`
     <furo-ui5-textarea
       accessible-name="${ifDefined(renderArgs.accessibleName)}"
@@ -138,7 +135,7 @@ export const Minimal: StoryObj = {
       maxlength="${ifDefined(renderArgs.maxlength)}"
       growing-max-rows="${ifDefined(renderArgs.growingMaxRows)}"
       rows="${ifDefined(renderArgs.rows)}"
-    >${unsafeHTML(renderArgs.valueStateMessageSlot)}
+      >${unsafeHTML(renderArgs.valueStateMessageSlot)}
     </furo-ui5-textarea>
-   `,
+  `,
 };

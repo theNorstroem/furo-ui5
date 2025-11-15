@@ -122,7 +122,9 @@ export class FuroUi5RadioButton extends RadioButton {
     this.text = this.text === undefined ? this._model.__placeholder : this.text;
 
     // a11y
-    this.accessibleName = this._model.__label;
+    if (this.accessibleName === undefined) {
+      this.accessibleName = this._model.__label;
+    }
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {

@@ -4811,7 +4811,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "`furo-furo-ui5-markdown`\n\n Renders given md data html.",
+          "description": "`furo-furo-ui5-markdown`\n\n Renders given md data directly to html.\n\n #### Stream rendering\n The stream rendering mode renders the pure markdown while the stream is running and makes a final render with all added plugins.\n This save a lot of resources by not rendering incomplete mermaid, svg or any other custom renderers.\n\n ##### In combination with field nodes\n - To notify the stream started, send a `FieldNode` event `stream-begins`.\n - To notify the stream has ended send a `FieldNode` event `stream-ends`.\n\n ##### When using the properties directly (html with js)\n - Enable the streaming mode with setting the attribute `streaming` to true.\n - To notify the stream has ended set the attribute `streaming` to false and the final markdown to the property `markdown`\n\n#### Adding custom renderers",
           "name": "Markdown",
           "members": [
             {
@@ -4825,12 +4825,33 @@
             },
             {
               "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING"
+              },
+              "privacy": "private",
+              "default": "new STRING()"
+            },
+            {
+              "kind": "field",
               "name": "_renderedMarkdown",
               "type": {
                 "text": "TemplateResult | typeof nothing"
               },
               "privacy": "private",
               "default": "nothing"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING"
+                  }
+                }
+              ]
             },
             {
               "kind": "field",
@@ -4841,6 +4862,33 @@
                 "text": "string"
               },
               "attribute": "markdown"
+            },
+            {
+              "kind": "field",
+              "name": "mdFinal",
+              "type": {
+                "text": "MarkdownIt"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "mdStream",
+              "type": {
+                "text": "MarkdownIt"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING"
+              },
+              "description": "Connect the model",
+              "parameters": [
+                {
+                  "name": "value"
+                }
+              ]
             },
             {
               "kind": "method",
@@ -4856,15 +4904,29 @@
               "description": "Parse markdown string to html content."
             },
             {
+              "kind": "method",
+              "name": "readFromModel"
+            },
+            {
               "kind": "field",
-              "name": "unsafe",
+              "name": "setStreamBegins",
+              "privacy": "private",
+              "description": "Notify that a stream has started"
+            },
+            {
+              "kind": "field",
+              "name": "setStreamEnds",
+              "privacy": "private",
+              "description": "Notify that a stream is completed.\nThis will trigger the final render."
+            },
+            {
+              "kind": "field",
+              "name": "streaming",
               "type": {
                 "text": "boolean"
               },
-              "privacy": "public",
-              "default": "false",
-              "description": "allow unsafe md. (writing html, playground-components,...)",
-              "attribute": "unsafe"
+              "privacy": "private",
+              "default": "false"
             }
           ],
           "attributes": [
@@ -4875,21 +4937,8 @@
                 "text": "string"
               },
               "fieldName": "markdown"
-            },
-            {
-              "name": "unsafe",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "allow unsafe md. (writing html, playground-components,...)",
-              "fieldName": "unsafe"
             }
           ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
           "tagName": "furo-ui5-markdown",
           "customElement": true,
           "summary": "renders markdown data"

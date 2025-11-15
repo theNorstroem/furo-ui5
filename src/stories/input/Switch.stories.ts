@@ -20,7 +20,7 @@ const meta: Meta = {
   component,
   subcomponents: {},
   tags: ["autodocs"],
-  args,
+  // args,
   argTypes,
   parameters: {
     parameters: {
@@ -41,6 +41,6 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  args: { ...args, accessibleName: "demo" },
+  args: { accessibleName: "demo" },
   render: renderArgs => html` <furo-ui5-switch accessible-name="${renderArgs.accessibleName}"> </furo-ui5-switch>`,
 };

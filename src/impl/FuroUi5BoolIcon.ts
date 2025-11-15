@@ -136,10 +136,12 @@ export class FuroUi5BoolIcon extends LitElement {
 
     // constraints
 
-    // set the text placeholdr from model if none was set
+    // set the text placeholder from model if none was set
 
     // a11y
-    this.accessibleName = this._model.__label;
+    if (this.accessibleName === undefined) {
+      this.accessibleName = this._model.__label;
+    }
   }
 
   private readFromModel(): void {

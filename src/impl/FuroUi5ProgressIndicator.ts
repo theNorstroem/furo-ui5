@@ -182,7 +182,9 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
     this.readFromModel();
 
     // a11y
-    this.accessibleName = this._model.__label;
+    if (this.accessibleName === undefined) {
+      this.accessibleName = this._model.__label;
+    }
   }
 
   private readFromModel(): void {

@@ -243,7 +243,9 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
     this.tooltip = this.tooltip === undefined ? this._model.__placeholder : this.tooltip;
 
     // a11y
-    this.accessibleName = this._model.__label;
+    if (this.accessibleName === undefined) {
+      this.accessibleName = this._model.__label;
+    }
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {

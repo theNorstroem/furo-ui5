@@ -111,7 +111,9 @@ export class FuroUi5ToggleButton extends ToggleButton {
     this.innerText = this.innerText === "" ? this._model.__placeholder : this.innerText;
 
     // a11y
-    this.accessibleName = this._model.__label;
+    if (this.accessibleName === undefined) {
+      this.accessibleName = this._model.__label;
+    }
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {

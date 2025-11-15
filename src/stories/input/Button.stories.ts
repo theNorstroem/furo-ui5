@@ -28,7 +28,7 @@ const meta: Meta = {
   title: "input/Button",
   component,
   tags: ["autodocs"],
-  args,
+  // args,
   argTypes,
   parameters: {
     actions: {
@@ -41,25 +41,23 @@ const meta: Meta = {
   },
 };
 export default meta;
-
 export const Default: StoryObj = {
   args: {
-    ...args,
     design: "Emphasized",
     defaultSlot: "Click me",
   },
   render: renderArgs =>
     html`<furo-ui5-button
-      ?disabled="${renderArgs.disabled}"
-      ?loading="${renderArgs.loading}"
-      ?submits="${renderArgs.submits}"
-      end-icon="${ifDefined(renderArgs.endIcon)}"
-      loading-delay="${ifDefined(renderArgs.loadingDelay)}"
-      accessible-name="${ifDefined(renderArgs.accessibleName)}"
-      type="${ifDefined(renderArgs.type)}"
-      tooltip="${ifDefined(renderArgs.tooltip)}"
-      design="${ifDefined(renderArgs.design)}"
-      icon="${ifDefined(renderArgs.icon)}"
-      >${unsafeHTML(renderArgs.defaultSlot)}</furo-ui5-button
-    >`,
+        ?disabled="${renderArgs.disabled}"
+        ?loading="${renderArgs.loading}"
+        ?submits="${renderArgs.submits}"
+        end-icon="${ifDefined(renderArgs.endIcon)}"
+        loading-delay="${ifDefined(renderArgs.loadingDelay)}"
+        accessible-name="${ifDefined(renderArgs.accessibleName)}"
+        type="${ifDefined(renderArgs.type)}"
+        tooltip="${ifDefined(renderArgs.tooltip)}"
+        design="${ifDefined(renderArgs.design)}"
+        icon="${ifDefined(renderArgs.icon)}"
+        >${unsafeHTML(renderArgs.defaultSlot)}</furo-ui5-button
+      >${renderArgs.loadingDelay}`,
 };

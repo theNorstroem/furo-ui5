@@ -162,7 +162,9 @@ export class FuroUi5PasswordInput extends Input {
     this.placeholder = this.placeholder === undefined ? this._model.__placeholder : this.placeholder;
 
     // a11y
-    this.accessibleName = this._model.__label;
+    if (this.accessibleName === undefined) {
+      this.accessibleName = this._model.__label;
+    }
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {

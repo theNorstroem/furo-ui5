@@ -221,7 +221,9 @@ export class FuroUi5Slider extends Slider {
     this.handleConstraints(this._model.__getConstraints());
 
     // a11y
-    this.accessibleName = this._model.__label;
+    if (this.accessibleName === undefined) {
+      this.accessibleName = this._model.__label;
+    }
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {
