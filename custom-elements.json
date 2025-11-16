@@ -9992,7 +9992,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define\nthe available options by using the furo-ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.\n\n```html\n<furo-ui5-select\n   .model=\"${this.model.stringlike}\"\n   .options=\"${this.identifiableOptionArray}\">\n</furo-ui5-select>\n```\n\n### Overview\n\nThe `furo-ui5-select` component is used to create a drop-down list.\n\n### Usage\n\nThere are two main usages of the `furo-ui5-select>`.\n\n- With Option (`furo-ui5-option`) web component:\n\nThe available options of the Select are defined by using the Option component.\nThe Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.\n\n- With OptionCustom (`furo-ui5-option-custom`) web component.\n\nOptions with custom content are defined by using the OptionCustom component.\nThe OptionCustom component comes with no predefined layout and it expects consumers to define it.\n\n### Selection\n\nThe options can be selected via user interaction (click or with the use of the Space and Enter keys)\nand programmatically - the Select component supports two distinct selection APIs, though mixing them is not supported:\n- The \"value\" property of the Select component\n- The \"selected\" property on individual options\n\n**Note:** If the \"value\" property is set but does not match any option,\nno option will be selected and the Select component will be displayed as empty.\n\n**Note:** when both \"value\" and \"selected\" are both used (although discouraged),\nthe \"value\" property will take precedence.\n\n### Keyboard Handling\n\nThe `furo-ui5-select` provides advanced keyboard handling.\n\n- [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.\n- [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.\n- [Space], [Enter] - If the drop-down is opened - selects the focused option.\n- [Escape] - Closes the drop-down without changing the selection.\n- [Home] - Navigates to first option\n- [End] - Navigates to the last option\n\n\n\n\n\n",
+          "description": "The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define\nthe available options by using the furo-ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.\n\n### Warning\n- This component updates the model with the first option, if the value was empty.\n- This component will render an empty value if the value is not in the list of options\n\n**Note:** Use either the Select's value or the Options' selected property. Mixed usage could result in unexpected behavior.\n\n**Note:** If the given value does not match any existing option, no option will be selected and the Select component will be displayed as empty.\n\n### IdentifiableList Signature\nThe optionsModel uses a FieldNode which fulfills the `IdentiableList` interface, this means that you have an ARRAY where the items have at least an id:string and a displeyName:string field.\n\n\n### Sample\n```html\n<furo-ui5-select\n   .model=\"${this.model.stringlike}\"\n   .optionsModel=\"${this.IdentifiableListKind}\">\n</furo-ui5-select>\n```\n\n### Overview\n\nThe `furo-ui5-select` component is used to create a drop-down list.\n\n### Usage\n\nThere are two main usages of the `furo-ui5-select>`.\n\n- With Option (`furo-ui5-option`) web component:\n\nThe available options of the Select are defined by using the Option component.\nThe Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.\n\n- With OptionCustom (`furo-ui5-option-custom`) web component.\n\nOptions with custom content are defined by using the OptionCustom component.\nThe OptionCustom component comes with no predefined layout and it expects consumers to define it.\n\n### Selection\n\nThe options can be selected via user interaction (click or with the use of the Space and Enter keys)\nand programmatically - the Select component supports two distinct selection APIs, though mixing them is not supported:\n- The \"value\" property of the Select component\n- The \"selected\" property on individual options\n\n**Note:** If the \"value\" property is set but does not match any option,\nno option will be selected and the Select component will be displayed as empty.\n\n**Note:** when both \"value\" and \"selected\" are both used (although discouraged),\nthe \"value\" property will take precedence.\n\n### Keyboard Handling\n\nThe `furo-ui5-select` provides advanced keyboard handling.\n\n- [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.\n- [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.\n- [Space], [Enter] - If the drop-down is opened - selects the focused option.\n- [Escape] - Closes the drop-down without changing the selection.\n- [Home] - Navigates to first option\n- [End] - Navigates to the last option\n\n\n\n\n\n",
           "name": "Select",
           "members": [
             {
@@ -10023,6 +10023,14 @@
               },
               "privacy": "private",
               "default": "new STRING()"
+            },
+            {
+              "kind": "field",
+              "name": "_optionsModel",
+              "type": {
+                "text": "IdentifiableList | undefined"
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -10093,6 +10101,27 @@
                       {
                         "name": "STRING",
                         "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component."
+            },
+            {
+              "kind": "method",
+              "name": "bindOptions",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "IdentifiableList",
+                    "references": [
+                      {
+                        "name": "IdentifiableList",
+                        "package": "@furo/ui5",
                         "module": "dist/index.js"
                       }
                     ]
@@ -10199,8 +10228,34 @@
               }
             },
             {
+              "kind": "field",
+              "name": "optionsModel",
+              "type": {
+                "text": "IdentifiableList | undefined",
+                "references": [
+                  {
+                    "name": "IdentifiableList",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a options field by attribute."
+            },
+            {
               "kind": "method",
               "name": "readFromModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "readFromOptionsModel",
               "privacy": "private",
               "return": {
                 "type": {

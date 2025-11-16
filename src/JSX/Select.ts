@@ -5,6 +5,8 @@ import type { SelectLiveChangeEventDetail, SelectChangeEventDetail, IOption } fr
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
 import * as React from "react";
 
+import type { IdentifiableList } from "../index";
+
 import type { FuroFatString } from "@/models/index.js";
 
 export interface Select extends React.HTMLAttributes<HTMLElement> {
@@ -18,6 +20,11 @@ export interface Select extends React.HTMLAttributes<HTMLElement> {
    * Use this to bind a model field by attribute.
    */
   model?: STRING | FuroFatString | StringValue;
+
+  /**
+   * Use this to bind a options field by attribute.
+   */
+  optionsModel?: IdentifiableList | undefined;
 
   // attributes
 
@@ -116,10 +123,23 @@ declare module "react" {
        * The furo-furo-furo-ui5-select component is used to create a drop-down list. The items inside the furo-furo-furo-ui5-select define
        * the available options by using the furo-furo-ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.
        *
+       * ### Warning
+       * - This component updates the model with the first option, if the value was empty.
+       * - This component will render an empty value if the value is not in the list of options
+       *
+       * **Note:** Use either the Select's value or the Options' selected property. Mixed usage could result in unexpected behavior.
+       *
+       * **Note:** If the given value does not match any existing option, no option will be selected and the Select component will be displayed as empty.
+       *
+       * ### IdentifiableList Signature
+       * The optionsModel uses a FieldNode which fulfills the `IdentiableList` interface, this means that you have an ARRAY where the items have at least an id:string and a displeyName:string field.
+       *
+       *
+       * ### Sample
        * ```html
        * <furo-furo-furo-ui5-select
        * .model="${this.model.stringlike}"
-       * .options="${this.identifiableOptionArray}">
+       * .optionsModel="${this.IdentifiableListKind}">
        * </furo-furo-furo-ui5-select>
        * ```
        *

@@ -14,14 +14,12 @@ import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
-import { ArgsSetEnum, ArgsTransormAll } from "@/stories/ArgTypesTransormer";
+import { ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
-import ValueState from "@/types/ValueState";
 
 const component = "furo-ui5-markdown";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
-ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 // set up the model
 const cube = new CubeEntity({ description: '**bold**\n- a\n- b\n\n ![alt text](/assets/favicon.svg "Title")' });

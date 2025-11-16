@@ -16,10 +16,23 @@ import { FuroFatString } from "@/models";
  * The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define
  * the available options by using the ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.
  *
+ * ### Warning
+ * - This component updates the model with the first option, if the value was empty.
+ * - This component will render an empty value if the value is not in the list of options
+ *
+ * **Note:** Use either the Select's value or the Options' selected property. Mixed usage could result in unexpected behavior.
+ *
+ * **Note:** If the given value does not match any existing option, no option will be selected and the Select component will be displayed as empty.
+ *
+ * ### IdentifiableList Signature
+ * The optionsModel uses a FieldNode which fulfills the `IdentiableList` interface, this means that you have an ARRAY where the items have at least an id:string and a displeyName:string field.
+ *
+ *
+ * ### Sample
  * ```html
  * <furo-ui5-select
  *    .model="${this.model.stringlike}"
- *    .options="${this.identifiableOptionArray}">
+ *    .optionsModel="${this.IdentifiableListKind}">
  * </furo-ui5-select>
  * ```
  *
@@ -128,7 +141,7 @@ export class FuroUi5Select extends Select {
   /**
    * Use this to bind a options field by attribute.
    *
-   * @typeref STRING - "@furo/open-optionss/dist/index.js"
+   * @typeref IdentifiableList - "@furo/ui5/dist/index.js"
    * @public
    */
   public set optionsModel(value: IdentifiableList) {
@@ -138,7 +151,7 @@ export class FuroUi5Select extends Select {
   /**
    * Connects your data model to this component.
    *
-   * @paramref fieldNode - STRING - "@furo/open-models/dist/index.js"
+   * @paramref fieldNode - IdentifiableList - "@furo/ui5/dist/index.js"
    * @public
    */
   public bindOptions(fieldNode: IdentifiableList) {
@@ -164,6 +177,14 @@ export class FuroUi5Select extends Select {
 
     // initial read
     this.readFromOptionsModel();
+
+    // write to model
+    setTimeout(() => {
+      if (this.value === "") {
+        this.value = this.optionsModel?.at(0)?.id.toString() || "";
+        this.writeToModel();
+      }
+    });
   }
 
   private readFromOptionsModel(): void {

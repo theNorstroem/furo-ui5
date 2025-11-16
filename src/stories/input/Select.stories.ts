@@ -3,6 +3,9 @@ import "@/furo-ui5-form-layout";
 import "@/furo-ui5-form-row";
 import "@/furo-ui5-button";
 import "@/furo-ui5-label";
+import "@/furo-ui5-markdown";
+import "@/furo-ui5-title";
+import "@/furo-ui5-text-input";
 
 import { ARRAY } from "@furo/open-models/dist/index";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
@@ -39,6 +42,10 @@ const options: ARRAY<CubeOptions, ICubeOptions> = ARRAY.Builder(CubeOptions, [
     icon: "product",
   },
 ]);
+
+const setValueOutOfRange = () => {
+  cube.cube.singleOption = "36";
+};
 
 const addOption = () => {
   options.add({ id: "3", displayName: "Dynamic" }, true);
@@ -110,6 +117,7 @@ export const Default: StoryObj = {
           .model="${cube.cube.singleOption}"
           .optionsModel="${options}"
           value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
         >
           ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
         </furo-ui5-select>
@@ -127,10 +135,143 @@ export const Default: StoryObj = {
           .model="${cube.cube.singleOption}"
           .optionsModel="${options}"
           value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
         >
           ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
         </furo-ui5-select>
       </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="sec">Selected Option ID</furo-ui5-label>
+        <furo-ui5-text-input .model="${cube.cube.singleOption}"> </furo-ui5-text-input>
+      </furo-ui5-form-row>
     </furo-ui5-form-layout>
+
+    <br />
+    <br />
+    <furo-ui5-title>Initial Options</furo-ui5-title>
+
+    <furo-ui5-markdown
+      markdown="\`\`\`json
+ ${JSON.stringify(options.__toLiteral(), null, 2)}"
+    ></furo-ui5-markdown>
+  `,
+};
+
+export const WithoutModelBinding: StoryObj = {
+  args: {
+    value: "2",
+  },
+
+  render: renderArgs => html`
+    <furo-ui5-form-layout form-title="Select">
+      <ul>
+        <li>You can use the select without binding a "model" to the select.</li>
+        <li>At least you have the select options, but have to handle the value handling by yourself.</li>
+        <li>Do not forget to set the <b>accessible name</b>, if you work without a model binding.</li>
+      </ul>
+
+      <furo-ui5-button slot="action" @click="${validate}" design="Transparent">Validate</furo-ui5-button>
+      <furo-ui5-button slot="action" @click="${addOption}" design="Transparent">Add Option</furo-ui5-button>
+      <furo-ui5-button slot="action" @click="${modifyOption}" design="Transparent">Modify Option</furo-ui5-button>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="enum">Description</furo-ui5-label>
+        <furo-ui5-select
+          id="enum"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
+          .optionsModel="${options}"
+          value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
+        >
+          ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-select>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="sec">Description</furo-ui5-label>
+        <furo-ui5-select
+          id="other"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
+          .optionsModel="${options}"
+          value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
+        >
+          ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-select>
+      </furo-ui5-form-row>
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="sec">Selected Option ID</furo-ui5-label>
+        <furo-ui5-text-input .model="${cube.cube.singleOption}"></furo-ui5-text-input>
+      </furo-ui5-form-row>
+    </furo-ui5-form-layout>
+  `,
+};
+
+export const ValueNotInOptionlist: StoryObj = {
+  args: {},
+
+  render: renderArgs => html`
+    <furo-ui5-form-layout form-title="Select">
+      <p>When the value is not in the list of options, a blank select is displayed</p>
+      <furo-ui5-button slot="action" @click="${setValueOutOfRange}" design="Transparent">Set Value out of range</furo-ui5-button>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="enum">Description</furo-ui5-label>
+        <furo-ui5-select
+          id="enum"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
+          .model="${cube.cube.singleOption}"
+          .optionsModel="${options}"
+          value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
+        >
+          ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-select>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="sec">Description</furo-ui5-label>
+        <furo-ui5-select
+          id="other"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
+          .model="${cube.cube.singleOption}"
+          .optionsModel="${options}"
+          value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
+        >
+          ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-select>
+      </furo-ui5-form-row>
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="sec">Selected Option ID</furo-ui5-label>
+        <furo-ui5-text-input .model="${cube.cube.singleOption}"> </furo-ui5-text-input>
+      </furo-ui5-form-row>
+    </furo-ui5-form-layout>
+
+    <br />
+    <br />
+    <furo-ui5-title>Initial Options</furo-ui5-title>
+
+    <furo-ui5-markdown
+      markdown="\`\`\`json
+ ${JSON.stringify(options.__toLiteral(), null, 2)}"
+    ></furo-ui5-markdown>
   `,
 };
