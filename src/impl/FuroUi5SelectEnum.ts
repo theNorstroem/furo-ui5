@@ -1,7 +1,8 @@
-import Select from "@ui5/webcomponents/dist/Select.js";
-import { ENUM, type FieldConstraints } from "@furo/open-models";
-
 import "@/furo-ui5-option";
+
+import { ENUM, type FieldConstraints } from "@furo/open-models";
+import Select from "@ui5/webcomponents/dist/Select.js";
+
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 
 /**

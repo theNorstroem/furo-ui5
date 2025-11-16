@@ -18,8 +18,6 @@ export class FuroUi5Option extends Option {
     return super.connectedCallback();
   }
 
-
-
   /**
    * @private
    */

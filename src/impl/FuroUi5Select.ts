@@ -1,14 +1,16 @@
-import '@ui5/webcomponents/dist/Option.js';
-import Select from '@ui5/webcomponents/dist/Select.js';
+import "@ui5/webcomponents/dist/Option.js";
+
+import { type FieldConstraints, STRING, StringValue } from "@furo/open-models";
+import Select from "@ui5/webcomponents/dist/Select.js";
+
+import type { FuroUi5Option } from "@/impl/FuroUi5Option";
+import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
-import { FatHandler } from "@/lib/open-models/FatHandler";
-import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
-import { type FieldConstraints, STRING, StringValue } from "@furo/open-models";
-import { FuroFatString } from "@/models";
 import type { IdentifiableList } from "@/lib/open-models/signatures";
-import type { FuroUi5Option } from "@/impl/FuroUi5Option";
+import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
+import { FuroFatString } from "@/models";
 
 /**
  * The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define
@@ -26,7 +28,8 @@ import type { FuroUi5Option } from "@/impl/FuroUi5Option";
  * @tagname furo-ui5-select
  * @demo demo-furo-ui5-select Basic usage (scalar , fat, wrapper values)
  */
-export class FuroUi5Select extends Select {private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
+export class FuroUi5Select extends Select {
+  private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
 
   private modelReaderWriter: ModelReaderWriter | undefined;
 
@@ -116,7 +119,6 @@ export class FuroUi5Select extends Select {private readonly valueStateManager: F
     }
   }
 
-
   private _optionsModel: IdentifiableList | undefined;
 
   public get optionsModel(): IdentifiableList | undefined {
@@ -162,43 +164,45 @@ export class FuroUi5Select extends Select {private readonly valueStateManager: F
 
     // initial read
     this.readFromOptionsModel();
-
   }
 
   private readFromOptionsModel(): void {
     // clear existing options
     this.querySelectorAll("furo-ui5-option").forEach(el => {
-      el.setAttribute("deleteme","")
+      el.setAttribute("deleteme", "");
     });
 
-    this.optionsModel?.forEach((option,i) => {
-      const existingOpt:FuroUi5Option | null = this.querySelector(`furo-ui5-option[value="${option.id.toString()}"]`)
-      const opt:FuroUi5Option = existingOpt || document.createElement("furo-ui5-option")
-      opt.innerText = option.displayName.toString()
-      opt.value = option.id.toString()
-      if(option.icon?.toString()){
-        opt.icon = option.icon.toString()
+    this.optionsModel?.forEach((option, i) => {
+      const existingOpt: FuroUi5Option | null = this.querySelector(`furo-ui5-option[value="${option.id.toString()}"]`);
+      const opt: FuroUi5Option = existingOpt || document.createElement("furo-ui5-option");
+      opt.innerText = option.displayName.toString();
+      opt.value = option.id.toString();
+      if (option.icon?.toString()) {
+        opt.icon = option.icon.toString();
       }
 
       opt.style.order = i.toString();
 
-      if(option.tooltip?.toString()){
-        opt.tooltip = option.tooltip.toString()
+      if (option.tooltip?.toString()) {
+        opt.tooltip = option.tooltip.toString();
       }
-      if(existingOpt === null){
-        this.appendChild(opt)
-      }else {
+      if (existingOpt === null) {
+        this.appendChild(opt);
+      } else {
         opt.removeAttribute("deleteme");
       }
-    })
+    });
     // delete
     this.querySelectorAll("furo-ui5-option[deleteme]").forEach(el => {
-      el.remove()
+      el.remove();
     });
 
     // sort
-    [...this.querySelectorAll('furo-ui5-option')].sort((a, b) => Number((a as HTMLElement).style.order) - Number((b as HTMLElement).style.order))
-      .forEach((el) => {this.appendChild(el)})
+    [...this.querySelectorAll("furo-ui5-option")]
+      .sort((a, b) => Number((a as HTMLElement).style.order) - Number((b as HTMLElement).style.order))
+      .forEach(el => {
+        this.appendChild(el);
+      });
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {
@@ -210,7 +214,6 @@ export class FuroUi5Select extends Select {private readonly valueStateManager: F
       if (fieldConstraints.read_only) {
         this.readonly = true;
       }
-
     }
   }
 
@@ -238,7 +241,6 @@ export class FuroUi5Select extends Select {private readonly valueStateManager: F
     this.value = "";
     this.writeToModel();
   }
-
 
   /**
    * @private

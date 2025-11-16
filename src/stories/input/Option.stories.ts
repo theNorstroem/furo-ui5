@@ -3,7 +3,6 @@ import "@/furo-ui5-form-layout";
 import "@/furo-ui5-form-row";
 import "@/furo-ui5-button";
 import "@/furo-ui5-label";
-
 import "@ui5/webcomponents-icons/dist/AllIcons";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
@@ -13,13 +12,12 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
-import {  ArgsTransormAll } from "@/stories/ArgTypesTransormer";
+import { ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
 
 const component = "furo-ui5-option";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
-
 
 // set up the model
 const cube = new CubeEntity();

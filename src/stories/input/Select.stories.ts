@@ -4,6 +4,7 @@ import "@/furo-ui5-form-row";
 import "@/furo-ui5-button";
 import "@/furo-ui5-label";
 
+import { ARRAY } from "@furo/open-models/dist/index";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
@@ -11,11 +12,10 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
+import { CubeOptions, type ICubeOptions } from "@/models/furoui5test/cube/CubeOptions";
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
 import ValueState from "@/types/ValueState";
-import { CubeOptions, type ICubeOptions } from "@/models/furoui5test/cube/CubeOptions";
-import { ARRAY } from "@furo/open-models/dist/index";
 
 const component = "furo-ui5-select";
 const { events, args, argTypes } = getStorybookHelpers(component);
@@ -36,20 +36,19 @@ const options: ARRAY<CubeOptions, ICubeOptions> = ARRAY.Builder(CubeOptions, [
   {
     id: "2",
     displayName: "Second",
-    icon:"product"
-  }
-  ]);
+    icon: "product",
+  },
+]);
 
-const addOption = ()=>{
-  options.add({id:"3", displayName:"Dynamic"},true)
-}
-const modifyOption = ()=>{
-  const opt = options.at(0)
-  if(opt){
-  opt.icon = "share"
+const addOption = () => {
+  options.add({ id: "3", displayName: "Dynamic" }, true);
+};
+const modifyOption = () => {
+  const opt = options.at(0);
+  if (opt) {
+    opt.icon = "share";
   }
-}
-
+};
 
 const meta: Meta = {
   title: "input/Select/Select",
@@ -132,8 +131,6 @@ export const Default: StoryObj = {
           ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
         </furo-ui5-select>
       </furo-ui5-form-row>
-
-
     </furo-ui5-form-layout>
   `,
 };

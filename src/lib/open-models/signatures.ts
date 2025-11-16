@@ -1,4 +1,4 @@
-import { FieldNode, STRING, ARRAY } from "@furo/open-models";
+import { ARRAY, FieldNode, STRING } from "@furo/open-models";
 
 export interface Identifiable extends FieldNode {
   id: STRING;
@@ -8,6 +8,4 @@ export interface Identifiable extends FieldNode {
   tooltip?: STRING;
 }
 
-export interface IdentifiableList extends ARRAY<Identifiable,unknown> {
-
-}
+export interface IdentifiableList extends ARRAY<Identifiable, unknown> {}

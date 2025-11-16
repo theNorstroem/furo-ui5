@@ -12,12 +12,12 @@ import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
+import type { FuroUi5Icon } from "@/impl/FuroUi5Icon";
+import type { FuroUi5PasswordInput } from "@/impl/FuroUi5PasswordInput";
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
 import ValueState from "@/types/ValueState";
-import type { FuroUi5PasswordInput } from "@/impl/FuroUi5PasswordInput";
-import type { FuroUi5Icon } from "@/impl/FuroUi5Icon";
 
 const component = "furo-ui5-password-input";
 const { events, args, argTypes } = getStorybookHelpers(component);

@@ -3,6 +3,7 @@ import { css, html, LitElement, nothing, type TemplateResult } from "lit";
 import { property } from "lit/decorators.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import MarkdownIt from "markdown-it";
+
 import { TableCss } from "@/styles/table.css";
 
 /**
@@ -58,10 +59,6 @@ export class FuroUi5Markdown extends LitElement {
    */
   set model(value: STRING) {
     this.bindData(value);
-  }
-
-  constructor() {
-    super();
   }
 
   override disconnectedCallback(): void {

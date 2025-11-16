@@ -9,9 +9,9 @@ export * from "./impl/FuroUi5TableToolbarSeparator";
 export * from "./impl/FuroUi5TextInput";
 export * from "./impl/FuroUi5UserMenu";
 export { type InputSelectionChangeEventDetail, type InputSuggestionScrollEventDetail } from "@ui5/webcomponents/dist/Input.js";
-export { type SelectChangeEventDetail, type SelectLiveChangeEventDetail } from "@ui5/webcomponents/dist/Select.js";
 export { type LinkClickEventDetail } from "@ui5/webcomponents/dist/Link.js";
 export { type PopupBeforeCloseEventDetail, type PopupScrollEventDetail } from "@ui5/webcomponents/dist/Popup.js";
+export { type SelectChangeEventDetail, type SelectLiveChangeEventDetail } from "@ui5/webcomponents/dist/Select.js";
 export {
   type ShellBarLogoClickEventDetail,
   type ShellBarMenuItemClickEventDetail,
