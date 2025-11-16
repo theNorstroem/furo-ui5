@@ -1,4 +1,4 @@
-import "@/furo-ui5-select-enum";
+import "@/furo-ui5-select";
 import "@/furo-ui5-form-layout";
 import "@/furo-ui5-form-row";
 import "@/furo-ui5-button";
@@ -14,8 +14,10 @@ import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
 import ValueState from "@/types/ValueState";
+import { CubeOptions, type ICubeOptions } from "@/models/furoui5test/cube/CubeOptions";
+import { ARRAY } from "@furo/open-models/dist/index";
 
-const component = "furo-ui5-select-enum";
+const component = "furo-ui5-select";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
@@ -26,8 +28,31 @@ const validate = () => {
   cube.__validate();
 };
 
+const options: ARRAY<CubeOptions, ICubeOptions> = ARRAY.Builder(CubeOptions, [
+  {
+    id: "1",
+    displayName: "First",
+  },
+  {
+    id: "2",
+    displayName: "Second",
+    icon:"product"
+  }
+  ]);
+
+const addOption = ()=>{
+  options.add({id:"3", displayName:"Dynamic"},true)
+}
+const modifyOption = ()=>{
+  const opt = options.at(0)
+  if(opt){
+  opt.icon = "share"
+  }
+}
+
+
 const meta: Meta = {
-  title: "input/Select/SelectEnum",
+  title: "input/Select/Select",
   component,
   subcomponents: {},
   tags: ["autodocs"],
@@ -68,87 +93,47 @@ export default meta;
 export const Default: StoryObj = {
   args: {},
   render: renderArgs => html`
-    <furo-ui5-form-layout form-title="Enum Select">
+    <furo-ui5-form-layout form-title="Select">
       ${cube.description}
       <furo-ui5-button slot="action" @click="${validate}" design="Transparent">Validate</furo-ui5-button>
+      <furo-ui5-button slot="action" @click="${addOption}" design="Transparent">Add Option</furo-ui5-button>
+      <furo-ui5-button slot="action" @click="${modifyOption}" design="Transparent">Modify Option</furo-ui5-button>
 
       <furo-ui5-form-row>
         <furo-ui5-label slot="label" for="enum">Description</furo-ui5-label>
-        <furo-ui5-select-enum
+        <furo-ui5-select
           id="enum"
           accessible-name="${ifDefined(renderArgs.accessibleName)}"
           ?disabled="${renderArgs.disabled}"
-          ?show-unspecified="${renderArgs.showUnspecified}"
           ?required="${renderArgs.required}"
           ?readonly="${renderArgs.readonly}"
           tooltip="${ifDefined(renderArgs.tooltip)}"
-          .model="${cube.cube.material}"
+          .model="${cube.cube.singleOption}"
+          .optionsModel="${options}"
           value-state="${ifDefined(renderArgs.valueState)}"
-          >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
-        </furo-ui5-select-enum>
+        >
+          ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-select>
       </furo-ui5-form-row>
 
       <furo-ui5-form-row>
         <furo-ui5-label slot="label" for="sec">Description</furo-ui5-label>
-        <furo-ui5-select-enum
-          id="sec"
+        <furo-ui5-select
+          id="other"
           accessible-name="${ifDefined(renderArgs.accessibleName)}"
           ?disabled="${renderArgs.disabled}"
-          ?show-unspecified="${renderArgs.showUnspecified}"
           ?required="${renderArgs.required}"
           ?readonly="${renderArgs.readonly}"
           tooltip="${ifDefined(renderArgs.tooltip)}"
-          .model="${cube.cube.material}"
+          .model="${cube.cube.singleOption}"
+          .optionsModel="${options}"
           value-state="${ifDefined(renderArgs.valueState)}"
-          >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
-        </furo-ui5-select-enum>
-      </furo-ui5-form-row>
-    </furo-ui5-form-layout>
-  `,
-};
-
-export const ShowUnspecified: StoryObj = {
-  args: {
-    showUnspecified: true,
-  },
-
-  render: renderArgs => html`
-    <furo-ui5-form-layout form-title="Text Input Element">
-      ${cube.description}
-      <furo-ui5-button slot="action" @click="${validate}" design="Transparent">Validate</furo-ui5-button>
-
-      <furo-ui5-form-row>
-        <furo-ui5-label slot="label" for="enum">Description</furo-ui5-label>
-        <furo-ui5-select-enum
-          id="enum"
-          accessible-name="${ifDefined(renderArgs.accessibleName)}"
-          ?disabled="${renderArgs.disabled}"
-          ?show-unspecified="${renderArgs.showUnspecified}"
-          ?required="${renderArgs.required}"
-          ?readonly="${renderArgs.readonly}"
-          value="${ifDefined(renderArgs.value)}"
-          .model="${cube.cube.material}"
-          value-state="${ifDefined(renderArgs.valueState)}"
-          >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
-        </furo-ui5-select-enum>
+        >
+          ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-select>
       </furo-ui5-form-row>
 
-      <furo-ui5-form-row>
-        <furo-ui5-label slot="label" for="sec">Description</furo-ui5-label>
-        <furo-ui5-select-enum
-          id="sec"
-          accessible-name="${ifDefined(renderArgs.accessibleName)}"
-          ?disabled="${renderArgs.disabled}"
-          ?show-unspecified="${renderArgs.showUnspecified}"
-          ?required="${renderArgs.required}"
-          ?readonly="${renderArgs.readonly}"
-          value="${ifDefined(renderArgs.value)}"
-          placeholder="${ifDefined(renderArgs.placeholder)}"
-          .model="${cube.cube.material}"
-          value-state="${ifDefined(renderArgs.valueState)}"
-          >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
-        </furo-ui5-select-enum>
-      </furo-ui5-form-row>
+
     </furo-ui5-form-layout>
   `,
 };

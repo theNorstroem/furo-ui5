@@ -1,6 +1,13 @@
-import { FieldNode, STRING } from "@furo/open-models";
+import { FieldNode, STRING, ARRAY } from "@furo/open-models";
 
 export interface Identifiable extends FieldNode {
   id: STRING;
   displayName: STRING;
+  icon?: STRING;
+  additionalText?: STRING;
+  tooltip?: STRING;
+}
+
+export interface IdentifiableList extends ARRAY<Identifiable,unknown> {
+
 }

@@ -43,7 +43,7 @@ import './impl/furo-ui5-reference-search-labeled.js';
 import './impl/furo-ui5-segmented-button.js';
 import './impl/FuroUi5Step.ts';
 import './impl/furo-ui5-step-input-labeled.js';
-import './impl/FuroUi5Select.js';
+import './impl/FuroUi5Select.ts';
 import './impl/furo-ui5-select-labeled.js';
 import './impl/FuroUi5SignPad.ts';
 import './impl/furo-ui5-table.js';

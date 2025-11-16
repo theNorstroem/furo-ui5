@@ -27,6 +27,8 @@ message CubeDefinition {
   };
   furo.fat.String fat_string = 9;
   int32 rating = 10 [(openapi.v3.property) ={default:{number:4}, maximum: 5, minimum: 0}];
+  string single_option = 11;
+  repeated string multiple_options = 12;
 }
 
 message CubeEntity {
@@ -35,3 +37,10 @@ message CubeEntity {
   CubeDefinition cube = 3 [(openapi.v3.property) = {default:{string:'{"length":222}'}}];
 }
 
+
+  message CubeOptions{
+  string id =1;
+  string display_name = 2;
+  string icon = 3;
+  string tooltip =4;
+  }

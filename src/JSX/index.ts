@@ -23,6 +23,7 @@ import "./RadioButton";
 import "./RatingIndicator";
 import "./ResponsivePopover";
 import "./Section";
+import "./Select";
 import "./SelectEnum";
 import "./ShellBar";
 import "./ShellBarItem";
