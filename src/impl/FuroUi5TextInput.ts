@@ -112,9 +112,9 @@ export class FuroUi5TextInput extends Input {
      * - from ui: input, change
      */
     this.readonlyState.detach();
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
-    this.addEventListener("input", this.writeToModel.bind(this));
-    this.addEventListener("change", this.writeToModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel.bind(this));
+    this.removeEventListener("input", this.writeToModel.bind(this));
+    this.removeEventListener("change", this.writeToModel.bind(this));
 
     // connect the model
     this._model = fieldNode;

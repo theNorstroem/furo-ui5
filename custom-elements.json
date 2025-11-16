@@ -4868,14 +4868,16 @@
               "name": "mdFinal",
               "type": {
                 "text": "MarkdownIt"
-              }
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",
               "name": "mdStream",
               "type": {
                 "text": "MarkdownIt"
-              }
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -4905,7 +4907,8 @@
             },
             {
               "kind": "method",
-              "name": "readFromModel"
+              "name": "readFromModel",
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -5842,6 +5845,225 @@
           "declaration": {
             "name": "FuroUi5NumberInput",
             "module": "src/impl/FuroUi5NumberInput.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5Option.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "\n\n### Overview\n\nThe `furo-ui5-option` component defines the content of an option in the `furo-ui5-select`.\n\n\n",
+          "name": "Option",
+          "cssProperties": [
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "Used to style the outermost wrapper of the Option.",
+              "name": "root"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "additionalText",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the `additionalText`, displayed in the end of the option.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the `icon` source URI.\n\n**Note:**\nSAP-icons font provides numerous built-in icons. To find all the available icons, see the\n[Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines the selected state of the component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the tooltip of the option.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the value of the `furo-ui5-select` inside an HTML Form element when this component is selected.\nFor more information on HTML Form support, see the `name` property of `furo-ui5-select`.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "Option",
+            "package": "@ui5/webcomponents",
+            "module": "dist/Option.js"
+          },
+          "tagName": "furo-ui5-option",
+          "customElement": true,
+          "slots": [
+            {
+              "name": "default",
+              "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines the `additionalText`, displayed in the end of the option.",
+              "name": "additional-text",
+              "default": "undefined",
+              "fieldName": "additionalText",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the `icon` source URI.\n\n**Note:**\nSAP-icons font provides numerous built-in icons. To find all the available icons, see the\n[Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).",
+              "name": "icon",
+              "default": "undefined",
+              "fieldName": "icon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the selected state of the component.",
+              "name": "selected",
+              "default": "false",
+              "fieldName": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            },
+            {
+              "description": "Defines the tooltip of the option.",
+              "name": "tooltip",
+              "default": "undefined",
+              "fieldName": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            },
+            {
+              "description": "Defines the value of the `furo-ui5-select` inside an HTML Form element when this component is selected.\nFor more information on HTML Form support, see the `name` property of `furo-ui5-select`.",
+              "name": "value",
+              "default": "undefined",
+              "fieldName": "value",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Option",
+                "module": "dist/Option.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5Option",
+          "declaration": {
+            "name": "FuroUi5Option",
+            "module": "src/impl/FuroUi5Option.ts"
           }
         }
       ]
@@ -9751,6 +9973,616 @@
           "declaration": {
             "name": "FuroUi5Section",
             "module": "src/impl/FuroUi5Section.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5SelectEnum.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "### FuroUi5SelectEnum\nWith FuroUi5SelectEnum you can bind a ENUM field to the model. It will build up all defined options from the ENUM.\n\nIt extends the UI5 Select.\n\n---\n\n### Overview\n\nThe `furo-ui5-select` component is used to create a drop-down list.\n\n### Usage\n\nThere are two main usages of the `furo-ui5-select>`.\n\n- With Option (`furo-ui5-option`) web component:\n\nThe available options of the Select are defined by using the Option component.\nThe Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.\n\n- With OptionCustom (`furo-ui5-option-custom`) web component.\n\nOptions with custom content are defined by using the OptionCustom component.\nThe OptionCustom component comes with no predefined layout and it expects consumers to define it.\n\n### Selection\n\nThe options can be selected via user interaction (click or with the use of the Space and Enter keys)\nand programmatically - the Select component supports two distinct selection APIs, though mixing them is not supported:\n- The \"value\" property of the Select component\n- The \"selected\" property on individual options\n\n**Note:** If the \"value\" property is set but does not match any option,\nno option will be selected and the Select component will be displayed as empty.\n\n**Note:** when both \"value\" and \"selected\" are both used (although discouraged),\nthe \"value\" property will take precedence.\n\n### Keyboard Handling\n\nThe `furo-ui5-select` provides advanced keyboard handling.\n\n- [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.\n- [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.\n- [Space], [Enter] - If the drop-down is opened - selects the focused option.\n- [Escape] - Closes the drop-down without changing the selection.\n- [Home] - Navigates to first option\n- [End] - Navigates to the last option\n\n\n\n\n\n",
+          "name": "SelectEnum",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "ENUM<unknown> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "accessibleDescription",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible description of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleDescriptionRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Receives id(or many ids) of the elements that describe the select.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible ARIA name of the component.",
+              "privacy": "public",
+              "default": "undefined",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Receives id(or many ids) of the elements that label the select.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "ENUM<unknown>",
+                    "references": [
+                      {
+                        "name": "ENUM",
+                        "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is in disabled state.\n\n**Note:** A disabled component is noninteractive.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleConstraints",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "fieldConstraints",
+                  "type": {
+                    "text": "FieldConstraints | undefined"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "ENUM<unknown> | undefined",
+                "references": [
+                  {
+                    "name": "ENUM",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "value"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines the name by which the component will be identified upon submission in an HTML form.\n\n**Note:** This property is only applicable within the context of an HTML Form element.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "readFromModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is read-only.\n\n**Note:** A read-only component is not editable,\nbut still provides visual feedback upon user interaction.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is required.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "selectedOption",
+              "type": {
+                "text": "IOption | undefined",
+                "references": [
+                  {
+                    "name": "IOption",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/Select.js"
+                  }
+                ]
+              },
+              "description": "Currently selected `furo-ui5-option` element.",
+              "privacy": "public",
+              "default": "undefined",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "showUnspecifiedOption",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "show-unspecified"
+            },
+            {
+              "kind": "field",
+              "name": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the tooltip of the select.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "description": "Defines the value of the component:\n\n- when get - returns the value of the component or the value/text content of the selected option.\n- when set - selects the option with matching `value` property or text content.\n\n**Note:** Use either the Select's value or the Options' selected property.\nMixed usage could result in unexpected behavior.\n\n**Note:** If the given value does not match any existing option,\nno option will be selected and the Select component will be displayed as empty.",
+              "privacy": "public",
+              "default": "\"\"",
+              "type": {
+                "text": "string"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "valueState",
+              "type": {
+                "text": "ValueState",
+                "references": [
+                  {
+                    "name": "ValueState",
+                    "package": "@ui5/webcomponents-base",
+                    "module": "dist/types/ValueState.js"
+                  }
+                ]
+              },
+              "default": "\"None\"",
+              "description": "Defines the value state of the component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "valueStateManager",
+              "type": {
+                "text": "FieldNodeValueState"
+              },
+              "privacy": "private",
+              "readonly": true,
+              "default": "new FieldNodeValueState(this)"
+            },
+            {
+              "kind": "method",
+              "name": "writeToModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines the accessible description of the component.",
+              "name": "accessible-description",
+              "default": "undefined",
+              "fieldName": "accessibleDescription",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "description": "Receives id(or many ids) of the elements that describe the select.",
+              "name": "accessible-description-ref",
+              "default": "undefined",
+              "fieldName": "accessibleDescriptionRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "description": "Defines the accessible ARIA name of the component.",
+              "name": "accessible-name",
+              "default": "undefined",
+              "fieldName": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "description": "Receives id(or many ids) of the elements that label the select.",
+              "name": "accessible-name-ref",
+              "default": "undefined",
+              "fieldName": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is in disabled state.\n\n**Note:** A disabled component is noninteractive.",
+              "name": "disabled",
+              "default": "false",
+              "fieldName": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Determines the name by which the component will be identified upon submission in an HTML form.\n\n**Note:** This property is only applicable within the context of an HTML Form element.",
+              "name": "name",
+              "default": "undefined",
+              "fieldName": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is read-only.\n\n**Note:** A read-only component is not editable,\nbut still provides visual feedback upon user interaction.",
+              "name": "readonly",
+              "default": "false",
+              "fieldName": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is required.",
+              "name": "required",
+              "default": "false",
+              "fieldName": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "description": "Currently selected `furo-ui5-option` element.",
+              "name": "selected-option",
+              "default": "undefined",
+              "fieldName": "selectedOption",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "name": "show-unspecified",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "showUnspecifiedOption",
+              "description": "Allows you to select the `unspecified` option."
+            },
+            {
+              "description": "Defines the tooltip of the select.",
+              "name": "tooltip",
+              "default": "undefined",
+              "fieldName": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "description": "Defines the value of the component:\n\n- when get - returns the value of the component or the value/text content of the selected option.\n- when set - selects the option with matching `value` property or text content.\n\n**Note:** Use either the Select's value or the Options' selected property.\nMixed usage could result in unexpected behavior.\n\n**Note:** If the given value does not match any existing option,\nno option will be selected and the Select component will be displayed as empty.",
+              "name": "value",
+              "default": "\"\"",
+              "fieldName": "value",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "description": "Defines the value state of the component.",
+              "name": "value-state",
+              "default": "\"None\"",
+              "fieldName": "valueState",
+              "type": {
+                "text": "\"None\" | \"Positive\" | \"Negative\" | \"Critical\" | \"Information\""
+              },
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "Select",
+            "package": "@ui5/webcomponents",
+            "module": "dist/Select.js"
+          },
+          "tagName": "furo-ui5-select-enum",
+          "customElement": true,
+          "slots": [
+            {
+              "name": "default",
+              "description": "Defines the component options.\n\n**Note:** Only one selected option is allowed.\nIf more than one option is defined as selected, the last one would be considered as the selected one.\n\n**Note:** Use the `ui5-option` component to define the desired options.",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "name": "valueStateMessage",
+              "description": "Defines the value state message that will be displayed as pop up under the component.\n\n**Note:** If not specified, a default text (in the respective language) will be displayed.\n\n**Note:** The `valueStateMessage` would be displayed,\nwhen the component is in `Information`, `Critical` or `Negative` value state.\n\n**Note:** If the component has `suggestionItems`,\nthe `valueStateMessage` would be displayed as part of the same popover, if used on desktop, or dialog - on phone.",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "name": "label",
+              "description": "Defines the HTML element that will be displayed in the component input part,\nrepresenting the selected option.\n\n**Note:** If not specified and `ui5-option-custom` is used,\neither the option's `display-text` or its textContent will be displayed.\n\n**Note:** If not specified and `ui5-option` is used,\nthe option's textContent will be displayed.",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Used to style the popover element",
+              "name": "popover",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "change",
+              "type": {
+                "text": "CustomEvent<SelectChangeEventDetail>",
+                "references": [
+                  {
+                    "name": "SelectChangeEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/Select.js"
+                  }
+                ]
+              },
+              "description": "Fired when the selected option changes.",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "name": "close",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired after the component's dropdown menu closes.",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "name": "live-change",
+              "type": {
+                "text": "CustomEvent<SelectLiveChangeEventDetail>",
+                "references": [
+                  {
+                    "name": "SelectLiveChangeEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/Select.js"
+                  }
+                ]
+              },
+              "description": "Fired when the user navigates through the options, but the selection is not finalized,\nor when pressing the ESC key to revert the current selection.",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            },
+            {
+              "name": "open",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired after the component's dropdown menu opens.",
+              "inheritedFrom": {
+                "name": "Select",
+                "module": "dist/Select.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5SelectEnum",
+          "declaration": {
+            "name": "FuroUi5SelectEnum",
+            "module": "src/impl/FuroUi5SelectEnum.ts"
           }
         }
       ]

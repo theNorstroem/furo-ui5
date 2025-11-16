@@ -1,6 +1,7 @@
 import "@/furo-ui5-button";
 import "@/furo-ui5-toast";
 import "@/furo-ui5-icon";
+import "@/furo-ui5-select-enum";
 import "@/furo-ui5-show-hide";
 import "@/furo-ui5-text-input";
 import "@/furo-ui5-textarea";
@@ -115,10 +116,12 @@ export class InputFields extends LitFBP(LitElement) {
    */
   override render() {
     return html`
+
+      <furo-ui5-select-enum .model="${this.cube.cube.material}"></furo-ui5-select-enum>
+      <furo-ui5-select-enum .model="${this.cube.cube.material}"></furo-ui5-select-enum>
       <furo-ui5-section heading="STRING">
         <furo-ui5-subsection heading="some">
           <furo-ui5-number-input value-state="Positive" .model="${this.cube.cube.length}"></furo-ui5-number-input>
-
           <furo-ui5-button @click="${this.validateCube}" slot="action" design="Transparent">Validate</furo-ui5-button>
           <furo-ui5-button at-click="--showDialog" slot="action" design="Transparent">Dialog</furo-ui5-button>
           <furo-ui5-checkbox slot="action" fn-check="" text="Override" .model="${this.wrappers.boolValue}"></furo-ui5-checkbox>
