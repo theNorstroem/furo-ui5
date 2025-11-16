@@ -307,7 +307,8 @@ export default {
 
           // Replace inherited ui5 descriptions with furo in main description
           decl.description = decl.description
-            .replaceAll("ui5-", "furo-ui5-")
+            .replaceAll(" ui5-", " furo-ui5-")
+            .replaceAll("`ui5-", "`furo-ui5-")
             .replaceAll("@ui5/webcomponents/", "@furo/ui5/")
             .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/")
             .replaceAll(/(### ES6 Module .*\n)/g,"")

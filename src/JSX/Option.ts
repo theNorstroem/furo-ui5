@@ -53,7 +53,7 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       *
+       * The `furo-furo-furo-ui5-option` is meant to be used inside a `furo-furo-furo-ui5-select`. It is also automatically used by the `furo-furo-furo-ui5-select-enum`.
        *
        * ### Overview
        *

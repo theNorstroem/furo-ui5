@@ -68,7 +68,7 @@ export default meta;
 export const Default: StoryObj = {
   args: {},
   render: renderArgs => html`
-    <furo-ui5-form-layout form-title="Text Input Element">
+    <furo-ui5-form-layout form-title="Enum Select">
       ${cube.description}
       <furo-ui5-button slot="action" @click="${validate}" design="Transparent">Validate</furo-ui5-button>
 
@@ -81,7 +81,7 @@ export const Default: StoryObj = {
           ?show-unspecified="${renderArgs.showUnspecified}"
           ?required="${renderArgs.required}"
           ?readonly="${renderArgs.readonly}"
-          value="${ifDefined(renderArgs.value)}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
           .model="${cube.cube.material}"
           value-state="${ifDefined(renderArgs.valueState)}"
           >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
@@ -97,8 +97,7 @@ export const Default: StoryObj = {
           ?show-unspecified="${renderArgs.showUnspecified}"
           ?required="${renderArgs.required}"
           ?readonly="${renderArgs.readonly}"
-          value="${ifDefined(renderArgs.value)}"
-          placeholder="${ifDefined(renderArgs.placeholder)}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
           .model="${cube.cube.material}"
           value-state="${ifDefined(renderArgs.valueState)}"
           >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
