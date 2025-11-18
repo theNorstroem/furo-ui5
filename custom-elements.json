@@ -4960,6 +4960,1069 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5McbItem.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The `furo-ui5-mcb-item` is meant to be used inside a `furo-ui5-multi-combobox`.\n\nThe `furo-ui5-mcb-item` represents the item for a `furo-ui5-multi-combobox`.",
+          "name": "McbItem",
+          "cssParts": [
+            {
+              "description": "Use this to format the `li` inside the shadow root of the component.",
+              "name": "native-li"
+            },
+            {
+              "description": "Use this to format the content `div` inside the shadow root of the component, which surrounds the title and the additional-text `spans`.",
+              "name": "content"
+            },
+            {
+              "description": "Use this to format the \"title\" `span` inside the shadow root of the component, which surrounds the default slot.",
+              "name": "title"
+            },
+            {
+              "description": "Use this to format the additional-text `span` inside the shadow root of the component.",
+              "name": "additional-text"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "MultiComboBoxItemLike | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "additionalText",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the additional text of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ComboBoxItem",
+                "module": "dist/ComboBoxItem.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "MultiComboBoxItemLike",
+                    "references": [
+                      {
+                        "name": "MultiComboBoxItemLike",
+                        "package": "@furo/ui5",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component."
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "MultiComboBoxItemLike | undefined",
+                "references": [
+                  {
+                    "name": "MultiComboBoxItemLike",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a multiComboBoxItems field by attribute."
+            },
+            {
+              "kind": "method",
+              "name": "readFromModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines the selected state of the component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBoxItem",
+                "module": "dist/MultiComboBoxItem.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the text of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ComboBoxItem",
+                "module": "dist/ComboBoxItem.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MultiComboBoxItem",
+            "package": "@ui5/webcomponents",
+            "module": "dist/MultiComboBoxItem.js"
+          },
+          "tagName": "furo-ui5-mcb-item",
+          "customElement": true,
+          "attributes": [
+            {
+              "description": "Defines the additional text of the component.",
+              "name": "additional-text",
+              "default": "undefined",
+              "fieldName": "additionalText",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "ComboBoxItem",
+                "module": "dist/ComboBoxItem.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the selected state of the component.",
+              "name": "selected",
+              "default": "false",
+              "fieldName": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBoxItem",
+                "module": "dist/MultiComboBoxItem.js"
+              }
+            },
+            {
+              "description": "Defines the text of the component.",
+              "name": "text",
+              "default": "undefined",
+              "fieldName": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "ComboBoxItem",
+                "module": "dist/ComboBoxItem.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5McbItem",
+          "declaration": {
+            "name": "FuroUi5McbItem",
+            "module": "src/impl/FuroUi5McbItem.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/impl/FuroUi5MultiCombobox.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-ui5-multi-combobox define\nthe available options by using the furo-ui5-mcb-item component. Use the function bindOptions to bind a RepeaterNode as a option list.\n\n```html\n<furo-ui5-multi-combobox\n   fn-bind-data=\"--entity(*.data.description)\"\n   fn-bind-options=\"--collection(*.entities)\">\n</furo-ui5-multi-combobox>\n```\n*\n\n### Overview\n\nThe `furo-ui5-multi-combobox` component consists of a list box with items and a text field allowing the user to either type a value directly into the text field, or choose from the list of existing items.\n\nThe drop-down list is used for selecting and filtering values, it enables users to select one or more options from a predefined list. The control provides an editable input field to filter the list, and a dropdown arrow to expand/collapse the list of available options.\nThe options in the list have checkboxes that permit multi-selection. Entered values are displayed as tokens.\n### Structure\nThe `furo-ui5-multi-combobox` consists of the following elements:\n\n-  Tokenizer - a list of tokens with selected options.\n-  Input field - displays the selected option/s as token/s. Users can type to filter the list.\n-  Drop-down arrow - expands\\collapses the option list.\n-  Option list - the list of available options.\n\n### Keyboard Handling\n\nThe `furo-ui5-multi-combobox` provides advanced keyboard handling.\n\n#### Picker\nIf the `furo-ui5-multi-combobox` is focused,\nyou can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.\nOnce the drop-down is opened, you can use the `UP` and `DOWN` arrow keys\nto navigate through the available options and select one by pressing the `Space` or `Enter` keys.\n[Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.\n\n#### Tokens\n\n-  Left/Right arrow keys - moves the focus selection form the currently focused token to the previous/next one (if available).\n-  Delete -  deletes the token and focuses the previous token.\n-  Backspace -  deletes the token and focus the next token.\n\n\n",
+          "name": "MultiCombobox",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_getModelReaders",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Map<string, () => void>"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "_getModelWriters",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Map<string, () => void>"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING | FuroFatString | StringValue"
+              },
+              "privacy": "private",
+              "default": "new STRING()"
+            },
+            {
+              "kind": "field",
+              "name": "_optionList",
+              "type": {
+                "text": "McbItem[] | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_optionsModel",
+              "type": {
+                "text": "OptionLikeList | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible ARIA name of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING | FuroFatString | StringValue",
+                    "references": [
+                      {
+                        "name": "STRING",
+                        "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component."
+            },
+            {
+              "kind": "method",
+              "name": "bindOptions",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "OptionLikeList",
+                    "references": [
+                      {
+                        "name": "OptionLikeList",
+                        "package": "@furo/ui5",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component."
+            },
+            {
+              "kind": "method",
+              "name": "clear",
+              "description": "Clears the value of the input field.",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is in disabled state.\n\n**Note:** A disabled component is completely noninteractive.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "fatHandler",
+              "type": {
+                "text": "FatHandler<FuroUi5MultiCombobox>"
+              },
+              "privacy": "private",
+              "default": "new FatHandler(this as FuroUi5MultiCombobox, [\"readonly\",\"disabled\",\"hidden\",\"required\"])"
+            },
+            {
+              "kind": "field",
+              "name": "filter",
+              "type": {
+                "text": "ComboBoxFilter",
+                "references": [
+                  {
+                    "name": "ComboBoxFilter",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/ComboBoxFilter.js"
+                  }
+                ]
+              },
+              "default": "\"StartsWithPerTerm\"",
+              "description": "Defines the filter type of the component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleConstraints",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "fieldConstraints",
+                  "type": {
+                    "text": "FieldConstraints | undefined"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING | FuroFatString | StringValue",
+                "references": [
+                  {
+                    "name": "STRING",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
+                  {
+                    "name": "StringValue",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
+                  {
+                    "name": "FuroFatString",
+                    "package": "@/models",
+                    "module": "index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a model field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines the name by which the component will be identified upon submission in an HTML form.\n\n**Note:** This property is only applicable within the context of an HTML Form element.\n**Note:** When the component is used inside a form element,\nthe value is sent as the first element in the form data, even if it's empty.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "noTypeahead",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the value will be autcompleted to match an item",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "noValidation",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines if the user input will be prevented, if no matching item has been found",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether the items picker is open.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "optionList",
+              "type": {
+                "text": "McbItem[] | undefined",
+                "references": [
+                  {
+                    "name": "McbItem",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a options field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "optionsModel",
+              "type": {
+                "text": "OptionLikeList | undefined",
+                "references": [
+                  {
+                    "name": "OptionLikeList",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a options field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "placeholder",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines a short hint intended to aid the user with data entry when the\ncomponent has no value.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "readFromModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "readFromOptionsModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is read-only.\n\n**Note:** A read-only component is not editable,\nbut still provides visual feedback upon user interaction.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "readonlyState",
+              "type": {
+                "text": "ReadonlyState"
+              },
+              "privacy": "private",
+              "default": "new ReadonlyState(this)"
+            },
+            {
+              "kind": "method",
+              "name": "renderOptionList",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "optionList",
+                  "type": {
+                    "text": "McbItem[]",
+                    "references": [
+                      {
+                        "name": "McbItem",
+                        "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Renders a list of options."
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is required.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "showClearIcon",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the clear icon of the multi-combobox will be shown.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "showSelectAll",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines if the select all checkbox is visible on top of suggestions.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "stringReaderWriters",
+              "type": {
+                "text": "StringReaderWriters<FuroUi5MultiCombobox> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Defines the value of the component.\n\n**Note:** The property is updated upon typing.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "valueState",
+              "type": {
+                "text": "ValueState",
+                "references": [
+                  {
+                    "name": "ValueState",
+                    "package": "@ui5/webcomponents-base",
+                    "module": "dist/types/ValueState.js"
+                  }
+                ]
+              },
+              "default": "\"None\"",
+              "description": "Defines the value state of the component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "valueStateManager",
+              "type": {
+                "text": "FieldNodeValueState"
+              },
+              "privacy": "private",
+              "readonly": true,
+              "default": "new FieldNodeValueState(this)"
+            },
+            {
+              "kind": "method",
+              "name": "writeToModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MultiComboBox",
+            "package": "@ui5/webcomponents",
+            "module": "dist/MultiComboBox.js"
+          },
+          "tagName": "furo-ui5-multi-combobox",
+          "customElement": true,
+          "summary": "data select field",
+          "slots": [
+            {
+              "name": "default",
+              "description": "Defines the component items.",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "name": "icon",
+              "description": "Defines the icon to be displayed in the component.",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "name": "valueStateMessage",
+              "description": "Defines the value state message that will be displayed as pop up under the component.\nThe value state message slot should contain only one root element.\n\n**Note:** If not specified, a default text (in the respective language) will be displayed.\n\n**Note:** The `valueStateMessage` would be displayed,\nwhen the component is in `Information`, `Critical` or `Negative` value state.",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Used to style each token(where `token-0` corresponds to the first item)",
+              "name": "token-\\{index\\}",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines the accessible ARIA name of the component.",
+              "name": "accessible-name",
+              "default": "undefined",
+              "fieldName": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "name": "accessible-name-ref",
+              "default": "undefined",
+              "fieldName": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is in disabled state.\n\n**Note:** A disabled component is completely noninteractive.",
+              "name": "disabled",
+              "default": "false",
+              "fieldName": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the filter type of the component.",
+              "name": "filter",
+              "default": "\"StartsWithPerTerm\"",
+              "fieldName": "filter",
+              "type": {
+                "text": "\"None\" | \"StartsWithPerTerm\" | \"StartsWith\" | \"Contains\""
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Determines the name by which the component will be identified upon submission in an HTML form.\n\n**Note:** This property is only applicable within the context of an HTML Form element.\n**Note:** When the component is used inside a form element,\nthe value is sent as the first element in the form data, even if it's empty.",
+              "name": "name",
+              "default": "undefined",
+              "fieldName": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Defines whether the value will be autcompleted to match an item",
+              "name": "no-typeahead",
+              "default": "false",
+              "fieldName": "noTypeahead",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Defines if the user input will be prevented, if no matching item has been found",
+              "name": "no-validation",
+              "default": "false",
+              "fieldName": "noValidation",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Indicates whether the items picker is open.",
+              "name": "open",
+              "default": "false",
+              "fieldName": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Defines a short hint intended to aid the user with data entry when the\ncomponent has no value.",
+              "name": "placeholder",
+              "default": "undefined",
+              "fieldName": "placeholder",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is read-only.\n\n**Note:** A read-only component is not editable,\nbut still provides visual feedback upon user interaction.",
+              "name": "readonly",
+              "default": "false",
+              "fieldName": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is required.",
+              "name": "required",
+              "default": "false",
+              "fieldName": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Defines whether the clear icon of the multi-combobox will be shown.",
+              "name": "show-clear-icon",
+              "default": "false",
+              "fieldName": "showClearIcon",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Determines if the select all checkbox is visible on top of suggestions.",
+              "name": "show-select-all",
+              "default": "false",
+              "fieldName": "showSelectAll",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Defines the value of the component.\n\n**Note:** The property is updated upon typing.",
+              "name": "value",
+              "default": "\"\"",
+              "fieldName": "value",
+              "type": {
+                "text": "string"
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "description": "Defines the value state of the component.",
+              "name": "value-state",
+              "default": "\"None\"",
+              "fieldName": "valueState",
+              "type": {
+                "text": "\"None\" | \"Positive\" | \"Negative\" | \"Critical\" | \"Information\""
+              },
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "change",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired when the input operation has finished by pressing Enter or on focusout.",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "name": "close",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired when the dropdown is closed.",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "name": "input",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired when the value of the component changes at each keystroke or clear icon is pressed.",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "name": "open",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired when the dropdown is opened.",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            },
+            {
+              "name": "selection-change",
+              "type": {
+                "text": "CustomEvent<MultiComboBoxSelectionChangeEventDetail>",
+                "references": [
+                  {
+                    "name": "MultiComboBoxSelectionChangeEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/MultiComboBox.js"
+                  }
+                ]
+              },
+              "description": "Fired when selection is changed by user interaction.",
+              "inheritedFrom": {
+                "name": "MultiComboBox",
+                "module": "dist/MultiComboBox.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5MultiCombobox",
+          "declaration": {
+            "name": "FuroUi5MultiCombobox",
+            "module": "src/impl/FuroUi5MultiCombobox.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/impl/FuroUi5NumberInput.js",
       "declarations": [
         {
@@ -5878,6 +6941,14 @@
           "members": [
             {
               "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "OptionLike | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
               "name": "additionalText",
               "type": {
                 "text": "string | undefined"
@@ -5889,6 +6960,27 @@
                 "name": "Option",
                 "module": "dist/Option.js"
               }
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "OptionLike",
+                    "references": [
+                      {
+                        "name": "OptionLike",
+                        "package": "@furo/ui5",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component."
             },
             {
               "kind": "field",
@@ -5910,6 +7002,32 @@
               "static": true,
               "privacy": "private",
               "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "OptionLike | undefined",
+                "references": [
+                  {
+                    "name": "OptionLike",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a options field by attribute."
+            },
+            {
+              "kind": "method",
+              "name": "readFromModel",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
             },
             {
               "kind": "field",
@@ -9992,7 +11110,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define\nthe available options by using the furo-ui5-option component. Use the function bindOptions to bind a RepeaterNode as a option list.\n\n### Warning\n- This component updates the model with the first option, if the value was empty.\n- This component will render an empty value if the value is not in the list of options\n\n**Note:** Use either the Select's value or the Options' selected property. Mixed usage could result in unexpected behavior.\n\n**Note:** If the given value does not match any existing option, no option will be selected and the Select component will be displayed as empty.\n\n### IdentifiableList Signature\nThe optionsModel uses a FieldNode which fulfills the `IdentiableList` interface, this means that you have an ARRAY where the items have at least an id:string and a displeyName:string field.\n\n\n### Sample\n```html\n<furo-ui5-select\n   .model=\"${this.model.stringlike}\"\n   .optionsModel=\"${this.IdentifiableListKind}\">\n</furo-ui5-select>\n```\n\n### Overview\n\nThe `furo-ui5-select` component is used to create a drop-down list.\n\n### Usage\n\nThere are two main usages of the `furo-ui5-select>`.\n\n- With Option (`furo-ui5-option`) web component:\n\nThe available options of the Select are defined by using the Option component.\nThe Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.\n\n- With OptionCustom (`furo-ui5-option-custom`) web component.\n\nOptions with custom content are defined by using the OptionCustom component.\nThe OptionCustom component comes with no predefined layout and it expects consumers to define it.\n\n### Selection\n\nThe options can be selected via user interaction (click or with the use of the Space and Enter keys)\nand programmatically - the Select component supports two distinct selection APIs, though mixing them is not supported:\n- The \"value\" property of the Select component\n- The \"selected\" property on individual options\n\n**Note:** If the \"value\" property is set but does not match any option,\nno option will be selected and the Select component will be displayed as empty.\n\n**Note:** when both \"value\" and \"selected\" are both used (although discouraged),\nthe \"value\" property will take precedence.\n\n### Keyboard Handling\n\nThe `furo-ui5-select` provides advanced keyboard handling.\n\n- [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.\n- [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.\n- [Space], [Enter] - If the drop-down is opened - selects the focused option.\n- [Escape] - Closes the drop-down without changing the selection.\n- [Home] - Navigates to first option\n- [End] - Navigates to the last option\n\n\n\n\n\n",
+          "description": "The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define\nthe available options by using the furo-ui5-option component.\n\n### Possible ways to set the option list\n- Use `bindOptions()` or `optionsModel=` to bind a RepeaterNode as an option list.\n- Add the options manually to the html\n- Use `setOptionList()` or `optionList=` to build up the option list.\n\n\n### Warning\n- This component updates the model with the first option, if the value was empty, to keep the data in sync with the visual impression.\n- This component will render an empty value if the value is not in the list of options\n\n**Note:** Use either the Select's value or the Options' selected property. Mixed usage could result in unexpected behavior.\n\n**Note:** If the given value does not match any existing option, no option will be selected and the Select component will be displayed as empty.\n\n### OptionLikeList Signature\nThe optionsModel uses a FieldNode which fulfills the `IdentiableList` interface,\nthis means that you have an ARRAY FieldNode where the items have at least an id:string and a displayName:string field.\n\n\n### Sample\n```html\n<furo-ui5-select\n   .model=\"${this.model.stringlike}\"\n   .optionsModel=\"${this.OptionLikeListKind}\">\n</furo-ui5-select>\n```\n\n### Overview\n\nThe `furo-ui5-select` component is used to create a drop-down list.\n\n### Usage\n\nThere are two main usages of the `furo-ui5-select>`.\n\n- With Option (`furo-ui5-option`) web component:\n\nThe available options of the Select are defined by using the Option component.\nThe Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.\n\n- With OptionCustom (`furo-ui5-option-custom`) web component.\n\nOptions with custom content are defined by using the OptionCustom component.\nThe OptionCustom component comes with no predefined layout and it expects consumers to define it.\n\n### Selection\n\nThe options can be selected via user interaction (click or with the use of the Space and Enter keys)\nand programmatically - the Select component supports two distinct selection APIs, though mixing them is not supported:\n- The \"value\" property of the Select component\n- The \"selected\" property on individual options\n\n**Note:** If the \"value\" property is set but does not match any option,\nno option will be selected and the Select component will be displayed as empty.\n\n**Note:** when both \"value\" and \"selected\" are both used (although discouraged),\nthe \"value\" property will take precedence.\n\n### Keyboard Handling\n\nThe `furo-ui5-select` provides advanced keyboard handling.\n\n- [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.\n- [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.\n- [Space], [Enter] - If the drop-down is opened - selects the focused option.\n- [Escape] - Closes the drop-down without changing the selection.\n- [Home] - Navigates to first option\n- [End] - Navigates to the last option\n\n\n\n\n\n",
           "name": "Select",
           "members": [
             {
@@ -10026,9 +11144,17 @@
             },
             {
               "kind": "field",
+              "name": "_optionList",
+              "type": {
+                "text": "SelectOption[] | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
               "name": "_optionsModel",
               "type": {
-                "text": "IdentifiableList | undefined"
+                "text": "OptionLikeList | undefined"
               },
               "privacy": "private"
             },
@@ -10117,10 +11243,10 @@
                 {
                   "name": "fieldNode",
                   "type": {
-                    "text": "IdentifiableList",
+                    "text": "OptionLikeList",
                     "references": [
                       {
-                        "name": "IdentifiableList",
+                        "name": "OptionLikeList",
                         "package": "@furo/ui5",
                         "module": "dist/index.js"
                       }
@@ -10229,12 +11355,28 @@
             },
             {
               "kind": "field",
-              "name": "optionsModel",
+              "name": "optionList",
               "type": {
-                "text": "IdentifiableList | undefined",
+                "text": "SelectOption[] | undefined",
                 "references": [
                   {
-                    "name": "IdentifiableList",
+                    "name": "SelectOption",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to set and render the optionList as an attribute.\n\nIf you prefer the usage of a method, use `renderOptionList()` instead."
+            },
+            {
+              "kind": "field",
+              "name": "optionsModel",
+              "type": {
+                "text": "OptionLikeList | undefined",
+                "references": [
+                  {
+                    "name": "OptionLikeList",
                     "package": "@furo/ui5",
                     "module": "dist/index.js"
                   }
@@ -10285,6 +11427,27 @@
               },
               "privacy": "private",
               "default": "new ReadonlyState(this)"
+            },
+            {
+              "kind": "method",
+              "name": "renderOptionList",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "optionList",
+                  "type": {
+                    "text": "SelectOption[]",
+                    "references": [
+                      {
+                        "name": "SelectOption",
+                        "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Renders a list of options and stores the list in `optionList`."
             },
             {
               "kind": "field",

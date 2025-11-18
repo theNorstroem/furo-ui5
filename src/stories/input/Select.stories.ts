@@ -19,6 +19,7 @@ import { CubeOptions, type ICubeOptions } from "@/models/furoui5test/cube/CubeOp
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
 import ValueState from "@/types/ValueState";
+import type { SelectOption } from "@/lib/open-models/signatures";
 
 const component = "furo-ui5-select";
 const { events, args, argTypes } = getStorybookHelpers(component);
@@ -42,6 +43,27 @@ const options: ARRAY<CubeOptions, ICubeOptions> = ARRAY.Builder(CubeOptions, [
     icon: "product",
   },
 ]);
+
+const optionList:SelectOption[] = [
+  {
+    id: "1",
+    displayName: "A from List",
+    additionalText: "First Item",
+  },
+  {
+    id: "2",
+    displayName: "Second from list",
+    icon: "product",
+    tooltip: "Second Item",
+  },
+  {
+    id: "3",
+    displayName: "Third from list",
+    icon: "product",
+    tooltip: "Second Item",
+    additionalText: "With additions",
+  },
+]
 
 const setValueOutOfRange = () => {
   cube.cube.singleOption = "36";
@@ -216,7 +238,7 @@ export const WithoutModelBinding: StoryObj = {
   `,
 };
 
-export const ValueNotInOptionlist: StoryObj = {
+export const ValueNotInOptions: StoryObj = {
   args: {},
 
   render: renderArgs => html`
@@ -273,5 +295,112 @@ export const ValueNotInOptionlist: StoryObj = {
       markdown="\`\`\`json
  ${JSON.stringify(options.__toLiteral(), null, 2)}"
     ></furo-ui5-markdown>
+  `,
+};
+
+export const ManuallyAddedOptions: StoryObj = {
+  args: {
+    defaultSlot:
+      '<furo-ui5-option value="1" desktop="">Manually added</furo-ui5-option>\n<furo-ui5-option value="2" icon="product">Second added manually</furo-ui5-option>',
+  },
+
+  render: renderArgs => html`
+    <furo-ui5-form-layout form-title="Select">
+      <p>You can add options manually too. When you do that, do not mix with <code>optionsModel</code></p>
+      <furo-ui5-button slot="action" @click="${setValueOutOfRange}" design="Transparent">Set Value out of range</furo-ui5-button>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="enum">Description</furo-ui5-label>
+        <furo-ui5-select
+          id="enum"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
+          .model="${cube.cube.singleOption}"
+
+          value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
+        >
+          ${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-select>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="sec">Description</furo-ui5-label>
+        <furo-ui5-select
+          id="other"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
+          .model="${cube.cube.singleOption}"
+          value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
+        >
+          ${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-select>
+      </furo-ui5-form-row>
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="sec">Selected Option ID</furo-ui5-label>
+        <furo-ui5-text-input .model="${cube.cube.singleOption}"> </furo-ui5-text-input>
+      </furo-ui5-form-row>
+    </furo-ui5-form-layout>
+
+  `,
+};
+
+export const WorkingWithOptionlist: StoryObj = {
+  args: {
+  },
+
+  render: renderArgs => html`
+    <furo-ui5-form-layout form-title="Select">
+      <p>Options added with <code>SelectOption[]</code></p>
+      <furo-ui5-button slot="action" @click="${setValueOutOfRange}" design="Transparent">Set Value out of range</furo-ui5-button>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="enum">Description</furo-ui5-label>
+        <furo-ui5-select
+          id="enum"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
+          .model="${cube.cube.singleOption}"
+          .optionList="${optionList}"
+          value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
+        >
+          ${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-select>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="sec">Description</furo-ui5-label>
+        <furo-ui5-select
+          id="other"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
+          .model="${cube.cube.singleOption}"
+          .optionList="${optionList}"
+          value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
+        >
+          ${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-select>
+      </furo-ui5-form-row>
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="sec">Selected Option ID</furo-ui5-label>
+        <furo-ui5-text-input .model="${cube.cube.singleOption}"> </furo-ui5-text-input>
+      </furo-ui5-form-row>
+    </furo-ui5-form-layout>
+
   `,
 };

@@ -14,6 +14,8 @@ import "./Icon";
 import "./Label";
 import "./Link";
 import "./Markdown";
+import "./McbItem";
+import "./MultiCombobox";
 import "./NumberInput";
 import "./Option";
 import "./PasswordInput";

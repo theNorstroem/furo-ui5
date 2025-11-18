@@ -6,6 +6,11 @@ import { ARRAY, BOOLEAN, DOUBLE, ENUM, FieldNode, INT32, Registry, STRING } from
 import { XString as FuroFatString, type IXString as IFuroFatString, type TXString as TFuroFatString } from "../../furo/fat/String";
 
 import { Colour as Furoui5TestCubeColour, type IColour as IFuroui5TestCubeColour, type TColour as TFuroui5TestCubeColour } from "./Colour";
+import {
+  CubeOptions as Furoui5TestCubeCubeOptions,
+  type ICubeOptions as IFuroui5TestCubeCubeOptions,
+  type TCubeOptions as TFuroui5TestCubeCubeOptions,
+} from "./CubeOptions";
 import { Materials as Furoui5TestCubeMaterials } from "./Materials";
 
 /**
@@ -24,6 +29,7 @@ export interface ICubeDefinition {
   rating?: number;
   singleOption?: string;
   multipleOptions?: string[];
+  multipleCubeOptions?: IFuroui5TestCubeCubeOptions[];
 }
 
 /**
@@ -42,6 +48,7 @@ export interface TCubeDefinition {
   rating?: number;
   single_option?: string;
   multiple_options?: string[];
+  multiple_cube_options?: TFuroui5TestCubeCubeOptions[];
 }
 
 /**
@@ -71,6 +78,8 @@ export class CubeDefinition extends FieldNode {
   private _singleOption: STRING;
 
   private _multipleOptions: ARRAY<STRING, string>;
+
+  private _multipleCubeOptions: ARRAY<Furoui5TestCubeCubeOptions, IFuroui5TestCubeCubeOptions>;
 
   public __defaultValues: ICubeDefinition;
 
@@ -151,6 +160,12 @@ export class CubeDefinition extends FieldNode {
         FieldConstructor: STRING,
         constraints: {},
       },
+      {
+        fieldName: "multipleCubeOptions",
+        protoName: "multiple_cube_options",
+        FieldConstructor: Furoui5TestCubeCubeOptions,
+        constraints: {},
+      },
     ];
 
     // Initialize the fields
@@ -177,6 +192,8 @@ export class CubeDefinition extends FieldNode {
     this._singleOption = new STRING(undefined, this, "singleOption");
 
     this._multipleOptions = new ARRAY<STRING, string>(undefined, this, "multipleOptions");
+
+    this._multipleCubeOptions = new ARRAY<Furoui5TestCubeCubeOptions, IFuroui5TestCubeCubeOptions>(undefined, this, "multipleCubeOptions");
 
     // Set required fields
     ["length", "breadth", "height"].forEach(fieldName => {
@@ -300,6 +317,14 @@ export class CubeDefinition extends FieldNode {
 
   public set multipleOptions(v: string[]) {
     this.__TypeSetter(this._multipleOptions, v);
+  }
+
+  public get multipleCubeOptions(): ARRAY<Furoui5TestCubeCubeOptions, IFuroui5TestCubeCubeOptions> {
+    return this._multipleCubeOptions;
+  }
+
+  public set multipleCubeOptions(v: IFuroui5TestCubeCubeOptions[]) {
+    this.__TypeSetter(this._multipleCubeOptions, v);
   }
 
   fromLiteral(data: ICubeDefinition) {

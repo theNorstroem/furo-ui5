@@ -29,6 +29,7 @@ message CubeDefinition {
   int32 rating = 10 [(openapi.v3.property) ={default:{number:4}, maximum: 5, minimum: 0}];
   string single_option = 11;
   repeated string multiple_options = 12;
+  repeated CubeOptions multiple_cube_options = 13;
 }
 
 message CubeEntity {

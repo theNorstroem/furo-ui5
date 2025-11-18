@@ -22,7 +22,7 @@ import './impl/furo-ui5-message-strip.js';
 import './impl/furo-ui5-message-strip-display.js';
 import './impl/furo-ui5-money-input.js';
 import './impl/furo-ui5-money-input-labeled.js';
-import './impl/furo-ui5-multi-combobox.js';
+import './impl/FuroUi5MultiCombobox.ts';
 import './impl/furo-ui5-multi-combobox-labeled.js';
 import './impl/furo-ui5-multi-input.js';
 import './impl/furo-ui5-multi-input-labeled.js';

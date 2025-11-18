@@ -1,38 +1,38 @@
-import Option from "@ui5/webcomponents/dist/Option.js";
-import type { OptionLike } from "@/lib/open-models/signatures";
+import MultiComboBoxItem from "@ui5/webcomponents/dist/MultiComboBoxItem.js";
+import type { MultiComboBoxItemLike } from "@/lib/open-models/signatures";
 
 /**
- * The `furo-ui5-option` is meant to be used inside a `furo-ui5-select`. It is also automatically used by the `furo-ui5-select-enum`.
+ * The `furo-ui5-mcb-item` is meant to be used inside a `furo-ui5-multi-combobox`.
  *
  * @csspart native-li - Use this to format the `li` inside the shadow root of the component.
  * @csspart content - Use this to format the content `div` inside the shadow root of the component, which surrounds the title and the additional-text `spans`.
  * @csspart title - Use this to format the "title" `span` inside the shadow root of the component, which surrounds the default slot.
  * @csspart additional-text - Use this to format the additional-text `span` inside the shadow root of the component.
- * @tagname furo-ui5-option
+ * @tagname furo-ui5-mcb-item
  */
-export class FuroUi5Option extends Option {
+export class FuroUi5McbItem extends MultiComboBoxItem {
   /**
    * Added for compatibility
    */
   override connectedCallback() {
-    this.setAttribute("ui5-option", "");
+    this.setAttribute("ui5-mcb-item", "");
     return super.connectedCallback();
   }
 
 
-  private _model: OptionLike | undefined;
+  private _model: MultiComboBoxItemLike | undefined;
 
-  public get model(): OptionLike | undefined {
+  public get model(): MultiComboBoxItemLike | undefined {
     return this._model;
   }
 
   /**
-   * Use this to bind a options field by attribute.
+   * Use this to bind a multiComboBoxItems field by attribute.
    *
-   * @typeref OptionLike - "@furo/ui5/dist/index.js"
+   * @typeref MultiComboBoxItemLike - "@furo/ui5/dist/index.js"
    * @public
    */
-  public set model(value: OptionLike) {
+  public set model(value: MultiComboBoxItemLike) {
     this.bindData(value);
   }
 
@@ -40,10 +40,10 @@ export class FuroUi5Option extends Option {
   /**
    * Connects your data model to this component.
    *
-   * @paramref fieldNode - OptionLike - "@furo/ui5/dist/index.js"
+   * @paramref fieldNode - MultiComboBoxItemLike - "@furo/ui5/dist/index.js"
    * @public
    */
-  public bindData(fieldNode: OptionLike) {
+  public bindData(fieldNode: MultiComboBoxItemLike) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -70,16 +70,9 @@ export class FuroUi5Option extends Option {
 
 
   private readFromModel(): void {
-   this.value = this._model!.id.toString();
-    this.innerText = this._model!.displayName.toString();
+    this.id = this._model!.id.toString();
+    this.text = this._model!.displayName.toString();
 
-    if(this._model!.icon){
-      this.icon = this._model!.icon.toString()
-    }
-
-    if(this._model!.tooltip){
-      this.tooltip = this._model!.tooltip.toString()
-    }
 
     if(this._model!.additionalText){
       this.additionalText = this._model!.additionalText.toString()
@@ -92,7 +85,7 @@ export class FuroUi5Option extends Option {
    */
   static override get metadata() {
     const md = super.metadata;
-    md.tag = "furo-ui5-option";
+    md.tag = "furo-ui5-mcb-item";
     return md;
   }
 }
