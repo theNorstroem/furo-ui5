@@ -20,11 +20,13 @@ import { ArgsSetEnum, ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
 import ValueState from "@/types/ValueState";
 import type { McbItem } from "@/lib/open-models/signatures";
+import ComboBoxFilter from "@/types/ComboBoxFilter";
 
 const component = "furo-ui5-multi-combobox";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
+ArgsSetEnum(argTypes, "filter", Object.values(ComboBoxFilter));
 
 // set up the model
 const cube = new CubeEntity();
@@ -32,7 +34,7 @@ const validate = () => {
   cube.__validate();
 };
 
-cube.cube.multipleOptions = ["2"]
+cube.cube.multipleOptions = ["2"];
 const options: ARRAY<CubeOptions, ICubeOptions> = ARRAY.Builder(CubeOptions, [
   {
     id: "1",
@@ -45,7 +47,7 @@ const options: ARRAY<CubeOptions, ICubeOptions> = ARRAY.Builder(CubeOptions, [
   },
 ]);
 
-const optionList:McbItem[] = [
+const optionList: McbItem[] = [
   {
     id: "1",
     displayName: "A from List",
@@ -60,7 +62,7 @@ const optionList:McbItem[] = [
     displayName: "Third from list",
     additionalText: "With additions",
   },
-]
+];
 
 const setValueOutOfRange = () => {
   cube.cube.singleOption = "36";
@@ -152,15 +154,12 @@ export const Default: StoryObj = {
           tooltip="${ifDefined(renderArgs.tooltip)}"
           .optionsModel="${options}"
           .model="${cube.cube.multipleOptions}"
-
           value-state="${ifDefined(renderArgs.valueState)}"
           value="${ifDefined(renderArgs.value)}"
         >
           ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
         </furo-ui5-multi-combobox>
       </furo-ui5-form-row>
-
-
     </furo-ui5-form-layout>
 
     <br />
@@ -173,4 +172,62 @@ export const Default: StoryObj = {
     ></furo-ui5-markdown>
   `,
   args: {},
+};
+
+export const Optionlist: StoryObj = {
+  args: {},
+
+  render: renderArgs => html`
+    <furo-ui5-form-layout form-title="Select">
+      ${cube.description}
+      <furo-ui5-button slot="action" @click="${validate}" design="Transparent">Validate</furo-ui5-button>
+      <furo-ui5-button slot="action" @click="${addOption}" design="Transparent">Add Option</furo-ui5-button>
+      <furo-ui5-button slot="action" @click="${modifyOption}" design="Transparent">Modify Option</furo-ui5-button>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="enum">Description</furo-ui5-label>
+        <furo-ui5-multi-combobox
+          id="enum"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
+          .model="${cube.cube.multipleOptions}"
+          .optionList="${optionList}"
+          value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
+        >
+          ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-multi-combobox>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label" for="sec">Description</furo-ui5-label>
+        <furo-ui5-multi-combobox
+          id="other"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          tooltip="${ifDefined(renderArgs.tooltip)}"
+          .optionList="${optionList}"
+          .model="${cube.cube.multipleOptions}"
+          value-state="${ifDefined(renderArgs.valueState)}"
+          value="${ifDefined(renderArgs.value)}"
+        >
+          ${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+        </furo-ui5-multi-combobox>
+      </furo-ui5-form-row>
+    </furo-ui5-form-layout>
+
+    <br />
+    <br />
+    <furo-ui5-title>Initial Data</furo-ui5-title>
+
+    <furo-ui5-markdown
+      markdown="\`\`\`json
+ ${JSON.stringify(cube.cube.multipleOptions.__toLiteral(), null, 2)}"
+    ></furo-ui5-markdown>
+  `,
 };

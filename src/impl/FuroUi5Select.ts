@@ -340,7 +340,6 @@ export class FuroUi5Select extends Select {
     md.tag = "furo-ui5-select";
     return md;
   }
-
 }
 
 FuroUi5Select.define();

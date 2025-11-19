@@ -44,7 +44,7 @@ const options: ARRAY<CubeOptions, ICubeOptions> = ARRAY.Builder(CubeOptions, [
   },
 ]);
 
-const optionList:SelectOption[] = [
+const optionList: SelectOption[] = [
   {
     id: "1",
     displayName: "A from List",
@@ -63,7 +63,7 @@ const optionList:SelectOption[] = [
     tooltip: "Second Item",
     additionalText: "With additions",
   },
-]
+];
 
 const setValueOutOfRange = () => {
   cube.cube.singleOption = "36";
@@ -319,7 +319,6 @@ export const ManuallyAddedOptions: StoryObj = {
           ?readonly="${renderArgs.readonly}"
           tooltip="${ifDefined(renderArgs.tooltip)}"
           .model="${cube.cube.singleOption}"
-
           value-state="${ifDefined(renderArgs.valueState)}"
           value="${ifDefined(renderArgs.value)}"
         >
@@ -348,13 +347,11 @@ export const ManuallyAddedOptions: StoryObj = {
         <furo-ui5-text-input .model="${cube.cube.singleOption}"> </furo-ui5-text-input>
       </furo-ui5-form-row>
     </furo-ui5-form-layout>
-
   `,
 };
 
 export const WorkingWithOptionlist: StoryObj = {
-  args: {
-  },
+  args: {},
 
   render: renderArgs => html`
     <furo-ui5-form-layout form-title="Select">
@@ -401,6 +398,5 @@ export const WorkingWithOptionlist: StoryObj = {
         <furo-ui5-text-input .model="${cube.cube.singleOption}"> </furo-ui5-text-input>
       </furo-ui5-form-row>
     </furo-ui5-form-layout>
-
   `,
 };

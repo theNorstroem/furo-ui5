@@ -19,7 +19,6 @@ export class FuroUi5McbItem extends MultiComboBoxItem {
     return super.connectedCallback();
   }
 
-
   private _model: MultiComboBoxItemLike | undefined;
 
   public get model(): MultiComboBoxItemLike | undefined {
@@ -35,7 +34,6 @@ export class FuroUi5McbItem extends MultiComboBoxItem {
   public set model(value: MultiComboBoxItemLike) {
     this.bindData(value);
   }
-
 
   /**
    * Connects your data model to this component.
@@ -65,19 +63,15 @@ export class FuroUi5McbItem extends MultiComboBoxItem {
 
     // initial read
     this.readFromModel();
-
   }
-
 
   private readFromModel(): void {
     this.id = this._model!.id.toString();
     this.text = this._model!.displayName.toString();
 
-
-    if(this._model!.additionalText){
-      this.additionalText = this._model!.additionalText.toString()
+    if (this._model!.additionalText) {
+      this.additionalText = this._model!.additionalText.toString();
     }
-
   }
 
   /**

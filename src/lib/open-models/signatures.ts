@@ -1,6 +1,5 @@
 import { ARRAY, FieldNode, STRING } from "@furo/open-models";
 
-
 /**
  * A list item which fits in to an option component
  */
@@ -22,7 +21,6 @@ export interface MultiComboBoxItemLike extends FieldNode {
   displayName: STRING;
   additionalText?: STRING;
 }
-
 
 /**
  * Used to set the input to a furo-ui5-multi-combobox
@@ -54,7 +52,7 @@ export interface OptionLikeList extends ARRAY<OptionLike, unknown> {}
  * enhancements.
  *
  */
-export interface SelectOption  {
+export interface SelectOption {
   /**
    * Unique string identifier for the option. Used internally
    * (e.g., as a value when an item is selected).
@@ -79,7 +77,7 @@ export interface SelectOption  {
   tooltip?: string;
 }
 
-export interface McbItem{
+export interface McbItem {
   id: string;
   displayName: string;
   additionalText?: string;

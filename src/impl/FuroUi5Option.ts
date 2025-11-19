@@ -19,7 +19,6 @@ export class FuroUi5Option extends Option {
     return super.connectedCallback();
   }
 
-
   private _model: OptionLike | undefined;
 
   public get model(): OptionLike | undefined {
@@ -35,7 +34,6 @@ export class FuroUi5Option extends Option {
   public set model(value: OptionLike) {
     this.bindData(value);
   }
-
 
   /**
    * Connects your data model to this component.
@@ -65,26 +63,23 @@ export class FuroUi5Option extends Option {
 
     // initial read
     this.readFromModel();
-
   }
 
-
   private readFromModel(): void {
-   this.value = this._model!.id.toString();
+    this.value = this._model!.id.toString();
     this.innerText = this._model!.displayName.toString();
 
-    if(this._model!.icon){
-      this.icon = this._model!.icon.toString()
+    if (this._model!.icon) {
+      this.icon = this._model!.icon.toString();
     }
 
-    if(this._model!.tooltip){
-      this.tooltip = this._model!.tooltip.toString()
+    if (this._model!.tooltip) {
+      this.tooltip = this._model!.tooltip.toString();
     }
 
-    if(this._model!.additionalText){
-      this.additionalText = this._model!.additionalText.toString()
+    if (this._model!.additionalText) {
+      this.additionalText = this._model!.additionalText.toString();
     }
-
   }
 
   /**
