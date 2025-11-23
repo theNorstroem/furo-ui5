@@ -1,16 +1,15 @@
 import "@ui5/webcomponents/dist/Option.js";
-
 import "@/furo-ui5-mcb-item";
+
 import { type FieldConstraints, STRING } from "@furo/open-models";
+import { ARRAY } from "@furo/open-models/dist/index";
 import MultiComboBox from "@ui5/webcomponents/dist/MultiComboBox.js";
 
 import type { FuroUi5McbItem } from "@/impl/FuroUi5McbItem";
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
-import type { OptionLikeList, McbItem, IdentifiableList, Identifiable } from "@/lib/open-models/signatures";
-
-import { ARRAY } from "@furo/open-models/dist/index";
+import type { Identifiable, IdentifiableList, McbItem, OptionLikeList } from "@/lib/open-models/signatures";
 import { type FuroFatString, type IFuroFatString } from "@/models";
 
 /**

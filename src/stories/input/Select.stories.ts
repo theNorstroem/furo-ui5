@@ -16,12 +16,12 @@ import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
+import type { SelectOption } from "@/lib/open-models/signatures";
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
 import { CubeOptions, type ICubeOptions } from "@/models/furoui5test/cube/CubeOptions";
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
 import ValueState from "@/types/ValueState";
-import type { SelectOption } from "@/lib/open-models/signatures";
 
 const component = "furo-ui5-select";
 const { events, args, argTypes } = getStorybookHelpers(component);

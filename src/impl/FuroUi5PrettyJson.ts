@@ -1,9 +1,8 @@
-import { LitElement, html, css } from "lit";
 import { STRING } from "@furo/open-models";
-
 import type { FieldNode } from "@furo/open-models/dist";
-import { unsafeHTML } from "lit/directives/unsafe-html.js";
+import { css, html, LitElement } from "lit";
 import { state } from "lit/decorators.js";
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 /**
  * `furo-pretty-json`
@@ -80,7 +79,7 @@ export class FuroUi5PrettyJson extends LitElement {
    * Inject JSON data
    * @param {JSON} json - Json literal
    */
-  injectData(json: Object) {
+  injectData(json: object) {
     if (json) {
       this.content = FuroUi5PrettyJson._syntaxHighlight(JSON.stringify(json, null, 2));
     } else {
@@ -89,7 +88,7 @@ export class FuroUi5PrettyJson extends LitElement {
     }
   }
 
-  set json(json: Object) {
+  set json(json: object) {
     this.injectData(json);
   }
 

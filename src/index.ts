@@ -1,5 +1,4 @@
 export * from "./impl/FuroUi5Button";
-export * from "./lib/open-models/signatures";
 export * from "./impl/FuroUi5Checkbox";
 export * from "./impl/FuroUi5HeaderPanel";
 export * from "./impl/FuroUi5Icon";
@@ -9,6 +8,7 @@ export * from "./impl/FuroUi5ShowHide";
 export * from "./impl/FuroUi5TableToolbarSeparator";
 export * from "./impl/FuroUi5TextInput";
 export * from "./impl/FuroUi5UserMenu";
+export * from "./lib/open-models/signatures";
 export { type InputSelectionChangeEventDetail, type InputSuggestionScrollEventDetail } from "@ui5/webcomponents/dist/Input.js";
 export { type LinkClickEventDetail } from "@ui5/webcomponents/dist/Link.js";
 export { type PopupBeforeCloseEventDetail, type PopupScrollEventDetail } from "@ui5/webcomponents/dist/Popup.js";

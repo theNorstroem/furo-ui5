@@ -1,4 +1,5 @@
 import MultiComboBoxItem from "@ui5/webcomponents/dist/MultiComboBoxItem.js";
+
 import type { MultiComboBoxItemLike } from "@/lib/open-models/signatures";
 
 /**
