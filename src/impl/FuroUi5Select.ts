@@ -1,4 +1,5 @@
 import "@ui5/webcomponents/dist/Option.js";
+import "@/furo-ui5-option";
 
 import { type FieldConstraints, STRING, StringValue } from "@furo/open-models";
 import Select from "@ui5/webcomponents/dist/Select.js";

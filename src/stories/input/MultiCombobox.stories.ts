@@ -6,6 +6,7 @@ import "@/furo-ui5-label";
 import "@/furo-ui5-markdown";
 import "@/furo-ui5-title";
 import "@/furo-ui5-text-input";
+import "@/furo-ui5-pretty-json";
 
 import { ARRAY } from "@furo/open-models/dist/index";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
@@ -63,10 +64,6 @@ const optionList: McbItem[] = [
     additionalText: "With additions",
   },
 ];
-
-const setValueOutOfRange = () => {
-  cube.cube.singleOption = "36";
-};
 
 const addOption = () => {
   options.add({ id: "3", displayName: "Dynamic" }, true);
@@ -163,13 +160,10 @@ export const Default: StoryObj = {
     </furo-ui5-form-layout>
 
     <br />
-    <br />
-    <furo-ui5-title>Initial Data</furo-ui5-title>
-
-    <furo-ui5-markdown
-      markdown="\`\`\`json
- ${JSON.stringify(cube.cube.multipleOptions.__toLiteral(), null, 2)}"
-    ></furo-ui5-markdown>
+    <furo-ui5-title>Selection</furo-ui5-title>
+    <furo-ui5-pretty-json .model="${cube.cube.multipleOptions}"></furo-ui5-pretty-json>
+    <furo-ui5-title>Options</furo-ui5-title>
+    <furo-ui5-pretty-json .model="${options}"></furo-ui5-pretty-json>
   `,
   args: {},
 };
@@ -222,12 +216,9 @@ export const Optionlist: StoryObj = {
     </furo-ui5-form-layout>
 
     <br />
-    <br />
-    <furo-ui5-title>Initial Data</furo-ui5-title>
-
-    <furo-ui5-markdown
-      markdown="\`\`\`json
- ${JSON.stringify(cube.cube.multipleOptions.__toLiteral(), null, 2)}"
-    ></furo-ui5-markdown>
+    <furo-ui5-title>Selection</furo-ui5-title>
+    <furo-ui5-pretty-json .model="${cube.cube.multipleOptions}"></furo-ui5-pretty-json>
+    <furo-ui5-title>Option List</furo-ui5-title>
+    <furo-ui5-pretty-json .json="${optionList}"></furo-ui5-pretty-json>
   `,
 };

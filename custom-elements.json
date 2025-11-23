@@ -4,6 +4,112 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "dist/impl/FuroPrettyJson.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`furo-pretty-json`\nPretty json with highlighting\n\n```html\n<furo-pretty-json\n  fn-inject-json=\"--data\"></furo-pretty-json>\n```",
+          "name": "FuroPrettyJson",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FieldNode"
+              },
+              "privacy": "private",
+              "default": "new STRING(\"\")"
+            },
+            {
+              "kind": "method",
+              "name": "_syntaxHighlight",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "json",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FieldNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "injectData",
+              "parameters": [
+                {
+                  "name": "json",
+                  "type": {
+                    "text": "JSON"
+                  },
+                  "description": "Json literal"
+                }
+              ],
+              "description": "Inject JSON data"
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FieldNode",
+                "references": [
+                  {
+                    "name": "FieldNode",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a model field by attribute."
+            },
+            {
+              "kind": "method",
+              "name": "readFromModel",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            }
+          ],
+          "tagName": "",
+          "customElement": true,
+          "summary": "pretty prints json data"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroPrettyJson",
+          "declaration": {
+            "name": "FuroPrettyJson",
+            "module": "src/impl/FuroPrettyJson.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/impl/FuroUi5BarcodeScannerDialog.js",
       "declarations": [
         {
@@ -5187,33 +5293,12 @@
           "name": "MultiCombobox",
           "members": [
             {
-              "kind": "method",
-              "name": "_getModelReaders",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "Map<string, () => void>"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_getModelWriters",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "Map<string, () => void>"
-                }
-              }
-            },
-            {
               "kind": "field",
               "name": "_model",
               "type": {
-                "text": "STRING | FuroFatString | StringValue"
+                "text": "ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList"
               },
-              "privacy": "private",
-              "default": "new STRING()"
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -5267,11 +5352,36 @@
                 {
                   "name": "fieldNode",
                   "type": {
-                    "text": "STRING | FuroFatString | StringValue",
+                    "text": "ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList",
                     "references": [
+                      {
+                        "name": "ARRAY",
+                        "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      },
                       {
                         "name": "STRING",
                         "package": "@furo/open-models",
+                        "module": "dist/index.js"
+                      },
+                      {
+                        "name": "FuroFatString",
+                        "package": "@/models",
+                        "module": "index.js"
+                      },
+                      {
+                        "name": "IFuroFatString",
+                        "package": "@/models",
+                        "module": "index.js"
+                      },
+                      {
+                        "name": "FuroFatString",
+                        "package": "@/models",
+                        "module": "index.js"
+                      },
+                      {
+                        "name": "IdentifiableList",
+                        "package": "@furo/ui5",
                         "module": "dist/index.js"
                       }
                     ]
@@ -5328,7 +5438,7 @@
                 "text": "FatHandler<FuroUi5MultiCombobox>"
               },
               "privacy": "private",
-              "default": "new FatHandler(this as FuroUi5MultiCombobox, [\"readonly\",\"disabled\",\"hidden\",\"required\"])"
+              "default": "new FatHandler(this as FuroUi5MultiCombobox, [\"readonly\", \"disabled\", \"hidden\", \"required\"])"
             },
             {
               "kind": "field",
@@ -5375,8 +5485,13 @@
               "kind": "field",
               "name": "model",
               "type": {
-                "text": "STRING | FuroFatString | StringValue",
+                "text": "ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList",
                 "references": [
+                  {
+                    "name": "ARRAY",
+                    "package": "@furo/open-models",
+                    "module": "dist/index.js"
+                  },
                   {
                     "name": "STRING",
                     "package": "@furo/open-models",
@@ -5391,19 +5506,21 @@
                     "name": "FuroFatString",
                     "package": "@/models",
                     "module": "index.js"
+                  },
+                  {
+                    "name": "IFuroFatString",
+                    "package": "@/models",
+                    "module": "index.js"
+                  },
+                  {
+                    "name": "IdentifiableList",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
                   }
                 ]
               },
               "privacy": "public",
               "description": "Use this to bind a model field by attribute."
-            },
-            {
-              "kind": "field",
-              "name": "modelReaderWriter",
-              "type": {
-                "text": "ModelReaderWriter | undefined"
-              },
-              "privacy": "private"
             },
             {
               "kind": "field",
@@ -5586,6 +5703,11 @@
               }
             },
             {
+              "kind": "method",
+              "name": "setSelectedItems",
+              "privacy": "public"
+            },
+            {
               "kind": "field",
               "name": "showClearIcon",
               "type": {
@@ -5612,14 +5734,6 @@
                 "name": "MultiComboBox",
                 "module": "dist/MultiComboBox.js"
               }
-            },
-            {
-              "kind": "field",
-              "name": "stringReaderWriters",
-              "type": {
-                "text": "StringReaderWriters<FuroUi5MultiCombobox> | undefined"
-              },
-              "privacy": "private"
             },
             {
               "kind": "field",

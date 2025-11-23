@@ -50,9 +50,12 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
   /**
    * Use this to bind a model field by attribute.
    *
+   * @typeref ARRAY - "@furo/open-models/dist/index.js"
    * @typeref STRING - "@furo/open-models/dist/index.js"
    * @typeref StringValue - "@furo/open-models/dist/index.js"
    * @typeref FuroFatString - "@/models/index.js"
+   * @typeref IFuroFatString - "@/models/index.js"
+   * @typeref IdentifiableList - "@furo/ui5/dist/index.js"
    * @public
    */
   public set model(value: ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList) {
@@ -62,7 +65,12 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
   /**
    * Connects your data model to this component.
    *
+   * @paramref fieldNode - ARRAY - "@furo/open-models/dist/index.js"
    * @paramref fieldNode - STRING - "@furo/open-models/dist/index.js"
+   * @paramref fieldNode - FuroFatString - "@/models/index.js"
+   * @paramref fieldNode - IFuroFatString - "@/models/index.js"
+   * @paramref fieldNode - FuroFatString - "@/models/index.js"
+   * @paramref fieldNode - IdentifiableList - "@furo/ui5/dist/index.js"
    * @public
    */
   public bindData(fieldNode: ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList) {

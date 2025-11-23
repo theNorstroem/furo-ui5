@@ -7,7 +7,7 @@ import '@ui5/webcomponents-icons/dist/information.js';
 import '@ui5/webcomponents-icons/dist/error.js';
 
 /**
- * The furo-ui5-date-picker component allows the user to bind an date object like google.type.Date or a date string
+ * The furo-ui5-date-picker component allows the user to bind a date object like google.type.Date or a date string
  * with ISO 8061 format like "2020-12-31" to the ui5 datepicker and edit it.
  *
  * It supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/ui5-webcomponents/playground/components/DatePicker/).

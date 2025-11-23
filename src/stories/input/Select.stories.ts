@@ -6,6 +6,8 @@ import "@/furo-ui5-label";
 import "@/furo-ui5-markdown";
 import "@/furo-ui5-title";
 import "@/furo-ui5-text-input";
+import "@/furo-ui5-pretty-json";
+import "@ui5/webcomponents-icons/AllIcons";
 
 import { ARRAY } from "@furo/open-models/dist/index";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
@@ -119,7 +121,6 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  args: {},
   render: renderArgs => html`
     <furo-ui5-form-layout form-title="Select">
       ${cube.description}
@@ -171,13 +172,10 @@ export const Default: StoryObj = {
 
     <br />
     <br />
-    <furo-ui5-title>Initial Options</furo-ui5-title>
-
-    <furo-ui5-markdown
-      markdown="\`\`\`json
- ${JSON.stringify(options.__toLiteral(), null, 2)}"
-    ></furo-ui5-markdown>
+    <furo-ui5-title>Options</furo-ui5-title>
+    <furo-ui5-pretty-json .model="${options}"></furo-ui5-pretty-json>
   `,
+  args: {},
 };
 
 export const WithoutModelBinding: StoryObj = {
@@ -289,12 +287,8 @@ export const ValueNotInOptions: StoryObj = {
 
     <br />
     <br />
-    <furo-ui5-title>Initial Options</furo-ui5-title>
-
-    <furo-ui5-markdown
-      markdown="\`\`\`json
- ${JSON.stringify(options.__toLiteral(), null, 2)}"
-    ></furo-ui5-markdown>
+    <furo-ui5-title>Options</furo-ui5-title>
+    <furo-ui5-pretty-json .model="${options}"></furo-ui5-pretty-json>
   `,
 };
 
