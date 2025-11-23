@@ -17,6 +17,7 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
  * @customElement
  */
 export class FuroUi5PrettyJson extends LitElement {
+
   private _model: FieldNode = new STRING("");
 
   @state()
@@ -88,7 +89,16 @@ export class FuroUi5PrettyJson extends LitElement {
     }
   }
 
-  set json(json: object) {
+  _json:object = {}
+
+  public get json(): object {
+    return this._json;
+  }
+
+  /**
+   * Set the json
+   */
+  public set json(json: object) {
     this.injectData(json);
   }
 
