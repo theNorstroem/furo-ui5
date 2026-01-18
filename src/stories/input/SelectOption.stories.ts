@@ -11,9 +11,9 @@ import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
+import { CubeOptions } from "@/models/furoui5test/cube/CubeOptions";
 import { ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
-import { CubeOptions } from "@/models/furoui5test/cube/CubeOptions";
 
 const component = "furo-ui5-option";
 const { events, args, argTypes } = getStorybookHelpers(component);
