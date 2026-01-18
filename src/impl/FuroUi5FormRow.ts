@@ -1,6 +1,5 @@
 import { LitFBP } from "@furo/fbp/dist/LitFBP";
 import { css, CSSResult, html, LitElement } from "lit";
-import { property } from "lit/decorators.js";
 
 /**
  * The furo-ui5-form-row gives the user a layout to manage
@@ -15,14 +14,8 @@ import { property } from "lit/decorators.js";
  * @public
  */
 export default class FuroUi5FormRow extends LitFBP(LitElement) {
-  /**
-   * Label for the form
-   */
-  @property({ type: String })
-  public label: string | undefined;
-
   override render() {
-    return html` <div class="label"><slot name="label"></slot>${this.label}</div>
+    return html` <div class="label"><slot name="label"></slot></div>
       <div class="field">
         <slot></slot>
         <slot name="text"></slot>

@@ -94,7 +94,7 @@ const meta: Meta = {
         component,
         since: "1.0.0",
         originalComponent: "https://ui5.github.io/webcomponents/components/MultiComboBox/",
-        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-139/ui-elements/multi-combo-box-web-component/",
+        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-142/ui-elements/multi-combo-box-web-component/",
       }),
     },
     a11y: {

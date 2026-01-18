@@ -1,6 +1,7 @@
 import ShellBar from "@ui5/webcomponents-fiori/dist/ShellBar.js";
 
 /**
+ *
  * @tagname furo-ui5-shellbar
  * @attribute {boolean} shadow - Drops a shadow below the shellbar
  *

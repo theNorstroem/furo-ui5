@@ -62,6 +62,17 @@ declare module "react" {
       /**
        * The `furo-furo-furo-ui5-option` is meant to be used inside a `furo-furo-furo-ui5-select`. It is also automatically used by the `furo-furo-furo-ui5-select-enum`.
        *
+       * You can bind any OptionLike field to it.
+       * ```js
+       * export interface OptionLike extends FieldNode {
+       * id: STRING;
+       * displayName: STRING;
+       * icon?: STRING;
+       * additionalText?: STRING;
+       * tooltip?: STRING;
+       * }
+       * ```
+       *
        * ### Overview
        *
        * The `furo-furo-ui5-option` component defines the content of an option in the `furo-furo-ui5-select`.

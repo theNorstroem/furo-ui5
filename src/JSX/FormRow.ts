@@ -4,13 +4,8 @@ import * as React from "react";
 export interface FormRow extends React.HTMLAttributes<HTMLElement> {
   // no events defined.
   // properties
-
   // attributes
-
-  /**
-   * Label for the form
-   */
-  label?: string | undefined;
+  // no attributes defined.
 }
 
 declare module "react" {

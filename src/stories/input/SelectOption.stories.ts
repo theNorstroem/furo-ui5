@@ -11,16 +11,21 @@ import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
-import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
 import { ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";
+import { CubeOptions } from "@/models/furoui5test/cube/CubeOptions";
 
 const component = "furo-ui5-option";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
 
 // set up the model
-const cube = new CubeEntity();
+
+const option: CubeOptions = new CubeOptions({
+  id: "1",
+  displayName: "A from List",
+  icon: "email",
+});
 
 const meta: Meta = {
   title: "input/Select/Option",
@@ -41,7 +46,7 @@ const meta: Meta = {
         component,
         since: "2.0.0",
         originalComponent: "https://ui5.github.io/webcomponents/components/Option/",
-        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-139/ui-elements/select-web-component/",
+        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-142/ui-elements/select-web-component/",
       }),
     },
     a11y: {
@@ -63,28 +68,51 @@ export default meta;
 
 export const Default: StoryObj = {
   args: {
+    value: "3",
     defaultSlot: "Option 1",
-    icon: "product",
-    additionalText: "additional text",
-    tooltip: "Tooltip Text",
-    value: "id_1234",
+    icon: "email",
+    selected: false,
+    tooltip: "Tooltip",
+    additionalText: "Additional Text",
   },
   render: renderArgs => html`
-    <furo-ui5-form-layout form-title="Single Option">
-      <p>Use it inside a <code>furo-ui5-select</code></p>
-      <furo-ui5-form-row>
-        <furo-ui5-label slot="label" for="enum">Option</furo-ui5-label>
-        <furo-ui5-option
-          id="enum"
-          ?selected="${renderArgs.selected}"
-          tooltip="${ifDefined(renderArgs.tooltip)}"
-          icon="${ifDefined(renderArgs.icon)}"
-          value="${ifDefined(renderArgs.value)}"
-          additional-text="${ifDefined(renderArgs.additionalText)}"
-          .model="${cube.cube.material}"
-          >${unsafeHTML(renderArgs.defaultSlot)}
-        </furo-ui5-option>
-      </furo-ui5-form-row>
-    </furo-ui5-form-layout>
+    <furo-ui5-option
+      icon="${ifDefined(renderArgs.icon)}"
+      ?selected="${renderArgs.selected}"
+      additional-text="${ifDefined(renderArgs.additionalText)}"
+      tooltip="${ifDefined(renderArgs.tooltip)}"
+      value="${ifDefined(renderArgs.value)}"
+    >
+      ${unsafeHTML(renderArgs.defaultSlot)}
+    </furo-ui5-option>
   `,
+};
+
+export const Selected: StoryObj = {
+  args: {
+    value: "3",
+    defaultSlot: "Option 1",
+    icon: "email",
+    selected: true,
+    tooltip: "Tooltip",
+    additionalText: "Additional Text",
+  },
+
+  render: renderArgs => html`
+    <furo-ui5-option
+      icon="${ifDefined(renderArgs.icon)}"
+      ?selected="${renderArgs.selected}"
+      additional-text="${ifDefined(renderArgs.additionalText)}"
+      tooltip="${ifDefined(renderArgs.tooltip)}"
+      value="${ifDefined(renderArgs.value)}"
+    >
+      ${unsafeHTML(renderArgs.defaultSlot)}
+    </furo-ui5-option>
+  `,
+};
+
+export const WithDataBinding: StoryObj = {
+  args: {},
+
+  render: _ => html` <furo-ui5-option .model="${option}"> </furo-ui5-option> `,
 };

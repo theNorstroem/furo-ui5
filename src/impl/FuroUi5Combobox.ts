@@ -177,7 +177,6 @@ export class FuroUi5Combobox extends ComboBox {
 
     // initial read
     this.readFromOptionsModel();
-
   }
 
   private readFromOptionsModel(): void {

@@ -18,7 +18,7 @@ import ValueState from "@/types/ValueState";
 const component = "furo-ui5-number-input";
 
 const componentInfo = {
-  guideline: "https://www.sap.com/design-system/fiori-design-web/v1-139/ui-elements/button/",
+  guideline: "https://www.sap.com/design-system/fiori-design-web/v1-142/ui-elements/button/",
   originalComponent: "https://ui5.github.io/webcomponents/components/Input/",
 };
 

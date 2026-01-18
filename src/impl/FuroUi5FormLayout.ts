@@ -22,16 +22,16 @@ import { property } from "lit/decorators.js";
  *
  * #### Single group
  * If there is only one group used or the available space is below 1024px, the width for the group is always full width.
- * <img src="assets/Form-singlecolumn-1.92-1.png">
+ * ![](assets/Form-singlecolumn-1.92-1.png)
  *
  * #### Multiple groups
  * If the space is 1024px and higher, the groups are displayed side by side with a fraction of 50:50.
- * <img src="assets/form-sizexl-1.92-1-1100x211.png">
+ * ![](assets/form-sizexl-1.92-1-1100x211.png)
  *
  *
  * If the space is 1440px and higher, the groups are displayed with a fraction of 33:33:33.
- * <img src="assets/Form_with_three_form_groups__three_columns_sizexl-1.92-1100x225.png">
- * <img src="assets/Form_with_two_form_groups__three_columns_sizexl-1.92-1100x225.png">
+ * ![](assets/Form_with_three_form_groups__three_columns_sizexl-1.92-1100x225.png)
+ * ![](assets/Form_with_two_form_groups__three_columns_sizexl-1.92-1100x225.png)
  *
  * ### Breakpoints for the form rows**
  *
@@ -47,7 +47,7 @@ import { property } from "lit/decorators.js";
  * (A field handles the space of a whole row.)
  * 0 grid columns of the responsive grid layout are used by empty columns.
  * (There is no empty space on the right of the field.)*
- * <img src="assets/03-form-BreakpointM_023n_Belize.png">
+ * ![](assets/03-form-BreakpointM_023n_Belize.png)
  *
  * ####  Size M
  * Size M of the form also has a single-column layout within the responsive grid layout by default.
@@ -59,7 +59,7 @@ import { property } from "lit/decorators.js";
  * 8 grid columns of the responsive grid layout are used by the fields.
  * 0 columns of the responsive grid layout are used by empty columns.
  *
- * <img src="assets/04-form-BreakpointM_014n_Belize-1.png">
+ * ![](assets/04-form-BreakpointM_014n_Belize-1.png)
  *
  * #### Size L
  * The form in size L use a two-column layout within the responsive grid layout by default.
@@ -73,7 +73,7 @@ import { property } from "lit/decorators.js";
  * 7 grid columns of the responsive grid layout are used by fields.
  * 1 grid columns of the responsive grid layout are used by empty columns.
  *
- * <img src="assets/05-form-BreakpointL_023_Belize.png">
+ * ![](assets/05-form-BreakpointL_023_Belize.png)
  *
  * #### Size XL
  * To avoid the stretching of the form field on large screens, the form uses extra empty columns for the layout.
@@ -84,16 +84,16 @@ import { property } from "lit/decorators.js";
  * 5 grid columns of the responsive grid layout are used by fields.
  * 4 grid columns of the responsive grid layout are used by empty columns.
  *
- * <img src="assets/06-form-BreakpointL_014_Belize.png">
+ * ![](assets/06-form-BreakpointL_014_Belize.png)
  *
  * ### Segmented fields
  * With the help of the `FormFieldSegmenter` you can have segmented fields with the patterns `SmallBig` and `BigSmall`.
- * <img src="assets/form_segmented_field.png">
+ * ![](assets/form_segmented_field.png)
  *
  * ### Units of measurement
  * The `FormFieldSegmenter` is also used to display units right to the input.
  *
- * <img src="assets/Form_units.png">
+ * ![](assets/Form_units.png)
  *
  * ### Text content
  * If you want to add text content instead of input elements (for readonly forms), you should use the **text** slot of the `FormRow` component.
@@ -128,10 +128,10 @@ export default class FuroUi5FormLayout extends LitElement {
    * @attr {boolean} multi-columns
    */
   @property({ type: Boolean, attribute: "multi-columns", reflect: true })
-  // @ts-expect-error needed for the css attr
+  // @ts-expect-error needed to update the CSS attribute
   private multiColumns: boolean = false;
 
-  public firdstUpdated() {
+  override firstUpdated() {
     const slot = this.shadowRoot!.querySelector("slot:not([name])") as HTMLSlotElement;
     slot.addEventListener("slotchange", () => {
       const nodes = slot.assignedElements();

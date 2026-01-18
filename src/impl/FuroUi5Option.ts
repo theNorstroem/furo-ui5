@@ -5,6 +5,18 @@ import type { OptionLike } from "@/lib/open-models/signatures";
 /**
  * The `furo-ui5-option` is meant to be used inside a `furo-ui5-select`. It is also automatically used by the `furo-ui5-select-enum`.
  *
+ * You can bind any OptionLike field to it.
+ * ```js
+ * export interface OptionLike extends FieldNode {
+ *   id: STRING;
+ *   displayName: STRING;
+ *   icon?: STRING;
+ *   additionalText?: STRING;
+ *   tooltip?: STRING;
+ * }
+ * ```
+ *
+ *
  * @csspart native-li - Use this to format the `li` inside the shadow root of the component.
  * @csspart content - Use this to format the content `div` inside the shadow root of the component, which surrounds the title and the additional-text `spans`.
  * @csspart title - Use this to format the "title" `span` inside the shadow root of the component, which surrounds the default slot.

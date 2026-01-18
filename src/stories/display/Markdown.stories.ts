@@ -42,7 +42,7 @@ const meta: Meta = {
         component,
         since: "0.8.0",
         originalComponent: "https://ui5.github.io/webcomponents/components/TextArea/",
-        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-139/ui-elements/text-area-web-component/",
+        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-142/ui-elements/text-area-web-component/",
       }),
     },
     a11y: {

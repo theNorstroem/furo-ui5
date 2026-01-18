@@ -4003,7 +4003,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "### Description\nA form is used to present data to the user and to allow users to enter data in a structured way. The `FormLayout` component is a container for `FormGroup`s.\n\nIt controls the layout according to the number of groups and content width according to the rules from the [guidelines](https://experience.sap.com/fiori-design-web/form/).\n\n### Types\nThere are three types of forms:\n\n- Display-only: the data is presented only as label-value field pairs without editable fields.\n- Editable: the data is presented as label-input field pairs, so users can enter data.\n- Mixed: some fields are editable and some are not.\n\n### Breakpoints for the group handling\nThe breakpoints are referenced by the container size of the `FormLayout` component, not by the screen size.\n\n#### Single group\nIf there is only one group used or the available space is below 1024px, the width for the group is always full width.\n<img src=\"assets/Form-singlecolumn-1.92-1.png\">\n\n#### Multiple groups\nIf the space is 1024px and higher, the groups are displayed side by side with a fraction of 50:50.\n<img src=\"assets/form-sizexl-1.92-1-1100x211.png\">\n\n\nIf the space is 1440px and higher, the groups are displayed with a fraction of 33:33:33.\n<img src=\"assets/Form_with_three_form_groups__three_columns_sizexl-1.92-1100x225.png\">\n<img src=\"assets/Form_with_two_form_groups__three_columns_sizexl-1.92-1100x225.png\">\n\n### Breakpoints for the form rows**\n\n#### Size S (Smartphones, small Dialogs, Sidepanel,...)\nSize S reaches up to 600 px. This means that as soon as the width of the form reaches 601 px, it changes from S to M, because the default value of breakpointM is 600.\nThis means that the form groups are positioned below each other in a single column and the labels are positioned above the fields to avoid truncation of the labels.\n\nThe label-field ratio is 12:12:0 by default:\n\n12 grid columns of the responsive grid layout are used by the labels.\n(A label handles the space of a whole row.)\n12 grid columns of the responsive grid layout are used by the fields.\n(A field handles the space of a whole row.)\n0 grid columns of the responsive grid layout are used by empty columns.\n(There is no empty space on the right of the field.)*\n<img src=\"assets/03-form-BreakpointM_023n_Belize.png\">\n\n####  Size M\nSize M of the form also has a single-column layout within the responsive grid layout by default.\nHowever, in size M the labels are positioned in the same row as the corresponding input field or value, and form groups are positioned below each other.\n\nThe label-field ratio is 4:8:0 by default:\n\n4 grid columns of the responsive grid layout are used by the labels.\n8 grid columns of the responsive grid layout are used by the fields.\n0 columns of the responsive grid layout are used by empty columns.\n\n<img src=\"assets/04-form-BreakpointM_014n_Belize-1.png\">\n\n#### Size L\nThe form in size L use a two-column layout within the responsive grid layout by default.\nThat means that the form groups are placed next to each other to have all the information on one screen and to avoid scrolling.\nIn these columns, the labels are positioned in the same row as the corresponding input field or value.\nSo the form groups adopt the Z layout (reading direction in rows, not in columns).\n\nThe label-field ratio is 4:7:1 by default:\n\n4 grid columns of the responsive grid layout are used by the labels.\n7 grid columns of the responsive grid layout are used by fields.\n1 grid columns of the responsive grid layout are used by empty columns.\n\n<img src=\"assets/05-form-BreakpointL_023_Belize.png\">\n\n#### Size XL\nTo avoid the stretching of the form field on large screens, the form uses extra empty columns for the layout.\n\nThe label-field ratio for size XL is 3:5:4\n\n3 grid columns of the responsive grid layout are used by labels.\n5 grid columns of the responsive grid layout are used by fields.\n4 grid columns of the responsive grid layout are used by empty columns.\n\n<img src=\"assets/06-form-BreakpointL_014_Belize.png\">\n\n### Segmented fields\nWith the help of the `FormFieldSegmenter` you can have segmented fields with the patterns `SmallBig` and `BigSmall`.\n<img src=\"assets/form_segmented_field.png\">\n\n### Units of measurement\nThe `FormFieldSegmenter` is also used to display units right to the input.\n\n<img src=\"assets/Form_units.png\">\n\n### Text content\nIf you want to add text content instead of input elements (for readonly forms), you should use the **text** slot of the `FormRow` component.",
+          "description": "### Description\nA form is used to present data to the user and to allow users to enter data in a structured way. The `FormLayout` component is a container for `FormGroup`s.\n\nIt controls the layout according to the number of groups and content width according to the rules from the [guidelines](https://experience.sap.com/fiori-design-web/form/).\n\n### Types\nThere are three types of forms:\n\n- Display-only: the data is presented only as label-value field pairs without editable fields.\n- Editable: the data is presented as label-input field pairs, so users can enter data.\n- Mixed: some fields are editable and some are not.\n\n### Breakpoints for the group handling\nThe breakpoints are referenced by the container size of the `FormLayout` component, not by the screen size.\n\n#### Single group\nIf there is only one group used or the available space is below 1024px, the width for the group is always full width.\n![](assets/Form-singlecolumn-1.92-1.png)\n\n#### Multiple groups\nIf the space is 1024px and higher, the groups are displayed side by side with a fraction of 50:50.\n![](assets/form-sizexl-1.92-1-1100x211.png)\n\n\nIf the space is 1440px and higher, the groups are displayed with a fraction of 33:33:33.\n![](assets/Form_with_three_form_groups__three_columns_sizexl-1.92-1100x225.png)\n![](assets/Form_with_two_form_groups__three_columns_sizexl-1.92-1100x225.png)\n\n### Breakpoints for the form rows**\n\n#### Size S (Smartphones, small Dialogs, Sidepanel,...)\nSize S reaches up to 600 px. This means that as soon as the width of the form reaches 601 px, it changes from S to M, because the default value of breakpointM is 600.\nThis means that the form groups are positioned below each other in a single column and the labels are positioned above the fields to avoid truncation of the labels.\n\nThe label-field ratio is 12:12:0 by default:\n\n12 grid columns of the responsive grid layout are used by the labels.\n(A label handles the space of a whole row.)\n12 grid columns of the responsive grid layout are used by the fields.\n(A field handles the space of a whole row.)\n0 grid columns of the responsive grid layout are used by empty columns.\n(There is no empty space on the right of the field.)*\n![](assets/03-form-BreakpointM_023n_Belize.png)\n\n####  Size M\nSize M of the form also has a single-column layout within the responsive grid layout by default.\nHowever, in size M the labels are positioned in the same row as the corresponding input field or value, and form groups are positioned below each other.\n\nThe label-field ratio is 4:8:0 by default:\n\n4 grid columns of the responsive grid layout are used by the labels.\n8 grid columns of the responsive grid layout are used by the fields.\n0 columns of the responsive grid layout are used by empty columns.\n\n![](assets/04-form-BreakpointM_014n_Belize-1.png)\n\n#### Size L\nThe form in size L use a two-column layout within the responsive grid layout by default.\nThat means that the form groups are placed next to each other to have all the information on one screen and to avoid scrolling.\nIn these columns, the labels are positioned in the same row as the corresponding input field or value.\nSo the form groups adopt the Z layout (reading direction in rows, not in columns).\n\nThe label-field ratio is 4:7:1 by default:\n\n4 grid columns of the responsive grid layout are used by the labels.\n7 grid columns of the responsive grid layout are used by fields.\n1 grid columns of the responsive grid layout are used by empty columns.\n\n![](assets/05-form-BreakpointL_023_Belize.png)\n\n#### Size XL\nTo avoid the stretching of the form field on large screens, the form uses extra empty columns for the layout.\n\nThe label-field ratio for size XL is 3:5:4\n\n3 grid columns of the responsive grid layout are used by labels.\n5 grid columns of the responsive grid layout are used by fields.\n4 grid columns of the responsive grid layout are used by empty columns.\n\n![](assets/06-form-BreakpointL_014_Belize.png)\n\n### Segmented fields\nWith the help of the `FormFieldSegmenter` you can have segmented fields with the patterns `SmallBig` and `BigSmall`.\n![](assets/form_segmented_field.png)\n\n### Units of measurement\nThe `FormFieldSegmenter` is also used to display units right to the input.\n\n![](assets/Form_units.png)\n\n### Text content\nIf you want to add text content instead of input elements (for readonly forms), you should use the **text** slot of the `FormRow` component.",
           "name": "FormLayout",
           "slots": [
             {
@@ -4022,11 +4022,6 @@
             }
           ],
           "members": [
-            {
-              "kind": "method",
-              "name": "firdstUpdated",
-              "privacy": "public"
-            },
             {
               "kind": "field",
               "name": "formTitle",
@@ -4133,28 +4128,7 @@
               "name": "label"
             }
           ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string | undefined"
-              },
-              "privacy": "public",
-              "description": "Label for the form",
-              "attribute": "label"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Label for the form",
-              "fieldName": "label"
-            }
-          ],
+          "members": [],
           "mixins": [
             {
               "name": "LitFBP",
@@ -7924,7 +7898,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The `furo-ui5-option` is meant to be used inside a `furo-ui5-select`. It is also automatically used by the `furo-ui5-select-enum`.\n\n### Overview\n\nThe `furo-ui5-option` component defines the content of an option in the `furo-ui5-select`.\n\n\n",
+          "description": "The `furo-ui5-option` is meant to be used inside a `furo-ui5-select`. It is also automatically used by the `furo-ui5-select-enum`.\n\nYou can bind any OptionLike field to it.\n```js\nexport interface OptionLike extends FieldNode {\n  id: STRING;\n  displayName: STRING;\n  icon?: STRING;\n  additionalText?: STRING;\n  tooltip?: STRING;\n}\n```\n\n### Overview\n\nThe `furo-ui5-option` component defines the content of an option in the `furo-ui5-select`.\n\n\n",
           "name": "Option",
           "cssParts": [
             {

@@ -100,7 +100,7 @@ const meta: Meta = {
         component,
         since: "2.0.0",
         originalComponent: "https://ui5.github.io/webcomponents/components/Select/",
-        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-139/ui-elements/select/",
+        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-142/ui-elements/select/",
       }),
     },
     a11y: {

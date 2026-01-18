@@ -1,5 +1,6 @@
 import "@/Assets";
 import "@/furo-ui5-button";
+import "@/furo-ui5-button-badge";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import ButtonDesign from "@ui5/webcomponents/dist/types/ButtonDesign.js";
@@ -14,7 +15,7 @@ import DocumentationTemplate from "@/stories/DocumentationTemplate";
 
 const component = "furo-ui5-button";
 const componentInfo = {
-  guideline: "https://www.sap.com/design-system/fiori-design-web/v1-139/ui-elements/button/",
+  guideline: "https://www.sap.com/design-system/fiori-design-web/v1-142/ui-elements/button/",
   originalComponent: "https://ui5.github.io/webcomponents/components/main/Button/",
 };
 
@@ -25,7 +26,7 @@ ArgsSetEnum(argTypes, "design", Object.values(ButtonDesign));
 ArgsSetEnum(argTypes, "type", Object.values(ButtonType));
 
 const meta: Meta = {
-  title: "input/Button",
+  title: "input/Button/Button",
   component,
   tags: ["autodocs"],
   // args,
