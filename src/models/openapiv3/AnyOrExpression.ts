@@ -57,7 +57,7 @@ export class AnyOrExpression extends FieldNode {
     this._expression = new OpenapiV3Expression(undefined, this, "expression");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof AnyOrExpression] as FieldNode).__meta.required = true;
     });
 
@@ -72,7 +72,7 @@ export class AnyOrExpression extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof AnyOrExpression] as FieldNode).__readonly = true;
     });
 

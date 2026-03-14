@@ -44,7 +44,7 @@ export class Strings extends FieldNode {
     this._additionalProperties = new ARRAY<OpenapiV3NamedString, IOpenapiV3NamedString>(undefined, this, "additionalProperties");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Strings] as FieldNode).__meta.required = true;
     });
 
@@ -59,7 +59,7 @@ export class Strings extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Strings] as FieldNode).__readonly = true;
     });
 

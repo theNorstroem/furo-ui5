@@ -44,7 +44,7 @@ export class Expression extends FieldNode {
     this._additionalProperties = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "additionalProperties");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Expression] as FieldNode).__meta.required = true;
     });
 
@@ -59,7 +59,7 @@ export class Expression extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Expression] as FieldNode).__readonly = true;
     });
 

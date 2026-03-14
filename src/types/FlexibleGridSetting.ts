@@ -8,8 +8,8 @@ export const SpanSizeHorizontalVals = ["full", "end", "1", "2", "3", "4", "5", "
 export type SpanSizeVertical = (typeof SpanSizeVerticalVals)[number];
 export type SpanSizeHorizontal = (typeof SpanSizeHorizontalVals)[number];
 
-export type FlexibleGridSetting = {
+export interface FlexibleGridSetting {
   hSpan?: SpanSizeHorizontal;
   vSpan?: SpanSizeVertical;
   order: number;
-};
+}

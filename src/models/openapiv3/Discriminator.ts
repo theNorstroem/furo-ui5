@@ -72,7 +72,7 @@ export class Discriminator extends FieldNode {
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Discriminator] as FieldNode).__meta.required = true;
     });
 
@@ -87,7 +87,7 @@ export class Discriminator extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Discriminator] as FieldNode).__readonly = true;
     });
 

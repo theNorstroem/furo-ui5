@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FieldNode } from "@furo/open-models/dist";
+import { FieldNode } from "@furo/open-models";
 
 export class ModelReaderWriter {
   /**
@@ -35,14 +35,14 @@ export class ModelReaderWriter {
     this.fieldNode = fieldNode;
     this.writers = writers;
     this.readers = readers;
-    this.modelWriteFn = this.writers.get(this.fieldNode!.__meta.typeName);
-    this.modelReadFn = this.readers.get(this.fieldNode!.__meta.typeName);
+    this.modelWriteFn = this.writers.get(this.fieldNode.__meta.typeName);
+    this.modelReadFn = this.readers.get(this.fieldNode.__meta.typeName);
   }
 
   public readModel() {
     if (this.modelReadFn === undefined) {
-      // eslint-disable-next-line no-console
-      console.error("No reader specified for field node type", this.fieldNode!.__meta.typeName);
+       
+      console.error("No reader specified for field node type", this.fieldNode.__meta.typeName);
       return;
     }
     this.modelReadFn();
@@ -50,14 +50,14 @@ export class ModelReaderWriter {
 
   public writeModel() {
     if (this.fieldNode === undefined) {
-      // eslint-disable-next-line no-console
+       
       console.error("No bindings for", this);
       return;
     }
 
     if (this.modelWriteFn === undefined) {
-      // eslint-disable-next-line no-console
-      console.error("No writer specified for field node type", this.fieldNode!.__meta.typeName);
+       
+      console.error("No writer specified for field node type", this.fieldNode.__meta.typeName);
       return;
     }
     this.modelWriteFn();

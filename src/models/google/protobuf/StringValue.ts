@@ -59,7 +59,7 @@ export class StringValue extends FieldNode {
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof StringValue] as FieldNode).__meta.required = true;
     });
 
@@ -74,7 +74,7 @@ export class StringValue extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof StringValue] as FieldNode).__readonly = true;
     });
 

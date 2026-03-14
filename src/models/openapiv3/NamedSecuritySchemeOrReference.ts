@@ -79,7 +79,7 @@ export class NamedSecuritySchemeOrReference extends FieldNode {
     this._value = new OpenapiV3SecuritySchemeOrReference(undefined, this, "value");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof NamedSecuritySchemeOrReference] as FieldNode).__meta.required = true;
     });
 
@@ -94,7 +94,7 @@ export class NamedSecuritySchemeOrReference extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof NamedSecuritySchemeOrReference] as FieldNode).__readonly = true;
     });
 

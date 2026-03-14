@@ -1,0 +1,231 @@
+import { LitElement, css } from 'lit';
+import { Env } from '@furo/framework';
+
+/**
+ *  furo-ui5-notification should be used together witch furo-ui5-notification-list-display or furo-ui5-notification-group-display. you can place those two web-components into different places.
+ *  best place the furo-ui5-notification-list(or group)-display on the main site. then you only need one furo-ui5-notification-list(or group)-display. it can work with n furo-ui5-notification.
+ *
+ * @fires {{Object}  this} open-furo-ui5-notification-requested -  Fired when value open banner is requested
+ * @fires {{Object}  this} open-furo-ui5-notification-group-requested -  Fired when value open banner is requested
+ * @fires {{Object}  payload} notification-closed. -  Fired when notification is closed.
+ * @fires {{Object}  payload} notification-custom-action -  Fired when notification custom action is triggered. this is a general action event.
+ * @fires {{Object}  payload} notification-custom-action-`commandName` -  Fired when notification custom action is triggered.
+ *
+ * @summary trigger component for notifications
+ * @element
+ */
+export class FuroUi5Notification extends LitElement {
+  constructor() {
+    super();
+    this.dismissButtonText = 'dismiss';
+  }
+
+  /**
+   *@private
+   */
+  static get properties() {
+    return {
+      /**
+       * banner text content. Use *word* to mark as strong. Use \n to insert a line break.
+       *
+       * *HTML tags will be stripped out.*
+       *
+       * @type String
+       */
+      text: {
+        type: String,
+      },
+      /**
+       * payload. can be a GRPC error or a notification message collection.
+       *
+       * @type Object
+       */
+      payload: {
+        type: Object,
+      },
+      /**
+       * type of the notification. `grpc` or `notification`
+       * @private
+       */
+      _type: { type: String },
+    };
+  }
+
+  /**
+   * request to display the notifications
+   * @param p {Object} payload
+   * @private
+   */
+  _requestListDisplay() {
+    const customEvent = new Event('open-furo-ui5-notification-requested', {
+      composed: true,
+      bubbles: true,
+    });
+    customEvent.detail = this;
+    this.dispatchEvent(customEvent);
+  }
+
+  /**
+   * request to display the notifications in group
+   * @param p {Object} payload
+   * @private
+   */
+  _requestGroupDisplay() {
+    const customEvent = new Event(
+      'open-furo-ui5-notification-group-requested',
+      {
+        composed: true,
+        bubbles: true,
+      }
+    );
+    customEvent.detail = this;
+    this.dispatchEvent(customEvent);
+  }
+
+  /**
+   * trigger event when notification is closed
+   *
+   * @param message
+   * @private
+   */
+  _close(message) {
+    const customEvent = new Event('notification-closed', {
+      composed: true,
+      bubbles: true,
+    });
+    customEvent.detail = message || this.payload;
+    this.dispatchEvent(customEvent);
+  }
+
+  /**
+   * trigger events when notification actions are triggered
+   *
+   * @param command
+   * @param message
+   * @private
+   */
+  _customAction(command, message) {
+    const customEvent = new Event('notification-custom-action', {
+      composed: true,
+      bubbles: true,
+    });
+    customEvent.detail = message;
+    this.dispatchEvent(customEvent);
+
+    const customActionEvent = new Event(
+      `notification-custom-action-${command}`,
+      {
+        bubbles: true,
+        composed: true,
+      }
+    );
+    customActionEvent.detail = message;
+    this.dispatchEvent(customActionEvent);
+
+    this._close(message);
+  }
+
+  /**
+   * inject a grpc status object
+   * parse grpc status object and set the label according to the LocalizedMessage in status.
+   * https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto .
+   * @param s
+   */
+  parseGrpcStatus(status) {
+    this.payload = status;
+    this._type = 'grpc';
+    this._requestListDisplay();
+  }
+
+  /**
+   * inject an array of notification messages.
+   * the notification message should be an array of the following object signature:
+   * {
+   *  "id": 1,
+   *  "display_name": "",
+   *  "heading": "heading 1",
+   *  "message_priority": "High",
+   *  "category": "warning",
+   *  "category_priority": "High",
+   *  "actions": [
+   *    {
+   *      "icon":"accept",
+   *      "command":"accept",
+   *      "text": "accept"
+   *    },
+   *    {
+   *      "icon":"message-error",
+   *      "command":"reject",
+   *      "text": "Reject"
+   *    }
+   *  ],
+   *  "message": "Markdown | Less | Pretty\n--- | --- | ---\n*Still* | `renders` | **nicely**\n1 | 2 | 3"
+   *}
+   * @param c
+   */
+  injectNotificationCollection(c) {
+    this.payload = c;
+    this._type = 'notification';
+    this._requestGroupDisplay();
+  }
+
+  /**
+   * Parses the output of dataObject.getValidityMessages and
+   * transforms the incoming data into a google.rpc.Status message of type google.rpc.BadRequest with
+   * a list of field violations as content
+   * @param fieldViolations
+   */
+  parseFieldValidityMessages(fieldViolations) {
+    const fieldValidityMessages = [];
+    Object.entries(fieldViolations.data).forEach(([key, element]) => {
+      if (key !== 'field_description') {
+        const item = { field: '', description: '' };
+        item.field = element.field_description.meta.label;
+        if (element.description !== undefined) {
+          item.description = element.description || '';
+        } else {
+          const subitem = [];
+          Object.entries(element).forEach(([, subElement]) => {
+            if (
+              subElement.field_description &&
+              subElement.description &&
+              subElement.description.length
+            ) {
+              subitem.push(
+                `${subElement.field_description.meta.label}: ${subElement.description}`
+              );
+            }
+          });
+          item.description = new Intl.ListFormat([Env.locale, 'de-CH'], {
+            style: 'long',
+            type: 'conjunction',
+          }).format(subitem);
+        }
+        fieldValidityMessages.push(item);
+      }
+    });
+
+    const status = {
+      code: 1,
+      details: [
+        {
+          '@type': 'type.googleapis.com/google.rpc.BadRequest',
+          field_violations: fieldValidityMessages,
+        },
+      ],
+    };
+    this.payload = status;
+    this._type = 'grpc';
+    this._requestListDisplay();
+  }
+
+  static get styles() {
+    return css`
+      :host {
+        display: none;
+      }
+    `;
+  }
+}
+
+customElements.define('furo-ui5-notification', FuroUi5Notification);

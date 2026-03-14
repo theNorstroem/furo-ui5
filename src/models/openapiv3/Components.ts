@@ -52,7 +52,7 @@ import {
 
 /**
  * @interface IComponents
- *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.
+ *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the web-components object will have no effect on the API unless they are explicitly referenced from properties outside the web-components object.
  */
 export interface IComponents {
   schemas?: IOpenapiV3SchemasOrReferences;
@@ -69,7 +69,7 @@ export interface IComponents {
 
 /**
  * @interface TComponents
- *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.
+ *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the web-components object will have no effect on the API unless they are explicitly referenced from properties outside the web-components object.
  */
 export interface TComponents {
   schemas?: TOpenapiV3SchemasOrReferences;
@@ -86,7 +86,7 @@ export interface TComponents {
 
 /**
  * Components
- *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.
+ *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the web-components object will have no effect on the API unless they are explicitly referenced from properties outside the web-components object.
  */
 export class Components extends FieldNode {
   private _schemas: OpenapiV3SchemasOrReferences;
@@ -200,7 +200,7 @@ export class Components extends FieldNode {
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Components] as FieldNode).__meta.required = true;
     });
 
@@ -215,7 +215,7 @@ export class Components extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Components] as FieldNode).__readonly = true;
     });
 

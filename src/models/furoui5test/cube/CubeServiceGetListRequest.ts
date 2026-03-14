@@ -50,7 +50,7 @@ export class CubeServiceGetListRequest extends FieldNode {
     this._query = new STRING(undefined, this, "query");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof CubeServiceGetListRequest] as FieldNode).__meta.required = true;
     });
 
@@ -65,7 +65,7 @@ export class CubeServiceGetListRequest extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof CubeServiceGetListRequest] as FieldNode).__readonly = true;
     });
 

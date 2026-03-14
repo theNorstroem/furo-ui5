@@ -12,7 +12,7 @@ import type {
   UINT64,
   DOUBLE,
   FLOAT,
-} from "@furo/open-models/dist/index.js";
+} from "@furo/open-models";
 import type { InputSelectionChangeEventDetail } from "@ui5/webcomponents/dist/Input.js";
 import type InputType from "@ui5/webcomponents/dist/types/InputType.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";

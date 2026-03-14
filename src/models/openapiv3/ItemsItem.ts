@@ -48,7 +48,7 @@ export class ItemsItem extends FieldNode {
     this._schemaOrReference = new ARRAY<OpenapiV3SchemaOrReference, IOpenapiV3SchemaOrReference>(undefined, this, "schemaOrReference");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof ItemsItem] as FieldNode).__meta.required = true;
     });
 
@@ -63,7 +63,7 @@ export class ItemsItem extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof ItemsItem] as FieldNode).__readonly = true;
     });
 

@@ -73,7 +73,7 @@ export class CustomHttpPattern extends FieldNode {
     this._path = new STRING(undefined, this, "path");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof CustomHttpPattern] as FieldNode).__meta.required = true;
     });
 
@@ -88,7 +88,7 @@ export class CustomHttpPattern extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof CustomHttpPattern] as FieldNode).__readonly = true;
     });
 

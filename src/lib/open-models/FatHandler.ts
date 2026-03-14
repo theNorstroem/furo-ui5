@@ -7,15 +7,15 @@ export class FatHandler<T> {
 
   private _initialAttributes: string[] = [];
 
-  private _receivedFatAttributes: Set<string> = new Set();
+  private _receivedFatAttributes = new Set<string>();
 
   /**
    * This is the default set of allowed labels to set.
    */
-  public allowedLabels: Set<string> = new Set(["hidden", "readonly", "disabled", "required"]);
+  public allowedLabels = new Set<string>(["hidden", "readonly", "disabled", "required"]);
 
   // eslint-disable-next-line class-methods-use-this
-  private _cutomAttributes: (attributes: Map<string, STRING>) => void = _ => {};
+  private _cutomAttributes: (attributes: Map<string, STRING>) => void = (_) => {};
 
   private fatAttributesToMap: (keyof T)[];
 
@@ -25,7 +25,7 @@ export class FatHandler<T> {
   }
 
   private applyAttributes(fat: FuroFatBool | FuroFatString | FuroFatInt32 | FuroFatInt64 | FuroFatUint32 | FuroFatUint64 | FuroFatFloat) {
-    if (fat.attributes.has("value-state") && this._initialAttributes.indexOf("value-state") === -1) {
+    if (fat.attributes.has("value-state") && !this._initialAttributes.includes("value-state")) {
       if (fat.attributes.has("value-state-message")) {
         const stateMap: Record<string, ValueState> = {
           Information: ValueState.Information,
@@ -88,7 +88,7 @@ export class FatHandler<T> {
   private applyLabels(labels: Map<string, BOOLEAN>) {
     labels.forEach((label, key) => {
       // do not touch initial html attributes
-      if (this.allowedLabels.has(key) && this._initialAttributes.indexOf(key) === -1) {
+      if (this.allowedLabels.has(key) && !this._initialAttributes.includes(key)) {
         if (label.value) {
           // set Attribute
           (this.target as HTMLElement).setAttribute(key, "");
@@ -100,7 +100,7 @@ export class FatHandler<T> {
       }
     });
     // remove attributes which was set before, but not received anymore
-    this._receivedFatAttributes.forEach(attribute => {
+    this._receivedFatAttributes.forEach((attribute) => {
       if (!labels.has(attribute)) {
         (this.target as HTMLElement).removeAttribute(attribute);
       }
@@ -108,7 +108,7 @@ export class FatHandler<T> {
   }
 
   readAttributes() {
-    this._initialAttributes = [...(this.target as HTMLElement).attributes].map(item => item.name);
+    this._initialAttributes = [...(this.target as HTMLElement).attributes].map((item) => item.name);
   }
 
   applyReceivedFatAttributesAndLabels(fat: FuroFatBool | FuroFatString | FuroFatInt32 | FuroFatInt64 | FuroFatUint32 | FuroFatUint64 | FuroFatFloat) {

@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FieldNode, ValueState } from "@furo/open-models/dist";
+import { FieldNode, ValueState } from "@furo/open-models";
 
 interface ComponentWithValueState extends HTMLElement {
   valueState: string;
@@ -24,7 +24,7 @@ export class FieldNodeValueState {
     }
     this._previousValueState.slotted = this.inputElement.querySelector('*[slot="valueStateMessage"]');
 
-    fieldNode.__addEventListener("state-changed", e => {
+    fieldNode.__addEventListener("state-changed", (e) => {
       // restore previous if it exists
       if (e.detail.__meta.valueState === "None" && this._previousValueState.slotted) {
         this.inputElement.querySelector('div[slot="valueStateMessage"].vse')?.remove();
@@ -78,7 +78,7 @@ export class FieldNodeValueState {
     const VALUE_STATE_MESSAGE_ELEMENT = document.createElement("div");
     VALUE_STATE_MESSAGE_ELEMENT.setAttribute("slot", "valueStateMessage");
     VALUE_STATE_MESSAGE_ELEMENT.setAttribute("class", "vse");
-    // eslint-disable-next-line wc/no-constructor-attributes
+     
     this.inputElement.appendChild(VALUE_STATE_MESSAGE_ELEMENT);
     return VALUE_STATE_MESSAGE_ELEMENT;
   }

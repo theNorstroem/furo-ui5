@@ -66,7 +66,7 @@ export class DefaultType extends FieldNode {
     this._string = new STRING(undefined, this, "string");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof DefaultType] as FieldNode).__meta.required = true;
     });
 
@@ -81,7 +81,7 @@ export class DefaultType extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof DefaultType] as FieldNode).__readonly = true;
     });
 

@@ -70,7 +70,7 @@ export class DoubleLabelsEntry extends FieldNode {
     this._value = new BOOLEAN(undefined, this, "value");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof DoubleLabelsEntry] as FieldNode).__meta.required = true;
     });
 
@@ -85,7 +85,7 @@ export class DoubleLabelsEntry extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof DoubleLabelsEntry] as FieldNode).__readonly = true;
     });
 

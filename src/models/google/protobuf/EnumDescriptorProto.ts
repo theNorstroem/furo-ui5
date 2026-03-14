@@ -141,7 +141,7 @@ export class EnumDescriptorProto extends FieldNode {
     this._reservedName = new ARRAY<STRING, string>(undefined, this, "reservedName");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof EnumDescriptorProto] as FieldNode).__meta.required = true;
     });
 
@@ -156,7 +156,7 @@ export class EnumDescriptorProto extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof EnumDescriptorProto] as FieldNode).__readonly = true;
     });
 

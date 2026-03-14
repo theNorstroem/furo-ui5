@@ -78,7 +78,7 @@ export class CubeOptions extends FieldNode {
     this._tooltip = new STRING(undefined, this, "tooltip");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof CubeOptions] as FieldNode).__meta.required = true;
     });
 
@@ -93,7 +93,7 @@ export class CubeOptions extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof CubeOptions] as FieldNode).__readonly = true;
     });
 

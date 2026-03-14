@@ -3,8 +3,6 @@
 
 import { ARRAY, BOOLEAN, DOUBLE, ENUM, FieldNode, INT32, Registry, STRING } from "@furo/open-models/dist/index";
 
-import { XString as FuroFatString, type IXString as IFuroFatString, type TXString as TFuroFatString } from "../../furo/fat/String";
-
 import { Colour as Furoui5TestCubeColour, type IColour as IFuroui5TestCubeColour, type TColour as TFuroui5TestCubeColour } from "./Colour";
 import {
   CubeOptions as Furoui5TestCubeCubeOptions,
@@ -12,6 +10,7 @@ import {
   type TCubeOptions as TFuroui5TestCubeCubeOptions,
 } from "./CubeOptions";
 import { Materials as Furoui5TestCubeMaterials } from "./Materials";
+import { XString as FuroFatString, type IXString as IFuroFatString, type TXString as TFuroFatString } from "../../furo/fat/String";
 
 /**
  * @interface ICubeDefinition
@@ -196,7 +195,7 @@ export class CubeDefinition extends FieldNode {
     this._multipleCubeOptions = new ARRAY<Furoui5TestCubeCubeOptions, IFuroui5TestCubeCubeOptions>(undefined, this, "multipleCubeOptions");
 
     // Set required fields
-    ["length", "breadth", "height"].forEach(fieldName => {
+    ["length", "breadth", "height"].forEach((fieldName) => {
       (this[fieldName as keyof CubeDefinition] as FieldNode).__meta.required = true;
     });
 
@@ -216,7 +215,7 @@ export class CubeDefinition extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof CubeDefinition] as FieldNode).__readonly = true;
     });
 

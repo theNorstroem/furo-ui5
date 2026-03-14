@@ -75,7 +75,7 @@ export class NamedMediaType extends FieldNode {
     this._value = new OpenapiV3MediaType(undefined, this, "value");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof NamedMediaType] as FieldNode).__meta.required = true;
     });
 
@@ -90,7 +90,7 @@ export class NamedMediaType extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof NamedMediaType] as FieldNode).__readonly = true;
     });
 

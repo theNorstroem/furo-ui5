@@ -150,7 +150,7 @@ export class UninterpretedOption extends FieldNode {
     this._aggregateValue = new STRING(undefined, this, "aggregateValue");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof UninterpretedOption] as FieldNode).__meta.required = true;
     });
 
@@ -165,7 +165,7 @@ export class UninterpretedOption extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof UninterpretedOption] as FieldNode).__readonly = true;
     });
 

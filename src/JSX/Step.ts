@@ -12,7 +12,7 @@ import type {
   UINT64,
   DOUBLE,
   FLOAT,
-} from "@furo/open-models/dist/index.js";
+} from "@furo/open-models";
 import type { StepInputValueStateChangeEventDetail } from "@ui5/webcomponents/dist/StepInput.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
 import * as React from "react";
@@ -188,7 +188,7 @@ declare module "react" {
        * use the regular `furo-furo-ui5-input` instead.
        * - To display a value that rarely needs to be adjusted and does not pertain to a particular step.
        * In this case, use the regular `furo-furo-ui5-input` instead.
-       * - To enter dates and times. In this case, use date/time related components instead.
+       * - To enter dates and times. In this case, use date/time related web-components instead.
        *
        * ### ES6 Module Import
        *
@@ -222,7 +222,7 @@ declare module "react" {
        * use the regular `furo-ui5-input` instead.
        * - To display a value that rarely needs to be adjusted and does not pertain to a particular step.
        * In this case, use the regular `furo-ui5-input` instead.
-       * - To enter dates and times. In this case, use date/time related components instead.
+       * - To enter dates and times. In this case, use date/time related web-components instead.
        *
        * ### ES6 Module Import
        *

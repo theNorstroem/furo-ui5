@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["dist", "test", "scripts", "hugo","docs","mockdata","storybook-static","proto","proto_dependencies","contracts",".storybook"]
+}

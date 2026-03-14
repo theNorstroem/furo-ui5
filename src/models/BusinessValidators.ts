@@ -1,4 +1,4 @@
-import { ValueState } from "@furo/open-models/dist";
+import { ValueState } from "@furo/open-models";
 import { Validators } from "@furo/open-models/dist/Validator";
 
 import { type XString as FuroFatString } from "@/models/furo/fat/String";

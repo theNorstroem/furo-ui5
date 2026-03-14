@@ -12,7 +12,7 @@ import type {
   UINT64,
   DOUBLE,
   FLOAT,
-} from "@furo/open-models/dist/index.js";
+} from "@furo/open-models";
 import type RatingIndicatorSize from "@ui5/webcomponents/dist/types/RatingIndicatorSize.js";
 import * as React from "react";
 

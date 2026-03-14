@@ -1,4 +1,4 @@
-import "../src/furo-ui5-icon";
+import "@/web-components/furo-ui5-icon";
 import "../src/Assets";
 
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";

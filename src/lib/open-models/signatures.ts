@@ -9,7 +9,7 @@ export interface Identifiable extends FieldNode {
 }
 
 /**
- * Some components are expecting that you fulfill this interface.
+ * Some web-components are expecting that you fulfill this interface.
  */
 export interface IdentifiableList extends ARRAY<Identifiable, unknown> {}
 
@@ -39,7 +39,7 @@ export interface OptionLike extends FieldNode {
 }
 
 /**
- * Some components are expecting that you fulfill this interface.
+ * Some web-components are expecting that you fulfill this interface.
  */
 export interface OptionLikeList extends ARRAY<OptionLike, unknown> {}
 

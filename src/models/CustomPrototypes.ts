@@ -1,4 +1,4 @@
-import { ToString, ValueOf } from "@furo/open-models/dist";
+import { ToString, ValueOf } from "@furo/open-models";
 
 import { Colour } from "./furoui5test/cube/Colour";
 import { CubeEntity } from "./furoui5test/cube/CubeEntity";

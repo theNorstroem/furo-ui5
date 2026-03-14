@@ -139,7 +139,7 @@ export class MethodDescriptorProto extends FieldNode {
     this._serverStreaming = new BOOLEAN(undefined, this, "serverStreaming");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof MethodDescriptorProto] as FieldNode).__meta.required = true;
     });
 
@@ -154,7 +154,7 @@ export class MethodDescriptorProto extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof MethodDescriptorProto] as FieldNode).__readonly = true;
     });
 

@@ -1,5 +1,5 @@
 import "@/Assets";
-  import "@/furo-ui5-text-input";
+  import "@/web-components/furo-ui5-text-input";
 
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";

@@ -10,8 +10,6 @@
  * //7. Reset the timer and args
  */
 
-import type { Timeout } from "@ui5/webcomponents-base";
-
 /**
  * @param {Function} func
  * @param {number} delay
@@ -20,8 +18,8 @@ import type { Timeout } from "@ui5/webcomponents-base";
  *
  */
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
-export default function DebounceBuilder(func: Function, delay: number = 250, option = { leading: false, trailing: true }) {
-  let timer: number | Timeout | undefined; // same like basic debounce
+export default function DebounceBuilder(func: Function, delay = 250, option = { leading: false, trailing: true }) {
+  let timer: number   | undefined; // same like basic debounce
   let trailingArgs: unknown[] = []; // as we require last arguments for trailing
 
   if (!option.leading && !option.trailing) return () => null; // if both false, return null

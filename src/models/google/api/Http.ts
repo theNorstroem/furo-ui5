@@ -109,7 +109,7 @@ export class Http extends FieldNode {
     this._fullyDecodeReservedExpansion = new BOOLEAN(undefined, this, "fullyDecodeReservedExpansion");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Http] as FieldNode).__meta.required = true;
     });
 
@@ -124,7 +124,7 @@ export class Http extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Http] as FieldNode).__readonly = true;
     });
 

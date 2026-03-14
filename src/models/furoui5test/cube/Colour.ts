@@ -100,7 +100,7 @@ export class Colour extends FieldNode {
     this._alpha = new FLOAT(undefined, this, "alpha");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Colour] as FieldNode).__meta.required = true;
     });
 
@@ -120,7 +120,7 @@ export class Colour extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Colour] as FieldNode).__readonly = true;
     });
 

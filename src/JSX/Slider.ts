@@ -12,7 +12,7 @@ import type {
   UINT64,
   DOUBLE,
   FLOAT,
-} from "@furo/open-models/dist/index.js";
+} from "@furo/open-models";
 import * as React from "react";
 
 import type { FuroFatUint32, FuroFatUint64, FuroFatInt32, FuroFatInt64, FuroFatFloat } from "@/models/index.js";

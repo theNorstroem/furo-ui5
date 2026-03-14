@@ -52,7 +52,7 @@ export class SecuritySchemesOrReferences extends FieldNode {
     );
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof SecuritySchemesOrReferences] as FieldNode).__meta.required = true;
     });
 
@@ -67,7 +67,7 @@ export class SecuritySchemesOrReferences extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof SecuritySchemesOrReferences] as FieldNode).__readonly = true;
     });
 

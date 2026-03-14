@@ -309,7 +309,7 @@ export class FileDescriptorProto extends FieldNode {
     this._edition = new ENUM<GoogleProtobufEdition>(undefined, GoogleProtobufEdition, GoogleProtobufEdition.EDITION_UNKNOWN, this, "edition");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof FileDescriptorProto] as FieldNode).__meta.required = true;
     });
 
@@ -324,7 +324,7 @@ export class FileDescriptorProto extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof FileDescriptorProto] as FieldNode).__readonly = true;
     });
 

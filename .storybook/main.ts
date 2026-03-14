@@ -2,16 +2,11 @@ import type { StorybookConfig } from '@storybook/web-components-vite';
 import remarkGfm from "remark-gfm";
 
 const config: StorybookConfig = {
-  stories: [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
-  ],
-staticDirs:[
-  { from: "../src/stories/assets", to: "assets" }
-],
+  stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  staticDirs: [{ from: "../src/stories/assets", to: "assets" }],
   addons: [
     {
-      name: '@storybook/addon-docs',
+      name: "@storybook/addon-docs",
       options: {
         csfPluginOptions: null,
         mdxPluginOptions: {
@@ -32,12 +27,11 @@ staticDirs:[
   ],
   framework: {
     name: "@storybook/web-components-vite",
-    options: {}
+    options: {},
   },
-  features:{
-    backgrounds:false,
+  features: {
+    backgrounds: false,
   },
-  docs:{
-  }
+  docs: {},
 };
 export default config;

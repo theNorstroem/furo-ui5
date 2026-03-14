@@ -1,5 +1,5 @@
 import "../src/Assets";
-import "../src/furo-ui5-table-toolbar-separator";
+import "@/web-components/furo-ui5-table-toolbar-separator";
 
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";

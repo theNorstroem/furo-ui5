@@ -1,4 +1,0 @@
-# furoBaseSpecs
-
-How to build:
-

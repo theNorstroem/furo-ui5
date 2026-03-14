@@ -191,7 +191,7 @@ export class Header extends FieldNode {
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Header] as FieldNode).__meta.required = true;
     });
 
@@ -206,7 +206,7 @@ export class Header extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Header] as FieldNode).__readonly = true;
     });
 

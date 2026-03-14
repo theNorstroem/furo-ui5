@@ -3,14 +3,13 @@
 
 import { Fetcher } from "@furo/open-models/dist/Fetcher";
 
-import { API_OPTIONS } from "../../API_OPTIONS";
-
 import { type ICubeServiceGetListRequest as IFuroui5testCubeCubeServiceGetListRequest } from "./CubeServiceGetListRequest";
 import { type ICubeServiceGetListResponse as IFuroui5testCubeCubeServiceGetListResponse } from "./CubeServiceGetListResponse";
 import { type ICubeServiceGetRequest as IFuroui5testCubeCubeServiceGetRequest } from "./CubeServiceGetRequest";
 import { type ICubeServiceGetResponse as IFuroui5testCubeCubeServiceGetResponse } from "./CubeServiceGetResponse";
 import { type ICubeServiceUpdateRequest as IFuroui5testCubeCubeServiceUpdateRequest } from "./CubeServiceUpdateRequest";
 import { type ICubeServiceUpdateResponse as IFuroui5testCubeCubeServiceUpdateResponse } from "./CubeServiceUpdateResponse";
+import { API_OPTIONS } from "../../API_OPTIONS";
 
 //  cube services
 

@@ -11,11 +11,11 @@ export interface IEmpty {
   /**
    *  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
    */
-  labels?: { [key: string]: boolean };
+  labels?: Record<string, boolean>;
   /**
    *  Attributes for a value, something like confidential-msg: you are not allowed to see this value
    */
-  attributes?: { [key: string]: string };
+  attributes?: Record<string, string>;
 }
 
 /**
@@ -26,11 +26,11 @@ export interface TEmpty {
   /**
    *  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
    */
-  labels?: { [key: string]: boolean };
+  labels?: Record<string, boolean>;
   /**
    *  Attributes for a value, something like confidential-msg: you are not allowed to see this value
    */
-  attributes?: { [key: string]: string };
+  attributes?: Record<string, string>;
 }
 
 /**
@@ -75,7 +75,7 @@ export class Empty extends FieldNode {
     this._attributes = new MAP<string, STRING, string>(undefined, this, "attributes");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Empty] as FieldNode).__meta.required = true;
     });
 
@@ -90,7 +90,7 @@ export class Empty extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof Empty] as FieldNode).__readonly = true;
     });
 
@@ -102,7 +102,7 @@ export class Empty extends FieldNode {
     return this._labels;
   }
 
-  public set labels(v: { [key: string]: boolean }) {
+  public set labels(v: Record<string, boolean>) {
     this.__TypeSetter(this._labels, v);
   }
 
@@ -111,7 +111,7 @@ export class Empty extends FieldNode {
     return this._attributes;
   }
 
-  public set attributes(v: { [key: string]: string }) {
+  public set attributes(v: Record<string, string>) {
     this.__TypeSetter(this._attributes, v);
   }
 

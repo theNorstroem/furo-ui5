@@ -59,7 +59,7 @@ export class UInt32Value extends FieldNode {
     this._value = new UINT32(undefined, this, "value");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof UInt32Value] as FieldNode).__meta.required = true;
     });
 
@@ -74,7 +74,7 @@ export class UInt32Value extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof UInt32Value] as FieldNode).__readonly = true;
     });
 

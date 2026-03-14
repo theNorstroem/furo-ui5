@@ -640,7 +640,7 @@ export class FileOptions extends FieldNode {
     this._uninterpretedOption = new ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>(undefined, this, "uninterpretedOption");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof FileOptions] as FieldNode).__meta.required = true;
     });
 
@@ -655,7 +655,7 @@ export class FileOptions extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof FileOptions] as FieldNode).__readonly = true;
     });
 

@@ -54,7 +54,7 @@ export class XAny extends FieldNode {
     this._yaml = new STRING(undefined, this, "yaml");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof XAny] as FieldNode).__meta.required = true;
     });
 
@@ -69,7 +69,7 @@ export class XAny extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof XAny] as FieldNode).__readonly = true;
     });
 

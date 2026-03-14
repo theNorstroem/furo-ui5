@@ -81,7 +81,7 @@ export class OneofOptions extends FieldNode {
     this._uninterpretedOption = new ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>(undefined, this, "uninterpretedOption");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof OneofOptions] as FieldNode).__meta.required = true;
     });
 
@@ -96,7 +96,7 @@ export class OneofOptions extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof OneofOptions] as FieldNode).__readonly = true;
     });
 

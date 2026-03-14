@@ -402,7 +402,7 @@ export class SourceCodeInfoLocation extends FieldNode {
     this._leadingDetachedComments = new ARRAY<STRING, string>(undefined, this, "leadingDetachedComments");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof SourceCodeInfoLocation] as FieldNode).__meta.required = true;
     });
 
@@ -417,7 +417,7 @@ export class SourceCodeInfoLocation extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof SourceCodeInfoLocation] as FieldNode).__readonly = true;
     });
 

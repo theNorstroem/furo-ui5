@@ -49,9 +49,7 @@
     "resolvePackageJsonImports": true,
     "rootDir": "./src/",
     "stripInternal": true,
-    "types": [
-      "mocha"
-    ],
+    "types": [],
     "verbatimModuleSyntax": true,
     "paths": {
       "@/*": [
@@ -64,7 +62,7 @@
     "global.d.ts"
   ],
   "exclude": [
-    "src/stories/**/*.tsx",
-    "src/typerenderer/**/*.ts"
+    "stories/**/*.tsx",
+    "src/wc-type-renderer/**/*.ts"
   ]
 }

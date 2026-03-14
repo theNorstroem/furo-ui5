@@ -48,7 +48,7 @@ export class ResponsesOrReferences extends FieldNode {
     this._additionalProperties = new ARRAY<OpenapiV3NamedResponseOrReference, IOpenapiV3NamedResponseOrReference>(undefined, this, "additionalProperties");
 
     // Set required fields
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof ResponsesOrReferences] as FieldNode).__meta.required = true;
     });
 
@@ -63,7 +63,7 @@ export class ResponsesOrReferences extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach(fieldName => {
+    [].forEach((fieldName) => {
       (this[fieldName as keyof ResponsesOrReferences] as FieldNode).__readonly = true;
     });
 

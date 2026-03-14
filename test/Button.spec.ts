@@ -1,5 +1,5 @@
 import "@/Assets";
-import "../src/furo-ui5-button";
+import "@/web-components/furo-ui5-button";
 
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";

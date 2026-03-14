@@ -11,7 +11,7 @@ test
 hugo
 docs
 tmp
-furo-specs
+tmp/furo-specs
 mockdata
 scripts
 .editorconfig
