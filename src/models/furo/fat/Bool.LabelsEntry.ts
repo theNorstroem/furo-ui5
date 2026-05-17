@@ -7,13 +7,7 @@ import { BOOLEAN, FieldNode, Registry, STRING } from "@furo/open-models/dist/ind
  * @interface IBoolLabelsEntry
  */
 export interface IBoolLabelsEntry {
-  /**
-   *  Furo annotated type wrapper message for `bool`.
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `bool`.
-   */
   value?: boolean;
 }
 
@@ -21,13 +15,7 @@ export interface IBoolLabelsEntry {
  * @interface TBoolLabelsEntry
  */
 export interface TBoolLabelsEntry {
-  /**
-   *  Furo annotated type wrapper message for `bool`.
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `bool`.
-   */
   value?: boolean;
 }
 
@@ -35,10 +23,12 @@ export interface TBoolLabelsEntry {
  * BoolLabelsEntry
  */
 export class BoolLabelsEntry extends FieldNode {
-  //  Furo annotated type wrapper message for `bool`.
+  /**
+   **/
   private _key: STRING;
 
-  //  Furo annotated type wrapper message for `bool`.
+  /**
+   **/
   private _value: BOOLEAN;
 
   public __defaultValues: IBoolLabelsEntry;
@@ -46,6 +36,7 @@ export class BoolLabelsEntry extends FieldNode {
   constructor(initData?: IBoolLabelsEntry, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Bool.LabelsEntry";
+    this.__meta.description = "BoolLabelsEntry";
 
     this.__meta.nodeFields = [
       {
@@ -53,20 +44,26 @@ export class BoolLabelsEntry extends FieldNode {
         protoName: "key",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  Furo annotated type wrapper message for `bool`.
+    // ---------------------
+
+    /**
+     **/
     this._key = new STRING(undefined, this, "key");
 
-    //  Furo annotated type wrapper message for `bool`.
+    /**
+     **/
     this._value = new BOOLEAN(undefined, this, "value");
 
     // Set required fields
@@ -92,30 +89,40 @@ export class BoolLabelsEntry extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Furo annotated type wrapper message for `bool`.
+  /**
+   * The getter receives the FieldNode
+   **/
   public get key(): STRING {
     return this._key;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set key(v: string) {
     this.__PrimitivesSetter(this._key, v);
   }
 
-  //  Furo annotated type wrapper message for `bool`.
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): BOOLEAN {
     return this._value;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set value(v: boolean) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IBoolLabelsEntry) {
+  fromLiteral(data: IBoolLabelsEntry): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IBoolLabelsEntry {
-    return super.__toLiteral();
+    return super.__toLiteral() as IBoolLabelsEntry;
   }
 }
 

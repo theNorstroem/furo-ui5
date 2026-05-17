@@ -36,7 +36,9 @@ export interface TBoolValue {
  *  The JSON representation for `BoolValue` is JSON `true` and `false`.
  */
 export class BoolValue extends FieldNode {
-  //  The bool value.
+  /**
+   * The bool value.
+   **/
   private _value: BOOLEAN;
 
   public __defaultValues: IBoolValue;
@@ -44,6 +46,7 @@ export class BoolValue extends FieldNode {
   constructor(initData?: IBoolValue, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.BoolValue";
+    this.__meta.description = "BoolValue Wrapper message for `bool`.\n\n The JSON representation for `BoolValue` is JSON `true` and `false`.";
 
     this.__meta.nodeFields = [
       {
@@ -51,11 +54,16 @@ export class BoolValue extends FieldNode {
         protoName: "value",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "The bool value.",
       },
     ];
 
     // Initialize the fields
-    //  The bool value.
+    // ---------------------
+
+    /**
+     *  The bool value.
+     **/
     this._value = new BOOLEAN(undefined, this, "value");
 
     // Set required fields
@@ -81,21 +89,27 @@ export class BoolValue extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The bool value.
+  /**
+   *  The bool value.
+   * The getter receives the FieldNode
+   **/
   public get value(): BOOLEAN {
     return this._value;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set value(v: boolean) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IBoolValue) {
+  fromLiteral(data: IBoolValue): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IBoolValue {
-    return super.__toLiteral();
+    return super.__toLiteral() as IBoolValue;
   }
 }
 

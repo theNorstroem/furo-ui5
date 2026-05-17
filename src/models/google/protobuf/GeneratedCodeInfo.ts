@@ -44,8 +44,10 @@ export interface TGeneratedCodeInfo {
  *  source file, but may contain references to different source .proto files.
  */
 export class GeneratedCodeInfo extends FieldNode {
-  //  An Annotation connects some span of text in generated code to an element
-  //  of its generating .proto file.
+  /**
+   * An Annotation connects some span of text in generated code to an element
+   * of its generating .proto file.
+   **/
   private _annotation: ARRAY<GoogleProtobufGeneratedCodeInfoAnnotation, IGoogleProtobufGeneratedCodeInfoAnnotation>;
 
   public __defaultValues: IGeneratedCodeInfo;
@@ -53,6 +55,8 @@ export class GeneratedCodeInfo extends FieldNode {
   constructor(initData?: IGeneratedCodeInfo, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.GeneratedCodeInfo";
+    this.__meta.description =
+      "GeneratedCodeInfo Describes the relationship between generated code and its original source\n file. A GeneratedCodeInfo message is associated with only one generated\n source file, but may contain references to different source .proto files.";
 
     this.__meta.nodeFields = [
       {
@@ -60,12 +64,17 @@ export class GeneratedCodeInfo extends FieldNode {
         protoName: "annotation",
         FieldConstructor: GoogleProtobufGeneratedCodeInfoAnnotation,
         constraints: {},
+        description: "An Annotation connects some span of text in generated code to an element\n of its generating .proto file.",
       },
     ];
 
     // Initialize the fields
-    //  An Annotation connects some span of text in generated code to an element
-    //  of its generating .proto file.
+    // ---------------------
+
+    /**
+     *  An Annotation connects some span of text in generated code to an element
+     *  of its generating .proto file.
+     **/
     this._annotation = new ARRAY<GoogleProtobufGeneratedCodeInfoAnnotation, IGoogleProtobufGeneratedCodeInfoAnnotation>(undefined, this, "annotation");
 
     // Set required fields
@@ -91,22 +100,28 @@ export class GeneratedCodeInfo extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  An Annotation connects some span of text in generated code to an element
-  //  of its generating .proto file.
+  /**
+   *  An Annotation connects some span of text in generated code to an element
+   *  of its generating .proto file.
+   * The getter receives the FieldNode
+   **/
   public get annotation(): ARRAY<GoogleProtobufGeneratedCodeInfoAnnotation, IGoogleProtobufGeneratedCodeInfoAnnotation> {
     return this._annotation;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufGeneratedCodeInfoAnnotation[]`
+   **/
   public set annotation(v: IGoogleProtobufGeneratedCodeInfoAnnotation[]) {
     this.__TypeSetter(this._annotation, v);
   }
 
-  fromLiteral(data: IGeneratedCodeInfo) {
+  fromLiteral(data: IGeneratedCodeInfo): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IGeneratedCodeInfo {
-    return super.__toLiteral();
+    return super.__toLiteral() as IGeneratedCodeInfo;
   }
 }
 

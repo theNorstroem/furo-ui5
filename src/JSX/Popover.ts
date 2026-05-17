@@ -48,12 +48,6 @@ export interface Popover extends React.HTMLAttributes<HTMLElement> {
   allowTargetOverlap?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the header text.
    *
    * **Note:** If `header` slot is provided, the `headerText` is ignored.
@@ -79,13 +73,8 @@ export interface Popover extends React.HTMLAttributes<HTMLElement> {
   initialFocus?: string | undefined;
 
   /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
-
-  /**
    * Defines whether the component should close when
-   * clicking/tapping outside of the popover.
+   * clicking/tapping outside the popover.
    * If enabled, it blocks any interaction with the background.
    */
   modal?: boolean;
@@ -119,6 +108,12 @@ export interface Popover extends React.HTMLAttributes<HTMLElement> {
   preventInitialFocus?: boolean;
 
   /**
+   * Determines whether the component is resizable.
+   * **Note:** This property is effective only on desktop devices.
+   */
+  resizable?: boolean;
+
+  /**
    * Determines the vertical alignment of the component.
    */
   verticalAlign?: PopoverVerticalAlign | keyof typeof PopoverVerticalAlign;
@@ -129,30 +124,6 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       *
-       * ### Overview
-       *
-       * The `furo-furo-ui5-popover` component displays additional information for an object
-       * in a compact way and without leaving the page.
-       * The Popover can contain various UI elements, such as fields, tables, images, and charts.
-       * It can also include actions in the footer.
-       *
-       * ### Structure
-       *
-       * The popover has three main areas:
-       *
-       * - Header (optional)
-       * - Content
-       * - Footer (optional)
-       *
-       * **Note:** The `furo-furo-ui5-popover` is closed when the user clicks
-       * or taps outside the popover
-       * or selects an action within the popover. You can prevent this with the
-       * `modal` property.
-       *
-       * ### ES6 Module Import
-       *
-       * `import "@furo/ui5/dist/Popover.js";`
        *
        * ### Overview
        *

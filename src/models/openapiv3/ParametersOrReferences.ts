@@ -27,6 +27,8 @@ export interface TParametersOrReferences {
  * ParametersOrReferences
  */
 export class ParametersOrReferences extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedParameterOrReference, IOpenapiV3NamedParameterOrReference>;
 
   public __defaultValues: IParametersOrReferences;
@@ -34,6 +36,7 @@ export class ParametersOrReferences extends FieldNode {
   constructor(initData?: IParametersOrReferences, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.ParametersOrReferences";
+    this.__meta.description = "ParametersOrReferences";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class ParametersOrReferences extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedParameterOrReference,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedParameterOrReference, IOpenapiV3NamedParameterOrReference>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class ParametersOrReferences extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedParameterOrReference, IOpenapiV3NamedParameterOrReference> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedParameterOrReference[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedParameterOrReference[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IParametersOrReferences) {
+  fromLiteral(data: IParametersOrReferences): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IParametersOrReferences {
-    return super.__toLiteral();
+    return super.__toLiteral() as IParametersOrReferences;
   }
 }
 

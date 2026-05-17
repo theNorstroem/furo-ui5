@@ -81,26 +81,46 @@ export interface TDescriptorProto {
  *  Describes a message type.
  */
 export class DescriptorProto extends FieldNode {
+  /**
+   **/
   private _name: STRING;
 
+  /**
+   **/
   private _field: ARRAY<GoogleProtobufFieldDescriptorProto, IGoogleProtobufFieldDescriptorProto>;
 
+  /**
+   **/
   private _extension: ARRAY<GoogleProtobufFieldDescriptorProto, IGoogleProtobufFieldDescriptorProto>;
 
+  /**
+   **/
   private _nestedType: ARRAY<DescriptorProto, IDescriptorProto>;
 
+  /**
+   **/
   private _enumType: ARRAY<GoogleProtobufEnumDescriptorProto, IGoogleProtobufEnumDescriptorProto>;
 
+  /**
+   **/
   private _extensionRange: ARRAY<GoogleProtobufDescriptorProtoExtensionRange, IGoogleProtobufDescriptorProtoExtensionRange>;
 
+  /**
+   **/
   private _oneofDecl: ARRAY<GoogleProtobufOneofDescriptorProto, IGoogleProtobufOneofDescriptorProto>;
 
+  /**
+   **/
   private _options: GoogleProtobufMessageOptions;
 
+  /**
+   **/
   private _reservedRange: ARRAY<GoogleProtobufDescriptorProtoReservedRange, IGoogleProtobufDescriptorProtoReservedRange>;
 
-  //  Reserved field names, which may not be used by fields in the same message.
-  //  A given name may only be reserved once.
+  /**
+   * Reserved field names, which may not be used by fields in the same message.
+   * A given name may only be reserved once.
+   **/
   private _reservedName: ARRAY<STRING, string>;
 
   public __defaultValues: IDescriptorProto;
@@ -108,6 +128,7 @@ export class DescriptorProto extends FieldNode {
   constructor(initData?: IDescriptorProto, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.DescriptorProto";
+    this.__meta.description = "DescriptorProto Describes a message type.";
 
     this.__meta.nodeFields = [
       {
@@ -115,88 +136,120 @@ export class DescriptorProto extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "field",
         protoName: "field",
         FieldConstructor: GoogleProtobufFieldDescriptorProto,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "extension",
         protoName: "extension",
         FieldConstructor: GoogleProtobufFieldDescriptorProto,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "nestedType",
         protoName: "nested_type",
         FieldConstructor: DescriptorProto,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "enumType",
         protoName: "enum_type",
         FieldConstructor: GoogleProtobufEnumDescriptorProto,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "extensionRange",
         protoName: "extension_range",
         FieldConstructor: GoogleProtobufDescriptorProtoExtensionRange,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "oneofDecl",
         protoName: "oneof_decl",
         FieldConstructor: GoogleProtobufOneofDescriptorProto,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "options",
         protoName: "options",
         FieldConstructor: GoogleProtobufMessageOptions,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "reservedRange",
         protoName: "reserved_range",
         FieldConstructor: GoogleProtobufDescriptorProtoReservedRange,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "reservedName",
         protoName: "reserved_name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Reserved field names, which may not be used by fields in the same message.\n A given name may only be reserved once.",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._name = new STRING(undefined, this, "name");
 
+    /**
+     **/
     this._field = new ARRAY<GoogleProtobufFieldDescriptorProto, IGoogleProtobufFieldDescriptorProto>(undefined, this, "field");
 
+    /**
+     **/
     this._extension = new ARRAY<GoogleProtobufFieldDescriptorProto, IGoogleProtobufFieldDescriptorProto>(undefined, this, "extension");
 
+    /**
+     **/
     this._nestedType = new ARRAY<DescriptorProto, IDescriptorProto>(undefined, this, "nestedType");
 
+    /**
+     **/
     this._enumType = new ARRAY<GoogleProtobufEnumDescriptorProto, IGoogleProtobufEnumDescriptorProto>(undefined, this, "enumType");
 
+    /**
+     **/
     this._extensionRange = new ARRAY<GoogleProtobufDescriptorProtoExtensionRange, IGoogleProtobufDescriptorProtoExtensionRange>(
       undefined,
       this,
       "extensionRange"
     );
 
+    /**
+     **/
     this._oneofDecl = new ARRAY<GoogleProtobufOneofDescriptorProto, IGoogleProtobufOneofDescriptorProto>(undefined, this, "oneofDecl");
 
+    /**
+     **/
     this._options = new GoogleProtobufMessageOptions(undefined, this, "options");
 
+    /**
+     **/
     this._reservedRange = new ARRAY<GoogleProtobufDescriptorProtoReservedRange, IGoogleProtobufDescriptorProtoReservedRange>(undefined, this, "reservedRange");
 
-    //  Reserved field names, which may not be used by fields in the same message.
-    //  A given name may only be reserved once.
+    /**
+     *  Reserved field names, which may not be used by fields in the same message.
+     *  A given name may only be reserved once.
+     **/
     this._reservedName = new ARRAY<STRING, string>(undefined, this, "reservedName");
 
     // Set required fields
@@ -222,94 +275,154 @@ export class DescriptorProto extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get field(): ARRAY<GoogleProtobufFieldDescriptorProto, IGoogleProtobufFieldDescriptorProto> {
     return this._field;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufFieldDescriptorProto[]`
+   **/
   public set field(v: IGoogleProtobufFieldDescriptorProto[]) {
     this.__TypeSetter(this._field, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get extension(): ARRAY<GoogleProtobufFieldDescriptorProto, IGoogleProtobufFieldDescriptorProto> {
     return this._extension;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufFieldDescriptorProto[]`
+   **/
   public set extension(v: IGoogleProtobufFieldDescriptorProto[]) {
     this.__TypeSetter(this._extension, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get nestedType(): ARRAY<DescriptorProto, IDescriptorProto> {
     return this._nestedType;
   }
 
+  /**
+   * The setter receives `IDescriptorProto[]`
+   **/
   public set nestedType(v: IDescriptorProto[]) {
     this.__TypeSetter(this._nestedType, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get enumType(): ARRAY<GoogleProtobufEnumDescriptorProto, IGoogleProtobufEnumDescriptorProto> {
     return this._enumType;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufEnumDescriptorProto[]`
+   **/
   public set enumType(v: IGoogleProtobufEnumDescriptorProto[]) {
     this.__TypeSetter(this._enumType, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get extensionRange(): ARRAY<GoogleProtobufDescriptorProtoExtensionRange, IGoogleProtobufDescriptorProtoExtensionRange> {
     return this._extensionRange;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufDescriptorProtoExtensionRange[]`
+   **/
   public set extensionRange(v: IGoogleProtobufDescriptorProtoExtensionRange[]) {
     this.__TypeSetter(this._extensionRange, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get oneofDecl(): ARRAY<GoogleProtobufOneofDescriptorProto, IGoogleProtobufOneofDescriptorProto> {
     return this._oneofDecl;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufOneofDescriptorProto[]`
+   **/
   public set oneofDecl(v: IGoogleProtobufOneofDescriptorProto[]) {
     this.__TypeSetter(this._oneofDecl, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get options(): GoogleProtobufMessageOptions {
     return this._options;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufMessageOptions`
+   **/
   public set options(v: IGoogleProtobufMessageOptions) {
     this.__TypeSetter(this._options, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get reservedRange(): ARRAY<GoogleProtobufDescriptorProtoReservedRange, IGoogleProtobufDescriptorProtoReservedRange> {
     return this._reservedRange;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufDescriptorProtoReservedRange[]`
+   **/
   public set reservedRange(v: IGoogleProtobufDescriptorProtoReservedRange[]) {
     this.__TypeSetter(this._reservedRange, v);
   }
 
-  //  Reserved field names, which may not be used by fields in the same message.
-  //  A given name may only be reserved once.
+  /**
+   *  Reserved field names, which may not be used by fields in the same message.
+   *  A given name may only be reserved once.
+   * The getter receives the FieldNode
+   **/
   public get reservedName(): ARRAY<STRING, string> {
     return this._reservedName;
   }
 
+  /**
+   * The setter receives `string[]`
+   **/
   public set reservedName(v: string[]) {
     this.__TypeSetter(this._reservedName, v);
   }
 
-  fromLiteral(data: IDescriptorProto) {
+  fromLiteral(data: IDescriptorProto): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IDescriptorProto {
-    return super.__toLiteral();
+    return super.__toLiteral() as IDescriptorProto;
   }
 }
 

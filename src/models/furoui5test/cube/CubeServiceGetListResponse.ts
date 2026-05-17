@@ -27,6 +27,8 @@ export interface TCubeServiceGetListResponse {
  * CubeServiceGetListResponse
  */
 export class CubeServiceGetListResponse extends FieldNode {
+  /**
+   **/
   private _entities: ARRAY<Furoui5TestCubeCubeEntity, IFuroui5TestCubeCubeEntity>;
 
   public __defaultValues: ICubeServiceGetListResponse;
@@ -34,6 +36,7 @@ export class CubeServiceGetListResponse extends FieldNode {
   constructor(initData?: ICubeServiceGetListResponse, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furoui5test.cube.CubeServiceGetListResponse";
+    this.__meta.description = "CubeServiceGetListResponse";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class CubeServiceGetListResponse extends FieldNode {
         protoName: "entities",
         FieldConstructor: Furoui5TestCubeCubeEntity,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._entities = new ARRAY<Furoui5TestCubeCubeEntity, IFuroui5TestCubeCubeEntity>(undefined, this, "entities");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class CubeServiceGetListResponse extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get entities(): ARRAY<Furoui5TestCubeCubeEntity, IFuroui5TestCubeCubeEntity> {
     return this._entities;
   }
 
+  /**
+   * The setter receives `IFuroui5TestCubeCubeEntity[]`
+   **/
   public set entities(v: IFuroui5TestCubeCubeEntity[]) {
     this.__TypeSetter(this._entities, v);
   }
 
-  fromLiteral(data: ICubeServiceGetListResponse) {
+  fromLiteral(data: ICubeServiceGetListResponse): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ICubeServiceGetListResponse {
-    return super.__toLiteral();
+    return super.__toLiteral() as ICubeServiceGetListResponse;
   }
 }
 

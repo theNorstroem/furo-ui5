@@ -27,14 +27,14 @@ import type { FuroFatBool } from "@/models";
  */
 export class FuroUi5Switch extends Switch {
   private modelReaderWriter: ModelReaderWriter | undefined;
-   
+
   private fatHandler: FatHandler<FuroUi5Switch>;
-   
+
   private boolReaderWriters: BoolReaderWriters<FuroUi5Switch> | undefined;
 
   constructor() {
     super();
-    this.fatHandler = new FatHandler(this as FuroUi5Switch, ["disabled"]);
+    this.fatHandler = new FatHandler<FuroUi5Switch>(this, ["disabled"]);
     this.fatHandler.readAttributes();
   }
 
@@ -47,8 +47,8 @@ export class FuroUi5Switch extends Switch {
   /**
    * FieldNode setter
    *
-   * @typeref BOOLEAN - "@furo/open-models"
-   * @typeref BoolValue - "@furo/open-models"
+   * @typeref BOOLEAN - "@furo/open-models/"
+   * @typeref BoolValue - "@furo/open-models/"
    * @typeref FuroFatBool - "@/models/index.js"
    * @public
    */
@@ -58,10 +58,10 @@ export class FuroUi5Switch extends Switch {
 
   /**
    *
-   * @paramref fieldNode - BOOLEAN - "@furo/open-models"
+   * @paramref fieldNode - BOOLEAN - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue) {
+  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -98,7 +98,7 @@ export class FuroUi5Switch extends Switch {
     this.tooltip = this.tooltip === undefined ? this._model.__placeholder : this.tooltip;
 
     // a11y
-    if (this.accessibleName === undefined) {
+    if (this.accessibleName ??= undefined) {
       this.accessibleName = this._model.__label;
     }
   }
@@ -120,7 +120,7 @@ export class FuroUi5Switch extends Switch {
   }
 
   private writeToModel(): void {
-    this.modelReaderWriter!.writeModel();
+    this.modelReaderWriter?.writeModel();
   }
 
   private _getModelReaders(): Map<string, () => void> {

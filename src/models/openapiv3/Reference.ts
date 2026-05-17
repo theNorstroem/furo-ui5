@@ -5,7 +5,7 @@ import { FieldNode, Registry, STRING } from "@furo/open-models/dist/index";
 
 /**
  * @interface IReference
- *  A simple object to allow referencing other web-components in the specification, internally and externally.  The Reference Object is defined by JSON Reference and follows the same structure, behavior and rules.   For this specification, reference resolution is accomplished as defined by the JSON Reference specification and not by the JSON Schema specification.
+ *  A simple object to allow referencing other components in the specification, internally and externally.  The Reference Object is defined by JSON Reference and follows the same structure, behavior and rules.   For this specification, reference resolution is accomplished as defined by the JSON Reference specification and not by the JSON Schema specification.
  */
 export interface IReference {
   Ref?: string;
@@ -15,7 +15,7 @@ export interface IReference {
 
 /**
  * @interface TReference
- *  A simple object to allow referencing other web-components in the specification, internally and externally.  The Reference Object is defined by JSON Reference and follows the same structure, behavior and rules.   For this specification, reference resolution is accomplished as defined by the JSON Reference specification and not by the JSON Schema specification.
+ *  A simple object to allow referencing other components in the specification, internally and externally.  The Reference Object is defined by JSON Reference and follows the same structure, behavior and rules.   For this specification, reference resolution is accomplished as defined by the JSON Reference specification and not by the JSON Schema specification.
  */
 export interface TReference {
   _ref?: string;
@@ -25,13 +25,19 @@ export interface TReference {
 
 /**
  * Reference
- *  A simple object to allow referencing other web-components in the specification, internally and externally.  The Reference Object is defined by JSON Reference and follows the same structure, behavior and rules.   For this specification, reference resolution is accomplished as defined by the JSON Reference specification and not by the JSON Schema specification.
+ *  A simple object to allow referencing other components in the specification, internally and externally.  The Reference Object is defined by JSON Reference and follows the same structure, behavior and rules.   For this specification, reference resolution is accomplished as defined by the JSON Reference specification and not by the JSON Schema specification.
  */
 export class Reference extends FieldNode {
+  /**
+   **/
   private _Ref: STRING;
 
+  /**
+   **/
   private _summary: STRING;
 
+  /**
+   **/
   private _description: STRING;
 
   public __defaultValues: IReference;
@@ -39,6 +45,8 @@ export class Reference extends FieldNode {
   constructor(initData?: IReference, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Reference";
+    this.__meta.description =
+      "Reference A simple object to allow referencing other components in the specification, internally and externally.  The Reference Object is defined by JSON Reference and follows the same structure, behavior and rules.   For this specification, reference resolution is accomplished as defined by the JSON Reference specification and not by the JSON Schema specification.";
 
     this.__meta.nodeFields = [
       {
@@ -46,26 +54,37 @@ export class Reference extends FieldNode {
         protoName: "_ref",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "summary",
         protoName: "summary",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "description",
         protoName: "description",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._Ref = new STRING(undefined, this, "Ref");
 
+    /**
+     **/
     this._summary = new STRING(undefined, this, "summary");
 
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
     // Set required fields
@@ -91,36 +110,54 @@ export class Reference extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get Ref(): STRING {
     return this._Ref;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set Ref(v: string) {
     this.__PrimitivesSetter(this._Ref, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get summary(): STRING {
     return this._summary;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set summary(v: string) {
     this.__PrimitivesSetter(this._summary, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
-  fromLiteral(data: IReference) {
+  fromLiteral(data: IReference): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IReference {
-    return super.__toLiteral();
+    return super.__toLiteral() as IReference;
   }
 }
 

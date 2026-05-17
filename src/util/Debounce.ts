@@ -19,7 +19,7 @@
  */
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export default function DebounceBuilder(func: Function, delay = 250, option = { leading: false, trailing: true }) {
-  let timer: number   | undefined; // same like basic debounce
+  let timer: ReturnType<typeof setTimeout> | undefined; // same like basic debounce
   let trailingArgs: unknown[] = []; // as we require last arguments for trailing
 
   if (!option.leading && !option.trailing) return () => null; // if both false, return null

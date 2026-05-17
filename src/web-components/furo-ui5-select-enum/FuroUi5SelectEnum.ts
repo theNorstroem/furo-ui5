@@ -31,7 +31,7 @@ export class FuroUi5SelectEnum extends Select {
   }
 
   /**
-   * @typeref ENUM - "@furo/open-models"
+   * @typeref ENUM - "@furo/open-models/"
    * @public
    * @param value
    */
@@ -40,18 +40,17 @@ export class FuroUi5SelectEnum extends Select {
   }
 
   /**
-   * @paramref fieldNode - ENUM - "@furo/open-models"
+   * @paramref fieldNode - ENUM - "@furo/open-models/"
    * @param fieldNode
    * @public
    */
-  public bindData(fieldNode: ENUM<unknown>) {
+  public bindData(fieldNode: ENUM<unknown> | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
     if (fieldNode.__meta.typeName !== "primitives.ENUM") {
-       
       console.error(`${fieldNode.__meta.typeName} is not bindable to EditEnum!`);
-       
+
       console.log(this);
       return;
     }
@@ -101,7 +100,7 @@ export class FuroUi5SelectEnum extends Select {
     this.tooltip = this.tooltip === undefined ? this._model.__placeholder : this.tooltip;
 
     // a11y
-    if (this.accessibleName === undefined) {
+    if (this.accessibleName ??= undefined) {
       this.accessibleName = this._model.__label;
     }
   }
@@ -116,7 +115,7 @@ export class FuroUi5SelectEnum extends Select {
   }
 
   private readFromModel(): void {
-    const option = this.querySelector(`furo-ui5-option[id=${(this._model!).value}]`);
+    const option = this.querySelector(`furo-ui5-option[id=${this._model!.value}]`);
     if (option) {
       const index = [...this.children].indexOf(option);
       // do not update same index
@@ -129,7 +128,7 @@ export class FuroUi5SelectEnum extends Select {
   private writeToModel(): void {
     const v = this.selectedOption?.id;
     if (v !== undefined) {
-      (this._model!).value = v;
+      this._model!.value = v;
     }
   }
 

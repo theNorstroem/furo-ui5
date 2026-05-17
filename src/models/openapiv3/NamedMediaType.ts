@@ -40,10 +40,14 @@ export interface TNamedMediaType {
  *  Automatically-generated message used to represent maps of MediaType as ordered (name,value) pairs.
  */
 export class NamedMediaType extends FieldNode {
-  //  Map key
+  /**
+   * Map key
+   **/
   private _name: STRING;
 
-  //  Mapped value
+  /**
+   * Mapped value
+   **/
   private _value: OpenapiV3MediaType;
 
   public __defaultValues: INamedMediaType;
@@ -51,6 +55,7 @@ export class NamedMediaType extends FieldNode {
   constructor(initData?: INamedMediaType, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.NamedMediaType";
+    this.__meta.description = "NamedMediaType Automatically-generated message used to represent maps of MediaType as ordered (name,value) pairs.";
 
     this.__meta.nodeFields = [
       {
@@ -58,20 +63,28 @@ export class NamedMediaType extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Map key",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: OpenapiV3MediaType,
         constraints: {},
+        description: "Mapped value",
       },
     ];
 
     // Initialize the fields
-    //  Map key
+    // ---------------------
+
+    /**
+     *  Map key
+     **/
     this._name = new STRING(undefined, this, "name");
 
-    //  Mapped value
+    /**
+     *  Mapped value
+     **/
     this._value = new OpenapiV3MediaType(undefined, this, "value");
 
     // Set required fields
@@ -97,30 +110,42 @@ export class NamedMediaType extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Map key
+  /**
+   *  Map key
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
-  //  Mapped value
+  /**
+   *  Mapped value
+   * The getter receives the FieldNode
+   **/
   public get value(): OpenapiV3MediaType {
     return this._value;
   }
 
+  /**
+   * The setter receives `IOpenapiV3MediaType`
+   **/
   public set value(v: IOpenapiV3MediaType) {
     this.__TypeSetter(this._value, v);
   }
 
-  fromLiteral(data: INamedMediaType) {
+  fromLiteral(data: INamedMediaType): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): INamedMediaType {
-    return super.__toLiteral();
+    return super.__toLiteral() as INamedMediaType;
   }
 }
 

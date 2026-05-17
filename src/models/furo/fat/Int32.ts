@@ -46,13 +46,19 @@ export interface TInt32 {
  *  Furo annotated type wrapper message for `int32`.
  */
 export class Int32 extends FieldNode {
-  //  The JSON representation for `Int32Value` is JSON number
+  /**
+   * The JSON representation for `Int32Value` is JSON number
+   **/
   private _value: INT32;
 
-  //  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+  /**
+   * Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+   **/
   private _labels: MAP<string, BOOLEAN, boolean>;
 
-  //  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+  /**
+   * Attributes for a value, something like confidential-msg: you are not allowed to see this value
+   **/
   private _attributes: MAP<string, STRING, string>;
 
   public __defaultValues: IInt32;
@@ -60,6 +66,7 @@ export class Int32 extends FieldNode {
   constructor(initData?: IInt32, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Int32";
+    this.__meta.description = "Int32 Furo annotated type wrapper message for `int32`.";
 
     this.__meta.nodeFields = [
       {
@@ -67,6 +74,7 @@ export class Int32 extends FieldNode {
         protoName: "value",
         FieldConstructor: INT32,
         constraints: {},
+        description: "The JSON representation for `Int32Value` is JSON number",
       },
       {
         fieldName: "labels",
@@ -74,6 +82,7 @@ export class Int32 extends FieldNode {
         FieldConstructor: MAP<string, BOOLEAN, boolean>,
         ValueConstructor: BOOLEAN,
         constraints: {},
+        description: "Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...",
       },
       {
         fieldName: "attributes",
@@ -81,17 +90,26 @@ export class Int32 extends FieldNode {
         FieldConstructor: MAP<string, STRING, string>,
         ValueConstructor: STRING,
         constraints: {},
+        description: "Attributes for a value, something like confidential-msg: you are not allowed to see this value",
       },
     ];
 
     // Initialize the fields
-    //  The JSON representation for `Int32Value` is JSON number
+    // ---------------------
+
+    /**
+     *  The JSON representation for `Int32Value` is JSON number
+     **/
     this._value = new INT32(undefined, this, "value");
 
-    //  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+    /**
+     *  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+     **/
     this._labels = new MAP<string, BOOLEAN, boolean>(undefined, this, "labels");
 
-    //  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+    /**
+     *  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+     **/
     this._attributes = new MAP<string, STRING, string>(undefined, this, "attributes");
 
     // Set required fields
@@ -117,39 +135,57 @@ export class Int32 extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The JSON representation for `Int32Value` is JSON number
+  /**
+   *  The JSON representation for `Int32Value` is JSON number
+   * The getter receives the FieldNode
+   **/
   public get value(): INT32 {
     return this._value;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set value(v: number) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  //  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+  /**
+   *  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+   * The getter receives the FieldNode
+   **/
   public get labels(): MAP<string, BOOLEAN, boolean> {
     return this._labels;
   }
 
+  /**
+   * The setter receives `{ [key: string]: boolean }`
+   **/
   public set labels(v: Record<string, boolean>) {
     this.__TypeSetter(this._labels, v);
   }
 
-  //  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+  /**
+   *  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+   * The getter receives the FieldNode
+   **/
   public get attributes(): MAP<string, STRING, string> {
     return this._attributes;
   }
 
+  /**
+   * The setter receives `{ [key: string]: string }`
+   **/
   public set attributes(v: Record<string, string>) {
     this.__TypeSetter(this._attributes, v);
   }
 
-  fromLiteral(data: IInt32) {
+  fromLiteral(data: IInt32): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IInt32 {
-    return super.__toLiteral();
+    return super.__toLiteral() as IInt32;
   }
 }
 

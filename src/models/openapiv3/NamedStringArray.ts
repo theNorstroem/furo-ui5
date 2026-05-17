@@ -40,10 +40,14 @@ export interface TNamedStringArray {
  *  Automatically-generated message used to represent maps of StringArray as ordered (name,value) pairs.
  */
 export class NamedStringArray extends FieldNode {
-  //  Map key
+  /**
+   * Map key
+   **/
   private _name: STRING;
 
-  //  Mapped value
+  /**
+   * Mapped value
+   **/
   private _value: OpenapiV3StringArray;
 
   public __defaultValues: INamedStringArray;
@@ -51,6 +55,7 @@ export class NamedStringArray extends FieldNode {
   constructor(initData?: INamedStringArray, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.NamedStringArray";
+    this.__meta.description = "NamedStringArray Automatically-generated message used to represent maps of StringArray as ordered (name,value) pairs.";
 
     this.__meta.nodeFields = [
       {
@@ -58,20 +63,28 @@ export class NamedStringArray extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Map key",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: OpenapiV3StringArray,
         constraints: {},
+        description: "Mapped value",
       },
     ];
 
     // Initialize the fields
-    //  Map key
+    // ---------------------
+
+    /**
+     *  Map key
+     **/
     this._name = new STRING(undefined, this, "name");
 
-    //  Mapped value
+    /**
+     *  Mapped value
+     **/
     this._value = new OpenapiV3StringArray(undefined, this, "value");
 
     // Set required fields
@@ -97,30 +110,42 @@ export class NamedStringArray extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Map key
+  /**
+   *  Map key
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
-  //  Mapped value
+  /**
+   *  Mapped value
+   * The getter receives the FieldNode
+   **/
   public get value(): OpenapiV3StringArray {
     return this._value;
   }
 
+  /**
+   * The setter receives `IOpenapiV3StringArray`
+   **/
   public set value(v: IOpenapiV3StringArray) {
     this.__TypeSetter(this._value, v);
   }
 
-  fromLiteral(data: INamedStringArray) {
+  fromLiteral(data: INamedStringArray): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): INamedStringArray {
-    return super.__toLiteral();
+    return super.__toLiteral() as INamedStringArray;
   }
 }
 

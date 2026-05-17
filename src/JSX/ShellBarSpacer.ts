@@ -4,19 +4,7 @@ import * as React from "react";
 export interface ShellBarSpacer extends React.HTMLAttributes<HTMLElement> {
   // no events defined.
   // properties
-
   // attributes
-
-  /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 }
 
 declare module "react" {
@@ -24,10 +12,6 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       *
-       * ### Overview
-       * The `furo-furo-ui5-shellbar-spacer` is an element, used for visual separation between the two content parts of the `furo-furo-ui5-shellbar`.
-       * **Note:** The `furo-furo-ui5-shellbar-spacer` component is in an experimental state and is a subject to change.
        *
        * ### Overview
        * The `furo-ui5-shellbar-spacer` is an element, used for visual separation between the two content parts of the `furo-ui5-shellbar`.

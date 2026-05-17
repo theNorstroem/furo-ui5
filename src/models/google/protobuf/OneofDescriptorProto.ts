@@ -32,8 +32,12 @@ export interface TOneofDescriptorProto {
  *  Describes a oneof.
  */
 export class OneofDescriptorProto extends FieldNode {
+  /**
+   **/
   private _name: STRING;
 
+  /**
+   **/
   private _options: GoogleProtobufOneofOptions;
 
   public __defaultValues: IOneofDescriptorProto;
@@ -41,6 +45,7 @@ export class OneofDescriptorProto extends FieldNode {
   constructor(initData?: IOneofDescriptorProto, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.OneofDescriptorProto";
+    this.__meta.description = "OneofDescriptorProto Describes a oneof.";
 
     this.__meta.nodeFields = [
       {
@@ -48,18 +53,26 @@ export class OneofDescriptorProto extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "options",
         protoName: "options",
         FieldConstructor: GoogleProtobufOneofOptions,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._name = new STRING(undefined, this, "name");
 
+    /**
+     **/
     this._options = new GoogleProtobufOneofOptions(undefined, this, "options");
 
     // Set required fields
@@ -85,28 +98,40 @@ export class OneofDescriptorProto extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get options(): GoogleProtobufOneofOptions {
     return this._options;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufOneofOptions`
+   **/
   public set options(v: IGoogleProtobufOneofOptions) {
     this.__TypeSetter(this._options, v);
   }
 
-  fromLiteral(data: IOneofDescriptorProto) {
+  fromLiteral(data: IOneofDescriptorProto): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IOneofDescriptorProto {
-    return super.__toLiteral();
+    return super.__toLiteral() as IOneofDescriptorProto;
   }
 }
 

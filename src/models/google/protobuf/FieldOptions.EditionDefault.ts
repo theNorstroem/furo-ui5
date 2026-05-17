@@ -25,8 +25,12 @@ export interface TFieldOptionsEditionDefault {
  * FieldOptionsEditionDefault
  */
 export class FieldOptionsEditionDefault extends FieldNode {
+  /**
+   **/
   private _edition: ENUM<GoogleProtobufEdition>;
 
+  /**
+   **/
   private _value: STRING; //  Textproto value.
 
   public __defaultValues: IFieldOptionsEditionDefault;
@@ -34,6 +38,7 @@ export class FieldOptionsEditionDefault extends FieldNode {
   constructor(initData?: IFieldOptionsEditionDefault, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.FieldOptions.EditionDefault";
+    this.__meta.description = "FieldOptionsEditionDefault";
 
     this.__meta.nodeFields = [
       {
@@ -41,18 +46,26 @@ export class FieldOptionsEditionDefault extends FieldNode {
         protoName: "edition",
         FieldConstructor: ENUM<GoogleProtobufEdition>,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._edition = new ENUM<GoogleProtobufEdition>(undefined, GoogleProtobufEdition, GoogleProtobufEdition.EDITION_UNKNOWN, this, "edition");
 
+    /**
+     **/
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
@@ -78,28 +91,40 @@ export class FieldOptionsEditionDefault extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get edition(): ENUM<GoogleProtobufEdition> {
     return this._edition;
   }
 
+  /**
+   * The setter receives `GoogleProtobufEdition`
+   **/
   public set edition(v: GoogleProtobufEdition) {
     this.__TypeSetter(this._edition, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): STRING {
     return this._value;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set value(v: string) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IFieldOptionsEditionDefault) {
+  fromLiteral(data: IFieldOptionsEditionDefault): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IFieldOptionsEditionDefault {
-    return super.__toLiteral();
+    return super.__toLiteral() as IFieldOptionsEditionDefault;
   }
 }
 

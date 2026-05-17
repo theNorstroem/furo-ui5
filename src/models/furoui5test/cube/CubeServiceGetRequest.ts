@@ -37,11 +37,15 @@ export interface TCubeServiceGetRequest {
  * CubeServiceGetRequest
  */
 export class CubeServiceGetRequest extends FieldNode {
-  //  ID of the cube
+  /**
+   * ID of the cube
+   **/
   private _cubeId: STRING;
 
-  //  Partial Response, https://cloud.google.com/apis/design/design_patterns#partial_response
-  //  use wildcard * to get all fields
+  /**
+   * Partial Response, https://cloud.google.com/apis/design/design_patterns#partial_response
+   * use wildcard * to get all fields
+   **/
   private _fields: STRING;
 
   public __defaultValues: ICubeServiceGetRequest;
@@ -49,6 +53,7 @@ export class CubeServiceGetRequest extends FieldNode {
   constructor(initData?: ICubeServiceGetRequest, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furoui5test.cube.CubeServiceGetRequest";
+    this.__meta.description = "CubeServiceGetRequest";
 
     this.__meta.nodeFields = [
       {
@@ -56,21 +61,29 @@ export class CubeServiceGetRequest extends FieldNode {
         protoName: "cube_id",
         FieldConstructor: STRING,
         constraints: {},
+        description: "ID of the cube",
       },
       {
         fieldName: "fields",
         protoName: "fields",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Partial Response, https://cloud.google.com/apis/design/design_patterns#partial_response\n use wildcard * to get all fields",
       },
     ];
 
     // Initialize the fields
-    //  ID of the cube
+    // ---------------------
+
+    /**
+     *  ID of the cube
+     **/
     this._cubeId = new STRING(undefined, this, "cubeId");
 
-    //  Partial Response, https://cloud.google.com/apis/design/design_patterns#partial_response
-    //  use wildcard * to get all fields
+    /**
+     *  Partial Response, https://cloud.google.com/apis/design/design_patterns#partial_response
+     *  use wildcard * to get all fields
+     **/
     this._fields = new STRING(undefined, this, "fields");
 
     // Set required fields
@@ -98,31 +111,43 @@ export class CubeServiceGetRequest extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  ID of the cube
+  /**
+   *  ID of the cube
+   * The getter receives the FieldNode
+   **/
   public get cubeId(): STRING {
     return this._cubeId;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set cubeId(v: string) {
     this.__PrimitivesSetter(this._cubeId, v);
   }
 
-  //  Partial Response, https://cloud.google.com/apis/design/design_patterns#partial_response
-  //  use wildcard * to get all fields
+  /**
+   *  Partial Response, https://cloud.google.com/apis/design/design_patterns#partial_response
+   *  use wildcard * to get all fields
+   * The getter receives the FieldNode
+   **/
   public get fields(): STRING {
     return this._fields;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set fields(v: string) {
     this.__PrimitivesSetter(this._fields, v);
   }
 
-  fromLiteral(data: ICubeServiceGetRequest) {
+  fromLiteral(data: ICubeServiceGetRequest): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ICubeServiceGetRequest {
-    return super.__toLiteral();
+    return super.__toLiteral() as ICubeServiceGetRequest;
   }
 }
 

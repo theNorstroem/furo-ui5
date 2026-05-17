@@ -52,7 +52,7 @@ import {
 
 /**
  * @interface IComponents
- *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the web-components object will have no effect on the API unless they are explicitly referenced from properties outside the web-components object.
+ *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.
  */
 export interface IComponents {
   schemas?: IOpenapiV3SchemasOrReferences;
@@ -69,7 +69,7 @@ export interface IComponents {
 
 /**
  * @interface TComponents
- *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the web-components object will have no effect on the API unless they are explicitly referenced from properties outside the web-components object.
+ *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.
  */
 export interface TComponents {
   schemas?: TOpenapiV3SchemasOrReferences;
@@ -86,27 +86,47 @@ export interface TComponents {
 
 /**
  * Components
- *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the web-components object will have no effect on the API unless they are explicitly referenced from properties outside the web-components object.
+ *  Holds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.
  */
 export class Components extends FieldNode {
+  /**
+   **/
   private _schemas: OpenapiV3SchemasOrReferences;
 
+  /**
+   **/
   private _responses: OpenapiV3ResponsesOrReferences;
 
+  /**
+   **/
   private _parameters: OpenapiV3ParametersOrReferences;
 
+  /**
+   **/
   private _examples: OpenapiV3ExamplesOrReferences;
 
+  /**
+   **/
   private _requestBodies: OpenapiV3RequestBodiesOrReferences;
 
+  /**
+   **/
   private _headers: OpenapiV3HeadersOrReferences;
 
+  /**
+   **/
   private _securitySchemes: OpenapiV3SecuritySchemesOrReferences;
 
+  /**
+   **/
   private _links: OpenapiV3LinksOrReferences;
 
+  /**
+   **/
   private _callbacks: OpenapiV3CallbacksOrReferences;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IComponents;
@@ -114,6 +134,8 @@ export class Components extends FieldNode {
   constructor(initData?: IComponents, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Components";
+    this.__meta.description =
+      "Components Holds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.";
 
     this.__meta.nodeFields = [
       {
@@ -121,82 +143,114 @@ export class Components extends FieldNode {
         protoName: "schemas",
         FieldConstructor: OpenapiV3SchemasOrReferences,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "responses",
         protoName: "responses",
         FieldConstructor: OpenapiV3ResponsesOrReferences,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "parameters",
         protoName: "parameters",
         FieldConstructor: OpenapiV3ParametersOrReferences,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "examples",
         protoName: "examples",
         FieldConstructor: OpenapiV3ExamplesOrReferences,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "requestBodies",
         protoName: "request_bodies",
         FieldConstructor: OpenapiV3RequestBodiesOrReferences,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "headers",
         protoName: "headers",
         FieldConstructor: OpenapiV3HeadersOrReferences,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "securitySchemes",
         protoName: "security_schemes",
         FieldConstructor: OpenapiV3SecuritySchemesOrReferences,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "links",
         protoName: "links",
         FieldConstructor: OpenapiV3LinksOrReferences,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "callbacks",
         protoName: "callbacks",
         FieldConstructor: OpenapiV3CallbacksOrReferences,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._schemas = new OpenapiV3SchemasOrReferences(undefined, this, "schemas");
 
+    /**
+     **/
     this._responses = new OpenapiV3ResponsesOrReferences(undefined, this, "responses");
 
+    /**
+     **/
     this._parameters = new OpenapiV3ParametersOrReferences(undefined, this, "parameters");
 
+    /**
+     **/
     this._examples = new OpenapiV3ExamplesOrReferences(undefined, this, "examples");
 
+    /**
+     **/
     this._requestBodies = new OpenapiV3RequestBodiesOrReferences(undefined, this, "requestBodies");
 
+    /**
+     **/
     this._headers = new OpenapiV3HeadersOrReferences(undefined, this, "headers");
 
+    /**
+     **/
     this._securitySchemes = new OpenapiV3SecuritySchemesOrReferences(undefined, this, "securitySchemes");
 
+    /**
+     **/
     this._links = new OpenapiV3LinksOrReferences(undefined, this, "links");
 
+    /**
+     **/
     this._callbacks = new OpenapiV3CallbacksOrReferences(undefined, this, "callbacks");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -222,92 +276,152 @@ export class Components extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get schemas(): OpenapiV3SchemasOrReferences {
     return this._schemas;
   }
 
+  /**
+   * The setter receives `IOpenapiV3SchemasOrReferences`
+   **/
   public set schemas(v: IOpenapiV3SchemasOrReferences) {
     this.__TypeSetter(this._schemas, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get responses(): OpenapiV3ResponsesOrReferences {
     return this._responses;
   }
 
+  /**
+   * The setter receives `IOpenapiV3ResponsesOrReferences`
+   **/
   public set responses(v: IOpenapiV3ResponsesOrReferences) {
     this.__TypeSetter(this._responses, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get parameters(): OpenapiV3ParametersOrReferences {
     return this._parameters;
   }
 
+  /**
+   * The setter receives `IOpenapiV3ParametersOrReferences`
+   **/
   public set parameters(v: IOpenapiV3ParametersOrReferences) {
     this.__TypeSetter(this._parameters, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get examples(): OpenapiV3ExamplesOrReferences {
     return this._examples;
   }
 
+  /**
+   * The setter receives `IOpenapiV3ExamplesOrReferences`
+   **/
   public set examples(v: IOpenapiV3ExamplesOrReferences) {
     this.__TypeSetter(this._examples, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get requestBodies(): OpenapiV3RequestBodiesOrReferences {
     return this._requestBodies;
   }
 
+  /**
+   * The setter receives `IOpenapiV3RequestBodiesOrReferences`
+   **/
   public set requestBodies(v: IOpenapiV3RequestBodiesOrReferences) {
     this.__TypeSetter(this._requestBodies, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get headers(): OpenapiV3HeadersOrReferences {
     return this._headers;
   }
 
+  /**
+   * The setter receives `IOpenapiV3HeadersOrReferences`
+   **/
   public set headers(v: IOpenapiV3HeadersOrReferences) {
     this.__TypeSetter(this._headers, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get securitySchemes(): OpenapiV3SecuritySchemesOrReferences {
     return this._securitySchemes;
   }
 
+  /**
+   * The setter receives `IOpenapiV3SecuritySchemesOrReferences`
+   **/
   public set securitySchemes(v: IOpenapiV3SecuritySchemesOrReferences) {
     this.__TypeSetter(this._securitySchemes, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get links(): OpenapiV3LinksOrReferences {
     return this._links;
   }
 
+  /**
+   * The setter receives `IOpenapiV3LinksOrReferences`
+   **/
   public set links(v: IOpenapiV3LinksOrReferences) {
     this.__TypeSetter(this._links, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get callbacks(): OpenapiV3CallbacksOrReferences {
     return this._callbacks;
   }
 
+  /**
+   * The setter receives `IOpenapiV3CallbacksOrReferences`
+   **/
   public set callbacks(v: IOpenapiV3CallbacksOrReferences) {
     this.__TypeSetter(this._callbacks, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IComponents) {
+  fromLiteral(data: IComponents): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IComponents {
-    return super.__toLiteral();
+    return super.__toLiteral() as IComponents;
   }
 }
 

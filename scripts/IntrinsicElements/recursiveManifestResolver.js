@@ -1,32 +1,32 @@
 import { getCEM } from './cem-reader.js';
 const fieldsToMerge = ['members', 'slots', 'events', 'cssParts','attributes'];
 const EXCLUDED_MEMBERS = new Set([
-  'detachComponentStateFinalized',
-  'attachComponentStateFinalized',
-  'effectiveDir',
-  'isUI5Element',
-  'attachInvalidate',
-  'define',
-  'detachInvalidate',
-  'fireEvent',
-  'fireDecoratorEvent',
-  'focus',
-  'getDomRef',
-  'getFocusDomRef',
-  'getFocusDomRefAsync',
-  'getMetadata',
-  'getSlottedNodes',
-  'getUniqueDependencies',
-  'onAfterRendering',
-  'onBeforeRendering',
-  'onEnterDOM',
-  'onExitDOM',
-  'onInvalidation',
-  'getStaticAreaItemDomRef'
+  "detachComponentStateFinalized",
+  "attachComponentStateFinalized",
+  "effectiveDir",
+  "isUI5Element",
+  "attachInvalidate",
+  "define",
+  "detachInvalidate",
+  "fireEvent",
+  "fireDecoratorEvent",
+  "focus",
+  "getDomRef",
+  "getFocusDomRef",
+  "getFocusDomRefAsync",
+  "getMetadata",
+  "getSlottedNodes",
+  "getUniqueDependencies",
+  "onAfterRendering",
+  "onBeforeRendering",
+  "onEnterDOM",
+  "onExitDOM",
+  "onInvalidation",
+  "getStaticAreaItemDomRef",
 ]);
 function mergeArraysWithoutDuplicates(currentValues, newValue) {
   if (!currentValues.find((currentValue) => currentValue.name === newValue.name)) {
-    if (!EXCLUDED_MEMBERS.has(newValue.name)) {
+    if (!EXCLUDED_MEMBERS.has(newValue.name) && !EXCLUDED_MEMBERS.has(newValue.fieldName)) {
       currentValues.push(newValue);
     }
   }

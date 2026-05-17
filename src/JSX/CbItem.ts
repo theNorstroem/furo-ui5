@@ -20,20 +20,32 @@ export interface CbItem extends React.HTMLAttributes<HTMLElement> {
   additionalText?: string | undefined;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
-
-  /**
    * Defines the text of the component.
    */
   text?: string | undefined;
+
+  /**
+   * Defines the value of the `furo-ui5-cb-item`.
+   *
+   * Use this property to associate a unique identifier or machine-readable value with the item,
+   * separate from the display text. This enables:
+   * - Selecting items programmatically via `selectedValue` on the ComboBox
+   * - Submitting machine-readable values in forms
+   * - Distinguishing between items with identical display text
+   *
+   * **When to use:**
+   * - **Recommended:** Use the `value` property on items together with `selectedValue` on the ComboBox when you need unique identifiers
+   * - Omit `value` if the display text (`text` property) is sufficient for your use case
+   *
+   * **Example:**
+   * ```html
+   * <furo-ui5-combobox selected-value="DE">
+   * <furo-ui5-cb-item text="Germany" value="DE"></furo-ui5-cb-item>
+   * <furo-ui5-cb-item text="France" value="FR"></furo-ui5-cb-item>
+   * </furo-ui5-combobox>
+   * ```
+   */
+  value?: string | undefined;
 }
 
 declare module "react" {
@@ -41,8 +53,6 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        * The `furo-furo-furo-ui5-cb-item` is meant to be used inside a `furo-furo-furo-ui5-combobox`.
-       *
-       * The `furo-furo-ui5-cb-item` represents the item for a `furo-furo-ui5-combobox`.
        *
        * The `furo-ui5-cb-item` represents the item for a `furo-ui5-combobox`.
        *

@@ -62,7 +62,6 @@
     "global.d.ts"
   ],
   "exclude": [
-    "stories/**/*.tsx",
-    "src/wc-type-renderer/**/*.ts"
+    "src/type-renderers/**/*.ts"
   ]
 }

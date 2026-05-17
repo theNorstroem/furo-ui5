@@ -23,6 +23,8 @@ export interface TExpression {
  * Expression
  */
 export class Expression extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IExpression;
@@ -30,6 +32,7 @@ export class Expression extends FieldNode {
   constructor(initData?: IExpression, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Expression";
+    this.__meta.description = "Expression";
 
     this.__meta.nodeFields = [
       {
@@ -37,10 +40,15 @@ export class Expression extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -66,20 +74,26 @@ export class Expression extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IExpression) {
+  fromLiteral(data: IExpression): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IExpression {
-    return super.__toLiteral();
+    return super.__toLiteral() as IExpression;
   }
 }
 

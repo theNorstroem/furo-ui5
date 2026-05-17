@@ -48,12 +48,6 @@ export interface ResponsivePopover extends React.HTMLAttributes<HTMLElement> {
   allowTargetOverlap?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the header text.
    *
    * **Note:** If `header` slot is provided, the `headerText` is ignored.
@@ -79,13 +73,8 @@ export interface ResponsivePopover extends React.HTMLAttributes<HTMLElement> {
   initialFocus?: string | undefined;
 
   /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
-
-  /**
    * Defines whether the component should close when
-   * clicking/tapping outside of the popover.
+   * clicking/tapping outside the popover.
    * If enabled, it blocks any interaction with the background.
    */
   modal?: boolean;
@@ -119,6 +108,12 @@ export interface ResponsivePopover extends React.HTMLAttributes<HTMLElement> {
   preventInitialFocus?: boolean;
 
   /**
+   * Determines whether the component is resizable.
+   * **Note:** This property is effective only on desktop devices.
+   */
+  resizable?: boolean;
+
+  /**
    * Determines the vertical alignment of the component.
    */
   verticalAlign?: PopoverVerticalAlign | keyof typeof PopoverVerticalAlign;
@@ -129,17 +124,6 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       *
-       * ### Overview
-       * The `furo-furo-ui5-responsive-popover` acts as a Popover on desktop and tablet, while on phone it acts as a Dialog.
-       * The component improves tremendously the user experience on mobile.
-       *
-       * ### Usage
-       * Use it when you want to make sure that all the content is visible on any device.
-       *
-       * ### ES6 Module Import
-       *
-       * `import "@furo/ui5/dist/ResponsivePopover.js";`
        *
        * ### Overview
        * The `furo-ui5-responsive-popover` acts as a Popover on desktop and tablet, while on phone it acts as a Dialog.

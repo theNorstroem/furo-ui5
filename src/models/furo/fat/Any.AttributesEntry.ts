@@ -7,17 +7,7 @@ import { FieldNode, Registry, STRING } from "@furo/open-models/dist/index";
  * @interface IAnyAttributesEntry
  */
 export interface IAnyAttributesEntry {
-  /**
-   *  Furo annotated type wrapper message for `any`.
-   *  // Any contains an arbitrary serialized protocol buffer message along with a
-   *  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `any`.
-   *  // Any contains an arbitrary serialized protocol buffer message along with a
-   *  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
-   */
   value?: string;
 }
 
@@ -25,17 +15,7 @@ export interface IAnyAttributesEntry {
  * @interface TAnyAttributesEntry
  */
 export interface TAnyAttributesEntry {
-  /**
-   *  Furo annotated type wrapper message for `any`.
-   *  // Any contains an arbitrary serialized protocol buffer message along with a
-   *  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `any`.
-   *  // Any contains an arbitrary serialized protocol buffer message along with a
-   *  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
-   */
   value?: string;
 }
 
@@ -43,14 +23,12 @@ export interface TAnyAttributesEntry {
  * AnyAttributesEntry
  */
 export class AnyAttributesEntry extends FieldNode {
-  //  Furo annotated type wrapper message for `any`.
-  //  // Any contains an arbitrary serialized protocol buffer message along with a
-  //  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
+  /**
+   **/
   private _key: STRING;
 
-  //  Furo annotated type wrapper message for `any`.
-  //  // Any contains an arbitrary serialized protocol buffer message along with a
-  //  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
+  /**
+   **/
   private _value: STRING;
 
   public __defaultValues: IAnyAttributesEntry;
@@ -58,6 +36,7 @@ export class AnyAttributesEntry extends FieldNode {
   constructor(initData?: IAnyAttributesEntry, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Any.AttributesEntry";
+    this.__meta.description = "AnyAttributesEntry";
 
     this.__meta.nodeFields = [
       {
@@ -65,24 +44,26 @@ export class AnyAttributesEntry extends FieldNode {
         protoName: "key",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  Furo annotated type wrapper message for `any`.
-    //  // Any contains an arbitrary serialized protocol buffer message along with a
-    //  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
+    // ---------------------
+
+    /**
+     **/
     this._key = new STRING(undefined, this, "key");
 
-    //  Furo annotated type wrapper message for `any`.
-    //  // Any contains an arbitrary serialized protocol buffer message along with a
-    //  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
+    /**
+     **/
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
@@ -108,34 +89,40 @@ export class AnyAttributesEntry extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Furo annotated type wrapper message for `any`.
-  //  // Any contains an arbitrary serialized protocol buffer message along with a
-  //  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
+  /**
+   * The getter receives the FieldNode
+   **/
   public get key(): STRING {
     return this._key;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set key(v: string) {
     this.__PrimitivesSetter(this._key, v);
   }
 
-  //  Furo annotated type wrapper message for `any`.
-  //  // Any contains an arbitrary serialized protocol buffer message along with a
-  //  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): STRING {
     return this._value;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set value(v: string) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IAnyAttributesEntry) {
+  fromLiteral(data: IAnyAttributesEntry): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IAnyAttributesEntry {
-    return super.__toLiteral();
+    return super.__toLiteral() as IAnyAttributesEntry;
   }
 }
 

@@ -30,10 +30,16 @@ export interface TLicense {
  *  License information for the exposed API.
  */
 export class License extends FieldNode {
+  /**
+   **/
   private _name: STRING;
 
+  /**
+   **/
   private _url: STRING;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: ILicense;
@@ -41,6 +47,7 @@ export class License extends FieldNode {
   constructor(initData?: ILicense, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.License";
+    this.__meta.description = "License License information for the exposed API.";
 
     this.__meta.nodeFields = [
       {
@@ -48,26 +55,37 @@ export class License extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "url",
         protoName: "url",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._name = new STRING(undefined, this, "name");
 
+    /**
+     **/
     this._url = new STRING(undefined, this, "url");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -93,36 +111,54 @@ export class License extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get url(): STRING {
     return this._url;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set url(v: string) {
     this.__PrimitivesSetter(this._url, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: ILicense) {
+  fromLiteral(data: ILicense): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ILicense {
-    return super.__toLiteral();
+    return super.__toLiteral() as ILicense;
   }
 }
 

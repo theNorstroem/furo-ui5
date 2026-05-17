@@ -27,12 +27,20 @@ export interface TCubeOptions {
  * CubeOptions
  */
 export class CubeOptions extends FieldNode {
+  /**
+   **/
   private _id: STRING;
 
+  /**
+   **/
   private _displayName: STRING;
 
+  /**
+   **/
   private _icon: STRING;
 
+  /**
+   **/
   private _tooltip: STRING;
 
   public __defaultValues: ICubeOptions;
@@ -40,6 +48,7 @@ export class CubeOptions extends FieldNode {
   constructor(initData?: ICubeOptions, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furoui5test.cube.CubeOptions";
+    this.__meta.description = "CubeOptions";
 
     this.__meta.nodeFields = [
       {
@@ -47,34 +56,48 @@ export class CubeOptions extends FieldNode {
         protoName: "id",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "displayName",
         protoName: "display_name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "icon",
         protoName: "icon",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "tooltip",
         protoName: "tooltip",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._id = new STRING(undefined, this, "id");
 
+    /**
+     **/
     this._displayName = new STRING(undefined, this, "displayName");
 
+    /**
+     **/
     this._icon = new STRING(undefined, this, "icon");
 
+    /**
+     **/
     this._tooltip = new STRING(undefined, this, "tooltip");
 
     // Set required fields
@@ -100,44 +123,68 @@ export class CubeOptions extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get id(): STRING {
     return this._id;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set id(v: string) {
     this.__PrimitivesSetter(this._id, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get displayName(): STRING {
     return this._displayName;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set displayName(v: string) {
     this.__PrimitivesSetter(this._displayName, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get icon(): STRING {
     return this._icon;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set icon(v: string) {
     this.__PrimitivesSetter(this._icon, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get tooltip(): STRING {
     return this._tooltip;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set tooltip(v: string) {
     this.__PrimitivesSetter(this._tooltip, v);
   }
 
-  fromLiteral(data: ICubeOptions) {
+  fromLiteral(data: ICubeOptions): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ICubeOptions {
-    return super.__toLiteral();
+    return super.__toLiteral() as ICubeOptions;
   }
 }
 

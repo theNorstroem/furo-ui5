@@ -5,6 +5,11 @@ import { BOOLEAN, FieldNode, Registry, STRING } from "@furo/open-models/dist/ind
 
 /**
  * @interface IUninterpretedOptionNamePart
+ *  The name of the uninterpreted option.  Each string represents a segment in
+ *  a dot-separated name.  is_extension is true iff a segment represents an
+ *  extension (denoted with parentheses in options specs in .proto files).
+ *  E.g.,{ ["foo", false], ["bar.baz", true], ["moo", false] } represents
+ *  "foo.(bar.baz).moo".
  */
 export interface IUninterpretedOptionNamePart {
   namePart?: string;
@@ -13,6 +18,11 @@ export interface IUninterpretedOptionNamePart {
 
 /**
  * @interface TUninterpretedOptionNamePart
+ *  The name of the uninterpreted option.  Each string represents a segment in
+ *  a dot-separated name.  is_extension is true iff a segment represents an
+ *  extension (denoted with parentheses in options specs in .proto files).
+ *  E.g.,{ ["foo", false], ["bar.baz", true], ["moo", false] } represents
+ *  "foo.(bar.baz).moo".
  */
 export interface TUninterpretedOptionNamePart {
   name_part?: string;
@@ -21,10 +31,19 @@ export interface TUninterpretedOptionNamePart {
 
 /**
  * UninterpretedOptionNamePart
+ *  The name of the uninterpreted option.  Each string represents a segment in
+ *  a dot-separated name.  is_extension is true iff a segment represents an
+ *  extension (denoted with parentheses in options specs in .proto files).
+ *  E.g.,{ ["foo", false], ["bar.baz", true], ["moo", false] } represents
+ *  "foo.(bar.baz).moo".
  */
 export class UninterpretedOptionNamePart extends FieldNode {
+  /**
+   **/
   private _namePart: STRING;
 
+  /**
+   **/
   private _isExtension: BOOLEAN;
 
   public __defaultValues: IUninterpretedOptionNamePart;
@@ -32,6 +51,8 @@ export class UninterpretedOptionNamePart extends FieldNode {
   constructor(initData?: IUninterpretedOptionNamePart, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.UninterpretedOption.NamePart";
+    this.__meta.description =
+      'UninterpretedOptionNamePart The name of the uninterpreted option.  Each string represents a segment in\n a dot-separated name.  is_extension is true iff a segment represents an\n extension (denoted with parentheses in options specs in .proto files).\n E.g.,{ ["foo", false], ["bar.baz", true], ["moo", false] } represents\n "foo.(bar.baz).moo".';
 
     this.__meta.nodeFields = [
       {
@@ -39,18 +60,26 @@ export class UninterpretedOptionNamePart extends FieldNode {
         protoName: "name_part",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "isExtension",
         protoName: "is_extension",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._namePart = new STRING(undefined, this, "namePart");
 
+    /**
+     **/
     this._isExtension = new BOOLEAN(undefined, this, "isExtension");
 
     // Set required fields
@@ -76,28 +105,40 @@ export class UninterpretedOptionNamePart extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get namePart(): STRING {
     return this._namePart;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set namePart(v: string) {
     this.__PrimitivesSetter(this._namePart, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get isExtension(): BOOLEAN {
     return this._isExtension;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set isExtension(v: boolean) {
     this.__PrimitivesSetter(this._isExtension, v);
   }
 
-  fromLiteral(data: IUninterpretedOptionNamePart) {
+  fromLiteral(data: IUninterpretedOptionNamePart): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IUninterpretedOptionNamePart {
-    return super.__toLiteral();
+    return super.__toLiteral() as IUninterpretedOptionNamePart;
   }
 }
 

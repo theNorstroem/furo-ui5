@@ -26,8 +26,12 @@ export interface TResponseOrReference {
  * ResponseOrReference
  */
 export class ResponseOrReference extends FieldNode {
+  /**
+   **/
   private _response: OpenapiV3Response;
 
+  /**
+   **/
   private _reference: OpenapiV3Reference;
 
   public __defaultValues: IResponseOrReference;
@@ -35,6 +39,7 @@ export class ResponseOrReference extends FieldNode {
   constructor(initData?: IResponseOrReference, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.ResponseOrReference";
+    this.__meta.description = "ResponseOrReference";
 
     this.__meta.nodeFields = [
       {
@@ -42,18 +47,30 @@ export class ResponseOrReference extends FieldNode {
         protoName: "response",
         FieldConstructor: OpenapiV3Response,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "reference",
         protoName: "reference",
         FieldConstructor: OpenapiV3Reference,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
     ];
 
+    this.__meta.oneofGroups = new Map([["oneof", undefined]]);
+
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._response = new OpenapiV3Response(undefined, this, "response");
 
+    /**
+     **/
     this._reference = new OpenapiV3Reference(undefined, this, "reference");
 
     // Set required fields
@@ -79,28 +96,40 @@ export class ResponseOrReference extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get response(): OpenapiV3Response {
     return this._response;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Response`
+   **/
   public set response(v: IOpenapiV3Response) {
     this.__TypeSetter(this._response, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get reference(): OpenapiV3Reference {
     return this._reference;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Reference`
+   **/
   public set reference(v: IOpenapiV3Reference) {
     this.__TypeSetter(this._reference, v);
   }
 
-  fromLiteral(data: IResponseOrReference) {
+  fromLiteral(data: IResponseOrReference): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IResponseOrReference {
-    return super.__toLiteral();
+    return super.__toLiteral() as IResponseOrReference;
   }
 }
 

@@ -27,6 +27,8 @@ export interface THeadersOrReferences {
  * HeadersOrReferences
  */
 export class HeadersOrReferences extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedHeaderOrReference, IOpenapiV3NamedHeaderOrReference>;
 
   public __defaultValues: IHeadersOrReferences;
@@ -34,6 +36,7 @@ export class HeadersOrReferences extends FieldNode {
   constructor(initData?: IHeadersOrReferences, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.HeadersOrReferences";
+    this.__meta.description = "HeadersOrReferences";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class HeadersOrReferences extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedHeaderOrReference,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedHeaderOrReference, IOpenapiV3NamedHeaderOrReference>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class HeadersOrReferences extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedHeaderOrReference, IOpenapiV3NamedHeaderOrReference> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedHeaderOrReference[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedHeaderOrReference[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IHeadersOrReferences) {
+  fromLiteral(data: IHeadersOrReferences): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IHeadersOrReferences {
-    return super.__toLiteral();
+    return super.__toLiteral() as IHeadersOrReferences;
   }
 }
 

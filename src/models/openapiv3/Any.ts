@@ -23,8 +23,12 @@ export interface TXAny {
  * XAny
  */
 export class XAny extends FieldNode {
+  /**
+   **/
   private _value: ANY;
 
+  /**
+   **/
   private _yaml: STRING;
 
   public __defaultValues: IXAny;
@@ -32,6 +36,7 @@ export class XAny extends FieldNode {
   constructor(initData?: IXAny, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Any";
+    this.__meta.description = "XAny";
 
     this.__meta.nodeFields = [
       {
@@ -39,18 +44,26 @@ export class XAny extends FieldNode {
         protoName: "value",
         FieldConstructor: ANY,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "yaml",
         protoName: "yaml",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._value = new ANY(undefined, this, "value");
 
+    /**
+     **/
     this._yaml = new STRING(undefined, this, "yaml");
 
     // Set required fields
@@ -76,28 +89,40 @@ export class XAny extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): ANY {
     return this._value;
   }
 
+  /**
+   * The setter receives `IAny`
+   **/
   public set value(v: IAny) {
     this.__TypeSetter(this._value, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get yaml(): STRING {
     return this._yaml;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set yaml(v: string) {
     this.__PrimitivesSetter(this._yaml, v);
   }
 
-  fromLiteral(data: IXAny) {
+  fromLiteral(data: IXAny): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IXAny {
-    return super.__toLiteral();
+    return super.__toLiteral() as IXAny;
   }
 }
 

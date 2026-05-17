@@ -16,13 +16,13 @@ Validators.set("furo.fat.String", (node: FuroFatString) => {
       if (fieldConstraints.max_length) {
         // String length can be restricted using minLength and maxLength. ">" is used to check.
         if (val.length > fieldConstraints.max_length) {
-          return ["constraint.violation.max_length", fieldConstraints.max_length?.toString(), val];
+          return ["constraint.violation.max_length", fieldConstraints.max_length.toString(), val];
         }
       }
       if (fieldConstraints.min_length) {
         // String length can be restricted using minLength and maxLength. "<" is used to check.
         if (val.length < fieldConstraints.min_length) {
-          return ["constraint.violation.min_length", fieldConstraints.min_length?.toString(), val];
+          return ["constraint.violation.min_length", fieldConstraints.min_length.toString(), val];
         }
       }
       if (fieldConstraints.pattern) {

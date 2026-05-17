@@ -31,10 +31,16 @@ export interface TCubeEntity {
  * CubeEntity
  */
 export class CubeEntity extends FieldNode {
+  /**
+   **/
   private _displayName: STRING;
 
+  /**
+   **/
   private _description: STRING;
 
+  /**
+   **/
   private _cube: Furoui5TestCubeCubeDefinition;
 
   public __defaultValues: ICubeEntity;
@@ -42,6 +48,7 @@ export class CubeEntity extends FieldNode {
   constructor(initData?: ICubeEntity, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furoui5test.cube.CubeEntity";
+    this.__meta.description = "CubeEntity";
 
     this.__meta.nodeFields = [
       {
@@ -49,26 +56,37 @@ export class CubeEntity extends FieldNode {
         protoName: "display_name",
         FieldConstructor: STRING,
         constraints: { read_only: true },
+        description: "",
       },
       {
         fieldName: "description",
         protoName: "description",
         FieldConstructor: STRING,
         constraints: { min_length: 5 },
+        description: "",
       },
       {
         fieldName: "cube",
         protoName: "cube",
         FieldConstructor: Furoui5TestCubeCubeDefinition,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._displayName = new STRING(undefined, this, "displayName");
 
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
+    /**
+     **/
     this._cube = new Furoui5TestCubeCubeDefinition(undefined, this, "cube");
 
     // Set required fields
@@ -97,36 +115,54 @@ export class CubeEntity extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get displayName(): STRING {
     return this._displayName;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set displayName(v: string) {
     this.__PrimitivesSetter(this._displayName, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get cube(): Furoui5TestCubeCubeDefinition {
     return this._cube;
   }
 
+  /**
+   * The setter receives `IFuroui5TestCubeCubeDefinition`
+   **/
   public set cube(v: IFuroui5TestCubeCubeDefinition) {
     this.__TypeSetter(this._cube, v);
   }
 
-  fromLiteral(data: ICubeEntity) {
+  fromLiteral(data: ICubeEntity): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ICubeEntity {
-    return super.__toLiteral();
+    return super.__toLiteral() as ICubeEntity;
   }
 }
 

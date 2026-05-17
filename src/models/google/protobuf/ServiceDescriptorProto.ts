@@ -39,10 +39,16 @@ export interface TServiceDescriptorProto {
  *  Describes a service.
  */
 export class ServiceDescriptorProto extends FieldNode {
+  /**
+   **/
   private _name: STRING;
 
+  /**
+   **/
   private _method: ARRAY<GoogleProtobufMethodDescriptorProto, IGoogleProtobufMethodDescriptorProto>;
 
+  /**
+   **/
   private _options: GoogleProtobufServiceOptions;
 
   public __defaultValues: IServiceDescriptorProto;
@@ -50,6 +56,7 @@ export class ServiceDescriptorProto extends FieldNode {
   constructor(initData?: IServiceDescriptorProto, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.ServiceDescriptorProto";
+    this.__meta.description = "ServiceDescriptorProto Describes a service.";
 
     this.__meta.nodeFields = [
       {
@@ -57,26 +64,37 @@ export class ServiceDescriptorProto extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "method",
         protoName: "method",
         FieldConstructor: GoogleProtobufMethodDescriptorProto,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "options",
         protoName: "options",
         FieldConstructor: GoogleProtobufServiceOptions,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._name = new STRING(undefined, this, "name");
 
+    /**
+     **/
     this._method = new ARRAY<GoogleProtobufMethodDescriptorProto, IGoogleProtobufMethodDescriptorProto>(undefined, this, "method");
 
+    /**
+     **/
     this._options = new GoogleProtobufServiceOptions(undefined, this, "options");
 
     // Set required fields
@@ -102,36 +120,54 @@ export class ServiceDescriptorProto extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get method(): ARRAY<GoogleProtobufMethodDescriptorProto, IGoogleProtobufMethodDescriptorProto> {
     return this._method;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufMethodDescriptorProto[]`
+   **/
   public set method(v: IGoogleProtobufMethodDescriptorProto[]) {
     this.__TypeSetter(this._method, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get options(): GoogleProtobufServiceOptions {
     return this._options;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufServiceOptions`
+   **/
   public set options(v: IGoogleProtobufServiceOptions) {
     this.__TypeSetter(this._options, v);
   }
 
-  fromLiteral(data: IServiceDescriptorProto) {
+  fromLiteral(data: IServiceDescriptorProto): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IServiceDescriptorProto {
-    return super.__toLiteral();
+    return super.__toLiteral() as IServiceDescriptorProto;
   }
 }
 

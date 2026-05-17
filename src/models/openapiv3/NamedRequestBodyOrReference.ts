@@ -44,10 +44,14 @@ export interface TNamedRequestBodyOrReference {
  *  Automatically-generated message used to represent maps of RequestBodyOrReference as ordered (name,value) pairs.
  */
 export class NamedRequestBodyOrReference extends FieldNode {
-  //  Map key
+  /**
+   * Map key
+   **/
   private _name: STRING;
 
-  //  Mapped value
+  /**
+   * Mapped value
+   **/
   private _value: OpenapiV3RequestBodyOrReference;
 
   public __defaultValues: INamedRequestBodyOrReference;
@@ -55,6 +59,8 @@ export class NamedRequestBodyOrReference extends FieldNode {
   constructor(initData?: INamedRequestBodyOrReference, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.NamedRequestBodyOrReference";
+    this.__meta.description =
+      "NamedRequestBodyOrReference Automatically-generated message used to represent maps of RequestBodyOrReference as ordered (name,value) pairs.";
 
     this.__meta.nodeFields = [
       {
@@ -62,20 +68,28 @@ export class NamedRequestBodyOrReference extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Map key",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: OpenapiV3RequestBodyOrReference,
         constraints: {},
+        description: "Mapped value",
       },
     ];
 
     // Initialize the fields
-    //  Map key
+    // ---------------------
+
+    /**
+     *  Map key
+     **/
     this._name = new STRING(undefined, this, "name");
 
-    //  Mapped value
+    /**
+     *  Mapped value
+     **/
     this._value = new OpenapiV3RequestBodyOrReference(undefined, this, "value");
 
     // Set required fields
@@ -101,30 +115,42 @@ export class NamedRequestBodyOrReference extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Map key
+  /**
+   *  Map key
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
-  //  Mapped value
+  /**
+   *  Mapped value
+   * The getter receives the FieldNode
+   **/
   public get value(): OpenapiV3RequestBodyOrReference {
     return this._value;
   }
 
+  /**
+   * The setter receives `IOpenapiV3RequestBodyOrReference`
+   **/
   public set value(v: IOpenapiV3RequestBodyOrReference) {
     this.__TypeSetter(this._value, v);
   }
 
-  fromLiteral(data: INamedRequestBodyOrReference) {
+  fromLiteral(data: INamedRequestBodyOrReference): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): INamedRequestBodyOrReference {
-    return super.__toLiteral();
+    return super.__toLiteral() as INamedRequestBodyOrReference;
   }
 }
 

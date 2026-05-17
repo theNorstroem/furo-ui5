@@ -36,7 +36,9 @@ export interface TDoubleValue {
  *  The JSON representation for `DoubleValue` is JSON number.
  */
 export class DoubleValue extends FieldNode {
-  //  The double value.
+  /**
+   * The double value.
+   **/
   private _value: DOUBLE;
 
   public __defaultValues: IDoubleValue;
@@ -44,6 +46,7 @@ export class DoubleValue extends FieldNode {
   constructor(initData?: IDoubleValue, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.DoubleValue";
+    this.__meta.description = "DoubleValue Wrapper message for `double`.\n\n The JSON representation for `DoubleValue` is JSON number.";
 
     this.__meta.nodeFields = [
       {
@@ -51,11 +54,16 @@ export class DoubleValue extends FieldNode {
         protoName: "value",
         FieldConstructor: DOUBLE,
         constraints: {},
+        description: "The double value.",
       },
     ];
 
     // Initialize the fields
-    //  The double value.
+    // ---------------------
+
+    /**
+     *  The double value.
+     **/
     this._value = new DOUBLE(undefined, this, "value");
 
     // Set required fields
@@ -81,21 +89,27 @@ export class DoubleValue extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The double value.
+  /**
+   *  The double value.
+   * The getter receives the FieldNode
+   **/
   public get value(): DOUBLE {
     return this._value;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set value(v: number) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IDoubleValue) {
+  fromLiteral(data: IDoubleValue): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IDoubleValue {
-    return super.__toLiteral();
+    return super.__toLiteral() as IDoubleValue;
   }
 }
 

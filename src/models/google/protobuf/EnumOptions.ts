@@ -88,28 +88,38 @@ export interface TEnumOptions {
  * EnumOptions
  */
 export class EnumOptions extends FieldNode {
-  //  Set this option to true to allow mapping different tag names to the same
-  //  value.
+  /**
+   * Set this option to true to allow mapping different tag names to the same
+   * value.
+   **/
   private _allowAlias: BOOLEAN;
 
-  //  Is this enum deprecated?
-  //  Depending on the target platform, this can emit Deprecated annotations
-  //  for the enum, or it will be completely ignored; in the very least, this
-  //  is a formalization for deprecating enums.
+  /**
+   * Is this enum deprecated?
+   * Depending on the target platform, this can emit Deprecated annotations
+   * for the enum, or it will be completely ignored; in the very least, this
+   * is a formalization for deprecating enums.
+   **/
   private _deprecated: BOOLEAN;
 
-  //  Enable the legacy handling of JSON field name conflicts.  This lowercases
-  //  and strips underscored from the fields before comparison in proto3 only.
-  //  The new behavior takes `json_name` into account and applies to proto2 as
-  //  well.
-  //  TODO Remove this legacy behavior once downstream teams have
-  //  had time to migrate.
+  /**
+   * Enable the legacy handling of JSON field name conflicts.  This lowercases
+   * and strips underscored from the fields before comparison in proto3 only.
+   * The new behavior takes `json_name` into account and applies to proto2 as
+   * well.
+   * TODO Remove this legacy behavior once downstream teams have
+   * had time to migrate.
+   **/
   private _deprecatedLegacyJsonFieldConflicts: BOOLEAN;
 
-  //  Any features defined in the specific edition.
+  /**
+   * Any features defined in the specific edition.
+   **/
   private _features: GoogleProtobufFeatureSet;
 
-  //  The parser stores options it doesn't recognize here. See above.
+  /**
+   * The parser stores options it doesn't recognize here. See above.
+   **/
   private _uninterpretedOption: ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>;
 
   public __defaultValues: IEnumOptions;
@@ -117,6 +127,7 @@ export class EnumOptions extends FieldNode {
   constructor(initData?: IEnumOptions, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.EnumOptions";
+    this.__meta.description = "EnumOptions";
 
     this.__meta.nodeFields = [
       {
@@ -124,56 +135,75 @@ export class EnumOptions extends FieldNode {
         protoName: "allow_alias",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "Set this option to true to allow mapping different tag names to the same\n value.",
       },
       {
         fieldName: "deprecated",
         protoName: "deprecated",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description:
+          "Is this enum deprecated?\n Depending on the target platform, this can emit Deprecated annotations\n for the enum, or it will be completely ignored; in the very least, this\n is a formalization for deprecating enums.",
       },
       {
         fieldName: "deprecatedLegacyJsonFieldConflicts",
         protoName: "deprecated_legacy_json_field_conflicts",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description:
+          "Enable the legacy handling of JSON field name conflicts.  This lowercases\n and strips underscored from the fields before comparison in proto3 only.\n The new behavior takes `json_name` into account and applies to proto2 as\n well.\n TODO Remove this legacy behavior once downstream teams have\n had time to migrate.",
       },
       {
         fieldName: "features",
         protoName: "features",
         FieldConstructor: GoogleProtobufFeatureSet,
         constraints: {},
+        description: "Any features defined in the specific edition.",
       },
       {
         fieldName: "uninterpretedOption",
         protoName: "uninterpreted_option",
         FieldConstructor: GoogleProtobufUninterpretedOption,
         constraints: {},
+        description: "The parser stores options it doesn't recognize here. See above.",
       },
     ];
 
     // Initialize the fields
-    //  Set this option to true to allow mapping different tag names to the same
-    //  value.
+    // ---------------------
+
+    /**
+     *  Set this option to true to allow mapping different tag names to the same
+     *  value.
+     **/
     this._allowAlias = new BOOLEAN(undefined, this, "allowAlias");
 
-    //  Is this enum deprecated?
-    //  Depending on the target platform, this can emit Deprecated annotations
-    //  for the enum, or it will be completely ignored; in the very least, this
-    //  is a formalization for deprecating enums.
+    /**
+     *  Is this enum deprecated?
+     *  Depending on the target platform, this can emit Deprecated annotations
+     *  for the enum, or it will be completely ignored; in the very least, this
+     *  is a formalization for deprecating enums.
+     **/
     this._deprecated = new BOOLEAN(undefined, this, "deprecated");
 
-    //  Enable the legacy handling of JSON field name conflicts.  This lowercases
-    //  and strips underscored from the fields before comparison in proto3 only.
-    //  The new behavior takes `json_name` into account and applies to proto2 as
-    //  well.
-    //  TODO Remove this legacy behavior once downstream teams have
-    //  had time to migrate.
+    /**
+     *  Enable the legacy handling of JSON field name conflicts.  This lowercases
+     *  and strips underscored from the fields before comparison in proto3 only.
+     *  The new behavior takes `json_name` into account and applies to proto2 as
+     *  well.
+     *  TODO Remove this legacy behavior once downstream teams have
+     *  had time to migrate.
+     **/
     this._deprecatedLegacyJsonFieldConflicts = new BOOLEAN(undefined, this, "deprecatedLegacyJsonFieldConflicts");
 
-    //  Any features defined in the specific edition.
+    /**
+     *  Any features defined in the specific edition.
+     **/
     this._features = new GoogleProtobufFeatureSet(undefined, this, "features");
 
-    //  The parser stores options it doesn't recognize here. See above.
+    /**
+     *  The parser stores options it doesn't recognize here. See above.
+     **/
     this._uninterpretedOption = new ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>(undefined, this, "uninterpretedOption");
 
     // Set required fields
@@ -199,66 +229,96 @@ export class EnumOptions extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Set this option to true to allow mapping different tag names to the same
-  //  value.
+  /**
+   *  Set this option to true to allow mapping different tag names to the same
+   *  value.
+   * The getter receives the FieldNode
+   **/
   public get allowAlias(): BOOLEAN {
     return this._allowAlias;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set allowAlias(v: boolean) {
     this.__PrimitivesSetter(this._allowAlias, v);
   }
 
-  //  Is this enum deprecated?
-  //  Depending on the target platform, this can emit Deprecated annotations
-  //  for the enum, or it will be completely ignored; in the very least, this
-  //  is a formalization for deprecating enums.
+  /**
+   *  Is this enum deprecated?
+   *  Depending on the target platform, this can emit Deprecated annotations
+   *  for the enum, or it will be completely ignored; in the very least, this
+   *  is a formalization for deprecating enums.
+   * The getter receives the FieldNode
+   **/
   public get deprecated(): BOOLEAN {
     return this._deprecated;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set deprecated(v: boolean) {
     this.__PrimitivesSetter(this._deprecated, v);
   }
 
-  //  Enable the legacy handling of JSON field name conflicts.  This lowercases
-  //  and strips underscored from the fields before comparison in proto3 only.
-  //  The new behavior takes `json_name` into account and applies to proto2 as
-  //  well.
-  //  TODO Remove this legacy behavior once downstream teams have
-  //  had time to migrate.
+  /**
+   *  Enable the legacy handling of JSON field name conflicts.  This lowercases
+   *  and strips underscored from the fields before comparison in proto3 only.
+   *  The new behavior takes `json_name` into account and applies to proto2 as
+   *  well.
+   *  TODO Remove this legacy behavior once downstream teams have
+   *  had time to migrate.
+   * The getter receives the FieldNode
+   **/
   public get deprecatedLegacyJsonFieldConflicts(): BOOLEAN {
     return this._deprecatedLegacyJsonFieldConflicts;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set deprecatedLegacyJsonFieldConflicts(v: boolean) {
     this.__PrimitivesSetter(this._deprecatedLegacyJsonFieldConflicts, v);
   }
 
-  //  Any features defined in the specific edition.
+  /**
+   *  Any features defined in the specific edition.
+   * The getter receives the FieldNode
+   **/
   public get features(): GoogleProtobufFeatureSet {
     return this._features;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufFeatureSet`
+   **/
   public set features(v: IGoogleProtobufFeatureSet) {
     this.__TypeSetter(this._features, v);
   }
 
-  //  The parser stores options it doesn't recognize here. See above.
+  /**
+   *  The parser stores options it doesn't recognize here. See above.
+   * The getter receives the FieldNode
+   **/
   public get uninterpretedOption(): ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption> {
     return this._uninterpretedOption;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufUninterpretedOption[]`
+   **/
   public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[]) {
     this.__TypeSetter(this._uninterpretedOption, v);
   }
 
-  fromLiteral(data: IEnumOptions) {
+  fromLiteral(data: IEnumOptions): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IEnumOptions {
-    return super.__toLiteral();
+    return super.__toLiteral() as IEnumOptions;
   }
 }
 

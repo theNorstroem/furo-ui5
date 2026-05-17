@@ -33,6 +33,8 @@ export interface TFileDescriptorSet {
  *  files it parses.
  */
 export class FileDescriptorSet extends FieldNode {
+  /**
+   **/
   private _file: ARRAY<GoogleProtobufFileDescriptorProto, IGoogleProtobufFileDescriptorProto>;
 
   public __defaultValues: IFileDescriptorSet;
@@ -40,6 +42,7 @@ export class FileDescriptorSet extends FieldNode {
   constructor(initData?: IFileDescriptorSet, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.FileDescriptorSet";
+    this.__meta.description = "FileDescriptorSet The protocol compiler can output a FileDescriptorSet containing the .proto\n files it parses.";
 
     this.__meta.nodeFields = [
       {
@@ -47,10 +50,15 @@ export class FileDescriptorSet extends FieldNode {
         protoName: "file",
         FieldConstructor: GoogleProtobufFileDescriptorProto,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._file = new ARRAY<GoogleProtobufFileDescriptorProto, IGoogleProtobufFileDescriptorProto>(undefined, this, "file");
 
     // Set required fields
@@ -76,20 +84,26 @@ export class FileDescriptorSet extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get file(): ARRAY<GoogleProtobufFileDescriptorProto, IGoogleProtobufFileDescriptorProto> {
     return this._file;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufFileDescriptorProto[]`
+   **/
   public set file(v: IGoogleProtobufFileDescriptorProto[]) {
     this.__TypeSetter(this._file, v);
   }
 
-  fromLiteral(data: IFileDescriptorSet) {
+  fromLiteral(data: IFileDescriptorSet): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IFileDescriptorSet {
-    return super.__toLiteral();
+    return super.__toLiteral() as IFileDescriptorSet;
   }
 }
 

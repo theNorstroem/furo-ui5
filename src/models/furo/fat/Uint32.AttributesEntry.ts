@@ -7,13 +7,7 @@ import { FieldNode, Registry, STRING } from "@furo/open-models/dist/index";
  * @interface IUint32AttributesEntry
  */
 export interface IUint32AttributesEntry {
-  /**
-   *  Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
-   */
   value?: string;
 }
 
@@ -21,13 +15,7 @@ export interface IUint32AttributesEntry {
  * @interface TUint32AttributesEntry
  */
 export interface TUint32AttributesEntry {
-  /**
-   *  Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
-   */
   value?: string;
 }
 
@@ -35,10 +23,12 @@ export interface TUint32AttributesEntry {
  * Uint32AttributesEntry
  */
 export class Uint32AttributesEntry extends FieldNode {
-  //  Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
+  /**
+   **/
   private _key: STRING;
 
-  //  Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
+  /**
+   **/
   private _value: STRING;
 
   public __defaultValues: IUint32AttributesEntry;
@@ -46,6 +36,7 @@ export class Uint32AttributesEntry extends FieldNode {
   constructor(initData?: IUint32AttributesEntry, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Uint32.AttributesEntry";
+    this.__meta.description = "Uint32AttributesEntry";
 
     this.__meta.nodeFields = [
       {
@@ -53,20 +44,26 @@ export class Uint32AttributesEntry extends FieldNode {
         protoName: "key",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
+    // ---------------------
+
+    /**
+     **/
     this._key = new STRING(undefined, this, "key");
 
-    //  Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
+    /**
+     **/
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
@@ -92,30 +89,40 @@ export class Uint32AttributesEntry extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
+  /**
+   * The getter receives the FieldNode
+   **/
   public get key(): STRING {
     return this._key;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set key(v: string) {
     this.__PrimitivesSetter(this._key, v);
   }
 
-  //  Furo annotated type wrapper message for `uint32`.  https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/wrappers.proto
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): STRING {
     return this._value;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set value(v: string) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IUint32AttributesEntry) {
+  fromLiteral(data: IUint32AttributesEntry): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IUint32AttributesEntry {
-    return super.__toLiteral();
+    return super.__toLiteral() as IUint32AttributesEntry;
   }
 }
 

@@ -7,13 +7,7 @@ import { BOOLEAN, FieldNode, Registry, STRING } from "@furo/open-models/dist/ind
  * @interface IStringLabelsEntry
  */
 export interface IStringLabelsEntry {
-  /**
-   *  Furo annotated type wrapper message for `string`.
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `string`.
-   */
   value?: boolean;
 }
 
@@ -21,13 +15,7 @@ export interface IStringLabelsEntry {
  * @interface TStringLabelsEntry
  */
 export interface TStringLabelsEntry {
-  /**
-   *  Furo annotated type wrapper message for `string`.
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `string`.
-   */
   value?: boolean;
 }
 
@@ -35,10 +23,12 @@ export interface TStringLabelsEntry {
  * StringLabelsEntry
  */
 export class StringLabelsEntry extends FieldNode {
-  //  Furo annotated type wrapper message for `string`.
+  /**
+   **/
   private _key: STRING;
 
-  //  Furo annotated type wrapper message for `string`.
+  /**
+   **/
   private _value: BOOLEAN;
 
   public __defaultValues: IStringLabelsEntry;
@@ -46,6 +36,7 @@ export class StringLabelsEntry extends FieldNode {
   constructor(initData?: IStringLabelsEntry, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.String.LabelsEntry";
+    this.__meta.description = "StringLabelsEntry";
 
     this.__meta.nodeFields = [
       {
@@ -53,20 +44,26 @@ export class StringLabelsEntry extends FieldNode {
         protoName: "key",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  Furo annotated type wrapper message for `string`.
+    // ---------------------
+
+    /**
+     **/
     this._key = new STRING(undefined, this, "key");
 
-    //  Furo annotated type wrapper message for `string`.
+    /**
+     **/
     this._value = new BOOLEAN(undefined, this, "value");
 
     // Set required fields
@@ -92,30 +89,40 @@ export class StringLabelsEntry extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Furo annotated type wrapper message for `string`.
+  /**
+   * The getter receives the FieldNode
+   **/
   public get key(): STRING {
     return this._key;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set key(v: string) {
     this.__PrimitivesSetter(this._key, v);
   }
 
-  //  Furo annotated type wrapper message for `string`.
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): BOOLEAN {
     return this._value;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set value(v: boolean) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IStringLabelsEntry) {
+  fromLiteral(data: IStringLabelsEntry): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IStringLabelsEntry {
-    return super.__toLiteral();
+    return super.__toLiteral() as IStringLabelsEntry;
   }
 }
 

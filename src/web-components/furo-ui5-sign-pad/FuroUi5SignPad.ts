@@ -59,7 +59,9 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
     this.canvas = this.shadowRoot!.querySelector("canvas");
 
     this.signaturePad = new SignaturePad(this.canvas!, {});
-    const processChanges = DebounceBuilder(() => { this.encodeImage(); }, 250);
+    const processChanges = DebounceBuilder(() => {
+      this.encodeImage();
+    }, 250);
     this.signaturePad.addEventListener("afterUpdateStroke", () => {
       processChanges();
     });

@@ -7,13 +7,7 @@ import { BOOLEAN, FieldNode, Registry, STRING } from "@furo/open-models/dist/ind
  * @interface IUint64LabelsEntry
  */
 export interface IUint64LabelsEntry {
-  /**
-   *  Furo annotated type wrapper message for `uint64`.  The range constraints are set to Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `uint64`.  The range constraints are set to Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   value?: boolean;
 }
 
@@ -21,13 +15,7 @@ export interface IUint64LabelsEntry {
  * @interface TUint64LabelsEntry
  */
 export interface TUint64LabelsEntry {
-  /**
-   *  Furo annotated type wrapper message for `uint64`.  The range constraints are set to Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `uint64`.  The range constraints are set to Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   value?: boolean;
 }
 
@@ -35,10 +23,12 @@ export interface TUint64LabelsEntry {
  * Uint64LabelsEntry
  */
 export class Uint64LabelsEntry extends FieldNode {
-  //  Furo annotated type wrapper message for `uint64`.  The range constraints are set to Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   **/
   private _key: STRING;
 
-  //  Furo annotated type wrapper message for `uint64`.  The range constraints are set to Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   **/
   private _value: BOOLEAN;
 
   public __defaultValues: IUint64LabelsEntry;
@@ -46,6 +36,7 @@ export class Uint64LabelsEntry extends FieldNode {
   constructor(initData?: IUint64LabelsEntry, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Uint64.LabelsEntry";
+    this.__meta.description = "Uint64LabelsEntry";
 
     this.__meta.nodeFields = [
       {
@@ -53,20 +44,26 @@ export class Uint64LabelsEntry extends FieldNode {
         protoName: "key",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  Furo annotated type wrapper message for `uint64`.  The range constraints are set to Number.MAX_SAFE_INTEGER because of browser limitations
+    // ---------------------
+
+    /**
+     **/
     this._key = new STRING(undefined, this, "key");
 
-    //  Furo annotated type wrapper message for `uint64`.  The range constraints are set to Number.MAX_SAFE_INTEGER because of browser limitations
+    /**
+     **/
     this._value = new BOOLEAN(undefined, this, "value");
 
     // Set required fields
@@ -92,30 +89,40 @@ export class Uint64LabelsEntry extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Furo annotated type wrapper message for `uint64`.  The range constraints are set to Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   * The getter receives the FieldNode
+   **/
   public get key(): STRING {
     return this._key;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set key(v: string) {
     this.__PrimitivesSetter(this._key, v);
   }
 
-  //  Furo annotated type wrapper message for `uint64`.  The range constraints are set to Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): BOOLEAN {
     return this._value;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set value(v: boolean) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IUint64LabelsEntry) {
+  fromLiteral(data: IUint64LabelsEntry): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IUint64LabelsEntry {
-    return super.__toLiteral();
+    return super.__toLiteral() as IUint64LabelsEntry;
   }
 }
 

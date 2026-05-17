@@ -43,22 +43,40 @@ export interface TSecurityScheme {
  *  Defines a security scheme that can be used by the operations. Supported schemes are HTTP authentication, an API key (either as a header, a cookie parameter or as a query parameter), mutual TLS (use of a client certificate), OAuth2's common flows (implicit, password, application and access code) as defined in RFC6749, and OpenID Connect.   Please note that currently (2019) the implicit flow is about to be deprecated OAuth 2.0 Security Best Current Practice. Recommended for most use case is Authorization Code Grant flow with PKCE.
  */
 export class SecurityScheme extends FieldNode {
+  /**
+   **/
   private _type: STRING;
 
+  /**
+   **/
   private _description: STRING;
 
+  /**
+   **/
   private _name: STRING;
 
+  /**
+   **/
   private _in: STRING;
 
+  /**
+   **/
   private _scheme: STRING;
 
+  /**
+   **/
   private _bearerFormat: STRING;
 
+  /**
+   **/
   private _flows: OpenapiV3OauthFlows;
 
+  /**
+   **/
   private _openIdConnectUrl: STRING;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: ISecurityScheme;
@@ -66,6 +84,8 @@ export class SecurityScheme extends FieldNode {
   constructor(initData?: ISecurityScheme, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.SecurityScheme";
+    this.__meta.description =
+      "SecurityScheme Defines a security scheme that can be used by the operations. Supported schemes are HTTP authentication, an API key (either as a header, a cookie parameter or as a query parameter), mutual TLS (use of a client certificate), OAuth2's common flows (implicit, password, application and access code) as defined in RFC6749, and OpenID Connect.   Please note that currently (2019) the implicit flow is about to be deprecated OAuth 2.0 Security Best Current Practice. Recommended for most use case is Authorization Code Grant flow with PKCE.";
 
     this.__meta.nodeFields = [
       {
@@ -73,74 +93,103 @@ export class SecurityScheme extends FieldNode {
         protoName: "type",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "description",
         protoName: "description",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "name",
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "in",
         protoName: "in",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "scheme",
         protoName: "scheme",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "bearerFormat",
         protoName: "bearer_format",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "flows",
         protoName: "flows",
         FieldConstructor: OpenapiV3OauthFlows,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "openIdConnectUrl",
         protoName: "open_id_connect_url",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._type = new STRING(undefined, this, "type");
 
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
+    /**
+     **/
     this._name = new STRING(undefined, this, "name");
 
+    /**
+     **/
     this._in = new STRING(undefined, this, "in");
 
+    /**
+     **/
     this._scheme = new STRING(undefined, this, "scheme");
 
+    /**
+     **/
     this._bearerFormat = new STRING(undefined, this, "bearerFormat");
 
+    /**
+     **/
     this._flows = new OpenapiV3OauthFlows(undefined, this, "flows");
 
+    /**
+     **/
     this._openIdConnectUrl = new STRING(undefined, this, "openIdConnectUrl");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -166,84 +215,138 @@ export class SecurityScheme extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get type(): STRING {
     return this._type;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set type(v: string) {
     this.__PrimitivesSetter(this._type, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get in(): STRING {
     return this._in;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set in(v: string) {
     this.__PrimitivesSetter(this._in, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get scheme(): STRING {
     return this._scheme;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set scheme(v: string) {
     this.__PrimitivesSetter(this._scheme, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get bearerFormat(): STRING {
     return this._bearerFormat;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set bearerFormat(v: string) {
     this.__PrimitivesSetter(this._bearerFormat, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get flows(): OpenapiV3OauthFlows {
     return this._flows;
   }
 
+  /**
+   * The setter receives `IOpenapiV3OauthFlows`
+   **/
   public set flows(v: IOpenapiV3OauthFlows) {
     this.__TypeSetter(this._flows, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get openIdConnectUrl(): STRING {
     return this._openIdConnectUrl;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set openIdConnectUrl(v: string) {
     this.__PrimitivesSetter(this._openIdConnectUrl, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: ISecurityScheme) {
+  fromLiteral(data: ISecurityScheme): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ISecurityScheme {
-    return super.__toLiteral();
+    return super.__toLiteral() as ISecurityScheme;
   }
 }
 

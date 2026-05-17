@@ -46,10 +46,14 @@ export interface TOneofOptions {
  * OneofOptions
  */
 export class OneofOptions extends FieldNode {
-  //  Any features defined in the specific edition.
+  /**
+   * Any features defined in the specific edition.
+   **/
   private _features: GoogleProtobufFeatureSet;
 
-  //  The parser stores options it doesn't recognize here. See above.
+  /**
+   * The parser stores options it doesn't recognize here. See above.
+   **/
   private _uninterpretedOption: ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>;
 
   public __defaultValues: IOneofOptions;
@@ -57,6 +61,7 @@ export class OneofOptions extends FieldNode {
   constructor(initData?: IOneofOptions, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.OneofOptions";
+    this.__meta.description = "OneofOptions";
 
     this.__meta.nodeFields = [
       {
@@ -64,20 +69,28 @@ export class OneofOptions extends FieldNode {
         protoName: "features",
         FieldConstructor: GoogleProtobufFeatureSet,
         constraints: {},
+        description: "Any features defined in the specific edition.",
       },
       {
         fieldName: "uninterpretedOption",
         protoName: "uninterpreted_option",
         FieldConstructor: GoogleProtobufUninterpretedOption,
         constraints: {},
+        description: "The parser stores options it doesn't recognize here. See above.",
       },
     ];
 
     // Initialize the fields
-    //  Any features defined in the specific edition.
+    // ---------------------
+
+    /**
+     *  Any features defined in the specific edition.
+     **/
     this._features = new GoogleProtobufFeatureSet(undefined, this, "features");
 
-    //  The parser stores options it doesn't recognize here. See above.
+    /**
+     *  The parser stores options it doesn't recognize here. See above.
+     **/
     this._uninterpretedOption = new ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>(undefined, this, "uninterpretedOption");
 
     // Set required fields
@@ -103,30 +116,42 @@ export class OneofOptions extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Any features defined in the specific edition.
+  /**
+   *  Any features defined in the specific edition.
+   * The getter receives the FieldNode
+   **/
   public get features(): GoogleProtobufFeatureSet {
     return this._features;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufFeatureSet`
+   **/
   public set features(v: IGoogleProtobufFeatureSet) {
     this.__TypeSetter(this._features, v);
   }
 
-  //  The parser stores options it doesn't recognize here. See above.
+  /**
+   *  The parser stores options it doesn't recognize here. See above.
+   * The getter receives the FieldNode
+   **/
   public get uninterpretedOption(): ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption> {
     return this._uninterpretedOption;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufUninterpretedOption[]`
+   **/
   public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[]) {
     this.__TypeSetter(this._uninterpretedOption, v);
   }
 
-  fromLiteral(data: IOneofOptions) {
+  fromLiteral(data: IOneofOptions): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IOneofOptions {
-    return super.__toLiteral();
+    return super.__toLiteral() as IOneofOptions;
   }
 }
 

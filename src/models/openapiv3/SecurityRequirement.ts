@@ -30,6 +30,8 @@ export interface TSecurityRequirement {
  *  Lists the required security schemes to execute this operation. The name used for each property MUST correspond to a security scheme declared in the Security Schemes under the Components Object.  Security Requirement Objects that contain multiple schemes require that all schemes MUST be satisfied for a request to be authorized. This enables support for scenarios where multiple query parameters or HTTP headers are required to convey security information.  When a list of Security Requirement Objects is defined on the OpenAPI Object or Operation Object, only one of the Security Requirement Objects in the list needs to be satisfied to authorize the request.
  */
 export class SecurityRequirement extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedStringArray, IOpenapiV3NamedStringArray>;
 
   public __defaultValues: ISecurityRequirement;
@@ -37,6 +39,8 @@ export class SecurityRequirement extends FieldNode {
   constructor(initData?: ISecurityRequirement, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.SecurityRequirement";
+    this.__meta.description =
+      "SecurityRequirement Lists the required security schemes to execute this operation. The name used for each property MUST correspond to a security scheme declared in the Security Schemes under the Components Object.  Security Requirement Objects that contain multiple schemes require that all schemes MUST be satisfied for a request to be authorized. This enables support for scenarios where multiple query parameters or HTTP headers are required to convey security information.  When a list of Security Requirement Objects is defined on the OpenAPI Object or Operation Object, only one of the Security Requirement Objects in the list needs to be satisfied to authorize the request.";
 
     this.__meta.nodeFields = [
       {
@@ -44,10 +48,15 @@ export class SecurityRequirement extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedStringArray,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedStringArray, IOpenapiV3NamedStringArray>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -73,20 +82,26 @@ export class SecurityRequirement extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedStringArray, IOpenapiV3NamedStringArray> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedStringArray[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedStringArray[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: ISecurityRequirement) {
+  fromLiteral(data: ISecurityRequirement): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ISecurityRequirement {
-    return super.__toLiteral();
+    return super.__toLiteral() as ISecurityRequirement;
   }
 }
 

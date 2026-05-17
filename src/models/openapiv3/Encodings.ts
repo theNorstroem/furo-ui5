@@ -27,6 +27,8 @@ export interface TEncodings {
  * Encodings
  */
 export class Encodings extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedEncoding, IOpenapiV3NamedEncoding>;
 
   public __defaultValues: IEncodings;
@@ -34,6 +36,7 @@ export class Encodings extends FieldNode {
   constructor(initData?: IEncodings, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Encodings";
+    this.__meta.description = "Encodings";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class Encodings extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedEncoding,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedEncoding, IOpenapiV3NamedEncoding>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class Encodings extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedEncoding, IOpenapiV3NamedEncoding> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedEncoding[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedEncoding[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IEncodings) {
+  fromLiteral(data: IEncodings): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IEncodings {
-    return super.__toLiteral();
+    return super.__toLiteral() as IEncodings;
   }
 }
 

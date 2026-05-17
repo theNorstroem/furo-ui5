@@ -10,8 +10,8 @@ import { GeneratedCodeInfoAnnotationSemantic as GoogleProtobufGeneratedCodeInfoA
  */
 export interface IGeneratedCodeInfoAnnotation {
   /**
-   *  Represents the identified object's effect on the element in the original
-   *  .proto file.
+   *  Identifies the element in the original source .proto file. This field
+   *  is formatted the same as SourceCodeInfo.Location.path.
    */
   path?: number[];
   /**
@@ -37,8 +37,8 @@ export interface IGeneratedCodeInfoAnnotation {
  */
 export interface TGeneratedCodeInfoAnnotation {
   /**
-   *  Represents the identified object's effect on the element in the original
-   *  .proto file.
+   *  Identifies the element in the original source .proto file. This field
+   *  is formatted the same as SourceCodeInfo.Location.path.
    */
   path?: number[];
   /**
@@ -63,22 +63,32 @@ export interface TGeneratedCodeInfoAnnotation {
  * GeneratedCodeInfoAnnotation
  */
 export class GeneratedCodeInfoAnnotation extends FieldNode {
-  //  Represents the identified object's effect on the element in the original
-  //  .proto file.
+  /**
+   * Identifies the element in the original source .proto file. This field
+   * is formatted the same as SourceCodeInfo.Location.path.
+   **/
   private _path: ARRAY<INT32, number>;
 
-  //  Identifies the filesystem path to the original source .proto.
+  /**
+   * Identifies the filesystem path to the original source .proto.
+   **/
   private _sourceFile: STRING;
 
-  //  Identifies the starting offset in bytes in the generated code
-  //  that relates to the identified object.
+  /**
+   * Identifies the starting offset in bytes in the generated code
+   * that relates to the identified object.
+   **/
   private _begin: INT32;
 
-  //  Identifies the ending offset in bytes in the generated code that
-  //  relates to the identified object. The end offset should be one past
-  //  the last relevant byte (so the length of the text = end - begin).
+  /**
+   * Identifies the ending offset in bytes in the generated code that
+   * relates to the identified object. The end offset should be one past
+   * the last relevant byte (so the length of the text = end - begin).
+   **/
   private _end: INT32;
 
+  /**
+   **/
   private _semantic: ENUM<GoogleProtobufGeneratedCodeInfoAnnotationSemantic>;
 
   public __defaultValues: IGeneratedCodeInfoAnnotation;
@@ -86,6 +96,7 @@ export class GeneratedCodeInfoAnnotation extends FieldNode {
   constructor(initData?: IGeneratedCodeInfoAnnotation, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.GeneratedCodeInfo.Annotation";
+    this.__meta.description = "GeneratedCodeInfoAnnotation";
 
     this.__meta.nodeFields = [
       {
@@ -93,50 +104,68 @@ export class GeneratedCodeInfoAnnotation extends FieldNode {
         protoName: "path",
         FieldConstructor: INT32,
         constraints: {},
+        description: "Identifies the element in the original source .proto file. This field\n is formatted the same as SourceCodeInfo.Location.path.",
       },
       {
         fieldName: "sourceFile",
         protoName: "source_file",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Identifies the filesystem path to the original source .proto.",
       },
       {
         fieldName: "begin",
         protoName: "begin",
         FieldConstructor: INT32,
         constraints: {},
+        description: "Identifies the starting offset in bytes in the generated code\n that relates to the identified object.",
       },
       {
         fieldName: "end",
         protoName: "end",
         FieldConstructor: INT32,
         constraints: {},
+        description:
+          "Identifies the ending offset in bytes in the generated code that\n relates to the identified object. The end offset should be one past\n the last relevant byte (so the length of the text = end - begin).",
       },
       {
         fieldName: "semantic",
         protoName: "semantic",
         FieldConstructor: ENUM<GoogleProtobufGeneratedCodeInfoAnnotationSemantic>,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  Represents the identified object's effect on the element in the original
-    //  .proto file.
+    // ---------------------
+
+    /**
+     *  Identifies the element in the original source .proto file. This field
+     *  is formatted the same as SourceCodeInfo.Location.path.
+     **/
     this._path = new ARRAY<INT32, number>(undefined, this, "path");
 
-    //  Identifies the filesystem path to the original source .proto.
+    /**
+     *  Identifies the filesystem path to the original source .proto.
+     **/
     this._sourceFile = new STRING(undefined, this, "sourceFile");
 
-    //  Identifies the starting offset in bytes in the generated code
-    //  that relates to the identified object.
+    /**
+     *  Identifies the starting offset in bytes in the generated code
+     *  that relates to the identified object.
+     **/
     this._begin = new INT32(undefined, this, "begin");
 
-    //  Identifies the ending offset in bytes in the generated code that
-    //  relates to the identified object. The end offset should be one past
-    //  the last relevant byte (so the length of the text = end - begin).
+    /**
+     *  Identifies the ending offset in bytes in the generated code that
+     *  relates to the identified object. The end offset should be one past
+     *  the last relevant byte (so the length of the text = end - begin).
+     **/
     this._end = new INT32(undefined, this, "end");
 
+    /**
+     **/
     this._semantic = new ENUM<GoogleProtobufGeneratedCodeInfoAnnotationSemantic>(
       undefined,
       GoogleProtobufGeneratedCodeInfoAnnotationSemantic,
@@ -168,60 +197,90 @@ export class GeneratedCodeInfoAnnotation extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Represents the identified object's effect on the element in the original
-  //  .proto file.
+  /**
+   *  Identifies the element in the original source .proto file. This field
+   *  is formatted the same as SourceCodeInfo.Location.path.
+   * The getter receives the FieldNode
+   **/
   public get path(): ARRAY<INT32, number> {
     return this._path;
   }
 
+  /**
+   * The setter receives `number[]`
+   **/
   public set path(v: number[]) {
     this.__TypeSetter(this._path, v);
   }
 
-  //  Identifies the filesystem path to the original source .proto.
+  /**
+   *  Identifies the filesystem path to the original source .proto.
+   * The getter receives the FieldNode
+   **/
   public get sourceFile(): STRING {
     return this._sourceFile;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set sourceFile(v: string) {
     this.__PrimitivesSetter(this._sourceFile, v);
   }
 
-  //  Identifies the starting offset in bytes in the generated code
-  //  that relates to the identified object.
+  /**
+   *  Identifies the starting offset in bytes in the generated code
+   *  that relates to the identified object.
+   * The getter receives the FieldNode
+   **/
   public get begin(): INT32 {
     return this._begin;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set begin(v: number) {
     this.__PrimitivesSetter(this._begin, v);
   }
 
-  //  Identifies the ending offset in bytes in the generated code that
-  //  relates to the identified object. The end offset should be one past
-  //  the last relevant byte (so the length of the text = end - begin).
+  /**
+   *  Identifies the ending offset in bytes in the generated code that
+   *  relates to the identified object. The end offset should be one past
+   *  the last relevant byte (so the length of the text = end - begin).
+   * The getter receives the FieldNode
+   **/
   public get end(): INT32 {
     return this._end;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set end(v: number) {
     this.__PrimitivesSetter(this._end, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get semantic(): ENUM<GoogleProtobufGeneratedCodeInfoAnnotationSemantic> {
     return this._semantic;
   }
 
+  /**
+   * The setter receives `GoogleProtobufGeneratedCodeInfoAnnotationSemantic`
+   **/
   public set semantic(v: GoogleProtobufGeneratedCodeInfoAnnotationSemantic) {
     this.__TypeSetter(this._semantic, v);
   }
 
-  fromLiteral(data: IGeneratedCodeInfoAnnotation) {
+  fromLiteral(data: IGeneratedCodeInfoAnnotation): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IGeneratedCodeInfoAnnotation {
-    return super.__toLiteral();
+    return super.__toLiteral() as IGeneratedCodeInfoAnnotation;
   }
 }
 

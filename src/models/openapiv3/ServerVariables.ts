@@ -27,6 +27,8 @@ export interface TServerVariables {
  * ServerVariables
  */
 export class ServerVariables extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedServerVariable, IOpenapiV3NamedServerVariable>;
 
   public __defaultValues: IServerVariables;
@@ -34,6 +36,7 @@ export class ServerVariables extends FieldNode {
   constructor(initData?: IServerVariables, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.ServerVariables";
+    this.__meta.description = "ServerVariables";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class ServerVariables extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedServerVariable,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedServerVariable, IOpenapiV3NamedServerVariable>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class ServerVariables extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedServerVariable, IOpenapiV3NamedServerVariable> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedServerVariable[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedServerVariable[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IServerVariables) {
+  fromLiteral(data: IServerVariables): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IServerVariables {
-    return super.__toLiteral();
+    return super.__toLiteral() as IServerVariables;
   }
 }
 

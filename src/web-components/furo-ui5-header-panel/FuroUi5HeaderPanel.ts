@@ -1,4 +1,3 @@
- 
 import "@ui5/webcomponents/dist/Icon.js";
 import "@ui5/webcomponents/dist/Avatar.js";
 import "@ui5/webcomponents/dist/Label.js";
@@ -18,9 +17,7 @@ import "@ui5/webcomponents-icons/dist/share.js";
 import "../furo-ui5-icon";
 
 import { css, LitElement, nothing } from "lit";
-// eslint-disable-next-line import/extensions
 import { property } from "lit/decorators.js";
-// eslint-disable-next-line import/extensions
 import { html } from "lit/static-html.js";
 
 import IconShape from "@/types/IconShape";
@@ -339,7 +336,7 @@ export class FuroUi5HeaderPanel extends LitElement {
           if (width > 0 && width < 406) {
             this.setAttribute("wrap", "");
 
-            wrappersize = (this.shadowRoot!.querySelector(".wrapper")!).offsetWidth;
+            wrappersize = this.shadowRoot!.querySelector<HTMLDivElement>(".wrapper")!.offsetWidth;
           } else if (width > 111 + wrappersize) {
             this.removeAttribute("wrap");
           }

@@ -37,12 +37,20 @@ export interface TTag {
  *  Adds metadata to a single tag that is used by the Operation Object. It is not mandatory to have a Tag Object per tag defined in the Operation Object instances.
  */
 export class Tag extends FieldNode {
+  /**
+   **/
   private _name: STRING;
 
+  /**
+   **/
   private _description: STRING;
 
+  /**
+   **/
   private _externalDocs: OpenapiV3ExternalDocs;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: ITag;
@@ -50,6 +58,8 @@ export class Tag extends FieldNode {
   constructor(initData?: ITag, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Tag";
+    this.__meta.description =
+      "Tag Adds metadata to a single tag that is used by the Operation Object. It is not mandatory to have a Tag Object per tag defined in the Operation Object instances.";
 
     this.__meta.nodeFields = [
       {
@@ -57,34 +67,48 @@ export class Tag extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "description",
         protoName: "description",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "externalDocs",
         protoName: "external_docs",
         FieldConstructor: OpenapiV3ExternalDocs,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._name = new STRING(undefined, this, "name");
 
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
+    /**
+     **/
     this._externalDocs = new OpenapiV3ExternalDocs(undefined, this, "externalDocs");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -110,44 +134,68 @@ export class Tag extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get externalDocs(): OpenapiV3ExternalDocs {
     return this._externalDocs;
   }
 
+  /**
+   * The setter receives `IOpenapiV3ExternalDocs`
+   **/
   public set externalDocs(v: IOpenapiV3ExternalDocs) {
     this.__TypeSetter(this._externalDocs, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: ITag) {
+  fromLiteral(data: ITag): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ITag {
-    return super.__toLiteral();
+    return super.__toLiteral() as ITag;
   }
 }
 

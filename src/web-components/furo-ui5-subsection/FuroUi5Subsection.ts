@@ -99,7 +99,6 @@ export class FuroUi5Subsection extends LitFBP(LitElement) {
   }
 
   override connectedCallback() {
-     
     super.connectedCallback();
     this.setAttribute("furo-ui5-subsection", "");
 

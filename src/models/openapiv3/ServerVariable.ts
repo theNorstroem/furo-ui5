@@ -32,12 +32,20 @@ export interface TServerVariable {
  *  An object representing a Server Variable for server URL template substitution.
  */
 export class ServerVariable extends FieldNode {
+  /**
+   **/
   private _enum: ARRAY<STRING, string>;
 
+  /**
+   **/
   private _default: STRING;
 
+  /**
+   **/
   private _description: STRING;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IServerVariable;
@@ -45,6 +53,7 @@ export class ServerVariable extends FieldNode {
   constructor(initData?: IServerVariable, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.ServerVariable";
+    this.__meta.description = "ServerVariable An object representing a Server Variable for server URL template substitution.";
 
     this.__meta.nodeFields = [
       {
@@ -52,34 +61,48 @@ export class ServerVariable extends FieldNode {
         protoName: "enum",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "default",
         protoName: "default",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "description",
         protoName: "description",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._enum = new ARRAY<STRING, string>(undefined, this, "enum");
 
+    /**
+     **/
     this._default = new STRING(undefined, this, "default");
 
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -105,44 +128,68 @@ export class ServerVariable extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get enum(): ARRAY<STRING, string> {
     return this._enum;
   }
 
+  /**
+   * The setter receives `string[]`
+   **/
   public set enum(v: string[]) {
     this.__TypeSetter(this._enum, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get default(): STRING {
     return this._default;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set default(v: string) {
     this.__PrimitivesSetter(this._default, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IServerVariable) {
+  fromLiteral(data: IServerVariable): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IServerVariable {
-    return super.__toLiteral();
+    return super.__toLiteral() as IServerVariable;
   }
 }
 

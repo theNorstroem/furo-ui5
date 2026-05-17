@@ -40,10 +40,14 @@ export interface TNamedAny {
  *  Automatically-generated message used to represent maps of Any as ordered (name,value) pairs.
  */
 export class NamedAny extends FieldNode {
-  //  Map key
+  /**
+   * Map key
+   **/
   private _name: STRING;
 
-  //  Mapped value
+  /**
+   * Mapped value
+   **/
   private _value: OpenapiV3Any;
 
   public __defaultValues: INamedAny;
@@ -51,6 +55,7 @@ export class NamedAny extends FieldNode {
   constructor(initData?: INamedAny, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.NamedAny";
+    this.__meta.description = "NamedAny Automatically-generated message used to represent maps of Any as ordered (name,value) pairs.";
 
     this.__meta.nodeFields = [
       {
@@ -58,20 +63,28 @@ export class NamedAny extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Map key",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: OpenapiV3Any,
         constraints: {},
+        description: "Mapped value",
       },
     ];
 
     // Initialize the fields
-    //  Map key
+    // ---------------------
+
+    /**
+     *  Map key
+     **/
     this._name = new STRING(undefined, this, "name");
 
-    //  Mapped value
+    /**
+     *  Mapped value
+     **/
     this._value = new OpenapiV3Any(undefined, this, "value");
 
     // Set required fields
@@ -97,30 +110,42 @@ export class NamedAny extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Map key
+  /**
+   *  Map key
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
-  //  Mapped value
+  /**
+   *  Mapped value
+   * The getter receives the FieldNode
+   **/
   public get value(): OpenapiV3Any {
     return this._value;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Any`
+   **/
   public set value(v: IOpenapiV3Any) {
     this.__TypeSetter(this._value, v);
   }
 
-  fromLiteral(data: INamedAny) {
+  fromLiteral(data: INamedAny): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): INamedAny {
-    return super.__toLiteral();
+    return super.__toLiteral() as INamedAny;
   }
 }
 

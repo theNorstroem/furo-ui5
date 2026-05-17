@@ -10,9 +10,9 @@
   <script type="module">
 
     import "@/Assets"
-    import "@/furo-ui5-popover.js"
-    import "@/furo-ui5-responsive-popover.js"
-    import "@/furo-ui5-button.js"
+    import "@/web-components/furo-ui5-button"
+    import "@/web-components/furo-ui5-popover"
+    import "@/web-components/furo-ui5-responsive-popover"
     // import playground-web-components here
     // import "@/Button";
 
@@ -23,6 +23,7 @@
       background-color: var(--sapBackgroundColor);
       padding: 1rem;
     }
+
     *:not(:defined) {
       display: none;
     }
@@ -33,17 +34,20 @@
 <main>
   <h1>Popover</h1>
 
-<furo-ui5-button id="opener" at-click="--openClicked">Open</furo-ui5-button>
-<furo-ui5-popover opener="opener" header-text="Header" fn-show="--openClicked">Content</furo-ui5-popover>
+  <furo-ui5-button id="opener" at-click="--openClicked">Open</furo-ui5-button>
+  <furo-ui5-popover opener="opener" header-text="Header" fn-show="--openClicked">Content</furo-ui5-popover>
   <furo-ui5-button id="responsive-opener" at-click="--openResponsiveClicked">Open</furo-ui5-button>
-  <furo-ui5-responsive-popover opener="responsive-opener" header-text="Responsive" fn-show="--openResponsiveClicked">Content</furo-ui5-responsive-popover>
+  <furo-ui5-responsive-popover opener="responsive-opener" header-text="Responsive" fn-show="--openResponsiveClicked">
+    Content
+    responsive
+  </furo-ui5-responsive-popover>
 </main>
 
 </body>
 
 
 <script type="module">
-  import { DOMFBP } from "@furo/fbp/src/DOMFBP";
+  import {DOMFBP} from "@furo/fbp/src/DOMFBP";
   // append fbp to the body
   const fbproot = new DOMFBP(document.body);
   fbproot._FBPTraceWires();

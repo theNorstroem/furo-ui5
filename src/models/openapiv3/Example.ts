@@ -32,14 +32,24 @@ export interface TExample {
  * Example
  */
 export class Example extends FieldNode {
+  /**
+   **/
   private _summary: STRING;
 
+  /**
+   **/
   private _description: STRING;
 
+  /**
+   **/
   private _value: OpenapiV3Any;
 
+  /**
+   **/
   private _externalValue: STRING;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IExample;
@@ -47,6 +57,7 @@ export class Example extends FieldNode {
   constructor(initData?: IExample, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Example";
+    this.__meta.description = "Example";
 
     this.__meta.nodeFields = [
       {
@@ -54,42 +65,59 @@ export class Example extends FieldNode {
         protoName: "summary",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "description",
         protoName: "description",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: OpenapiV3Any,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "externalValue",
         protoName: "external_value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._summary = new STRING(undefined, this, "summary");
 
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
+    /**
+     **/
     this._value = new OpenapiV3Any(undefined, this, "value");
 
+    /**
+     **/
     this._externalValue = new STRING(undefined, this, "externalValue");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -115,52 +143,82 @@ export class Example extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get summary(): STRING {
     return this._summary;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set summary(v: string) {
     this.__PrimitivesSetter(this._summary, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): OpenapiV3Any {
     return this._value;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Any`
+   **/
   public set value(v: IOpenapiV3Any) {
     this.__TypeSetter(this._value, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get externalValue(): STRING {
     return this._externalValue;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set externalValue(v: string) {
     this.__PrimitivesSetter(this._externalValue, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IExample) {
+  fromLiteral(data: IExample): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IExample {
-    return super.__toLiteral();
+    return super.__toLiteral() as IExample;
   }
 }
 

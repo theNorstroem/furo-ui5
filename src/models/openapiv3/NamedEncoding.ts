@@ -40,10 +40,14 @@ export interface TNamedEncoding {
  *  Automatically-generated message used to represent maps of Encoding as ordered (name,value) pairs.
  */
 export class NamedEncoding extends FieldNode {
-  //  Map key
+  /**
+   * Map key
+   **/
   private _name: STRING;
 
-  //  Mapped value
+  /**
+   * Mapped value
+   **/
   private _value: OpenapiV3Encoding;
 
   public __defaultValues: INamedEncoding;
@@ -51,6 +55,7 @@ export class NamedEncoding extends FieldNode {
   constructor(initData?: INamedEncoding, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.NamedEncoding";
+    this.__meta.description = "NamedEncoding Automatically-generated message used to represent maps of Encoding as ordered (name,value) pairs.";
 
     this.__meta.nodeFields = [
       {
@@ -58,20 +63,28 @@ export class NamedEncoding extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Map key",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: OpenapiV3Encoding,
         constraints: {},
+        description: "Mapped value",
       },
     ];
 
     // Initialize the fields
-    //  Map key
+    // ---------------------
+
+    /**
+     *  Map key
+     **/
     this._name = new STRING(undefined, this, "name");
 
-    //  Mapped value
+    /**
+     *  Mapped value
+     **/
     this._value = new OpenapiV3Encoding(undefined, this, "value");
 
     // Set required fields
@@ -97,30 +110,42 @@ export class NamedEncoding extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Map key
+  /**
+   *  Map key
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
-  //  Mapped value
+  /**
+   *  Mapped value
+   * The getter receives the FieldNode
+   **/
   public get value(): OpenapiV3Encoding {
     return this._value;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Encoding`
+   **/
   public set value(v: IOpenapiV3Encoding) {
     this.__TypeSetter(this._value, v);
   }
 
-  fromLiteral(data: INamedEncoding) {
+  fromLiteral(data: INamedEncoding): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): INamedEncoding {
-    return super.__toLiteral();
+    return super.__toLiteral() as INamedEncoding;
   }
 }
 

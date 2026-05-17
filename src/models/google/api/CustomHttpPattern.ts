@@ -38,10 +38,14 @@ export interface TCustomHttpPattern {
  *  A custom pattern is used for defining custom HTTP verb.
  */
 export class CustomHttpPattern extends FieldNode {
-  //  The name of this custom HTTP verb.
+  /**
+   * The name of this custom HTTP verb.
+   **/
   private _kind: STRING;
 
-  //  The path matched by this custom verb.
+  /**
+   * The path matched by this custom verb.
+   **/
   private _path: STRING;
 
   public __defaultValues: ICustomHttpPattern;
@@ -49,6 +53,7 @@ export class CustomHttpPattern extends FieldNode {
   constructor(initData?: ICustomHttpPattern, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.api.CustomHttpPattern";
+    this.__meta.description = "CustomHttpPattern A custom pattern is used for defining custom HTTP verb.";
 
     this.__meta.nodeFields = [
       {
@@ -56,20 +61,28 @@ export class CustomHttpPattern extends FieldNode {
         protoName: "kind",
         FieldConstructor: STRING,
         constraints: {},
+        description: "The name of this custom HTTP verb.",
       },
       {
         fieldName: "path",
         protoName: "path",
         FieldConstructor: STRING,
         constraints: {},
+        description: "The path matched by this custom verb.",
       },
     ];
 
     // Initialize the fields
-    //  The name of this custom HTTP verb.
+    // ---------------------
+
+    /**
+     *  The name of this custom HTTP verb.
+     **/
     this._kind = new STRING(undefined, this, "kind");
 
-    //  The path matched by this custom verb.
+    /**
+     *  The path matched by this custom verb.
+     **/
     this._path = new STRING(undefined, this, "path");
 
     // Set required fields
@@ -95,30 +108,42 @@ export class CustomHttpPattern extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The name of this custom HTTP verb.
+  /**
+   *  The name of this custom HTTP verb.
+   * The getter receives the FieldNode
+   **/
   public get kind(): STRING {
     return this._kind;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set kind(v: string) {
     this.__PrimitivesSetter(this._kind, v);
   }
 
-  //  The path matched by this custom verb.
+  /**
+   *  The path matched by this custom verb.
+   * The getter receives the FieldNode
+   **/
   public get path(): STRING {
     return this._path;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set path(v: string) {
     this.__PrimitivesSetter(this._path, v);
   }
 
-  fromLiteral(data: ICustomHttpPattern) {
+  fromLiteral(data: ICustomHttpPattern): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ICustomHttpPattern {
-    return super.__toLiteral();
+    return super.__toLiteral() as ICustomHttpPattern;
   }
 }
 

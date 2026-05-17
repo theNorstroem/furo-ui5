@@ -27,6 +27,8 @@ export interface TResponsesOrReferences {
  * ResponsesOrReferences
  */
 export class ResponsesOrReferences extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedResponseOrReference, IOpenapiV3NamedResponseOrReference>;
 
   public __defaultValues: IResponsesOrReferences;
@@ -34,6 +36,7 @@ export class ResponsesOrReferences extends FieldNode {
   constructor(initData?: IResponsesOrReferences, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.ResponsesOrReferences";
+    this.__meta.description = "ResponsesOrReferences";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class ResponsesOrReferences extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedResponseOrReference,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedResponseOrReference, IOpenapiV3NamedResponseOrReference>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class ResponsesOrReferences extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedResponseOrReference, IOpenapiV3NamedResponseOrReference> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedResponseOrReference[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedResponseOrReference[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IResponsesOrReferences) {
+  fromLiteral(data: IResponsesOrReferences): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IResponsesOrReferences {
-    return super.__toLiteral();
+    return super.__toLiteral() as IResponsesOrReferences;
   }
 }
 

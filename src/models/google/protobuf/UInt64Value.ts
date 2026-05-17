@@ -36,7 +36,9 @@ export interface TUInt64Value {
  *  The JSON representation for `UInt64Value` is JSON string.
  */
 export class UInt64Value extends FieldNode {
-  //  The uint64 value.
+  /**
+   * The uint64 value.
+   **/
   private _value: UINT64;
 
   public __defaultValues: IUInt64Value;
@@ -44,6 +46,7 @@ export class UInt64Value extends FieldNode {
   constructor(initData?: IUInt64Value, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.UInt64Value";
+    this.__meta.description = "UInt64Value Wrapper message for `uint64`.\n\n The JSON representation for `UInt64Value` is JSON string.";
 
     this.__meta.nodeFields = [
       {
@@ -51,11 +54,16 @@ export class UInt64Value extends FieldNode {
         protoName: "value",
         FieldConstructor: UINT64,
         constraints: {},
+        description: "The uint64 value.",
       },
     ];
 
     // Initialize the fields
-    //  The uint64 value.
+    // ---------------------
+
+    /**
+     *  The uint64 value.
+     **/
     this._value = new UINT64(undefined, this, "value");
 
     // Set required fields
@@ -81,21 +89,27 @@ export class UInt64Value extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The uint64 value.
+  /**
+   *  The uint64 value.
+   * The getter receives the FieldNode
+   **/
   public get value(): UINT64 {
     return this._value;
   }
 
+  /**
+   * The setter receives `bigint`
+   **/
   public set value(v: bigint) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IUInt64Value) {
+  fromLiteral(data: IUInt64Value): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IUInt64Value {
-    return super.__toLiteral();
+    return super.__toLiteral() as IUInt64Value;
   }
 }
 

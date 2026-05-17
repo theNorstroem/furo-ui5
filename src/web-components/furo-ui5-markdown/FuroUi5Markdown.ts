@@ -68,7 +68,7 @@ export class FuroUi5Markdown extends LitElement {
     this._model.__removeCustomEventListener("stream-ends", this.setStreamEnds.bind(this));
   }
 
-  bindData(fieldNode: STRING) {
+  bindData(fieldNode: STRING | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }

@@ -27,6 +27,8 @@ export interface TCallbacksOrReferences {
  * CallbacksOrReferences
  */
 export class CallbacksOrReferences extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedCallbackOrReference, IOpenapiV3NamedCallbackOrReference>;
 
   public __defaultValues: ICallbacksOrReferences;
@@ -34,6 +36,7 @@ export class CallbacksOrReferences extends FieldNode {
   constructor(initData?: ICallbacksOrReferences, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.CallbacksOrReferences";
+    this.__meta.description = "CallbacksOrReferences";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class CallbacksOrReferences extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedCallbackOrReference,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedCallbackOrReference, IOpenapiV3NamedCallbackOrReference>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class CallbacksOrReferences extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedCallbackOrReference, IOpenapiV3NamedCallbackOrReference> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedCallbackOrReference[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedCallbackOrReference[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: ICallbacksOrReferences) {
+  fromLiteral(data: ICallbacksOrReferences): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ICallbacksOrReferences {
-    return super.__toLiteral();
+    return super.__toLiteral() as ICallbacksOrReferences;
   }
 }
 

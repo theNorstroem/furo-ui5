@@ -36,7 +36,9 @@ export interface TInt32Value {
  *  The JSON representation for `Int32Value` is JSON number.
  */
 export class Int32Value extends FieldNode {
-  //  The int32 value.
+  /**
+   * The int32 value.
+   **/
   private _value: INT32;
 
   public __defaultValues: IInt32Value;
@@ -44,6 +46,7 @@ export class Int32Value extends FieldNode {
   constructor(initData?: IInt32Value, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.Int32Value";
+    this.__meta.description = "Int32Value Wrapper message for `int32`.\n\n The JSON representation for `Int32Value` is JSON number.";
 
     this.__meta.nodeFields = [
       {
@@ -51,11 +54,16 @@ export class Int32Value extends FieldNode {
         protoName: "value",
         FieldConstructor: INT32,
         constraints: {},
+        description: "The int32 value.",
       },
     ];
 
     // Initialize the fields
-    //  The int32 value.
+    // ---------------------
+
+    /**
+     *  The int32 value.
+     **/
     this._value = new INT32(undefined, this, "value");
 
     // Set required fields
@@ -81,21 +89,27 @@ export class Int32Value extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The int32 value.
+  /**
+   *  The int32 value.
+   * The getter receives the FieldNode
+   **/
   public get value(): INT32 {
     return this._value;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set value(v: number) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IInt32Value) {
+  fromLiteral(data: IInt32Value): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IInt32Value {
-    return super.__toLiteral();
+    return super.__toLiteral() as IInt32Value;
   }
 }
 

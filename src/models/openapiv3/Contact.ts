@@ -32,12 +32,20 @@ export interface TContact {
  *  Contact information for the exposed API.
  */
 export class Contact extends FieldNode {
+  /**
+   **/
   private _name: STRING;
 
+  /**
+   **/
   private _url: STRING;
 
+  /**
+   **/
   private _email: STRING;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IContact;
@@ -45,6 +53,7 @@ export class Contact extends FieldNode {
   constructor(initData?: IContact, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Contact";
+    this.__meta.description = "Contact Contact information for the exposed API.";
 
     this.__meta.nodeFields = [
       {
@@ -52,34 +61,48 @@ export class Contact extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "url",
         protoName: "url",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "email",
         protoName: "email",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._name = new STRING(undefined, this, "name");
 
+    /**
+     **/
     this._url = new STRING(undefined, this, "url");
 
+    /**
+     **/
     this._email = new STRING(undefined, this, "email");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -105,44 +128,68 @@ export class Contact extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get url(): STRING {
     return this._url;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set url(v: string) {
     this.__PrimitivesSetter(this._url, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get email(): STRING {
     return this._email;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set email(v: string) {
     this.__PrimitivesSetter(this._email, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IContact) {
+  fromLiteral(data: IContact): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IContact {
-    return super.__toLiteral();
+    return super.__toLiteral() as IContact;
   }
 }
 

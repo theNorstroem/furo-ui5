@@ -19,7 +19,7 @@ import type { FuroFatBool } from "@/models";
  */
 export class FuroUiBusyIndicator extends BusyIndicator {
   private modelReaderWriter: ModelReaderWriter | undefined;
-   
+
   private boolReaderWriters: BoolReaderWriters<FuroUiBusyIndicator> | undefined;
 
   private _model: BOOLEAN | FuroFatBool | BoolValue = new BOOLEAN();
@@ -31,8 +31,8 @@ export class FuroUiBusyIndicator extends BusyIndicator {
   /**
    * FieldNode setter
    *
-   * @typeref BOOLEAN - "@furo/open-models"
-   * @typeref BoolValue - "@furo/open-models"
+   * @typeref BOOLEAN - "@furo/open-models/"
+   * @typeref BoolValue - "@furo/open-models/"
    * @typeref FuroFatBool - "@/models/index.js"
    * @public
    */
@@ -42,10 +42,10 @@ export class FuroUiBusyIndicator extends BusyIndicator {
 
   /**
    *
-   * @paramref fieldNode - BOOLEAN - "@furo/open-models"
+   * @paramref fieldNode - BOOLEAN - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue) {
+  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }

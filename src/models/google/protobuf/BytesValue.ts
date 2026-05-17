@@ -36,7 +36,9 @@ export interface TBytesValue {
  *  The JSON representation for `BytesValue` is JSON string.
  */
 export class BytesValue extends FieldNode {
-  //  The bytes value.
+  /**
+   * The bytes value.
+   **/
   private _value: BYTES;
 
   public __defaultValues: IBytesValue;
@@ -44,6 +46,7 @@ export class BytesValue extends FieldNode {
   constructor(initData?: IBytesValue, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.BytesValue";
+    this.__meta.description = "BytesValue Wrapper message for `bytes`.\n\n The JSON representation for `BytesValue` is JSON string.";
 
     this.__meta.nodeFields = [
       {
@@ -51,11 +54,16 @@ export class BytesValue extends FieldNode {
         protoName: "value",
         FieldConstructor: BYTES,
         constraints: {},
+        description: "The bytes value.",
       },
     ];
 
     // Initialize the fields
-    //  The bytes value.
+    // ---------------------
+
+    /**
+     *  The bytes value.
+     **/
     this._value = new BYTES(undefined, this, "value");
 
     // Set required fields
@@ -81,21 +89,27 @@ export class BytesValue extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The bytes value.
+  /**
+   *  The bytes value.
+   * The getter receives the FieldNode
+   **/
   public get value(): BYTES {
     return this._value;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set value(v: string) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IBytesValue) {
+  fromLiteral(data: IBytesValue): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IBytesValue {
-    return super.__toLiteral();
+    return super.__toLiteral() as IBytesValue;
   }
 }
 

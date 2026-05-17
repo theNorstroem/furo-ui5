@@ -43,16 +43,16 @@ export class FuroUi5Combobox extends ComboBox {
   private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
 
   private modelReaderWriter: ModelReaderWriter | undefined;
-   
+
   private fatHandler: FatHandler<FuroUi5Combobox>;
-   
+
   private stringReaderWriters: StringReaderWriters<FuroUi5Combobox> | undefined;
 
   private readonlyState: ReadonlyState = new ReadonlyState(this);
 
   constructor() {
     super();
-    this.fatHandler = new FatHandler(this as FuroUi5Combobox, ["placeholder"]);
+    this.fatHandler = new FatHandler<FuroUi5Combobox>(this, ["placeholder"]);
     this.fatHandler.readAttributes();
   }
 
@@ -65,8 +65,8 @@ export class FuroUi5Combobox extends ComboBox {
   /**
    * Use this to bind a model field by attribute.
    *
-   * @typeref STRING - "@furo/open-models"
-   * @typeref StringValue - "@furo/open-models"
+   * @typeref STRING - "@furo/open-models/"
+   * @typeref StringValue - "@furo/open-models/"
    * @typeref FuroFatString - "@/models/index.js"
    * @public
    */
@@ -77,10 +77,10 @@ export class FuroUi5Combobox extends ComboBox {
   /**
    * Connects your data model to this component.
    *
-   * @paramref fieldNode - STRING - "@furo/open-models"
+   * @paramref fieldNode - STRING - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: STRING | FuroFatString | StringValue) {
+  public bindData(fieldNode: STRING | FuroFatString | StringValue | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -123,10 +123,10 @@ export class FuroUi5Combobox extends ComboBox {
     this.placeholder = this.placeholder === undefined ? this._model.__placeholder : this.placeholder;
 
     // a11y
-    if (this.accessibleName === undefined) {
-      if (this.accessibleName === undefined) {
+    if (this.accessibleName ??= undefined) {
+
         this.accessibleName = this._model.__label;
-      }
+
     }
   }
 
@@ -152,7 +152,7 @@ export class FuroUi5Combobox extends ComboBox {
    * @paramref fieldNode - OptionLikeList - "@furo/ui5/dist/index.js"
    * @public
    */
-  public bindOptions(fieldNode: OptionLikeList) {
+  public bindOptions(fieldNode: OptionLikeList | undefined) {
     if (fieldNode === undefined || fieldNode === this._optionsModel) {
       return;
     }
@@ -240,7 +240,7 @@ export class FuroUi5Combobox extends ComboBox {
   /**
    * Renders a list of options and stores the list in `optionList`.
    *
-   * @paramref optionList - SelectOption - "@furo/open-models"
+   * @paramref optionList - SelectOption - "@furo/open-models/"
    * @param optionList
    * @private
    */
@@ -288,7 +288,7 @@ export class FuroUi5Combobox extends ComboBox {
   }
 
   private writeToModel(): void {
-    this.modelReaderWriter!.writeModel();
+    this.modelReaderWriter?.writeModel();
   }
 
   private _getModelReaders(): Map<string, () => void> {

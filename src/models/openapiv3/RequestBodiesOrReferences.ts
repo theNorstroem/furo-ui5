@@ -27,6 +27,8 @@ export interface TRequestBodiesOrReferences {
  * RequestBodiesOrReferences
  */
 export class RequestBodiesOrReferences extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedRequestBodyOrReference, IOpenapiV3NamedRequestBodyOrReference>;
 
   public __defaultValues: IRequestBodiesOrReferences;
@@ -34,6 +36,7 @@ export class RequestBodiesOrReferences extends FieldNode {
   constructor(initData?: IRequestBodiesOrReferences, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.RequestBodiesOrReferences";
+    this.__meta.description = "RequestBodiesOrReferences";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class RequestBodiesOrReferences extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedRequestBodyOrReference,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedRequestBodyOrReference, IOpenapiV3NamedRequestBodyOrReference>(
       undefined,
       this,
@@ -74,20 +82,26 @@ export class RequestBodiesOrReferences extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedRequestBodyOrReference, IOpenapiV3NamedRequestBodyOrReference> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedRequestBodyOrReference[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedRequestBodyOrReference[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IRequestBodiesOrReferences) {
+  fromLiteral(data: IRequestBodiesOrReferences): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IRequestBodiesOrReferences {
-    return super.__toLiteral();
+    return super.__toLiteral() as IRequestBodiesOrReferences;
   }
 }
 

@@ -28,10 +28,16 @@ export interface TSpecificationExtension {
  *  Any property starting with x- is valid.
  */
 export class SpecificationExtension extends FieldNode {
+  /**
+   **/
   private _number: DOUBLE;
 
+  /**
+   **/
   private _boolean: BOOLEAN;
 
+  /**
+   **/
   private _string: STRING;
 
   public __defaultValues: ISpecificationExtension;
@@ -39,6 +45,7 @@ export class SpecificationExtension extends FieldNode {
   constructor(initData?: ISpecificationExtension, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.SpecificationExtension";
+    this.__meta.description = "SpecificationExtension Any property starting with x- is valid.";
 
     this.__meta.nodeFields = [
       {
@@ -46,26 +53,42 @@ export class SpecificationExtension extends FieldNode {
         protoName: "number",
         FieldConstructor: DOUBLE,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "boolean",
         protoName: "boolean",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "string",
         protoName: "string",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
     ];
 
+    this.__meta.oneofGroups = new Map([["oneof", undefined]]);
+
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._number = new DOUBLE(undefined, this, "number");
 
+    /**
+     **/
     this._boolean = new BOOLEAN(undefined, this, "boolean");
 
+    /**
+     **/
     this._string = new STRING(undefined, this, "string");
 
     // Set required fields
@@ -91,36 +114,54 @@ export class SpecificationExtension extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get number(): DOUBLE {
     return this._number;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set number(v: number) {
     this.__PrimitivesSetter(this._number, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get boolean(): BOOLEAN {
     return this._boolean;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set boolean(v: boolean) {
     this.__PrimitivesSetter(this._boolean, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get string(): STRING {
     return this._string;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set string(v: string) {
     this.__PrimitivesSetter(this._string, v);
   }
 
-  fromLiteral(data: ISpecificationExtension) {
+  fromLiteral(data: ISpecificationExtension): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ISpecificationExtension {
-    return super.__toLiteral();
+    return super.__toLiteral() as ISpecificationExtension;
   }
 }
 

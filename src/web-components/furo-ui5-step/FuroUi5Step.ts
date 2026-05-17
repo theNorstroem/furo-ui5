@@ -58,16 +58,16 @@ export class FuroUi5Step extends StepInput {
   private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
 
   private modelReaderWriter: ModelReaderWriter | undefined;
-   
+
   private fatHandler: FatHandler<FuroUi5Step>;
-   
+
   private numericReaderWriters: NumericReaderWriters<FuroUi5Step> | undefined;
 
   private readonlyState: ReadonlyState = new ReadonlyState(this);
 
   constructor() {
     super();
-    this.fatHandler = new FatHandler(this as FuroUi5Step, ["placeholder"]);
+    this.fatHandler = new FatHandler<FuroUi5Step>(this, ["placeholder"]);
     this.fatHandler.readAttributes();
   }
 
@@ -112,17 +112,17 @@ export class FuroUi5Step extends StepInput {
   /**
    * Use this to bind a model field by attribute.
    *
-   * @typeref Int32Value - "@furo/open-models"
-   * @typeref UInt32Value - "@furo/open-models"
-   * @typeref Int64Value - "@furo/open-models"
-   * @typeref UInt64Value - "@furo/open-models"
-   * @typeref FloatValue - "@furo/open-models"
-   * @typeref INT32 - "@furo/open-models"
-   * @typeref INT64 - "@furo/open-models"
-   * @typeref UINT32 - "@furo/open-models"
-   * @typeref UINT64 - "@furo/open-models"
-   * @typeref DOUBLE - "@furo/open-models"
-   * @typeref FLOAT - "@furo/open-models"
+   * @typeref Int32Value - "@furo/open-models/"
+   * @typeref UInt32Value - "@furo/open-models/"
+   * @typeref Int64Value - "@furo/open-models/"
+   * @typeref UInt64Value - "@furo/open-models/"
+   * @typeref FloatValue - "@furo/open-models/"
+   * @typeref INT32 - "@furo/open-models/"
+   * @typeref INT64 - "@furo/open-models/"
+   * @typeref UINT32 - "@furo/open-models/"
+   * @typeref UINT64 - "@furo/open-models/"
+   * @typeref DOUBLE - "@furo/open-models/"
+   * @typeref FLOAT - "@furo/open-models/"
    * @typeref FuroFatUint32 - "@/models/index.js"
    * @typeref FuroFatUint64 - "@/models/index.js"
    * @typeref FuroFatInt32 - "@/models/index.js"
@@ -155,18 +155,18 @@ export class FuroUi5Step extends StepInput {
   /**
    * Connects your data model to this component.
    *
-   * @paramref fieldNode - Int32Value - "@furo/open-models"
-   * @paramref fieldNode Int32Value - "@furo/open-models"
-   * @paramref fieldNode UInt32Value - "@furo/open-models"
-   * @paramref fieldNode Int64Value - "@furo/open-models"
-   * @paramref fieldNode UInt64Value - "@furo/open-models"
-   * @paramref fieldNode FloatValue - "@furo/open-models"
-   * @paramref fieldNode INT32 - "@furo/open-models"
-   * @paramref fieldNode INT64 - "@furo/open-models"
-   * @paramref fieldNode UINT32 - "@furo/open-models"
-   * @paramref fieldNode UINT64 - "@furo/open-models"
-   * @paramref fieldNode DOUBLE - "@furo/open-models"
-   * @paramref fieldNode FLOAT - "@furo/open-models"
+   * @paramref fieldNode - Int32Value - "@furo/open-models/"
+   * @paramref fieldNode Int32Value - "@furo/open-models/"
+   * @paramref fieldNode UInt32Value - "@furo/open-models/"
+   * @paramref fieldNode Int64Value - "@furo/open-models/"
+   * @paramref fieldNode UInt64Value - "@furo/open-models/"
+   * @paramref fieldNode FloatValue - "@furo/open-models/"
+   * @paramref fieldNode INT32 - "@furo/open-models/"
+   * @paramref fieldNode INT64 - "@furo/open-models/"
+   * @paramref fieldNode UINT32 - "@furo/open-models/"
+   * @paramref fieldNode UINT64 - "@furo/open-models/"
+   * @paramref fieldNode DOUBLE - "@furo/open-models/"
+   * @paramref fieldNode FLOAT - "@furo/open-models/"
    * @paramref fieldNode FuroFatUint32 - "@/models/index.js"
    * @paramref fieldNode FuroFatUint64 - "@/models/index.js"
    * @paramref fieldNode FuroFatInt32 - "@/models/index.js"
@@ -193,6 +193,7 @@ export class FuroUi5Step extends StepInput {
       | Int64Value
       | UInt32Value
       | UInt64Value
+      | undefined
   ) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
@@ -237,7 +238,7 @@ export class FuroUi5Step extends StepInput {
     this.placeholder = this.placeholder === undefined ? this._model.__placeholder : this.placeholder;
 
     // a11y
-    if (this.accessibleName === undefined) {
+    if (this.accessibleName ??= undefined) {
       this.accessibleName = this._model.__label;
     }
   }
@@ -263,7 +264,7 @@ export class FuroUi5Step extends StepInput {
   }
 
   private writeToModel(): void {
-    this.modelReaderWriter!.writeModel();
+    this.modelReaderWriter?.writeModel();
   }
 
   private _getModelReaders(): Map<string, () => void> {

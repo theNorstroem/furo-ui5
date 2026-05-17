@@ -78,7 +78,7 @@ export class FieldNodeValueState {
     const VALUE_STATE_MESSAGE_ELEMENT = document.createElement("div");
     VALUE_STATE_MESSAGE_ELEMENT.setAttribute("slot", "valueStateMessage");
     VALUE_STATE_MESSAGE_ELEMENT.setAttribute("class", "vse");
-     
+
     this.inputElement.appendChild(VALUE_STATE_MESSAGE_ELEMENT);
     return VALUE_STATE_MESSAGE_ELEMENT;
   }

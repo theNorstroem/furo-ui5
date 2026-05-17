@@ -10,7 +10,7 @@
  */
 export const NavigationGroup = (container: HTMLElement | HTMLSlotElement | null, itemselector: string) => {
   let nodes: unknown[];
-   
+
   itemselector = itemselector || "*";
 
   if (container === null) {

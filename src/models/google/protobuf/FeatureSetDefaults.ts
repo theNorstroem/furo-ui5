@@ -60,14 +60,20 @@ export interface TFeatureSetDefaults {
  *  for the closest matching edition, followed by proto merges.
  */
 export class FeatureSetDefaults extends FieldNode {
+  /**
+   **/
   private _defaults: ARRAY<GoogleProtobufFeatureSetDefaultsFeatureSetEditionDefault, IGoogleProtobufFeatureSetDefaultsFeatureSetEditionDefault>;
 
-  //  The minimum supported edition (inclusive) when this was constructed.
-  //  Editions before this will not have defaults.
+  /**
+   * The minimum supported edition (inclusive) when this was constructed.
+   * Editions before this will not have defaults.
+   **/
   private _minimumEdition: ENUM<GoogleProtobufEdition>;
 
-  //  The maximum known edition (inclusive) when this was constructed. Editions
-  //  after this will not have reliable defaults.
+  /**
+   * The maximum known edition (inclusive) when this was constructed. Editions
+   * after this will not have reliable defaults.
+   **/
   private _maximumEdition: ENUM<GoogleProtobufEdition>;
 
   public __defaultValues: IFeatureSetDefaults;
@@ -75,6 +81,8 @@ export class FeatureSetDefaults extends FieldNode {
   constructor(initData?: IFeatureSetDefaults, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.FeatureSetDefaults";
+    this.__meta.description =
+      "FeatureSetDefaults A compiled specification for the defaults of a set of features.  These\n messages are generated from FeatureSet extensions and can be used to seed\n feature resolution. The resolution with this object becomes a simple search\n for the closest matching edition, followed by proto merges.";
 
     this.__meta.nodeFields = [
       {
@@ -82,34 +90,45 @@ export class FeatureSetDefaults extends FieldNode {
         protoName: "defaults",
         FieldConstructor: GoogleProtobufFeatureSetDefaultsFeatureSetEditionDefault,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "minimumEdition",
         protoName: "minimum_edition",
         FieldConstructor: ENUM<GoogleProtobufEdition>,
         constraints: {},
+        description: "The minimum supported edition (inclusive) when this was constructed.\n Editions before this will not have defaults.",
       },
       {
         fieldName: "maximumEdition",
         protoName: "maximum_edition",
         FieldConstructor: ENUM<GoogleProtobufEdition>,
         constraints: {},
+        description: "The maximum known edition (inclusive) when this was constructed. Editions\n after this will not have reliable defaults.",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._defaults = new ARRAY<GoogleProtobufFeatureSetDefaultsFeatureSetEditionDefault, IGoogleProtobufFeatureSetDefaultsFeatureSetEditionDefault>(
       undefined,
       this,
       "defaults"
     );
 
-    //  The minimum supported edition (inclusive) when this was constructed.
-    //  Editions before this will not have defaults.
+    /**
+     *  The minimum supported edition (inclusive) when this was constructed.
+     *  Editions before this will not have defaults.
+     **/
     this._minimumEdition = new ENUM<GoogleProtobufEdition>(undefined, GoogleProtobufEdition, GoogleProtobufEdition.EDITION_UNKNOWN, this, "minimumEdition");
 
-    //  The maximum known edition (inclusive) when this was constructed. Editions
-    //  after this will not have reliable defaults.
+    /**
+     *  The maximum known edition (inclusive) when this was constructed. Editions
+     *  after this will not have reliable defaults.
+     **/
     this._maximumEdition = new ENUM<GoogleProtobufEdition>(undefined, GoogleProtobufEdition, GoogleProtobufEdition.EDITION_UNKNOWN, this, "maximumEdition");
 
     // Set required fields
@@ -135,40 +154,58 @@ export class FeatureSetDefaults extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get defaults(): ARRAY<GoogleProtobufFeatureSetDefaultsFeatureSetEditionDefault, IGoogleProtobufFeatureSetDefaultsFeatureSetEditionDefault> {
     return this._defaults;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufFeatureSetDefaultsFeatureSetEditionDefault[]`
+   **/
   public set defaults(v: IGoogleProtobufFeatureSetDefaultsFeatureSetEditionDefault[]) {
     this.__TypeSetter(this._defaults, v);
   }
 
-  //  The minimum supported edition (inclusive) when this was constructed.
-  //  Editions before this will not have defaults.
+  /**
+   *  The minimum supported edition (inclusive) when this was constructed.
+   *  Editions before this will not have defaults.
+   * The getter receives the FieldNode
+   **/
   public get minimumEdition(): ENUM<GoogleProtobufEdition> {
     return this._minimumEdition;
   }
 
+  /**
+   * The setter receives `GoogleProtobufEdition`
+   **/
   public set minimumEdition(v: GoogleProtobufEdition) {
     this.__TypeSetter(this._minimumEdition, v);
   }
 
-  //  The maximum known edition (inclusive) when this was constructed. Editions
-  //  after this will not have reliable defaults.
+  /**
+   *  The maximum known edition (inclusive) when this was constructed. Editions
+   *  after this will not have reliable defaults.
+   * The getter receives the FieldNode
+   **/
   public get maximumEdition(): ENUM<GoogleProtobufEdition> {
     return this._maximumEdition;
   }
 
+  /**
+   * The setter receives `GoogleProtobufEdition`
+   **/
   public set maximumEdition(v: GoogleProtobufEdition) {
     this.__TypeSetter(this._maximumEdition, v);
   }
 
-  fromLiteral(data: IFeatureSetDefaults) {
+  fromLiteral(data: IFeatureSetDefaults): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IFeatureSetDefaults {
-    return super.__toLiteral();
+    return super.__toLiteral() as IFeatureSetDefaults;
   }
 }
 

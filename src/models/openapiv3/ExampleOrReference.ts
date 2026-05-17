@@ -26,8 +26,12 @@ export interface TExampleOrReference {
  * ExampleOrReference
  */
 export class ExampleOrReference extends FieldNode {
+  /**
+   **/
   private _example: OpenapiV3Example;
 
+  /**
+   **/
   private _reference: OpenapiV3Reference;
 
   public __defaultValues: IExampleOrReference;
@@ -35,6 +39,7 @@ export class ExampleOrReference extends FieldNode {
   constructor(initData?: IExampleOrReference, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.ExampleOrReference";
+    this.__meta.description = "ExampleOrReference";
 
     this.__meta.nodeFields = [
       {
@@ -42,18 +47,30 @@ export class ExampleOrReference extends FieldNode {
         protoName: "example",
         FieldConstructor: OpenapiV3Example,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "reference",
         protoName: "reference",
         FieldConstructor: OpenapiV3Reference,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
     ];
 
+    this.__meta.oneofGroups = new Map([["oneof", undefined]]);
+
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._example = new OpenapiV3Example(undefined, this, "example");
 
+    /**
+     **/
     this._reference = new OpenapiV3Reference(undefined, this, "reference");
 
     // Set required fields
@@ -79,28 +96,40 @@ export class ExampleOrReference extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get example(): OpenapiV3Example {
     return this._example;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Example`
+   **/
   public set example(v: IOpenapiV3Example) {
     this.__TypeSetter(this._example, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get reference(): OpenapiV3Reference {
     return this._reference;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Reference`
+   **/
   public set reference(v: IOpenapiV3Reference) {
     this.__TypeSetter(this._reference, v);
   }
 
-  fromLiteral(data: IExampleOrReference) {
+  fromLiteral(data: IExampleOrReference): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IExampleOrReference {
-    return super.__toLiteral();
+    return super.__toLiteral() as IExampleOrReference;
   }
 }
 

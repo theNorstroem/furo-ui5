@@ -37,7 +37,7 @@ import { FuroFatString } from "@/models";
  */
 export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
   private modelReaderWriter: ModelReaderWriter | undefined;
-   
+
   private stringReaderWriters: StringReaderWriters<FuroUi5BarcodeScannerDialog> | undefined;
 
   private _model: STRING | FuroFatString | StringValue = new STRING();
@@ -49,9 +49,9 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
   /**
    * Use this to bind a model field by attribute.
    *
-   * @typeref STRING - "@furo/open-models"
-   * @typeref StringValue - "@furo/open-models"
    * @typeref FuroFatString - "@/models/index.js"
+   * @typeref STRING - "@furo/open-models/"
+   * @typeref StringValue - "@furo/open-models/"
    * @public
    */
   public set model(value: STRING | FuroFatString | StringValue) {
@@ -63,10 +63,10 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
   /**
    * Connects your data model to this component.
    *
-   * @paramref fieldNode - STRING - "@furo/open-models"
+   * @paramref fieldNode - STRING - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: STRING | FuroFatString | StringValue) {
+  public bindData(fieldNode: STRING | FuroFatString | StringValue | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -98,7 +98,7 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
 
   private writeToModel(e: CustomEvent<BarcodeScannerDialogScanSuccessEventDetail>): void {
     this.code = e.detail.text;
-    this.modelReaderWriter!.writeModel();
+    this.modelReaderWriter?.writeModel();
     this.close();
   }
 

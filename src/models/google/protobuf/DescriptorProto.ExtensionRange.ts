@@ -35,10 +35,16 @@ export interface TDescriptorProtoExtensionRange {
  * DescriptorProtoExtensionRange
  */
 export class DescriptorProtoExtensionRange extends FieldNode {
+  /**
+   **/
   private _start: INT32; //  Inclusive.
 
+  /**
+   **/
   private _end: INT32; //  Exclusive.
 
+  /**
+   **/
   private _options: GoogleProtobufExtensionRangeOptions;
 
   public __defaultValues: IDescriptorProtoExtensionRange;
@@ -46,6 +52,7 @@ export class DescriptorProtoExtensionRange extends FieldNode {
   constructor(initData?: IDescriptorProtoExtensionRange, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.DescriptorProto.ExtensionRange";
+    this.__meta.description = "DescriptorProtoExtensionRange";
 
     this.__meta.nodeFields = [
       {
@@ -53,26 +60,37 @@ export class DescriptorProtoExtensionRange extends FieldNode {
         protoName: "start",
         FieldConstructor: INT32,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "end",
         protoName: "end",
         FieldConstructor: INT32,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "options",
         protoName: "options",
         FieldConstructor: GoogleProtobufExtensionRangeOptions,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._start = new INT32(undefined, this, "start");
 
+    /**
+     **/
     this._end = new INT32(undefined, this, "end");
 
+    /**
+     **/
     this._options = new GoogleProtobufExtensionRangeOptions(undefined, this, "options");
 
     // Set required fields
@@ -98,36 +116,54 @@ export class DescriptorProtoExtensionRange extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get start(): INT32 {
     return this._start;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set start(v: number) {
     this.__PrimitivesSetter(this._start, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get end(): INT32 {
     return this._end;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set end(v: number) {
     this.__PrimitivesSetter(this._end, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get options(): GoogleProtobufExtensionRangeOptions {
     return this._options;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufExtensionRangeOptions`
+   **/
   public set options(v: IGoogleProtobufExtensionRangeOptions) {
     this.__TypeSetter(this._options, v);
   }
 
-  fromLiteral(data: IDescriptorProtoExtensionRange) {
+  fromLiteral(data: IDescriptorProtoExtensionRange): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IDescriptorProtoExtensionRange {
-    return super.__toLiteral();
+    return super.__toLiteral() as IDescriptorProtoExtensionRange;
   }
 }
 

@@ -60,17 +60,21 @@ export interface THttp {
  *  to one or more HTTP REST API methods.
  */
 export class Http extends FieldNode {
-  //  A list of HTTP configuration rules that apply to individual API methods.
-  //
-  //  **NOTE:** All service configuration rules follow "last one wins" order.
+  /**
+   * A list of HTTP configuration rules that apply to individual API methods.
+   *
+   * **NOTE:** All service configuration rules follow "last one wins" order.
+   **/
   private _rules: ARRAY<GoogleApiHttpRule, IGoogleApiHttpRule>;
 
-  //  When set to true, URL path parameters will be fully URI-decoded except in
-  //  cases of single segment matches in reserved expansion, where "%2F" will be
-  //  left encoded.
-  //
-  //  The default behavior is to not decode RFC 6570 reserved characters in multi
-  //  segment matches.
+  /**
+   * When set to true, URL path parameters will be fully URI-decoded except in
+   * cases of single segment matches in reserved expansion, where "%2F" will be
+   * left encoded.
+   *
+   * The default behavior is to not decode RFC 6570 reserved characters in multi
+   * segment matches.
+   **/
   private _fullyDecodeReservedExpansion: BOOLEAN;
 
   public __defaultValues: IHttp;
@@ -78,6 +82,8 @@ export class Http extends FieldNode {
   constructor(initData?: IHttp, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.api.Http";
+    this.__meta.description =
+      "Http Defines the HTTP configuration for an API service. It contains a list of\n [HttpRule][google.api.HttpRule], each specifying the mapping of an RPC method\n to one or more HTTP REST API methods.";
 
     this.__meta.nodeFields = [
       {
@@ -85,27 +91,37 @@ export class Http extends FieldNode {
         protoName: "rules",
         FieldConstructor: GoogleApiHttpRule,
         constraints: {},
+        description:
+          'A list of HTTP configuration rules that apply to individual API methods.\n\n **NOTE:** All service configuration rules follow "last one wins" order.',
       },
       {
         fieldName: "fullyDecodeReservedExpansion",
         protoName: "fully_decode_reserved_expansion",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description:
+          'When set to true, URL path parameters will be fully URI-decoded except in\n cases of single segment matches in reserved expansion, where "%2F" will be\n left encoded.\n\n The default behavior is to not decode RFC 6570 reserved characters in multi\n segment matches.',
       },
     ];
 
     // Initialize the fields
-    //  A list of HTTP configuration rules that apply to individual API methods.
-    //
-    //  **NOTE:** All service configuration rules follow "last one wins" order.
+    // ---------------------
+
+    /**
+     *  A list of HTTP configuration rules that apply to individual API methods.
+     *
+     *  **NOTE:** All service configuration rules follow "last one wins" order.
+     **/
     this._rules = new ARRAY<GoogleApiHttpRule, IGoogleApiHttpRule>(undefined, this, "rules");
 
-    //  When set to true, URL path parameters will be fully URI-decoded except in
-    //  cases of single segment matches in reserved expansion, where "%2F" will be
-    //  left encoded.
-    //
-    //  The default behavior is to not decode RFC 6570 reserved characters in multi
-    //  segment matches.
+    /**
+     *  When set to true, URL path parameters will be fully URI-decoded except in
+     *  cases of single segment matches in reserved expansion, where "%2F" will be
+     *  left encoded.
+     *
+     *  The default behavior is to not decode RFC 6570 reserved characters in multi
+     *  segment matches.
+     **/
     this._fullyDecodeReservedExpansion = new BOOLEAN(undefined, this, "fullyDecodeReservedExpansion");
 
     // Set required fields
@@ -131,37 +147,49 @@ export class Http extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  A list of HTTP configuration rules that apply to individual API methods.
-  //
-  //  **NOTE:** All service configuration rules follow "last one wins" order.
+  /**
+   *  A list of HTTP configuration rules that apply to individual API methods.
+   *
+   *  **NOTE:** All service configuration rules follow "last one wins" order.
+   * The getter receives the FieldNode
+   **/
   public get rules(): ARRAY<GoogleApiHttpRule, IGoogleApiHttpRule> {
     return this._rules;
   }
 
+  /**
+   * The setter receives `IGoogleApiHttpRule[]`
+   **/
   public set rules(v: IGoogleApiHttpRule[]) {
     this.__TypeSetter(this._rules, v);
   }
 
-  //  When set to true, URL path parameters will be fully URI-decoded except in
-  //  cases of single segment matches in reserved expansion, where "%2F" will be
-  //  left encoded.
-  //
-  //  The default behavior is to not decode RFC 6570 reserved characters in multi
-  //  segment matches.
+  /**
+   *  When set to true, URL path parameters will be fully URI-decoded except in
+   *  cases of single segment matches in reserved expansion, where "%2F" will be
+   *  left encoded.
+   *
+   *  The default behavior is to not decode RFC 6570 reserved characters in multi
+   *  segment matches.
+   * The getter receives the FieldNode
+   **/
   public get fullyDecodeReservedExpansion(): BOOLEAN {
     return this._fullyDecodeReservedExpansion;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set fullyDecodeReservedExpansion(v: boolean) {
     this.__PrimitivesSetter(this._fullyDecodeReservedExpansion, v);
   }
 
-  fromLiteral(data: IHttp) {
+  fromLiteral(data: IHttp): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IHttp {
-    return super.__toLiteral();
+    return super.__toLiteral() as IHttp;
   }
 }
 

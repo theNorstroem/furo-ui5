@@ -26,8 +26,12 @@ export interface TAnyOrExpression {
  * AnyOrExpression
  */
 export class AnyOrExpression extends FieldNode {
+  /**
+   **/
   private _any: OpenapiV3Any;
 
+  /**
+   **/
   private _expression: OpenapiV3Expression;
 
   public __defaultValues: IAnyOrExpression;
@@ -35,6 +39,7 @@ export class AnyOrExpression extends FieldNode {
   constructor(initData?: IAnyOrExpression, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.AnyOrExpression";
+    this.__meta.description = "AnyOrExpression";
 
     this.__meta.nodeFields = [
       {
@@ -42,18 +47,30 @@ export class AnyOrExpression extends FieldNode {
         protoName: "any",
         FieldConstructor: OpenapiV3Any,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "expression",
         protoName: "expression",
         FieldConstructor: OpenapiV3Expression,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
     ];
 
+    this.__meta.oneofGroups = new Map([["oneof", undefined]]);
+
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._any = new OpenapiV3Any(undefined, this, "any");
 
+    /**
+     **/
     this._expression = new OpenapiV3Expression(undefined, this, "expression");
 
     // Set required fields
@@ -79,28 +96,40 @@ export class AnyOrExpression extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get any(): OpenapiV3Any {
     return this._any;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Any`
+   **/
   public set any(v: IOpenapiV3Any) {
     this.__TypeSetter(this._any, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get expression(): OpenapiV3Expression {
     return this._expression;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Expression`
+   **/
   public set expression(v: IOpenapiV3Expression) {
     this.__TypeSetter(this._expression, v);
   }
 
-  fromLiteral(data: IAnyOrExpression) {
+  fromLiteral(data: IAnyOrExpression): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IAnyOrExpression {
-    return super.__toLiteral();
+    return super.__toLiteral() as IAnyOrExpression;
   }
 }
 

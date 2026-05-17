@@ -35,14 +35,24 @@ export interface TOauthFlow {
  *  Configuration details for a supported OAuth Flow
  */
 export class OauthFlow extends FieldNode {
+  /**
+   **/
   private _authorizationUrl: STRING;
 
+  /**
+   **/
   private _tokenUrl: STRING;
 
+  /**
+   **/
   private _refreshUrl: STRING;
 
+  /**
+   **/
   private _scopes: OpenapiV3Strings;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IOauthFlow;
@@ -50,6 +60,7 @@ export class OauthFlow extends FieldNode {
   constructor(initData?: IOauthFlow, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.OauthFlow";
+    this.__meta.description = "OauthFlow Configuration details for a supported OAuth Flow";
 
     this.__meta.nodeFields = [
       {
@@ -57,42 +68,59 @@ export class OauthFlow extends FieldNode {
         protoName: "authorization_url",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "tokenUrl",
         protoName: "token_url",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "refreshUrl",
         protoName: "refresh_url",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "scopes",
         protoName: "scopes",
         FieldConstructor: OpenapiV3Strings,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._authorizationUrl = new STRING(undefined, this, "authorizationUrl");
 
+    /**
+     **/
     this._tokenUrl = new STRING(undefined, this, "tokenUrl");
 
+    /**
+     **/
     this._refreshUrl = new STRING(undefined, this, "refreshUrl");
 
+    /**
+     **/
     this._scopes = new OpenapiV3Strings(undefined, this, "scopes");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -118,52 +146,82 @@ export class OauthFlow extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get authorizationUrl(): STRING {
     return this._authorizationUrl;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set authorizationUrl(v: string) {
     this.__PrimitivesSetter(this._authorizationUrl, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get tokenUrl(): STRING {
     return this._tokenUrl;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set tokenUrl(v: string) {
     this.__PrimitivesSetter(this._tokenUrl, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get refreshUrl(): STRING {
     return this._refreshUrl;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set refreshUrl(v: string) {
     this.__PrimitivesSetter(this._refreshUrl, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get scopes(): OpenapiV3Strings {
     return this._scopes;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Strings`
+   **/
   public set scopes(v: IOpenapiV3Strings) {
     this.__TypeSetter(this._scopes, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IOauthFlow) {
+  fromLiteral(data: IOauthFlow): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IOauthFlow {
-    return super.__toLiteral();
+    return super.__toLiteral() as IOauthFlow;
   }
 }
 

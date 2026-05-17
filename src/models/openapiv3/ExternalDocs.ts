@@ -30,10 +30,16 @@ export interface TExternalDocs {
  *  Allows referencing an external resource for extended documentation.
  */
 export class ExternalDocs extends FieldNode {
+  /**
+   **/
   private _description: STRING;
 
+  /**
+   **/
   private _url: STRING;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IExternalDocs;
@@ -41,6 +47,7 @@ export class ExternalDocs extends FieldNode {
   constructor(initData?: IExternalDocs, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.ExternalDocs";
+    this.__meta.description = "ExternalDocs Allows referencing an external resource for extended documentation.";
 
     this.__meta.nodeFields = [
       {
@@ -48,26 +55,37 @@ export class ExternalDocs extends FieldNode {
         protoName: "description",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "url",
         protoName: "url",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
+    /**
+     **/
     this._url = new STRING(undefined, this, "url");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -93,36 +111,54 @@ export class ExternalDocs extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get url(): STRING {
     return this._url;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set url(v: string) {
     this.__PrimitivesSetter(this._url, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IExternalDocs) {
+  fromLiteral(data: IExternalDocs): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IExternalDocs {
-    return super.__toLiteral();
+    return super.__toLiteral() as IExternalDocs;
   }
 }
 

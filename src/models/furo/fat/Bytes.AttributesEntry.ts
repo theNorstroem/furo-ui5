@@ -7,13 +7,7 @@ import { FieldNode, Registry, STRING } from "@furo/open-models/dist/index";
  * @interface IBytesAttributesEntry
  */
 export interface IBytesAttributesEntry {
-  /**
-   *  Furo annotated type wrapper message for `bytes`.
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `bytes`.
-   */
   value?: string;
 }
 
@@ -21,13 +15,7 @@ export interface IBytesAttributesEntry {
  * @interface TBytesAttributesEntry
  */
 export interface TBytesAttributesEntry {
-  /**
-   *  Furo annotated type wrapper message for `bytes`.
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `bytes`.
-   */
   value?: string;
 }
 
@@ -35,10 +23,12 @@ export interface TBytesAttributesEntry {
  * BytesAttributesEntry
  */
 export class BytesAttributesEntry extends FieldNode {
-  //  Furo annotated type wrapper message for `bytes`.
+  /**
+   **/
   private _key: STRING;
 
-  //  Furo annotated type wrapper message for `bytes`.
+  /**
+   **/
   private _value: STRING;
 
   public __defaultValues: IBytesAttributesEntry;
@@ -46,6 +36,7 @@ export class BytesAttributesEntry extends FieldNode {
   constructor(initData?: IBytesAttributesEntry, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Bytes.AttributesEntry";
+    this.__meta.description = "BytesAttributesEntry";
 
     this.__meta.nodeFields = [
       {
@@ -53,20 +44,26 @@ export class BytesAttributesEntry extends FieldNode {
         protoName: "key",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  Furo annotated type wrapper message for `bytes`.
+    // ---------------------
+
+    /**
+     **/
     this._key = new STRING(undefined, this, "key");
 
-    //  Furo annotated type wrapper message for `bytes`.
+    /**
+     **/
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
@@ -92,30 +89,40 @@ export class BytesAttributesEntry extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Furo annotated type wrapper message for `bytes`.
+  /**
+   * The getter receives the FieldNode
+   **/
   public get key(): STRING {
     return this._key;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set key(v: string) {
     this.__PrimitivesSetter(this._key, v);
   }
 
-  //  Furo annotated type wrapper message for `bytes`.
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): STRING {
     return this._value;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set value(v: string) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IBytesAttributesEntry) {
+  fromLiteral(data: IBytesAttributesEntry): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IBytesAttributesEntry {
-    return super.__toLiteral();
+    return super.__toLiteral() as IBytesAttributesEntry;
   }
 }
 

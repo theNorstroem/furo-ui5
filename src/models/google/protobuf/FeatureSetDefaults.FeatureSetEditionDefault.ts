@@ -12,6 +12,10 @@ import {
 
 /**
  * @interface IFeatureSetDefaultsFeatureSetEditionDefault
+ *  A map from every known edition with a unique set of defaults to its
+ *  defaults. Not all editions may be contained here.  For a given edition,
+ *  the defaults at the closest matching edition ordered at or before it should
+ *  be used.  This field must be in strict ascending order by edition.
  */
 export interface IFeatureSetDefaultsFeatureSetEditionDefault {
   edition?: GoogleProtobufEdition | string;
@@ -20,6 +24,10 @@ export interface IFeatureSetDefaultsFeatureSetEditionDefault {
 
 /**
  * @interface TFeatureSetDefaultsFeatureSetEditionDefault
+ *  A map from every known edition with a unique set of defaults to its
+ *  defaults. Not all editions may be contained here.  For a given edition,
+ *  the defaults at the closest matching edition ordered at or before it should
+ *  be used.  This field must be in strict ascending order by edition.
  */
 export interface TFeatureSetDefaultsFeatureSetEditionDefault {
   edition?: GoogleProtobufEdition | string;
@@ -28,10 +36,18 @@ export interface TFeatureSetDefaultsFeatureSetEditionDefault {
 
 /**
  * FeatureSetDefaultsFeatureSetEditionDefault
+ *  A map from every known edition with a unique set of defaults to its
+ *  defaults. Not all editions may be contained here.  For a given edition,
+ *  the defaults at the closest matching edition ordered at or before it should
+ *  be used.  This field must be in strict ascending order by edition.
  */
 export class FeatureSetDefaultsFeatureSetEditionDefault extends FieldNode {
+  /**
+   **/
   private _edition: ENUM<GoogleProtobufEdition>;
 
+  /**
+   **/
   private _features: GoogleProtobufFeatureSet;
 
   public __defaultValues: IFeatureSetDefaultsFeatureSetEditionDefault;
@@ -39,6 +55,8 @@ export class FeatureSetDefaultsFeatureSetEditionDefault extends FieldNode {
   constructor(initData?: IFeatureSetDefaultsFeatureSetEditionDefault, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault";
+    this.__meta.description =
+      "FeatureSetDefaultsFeatureSetEditionDefault A map from every known edition with a unique set of defaults to its\n defaults. Not all editions may be contained here.  For a given edition,\n the defaults at the closest matching edition ordered at or before it should\n be used.  This field must be in strict ascending order by edition.";
 
     this.__meta.nodeFields = [
       {
@@ -46,18 +64,26 @@ export class FeatureSetDefaultsFeatureSetEditionDefault extends FieldNode {
         protoName: "edition",
         FieldConstructor: ENUM<GoogleProtobufEdition>,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "features",
         protoName: "features",
         FieldConstructor: GoogleProtobufFeatureSet,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._edition = new ENUM<GoogleProtobufEdition>(undefined, GoogleProtobufEdition, GoogleProtobufEdition.EDITION_UNKNOWN, this, "edition");
 
+    /**
+     **/
     this._features = new GoogleProtobufFeatureSet(undefined, this, "features");
 
     // Set required fields
@@ -83,28 +109,40 @@ export class FeatureSetDefaultsFeatureSetEditionDefault extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get edition(): ENUM<GoogleProtobufEdition> {
     return this._edition;
   }
 
+  /**
+   * The setter receives `GoogleProtobufEdition`
+   **/
   public set edition(v: GoogleProtobufEdition) {
     this.__TypeSetter(this._edition, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get features(): GoogleProtobufFeatureSet {
     return this._features;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufFeatureSet`
+   **/
   public set features(v: IGoogleProtobufFeatureSet) {
     this.__TypeSetter(this._features, v);
   }
 
-  fromLiteral(data: IFeatureSetDefaultsFeatureSetEditionDefault) {
+  fromLiteral(data: IFeatureSetDefaultsFeatureSetEditionDefault): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IFeatureSetDefaultsFeatureSetEditionDefault {
-    return super.__toLiteral();
+    return super.__toLiteral() as IFeatureSetDefaultsFeatureSetEditionDefault;
   }
 }
 

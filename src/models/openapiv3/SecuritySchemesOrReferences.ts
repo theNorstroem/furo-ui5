@@ -27,6 +27,8 @@ export interface TSecuritySchemesOrReferences {
  * SecuritySchemesOrReferences
  */
 export class SecuritySchemesOrReferences extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedSecuritySchemeOrReference, IOpenapiV3NamedSecuritySchemeOrReference>;
 
   public __defaultValues: ISecuritySchemesOrReferences;
@@ -34,6 +36,7 @@ export class SecuritySchemesOrReferences extends FieldNode {
   constructor(initData?: ISecuritySchemesOrReferences, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.SecuritySchemesOrReferences";
+    this.__meta.description = "SecuritySchemesOrReferences";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class SecuritySchemesOrReferences extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedSecuritySchemeOrReference,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedSecuritySchemeOrReference, IOpenapiV3NamedSecuritySchemeOrReference>(
       undefined,
       this,
@@ -74,20 +82,26 @@ export class SecuritySchemesOrReferences extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedSecuritySchemeOrReference, IOpenapiV3NamedSecuritySchemeOrReference> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedSecuritySchemeOrReference[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedSecuritySchemeOrReference[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: ISecuritySchemesOrReferences) {
+  fromLiteral(data: ISecuritySchemesOrReferences): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ISecuritySchemesOrReferences {
-    return super.__toLiteral();
+    return super.__toLiteral() as ISecuritySchemesOrReferences;
   }
 }
 

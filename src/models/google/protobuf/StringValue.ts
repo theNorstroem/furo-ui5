@@ -36,7 +36,9 @@ export interface TStringValue {
  *  The JSON representation for `StringValue` is JSON string.
  */
 export class StringValue extends FieldNode {
-  //  The string value.
+  /**
+   * The string value.
+   **/
   private _value: STRING;
 
   public __defaultValues: IStringValue;
@@ -44,6 +46,7 @@ export class StringValue extends FieldNode {
   constructor(initData?: IStringValue, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.StringValue";
+    this.__meta.description = "StringValue Wrapper message for `string`.\n\n The JSON representation for `StringValue` is JSON string.";
 
     this.__meta.nodeFields = [
       {
@@ -51,11 +54,16 @@ export class StringValue extends FieldNode {
         protoName: "value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "The string value.",
       },
     ];
 
     // Initialize the fields
-    //  The string value.
+    // ---------------------
+
+    /**
+     *  The string value.
+     **/
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
@@ -81,21 +89,27 @@ export class StringValue extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The string value.
+  /**
+   *  The string value.
+   * The getter receives the FieldNode
+   **/
   public get value(): STRING {
     return this._value;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set value(v: string) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IStringValue) {
+  fromLiteral(data: IStringValue): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IStringValue {
-    return super.__toLiteral();
+    return super.__toLiteral() as IStringValue;
   }
 }
 

@@ -7,13 +7,7 @@ import { FieldNode, Registry, STRING } from "@furo/open-models/dist/index";
  * @interface IInt64AttributesEntry
  */
 export interface IInt64AttributesEntry {
-  /**
-   *  Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   value?: string;
 }
 
@@ -21,13 +15,7 @@ export interface IInt64AttributesEntry {
  * @interface TInt64AttributesEntry
  */
 export interface TInt64AttributesEntry {
-  /**
-   *  Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   value?: string;
 }
 
@@ -35,10 +23,12 @@ export interface TInt64AttributesEntry {
  * Int64AttributesEntry
  */
 export class Int64AttributesEntry extends FieldNode {
-  //  Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   **/
   private _key: STRING;
 
-  //  Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   **/
   private _value: STRING;
 
   public __defaultValues: IInt64AttributesEntry;
@@ -46,6 +36,7 @@ export class Int64AttributesEntry extends FieldNode {
   constructor(initData?: IInt64AttributesEntry, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Int64.AttributesEntry";
+    this.__meta.description = "Int64AttributesEntry";
 
     this.__meta.nodeFields = [
       {
@@ -53,20 +44,26 @@ export class Int64AttributesEntry extends FieldNode {
         protoName: "key",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+    // ---------------------
+
+    /**
+     **/
     this._key = new STRING(undefined, this, "key");
 
-    //  Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+    /**
+     **/
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
@@ -92,30 +89,40 @@ export class Int64AttributesEntry extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   * The getter receives the FieldNode
+   **/
   public get key(): STRING {
     return this._key;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set key(v: string) {
     this.__PrimitivesSetter(this._key, v);
   }
 
-  //  Furo annotated type wrapper message for `int64`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): STRING {
     return this._value;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set value(v: string) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IInt64AttributesEntry) {
+  fromLiteral(data: IInt64AttributesEntry): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IInt64AttributesEntry {
-    return super.__toLiteral();
+    return super.__toLiteral() as IInt64AttributesEntry;
   }
 }
 

@@ -38,10 +38,14 @@ export interface TNamedString {
  *  Automatically-generated message used to represent maps of string as ordered (name,value) pairs.
  */
 export class NamedString extends FieldNode {
-  //  Map key
+  /**
+   * Map key
+   **/
   private _name: STRING;
 
-  //  Mapped value
+  /**
+   * Mapped value
+   **/
   private _value: STRING;
 
   public __defaultValues: INamedString;
@@ -49,6 +53,7 @@ export class NamedString extends FieldNode {
   constructor(initData?: INamedString, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.NamedString";
+    this.__meta.description = "NamedString Automatically-generated message used to represent maps of string as ordered (name,value) pairs.";
 
     this.__meta.nodeFields = [
       {
@@ -56,20 +61,28 @@ export class NamedString extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Map key",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Mapped value",
       },
     ];
 
     // Initialize the fields
-    //  Map key
+    // ---------------------
+
+    /**
+     *  Map key
+     **/
     this._name = new STRING(undefined, this, "name");
 
-    //  Mapped value
+    /**
+     *  Mapped value
+     **/
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
@@ -95,30 +108,42 @@ export class NamedString extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Map key
+  /**
+   *  Map key
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
-  //  Mapped value
+  /**
+   *  Mapped value
+   * The getter receives the FieldNode
+   **/
   public get value(): STRING {
     return this._value;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set value(v: string) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: INamedString) {
+  fromLiteral(data: INamedString): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): INamedString {
-    return super.__toLiteral();
+    return super.__toLiteral() as INamedString;
   }
 }
 

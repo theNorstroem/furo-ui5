@@ -27,6 +27,8 @@ export interface TLinksOrReferences {
  * LinksOrReferences
  */
 export class LinksOrReferences extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedLinkOrReference, IOpenapiV3NamedLinkOrReference>;
 
   public __defaultValues: ILinksOrReferences;
@@ -34,6 +36,7 @@ export class LinksOrReferences extends FieldNode {
   constructor(initData?: ILinksOrReferences, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.LinksOrReferences";
+    this.__meta.description = "LinksOrReferences";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class LinksOrReferences extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedLinkOrReference,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedLinkOrReference, IOpenapiV3NamedLinkOrReference>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class LinksOrReferences extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedLinkOrReference, IOpenapiV3NamedLinkOrReference> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedLinkOrReference[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedLinkOrReference[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: ILinksOrReferences) {
+  fromLiteral(data: ILinksOrReferences): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ILinksOrReferences {
-    return super.__toLiteral();
+    return super.__toLiteral() as ILinksOrReferences;
   }
 }
 

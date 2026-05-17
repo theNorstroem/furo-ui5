@@ -26,8 +26,12 @@ export interface THeaderOrReference {
  * HeaderOrReference
  */
 export class HeaderOrReference extends FieldNode {
+  /**
+   **/
   private _header: OpenapiV3Header;
 
+  /**
+   **/
   private _reference: OpenapiV3Reference;
 
   public __defaultValues: IHeaderOrReference;
@@ -35,6 +39,7 @@ export class HeaderOrReference extends FieldNode {
   constructor(initData?: IHeaderOrReference, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.HeaderOrReference";
+    this.__meta.description = "HeaderOrReference";
 
     this.__meta.nodeFields = [
       {
@@ -42,18 +47,30 @@ export class HeaderOrReference extends FieldNode {
         protoName: "header",
         FieldConstructor: OpenapiV3Header,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "reference",
         protoName: "reference",
         FieldConstructor: OpenapiV3Reference,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
     ];
 
+    this.__meta.oneofGroups = new Map([["oneof", undefined]]);
+
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._header = new OpenapiV3Header(undefined, this, "header");
 
+    /**
+     **/
     this._reference = new OpenapiV3Reference(undefined, this, "reference");
 
     // Set required fields
@@ -79,28 +96,40 @@ export class HeaderOrReference extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get header(): OpenapiV3Header {
     return this._header;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Header`
+   **/
   public set header(v: IOpenapiV3Header) {
     this.__TypeSetter(this._header, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get reference(): OpenapiV3Reference {
     return this._reference;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Reference`
+   **/
   public set reference(v: IOpenapiV3Reference) {
     this.__TypeSetter(this._reference, v);
   }
 
-  fromLiteral(data: IHeaderOrReference) {
+  fromLiteral(data: IHeaderOrReference): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IHeaderOrReference {
-    return super.__toLiteral();
+    return super.__toLiteral() as IHeaderOrReference;
   }
 }
 

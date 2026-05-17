@@ -2,7 +2,7 @@ import { LitElement } from 'lit';
 import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
 /**
  * `furo-ui5-propertylist-display` allows the user to show repeated properties (furo.Property) in a readonly mode.
- * For all other types you can use furo-ui5-wc-type-renderer-labeled.
+ * For all other types you can use furo-ui5-type-renderers-labeled.
  *
  * The type information of the property is used for the display of the individual attributes.
  * E.g.
@@ -32,8 +32,8 @@ import { RepeaterNode } from '@furo/data/src/lib/RepeaterNode';
  *
  *
  * @summary
- * @tagname furo-ui5-wc-type-renderer-labeled
- * @demo demo-furo-ui5-wc-type-renderer-labeled Basic Usage
+ * @tagname furo-ui5-type-renderers-labeled
+ * @demo demo-furo-ui5-type-renderers-labeled Basic Usage
  * @appliesMixin FBP
  */
 export class FuroUi5PropertylistDisplay extends LitElement {

@@ -5,6 +5,9 @@ import { FieldNode, INT32, Registry } from "@furo/open-models/dist/index";
 
 /**
  * @interface IDescriptorProtoReservedRange
+ *  Range of reserved tag numbers. Reserved tag numbers may not be used by
+ *  fields or extension ranges in the same message. Reserved ranges may
+ *  not overlap.
  */
 export interface IDescriptorProtoReservedRange {
   start?: number; //  Inclusive.
@@ -14,6 +17,9 @@ export interface IDescriptorProtoReservedRange {
 
 /**
  * @interface TDescriptorProtoReservedRange
+ *  Range of reserved tag numbers. Reserved tag numbers may not be used by
+ *  fields or extension ranges in the same message. Reserved ranges may
+ *  not overlap.
  */
 export interface TDescriptorProtoReservedRange {
   start?: number; //  Inclusive.
@@ -23,10 +29,17 @@ export interface TDescriptorProtoReservedRange {
 
 /**
  * DescriptorProtoReservedRange
+ *  Range of reserved tag numbers. Reserved tag numbers may not be used by
+ *  fields or extension ranges in the same message. Reserved ranges may
+ *  not overlap.
  */
 export class DescriptorProtoReservedRange extends FieldNode {
+  /**
+   **/
   private _start: INT32; //  Inclusive.
 
+  /**
+   **/
   private _end: INT32; //  Exclusive.
 
   public __defaultValues: IDescriptorProtoReservedRange;
@@ -34,6 +47,8 @@ export class DescriptorProtoReservedRange extends FieldNode {
   constructor(initData?: IDescriptorProtoReservedRange, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.DescriptorProto.ReservedRange";
+    this.__meta.description =
+      "DescriptorProtoReservedRange Range of reserved tag numbers. Reserved tag numbers may not be used by\n fields or extension ranges in the same message. Reserved ranges may\n not overlap.";
 
     this.__meta.nodeFields = [
       {
@@ -41,18 +56,26 @@ export class DescriptorProtoReservedRange extends FieldNode {
         protoName: "start",
         FieldConstructor: INT32,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "end",
         protoName: "end",
         FieldConstructor: INT32,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._start = new INT32(undefined, this, "start");
 
+    /**
+     **/
     this._end = new INT32(undefined, this, "end");
 
     // Set required fields
@@ -78,28 +101,40 @@ export class DescriptorProtoReservedRange extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get start(): INT32 {
     return this._start;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set start(v: number) {
     this.__PrimitivesSetter(this._start, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get end(): INT32 {
     return this._end;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set end(v: number) {
     this.__PrimitivesSetter(this._end, v);
   }
 
-  fromLiteral(data: IDescriptorProtoReservedRange) {
+  fromLiteral(data: IDescriptorProtoReservedRange): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IDescriptorProtoReservedRange {
-    return super.__toLiteral();
+    return super.__toLiteral() as IDescriptorProtoReservedRange;
   }
 }
 

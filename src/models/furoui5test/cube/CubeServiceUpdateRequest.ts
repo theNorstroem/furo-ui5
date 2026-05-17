@@ -35,9 +35,13 @@ export interface TCubeServiceUpdateRequest {
  * CubeServiceUpdateRequest
  */
 export class CubeServiceUpdateRequest extends FieldNode {
-  //  ID of the cube
+  /**
+   * ID of the cube
+   **/
   private _cubeId: STRING;
 
+  /**
+   **/
   private _entity: Furoui5TestCubeCubeEntity;
 
   public __defaultValues: ICubeServiceUpdateRequest;
@@ -45,6 +49,7 @@ export class CubeServiceUpdateRequest extends FieldNode {
   constructor(initData?: ICubeServiceUpdateRequest, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furoui5test.cube.CubeServiceUpdateRequest";
+    this.__meta.description = "CubeServiceUpdateRequest";
 
     this.__meta.nodeFields = [
       {
@@ -52,19 +57,27 @@ export class CubeServiceUpdateRequest extends FieldNode {
         protoName: "cube_id",
         FieldConstructor: STRING,
         constraints: {},
+        description: "ID of the cube",
       },
       {
         fieldName: "entity",
         protoName: "entity",
         FieldConstructor: Furoui5TestCubeCubeEntity,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  ID of the cube
+    // ---------------------
+
+    /**
+     *  ID of the cube
+     **/
     this._cubeId = new STRING(undefined, this, "cubeId");
 
+    /**
+     **/
     this._entity = new Furoui5TestCubeCubeEntity(undefined, this, "entity");
 
     // Set required fields
@@ -90,29 +103,41 @@ export class CubeServiceUpdateRequest extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  ID of the cube
+  /**
+   *  ID of the cube
+   * The getter receives the FieldNode
+   **/
   public get cubeId(): STRING {
     return this._cubeId;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set cubeId(v: string) {
     this.__PrimitivesSetter(this._cubeId, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get entity(): Furoui5TestCubeCubeEntity {
     return this._entity;
   }
 
+  /**
+   * The setter receives `IFuroui5TestCubeCubeEntity`
+   **/
   public set entity(v: IFuroui5TestCubeCubeEntity) {
     this.__TypeSetter(this._entity, v);
   }
 
-  fromLiteral(data: ICubeServiceUpdateRequest) {
+  fromLiteral(data: ICubeServiceUpdateRequest): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ICubeServiceUpdateRequest {
-    return super.__toLiteral();
+    return super.__toLiteral() as ICubeServiceUpdateRequest;
   }
 }
 

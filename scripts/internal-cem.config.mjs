@@ -14,12 +14,12 @@ const nullSafeLocaleCompare = (a, b) => {
 
 
 export default {
-  globs: ["./src/impl/**/*.ts"],
-  exclude: ['./dist/**/*'],
+  globs: ["./src/web-components/**/*.ts"],
+  exclude: ["./dist/**/*"],
   outdir: "./tmp/",
   dev: false,
   litelement: true,
-  dependencies:true,
+  dependencies: true,
   overrideModuleCreation: ({ ts, globs }) => {
     typeProgram = ts.createProgram(globs, {
       noEmitOnError: false,
@@ -68,18 +68,17 @@ export default {
             });
 
             // event refs
-            node.jsDoc?.forEach((docBlock) => {
-              docBlock?.tags?.forEach((tag) => {
-
+            node.jsDoc?.forEach(docBlock => {
+              docBlock?.tags?.forEach(tag => {
                 // class annotation
                 if (tag?.tagName.escapedText === "classref") {
-                  tag?.text
+                  tag?.text;
                   const matches = /([^\s]+)\s+-\s+"([^\/]+\/[^\/]+)\/(.*)"/.exec(tag.comment);
                   currDocDeclaration.superclass = {
-                    "name": matches[1],
-                    "package": matches[2],
-                    "module": matches[3]
-                  }
+                    name: matches[1],
+                    package: matches[2],
+                    module: matches[3],
+                  };
                 }
 
                 if (tag?.tagName.escapedText === "eventref") {
@@ -94,24 +93,22 @@ export default {
                         eventDoc.type["references"] = [];
                       }
 
-                      eventDoc.type["references"].push(
-                        {
-                          "name": matches[2],
-                          "package": matches[3],
-                          "module": matches[4]
-                        });
+                      eventDoc.type["references"].push({
+                        name: matches[2],
+                        package: matches[3],
+                        module: matches[4],
+                      });
                     }
                   }
                 }
               });
             });
 
-
             node.members?.forEach((member, memberIndex) => {
               switch (member.kind) {
                 case ts.SyntaxKind.MethodDeclaration:
-                  member?.jsDoc?.forEach((docBlock) => {
-                    docBlock?.tags?.forEach((tag) => {
+                  member?.jsDoc?.forEach(docBlock => {
+                    docBlock?.tags?.forEach(tag => {
                       if (tag?.tagName.escapedText === "paramref") {
                         // find current member
                         const currDocMember = currDocDeclaration?.members?.find(docMember => {
@@ -124,31 +121,32 @@ export default {
                             return param.name === matches[1];
                           });
                           if (!docParameter) {
-                            console.log("\x1b[31m%s\x1b[0m", `Param ${matches[1]} does not exist on method ${member?.name?.escapedText} in module ${node?.name?.escapedText}`);
+                            console.log(
+                              "\x1b[31m%s\x1b[0m",
+                              `Param ${matches[1]} does not exist on method ${member?.name?.escapedText} in module ${node?.name?.escapedText}`
+                            );
                             process.exit(1);
                           }
                           if (!docParameter.type["references"]) {
                             docParameter.type["references"] = [];
                           }
 
-                          docParameter.type["references"].push(
-                            {
-                              "name": matches[2],
-                              "package": matches[3],
-                              "module": matches[4]
-                            });
+                          docParameter.type["references"].push({
+                            name: matches[2],
+                            package: matches[3],
+                            module: matches[4],
+                          });
                         }
-                      }else{
-                        console.log(tag?.tagName.escapedText)
+                      } else {
+                        console.log(tag?.tagName.escapedText);
                       }
                     });
                   });
                   break;
 
-
                 case ts.SyntaxKind.PropertyDeclaration:
-                  member?.jsDoc?.forEach((docBlock) => {
-                    docBlock?.tags?.forEach((tag) => {
+                  member?.jsDoc?.forEach(docBlock => {
+                    docBlock?.tags?.forEach(tag => {
                       if (tag?.tagName.escapedText === "typeref") {
                         // find current member
                         const currDocMember = currDocDeclaration?.members?.find(docMember => {
@@ -160,12 +158,11 @@ export default {
                         }
                         const matches = /^([^\s]+)\s+-\s+"([^\/]+\/[^\/]+)\/(.*)"/.exec(tag.comment);
                         if (matches !== null && matches.length === 4) {
-                          currDocMember.type["references"].push(
-                            {
-                              "name": matches[1],
-                              "package": matches[2],
-                              "module": matches[3]
-                            });
+                          currDocMember.type["references"].push({
+                            name: matches[1],
+                            package: matches[2],
+                            module: matches[3],
+                          });
                         }
                       }
                     });
@@ -174,17 +171,17 @@ export default {
 
                 case ts.SyntaxKind.SetAccessor:
                 case ts.SyntaxKind.GetAccessor:
-                  member?.jsDoc?.forEach((docBlock) => {
-                    docBlock?.tags?.forEach((tag) => {
+                  member?.jsDoc?.forEach(docBlock => {
+                    docBlock?.tags?.forEach(tag => {
                       if (tag?.tagName.escapedText === "typeref") {
                         // find current member
                         const currDocMember = currDocDeclaration?.members?.find(docMember => {
                           return docMember?.name?.toString() === member?.name?.escapedText;
                         });
 
-                        if(!currDocMember.type){
-                          currDocMember.type = {"references":[] };
-                          if(currDocMember.parameters.length > 0 && currDocMember.parameters[0].type){
+                        if (!currDocMember.type) {
+                          currDocMember.type = { references: [] };
+                          if (currDocMember.parameters.length > 0 && currDocMember.parameters[0].type) {
                             currDocMember.type.text = currDocMember.parameters[0].type.text;
                           }
                         }
@@ -196,36 +193,30 @@ export default {
                         const matches = /^([^\s]+)\s+-\s+"([^\/]+\/[^\/]+)\/(.*)"/.exec(tag.comment);
                         console.log(matches !== null && matches.length === 5);
                         if (matches !== null && matches.length === 4) {
-                          if(!currDocMember.type.text){
+                          if (!currDocMember.type.text) {
                             currDocMember.type.text = matches[1];
                           }
-                          currDocMember.type["references"].push(
-                            {
-                              "name": matches[1],
-                              "package": matches[2],
-                              "module": matches[3]
-                            });
+                          currDocMember.type["references"].push({
+                            name: matches[1],
+                            package: matches[2],
+                            module: matches[3],
+                          });
                         }
                       }
                     });
                   });
-                  break
+                  break;
               }
-
-
             });
 
             break;
         }
-
-
       },
       // Runs for each module, after analyzing, all information about your module should now be available
       moduleLinkPhase({ moduleDoc, context }) {
         moduleDoc.path = moduleDoc.path.replace(/src\/(.*).ts/, "dist/$1.js");
 
-        moduleDoc.declarations?.forEach(decl =>{
-
+        moduleDoc.declarations?.forEach(decl => {
           if (decl === undefined || decl.kind !== "class") {
             return;
           }
@@ -233,7 +224,7 @@ export default {
           // superclass
           if (decl.superclass?.name) {
             if (decl.superclass.name === "LitElement") {
-              delete (decl.superclass);
+              delete decl.superclass;
             } else {
               const matches = /^(@[^\/]+\/[^\/]+)\/(.*)$/.exec(decl.superclass.package);
               if (matches !== null && matches.length === 3) {
@@ -242,44 +233,40 @@ export default {
               }
             }
           }
-//-------
+          //-------
           // remove private members
-          decl.members = decl.members?.filter((member)=>{
-            return member.privacy !== "private"
-          })
+          decl.members = decl.members?.filter(member => {
+            return member.privacy !== "private";
+          });
 
           // exit on incorrect type declarations on fields
-          decl.members?.forEach(member=>{
-            if(member.kind ==="field" && !member.type  ){
-              console.log('\x1b[31m%s\x1b[0m', `Error in class ${decl?.name}, field ${member.name} does not have a propper type definition.`);
+          decl.members?.forEach(member => {
+            if (member.kind === "field" && !member.type) {
+              console.log("\x1b[31m%s\x1b[0m", `Error in class ${decl?.name}, field ${member.name} does not have a propper type definition.`);
               process.exit(1);
             }
-          })
-
+          });
 
           // exit on incorrect type declarations on attributes
-          decl.attributes?.forEach(attr=>{
-            if(!attr.type  ){
-              console.log('\x1b[31m%s\x1b[0m', `Error in class ${decl?.name}, attribute ${attr.name} does not have a proper type definition.`);
+          decl.attributes?.forEach(attr => {
+            if (!attr.type) {
+              console.log("\x1b[31m%s\x1b[0m", `Error in class ${decl?.name}, attribute ${attr.name} does not have a proper type definition.`);
               process.exit(1);
             }
-          })
+          });
 
           // exit on untyped events
-          decl.events?.forEach(ev=>{
-            if(!ev.type){
-              console.log('\x1b[31m%s\x1b[0m',`Error in class ${decl?.name}, event ${ev.name} does not have a type definition.`);
+          decl.events?.forEach(ev => {
+            if (!ev.type) {
+              console.log("\x1b[31m%s\x1b[0m", `Error in class ${decl?.name}, event ${ev.name} does not have a type definition.`);
               process.exit(1);
             }
-          })
-        })
-//------
-
-
+          });
+        });
+        //------
       },
       // Runs after modules have been parsed and after post-processing
       packageLinkPhase({ customElementsManifest, context }) {
-
         for (let i = 0; i < customElementsManifest.modules.length; i++) {
           const decl = customElementsManifest.modules[i].declarations[0];
 
@@ -287,34 +274,32 @@ export default {
             continue;
           }
 
-
           // The filenames do not start with Furo, the wrapper generator would create FuroXxxxComponents
           if (decl.name.startsWith("FuroUi5")) {
             decl.name = decl.name.replace(/^FuroUi5/, "");
           }
 
-
           if (decl.superclass?.module) {
             // Get superclass description and append it to this description
             let externalDoc;
-            context.thirdPartyCEMs?.find((pkg) => {
-              externalDoc = pkg.modules.find((m) => {
+            context.thirdPartyCEMs?.find(pkg => {
+              externalDoc = pkg.modules.find(m => {
                 return m.path === decl.superclass?.module;
               });
               return externalDoc;
             });
             // merge the descriptions
-            if(externalDoc === undefined) {
+            if (externalDoc === undefined) {
               // check local cem for descriptions
-              externalDoc = customElementsManifest.modules.find((m) => {
+              externalDoc = customElementsManifest.modules.find(m => {
                 return m.path === decl.superclass?.module;
               });
             }
 
             if (externalDoc?.declarations[0]?.description) {
               decl.description += "\n\n" + externalDoc.declarations[0]?.description;
-            }else{
-              console.log("No external doc for " , decl.name)
+            } else {
+              console.log("No external doc for ", decl.name);
             }
           }
 
@@ -325,41 +310,42 @@ export default {
             .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/");
 
           // Replace inherited ui5 descriptions with furo in attributes description
-          decl.attributes?.map(attribute=>{
-            attribute.description = attribute.description?.replaceAll("ui5-", "furo-ui5-")
+          decl.attributes?.map(attribute => {
+            attribute.description = attribute.description
+              ?.replaceAll("ui5-", "furo-ui5-")
               .replaceAll("@ui5/webcomponents/", "@furo/ui5/")
-              .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/")
+              .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/");
           });
 
           // Replace inherited ui5 descriptions with furo/ui5 in members description
-          decl.members?.map(member=>{
-            member.description = member.description?.replaceAll("ui5-", "furo-ui5-")
+          decl.members?.map(member => {
+            member.description = member.description
+              ?.replaceAll("ui5-", "furo-ui5-")
               .replaceAll("@ui5/webcomponents/", "@furo/ui5/")
-              .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/")
+              .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/");
           });
           // Replace inherited ui5 descriptions with furo/ui5 in events description
-          decl.events?.map(event=>{
-            event.description = event.description?.replaceAll("ui5-", "furo-ui5-")
+          decl.events?.map(event => {
+            event.description = event.description
+              ?.replaceAll("ui5-", "furo-ui5-")
               .replaceAll("@ui5/webcomponents/", "@furo/ui5/")
-              .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/")
+              .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/");
           });
         }
 
         /* sort as much as possible to avoid changes on generated files every time */
         for (const mod of customElementsManifest.modules) {
           for (const decl of mod.declarations) {
-
             decl.members?.sort((a, b) => nullSafeLocaleCompare(a.name, b.name));
             decl.attributes?.sort((a, b) => nullSafeLocaleCompare(a.name, b.name));
             decl.events?.sort((a, b) => nullSafeLocaleCompare(a.name, b.name));
             decl.mixins?.sort((a, b) => nullSafeLocaleCompare(a.name, b.name));
             decl.parameters?.sort((a, b) => nullSafeLocaleCompare(a.name, b.name));
           }
-          mod.exports.sort((a, b) => nullSafeLocaleCompare(a.name, b.name))
+          mod.exports.sort((a, b) => nullSafeLocaleCompare(a.name, b.name));
         }
-        customElementsManifest.modules.sort((a, b) => nullSafeLocaleCompare(a.path, b.path))
-      }
+        customElementsManifest.modules.sort((a, b) => nullSafeLocaleCompare(a.path, b.path));
+      },
     },
-
   ],
 };

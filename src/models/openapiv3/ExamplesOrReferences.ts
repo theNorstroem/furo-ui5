@@ -27,6 +27,8 @@ export interface TExamplesOrReferences {
  * ExamplesOrReferences
  */
 export class ExamplesOrReferences extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedExampleOrReference, IOpenapiV3NamedExampleOrReference>;
 
   public __defaultValues: IExamplesOrReferences;
@@ -34,6 +36,7 @@ export class ExamplesOrReferences extends FieldNode {
   constructor(initData?: IExamplesOrReferences, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.ExamplesOrReferences";
+    this.__meta.description = "ExamplesOrReferences";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class ExamplesOrReferences extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedExampleOrReference,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedExampleOrReference, IOpenapiV3NamedExampleOrReference>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class ExamplesOrReferences extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedExampleOrReference, IOpenapiV3NamedExampleOrReference> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedExampleOrReference[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedExampleOrReference[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IExamplesOrReferences) {
+  fromLiteral(data: IExamplesOrReferences): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IExamplesOrReferences {
-    return super.__toLiteral();
+    return super.__toLiteral() as IExamplesOrReferences;
   }
 }
 

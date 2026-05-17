@@ -7,13 +7,7 @@ import { FieldNode, Registry, STRING } from "@furo/open-models/dist/index";
  * @interface IFloatAttributesEntry
  */
 export interface IFloatAttributesEntry {
-  /**
-   *  Furo annotated type wrapper message for `float`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `float`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   value?: string;
 }
 
@@ -21,13 +15,7 @@ export interface IFloatAttributesEntry {
  * @interface TFloatAttributesEntry
  */
 export interface TFloatAttributesEntry {
-  /**
-   *  Furo annotated type wrapper message for `float`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `float`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
-   */
   value?: string;
 }
 
@@ -35,10 +23,12 @@ export interface TFloatAttributesEntry {
  * FloatAttributesEntry
  */
 export class FloatAttributesEntry extends FieldNode {
-  //  Furo annotated type wrapper message for `float`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   **/
   private _key: STRING;
 
-  //  Furo annotated type wrapper message for `float`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   **/
   private _value: STRING;
 
   public __defaultValues: IFloatAttributesEntry;
@@ -46,6 +36,7 @@ export class FloatAttributesEntry extends FieldNode {
   constructor(initData?: IFloatAttributesEntry, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Float.AttributesEntry";
+    this.__meta.description = "FloatAttributesEntry";
 
     this.__meta.nodeFields = [
       {
@@ -53,20 +44,26 @@ export class FloatAttributesEntry extends FieldNode {
         protoName: "key",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  Furo annotated type wrapper message for `float`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+    // ---------------------
+
+    /**
+     **/
     this._key = new STRING(undefined, this, "key");
 
-    //  Furo annotated type wrapper message for `float`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+    /**
+     **/
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
@@ -92,30 +89,40 @@ export class FloatAttributesEntry extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Furo annotated type wrapper message for `float`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   * The getter receives the FieldNode
+   **/
   public get key(): STRING {
     return this._key;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set key(v: string) {
     this.__PrimitivesSetter(this._key, v);
   }
 
-  //  Furo annotated type wrapper message for `float`. The range constraints are set to Number.MIN_SAFE_INTEGER - Number.MAX_SAFE_INTEGER because of browser limitations
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): STRING {
     return this._value;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set value(v: string) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IFloatAttributesEntry) {
+  fromLiteral(data: IFloatAttributesEntry): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IFloatAttributesEntry {
-    return super.__toLiteral();
+    return super.__toLiteral() as IFloatAttributesEntry;
   }
 }
 

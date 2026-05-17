@@ -46,15 +46,15 @@ export class FuroUi5RadioButton extends RadioButton {
   private readonly valueStateManager: FieldNodeValueState;
 
   private modelReaderWriter: ModelReaderWriter | undefined;
-   
+
   private fatHandler: FatHandler<FuroUi5RadioButton>;
-   
+
   private boolReaderWriters: BoolReaderWriters<FuroUi5RadioButton> | undefined;
 
   constructor() {
     super();
     this.valueStateManager = new FieldNodeValueState(this);
-    this.fatHandler = new FatHandler(this as FuroUi5RadioButton, ["readonly", "disabled", "required"]);
+    this.fatHandler = new FatHandler<FuroUi5RadioButton>(this, ["readonly", "disabled", "required"]);
     this.fatHandler.readAttributes();
   }
 
@@ -67,8 +67,8 @@ export class FuroUi5RadioButton extends RadioButton {
   /**
    * FieldNode setter
    *
-   * @typeref BOOLEAN - "@furo/open-models"
-   * @typeref BoolValue - "@furo/open-models"
+   * @typeref BOOLEAN - "@furo/open-models/"
+   * @typeref BoolValue - "@furo/open-models/"
    * @typeref FuroFatBool - "@/models/index.js"
    * @public
    */
@@ -78,10 +78,10 @@ export class FuroUi5RadioButton extends RadioButton {
 
   /**
    *
-   * @paramref fieldNode - BOOLEAN - "@furo/open-models"
+   * @paramref fieldNode - BOOLEAN - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue) {
+  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -120,7 +120,7 @@ export class FuroUi5RadioButton extends RadioButton {
     this.text = this.text === undefined ? this._model.__placeholder : this.text;
 
     // a11y
-    if (this.accessibleName === undefined) {
+    if (this.accessibleName ??= undefined) {
       this.accessibleName = this._model.__label;
     }
   }
@@ -150,7 +150,7 @@ export class FuroUi5RadioButton extends RadioButton {
   }
 
   private writeToModel(): void {
-    this.modelReaderWriter!.writeModel();
+    this.modelReaderWriter?.writeModel();
   }
 
   private _getModelReaders(): Map<string, () => void> {

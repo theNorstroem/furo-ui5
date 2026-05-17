@@ -45,8 +45,8 @@ import DebounceBuilder from "@/util/Debounce";
  *
  * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
  *
- * @fires {void} password-showed - Fired when the password is shown, after calling the show method.
- * @fires {void} password-hidden - Fired when the password is hidden, after calling the hide() method.
+ * @fires {CustomEvent<undefined>} password-showed - Fired when the password is shown, after calling the show method.
+ * @fires {CustomEvent<undefined>} password-hidden - Fired when the password is hidden, after calling the hide() method.
  *
  * @summary data password input field
  * @tagname furo-ui5-password-input
@@ -55,9 +55,9 @@ export class FuroUi5PasswordInput extends Input {
   private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
 
   private modelReaderWriter: ModelReaderWriter | undefined;
-   
+
   private fatHandler: FatHandler<FuroUi5PasswordInput>;
-   
+
   private stringReaderWriters: StringReaderWriters<FuroUi5PasswordInput> | undefined;
 
   private readonlyState: ReadonlyState = new ReadonlyState(this);
@@ -66,7 +66,7 @@ export class FuroUi5PasswordInput extends Input {
     super();
     this.type = "Password";
 
-    this.fatHandler = new FatHandler(this as FuroUi5PasswordInput, ["placeholder", "maxlength"]);
+    this.fatHandler = new FatHandler<FuroUi5PasswordInput>(this, ["placeholder", "maxlength"]);
     this.fatHandler.readAttributes();
   }
 
@@ -102,8 +102,8 @@ export class FuroUi5PasswordInput extends Input {
   /**
    * Use this to bind a model field by attribute.
    *
-   * @typeref STRING - "@furo/open-models"
-   * @typeref StringValue - "@furo/open-models"
+   * @typeref STRING - "@furo/open-models/"
+   * @typeref StringValue - "@furo/open-models/"
    * @typeref FuroFatString - "@/models/index.js"
    * @public
    */
@@ -114,10 +114,10 @@ export class FuroUi5PasswordInput extends Input {
   /**
    * Connects your data model to this component.
    *
-   * @paramref fieldNode - STRING - "@furo/open-models"
+   * @paramref fieldNode - STRING - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: STRING | FuroFatString | StringValue) {
+  public bindData(fieldNode: STRING | FuroFatString | StringValue | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -160,7 +160,7 @@ export class FuroUi5PasswordInput extends Input {
     this.placeholder = this.placeholder === undefined ? this._model.__placeholder : this.placeholder;
 
     // a11y
-    if (this.accessibleName === undefined) {
+    if (this.accessibleName ??= undefined) {
       this.accessibleName = this._model.__label;
     }
   }
@@ -185,7 +185,7 @@ export class FuroUi5PasswordInput extends Input {
   }
 
   private writeToModel(): void {
-    this.modelReaderWriter!.writeModel();
+    this.modelReaderWriter?.writeModel();
   }
 
   private _getModelReaders(): Map<string, () => void> {

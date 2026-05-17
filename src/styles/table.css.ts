@@ -82,8 +82,7 @@ const TableCss = css`
     position: relative;
   }
 
-  tr[value-state="Negative"] td:first-child:before,
-  furo-ui5-table-row[value-state="Negative"] furo-ui5-table-cell:first-child:before {
+  tr[value-state="Negative"] td:first-child:before {
     border-left: 0.4rem solid var(--sapShell_NegativeColor);
     content: "";
     display: block;
@@ -93,8 +92,7 @@ const TableCss = css`
     left: 0;
   }
 
-  tr[value-state="Positive"] td:first-child:before,
-  furo-ui5-table-row[value-state="Positive"] furo-ui5-table-cell:first-child:before {
+  tr[value-state="Positive"] td:first-child:before {
     border-left: 0.4rem solid var(--sapShell_PositiveColor);
     content: "";
     display: block;
@@ -104,8 +102,7 @@ const TableCss = css`
     left: 0;
   }
 
-  tr[value-state="Information"] td:first-child:before,
-  furo-ui5-table-row[value-state="Information"] furo-ui5-table-cell:first-child:before {
+  tr[value-state="Information"] td:first-child:before {
     border-left: 0.4rem solid var(--sapShell_InformativeColor);
     content: "";
     display: block;
@@ -115,8 +112,7 @@ const TableCss = css`
     left: 0;
   }
 
-  tr[value-state="Critical"] td:first-child:before,
-  furo-ui5-table-row[value-state="Critical"] furo-ui5-table-cell:first-child:before {
+  tr[value-state="Critical"] td:first-child:before {
     border-left: 0.4rem solid var(--sapShell_CriticalColor);
     content: "";
     display: block;

@@ -37,12 +37,20 @@ export interface TServer {
  *  An object representing a Server.
  */
 export class Server extends FieldNode {
+  /**
+   **/
   private _url: STRING;
 
+  /**
+   **/
   private _description: STRING;
 
+  /**
+   **/
   private _variables: OpenapiV3ServerVariables;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IServer;
@@ -50,6 +58,7 @@ export class Server extends FieldNode {
   constructor(initData?: IServer, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Server";
+    this.__meta.description = "Server An object representing a Server.";
 
     this.__meta.nodeFields = [
       {
@@ -57,34 +66,48 @@ export class Server extends FieldNode {
         protoName: "url",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "description",
         protoName: "description",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "variables",
         protoName: "variables",
         FieldConstructor: OpenapiV3ServerVariables,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._url = new STRING(undefined, this, "url");
 
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
+    /**
+     **/
     this._variables = new OpenapiV3ServerVariables(undefined, this, "variables");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -110,44 +133,68 @@ export class Server extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get url(): STRING {
     return this._url;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set url(v: string) {
     this.__PrimitivesSetter(this._url, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get variables(): OpenapiV3ServerVariables {
     return this._variables;
   }
 
+  /**
+   * The setter receives `IOpenapiV3ServerVariables`
+   **/
   public set variables(v: IOpenapiV3ServerVariables) {
     this.__TypeSetter(this._variables, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IServer) {
+  fromLiteral(data: IServer): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IServer {
-    return super.__toLiteral();
+    return super.__toLiteral() as IServer;
   }
 }
 

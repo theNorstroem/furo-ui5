@@ -42,7 +42,7 @@ export class FuroUi5McbItem extends MultiComboBoxItem {
    * @paramref fieldNode - MultiComboBoxItemLike - "@furo/ui5/dist/index.js"
    * @public
    */
-  public bindData(fieldNode: MultiComboBoxItemLike) {
+  public bindData(fieldNode: MultiComboBoxItemLike | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }

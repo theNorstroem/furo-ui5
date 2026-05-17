@@ -42,20 +42,36 @@ export interface TInfo {
  *  The object provides metadata about the API. The metadata MAY be used by the clients if needed, and MAY be presented in editing or documentation generation tools for convenience.
  */
 export class Info extends FieldNode {
+  /**
+   **/
   private _title: STRING;
 
+  /**
+   **/
   private _description: STRING;
 
+  /**
+   **/
   private _termsOfService: STRING;
 
+  /**
+   **/
   private _contact: OpenapiV3Contact;
 
+  /**
+   **/
   private _license: OpenapiV3License;
 
+  /**
+   **/
   private _version: STRING;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
+  /**
+   **/
   private _summary: STRING;
 
   public __defaultValues: IInfo;
@@ -63,6 +79,8 @@ export class Info extends FieldNode {
   constructor(initData?: IInfo, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Info";
+    this.__meta.description =
+      "Info The object provides metadata about the API. The metadata MAY be used by the clients if needed, and MAY be presented in editing or documentation generation tools for convenience.";
 
     this.__meta.nodeFields = [
       {
@@ -70,66 +88,92 @@ export class Info extends FieldNode {
         protoName: "title",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "description",
         protoName: "description",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "termsOfService",
         protoName: "terms_of_service",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "contact",
         protoName: "contact",
         FieldConstructor: OpenapiV3Contact,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "license",
         protoName: "license",
         FieldConstructor: OpenapiV3License,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "version",
         protoName: "version",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "summary",
         protoName: "summary",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._title = new STRING(undefined, this, "title");
 
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
+    /**
+     **/
     this._termsOfService = new STRING(undefined, this, "termsOfService");
 
+    /**
+     **/
     this._contact = new OpenapiV3Contact(undefined, this, "contact");
 
+    /**
+     **/
     this._license = new OpenapiV3License(undefined, this, "license");
 
+    /**
+     **/
     this._version = new STRING(undefined, this, "version");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
+    /**
+     **/
     this._summary = new STRING(undefined, this, "summary");
 
     // Set required fields
@@ -155,76 +199,124 @@ export class Info extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get title(): STRING {
     return this._title;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set title(v: string) {
     this.__PrimitivesSetter(this._title, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get termsOfService(): STRING {
     return this._termsOfService;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set termsOfService(v: string) {
     this.__PrimitivesSetter(this._termsOfService, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get contact(): OpenapiV3Contact {
     return this._contact;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Contact`
+   **/
   public set contact(v: IOpenapiV3Contact) {
     this.__TypeSetter(this._contact, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get license(): OpenapiV3License {
     return this._license;
   }
 
+  /**
+   * The setter receives `IOpenapiV3License`
+   **/
   public set license(v: IOpenapiV3License) {
     this.__TypeSetter(this._license, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get version(): STRING {
     return this._version;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set version(v: string) {
     this.__PrimitivesSetter(this._version, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get summary(): STRING {
     return this._summary;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set summary(v: string) {
     this.__PrimitivesSetter(this._summary, v);
   }
 
-  fromLiteral(data: IInfo) {
+  fromLiteral(data: IInfo): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IInfo {
-    return super.__toLiteral();
+    return super.__toLiteral() as IInfo;
   }
 }
 

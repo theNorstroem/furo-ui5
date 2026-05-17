@@ -41,7 +41,6 @@ export class ModelReaderWriter {
 
   public readModel() {
     if (this.modelReadFn === undefined) {
-       
       console.error("No reader specified for field node type", this.fieldNode.__meta.typeName);
       return;
     }
@@ -50,13 +49,11 @@ export class ModelReaderWriter {
 
   public writeModel() {
     if (this.fieldNode === undefined) {
-       
       console.error("No bindings for", this);
       return;
     }
 
     if (this.modelWriteFn === undefined) {
-       
       console.error("No writer specified for field node type", this.fieldNode.__meta.typeName);
       return;
     }

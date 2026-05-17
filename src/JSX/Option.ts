@@ -20,12 +20,6 @@ export interface Option extends React.HTMLAttributes<HTMLElement> {
   additionalText?: string | undefined;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the `icon` source URI.
    *
    * **Note:**
@@ -33,11 +27,6 @@ export interface Option extends React.HTMLAttributes<HTMLElement> {
    * [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
    */
   icon?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Defines the selected state of the component.
@@ -50,8 +39,8 @@ export interface Option extends React.HTMLAttributes<HTMLElement> {
   tooltip?: string | undefined;
 
   /**
-   * Defines the value of the `furo-furo-ui5-select` inside an HTML Form element when this component is selected.
-   * For more information on HTML Form support, see the `name` property of `furo-furo-ui5-select`.
+   * Defines the value of the `furo-ui5-select` inside an HTML Form element when this component is selected.
+   * For more information on HTML Form support, see the `name` property of `furo-ui5-select`.
    */
   value?: string | undefined;
 }
@@ -72,14 +61,6 @@ declare module "react" {
        * tooltip?: STRING;
        * }
        * ```
-       *
-       * ### Overview
-       *
-       * The `furo-furo-ui5-option` component defines the content of an option in the `furo-furo-ui5-select`.
-       *
-       * ### ES6 Module Import
-       *
-       * `import "@furo/ui5/dist/Option.js";`
        *
        * ### Overview
        *

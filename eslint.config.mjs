@@ -14,12 +14,11 @@ export default tseslint.config(
       "**/*.js",
       "**/*.html",
       "**/*.d.ts",
-      "stories/**",
+      "src/stories/**",
       ".agents/**",
       "dist/**",
       "node_modules/**",
-      "src/wc-type-renderer/**",
-      "src/models/**",
+      "src/type-renderers/**",
       "src/x/models/**", // Generated protobuf models
     ],
   },
@@ -153,12 +152,17 @@ export default tseslint.config(
     },
   },
 
-  // Test file overrides
   {
     files: ["src/JSX/*.ts"],
     rules: {
       "@typescript-eslint/no-namespace":"off",
       "@typescript-eslint/no-empty-object-type":"off"
+    },
+  },
+  {
+    files: ["src/models/**/*.ts"],
+    rules: {
+      "@typescript-eslint/related-getter-setter-pairs": "off",
     },
   },
   // Test file overrides

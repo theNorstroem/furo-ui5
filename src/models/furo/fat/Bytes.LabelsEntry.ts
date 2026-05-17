@@ -7,13 +7,7 @@ import { BOOLEAN, FieldNode, Registry, STRING } from "@furo/open-models/dist/ind
  * @interface IBytesLabelsEntry
  */
 export interface IBytesLabelsEntry {
-  /**
-   *  Furo annotated type wrapper message for `bytes`.
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `bytes`.
-   */
   value?: boolean;
 }
 
@@ -21,13 +15,7 @@ export interface IBytesLabelsEntry {
  * @interface TBytesLabelsEntry
  */
 export interface TBytesLabelsEntry {
-  /**
-   *  Furo annotated type wrapper message for `bytes`.
-   */
   key?: string;
-  /**
-   *  Furo annotated type wrapper message for `bytes`.
-   */
   value?: boolean;
 }
 
@@ -35,10 +23,12 @@ export interface TBytesLabelsEntry {
  * BytesLabelsEntry
  */
 export class BytesLabelsEntry extends FieldNode {
-  //  Furo annotated type wrapper message for `bytes`.
+  /**
+   **/
   private _key: STRING;
 
-  //  Furo annotated type wrapper message for `bytes`.
+  /**
+   **/
   private _value: BOOLEAN;
 
   public __defaultValues: IBytesLabelsEntry;
@@ -46,6 +36,7 @@ export class BytesLabelsEntry extends FieldNode {
   constructor(initData?: IBytesLabelsEntry, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Bytes.LabelsEntry";
+    this.__meta.description = "BytesLabelsEntry";
 
     this.__meta.nodeFields = [
       {
@@ -53,20 +44,26 @@ export class BytesLabelsEntry extends FieldNode {
         protoName: "key",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  Furo annotated type wrapper message for `bytes`.
+    // ---------------------
+
+    /**
+     **/
     this._key = new STRING(undefined, this, "key");
 
-    //  Furo annotated type wrapper message for `bytes`.
+    /**
+     **/
     this._value = new BOOLEAN(undefined, this, "value");
 
     // Set required fields
@@ -92,30 +89,40 @@ export class BytesLabelsEntry extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Furo annotated type wrapper message for `bytes`.
+  /**
+   * The getter receives the FieldNode
+   **/
   public get key(): STRING {
     return this._key;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set key(v: string) {
     this.__PrimitivesSetter(this._key, v);
   }
 
-  //  Furo annotated type wrapper message for `bytes`.
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): BOOLEAN {
     return this._value;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set value(v: boolean) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IBytesLabelsEntry) {
+  fromLiteral(data: IBytesLabelsEntry): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IBytesLabelsEntry {
-    return super.__toLiteral();
+    return super.__toLiteral() as IBytesLabelsEntry;
   }
 }
 

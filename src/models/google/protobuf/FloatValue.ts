@@ -36,7 +36,9 @@ export interface TFloatValue {
  *  The JSON representation for `FloatValue` is JSON number.
  */
 export class FloatValue extends FieldNode {
-  //  The float value.
+  /**
+   * The float value.
+   **/
   private _value: FLOAT;
 
   public __defaultValues: IFloatValue;
@@ -44,6 +46,7 @@ export class FloatValue extends FieldNode {
   constructor(initData?: IFloatValue, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.FloatValue";
+    this.__meta.description = "FloatValue Wrapper message for `float`.\n\n The JSON representation for `FloatValue` is JSON number.";
 
     this.__meta.nodeFields = [
       {
@@ -51,11 +54,16 @@ export class FloatValue extends FieldNode {
         protoName: "value",
         FieldConstructor: FLOAT,
         constraints: {},
+        description: "The float value.",
       },
     ];
 
     // Initialize the fields
-    //  The float value.
+    // ---------------------
+
+    /**
+     *  The float value.
+     **/
     this._value = new FLOAT(undefined, this, "value");
 
     // Set required fields
@@ -81,21 +89,27 @@ export class FloatValue extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The float value.
+  /**
+   *  The float value.
+   * The getter receives the FieldNode
+   **/
   public get value(): FLOAT {
     return this._value;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set value(v: number) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IFloatValue) {
+  fromLiteral(data: IFloatValue): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IFloatValue {
-    return super.__toLiteral();
+    return super.__toLiteral() as IFloatValue;
   }
 }
 

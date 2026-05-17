@@ -53,16 +53,16 @@ export class FuroUi5Select extends Select {
   private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
 
   private modelReaderWriter: ModelReaderWriter | undefined;
-   
+
   private fatHandler: FatHandler<FuroUi5Select>;
-   
+
   private stringReaderWriters: StringReaderWriters<FuroUi5Select> | undefined;
 
   private readonlyState: ReadonlyState = new ReadonlyState(this);
 
   constructor() {
     super();
-    this.fatHandler = new FatHandler(this as FuroUi5Select, ["tooltip"]);
+    this.fatHandler = new FatHandler<FuroUi5Select>(this, ["tooltip"]);
     this.fatHandler.readAttributes();
   }
 
@@ -75,8 +75,8 @@ export class FuroUi5Select extends Select {
   /**
    * Use this to bind a model field by attribute.
    *
-   * @typeref STRING - "@furo/open-models"
-   * @typeref StringValue - "@furo/open-models"
+   * @typeref STRING - "@furo/open-models/"
+   * @typeref StringValue - "@furo/open-models/"
    * @typeref FuroFatString - "@/models/index.js"
    * @public
    */
@@ -87,10 +87,10 @@ export class FuroUi5Select extends Select {
   /**
    * Connects your data model to this component.
    *
-   * @paramref fieldNode - STRING - "@furo/open-models"
+   * @paramref fieldNode - STRING - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: STRING | FuroFatString | StringValue) {
+  public bindData(fieldNode: STRING | FuroFatString | StringValue | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -131,10 +131,10 @@ export class FuroUi5Select extends Select {
     this.tooltip = this.tooltip === undefined ? this._model.__placeholder : this.tooltip;
 
     // a11y
-    if (this.accessibleName === undefined) {
-      if (this.accessibleName === undefined) {
+    if (this.accessibleName ??= undefined) {
+
         this.accessibleName = this._model.__label;
-      }
+
     }
   }
 
@@ -160,7 +160,7 @@ export class FuroUi5Select extends Select {
    * @paramref fieldNode - OptionLikeList - "@furo/ui5/dist/index.js"
    * @public
    */
-  public bindOptions(fieldNode: OptionLikeList) {
+  public bindOptions(fieldNode: OptionLikeList | undefined) {
     if (fieldNode === undefined || fieldNode === this._optionsModel) {
       return;
     }
@@ -256,7 +256,7 @@ export class FuroUi5Select extends Select {
   /**
    * Renders a list of options and stores the list in `optionList`.
    *
-   * @paramref optionList - SelectOption - "@furo/open-models"
+   * @paramref optionList - SelectOption - "@furo/open-models/"
    * @param optionList
    * @private
    */

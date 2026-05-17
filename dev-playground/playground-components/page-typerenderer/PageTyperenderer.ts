@@ -8,11 +8,8 @@ import "@/web-components/furo-ui5-shellbar"
  * ### Description
  *
  *
- * @slot {HTMLElement[]} slot-name - slot description
- * @event {MouseEvent} event-name - event description
- *
  * @author veith
- * @tagname page-wc-type-renderer
+ * @tagname page-type-renderers
  * @public
  */
 export class PageTyperenderer extends LitElement {
@@ -21,7 +18,7 @@ export class PageTyperenderer extends LitElement {
    * @public
    */
   @property({ type: String, attribute: "attr-name", reflect: true })
-  attrName: string = "";
+  attrName = "";
 
   /**
    * Styles

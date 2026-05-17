@@ -54,22 +54,40 @@ export interface TDocument {
  * Document
  */
 export class Document extends FieldNode {
+  /**
+   **/
   private _openapi: STRING;
 
+  /**
+   **/
   private _info: OpenapiV3Info;
 
+  /**
+   **/
   private _servers: ARRAY<OpenapiV3Server, IOpenapiV3Server>;
 
+  /**
+   **/
   private _paths: OpenapiV3Paths;
 
+  /**
+   **/
   private _components: OpenapiV3Components;
 
+  /**
+   **/
   private _security: ARRAY<OpenapiV3SecurityRequirement, IOpenapiV3SecurityRequirement>;
 
+  /**
+   **/
   private _tags: ARRAY<OpenapiV3Tag, IOpenapiV3Tag>;
 
+  /**
+   **/
   private _externalDocs: OpenapiV3ExternalDocs;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IDocument;
@@ -77,6 +95,7 @@ export class Document extends FieldNode {
   constructor(initData?: IDocument, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Document";
+    this.__meta.description = "Document";
 
     this.__meta.nodeFields = [
       {
@@ -84,74 +103,103 @@ export class Document extends FieldNode {
         protoName: "openapi",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "info",
         protoName: "info",
         FieldConstructor: OpenapiV3Info,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "servers",
         protoName: "servers",
         FieldConstructor: OpenapiV3Server,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "paths",
         protoName: "paths",
         FieldConstructor: OpenapiV3Paths,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "components",
         protoName: "components",
         FieldConstructor: OpenapiV3Components,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "security",
         protoName: "security",
         FieldConstructor: OpenapiV3SecurityRequirement,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "tags",
         protoName: "tags",
         FieldConstructor: OpenapiV3Tag,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "externalDocs",
         protoName: "external_docs",
         FieldConstructor: OpenapiV3ExternalDocs,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._openapi = new STRING(undefined, this, "openapi");
 
+    /**
+     **/
     this._info = new OpenapiV3Info(undefined, this, "info");
 
+    /**
+     **/
     this._servers = new ARRAY<OpenapiV3Server, IOpenapiV3Server>(undefined, this, "servers");
 
+    /**
+     **/
     this._paths = new OpenapiV3Paths(undefined, this, "paths");
 
+    /**
+     **/
     this._components = new OpenapiV3Components(undefined, this, "components");
 
+    /**
+     **/
     this._security = new ARRAY<OpenapiV3SecurityRequirement, IOpenapiV3SecurityRequirement>(undefined, this, "security");
 
+    /**
+     **/
     this._tags = new ARRAY<OpenapiV3Tag, IOpenapiV3Tag>(undefined, this, "tags");
 
+    /**
+     **/
     this._externalDocs = new OpenapiV3ExternalDocs(undefined, this, "externalDocs");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -177,84 +225,138 @@ export class Document extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get openapi(): STRING {
     return this._openapi;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set openapi(v: string) {
     this.__PrimitivesSetter(this._openapi, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get info(): OpenapiV3Info {
     return this._info;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Info`
+   **/
   public set info(v: IOpenapiV3Info) {
     this.__TypeSetter(this._info, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get servers(): ARRAY<OpenapiV3Server, IOpenapiV3Server> {
     return this._servers;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Server[]`
+   **/
   public set servers(v: IOpenapiV3Server[]) {
     this.__TypeSetter(this._servers, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get paths(): OpenapiV3Paths {
     return this._paths;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Paths`
+   **/
   public set paths(v: IOpenapiV3Paths) {
     this.__TypeSetter(this._paths, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get components(): OpenapiV3Components {
     return this._components;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Components`
+   **/
   public set components(v: IOpenapiV3Components) {
     this.__TypeSetter(this._components, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get security(): ARRAY<OpenapiV3SecurityRequirement, IOpenapiV3SecurityRequirement> {
     return this._security;
   }
 
+  /**
+   * The setter receives `IOpenapiV3SecurityRequirement[]`
+   **/
   public set security(v: IOpenapiV3SecurityRequirement[]) {
     this.__TypeSetter(this._security, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get tags(): ARRAY<OpenapiV3Tag, IOpenapiV3Tag> {
     return this._tags;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Tag[]`
+   **/
   public set tags(v: IOpenapiV3Tag[]) {
     this.__TypeSetter(this._tags, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get externalDocs(): OpenapiV3ExternalDocs {
     return this._externalDocs;
   }
 
+  /**
+   * The setter receives `IOpenapiV3ExternalDocs`
+   **/
   public set externalDocs(v: IOpenapiV3ExternalDocs) {
     this.__TypeSetter(this._externalDocs, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IDocument) {
+  fromLiteral(data: IDocument): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IDocument {
-    return super.__toLiteral();
+    return super.__toLiteral() as IDocument;
   }
 }
 

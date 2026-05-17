@@ -23,6 +23,8 @@ export interface TStrings {
  * Strings
  */
 export class Strings extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedString, IOpenapiV3NamedString>;
 
   public __defaultValues: IStrings;
@@ -30,6 +32,7 @@ export class Strings extends FieldNode {
   constructor(initData?: IStrings, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Strings";
+    this.__meta.description = "Strings";
 
     this.__meta.nodeFields = [
       {
@@ -37,10 +40,15 @@ export class Strings extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedString,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedString, IOpenapiV3NamedString>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -66,20 +74,26 @@ export class Strings extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedString, IOpenapiV3NamedString> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedString[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedString[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IStrings) {
+  fromLiteral(data: IStrings): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IStrings {
-    return super.__toLiteral();
+    return super.__toLiteral() as IStrings;
   }
 }
 

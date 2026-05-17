@@ -1,4 +1,5 @@
 import "@/Assets";
+import "@/Icons";
 import "@/web-components/furo-ui5-header-panel";
 
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
@@ -78,6 +79,7 @@ describe("DynamicHeader Component", async () => {
     assert.equal(el.collapsed, true);
 
     collapseExpandIcon.click()
+    await new Promise((resolve) => setTimeout(resolve, 600));
 
     assert.equal(el.getAttribute('collapsed') === null, true);
   });

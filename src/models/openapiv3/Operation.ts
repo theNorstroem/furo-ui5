@@ -77,30 +77,56 @@ export interface TOperation {
  *  Describes a single API operation on a path.
  */
 export class Operation extends FieldNode {
+  /**
+   **/
   private _tags: ARRAY<STRING, string>;
 
+  /**
+   **/
   private _summary: STRING;
 
+  /**
+   **/
   private _description: STRING;
 
+  /**
+   **/
   private _externalDocs: OpenapiV3ExternalDocs;
 
+  /**
+   **/
   private _operationId: STRING;
 
+  /**
+   **/
   private _parameters: ARRAY<OpenapiV3ParameterOrReference, IOpenapiV3ParameterOrReference>;
 
+  /**
+   **/
   private _requestBody: OpenapiV3RequestBodyOrReference;
 
+  /**
+   **/
   private _responses: OpenapiV3Responses;
 
+  /**
+   **/
   private _callbacks: OpenapiV3CallbacksOrReferences;
 
+  /**
+   **/
   private _deprecated: BOOLEAN;
 
+  /**
+   **/
   private _security: ARRAY<OpenapiV3SecurityRequirement, IOpenapiV3SecurityRequirement>;
 
+  /**
+   **/
   private _servers: ARRAY<OpenapiV3Server, IOpenapiV3Server>;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IOperation;
@@ -108,6 +134,7 @@ export class Operation extends FieldNode {
   constructor(initData?: IOperation, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Operation";
+    this.__meta.description = "Operation Describes a single API operation on a path.";
 
     this.__meta.nodeFields = [
       {
@@ -115,106 +142,147 @@ export class Operation extends FieldNode {
         protoName: "tags",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "summary",
         protoName: "summary",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "description",
         protoName: "description",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "externalDocs",
         protoName: "external_docs",
         FieldConstructor: OpenapiV3ExternalDocs,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "operationId",
         protoName: "operation_id",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "parameters",
         protoName: "parameters",
         FieldConstructor: OpenapiV3ParameterOrReference,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "requestBody",
         protoName: "request_body",
         FieldConstructor: OpenapiV3RequestBodyOrReference,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "responses",
         protoName: "responses",
         FieldConstructor: OpenapiV3Responses,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "callbacks",
         protoName: "callbacks",
         FieldConstructor: OpenapiV3CallbacksOrReferences,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "deprecated",
         protoName: "deprecated",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "security",
         protoName: "security",
         FieldConstructor: OpenapiV3SecurityRequirement,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "servers",
         protoName: "servers",
         FieldConstructor: OpenapiV3Server,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._tags = new ARRAY<STRING, string>(undefined, this, "tags");
 
+    /**
+     **/
     this._summary = new STRING(undefined, this, "summary");
 
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
+    /**
+     **/
     this._externalDocs = new OpenapiV3ExternalDocs(undefined, this, "externalDocs");
 
+    /**
+     **/
     this._operationId = new STRING(undefined, this, "operationId");
 
+    /**
+     **/
     this._parameters = new ARRAY<OpenapiV3ParameterOrReference, IOpenapiV3ParameterOrReference>(undefined, this, "parameters");
 
+    /**
+     **/
     this._requestBody = new OpenapiV3RequestBodyOrReference(undefined, this, "requestBody");
 
+    /**
+     **/
     this._responses = new OpenapiV3Responses(undefined, this, "responses");
 
+    /**
+     **/
     this._callbacks = new OpenapiV3CallbacksOrReferences(undefined, this, "callbacks");
 
+    /**
+     **/
     this._deprecated = new BOOLEAN(undefined, this, "deprecated");
 
+    /**
+     **/
     this._security = new ARRAY<OpenapiV3SecurityRequirement, IOpenapiV3SecurityRequirement>(undefined, this, "security");
 
+    /**
+     **/
     this._servers = new ARRAY<OpenapiV3Server, IOpenapiV3Server>(undefined, this, "servers");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -240,116 +308,194 @@ export class Operation extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get tags(): ARRAY<STRING, string> {
     return this._tags;
   }
 
+  /**
+   * The setter receives `string[]`
+   **/
   public set tags(v: string[]) {
     this.__TypeSetter(this._tags, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get summary(): STRING {
     return this._summary;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set summary(v: string) {
     this.__PrimitivesSetter(this._summary, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get externalDocs(): OpenapiV3ExternalDocs {
     return this._externalDocs;
   }
 
+  /**
+   * The setter receives `IOpenapiV3ExternalDocs`
+   **/
   public set externalDocs(v: IOpenapiV3ExternalDocs) {
     this.__TypeSetter(this._externalDocs, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get operationId(): STRING {
     return this._operationId;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set operationId(v: string) {
     this.__PrimitivesSetter(this._operationId, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get parameters(): ARRAY<OpenapiV3ParameterOrReference, IOpenapiV3ParameterOrReference> {
     return this._parameters;
   }
 
+  /**
+   * The setter receives `IOpenapiV3ParameterOrReference[]`
+   **/
   public set parameters(v: IOpenapiV3ParameterOrReference[]) {
     this.__TypeSetter(this._parameters, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get requestBody(): OpenapiV3RequestBodyOrReference {
     return this._requestBody;
   }
 
+  /**
+   * The setter receives `IOpenapiV3RequestBodyOrReference`
+   **/
   public set requestBody(v: IOpenapiV3RequestBodyOrReference) {
     this.__TypeSetter(this._requestBody, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get responses(): OpenapiV3Responses {
     return this._responses;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Responses`
+   **/
   public set responses(v: IOpenapiV3Responses) {
     this.__TypeSetter(this._responses, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get callbacks(): OpenapiV3CallbacksOrReferences {
     return this._callbacks;
   }
 
+  /**
+   * The setter receives `IOpenapiV3CallbacksOrReferences`
+   **/
   public set callbacks(v: IOpenapiV3CallbacksOrReferences) {
     this.__TypeSetter(this._callbacks, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get deprecated(): BOOLEAN {
     return this._deprecated;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set deprecated(v: boolean) {
     this.__PrimitivesSetter(this._deprecated, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get security(): ARRAY<OpenapiV3SecurityRequirement, IOpenapiV3SecurityRequirement> {
     return this._security;
   }
 
+  /**
+   * The setter receives `IOpenapiV3SecurityRequirement[]`
+   **/
   public set security(v: IOpenapiV3SecurityRequirement[]) {
     this.__TypeSetter(this._security, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get servers(): ARRAY<OpenapiV3Server, IOpenapiV3Server> {
     return this._servers;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Server[]`
+   **/
   public set servers(v: IOpenapiV3Server[]) {
     this.__TypeSetter(this._servers, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IOperation) {
+  fromLiteral(data: IOperation): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IOperation {
-    return super.__toLiteral();
+    return super.__toLiteral() as IOperation;
   }
 }
 

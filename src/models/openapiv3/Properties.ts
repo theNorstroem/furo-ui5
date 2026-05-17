@@ -27,6 +27,8 @@ export interface TProperties {
  * Properties
  */
 export class Properties extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedSchemaOrReference, IOpenapiV3NamedSchemaOrReference>;
 
   public __defaultValues: IProperties;
@@ -34,6 +36,7 @@ export class Properties extends FieldNode {
   constructor(initData?: IProperties, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Properties";
+    this.__meta.description = "Properties";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class Properties extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedSchemaOrReference,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedSchemaOrReference, IOpenapiV3NamedSchemaOrReference>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class Properties extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedSchemaOrReference, IOpenapiV3NamedSchemaOrReference> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedSchemaOrReference[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedSchemaOrReference[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IProperties) {
+  fromLiteral(data: IProperties): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IProperties {
-    return super.__toLiteral();
+    return super.__toLiteral() as IProperties;
   }
 }
 

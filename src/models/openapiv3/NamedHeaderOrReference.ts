@@ -44,10 +44,14 @@ export interface TNamedHeaderOrReference {
  *  Automatically-generated message used to represent maps of HeaderOrReference as ordered (name,value) pairs.
  */
 export class NamedHeaderOrReference extends FieldNode {
-  //  Map key
+  /**
+   * Map key
+   **/
   private _name: STRING;
 
-  //  Mapped value
+  /**
+   * Mapped value
+   **/
   private _value: OpenapiV3HeaderOrReference;
 
   public __defaultValues: INamedHeaderOrReference;
@@ -55,6 +59,8 @@ export class NamedHeaderOrReference extends FieldNode {
   constructor(initData?: INamedHeaderOrReference, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.NamedHeaderOrReference";
+    this.__meta.description =
+      "NamedHeaderOrReference Automatically-generated message used to represent maps of HeaderOrReference as ordered (name,value) pairs.";
 
     this.__meta.nodeFields = [
       {
@@ -62,20 +68,28 @@ export class NamedHeaderOrReference extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Map key",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: OpenapiV3HeaderOrReference,
         constraints: {},
+        description: "Mapped value",
       },
     ];
 
     // Initialize the fields
-    //  Map key
+    // ---------------------
+
+    /**
+     *  Map key
+     **/
     this._name = new STRING(undefined, this, "name");
 
-    //  Mapped value
+    /**
+     *  Mapped value
+     **/
     this._value = new OpenapiV3HeaderOrReference(undefined, this, "value");
 
     // Set required fields
@@ -101,30 +115,42 @@ export class NamedHeaderOrReference extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Map key
+  /**
+   *  Map key
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
-  //  Mapped value
+  /**
+   *  Mapped value
+   * The getter receives the FieldNode
+   **/
   public get value(): OpenapiV3HeaderOrReference {
     return this._value;
   }
 
+  /**
+   * The setter receives `IOpenapiV3HeaderOrReference`
+   **/
   public set value(v: IOpenapiV3HeaderOrReference) {
     this.__TypeSetter(this._value, v);
   }
 
-  fromLiteral(data: INamedHeaderOrReference) {
+  fromLiteral(data: INamedHeaderOrReference): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): INamedHeaderOrReference {
-    return super.__toLiteral();
+    return super.__toLiteral() as INamedHeaderOrReference;
   }
 }
 

@@ -29,14 +29,14 @@ export class FuroUi5PrettyJson extends LitElement {
   /**
    * Use this to bind a model field by attribute.
    *
-   * @typeref FieldNode - "@furo/open-models"
+   * @typeref FieldNode - "@furo/open-models/"
    * @public
    */
   public set model(value: FieldNode) {
     this.bindData(value);
   }
 
-  public bindData(fieldNode: FieldNode) {
+  public bindData(fieldNode: FieldNode | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -146,7 +146,7 @@ export class FuroUi5PrettyJson extends LitElement {
       .replace(/>/g, "&gt;")
       .replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g, (match) => {
         let cls = "number";
-        if (match.startsWith("\"")) {
+        if (match.startsWith('"')) {
           if (match.endsWith(":")) {
             cls = "key";
           } else {
@@ -154,7 +154,7 @@ export class FuroUi5PrettyJson extends LitElement {
           }
         } else if (/true|false/.test(match)) {
           cls = "boolean";
-        } else if (match.includes('null')) {
+        } else if (match.includes("null")) {
           cls = "null";
         }
         return `<span class="${cls}">${match}</span>`;

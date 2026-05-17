@@ -76,20 +76,28 @@ export interface TExtensionRangeOptions {
  * ExtensionRangeOptions
  */
 export class ExtensionRangeOptions extends FieldNode {
-  //  The parser stores options it doesn't recognize here. See above.
+  /**
+   * The parser stores options it doesn't recognize here. See above.
+   **/
   private _uninterpretedOption: ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>;
 
-  //  For external users: DO NOT USE. We are in the process of open sourcing
-  //  extension declaration and executing internal cleanups before it can be
-  //  used externally.
+  /**
+   * For external users: DO NOT USE. We are in the process of open sourcing
+   * extension declaration and executing internal cleanups before it can be
+   * used externally.
+   **/
   private _declaration: ARRAY<GoogleProtobufExtensionRangeOptionsDeclaration, IGoogleProtobufExtensionRangeOptionsDeclaration>;
 
-  //  Any features defined in the specific edition.
+  /**
+   * Any features defined in the specific edition.
+   **/
   private _features: GoogleProtobufFeatureSet;
 
-  //  The verification state of the range.
-  //  TODO: flip the default to DECLARATION once all empty ranges
-  //  are marked as UNVERIFIED.
+  /**
+   * The verification state of the range.
+   * TODO: flip the default to DECLARATION once all empty ranges
+   * are marked as UNVERIFIED.
+   **/
   private _verification: ENUM<GoogleProtobufExtensionRangeOptionsVerificationState>;
 
   public __defaultValues: IExtensionRangeOptions;
@@ -97,6 +105,7 @@ export class ExtensionRangeOptions extends FieldNode {
   constructor(initData?: IExtensionRangeOptions, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.ExtensionRangeOptions";
+    this.__meta.description = "ExtensionRangeOptions";
 
     this.__meta.nodeFields = [
       {
@@ -104,50 +113,65 @@ export class ExtensionRangeOptions extends FieldNode {
         protoName: "uninterpreted_option",
         FieldConstructor: GoogleProtobufUninterpretedOption,
         constraints: {},
+        description: "The parser stores options it doesn't recognize here. See above.",
       },
       {
         fieldName: "declaration",
         protoName: "declaration",
         FieldConstructor: GoogleProtobufExtensionRangeOptionsDeclaration,
         constraints: {},
+        description:
+          "For external users: DO NOT USE. We are in the process of open sourcing\n extension declaration and executing internal cleanups before it can be\n used externally.",
       },
       {
         fieldName: "features",
         protoName: "features",
         FieldConstructor: GoogleProtobufFeatureSet,
         constraints: {},
+        description: "Any features defined in the specific edition.",
       },
       {
         fieldName: "verification",
         protoName: "verification",
         FieldConstructor: ENUM<GoogleProtobufExtensionRangeOptionsVerificationState>,
         constraints: {},
+        description: "The verification state of the range.\n TODO: flip the default to DECLARATION once all empty ranges\n are marked as UNVERIFIED.",
       },
     ];
 
     // Initialize the fields
-    //  The parser stores options it doesn't recognize here. See above.
+    // ---------------------
+
+    /**
+     *  The parser stores options it doesn't recognize here. See above.
+     **/
     this._uninterpretedOption = new ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>(undefined, this, "uninterpretedOption");
 
-    //  For external users: DO NOT USE. We are in the process of open sourcing
-    //  extension declaration and executing internal cleanups before it can be
-    //  used externally.
+    /**
+     *  For external users: DO NOT USE. We are in the process of open sourcing
+     *  extension declaration and executing internal cleanups before it can be
+     *  used externally.
+     **/
     this._declaration = new ARRAY<GoogleProtobufExtensionRangeOptionsDeclaration, IGoogleProtobufExtensionRangeOptionsDeclaration>(
       undefined,
       this,
       "declaration"
     );
 
-    //  Any features defined in the specific edition.
+    /**
+     *  Any features defined in the specific edition.
+     **/
     this._features = new GoogleProtobufFeatureSet(undefined, this, "features");
 
-    //  The verification state of the range.
-    //  TODO: flip the default to DECLARATION once all empty ranges
-    //  are marked as UNVERIFIED.
+    /**
+     *  The verification state of the range.
+     *  TODO: flip the default to DECLARATION once all empty ranges
+     *  are marked as UNVERIFIED.
+     **/
     this._verification = new ENUM<GoogleProtobufExtensionRangeOptionsVerificationState>(
       undefined,
       GoogleProtobufExtensionRangeOptionsVerificationState,
-      GoogleProtobufExtensionRangeOptionsVerificationState.UNVERIFIED,
+      GoogleProtobufExtensionRangeOptionsVerificationState.DECLARATION,
       this,
       "verification"
     );
@@ -175,52 +199,76 @@ export class ExtensionRangeOptions extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The parser stores options it doesn't recognize here. See above.
+  /**
+   *  The parser stores options it doesn't recognize here. See above.
+   * The getter receives the FieldNode
+   **/
   public get uninterpretedOption(): ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption> {
     return this._uninterpretedOption;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufUninterpretedOption[]`
+   **/
   public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[]) {
     this.__TypeSetter(this._uninterpretedOption, v);
   }
 
-  //  For external users: DO NOT USE. We are in the process of open sourcing
-  //  extension declaration and executing internal cleanups before it can be
-  //  used externally.
+  /**
+   *  For external users: DO NOT USE. We are in the process of open sourcing
+   *  extension declaration and executing internal cleanups before it can be
+   *  used externally.
+   * The getter receives the FieldNode
+   **/
   public get declaration(): ARRAY<GoogleProtobufExtensionRangeOptionsDeclaration, IGoogleProtobufExtensionRangeOptionsDeclaration> {
     return this._declaration;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufExtensionRangeOptionsDeclaration[]`
+   **/
   public set declaration(v: IGoogleProtobufExtensionRangeOptionsDeclaration[]) {
     this.__TypeSetter(this._declaration, v);
   }
 
-  //  Any features defined in the specific edition.
+  /**
+   *  Any features defined in the specific edition.
+   * The getter receives the FieldNode
+   **/
   public get features(): GoogleProtobufFeatureSet {
     return this._features;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufFeatureSet`
+   **/
   public set features(v: IGoogleProtobufFeatureSet) {
     this.__TypeSetter(this._features, v);
   }
 
-  //  The verification state of the range.
-  //  TODO: flip the default to DECLARATION once all empty ranges
-  //  are marked as UNVERIFIED.
+  /**
+   *  The verification state of the range.
+   *  TODO: flip the default to DECLARATION once all empty ranges
+   *  are marked as UNVERIFIED.
+   * The getter receives the FieldNode
+   **/
   public get verification(): ENUM<GoogleProtobufExtensionRangeOptionsVerificationState> {
     return this._verification;
   }
 
+  /**
+   * The setter receives `GoogleProtobufExtensionRangeOptionsVerificationState`
+   **/
   public set verification(v: GoogleProtobufExtensionRangeOptionsVerificationState) {
     this.__TypeSetter(this._verification, v);
   }
 
-  fromLiteral(data: IExtensionRangeOptions) {
+  fromLiteral(data: IExtensionRangeOptions): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IExtensionRangeOptions {
-    return super.__toLiteral();
+    return super.__toLiteral() as IExtensionRangeOptions;
   }
 }
 

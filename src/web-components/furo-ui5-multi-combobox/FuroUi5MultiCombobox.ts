@@ -8,7 +8,7 @@ import MultiComboBox from "@ui5/webcomponents/dist/MultiComboBox.js";
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
-import type {  IdentifiableList, McbItem, OptionLikeList } from "@/lib/open-models/signatures";
+import type { IdentifiableList, McbItem, OptionLikeList } from "@/lib/open-models/signatures";
 import { type FuroFatString, type IFuroFatString } from "@/models";
 import type { FuroUi5McbItem } from "@/web-components/furo-ui5-mcb-item/FuroUi5McbItem";
 
@@ -28,14 +28,14 @@ import type { FuroUi5McbItem } from "@/web-components/furo-ui5-mcb-item/FuroUi5M
  */
 export class FuroUi5MultiCombobox extends MultiComboBox {
   private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
-   
+
   private fatHandler: FatHandler<FuroUi5MultiCombobox>;
 
   private readonlyState: ReadonlyState = new ReadonlyState(this);
 
   constructor() {
     super();
-    this.fatHandler = new FatHandler(this as FuroUi5MultiCombobox, ["readonly", "disabled", "hidden", "required"]);
+    this.fatHandler = new FatHandler<FuroUi5MultiCombobox>(this, ["readonly", "disabled", "hidden", "required"]);
     this.fatHandler.readAttributes();
   }
 
@@ -48,9 +48,9 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
   /**
    * Use this to bind a model field by attribute.
    *
-   * @typeref ARRAY - "@furo/open-models"
-   * @typeref STRING - "@furo/open-models"
-   * @typeref StringValue - "@furo/open-models"
+   * @typeref ARRAY - "@furo/open-models/"
+   * @typeref STRING - "@furo/open-models/"
+   * @typeref StringValue - "@furo/open-models/"
    * @typeref FuroFatString - "@/models/index.js"
    * @typeref IFuroFatString - "@/models/index.js"
    * @typeref IdentifiableList - "@furo/ui5/dist/index.js"
@@ -63,15 +63,15 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
   /**
    * Connects your data model to this component.
    *
-   * @paramref fieldNode - ARRAY - "@furo/open-models"
-   * @paramref fieldNode - STRING - "@furo/open-models"
+   * @paramref fieldNode - ARRAY - "@furo/open-models/"
+   * @paramref fieldNode - STRING - "@furo/open-models/"
    * @paramref fieldNode - FuroFatString - "@/models/index.js"
    * @paramref fieldNode - IFuroFatString - "@/models/index.js"
    * @paramref fieldNode - FuroFatString - "@/models/index.js"
    * @paramref fieldNode - IdentifiableList - "@furo/ui5/dist/index.js"
    * @public
    */
-  public bindData(fieldNode: ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList) {
+  public bindData(fieldNode: ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -109,10 +109,10 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     // set the placeholder from model if none was set before
 
     // a11y
-    if (this.accessibleName === undefined) {
-      if (this.accessibleName === undefined) {
+    if (this.accessibleName ??= undefined) {
+
         this.accessibleName = this._model.__label;
-      }
+
     }
   }
 
@@ -138,7 +138,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
    * @paramref fieldNode - OptionLikeList - "@furo/ui5/dist/index.js"
    * @public
    */
-  public bindOptions(fieldNode: OptionLikeList) {
+  public bindOptions(fieldNode: OptionLikeList | undefined) {
     if (fieldNode === undefined || fieldNode === this._optionsModel) {
       return;
     }
@@ -164,13 +164,13 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
 
   private readFromOptionsModel(): void {
     // clear existing options
-    this.querySelectorAll("furo-ui5-mcb-item").forEach((el) => {
+    this.querySelectorAll("furo-ui5-mcb-item").forEach(el => {
       el.setAttribute("deleteme", "");
     });
 
     this.optionsModel?.forEach((option, i) => {
       const existingOpt: FuroUi5McbItem | null = this.querySelector(`furo-ui5-mcb-item[value="${option.id.toString()}"]`);
-      const opt: FuroUi5McbItem = existingOpt || (document.createElement("furo-ui5-mcb-item"));
+      const opt: FuroUi5McbItem = existingOpt || document.createElement("furo-ui5-mcb-item");
       opt.model = option;
       opt.style.order = i.toString();
       if (existingOpt === null) {
@@ -180,14 +180,14 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
       }
     });
     // delete
-    this.querySelectorAll("furo-ui5-mcb-item[deleteme]").forEach((el) => {
+    this.querySelectorAll("furo-ui5-mcb-item[deleteme]").forEach(el => {
       el.remove();
     });
 
     // sort
     [...this.querySelectorAll("furo-ui5-mcb-item")]
       .sort((a, b) => Number((a as HTMLElement).style.order) - Number((b as HTMLElement).style.order))
-      .forEach((el) => {
+      .forEach(el => {
         this.appendChild(el);
       });
 
@@ -207,10 +207,10 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
         items.push(...(this._model as ARRAY<FuroFatString, IFuroFatString>).value.toString());
       } else {
         // we should have an identifiable
-        items.push(...(this._model as IdentifiableList).map((e) => e.id.toString()));
+        items.push(...(this._model as IdentifiableList).map(e => e.id.toString()));
       }
 
-      items.forEach((item) => {
+      items.forEach(item => {
         const mcb = this.querySelector(`furo-ui5-mcb-item[id="${item}"]`);
         if (mcb) {
           mcb.setAttribute("selected", "");
@@ -218,7 +218,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
       });
     } else {
       // Empty model => deselect all items
-      this.querySelectorAll(`furo-ui5-mcb-item`).forEach((el) => {
+      this.querySelectorAll(`furo-ui5-mcb-item`).forEach(el => {
         el.removeAttribute("selected");
       });
     }
@@ -255,19 +255,19 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
   /**
    * Renders a list of options.
    *
-   * @paramref optionList - McbItem - "@furo/open-models"
+   * @paramref optionList - McbItem - "@furo/open-models/"
    * @param optionList
    * @private
    */
   public renderOptionList(optionList: McbItem[]) {
     // set marker to clear existing options
-    this.querySelectorAll("furo-ui5-mcb-item").forEach((el) => {
+    this.querySelectorAll("furo-ui5-mcb-item").forEach(el => {
       el.setAttribute("deleteme", "");
     });
 
     optionList.forEach((option, i) => {
       const existingOpt: FuroUi5McbItem | null = this.querySelector(`furo-ui5-mcb-item[id="${option.id}"]`);
-      const opt: FuroUi5McbItem = existingOpt || (document.createElement("furo-ui5-mcb-item"));
+      const opt: FuroUi5McbItem = existingOpt || document.createElement("furo-ui5-mcb-item");
       opt.text = option.displayName;
       opt.id = option.id;
 
@@ -283,7 +283,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
       }
     });
     // delete
-    this.querySelectorAll("furo-ui5-mcb-item[deleteme]").forEach((el) => {
+    this.querySelectorAll("furo-ui5-mcb-item[deleteme]").forEach(el => {
       el.remove();
     });
 
@@ -291,7 +291,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     if (this._optionList) {
       [...this.querySelectorAll("furo-ui5-mcb-item")]
         .sort((a, b) => Number((a as HTMLElement).style.order) - Number((b as HTMLElement).style.order))
-        .forEach((el) => {
+        .forEach(el => {
           this.appendChild(el);
         });
     }
@@ -307,7 +307,6 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
 
   private writeToModel(): void {
     this.model.__clear();
-
   }
 
   /**

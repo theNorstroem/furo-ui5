@@ -2,7 +2,6 @@
 import { BOOLEAN, BoolValue, type FieldConstraints } from "@furo/open-models";
 import { getAnimationMode } from "@ui5/webcomponents-base/dist/config/AnimationMode.js";
 import { css, html, LitElement } from "lit";
-// eslint-disable-next-line import/extensions
 import { property } from "lit/decorators.js";
 
 import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
@@ -44,12 +43,12 @@ export class FuroUi5ShowHide extends LitElement {
   @property({ type: Boolean, attribute: "hide-on-false" })
   public hideOnFalse = false;
 
-  private _timeout: number   | undefined;
+  private _timeout: ReturnType<typeof setTimeout> | undefined;
 
   private _clientHeight = 0;
 
   private _hidden = false;
-   
+
   private boolReaderWriters: BoolReaderWriters<FuroUi5ShowHide> | undefined;
 
   private _model: BOOLEAN | FuroFatBool | BoolValue = new BOOLEAN();
@@ -61,8 +60,8 @@ export class FuroUi5ShowHide extends LitElement {
   /**
    * Use this to bind a model field by attribute.
    *
-   * @typeref BOOLEAN - "@furo/open-models"
-   * @typeref BoolValue - "@furo/open-models"
+   * @typeref BOOLEAN - "@furo/open-models/"
+   * @typeref BoolValue - "@furo/open-models/"
    * @typeref FuroFatBool - "@/models/index.js"
    * @public
    */
@@ -73,10 +72,10 @@ export class FuroUi5ShowHide extends LitElement {
   /**
    * Connects your data model to this component.
    *
-   * @paramref fieldNode - BOOLEAN - "@furo/open-models"
+   * @paramref fieldNode - BOOLEAN - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue) {
+  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }

@@ -109,7 +109,7 @@ import { css, html, LitElement } from "lit";
 export class FuroUi5ZGrid extends LitElement {
   constructor() {
     super();
-    this.updateComplete.then(() => {
+    void this.updateComplete.then(() => {
       if (window.ResizeObserver) {
         const ro = new ResizeObserver(() => {
           window.requestAnimationFrame(() => {

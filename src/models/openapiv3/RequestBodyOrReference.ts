@@ -26,8 +26,12 @@ export interface TRequestBodyOrReference {
  * RequestBodyOrReference
  */
 export class RequestBodyOrReference extends FieldNode {
+  /**
+   **/
   private _requestBody: OpenapiV3RequestBody;
 
+  /**
+   **/
   private _reference: OpenapiV3Reference;
 
   public __defaultValues: IRequestBodyOrReference;
@@ -35,6 +39,7 @@ export class RequestBodyOrReference extends FieldNode {
   constructor(initData?: IRequestBodyOrReference, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.RequestBodyOrReference";
+    this.__meta.description = "RequestBodyOrReference";
 
     this.__meta.nodeFields = [
       {
@@ -42,18 +47,30 @@ export class RequestBodyOrReference extends FieldNode {
         protoName: "request_body",
         FieldConstructor: OpenapiV3RequestBody,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "reference",
         protoName: "reference",
         FieldConstructor: OpenapiV3Reference,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
     ];
 
+    this.__meta.oneofGroups = new Map([["oneof", undefined]]);
+
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._requestBody = new OpenapiV3RequestBody(undefined, this, "requestBody");
 
+    /**
+     **/
     this._reference = new OpenapiV3Reference(undefined, this, "reference");
 
     // Set required fields
@@ -79,28 +96,40 @@ export class RequestBodyOrReference extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get requestBody(): OpenapiV3RequestBody {
     return this._requestBody;
   }
 
+  /**
+   * The setter receives `IOpenapiV3RequestBody`
+   **/
   public set requestBody(v: IOpenapiV3RequestBody) {
     this.__TypeSetter(this._requestBody, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get reference(): OpenapiV3Reference {
     return this._reference;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Reference`
+   **/
   public set reference(v: IOpenapiV3Reference) {
     this.__TypeSetter(this._reference, v);
   }
 
-  fromLiteral(data: IRequestBodyOrReference) {
+  fromLiteral(data: IRequestBodyOrReference): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IRequestBodyOrReference {
-    return super.__toLiteral();
+    return super.__toLiteral() as IRequestBodyOrReference;
   }
 }
 

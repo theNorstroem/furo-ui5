@@ -27,7 +27,9 @@ export interface TCubeServiceGetListRequest {
  * CubeServiceGetListRequest
  */
 export class CubeServiceGetListRequest extends FieldNode {
-  //  searches for display_name or client_number
+  /**
+   * searches for display_name or client_number
+   **/
   private _query: STRING;
 
   public __defaultValues: ICubeServiceGetListRequest;
@@ -35,6 +37,7 @@ export class CubeServiceGetListRequest extends FieldNode {
   constructor(initData?: ICubeServiceGetListRequest, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furoui5test.cube.CubeServiceGetListRequest";
+    this.__meta.description = "CubeServiceGetListRequest";
 
     this.__meta.nodeFields = [
       {
@@ -42,11 +45,16 @@ export class CubeServiceGetListRequest extends FieldNode {
         protoName: "query",
         FieldConstructor: STRING,
         constraints: {},
+        description: "searches for display_name or client_number",
       },
     ];
 
     // Initialize the fields
-    //  searches for display_name or client_number
+    // ---------------------
+
+    /**
+     *  searches for display_name or client_number
+     **/
     this._query = new STRING(undefined, this, "query");
 
     // Set required fields
@@ -72,21 +80,27 @@ export class CubeServiceGetListRequest extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  searches for display_name or client_number
+  /**
+   *  searches for display_name or client_number
+   * The getter receives the FieldNode
+   **/
   public get query(): STRING {
     return this._query;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set query(v: string) {
     this.__PrimitivesSetter(this._query, v);
   }
 
-  fromLiteral(data: ICubeServiceGetListRequest) {
+  fromLiteral(data: ICubeServiceGetListRequest): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ICubeServiceGetListRequest {
-    return super.__toLiteral();
+    return super.__toLiteral() as ICubeServiceGetListRequest;
   }
 }
 

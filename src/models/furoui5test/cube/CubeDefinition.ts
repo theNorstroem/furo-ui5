@@ -54,30 +54,56 @@ export interface TCubeDefinition {
  * CubeDefinition
  */
 export class CubeDefinition extends FieldNode {
+  /**
+   **/
   private _length: DOUBLE;
 
+  /**
+   **/
   private _breadth: DOUBLE;
 
+  /**
+   **/
   private _height: DOUBLE;
 
+  /**
+   **/
   private _colour: Furoui5TestCubeColour;
 
+  /**
+   **/
   private _material: ENUM<Furoui5TestCubeMaterials>;
 
+  /**
+   **/
   private _str: STRING;
 
+  /**
+   **/
   private _boo: BOOLEAN;
 
+  /**
+   **/
   private _num: INT32;
 
+  /**
+   **/
   private _fatString: FuroFatString;
 
+  /**
+   **/
   private _rating: INT32;
 
+  /**
+   **/
   private _singleOption: STRING;
 
+  /**
+   **/
   private _multipleOptions: ARRAY<STRING, string>;
 
+  /**
+   **/
   private _multipleCubeOptions: ARRAY<Furoui5TestCubeCubeOptions, IFuroui5TestCubeCubeOptions>;
 
   public __defaultValues: ICubeDefinition;
@@ -85,6 +111,7 @@ export class CubeDefinition extends FieldNode {
   constructor(initData?: ICubeDefinition, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furoui5test.cube.CubeDefinition";
+    this.__meta.description = "CubeDefinition";
 
     this.__meta.nodeFields = [
       {
@@ -92,106 +119,152 @@ export class CubeDefinition extends FieldNode {
         protoName: "length",
         FieldConstructor: DOUBLE,
         constraints: { maximum: 1000, minimum: 100, required: true },
+        description: "",
       },
       {
         fieldName: "breadth",
         protoName: "breadth",
         FieldConstructor: DOUBLE,
         constraints: { maximum: 1000, minimum: 100, required: true },
+        description: "",
       },
       {
         fieldName: "height",
         protoName: "height",
         FieldConstructor: DOUBLE,
         constraints: { maximum: 1000, minimum: 100, required: true },
+        description: "",
       },
       {
         fieldName: "colour",
         protoName: "colour",
         FieldConstructor: Furoui5TestCubeColour,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "material",
         protoName: "material",
         FieldConstructor: ENUM<Furoui5TestCubeMaterials>,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "str",
         protoName: "str",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
+        oneofGroup: "op",
       },
       {
         fieldName: "boo",
         protoName: "boo",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
+        oneofGroup: "op",
       },
       {
         fieldName: "num",
         protoName: "num",
         FieldConstructor: INT32,
         constraints: {},
+        description: "",
+        oneofGroup: "op",
       },
       {
         fieldName: "fatString",
         protoName: "fat_string",
         FieldConstructor: FuroFatString,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "rating",
         protoName: "rating",
         FieldConstructor: INT32,
         constraints: { maximum: 5 },
+        description: "",
       },
       {
         fieldName: "singleOption",
         protoName: "single_option",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "multipleOptions",
         protoName: "multiple_options",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "multipleCubeOptions",
         protoName: "multiple_cube_options",
         FieldConstructor: Furoui5TestCubeCubeOptions,
         constraints: {},
+        description: "",
       },
     ];
 
+    this.__meta.oneofGroups = new Map([["op", undefined]]);
+
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._length = new DOUBLE(undefined, this, "length");
 
+    /**
+     **/
     this._breadth = new DOUBLE(undefined, this, "breadth");
 
+    /**
+     **/
     this._height = new DOUBLE(undefined, this, "height");
 
+    /**
+     **/
     this._colour = new Furoui5TestCubeColour(undefined, this, "colour");
 
+    /**
+     **/
     this._material = new ENUM<Furoui5TestCubeMaterials>(undefined, Furoui5TestCubeMaterials, Furoui5TestCubeMaterials.MATERIALS_UNSPECIFIED, this, "material");
 
+    /**
+     **/
     this._str = new STRING(undefined, this, "str");
 
+    /**
+     **/
     this._boo = new BOOLEAN(undefined, this, "boo");
 
+    /**
+     **/
     this._num = new INT32(undefined, this, "num");
 
+    /**
+     **/
     this._fatString = new FuroFatString(undefined, this, "fatString");
 
+    /**
+     **/
     this._rating = new INT32(undefined, this, "rating");
 
+    /**
+     **/
     this._singleOption = new STRING(undefined, this, "singleOption");
 
+    /**
+     **/
     this._multipleOptions = new ARRAY<STRING, string>(undefined, this, "multipleOptions");
 
+    /**
+     **/
     this._multipleCubeOptions = new ARRAY<Furoui5TestCubeCubeOptions, IFuroui5TestCubeCubeOptions>(undefined, this, "multipleCubeOptions");
 
     // Set required fields
@@ -222,116 +295,194 @@ export class CubeDefinition extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get length(): DOUBLE {
     return this._length;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set length(v: number) {
     this.__PrimitivesSetter(this._length, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get breadth(): DOUBLE {
     return this._breadth;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set breadth(v: number) {
     this.__PrimitivesSetter(this._breadth, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get height(): DOUBLE {
     return this._height;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set height(v: number) {
     this.__PrimitivesSetter(this._height, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get colour(): Furoui5TestCubeColour {
     return this._colour;
   }
 
+  /**
+   * The setter receives `IFuroui5TestCubeColour`
+   **/
   public set colour(v: IFuroui5TestCubeColour) {
     this.__TypeSetter(this._colour, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get material(): ENUM<Furoui5TestCubeMaterials> {
     return this._material;
   }
 
+  /**
+   * The setter receives `Furoui5TestCubeMaterials`
+   **/
   public set material(v: Furoui5TestCubeMaterials) {
     this.__TypeSetter(this._material, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get str(): STRING {
     return this._str;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set str(v: string) {
     this.__PrimitivesSetter(this._str, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get boo(): BOOLEAN {
     return this._boo;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set boo(v: boolean) {
     this.__PrimitivesSetter(this._boo, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get num(): INT32 {
     return this._num;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set num(v: number) {
     this.__PrimitivesSetter(this._num, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get fatString(): FuroFatString {
     return this._fatString;
   }
 
+  /**
+   * The setter receives `IFuroFatString`
+   **/
   public set fatString(v: IFuroFatString) {
     this.__TypeSetter(this._fatString, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get rating(): INT32 {
     return this._rating;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set rating(v: number) {
     this.__PrimitivesSetter(this._rating, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get singleOption(): STRING {
     return this._singleOption;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set singleOption(v: string) {
     this.__PrimitivesSetter(this._singleOption, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get multipleOptions(): ARRAY<STRING, string> {
     return this._multipleOptions;
   }
 
+  /**
+   * The setter receives `string[]`
+   **/
   public set multipleOptions(v: string[]) {
     this.__TypeSetter(this._multipleOptions, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get multipleCubeOptions(): ARRAY<Furoui5TestCubeCubeOptions, IFuroui5TestCubeCubeOptions> {
     return this._multipleCubeOptions;
   }
 
+  /**
+   * The setter receives `IFuroui5TestCubeCubeOptions[]`
+   **/
   public set multipleCubeOptions(v: IFuroui5TestCubeCubeOptions[]) {
     this.__TypeSetter(this._multipleCubeOptions, v);
   }
 
-  fromLiteral(data: ICubeDefinition) {
+  fromLiteral(data: ICubeDefinition): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ICubeDefinition {
-    return super.__toLiteral();
+    return super.__toLiteral() as ICubeDefinition;
   }
 }
 

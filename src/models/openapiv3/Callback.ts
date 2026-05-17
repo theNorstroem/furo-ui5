@@ -33,8 +33,12 @@ export interface TCallback {
  *  A map of possible out-of band callbacks related to the parent operation. Each value in the map is a Path Item Object that describes a set of requests that may be initiated by the API provider and the expected responses. The key value used to identify the callback object is an expression, evaluated at runtime, that identifies a URL to use for the callback operation.
  */
 export class Callback extends FieldNode {
+  /**
+   **/
   private _path: ARRAY<OpenapiV3NamedPathItem, IOpenapiV3NamedPathItem>;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: ICallback;
@@ -42,6 +46,8 @@ export class Callback extends FieldNode {
   constructor(initData?: ICallback, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Callback";
+    this.__meta.description =
+      "Callback A map of possible out-of band callbacks related to the parent operation. Each value in the map is a Path Item Object that describes a set of requests that may be initiated by the API provider and the expected responses. The key value used to identify the callback object is an expression, evaluated at runtime, that identifies a URL to use for the callback operation.";
 
     this.__meta.nodeFields = [
       {
@@ -49,18 +55,26 @@ export class Callback extends FieldNode {
         protoName: "path",
         FieldConstructor: OpenapiV3NamedPathItem,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._path = new ARRAY<OpenapiV3NamedPathItem, IOpenapiV3NamedPathItem>(undefined, this, "path");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -86,28 +100,40 @@ export class Callback extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get path(): ARRAY<OpenapiV3NamedPathItem, IOpenapiV3NamedPathItem> {
     return this._path;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedPathItem[]`
+   **/
   public set path(v: IOpenapiV3NamedPathItem[]) {
     this.__TypeSetter(this._path, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: ICallback) {
+  fromLiteral(data: ICallback): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ICallback {
-    return super.__toLiteral();
+    return super.__toLiteral() as ICallback;
   }
 }
 

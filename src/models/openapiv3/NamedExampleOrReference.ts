@@ -44,10 +44,14 @@ export interface TNamedExampleOrReference {
  *  Automatically-generated message used to represent maps of ExampleOrReference as ordered (name,value) pairs.
  */
 export class NamedExampleOrReference extends FieldNode {
-  //  Map key
+  /**
+   * Map key
+   **/
   private _name: STRING;
 
-  //  Mapped value
+  /**
+   * Mapped value
+   **/
   private _value: OpenapiV3ExampleOrReference;
 
   public __defaultValues: INamedExampleOrReference;
@@ -55,6 +59,8 @@ export class NamedExampleOrReference extends FieldNode {
   constructor(initData?: INamedExampleOrReference, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.NamedExampleOrReference";
+    this.__meta.description =
+      "NamedExampleOrReference Automatically-generated message used to represent maps of ExampleOrReference as ordered (name,value) pairs.";
 
     this.__meta.nodeFields = [
       {
@@ -62,20 +68,28 @@ export class NamedExampleOrReference extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Map key",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: OpenapiV3ExampleOrReference,
         constraints: {},
+        description: "Mapped value",
       },
     ];
 
     // Initialize the fields
-    //  Map key
+    // ---------------------
+
+    /**
+     *  Map key
+     **/
     this._name = new STRING(undefined, this, "name");
 
-    //  Mapped value
+    /**
+     *  Mapped value
+     **/
     this._value = new OpenapiV3ExampleOrReference(undefined, this, "value");
 
     // Set required fields
@@ -101,30 +115,42 @@ export class NamedExampleOrReference extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Map key
+  /**
+   *  Map key
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
-  //  Mapped value
+  /**
+   *  Mapped value
+   * The getter receives the FieldNode
+   **/
   public get value(): OpenapiV3ExampleOrReference {
     return this._value;
   }
 
+  /**
+   * The setter receives `IOpenapiV3ExampleOrReference`
+   **/
   public set value(v: IOpenapiV3ExampleOrReference) {
     this.__TypeSetter(this._value, v);
   }
 
-  fromLiteral(data: INamedExampleOrReference) {
+  fromLiteral(data: INamedExampleOrReference): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): INamedExampleOrReference {
-    return super.__toLiteral();
+    return super.__toLiteral() as INamedExampleOrReference;
   }
 }
 

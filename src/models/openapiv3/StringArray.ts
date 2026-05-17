@@ -21,6 +21,8 @@ export interface TStringArray {
  * StringArray
  */
 export class StringArray extends FieldNode {
+  /**
+   **/
   private _value: ARRAY<STRING, string>;
 
   public __defaultValues: IStringArray;
@@ -28,6 +30,7 @@ export class StringArray extends FieldNode {
   constructor(initData?: IStringArray, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.StringArray";
+    this.__meta.description = "StringArray";
 
     this.__meta.nodeFields = [
       {
@@ -35,10 +38,15 @@ export class StringArray extends FieldNode {
         protoName: "value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._value = new ARRAY<STRING, string>(undefined, this, "value");
 
     // Set required fields
@@ -64,20 +72,26 @@ export class StringArray extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get value(): ARRAY<STRING, string> {
     return this._value;
   }
 
+  /**
+   * The setter receives `string[]`
+   **/
   public set value(v: string[]) {
     this.__TypeSetter(this._value, v);
   }
 
-  fromLiteral(data: IStringArray) {
+  fromLiteral(data: IStringArray): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IStringArray {
-    return super.__toLiteral();
+    return super.__toLiteral() as IStringArray;
   }
 }
 

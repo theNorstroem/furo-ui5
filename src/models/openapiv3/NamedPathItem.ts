@@ -40,10 +40,14 @@ export interface TNamedPathItem {
  *  Automatically-generated message used to represent maps of PathItem as ordered (name,value) pairs.
  */
 export class NamedPathItem extends FieldNode {
-  //  Map key
+  /**
+   * Map key
+   **/
   private _name: STRING;
 
-  //  Mapped value
+  /**
+   * Mapped value
+   **/
   private _value: OpenapiV3PathItem;
 
   public __defaultValues: INamedPathItem;
@@ -51,6 +55,7 @@ export class NamedPathItem extends FieldNode {
   constructor(initData?: INamedPathItem, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.NamedPathItem";
+    this.__meta.description = "NamedPathItem Automatically-generated message used to represent maps of PathItem as ordered (name,value) pairs.";
 
     this.__meta.nodeFields = [
       {
@@ -58,20 +63,28 @@ export class NamedPathItem extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "Map key",
       },
       {
         fieldName: "value",
         protoName: "value",
         FieldConstructor: OpenapiV3PathItem,
         constraints: {},
+        description: "Mapped value",
       },
     ];
 
     // Initialize the fields
-    //  Map key
+    // ---------------------
+
+    /**
+     *  Map key
+     **/
     this._name = new STRING(undefined, this, "name");
 
-    //  Mapped value
+    /**
+     *  Mapped value
+     **/
     this._value = new OpenapiV3PathItem(undefined, this, "value");
 
     // Set required fields
@@ -97,30 +110,42 @@ export class NamedPathItem extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Map key
+  /**
+   *  Map key
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
-  //  Mapped value
+  /**
+   *  Mapped value
+   * The getter receives the FieldNode
+   **/
   public get value(): OpenapiV3PathItem {
     return this._value;
   }
 
+  /**
+   * The setter receives `IOpenapiV3PathItem`
+   **/
   public set value(v: IOpenapiV3PathItem) {
     this.__TypeSetter(this._value, v);
   }
 
-  fromLiteral(data: INamedPathItem) {
+  fromLiteral(data: INamedPathItem): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): INamedPathItem {
-    return super.__toLiteral();
+    return super.__toLiteral() as INamedPathItem;
   }
 }
 

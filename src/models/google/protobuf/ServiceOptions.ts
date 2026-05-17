@@ -60,16 +60,22 @@ export interface TServiceOptions {
  * ServiceOptions
  */
 export class ServiceOptions extends FieldNode {
-  //  Any features defined in the specific edition.
+  /**
+   * Any features defined in the specific edition.
+   **/
   private _features: GoogleProtobufFeatureSet;
 
-  //  Is this service deprecated?
-  //  Depending on the target platform, this can emit Deprecated annotations
-  //  for the service, or it will be completely ignored; in the very least,
-  //  this is a formalization for deprecating services.
+  /**
+   * Is this service deprecated?
+   * Depending on the target platform, this can emit Deprecated annotations
+   * for the service, or it will be completely ignored; in the very least,
+   * this is a formalization for deprecating services.
+   **/
   private _deprecated: BOOLEAN;
 
-  //  The parser stores options it doesn't recognize here. See above.
+  /**
+   * The parser stores options it doesn't recognize here. See above.
+   **/
   private _uninterpretedOption: ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>;
 
   public __defaultValues: IServiceOptions;
@@ -77,6 +83,7 @@ export class ServiceOptions extends FieldNode {
   constructor(initData?: IServiceOptions, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.ServiceOptions";
+    this.__meta.description = "ServiceOptions";
 
     this.__meta.nodeFields = [
       {
@@ -84,32 +91,44 @@ export class ServiceOptions extends FieldNode {
         protoName: "features",
         FieldConstructor: GoogleProtobufFeatureSet,
         constraints: {},
+        description: "Any features defined in the specific edition.",
       },
       {
         fieldName: "deprecated",
         protoName: "deprecated",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description:
+          "Is this service deprecated?\n Depending on the target platform, this can emit Deprecated annotations\n for the service, or it will be completely ignored; in the very least,\n this is a formalization for deprecating services.",
       },
       {
         fieldName: "uninterpretedOption",
         protoName: "uninterpreted_option",
         FieldConstructor: GoogleProtobufUninterpretedOption,
         constraints: {},
+        description: "The parser stores options it doesn't recognize here. See above.",
       },
     ];
 
     // Initialize the fields
-    //  Any features defined in the specific edition.
+    // ---------------------
+
+    /**
+     *  Any features defined in the specific edition.
+     **/
     this._features = new GoogleProtobufFeatureSet(undefined, this, "features");
 
-    //  Is this service deprecated?
-    //  Depending on the target platform, this can emit Deprecated annotations
-    //  for the service, or it will be completely ignored; in the very least,
-    //  this is a formalization for deprecating services.
+    /**
+     *  Is this service deprecated?
+     *  Depending on the target platform, this can emit Deprecated annotations
+     *  for the service, or it will be completely ignored; in the very least,
+     *  this is a formalization for deprecating services.
+     **/
     this._deprecated = new BOOLEAN(undefined, this, "deprecated");
 
-    //  The parser stores options it doesn't recognize here. See above.
+    /**
+     *  The parser stores options it doesn't recognize here. See above.
+     **/
     this._uninterpretedOption = new ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>(undefined, this, "uninterpretedOption");
 
     // Set required fields
@@ -135,42 +154,60 @@ export class ServiceOptions extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Any features defined in the specific edition.
+  /**
+   *  Any features defined in the specific edition.
+   * The getter receives the FieldNode
+   **/
   public get features(): GoogleProtobufFeatureSet {
     return this._features;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufFeatureSet`
+   **/
   public set features(v: IGoogleProtobufFeatureSet) {
     this.__TypeSetter(this._features, v);
   }
 
-  //  Is this service deprecated?
-  //  Depending on the target platform, this can emit Deprecated annotations
-  //  for the service, or it will be completely ignored; in the very least,
-  //  this is a formalization for deprecating services.
+  /**
+   *  Is this service deprecated?
+   *  Depending on the target platform, this can emit Deprecated annotations
+   *  for the service, or it will be completely ignored; in the very least,
+   *  this is a formalization for deprecating services.
+   * The getter receives the FieldNode
+   **/
   public get deprecated(): BOOLEAN {
     return this._deprecated;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set deprecated(v: boolean) {
     this.__PrimitivesSetter(this._deprecated, v);
   }
 
-  //  The parser stores options it doesn't recognize here. See above.
+  /**
+   *  The parser stores options it doesn't recognize here. See above.
+   * The getter receives the FieldNode
+   **/
   public get uninterpretedOption(): ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption> {
     return this._uninterpretedOption;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufUninterpretedOption[]`
+   **/
   public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[]) {
     this.__TypeSetter(this._uninterpretedOption, v);
   }
 
-  fromLiteral(data: IServiceOptions) {
+  fromLiteral(data: IServiceOptions): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IServiceOptions {
-    return super.__toLiteral();
+    return super.__toLiteral() as IServiceOptions;
   }
 }
 

@@ -30,15 +30,15 @@ export class FuroUi5ToggleButton extends ToggleButton {
   private _previousDesign: "Default" | "Positive" | "Negative" | "Transparent" | "Emphasized" | "Attention" = "Default";
 
   private modelReaderWriter: ModelReaderWriter | undefined;
-   
+
   private fatHandler: FatHandler<FuroUi5ToggleButton>;
-   
+
   private boolReaderWriters: BoolReaderWriters<FuroUi5ToggleButton> | undefined;
 
   constructor() {
     super();
 
-    this.fatHandler = new FatHandler(this as FuroUi5ToggleButton, ["icon", "endIcon", "design"]);
+    this.fatHandler = new FatHandler<FuroUi5ToggleButton>(this, ["icon", "endIcon", "design"]);
     this.fatHandler.readAttributes();
     this.fatHandler.setCustomAttributesHandler((attributes) => {
       // reset the design to the initial design if none was received
@@ -58,8 +58,8 @@ export class FuroUi5ToggleButton extends ToggleButton {
   /**
    * FieldNode setter
    *
-   * @typeref BOOLEAN - "@furo/open-models"
-   * @typeref BoolValue - "@furo/open-models"
+   * @typeref BOOLEAN - "@furo/open-models/"
+   * @typeref BoolValue - "@furo/open-models/"
    * @typeref FuroFatBool - "@/models/index.js"
    * @public
    */
@@ -69,10 +69,10 @@ export class FuroUi5ToggleButton extends ToggleButton {
 
   /**
    *
-   * @paramref fieldNode - BOOLEAN - "@furo/open-models"
+   * @paramref fieldNode - BOOLEAN - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue) {
+  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -109,7 +109,7 @@ export class FuroUi5ToggleButton extends ToggleButton {
     this.innerText = this.innerText === "" ? this._model.__placeholder : this.innerText;
 
     // a11y
-    if (this.accessibleName === undefined) {
+    if (this.accessibleName ??= undefined) {
       this.accessibleName = this._model.__label;
     }
   }
@@ -127,7 +127,7 @@ export class FuroUi5ToggleButton extends ToggleButton {
   }
 
   private writeToModel(): void {
-    this.modelReaderWriter!.writeModel();
+    this.modelReaderWriter?.writeModel();
   }
 
   private _getModelReaders(): Map<string, () => void> {

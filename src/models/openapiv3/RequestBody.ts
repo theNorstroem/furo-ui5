@@ -33,12 +33,20 @@ export interface TRequestBody {
  *  Describes a single request body.
  */
 export class RequestBody extends FieldNode {
+  /**
+   **/
   private _description: STRING;
 
+  /**
+   **/
   private _content: OpenapiV3MediaTypes;
 
+  /**
+   **/
   private _required: BOOLEAN;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IRequestBody;
@@ -46,6 +54,7 @@ export class RequestBody extends FieldNode {
   constructor(initData?: IRequestBody, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.RequestBody";
+    this.__meta.description = "RequestBody Describes a single request body.";
 
     this.__meta.nodeFields = [
       {
@@ -53,34 +62,48 @@ export class RequestBody extends FieldNode {
         protoName: "description",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "content",
         protoName: "content",
         FieldConstructor: OpenapiV3MediaTypes,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "required",
         protoName: "required",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._description = new STRING(undefined, this, "description");
 
+    /**
+     **/
     this._content = new OpenapiV3MediaTypes(undefined, this, "content");
 
+    /**
+     **/
     this._required = new BOOLEAN(undefined, this, "required");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -106,44 +129,68 @@ export class RequestBody extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get description(): STRING {
     return this._description;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set description(v: string) {
     this.__PrimitivesSetter(this._description, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get content(): OpenapiV3MediaTypes {
     return this._content;
   }
 
+  /**
+   * The setter receives `IOpenapiV3MediaTypes`
+   **/
   public set content(v: IOpenapiV3MediaTypes) {
     this.__TypeSetter(this._content, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get required(): BOOLEAN {
     return this._required;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set required(v: boolean) {
     this.__PrimitivesSetter(this._required, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IRequestBody) {
+  fromLiteral(data: IRequestBody): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IRequestBody {
-    return super.__toLiteral();
+    return super.__toLiteral() as IRequestBody;
   }
 }
 

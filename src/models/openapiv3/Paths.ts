@@ -33,8 +33,12 @@ export interface TPaths {
  *  Holds the relative paths to the individual endpoints and their operations. The path is appended to the URL from the `Server Object` in order to construct the full URL.  The Paths MAY be empty, due to ACL constraints.
  */
 export class Paths extends FieldNode {
+  /**
+   **/
   private _path: ARRAY<OpenapiV3NamedPathItem, IOpenapiV3NamedPathItem>;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IPaths;
@@ -42,6 +46,8 @@ export class Paths extends FieldNode {
   constructor(initData?: IPaths, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Paths";
+    this.__meta.description =
+      "Paths Holds the relative paths to the individual endpoints and their operations. The path is appended to the URL from the `Server Object` in order to construct the full URL.  The Paths MAY be empty, due to ACL constraints.";
 
     this.__meta.nodeFields = [
       {
@@ -49,18 +55,26 @@ export class Paths extends FieldNode {
         protoName: "path",
         FieldConstructor: OpenapiV3NamedPathItem,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._path = new ARRAY<OpenapiV3NamedPathItem, IOpenapiV3NamedPathItem>(undefined, this, "path");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -86,28 +100,40 @@ export class Paths extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get path(): ARRAY<OpenapiV3NamedPathItem, IOpenapiV3NamedPathItem> {
     return this._path;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedPathItem[]`
+   **/
   public set path(v: IOpenapiV3NamedPathItem[]) {
     this.__TypeSetter(this._path, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IPaths) {
+  fromLiteral(data: IPaths): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IPaths {
-    return super.__toLiteral();
+    return super.__toLiteral() as IPaths;
   }
 }
 

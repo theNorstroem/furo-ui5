@@ -72,21 +72,29 @@ export interface TEnumValueOptions {
  * EnumValueOptions
  */
 export class EnumValueOptions extends FieldNode {
-  //  Is this enum value deprecated?
-  //  Depending on the target platform, this can emit Deprecated annotations
-  //  for the enum value, or it will be completely ignored; in the very least,
-  //  this is a formalization for deprecating enum values.
+  /**
+   * Is this enum value deprecated?
+   * Depending on the target platform, this can emit Deprecated annotations
+   * for the enum value, or it will be completely ignored; in the very least,
+   * this is a formalization for deprecating enum values.
+   **/
   private _deprecated: BOOLEAN;
 
-  //  Any features defined in the specific edition.
+  /**
+   * Any features defined in the specific edition.
+   **/
   private _features: GoogleProtobufFeatureSet;
 
-  //  Indicate that fields annotated with this enum value should not be printed
-  //  out when using debug formats, e.g. when the field contains sensitive
-  //  credentials.
+  /**
+   * Indicate that fields annotated with this enum value should not be printed
+   * out when using debug formats, e.g. when the field contains sensitive
+   * credentials.
+   **/
   private _debugRedact: BOOLEAN;
 
-  //  The parser stores options it doesn't recognize here. See above.
+  /**
+   * The parser stores options it doesn't recognize here. See above.
+   **/
   private _uninterpretedOption: ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>;
 
   public __defaultValues: IEnumValueOptions;
@@ -94,6 +102,7 @@ export class EnumValueOptions extends FieldNode {
   constructor(initData?: IEnumValueOptions, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.EnumValueOptions";
+    this.__meta.description = "EnumValueOptions";
 
     this.__meta.nodeFields = [
       {
@@ -101,43 +110,59 @@ export class EnumValueOptions extends FieldNode {
         protoName: "deprecated",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description:
+          "Is this enum value deprecated?\n Depending on the target platform, this can emit Deprecated annotations\n for the enum value, or it will be completely ignored; in the very least,\n this is a formalization for deprecating enum values.",
       },
       {
         fieldName: "features",
         protoName: "features",
         FieldConstructor: GoogleProtobufFeatureSet,
         constraints: {},
+        description: "Any features defined in the specific edition.",
       },
       {
         fieldName: "debugRedact",
         protoName: "debug_redact",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description:
+          "Indicate that fields annotated with this enum value should not be printed\n out when using debug formats, e.g. when the field contains sensitive\n credentials.",
       },
       {
         fieldName: "uninterpretedOption",
         protoName: "uninterpreted_option",
         FieldConstructor: GoogleProtobufUninterpretedOption,
         constraints: {},
+        description: "The parser stores options it doesn't recognize here. See above.",
       },
     ];
 
     // Initialize the fields
-    //  Is this enum value deprecated?
-    //  Depending on the target platform, this can emit Deprecated annotations
-    //  for the enum value, or it will be completely ignored; in the very least,
-    //  this is a formalization for deprecating enum values.
+    // ---------------------
+
+    /**
+     *  Is this enum value deprecated?
+     *  Depending on the target platform, this can emit Deprecated annotations
+     *  for the enum value, or it will be completely ignored; in the very least,
+     *  this is a formalization for deprecating enum values.
+     **/
     this._deprecated = new BOOLEAN(undefined, this, "deprecated");
 
-    //  Any features defined in the specific edition.
+    /**
+     *  Any features defined in the specific edition.
+     **/
     this._features = new GoogleProtobufFeatureSet(undefined, this, "features");
 
-    //  Indicate that fields annotated with this enum value should not be printed
-    //  out when using debug formats, e.g. when the field contains sensitive
-    //  credentials.
+    /**
+     *  Indicate that fields annotated with this enum value should not be printed
+     *  out when using debug formats, e.g. when the field contains sensitive
+     *  credentials.
+     **/
     this._debugRedact = new BOOLEAN(undefined, this, "debugRedact");
 
-    //  The parser stores options it doesn't recognize here. See above.
+    /**
+     *  The parser stores options it doesn't recognize here. See above.
+     **/
     this._uninterpretedOption = new ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>(undefined, this, "uninterpretedOption");
 
     // Set required fields
@@ -163,53 +188,77 @@ export class EnumValueOptions extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  Is this enum value deprecated?
-  //  Depending on the target platform, this can emit Deprecated annotations
-  //  for the enum value, or it will be completely ignored; in the very least,
-  //  this is a formalization for deprecating enum values.
+  /**
+   *  Is this enum value deprecated?
+   *  Depending on the target platform, this can emit Deprecated annotations
+   *  for the enum value, or it will be completely ignored; in the very least,
+   *  this is a formalization for deprecating enum values.
+   * The getter receives the FieldNode
+   **/
   public get deprecated(): BOOLEAN {
     return this._deprecated;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set deprecated(v: boolean) {
     this.__PrimitivesSetter(this._deprecated, v);
   }
 
-  //  Any features defined in the specific edition.
+  /**
+   *  Any features defined in the specific edition.
+   * The getter receives the FieldNode
+   **/
   public get features(): GoogleProtobufFeatureSet {
     return this._features;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufFeatureSet`
+   **/
   public set features(v: IGoogleProtobufFeatureSet) {
     this.__TypeSetter(this._features, v);
   }
 
-  //  Indicate that fields annotated with this enum value should not be printed
-  //  out when using debug formats, e.g. when the field contains sensitive
-  //  credentials.
+  /**
+   *  Indicate that fields annotated with this enum value should not be printed
+   *  out when using debug formats, e.g. when the field contains sensitive
+   *  credentials.
+   * The getter receives the FieldNode
+   **/
   public get debugRedact(): BOOLEAN {
     return this._debugRedact;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set debugRedact(v: boolean) {
     this.__PrimitivesSetter(this._debugRedact, v);
   }
 
-  //  The parser stores options it doesn't recognize here. See above.
+  /**
+   *  The parser stores options it doesn't recognize here. See above.
+   * The getter receives the FieldNode
+   **/
   public get uninterpretedOption(): ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption> {
     return this._uninterpretedOption;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufUninterpretedOption[]`
+   **/
   public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[]) {
     this.__TypeSetter(this._uninterpretedOption, v);
   }
 
-  fromLiteral(data: IEnumValueOptions) {
+  fromLiteral(data: IEnumValueOptions): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IEnumValueOptions {
-    return super.__toLiteral();
+    return super.__toLiteral() as IEnumValueOptions;
   }
 }
 

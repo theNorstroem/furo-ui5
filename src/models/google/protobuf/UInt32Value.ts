@@ -36,7 +36,9 @@ export interface TUInt32Value {
  *  The JSON representation for `UInt32Value` is JSON number.
  */
 export class UInt32Value extends FieldNode {
-  //  The uint32 value.
+  /**
+   * The uint32 value.
+   **/
   private _value: UINT32;
 
   public __defaultValues: IUInt32Value;
@@ -44,6 +46,7 @@ export class UInt32Value extends FieldNode {
   constructor(initData?: IUInt32Value, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.UInt32Value";
+    this.__meta.description = "UInt32Value Wrapper message for `uint32`.\n\n The JSON representation for `UInt32Value` is JSON number.";
 
     this.__meta.nodeFields = [
       {
@@ -51,11 +54,16 @@ export class UInt32Value extends FieldNode {
         protoName: "value",
         FieldConstructor: UINT32,
         constraints: {},
+        description: "The uint32 value.",
       },
     ];
 
     // Initialize the fields
-    //  The uint32 value.
+    // ---------------------
+
+    /**
+     *  The uint32 value.
+     **/
     this._value = new UINT32(undefined, this, "value");
 
     // Set required fields
@@ -81,21 +89,27 @@ export class UInt32Value extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The uint32 value.
+  /**
+   *  The uint32 value.
+   * The getter receives the FieldNode
+   **/
   public get value(): UINT32 {
     return this._value;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set value(v: number) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  fromLiteral(data: IUInt32Value) {
+  fromLiteral(data: IUInt32Value): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IUInt32Value {
-    return super.__toLiteral();
+    return super.__toLiteral() as IUInt32Value;
   }
 }
 

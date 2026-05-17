@@ -23,6 +23,8 @@ export interface TXObject {
  * XObject
  */
 export class XObject extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IXObject;
@@ -30,6 +32,7 @@ export class XObject extends FieldNode {
   constructor(initData?: IXObject, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Object";
+    this.__meta.description = "XObject";
 
     this.__meta.nodeFields = [
       {
@@ -37,10 +40,15 @@ export class XObject extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -66,20 +74,26 @@ export class XObject extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IXObject) {
+  fromLiteral(data: IXObject): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IXObject {
-    return super.__toLiteral();
+    return super.__toLiteral() as IXObject;
   }
 }
 

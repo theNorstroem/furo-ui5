@@ -26,8 +26,12 @@ export interface TLinkOrReference {
  * LinkOrReference
  */
 export class LinkOrReference extends FieldNode {
+  /**
+   **/
   private _link: OpenapiV3Link;
 
+  /**
+   **/
   private _reference: OpenapiV3Reference;
 
   public __defaultValues: ILinkOrReference;
@@ -35,6 +39,7 @@ export class LinkOrReference extends FieldNode {
   constructor(initData?: ILinkOrReference, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.LinkOrReference";
+    this.__meta.description = "LinkOrReference";
 
     this.__meta.nodeFields = [
       {
@@ -42,18 +47,30 @@ export class LinkOrReference extends FieldNode {
         protoName: "link",
         FieldConstructor: OpenapiV3Link,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "reference",
         protoName: "reference",
         FieldConstructor: OpenapiV3Reference,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
     ];
 
+    this.__meta.oneofGroups = new Map([["oneof", undefined]]);
+
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._link = new OpenapiV3Link(undefined, this, "link");
 
+    /**
+     **/
     this._reference = new OpenapiV3Reference(undefined, this, "reference");
 
     // Set required fields
@@ -79,28 +96,40 @@ export class LinkOrReference extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get link(): OpenapiV3Link {
     return this._link;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Link`
+   **/
   public set link(v: IOpenapiV3Link) {
     this.__TypeSetter(this._link, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get reference(): OpenapiV3Reference {
     return this._reference;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Reference`
+   **/
   public set reference(v: IOpenapiV3Reference) {
     this.__TypeSetter(this._reference, v);
   }
 
-  fromLiteral(data: ILinkOrReference) {
+  fromLiteral(data: ILinkOrReference): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ILinkOrReference {
-    return super.__toLiteral();
+    return super.__toLiteral() as ILinkOrReference;
   }
 }
 

@@ -52,12 +52,6 @@ export interface Dialog extends React.HTMLAttributes<HTMLElement> {
   draggable?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the header text.
    *
    * **Note:** If `header` slot is provided, the `headerText` is ignored.
@@ -71,11 +65,6 @@ export interface Dialog extends React.HTMLAttributes<HTMLElement> {
    * `initialFocus` won't take effect.
    */
   initialFocus?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Indicates if the element is open
@@ -143,52 +132,6 @@ declare module "react" {
        *
        * <button at-click="--openDialogClicked">Open dialog</button>
        * ```
-       *
-       * ### Overview
-       * The `furo-furo-ui5-dialog` component is used to temporarily display some information in a
-       * size-limited window in front of the regular app screen.
-       * It is used to prompt the user for an action or a confirmation.
-       * The `furo-furo-ui5-dialog` interrupts the current app processing as it is the only focused UI element and
-       * the main screen is dimmed/blocked.
-       * The dialog combines concepts known from other technologies where the windows have
-       * names such as dialog box, dialog window, pop-up, pop-up window, alert box, or message box.
-       *
-       * The `furo-furo-ui5-dialog` is modal, which means that a user action is required before it is possible to return to the parent window.
-       * To open multiple dialogs, each dialog element should be separate in the markup. This will ensure the correct modal behavior. Avoid nesting dialogs within each other.
-       * The content of the `furo-furo-ui5-dialog` is fully customizable.
-       *
-       * ### Structure
-       * A `furo-furo-ui5-dialog` consists of a header, content, and a footer for action buttons.
-       * The `furo-furo-ui5-dialog` is usually displayed at the center of the screen.
-       * Its position can be changed by the user. To enable this, you need to set the property `draggable` accordingly.
-       *
-       *
-       * ### Responsive Behavior
-       * The `stretch` property can be used to stretch the `furo-furo-ui5-dialog` to full screen. For better usability, it's recommended to stretch the dialog to full screen on phone devices.
-       *
-       * **Note:** When a `furo-furo-ui5-bar` is used in the header or in the footer, you should remove the default dialog's paddings.
-       *
-       * For more information see the sample "Bar in Header/Footer".
-       *
-       * ### Keyboard Handling
-       *
-       * #### Basic Navigation
-       * When the `furo-furo-ui5-dialog` has the `draggable` property set to `true` and the header is focused, the user can move the dialog
-       * with the following keyboard shortcuts:
-       *
-       * - [Up] or [Down] arrow keys - Move the dialog up/down.
-       * - [Left] or [Right] arrow keys - Move the dialog left/right.
-       *
-       * #### Resizing
-       * When the `furo-furo-ui5-dialog` has the `resizable` property set to `true` and the header is focused, the user can change the size of the dialog
-       * with the following keyboard shortcuts:
-       *
-       * - [Shift] + [Up] or [Down] - Decrease/Increase the height of the dialog.
-       * - [Shift] + [Left] or [Right] - Decrease/Increase the width of the dialog.
-       *
-       * ### ES6 Module Import
-       *
-       * `import "@furo/ui5/dist/Dialog";`
        *
        * ### Overview
        * The `furo-ui5-dialog` component is used to temporarily display some information in a

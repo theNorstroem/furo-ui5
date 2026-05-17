@@ -31,10 +31,16 @@ export interface TDiscriminator {
  *  When request bodies or response payloads may be one of a number of different schemas, a `discriminator` object can be used to aid in serialization, deserialization, and validation.  The discriminator is a specific object in a schema which is used to inform the consumer of the specification of an alternative schema based on the value associated with it.  When using the discriminator, _inline_ schemas will not be considered.
  */
 export class Discriminator extends FieldNode {
+  /**
+   **/
   private _propertyName: STRING;
 
+  /**
+   **/
   private _mapping: OpenapiV3Strings;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IDiscriminator;
@@ -42,6 +48,8 @@ export class Discriminator extends FieldNode {
   constructor(initData?: IDiscriminator, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Discriminator";
+    this.__meta.description =
+      "Discriminator When request bodies or response payloads may be one of a number of different schemas, a `discriminator` object can be used to aid in serialization, deserialization, and validation.  The discriminator is a specific object in a schema which is used to inform the consumer of the specification of an alternative schema based on the value associated with it.  When using the discriminator, _inline_ schemas will not be considered.";
 
     this.__meta.nodeFields = [
       {
@@ -49,26 +57,37 @@ export class Discriminator extends FieldNode {
         protoName: "property_name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "mapping",
         protoName: "mapping",
         FieldConstructor: OpenapiV3Strings,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._propertyName = new STRING(undefined, this, "propertyName");
 
+    /**
+     **/
     this._mapping = new OpenapiV3Strings(undefined, this, "mapping");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -94,36 +113,54 @@ export class Discriminator extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get propertyName(): STRING {
     return this._propertyName;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set propertyName(v: string) {
     this.__PrimitivesSetter(this._propertyName, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get mapping(): OpenapiV3Strings {
     return this._mapping;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Strings`
+   **/
   public set mapping(v: IOpenapiV3Strings) {
     this.__TypeSetter(this._mapping, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IDiscriminator) {
+  fromLiteral(data: IDiscriminator): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IDiscriminator {
-    return super.__toLiteral();
+    return super.__toLiteral() as IDiscriminator;
   }
 }
 

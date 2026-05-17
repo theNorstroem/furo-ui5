@@ -65,20 +65,34 @@ export interface TUninterpretedOption {
  *  in them.
  */
 export class UninterpretedOption extends FieldNode {
+  /**
+   **/
   private _name: ARRAY<GoogleProtobufUninterpretedOptionNamePart, IGoogleProtobufUninterpretedOptionNamePart>;
 
-  //  The value of the uninterpreted option, in whatever type the tokenizer
-  //  identified it as during parsing. Exactly one of these should be set.
+  /**
+   * The value of the uninterpreted option, in whatever type the tokenizer
+   * identified it as during parsing. Exactly one of these should be set.
+   **/
   private _identifierValue: STRING;
 
+  /**
+   **/
   private _positiveIntValue: UINT64;
 
+  /**
+   **/
   private _negativeIntValue: INT64;
 
+  /**
+   **/
   private _doubleValue: DOUBLE;
 
+  /**
+   **/
   private _stringValue: BYTES;
 
+  /**
+   **/
   private _aggregateValue: STRING;
 
   public __defaultValues: IUninterpretedOption;
@@ -86,6 +100,8 @@ export class UninterpretedOption extends FieldNode {
   constructor(initData?: IUninterpretedOption, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.UninterpretedOption";
+    this.__meta.description =
+      "UninterpretedOption A message representing a option the parser does not recognize. This only\n appears in options protos created by the compiler::Parser class.\n DescriptorPool resolves these when building Descriptor objects. Therefore,\n options protos in descriptor objects (e.g. returned by Descriptor::options(),\n or produced by Descriptor::CopyTo()) will never have UninterpretedOptions\n in them.";
 
     this.__meta.nodeFields = [
       {
@@ -93,60 +109,84 @@ export class UninterpretedOption extends FieldNode {
         protoName: "name",
         FieldConstructor: GoogleProtobufUninterpretedOptionNamePart,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "identifierValue",
         protoName: "identifier_value",
         FieldConstructor: STRING,
         constraints: {},
+        description:
+          "The value of the uninterpreted option, in whatever type the tokenizer\n identified it as during parsing. Exactly one of these should be set.",
       },
       {
         fieldName: "positiveIntValue",
         protoName: "positive_int_value",
         FieldConstructor: UINT64,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "negativeIntValue",
         protoName: "negative_int_value",
         FieldConstructor: INT64,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "doubleValue",
         protoName: "double_value",
         FieldConstructor: DOUBLE,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "stringValue",
         protoName: "string_value",
         FieldConstructor: BYTES,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "aggregateValue",
         protoName: "aggregate_value",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._name = new ARRAY<GoogleProtobufUninterpretedOptionNamePart, IGoogleProtobufUninterpretedOptionNamePart>(undefined, this, "name");
 
-    //  The value of the uninterpreted option, in whatever type the tokenizer
-    //  identified it as during parsing. Exactly one of these should be set.
+    /**
+     *  The value of the uninterpreted option, in whatever type the tokenizer
+     *  identified it as during parsing. Exactly one of these should be set.
+     **/
     this._identifierValue = new STRING(undefined, this, "identifierValue");
 
+    /**
+     **/
     this._positiveIntValue = new UINT64(undefined, this, "positiveIntValue");
 
+    /**
+     **/
     this._negativeIntValue = new INT64(undefined, this, "negativeIntValue");
 
+    /**
+     **/
     this._doubleValue = new DOUBLE(undefined, this, "doubleValue");
 
+    /**
+     **/
     this._stringValue = new BYTES(undefined, this, "stringValue");
 
+    /**
+     **/
     this._aggregateValue = new STRING(undefined, this, "aggregateValue");
 
     // Set required fields
@@ -172,70 +212,112 @@ export class UninterpretedOption extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get name(): ARRAY<GoogleProtobufUninterpretedOptionNamePart, IGoogleProtobufUninterpretedOptionNamePart> {
     return this._name;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufUninterpretedOptionNamePart[]`
+   **/
   public set name(v: IGoogleProtobufUninterpretedOptionNamePart[]) {
     this.__TypeSetter(this._name, v);
   }
 
-  //  The value of the uninterpreted option, in whatever type the tokenizer
-  //  identified it as during parsing. Exactly one of these should be set.
+  /**
+   *  The value of the uninterpreted option, in whatever type the tokenizer
+   *  identified it as during parsing. Exactly one of these should be set.
+   * The getter receives the FieldNode
+   **/
   public get identifierValue(): STRING {
     return this._identifierValue;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set identifierValue(v: string) {
     this.__PrimitivesSetter(this._identifierValue, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get positiveIntValue(): UINT64 {
     return this._positiveIntValue;
   }
 
+  /**
+   * The setter receives `bigint`
+   **/
   public set positiveIntValue(v: bigint) {
     this.__PrimitivesSetter(this._positiveIntValue, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get negativeIntValue(): INT64 {
     return this._negativeIntValue;
   }
 
+  /**
+   * The setter receives `bigint`
+   **/
   public set negativeIntValue(v: bigint) {
     this.__PrimitivesSetter(this._negativeIntValue, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get doubleValue(): DOUBLE {
     return this._doubleValue;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set doubleValue(v: number) {
     this.__PrimitivesSetter(this._doubleValue, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get stringValue(): BYTES {
     return this._stringValue;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set stringValue(v: string) {
     this.__PrimitivesSetter(this._stringValue, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get aggregateValue(): STRING {
     return this._aggregateValue;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set aggregateValue(v: string) {
     this.__PrimitivesSetter(this._aggregateValue, v);
   }
 
-  fromLiteral(data: IUninterpretedOption) {
+  fromLiteral(data: IUninterpretedOption): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IUninterpretedOption {
-    return super.__toLiteral();
+    return super.__toLiteral() as IUninterpretedOption;
   }
 }
 

@@ -2,13 +2,13 @@ import "@ui5/webcomponents/dist/Icon.js";
 import "@ui5/webcomponents-icons/dist/navigation-down-arrow.js";
 import "@ui5/webcomponents-icons/dist/navigation-right-arrow.js";
 
-import { BOOLEAN, BoolValue } from "@furo/open-models";
+import { fieldBindings, BOOLEAN, type BoolValue } from "@furo/open-models";
+import type { BindableComponent } from "@furo/open-models";
 import { css, html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
 
 import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { FatHandler } from "@/lib/open-models/FatHandler";
-import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import type { FuroFatBool } from "@/models";
 
 /**
@@ -28,7 +28,7 @@ import type { FuroFatBool } from "@/models";
  * @tagname furo-ui5-bool-icon
  * @appliesMixin FBP
  */
-export class FuroUi5BoolIcon extends LitElement {
+export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
   /**
    * Defines the icon for the true state.
    *
@@ -64,98 +64,58 @@ export class FuroUi5BoolIcon extends LitElement {
   @property({ type: String })
   private design: "Contrast" | "Critical" | "Default" | "Information" | "Negative" | "Neutral" | "NonInteractive" | "Positive" = "Default";
 
-  private modelReaderWriter: ModelReaderWriter | undefined;
-   
   private fatHandler: FatHandler<FuroUi5BoolIcon>;
-   
-  private boolReaderWriters: BoolReaderWriters<FuroUi5BoolIcon> | undefined;
+
+  private boolReaderWriters: BoolReaderWriters<FuroUi5BoolIcon>;
 
   @property({ type: String, attribute: "accesible-name" })
   public accessibleName = "Toggle";
 
+  modelReaders: Map<string, () => void>;
+
+  modelWriters: Map<string, () => void>;
+
   constructor() {
     super();
-    this.fatHandler = new FatHandler(this as FuroUi5BoolIcon, ["disabled"]);
+    this.fatHandler = new FatHandler<FuroUi5BoolIcon>(this, ["disabled"]);
     this.fatHandler.readAttributes();
-  }
-
-  private _model: BOOLEAN | FuroFatBool | BoolValue = new BOOLEAN();
-
-  public get model(): BOOLEAN | FuroFatBool | BoolValue {
-    return this._model;
+    this.boolReaderWriters = new BoolReaderWriters<FuroUi5BoolIcon>(this, "value", this.model, this.fatHandler);
+    this.modelReaders = this.boolReaderWriters?.getReaders();
+    this.modelWriters = this.boolReaderWriters?.getWriters();
   }
 
   /**
    * FieldNode setter
    *
-   * @typeref BOOLEAN - "@furo/open-models"
-   * @typeref BoolValue - "@furo/open-models"
+   * @typeref BOOLEAN - "@furo/open-models/"
+   * @typeref BoolValue - "@furo/open-models/"
    * @typeref FuroFatBool - "@/models/index.js"
    * @public
    */
-  public set model(value: BOOLEAN | FuroFatBool | BoolValue) {
-    this.bindData(value);
-  }
+  @fieldBindings.model()
+  public model: BOOLEAN | FuroFatBool | BoolValue = new BOOLEAN();
 
   /**
-   *
-   * @paramref fieldNode - BOOLEAN - "@furo/open-models"
-   * @public
+   * Bind data - alternative to setting .model directly
    */
-  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue) {
-    if (fieldNode === undefined || fieldNode === this._model) {
+  bindData(model: BOOLEAN | FuroFatBool | BoolValue): void {
+    if (model === this.model) {
       return;
     }
-
-    // remove existing listeners
-    // from ui: input, change
-    // from model: "this-field-value-changed",listenToStateChanged
-
-    // init model
-    this._model = fieldNode;
-    this.boolReaderWriters = new BoolReaderWriters<FuroUi5BoolIcon>(this, "value", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
-
-    // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", () => {
-      this.readFromModel();
-    });
-
-    // listen on changes from UI
-    this.addEventListener("input", () => {
-      this.writeToModel();
-    });
-    this.addEventListener("change", () => {
-      this.writeToModel();
-    });
-
-    // initial read
-    this.readFromModel();
+    this.model = model;
 
     // constraints
 
     // set the text placeholder from model if none was set
 
     // a11y
-    if (this.accessibleName === undefined) {
-      this.accessibleName = this._model.__label;
+    if (this.accessibleName ??= undefined) {
+      this.accessibleName = this.model.__label;
     }
   }
 
-  private readFromModel(): void {
-    this.modelReaderWriter?.readModel();
-  }
-
-  private writeToModel(): void {
-    this.modelReaderWriter!.writeModel();
-  }
-
-  private _getModelReaders(): Map<string, () => void> {
-    return this.boolReaderWriters!.getReaders();
-  }
-
-  private _getModelWriters(): Map<string, () => void> {
-    return this.boolReaderWriters!.getWriters();
+  public writeToModel(): void {
+    return;
   }
 
   /**

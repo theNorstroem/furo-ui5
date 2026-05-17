@@ -52,13 +52,19 @@ export interface TXAny {
  *  // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
  */
 export class XAny extends FieldNode {
-  //  The JSON representation for `AnyValue` is a JSON string? The client uses type `ArrayBuffer` for the value field.
+  /**
+   * The JSON representation for `AnyValue` is a JSON string? The client uses type `ArrayBuffer` for the value field.
+   **/
   private _value: BYTES;
 
-  //  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+  /**
+   * Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+   **/
   private _labels: MAP<string, BOOLEAN, boolean>;
 
-  //  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+  /**
+   * Attributes for a value, something like confidential-msg: you are not allowed to see this value
+   **/
   private _attributes: MAP<string, STRING, string>;
 
   public __defaultValues: IXAny;
@@ -66,6 +72,8 @@ export class XAny extends FieldNode {
   constructor(initData?: IXAny, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Any";
+    this.__meta.description =
+      "XAny Furo annotated type wrapper message for `any`. \n // Any contains an arbitrary serialized protocol buffer message along with a\n // URL that describes the type of the serialized message. https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto";
 
     this.__meta.nodeFields = [
       {
@@ -73,6 +81,7 @@ export class XAny extends FieldNode {
         protoName: "value",
         FieldConstructor: BYTES,
         constraints: {},
+        description: "The JSON representation for `AnyValue` is a JSON string? The client uses type `ArrayBuffer` for the value field.",
       },
       {
         fieldName: "labels",
@@ -80,6 +89,7 @@ export class XAny extends FieldNode {
         FieldConstructor: MAP<string, BOOLEAN, boolean>,
         ValueConstructor: BOOLEAN,
         constraints: {},
+        description: "Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...",
       },
       {
         fieldName: "attributes",
@@ -87,17 +97,26 @@ export class XAny extends FieldNode {
         FieldConstructor: MAP<string, STRING, string>,
         ValueConstructor: STRING,
         constraints: {},
+        description: "Attributes for a value, something like confidential-msg: you are not allowed to see this value",
       },
     ];
 
     // Initialize the fields
-    //  The JSON representation for `AnyValue` is a JSON string? The client uses type `ArrayBuffer` for the value field.
+    // ---------------------
+
+    /**
+     *  The JSON representation for `AnyValue` is a JSON string? The client uses type `ArrayBuffer` for the value field.
+     **/
     this._value = new BYTES(undefined, this, "value");
 
-    //  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+    /**
+     *  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+     **/
     this._labels = new MAP<string, BOOLEAN, boolean>(undefined, this, "labels");
 
-    //  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+    /**
+     *  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+     **/
     this._attributes = new MAP<string, STRING, string>(undefined, this, "attributes");
 
     // Set required fields
@@ -123,39 +142,57 @@ export class XAny extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The JSON representation for `AnyValue` is a JSON string? The client uses type `ArrayBuffer` for the value field.
+  /**
+   *  The JSON representation for `AnyValue` is a JSON string? The client uses type `ArrayBuffer` for the value field.
+   * The getter receives the FieldNode
+   **/
   public get value(): BYTES {
     return this._value;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set value(v: string) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  //  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+  /**
+   *  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+   * The getter receives the FieldNode
+   **/
   public get labels(): MAP<string, BOOLEAN, boolean> {
     return this._labels;
   }
 
+  /**
+   * The setter receives `{ [key: string]: boolean }`
+   **/
   public set labels(v: Record<string, boolean>) {
     this.__TypeSetter(this._labels, v);
   }
 
-  //  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+  /**
+   *  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+   * The getter receives the FieldNode
+   **/
   public get attributes(): MAP<string, STRING, string> {
     return this._attributes;
   }
 
+  /**
+   * The setter receives `{ [key: string]: string }`
+   **/
   public set attributes(v: Record<string, string>) {
     this.__TypeSetter(this._attributes, v);
   }
 
-  fromLiteral(data: IXAny) {
+  fromLiteral(data: IXAny): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IXAny {
-    return super.__toLiteral();
+    return super.__toLiteral() as IXAny;
   }
 }
 

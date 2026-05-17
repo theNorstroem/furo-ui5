@@ -35,14 +35,24 @@ export interface TOauthFlows {
  *  Allows configuration of the supported OAuth Flows.
  */
 export class OauthFlows extends FieldNode {
+  /**
+   **/
   private _implicit: OpenapiV3OauthFlow;
 
+  /**
+   **/
   private _password: OpenapiV3OauthFlow;
 
+  /**
+   **/
   private _clientCredentials: OpenapiV3OauthFlow;
 
+  /**
+   **/
   private _authorizationCode: OpenapiV3OauthFlow;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IOauthFlows;
@@ -50,6 +60,7 @@ export class OauthFlows extends FieldNode {
   constructor(initData?: IOauthFlows, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.OauthFlows";
+    this.__meta.description = "OauthFlows Allows configuration of the supported OAuth Flows.";
 
     this.__meta.nodeFields = [
       {
@@ -57,42 +68,59 @@ export class OauthFlows extends FieldNode {
         protoName: "implicit",
         FieldConstructor: OpenapiV3OauthFlow,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "password",
         protoName: "password",
         FieldConstructor: OpenapiV3OauthFlow,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "clientCredentials",
         protoName: "client_credentials",
         FieldConstructor: OpenapiV3OauthFlow,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "authorizationCode",
         protoName: "authorization_code",
         FieldConstructor: OpenapiV3OauthFlow,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._implicit = new OpenapiV3OauthFlow(undefined, this, "implicit");
 
+    /**
+     **/
     this._password = new OpenapiV3OauthFlow(undefined, this, "password");
 
+    /**
+     **/
     this._clientCredentials = new OpenapiV3OauthFlow(undefined, this, "clientCredentials");
 
+    /**
+     **/
     this._authorizationCode = new OpenapiV3OauthFlow(undefined, this, "authorizationCode");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -118,52 +146,82 @@ export class OauthFlows extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get implicit(): OpenapiV3OauthFlow {
     return this._implicit;
   }
 
+  /**
+   * The setter receives `IOpenapiV3OauthFlow`
+   **/
   public set implicit(v: IOpenapiV3OauthFlow) {
     this.__TypeSetter(this._implicit, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get password(): OpenapiV3OauthFlow {
     return this._password;
   }
 
+  /**
+   * The setter receives `IOpenapiV3OauthFlow`
+   **/
   public set password(v: IOpenapiV3OauthFlow) {
     this.__TypeSetter(this._password, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get clientCredentials(): OpenapiV3OauthFlow {
     return this._clientCredentials;
   }
 
+  /**
+   * The setter receives `IOpenapiV3OauthFlow`
+   **/
   public set clientCredentials(v: IOpenapiV3OauthFlow) {
     this.__TypeSetter(this._clientCredentials, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get authorizationCode(): OpenapiV3OauthFlow {
     return this._authorizationCode;
   }
 
+  /**
+   * The setter receives `IOpenapiV3OauthFlow`
+   **/
   public set authorizationCode(v: IOpenapiV3OauthFlow) {
     this.__TypeSetter(this._authorizationCode, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IOauthFlows) {
+  fromLiteral(data: IOauthFlows): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IOauthFlows {
-    return super.__toLiteral();
+    return super.__toLiteral() as IOauthFlows;
   }
 }
 

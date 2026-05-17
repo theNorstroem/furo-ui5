@@ -30,8 +30,12 @@ export interface TSecuritySchemeOrReference {
  * SecuritySchemeOrReference
  */
 export class SecuritySchemeOrReference extends FieldNode {
+  /**
+   **/
   private _securityScheme: OpenapiV3SecurityScheme;
 
+  /**
+   **/
   private _reference: OpenapiV3Reference;
 
   public __defaultValues: ISecuritySchemeOrReference;
@@ -39,6 +43,7 @@ export class SecuritySchemeOrReference extends FieldNode {
   constructor(initData?: ISecuritySchemeOrReference, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.SecuritySchemeOrReference";
+    this.__meta.description = "SecuritySchemeOrReference";
 
     this.__meta.nodeFields = [
       {
@@ -46,18 +51,30 @@ export class SecuritySchemeOrReference extends FieldNode {
         protoName: "security_scheme",
         FieldConstructor: OpenapiV3SecurityScheme,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "reference",
         protoName: "reference",
         FieldConstructor: OpenapiV3Reference,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
     ];
 
+    this.__meta.oneofGroups = new Map([["oneof", undefined]]);
+
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._securityScheme = new OpenapiV3SecurityScheme(undefined, this, "securityScheme");
 
+    /**
+     **/
     this._reference = new OpenapiV3Reference(undefined, this, "reference");
 
     // Set required fields
@@ -83,28 +100,40 @@ export class SecuritySchemeOrReference extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get securityScheme(): OpenapiV3SecurityScheme {
     return this._securityScheme;
   }
 
+  /**
+   * The setter receives `IOpenapiV3SecurityScheme`
+   **/
   public set securityScheme(v: IOpenapiV3SecurityScheme) {
     this.__TypeSetter(this._securityScheme, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get reference(): OpenapiV3Reference {
     return this._reference;
   }
 
+  /**
+   * The setter receives `IOpenapiV3Reference`
+   **/
   public set reference(v: IOpenapiV3Reference) {
     this.__TypeSetter(this._reference, v);
   }
 
-  fromLiteral(data: ISecuritySchemeOrReference) {
+  fromLiteral(data: ISecuritySchemeOrReference): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ISecuritySchemeOrReference {
-    return super.__toLiteral();
+    return super.__toLiteral() as ISecuritySchemeOrReference;
   }
 }
 

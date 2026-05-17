@@ -5,6 +5,12 @@ import { FieldNode, INT32, Registry } from "@furo/open-models/dist/index";
 
 /**
  * @interface IEnumDescriptorProtoEnumReservedRange
+ *  Range of reserved numeric values. Reserved values may not be used by
+ *  entries in the same enum. Reserved ranges may not overlap.
+ *
+ *  Note that this is distinct from DescriptorProto.ReservedRange in that it
+ *  is inclusive such that it can appropriately represent the entire int32
+ *  domain.
  */
 export interface IEnumDescriptorProtoEnumReservedRange {
   start?: number; //  Inclusive.
@@ -14,6 +20,12 @@ export interface IEnumDescriptorProtoEnumReservedRange {
 
 /**
  * @interface TEnumDescriptorProtoEnumReservedRange
+ *  Range of reserved numeric values. Reserved values may not be used by
+ *  entries in the same enum. Reserved ranges may not overlap.
+ *
+ *  Note that this is distinct from DescriptorProto.ReservedRange in that it
+ *  is inclusive such that it can appropriately represent the entire int32
+ *  domain.
  */
 export interface TEnumDescriptorProtoEnumReservedRange {
   start?: number; //  Inclusive.
@@ -23,10 +35,20 @@ export interface TEnumDescriptorProtoEnumReservedRange {
 
 /**
  * EnumDescriptorProtoEnumReservedRange
+ *  Range of reserved numeric values. Reserved values may not be used by
+ *  entries in the same enum. Reserved ranges may not overlap.
+ *
+ *  Note that this is distinct from DescriptorProto.ReservedRange in that it
+ *  is inclusive such that it can appropriately represent the entire int32
+ *  domain.
  */
 export class EnumDescriptorProtoEnumReservedRange extends FieldNode {
+  /**
+   **/
   private _start: INT32; //  Inclusive.
 
+  /**
+   **/
   private _end: INT32; //  Inclusive.
 
   public __defaultValues: IEnumDescriptorProtoEnumReservedRange;
@@ -34,6 +56,8 @@ export class EnumDescriptorProtoEnumReservedRange extends FieldNode {
   constructor(initData?: IEnumDescriptorProtoEnumReservedRange, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.EnumDescriptorProto.EnumReservedRange";
+    this.__meta.description =
+      "EnumDescriptorProtoEnumReservedRange Range of reserved numeric values. Reserved values may not be used by\n entries in the same enum. Reserved ranges may not overlap.\n\n Note that this is distinct from DescriptorProto.ReservedRange in that it\n is inclusive such that it can appropriately represent the entire int32\n domain.";
 
     this.__meta.nodeFields = [
       {
@@ -41,18 +65,26 @@ export class EnumDescriptorProtoEnumReservedRange extends FieldNode {
         protoName: "start",
         FieldConstructor: INT32,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "end",
         protoName: "end",
         FieldConstructor: INT32,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._start = new INT32(undefined, this, "start");
 
+    /**
+     **/
     this._end = new INT32(undefined, this, "end");
 
     // Set required fields
@@ -78,28 +110,40 @@ export class EnumDescriptorProtoEnumReservedRange extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get start(): INT32 {
     return this._start;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set start(v: number) {
     this.__PrimitivesSetter(this._start, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get end(): INT32 {
     return this._end;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set end(v: number) {
     this.__PrimitivesSetter(this._end, v);
   }
 
-  fromLiteral(data: IEnumDescriptorProtoEnumReservedRange) {
+  fromLiteral(data: IEnumDescriptorProtoEnumReservedRange): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IEnumDescriptorProtoEnumReservedRange {
-    return super.__toLiteral();
+    return super.__toLiteral() as IEnumDescriptorProtoEnumReservedRange;
   }
 }
 

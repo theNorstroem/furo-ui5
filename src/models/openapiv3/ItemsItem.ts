@@ -27,6 +27,8 @@ export interface TItemsItem {
  * ItemsItem
  */
 export class ItemsItem extends FieldNode {
+  /**
+   **/
   private _schemaOrReference: ARRAY<OpenapiV3SchemaOrReference, IOpenapiV3SchemaOrReference>;
 
   public __defaultValues: IItemsItem;
@@ -34,6 +36,7 @@ export class ItemsItem extends FieldNode {
   constructor(initData?: IItemsItem, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.ItemsItem";
+    this.__meta.description = "ItemsItem";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class ItemsItem extends FieldNode {
         protoName: "schema_or_reference",
         FieldConstructor: OpenapiV3SchemaOrReference,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._schemaOrReference = new ARRAY<OpenapiV3SchemaOrReference, IOpenapiV3SchemaOrReference>(undefined, this, "schemaOrReference");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class ItemsItem extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get schemaOrReference(): ARRAY<OpenapiV3SchemaOrReference, IOpenapiV3SchemaOrReference> {
     return this._schemaOrReference;
   }
 
+  /**
+   * The setter receives `IOpenapiV3SchemaOrReference[]`
+   **/
   public set schemaOrReference(v: IOpenapiV3SchemaOrReference[]) {
     this.__TypeSetter(this._schemaOrReference, v);
   }
 
-  fromLiteral(data: IItemsItem) {
+  fromLiteral(data: IItemsItem): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IItemsItem {
-    return super.__toLiteral();
+    return super.__toLiteral() as IItemsItem;
   }
 }
 

@@ -25,10 +25,16 @@ export interface TDefaultType {
  * DefaultType
  */
 export class DefaultType extends FieldNode {
+  /**
+   **/
   private _number: DOUBLE;
 
+  /**
+   **/
   private _boolean: BOOLEAN;
 
+  /**
+   **/
   private _string: STRING;
 
   public __defaultValues: IDefaultType;
@@ -36,6 +42,7 @@ export class DefaultType extends FieldNode {
   constructor(initData?: IDefaultType, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.DefaultType";
+    this.__meta.description = "DefaultType";
 
     this.__meta.nodeFields = [
       {
@@ -43,26 +50,42 @@ export class DefaultType extends FieldNode {
         protoName: "number",
         FieldConstructor: DOUBLE,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "boolean",
         protoName: "boolean",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
       {
         fieldName: "string",
         protoName: "string",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
+        oneofGroup: "oneof",
       },
     ];
 
+    this.__meta.oneofGroups = new Map([["oneof", undefined]]);
+
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._number = new DOUBLE(undefined, this, "number");
 
+    /**
+     **/
     this._boolean = new BOOLEAN(undefined, this, "boolean");
 
+    /**
+     **/
     this._string = new STRING(undefined, this, "string");
 
     // Set required fields
@@ -88,36 +111,54 @@ export class DefaultType extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get number(): DOUBLE {
     return this._number;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set number(v: number) {
     this.__PrimitivesSetter(this._number, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get boolean(): BOOLEAN {
     return this._boolean;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set boolean(v: boolean) {
     this.__PrimitivesSetter(this._boolean, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get string(): STRING {
     return this._string;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set string(v: string) {
     this.__PrimitivesSetter(this._string, v);
   }
 
-  fromLiteral(data: IDefaultType) {
+  fromLiteral(data: IDefaultType): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IDefaultType {
-    return super.__toLiteral();
+    return super.__toLiteral() as IDefaultType;
   }
 }
 

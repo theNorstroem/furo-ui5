@@ -27,6 +27,8 @@ export interface TMediaTypes {
  * MediaTypes
  */
 export class MediaTypes extends FieldNode {
+  /**
+   **/
   private _additionalProperties: ARRAY<OpenapiV3NamedMediaType, IOpenapiV3NamedMediaType>;
 
   public __defaultValues: IMediaTypes;
@@ -34,6 +36,7 @@ export class MediaTypes extends FieldNode {
   constructor(initData?: IMediaTypes, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.MediaTypes";
+    this.__meta.description = "MediaTypes";
 
     this.__meta.nodeFields = [
       {
@@ -41,10 +44,15 @@ export class MediaTypes extends FieldNode {
         protoName: "additional_properties",
         FieldConstructor: OpenapiV3NamedMediaType,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._additionalProperties = new ARRAY<OpenapiV3NamedMediaType, IOpenapiV3NamedMediaType>(undefined, this, "additionalProperties");
 
     // Set required fields
@@ -70,20 +78,26 @@ export class MediaTypes extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get additionalProperties(): ARRAY<OpenapiV3NamedMediaType, IOpenapiV3NamedMediaType> {
     return this._additionalProperties;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedMediaType[]`
+   **/
   public set additionalProperties(v: IOpenapiV3NamedMediaType[]) {
     this.__TypeSetter(this._additionalProperties, v);
   }
 
-  fromLiteral(data: IMediaTypes) {
+  fromLiteral(data: IMediaTypes): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IMediaTypes {
-    return super.__toLiteral();
+    return super.__toLiteral() as IMediaTypes;
   }
 }
 

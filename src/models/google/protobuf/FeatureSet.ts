@@ -56,16 +56,28 @@ export interface TFeatureSet {
  *  conflict here.
  */
 export class FeatureSet extends FieldNode {
+  /**
+   **/
   private _fieldPresence: ENUM<GoogleProtobufFeatureSetFieldPresence>;
 
+  /**
+   **/
   private _enumType: ENUM<GoogleProtobufFeatureSetEnumType>;
 
+  /**
+   **/
   private _repeatedFieldEncoding: ENUM<GoogleProtobufFeatureSetRepeatedFieldEncoding>;
 
+  /**
+   **/
   private _utf8Validation: ENUM<GoogleProtobufFeatureSetUtf8Validation>;
 
+  /**
+   **/
   private _messageEncoding: ENUM<GoogleProtobufFeatureSetMessageEncoding>;
 
+  /**
+   **/
   private _jsonFormat: ENUM<GoogleProtobufFeatureSetJsonFormat>;
 
   public __defaultValues: IFeatureSet;
@@ -73,6 +85,8 @@ export class FeatureSet extends FieldNode {
   constructor(initData?: IFeatureSet, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.FeatureSet";
+    this.__meta.description =
+      "FeatureSet TODO Enums in C++ gencode (and potentially other languages) are\n not well scoped.  This means that each of the feature enums below can clash\n with each other.  The short names we've chosen maximize call-site\n readability, but leave us very open to this scenario.  A future feature will\n be designed and implemented to handle this, hopefully before we ever hit a\n conflict here.";
 
     this.__meta.nodeFields = [
       {
@@ -80,40 +94,50 @@ export class FeatureSet extends FieldNode {
         protoName: "field_presence",
         FieldConstructor: ENUM<GoogleProtobufFeatureSetFieldPresence>,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "enumType",
         protoName: "enum_type",
         FieldConstructor: ENUM<GoogleProtobufFeatureSetEnumType>,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "repeatedFieldEncoding",
         protoName: "repeated_field_encoding",
         FieldConstructor: ENUM<GoogleProtobufFeatureSetRepeatedFieldEncoding>,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "utf8Validation",
         protoName: "utf8_validation",
         FieldConstructor: ENUM<GoogleProtobufFeatureSetUtf8Validation>,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "messageEncoding",
         protoName: "message_encoding",
         FieldConstructor: ENUM<GoogleProtobufFeatureSetMessageEncoding>,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "jsonFormat",
         protoName: "json_format",
         FieldConstructor: ENUM<GoogleProtobufFeatureSetJsonFormat>,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._fieldPresence = new ENUM<GoogleProtobufFeatureSetFieldPresence>(
       undefined,
       GoogleProtobufFeatureSetFieldPresence,
@@ -122,6 +146,8 @@ export class FeatureSet extends FieldNode {
       "fieldPresence"
     );
 
+    /**
+     **/
     this._enumType = new ENUM<GoogleProtobufFeatureSetEnumType>(
       undefined,
       GoogleProtobufFeatureSetEnumType,
@@ -130,6 +156,8 @@ export class FeatureSet extends FieldNode {
       "enumType"
     );
 
+    /**
+     **/
     this._repeatedFieldEncoding = new ENUM<GoogleProtobufFeatureSetRepeatedFieldEncoding>(
       undefined,
       GoogleProtobufFeatureSetRepeatedFieldEncoding,
@@ -138,6 +166,8 @@ export class FeatureSet extends FieldNode {
       "repeatedFieldEncoding"
     );
 
+    /**
+     **/
     this._utf8Validation = new ENUM<GoogleProtobufFeatureSetUtf8Validation>(
       undefined,
       GoogleProtobufFeatureSetUtf8Validation,
@@ -146,6 +176,8 @@ export class FeatureSet extends FieldNode {
       "utf8Validation"
     );
 
+    /**
+     **/
     this._messageEncoding = new ENUM<GoogleProtobufFeatureSetMessageEncoding>(
       undefined,
       GoogleProtobufFeatureSetMessageEncoding,
@@ -154,6 +186,8 @@ export class FeatureSet extends FieldNode {
       "messageEncoding"
     );
 
+    /**
+     **/
     this._jsonFormat = new ENUM<GoogleProtobufFeatureSetJsonFormat>(
       undefined,
       GoogleProtobufFeatureSetJsonFormat,
@@ -185,60 +219,96 @@ export class FeatureSet extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get fieldPresence(): ENUM<GoogleProtobufFeatureSetFieldPresence> {
     return this._fieldPresence;
   }
 
+  /**
+   * The setter receives `GoogleProtobufFeatureSetFieldPresence`
+   **/
   public set fieldPresence(v: GoogleProtobufFeatureSetFieldPresence) {
     this.__TypeSetter(this._fieldPresence, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get enumType(): ENUM<GoogleProtobufFeatureSetEnumType> {
     return this._enumType;
   }
 
+  /**
+   * The setter receives `GoogleProtobufFeatureSetEnumType`
+   **/
   public set enumType(v: GoogleProtobufFeatureSetEnumType) {
     this.__TypeSetter(this._enumType, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get repeatedFieldEncoding(): ENUM<GoogleProtobufFeatureSetRepeatedFieldEncoding> {
     return this._repeatedFieldEncoding;
   }
 
+  /**
+   * The setter receives `GoogleProtobufFeatureSetRepeatedFieldEncoding`
+   **/
   public set repeatedFieldEncoding(v: GoogleProtobufFeatureSetRepeatedFieldEncoding) {
     this.__TypeSetter(this._repeatedFieldEncoding, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get utf8Validation(): ENUM<GoogleProtobufFeatureSetUtf8Validation> {
     return this._utf8Validation;
   }
 
+  /**
+   * The setter receives `GoogleProtobufFeatureSetUtf8Validation`
+   **/
   public set utf8Validation(v: GoogleProtobufFeatureSetUtf8Validation) {
     this.__TypeSetter(this._utf8Validation, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get messageEncoding(): ENUM<GoogleProtobufFeatureSetMessageEncoding> {
     return this._messageEncoding;
   }
 
+  /**
+   * The setter receives `GoogleProtobufFeatureSetMessageEncoding`
+   **/
   public set messageEncoding(v: GoogleProtobufFeatureSetMessageEncoding) {
     this.__TypeSetter(this._messageEncoding, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get jsonFormat(): ENUM<GoogleProtobufFeatureSetJsonFormat> {
     return this._jsonFormat;
   }
 
+  /**
+   * The setter receives `GoogleProtobufFeatureSetJsonFormat`
+   **/
   public set jsonFormat(v: GoogleProtobufFeatureSetJsonFormat) {
     this.__TypeSetter(this._jsonFormat, v);
   }
 
-  fromLiteral(data: IFeatureSet) {
+  fromLiteral(data: IFeatureSet): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IFeatureSet {
-    return super.__toLiteral();
+    return super.__toLiteral() as IFeatureSet;
   }
 }
 

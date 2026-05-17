@@ -36,16 +36,28 @@ export interface TXml {
  *  A metadata object that allows for more fine-tuned XML model definitions.  When using arrays, XML element names are *not* inferred (for singular/plural forms) and the `name` property SHOULD be used to add that information. See examples for expected behavior.
  */
 export class Xml extends FieldNode {
+  /**
+   **/
   private _name: STRING;
 
+  /**
+   **/
   private _namespace: STRING;
 
+  /**
+   **/
   private _prefix: STRING;
 
+  /**
+   **/
   private _attribute: BOOLEAN;
 
+  /**
+   **/
   private _wrapped: BOOLEAN;
 
+  /**
+   **/
   private _specificationExtension: ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>;
 
   public __defaultValues: IXml;
@@ -53,6 +65,8 @@ export class Xml extends FieldNode {
   constructor(initData?: IXml, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "openapi.v3.Xml";
+    this.__meta.description =
+      "Xml A metadata object that allows for more fine-tuned XML model definitions.  When using arrays, XML element names are *not* inferred (for singular/plural forms) and the `name` property SHOULD be used to add that information. See examples for expected behavior.";
 
     this.__meta.nodeFields = [
       {
@@ -60,50 +74,70 @@ export class Xml extends FieldNode {
         protoName: "name",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "namespace",
         protoName: "namespace",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "prefix",
         protoName: "prefix",
         FieldConstructor: STRING,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "attribute",
         protoName: "attribute",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "wrapped",
         protoName: "wrapped",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "",
       },
       {
         fieldName: "specificationExtension",
         protoName: "specification_extension",
         FieldConstructor: OpenapiV3NamedAny,
         constraints: {},
+        description: "",
       },
     ];
 
     // Initialize the fields
+    // ---------------------
+
+    /**
+     **/
     this._name = new STRING(undefined, this, "name");
 
+    /**
+     **/
     this._namespace = new STRING(undefined, this, "namespace");
 
+    /**
+     **/
     this._prefix = new STRING(undefined, this, "prefix");
 
+    /**
+     **/
     this._attribute = new BOOLEAN(undefined, this, "attribute");
 
+    /**
+     **/
     this._wrapped = new BOOLEAN(undefined, this, "wrapped");
 
+    /**
+     **/
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
@@ -129,60 +163,96 @@ export class Xml extends FieldNode {
     this.__meta.isPristine = true;
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get name(): STRING {
     return this._name;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set name(v: string) {
     this.__PrimitivesSetter(this._name, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get namespace(): STRING {
     return this._namespace;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set namespace(v: string) {
     this.__PrimitivesSetter(this._namespace, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get prefix(): STRING {
     return this._prefix;
   }
 
+  /**
+   * The setter receives `string`
+   **/
   public set prefix(v: string) {
     this.__PrimitivesSetter(this._prefix, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get attribute(): BOOLEAN {
     return this._attribute;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set attribute(v: boolean) {
     this.__PrimitivesSetter(this._attribute, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get wrapped(): BOOLEAN {
     return this._wrapped;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set wrapped(v: boolean) {
     this.__PrimitivesSetter(this._wrapped, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get specificationExtension(): ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny> {
     return this._specificationExtension;
   }
 
+  /**
+   * The setter receives `IOpenapiV3NamedAny[]`
+   **/
   public set specificationExtension(v: IOpenapiV3NamedAny[]) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 
-  fromLiteral(data: IXml) {
+  fromLiteral(data: IXml): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IXml {
-    return super.__toLiteral();
+    return super.__toLiteral() as IXml;
   }
 }
 

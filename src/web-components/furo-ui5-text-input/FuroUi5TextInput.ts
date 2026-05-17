@@ -36,9 +36,9 @@ export class FuroUi5TextInput extends Input {
   private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
 
   private modelReaderWriter: ModelReaderWriter | undefined;
-   
+
   private fatHandler: FatHandler<FuroUi5TextInput>;
-   
+
   private stringReaderWriters: StringReaderWriters<FuroUi5TextInput> | undefined;
 
   private readonlyState: ReadonlyState = new ReadonlyState(this);
@@ -47,7 +47,7 @@ export class FuroUi5TextInput extends Input {
     super();
     this.type = "Text";
 
-    this.fatHandler = new FatHandler(this as FuroUi5TextInput, ["placeholder", "maxlength"]);
+    this.fatHandler = new FatHandler<FuroUi5TextInput>(this, ["placeholder", "maxlength"]);
     this.fatHandler.readAttributes();
   }
 
@@ -83,8 +83,8 @@ export class FuroUi5TextInput extends Input {
   /**
    * Use this to bind a model field by attribute.
    *
-   * @typeref STRING - "@furo/open-models"
-   * @typeref StringValue - "@furo/open-models"
+   * @typeref STRING - "@furo/open-models/"
+   * @typeref StringValue - "@furo/open-models/"
    * @typeref FuroFatString - "@/models/index.js"
    * @public
    */
@@ -95,10 +95,10 @@ export class FuroUi5TextInput extends Input {
   /**
    * Connects your data model to this component.
    *
-   * @paramref fieldNode - STRING - "@furo/open-models"
+   * @paramref fieldNode - STRING - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: STRING | FuroFatString | StringValue) {
+  public bindData(fieldNode: STRING | FuroFatString | StringValue | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -141,10 +141,8 @@ export class FuroUi5TextInput extends Input {
     this.placeholder = this.placeholder === undefined ? this._model.__placeholder : this.placeholder;
 
     // a11y
-    if (this.accessibleName === undefined) {
-      if (this.accessibleName === undefined) {
+    if (this.accessibleName ??= undefined) {
         this.accessibleName = this._model.__label;
-      }
     }
   }
 
@@ -168,7 +166,7 @@ export class FuroUi5TextInput extends Input {
   }
 
   private writeToModel(): void {
-    this.modelReaderWriter!.writeModel();
+    this.modelReaderWriter?.writeModel();
   }
 
   private _getModelReaders(): Map<string, () => void> {

@@ -9,8 +9,9 @@
 
   <script type="module">
 
-    import "@ui5/webcomponents/Assets";
-    import "@ui5/webcomponents-icons/AllIcons";
+    import "@/Assets";
+    import "@/Icons";
+    import "@/web-components/furo-ui5-button"
     // import web-components here
 
   </script>
@@ -50,11 +51,12 @@
     </tr>
     </thead>
     <tbody>
+
     <tr value-state="Negative">
-      <th>Name / Description</th>
-      <th>Qty.</th>
-      <th>@</th>
-      <th>Cost</th>
+      <td>Paperclips</td>
+      <td>1000 <br>ll</td>
+      <td><furo-ui5-rating-indicator value="3"></furo-ui5-rating-indicator></td>
+      <td>10.00</td>
     </tr>
     <tr value-state="Positive">
       <td>Paperclips</td>
@@ -62,7 +64,7 @@
       <td><furo-ui5-rating-indicator value="3"></furo-ui5-rating-indicator></td>
       <td>10.00</td>
     </tr>
-    <tr>
+    <tr  value-state="Critical">
       <td>Staples (box)</td>
       <td>100</td>
       <td>1.00</td>

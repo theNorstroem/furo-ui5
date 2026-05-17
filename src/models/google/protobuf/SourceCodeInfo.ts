@@ -55,7 +55,7 @@ export interface ISourceCodeInfo {
    *  - Just because a location's span is a subset of some other location's span
    *    does not mean that it is a descendant.  For example, a "group" defines
    *    both a type and a field in a single declaration.  Thus, the locations
-   *    corresponding to the type and field and their web-components will overlap.
+   *    corresponding to the type and field and their components will overlap.
    *  - Code which tries to interpret locations should probably be designed to
    *    ignore those that it doesn't understand, as more types of locations could
    *    be recorded in the future.
@@ -109,7 +109,7 @@ export interface TSourceCodeInfo {
    *  - Just because a location's span is a subset of some other location's span
    *    does not mean that it is a descendant.  For example, a "group" defines
    *    both a type and a field in a single declaration.  Thus, the locations
-   *    corresponding to the type and field and their web-components will overlap.
+   *    corresponding to the type and field and their components will overlap.
    *  - Code which tries to interpret locations should probably be designed to
    *    ignore those that it doesn't understand, as more types of locations could
    *    be recorded in the future.
@@ -123,49 +123,51 @@ export interface TSourceCodeInfo {
  *  FileDescriptorProto was generated.
  */
 export class SourceCodeInfo extends FieldNode {
-  //  A Location identifies a piece of source code in a .proto file which
-  //  corresponds to a particular definition.  This information is intended
-  //  to be useful to IDEs, code indexers, documentation generators, and similar
-  //  tools.
-  //
-  //  For example, say we have a file like:
-  //    message Foo {
-  //      optional string foo = 1;
-  //    }
-  //  Let's look at just the field definition:
-  //    optional string foo = 1;
-  //    ^       ^^     ^^  ^  ^^^
-  //    a       bc     de  f  ghi
-  //  We have the following locations:
-  //    span   path               represents
-  //    [a,i)  [ 4, 0, 2, 0 ]     The whole field definition.
-  //    [a,b)  [ 4, 0, 2, 0, 4 ]  The label (optional).
-  //    [c,d)  [ 4, 0, 2, 0, 5 ]  The type (string).
-  //    [e,f)  [ 4, 0, 2, 0, 1 ]  The name (foo).
-  //    [g,h)  [ 4, 0, 2, 0, 3 ]  The number (1).
-  //
-  //  Notes:
-  //  - A location may refer to a repeated field itself (i.e. not to any
-  //    particular index within it).  This is used whenever a set of elements are
-  //    logically enclosed in a single code segment.  For example, an entire
-  //    extend block (possibly containing multiple extension definitions) will
-  //    have an outer location whose path refers to the "extensions" repeated
-  //    field without an index.
-  //  - Multiple locations may have the same path.  This happens when a single
-  //    logical declaration is spread out across multiple places.  The most
-  //    obvious example is the "extend" block again -- there may be multiple
-  //    extend blocks in the same scope, each of which will have the same path.
-  //  - A location's span is not always a subset of its parent's span.  For
-  //    example, the "extendee" of an extension declaration appears at the
-  //    beginning of the "extend" block and is shared by all extensions within
-  //    the block.
-  //  - Just because a location's span is a subset of some other location's span
-  //    does not mean that it is a descendant.  For example, a "group" defines
-  //    both a type and a field in a single declaration.  Thus, the locations
-  //    corresponding to the type and field and their web-components will overlap.
-  //  - Code which tries to interpret locations should probably be designed to
-  //    ignore those that it doesn't understand, as more types of locations could
-  //    be recorded in the future.
+  /**
+   * A Location identifies a piece of source code in a .proto file which
+   * corresponds to a particular definition.  This information is intended
+   * to be useful to IDEs, code indexers, documentation generators, and similar
+   * tools.
+   *
+   * For example, say we have a file like:
+   *   message Foo {
+   *     optional string foo = 1;
+   *   }
+   * Let's look at just the field definition:
+   *   optional string foo = 1;
+   *   ^       ^^     ^^  ^  ^^^
+   *   a       bc     de  f  ghi
+   * We have the following locations:
+   *   span   path               represents
+   *   [a,i)  [ 4, 0, 2, 0 ]     The whole field definition.
+   *   [a,b)  [ 4, 0, 2, 0, 4 ]  The label (optional).
+   *   [c,d)  [ 4, 0, 2, 0, 5 ]  The type (string).
+   *   [e,f)  [ 4, 0, 2, 0, 1 ]  The name (foo).
+   *   [g,h)  [ 4, 0, 2, 0, 3 ]  The number (1).
+   *
+   * Notes:
+   * - A location may refer to a repeated field itself (i.e. not to any
+   *   particular index within it).  This is used whenever a set of elements are
+   *   logically enclosed in a single code segment.  For example, an entire
+   *   extend block (possibly containing multiple extension definitions) will
+   *   have an outer location whose path refers to the "extensions" repeated
+   *   field without an index.
+   * - Multiple locations may have the same path.  This happens when a single
+   *   logical declaration is spread out across multiple places.  The most
+   *   obvious example is the "extend" block again -- there may be multiple
+   *   extend blocks in the same scope, each of which will have the same path.
+   * - A location's span is not always a subset of its parent's span.  For
+   *   example, the "extendee" of an extension declaration appears at the
+   *   beginning of the "extend" block and is shared by all extensions within
+   *   the block.
+   * - Just because a location's span is a subset of some other location's span
+   *   does not mean that it is a descendant.  For example, a "group" defines
+   *   both a type and a field in a single declaration.  Thus, the locations
+   *   corresponding to the type and field and their components will overlap.
+   * - Code which tries to interpret locations should probably be designed to
+   *   ignore those that it doesn't understand, as more types of locations could
+   *   be recorded in the future.
+   **/
   private _location: ARRAY<GoogleProtobufSourceCodeInfoLocation, IGoogleProtobufSourceCodeInfoLocation>;
 
   public __defaultValues: ISourceCodeInfo;
@@ -173,6 +175,7 @@ export class SourceCodeInfo extends FieldNode {
   constructor(initData?: ISourceCodeInfo, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "google.protobuf.SourceCodeInfo";
+    this.__meta.description = "SourceCodeInfo Encapsulates information about the original source file from which a\n FileDescriptorProto was generated.";
 
     this.__meta.nodeFields = [
       {
@@ -180,53 +183,59 @@ export class SourceCodeInfo extends FieldNode {
         protoName: "location",
         FieldConstructor: GoogleProtobufSourceCodeInfoLocation,
         constraints: {},
+        description:
+          'A Location identifies a piece of source code in a .proto file which\n corresponds to a particular definition.  This information is intended\n to be useful to IDEs, code indexers, documentation generators, and similar\n tools.\n\n For example, say we have a file like:\n   message Foo {\n     optional string foo = 1;\n   }\n Let\'s look at just the field definition:\n   optional string foo = 1;\n   ^       ^^     ^^  ^  ^^^\n   a       bc     de  f  ghi\n We have the following locations:\n   span   path               represents\n   [a,i)  [ 4, 0, 2, 0 ]     The whole field definition.\n   [a,b)  [ 4, 0, 2, 0, 4 ]  The label (optional).\n   [c,d)  [ 4, 0, 2, 0, 5 ]  The type (string).\n   [e,f)  [ 4, 0, 2, 0, 1 ]  The name (foo).\n   [g,h)  [ 4, 0, 2, 0, 3 ]  The number (1).\n\n Notes:\n - A location may refer to a repeated field itself (i.e. not to any\n   particular index within it).  This is used whenever a set of elements are\n   logically enclosed in a single code segment.  For example, an entire\n   extend block (possibly containing multiple extension definitions) will\n   have an outer location whose path refers to the "extensions" repeated\n   field without an index.\n - Multiple locations may have the same path.  This happens when a single\n   logical declaration is spread out across multiple places.  The most\n   obvious example is the "extend" block again -- there may be multiple\n   extend blocks in the same scope, each of which will have the same path.\n - A location\'s span is not always a subset of its parent\'s span.  For\n   example, the "extendee" of an extension declaration appears at the\n   beginning of the "extend" block and is shared by all extensions within\n   the block.\n - Just because a location\'s span is a subset of some other location\'s span\n   does not mean that it is a descendant.  For example, a "group" defines\n   both a type and a field in a single declaration.  Thus, the locations\n   corresponding to the type and field and their components will overlap.\n - Code which tries to interpret locations should probably be designed to\n   ignore those that it doesn\'t understand, as more types of locations could\n   be recorded in the future.',
       },
     ];
 
     // Initialize the fields
-    //  A Location identifies a piece of source code in a .proto file which
-    //  corresponds to a particular definition.  This information is intended
-    //  to be useful to IDEs, code indexers, documentation generators, and similar
-    //  tools.
-    //
-    //  For example, say we have a file like:
-    //    message Foo {
-    //      optional string foo = 1;
-    //    }
-    //  Let's look at just the field definition:
-    //    optional string foo = 1;
-    //    ^       ^^     ^^  ^  ^^^
-    //    a       bc     de  f  ghi
-    //  We have the following locations:
-    //    span   path               represents
-    //    [a,i)  [ 4, 0, 2, 0 ]     The whole field definition.
-    //    [a,b)  [ 4, 0, 2, 0, 4 ]  The label (optional).
-    //    [c,d)  [ 4, 0, 2, 0, 5 ]  The type (string).
-    //    [e,f)  [ 4, 0, 2, 0, 1 ]  The name (foo).
-    //    [g,h)  [ 4, 0, 2, 0, 3 ]  The number (1).
-    //
-    //  Notes:
-    //  - A location may refer to a repeated field itself (i.e. not to any
-    //    particular index within it).  This is used whenever a set of elements are
-    //    logically enclosed in a single code segment.  For example, an entire
-    //    extend block (possibly containing multiple extension definitions) will
-    //    have an outer location whose path refers to the "extensions" repeated
-    //    field without an index.
-    //  - Multiple locations may have the same path.  This happens when a single
-    //    logical declaration is spread out across multiple places.  The most
-    //    obvious example is the "extend" block again -- there may be multiple
-    //    extend blocks in the same scope, each of which will have the same path.
-    //  - A location's span is not always a subset of its parent's span.  For
-    //    example, the "extendee" of an extension declaration appears at the
-    //    beginning of the "extend" block and is shared by all extensions within
-    //    the block.
-    //  - Just because a location's span is a subset of some other location's span
-    //    does not mean that it is a descendant.  For example, a "group" defines
-    //    both a type and a field in a single declaration.  Thus, the locations
-    //    corresponding to the type and field and their web-components will overlap.
-    //  - Code which tries to interpret locations should probably be designed to
-    //    ignore those that it doesn't understand, as more types of locations could
-    //    be recorded in the future.
+    // ---------------------
+
+    /**
+     *  A Location identifies a piece of source code in a .proto file which
+     *  corresponds to a particular definition.  This information is intended
+     *  to be useful to IDEs, code indexers, documentation generators, and similar
+     *  tools.
+     *
+     *  For example, say we have a file like:
+     *    message Foo {
+     *      optional string foo = 1;
+     *    }
+     *  Let's look at just the field definition:
+     *    optional string foo = 1;
+     *    ^       ^^     ^^  ^  ^^^
+     *    a       bc     de  f  ghi
+     *  We have the following locations:
+     *    span   path               represents
+     *    [a,i)  [ 4, 0, 2, 0 ]     The whole field definition.
+     *    [a,b)  [ 4, 0, 2, 0, 4 ]  The label (optional).
+     *    [c,d)  [ 4, 0, 2, 0, 5 ]  The type (string).
+     *    [e,f)  [ 4, 0, 2, 0, 1 ]  The name (foo).
+     *    [g,h)  [ 4, 0, 2, 0, 3 ]  The number (1).
+     *
+     *  Notes:
+     *  - A location may refer to a repeated field itself (i.e. not to any
+     *    particular index within it).  This is used whenever a set of elements are
+     *    logically enclosed in a single code segment.  For example, an entire
+     *    extend block (possibly containing multiple extension definitions) will
+     *    have an outer location whose path refers to the "extensions" repeated
+     *    field without an index.
+     *  - Multiple locations may have the same path.  This happens when a single
+     *    logical declaration is spread out across multiple places.  The most
+     *    obvious example is the "extend" block again -- there may be multiple
+     *    extend blocks in the same scope, each of which will have the same path.
+     *  - A location's span is not always a subset of its parent's span.  For
+     *    example, the "extendee" of an extension declaration appears at the
+     *    beginning of the "extend" block and is shared by all extensions within
+     *    the block.
+     *  - Just because a location's span is a subset of some other location's span
+     *    does not mean that it is a descendant.  For example, a "group" defines
+     *    both a type and a field in a single declaration.  Thus, the locations
+     *    corresponding to the type and field and their components will overlap.
+     *  - Code which tries to interpret locations should probably be designed to
+     *    ignore those that it doesn't understand, as more types of locations could
+     *    be recorded in the future.
+     **/
     this._location = new ARRAY<GoogleProtobufSourceCodeInfoLocation, IGoogleProtobufSourceCodeInfoLocation>(undefined, this, "location");
 
     // Set required fields
@@ -252,63 +261,69 @@ export class SourceCodeInfo extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  A Location identifies a piece of source code in a .proto file which
-  //  corresponds to a particular definition.  This information is intended
-  //  to be useful to IDEs, code indexers, documentation generators, and similar
-  //  tools.
-  //
-  //  For example, say we have a file like:
-  //    message Foo {
-  //      optional string foo = 1;
-  //    }
-  //  Let's look at just the field definition:
-  //    optional string foo = 1;
-  //    ^       ^^     ^^  ^  ^^^
-  //    a       bc     de  f  ghi
-  //  We have the following locations:
-  //    span   path               represents
-  //    [a,i)  [ 4, 0, 2, 0 ]     The whole field definition.
-  //    [a,b)  [ 4, 0, 2, 0, 4 ]  The label (optional).
-  //    [c,d)  [ 4, 0, 2, 0, 5 ]  The type (string).
-  //    [e,f)  [ 4, 0, 2, 0, 1 ]  The name (foo).
-  //    [g,h)  [ 4, 0, 2, 0, 3 ]  The number (1).
-  //
-  //  Notes:
-  //  - A location may refer to a repeated field itself (i.e. not to any
-  //    particular index within it).  This is used whenever a set of elements are
-  //    logically enclosed in a single code segment.  For example, an entire
-  //    extend block (possibly containing multiple extension definitions) will
-  //    have an outer location whose path refers to the "extensions" repeated
-  //    field without an index.
-  //  - Multiple locations may have the same path.  This happens when a single
-  //    logical declaration is spread out across multiple places.  The most
-  //    obvious example is the "extend" block again -- there may be multiple
-  //    extend blocks in the same scope, each of which will have the same path.
-  //  - A location's span is not always a subset of its parent's span.  For
-  //    example, the "extendee" of an extension declaration appears at the
-  //    beginning of the "extend" block and is shared by all extensions within
-  //    the block.
-  //  - Just because a location's span is a subset of some other location's span
-  //    does not mean that it is a descendant.  For example, a "group" defines
-  //    both a type and a field in a single declaration.  Thus, the locations
-  //    corresponding to the type and field and their web-components will overlap.
-  //  - Code which tries to interpret locations should probably be designed to
-  //    ignore those that it doesn't understand, as more types of locations could
-  //    be recorded in the future.
+  /**
+   *  A Location identifies a piece of source code in a .proto file which
+   *  corresponds to a particular definition.  This information is intended
+   *  to be useful to IDEs, code indexers, documentation generators, and similar
+   *  tools.
+   *
+   *  For example, say we have a file like:
+   *    message Foo {
+   *      optional string foo = 1;
+   *    }
+   *  Let's look at just the field definition:
+   *    optional string foo = 1;
+   *    ^       ^^     ^^  ^  ^^^
+   *    a       bc     de  f  ghi
+   *  We have the following locations:
+   *    span   path               represents
+   *    [a,i)  [ 4, 0, 2, 0 ]     The whole field definition.
+   *    [a,b)  [ 4, 0, 2, 0, 4 ]  The label (optional).
+   *    [c,d)  [ 4, 0, 2, 0, 5 ]  The type (string).
+   *    [e,f)  [ 4, 0, 2, 0, 1 ]  The name (foo).
+   *    [g,h)  [ 4, 0, 2, 0, 3 ]  The number (1).
+   *
+   *  Notes:
+   *  - A location may refer to a repeated field itself (i.e. not to any
+   *    particular index within it).  This is used whenever a set of elements are
+   *    logically enclosed in a single code segment.  For example, an entire
+   *    extend block (possibly containing multiple extension definitions) will
+   *    have an outer location whose path refers to the "extensions" repeated
+   *    field without an index.
+   *  - Multiple locations may have the same path.  This happens when a single
+   *    logical declaration is spread out across multiple places.  The most
+   *    obvious example is the "extend" block again -- there may be multiple
+   *    extend blocks in the same scope, each of which will have the same path.
+   *  - A location's span is not always a subset of its parent's span.  For
+   *    example, the "extendee" of an extension declaration appears at the
+   *    beginning of the "extend" block and is shared by all extensions within
+   *    the block.
+   *  - Just because a location's span is a subset of some other location's span
+   *    does not mean that it is a descendant.  For example, a "group" defines
+   *    both a type and a field in a single declaration.  Thus, the locations
+   *    corresponding to the type and field and their components will overlap.
+   *  - Code which tries to interpret locations should probably be designed to
+   *    ignore those that it doesn't understand, as more types of locations could
+   *    be recorded in the future.
+   * The getter receives the FieldNode
+   **/
   public get location(): ARRAY<GoogleProtobufSourceCodeInfoLocation, IGoogleProtobufSourceCodeInfoLocation> {
     return this._location;
   }
 
+  /**
+   * The setter receives `IGoogleProtobufSourceCodeInfoLocation[]`
+   **/
   public set location(v: IGoogleProtobufSourceCodeInfoLocation[]) {
     this.__TypeSetter(this._location, v);
   }
 
-  fromLiteral(data: ISourceCodeInfo) {
+  fromLiteral(data: ISourceCodeInfo): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): ISourceCodeInfo {
-    return super.__toLiteral();
+    return super.__toLiteral() as ISourceCodeInfo;
   }
 }
 

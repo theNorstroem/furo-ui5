@@ -46,13 +46,19 @@ export interface TBool {
  *  Furo annotated type wrapper message for `bool`.
  */
 export class Bool extends FieldNode {
-  //  The JSON representation for `BoolValue` is a JSON boolean
+  /**
+   * The JSON representation for `BoolValue` is a JSON boolean
+   **/
   private _value: BOOLEAN;
 
-  //  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+  /**
+   * Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+   **/
   private _labels: MAP<string, BOOLEAN, boolean>;
 
-  //  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+  /**
+   * Attributes for a value, something like confidential-msg: you are not allowed to see this value
+   **/
   private _attributes: MAP<string, STRING, string>;
 
   public __defaultValues: IBool;
@@ -60,6 +66,7 @@ export class Bool extends FieldNode {
   constructor(initData?: IBool, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furo.fat.Bool";
+    this.__meta.description = "Bool Furo annotated type wrapper message for `bool`.";
 
     this.__meta.nodeFields = [
       {
@@ -67,6 +74,7 @@ export class Bool extends FieldNode {
         protoName: "value",
         FieldConstructor: BOOLEAN,
         constraints: {},
+        description: "The JSON representation for `BoolValue` is a JSON boolean",
       },
       {
         fieldName: "labels",
@@ -74,6 +82,7 @@ export class Bool extends FieldNode {
         FieldConstructor: MAP<string, BOOLEAN, boolean>,
         ValueConstructor: BOOLEAN,
         constraints: {},
+        description: "Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...",
       },
       {
         fieldName: "attributes",
@@ -81,17 +90,26 @@ export class Bool extends FieldNode {
         FieldConstructor: MAP<string, STRING, string>,
         ValueConstructor: STRING,
         constraints: {},
+        description: "Attributes for a value, something like confidential-msg: you are not allowed to see this value",
       },
     ];
 
     // Initialize the fields
-    //  The JSON representation for `BoolValue` is a JSON boolean
+    // ---------------------
+
+    /**
+     *  The JSON representation for `BoolValue` is a JSON boolean
+     **/
     this._value = new BOOLEAN(undefined, this, "value");
 
-    //  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+    /**
+     *  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+     **/
     this._labels = new MAP<string, BOOLEAN, boolean>(undefined, this, "labels");
 
-    //  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+    /**
+     *  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+     **/
     this._attributes = new MAP<string, STRING, string>(undefined, this, "attributes");
 
     // Set required fields
@@ -117,39 +135,57 @@ export class Bool extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  The JSON representation for `BoolValue` is a JSON boolean
+  /**
+   *  The JSON representation for `BoolValue` is a JSON boolean
+   * The getter receives the FieldNode
+   **/
   public get value(): BOOLEAN {
     return this._value;
   }
 
+  /**
+   * The setter receives `boolean`
+   **/
   public set value(v: boolean) {
     this.__PrimitivesSetter(this._value, v);
   }
 
-  //  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+  /**
+   *  Labels / flags for the value, something like unspecified, empty, confidential, absent,... Can be used for AI, UI, Business Logic,...
+   * The getter receives the FieldNode
+   **/
   public get labels(): MAP<string, BOOLEAN, boolean> {
     return this._labels;
   }
 
+  /**
+   * The setter receives `{ [key: string]: boolean }`
+   **/
   public set labels(v: Record<string, boolean>) {
     this.__TypeSetter(this._labels, v);
   }
 
-  //  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+  /**
+   *  Attributes for a value, something like confidential-msg: you are not allowed to see this value
+   * The getter receives the FieldNode
+   **/
   public get attributes(): MAP<string, STRING, string> {
     return this._attributes;
   }
 
+  /**
+   * The setter receives `{ [key: string]: string }`
+   **/
   public set attributes(v: Record<string, string>) {
     this.__TypeSetter(this._attributes, v);
   }
 
-  fromLiteral(data: IBool) {
+  fromLiteral(data: IBool): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IBool {
-    return super.__toLiteral();
+    return super.__toLiteral() as IBool;
   }
 }
 

@@ -43,15 +43,23 @@ export interface TColour {
  * Colour
  */
 export class Colour extends FieldNode {
-  //  multiline leading comment
-  //  the red part
+  /**
+   * multiline leading comment
+   * the red part
+   **/
   private _red: INT32; //  with constraints
 
-  //  the green part
+  /**
+   * the green part
+   **/
   private _green: INT32;
 
+  /**
+   **/
   private _blue: INT32;
 
+  /**
+   **/
   private _alpha: FLOAT;
 
   public __defaultValues: IColour;
@@ -59,6 +67,7 @@ export class Colour extends FieldNode {
   constructor(initData?: IColour, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
     this.__meta.typeName = "furoui5test.cube.Colour";
+    this.__meta.description = "Colour";
 
     this.__meta.nodeFields = [
       {
@@ -66,37 +75,51 @@ export class Colour extends FieldNode {
         protoName: "red",
         FieldConstructor: INT32,
         constraints: { maximum: 255 },
+        description: "multiline leading comment\n the red part",
       },
       {
         fieldName: "green",
         protoName: "green",
         FieldConstructor: INT32,
         constraints: { maximum: 255 },
+        description: "the green part",
       },
       {
         fieldName: "blue",
         protoName: "blue",
         FieldConstructor: INT32,
         constraints: { maximum: 255 },
+        description: "",
       },
       {
         fieldName: "alpha",
         protoName: "alpha",
         FieldConstructor: FLOAT,
         constraints: { maximum: 1 },
+        description: "",
       },
     ];
 
     // Initialize the fields
-    //  multiline leading comment
-    //  the red part
+    // ---------------------
+
+    /**
+     *  multiline leading comment
+     *  the red part
+     **/
     this._red = new INT32(undefined, this, "red");
 
-    //  the green part
+    /**
+     *  the green part
+     **/
     this._green = new INT32(undefined, this, "green");
 
+    /**
+     **/
     this._blue = new INT32(undefined, this, "blue");
 
+    /**
+     **/
     this._alpha = new FLOAT(undefined, this, "alpha");
 
     // Set required fields
@@ -127,47 +150,71 @@ export class Colour extends FieldNode {
     this.__meta.isPristine = true;
   }
 
-  //  multiline leading comment
-  //  the red part
+  /**
+   *  multiline leading comment
+   *  the red part
+   * The getter receives the FieldNode
+   **/
   public get red(): INT32 {
     return this._red;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set red(v: number) {
     this.__PrimitivesSetter(this._red, v);
   }
 
-  //  the green part
+  /**
+   *  the green part
+   * The getter receives the FieldNode
+   **/
   public get green(): INT32 {
     return this._green;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set green(v: number) {
     this.__PrimitivesSetter(this._green, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get blue(): INT32 {
     return this._blue;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set blue(v: number) {
     this.__PrimitivesSetter(this._blue, v);
   }
 
+  /**
+   * The getter receives the FieldNode
+   **/
   public get alpha(): FLOAT {
     return this._alpha;
   }
 
+  /**
+   * The setter receives `number`
+   **/
   public set alpha(v: number) {
     this.__PrimitivesSetter(this._alpha, v);
   }
 
-  fromLiteral(data: IColour) {
+  fromLiteral(data: IColour): void {
     super.__fromLiteral(data);
   }
 
   toLiteral(): IColour {
-    return super.__toLiteral();
+    return super.__toLiteral() as IColour;
   }
 }
 

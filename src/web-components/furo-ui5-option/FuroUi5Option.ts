@@ -54,7 +54,7 @@ export class FuroUi5Option extends Option {
    * @paramref fieldNode - OptionLike - "@furo/ui5/dist/index.js"
    * @public
    */
-  public bindData(fieldNode: OptionLike) {
+  public bindData(fieldNode: OptionLike | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -82,16 +82,16 @@ export class FuroUi5Option extends Option {
     this.value = this._model!.id.toString();
     this.innerText = this._model!.displayName.toString();
 
-    if (this._model!.icon) {
-      this.icon = this._model!.icon.toString();
+    if (this._model?.icon) {
+      this.icon = this._model.icon.toString();
     }
 
-    if (this._model!.tooltip) {
-      this.tooltip = this._model!.tooltip.toString();
+    if (this._model?.tooltip) {
+      this.tooltip = this._model.tooltip.toString();
     }
 
-    if (this._model!.additionalText) {
-      this.additionalText = this._model!.additionalText.toString();
+    if (this._model?.additionalText) {
+      this.additionalText = this._model.additionalText.toString();
     }
   }
 
