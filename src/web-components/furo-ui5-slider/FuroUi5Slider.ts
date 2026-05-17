@@ -201,7 +201,11 @@ export class FuroUi5Slider extends Slider {
 
     // init model
     this.numericReaderWriters = new NumericReaderWriters<FuroUi5Slider>(this, "value", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      this.numericReaderWriters.getWriters(),
+      this.numericReaderWriters.getReaders(),
+    );
 
     // listen on state changes on the model
     this.readonlyState.listenToStateChanged(fieldNode);
@@ -220,9 +224,7 @@ export class FuroUi5Slider extends Slider {
     this.handleConstraints(this._model.__getConstraints());
 
     // a11y
-    if (this.accessibleName ??= undefined) {
-      this.accessibleName = this._model.__label;
-    }
+    this.accessibleName ??= this._model.__label;
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {
@@ -245,14 +247,6 @@ export class FuroUi5Slider extends Slider {
 
   private writeToModel(): void {
     this.modelReaderWriter?.writeModel();
-  }
-
-  private _getModelReaders(): Map<string, () => void> {
-    return this.numericReaderWriters!.getReaders();
-  }
-
-  private _getModelWriters(): Map<string, () => void> {
-    return this.numericReaderWriters!.getWriters();
   }
 
   /**

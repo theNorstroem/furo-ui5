@@ -73,7 +73,11 @@ export class FuroUi5Switch extends Switch {
     // init model
     this._model = fieldNode;
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5Switch>(this, "checked", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      this.boolReaderWriters.getWriters(),
+      this.boolReaderWriters.getReaders(),
+    );
 
     // listen on changes from the model
     this._model.__addEventListener("field-value-changed", () => {
@@ -95,12 +99,10 @@ export class FuroUi5Switch extends Switch {
     this.handleConstraints(this._model.__getConstraints());
 
     // set the text placeholdr from model if none was set
-    this.tooltip = this.tooltip === undefined ? this._model.__placeholder : this.tooltip;
+    this.tooltip = this.tooltip ?? undefined ? this._model.__placeholder : this.tooltip;
 
     // a11y
-    if (this.accessibleName ??= undefined) {
-      this.accessibleName = this._model.__label;
-    }
+    this.accessibleName ??= this._model.__label;
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {
@@ -121,14 +123,6 @@ export class FuroUi5Switch extends Switch {
 
   private writeToModel(): void {
     this.modelReaderWriter?.writeModel();
-  }
-
-  private _getModelReaders(): Map<string, () => void> {
-    return this.boolReaderWriters!.getReaders();
-  }
-
-  private _getModelWriters(): Map<string, () => void> {
-    return this.boolReaderWriters!.getWriters();
   }
 
   /**

@@ -2,7 +2,7 @@
 import { BOOLEAN, BoolValue, type FieldConstraints } from "@furo/open-models";
 import { getAnimationMode } from "@ui5/webcomponents-base/dist/config/AnimationMode.js";
 import { css, html, LitElement } from "lit";
-import { property } from "lit/decorators.js";
+import { property, query } from "lit/decorators.js";
 
 import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
@@ -34,6 +34,8 @@ import { FuroFatBool } from "@/models";
  * @public
  */
 export class FuroUi5ShowHide extends LitElement {
+  @query("#measure") private measureEl?: HTMLElement;
+
   private modelReaderWriter: ModelReaderWriter | undefined;
 
   private readonlyState: ReadonlyState = new ReadonlyState(this);
@@ -93,7 +95,11 @@ export class FuroUi5ShowHide extends LitElement {
     // init model
     this._model = fieldNode;
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5ShowHide>(this, "value", this._model);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      this.boolReaderWriters.getWriters(),
+      this.boolReaderWriters.getReaders(),
+    );
 
     // listen on state changes on the model
     this.readonlyState.listenToStateChanged(fieldNode);
@@ -123,14 +129,6 @@ export class FuroUi5ShowHide extends LitElement {
 
   private readFromModel(): void {
     this.modelReaderWriter?.readModel();
-  }
-
-  private _getModelReaders(): Map<string, () => void> {
-    return this.boolReaderWriters!.getReaders();
-  }
-
-  private _getModelWriters(): Map<string, () => void> {
-    return this.boolReaderWriters!.getWriters();
   }
 
   /**
@@ -223,7 +221,7 @@ export class FuroUi5ShowHide extends LitElement {
     const oldval = this._hidden || false;
 
     if (animation === "none" || this.NoAnimation) {
-      this.shadowRoot!.getElementById("measure")!.classList.remove("translate");
+      this.measureEl?.classList.remove("translate");
 
       if (oldval !== hide) {
         setTimeout(() => {
@@ -248,20 +246,20 @@ export class FuroUi5ShowHide extends LitElement {
       }
       return;
     }
-    if (this.shadowRoot && this.shadowRoot.getElementById("measure")) {
-      this._clientHeight = this.shadowRoot.getElementById("measure")!.clientHeight;
+    if (this.measureEl) {
+      this._clientHeight = this.measureEl.clientHeight;
     }
 
     this.setAttribute("animating", "");
     if (hide && this._clientHeight > 0) {
-      this.style.setProperty("height", `${this._clientHeight}px`);
+      this.style.setProperty("height", `${this._clientHeight.toString()}px`);
       clearTimeout(this._timeout);
 
       this._timeout = setTimeout(() => {
         this.style.setProperty("height", "");
       }, 16);
     } else {
-      this.style.setProperty("height", `${this._clientHeight}px`);
+      this.style.setProperty("height", `${this._clientHeight.toString()}px`);
       clearTimeout(this._timeout);
 
       this._timeout = setTimeout(() => {

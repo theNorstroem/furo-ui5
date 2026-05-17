@@ -69,7 +69,7 @@ export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
   private boolReaderWriters: BoolReaderWriters<FuroUi5BoolIcon>;
 
   @property({ type: String, attribute: "accesible-name" })
-  public accessibleName = "Toggle";
+  public accessibleName: string | undefined = "Toggle";
 
   modelReaders: Map<string, () => void>;
 
@@ -109,9 +109,7 @@ export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
     // set the text placeholder from model if none was set
 
     // a11y
-    if (this.accessibleName ??= undefined) {
-      this.accessibleName = this.model.__label;
-    }
+    this.accessibleName ??= this.model.__label;
   }
 
   public writeToModel(): void {

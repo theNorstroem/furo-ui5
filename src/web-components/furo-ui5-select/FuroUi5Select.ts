@@ -109,7 +109,11 @@ export class FuroUi5Select extends Select {
     this._model = fieldNode;
     // init model
     this.stringReaderWriters = new StringReaderWriters<FuroUi5Select>(this, "value", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      this.stringReaderWriters.getWriters(),
+      this.stringReaderWriters.getReaders(),
+    );
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);
@@ -128,14 +132,10 @@ export class FuroUi5Select extends Select {
     this.handleConstraints(this._model.__getConstraints());
 
     // set the placeholder from model if none was set before
-    this.tooltip = this.tooltip === undefined ? this._model.__placeholder : this.tooltip;
+    this.tooltip = this.tooltip ?? undefined ? this._model.__placeholder : this.tooltip;
 
     // a11y
-    if (this.accessibleName ??= undefined) {
-
-        this.accessibleName = this._model.__label;
-
-    }
+    this.accessibleName ??= this._model.__label;
   }
 
   private _optionsModel: OptionLikeList | undefined;
@@ -312,14 +312,6 @@ export class FuroUi5Select extends Select {
 
   private writeToModel(): void {
     this.modelReaderWriter!.writeModel();
-  }
-
-  private _getModelReaders(): Map<string, () => void> {
-    return this.stringReaderWriters!.getReaders();
-  }
-
-  private _getModelWriters(): Map<string, () => void> {
-    return this.stringReaderWriters!.getWriters();
   }
 
   /**

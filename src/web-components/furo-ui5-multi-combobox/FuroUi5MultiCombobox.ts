@@ -109,11 +109,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     // set the placeholder from model if none was set before
 
     // a11y
-    if (this.accessibleName ??= undefined) {
-
-        this.accessibleName = this._model.__label;
-
-    }
+    this.accessibleName ??= this._model.__label;
   }
 
   private _optionsModel: OptionLikeList | undefined;

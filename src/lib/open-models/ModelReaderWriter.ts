@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNode } from "@furo/open-models";
 
 export class ModelReaderWriter {

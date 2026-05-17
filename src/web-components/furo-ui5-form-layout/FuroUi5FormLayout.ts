@@ -1,7 +1,7 @@
 import "@furo/layout/furo-horizontal-flex";
 
 import { css, CSSResult, html, LitElement } from "lit";
-import { property } from "lit/decorators.js";
+import { property, query } from "lit/decorators.js";
 
 /**
  * ### Description
@@ -130,11 +130,12 @@ export default class FuroUi5FormLayout extends LitElement {
   // @ts-expect-error needed to update the CSS attribute
   private multiColumns = false;
 
+  @query("slot:not([name])") private defaultSlot!: HTMLSlotElement;
+
   override firstUpdated() {
-    const slot = this.shadowRoot!.querySelector("slot:not([name])")!;
-    slot.addEventListener("slotchange", () => {
-      const nodes = slot.assignedElements();
-      this.multiColumns = nodes && nodes.length > 1;
+    this.defaultSlot.addEventListener("slotchange", () => {
+      const nodes = this.defaultSlot.assignedElements();
+      this.multiColumns = nodes.length > 1;
     });
   }
 

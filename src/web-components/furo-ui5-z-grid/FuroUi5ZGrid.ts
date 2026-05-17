@@ -110,25 +110,12 @@ export class FuroUi5ZGrid extends LitElement {
   constructor() {
     super();
     void this.updateComplete.then(() => {
-      if (window.ResizeObserver) {
-        const ro = new ResizeObserver(() => {
-          window.requestAnimationFrame(() => {
-            this._checkSize(this.getBoundingClientRect().width);
-          });
+      const ro = new ResizeObserver(() => {
+        window.requestAnimationFrame(() => {
+          this._checkSize(this.getBoundingClientRect().width);
         });
-        ro.observe(this);
-      } else {
-        // fallback, just listen to the resize event
-        setTimeout(() => {
-          const cr = this.getBoundingClientRect();
-          this._checkSize(cr.width);
-        }, 1);
-
-        window.addEventListener("resize", () => {
-          const cr = this.getBoundingClientRect();
-          this._checkSize(cr.width);
-        });
-      }
+      });
+      ro.observe(this);
     });
   }
 

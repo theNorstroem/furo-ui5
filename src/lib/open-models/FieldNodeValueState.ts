@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { FieldNode, ValueState } from "@furo/open-models";
 
 interface ComponentWithValueState extends HTMLElement {

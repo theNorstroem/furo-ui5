@@ -1,6 +1,14 @@
-import { BOOLEAN, type JSONValue, STRING, ValueState } from "@furo/open-models";
+import { BOOLEAN, STRING, ValueState } from "@furo/open-models";
 
-import { type FuroFatBool, FuroFatFloat, FuroFatInt32, FuroFatInt64, type FuroFatString, FuroFatUint32, FuroFatUint64 } from "@/models";
+import {
+  type FuroFatBool,
+  FuroFatFloat,
+  FuroFatInt32,
+  FuroFatInt64,
+  type FuroFatString,
+  FuroFatUint32,
+  FuroFatUint64,
+} from "@/models";
 
 export class FatHandler<T> {
   private target: T;
@@ -15,7 +23,9 @@ export class FatHandler<T> {
   public allowedLabels = new Set<string>(["hidden", "readonly", "disabled", "required"]);
 
   // eslint-disable-next-line class-methods-use-this
-  private _cutomAttributes: (attributes: Map<string, STRING>) => void = (_) => {};
+  private _cutomAttributes: (attributes: Map<string, STRING>) => void = (_) => {
+    return;
+  };
 
   private fatAttributesToMap: (keyof T)[];
 
@@ -25,19 +35,21 @@ export class FatHandler<T> {
   }
 
   private applyAttributes(fat: FuroFatBool | FuroFatString | FuroFatInt32 | FuroFatInt64 | FuroFatUint32 | FuroFatUint64 | FuroFatFloat) {
-    if (fat.attributes.has("value-state") && !this._initialAttributes.includes("value-state")) {
-      if (fat.attributes.has("value-state-message")) {
+    const valueStateAttr = fat.attributes.get("value-state");
+    if (valueStateAttr && !this._initialAttributes.includes("value-state")) {
+      const valueStateMessageAttr = fat.attributes.get("value-state-message");
+      if (valueStateMessageAttr) {
         const stateMap: Record<string, ValueState> = {
           Information: ValueState.Information,
           Positive: ValueState.Positive,
           Negative: ValueState.Negative,
           Critical: ValueState.Critical,
         };
-        const stateKey = fat.attributes.get("value-state")!.toString();
+        const stateKey = valueStateAttr.toString();
         const valueState = stateMap[stateKey] ?? ValueState.None;
-        fat.__setValueState(valueState, [fat.attributes.get("value-state-message")!.toString()]);
+        fat.__setValueState(valueState, [valueStateMessageAttr.toString()]);
       } else {
-        (this.target as HTMLElement).setAttribute("value-state", fat.attributes.get("value-state")!.toString());
+        (this.target as HTMLElement).setAttribute("value-state", valueStateAttr.toString());
       }
     }
 
@@ -45,22 +57,20 @@ export class FatHandler<T> {
     fat.attributes.forEach((val, key) => {
       if (this.fatAttributesToMap.includes(key as keyof T) && !this._initialAttributes.includes(key)) {
         switch (typeof (this.target as unknown as Record<string, string>)[key]) {
-          case "number":
-            {
-              // assign numeric target as number
-              const num: JSONValue = JSON.parse(val.value);
-              if (val.value && typeof num === "number") {
-                (this.target as unknown as Record<string, number>)[key] = num;
-              }
+          case "number": {
+            // assign numeric target as number
+            const num: unknown = JSON.parse(val.value);
+            if (val.value && typeof num === "number") {
+              (this.target as unknown as Record<string, number>)[key] = num;
             }
+          }
             break;
-          case "boolean":
-            {
-              const bol: JSONValue = JSON.parse(val.value);
-              if (val.value && typeof bol === "boolean") {
-                (this.target as unknown as Record<string, boolean>)[key] = bol;
-              }
+          case "boolean": {
+            const bol: unknown = JSON.parse(val.value);
+            if (val.value && typeof bol === "boolean") {
+              (this.target as unknown as Record<string, boolean>)[key] = bol;
             }
+          }
             break;
           case "string":
             (this.target as unknown as Record<string, string>)[key] = val.value;

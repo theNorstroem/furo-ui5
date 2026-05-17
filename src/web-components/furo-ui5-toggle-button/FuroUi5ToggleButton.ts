@@ -84,7 +84,11 @@ export class FuroUi5ToggleButton extends ToggleButton {
     // init model
     this._model = fieldNode;
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5ToggleButton>(this, "pressed", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      this.boolReaderWriters.getWriters(),
+      this.boolReaderWriters.getReaders(),
+    );
 
     // listen on changes from the model
     this._model.__addEventListener("field-value-changed", () => {
@@ -109,9 +113,7 @@ export class FuroUi5ToggleButton extends ToggleButton {
     this.innerText = this.innerText === "" ? this._model.__placeholder : this.innerText;
 
     // a11y
-    if (this.accessibleName ??= undefined) {
-      this.accessibleName = this._model.__label;
-    }
+    this.accessibleName ??= this._model.__label;
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {
@@ -128,14 +130,6 @@ export class FuroUi5ToggleButton extends ToggleButton {
 
   private writeToModel(): void {
     this.modelReaderWriter?.writeModel();
-  }
-
-  private _getModelReaders(): Map<string, () => void> {
-    return this.boolReaderWriters!.getReaders();
-  }
-
-  private _getModelWriters(): Map<string, () => void> {
-    return this.boolReaderWriters!.getWriters();
   }
 
   /**

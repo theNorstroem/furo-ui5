@@ -1,6 +1,6 @@
 import { LitFBP } from "@furo/fbp/dist/LitFBP";
 import { css, html, LitElement } from "lit";
-import { property } from "lit/decorators.js";
+import { property, query } from "lit/decorators.js";
 import SignaturePad from "signature_pad";
 
 import DebounceBuilder from "@/util/Debounce";
@@ -17,7 +17,7 @@ import DebounceBuilder from "@/util/Debounce";
 
  */
 export class FuroUi5SignPad extends LitFBP(LitElement) {
-  private canvas: HTMLCanvasElement | null = null;
+  @query("canvas") private canvas!: HTMLCanvasElement;
 
   private signaturePad: SignaturePad | undefined;
 
@@ -56,9 +56,7 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
   override _FBPReady() {
     super._FBPReady();
 
-    this.canvas = this.shadowRoot!.querySelector("canvas");
-
-    this.signaturePad = new SignaturePad(this.canvas!, {});
+    this.signaturePad = new SignaturePad(this.canvas, {});
     const processChanges = DebounceBuilder(() => {
       this.encodeImage();
     }, 250);
@@ -74,7 +72,7 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
     ro.observe(this);
 
     if (this.disabled) {
-      this.signaturePad?.off();
+      this.signaturePad.off();
     }
     this.signaturePad.clear();
   }
@@ -84,13 +82,11 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
    *
    */
   private handleResize() {
-    if (this.canvas) {
-      const ratio = Math.max(window.devicePixelRatio || 1, 1);
-      this.canvas.width = this.canvas.offsetWidth * ratio;
-      this.canvas.height = this.canvas.offsetHeight * ratio;
-      this.canvas.getContext("2d")?.scale(ratio, ratio);
-      this.signaturePad!.redraw();
-    }
+    const ratio = Math.max(window.devicePixelRatio || 1, 1);
+    this.canvas.width = this.canvas.offsetWidth * ratio;
+    this.canvas.height = this.canvas.offsetHeight * ratio;
+    this.canvas.getContext("2d")?.scale(ratio, ratio);
+    this.signaturePad?.redraw();
   }
 
   /**
@@ -186,7 +182,7 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
   public putImage(encodedImage: string) {
     const img = new Image();
     img.src = encodedImage;
-    const ctx = this.canvas!.getContext("2d")!;
+    const ctx = this.canvas.getContext("2d")!;
 
     img.onload = () => {
       ctx.drawImage(img, 0, 0); // Or at whatever offset you like
@@ -200,7 +196,7 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
    * The encoded image is available in the `image` property.
    */
   encodeImage() {
-    this.image = this.canvas!.toDataURL();
+    this.image = this.canvas.toDataURL();
     const customEvent = new CustomEvent<string>("sign-updated", {
       composed: true,
       bubbles: true,

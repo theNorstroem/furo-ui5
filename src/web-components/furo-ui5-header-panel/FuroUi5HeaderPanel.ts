@@ -17,7 +17,7 @@ import "@ui5/webcomponents-icons/dist/share.js";
 import "../furo-ui5-icon";
 
 import { css, LitElement, nothing } from "lit";
-import { property } from "lit/decorators.js";
+import { property, query } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
 
 import IconShape from "@/types/IconShape";
@@ -219,9 +219,17 @@ export class FuroUi5HeaderPanel extends LitElement {
    *
    * @private
    */
-  private _showHideComponent: FuroUi5ShowHide | undefined;
+  @query("#showHide") private _showHideComponent?: FuroUi5ShowHide;
 
-  private _summaryComponent: FuroUi5ShowHide | undefined;
+  @query("#summaryShowHide") private _summaryComponent?: FuroUi5ShowHide;
+
+  @query(".wrapper") private _wrapperEl?: HTMLDivElement;
+
+  @query(".content") private _contentSlotEl?: HTMLElement;
+
+  @query("#kpinav") private _kpiNavEl?: HTMLElement;
+
+  @query("#variantIcon") private _variantIconEl?: HTMLElement;
 
   /**
    *
@@ -325,9 +333,6 @@ export class FuroUi5HeaderPanel extends LitElement {
     this.setAttribute("furo-ui5-header-panel", "");
 
     this.updateComplete.then(() => {
-      this._showHideComponent = this.shadowRoot!.getElementById("showHide") as FuroUi5ShowHide;
-      this._summaryComponent = this.shadowRoot!.getElementById("summaryShowHide") as FuroUi5ShowHide;
-
       let wrappersize = 390;
       // set wrap if content is smaller then 390px
       const ro = new ResizeObserver((entries) => {
@@ -336,16 +341,17 @@ export class FuroUi5HeaderPanel extends LitElement {
           if (width > 0 && width < 406) {
             this.setAttribute("wrap", "");
 
-            wrappersize = this.shadowRoot!.querySelector<HTMLDivElement>(".wrapper")!.offsetWidth;
+            if (this._wrapperEl) {
+              wrappersize = this._wrapperEl.offsetWidth;
+            }
           } else if (width > 111 + wrappersize) {
             this.removeAttribute("wrap");
           }
         });
       });
 
-      const contentslot = this.shadowRoot!.querySelector(".content");
-      if (contentslot != null) {
-        ro.observe(contentslot);
+      if (this._contentSlotEl) {
+        ro.observe(this._contentSlotEl);
       }
 
       document.addEventListener("scroll", this._scrollhandler, {
@@ -356,7 +362,7 @@ export class FuroUi5HeaderPanel extends LitElement {
         passive: true,
       });
 
-      NavigationGroup(this.shadowRoot!.querySelector("#kpinav"), "*");
+      NavigationGroup(this._kpiNavEl ?? null, "*");
     });
   }
 
@@ -417,7 +423,7 @@ export class FuroUi5HeaderPanel extends LitElement {
    * @param options
    */
   override focus(options?: FocusOptions) {
-    this.shadowRoot!.getElementById("variantIcon")!.focus(options);
+    this._variantIconEl?.focus(options);
   }
 
   /**

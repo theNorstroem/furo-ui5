@@ -240,12 +240,10 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
     this.handleConstraints(this._model.__getConstraints());
 
     // set the placeholder from model if none was set before
-    this.tooltip = this.tooltip === undefined ? this._model.__placeholder : this.tooltip;
+    this.tooltip = this.tooltip ?? undefined ? this._model.__placeholder : this.tooltip;
 
     // a11y
-    if (this.accessibleName ??= undefined) {
-      this.accessibleName = this._model.__label;
-    }
+    this.accessibleName ??= this._model.__label;
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {

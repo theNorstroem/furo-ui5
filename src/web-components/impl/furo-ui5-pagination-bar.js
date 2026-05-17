@@ -2,7 +2,6 @@ import { LitElement, html, css } from 'lit';
 
 import { FBP } from '@furo/fbp';
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/util/src/furo-navigation-pad.js';
 import '@ui5/webcomponents/dist/Button.js';
 import '@ui5/webcomponents-fiori/dist/Bar.js';

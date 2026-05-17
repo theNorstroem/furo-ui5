@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import "@ui5/webcomponents/dist/features/InputSuggestions.js";
 
 import { type FieldConstraints, STRING, StringValue } from "@furo/open-models";
@@ -137,7 +136,11 @@ export class FuroUi5PasswordInput extends Input {
     this._model = fieldNode;
     // init model
     this.stringReaderWriters = new StringReaderWriters<FuroUi5PasswordInput>(this, "value", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      this.stringReaderWriters.getWriters(),
+      this.stringReaderWriters.getReaders(),
+    );
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);
@@ -157,12 +160,10 @@ export class FuroUi5PasswordInput extends Input {
     this.handleConstraints(this._model.__getConstraints());
 
     // set the placeholder from model if none was set before
-    this.placeholder = this.placeholder === undefined ? this._model.__placeholder : this.placeholder;
+    this.placeholder ??= this._model.__placeholder;
 
     // a11y
-    if (this.accessibleName ??= undefined) {
-      this.accessibleName = this._model.__label;
-    }
+    this.accessibleName ??= this._model.__label;
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {
@@ -186,14 +187,6 @@ export class FuroUi5PasswordInput extends Input {
 
   private writeToModel(): void {
     this.modelReaderWriter?.writeModel();
-  }
-
-  private _getModelReaders(): Map<string, () => void> {
-    return this.stringReaderWriters!.getReaders();
-  }
-
-  private _getModelWriters(): Map<string, () => void> {
-    return this.stringReaderWriters!.getWriters();
   }
 
   /**

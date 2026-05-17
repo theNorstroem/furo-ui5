@@ -223,7 +223,11 @@ export class FuroUi5NumberInput extends Input {
 
     // init model
     this.numericReaderWriters = new NumericReaderWriters<FuroUi5NumberInput>(this, "modelValue", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      this.numericReaderWriters.getWriters(),
+      this.numericReaderWriters.getReaders(),
+    );
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);
@@ -243,12 +247,10 @@ export class FuroUi5NumberInput extends Input {
     this.handleConstraints(this._model.__getConstraints());
 
     // set the placeholder from model if none was set before
-    this.placeholder = this.placeholder === undefined ? this._model.__placeholder : this.placeholder;
+    this.placeholder ??= this._model.__placeholder;
 
     // a11y
-    if (this.accessibleName ??= undefined) {
-      this.accessibleName = this._model.__label;
-    }
+    this.accessibleName ??= this._model.__label;
   }
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {
@@ -273,14 +275,6 @@ export class FuroUi5NumberInput extends Input {
 
   private writeToModel(): void {
     this.modelReaderWriter?.writeModel();
-  }
-
-  private _getModelReaders(): Map<string, () => void> {
-    return this.numericReaderWriters!.getReaders();
-  }
-
-  private _getModelWriters(): Map<string, () => void> {
-    return this.numericReaderWriters!.getWriters();
   }
 
   /**

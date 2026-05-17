@@ -57,7 +57,11 @@ export class FuroUiBusyIndicator extends BusyIndicator {
     // init model
     this._model = fieldNode;
     this.boolReaderWriters = new BoolReaderWriters<FuroUiBusyIndicator>(this, "active", this._model);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      new Map<string, () => void>(),
+      this.boolReaderWriters.getReaders(),
+    );
 
     // listen on state changes on the model
 
@@ -74,22 +78,13 @@ export class FuroUiBusyIndicator extends BusyIndicator {
     // constraints
 
     // set the text placeholdr from model if none was set
-    this.text = this.text === undefined ? this._model.__placeholder : this.text;
+    this.text ??= this._model.__placeholder;
 
     // a11y
   }
 
   private readFromModel(): void {
     this.modelReaderWriter?.readModel();
-  }
-
-  private _getModelReaders(): Map<string, () => void> {
-    return this.boolReaderWriters!.getReaders();
-  }
-
-  // eslint-disable-next-line class-methods-use-this
-  private _getModelWriters(): Map<string, () => void> {
-    return new Map<string, () => void>();
   }
 
   /**

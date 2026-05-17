@@ -82,7 +82,11 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
     this._model = fieldNode;
     // init model
     this.stringReaderWriters = new StringReaderWriters<FuroUi5BarcodeScannerDialog>(this, "code", this._model);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      this.stringReaderWriters.getWriters(),
+      new Map<string, () => void>(),
+    );
 
     // listen on state changes on the model
 
@@ -100,15 +104,6 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
     this.code = e.detail.text;
     this.modelReaderWriter?.writeModel();
     this.close();
-  }
-
-  // eslint-disable-next-line class-methods-use-this
-  private _getModelReaders(): Map<string, () => void> {
-    return new Map<string, () => void>();
-  }
-
-  private _getModelWriters(): Map<string, () => void> {
-    return this.stringReaderWriters!.getWriters();
   }
 
   /**

@@ -168,7 +168,11 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
 
     // init model
     this.numericReaderWriters = new NumericReaderWriters<FuroUi5ProgressIndicator>(this, "value", this._model);
-    this.modelReaderWriter = new ModelReaderWriter(this._model, this._getModelWriters(), this._getModelReaders());
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      new Map<string, () => void>(),
+      this.numericReaderWriters.getReaders(),
+    );
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);
@@ -182,22 +186,11 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
     this.readFromModel();
 
     // a11y
-    if (this.accessibleName ??= undefined) {
-      this.accessibleName = this._model.__label;
-    }
+    this.accessibleName ??= this._model.__label;
   }
 
   private readFromModel(): void {
     this.modelReaderWriter?.readModel();
-  }
-
-  private _getModelReaders(): Map<string, () => void> {
-    return this.numericReaderWriters!.getReaders();
-  }
-
-  // eslint-disable-next-line class-methods-use-this
-  private _getModelWriters(): Map<string, () => void> {
-    return new Map<string, () => void>();
   }
 
   /**

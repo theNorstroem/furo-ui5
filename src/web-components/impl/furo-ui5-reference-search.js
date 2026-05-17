@@ -5,7 +5,6 @@ import { Env } from '@furo/framework';
 
 import '@furo/data/src/furo-collection-agent.js';
 import '@furo/fbp/src/flow-repeat.js';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import '@furo/util/src/furo-de-bounce.js';
 import '@ui5/webcomponents/dist/Input.js';
 import '@ui5/webcomponents/dist/List.js';
