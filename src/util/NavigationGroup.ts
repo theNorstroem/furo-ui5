@@ -41,9 +41,8 @@ export const NavigationGroup = (container: HTMLElement | HTMLSlotElement | null,
         nodes.forEach((k) => {
           (k as HTMLElement).setAttribute("tabindex", "-1");
         });
-        if ((nodes[currentIndex] as Closable).close !== undefined) {
-          (nodes[currentIndex] as Closable).close!();
-        }
+        const closable = nodes[currentIndex] as Closable;
+        if (closable.close) closable.close();
 
         (nodes[currentIndex + 1] as HTMLElement).setAttribute("tabindex", "0");
         (nodes[currentIndex + 1] as HTMLElement).focus();
@@ -54,9 +53,8 @@ export const NavigationGroup = (container: HTMLElement | HTMLSlotElement | null,
         nodes.forEach((k) => {
           (k as HTMLElement).setAttribute("tabindex", "-1");
         });
-        if ((nodes[currentIndex] as Closable).close !== undefined) {
-          (nodes[currentIndex] as Closable).close!();
-        }
+        const closable = nodes[currentIndex] as Closable;
+        if (closable.close) closable.close();
         (nodes[currentIndex - 1] as HTMLElement).setAttribute("tabindex", "0");
         (nodes[currentIndex - 1] as HTMLElement).focus();
       }

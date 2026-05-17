@@ -180,12 +180,14 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
    * @param encodedImage {imageURL}
    */
   public putImage(encodedImage: string) {
+    const ctx = this.canvas.getContext("2d");
+    if (!ctx) return;
+
     const img = new Image();
     img.src = encodedImage;
-    const ctx = this.canvas.getContext("2d")!;
 
     img.onload = () => {
-      ctx.drawImage(img, 0, 0); // Or at whatever offset you like
+      ctx.drawImage(img, 0, 0);
     };
     img.src = encodedImage;
     this.encodeImage();

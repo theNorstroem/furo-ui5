@@ -44,7 +44,8 @@ export class ReadonlyState {
 
   private handleParentReadonlyUnset() {
     return () => {
-      if (!this.fieldNode!.__isLogicalReadonly()) {
+      if (this.fieldNode === undefined) return;
+      if (!this.fieldNode.__isLogicalReadonly()) {
         if ("readonly" in this.inputElement) {
           this.inputElement.readonly = false;
         } else {

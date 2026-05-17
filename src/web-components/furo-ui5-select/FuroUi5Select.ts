@@ -187,7 +187,7 @@ export class FuroUi5Select extends Select {
     // write to model
     setTimeout(() => {
       if (this.value === "") {
-        this.value = this.optionsModel?.at(0)?.id.toString() || "";
+        this.value = this.optionsModel?.at(0)?.id.toString() ?? "";
         this.writeToModel();
       }
     });
@@ -201,7 +201,7 @@ export class FuroUi5Select extends Select {
 
     this.optionsModel?.forEach((option, i) => {
       const existingOpt: FuroUi5Option | null = this.querySelector(`furo-ui5-option[value="${option.id.toString()}"]`);
-      const opt: FuroUi5Option = existingOpt || document.createElement("furo-ui5-option");
+      const opt: FuroUi5Option = existingOpt ?? document.createElement("furo-ui5-option");
       opt.model = option;
       opt.style.order = i.toString();
       if (existingOpt === null) {
@@ -268,7 +268,7 @@ export class FuroUi5Select extends Select {
 
     optionList.forEach((option, i) => {
       const existingOpt: FuroUi5Option | null = this.querySelector(`furo-ui5-option[value="${option.id}"]`);
-      const opt: FuroUi5Option = existingOpt || document.createElement("furo-ui5-option");
+      const opt: FuroUi5Option = existingOpt ?? document.createElement("furo-ui5-option");
       opt.innerText = option.displayName;
       opt.value = option.id;
       if (option.icon) {
@@ -311,7 +311,7 @@ export class FuroUi5Select extends Select {
   }
 
   private writeToModel(): void {
-    this.modelReaderWriter!.writeModel();
+    this.modelReaderWriter?.writeModel();
   }
 
   /**

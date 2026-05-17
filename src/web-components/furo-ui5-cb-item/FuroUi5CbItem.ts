@@ -67,11 +67,12 @@ export class FuroUi5CbItem extends ComboBoxItem {
   }
 
   private readFromModel(): void {
-    this.id = this._model!.id.toString();
-    this.text = this._model!.displayName.toString();
+    if (!this._model) return;
+    this.id = this._model.id.toString();
+    this.text = this._model.displayName.toString();
 
-    if (this._model!.additionalText) {
-      this.additionalText = this._model!.additionalText.toString();
+    if (this._model.additionalText) {
+      this.additionalText = this._model.additionalText.toString();
     }
   }
 

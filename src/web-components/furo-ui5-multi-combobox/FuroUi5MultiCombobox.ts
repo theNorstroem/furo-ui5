@@ -192,8 +192,8 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
   }
 
   public setSelectedItems() {
-    if (this.model.at(0)) {
-      const firstElement = this.model.at(0)!;
+    const firstElement = this.model.at(0);
+    if (firstElement) {
       const items: string[] = [];
       if (firstElement.__meta.typeName === "primitives.STRING") {
         // we have a string array

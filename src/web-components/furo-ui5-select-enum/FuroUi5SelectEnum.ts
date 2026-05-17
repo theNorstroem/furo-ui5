@@ -113,7 +113,8 @@ export class FuroUi5SelectEnum extends Select {
   }
 
   private readFromModel(): void {
-    const option = this.querySelector(`furo-ui5-option[id=${this._model!.value}]`);
+    if (!this._model) return;
+    const option = this.querySelector(`furo-ui5-option[id=${this._model.value}]`);
     if (option) {
       const index = [...this.children].indexOf(option);
       // do not update same index
@@ -124,9 +125,10 @@ export class FuroUi5SelectEnum extends Select {
   }
 
   private writeToModel(): void {
+    if (!this._model) return;
     const v = this.selectedOption?.id;
     if (v !== undefined) {
-      this._model!.value = v;
+      this._model.value = v;
     }
   }
 

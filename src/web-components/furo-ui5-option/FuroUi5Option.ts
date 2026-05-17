@@ -79,18 +79,19 @@ export class FuroUi5Option extends Option {
   }
 
   private readFromModel(): void {
-    this.value = this._model!.id.toString();
-    this.innerText = this._model!.displayName.toString();
+    if (!this._model) return;
+    this.value = this._model.id.toString();
+    this.innerText = this._model.displayName.toString();
 
-    if (this._model?.icon) {
+    if (this._model.icon) {
       this.icon = this._model.icon.toString();
     }
 
-    if (this._model?.tooltip) {
+    if (this._model.tooltip) {
       this.tooltip = this._model.tooltip.toString();
     }
 
-    if (this._model?.additionalText) {
+    if (this._model.additionalText) {
       this.additionalText = this._model.additionalText.toString();
     }
   }
