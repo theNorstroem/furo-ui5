@@ -2,7 +2,7 @@ import {html, css, LitElement} from "lit";
 import { property } from "lit/decorators.js";
 import "@furo/layout/furo-vertical-flex"
 import "@furo/layout/furo-layout-indent"
-import "@/web-components/furo-ui5-shellbar"
+import "@/elements/shellbar"
 
 /**
  * ### Description

@@ -1,6 +1,6 @@
 import "@/Assets";
 import "@/Icons";
-import "@/web-components/furo-ui5-button";
+import "@/elements/button";
 
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";

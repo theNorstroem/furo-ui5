@@ -1,4 +1,4 @@
-import "@/web-components/furo-ui5-switch";
+import "@/elements/switch";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import SwitchDesign from "@ui5/webcomponents/types/SwitchDesign.js";

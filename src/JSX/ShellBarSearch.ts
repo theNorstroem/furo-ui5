@@ -13,11 +13,6 @@ export interface ShellBarSearch extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
-   * Indicates whether the suggestions popover should be opened on focus.
-   */
-  autoOpen?: boolean;
-
-  /**
    * Defines the accessible ARIA description of the field.
    */
   accessibleDescription?: string | undefined;
@@ -28,9 +23,25 @@ export interface ShellBarSearch extends React.HTMLAttributes<HTMLElement> {
   accessibleName?: string | undefined;
 
   /**
+   * Indicates whether the suggestions popover should be opened on focus.
+   */
+  autoOpen?: boolean;
+
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
    * Indicates whether a loading indicator should be shown in the input field.
    */
   fieldLoading?: boolean;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * Indicates whether a loading indicator should be shown in the popup.
@@ -81,6 +92,8 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
+       *
+       * Search field for the ShellBar component.
        *
        * Search field for the ShellBar component.
        *

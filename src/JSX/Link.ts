@@ -62,6 +62,12 @@ export interface Link extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
    * Defines the icon, displayed as graphical element within the component after the link's text.
    * The SAP-icons font provides numerous options.
    *
@@ -98,10 +104,15 @@ export interface Link extends React.HTMLAttributes<HTMLElement> {
    * - **InteractiveAreaSize.Large**: The target area size is enlarged to 24px in height.
    *
    * **Note:**The property is designed to make links easier to activate and helps meet the WCAG 2.2 Target Size requirement. It is applicable only for the SAP Horizon themes.
-   * **Note:**To improve <code>furo-ui5-link</code>'s reliability and usability, it is recommended to use the <code>InteractiveAreaSize.Large</code> value in scenarios where the <code>furo-ui5-link</code> component is placed inside another interactive component, such as a list item or a table cell.
-   * Setting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.
+   * **Note:**To improve <code>furo-furo-ui5-link</code>'s reliability and usability, it is recommended to use the <code>InteractiveAreaSize.Large</code> value in scenarios where the <code>furo-furo-ui5-link</code> component is placed inside another interactive component, such as a list item or a table cell.
+   * Setting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.
    */
   interactiveAreaSize?: InteractiveAreaSize | keyof typeof InteractiveAreaSize;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * Defines the component target.
@@ -136,6 +147,35 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
+       *
+       * ### Overview
+       * The `furo-furo-ui5-link` is a hyperlink component that is used to navigate to other
+       * apps and web pages, or to trigger actions.
+       * It is a clickable text element, visualized in such a way that it stands out
+       * from the standard text.
+       * On hover, it changes its style to an underlined text to provide additional feedback to the user.
+       *
+       * ### Usage
+       *
+       * You can set the `furo-furo-ui5-link` to be enabled or disabled.
+       *
+       * To create a visual hierarchy in large lists of links, you can set the less important links as
+       * `Subtle` or the more important ones as `Emphasized`,
+       * by using the `design` property.
+       *
+       * If the `href` property is set, the link behaves as the HTML
+       * anchor tag (`<a></a>`) and opens the specified URL in the given target frame (`target` property).
+       * To specify where the linked content is opened, you can use the `target` property.
+       *
+       * ### Responsive behavior
+       *
+       * If there is not enough space, the text of the `furo-furo-ui5-link` becomes truncated.
+       * If the `wrappingType` property is set to `"Normal"`, the text is displayed
+       * on several lines instead of being truncated.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Link";`
        *
        * ### Overview
        * The `furo-ui5-link` is a hyperlink component that is used to navigate to other

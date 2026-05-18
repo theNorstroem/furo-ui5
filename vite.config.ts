@@ -30,7 +30,6 @@ export default defineConfig({
       provider: playwright({
         launchOptions: {
           slowMo: 100,
-          devtools: true,
           args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
         },
       }),
@@ -47,7 +46,7 @@ export default defineConfig({
       junit: "test-results/junit.xml",
     },
     coverage: {
-      include: ["src/web-components/**/*.{ts,tsx}"],
+      include: ["src/elements/**/*.{ts,tsx}"],
       enabled: false,
       thresholds: {
         statements: 80,
@@ -57,7 +56,7 @@ export default defineConfig({
       },
       provider: "istanbul",
       reporter: ["text", "json-summary", "lcov", "html"],
-      reportOnFailure: true,
+      reportOnFailure: false,
     },
     onConsoleLog(log: string, type: "stderr" | "stdout"): boolean | void {
       if (type === "stderr" && log.includes("in dev mode")) {

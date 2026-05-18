@@ -51,6 +51,17 @@ export interface StepInput extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
+
+  /**
    * Defines a maximum value of the component.
    */
   max?: number | undefined;
@@ -135,6 +146,40 @@ declare module "react" {
        * - **placeholder:"some string"** set the placeholder for the element
        *
        * The constraint **required** will mark the element as required
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-step-input` consists of an input field and buttons with icons to increase/decrease the value
+       * with the predefined step.
+       *
+       * The user can change the value of the component by pressing the increase/decrease buttons,
+       * by typing a number directly, by using the keyboard up/down and page up/down,
+       * or by using the mouse scroll wheel. Decimal values are supported.
+       *
+       * ### Usage
+       *
+       * The default step is 1 but the app developer can set a different one.
+       *
+       * App developers can set a maximum and minimum value for the `StepInput`.
+       * The increase/decrease button and the up/down keyboard navigation become disabled when
+       * the value reaches the max/min or a new value is entered from the input which is greater/less than the max/min.
+       *
+       * #### When to use:
+       *
+       * - To adjust amounts, quantities, or other values quickly.
+       * - To adjust values for a specific step.
+       *
+       * #### When not to use:
+       *
+       * - To enter a static number (for example, postal code, phone number, or ID). In this case,
+       * use the regular `furo-furo-ui5-input` instead.
+       * - To display a value that rarely needs to be adjusted and does not pertain to a particular step.
+       * In this case, use the regular `furo-furo-ui5-input` instead.
+       * - To enter dates and times. In this case, use date/time related components instead.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/StepInput.js";`
        *
        * ### Overview
        *

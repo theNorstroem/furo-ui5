@@ -1,7 +1,7 @@
 import "@furo/layout/furo-horizontal-flex";
 import "@ui5/webcomponents/dist/Link.js";
-import "@/web-components/furo-ui5-link";
-import "@/web-components/furo-ui5-title";
+import "@/elements/link";
+import "@/elements/title";
 
 import { LitFBP } from "@furo/fbp/dist/LitFBP";
 import { css, html, LitElement, nothing } from "lit";

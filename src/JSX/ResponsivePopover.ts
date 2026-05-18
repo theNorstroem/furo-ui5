@@ -48,6 +48,12 @@ export interface ResponsivePopover extends React.HTMLAttributes<HTMLElement> {
   allowTargetOverlap?: boolean;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
    * Defines the header text.
    *
    * **Note:** If `header` slot is provided, the `headerText` is ignored.
@@ -71,6 +77,11 @@ export interface ResponsivePopover extends React.HTMLAttributes<HTMLElement> {
    * `initialFocus` won't take effect.
    */
   initialFocus?: string | undefined;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * Defines whether the component should close when
@@ -124,6 +135,17 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
+       *
+       * ### Overview
+       * The `furo-furo-ui5-responsive-popover` acts as a Popover on desktop and tablet, while on phone it acts as a Dialog.
+       * The component improves tremendously the user experience on mobile.
+       *
+       * ### Usage
+       * Use it when you want to make sure that all the content is visible on any device.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/ResponsivePopover.js";`
        *
        * ### Overview
        * The `furo-ui5-responsive-popover` acts as a Popover on desktop and tablet, while on phone it acts as a Dialog.

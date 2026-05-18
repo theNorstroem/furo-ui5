@@ -1,9 +1,10 @@
 import "@ui5/webcomponents/dist/Option.js";
-import "@/web-components/furo-ui5-cb-item";
+import "@/elements/cb-item";
 
 import { type FieldConstraints, STRING, StringValue } from "@furo/open-models";
 import ComboBox from "@ui5/webcomponents/dist/ComboBox.js";
 
+import type { FuroUi5CbItem } from "@/elements/cb-item/FuroUi5CbItem";
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
@@ -11,7 +12,6 @@ import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import type { OptionLikeList, SelectOption } from "@/lib/open-models/signatures";
 import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
 import { FuroFatString } from "@/models";
-import type { FuroUi5CbItem } from "@/web-components/furo-ui5-cb-item/FuroUi5CbItem";
 
 /**
  * The furo-ui5-combobox component is used to create a drop-down list for quick data entry, but allows you to enter any string.

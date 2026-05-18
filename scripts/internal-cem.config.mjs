@@ -14,7 +14,7 @@ const nullSafeLocaleCompare = (a, b) => {
 
 
 export default {
-  globs: ["./src/web-components/**/*.ts"],
+  globs: ["./src/elements/**/*.ts"],
   exclude: ["./dist/**/*"],
   outdir: "./tmp/",
   dev: false,

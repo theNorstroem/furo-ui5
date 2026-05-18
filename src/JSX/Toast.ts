@@ -18,6 +18,17 @@ export interface Toast extends React.HTMLAttributes<HTMLElement> {
   duration?: number;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
+
+  /**
    * Indicates whether the component is open (visible).
    */
   open?: boolean;
@@ -47,6 +58,30 @@ declare module "react" {
        *
        * <button at-click="--openToastClicked">Open toast</button>
        * ```
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-toast` is a small, non-disruptive popup for success or information messages that
+       * disappears automatically after a few seconds.
+       *
+       * ### Usage
+       *
+       * #### When to use:
+       *
+       * - You want to display a short success or information message.
+       * - You do not want to interrupt users while they are performing an action.
+       * - You want to confirm a successful action.
+       *
+       * #### When not to use:
+       *
+       * - You want to display error or warning message.
+       * - You want to interrupt users while they are performing an action.
+       * - You want to make sure that users read the message before they leave the page.
+       * - You want users to be able to copy some part of the message text.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Toast.js";`
        *
        * ### Overview
        *

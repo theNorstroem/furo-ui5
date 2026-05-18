@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
-  "version": "2.0.0-RC.6",
+  "version": "2.0.0-RC.7",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": "git@github.com:eclipse/eclipsefuro-web.git",
   "author": {
@@ -9,7 +9,11 @@
     "email": "",
     "url": "https://github.com/theNorstroem/"
   },
-  "keywords": ["web-components", "flow based programming", "fbp"],
+  "keywords": [
+    "web-components",
+    "flow based programming",
+    "fbp"
+  ],
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",
@@ -25,9 +29,205 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./dist/*": {
-      "types": "./dist/*.d.ts",
-      "default": "./dist/*.js"
+    "./barcode-scanner-dialog": {
+      "types": "./dist/elements/barcode-scanner-dialog/index.d.ts",
+      "default": "./dist/elements/barcode-scanner-dialog/index.js"
+    },
+    "./bool-icon": {
+      "types": "./dist/elements/bool-icon/index.d.ts",
+      "default": "./dist/elements/bool-icon/index.js"
+    },
+    "./busy-indicator": {
+      "types": "./dist/elements/busy-indicator/index.d.ts",
+      "default": "./dist/elements/busy-indicator/index.js"
+    },
+    "./button": {
+      "types": "./dist/elements/button/index.d.ts",
+      "default": "./dist/elements/button/index.js"
+    },
+    "./button-badge": {
+      "types": "./dist/elements/button-badge/index.d.ts",
+      "default": "./dist/elements/button-badge/index.js"
+    },
+    "./cb-item": {
+      "types": "./dist/elements/cb-item/index.d.ts",
+      "default": "./dist/elements/cb-item/index.js"
+    },
+    "./checkbox": {
+      "types": "./dist/elements/checkbox/index.d.ts",
+      "default": "./dist/elements/checkbox/index.js"
+    },
+    "./combobox": {
+      "types": "./dist/elements/combobox/index.d.ts",
+      "default": "./dist/elements/combobox/index.js"
+    },
+    "./dialog": {
+      "types": "./dist/elements/dialog/index.d.ts",
+      "default": "./dist/elements/dialog/index.js"
+    },
+    "./form-field-segmenter": {
+      "types": "./dist/elements/form-field-segmenter/index.d.ts",
+      "default": "./dist/elements/form-field-segmenter/index.js"
+    },
+    "./form-group": {
+      "types": "./dist/elements/form-group/index.d.ts",
+      "default": "./dist/elements/form-group/index.js"
+    },
+    "./form-layout": {
+      "types": "./dist/elements/form-layout/index.d.ts",
+      "default": "./dist/elements/form-layout/index.js"
+    },
+    "./form-row": {
+      "types": "./dist/elements/form-row/index.d.ts",
+      "default": "./dist/elements/form-row/index.js"
+    },
+    "./header-panel": {
+      "types": "./dist/elements/header-panel/index.d.ts",
+      "default": "./dist/elements/header-panel/index.js"
+    },
+    "./icon": {
+      "types": "./dist/elements/icon/index.d.ts",
+      "default": "./dist/elements/icon/index.js"
+    },
+    "./label": {
+      "types": "./dist/elements/label/index.d.ts",
+      "default": "./dist/elements/label/index.js"
+    },
+    "./link": {
+      "types": "./dist/elements/link/index.d.ts",
+      "default": "./dist/elements/link/index.js"
+    },
+    "./markdown": {
+      "types": "./dist/elements/markdown/index.d.ts",
+      "default": "./dist/elements/markdown/index.js"
+    },
+    "./mcb-item": {
+      "types": "./dist/elements/mcb-item/index.d.ts",
+      "default": "./dist/elements/mcb-item/index.js"
+    },
+    "./multi-combobox": {
+      "types": "./dist/elements/multi-combobox/index.d.ts",
+      "default": "./dist/elements/multi-combobox/index.js"
+    },
+    "./number-input": {
+      "types": "./dist/elements/number-input/index.d.ts",
+      "default": "./dist/elements/number-input/index.js"
+    },
+    "./option": {
+      "types": "./dist/elements/option/index.d.ts",
+      "default": "./dist/elements/option/index.js"
+    },
+    "./password-input": {
+      "types": "./dist/elements/password-input/index.d.ts",
+      "default": "./dist/elements/password-input/index.js"
+    },
+    "./popover": {
+      "types": "./dist/elements/popover/index.d.ts",
+      "default": "./dist/elements/popover/index.js"
+    },
+    "./pretty-json": {
+      "types": "./dist/elements/pretty-json/index.d.ts",
+      "default": "./dist/elements/pretty-json/index.js"
+    },
+    "./progress-indicator": {
+      "types": "./dist/elements/progress-indicator/index.d.ts",
+      "default": "./dist/elements/progress-indicator/index.js"
+    },
+    "./radio-button": {
+      "types": "./dist/elements/radio-button/index.d.ts",
+      "default": "./dist/elements/radio-button/index.js"
+    },
+    "./rating-indicator": {
+      "types": "./dist/elements/rating-indicator/index.d.ts",
+      "default": "./dist/elements/rating-indicator/index.js"
+    },
+    "./responsive-popover": {
+      "types": "./dist/elements/responsive-popover/index.d.ts",
+      "default": "./dist/elements/responsive-popover/index.js"
+    },
+    "./section": {
+      "types": "./dist/elements/section/index.d.ts",
+      "default": "./dist/elements/section/index.js"
+    },
+    "./select": {
+      "types": "./dist/elements/select/index.d.ts",
+      "default": "./dist/elements/select/index.js"
+    },
+    "./select-enum": {
+      "types": "./dist/elements/select-enum/index.d.ts",
+      "default": "./dist/elements/select-enum/index.js"
+    },
+    "./shellbar": {
+      "types": "./dist/elements/shellbar/index.d.ts",
+      "default": "./dist/elements/shellbar/index.js"
+    },
+    "./shellbar-item": {
+      "types": "./dist/elements/shellbar-item/index.d.ts",
+      "default": "./dist/elements/shellbar-item/index.js"
+    },
+    "./shellbar-search": {
+      "types": "./dist/elements/shellbar-search/index.d.ts",
+      "default": "./dist/elements/shellbar-search/index.js"
+    },
+    "./shellbar-spacer": {
+      "types": "./dist/elements/shellbar-spacer/index.d.ts",
+      "default": "./dist/elements/shellbar-spacer/index.js"
+    },
+    "./show-hide": {
+      "types": "./dist/elements/show-hide/index.d.ts",
+      "default": "./dist/elements/show-hide/index.js"
+    },
+    "./sign-pad": {
+      "types": "./dist/elements/sign-pad/index.d.ts",
+      "default": "./dist/elements/sign-pad/index.js"
+    },
+    "./slider": {
+      "types": "./dist/elements/slider/index.d.ts",
+      "default": "./dist/elements/slider/index.js"
+    },
+    "./step-input": {
+      "types": "./dist/elements/step-input/index.d.ts",
+      "default": "./dist/elements/step-input/index.js"
+    },
+    "./subsection": {
+      "types": "./dist/elements/subsection/index.d.ts",
+      "default": "./dist/elements/subsection/index.js"
+    },
+    "./switch": {
+      "types": "./dist/elements/switch/index.d.ts",
+      "default": "./dist/elements/switch/index.js"
+    },
+    "./table-toolbar-separator": {
+      "types": "./dist/elements/table-toolbar-separator/index.d.ts",
+      "default": "./dist/elements/table-toolbar-separator/index.js"
+    },
+    "./text-input": {
+      "types": "./dist/elements/text-input/index.d.ts",
+      "default": "./dist/elements/text-input/index.js"
+    },
+    "./textarea": {
+      "types": "./dist/elements/textarea/index.d.ts",
+      "default": "./dist/elements/textarea/index.js"
+    },
+    "./title": {
+      "types": "./dist/elements/title/index.d.ts",
+      "default": "./dist/elements/title/index.js"
+    },
+    "./toast": {
+      "types": "./dist/elements/toast/index.d.ts",
+      "default": "./dist/elements/toast/index.js"
+    },
+    "./toggle-button": {
+      "types": "./dist/elements/toggle-button/index.d.ts",
+      "default": "./dist/elements/toggle-button/index.js"
+    },
+    "./user-menu": {
+      "types": "./dist/elements/user-menu/index.d.ts",
+      "default": "./dist/elements/user-menu/index.js"
+    },
+    "./z-grid": {
+      "types": "./dist/elements/z-grid/index.d.ts",
+      "default": "./dist/elements/z-grid/index.js"
     },
     "./package.json": "./package.json",
     "./custom-elements.json": "./custom-elements.json",
@@ -46,6 +246,7 @@
     "gen:intrinsic:pure": "node ./scripts/IntrinsicElements/main.js  && prettier src/JSX/*.ts --write",
     "gen:intrinsic": "rimraf src/JSX/* && node ./scripts/IntrinsicElements/main.js @furo/ui5 && eslint --version && eslint --fix src/JSX && prettier src/JSX/*.ts --write",
     "gen:contracts": "npm run clean:models && contracts/protoc-gen-open-models.sh && eslint ./src/models --fix && prettier --ext .ts ./src/models --write --ignore-path .gitignore",
+    "gen:exports": "node scripts/gen-exports.mjs --write",
     "clean:models": "rimraf src/models/furo && rimraf src/models/google && rimraf src/models/openapiv3",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",

@@ -67,6 +67,12 @@ export interface Button extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
    * Defines the icon, displayed as graphical element within the component after the button text.
    *
    * **Note:** It is highly recommended to use `endIcon` property only together with `icon` and/or `text` properties.
@@ -96,6 +102,11 @@ export interface Button extends React.HTMLAttributes<HTMLElement> {
    * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
    */
   icon?: string | undefined;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * Defines whether the button shows a loading indicator.
@@ -137,6 +148,29 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-button` component represents a simple push button.
+       * It enables users to trigger actions by clicking or tapping the `furo-furo-ui5-button`, or by pressing
+       * certain keyboard keys, such as Enter.
+       *
+       * ### Usage
+       *
+       * For the `furo-furo-ui5-button` UI, you can define text, icon, or both. You can also specify
+       * whether the text or the icon is displayed first.
+       *
+       * You can choose from a set of predefined types that offer different
+       * styling to correspond to the triggered action.
+       *
+       * You can set the `furo-furo-ui5-button` as enabled or disabled. An enabled
+       * `furo-furo-ui5-button` can be pressed by clicking or tapping it. The button changes
+       * its style to provide visual feedback to the user that it is pressed or hovered over with
+       * the mouse cursor. A disabled `furo-furo-ui5-button` appears inactive and cannot be pressed.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Button.js";`
        *
        * ### Overview
        *

@@ -1,9 +1,9 @@
-import "@/web-components/furo-ui5-password-input";
-import "@/web-components/furo-ui5-form-layout";
-import "@/web-components/furo-ui5-form-row";
-import "@/web-components/furo-ui5-button";
-import "@/web-components/furo-ui5-icon";
-import "@/web-components/furo-ui5-label";
+import "@/elements/password-input";
+import "@/elements/form-layout";
+import "@/elements/form-row";
+import "@/elements/button";
+import "@/elements/icon";
+import "@/elements/label";
 import "@ui5/webcomponents-icons/dist/AllIcons";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
@@ -12,8 +12,8 @@ import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
-import type { FuroUi5Icon } from "@/web-components/furo-ui5-icon/FuroUi5Icon";
-import type { FuroUi5PasswordInput } from "@/web-components/furo-ui5-password-input/FuroUi5PasswordInput";
+import type { FuroUi5Icon } from "@/elements/icon/FuroUi5Icon";
+import type { FuroUi5PasswordInput } from "@/elements/password-input/FuroUi5PasswordInput";
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories/DocumentationTemplate";

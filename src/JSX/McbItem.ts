@@ -20,6 +20,17 @@ export interface McbItem extends React.HTMLAttributes<HTMLElement> {
   additionalText?: string | undefined;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
+
+  /**
    * Defines the selected state of the component.
    */
   selected?: boolean;
@@ -44,6 +55,8 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        * The `furo-furo-furo-ui5-mcb-item` is meant to be used inside a `furo-furo-furo-ui5-multi-combobox`.
+       *
+       * The `furo-furo-ui5-mcb-item` represents the item for a `furo-furo-ui5-multi-combobox`.
        *
        * The `furo-ui5-mcb-item` represents the item for a `furo-ui5-multi-combobox`.
        *

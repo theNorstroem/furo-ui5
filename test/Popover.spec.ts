@@ -1,5 +1,5 @@
 import "../src/Assets";
-import "@/web-components/furo-ui5-popover";
+import "@/elements/popover";
 
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";

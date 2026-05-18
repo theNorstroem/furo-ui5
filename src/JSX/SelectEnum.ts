@@ -19,11 +19,6 @@ export interface SelectEnum extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
-   * Allows you to select the `unspecified` option.
-   */
-  showUnspecifiedOption?: boolean;
-
-  /**
    * Defines the accessible description of the component.
    */
   accessibleDescription?: string | undefined;
@@ -51,6 +46,17 @@ export interface SelectEnum extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
+
+  /**
    * Determines the name by which the component will be identified upon submission in an HTML form.
    *
    * **Note:** This property is only applicable within the context of an HTML Form element.
@@ -71,9 +77,14 @@ export interface SelectEnum extends React.HTMLAttributes<HTMLElement> {
   required?: boolean;
 
   /**
-   * Currently selected `furo-ui5-option` element.
+   * Currently selected `furo-furo-ui5-option` element.
    */
   selectedOption?: IOption | undefined;
+
+  /**
+   * Allows you to select the `unspecified` option.
+   */
+  showUnspecifiedOption?: boolean;
 
   /**
    * Defines the separator type for the two columns layout when Select is in read-only mode.
@@ -115,6 +126,55 @@ declare module "react" {
        * It extends the UI5 Select.
        *
        * ---
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-select` component is used to create a drop-down list.
+       *
+       * ### Usage
+       *
+       * There are two main usages of the `furo-furo-ui5-select>`.
+       *
+       * - With Option (`furo-furo-ui5-option`) web component:
+       *
+       * The available options of the Select are defined by using the Option component.
+       * The Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.
+       *
+       * - With OptionCustom (`furo-furo-ui5-option-custom`) web component.
+       *
+       * Options with custom content are defined by using the OptionCustom component.
+       * The OptionCustom component comes with no predefined layout and it expects consumers to define it.
+       *
+       * ### Selection
+       *
+       * The options can be selected via user interaction (click or with the use of the Space and Enter keys)
+       * and programmatically - the Select component supports two distinct selection APIs, though mixing them is not supported:
+       * - The "value" property of the Select component
+       * - The "selected" property on individual options
+       *
+       * **Note:** If the "value" property is set but does not match any option,
+       * no option will be selected and the Select component will be displayed as empty.
+       *
+       * **Note:** when both "value" and "selected" are both used (although discouraged),
+       * the "value" property will take precedence.
+       *
+       * ### Keyboard Handling
+       *
+       * The `furo-furo-ui5-select` provides advanced keyboard handling.
+       *
+       * - [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.
+       * - [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.
+       * - [Space], [Enter] - If the drop-down is opened - selects the focused option.
+       * - [Escape] - Closes the drop-down without changing the selection.
+       * - [Home] - Navigates to first option
+       * - [End] - Navigates to the last option
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Select";`
+       *
+       * `import "@furo/ui5/dist/Option";`
+       * `import "@furo/ui5/dist/OptionCustom";`
        *
        * ### Overview
        *

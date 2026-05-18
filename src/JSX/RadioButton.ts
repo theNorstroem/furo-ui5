@@ -7,7 +7,7 @@ import * as React from "react";
 import type { FuroFatBool } from "@/models/index.js";
 
 export interface RadioButton extends React.HTMLAttributes<HTMLElement> {
-  onchange?: (d: boolean) => void;
+  onchange?: (d: CustomEvent) => void;
   // properties
 
   /**
@@ -45,6 +45,17 @@ export interface RadioButton extends React.HTMLAttributes<HTMLElement> {
    * **Note:** A disabled component is completely noninteractive.
    */
   disabled?: boolean;
+
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * Determines the name by which the component will be identified upon submission in an HTML form.
@@ -129,6 +140,29 @@ declare module "react" {
        * The constraint **required** will mark the element as required
        *
        * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-radio-button` component enables users to select a single option from a set of options.
+       * When a `furo-furo-ui5-radio-button` is selected by the user, the
+       * `change` event is fired.
+       * When a `furo-furo-ui5-radio-button` that is within a group is selected, the one
+       * that was previously selected gets automatically deselected. You can group radio buttons by using the `name` property.
+       *
+       * **Note:** If `furo-furo-ui5-radio-button` is not part of a group, it can be selected once, but can not be deselected back.
+       *
+       * ### Keyboard Handling
+       *
+       * Once the `furo-furo-ui5-radio-button` is on focus, it might be selected by pressing the Space and Enter keys.
+       *
+       * The Arrow Down/Arrow Up and Arrow Left/Arrow Right keys can be used to change selection between next/previous radio buttons in one group,
+       * while TAB and SHIFT + TAB can be used to enter or leave the radio button group.
+       *
+       * **Note:** On entering radio button group, the focus goes to the currently selected radio button.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/RadioButton";`
        *
        * ### Overview
        *

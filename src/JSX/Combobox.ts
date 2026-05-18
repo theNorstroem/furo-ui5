@@ -55,9 +55,20 @@ export interface Combobox extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
    * Defines the filter type of the component.
    */
   filter?: ComboBoxFilter | keyof typeof ComboBoxFilter;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * Indicates whether a loading indicator should be shown in the picker.
@@ -101,7 +112,7 @@ export interface Combobox extends React.HTMLAttributes<HTMLElement> {
   required?: boolean;
 
   /**
-   * Defines the value of the selected item (references the `value` property of `furo-ui5-cb-item`).
+   * Defines the value of the selected item (references the `value` property of `furo-furo-ui5-cb-item`).
    *
    * Use this property to work with unique identifiers (IDs, codes) instead of display text.
    * When set, the ComboBox finds and selects the item whose `value` property matches this property.
@@ -157,6 +168,64 @@ declare module "react" {
        * .optionsModel="${this.OptionLikeListKind}">
        * </furo-furo-furo-ui5-combobox>
        * ```
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-combobox` component represents a drop-down menu with a list of the available options and a text input field to narrow down the options.
+       *
+       * It is commonly used to enable users to select an option from a predefined list.
+       *
+       * ### Structure
+       * The `furo-furo-ui5-combobox` consists of the following elements:
+       *
+       * -  Input field - displays the selected option or a custom user entry. Users can type to narrow down the list or enter their own value.
+       * -  Drop-down arrow - expands\collapses the option list.
+       * -  Option list - the list of available options.
+       *
+       * ### Working with Values
+       *
+       * The ComboBox offers two ways to work with item selection:
+       *
+       * **1. Display Text Only (using `value`):**
+       * ```html
+       * <furo-furo-ui5-combobox value="Germany">
+       * <furo-furo-ui5-cb-item text="Germany"></furo-furo-ui5-cb-item>
+       * <furo-furo-ui5-cb-item text="France"></furo-furo-ui5-cb-item>
+       * </furo-furo-ui5-combobox>
+       * ```
+       * Use this approach when the displayed text is sufficient for your needs.
+       *
+       * **2. Unique Identifiers - Recommended (using `selectedValue` and item `value`):**
+       * ```html
+       * <furo-furo-ui5-combobox value="Germany" selected-value="DE">
+       * <furo-furo-ui5-cb-item text="Germany" value="DE"></furo-furo-ui5-cb-item>
+       * <furo-furo-ui5-cb-item text="France" value="FR"></furo-furo-ui5-cb-item>
+       * </furo-furo-ui5-combobox>
+       * ```
+       * This is the recommended approach when you need to work with unique identifiers (IDs, codes) separate from display text.
+       * The `selectedValue` property references the `value` property of the selected item.
+       * In forms, the item's `value` (e.g., "DE") will be submitted instead of the display text.
+       *
+       * **Important:** Do not mix the `selectedValue` approach with the deprecated `selected` property on items.
+       *
+       * ### Keyboard Handling
+       *
+       * The `furo-furo-ui5-combobox` provides advanced keyboard handling.
+       *
+       * - [F4], [Alt]+[Up], or [Alt]+[Down] - Toggles the picker.
+       * - [Escape] - Closes the picker, if open. If closed, cancels changes and reverts the typed in value.
+       * - [Enter] or [Return] - If picker is open, takes over the currently selected item and closes it.
+       * - [Down] - Selects the next matching item in the picker.
+       * - [Up] - Selects the previous matching item in the picker.
+       * - [Page Down] - Moves selection down by page size (10 items by default).
+       * - [Page Up] - Moves selection up by page size (10 items by default).
+       * - [Home] - If focus is in the ComboBox, moves cursor at the beginning of text. If focus is in the picker, selects the first item.
+       * - [End] - If focus is in the ComboBox, moves cursor at the end of text. If focus is in the picker, selects the last item.
+       * - [Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/ComboBox.js";`
        *
        * ### Overview
        *

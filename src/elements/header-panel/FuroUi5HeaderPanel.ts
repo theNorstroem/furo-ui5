@@ -4,9 +4,9 @@ import "@ui5/webcomponents/dist/Label.js";
 import "@furo/layout/furo-responsive-layout";
 import "@furo/layout/furo-horizontal-flex";
 import "@furo/layout/furo-vertical-flex";
-import "../furo-ui5-show-hide";
-import "../furo-ui5-button";
-import "../furo-ui5-title";
+import "../show-hide";
+import "../button";
+import "../title";
 import "@ui5/webcomponents-icons/dist/slim-arrow-up.js";
 import "@ui5/webcomponents-icons/dist/slim-arrow-down.js";
 import "@ui5/webcomponents-icons/dist/pushpin-off.js";
@@ -14,17 +14,17 @@ import "@ui5/webcomponents-icons/dist/pushpin-on.js";
 import "@ui5/webcomponents-icons/dist/favorite.js";
 import "@ui5/webcomponents-icons/dist/navigation-down-arrow.js";
 import "@ui5/webcomponents-icons/dist/share.js";
-import "../furo-ui5-icon";
+import "../icon";
 
 import { css, LitElement, nothing } from "lit";
 import { property, query } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
 
+import type { FuroUi5ShowHide } from "@/elements/show-hide/FuroUi5ShowHide";
 import IconShape from "@/types/IconShape";
 import IconSize from "@/types/IconSize";
 import { NavigationGroup } from "@/util/NavigationGroup";
 import Throttle from "@/util/Throttle";
-import type { FuroUi5ShowHide } from "@/web-components/furo-ui5-show-hide/FuroUi5ShowHide";
 
 /**
  *
@@ -194,7 +194,7 @@ export class FuroUi5HeaderPanel extends LitElement {
    * @attr {string} secondary-text
    */
   @property({ type: String, attribute: "secondary-text", reflect: true })
-  secondaryText!: string;
+  secondaryText = "";
 
   /**
    * Set the is-pinned attribute to disable collapse and expand before unpin.

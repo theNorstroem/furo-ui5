@@ -7,7 +7,7 @@ import * as React from "react";
 import type { FuroFatBool } from "@/models/index.js";
 
 export interface Checkbox extends React.HTMLAttributes<HTMLElement> {
-  onchange?: (d: boolean) => void;
+  onchange?: (d: CustomEvent) => void;
   // properties
 
   /**
@@ -44,14 +44,20 @@ export interface Checkbox extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
-   * Determines whether the `furo-ui5-checkbox` is in display only state.
+   * Determines whether the `furo-furo-ui5-checkbox` is in display only state.
    *
-   * When set to `true`, the `furo-ui5-checkbox` is not interactive, not editable, not focusable
+   * When set to `true`, the `furo-furo-ui5-checkbox` is not interactive, not editable, not focusable
    * and not in the tab chain. This setting is used for forms in review mode.
    *
    * **Note:** When the property `disabled` is set to `true` this property has no effect.
    */
   displayOnly?: boolean;
+
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
   /**
    * Defines whether the component is displayed as partially checked.
@@ -65,6 +71,11 @@ export interface Checkbox extends React.HTMLAttributes<HTMLElement> {
    * -  If the component is not checked, it will be displayed as not checked regardless value of the indeterminate attribute
    */
   indeterminate?: boolean;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * Determines the name by which the component will be identified upon submission in an HTML form.
@@ -97,7 +108,7 @@ export interface Checkbox extends React.HTMLAttributes<HTMLElement> {
   /**
    * Defines the form value of the component that is submitted when the checkbox is checked.
    *
-   * When a form containing `furo-ui5-checkbox` elements is submitted, only the values of the
+   * When a form containing `furo-furo-ui5-checkbox` elements is submitted, only the values of the
    * **checked** checkboxes are included in the form data sent to the server. Unchecked
    * checkboxes do not contribute any data to the form submission.
    *
@@ -136,6 +147,39 @@ declare module "react" {
        *
        * ## supported meta and constraints
        * - **readonly: true** , set the element to readonly
+       *
+       * ### Overview
+       *
+       * Allows the user to set a binary value, such as true/false or yes/no for an item.
+       *
+       * The `furo-furo-ui5-checkbox` component consists of a box and a label that describes its purpose.
+       * If it's checked, an indicator is displayed inside the box.
+       * To check/uncheck the `furo-furo-ui5-checkbox`, the user has to click or tap the square
+       * box or its label.
+       *
+       * The `furo-furo-ui5-checkbox` component only has 2 states - checked and unchecked.
+       * Clicking or tapping toggles the `furo-furo-ui5-checkbox` between checked and unchecked state.
+       *
+       * ### Usage
+       *
+       * You can define the checkbox text with via the `text` property. If the text exceeds the available width, it is truncated by default.
+       * In case you prefer text to truncate, set the `wrappingType` property to "None".
+       * The touchable area for toggling the `furo-furo-ui5-checkbox` ends where the text ends.
+       *
+       * You can disable the `furo-furo-ui5-checkbox` by setting the `disabled` property to
+       * `true`,
+       * or use the `furo-furo-ui5-checkbox` in read-only mode by setting the `readonly`
+       * property to `true`.
+       *
+       * ### Keyboard Handling
+       *
+       * The user can use the following keyboard shortcuts to toggle the checked state of the `furo-furo-ui5-checkbox`.
+       *
+       * - [Space],[Enter] - Toggles between different states: checked, not checked.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/CheckBox.js";`
        *
        * ### Overview
        *

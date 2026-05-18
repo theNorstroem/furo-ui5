@@ -1,6 +1,6 @@
 import "@/Assets";
-import "@/web-components/furo-ui5-button";
-import "@/web-components/furo-ui5-button-badge";
+import "@/elements/button";
+import "@/elements/button-badge";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import ButtonDesign from "@ui5/webcomponents/dist/types/ButtonDesign.js";

@@ -1,8 +1,8 @@
-import "@/web-components/furo-ui5-option";
-import "@/web-components/furo-ui5-form-layout";
-import "@/web-components/furo-ui5-form-row";
-import "@/web-components/furo-ui5-button";
-import "@/web-components/furo-ui5-label";
+import "@/elements/option";
+import "@/elements/form-layout";
+import "@/elements/form-row";
+import "@/elements/button";
+import "@/elements/label";
 import "@ui5/webcomponents-icons/dist/AllIcons";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";

@@ -1,10 +1,10 @@
-import "@/web-components/furo-ui5-textarea";
-import "@/web-components/furo-ui5-form-layout";
-import "@/web-components/furo-ui5-form-row";
-import "@/web-components/furo-ui5-icon";
-import "@/web-components/furo-ui5-button";
-import "@/web-components/furo-ui5-label";
-import "@/web-components/furo-ui5-markdown";
+import "@/elements/textarea";
+import "@/elements/form-layout";
+import "@/elements/form-row";
+import "@/elements/icon";
+import "@/elements/button";
+import "@/elements/label";
+import "@/elements/markdown";
 import "@furo/layout/furo-horizontal-flex";
 import "@ui5/webcomponents-icons/dist/AllIcons";
 

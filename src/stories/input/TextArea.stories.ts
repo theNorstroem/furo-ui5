@@ -1,8 +1,8 @@
-import "@/web-components/furo-ui5-textarea";
-import "@/web-components/furo-ui5-form-layout";
-import "@/web-components/furo-ui5-form-row";
-import "@/web-components/furo-ui5-button";
-import "@/web-components/furo-ui5-label";
+import "@/elements/textarea";
+import "@/elements/form-layout";
+import "@/elements/form-row";
+import "@/elements/button";
+import "@/elements/label";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";

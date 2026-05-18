@@ -1,8 +1,8 @@
 import "@/Assets";
-import "@/web-components/furo-ui5-number-input";
-import "@/web-components/furo-ui5-form-row";
-import "@/web-components/furo-ui5-label";
-import "@/web-components/furo-ui5-icon";
+import "@/elements/number-input";
+import "@/elements/form-row";
+import "@/elements/label";
+import "@/elements/icon";
 
 import { INT32 } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";

@@ -48,6 +48,12 @@ export interface Textarea extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
    * Enables the component to automatically grow and shrink dynamically with its content.
    */
   growing?: boolean;
@@ -56,6 +62,11 @@ export interface Textarea extends React.HTMLAttributes<HTMLElement> {
    * Defines the maximum number of rows that the component can grow.
    */
   growingMaxRows?: number;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * Defines the maximum number of characters that the `value` can have.
@@ -145,6 +156,17 @@ declare module "react" {
        * - **readonly: true** , set the element to readonly
        * - **placeholder:"some string"** set the placeholder for the element
        * - **max:"number"** set the maximum number of characters available in the input field.
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-textarea` component is used to enter multiple rows of text.
+       *
+       * When empty, it can hold a placeholder similar to a `furo-furo-ui5-input`.
+       * You can define the rows of the `furo-furo-ui5-textarea` and also determine specific behavior when handling long texts.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/TextArea.js";`
        *
        * ### Overview
        *

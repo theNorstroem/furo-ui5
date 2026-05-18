@@ -3,6 +3,7 @@
 import type { DOUBLE, FLOAT, FloatValue, INT32, INT64, Int32Value, Int64Value, UINT32, UINT64, UInt32Value, UInt64Value } from "@furo/open-models/";
 import type { InputSelectionChangeEventDetail } from "@ui5/webcomponents/dist/Input.js";
 import type InputSuggestionsFilter from "@ui5/webcomponents/dist/types/InputSuggestionsFilter.js";
+import type InputType from "@ui5/webcomponents/dist/types/InputType.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
 import * as React from "react";
 
@@ -68,14 +69,25 @@ export interface NumberInput extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
    * Defines the filter type of the component.
    */
   filter?: InputSuggestionsFilter | keyof typeof InputSuggestionsFilter;
 
   /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
+
+  /**
    * Sets the maximum number of characters available in the input field.
    *
-   * **Note:** This property is not compatible with the furo-ui5-input type InputType.Number. If the furo-ui5-input type is set to Number, the maxlength value is ignored.
+   * **Note:** This property is not compatible with the furo-furo-ui5-input type InputType.Number. If the furo-furo-ui5-input type is set to Number, the maxlength value is ignored.
    */
   maxlength?: number | undefined;
 
@@ -138,7 +150,7 @@ export interface NumberInput extends React.HTMLAttributes<HTMLElement> {
    * that use different soft keyboard layouts depending on the given input type.
    * - Type `Number` does not support suggestions.
    */
-  type?: string;
+  type?: InputType | keyof typeof InputType;
 
   /**
    * Defines the value of the component.
@@ -173,6 +185,36 @@ declare module "react" {
        * ## supported meta and constraints
        * - **readonly: true** , set the element to readonly
        * - **placeholder:"some string"** set the placeholder for the element
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-input` component allows the user to enter and edit text or numeric values in one line.
+       *
+       * Additionally, you can provide `suggestionItems`
+       * that are displayed in a popover right under the input. Keep in mind that `furo-furo-ui5-input` with type `Number` does not support suggestions.
+       *
+       * The text field can be editable or read-only (`readonly` property),
+       * and it can be enabled or disabled (`disabled` property).
+       * To visualize semantic states, such as "Negative" or "Critical", the `valueState` property is provided.
+       * When the user makes changes to the text, the change event is fired,
+       * which enables you to react on any text change.
+       *
+       * ### Keyboard Handling
+       * The `furo-furo-ui5-input` provides the following keyboard shortcuts:
+       *
+       * - [Escape] - Closes the suggestion list, if open. If closed or not enabled, cancels changes and reverts to the value which the Input field had when it got the focus.
+       * - [Enter] or [Return] - If suggestion list is open takes over the current matching item and closes it. If value state or group header is focused, does nothing.
+       * - [Down] - Focuses the next matching item in the suggestion list. Selection-change event is fired.
+       * - [Up] - Focuses the previous matching item in the suggestion list. Selection-change event is fired.
+       * - [Home] - If focus is in the text input, moves caret before the first character. If focus is in the list, highlights the first item and updates the input accordingly.
+       * - [End] - If focus is in the text input, moves caret after the last character. If focus is in the list, highlights the last item and updates the input accordingly.
+       * - [Page Up] - If focus is in the list, moves highlight up by page size (10 items by default). If focus is in the input, does nothing.
+       * - [Page Down] - If focus is in the list, moves highlight down by page size (10 items by default). If focus is in the input, does nothing.
+       * - [Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Input.js";`
        *
        * ### Overview
        *

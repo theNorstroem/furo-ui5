@@ -48,9 +48,20 @@ export interface ProgressIndicator extends React.HTMLAttributes<HTMLElement> {
   displayValue?: string | undefined;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
    * Defines whether the component value is shown.
    */
   hideValue?: boolean;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * Specifies the numerical value in percent for the length of the component.
@@ -78,6 +89,17 @@ declare module "react" {
        * ```html
        * <furo-furo-furo-ui5-progress-indicator fn-bind-data="--dao(FIELDNODE)"></furo-furo-furo-ui5-progress-indicator>
        * ```
+       *
+       * ### Overview
+       * Shows the progress of a process in a graphical way. To indicate the progress,
+       * the inside of the component is filled with a color.
+       *
+       * ### Responsive Behavior
+       * You can change the size of the Progress Indicator by changing its `width` or `height` CSS properties.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/ProgressIndicator.js";`
        *
        * ### Overview
        * Shows the progress of a process in a graphical way. To indicate the progress,

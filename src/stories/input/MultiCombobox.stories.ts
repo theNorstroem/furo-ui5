@@ -1,12 +1,12 @@
-import "@/web-components/furo-ui5-multi-combobox";
-import "@/web-components/furo-ui5-form-layout";
-import "@/web-components/furo-ui5-form-row";
-import "@/web-components/furo-ui5-button";
-import "@/web-components/furo-ui5-label";
-import "@/web-components/furo-ui5-markdown";
-import "@/web-components/furo-ui5-title";
-import "@/web-components/furo-ui5-text-input";
-import "@/web-components/furo-ui5-pretty-json";
+import "@/elements/multi-combobox";
+import "@/elements/form-layout";
+import "@/elements/form-row";
+import "@/elements/button";
+import "@/elements/label";
+import "@/elements/markdown";
+import "@/elements/title";
+import "@/elements/text-input";
+import "@/elements/pretty-json";
 
 import { ARRAY } from "@furo/open-models/dist/index";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";

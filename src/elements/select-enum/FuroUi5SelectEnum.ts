@@ -1,4 +1,4 @@
-import "@/web-components/furo-ui5-option";
+import "@/elements/option";
 
 import { ENUM, type FieldConstraints } from "@furo/open-models";
 import Select from "@ui5/webcomponents/dist/Select.js";

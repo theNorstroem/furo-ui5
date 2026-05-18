@@ -4,183 +4,7 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "dist/types/BackgroundDesign.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "BackgroundDesign",
-            "module": "src/types/BackgroundDesign.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/types/ComboBoxFilter.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "ComboBoxFilter",
-            "module": "src/types/ComboBoxFilter.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/types/FlexibleGridSetting.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "SpanSizeVerticalVals",
-          "type": {
-            "text": "array"
-          },
-          "default": "[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\", \"12\", \"13\"]",
-          "privacy": "public"
-        },
-        {
-          "kind": "variable",
-          "name": "SpanSizeHorizontalVals",
-          "type": {
-            "text": "array"
-          },
-          "default": "[\"full\", \"end\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\", \"12\", \"13\"]"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "SpanSizeHorizontalVals",
-          "declaration": {
-            "name": "SpanSizeHorizontalVals",
-            "module": "src/types/FlexibleGridSetting.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "SpanSizeVerticalVals",
-          "declaration": {
-            "name": "SpanSizeVerticalVals",
-            "module": "src/types/FlexibleGridSetting.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/types/FormFieldSegmentationPatterns.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "FormFieldSegmentationPatterns",
-            "module": "src/types/FormFieldSegmentationPatterns.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/types/IconShape.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "IconShape",
-            "module": "src/types/IconShape.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/types/IconSize.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "IconSize",
-            "module": "src/types/IconSize.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/types/InputSuggestionsFilter.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "InputSuggestionsFilter",
-            "module": "src/types/InputSuggestionsFilter.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/types/ResponsiveLayoutSize.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "ResponsiveLayoutSize",
-            "module": "src/types/ResponsiveLayoutSize.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/types/SelectTextSeparator.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SelectTextSeparator",
-            "module": "src/types/SelectTextSeparator.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/types/ValueState.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "ValueState",
-            "module": "src/types/ValueState.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-barcode-scanner-dialog/FuroUi5BarcodeScannerDialog.js",
+      "path": "dist/elements/barcode-scanner-dialog/FuroUi5BarcodeScannerDialog.js",
       "declarations": [
         {
           "kind": "class",
@@ -443,20 +267,20 @@
           "name": "FuroUi5BarcodeScannerDialog",
           "declaration": {
             "name": "FuroUi5BarcodeScannerDialog",
-            "module": "src/web-components/furo-ui5-barcode-scanner-dialog/FuroUi5BarcodeScannerDialog.ts"
+            "module": "src/elements/barcode-scanner-dialog/FuroUi5BarcodeScannerDialog.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-barcode-scanner-dialog/index.js",
+      "path": "dist/elements/barcode-scanner-dialog/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-bool-icon/FuroUi5BoolIcon.js",
+      "path": "dist/elements/bool-icon/FuroUi5BoolIcon.js",
       "declarations": [
         {
           "kind": "class",
@@ -595,8 +419,11 @@
               "attribute": "symboltrue"
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "toggle",
+              "type": {
+                "text": "() => void"
+              },
               "description": "Toggles the icon."
             },
             {
@@ -687,14 +514,14 @@
           "name": "FuroUi5BoolIcon",
           "declaration": {
             "name": "FuroUi5BoolIcon",
-            "module": "src/web-components/furo-ui5-bool-icon/FuroUi5BoolIcon.ts"
+            "module": "src/elements/bool-icon/FuroUi5BoolIcon.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-bool-icon/index.js",
+      "path": "dist/elements/bool-icon/index.js",
       "declarations": [],
       "exports": [
         {
@@ -702,14 +529,14 @@
           "name": "furo-ui5-bool-icon",
           "declaration": {
             "name": "FuroUi5BoolIcon",
-            "module": "/src/web-components/furo-ui5-bool-icon/FuroUi5BoolIcon"
+            "module": "/src/elements/bool-icon/FuroUi5BoolIcon"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-busy-indicator/FuroUi5BusyIndicator.js",
+      "path": "dist/elements/busy-indicator/FuroUi5BusyIndicator.js",
       "declarations": [
         {
           "kind": "class",
@@ -1018,20 +845,20 @@
           "name": "FuroUiBusyIndicator",
           "declaration": {
             "name": "FuroUiBusyIndicator",
-            "module": "src/web-components/furo-ui5-busy-indicator/FuroUi5BusyIndicator.ts"
+            "module": "src/elements/busy-indicator/FuroUi5BusyIndicator.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-busy-indicator/index.js",
+      "path": "dist/elements/busy-indicator/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-button-badge/FuroUi5ButtonBadge.js",
+      "path": "dist/elements/button-badge/FuroUi5ButtonBadge.js",
       "declarations": [
         {
           "kind": "class",
@@ -1170,20 +997,20 @@
           "name": "FuroUi5ButtonBadge",
           "declaration": {
             "name": "FuroUi5ButtonBadge",
-            "module": "src/web-components/furo-ui5-button-badge/FuroUi5ButtonBadge.ts"
+            "module": "src/elements/button-badge/FuroUi5ButtonBadge.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-button-badge/index.js",
+      "path": "dist/elements/button-badge/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-button/FuroUi5Button.js",
+      "path": "dist/elements/button/FuroUi5Button.js",
       "declarations": [
         {
           "kind": "class",
@@ -1772,20 +1599,20 @@
           "name": "FuroUi5Button",
           "declaration": {
             "name": "FuroUi5Button",
-            "module": "src/web-components/furo-ui5-button/FuroUi5Button.ts"
+            "module": "src/elements/button/FuroUi5Button.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-button/index.js",
+      "path": "dist/elements/button/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-cb-item/FuroUi5CbItem.js",
+      "path": "dist/elements/cb-item/FuroUi5CbItem.js",
       "declarations": [
         {
           "kind": "class",
@@ -1992,20 +1819,20 @@
           "name": "FuroUi5CbItem",
           "declaration": {
             "name": "FuroUi5CbItem",
-            "module": "src/web-components/furo-ui5-cb-item/FuroUi5CbItem.ts"
+            "module": "src/elements/cb-item/FuroUi5CbItem.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-cb-item/index.js",
+      "path": "dist/elements/cb-item/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-checkbox/FuroUi5Checkbox.js",
+      "path": "dist/elements/checkbox/FuroUi5Checkbox.js",
       "declarations": [
         {
           "kind": "class",
@@ -2603,20 +2430,20 @@
           "name": "FuroUi5Checkbox",
           "declaration": {
             "name": "FuroUi5Checkbox",
-            "module": "src/web-components/furo-ui5-checkbox/FuroUi5Checkbox.ts"
+            "module": "src/elements/checkbox/FuroUi5Checkbox.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-checkbox/index.js",
+      "path": "dist/elements/checkbox/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-combobox/FuroUi5Combobox.js",
+      "path": "dist/elements/combobox/FuroUi5Combobox.js",
       "declarations": [
         {
           "kind": "class",
@@ -3407,20 +3234,20 @@
           "name": "FuroUi5Combobox",
           "declaration": {
             "name": "FuroUi5Combobox",
-            "module": "src/web-components/furo-ui5-combobox/FuroUi5Combobox.ts"
+            "module": "src/elements/combobox/FuroUi5Combobox.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-combobox/index.js",
+      "path": "dist/elements/combobox/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-dialog/FuroUi5Dialog.js",
+      "path": "dist/elements/dialog/FuroUi5Dialog.js",
       "declarations": [
         {
           "kind": "class",
@@ -4015,20 +3842,20 @@
           "name": "FuroUi5Dialog",
           "declaration": {
             "name": "FuroUi5Dialog",
-            "module": "src/web-components/furo-ui5-dialog/FuroUi5Dialog.ts"
+            "module": "src/elements/dialog/FuroUi5Dialog.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-dialog/index.js",
+      "path": "dist/elements/dialog/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-form-field-segmenter/FuroUi5FormFieldSegmenter.js",
+      "path": "dist/elements/form-field-segmenter/FuroUi5FormFieldSegmenter.js",
       "declarations": [
         {
           "kind": "class",
@@ -4110,14 +3937,14 @@
           "name": "FuroUi5FormFieldSegmenter",
           "declaration": {
             "name": "FuroUi5FormFieldSegmenter",
-            "module": "src/web-components/furo-ui5-form-field-segmenter/FuroUi5FormFieldSegmenter.ts"
+            "module": "src/elements/form-field-segmenter/FuroUi5FormFieldSegmenter.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-form-field-segmenter/index.js",
+      "path": "dist/elements/form-field-segmenter/index.js",
       "declarations": [],
       "exports": [
         {
@@ -4125,14 +3952,14 @@
           "name": "furo-ui5-form-field-segmenter",
           "declaration": {
             "name": "FuroUi5FormFieldSegmenter",
-            "module": "/src/web-components/furo-ui5-form-field-segmenter/FuroUi5FormFieldSegmenter"
+            "module": "/src/elements/form-field-segmenter/FuroUi5FormFieldSegmenter"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-form-group/FuroUi5FormGroup.js",
+      "path": "dist/elements/form-group/FuroUi5FormGroup.js",
       "declarations": [
         {
           "kind": "class",
@@ -4181,14 +4008,14 @@
           "name": "default",
           "declaration": {
             "name": "FuroUi5FormGroup",
-            "module": "src/web-components/furo-ui5-form-group/FuroUi5FormGroup.ts"
+            "module": "src/elements/form-group/FuroUi5FormGroup.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-form-group/index.js",
+      "path": "dist/elements/form-group/index.js",
       "declarations": [],
       "exports": [
         {
@@ -4196,14 +4023,14 @@
           "name": "furo-ui5-form-group",
           "declaration": {
             "name": "FuroUi5FormGroup",
-            "module": "/src/web-components/furo-ui5-form-group/FuroUi5FormGroup"
+            "module": "/src/elements/form-group/FuroUi5FormGroup"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-form-layout/FuroUi5FormLayout.js",
+      "path": "dist/elements/form-layout/FuroUi5FormLayout.js",
       "declarations": [
         {
           "kind": "class",
@@ -4311,14 +4138,14 @@
           "name": "default",
           "declaration": {
             "name": "FuroUi5FormLayout",
-            "module": "src/web-components/furo-ui5-form-layout/FuroUi5FormLayout.ts"
+            "module": "src/elements/form-layout/FuroUi5FormLayout.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-form-layout/index.js",
+      "path": "dist/elements/form-layout/index.js",
       "declarations": [],
       "exports": [
         {
@@ -4326,14 +4153,14 @@
           "name": "furo-ui5-form-layout",
           "declaration": {
             "name": "FuroUi5FormLayout",
-            "module": "/src/web-components/furo-ui5-form-layout/FuroUi5FormLayout"
+            "module": "/src/elements/form-layout/FuroUi5FormLayout"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-form-row/FuroUi5FormRow.js",
+      "path": "dist/elements/form-row/FuroUi5FormRow.js",
       "declarations": [
         {
           "kind": "class",
@@ -4372,14 +4199,14 @@
           "name": "default",
           "declaration": {
             "name": "FuroUi5FormRow",
-            "module": "src/web-components/furo-ui5-form-row/FuroUi5FormRow.ts"
+            "module": "src/elements/form-row/FuroUi5FormRow.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-form-row/index.js",
+      "path": "dist/elements/form-row/index.js",
       "declarations": [],
       "exports": [
         {
@@ -4387,14 +4214,14 @@
           "name": "furo-ui5-form-row",
           "declaration": {
             "name": "FuroUi5FormRow",
-            "module": "/src/web-components/furo-ui5-form-row/FuroUi5FormRow"
+            "module": "/src/elements/form-row/FuroUi5FormRow"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-header-panel/FuroUi5HeaderPanel.js",
+      "path": "dist/elements/header-panel/FuroUi5HeaderPanel.js",
       "declarations": [
         {
           "kind": "class",
@@ -5030,14 +4857,14 @@
           "name": "FuroUi5HeaderPanel",
           "declaration": {
             "name": "FuroUi5HeaderPanel",
-            "module": "src/web-components/furo-ui5-header-panel/FuroUi5HeaderPanel.ts"
+            "module": "src/elements/header-panel/FuroUi5HeaderPanel.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-header-panel/index.js",
+      "path": "dist/elements/header-panel/index.js",
       "declarations": [],
       "exports": [
         {
@@ -5045,14 +4872,14 @@
           "name": "furo-ui5-header-panel",
           "declaration": {
             "name": "FuroUi5HeaderPanel",
-            "module": "/src/web-components/furo-ui5-header-panel/FuroUi5HeaderPanel"
+            "module": "/src/elements/header-panel/FuroUi5HeaderPanel"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-icon/FuroUi5Icon.js",
+      "path": "dist/elements/icon/FuroUi5Icon.js",
       "declarations": [
         {
           "kind": "class",
@@ -5299,20 +5126,20 @@
           "name": "FuroUi5Icon",
           "declaration": {
             "name": "FuroUi5Icon",
-            "module": "src/web-components/furo-ui5-icon/FuroUi5Icon.ts"
+            "module": "src/elements/icon/FuroUi5Icon.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-icon/index.js",
+      "path": "dist/elements/icon/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-label/FuroUi5Label.js",
+      "path": "dist/elements/label/FuroUi5Label.js",
       "declarations": [
         {
           "kind": "class",
@@ -5503,20 +5330,20 @@
           "name": "FuroUi5Label",
           "declaration": {
             "name": "FuroUi5Label",
-            "module": "src/web-components/furo-ui5-label/FuroUi5Label.ts"
+            "module": "src/elements/label/FuroUi5Label.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-label/index.js",
+      "path": "dist/elements/label/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-link/FuroUi5Link.js",
+      "path": "dist/elements/link/FuroUi5Link.js",
       "declarations": [
         {
           "kind": "class",
@@ -6035,20 +5862,20 @@
           "name": "FuroUi5Link",
           "declaration": {
             "name": "FuroUi5Link",
-            "module": "src/web-components/furo-ui5-link/FuroUi5Link.ts"
+            "module": "src/elements/link/FuroUi5Link.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-link/index.js",
+      "path": "dist/elements/link/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-markdown/FuroUi5Markdown.js",
+      "path": "dist/elements/markdown/FuroUi5Markdown.js",
       "declarations": [
         {
           "kind": "class",
@@ -6194,14 +6021,14 @@
           "name": "FuroUi5Markdown",
           "declaration": {
             "name": "FuroUi5Markdown",
-            "module": "src/web-components/furo-ui5-markdown/FuroUi5Markdown.ts"
+            "module": "src/elements/markdown/FuroUi5Markdown.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-markdown/index.js",
+      "path": "dist/elements/markdown/index.js",
       "declarations": [],
       "exports": [
         {
@@ -6209,14 +6036,14 @@
           "name": "furo-ui5-markdown",
           "declaration": {
             "name": "FuroUi5Markdown",
-            "module": "/src/web-components/furo-ui5-markdown/FuroUi5Markdown"
+            "module": "/src/elements/markdown/FuroUi5Markdown"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-mcb-item/FuroUi5McbItem.js",
+      "path": "dist/elements/mcb-item/FuroUi5McbItem.js",
       "declarations": [
         {
           "kind": "class",
@@ -6452,20 +6279,20 @@
           "name": "FuroUi5McbItem",
           "declaration": {
             "name": "FuroUi5McbItem",
-            "module": "src/web-components/furo-ui5-mcb-item/FuroUi5McbItem.ts"
+            "module": "src/elements/mcb-item/FuroUi5McbItem.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-mcb-item/index.js",
+      "path": "dist/elements/mcb-item/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-multi-combobox/FuroUi5MultiCombobox.js",
+      "path": "dist/elements/multi-combobox/FuroUi5MultiCombobox.js",
       "declarations": [
         {
           "kind": "class",
@@ -7367,20 +7194,20 @@
           "name": "FuroUi5MultiCombobox",
           "declaration": {
             "name": "FuroUi5MultiCombobox",
-            "module": "src/web-components/furo-ui5-multi-combobox/FuroUi5MultiCombobox.ts"
+            "module": "src/elements/multi-combobox/FuroUi5MultiCombobox.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-multi-combobox/index.js",
+      "path": "dist/elements/multi-combobox/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-number-input/FuroUi5NumberInput.js",
+      "path": "dist/elements/number-input/FuroUi5NumberInput.js",
       "declarations": [
         {
           "kind": "class",
@@ -8268,20 +8095,20 @@
           "name": "FuroUi5NumberInput",
           "declaration": {
             "name": "FuroUi5NumberInput",
-            "module": "src/web-components/furo-ui5-number-input/FuroUi5NumberInput.ts"
+            "module": "src/elements/number-input/FuroUi5NumberInput.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-number-input/index.js",
+      "path": "dist/elements/number-input/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-option/FuroUi5Option.js",
+      "path": "dist/elements/option/FuroUi5Option.js",
       "declarations": [
         {
           "kind": "class",
@@ -8554,20 +8381,20 @@
           "name": "FuroUi5Option",
           "declaration": {
             "name": "FuroUi5Option",
-            "module": "src/web-components/furo-ui5-option/FuroUi5Option.ts"
+            "module": "src/elements/option/FuroUi5Option.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-option/index.js",
+      "path": "dist/elements/option/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-password-input/FuroUi5PasswordInput.js",
+      "path": "dist/elements/password-input/FuroUi5PasswordInput.js",
       "declarations": [
         {
           "kind": "class",
@@ -9426,20 +9253,20 @@
           "name": "FuroUi5PasswordInput",
           "declaration": {
             "name": "FuroUi5PasswordInput",
-            "module": "src/web-components/furo-ui5-password-input/FuroUi5PasswordInput.ts"
+            "module": "src/elements/password-input/FuroUi5PasswordInput.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-password-input/index.js",
+      "path": "dist/elements/password-input/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-popover/FuroUi5Popover.js",
+      "path": "dist/elements/popover/FuroUi5Popover.js",
       "declarations": [
         {
           "kind": "class",
@@ -10163,20 +9990,20 @@
           "name": "FuroUi5Popover",
           "declaration": {
             "name": "FuroUi5Popover",
-            "module": "src/web-components/furo-ui5-popover/FuroUi5Popover.ts"
+            "module": "src/elements/popover/FuroUi5Popover.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-popover/index.js",
+      "path": "dist/elements/popover/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-pretty-json/FuroUi5PrettyJson.js",
+      "path": "dist/elements/pretty-json/FuroUi5PrettyJson.js",
       "declarations": [
         {
           "kind": "class",
@@ -10297,14 +10124,14 @@
           "name": "FuroUi5PrettyJson",
           "declaration": {
             "name": "FuroUi5PrettyJson",
-            "module": "src/web-components/furo-ui5-pretty-json/FuroUi5PrettyJson.ts"
+            "module": "src/elements/pretty-json/FuroUi5PrettyJson.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-pretty-json/index.js",
+      "path": "dist/elements/pretty-json/index.js",
       "declarations": [],
       "exports": [
         {
@@ -10312,14 +10139,14 @@
           "name": "furo-ui5-pretty-json",
           "declaration": {
             "name": "FuroUi5PrettyJson",
-            "module": "/src/web-components/furo-ui5-pretty-json/FuroUi5PrettyJson"
+            "module": "/src/elements/pretty-json/FuroUi5PrettyJson"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-progress-indicator/FuroUi5ProgressIndicator.js",
+      "path": "dist/elements/progress-indicator/FuroUi5ProgressIndicator.js",
       "declarations": [
         {
           "kind": "class",
@@ -10690,20 +10517,20 @@
           "name": "FuroUi5ProgressIndicator",
           "declaration": {
             "name": "FuroUi5ProgressIndicator",
-            "module": "src/web-components/furo-ui5-progress-indicator/FuroUi5ProgressIndicator.ts"
+            "module": "src/elements/progress-indicator/FuroUi5ProgressIndicator.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-progress-indicator/index.js",
+      "path": "dist/elements/progress-indicator/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-radio-button/FuroUi5RadioButton.js",
+      "path": "dist/elements/radio-button/FuroUi5RadioButton.js",
       "declarations": [
         {
           "kind": "class",
@@ -11244,20 +11071,20 @@
           "name": "FuroUi5RadioButton",
           "declaration": {
             "name": "FuroUi5RadioButton",
-            "module": "src/web-components/furo-ui5-radio-button/FuroUi5RadioButton.ts"
+            "module": "src/elements/radio-button/FuroUi5RadioButton.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-radio-button/index.js",
+      "path": "dist/elements/radio-button/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-rating-indicator/FuroUi5RatingIndicator.js",
+      "path": "dist/elements/rating-indicator/FuroUi5RatingIndicator.js",
       "declarations": [
         {
           "kind": "class",
@@ -11879,20 +11706,20 @@
           "name": "FuroUi5RatingIndicator",
           "declaration": {
             "name": "FuroUi5RatingIndicator",
-            "module": "src/web-components/furo-ui5-rating-indicator/FuroUi5RatingIndicator.ts"
+            "module": "src/elements/rating-indicator/FuroUi5RatingIndicator.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-rating-indicator/index.js",
+      "path": "dist/elements/rating-indicator/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-responsive-popover/FuroUi5ResponsivePopover.js",
+      "path": "dist/elements/responsive-popover/FuroUi5ResponsivePopover.js",
       "declarations": [
         {
           "kind": "class",
@@ -12616,20 +12443,20 @@
           "name": "FuroUi5ResponsivePopover",
           "declaration": {
             "name": "FuroUi5ResponsivePopover",
-            "module": "src/web-components/furo-ui5-responsive-popover/FuroUi5ResponsivePopover.ts"
+            "module": "src/elements/responsive-popover/FuroUi5ResponsivePopover.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-responsive-popover/index.js",
+      "path": "dist/elements/responsive-popover/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-section/FuroUi5Section.js",
+      "path": "dist/elements/section/FuroUi5Section.js",
       "declarations": [
         {
           "kind": "class",
@@ -12705,14 +12532,14 @@
           "name": "FuroUi5Section",
           "declaration": {
             "name": "FuroUi5Section",
-            "module": "src/web-components/furo-ui5-section/FuroUi5Section.ts"
+            "module": "src/elements/section/FuroUi5Section.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-section/index.js",
+      "path": "dist/elements/section/index.js",
       "declarations": [],
       "exports": [
         {
@@ -12720,14 +12547,14 @@
           "name": "furo-ui5-section",
           "declaration": {
             "name": "FuroUi5Section",
-            "module": "/src/web-components/furo-ui5-section/FuroUi5Section"
+            "module": "/src/elements/section/FuroUi5Section"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-select-enum/FuroUi5SelectEnum.js",
+      "path": "dist/elements/select-enum/FuroUi5SelectEnum.js",
       "declarations": [
         {
           "kind": "class",
@@ -13354,20 +13181,20 @@
           "name": "FuroUi5SelectEnum",
           "declaration": {
             "name": "FuroUi5SelectEnum",
-            "module": "src/web-components/furo-ui5-select-enum/FuroUi5SelectEnum.ts"
+            "module": "src/elements/select-enum/FuroUi5SelectEnum.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-select-enum/index.js",
+      "path": "dist/elements/select-enum/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-select/FuroUi5Select.js",
+      "path": "dist/elements/select/FuroUi5Select.js",
       "declarations": [
         {
           "kind": "class",
@@ -14119,20 +13946,20 @@
           "name": "FuroUi5Select",
           "declaration": {
             "name": "FuroUi5Select",
-            "module": "src/web-components/furo-ui5-select/FuroUi5Select.ts"
+            "module": "src/elements/select/FuroUi5Select.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-select/index.js",
+      "path": "dist/elements/select/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-shellbar-item/FuroUi5ShellBarItem.js",
+      "path": "dist/elements/shellbar-item/FuroUi5ShellBarItem.js",
       "declarations": [
         {
           "kind": "class",
@@ -14325,20 +14152,20 @@
           "name": "FuroUi5ShellBarItem",
           "declaration": {
             "name": "FuroUi5ShellBarItem",
-            "module": "src/web-components/furo-ui5-shellbar-item/FuroUi5ShellBarItem.ts"
+            "module": "src/elements/shellbar-item/FuroUi5ShellBarItem.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-shellbar-item/index.js",
+      "path": "dist/elements/shellbar-item/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-shellbar-search/FuroUi5ShellBarSearch.js",
+      "path": "dist/elements/shellbar-search/FuroUi5ShellBarSearch.js",
       "declarations": [
         {
           "kind": "class",
@@ -14807,20 +14634,20 @@
           "name": "FuroUi5ShellBarSearch",
           "declaration": {
             "name": "FuroUi5ShellBarSearch",
-            "module": "src/web-components/furo-ui5-shellbar-search/FuroUi5ShellBarSearch.ts"
+            "module": "src/elements/shellbar-search/FuroUi5ShellBarSearch.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-shellbar-search/index.js",
+      "path": "dist/elements/shellbar-search/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-shellbar-spacer/FuroUi5ShellBarSpacer.js",
+      "path": "dist/elements/shellbar-spacer/FuroUi5ShellBarSpacer.js",
       "declarations": [
         {
           "kind": "class",
@@ -14878,20 +14705,20 @@
           "name": "FuroUi5ShellBarSpacer",
           "declaration": {
             "name": "FuroUi5ShellBarSpacer",
-            "module": "src/web-components/furo-ui5-shellbar-spacer/FuroUi5ShellBarSpacer.ts"
+            "module": "src/elements/shellbar-spacer/FuroUi5ShellBarSpacer.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-shellbar-spacer/index.js",
+      "path": "dist/elements/shellbar-spacer/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-shellbar/FuroUi5ShellBar.js",
+      "path": "dist/elements/shellbar/FuroUi5ShellBar.js",
       "declarations": [
         {
           "kind": "class",
@@ -15624,20 +15451,20 @@
           "name": "FuroUi5ShellBar",
           "declaration": {
             "name": "FuroUi5ShellBar",
-            "module": "src/web-components/furo-ui5-shellbar/FuroUi5ShellBar.ts"
+            "module": "src/elements/shellbar/FuroUi5ShellBar.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-shellbar/index.js",
+      "path": "dist/elements/shellbar/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-show-hide/FuroUi5ShowHide.js",
+      "path": "dist/elements/show-hide/FuroUi5ShowHide.js",
       "declarations": [
         {
           "kind": "class",
@@ -15940,14 +15767,14 @@
           "name": "FuroUi5ShowHide",
           "declaration": {
             "name": "FuroUi5ShowHide",
-            "module": "src/web-components/furo-ui5-show-hide/FuroUi5ShowHide.ts"
+            "module": "src/elements/show-hide/FuroUi5ShowHide.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-show-hide/index.js",
+      "path": "dist/elements/show-hide/index.js",
       "declarations": [],
       "exports": [
         {
@@ -15955,14 +15782,14 @@
           "name": "furo-ui5-show-hide",
           "declaration": {
             "name": "FuroUi5ShowHide",
-            "module": "/src/web-components/furo-ui5-show-hide/FuroUi5ShowHide"
+            "module": "/src/elements/show-hide/FuroUi5ShowHide"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-sign-pad/FuroUi5SignPad.js",
+      "path": "dist/elements/sign-pad/FuroUi5SignPad.js",
       "declarations": [
         {
           "kind": "class",
@@ -16109,14 +15936,14 @@
           "name": "FuroUi5SignPad",
           "declaration": {
             "name": "FuroUi5SignPad",
-            "module": "src/web-components/furo-ui5-sign-pad/FuroUi5SignPad.ts"
+            "module": "src/elements/sign-pad/FuroUi5SignPad.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-sign-pad/index.js",
+      "path": "dist/elements/sign-pad/index.js",
       "declarations": [],
       "exports": [
         {
@@ -16124,14 +15951,14 @@
           "name": "furo-ui5-sign-pad",
           "declaration": {
             "name": "FuroUi5SignPad",
-            "module": "/src/web-components/furo-ui5-sign-pad/FuroUi5SignPad"
+            "module": "/src/elements/sign-pad/FuroUi5SignPad"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-slider/FuroUi5Slider.js",
+      "path": "dist/elements/slider/FuroUi5Slider.js",
       "declarations": [
         {
           "kind": "class",
@@ -16715,20 +16542,20 @@
           "name": "FuroUi5Slider",
           "declaration": {
             "name": "FuroUi5Slider",
-            "module": "src/web-components/furo-ui5-slider/FuroUi5Slider.ts"
+            "module": "src/elements/slider/FuroUi5Slider.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-slider/index.js",
+      "path": "dist/elements/slider/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-step-input/FuroUi5StepInput.js",
+      "path": "dist/elements/step-input/FuroUi5StepInput.js",
       "declarations": [
         {
           "kind": "class",
@@ -17385,20 +17212,20 @@
           "name": "FuroUi5StepInput",
           "declaration": {
             "name": "FuroUi5StepInput",
-            "module": "src/web-components/furo-ui5-step-input/FuroUi5StepInput.ts"
+            "module": "src/elements/step-input/FuroUi5StepInput.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-step-input/index.js",
+      "path": "dist/elements/step-input/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-subsection/FuroUi5Subsection.js",
+      "path": "dist/elements/subsection/FuroUi5Subsection.js",
       "declarations": [
         {
           "kind": "class",
@@ -17599,14 +17426,14 @@
           "name": "FuroUi5Subsection",
           "declaration": {
             "name": "FuroUi5Subsection",
-            "module": "src/web-components/furo-ui5-subsection/FuroUi5Subsection.ts"
+            "module": "src/elements/subsection/FuroUi5Subsection.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-subsection/index.js",
+      "path": "dist/elements/subsection/index.js",
       "declarations": [],
       "exports": [
         {
@@ -17614,14 +17441,14 @@
           "name": "furo-ui5-subsection",
           "declaration": {
             "name": "FuroUi5Subsection",
-            "module": "/src/web-components/furo-ui5-subsection/FuroUi5Subsection"
+            "module": "/src/elements/subsection/FuroUi5Subsection"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-switch/FuroUi5Switch.js",
+      "path": "dist/elements/switch/FuroUi5Switch.js",
       "declarations": [
         {
           "kind": "class",
@@ -18183,20 +18010,20 @@
           "name": "FuroUi5Switch",
           "declaration": {
             "name": "FuroUi5Switch",
-            "module": "src/web-components/furo-ui5-switch/FuroUi5Switch.ts"
+            "module": "src/elements/switch/FuroUi5Switch.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-switch/index.js",
+      "path": "dist/elements/switch/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-table-toolbar-separator/FuroUi5TableToolbarSeparator.js",
+      "path": "dist/elements/table-toolbar-separator/FuroUi5TableToolbarSeparator.js",
       "declarations": [
         {
           "kind": "class",
@@ -18213,14 +18040,14 @@
           "name": "FuroUi5TableToolbarSeparator",
           "declaration": {
             "name": "FuroUi5TableToolbarSeparator",
-            "module": "src/web-components/furo-ui5-table-toolbar-separator/FuroUi5TableToolbarSeparator.ts"
+            "module": "src/elements/table-toolbar-separator/FuroUi5TableToolbarSeparator.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-table-toolbar-separator/index.js",
+      "path": "dist/elements/table-toolbar-separator/index.js",
       "declarations": [],
       "exports": [
         {
@@ -18228,14 +18055,14 @@
           "name": "furo-ui5-table-toolbar-separator",
           "declaration": {
             "name": "FuroUi5TableToolbarSeparator",
-            "module": "/src/web-components/furo-ui5-table-toolbar-separator/FuroUi5TableToolbarSeparator"
+            "module": "/src/elements/table-toolbar-separator/FuroUi5TableToolbarSeparator"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-text-input/FuroUi5TextInput.js",
+      "path": "dist/elements/text-input/FuroUi5TextInput.js",
       "declarations": [
         {
           "kind": "class",
@@ -19074,20 +18901,20 @@
           "name": "FuroUi5TextInput",
           "declaration": {
             "name": "FuroUi5TextInput",
-            "module": "src/web-components/furo-ui5-text-input/FuroUi5TextInput.ts"
+            "module": "src/elements/text-input/FuroUi5TextInput.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-text-input/index.js",
+      "path": "dist/elements/text-input/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-textarea/FuroUi5Textarea.js",
+      "path": "dist/elements/textarea/FuroUi5Textarea.js",
       "declarations": [
         {
           "kind": "class",
@@ -19786,20 +19613,20 @@
           "name": "FuroUi5Textarea",
           "declaration": {
             "name": "FuroUi5Textarea",
-            "module": "src/web-components/furo-ui5-textarea/FuroUi5Textarea.ts"
+            "module": "src/elements/textarea/FuroUi5Textarea.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-textarea/index.js",
+      "path": "dist/elements/textarea/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-title/FuroUi5Title.js",
+      "path": "dist/elements/title/FuroUi5Title.js",
       "declarations": [
         {
           "kind": "class",
@@ -19969,20 +19796,20 @@
           "name": "FuroUi5Title",
           "declaration": {
             "name": "FuroUi5Title",
-            "module": "src/web-components/furo-ui5-title/FuroUi5Title.ts"
+            "module": "src/elements/title/FuroUi5Title.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-title/index.js",
+      "path": "dist/elements/title/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-toast/FuroUi5Toast.js",
+      "path": "dist/elements/toast/FuroUi5Toast.js",
       "declarations": [
         {
           "kind": "class",
@@ -20158,20 +19985,20 @@
           "name": "FuroUi5Toast",
           "declaration": {
             "name": "FuroUi5Toast",
-            "module": "src/web-components/furo-ui5-toast/FuroUi5Toast.ts"
+            "module": "src/elements/toast/FuroUi5Toast.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-toast/index.js",
+      "path": "dist/elements/toast/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-toggle-button/FuroUi5ToggleButton.js",
+      "path": "dist/elements/toggle-button/FuroUi5ToggleButton.js",
       "declarations": [
         {
           "kind": "class",
@@ -20910,20 +20737,20 @@
           "name": "FuroUi5ToggleButton",
           "declaration": {
             "name": "FuroUi5ToggleButton",
-            "module": "src/web-components/furo-ui5-toggle-button/FuroUi5ToggleButton.ts"
+            "module": "src/elements/toggle-button/FuroUi5ToggleButton.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-toggle-button/index.js",
+      "path": "dist/elements/toggle-button/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-user-menu/FuroUi5UserMenu.js",
+      "path": "dist/elements/user-menu/FuroUi5UserMenu.js",
       "declarations": [
         {
           "kind": "class",
@@ -21304,20 +21131,20 @@
           "name": "FuroUi5UserMenu",
           "declaration": {
             "name": "FuroUi5UserMenu",
-            "module": "src/web-components/furo-ui5-user-menu/FuroUi5UserMenu.ts"
+            "module": "src/elements/user-menu/FuroUi5UserMenu.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-user-menu/index.js",
+      "path": "dist/elements/user-menu/index.js",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-z-grid/FuroUi5ZGrid.js",
+      "path": "dist/elements/z-grid/FuroUi5ZGrid.js",
       "declarations": [
         {
           "kind": "class",
@@ -21433,14 +21260,14 @@
           "name": "FuroUi5ZGrid",
           "declaration": {
             "name": "FuroUi5ZGrid",
-            "module": "src/web-components/furo-ui5-z-grid/FuroUi5ZGrid.ts"
+            "module": "src/elements/z-grid/FuroUi5ZGrid.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "dist/web-components/furo-ui5-z-grid/index.js",
+      "path": "dist/elements/z-grid/index.js",
       "declarations": [],
       "exports": [
         {
@@ -21448,7 +21275,183 @@
           "name": "furo-ui5-z-grid",
           "declaration": {
             "name": "FuroUi5ZGrid",
-            "module": "/src/web-components/furo-ui5-z-grid/FuroUi5ZGrid"
+            "module": "/src/elements/z-grid/FuroUi5ZGrid"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/types/BackgroundDesign.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "BackgroundDesign",
+            "module": "src/types/BackgroundDesign.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/types/ComboBoxFilter.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "ComboBoxFilter",
+            "module": "src/types/ComboBoxFilter.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/types/FlexibleGridSetting.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "SpanSizeVerticalVals",
+          "type": {
+            "text": "array"
+          },
+          "default": "[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\", \"12\", \"13\"]",
+          "privacy": "public"
+        },
+        {
+          "kind": "variable",
+          "name": "SpanSizeHorizontalVals",
+          "type": {
+            "text": "array"
+          },
+          "default": "[\"full\", \"end\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\", \"12\", \"13\"]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SpanSizeHorizontalVals",
+          "declaration": {
+            "name": "SpanSizeHorizontalVals",
+            "module": "src/types/FlexibleGridSetting.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "SpanSizeVerticalVals",
+          "declaration": {
+            "name": "SpanSizeVerticalVals",
+            "module": "src/types/FlexibleGridSetting.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/types/FormFieldSegmentationPatterns.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "FormFieldSegmentationPatterns",
+            "module": "src/types/FormFieldSegmentationPatterns.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/types/IconShape.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "IconShape",
+            "module": "src/types/IconShape.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/types/IconSize.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "IconSize",
+            "module": "src/types/IconSize.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/types/InputSuggestionsFilter.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "InputSuggestionsFilter",
+            "module": "src/types/InputSuggestionsFilter.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/types/ResponsiveLayoutSize.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "ResponsiveLayoutSize",
+            "module": "src/types/ResponsiveLayoutSize.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/types/SelectTextSeparator.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SelectTextSeparator",
+            "module": "src/types/SelectTextSeparator.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/types/ValueState.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "ValueState",
+            "module": "src/types/ValueState.ts"
           }
         }
       ]

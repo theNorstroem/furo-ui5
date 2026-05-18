@@ -8,7 +8,7 @@ import type ValueState from "../types/ValueState";
 import type { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models/index.js";
 
 export interface RatingIndicator extends React.HTMLAttributes<HTMLElement> {
-  onchange?: (d: `number`) => void;
+  onchange?: (d: CustomEvent) => void;
   "onfuro-value-changed"?: (d: `number`) => void;
   // properties
 
@@ -41,11 +41,6 @@ export interface RatingIndicator extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
-   * Set the value state
-   */
-  "value-state"?: "Positive" | "Negative" | "Critical" | "Information" | "None";
-
-  /**
    * Defines the accessible ARIA name of the component.
    */
   accessibleName?: string | undefined;
@@ -61,6 +56,17 @@ export interface RatingIndicator extends React.HTMLAttributes<HTMLElement> {
    * **Note:** A disabled component is completely noninteractive.
    */
   disabled?: boolean;
+
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * The number of displayed rating symbols.
@@ -110,6 +116,11 @@ export interface RatingIndicator extends React.HTMLAttributes<HTMLElement> {
    * - 1.8 - 1.9 -> 2
    */
   value?: number;
+
+  /**
+   * Set the value state
+   */
+  "value-state"?: "Positive" | "Negative" | "Critical" | "Information" | "None";
 }
 
 declare module "react" {
@@ -140,6 +151,33 @@ declare module "react" {
        * Bind aa entity field. You can use the entity even when no data was received.
        *
        * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+       *
+       * ### Overview
+       * The Rating Indicator is used to display a specific number of icons that are used to rate an item.
+       * Additionally, it is also used to display the average and overall ratings.
+       *
+       * ### Usage
+       * The recommended number of icons is between 5 and 7.
+       *
+       * ### Responsive Behavior
+       * You can change the size of the Rating Indicator by changing its `font-size` CSS property.
+       *
+       * Example: `<furo-furo-ui5-rating-indicator style="font-size: 3rem;"></furo-furo-ui5-rating-indicator>`
+       *
+       * ### Keyboard Handling
+       * When the `furo-furo-ui5-rating-indicator` is focused, the user can change the rating
+       * with the following keyboard shortcuts:
+       *
+       * - [RIGHT/UP] - Increases the value of the rating by one step. If the highest value is reached, does nothing
+       * - [LEFT/DOWN] - Decreases the value of the rating by one step. If the lowest value is reached, does nothing.
+       * - [Home] - Sets the lowest value.
+       * - [End] - Sets the highest value.
+       * - [SPACE/ENTER/RETURN] - Increases the value of the rating by one step. If the highest value is reached, sets the rating to the lowest value.
+       * - Any number - Changes value to the corresponding number. If typed number is larger than the number of values, sets the highest value.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/RatingIndicator.js";`
        *
        * ### Overview
        * The Rating Indicator is used to display a specific number of icons that are used to rate an item.

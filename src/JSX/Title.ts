@@ -11,6 +11,17 @@ export interface Title extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
+
+  /**
    * Defines the component level.
    * Available options are: `"H6"` to `"H1"`.
    * This property does not influence the style of the component.
@@ -37,6 +48,15 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-title` component is used to display titles inside a page.
+       * It is a simple, large-sized text with explicit header/title semantics.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Title.js";`
        *
        * ### Overview
        *

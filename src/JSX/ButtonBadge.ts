@@ -17,6 +17,17 @@ export interface ButtonBadge extends React.HTMLAttributes<HTMLElement> {
   design?: ButtonBadgeDesign | keyof typeof ButtonBadgeDesign;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
+
+  /**
    * Defines the text of the component.
    *
    * **Note:** Text is not applied when the `design` property is set to `AttentionDot`.
@@ -31,6 +42,12 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
+       *
+       * The `furo-furo-ui5-button-badge` component defines a badge that appears in the `furo-furo-ui5-button`.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/ButtonBadge.js";`
        *
        * The `furo-ui5-button-badge` component defines a badge that appears in the `furo-ui5-button`.
        *

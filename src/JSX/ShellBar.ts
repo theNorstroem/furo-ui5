@@ -28,11 +28,6 @@ export interface ShellBar extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
-   * Drops a shadow below the shellbar
-   */
-  shadow?: boolean;
-
-  /**
    * Defines additional accessibility attributes on different areas of the component.
    *
    * The accessibilityAttributes object has the following fields,
@@ -72,11 +67,22 @@ export interface ShellBar extends React.HTMLAttributes<HTMLElement> {
   disableSearchCollapse?: boolean;
 
   /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
+
+  /**
    * Defines the visibility state of the search button.
    *
    * **Note:** The `hideSearchButton` property is in an experimental state and is a subject to change.
    */
   hideSearchButton?: boolean;
+
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
   /**
    * Returns the `logo` DOM ref.
@@ -124,6 +130,11 @@ export interface ShellBar extends React.HTMLAttributes<HTMLElement> {
   secondaryTitle?: string | undefined;
 
   /**
+   * Drops a shadow below the shellbar
+   */
+  shadow?: boolean;
+
+  /**
    * Defines, if the notification icon would be displayed.
    */
   showNotifications?: boolean;
@@ -146,6 +157,31 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-shellbar` is meant to serve as an application header
+       * and includes numerous built-in features, such as: logo, profile image/icon, title, search field, notifications and so on.
+       *
+       * ### Stable DOM Refs
+       *
+       * You can use the following stable DOM refs for the `furo-furo-ui5-shellbar`:
+       *
+       * - logo
+       * - notifications
+       * - overflow
+       * - profile
+       * - product-switch
+       *
+       * ### Keyboard Handling
+       *
+       * #### Fast Navigation
+       * This component provides a build in fast navigation group which can be used via [F6] / [Shift] + [F6] / [Ctrl] + [Alt/Option] / [Down] or [Ctrl] + [Alt/Option] + [Up].
+       * In order to use this functionality, you need to import the following module:
+       * `import "@ui5/webcomponents-base/dist/features/F6Navigation.js"`
+       *
+       * ### ES6 Module Import
+       * `import "@furo/ui5/dist/ShellBar.js";`
        *
        * ### Overview
        *

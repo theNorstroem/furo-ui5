@@ -121,12 +121,12 @@ export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
   /**
    * Toggles the icon.
    */
-  toggle = ()=> {
+  toggle: () => void = () => {
     if (!this.disabled) {
       this.value = !this.value;
       this.writeToModel();
     }
-  }
+  };
 
   /**
    * Themable Styles

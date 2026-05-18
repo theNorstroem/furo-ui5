@@ -1,16 +1,16 @@
 import "@ui5/webcomponents/dist/Option.js";
-import "@/web-components/furo-ui5-mcb-item";
+import "@/elements/mcb-item";
 
 import { type FieldConstraints, STRING } from "@furo/open-models";
 import { ARRAY } from "@furo/open-models/dist/index";
 import MultiComboBox from "@ui5/webcomponents/dist/MultiComboBox.js";
 
+import type { FuroUi5McbItem } from "@/elements/mcb-item/FuroUi5McbItem";
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import type { IdentifiableList, McbItem, OptionLikeList } from "@/lib/open-models/signatures";
 import { type FuroFatString, type IFuroFatString } from "@/models";
-import type { FuroUi5McbItem } from "@/web-components/furo-ui5-mcb-item/FuroUi5McbItem";
 
 /**
  * The furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-ui5-multi-combobox define

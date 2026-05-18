@@ -1,9 +1,10 @@
 import "@ui5/webcomponents/dist/Option.js";
-import "@/web-components/furo-ui5-option";
+import "@/elements/option";
 
 import { type FieldConstraints, STRING, StringValue } from "@furo/open-models";
 import Select from "@ui5/webcomponents/dist/Select.js";
 
+import type { FuroUi5Option } from "@/elements/option/FuroUi5Option";
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
@@ -11,7 +12,6 @@ import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import type { OptionLikeList, SelectOption } from "@/lib/open-models/signatures";
 import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
 import { FuroFatString } from "@/models";
-import type { FuroUi5Option } from "@/web-components/furo-ui5-option/FuroUi5Option";
 
 /**
  * The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define
