@@ -16,7 +16,7 @@ export interface BoolIcon extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   // undocumented
-  accessibleName?: string;
+  accessibleName?: string | undefined;
 
   /**
    * Defines the component semantic design.

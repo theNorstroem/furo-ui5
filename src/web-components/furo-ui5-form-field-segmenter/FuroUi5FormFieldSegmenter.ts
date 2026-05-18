@@ -27,11 +27,7 @@ export class FuroUi5FormFieldSegmenter extends LitElement {
    * @typeref FormFieldSegmentationPatterns - "@furo/ui5/dist/types/FormFieldSegmentationPatterns.js"
    * @public
    */
-  @property({
-    type: FormFieldSegmentationPatterns,
-    attribute: "pattern",
-    reflect: true,
-  })
+  @property({ type: String, attribute: "pattern", reflect: true })
   pattern: FormFieldSegmentationPatterns = FormFieldSegmentationPatterns.Full;
 
   override render() {

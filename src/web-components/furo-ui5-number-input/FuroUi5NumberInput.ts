@@ -57,8 +57,8 @@ export class FuroUi5NumberInput extends Input {
   private readonlyState: ReadonlyState = new ReadonlyState(this);
 
   // used to set the value from the model to this.value
-  set modelValue(v: number) {
-    this.value = v.toString(10);
+  set modelValue(v: number | string) {
+    this.value = String(v);
   }
 
   get modelValue(): number | string {
@@ -155,9 +155,9 @@ export class FuroUi5NumberInput extends Input {
 
   override disconnectedCallback(): void {
     super.disconnectedCallback();
-    this._model.__removeEventListener("field-value-changed", this.readFromModel.bind(this));
-    this.removeEventListener("input", this.writeToModel.bind(this));
-    this.removeEventListener("change", this.readFromModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this.removeEventListener("input", this.writeToModel);
+    this.removeEventListener("change", this.readFromModel);
   }
 
   /**
@@ -214,9 +214,9 @@ export class FuroUi5NumberInput extends Input {
      * - from ui: input, change
      */
     this.readonlyState.detach();
-    this._model.__removeEventListener("field-value-changed", this.readFromModel.bind(this));
-    this.removeEventListener("input", this.writeToModel.bind(this));
-    this.removeEventListener("change", this.readFromModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this.removeEventListener("input", this.writeToModel);
+    this.removeEventListener("change", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
@@ -234,11 +234,11 @@ export class FuroUi5NumberInput extends Input {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("input", this.writeToModel.bind(this));
-    this.addEventListener("change", this.readFromModel.bind(this));
+    this.addEventListener("input", this.writeToModel);
+    this.addEventListener("change", this.readFromModel);
 
     // initial read
     this.readFromModel();
@@ -269,13 +269,13 @@ export class FuroUi5NumberInput extends Input {
     }
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
-  private writeToModel(): void {
+  private writeToModel = (): void => {
     this.modelReaderWriter?.writeModel();
-  }
+  };
 
   /**
    * @private

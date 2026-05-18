@@ -1,4 +1,4 @@
-import { STRING } from "@furo/open-models";
+import { type JSONObject, STRING } from "@furo/open-models";
 import type { FieldNode } from "@furo/open-models";
 import { css, html, LitElement } from "lit";
 import { state } from "lit/decorators.js";
@@ -48,7 +48,7 @@ export class FuroUi5PrettyJson extends LitElement {
      * - from ui: input, change
      */
 
-    this._model.__removeEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
@@ -57,7 +57,7 @@ export class FuroUi5PrettyJson extends LitElement {
     // listen on state changes on the model
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
 
@@ -71,15 +71,15 @@ export class FuroUi5PrettyJson extends LitElement {
     // a11y
   }
 
-  readFromModel(): void {
-    this.injectData(this._model.__toLiteral());
-  }
+  private readFromModel = (): void => {
+    this.injectData(this._model.__toLiteral() as JSONObject);
+  };
 
   /**
    * Inject JSON data
    * @param {JSON} json - Json literal
    */
-  injectData(json: object) {
+  injectData(json: object | undefined) {
     if (json) {
       this.content = FuroUi5PrettyJson._syntaxHighlight(JSON.stringify(json, null, 2));
     } else {

@@ -13,9 +13,10 @@ const nullSafeLocaleCompare = (a, b) => {
 };
 
 export default {
-  globs: ["./src/web-components/**/*.ts"],
+  globs: ["./src/web-components/**/*.ts", "./src/types/*.ts"],
   exclude: ["./dist/**/*"],
   outdir: "./",
+  paths: { "@/*": ["./src/*"] },
   dev: false,
   litelement: true,
   dependencies: true,
@@ -28,7 +29,9 @@ export default {
       downlevelIteration: true,
       module: 99,
       strictNullChecks: true,
-      moduleResolution: 3,
+      moduleResolution: 100,
+      baseUrl: ".",
+      paths: { "@/*": ["./src/*"] },
       esModuleInterop: true,
       noEmit: true,
       pretty: true,
@@ -136,8 +139,6 @@ export default {
                             module: matches[4],
                           });
                         }
-                      } else {
-                        console.log(tag?.tagName.escapedText);
                       }
                     });
                   });
@@ -217,9 +218,7 @@ export default {
                         if (!currDocMember.type["references"]) {
                           currDocMember.type["references"] = [];
                         }
-
                         const matches = /^([^\s]+)\s+-\s+"([^\/]+\/[^\/]+)\/(.*)"/.exec(tag.comment);
-                        console.log(matches !== null && matches.length === 5);
                         if (matches !== null && matches.length === 4) {
                           if (!currDocMember.type.text) {
                             currDocMember.type.text = matches[1];

@@ -6,7 +6,7 @@ import "@/web-components/furo-ui5-show-hide";
 import "@/web-components/furo-ui5-text-input";
 import "@/web-components/furo-ui5-textarea";
 import "@/web-components/furo-ui5-number-input";
-import "@/web-components/furo-ui5-step";
+import "@/web-components/furo-ui5-step-input";
 import "@/web-components/furo-ui5-password-input";
 import "@/web-components/furo-ui5-progress-indicator";
 import "@/web-components/furo-ui5-slider";
@@ -117,7 +117,6 @@ export class InputFields extends LitFBP(LitElement) {
    */
   override render() {
     return html`
-
       <furo-ui5-select-enum .model="${this.cube.cube.material}"></furo-ui5-select-enum>
       <furo-ui5-select-enum .model="${this.cube.cube.material}"></furo-ui5-select-enum>
       <furo-ui5-section heading="STRING">

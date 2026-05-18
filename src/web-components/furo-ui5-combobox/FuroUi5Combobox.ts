@@ -92,9 +92,9 @@ export class FuroUi5Combobox extends ComboBox {
      * - from ui: input, change
      */
     this.readonlyState.detach();
-    this._model.__removeEventListener("field-value-changed", this.readFromModel.bind(this));
-    this.removeEventListener("change", this.writeToModel.bind(this));
-    this.removeEventListener("input", this.writeToModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this.removeEventListener("change", this.writeToModel);
+    this.removeEventListener("input", this.writeToModel);
 
     // connect the model
     this._model = fieldNode;
@@ -111,11 +111,11 @@ export class FuroUi5Combobox extends ComboBox {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("change", this.writeToModel.bind(this));
-    this.addEventListener("input", this.writeToModel.bind(this));
+    this.addEventListener("change", this.writeToModel);
+    this.addEventListener("input", this.writeToModel);
 
     // initial read
     this.readFromModel();
@@ -142,7 +142,7 @@ export class FuroUi5Combobox extends ComboBox {
    * @typeref OptionLikeList - "@furo/ui5/dist/index.js"
    * @public
    */
-  public set optionsModel(value: OptionLikeList) {
+  public set optionsModel(value: OptionLikeList | undefined) {
     this.bindOptions(value);
   }
 
@@ -164,20 +164,19 @@ export class FuroUi5Combobox extends ComboBox {
      * - from ui: input, change
      */
 
-    this._optionsModel?.__removeEventListener("array-changed", this.readFromModel.bind(this));
-    this.removeEventListener("change", this.writeToModel.bind(this));
+    this._optionsModel?.__removeEventListener("array-changed", this.readFromOptionsModel);
 
     // connect the model
     this._optionsModel = fieldNode;
 
     // listen on changes from the model
-    this._optionsModel.__addEventListener("array-changed", this.readFromOptionsModel.bind(this));
+    this._optionsModel.__addEventListener("array-changed", this.readFromOptionsModel);
 
     // initial read
     this.readFromOptionsModel();
   }
 
-  private readFromOptionsModel(): void {
+  private readFromOptionsModel = (): void => {
     // clear existing options
     this.querySelectorAll("furo-ui5-cb-item").forEach((el) => {
       el.setAttribute("deleteme", "");
@@ -185,7 +184,7 @@ export class FuroUi5Combobox extends ComboBox {
 
     this.optionsModel?.forEach((option, i) => {
       const existingOpt: FuroUi5CbItem | null = this.querySelector(`furo-ui5-cb-item[value="${option.id.toString()}"]`);
-      const opt: FuroUi5CbItem = existingOpt || document.createElement("furo-ui5-cb-item");
+      const opt: FuroUi5CbItem = existingOpt ?? document.createElement("furo-ui5-cb-item");
       opt.model = option;
       opt.style.order = i.toString();
       if (existingOpt === null) {
@@ -205,7 +204,7 @@ export class FuroUi5Combobox extends ComboBox {
       .forEach((el) => {
         this.appendChild(el);
       });
-  }
+  };
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {
     if (fieldConstraints !== undefined) {
@@ -233,7 +232,7 @@ export class FuroUi5Combobox extends ComboBox {
    * @typeref SelectOption - "@furo/ui5/dist/index.js"
    * @public
    */
-  public set optionList(value: SelectOption[]) {
+  public set optionList(value: SelectOption[] | undefined) {
     this.renderOptionList(value);
   }
 
@@ -244,7 +243,10 @@ export class FuroUi5Combobox extends ComboBox {
    * @param optionList
    * @private
    */
-  public renderOptionList(optionList: SelectOption[]) {
+  public renderOptionList(optionList: SelectOption[] | undefined) {
+    if (optionList === undefined) {
+      return;
+    }
     // set marker to clear existing options
     this.querySelectorAll("furo-ui5-cb-item").forEach((el) => {
       el.setAttribute("deleteme", "");
@@ -252,7 +254,7 @@ export class FuroUi5Combobox extends ComboBox {
 
     optionList.forEach((option, i) => {
       const existingOpt: FuroUi5CbItem | null = this.querySelector(`furo-ui5-cb-item[value="${option.id}"]`);
-      const opt: FuroUi5CbItem = existingOpt || document.createElement("furo-ui5-cb-item");
+      const opt: FuroUi5CbItem = existingOpt ?? document.createElement("furo-ui5-cb-item");
       opt.text = option.displayName;
 
       opt.style.order = i.toString();
@@ -283,13 +285,13 @@ export class FuroUi5Combobox extends ComboBox {
     this._optionList = optionList;
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
-  private writeToModel(): void {
+  private writeToModel = (): void => {
     this.modelReaderWriter?.writeModel();
-  }
+  };
 
   /**
    * Clears the value of the input field.

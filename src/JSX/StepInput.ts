@@ -6,7 +6,7 @@ import * as React from "react";
 
 import type { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models/index.js";
 
-export interface Step extends React.HTMLAttributes<HTMLElement> {
+export interface StepInput extends React.HTMLAttributes<HTMLElement> {
   onchange?: (d: CustomEvent) => void;
   oninput?: (d: CustomEvent) => void;
   "onvalue-state-change"?: (d: CustomEvent<StepInputValueStateChangeEventDetail>) => void;
@@ -111,7 +111,7 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-step component allows the user to enter and edit numbers with data binding. It consists of an
+       * The furo-furo-furo-ui5-step-input component allows the user to enter and edit numbers with data binding. It consists of an
        * input field and buttons with icons to increase/decrease the value with the predefined step.
        * It supports all features from the [SAP ui5 Input element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/StepInput/).
        *
@@ -172,7 +172,7 @@ declare module "react" {
        *
        * Base class for all UI5 Web Components
        */
-      "furo-ui5-step": Step;
+      "furo-ui5-step-input": StepInput;
     }
   }
 }

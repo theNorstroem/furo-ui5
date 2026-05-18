@@ -22,8 +22,8 @@ export class ReadonlyState {
 
   listenToStateChanged(fieldNode: FieldNode) {
     this.fieldNode = fieldNode;
-    this.fieldNode.__addEventListener("parent-readonly-set", this.handleParentReadonlySet());
-    this.fieldNode.__addEventListener("parent-readonly-unset", this.handleParentReadonlyUnset());
+    this.fieldNode.__addEventListener("parent-readonly-set", this.handleParentReadonlySet);
+    this.fieldNode.__addEventListener("parent-readonly-unset", this.handleParentReadonlyUnset);
     // initial readonly check
     if (this.fieldNode.__isLogicalReadonly()) {
       if ("readonly" in this.inputElement) {
@@ -38,30 +38,26 @@ export class ReadonlyState {
    * removes the listeners from "old" FieldNodes
    */
   detach(): void {
-    this.fieldNode?.__removeEventListener("parent-readonly-set", this.handleParentReadonlySet());
-    this.fieldNode?.__removeEventListener("parent-readonly-unset", this.handleParentReadonlyUnset());
+    this.fieldNode?.__removeEventListener("parent-readonly-set", this.handleParentReadonlySet);
+    this.fieldNode?.__removeEventListener("parent-readonly-unset", this.handleParentReadonlyUnset);
   }
 
-  private handleParentReadonlyUnset() {
-    return () => {
-      if (this.fieldNode === undefined) return;
-      if (!this.fieldNode.__isLogicalReadonly()) {
-        if ("readonly" in this.inputElement) {
-          this.inputElement.readonly = false;
-        } else {
-          this.inputElement.disabled = false;
-        }
-      }
-    };
-  }
-
-  private handleParentReadonlySet() {
-    return () => {
+  private handleParentReadonlyUnset = (): void => {
+    if (this.fieldNode === undefined) return;
+    if (!this.fieldNode.__isLogicalReadonly()) {
       if ("readonly" in this.inputElement) {
-        this.inputElement.readonly = true;
+        this.inputElement.readonly = false;
       } else {
-        this.inputElement.disabled = true;
+        this.inputElement.disabled = false;
       }
-    };
-  }
+    }
+  };
+
+  private handleParentReadonlySet = (): void => {
+    if ("readonly" in this.inputElement) {
+      this.inputElement.readonly = true;
+    } else {
+      this.inputElement.disabled = true;
+    }
+  };
 }

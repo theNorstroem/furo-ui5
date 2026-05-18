@@ -80,8 +80,8 @@ export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
     this.fatHandler = new FatHandler<FuroUi5BoolIcon>(this, ["disabled"]);
     this.fatHandler.readAttributes();
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5BoolIcon>(this, "value", this.model, this.fatHandler);
-    this.modelReaders = this.boolReaderWriters?.getReaders();
-    this.modelWriters = this.boolReaderWriters?.getWriters();
+    this.modelReaders = this.boolReaderWriters.getReaders();
+    this.modelWriters = this.boolReaderWriters.getWriters();
   }
 
   /**
@@ -112,14 +112,16 @@ export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
     this.accessibleName ??= this.model.__label;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   public writeToModel(): void {
+    // dummy method, this can not be reached, but we added it because of the linter
     return;
   }
 
   /**
    * Toggles the icon.
    */
-  toggle() {
+  toggle = ()=> {
     if (!this.disabled) {
       this.value = !this.value;
       this.writeToModel();

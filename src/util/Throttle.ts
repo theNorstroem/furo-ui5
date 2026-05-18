@@ -1,8 +1,7 @@
 // Executes the first call and accepts the next call after delay time.
-// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
-export default function Throttle(func: Function, delay = 500) {
+export default function Throttle<TArgs extends unknown[]>(func: (...args: TArgs) => unknown, delay = 500) {
   let isQueued = false;
-  return (...args: unknown[]) => {
+  return (...args: TArgs) => {
     if (!isQueued) {
       isQueued = true;
       setTimeout(() => {

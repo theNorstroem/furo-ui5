@@ -108,23 +108,21 @@ export class FuroUi5HeaderPanel extends LitElement {
    *
    * S, M, L, XL
    *
-   * @type IconSize
    * @typeref IconSize - "@furo/ui5/dist/types/IconSize.js"
    * @public
    */
-  @property({ type: IconSize, attribute: "icon-size" })
+  @property({ type: String, attribute: "icon-size" })
   iconSize: IconSize = IconSize.S;
 
   /**
    * Defines the icon-shape of the icon / image.
    * Square | Circle
    *
-   * @type IconShape
    * @typeref IconShape - "@furo/ui5/dist/types/IconShape.js"
    * @public
    */
-  @property({ type: IconShape, attribute: "icon-shape" })
-  iconShape: IconShape = IconShape.Square;
+  @property({ type: String, attribute: "icon-shape" })
+  public iconShape: IconShape = IconShape.Square;
 
   /**
    * Shows the fovorite icon when set.
@@ -219,17 +217,17 @@ export class FuroUi5HeaderPanel extends LitElement {
    *
    * @private
    */
-  @query("#showHide") private _showHideComponent?: FuroUi5ShowHide;
+  @query("#showHide") private showHideComponent?: FuroUi5ShowHide;
 
-  @query("#summaryShowHide") private _summaryComponent?: FuroUi5ShowHide;
+  @query("#summaryShowHide") private summaryComponent?: FuroUi5ShowHide;
 
-  @query(".wrapper") private _wrapperEl?: HTMLDivElement;
+  @query(".wrapper") private wrapperEl?: HTMLDivElement;
 
-  @query(".content") private _contentSlotEl?: HTMLElement;
+  @query(".content") private contentSlotEl?: HTMLElement;
 
-  @query("#kpinav") private _kpiNavEl?: HTMLElement;
+  @query("#kpinav") private kpiNavEl?: HTMLElement;
 
-  @query("#variantIcon") private _variantIconEl?: HTMLElement;
+  @query("#variantIcon") private variantIconEl?: HTMLElement;
 
   /**
    *
@@ -240,7 +238,7 @@ export class FuroUi5HeaderPanel extends LitElement {
   /**
    * @private
    */
-  _fireVariantIconClicked(e: MouseEvent) {
+  private fireVariantIconClicked = (e: MouseEvent) => {
     this.dispatchEvent(
       new CustomEvent("variant-icon-clicked", {
         composed: true,
@@ -248,12 +246,12 @@ export class FuroUi5HeaderPanel extends LitElement {
         detail: e.target,
       })
     );
-  }
+  };
 
   /**
    * @private
    */
-  _variantButtonKeyboardHandler(e: KeyboardEvent) {
+  private variantButtonKeyboardHandler = (e: KeyboardEvent) => {
     if (e.key === "ArrowDown") {
       this.dispatchEvent(
         new CustomEvent("variant-icon-clicked", {
@@ -263,12 +261,12 @@ export class FuroUi5HeaderPanel extends LitElement {
         })
       );
     }
-  }
+  };
 
   /**
    * @private
    */
-  _fireFavoriteIconClicked(e: MouseEvent) {
+  private fireFavoriteIconClicked = (e: MouseEvent) => {
     this.dispatchEvent(
       new CustomEvent("favorite-icon-clicked", {
         composed: true,
@@ -276,12 +274,12 @@ export class FuroUi5HeaderPanel extends LitElement {
         detail: e.target,
       })
     );
-  }
+  };
 
   /**
    * @private
    */
-  _fireObjectIconClicked(e: MouseEvent) {
+  private fireObjectIconClicked = (e: MouseEvent) => {
     this.dispatchEvent(
       new CustomEvent("object-icon-clicked", {
         composed: true,
@@ -289,7 +287,7 @@ export class FuroUi5HeaderPanel extends LitElement {
         detail: e.target,
       })
     );
-  }
+  };
 
   /**
    * Collapses the header content.
@@ -301,8 +299,8 @@ export class FuroUi5HeaderPanel extends LitElement {
    */
   collapse() {
     if (!this.collapsed && !this.isPinned) {
-      this._summaryComponent?.show();
-      this._showHideComponent?.hide();
+      this.summaryComponent?.show();
+      this.showHideComponent?.hide();
       setTimeout(() => {
         this.collapsed = true;
       }, 250);
@@ -319,8 +317,8 @@ export class FuroUi5HeaderPanel extends LitElement {
    */
   expand() {
     if (this.collapsed && !this.isPinned) {
-      this._summaryComponent?.hide();
-      this._showHideComponent?.show();
+      this.summaryComponent?.hide();
+      this.showHideComponent?.show();
       setTimeout(() => {
         // rotate the icon when panel is open
         this.collapsed = false;
@@ -332,7 +330,7 @@ export class FuroUi5HeaderPanel extends LitElement {
     super.connectedCallback();
     this.setAttribute("furo-ui5-header-panel", "");
 
-    this.updateComplete.then(() => {
+    void this.updateComplete.then(() => {
       let wrappersize = 390;
       // set wrap if content is smaller then 390px
       const ro = new ResizeObserver((entries) => {
@@ -341,8 +339,8 @@ export class FuroUi5HeaderPanel extends LitElement {
           if (width > 0 && width < 406) {
             this.setAttribute("wrap", "");
 
-            if (this._wrapperEl) {
-              wrappersize = this._wrapperEl.offsetWidth;
+            if (this.wrapperEl) {
+              wrappersize = this.wrapperEl.offsetWidth;
             }
           } else if (width > 111 + wrappersize) {
             this.removeAttribute("wrap");
@@ -350,11 +348,11 @@ export class FuroUi5HeaderPanel extends LitElement {
         });
       });
 
-      if (this._contentSlotEl) {
-        ro.observe(this._contentSlotEl);
+      if (this.contentSlotEl) {
+        ro.observe(this.contentSlotEl);
       }
 
-      document.addEventListener("scroll", this._scrollhandler, {
+      document.addEventListener("scroll", this.scrollhandler, {
         passive: true,
       });
 
@@ -362,13 +360,13 @@ export class FuroUi5HeaderPanel extends LitElement {
         passive: true,
       });
 
-      NavigationGroup(this._kpiNavEl ?? null, "*");
+      NavigationGroup(this.kpiNavEl ?? null, "*");
     });
   }
 
   override disconnectedCallback() {
     super.disconnectedCallback();
-    document.removeEventListener("scroll", this._scrollhandler, true);
+    document.removeEventListener("scroll", this.scrollhandler, true);
     this.removeEventListener("mousewheel", this._wheelhandler as EventListener, true);
   }
 
@@ -398,12 +396,12 @@ export class FuroUi5HeaderPanel extends LitElement {
   /**
    * @private
    */
-  _scrollhandler = () => {
+  private scrollhandler = () => {
     this._bodyIsScrolling = true;
     this._disableBIS();
   };
 
-  _toggle() {
+  private toggleCollapseExpand = () => {
     if (!this.isPinned) {
       if (this.collapsed) {
         this.expand();
@@ -411,26 +409,26 @@ export class FuroUi5HeaderPanel extends LitElement {
         this.collapse();
       }
     }
-  }
+  };
 
   // eslint-disable-next-line class-methods-use-this
-  _toggleOnKeyup() {
+  private toggleOnKeyup = () => {
     // this event is unreachable, just inserted for the a11 linter
-  }
+  };
 
   /**
    * Focuses the variant button (dropdown).
    * @param options
    */
   override focus(options?: FocusOptions) {
-    this._variantIconEl?.focus(options);
+    this.variantIconEl?.focus(options);
   }
 
   /**
    * @private
    *
    */
-  _pinClicked(e: Event) {
+  private pinClicked = (e: Event) => {
     e.stopPropagation();
 
     if (!this.isPinned) {
@@ -455,7 +453,7 @@ export class FuroUi5HeaderPanel extends LitElement {
       );
     }
     this.requestUpdate();
-  }
+  };
 
   static override styles = css`
     :host {
@@ -665,8 +663,8 @@ export class FuroUi5HeaderPanel extends LitElement {
         <div data-sap-ui-fastnavgroup="${this.showDropdown ? "true" : "false"}" ?tripple="${!this.bigAction}" ?double="${this.bigAction}" id="titleblock">
           ${this.showDropdown
             ? html` <furo-ui5-button
-                @click="${this._fireVariantIconClicked}"
-                @keydown="${this._variantButtonKeyboardHandler}"
+                @click="${this.fireVariantIconClicked}"
+                @keydown="${this.variantButtonKeyboardHandler}"
                 design="Transparent"
                 style="margin-left:-0.5rem;--sapButton_Lite_Hover_Background:none;height:2rem;"
               >
@@ -683,14 +681,14 @@ export class FuroUi5HeaderPanel extends LitElement {
                   </span>
                 </furo-ui5-title>
               </furo-ui5-button>`
-            : html`<furo-ui5-title wrapping-type="None" style="display: inline-block" level="${this.headerTextLevel}"> ${this.headerText} </furo-ui5-title> `}
+            : html` <furo-ui5-title wrapping-type="None" style="display: inline-block" level="${this.headerTextLevel}"> ${this.headerText} </furo-ui5-title> `}
           ${this.objectIcon !== ""
-            ? html` <furo-ui5-icon @click="${this._fireObjectIconClicked}" design="Transparent" mode="Interactive" name="${this.objectIcon}"></furo-ui5-icon>`
+            ? html` <furo-ui5-icon @click="${this.fireObjectIconClicked}" design="Transparent" mode="Interactive" name="${this.objectIcon}"></furo-ui5-icon>`
             : ""}
 
           <furo-ui5-icon
             ?hidden="${!this.isFavorite}"
-            @click="${this._fireFavoriteIconClicked}"
+            @click="${this.fireFavoriteIconClicked}"
             design="Information"
             name="favorite"
             mode="Decorative"
@@ -704,7 +702,7 @@ export class FuroUi5HeaderPanel extends LitElement {
           <slot name="action"></slot>
         </div>
       </furo-responsive-layout>
-      ${this.secondaryText && this.secondaryText.trim().length ? html` <ui5-label>${this.secondaryText} </ui5-label>` : ""}
+      ${this.secondaryText.trim().length ? html` <ui5-label>${this.secondaryText}</ui5-label>` : nothing}
 
       <div>
         <slot name="secondary"></slot>
@@ -730,16 +728,11 @@ export class FuroUi5HeaderPanel extends LitElement {
           <slot name="badges"></slot>
         </div>
       </furo-ui5-show-hide>
-      <div class="splitter_bar" @click="${this._toggle}" @keyup="${this._toggleOnKeyup}">
+      <div class="splitter_bar" @click="${this.toggleCollapseExpand}" @keyup="${this.toggleOnKeyup}">
         <div class="splitter before"></div>
         <furo-ui5-icon mode="Interactive" class="collapser-button" name="slim-arrow-up"></furo-ui5-icon>
         <div class="mid"></div>
-        <furo-ui5-icon
-          class="pin-button"
-          mode="Interactive"
-          @click="${this._pinClicked}"
-          name="${this.isPinned ? "pushpin-on" : "pushpin-off"}"
-        ></furo-ui5-icon>
+        <furo-ui5-icon class="pin-button" mode="Interactive" @click="${this.pinClicked}" name="${this.isPinned ? "pushpin-on" : "pushpin-off"}"></furo-ui5-icon>
         <div class="splitter after"></div>
       </div>
     `;

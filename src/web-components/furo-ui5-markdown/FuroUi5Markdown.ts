@@ -63,9 +63,9 @@ export class FuroUi5Markdown extends LitElement {
 
   override disconnectedCallback(): void {
     super.disconnectedCallback();
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
-    this._model.__removeCustomEventListener("stream-begins", this.setStreamBegins.bind(this));
-    this._model.__removeCustomEventListener("stream-ends", this.setStreamEnds.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeCustomEventListener("stream-begins", this.setStreamBegins);
+    this._model.__removeCustomEventListener("stream-ends", this.setStreamEnds);
   }
 
   bindData(fieldNode: STRING | undefined) {
@@ -80,11 +80,11 @@ export class FuroUi5Markdown extends LitElement {
      * - from ui: input, change
      */
 
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
 
-    this._model.__removeCustomEventListener("stream-begins", this.setStreamBegins.bind(this));
+    this._model.__removeCustomEventListener("stream-begins", this.setStreamBegins);
 
-    this._model.__removeCustomEventListener("stream-ends", this.setStreamEnds.bind(this));
+    this._model.__removeCustomEventListener("stream-ends", this.setStreamEnds);
 
     // connect the model
     this._model = fieldNode;
@@ -92,11 +92,11 @@ export class FuroUi5Markdown extends LitElement {
     // listen on state changes on the model
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
-    this._model.__addCustomEventListener("stream-begins", this.setStreamBegins.bind(this));
+    this._model.__addCustomEventListener("stream-begins", this.setStreamBegins);
 
-    this._model.__addCustomEventListener("stream-ends", this.setStreamEnds.bind(this));
+    this._model.__addCustomEventListener("stream-ends", this.setStreamEnds);
 
     // initial read
     this.readFromModel();
@@ -119,9 +119,9 @@ export class FuroUi5Markdown extends LitElement {
     this.readFromModel();
   };
 
-  private readFromModel() {
+  private readFromModel = (): void => {
     this.markdown = this._model.value;
-  }
+  };
 
   private _renderedMarkdown: TemplateResult | typeof nothing = nothing;
 

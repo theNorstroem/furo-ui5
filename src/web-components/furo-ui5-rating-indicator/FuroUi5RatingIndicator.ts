@@ -68,7 +68,7 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
   }
 
   private get modelValue(): number {
-    return Number(this.value);
+    return this.value;
   }
 
   constructor() {
@@ -212,9 +212,9 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
      * - from ui: input, change
      */
     this.readonlyState.detach();
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
-    this.addEventListener("input", this.writeToModel.bind(this));
-    this.addEventListener("change", this.writeToModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this.removeEventListener("input", this.writeToModel);
+    this.removeEventListener("change", this.writeToModel);
 
     // connect the model
     this._model = fieldNode;
@@ -227,11 +227,11 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("input", this.writeToModel.bind(this));
-    this.addEventListener("change", this.writeToModel.bind(this));
+    this.addEventListener("input", this.writeToModel);
+    this.addEventListener("change", this.writeToModel);
 
     // initial read
     this.readFromModel();
@@ -261,13 +261,13 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
     }
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
-  private writeToModel(): void {
+  private writeToModel = (): void => {
     this.modelReaderWriter?.writeModel();
-  }
+  };
 
   private _getModelReaders(): Map<string, () => void> {
     const readers = new Map<string, () => void>();
@@ -305,7 +305,7 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
     const writers = new Map<string, () => void>();
 
     writers.set("primitives.DOUBLE", () => {
-      const v = Number(this.modelValue);
+      const v = this.modelValue;
       if (Number.isNaN(v)) {
         (this._model as DOUBLE).value = 0;
       } else {
@@ -314,7 +314,7 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
     });
 
     writers.set("primitives.FLOAT", () => {
-      const v = Number(this.modelValue);
+      const v = this.modelValue;
       if (Number.isNaN(v)) {
         (this._model as FLOAT).value = 0;
       } else {
@@ -326,7 +326,7 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
      * Updater for primitives.INT32
      */
     writers.set("primitives.INT32", () => {
-      const v = parseInt(String(Number(this.modelValue)), 10);
+      const v = parseInt(String(this.modelValue), 10);
       if (Number.isNaN(v)) {
         (this._model as INT32).value = 0;
       } else {
@@ -338,7 +338,7 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
      * Updater for primitives.INT64
      */
     writers.set("primitives.INT64", () => {
-      const v = parseInt(String(Number(this.modelValue)), 10);
+      const v = parseInt(String(this.modelValue), 10);
       if (Number.isNaN(v)) {
         (this._model as INT64).value = 0n;
       } else {

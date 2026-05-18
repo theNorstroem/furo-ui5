@@ -22,7 +22,7 @@ import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
 
 /**
- * The furo-ui5-step component allows the user to enter and edit numbers with data binding. It consists of an
+ * The furo-ui5-step-input component allows the user to enter and edit numbers with data binding. It consists of an
  * input field and buttons with icons to increase/decrease the value with the predefined step.
  * It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/StepInput/).
  *
@@ -49,25 +49,25 @@ import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 
  *
  *
  * @summary data step input field
- * @tagname furo-ui5-step
+ * @tagname furo-ui5-step-input
  * @demo demo-furo-ui5-number-input Basic usage (scalar , fat, wrapper values)
  * @demo demo-furo-ui5-text-input Basic usage (scalar , fat, wrapper values)
  * @demo demo-furo-ui5-text-input-together playground
  */
-export class FuroUi5Step extends StepInput {
+export class FuroUi5StepInput extends StepInput {
   private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
 
   private modelReaderWriter: ModelReaderWriter | undefined;
 
-  private fatHandler: FatHandler<FuroUi5Step>;
+  private fatHandler: FatHandler<FuroUi5StepInput>;
 
-  private numericReaderWriters: NumericReaderWriters<FuroUi5Step> | undefined;
+  private numericReaderWriters: NumericReaderWriters<FuroUi5StepInput> | undefined;
 
   private readonlyState: ReadonlyState = new ReadonlyState(this);
 
   constructor() {
     super();
-    this.fatHandler = new FatHandler<FuroUi5Step>(this, ["placeholder"]);
+    this.fatHandler = new FatHandler<FuroUi5StepInput>(this, ["placeholder"]);
     this.fatHandler.readAttributes();
   }
 
@@ -206,15 +206,15 @@ export class FuroUi5Step extends StepInput {
      * - from ui: input, change
      */
     this.readonlyState.detach();
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
-    this.addEventListener("input", this.writeToModel.bind(this));
-    this.addEventListener("change", this.writeToModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this.removeEventListener("input", this.writeToModel);
+    this.removeEventListener("change", this.writeToModel);
 
     // connect the model
     this._model = fieldNode;
 
     // init model
-    this.numericReaderWriters = new NumericReaderWriters<FuroUi5Step>(this, "value", this._model, this.fatHandler);
+    this.numericReaderWriters = new NumericReaderWriters<FuroUi5StepInput>(this, "value", this._model, this.fatHandler);
     this.modelReaderWriter = new ModelReaderWriter(
       this._model,
       this.numericReaderWriters.getWriters(),
@@ -226,11 +226,11 @@ export class FuroUi5Step extends StepInput {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("input", this.writeToModel.bind(this));
-    this.addEventListener("change", this.writeToModel.bind(this));
+    this.addEventListener("input", this.writeToModel);
+    this.addEventListener("change", this.writeToModel);
 
     // initial read
     this.readFromModel();
@@ -261,13 +261,13 @@ export class FuroUi5Step extends StepInput {
     }
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
-  private writeToModel(): void {
+  private writeToModel = (): void => {
     this.modelReaderWriter?.writeModel();
-  }
+  };
 
   /**
    * @private

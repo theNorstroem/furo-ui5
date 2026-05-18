@@ -11,7 +11,7 @@ export interface Identifiable extends FieldNode {
 /**
  * Some web-components are expecting that you fulfill this interface.
  */
-export interface IdentifiableList extends ARRAY<Identifiable, unknown> {}
+export type IdentifiableList = ARRAY<Identifiable, unknown>;
 
 /**
  * A list item which fits in to a furo-ui5-mcb-item component
@@ -25,7 +25,7 @@ export interface MultiComboBoxItemLike extends FieldNode {
 /**
  * Used to set the input to a furo-ui5-multi-combobox
  */
-export interface MultiComboBoxItemLikeList extends ARRAY<MultiComboBoxItemLike, unknown> {}
+export type MultiComboBoxItemLikeList = ARRAY<MultiComboBoxItemLike, unknown>;
 
 /**
  * A list item which fits in to an option component
@@ -41,7 +41,7 @@ export interface OptionLike extends FieldNode {
 /**
  * Some web-components are expecting that you fulfill this interface.
  */
-export interface OptionLikeList extends ARRAY<OptionLike, unknown> {}
+export type OptionLikeList = ARRAY<OptionLike, unknown>;
 
 /**
  * Represents an option in a selection control.

@@ -65,7 +65,7 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
     });
 
     // Observe resizes
-    const debouncedResize = DebounceBuilder(this.handleResize.bind(this), 100);
+    const debouncedResize = DebounceBuilder(this.handleResize, 100);
     const ro = new ResizeObserver((_) => {
       debouncedResize();
     });
@@ -81,13 +81,13 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
    * Trigger this method after a resize.
    *
    */
-  private handleResize() {
+  private handleResize = (): void => {
     const ratio = Math.max(window.devicePixelRatio || 1, 1);
     this.canvas.width = this.canvas.offsetWidth * ratio;
     this.canvas.height = this.canvas.offsetHeight * ratio;
     this.canvas.getContext("2d")?.scale(ratio, ratio);
     this.signaturePad?.redraw();
-  }
+  };
 
   /**
    *

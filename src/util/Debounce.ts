@@ -17,30 +17,30 @@
  * @param {boolean} option.trailing
  *
  */
-// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
-export default function DebounceBuilder(func: Function, delay = 250, option = { leading: false, trailing: true }) {
-  let timer: ReturnType<typeof setTimeout> | undefined; // same like basic debounce
-  let trailingArgs: unknown[] = []; // as we require last arguments for trailing
+export default function DebounceBuilder<TArgs extends unknown[]>(
+  func: (...args: TArgs) => unknown,
+  delay = 250,
+  option = { leading: false, trailing: true },
+) {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  let trailingArgs: TArgs | undefined;
 
-  if (!option.leading && !option.trailing) return () => null; // if both false, return null
+  if (!option.leading && !option.trailing) return () => null;
 
-  return function debounced(...args: unknown[]) {
-    // returns a debounced function
-
+  return function debounced(...args: TArgs) {
     if (!timer && option.leading) {
-      // timer done but leading true
-      func(args); // call func
+      func(...args);
     } else {
-      trailingArgs = args; // arguments will be the last args
+      trailingArgs = args;
     }
 
-    clearTimeout(timer); // clear timer for avoiding multiple timer instances
+    clearTimeout(timer);
 
     timer = setTimeout(() => {
-      if (option.trailing && trailingArgs) func(...trailingArgs); // trailingArgs is present and trailing is true
+      if (option.trailing && trailingArgs) func(...trailingArgs);
 
-      trailingArgs = []; // reset last arguments
-      timer = undefined; // reset timer
+      trailingArgs = undefined;
+      timer = undefined;
     }, delay);
   };
 }

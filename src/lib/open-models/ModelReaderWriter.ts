@@ -47,6 +47,7 @@ export class ModelReaderWriter {
   }
 
   public writeModel() {
+    // eslint-disable-next-line
     if (this.fieldNode === undefined) {
       console.error("No bindings for", this);
       return;

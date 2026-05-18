@@ -10,6 +10,7 @@
   <script type="module">
 
     import "@/Assets"
+    import "@/Icons"
     // import web-components here
       import "@/web-components/furo-ui5-button";
       import "@/web-components/furo-ui5-header-panel";
@@ -20,10 +21,17 @@
 
   <style>
     body {
-      background-color: var(--sapBackgroundColor);
-      padding: 0;
       margin: 0;
+      padding:0;
+      min-height: 100vh;
+      background-color: var(--sapBackgroundColor);
     }
+
+    html {
+      overflow-x: hidden;
+    }
+
+
     *:not(:defined) {
       display: none;
     }
@@ -36,7 +44,7 @@
 
 <main>
   <furo-vertical-flex>
-    <furo-ui5-header-panel shadow is-favorite show-dropdown icon="share" object-icon="product" header-text="Header Panel">
+    <furo-ui5-header-panel icon-size="L" shadow is-favorite show-dropdown icon="share" object-icon="product" header-text="Header Panel" secondary-text="secondary">
       <furo-responsive-layout layout="six">
         <div>A</div>
         <div>A</div>
@@ -45,6 +53,7 @@
         <div>A</div>
         <div>A</div>
       </furo-responsive-layout>
+      <div>a <br>a <br>a <br>a <br></div>
     </furo-ui5-header-panel>
     <div flex>XXX</div>
   </furo-vertical-flex>

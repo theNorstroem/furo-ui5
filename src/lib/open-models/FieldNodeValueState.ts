@@ -23,13 +23,13 @@ export class FieldNodeValueState {
     }
     this._previousValueState.slotted = this.inputElement.querySelector('*[slot="valueStateMessage"]');
 
-    fieldNode.__addEventListener("state-changed", (e) => {
+    fieldNode.__addEventListener("state-changed", (e:CustomEvent<FieldNode>) => {
       // restore previous if it exists
-      if (e.detail.__meta.valueState === "None" && this._previousValueState.slotted) {
+      if (e.detail.__meta.valueState === ValueState.None && this._previousValueState.slotted) {
         this.inputElement.querySelector('div[slot="valueStateMessage"].vse')?.remove();
         this.inputElement.valueState = this._previousValueState.state;
         this.inputElement.appendChild(this._previousValueState.slotted);
-      } else if (e.detail.__meta.valueState === "None" && this._previousValueState.state) {
+      } else if (e.detail.__meta.valueState === ValueState.None && this._previousValueState.state) {
         this.inputElement.valueState = this._previousValueState.state;
       } else {
         this.setValueStateMessage(e.detail.__meta.valueState, e.detail.__meta.stateMessage);
@@ -37,7 +37,7 @@ export class FieldNodeValueState {
     });
 
     // set initial state
-    if (fieldNode.__meta.valueState !== "None") {
+    if (fieldNode.__meta.valueState !== ValueState.None) {
       this.setValueStateMessage(fieldNode.__meta.valueState, fieldNode.__meta.stateMessage);
     }
   }
@@ -57,9 +57,7 @@ export class FieldNodeValueState {
     this._previousValueState.slotted?.remove();
 
     const VSE = this.createValueStateMessageDiv();
-    if (VSE !== null) {
-      VSE.innerText = message || "";
-    }
+    VSE.innerText = message || "";
   }
 
   /**

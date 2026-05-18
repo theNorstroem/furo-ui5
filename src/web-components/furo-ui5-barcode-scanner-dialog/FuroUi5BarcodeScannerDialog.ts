@@ -93,18 +93,18 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
     // listen on changes from the model
 
     // listen on changes from UI
-    this.addEventListener("scan-success", this.writeToModel.bind(this) as EventListener);
+    this.addEventListener("scan-success", this.writeToModel as EventListener);
 
     // initial read
 
     // constraints
   }
 
-  private writeToModel(e: CustomEvent<BarcodeScannerDialogScanSuccessEventDetail>): void {
+  private writeToModel = (e: CustomEvent<BarcodeScannerDialogScanSuccessEventDetail>): void => {
     this.code = e.detail.text;
     this.modelReaderWriter?.writeModel();
     this.close();
-  }
+  };
 
   /**
    * Shows the popover at the opener position defined with attribute opener.

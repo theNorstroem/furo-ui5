@@ -102,8 +102,8 @@ export class FuroUi5Select extends Select {
      * - from ui: input, change
      */
     this.readonlyState.detach();
-    this._model.__removeEventListener("field-value-changed", this.readFromModel.bind(this));
-    this.removeEventListener("change", this.writeToModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this.removeEventListener("change", this.writeToModel);
 
     // connect the model
     this._model = fieldNode;
@@ -120,10 +120,10 @@ export class FuroUi5Select extends Select {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("change", this.writeToModel.bind(this));
+    this.addEventListener("change", this.writeToModel);
 
     // initial read
     this.readFromModel();
@@ -150,7 +150,7 @@ export class FuroUi5Select extends Select {
    * @typeref OptionLikeList - "@furo/ui5/dist/index.js"
    * @public
    */
-  public set optionsModel(value: OptionLikeList) {
+  public set optionsModel(value: OptionLikeList | undefined) {
     this.bindOptions(value);
   }
 
@@ -172,14 +172,13 @@ export class FuroUi5Select extends Select {
      * - from ui: input, change
      */
 
-    this._optionsModel?.__removeEventListener("array-changed", this.readFromModel.bind(this));
-    this.removeEventListener("change", this.writeToModel.bind(this));
+    this._optionsModel?.__removeEventListener("array-changed", this.readFromOptionsModel);
 
     // connect the model
     this._optionsModel = fieldNode;
 
     // listen on changes from the model
-    this._optionsModel.__addEventListener("array-changed", this.readFromOptionsModel.bind(this));
+    this._optionsModel.__addEventListener("array-changed", this.readFromOptionsModel);
 
     // initial read
     this.readFromOptionsModel();
@@ -193,7 +192,7 @@ export class FuroUi5Select extends Select {
     });
   }
 
-  private readFromOptionsModel(): void {
+  private readFromOptionsModel = (): void => {
     // clear existing options
     this.querySelectorAll("furo-ui5-option").forEach((el) => {
       el.setAttribute("deleteme", "");
@@ -221,7 +220,7 @@ export class FuroUi5Select extends Select {
       .forEach((el) => {
         this.appendChild(el);
       });
-  }
+  };
 
   private handleConstraints(fieldConstraints: FieldConstraints | undefined) {
     if (fieldConstraints !== undefined) {
@@ -249,7 +248,7 @@ export class FuroUi5Select extends Select {
    * @typeref SelectOption - "@furo/ui5/dist/index.js"
    * @public
    */
-  public set optionList(value: SelectOption[]) {
+  public set optionList(value: SelectOption[] | undefined) {
     this.renderOptionList(value);
   }
 
@@ -260,7 +259,10 @@ export class FuroUi5Select extends Select {
    * @param optionList
    * @private
    */
-  public renderOptionList(optionList: SelectOption[]) {
+  public renderOptionList(optionList: SelectOption[] | undefined) {
+    if (optionList === undefined) {
+      return;
+    }
     // set marker to clear existing options
     this.querySelectorAll("furo-ui5-option").forEach((el) => {
       el.setAttribute("deleteme", "");
@@ -306,13 +308,13 @@ export class FuroUi5Select extends Select {
     this._optionList = optionList;
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
-  private writeToModel(): void {
+  private writeToModel = (): void => {
     this.modelReaderWriter?.writeModel();
-  }
+  };
 
   /**
    * Clears the value of the input field.

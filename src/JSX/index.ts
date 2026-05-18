@@ -37,7 +37,7 @@ import "./ShellBar";
 import "./ShowHide";
 import "./SignPad";
 import "./Slider";
-import "./Step";
+import "./StepInput";
 import "./Subsection";
 import "./Switch";
 import "./TableToolbarSeparator";

@@ -35,7 +35,7 @@ export class FuroUi5SelectEnum extends Select {
    * @public
    * @param value
    */
-  set model(value: ENUM<unknown>) {
+  set model(value: ENUM<unknown> | undefined) {
     this.bindData(value);
   }
 
@@ -56,8 +56,8 @@ export class FuroUi5SelectEnum extends Select {
     }
 
     // remove listeners on old model
-    this.removeEventListener("change", this.writeToModel.bind(this));
-    this._model?.__removeEventListener("field-value-changed", this.readFromModel.bind(this));
+    this.removeEventListener("change", this.writeToModel);
+    this._model?.__removeEventListener("field-value-changed", this.readFromModel);
 
     this._model = fieldNode;
     // remove existing children
@@ -70,7 +70,8 @@ export class FuroUi5SelectEnum extends Select {
       const select = document.createElement("furo-ui5-option");
       select.id = key;
       select.innerText = fieldNode.msg(key);
-      if (select.id === this._model?.value) {
+      const currentValue = this._model?.value;
+      if (typeof currentValue === "string" && select.id === currentValue) {
         select.setAttribute("selected", "");
       }
       // hide UNSPECIFIED option unless show-unspecified is requested.
@@ -85,10 +86,10 @@ export class FuroUi5SelectEnum extends Select {
     this.valueStateManager.listenToStateChanges(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("change", this.writeToModel.bind(this));
+    this.addEventListener("change", this.writeToModel);
 
     // initial read
     this.readFromModel();
@@ -112,9 +113,10 @@ export class FuroUi5SelectEnum extends Select {
     }
   }
 
-  private readFromModel(): void {
-    if (!this._model) return;
-    const option = this.querySelector(`furo-ui5-option[id=${this._model.value}]`);
+  private readFromModel = (): void => {
+    const value = this._model?.value;
+    if (typeof value !== "string") return;
+    const option = this.querySelector(`furo-ui5-option[id="${CSS.escape(value)}"]`);
     if (option) {
       const index = [...this.children].indexOf(option);
       // do not update same index
@@ -122,15 +124,15 @@ export class FuroUi5SelectEnum extends Select {
         this._select(index);
       }
     }
-  }
+  };
 
-  private writeToModel(): void {
+  private writeToModel = (): void => {
     if (!this._model) return;
     const v = this.selectedOption?.id;
     if (v !== undefined) {
       this._model.value = v;
     }
-  }
+  };
 
   /**
    * @private

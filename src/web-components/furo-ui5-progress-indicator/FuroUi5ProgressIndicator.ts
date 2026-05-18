@@ -161,7 +161,7 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
      * - from model: "this-field-value-changed",listenToStateChanged
      * - from ui: input, change
      */
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
@@ -178,7 +178,7 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
     this.valueStateManager.listenToStateChanges(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
 
@@ -189,9 +189,9 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
     this.accessibleName ??= this._model.__label;
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
   /**
    * @private

@@ -57,7 +57,6 @@ export default css`
 
   body {
     margin: 0;
-    font-size: var(--sapFontSize);
   }
 
   a {

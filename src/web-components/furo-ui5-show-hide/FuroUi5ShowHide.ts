@@ -89,7 +89,7 @@ export class FuroUi5ShowHide extends LitElement {
      * - from ui: input, change
      */
     this.readonlyState.detach();
-    this._model.__removeEventListener("this-field-value-changed", this.readFromModel.bind(this));
+    this._model.__removeEventListener("this-field-value-changed", this.readFromModel);
 
     // connect the model
     // init model
@@ -105,7 +105,7 @@ export class FuroUi5ShowHide extends LitElement {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("this-field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("this-field-value-changed", this.readFromModel);
 
     // listen on changes from UI
     // no ui listeners
@@ -127,9 +127,9 @@ export class FuroUi5ShowHide extends LitElement {
     }
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
   /**
    * inverses the bool based on hideOnFalse

@@ -128,9 +128,9 @@ export class FuroUi5PasswordInput extends Input {
      * - from ui: input, change
      */
     this.readonlyState.detach();
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
-    this.addEventListener("input", this.writeToModel.bind(this));
-    this.addEventListener("change", this.writeToModel.bind(this));
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this.removeEventListener("input", this.writeToModel);
+    this.removeEventListener("change", this.writeToModel);
 
     // connect the model
     this._model = fieldNode;
@@ -147,11 +147,11 @@ export class FuroUi5PasswordInput extends Input {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("input", this.writeToModel.bind(this));
-    this.addEventListener("change", this.writeToModel.bind(this));
+    this.addEventListener("input", this.writeToModel);
+    this.addEventListener("change", this.writeToModel);
 
     // initial read
     this.readFromModel();
@@ -181,13 +181,13 @@ export class FuroUi5PasswordInput extends Input {
     }
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
-  private writeToModel(): void {
+  private writeToModel = (): void => {
     this.modelReaderWriter?.writeModel();
-  }
+  };
 
   /**
    * Clears the value of the input field.

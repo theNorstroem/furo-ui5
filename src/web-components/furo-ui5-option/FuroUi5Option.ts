@@ -44,7 +44,7 @@ export class FuroUi5Option extends Option {
    * @typeref OptionLike - "@furo/ui5/dist/index.js"
    * @public
    */
-  public set model(value: OptionLike) {
+  public set model(value: OptionLike | undefined) {
     this.bindData(value);
   }
 
@@ -66,19 +66,19 @@ export class FuroUi5Option extends Option {
      * - from ui: input, change
      */
 
-    this._model?.__removeEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model?.__removeEventListener("field-value-changed", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel.bind(this));
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // initial read
     this.readFromModel();
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     if (!this._model) return;
     this.value = this._model.id.toString();
     this.innerText = this._model.displayName.toString();
@@ -94,7 +94,7 @@ export class FuroUi5Option extends Option {
     if (this._model.additionalText) {
       this.additionalText = this._model.additionalText.toString();
     }
-  }
+  };
 
   /**
    * @private
