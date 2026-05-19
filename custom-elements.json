@@ -289,6 +289,15 @@
           "members": [
             {
               "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "BOOLEAN | FuroFatBool | BoolValue"
+              },
+              "privacy": "private",
+              "default": "new BOOLEAN()"
+            },
+            {
+              "kind": "field",
               "name": "accessibleName",
               "type": {
                 "text": "string | undefined"
@@ -300,29 +309,31 @@
             {
               "kind": "method",
               "name": "bindData",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              },
+              "privacy": "public",
               "parameters": [
                 {
-                  "name": "model",
+                  "name": "fieldNode",
                   "type": {
-                    "text": "BOOLEAN | FuroFatBool | BoolValue"
+                    "text": "BOOLEAN | FuroFatBool | BoolValue | undefined",
+                    "references": [
+                      {
+                        "name": "BOOLEAN",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      }
+                    ]
                   }
                 }
               ],
-              "description": "Bind data - alternative to setting .model directly"
+              "description": "Connects your data model to this component."
             },
             {
               "kind": "field",
               "name": "boolReaderWriters",
               "type": {
-                "text": "BoolReaderWriters<FuroUi5BoolIcon>"
+                "text": "BoolReaderWriters<FuroUi5BoolIcon> | undefined"
               },
-              "privacy": "private",
-              "default": "new BoolReaderWriters<FuroUi5BoolIcon>(this, \"value\", this.model, this.fatHandler)"
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -356,6 +367,19 @@
               "default": "new FatHandler<FuroUi5BoolIcon>(this, [\"disabled\"])"
             },
             {
+              "kind": "method",
+              "name": "handleConstraints",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "fieldConstraints",
+                  "type": {
+                    "text": "FieldConstraints | undefined"
+                  }
+                }
+              ]
+            },
+            {
               "kind": "field",
               "name": "model",
               "type": {
@@ -379,22 +403,41 @@
                 ]
               },
               "privacy": "public",
-              "default": "new BOOLEAN()",
               "description": "FieldNode setter"
             },
             {
               "kind": "field",
-              "name": "modelReaders",
+              "name": "modelReaderWriter",
               "type": {
-                "text": "Map<string, () => void>"
-              }
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",
-              "name": "modelWriters",
+              "name": "readFromModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "readonly",
               "type": {
-                "text": "Map<string, () => void>"
-              }
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "description": "When true, the icon renders without the `interactive` attribute and clicks no longer toggle the value.\nWired automatically from the bound field's logical readonly state and from `read_only: true` constraints.",
+              "attribute": "readonly",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "readonlyState",
+              "type": {
+                "text": "ReadonlyState"
+              },
+              "privacy": "private",
+              "default": "new ReadonlyState(this)"
             },
             {
               "kind": "field",
@@ -424,7 +467,7 @@
               "type": {
                 "text": "() => void"
               },
-              "description": "Toggles the icon."
+              "description": "Toggles the icon. No-op when disabled or readonly."
             },
             {
               "kind": "field",
@@ -438,14 +481,9 @@
               "attribute": "value"
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "writeToModel",
-              "privacy": "public",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
+              "privacy": "private"
             }
           ],
           "attributes": [
@@ -474,6 +512,15 @@
               "default": "false",
               "description": "Disable the pointer interaction",
               "fieldName": "disabled"
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, the icon renders without the `interactive` attribute and clicks no longer toggle the value.\nWired automatically from the bound field's logical readonly state and from `read_only: true` constraints.",
+              "fieldName": "readonly"
             },
             {
               "name": "symbolfalse",
@@ -660,14 +707,9 @@
               "privacy": "private"
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "readFromModel",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -2044,14 +2086,9 @@
               }
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "readFromModel",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -2066,6 +2103,15 @@
                 "name": "CheckBox",
                 "module": "dist/CheckBox.js"
               }
+            },
+            {
+              "kind": "field",
+              "name": "readonlyState",
+              "type": {
+                "text": "ReadonlyState"
+              },
+              "privacy": "private",
+              "default": "new ReadonlyState(this)"
             },
             {
               "kind": "field",
@@ -2168,14 +2214,9 @@
               }
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "writeToModel",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
+              "privacy": "private"
             }
           ],
           "events": [
@@ -4005,7 +4046,7 @@
       "exports": [
         {
           "kind": "js",
-          "name": "default",
+          "name": "FuroUi5FormGroup",
           "declaration": {
             "name": "FuroUi5FormGroup",
             "module": "src/elements/form-group/FuroUi5FormGroup.ts"
@@ -4135,7 +4176,7 @@
       "exports": [
         {
           "kind": "js",
-          "name": "default",
+          "name": "FuroUi5FormLayout",
           "declaration": {
             "name": "FuroUi5FormLayout",
             "module": "src/elements/form-layout/FuroUi5FormLayout.ts"
@@ -4196,7 +4237,7 @@
       "exports": [
         {
           "kind": "js",
-          "name": "default",
+          "name": "FuroUi5FormRow",
           "declaration": {
             "name": "FuroUi5FormRow",
             "module": "src/elements/form-row/FuroUi5FormRow.ts"
@@ -10716,14 +10757,9 @@
               }
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "readFromModel",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -10738,6 +10774,15 @@
                 "name": "RadioButton",
                 "module": "dist/RadioButton.js"
               }
+            },
+            {
+              "kind": "field",
+              "name": "readonlyState",
+              "type": {
+                "text": "ReadonlyState"
+              },
+              "privacy": "private",
+              "default": "new ReadonlyState(this)"
             },
             {
               "kind": "field",
@@ -10845,14 +10890,9 @@
               }
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "writeToModel",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
+              "privacy": "private"
             }
           ],
           "events": [
@@ -11094,26 +11134,6 @@
           "name": "RatingIndicator",
           "members": [
             {
-              "kind": "method",
-              "name": "_getModelReaders",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "Map<string, () => void>"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "_getModelWriters",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "Map<string, () => void>"
-                }
-              }
-            },
-            {
               "kind": "field",
               "name": "_model",
               "type": {
@@ -11338,10 +11358,17 @@
             {
               "kind": "field",
               "name": "modelValue",
-              "privacy": "private",
               "type": {
                 "text": "number"
               }
+            },
+            {
+              "kind": "field",
+              "name": "numericReaderWriters",
+              "type": {
+                "text": "NumericReaderWriters<FuroUi5RatingIndicator> | undefined"
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -12628,6 +12655,11 @@
               }
             },
             {
+              "kind": "field",
+              "name": "applyModelValueToSelection",
+              "privacy": "private"
+            },
+            {
               "kind": "method",
               "name": "bindData",
               "privacy": "public",
@@ -12646,6 +12678,11 @@
                   }
                 }
               ]
+            },
+            {
+              "kind": "field",
+              "name": "captureSelectionIntoModel",
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -12703,6 +12740,14 @@
             },
             {
               "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
               "name": "name",
               "type": {
                 "text": "string | undefined"
@@ -12733,6 +12778,15 @@
                 "name": "Select",
                 "module": "dist/Select.js"
               }
+            },
+            {
+              "kind": "field",
+              "name": "readonlyState",
+              "type": {
+                "text": "ReadonlyState"
+              },
+              "privacy": "private",
+              "default": "new ReadonlyState(this)"
             },
             {
               "kind": "field",
@@ -17655,14 +17709,9 @@
               }
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "readFromModel",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -17677,6 +17726,15 @@
                 "name": "Switch",
                 "module": "dist/Switch.js"
               }
+            },
+            {
+              "kind": "field",
+              "name": "readonlyState",
+              "type": {
+                "text": "ReadonlyState"
+              },
+              "privacy": "private",
+              "default": "new ReadonlyState(this)"
             },
             {
               "kind": "field",
@@ -17755,14 +17813,9 @@
               }
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "writeToModel",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
+              "privacy": "private"
             }
           ],
           "events": [
@@ -20346,14 +20399,18 @@
               }
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "readFromModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "readonlyState",
+              "type": {
+                "text": "ReadonlyState"
+              },
               "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
+              "default": "new ReadonlyState(this)"
             },
             {
               "kind": "field",
@@ -20412,14 +20469,9 @@
               "description": "Unhecks the checkbox and updates the value"
             },
             {
-              "kind": "method",
+              "kind": "field",
               "name": "writeToModel",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
+              "privacy": "private"
             }
           ],
           "superclass": {

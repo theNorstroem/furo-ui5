@@ -36,6 +36,11 @@ export class FuroUi5PrettyJson extends LitElement {
     this.bindData(value);
   }
 
+  override disconnectedCallback(): void {
+    super.disconnectedCallback();
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+  }
+
   public bindData(fieldNode: FieldNode | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;

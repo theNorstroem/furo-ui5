@@ -132,7 +132,7 @@ export class FuroUi5Select extends Select {
     this.handleConstraints(this._model.__getConstraints());
 
     // set the placeholder from model if none was set before
-    this.tooltip = this.tooltip ?? undefined ? this._model.__placeholder : this.tooltip;
+    this.tooltip ??= this._model.__placeholder;
 
     // a11y
     this.accessibleName ??= this._model.__label;
@@ -183,13 +183,18 @@ export class FuroUi5Select extends Select {
     // initial read
     this.readFromOptionsModel();
 
-    // write to model
-    setTimeout(() => {
-      if (this.value === "") {
-        this.value = this.optionsModel?.at(0)?.id.toString() ?? "";
-        this.writeToModel();
-      }
-    });
+    // Auto-select the first option when the bound model has no value.
+    // Done synchronously: the option children appended above are already
+    // upgraded (furo-ui5-option is registered on module load), and at this
+    // point UI5 Select has not yet run a render pass, so this.value still
+    // reflects what bindData() seeded from the model. Once we assign
+    // this.value below, UI5 Select reconciles the visible selection on its
+    // next render via _applySelectionByValue.
+    const firstOption = this.optionsModel.at(0);
+    if (this.value === "" && firstOption !== undefined) {
+      this.value = firstOption.id.toString();
+      this.writeToModel();
+    }
   }
 
   private readFromOptionsModel = (): void => {

@@ -1,9 +1,9 @@
-import { FuroUiBusyIndicator } from "./FuroUi5BusyIndicator";
+import { FuroUi5BusyIndicator } from "./FuroUi5BusyIndicator";
 
-FuroUiBusyIndicator.define();
+FuroUi5BusyIndicator.define();
 
 declare global {
   interface HTMLElementTagNameMap {
-    "furo-ui5-busy-indicator": FuroUiBusyIndicator;
+    "furo-ui5-busy-indicator": FuroUi5BusyIndicator;
   }
 }

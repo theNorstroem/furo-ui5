@@ -29,6 +29,12 @@ export interface BoolIcon extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
+   * When true, the icon renders without the `interactive` attribute and clicks no longer toggle the value.
+   * Wired automatically from the bound field's logical readonly state and from `read_only: true` constraints.
+   */
+  readonly?: boolean;
+
+  /**
    * Defines the icon for the false state.
    */
   symbolfalse?: string;

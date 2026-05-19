@@ -104,7 +104,7 @@ import { property, query } from "lit/decorators.js";
  * @tagname furo-ui5-form-layout
  * @public
  */
-export default class FuroUi5FormLayout extends LitElement {
+export class FuroUi5FormLayout extends LitElement {
   /**
    * Title of the form.
    * @public

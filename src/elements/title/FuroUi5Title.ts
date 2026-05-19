@@ -5,6 +5,14 @@ import Title from "@ui5/webcomponents/dist/Title.js";
  */
 export class FuroUi5Title extends Title {
   /**
+   * Added for compatibility
+   */
+  override connectedCallback() {
+    this.setAttribute("ui5-title", "");
+    return super.connectedCallback();
+  }
+
+  /**
    * @private
    */
   static override get metadata() {

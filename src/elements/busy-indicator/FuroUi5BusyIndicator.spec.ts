@@ -31,7 +31,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUiBusyIndicator } from "./FuroUi5BusyIndicator";
+import { FuroUi5BusyIndicator } from "./FuroUi5BusyIndicator";
 
 import { createFatBool } from "@/util/test-helpers/createFatBool";
 import { delay } from "@/util/test-helpers/delay";
@@ -43,7 +43,7 @@ describe("FuroUiBusyIndicator", () => {
   // [TEMPLATE] Element identity & accessibility
   // ───────────────────────────────────────────────────────────────────────
   describe("element identity & a11y [TEMPLATE]", () => {
-    let el: FuroUiBusyIndicator;
+    let el: FuroUi5BusyIndicator;
     let elLocator: LocatorSelectors;
 
     beforeAll(async () => {
@@ -78,7 +78,7 @@ describe("FuroUiBusyIndicator", () => {
   // [TEMPLATE] Default model state
   // ───────────────────────────────────────────────────────────────────────
   describe("default model state [TEMPLATE]", () => {
-    let el: FuroUiBusyIndicator;
+    let el: FuroUi5BusyIndicator;
 
     beforeEach(async () => {
       el = await fixture(html`<furo-ui5-busy-indicator></furo-ui5-busy-indicator>`);
@@ -106,7 +106,7 @@ describe("FuroUiBusyIndicator", () => {
   // inherited UI5 `active` property for each supported model type.
   // ───────────────────────────────────────────────────────────────────────
   describe("model → UI value sync [TEMPLATE]", () => {
-    let el: FuroUiBusyIndicator;
+    let el: FuroUi5BusyIndicator;
 
     beforeEach(async () => {
       el = await fixture(html`<furo-ui5-busy-indicator></furo-ui5-busy-indicator>`);
@@ -168,7 +168,7 @@ describe("FuroUiBusyIndicator", () => {
   // [TEMPLATE] Rebinding cleanliness
   // ───────────────────────────────────────────────────────────────────────
   describe("rebinding cleanliness [TEMPLATE]", () => {
-    let el: FuroUiBusyIndicator;
+    let el: FuroUi5BusyIndicator;
 
     beforeEach(async () => {
       el = await fixture(html`<furo-ui5-busy-indicator></furo-ui5-busy-indicator>`);
@@ -219,7 +219,7 @@ describe("FuroUiBusyIndicator", () => {
   // to a bound model when these are called (display-only binding).
   // ───────────────────────────────────────────────────────────────────────
   describe("activate() / deactivate() [element-specific]", () => {
-    let el: FuroUiBusyIndicator;
+    let el: FuroUi5BusyIndicator;
 
     beforeEach(async () => {
       el = await fixture(html`<furo-ui5-busy-indicator></furo-ui5-busy-indicator>`);

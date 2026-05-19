@@ -250,36 +250,33 @@ describe("FuroUi5PrettyJson", () => {
   // ───────────────────────────────────────────────────────────────────────
   // [element-specific] Lifecycle
   //
-  // Unlike the markdown reference (which detaches its `field-value-changed`
-  // listener in `disconnectedCallback`), `FuroUi5PrettyJson` keeps the
-  // listener attached after disconnect. A model mutation after `el.remove()`
-  // therefore still triggers `injectData` → `content` state change → Lit
-  // re-render of the (now detached) shadow root.
-  //
-  // This block documents the current behavior. If `disconnectedCallback` is
-  // ever implemented to remove the listener, flip the assertions to expect
-  // `snapshot` instead.
+  // `FuroUi5PrettyJson.disconnectedCallback` detaches the
+  // `field-value-changed` listener from the currently bound model. After
+  // `el.remove()` a subsequent model mutation must NOT trigger `injectData`
+  // → `content` state change → Lit re-render of the (now detached) shadow
+  // root, mirroring the markdown reference.
   // ───────────────────────────────────────────────────────────────────────
   describe("lifecycle [element-specific]", () => {
     afterEach(() => {
       fixtureCleanup();
     });
 
-    it("the model listener is currently not detached on disconnect (leaks)", async () => {
+    it("detaches the model listener on disconnect", async () => {
       const el: FuroUi5PrettyJson = await fixture(html`<furo-ui5-pretty-json></furo-ui5-pretty-json>`);
       const model = new STRING("initial");
       el.bindData(model);
       await el.updateComplete;
       assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, "\"initial\"");
 
+      const snapshot = el.shadowRoot!.innerHTML;
       el.remove();
       model.value = "after-disconnect";
-      // give the engine a tick for the re-render to settle
+      // give the engine a tick for any (unwanted) re-render to settle
       await delay(50);
-      // documents the current behavior: the disconnected element still re-rendered
       assert.equal(
-        el.shadowRoot!.querySelector("pre#content span.string")?.textContent,
-        "\"after-disconnect\"",
+        el.shadowRoot!.innerHTML,
+        snapshot,
+        "the detached element should not re-render after a model mutation",
       );
     });
   });

@@ -279,34 +279,27 @@ describe("FuroUi5Select", () => {
   });
 
   // ───────────────────────────────────────────────────────────────────────
-  // [TEMPLATE] FAT attribute mapping — select only maps `tooltip`.
-  //
-  // Note: select's `bindData()` finishes by setting `this.tooltip` to
-  // `this._model.__placeholder` whenever `this.tooltip` is truthy (the
-  // existing ternary `this.tooltip ?? undefined ? __placeholder : this.tooltip`
-  // is effectively `tooltip ? __placeholder : tooltip`). That means the final
-  // `el.tooltip` after `bindData()` reflects `model.__placeholder`, not the FAT
-  // attribute. The tests below assert the observable, end-of-bindData state.
+  // [TEMPLATE] FAT attribute mapping — select maps a single FAT attribute
+  // (`tooltip`). When neither the HTML attribute nor the FAT attribute
+  // provides a tooltip, `bindData()` falls back to `model.__placeholder`
+  // via `??=` (FAT > preset > placeholder).
   // ───────────────────────────────────────────────────────────────────────
   describe("FAT attribute mapping [TEMPLATE]", () => {
     afterEach(() => {
       fixtureCleanup();
     });
 
-    it("FAT 'tooltip' is applied during FatHandler.applyAttributes (no crash)", async () => {
-      // bindData must not throw when a FAT 'tooltip' attribute is supplied.
+    it("applies 'tooltip' FAT attribute to el.tooltip", async () => {
       const el: FuroUi5Select = await fixture(html`<furo-ui5-select></furo-ui5-select>`);
       const model = createFatString({ attributes: { tooltip: "from-fat" } });
       el.bindData(model);
-      // tooltip is non-empty (either FAT value or __placeholder fallback)
-      assert.isString(el.tooltip);
+      assert.equal(el.tooltip, "from-fat");
     });
 
-    it("post-bind tooltip falls back to model __placeholder when no html tooltip is preset", async () => {
+    it("post-bind tooltip falls back to model __placeholder when no FAT tooltip is provided", async () => {
       const el: FuroUi5Select = await fixture(html`<furo-ui5-select></furo-ui5-select>`);
-      const model = createFatString({ attributes: { tooltip: "from-fat" } });
+      const model = createFatString();
       el.bindData(model);
-      // FatHandler sets tooltip="from-fat"; bindData's trailing line overwrites it with __placeholder
       assert.equal(el.tooltip, model.__placeholder);
     });
 
@@ -456,10 +449,10 @@ describe("FuroUi5Select", () => {
       assert.equal(el.querySelectorAll("furo-ui5-option").length, 3);
     });
 
-    it("auto-selects the first option (sets el.value) when value is empty", async () => {
-      // Source schedules `this.value = optionsModel.at(0).id` via setTimeout
-      // after bindOptions. Once UI5 Select upgrades its option children, the
-      // assigned value is reflected on `el.value`.
+    it("auto-selects the first option and writes the id to the bound model", async () => {
+      // bindOptions awaits @ui5 renderFinished() before assigning the first
+      // option id to this.value and calling writeToModel(), so by the time the
+      // microtask chain resolves both el.value and the bound model carry the id.
       const model = new STRING();
       el.bindData(model);
       const options: ARRAY<CubeOptions, ICubeOptions> = ARRAY.Builder(CubeOptions, [
@@ -469,6 +462,7 @@ describe("FuroUi5Select", () => {
       el.bindOptions(options);
       await delay(200);
       assert.equal(el.value, "first");
+      assert.equal(model.value, "first");
     });
 
     it("does not override a pre-existing value when options are bound", async () => {

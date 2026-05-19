@@ -11,7 +11,7 @@ import { property } from "lit/decorators.js";
  * @tagname furo-ui5-form-group
  * @public
  */
-export default class FuroUi5FormGroup extends LitElement {
+export class FuroUi5FormGroup extends LitElement {
   /**
    * The label of the form-group.
    * @public

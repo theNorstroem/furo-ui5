@@ -17,10 +17,10 @@ import type { FuroFatBool } from "@/models";
  * @summary ui5 busy indicator with methods
  * @tagname furo-ui5-busy-indicator
  */
-export class FuroUiBusyIndicator extends BusyIndicator {
+export class FuroUi5BusyIndicator extends BusyIndicator {
   private modelReaderWriter: ModelReaderWriter | undefined;
 
-  private boolReaderWriters: BoolReaderWriters<FuroUiBusyIndicator> | undefined;
+  private boolReaderWriters: BoolReaderWriters<FuroUi5BusyIndicator> | undefined;
 
   private _model: BOOLEAN | FuroFatBool | BoolValue = new BOOLEAN();
 
@@ -56,7 +56,7 @@ export class FuroUiBusyIndicator extends BusyIndicator {
     // connect the model
     this._model = fieldNode;
     // init model — display-only, empty writers map
-    this.boolReaderWriters = new BoolReaderWriters<FuroUiBusyIndicator>(this, "active", this._model);
+    this.boolReaderWriters = new BoolReaderWriters<FuroUi5BusyIndicator>(this, "active", this._model);
     this.modelReaderWriter = new ModelReaderWriter(
       this._model,
       new Map<string, () => void>(),

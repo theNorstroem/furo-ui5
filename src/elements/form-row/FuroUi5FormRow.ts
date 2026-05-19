@@ -13,7 +13,7 @@ import { css, CSSResult, html, LitElement } from "lit";
  * @tagname furo-ui5-form-row
  * @public
  */
-export default class FuroUi5FormRow extends LitFBP(LitElement) {
+export class FuroUi5FormRow extends LitFBP(LitElement) {
   override render() {
     return html` <div class="label"><slot name="label"></slot></div>
       <div class="field">

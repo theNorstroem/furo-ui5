@@ -7,12 +7,13 @@
  *   - model → UI sync is selection-driven: `setSelectedItems()` toggles the
  *     `selected` attribute on the matching `furo-ui5-mcb-item` children, so
  *     value-sync assertions look at item selection rather than `el.value`
- *   - UI → model sync fires a `selection-change` event which calls
- *     `model.__clear()` — there is no per-selection write-back yet
- *   - FAT label-style attributes (`readonly`, `disabled`, `hidden`, `required`)
- *     are listed in the `FatHandler` but `applyReceivedFatAttributesAndLabels`
- *     is not invoked from this element, so only `accessible-name` fallback
- *     behavior is covered in the FAT-mapping block
+ *   - UI → model sync fires a `selection-change` event whose `detail.items`
+ *     holds the currently-selected `furo-ui5-mcb-item` DOM elements; the
+ *     element extracts each `.id` and pushes them back into the bound array
+ *   - FAT attribute mapping is intentionally not wired (the previous
+ *     `FatHandler` plumbing was dead code and was removed); only the
+ *     `accessibleName ??= model.__label` fallback is covered in the
+ *     FAT-mapping block
  *   - constraints test drops `max_length` (multi-combobox doesn't apply it)
  *   - lifecycle block skipped (multi-combobox registers no listeners in
  *     lifecycle hooks)
@@ -182,9 +183,11 @@ describe("FuroUi5MultiCombobox", () => {
   // ───────────────────────────────────────────────────────────────────────
   // [TEMPLATE] UI → model value sync
   //
-  // The multi-combobox listens for `selection-change` and calls
-  // `model.__clear()`. There is currently no per-item write-back; this block
-  // documents the current behavior.
+  // The multi-combobox listens for `selection-change` and pushes the ids of
+  // the currently-selected items in `event.detail.items` back into the bound
+  // array. The model is cleared first, then rebuilt — listener detach/re-attach
+  // around the mutation prevents the field-value-changed → setSelectedItems
+  // feedback loop.
   // ───────────────────────────────────────────────────────────────────────
   describe("UI → model value sync [TEMPLATE]", () => {
     let el: FuroUi5MultiCombobox;
@@ -201,31 +204,56 @@ describe("FuroUi5MultiCombobox", () => {
       fixtureCleanup();
     });
 
-    it("clears the ARRAY<STRING> model on selection-change", () => {
+    const fireSelectionChange = (host: FuroUi5MultiCombobox, selectedItemIds: string[]) => {
+      const items = selectedItemIds.map((id) => host.querySelector(`furo-ui5-mcb-item[id="${id}"]`));
+      host.dispatchEvent(
+        new CustomEvent("selection-change", { bubbles: true, composed: true, detail: { items } }),
+      );
+    };
+
+    it("writes selected ids back to an ARRAY<STRING> model", () => {
+      const model = stringArray([]);
+      el.bindData(model);
+      fireSelectionChange(el, ["1", "2"]);
+      assert.deepEqual(model.__toLiteral(), ["1", "2"]);
+    });
+
+    it("replaces existing entries in the ARRAY<STRING> model on each selection-change", () => {
       const model = stringArray(["1", "2"]);
       el.bindData(model);
-      assert.equal(model.length, 2);
-      el.dispatchEvent(new CustomEvent("selection-change", { bubbles: true, composed: true }));
-      assert.equal(model.length, 0);
+      fireSelectionChange(el, ["2"]);
+      assert.deepEqual(model.__toLiteral(), ["2"]);
     });
 
-    it("clears the ARRAY<FuroFatString> model on selection-change", () => {
-      const model = fatStringArray(["1", "2"]);
+    it("clears the ARRAY<STRING> model when selection-change has no items", () => {
+      const model = stringArray(["1", "2"]);
       el.bindData(model);
-      assert.equal(model.length, 2);
-      el.dispatchEvent(new CustomEvent("selection-change", { bubbles: true, composed: true }));
+      fireSelectionChange(el, []);
       assert.equal(model.length, 0);
     });
 
-    it("clears the IdentifiableList model on selection-change", () => {
-      const model = identifiableList([
+    it("writes selected ids back to an ARRAY<FuroFatString> model as { value }", () => {
+      const model = fatStringArray([]);
+      el.bindData(model);
+      fireSelectionChange(el, ["1", "2"]);
+      assert.deepEqual(
+        model.map((item) => item.value.toString()),
+        ["1", "2"],
+      );
+    });
+
+    it("writes selected ids back to an IdentifiableList by looking up the options model", () => {
+      const options: ARRAY<CubeOptions, ICubeOptions> = ARRAY.Builder(CubeOptions, [
         { id: "1", displayName: "One" },
         { id: "2", displayName: "Two" },
       ]);
+      el.bindOptions(options);
+      const model = identifiableList([]);
       el.bindData(model);
-      assert.equal(model.length, 2);
-      el.dispatchEvent(new CustomEvent("selection-change", { bubbles: true, composed: true }));
-      assert.equal(model.length, 0);
+      fireSelectionChange(el, ["2"]);
+      assert.equal(model.length, 1);
+      assert.equal(model.at(0)?.id.toString(), "2");
+      assert.equal(model.at(0)?.displayName.toString(), "Two");
     });
   });
 
@@ -294,11 +322,10 @@ describe("FuroUi5MultiCombobox", () => {
   // ───────────────────────────────────────────────────────────────────────
   // [TEMPLATE] FAT attribute mapping
   //
-  // Multi-combobox lists `["readonly","disabled","hidden","required"]` in its
-  // `FatHandler`, but `applyReceivedFatAttributesAndLabels` is not invoked
-  // from this element (no `ModelReaderWriter` is used). Only the
-  // `accessibleName ??= model.__label` fallback wired in `bindData` is
-  // covered here.
+  // Multi-combobox does NOT use a `FatHandler` — the previous plumbing was
+  // dead code (no `*ReaderWriters` class to route FAT through, and an `ARRAY`
+  // model is not itself FAT-shaped). Only the `accessibleName ??= model.__label`
+  // fallback wired in `bindData` is covered here.
   // ───────────────────────────────────────────────────────────────────────
   describe("FAT attribute mapping [TEMPLATE]", () => {
     afterEach(() => {
@@ -341,21 +368,18 @@ describe("FuroUi5MultiCombobox", () => {
       fixtureCleanup();
     });
 
-    it("mutating the old model after rebind does not change selection", () => {
+    it("rebinding refreshes UI selection to reflect the new model only", () => {
       const modelA = stringArray(["1"]);
       const modelB = stringArray(["2"]);
       el.bindData(modelA);
       assert.deepEqual(selectedIds(el), ["1"]);
       el.bindData(modelB);
-      // `setSelectedItems` only adds `selected` — it does not clear stale items —
-      // so after rebind both prior selections remain on the DOM (current source
-      // behavior).
-      const afterRebind = selectedIds(el).sort();
-      assert.deepEqual(afterRebind, ["1", "2"]);
+      // `setSelectedItems` clears stale selections first, then re-applies the
+      // current model — so only modelB's selections remain on the DOM.
+      assert.deepEqual(selectedIds(el), ["2"]);
       modelA.add("3", false);
-      // the detached modelA listener must NOT re-render through the element —
-      // so id "3" must not appear in the selection.
-      assert.deepEqual(selectedIds(el).sort(), afterRebind);
+      // the detached modelA listener must NOT re-render through the element.
+      assert.deepEqual(selectedIds(el), ["2"]);
     });
 
     it("UI writes go to the new model only after rebind", () => {
@@ -363,7 +387,9 @@ describe("FuroUi5MultiCombobox", () => {
       const modelB = stringArray(["2"]);
       el.bindData(modelA);
       el.bindData(modelB);
-      el.dispatchEvent(new CustomEvent("selection-change", { bubbles: true, composed: true }));
+      el.dispatchEvent(
+        new CustomEvent("selection-change", { bubbles: true, composed: true, detail: { items: [] } }),
+      );
       // writeToModel clears the currently-bound model only
       assert.equal(modelB.length, 0);
       assert.equal(modelA.length, 1);
@@ -375,7 +401,9 @@ describe("FuroUi5MultiCombobox", () => {
       const ref = el.model;
       el.bindData(model);
       assert.strictEqual(el.model, ref);
-      el.dispatchEvent(new CustomEvent("selection-change", { bubbles: true, composed: true }));
+      el.dispatchEvent(
+        new CustomEvent("selection-change", { bubbles: true, composed: true, detail: { items: [] } }),
+      );
       // a single bound listener clears the model exactly once
       assert.equal(model.length, 0);
     });
@@ -449,6 +477,16 @@ describe("FuroUi5MultiCombobox", () => {
     it("ignores ids that do not match any rendered item", () => {
       const model = stringArray(["1", "does-not-exist"]);
       el.bindData(model);
+      assert.deepEqual(selectedIds(el), ["1"]);
+    });
+
+    it("removes 'selected' from items dropped from a shrunken model", () => {
+      const model = stringArray(["1", "2"]);
+      el.bindData(model);
+      assert.deepEqual(selectedIds(el).sort(), ["1", "2"]);
+      // shrink the bound array — id "2" should be deselected on the next sync
+      model.delete(1);
+      el.setSelectedItems();
       assert.deepEqual(selectedIds(el), ["1"]);
     });
   });
