@@ -50,12 +50,12 @@ export class FuroUiBusyIndicator extends BusyIndicator {
       return;
     }
 
-    // remove existing listeners
-    // from ui: input, change
-    // from model: "this-field-value-changed",listenToStateChanged
+    // remove existing listeners — display-only, no UI listeners to clean up
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
 
-    // init model
+    // connect the model
     this._model = fieldNode;
+    // init model — display-only, empty writers map
     this.boolReaderWriters = new BoolReaderWriters<FuroUiBusyIndicator>(this, "active", this._model);
     this.modelReaderWriter = new ModelReaderWriter(
       this._model,
@@ -63,29 +63,19 @@ export class FuroUiBusyIndicator extends BusyIndicator {
       this.boolReaderWriters.getReaders(),
     );
 
-    // listen on state changes on the model
-
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", () => {
-      this.readFromModel();
-    });
-
-    // listen on changes from UI
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // initial read
     this.readFromModel();
 
-    // constraints
-
-    // set the text placeholdr from model if none was set
+    // set the text placeholder from model if none was set
     this.text ??= this._model.__placeholder;
-
-    // a11y
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
   /**
    * Sets the busy indicator state to active

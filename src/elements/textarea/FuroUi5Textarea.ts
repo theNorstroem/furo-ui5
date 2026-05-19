@@ -115,7 +115,7 @@ export class FuroUi5Textarea extends TextArea {
     this.handleConstraints(this._model.__getConstraints());
 
     // set the placeholder from model if none was set before
-    this.placeholder = this.placeholder ?? undefined ? this._model.__placeholder : this.placeholder;
+    this.placeholder ??= this._model.__placeholder;
 
     // a11y
     this.accessibleName ??= this._model.__label;

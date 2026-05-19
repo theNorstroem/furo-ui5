@@ -155,18 +155,13 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
       return;
     }
 
-    /**
-     * remove existing listeners
-     * - from readonly watcher
-     * - from model: "this-field-value-changed",listenToStateChanged
-     * - from ui: input, change
-     */
+    // remove existing listeners — display-only, no UI listeners to clean up
     this._model.__removeEventListener("field-value-changed", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
 
-    // init model
+    // init model — display-only, empty writers map
     this.numericReaderWriters = new NumericReaderWriters<FuroUi5ProgressIndicator>(this, "value", this._model);
     this.modelReaderWriter = new ModelReaderWriter(
       this._model,
@@ -179,8 +174,6 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
 
     // listen on changes from the model
     this._model.__addEventListener("field-value-changed", this.readFromModel);
-
-    // listen on changes from UI
 
     // initial read
     this.readFromModel();

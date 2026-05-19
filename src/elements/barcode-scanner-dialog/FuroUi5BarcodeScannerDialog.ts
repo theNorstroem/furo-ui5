@@ -73,14 +73,16 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
 
     /**
      * remove existing listeners
-     * - from readonly watcher
-     * - from model: "this-field-value-changed",listenToStateChanged
-     * - from ui: input, change
+     * - from ui: scan-success
+     *
+     * This component is write-only by design — the scanner produces values, it never displays
+     * the bound model's value — so there is no model `field-value-changed` listener or initial read.
      */
+    this.removeEventListener("scan-success", this.writeToModel as EventListener);
 
     // connect the model
     this._model = fieldNode;
-    // init model
+    // init model — write-only, empty readers map
     this.stringReaderWriters = new StringReaderWriters<FuroUi5BarcodeScannerDialog>(this, "code", this._model);
     this.modelReaderWriter = new ModelReaderWriter(
       this._model,
@@ -88,16 +90,8 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
       new Map<string, () => void>(),
     );
 
-    // listen on state changes on the model
-
-    // listen on changes from the model
-
     // listen on changes from UI
     this.addEventListener("scan-success", this.writeToModel as EventListener);
-
-    // initial read
-
-    // constraints
   }
 
   private writeToModel = (e: CustomEvent<BarcodeScannerDialogScanSuccessEventDetail>): void => {

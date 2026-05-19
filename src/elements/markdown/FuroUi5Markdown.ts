@@ -75,27 +75,19 @@ export class FuroUi5Markdown extends LitElement {
 
     /**
      * remove existing listeners
-     * - from readonly watcher
-     * - from model: "this-field-value-changed",listenToStateChanged
-     * - from ui: input, change
+     * - from model: "field-value-changed"
+     * - from model custom: stream-begins, stream-ends
      */
-
     this._model.__removeEventListener("field-value-changed", this.readFromModel);
-
     this._model.__removeCustomEventListener("stream-begins", this.setStreamBegins);
-
     this._model.__removeCustomEventListener("stream-ends", this.setStreamEnds);
 
     // connect the model
     this._model = fieldNode;
 
-    // listen on state changes on the model
-
     // listen on changes from the model
     this._model.__addEventListener("field-value-changed", this.readFromModel);
-
     this._model.__addCustomEventListener("stream-begins", this.setStreamBegins);
-
     this._model.__addCustomEventListener("stream-ends", this.setStreamEnds);
 
     // initial read

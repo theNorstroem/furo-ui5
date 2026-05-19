@@ -4,6 +4,8 @@ import { ENUM, type FieldConstraints } from "@furo/open-models";
 import Select from "@ui5/webcomponents/dist/Select.js";
 
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
+import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
+import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 
 /**
  * ### FuroUi5SelectEnum
@@ -18,6 +20,10 @@ import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
  */
 export class FuroUi5SelectEnum extends Select {
   private readonly valueStateManager: FieldNodeValueState = new FieldNodeValueState(this);
+
+  private modelReaderWriter: ModelReaderWriter | undefined;
+
+  private readonlyState: ReadonlyState = new ReadonlyState(this);
 
   /**
    * @attribute {boolean} show-unspecified - Allows you to select the `unspecified` option.
@@ -55,10 +61,17 @@ export class FuroUi5SelectEnum extends Select {
       return;
     }
 
-    // remove listeners on old model
-    this.removeEventListener("change", this.writeToModel);
+    /**
+     * remove existing listeners
+     * - from readonly watcher
+     * - from model: "field-value-changed"
+     * - from ui: change
+     */
+    this.readonlyState.detach();
     this._model?.__removeEventListener("field-value-changed", this.readFromModel);
+    this.removeEventListener("change", this.writeToModel);
 
+    // connect the model
     this._model = fieldNode;
     // remove existing children
     this.querySelectorAll("furo-ui5-option").forEach((el) => {
@@ -82,8 +95,16 @@ export class FuroUi5SelectEnum extends Select {
     });
     options.forEach((option) => this.appendChild(option));
 
+    // init model — dispatch-by-typeName via ModelReaderWriter (single entry: primitives.ENUM)
+    const readers = new Map<string, () => void>();
+    readers.set("primitives.ENUM", this.applyModelValueToSelection);
+    const writers = new Map<string, () => void>();
+    writers.set("primitives.ENUM", this.captureSelectionIntoModel);
+    this.modelReaderWriter = new ModelReaderWriter(this._model, writers, readers);
+
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);
+    this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
     this._model.__addEventListener("field-value-changed", this.readFromModel);
@@ -114,6 +135,14 @@ export class FuroUi5SelectEnum extends Select {
   }
 
   private readFromModel = (): void => {
+    this.modelReaderWriter?.readModel();
+  };
+
+  private writeToModel = (): void => {
+    this.modelReaderWriter?.writeModel();
+  };
+
+  private applyModelValueToSelection = (): void => {
     const value = this._model?.value;
     if (typeof value !== "string") return;
     const option = this.querySelector(`furo-ui5-option[id="${CSS.escape(value)}"]`);
@@ -126,7 +155,7 @@ export class FuroUi5SelectEnum extends Select {
     }
   };
 
-  private writeToModel = (): void => {
+  private captureSelectionIntoModel = (): void => {
     if (!this._model) return;
     const v = this.selectedOption?.id;
     if (v !== undefined) {

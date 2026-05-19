@@ -2,13 +2,14 @@ import "@ui5/webcomponents/dist/Icon.js";
 import "@ui5/webcomponents-icons/dist/navigation-down-arrow.js";
 import "@ui5/webcomponents-icons/dist/navigation-right-arrow.js";
 
-import { fieldBindings, BOOLEAN, type BoolValue } from "@furo/open-models";
-import type { BindableComponent } from "@furo/open-models";
+import { BOOLEAN, type BoolValue, type FieldConstraints } from "@furo/open-models";
 import { css, html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
 
 import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { FatHandler } from "@/lib/open-models/FatHandler";
+import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
+import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import type { FuroFatBool } from "@/models";
 
 /**
@@ -28,7 +29,7 @@ import type { FuroFatBool } from "@/models";
  * @tagname furo-ui5-bool-icon
  * @appliesMixin FBP
  */
-export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
+export class FuroUi5BoolIcon extends LitElement {
   /**
    * Defines the icon for the true state.
    *
@@ -58,30 +59,40 @@ export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
   public disabled = false;
 
   /**
+   * When true, the icon renders without the `interactive` attribute and clicks no longer toggle the value.
+   * Wired automatically from the bound field's logical readonly state and from `read_only: true` constraints.
+   */
+  @property({ type: Boolean, reflect: true })
+  public readonly = false;
+
+  /**
    * Defines the component semantic design.
    * @private
    */
   @property({ type: String })
   private design: "Contrast" | "Critical" | "Default" | "Information" | "Negative" | "Neutral" | "NonInteractive" | "Positive" = "Default";
 
-  private fatHandler: FatHandler<FuroUi5BoolIcon>;
-
-  private boolReaderWriters: BoolReaderWriters<FuroUi5BoolIcon>;
-
   @property({ type: String, attribute: "accesible-name" })
   public accessibleName: string | undefined = "Toggle";
 
-  modelReaders: Map<string, () => void>;
+  private fatHandler: FatHandler<FuroUi5BoolIcon>;
 
-  modelWriters: Map<string, () => void>;
+  private readonlyState: ReadonlyState = new ReadonlyState(this);
+
+  private modelReaderWriter: ModelReaderWriter | undefined;
+
+  private boolReaderWriters: BoolReaderWriters<FuroUi5BoolIcon> | undefined;
 
   constructor() {
     super();
     this.fatHandler = new FatHandler<FuroUi5BoolIcon>(this, ["disabled"]);
     this.fatHandler.readAttributes();
-    this.boolReaderWriters = new BoolReaderWriters<FuroUi5BoolIcon>(this, "value", this.model, this.fatHandler);
-    this.modelReaders = this.boolReaderWriters.getReaders();
-    this.modelWriters = this.boolReaderWriters.getWriters();
+  }
+
+  private _model: BOOLEAN | FuroFatBool | BoolValue = new BOOLEAN();
+
+  public get model(): BOOLEAN | FuroFatBool | BoolValue {
+    return this._model;
   }
 
   /**
@@ -92,40 +103,77 @@ export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
    * @typeref FuroFatBool - "@/models/index.js"
    * @public
    */
-  @fieldBindings.model()
-  public model: BOOLEAN | FuroFatBool | BoolValue = new BOOLEAN();
+  public set model(value: BOOLEAN | FuroFatBool | BoolValue) {
+    this.bindData(value);
+  }
 
   /**
-   * Bind data - alternative to setting .model directly
+   * Connects your data model to this component.
+   *
+   * @paramref fieldNode - BOOLEAN - "@furo/open-models/"
+   * @public
    */
-  bindData(model: BOOLEAN | FuroFatBool | BoolValue): void {
-    if (model === this.model) {
+  public bindData(fieldNode: BOOLEAN | FuroFatBool | BoolValue | undefined) {
+    if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
-    this.model = model;
+
+    /**
+     * remove existing listeners
+     * - from readonly watcher
+     * - from model: "field-value-changed", listenToStateChanged
+     * (no UI listeners — click is bound declaratively in the template)
+     */
+    this.readonlyState.detach();
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+
+    // connect the model
+    this._model = fieldNode;
+    // init model
+    this.boolReaderWriters = new BoolReaderWriters<FuroUi5BoolIcon>(this, "value", this._model, this.fatHandler);
+    this.modelReaderWriter = new ModelReaderWriter(
+      this._model,
+      this.boolReaderWriters.getWriters(),
+      this.boolReaderWriters.getReaders(),
+    );
+
+    // listen on state changes on the model
+    this.readonlyState.listenToStateChanged(fieldNode);
+
+    // listen on changes from the model
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
+
+    // initial read
+    this.readFromModel();
 
     // constraints
-
-    // set the text placeholder from model if none was set
+    this.handleConstraints(this._model.__getConstraints());
 
     // a11y
-    this.accessibleName ??= this.model.__label;
+    this.accessibleName ??= this._model.__label;
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  public writeToModel(): void {
-    // dummy method, this can not be reached, but we added it because of the linter
-    return;
+  private handleConstraints(fieldConstraints: FieldConstraints | undefined) {
+    if (fieldConstraints?.read_only) {
+      this.readonly = true;
+    }
   }
+
+  private readFromModel = (): void => {
+    this.modelReaderWriter?.readModel();
+  };
+
+  private writeToModel = (): void => {
+    this.modelReaderWriter?.writeModel();
+  };
 
   /**
-   * Toggles the icon.
+   * Toggles the icon. No-op when disabled or readonly.
    */
   toggle: () => void = () => {
-    if (!this.disabled) {
-      this.value = !this.value;
-      this.writeToModel();
-    }
+    if (this.disabled || this.readonly) return;
+    this.value = !this.value;
+    this.writeToModel();
   };
 
   /**
@@ -146,11 +194,13 @@ export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
         display: none;
       }
 
+      ui5-icon[interactive] {
+        cursor: pointer;
+      }
+
       ui5-icon {
         width: var(--_ui5-tree-toggle-icon-size);
         height: var(--_ui5-tree-toggle-icon-size);
-
-        cursor: pointer;
       }
     `;
   }
@@ -162,7 +212,7 @@ export class FuroUi5BoolIcon extends LitElement implements BindableComponent {
   override render() {
     // language=HTML
     return html` <ui5-icon
-      interactive
+      ?interactive="${!this.readonly && !this.disabled}"
       accessible-name="${this.accessibleName}"
       design="${this.design}"
       name="${this.value ? this.symboltrue : this.symbolfalse}"

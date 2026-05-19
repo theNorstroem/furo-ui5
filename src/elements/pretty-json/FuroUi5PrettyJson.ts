@@ -41,34 +41,17 @@ export class FuroUi5PrettyJson extends LitElement {
       return;
     }
 
-    /**
-     * remove existing listeners
-     * - from readonly watcher
-     * - from model: "this-field-value-changed",listenToStateChanged
-     * - from ui: input, change
-     */
-
+    // remove existing listeners
     this._model.__removeEventListener("field-value-changed", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
-    // init model
-
-    // listen on state changes on the model
 
     // listen on changes from the model
     this._model.__addEventListener("field-value-changed", this.readFromModel);
 
-    // listen on changes from UI
-
     // initial read
     this.readFromModel();
-
-    // constraints
-
-    // set the placeholder from model if none was set before
-
-    // a11y
   }
 
   private readFromModel = (): void => {
