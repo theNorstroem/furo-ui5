@@ -5,7 +5,6 @@ import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
-import { type LocatorSelectors, utils } from "vitest/browser";
 
 import { FuroUi5TableToolbarSeparator } from "./FuroUi5TableToolbarSeparator";
 
@@ -14,13 +13,11 @@ chai.use(chaiA11yAxe);
 describe("TableToolbarSeparator Component", async () => {
   let el: FuroUi5TableToolbarSeparator;
 
-  let elLocator: LocatorSelectors;
-
   beforeAll(async () => {
-    el = await fixture(html` <furo-ui5-table-toolbar-separator data-testid="test"></furo-ui5-table-toolbar-separator> `);
-    elLocator = utils.getElementLocatorSelectors(el);
-    // dummy method call, you can remove it as soon you use elLocator in the tests
-    elLocator.getByTestId("test");
+    el = await fixture(
+      html` <furo-ui5-table-toolbar-separator data-testid="test"></furo-ui5-table-toolbar-separator> `
+    );
+    await el.updateComplete;
   });
 
   afterAll(() => {
@@ -38,5 +35,21 @@ describe("TableToolbarSeparator Component", async () => {
 
   test("a11y", async () => {
     await assert.isAccessible(el);
+  });
+
+  it("should render nothing into the shadow root", () => {
+    // render() returns `nothing` — shadow root should have no element children
+    const elementChildren = Array.from(el.shadowRoot!.childNodes).filter((n) => n.nodeType === Node.ELEMENT_NODE);
+    assert.equal(elementChildren.length, 0);
+  });
+
+  it("should be 1px wide", () => {
+    const styles = window.getComputedStyle(el);
+    assert.equal(styles.width, "1px");
+  });
+
+  it("should have a non-zero height", () => {
+    const styles = window.getComputedStyle(el);
+    assert.isTrue(parseFloat(styles.height) > 0, "height should resolve to a positive value");
   });
 });

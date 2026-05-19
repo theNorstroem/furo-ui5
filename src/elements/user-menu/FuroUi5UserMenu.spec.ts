@@ -5,7 +5,6 @@ import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
-import { type LocatorSelectors, utils } from "vitest/browser";
 
 import { FuroUi5UserMenu } from "./FuroUi5UserMenu";
 
@@ -14,13 +13,8 @@ chai.use(chaiA11yAxe);
 describe("UserMenu Component", async () => {
   let el: FuroUi5UserMenu;
 
-  let elLocator: LocatorSelectors;
-
   beforeAll(async () => {
     el = await fixture(html` <furo-ui5-user-menu data-testid="test">some content..</furo-ui5-user-menu> `);
-    elLocator = utils.getElementLocatorSelectors(el);
-    // dummy method call, you can remove it as soon you use elLocator in the tests
-    elLocator.getByTestId("test");
   });
 
   afterAll(() => {
@@ -40,14 +34,22 @@ describe("UserMenu Component", async () => {
     await assert.isAccessible(el);
   });
 
-  it("should be visible after open", async () => {
-    el.show();
-    assert.equal(el.checkVisibility(), true, "visible");
-    el.close();
+  it("should expose slotted default content", () => {
+    assert.include(el.textContent, "some content");
   });
 
-  it("should be visible after open with showAt", async () => {
+  it("show() should set open to true; close() should reset it", () => {
+    el.show();
+    assert.equal(el.open, true, "open is true after show()");
+    el.close();
+    assert.equal(el.open, false, "open is false after close()");
+  });
+
+  it("showAt(opener) should assign the opener and set open synchronously", () => {
     el.showAt(el);
-    assert.equal(el.checkVisibility(), true, "visible");
+    assert.equal(el.opener, el, "opener reference assigned");
+    assert.equal(el.open, true, "open is true synchronously after showAt()");
+    el.close();
+    assert.equal(el.open, false);
   });
 });

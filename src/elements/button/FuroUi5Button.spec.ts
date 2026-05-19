@@ -6,27 +6,19 @@ import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
-import { type LocatorSelectors, utils } from "vitest/browser";
 
 import { FuroUi5Button } from "./FuroUi5Button";
 
-chai.use(chaiA11yAxe);
+import { delay } from "@/util/test-helpers/delay";
 
-// https://vitest.dev/guide/browser/context.html#context
-// https://main.vitest.dev/guide/browser/locators.html
+chai.use(chaiA11yAxe);
 
 describe("Button Component", async () => {
   let el: FuroUi5Button;
-  let btn: FuroUi5Button;
-
-  let elLocator: LocatorSelectors;
 
   beforeAll(async () => {
     el = await fixture(html` <furo-ui5-button icon="share">light-dom</furo-ui5-button> `);
-    btn = el;
-    elLocator = utils.getElementLocatorSelectors(el);
-    // dummy method call, you can remove it as soon you use elLocator in the tests
-    elLocator.getByTestId("data-testid");
+    await delay(16);
   });
 
   afterAll(() => {
@@ -35,49 +27,69 @@ describe("Button Component", async () => {
 
   it("should be a furo-ui5-button element", () => {
     // keep this test on top, so you can recognize a wrong assignment
-    assert.equal(btn.nodeName.toLowerCase(), "furo-ui5-button");
+    assert.equal(el.nodeName.toLowerCase(), "furo-ui5-button");
   });
 
   it("should be ok", () => {
-    assert.isOk(btn);
+    assert.isOk(el);
   });
-
-  it("should be clickable", () =>
-    new Promise((done) => {
-      btn.addEventListener("click", () => {
-        done(1);
-      });
-      btn.click();
-    }));
 
   test("a11y", async () => {
     await assert.isAccessible(el);
   });
 
-  it("should have enable function", () =>
+  it("should render the default-slot light-dom content", () => {
+    assert.include(el.textContent, "light-dom");
+  });
+
+  it("should be clickable", () =>
     new Promise((done) => {
-      btn.disable();
-      btn.addEventListener("click", () => {
+      const handler = () => {
+        el.removeEventListener("click", handler);
         done(1);
-      });
-      btn.enable();
-      btn.click();
+      };
+      el.addEventListener("click", handler);
+      el.click();
     }));
 
-  it("should have different designs", () =>
-    new Promise((done) => {
-      btn.setAttribute("design", "Negative");
-      setTimeout(() => {
-        assert.equal(btn.design, "Negative");
-        done(1);
-      }, 16);
-    }));
+  it("disable() should set the disabled property and enable() should clear it", () => {
+    el.disable();
+    assert.equal(el.disabled, true);
+    el.enable();
+    assert.equal(el.disabled, false);
+  });
 
-  it("should hide", async () => {
-    assert.equal(btn.checkVisibility(), true, "visible");
-    btn.hide();
-    assert.equal(btn.checkVisibility(), false, "not visible");
-    btn.show();
-    assert.equal(btn.checkVisibility(), true, "visible");
+  it("disable() should block click events", async () => {
+    let calls = 0;
+    const handler = () => {
+      calls += 1;
+    };
+    el.addEventListener("click", handler);
+    el.disable();
+    el.click();
+    await delay(50);
+    el.removeEventListener("click", handler);
+    el.enable();
+    assert.equal(calls, 0, "click handler should not fire while disabled");
+  });
+
+  it("should round-trip every supported design value", async () => {
+    for (const design of ["Default", "Positive", "Negative", "Attention", "Emphasized", "Transparent"]) {
+      el.setAttribute("design", design);
+      await delay(16);
+      assert.equal(el.design, design, `design "${design}" should round-trip`);
+    }
+    el.setAttribute("design", "Default");
+    await delay(16);
+  });
+
+  it("hide() and show() should toggle the hidden attribute and visibility", () => {
+    assert.equal(el.checkVisibility(), true, "starts visible");
+    el.hide();
+    assert.equal(el.hasAttribute("hidden"), true, "has hidden attribute after hide()");
+    assert.equal(el.checkVisibility(), false, "not visible after hide()");
+    el.show();
+    assert.equal(el.hasAttribute("hidden"), false, "no hidden attribute after show()");
+    assert.equal(el.checkVisibility(), true, "visible after show()");
   });
 });

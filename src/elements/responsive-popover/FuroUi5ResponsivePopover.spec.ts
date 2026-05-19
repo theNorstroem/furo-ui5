@@ -5,7 +5,6 @@ import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
-import { type LocatorSelectors, utils } from "vitest/browser";
 
 import { FuroUi5ResponsivePopover } from "./FuroUi5ResponsivePopover";
 
@@ -14,13 +13,10 @@ chai.use(chaiA11yAxe);
 describe("ResponsivePopover Component", async () => {
   let el: FuroUi5ResponsivePopover;
 
-  let elLocator: LocatorSelectors;
-
   beforeAll(async () => {
-    el = await fixture(html` <furo-ui5-responsive-popover data-testid="test"></furo-ui5-responsive-popover> `);
-    elLocator = utils.getElementLocatorSelectors(el);
-    // dummy method call, you can remove it as soon you use elLocator in the tests
-    elLocator.getByTestId("test");
+    el = await fixture(
+      html` <furo-ui5-responsive-popover data-testid="test" header-text="rp">Content</furo-ui5-responsive-popover> `
+    );
   });
 
   afterAll(() => {
@@ -40,21 +36,38 @@ describe("ResponsivePopover Component", async () => {
     await assert.isAccessible(el);
   });
 
-  it("should not be visible", async () => {
+  it("should not be visible by default", () => {
     assert.equal(el.checkVisibility(), false, "not visible");
+    assert.equal(el.open, false, "open property is false");
   });
 
-  it("should be visible after open", async () => {
+  it("should expose slotted default content", () => {
+    assert.include(el.textContent, "Content");
+  });
+
+  it("show() should set open to true and make it visible; close() reverses it", () => {
     el.show();
+    assert.equal(el.open, true, "open is true after show()");
     assert.equal(el.checkVisibility(), true, "visible");
     el.close();
+    assert.equal(el.open, false, "open is false after close()");
     assert.equal(el.checkVisibility(), false, "not visible");
   });
 
-  it("should be visible after open with showAt", async () => {
+  it("showAt(opener) should assign the opener and set open synchronously", () => {
     el.showAt(el);
-    assert.equal(el.checkVisibility(), true, "visible");
+    assert.equal(el.opener, el, "opener reference assigned");
+    assert.equal(el.open, true, "open is true synchronously after showAt()");
+    assert.equal(el.checkVisibility(), true, "visible synchronously after showAt()");
     el.close();
-    assert.equal(el.checkVisibility(), false, "not visible");
+    assert.equal(el.open, false);
+  });
+
+  it("showAt(string) should assign the opener id and set open synchronously", () => {
+    el.showAt("some-opener-id");
+    assert.equal(el.opener, "some-opener-id");
+    assert.equal(el.open, true);
+    el.close();
+    assert.equal(el.open, false);
   });
 });
