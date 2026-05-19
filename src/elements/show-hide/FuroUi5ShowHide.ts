@@ -85,15 +85,14 @@ export class FuroUi5ShowHide extends LitElement {
     /**
      * remove existing listeners
      * - from readonly watcher
-     * - from model: "this-field-value-changed",listenToStateChanged
-     * - from ui: input, change
+     * - from model: "field-value-changed", listenToStateChanged
      */
     this.readonlyState.detach();
-    this._model.__removeEventListener("this-field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
 
     // connect the model
-    // init model
     this._model = fieldNode;
+    // init model
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5ShowHide>(this, "value", this._model);
     this.modelReaderWriter = new ModelReaderWriter(
       this._model,
@@ -105,15 +104,13 @@ export class FuroUi5ShowHide extends LitElement {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("this-field-value-changed", this.readFromModel);
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
-    // no ui listeners
+    // no ui listeners — this is a display-only control
 
     // initial read
-    setTimeout(() => {
-      this.readFromModel();
-    }, 32);
+    this.readFromModel();
 
     // constraints
     this.handleConstraints(this._model.__getConstraints());

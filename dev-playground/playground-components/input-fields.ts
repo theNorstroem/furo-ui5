@@ -174,6 +174,16 @@ export class InputFields extends LitFBP(LitElement) {
                   value="4.3"
                 ></furo-ui5-rating-indicator>
               </furo-ui5-form-row>
+
+              <furo-ui5-form-row>
+                <furo-ui5-label show-colon slot="label" for="rating">Rating indicator 1</furo-ui5-label>
+                <furo-ui5-rating-indicator .model="${this.cube.cube.rating}" id="rating" accessible-name="" value="4.3"></furo-ui5-rating-indicator>
+              </furo-ui5-form-row>
+
+              <furo-ui5-form-row>
+                <furo-ui5-label show-colon slot="label" for="rating2">Rating indicator 2</furo-ui5-label>
+                <furo-ui5-rating-indicator value-state="Positive" .model="${this.cube.cube.rating}" id="rating2" accessible-name="" value="4.3"></furo-ui5-rating-indicator>
+              </furo-ui5-form-row>
               <furo-ui5-form-row>
                 <furo-ui5-label show-colon slot="label" for="rating">Step Input </furo-ui5-label>
                 <furo-ui5-step value-state="Positive" .model="${this.cube.cube.length}"></furo-ui5-step>
@@ -275,10 +285,12 @@ export class InputFields extends LitFBP(LitElement) {
                   start-value="25"
                 ></furo-ui5-range-slider>
               </furo-ui5-form-row>
+
               <furo-ui5-form-row>
-                <furo-ui5-label show-colon slot="label" for="rating">Rating indicator </furo-ui5-label>
+                <furo-ui5-label show-colon slot="label" for="rating">Rating indicator 1</furo-ui5-label>
                 <furo-ui5-rating-indicator .model="${this.cube.cube.rating}" id="rating" accessible-name="" value="4.3"></furo-ui5-rating-indicator>
               </furo-ui5-form-row>
+
               <furo-ui5-form-row>
                 <furo-ui5-label show-colon slot="label" required="" for="select">Select </furo-ui5-label>
                 <furo-ui5-select accessible-name="" accessible-name-ref="" name="" value-state="Positive">

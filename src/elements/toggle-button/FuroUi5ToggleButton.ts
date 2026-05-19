@@ -4,6 +4,7 @@ import ToggleButton from "@ui5/webcomponents/dist/ToggleButton.js";
 import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
+import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import type { FuroFatBool } from "@/models";
 
 /**
@@ -34,6 +35,8 @@ export class FuroUi5ToggleButton extends ToggleButton {
   private fatHandler: FatHandler<FuroUi5ToggleButton>;
 
   private boolReaderWriters: BoolReaderWriters<FuroUi5ToggleButton> | undefined;
+
+  private readonlyState: ReadonlyState = new ReadonlyState(this);
 
   constructor() {
     super();
@@ -77,12 +80,20 @@ export class FuroUi5ToggleButton extends ToggleButton {
       return;
     }
 
-    // remove existing listeners
-    // from ui: input, change
-    // from model: "this-field-value-changed",listenToStateChanged
+    /**
+     * remove existing listeners
+     * - from readonly watcher
+     * - from model: "field-value-changed", listenToStateChanged
+     * - from ui: click, change
+     */
+    this.readonlyState.detach();
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this.removeEventListener("click", this.writeToModel);
+    this.removeEventListener("change", this.writeToModel);
 
-    // init model
+    // connect the model
     this._model = fieldNode;
+    // init model
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5ToggleButton>(this, "pressed", this._model, this.fatHandler);
     this.modelReaderWriter = new ModelReaderWriter(
       this._model,
@@ -90,18 +101,15 @@ export class FuroUi5ToggleButton extends ToggleButton {
       this.boolReaderWriters.getReaders(),
     );
 
+    // listen on state changes on the model
+    this.readonlyState.listenToStateChanged(fieldNode);
+
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", () => {
-      this.readFromModel();
-    });
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("click", () => {
-      this.writeToModel();
-    });
-    this.addEventListener("change", () => {
-      this.writeToModel();
-    });
+    this.addEventListener("click", this.writeToModel);
+    this.addEventListener("change", this.writeToModel);
 
     // initial read
     this.readFromModel();
@@ -124,13 +132,13 @@ export class FuroUi5ToggleButton extends ToggleButton {
     }
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
-  private writeToModel(): void {
+  private writeToModel = (): void => {
     this.modelReaderWriter?.writeModel();
-  }
+  };
 
   /**
    * Checks the checkbox and updates the value

@@ -5,6 +5,7 @@ import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { FatHandler } from "@/lib/open-models/FatHandler";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
+import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import type { FuroFatBool } from "@/models";
 
 /**
@@ -51,6 +52,8 @@ export class FuroUi5RadioButton extends RadioButton {
 
   private boolReaderWriters: BoolReaderWriters<FuroUi5RadioButton> | undefined;
 
+  private readonlyState: ReadonlyState = new ReadonlyState(this);
+
   constructor() {
     super();
     this.valueStateManager = new FieldNodeValueState(this);
@@ -86,12 +89,20 @@ export class FuroUi5RadioButton extends RadioButton {
       return;
     }
 
-    // remove existing listeners
-    // from ui: input, change
-    // from model: "this-field-value-changed",listenToStateChanged
+    /**
+     * remove existing listeners
+     * - from readonly watcher
+     * - from model: "field-value-changed", listenToStateChanged
+     * - from ui: input, change
+     */
+    this.readonlyState.detach();
+    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this.removeEventListener("input", this.writeToModel);
+    this.removeEventListener("change", this.writeToModel);
 
-    // init model
+    // connect the model
     this._model = fieldNode;
+    // init model
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5RadioButton>(this, "checked", this._model, this.fatHandler);
     this.modelReaderWriter = new ModelReaderWriter(
       this._model,
@@ -101,18 +112,14 @@ export class FuroUi5RadioButton extends RadioButton {
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);
+    this.readonlyState.listenToStateChanged(fieldNode);
+
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", () => {
-      this.readFromModel();
-    });
+    this._model.__addEventListener("field-value-changed", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("input", () => {
-      this.writeToModel();
-    });
-    this.addEventListener("change", () => {
-      this.writeToModel();
-    });
+    this.addEventListener("input", this.writeToModel);
+    this.addEventListener("change", this.writeToModel);
 
     // initial read
     this.readFromModel();
@@ -147,13 +154,13 @@ export class FuroUi5RadioButton extends RadioButton {
     this.writeToModel();
   }
 
-  private readFromModel(): void {
+  private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
-  }
+  };
 
-  private writeToModel(): void {
+  private writeToModel = (): void => {
     this.modelReaderWriter?.writeModel();
-  }
+  };
 
   /**
    * Checks the checkbox and updates the value
