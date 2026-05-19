@@ -20,6 +20,12 @@ export default {
   dev: false,
   litelement: true,
   dependencies: true,
+  resolutionOptions: {
+    tsconfig: {
+      configFile: path.resolve(process.cwd(), "tsconfig.json"),
+      references: "auto",
+    },
+  },
   overrideModuleCreation: ({ ts, globs }) => {
     typeProgram = ts.createProgram(globs, {
       noEmitOnError: false,
@@ -137,8 +143,6 @@ export default {
                             module: matches[4],
                           });
                         }
-                      } else {
-                        console.log(tag?.tagName.escapedText);
                       }
                     });
                   });
@@ -191,7 +195,6 @@ export default {
                         }
 
                         const matches = /^([^\s]+)\s+-\s+"([^\/]+\/[^\/]+)\/(.*)"/.exec(tag.comment);
-                        console.log(matches !== null && matches.length === 5);
                         if (matches !== null && matches.length === 4) {
                           if (!currDocMember.type.text) {
                             currDocMember.type.text = matches[1];

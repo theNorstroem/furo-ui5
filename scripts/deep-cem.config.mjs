@@ -20,6 +20,12 @@ export default {
   dev: false,
   litelement: true,
   dependencies: true,
+  resolutionOptions: {
+    tsconfig: {
+      configFile: path.resolve(process.cwd(), "tsconfig.json"),
+      references: "auto",
+    },
+  },
   overrideModuleCreation: ({ ts, globs }) => {
     typeProgram = ts.createProgram(globs, {
       noEmitOnError: false,
