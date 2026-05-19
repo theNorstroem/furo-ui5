@@ -16,6 +16,10 @@ node_modules/
 # tests
 /test/.specs/
 
+# vitest browser failure screenshots
+.vitest-attachments/
+**/__screenshots__/
+
 # Playwright
 /test-results/
 test-results.json
