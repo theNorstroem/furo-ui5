@@ -4076,7 +4076,7 @@
               "kind": "field",
               "name": "headingLevel",
               "type": {
-                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "privacy": "public",
               "default": "\"H5\"",
@@ -4110,7 +4110,7 @@
             {
               "name": "heading-level",
               "type": {
-                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "default": "\"H5\"",
               "description": "Level for the heading.",
@@ -4558,6 +4558,7 @@
               "type": {
                 "text": "string"
               },
+              "default": "\"\"",
               "description": "The secondary text is something like a subtitle, it is placed below the header text and KPI slot.\nIf the secondary text is empty, the label is removed.",
               "privacy": "public",
               "attribute": "secondary-text",
@@ -4823,6 +4824,7 @@
               "type": {
                 "text": "string"
               },
+              "default": "\"\"",
               "description": "The secondary text is something like a subtitle, it is placed below the header text and KPI slot.\nIf the secondary text is empty, the label is removed.",
               "fieldName": "secondaryText",
               "attribute": "secondary-text"

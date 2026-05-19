@@ -218,7 +218,7 @@ export class InputFields extends LitFBP(LitElement) {
             </furo-ui5-text-input>
 
             <furo-ui5-text-input .model="${this.cube.cube.fatString}"></furo-ui5-text-input>
-            <furo-ui5-text-input readonly @search-requeseted="${this.search}" .model="${this.cube.cube.fatString}"></furo-ui5-text-input>
+            <furo-ui5-text-input readonly @search-requested="${this.search}" .model="${this.cube.cube.fatString}"></furo-ui5-text-input>
             <furo-ui5-text-input @search-requested="${this.search}" placeholder="search"></furo-ui5-text-input>
 
             <furo-ui5-checkbox value-state="Negative" .model="${this.wrappers.boolValue}"></furo-ui5-checkbox>

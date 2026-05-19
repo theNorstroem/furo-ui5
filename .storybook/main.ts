@@ -2,8 +2,8 @@ import type { StorybookConfig } from '@storybook/web-components-vite';
 import remarkGfm from "remark-gfm";
 
 const config: StorybookConfig = {
-  stories: ["../src/stories/**/*.mdx", "../src/stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  staticDirs: [{ from: "../src/stories/assets", to: "assets" }],
+  stories: ["../src/stories-shared/**/*.mdx", "../src/elements/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  staticDirs: [{ from: "../src/stories-shared/assets", to: "assets" }],
   addons: [
     {
       name: "@storybook/addon-docs",

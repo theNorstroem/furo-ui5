@@ -22,7 +22,7 @@ export default defineConfig({
   },
   test: {
     testTimeout: 5000,
-    include: ["test/**/*.spec.ts"],
+    include: ["src/**/*.spec.ts"],
     // Lit recommends using browser environment for testing
     // https://lit.dev/docs/tools/testing/#testing-in-the-browser
     browser: {
@@ -47,6 +47,7 @@ export default defineConfig({
     },
     coverage: {
       include: ["src/elements/**/*.{ts,tsx}"],
+      exclude: ["src/**/*.spec.ts", "src/**/*.stories.ts"],
       enabled: false,
       thresholds: {
         statements: 80,

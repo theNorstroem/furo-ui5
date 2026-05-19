@@ -14,7 +14,8 @@ export default tseslint.config(
       "**/*.js",
       "**/*.html",
       "**/*.d.ts",
-      "src/stories/**",
+      "src/stories-shared/**",
+      "src/elements/**/*.stories.ts",
       ".agents/**",
       "dist/**",
       "node_modules/**",
@@ -167,12 +168,15 @@ export default tseslint.config(
   },
   // Test file overrides
   {
-    files: ["src/**/*.spec.ts", "src/util/test-helpers/**/*.ts"],
+    files: ["src/**/*.spec.ts", "src/util/test-helpers/**/*.ts", "src/directives/nl2br-test-helper.ts"],
     rules: {
       "require-jsdoc": "off",
       "import-x/extensions": "off",
       "import-x/no-extraneous-dependencies": ["error", { devDependencies: true }],
       "class-methods-use-this": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/require-await": "off",
+      "@typescript-eslint/no-floating-promises": "off",
     },
   }
 );
