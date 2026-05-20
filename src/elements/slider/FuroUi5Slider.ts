@@ -201,11 +201,7 @@ export class FuroUi5Slider extends Slider {
 
     // init model
     this.numericReaderWriters = new NumericReaderWriters<FuroUi5Slider>(this, "value", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.numericReaderWriters.getWriters(),
-      this.numericReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.numericReaderWriters.getWriters(), this.numericReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.readonlyState.listenToStateChanged(fieldNode);

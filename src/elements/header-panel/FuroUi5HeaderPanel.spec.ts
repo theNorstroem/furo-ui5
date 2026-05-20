@@ -26,15 +26,10 @@ describe("DynamicHeader Component", async () => {
 
   beforeAll(async () => {
     el = await fixture(html`
-      <furo-ui5-header-panel
-        is-favorite
-        collapsed
-        show-dropdown
-        shadow
-        object-icon="product"
-        header-text="Header">
+      <furo-ui5-header-panel is-favorite collapsed show-dropdown shadow object-icon="product" header-text="Header">
         <div data-testid="content">CONTENT</div>
-      </furo-ui5-header-panel> `);
+      </furo-ui5-header-panel>
+    `);
     await delay(16);
 
     headerButton = el.shadowRoot!.querySelector("furo-ui5-button")!;

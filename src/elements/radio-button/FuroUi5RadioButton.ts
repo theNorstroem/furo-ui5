@@ -104,11 +104,7 @@ export class FuroUi5RadioButton extends RadioButton {
     this._model = fieldNode;
     // init model
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5RadioButton>(this, "checked", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.boolReaderWriters.getWriters(),
-      this.boolReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.boolReaderWriters.getWriters(), this.boolReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);

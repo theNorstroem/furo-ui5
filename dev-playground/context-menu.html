@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Context Menu</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+
+  <script type="module">
+    import "@/Assets";
+    import "@/elements/button";
+    import "@/elements/context-menu";
+    import "@ui5/webcomponents-icons/AllIcons";
+  </script>
+
+  <style>
+    body {
+      background-color: var(--sapBackgroundColor);
+      padding: 1rem;
+      font-family: var(--sapFontFamily), sans-serif;
+      color: var(--sapTextColor);
+    }
+    *:not(:defined) {
+      display: none;
+    }
+    .row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    pre#log {
+      background: var(--sapList_Background);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      max-height: 240px;
+      overflow: auto;
+      font-size: var(--sapFontSmallSize);
+    }
+  </style>
+</head>
+<body class="sapUiSizeCompact">
+
+<main>
+  <h1>furo-ui5-context-menu</h1>
+  <p>Click the buttons to open the menu. Selections are logged below with the source <code>Menuitem</code> field node and the per-trigger context.</p>
+
+  <div class="row">
+    <furo-ui5-button id="opener-flat">Open flat menu</furo-ui5-button>
+    <furo-ui5-button id="opener-nested" design="Emphasized">Open nested menu</furo-ui5-button>
+  </div>
+
+  <furo-ui5-context-menu id="menu"></furo-ui5-context-menu>
+
+  <h3>Selection log</h3>
+  <pre id="log">(no selection yet)</pre>
+</main>
+
+<script type="module">
+  import { ARRAY } from "@furo/open-models/dist/index";
+  import { Menuitem } from "@/models/furoui5/Menuitem";
+
+  const menu = ARRAY.Builder(Menuitem, [
+    { id: "new",        displayName: "New",        icon: "create",        command: "Ctrl+N" },
+    { id: "open",       displayName: "Open…",      icon: "open-folder",   command: "Ctrl+O" },
+    { id: "save",       displayName: "Save",       icon: "save",          command: "Ctrl+S" },
+    {
+      id: "share",
+      displayName: "Share",
+      icon: "share",
+      children: [
+        { id: "share-link",  displayName: "Copy link",   icon: "chain-link" },
+        { id: "share-email", displayName: "Send by mail", icon: "email" },
+        {
+          id: "share-team",
+          displayName: "Team",
+          children: [
+            { id: "team-marketing",  displayName: "Marketing" },
+            { id: "team-engineering", displayName: "Engineering" },
+          ],
+        },
+      ],
+    },
+    { id: "duplicate", displayName: "Duplicate",  icon: "duplicate",  leadingDivider: true },
+    { id: "delete",    displayName: "Delete…",    icon: "delete",     command: "Del", disabled: true },
+  ]);
+
+  const menuEl = document.getElementById("menu");
+  menuEl.model = menu;
+
+  const log = document.getElementById("log");
+  let history = [];
+
+  menuEl.addEventListener("menu-item-selected", (e) => {
+    const { context, menuitem } = e.detail;
+    history = [
+      {
+        context,
+        id: menuitem.id.value,
+        displayName: menuitem.displayName.value,
+      },
+      ...history,
+    ].slice(0, 10);
+    log.textContent = JSON.stringify(history, null, 2);
+  });
+
+  document.getElementById("opener-flat").addEventListener("click", () => {
+    menuEl.opener = "opener-flat";
+    menuEl.triggerContext({ source: "flat-button" });
+  });
+
+  document.getElementById("opener-nested").addEventListener("click", () => {
+    menuEl.opener = "opener-nested";
+    menuEl.triggerContext({ source: "nested-button" });
+  });
+</script>
+</body>
+</html>

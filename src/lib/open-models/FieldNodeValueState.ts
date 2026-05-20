@@ -23,7 +23,7 @@ export class FieldNodeValueState {
     }
     this._previousValueState.slotted = this.inputElement.querySelector('*[slot="valueStateMessage"]');
 
-    fieldNode.__addEventListener("state-changed", (e:CustomEvent<FieldNode>) => {
+    fieldNode.__addEventListener("state-changed", (e: CustomEvent<FieldNode>) => {
       // restore previous if it exists
       if (e.detail.__meta.valueState === ValueState.None && this._previousValueState.slotted) {
         this.inputElement.querySelector('div[slot="valueStateMessage"].vse')?.remove();

@@ -120,11 +120,11 @@ describe("FuroUi5PrettyJson", () => {
       el.bindData(model);
       await el.updateComplete;
       const pre = el.shadowRoot!.querySelector("pre#content");
-      assert.isOk(pre, "a <pre id=\"content\"> should be rendered in the shadow root");
+      assert.isOk(pre, 'a <pre id="content"> should be rendered in the shadow root');
       // JSON.stringify("hello") -> "\"hello\"" -> highlighted as a string span
       const stringSpan = pre.querySelector("span.string");
-      assert.isOk(stringSpan, "a <span class=\"string\"> should highlight the JSON string");
-      assert.equal(stringSpan.textContent, "\"hello\"");
+      assert.isOk(stringSpan, 'a <span class="string"> should highlight the JSON string');
+      assert.equal(stringSpan.textContent, '"hello"');
     });
 
     it("propagates STRING.value changes through field-value-changed", async () => {
@@ -134,7 +134,7 @@ describe("FuroUi5PrettyJson", () => {
       await el.updateComplete;
       const stringSpan = el.shadowRoot!.querySelector("pre#content span.string");
       assert.isOk(stringSpan);
-      assert.equal(stringSpan.textContent, "\"world\"");
+      assert.equal(stringSpan.textContent, '"world"');
     });
   });
 
@@ -157,13 +157,13 @@ describe("FuroUi5PrettyJson", () => {
       const modelB = new STRING("B");
       el.bindData(modelA);
       await el.updateComplete;
-      assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, "\"A\"");
+      assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, '"A"');
       el.bindData(modelB);
       await el.updateComplete;
-      assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, "\"B\"");
+      assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, '"B"');
       modelA.value = "stale";
       await el.updateComplete;
-      assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, "\"B\"");
+      assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, '"B"');
     });
 
     it("bindData(sameModel) is a no-op (no duplicate listeners)", async () => {
@@ -175,7 +175,7 @@ describe("FuroUi5PrettyJson", () => {
       // a single model mutation should still produce a single, consistent render
       model.value = "again";
       await el.updateComplete;
-      assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, "\"again\"");
+      assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, '"again"');
     });
   });
 
@@ -202,10 +202,10 @@ describe("FuroUi5PrettyJson", () => {
       const strings = pre.querySelectorAll("span.string");
       const numbers = pre.querySelectorAll("span.number");
       assert.equal(keys.length, 2, "two keys should be highlighted");
-      assert.equal(keys[0].textContent, "\"name\":");
-      assert.equal(keys[1].textContent, "\"age\":");
+      assert.equal(keys[0].textContent, '"name":');
+      assert.equal(keys[1].textContent, '"age":');
       assert.equal(strings.length, 1);
-      assert.equal(strings[0].textContent, "\"alice\"");
+      assert.equal(strings[0].textContent, '"alice"');
       assert.equal(numbers.length, 1);
       assert.equal(numbers[0].textContent, "30");
     });
@@ -241,9 +241,9 @@ describe("FuroUi5PrettyJson", () => {
       const key = pre.querySelector("span.key");
       const value = pre.querySelector("span.string");
       assert.isOk(key);
-      assert.equal(key.textContent, "\"greeting\":");
+      assert.equal(key.textContent, '"greeting":');
       assert.isOk(value);
-      assert.equal(value.textContent, "\"hi\"");
+      assert.equal(value.textContent, '"hi"');
     });
   });
 
@@ -266,18 +266,14 @@ describe("FuroUi5PrettyJson", () => {
       const model = new STRING("initial");
       el.bindData(model);
       await el.updateComplete;
-      assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, "\"initial\"");
+      assert.equal(el.shadowRoot!.querySelector("pre#content span.string")?.textContent, '"initial"');
 
       const snapshot = el.shadowRoot!.innerHTML;
       el.remove();
       model.value = "after-disconnect";
       // give the engine a tick for any (unwanted) re-render to settle
       await delay(50);
-      assert.equal(
-        el.shadowRoot!.innerHTML,
-        snapshot,
-        "the detached element should not re-render after a model mutation",
-      );
+      assert.equal(el.shadowRoot!.innerHTML, snapshot, "the detached element should not re-render after a model mutation");
     });
   });
 });

@@ -119,7 +119,7 @@ export class FuroUi5SelectEnum extends Select {
     this.handleConstraints(this._model.__getConstraints());
 
     // set the placeholder from model if none was set before
-    this.tooltip = this.tooltip ?? undefined ? this._model.__placeholder : this.tooltip;
+    this.tooltip = (this.tooltip ?? undefined) ? this._model.__placeholder : this.tooltip;
 
     // a11y
     this.accessibleName ??= this._model.__label;

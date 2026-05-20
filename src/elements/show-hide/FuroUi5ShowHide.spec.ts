@@ -303,9 +303,13 @@ describe("FuroUi5ShowHide", () => {
       assert.equal(el.value, true);
 
       const showed = new Promise<CustomEvent<boolean>>((resolve) => {
-        el.addEventListener("showed", (e) => {
-          resolve(e as CustomEvent<boolean>);
-        }, { once: true });
+        el.addEventListener(
+          "showed",
+          (e) => {
+            resolve(e as CustomEvent<boolean>);
+          },
+          { once: true }
+        );
       });
 
       el.show();
@@ -322,9 +326,13 @@ describe("FuroUi5ShowHide", () => {
       await delay(10);
 
       const toggled = new Promise<CustomEvent<boolean>>((resolve) => {
-        el.addEventListener("toggled", (e) => {
-          resolve(e as CustomEvent<boolean>);
-        }, { once: true });
+        el.addEventListener(
+          "toggled",
+          (e) => {
+            resolve(e as CustomEvent<boolean>);
+          },
+          { once: true }
+        );
       });
 
       el.show();
@@ -351,9 +359,13 @@ describe("FuroUi5ShowHide", () => {
 
     it("hides the element and dispatches `hid`", async () => {
       const hid = new Promise<CustomEvent<boolean>>((resolve) => {
-        el.addEventListener("hid", (e) => {
-          resolve(e as CustomEvent<boolean>);
-        }, { once: true });
+        el.addEventListener(
+          "hid",
+          (e) => {
+            resolve(e as CustomEvent<boolean>);
+          },
+          { once: true }
+        );
       });
 
       el.hide();
@@ -368,9 +380,13 @@ describe("FuroUi5ShowHide", () => {
 
     it("dispatches `toggled` on the first hide()", async () => {
       const toggled = new Promise<CustomEvent<boolean>>((resolve) => {
-        el.addEventListener("toggled", (e) => {
-          resolve(e as CustomEvent<boolean>);
-        }, { once: true });
+        el.addEventListener(
+          "toggled",
+          (e) => {
+            resolve(e as CustomEvent<boolean>);
+          },
+          { once: true }
+        );
       });
 
       el.hide();
@@ -400,9 +416,13 @@ describe("FuroUi5ShowHide", () => {
       assert.equal(el.value, false);
 
       const hid = new Promise<CustomEvent<boolean>>((resolve) => {
-        el.addEventListener("hid", (e) => {
-          resolve(e as CustomEvent<boolean>);
-        }, { once: true });
+        el.addEventListener(
+          "hid",
+          (e) => {
+            resolve(e as CustomEvent<boolean>);
+          },
+          { once: true }
+        );
       });
 
       el.toggle();
@@ -418,9 +438,13 @@ describe("FuroUi5ShowHide", () => {
       assert.equal(el.value, true);
 
       const showed = new Promise<CustomEvent<boolean>>((resolve) => {
-        el.addEventListener("showed", (e) => {
-          resolve(e as CustomEvent<boolean>);
-        }, { once: true });
+        el.addEventListener(
+          "showed",
+          (e) => {
+            resolve(e as CustomEvent<boolean>);
+          },
+          { once: true }
+        );
       });
 
       el.toggle();

@@ -2,7 +2,7 @@ import "@ui5/webcomponents/dist/Option.js";
 import "@/elements/mcb-item";
 
 import { type FieldConstraints, STRING } from "@furo/open-models";
-import { ARRAY } from "@furo/open-models/dist/index";
+import { ARRAY } from "@furo/open-models";
 import MultiComboBox from "@ui5/webcomponents/dist/MultiComboBox.js";
 
 import type { FuroUi5McbItem } from "@/elements/mcb-item/FuroUi5McbItem";
@@ -107,9 +107,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     this.accessibleName ??= this._model.__label;
   }
 
-  private static _detectModelItemType(
-    arr: ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList,
-  ): ModelItemType {
+  private static _detectModelItemType(arr: ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList): ModelItemType {
     const first = arr.at(0);
     if (first?.__meta.typeName === "primitives.STRING") return "STRING";
     if (first?.__meta.typeName === "furo.fat.String") return "FAT_STRING";
@@ -117,9 +115,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
 
     // Empty array — peek the array's constructor (set by ARRAY.Builder) so
     // we still pick the correct literal shape on write-back.
-    const ctor = (
-      arr as unknown as { __getConstructor?: () => unknown }
-    ).__getConstructor?.();
+    const ctor = (arr as unknown as { __getConstructor?: () => unknown }).__getConstructor?.();
     if (ctor === STRING) return "STRING";
     if (ctor === FuroFatString) return "FAT_STRING";
     return "IDENTIFIABLE";
@@ -316,9 +312,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
   };
 
   private writeToModel = (event: Event): void => {
-    const detail = (event as CustomEvent<{ items: (HTMLElement & { id: string })[] }>).detail as
-      | { items?: (HTMLElement & { id: string })[] }
-      | undefined;
+    const detail = (event as CustomEvent<{ items: (HTMLElement & { id: string })[] }>).detail as { items?: (HTMLElement & { id: string })[] } | undefined;
     const selectedIds = (detail?.items ?? []).map((it) => it.id);
     this._writeIdsToModel(selectedIds);
   };
@@ -340,8 +334,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
         // displayName/additionalText/etc. Falls back to a bare `{ id }` shape
         // if optionsModel isn't bound (degrades gracefully).
         const opt = this._optionsModel?.find((o) => o.id.toString() === id);
-        const literal =
-          opt && "__toLiteral" in opt ? (opt as { __toLiteral: () => unknown }).__toLiteral() : { id };
+        const literal = opt && "__toLiteral" in opt ? (opt as { __toLiteral: () => unknown }).__toLiteral() : { id };
         (this._model as unknown as { push: (literal: unknown) => number }).push(literal);
       }
     });

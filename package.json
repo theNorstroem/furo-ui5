@@ -61,6 +61,10 @@
       "types": "./dist/elements/combobox/index.d.ts",
       "default": "./dist/elements/combobox/index.js"
     },
+    "./context-menu": {
+      "types": "./dist/elements/context-menu/index.d.ts",
+      "default": "./dist/elements/context-menu/index.js"
+    },
     "./dialog": {
       "types": "./dist/elements/dialog/index.d.ts",
       "default": "./dist/elements/dialog/index.js"
@@ -245,7 +249,7 @@
     "tsc": "tsc && tsc-alias",
     "gen:intrinsic:pure": "node ./scripts/IntrinsicElements/main.js  && prettier src/JSX/*.ts --write",
     "gen:intrinsic": "rimraf src/JSX/* && node ./scripts/IntrinsicElements/main.js @furo/ui5 && eslint --version && eslint --fix src/JSX && prettier src/JSX/*.ts --write",
-    "gen:contracts": "npm run clean:models && contracts/protoc-gen-open-models.sh && eslint ./src/models --fix && prettier --ext .ts ./src/models --write --ignore-path .gitignore",
+    "gen:contracts": "npm run clean:models && contracts/protoc-gen-open-models.sh && eslint ./src/models --fix && prettier --ext .ts ./src/models --write --ignore-path .gitignore && npm run lint:fix",
     "gen:exports": "node scripts/gen-exports.mjs --write",
     "clean:models": "rimraf src/models/furo && rimraf src/models/google && rimraf src/models/openapiv3",
     "lint": "eslint ./src",

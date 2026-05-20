@@ -84,11 +84,7 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
     this._model = fieldNode;
     // init model — write-only, empty readers map
     this.stringReaderWriters = new StringReaderWriters<FuroUi5BarcodeScannerDialog>(this, "code", this._model);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.stringReaderWriters.getWriters(),
-      new Map<string, () => void>(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.stringReaderWriters.getWriters(), new Map<string, () => void>());
 
     // listen on changes from UI
     this.addEventListener("scan-success", this.writeToModel as EventListener);

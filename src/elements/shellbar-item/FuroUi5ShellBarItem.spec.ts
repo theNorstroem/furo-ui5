@@ -16,9 +16,7 @@ describe("ShellBarItem Component", async () => {
   let el: FuroUi5ShellBarItem;
 
   beforeAll(async () => {
-    el = await fixture(html`
-      <furo-ui5-shellbar-item icon="bell" text="Notifications" count="3"></furo-ui5-shellbar-item>
-    `);
+    el = await fixture(html` <furo-ui5-shellbar-item icon="bell" text="Notifications" count="3"></furo-ui5-shellbar-item> `);
     await delay(16);
   });
 

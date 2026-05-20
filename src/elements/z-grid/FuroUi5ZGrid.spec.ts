@@ -85,11 +85,7 @@ describe("FuroUi5ZGrid Component", () => {
       // than one track because auto-fill on a 1200px container with ~6-8rem minimums
       // will always produce several columns.
       const tracks = styles.gridTemplateColumns.split(/\s+/).filter((t) => /\dpx$/.test(t));
-      assert.isAbove(
-        tracks.length,
-        1,
-        `expected multiple grid columns at width 1200, got ${String(tracks.length)} (${styles.gridTemplateColumns})`,
-      );
+      assert.isAbove(tracks.length, 1, `expected multiple grid columns at width 1200, got ${String(tracks.length)} (${styles.gridTemplateColumns})`);
     });
   });
 
@@ -260,11 +256,7 @@ describe("FuroUi5ZGrid Component", () => {
       // `:host([size="size-s"]) ::slotted(*)` sets grid-column-start: 1; grid-column-end: last-col;
       assert.equal(styles.gridColumnStart, "1");
       // gridColumnEnd resolves to "last-col" (a named line) when applied via ::slotted on size-s.
-      assert.match(
-        styles.gridColumnEnd,
-        /last-col/,
-        `expected gridColumnEnd to reference 'last-col' on size-s, got '${styles.gridColumnEnd}'`,
-      );
+      assert.match(styles.gridColumnEnd, /last-col/, `expected gridColumnEnd to reference 'last-col' on size-s, got '${styles.gridColumnEnd}'`);
     });
   });
 });

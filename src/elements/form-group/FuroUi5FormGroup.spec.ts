@@ -6,7 +6,7 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
 
-import {FuroUi5FormGroup} from "./FuroUi5FormGroup";
+import { FuroUi5FormGroup } from "./FuroUi5FormGroup";
 
 import { delay } from "@/util/test-helpers/delay";
 
@@ -124,11 +124,7 @@ describe("FormGroup Component", async () => {
       await delay(50);
       const fieldset = narrow.shadowRoot!.querySelector("fieldset")!;
       const styles = window.getComputedStyle(fieldset);
-      assert.equal(
-        countColumns(styles.gridTemplateColumns),
-        1,
-        `expected 1 column for narrow host, got: "${styles.gridTemplateColumns}"`
-      );
+      assert.equal(countColumns(styles.gridTemplateColumns), 1, `expected 1 column for narrow host, got: "${styles.gridTemplateColumns}"`);
     });
 
     it("should render 2 columns at 1300px host width", async () => {
@@ -142,11 +138,7 @@ describe("FormGroup Component", async () => {
       await delay(50);
       const fieldset = mid.shadowRoot!.querySelector("fieldset")!;
       const styles = window.getComputedStyle(fieldset);
-      assert.equal(
-        countColumns(styles.gridTemplateColumns),
-        2,
-        `expected 2 columns at 1300px host, got: "${styles.gridTemplateColumns}"`
-      );
+      assert.equal(countColumns(styles.gridTemplateColumns), 2, `expected 2 columns at 1300px host, got: "${styles.gridTemplateColumns}"`);
     });
 
     it("should render 3 columns at 1900px host width", async () => {
@@ -161,11 +153,7 @@ describe("FormGroup Component", async () => {
       await delay(50);
       const fieldset = wide.shadowRoot!.querySelector("fieldset")!;
       const styles = window.getComputedStyle(fieldset);
-      assert.equal(
-        countColumns(styles.gridTemplateColumns),
-        3,
-        `expected 3 columns at 1900px host, got: "${styles.gridTemplateColumns}"`
-      );
+      assert.equal(countColumns(styles.gridTemplateColumns), 3, `expected 3 columns at 1900px host, got: "${styles.gridTemplateColumns}"`);
     });
   });
 });

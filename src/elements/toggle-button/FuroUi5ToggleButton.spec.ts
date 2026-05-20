@@ -53,9 +53,7 @@ describe("FuroUi5ToggleButton", () => {
     let elLocator: LocatorSelectors;
 
     beforeAll(async () => {
-      el = await fixture(
-        html` <furo-ui5-toggle-button accessible-name="name" data-testid="test">label</furo-ui5-toggle-button> `,
-      );
+      el = await fixture(html` <furo-ui5-toggle-button accessible-name="name" data-testid="test">label</furo-ui5-toggle-button> `);
       elLocator = utils.getElementLocatorSelectors(el);
       // dummy method call, you can remove it as soon you use elLocator in the tests
       elLocator.getByTestId("test");
@@ -261,36 +259,28 @@ describe("FuroUi5ToggleButton", () => {
     });
 
     it("applies 'icon' FAT attribute to el.icon", async () => {
-      const el: FuroUi5ToggleButton = await fixture(
-        html`<furo-ui5-toggle-button>label</furo-ui5-toggle-button>`,
-      );
+      const el: FuroUi5ToggleButton = await fixture(html`<furo-ui5-toggle-button>label</furo-ui5-toggle-button>`);
       const model = createFatBool({ attributes: { icon: "accept" } });
       el.bindData(model);
       assert.equal(el.icon, "accept");
     });
 
     it("applies 'endIcon' FAT attribute to el.endIcon", async () => {
-      const el: FuroUi5ToggleButton = await fixture(
-        html`<furo-ui5-toggle-button>label</furo-ui5-toggle-button>`,
-      );
+      const el: FuroUi5ToggleButton = await fixture(html`<furo-ui5-toggle-button>label</furo-ui5-toggle-button>`);
       const model = createFatBool({ attributes: { endIcon: "decline" } });
       el.bindData(model);
       assert.equal(el.endIcon, "decline");
     });
 
     it("applies 'design' FAT attribute to el.design", async () => {
-      const el: FuroUi5ToggleButton = await fixture(
-        html`<furo-ui5-toggle-button>label</furo-ui5-toggle-button>`,
-      );
+      const el: FuroUi5ToggleButton = await fixture(html`<furo-ui5-toggle-button>label</furo-ui5-toggle-button>`);
       const model = createFatBool({ attributes: { design: "Positive" } });
       el.bindData(model);
       assert.equal(el.design, "Positive");
     });
 
     it("resets design to the previous design when no FAT 'design' attribute is present", async () => {
-      const el: FuroUi5ToggleButton = await fixture(
-        html`<furo-ui5-toggle-button>label</furo-ui5-toggle-button>`,
-      );
+      const el: FuroUi5ToggleButton = await fixture(html`<furo-ui5-toggle-button>label</furo-ui5-toggle-button>`);
       // bind a FAT model with no `design` attribute → custom handler resets
       // `design` to `_previousDesign`, which is "Default" out of the box.
       const model = createFatBool({ attributes: { icon: "accept" } });
@@ -299,36 +289,28 @@ describe("FuroUi5ToggleButton", () => {
     });
 
     it("pre-set HTML 'icon' wins over FAT attribute", async () => {
-      const el: FuroUi5ToggleButton = await fixture(
-        html`<furo-ui5-toggle-button icon="accept">label</furo-ui5-toggle-button>`,
-      );
+      const el: FuroUi5ToggleButton = await fixture(html`<furo-ui5-toggle-button icon="accept">label</furo-ui5-toggle-button>`);
       const model = createFatBool({ attributes: { icon: "decline" } });
       el.bindData(model);
       assert.equal(el.icon, "accept");
     });
 
     it("pre-set HTML 'design' wins over FAT attribute", async () => {
-      const el: FuroUi5ToggleButton = await fixture(
-        html`<furo-ui5-toggle-button design="Emphasized">label</furo-ui5-toggle-button>`,
-      );
+      const el: FuroUi5ToggleButton = await fixture(html`<furo-ui5-toggle-button design="Emphasized">label</furo-ui5-toggle-button>`);
       const model = createFatBool({ attributes: { design: "Positive" } });
       el.bindData(model);
       assert.equal(el.design, "Emphasized");
     });
 
     it("pre-set accessible-name wins over model __label", async () => {
-      const el: FuroUi5ToggleButton = await fixture(
-        html`<furo-ui5-toggle-button accessible-name="preset">label</furo-ui5-toggle-button>`,
-      );
+      const el: FuroUi5ToggleButton = await fixture(html`<furo-ui5-toggle-button accessible-name="preset">label</furo-ui5-toggle-button>`);
       const model = createFatBool();
       el.bindData(model);
       assert.equal(el.accessibleName, "preset");
     });
 
     it("falls back to model __label when accessibleName is not preset", async () => {
-      const el: FuroUi5ToggleButton = await fixture(
-        html`<furo-ui5-toggle-button>label</furo-ui5-toggle-button>`,
-      );
+      const el: FuroUi5ToggleButton = await fixture(html`<furo-ui5-toggle-button>label</furo-ui5-toggle-button>`);
       const model = createFatBool();
       el.bindData(model);
       assert.equal(el.accessibleName, model.__label);

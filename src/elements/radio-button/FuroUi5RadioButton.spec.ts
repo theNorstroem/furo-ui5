@@ -48,9 +48,7 @@ describe("FuroUi5RadioButton", () => {
     let elLocator: LocatorSelectors;
 
     beforeAll(async () => {
-      el = await fixture(
-        html` <furo-ui5-radio-button accessible-name="name" data-testid="test"></furo-ui5-radio-button> `,
-      );
+      el = await fixture(html` <furo-ui5-radio-button accessible-name="name" data-testid="test"></furo-ui5-radio-button> `);
       elLocator = utils.getElementLocatorSelectors(el);
       // dummy method call, you can remove it as soon you use elLocator in the tests
       elLocator.getByTestId("test");
@@ -333,9 +331,7 @@ describe("FuroUi5RadioButton", () => {
     });
 
     it("pre-set accessible-name wins over model __label", async () => {
-      const el: FuroUi5RadioButton = await fixture(
-        html`<furo-ui5-radio-button accessible-name="preset"></furo-ui5-radio-button>`,
-      );
+      const el: FuroUi5RadioButton = await fixture(html`<furo-ui5-radio-button accessible-name="preset"></furo-ui5-radio-button>`);
       const model = createFatBool();
       el.bindData(model);
       assert.equal(el.accessibleName, "preset");

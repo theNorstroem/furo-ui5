@@ -100,11 +100,7 @@ export class FuroUi5Combobox extends ComboBox {
     this._model = fieldNode;
     // init model
     this.stringReaderWriters = new StringReaderWriters<FuroUi5Combobox>(this, "value", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.stringReaderWriters.getWriters(),
-      this.stringReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.stringReaderWriters.getWriters(), this.stringReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);

@@ -215,11 +215,7 @@ export class FuroUi5StepInput extends StepInput {
 
     // init model
     this.numericReaderWriters = new NumericReaderWriters<FuroUi5StepInput>(this, "value", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.numericReaderWriters.getWriters(),
-      this.numericReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.numericReaderWriters.getWriters(), this.numericReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);

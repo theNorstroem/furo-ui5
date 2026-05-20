@@ -38,6 +38,13 @@ describe("SignPad Component", async () => {
     await assert.isAccessible(el);
   });
 
+  it("should re render on resize", async () => {
+    const reducedWidth = el.clientWidth * 0.9;
+    el.style.width = `${reducedWidth.toString()}px`;
+    await delay(316);
+    assert.equal(reducedWidth, el.clientWidth);
+  });
+
   it("should render a canvas in shadow", () => {
     const canvas = el.shadowRoot!.querySelector("canvas");
     assert.isNotNull(canvas);

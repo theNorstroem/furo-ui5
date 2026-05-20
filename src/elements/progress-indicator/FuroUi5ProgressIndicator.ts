@@ -163,11 +163,7 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
 
     // init model — display-only, empty writers map
     this.numericReaderWriters = new NumericReaderWriters<FuroUi5ProgressIndicator>(this, "value", this._model);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      new Map<string, () => void>(),
-      this.numericReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, new Map<string, () => void>(), this.numericReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);

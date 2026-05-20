@@ -300,18 +300,14 @@ describe("FuroUi5NumberInput", () => {
     });
 
     it("pre-set HTML 'placeholder' wins over FAT attribute", async () => {
-      const el: FuroUi5NumberInput = await fixture(
-        html`<furo-ui5-number-input placeholder="local"></furo-ui5-number-input>`,
-      );
+      const el: FuroUi5NumberInput = await fixture(html`<furo-ui5-number-input placeholder="local"></furo-ui5-number-input>`);
       const model = createFatInt32({ attributes: { placeholder: "from-fat" } });
       el.bindData(model);
       assert.equal(el.placeholder, "local");
     });
 
     it("pre-set accessible-name wins over model __label", async () => {
-      const el: FuroUi5NumberInput = await fixture(
-        html`<furo-ui5-number-input accessible-name="preset"></furo-ui5-number-input>`,
-      );
+      const el: FuroUi5NumberInput = await fixture(html`<furo-ui5-number-input accessible-name="preset"></furo-ui5-number-input>`);
       const model = createFatInt32();
       el.bindData(model);
       assert.equal(el.accessibleName, "preset");

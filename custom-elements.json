@@ -588,7 +588,7 @@
         {
           "kind": "class",
           "description": "The furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.\n\n```html\n<furo-ui5-busy-indicator></furo-ui5-busy-indicator>\n```\n\nhttps://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/\n\n### Overview\n\nThe `furo-ui5-busy-indicator` signals that some operation is going on and that the\nuser must wait. It does not block the current UI screen so other operations could be triggered in parallel.\nIt displays 3 dots and each dot expands and shrinks at a different rate, resulting in a cascading flow of animation.\n\n### Usage\nFor the `furo-ui5-busy-indicator` you can define the size, the text and whether it is shown or hidden.\nIn order to hide it, use the \"active\" property.\n\nIn order to show busy state over an HTML element, simply nest the HTML element in a `furo-ui5-busy-indicator` instance.\n\n**Note:** Since `furo-ui5-busy-indicator` has `display: inline-block;` by default and no width of its own,\nwhenever you need to wrap a block-level element, you should set `display: block` to the busy indicator as well.\n\n#### When to use:\n\n- The user needs to be able to cancel the operation.\n- Only part of the application or a particular component is affected.\n\n#### When not to use:\n\n- The operation takes less than one second.\n- You need to block the screen and prevent the user from starting another activity.\n- Do not show multiple busy indicators at once.\n\n\n",
-          "name": "FuroUiBusyIndicator",
+          "name": "BusyIndicator",
           "members": [
             {
               "kind": "field",
@@ -642,7 +642,7 @@
               "kind": "field",
               "name": "boolReaderWriters",
               "type": {
-                "text": "BoolReaderWriters<FuroUiBusyIndicator> | undefined"
+                "text": "BoolReaderWriters<FuroUi5BusyIndicator> | undefined"
               },
               "privacy": "private"
             },
@@ -884,9 +884,9 @@
       "exports": [
         {
           "kind": "js",
-          "name": "FuroUiBusyIndicator",
+          "name": "FuroUi5BusyIndicator",
           "declaration": {
-            "name": "FuroUiBusyIndicator",
+            "name": "FuroUi5BusyIndicator",
             "module": "src/elements/busy-indicator/FuroUi5BusyIndicator.ts"
           }
         }
@@ -3283,6 +3283,637 @@
     {
       "kind": "javascript-module",
       "path": "dist/elements/combobox/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/context-menu/FuroUi5ContextMenu.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The furo-ui5-context-menu binds a `furoui5.Menuitem` model (or an ARRAY of them) to\na SAP `furo-ui5-menu`. Because `furo-ui5-menu` is itself a self-contained popover, no separate\ndisplay element is required.\n\nThe opener is wired up using the standard UI5 convention via the `opener` attribute\n(element id or `HTMLElement` reference) and `show()` / `trigger()`. Hierarchical\nsub-menus, keyboard navigation, separators and a11y are inherited from `furo-ui5-menu`.\n\n### Sample\n```html\n<furo-ui5-button id=\"opener\" at-click=\"--openClicked\">Open</furo-ui5-button>\n<furo-ui5-context-menu\n  opener=\"opener\"\n  fn-show=\"--openClicked\"\n  .model=\"${menu}\"\n\n### Overview\n\n`furo-ui5-menu` component represents a hierarchical menu structure.\n\n### Structure\n\nThe `furo-ui5-menu` can hold two types of entities:\n\n- `furo-ui5-menu-item` components\n- `furo-ui5-menu-separator` - used to separate menu items with a line\n\nAn arbitrary hierarchy structure can be represented by recursively nesting menu items.\n\n### Keyboard Handling\n\nThe `furo-ui5-menu` provides advanced keyboard handling.\nThe user can use the following keyboard shortcuts in order to navigate trough the tree:\n\n- `Arrow Up` / `Arrow Down` - Navigates up and down the menu items that are currently visible.\n- `Arrow Right`, `Space` or `Enter` - Opens a sub-menu if there are menu items nested\nin the currently clicked menu item.\n- `Arrow Left` or `Escape` - Closes the currently opened sub-menu.\n\nwhen there is `endContent` :\n- `Arrow Left` or `ArrowRight` - Navigate between the menu item actions and the menu item itself\n- `Arrow Up` / `Arrow Down` - Navigates up and down the currently visible menu items\n\n**Note:** If the text direction is set to Right-to-left (RTL), `Arrow Right` and `Arrow Left` functionality is swapped.\n\nApplication developers are responsible for ensuring that interactive elements placed in the `endContent` slot\nhave the correct accessibility behaviour, including their enabled or disabled states.\nThe menu does not manage these aspects when the menu item state changes.\n\n\n",
+          "name": "ContextMenu",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_context",
+              "type": {
+                "text": "unknown"
+              },
+              "privacy": "private",
+              "description": "Last value passed to `setContext()` / `triggerContext()`. Echoed back as\n`detail.context` on the next emitted `menu-item-selected` event."
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "MenuModel | undefined"
+              },
+              "privacy": "private",
+              "description": "The currently bound source model — an `ARRAY` of root items, or a single `Menuitem`\nwhose `children` are the root items. `undefined` until `bindData()` is called."
+            },
+            {
+              "kind": "field",
+              "name": "_queueTrigger",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
+              "description": "Set when `trigger()` / `triggerContext()` is called before any model is bound.\nThe pending open is replayed inside `bindData()` once a model arrives — preserves\nthe legacy `furo-furo-ui5-context-menu` behavior."
+            },
+            {
+              "kind": "method",
+              "name": "appendChildrenFor",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "Menuitem"
+                  }
+                },
+                {
+                  "name": "parent",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                }
+              ],
+              "description": "Renders a single `Menuitem` plus any of its `children` recursively into `parent`\n(the menu host at the root, or a `<furo-ui5-menu-item>` to form a submenu). Inserts a\nleading `<furo-ui5-menu-separator>` when `node.leadingDivider.value` is `true`, and\nrecords the `MenuItem → Menuitem` mapping in `itemSources` so `handleItemClick`\ncan resolve the source field node on selection."
+            },
+            {
+              "kind": "method",
+              "name": "attachModelListeners",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Subscribes `handleModelChanged` to the currently bound `_model`'s `array-changed`\nand `field-value-changed` events. No-op when no model is bound."
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "MenuModel | undefined",
+                    "references": [
+                      {
+                        "name": "ARRAY",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component. Accepts either an `ARRAY<Menuitem, IMenuitem>`\n(typical case: the array of root items) or a single `Menuitem` whose `children`\nwill be used as the root items."
+            },
+            {
+              "kind": "method",
+              "name": "close",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Closes the menu."
+            },
+            {
+              "kind": "method",
+              "name": "detachModelListeners",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Inverse of `attachModelListeners`; called on rebind and on `disconnectedCallback`\nto avoid listener leaks on the source model."
+            },
+            {
+              "kind": "field",
+              "name": "handleItemClick",
+              "privacy": "private",
+              "description": "Translates UI5's native `item-click` event into our `menu-item-selected` event by\nlooking the clicked `MenuItem` up in `itemSources`. Items not in the map (e.g.\nstray children the user appended manually) are ignored. Defined as an arrow so\n`this` stays bound when used as a DOM event listener."
+            },
+            {
+              "kind": "field",
+              "name": "handleModelChanged",
+              "privacy": "private",
+              "readonly": true,
+              "description": "Listener attached to the bound model's `array-changed` and `field-value-changed`\nevents; re-renders the menu items on any change to the model tree."
+            },
+            {
+              "kind": "field",
+              "name": "headerText",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the header text of the menu (displayed on mobile).",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "horizontalAlign",
+              "type": {
+                "text": "PopoverHorizontalAlign",
+                "references": [
+                  {
+                    "name": "PopoverHorizontalAlign",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/PopoverHorizontalAlign.js"
+                  }
+                ]
+              },
+              "default": "\"Start\"",
+              "description": "Determines the horizontal alignment of the menu relative to its opener control.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "itemSources",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new WeakMap<MenuItem, Menuitem>()",
+              "description": "Maps each rendered `<furo-ui5-menu-item>` back to its source `Menuitem` field node, so\n`handleItemClick` can attach the correct field node to the emitted\n`menu-item-selected` event. `WeakMap` so removed items can be GC'd."
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines if a loading indicator would be displayed inside the corresponding furo-ui5-menu popover.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "loadingDelay",
+              "type": {
+                "text": "number"
+              },
+              "default": "1000",
+              "description": "Defines the delay in milliseconds, after which the loading indicator will be displayed inside the corresponding furo-ui5-menu popover.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "MenuModel | undefined",
+                "references": [
+                  {
+                    "name": "ARRAY",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "MenuModel",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a model field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates if the menu is open.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "opener",
+              "type": {
+                "text": "HTMLElement | string | null | undefined"
+              },
+              "description": "Defines the ID or DOM Reference of the element at which the menu is shown.\nWhen using this attribute in a declarative way, you must only use the `id` (as a string) of the element at which you want to show the popover.\nYou can only set the `opener` attribute to a DOM Reference when using JavaScript.",
+              "privacy": "public",
+              "default": "undefined",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "placement",
+              "type": {
+                "text": "PopoverPlacement",
+                "references": [
+                  {
+                    "name": "PopoverPlacement",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/PopoverPlacement.js"
+                  }
+                ]
+              },
+              "default": "\"Bottom\"",
+              "description": "Determines on which side the component is placed at.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderItems",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Clears any previously rendered `<furo-ui5-menu-item>` / `<furo-ui5-menu-separator>` light-DOM\nchildren, then re-creates them from the current `rootItems`. Called from `bindData`\nand from `handleModelChanged`."
+            },
+            {
+              "kind": "field",
+              "name": "rootItems",
+              "type": {
+                "text": "ARRAY<Menuitem, IMenuitem> | undefined"
+              },
+              "privacy": "private",
+              "description": "Resolves the bound model to the ARRAY of root items: returns the model itself when\nit's already an `ARRAY`, otherwise its `children` ARRAY. `undefined` when nothing\nis bound.",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "setContext",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "ctx",
+                  "type": {
+                    "text": "unknown"
+                  }
+                }
+              ],
+              "description": "Sets a context value that is echoed back inside the `menu-item-selected` event."
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Opens the menu (uses the currently configured opener)."
+            },
+            {
+              "kind": "method",
+              "name": "showAt",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "opener",
+                  "type": {
+                    "text": "HTMLElement | string"
+                  }
+                }
+              ],
+              "description": "Convenience: assigns the opener and opens the menu."
+            },
+            {
+              "kind": "method",
+              "name": "trigger",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Opens the menu at the configured opener. If `bindData` has not yet been called,\nthe trigger is queued and replayed once a model arrives."
+            },
+            {
+              "kind": "method",
+              "name": "triggerContext",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "ctx",
+                  "type": {
+                    "text": "unknown"
+                  }
+                }
+              ],
+              "description": "Sets the context and opens the menu."
+            }
+          ],
+          "events": [
+            {
+              "name": "before-close",
+              "type": {
+                "text": "CustomEvent<MenuBeforeCloseEventDetail>",
+                "references": [
+                  {
+                    "name": "MenuBeforeCloseEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/Menu.js"
+                  }
+                ]
+              },
+              "description": "Fired before the menu is closed. This event can be cancelled, which will prevent the menu from closing.",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "name": "before-open",
+              "type": {
+                "text": "CustomEvent<MenuBeforeOpenEventDetail>",
+                "references": [
+                  {
+                    "name": "MenuBeforeOpenEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/Menu.js"
+                  }
+                ]
+              },
+              "description": "Fired before the menu is opened. This event can be cancelled, which will prevent the menu from opening.\n\n**Note:** Since 1.14.0 the event is also fired before a sub-menu opens.",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "name": "close",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired after the menu is closed.",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "name": "item-click",
+              "type": {
+                "text": "CustomEvent<MenuItemClickEventDetail>",
+                "references": [
+                  {
+                    "name": "MenuItemClickEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/Menu.js"
+                  }
+                ]
+              },
+              "description": "Fired when an item is being clicked.\n\n**Note:** Since 1.17.0 the event is preventable, allowing the menu to remain open after an item is pressed.",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "type": {
+                "text": "CustomEvent<MenuItemSelectedEventDetail>",
+                "references": [
+                  {
+                    "name": "MenuItemSelectedEventDetail",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "description": "Fired when a menu item was clicked.",
+              "name": "menu-item-selected"
+            },
+            {
+              "name": "open",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired after the menu is opened.",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "Menu",
+            "package": "@ui5/webcomponents",
+            "module": "dist/Menu.js"
+          },
+          "tagName": "furo-ui5-context-menu",
+          "customElement": true,
+          "summary": "Context menu bound to a `furoui5.Menuitem` model.",
+          "slots": [
+            {
+              "name": "default",
+              "description": "Defines the items of this component.\n\n**Note:** Use `ui5-menu-item` and `ui5-menu-separator` for their intended design.",
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the header text of the menu (displayed on mobile).",
+              "name": "header-text",
+              "default": "undefined",
+              "fieldName": "headerText",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "description": "Determines the horizontal alignment of the menu relative to its opener control.",
+              "name": "horizontal-align",
+              "default": "\"Start\"",
+              "fieldName": "horizontalAlign",
+              "type": {
+                "text": "\"Start\" | \"End\" | \"Center\" | \"Stretch\""
+              },
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines if a loading indicator would be displayed inside the corresponding furo-ui5-menu popover.",
+              "name": "loading",
+              "default": "false",
+              "fieldName": "loading",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "description": "Defines the delay in milliseconds, after which the loading indicator will be displayed inside the corresponding furo-ui5-menu popover.",
+              "name": "loading-delay",
+              "default": "1000",
+              "fieldName": "loadingDelay",
+              "type": {
+                "text": "number"
+              },
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "description": "Indicates if the menu is open.",
+              "name": "open",
+              "default": "false",
+              "fieldName": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "description": "Defines the ID or DOM Reference of the element at which the menu is shown.\nWhen using this attribute in a declarative way, you must only use the `id` (as a string) of the element at which you want to show the popover.\nYou can only set the `opener` attribute to a DOM Reference when using JavaScript.",
+              "name": "opener",
+              "default": "undefined",
+              "fieldName": "opener",
+              "type": {
+                "text": "string | HTMLElement | null | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            },
+            {
+              "description": "Determines on which side the component is placed at.",
+              "name": "placement",
+              "default": "\"Bottom\"",
+              "fieldName": "placement",
+              "type": {
+                "text": "\"Top\" | \"Bottom\" | \"Start\" | \"End\""
+              },
+              "inheritedFrom": {
+                "name": "Menu",
+                "module": "dist/Menu.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5ContextMenu",
+          "declaration": {
+            "name": "FuroUi5ContextMenu",
+            "module": "src/elements/context-menu/FuroUi5ContextMenu.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/context-menu/index.js",
       "declarations": [],
       "exports": []
     },
@@ -6343,12 +6974,40 @@
           "name": "MultiCombobox",
           "members": [
             {
+              "kind": "method",
+              "name": "_detectModelItemType",
+              "privacy": "private",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "ModelItemType"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "arr",
+                  "type": {
+                    "text": "ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList"
+                  }
+                }
+              ]
+            },
+            {
               "kind": "field",
               "name": "_model",
               "type": {
                 "text": "ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList"
               },
               "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_modelItemType",
+              "type": {
+                "text": "ModelItemType"
+              },
+              "privacy": "private",
+              "default": "\"STRING\""
             },
             {
               "kind": "field",
@@ -6365,6 +7024,19 @@
                 "text": "OptionLikeList | undefined"
               },
               "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "_writeIdsToModel",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "ids",
+                  "type": {
+                    "text": "string[]"
+                  }
+                }
+              ]
             },
             {
               "kind": "field",
@@ -6480,15 +7152,6 @@
                 "name": "MultiComboBox",
                 "module": "dist/MultiComboBox.js"
               }
-            },
-            {
-              "kind": "field",
-              "name": "fatHandler",
-              "type": {
-                "text": "FatHandler<FuroUi5MultiCombobox>"
-              },
-              "privacy": "private",
-              "default": "new FatHandler<FuroUi5MultiCombobox>(this, [\"readonly\", \"disabled\", \"hidden\", \"required\"])"
             },
             {
               "kind": "field",

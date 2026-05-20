@@ -16,9 +16,7 @@ describe("Link Component", async () => {
   let el: FuroUi5Link;
 
   beforeAll(async () => {
-    el = await fixture(
-      html` <furo-ui5-link href="https://example.com" target="_blank" design="Default">Open example</furo-ui5-link> `
-    );
+    el = await fixture(html` <furo-ui5-link href="https://example.com" target="_blank" design="Default">Open example</furo-ui5-link> `);
     await delay(16);
   });
 

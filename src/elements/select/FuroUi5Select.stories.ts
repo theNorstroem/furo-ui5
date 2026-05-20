@@ -9,7 +9,7 @@ import "@/elements/text-input";
 import "@/elements/pretty-json";
 import "@ui5/webcomponents-icons/AllIcons";
 
-import { ARRAY } from "@furo/open-models/dist/index";
+import { ARRAY } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";

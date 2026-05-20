@@ -16,9 +16,7 @@ describe("ShellBarSearch Component", async () => {
   let el: FuroUi5ShellBarSearch;
 
   beforeAll(async () => {
-    el = await fixture(html`
-      <furo-ui5-shellbar-search placeholder="Search..." value="initial"></furo-ui5-shellbar-search>
-    `);
+    el = await fixture(html` <furo-ui5-shellbar-search placeholder="Search..." value="initial"></furo-ui5-shellbar-search> `);
     await delay(16);
   });
 

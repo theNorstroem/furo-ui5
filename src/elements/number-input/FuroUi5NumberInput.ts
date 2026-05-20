@@ -223,11 +223,7 @@ export class FuroUi5NumberInput extends Input {
 
     // init model
     this.numericReaderWriters = new NumericReaderWriters<FuroUi5NumberInput>(this, "modelValue", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.numericReaderWriters.getWriters(),
-      this.numericReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.numericReaderWriters.getWriters(), this.numericReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);

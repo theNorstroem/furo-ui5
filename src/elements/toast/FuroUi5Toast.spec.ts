@@ -16,9 +16,7 @@ describe("Toast Component", async () => {
   let el: FuroUi5Toast;
 
   beforeAll(async () => {
-    el = await fixture(html`
-      <furo-ui5-toast data-testid="test" duration="500" placement="MiddleCenter">Toast content</furo-ui5-toast>
-    `);
+    el = await fixture(html` <furo-ui5-toast data-testid="test" duration="500" placement="MiddleCenter">Toast content</furo-ui5-toast> `);
   });
 
   afterAll(() => {

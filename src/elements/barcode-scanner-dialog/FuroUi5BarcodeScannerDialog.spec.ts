@@ -34,7 +34,7 @@ const dispatchScanSuccess = (el: HTMLElement, text: string): void => {
       detail: { text, rawBytes: new Uint8Array() },
       bubbles: true,
       composed: true,
-    }),
+    })
   );
 };
 
@@ -47,9 +47,7 @@ describe("FuroUi5BarcodeScannerDialog", () => {
     let elLocator: LocatorSelectors;
 
     beforeAll(async () => {
-      el = await fixture(
-        html` <furo-ui5-barcode-scanner-dialog data-testid="test"></furo-ui5-barcode-scanner-dialog> `,
-      );
+      el = await fixture(html` <furo-ui5-barcode-scanner-dialog data-testid="test"></furo-ui5-barcode-scanner-dialog> `);
       elLocator = utils.getElementLocatorSelectors(el);
       // dummy method call, you can remove it as soon you use elLocator in the tests
       elLocator.getByTestId("test");

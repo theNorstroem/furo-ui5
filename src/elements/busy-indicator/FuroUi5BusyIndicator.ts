@@ -57,11 +57,7 @@ export class FuroUi5BusyIndicator extends BusyIndicator {
     this._model = fieldNode;
     // init model — display-only, empty writers map
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5BusyIndicator>(this, "active", this._model);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      new Map<string, () => void>(),
-      this.boolReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, new Map<string, () => void>(), this.boolReaderWriters.getReaders());
 
     // listen on changes from the model
     this._model.__addEventListener("field-value-changed", this.readFromModel);

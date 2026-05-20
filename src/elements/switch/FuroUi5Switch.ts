@@ -84,11 +84,7 @@ export class FuroUi5Switch extends Switch {
     this._model = fieldNode;
     // init model
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5Switch>(this, "checked", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.boolReaderWriters.getWriters(),
-      this.boolReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.boolReaderWriters.getWriters(), this.boolReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.readonlyState.listenToStateChanged(fieldNode);
@@ -107,7 +103,7 @@ export class FuroUi5Switch extends Switch {
     this.handleConstraints(this._model.__getConstraints());
 
     // set the text placeholdr from model if none was set
-    this.tooltip = this.tooltip ?? undefined ? this._model.__placeholder : this.tooltip;
+    this.tooltip = (this.tooltip ?? undefined) ? this._model.__placeholder : this.tooltip;
 
     // a11y
     this.accessibleName ??= this._model.__label;

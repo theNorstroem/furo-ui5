@@ -6,7 +6,7 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
 
-import {FuroUi5FormRow} from "./FuroUi5FormRow";
+import { FuroUi5FormRow } from "./FuroUi5FormRow";
 
 chai.use(chaiA11yAxe);
 
@@ -78,11 +78,7 @@ describe("FormRow Component", async () => {
     const styles = window.getComputedStyle(el);
     assert.equal(styles.display, "grid");
     const tracks = styles.gridTemplateColumns.split(/\s+/).filter(Boolean);
-    assert.equal(
-      tracks.length,
-      12,
-      `expected 12 grid columns, got ${String(tracks.length)} (${styles.gridTemplateColumns})`
-    );
+    assert.equal(tracks.length, 12, `expected 12 grid columns, got ${String(tracks.length)} (${styles.gridTemplateColumns})`);
   });
 
   it("should align grid items to the start on the host", () => {

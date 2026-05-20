@@ -38,8 +38,7 @@ import { delay } from "@/util/test-helpers/delay";
 chai.use(chaiA11yAxe);
 
 /** Fresh ENUM model bound to the `Materials` enum from the furoui5test contracts. */
-const createEnum = (initial?: Materials): ENUM<Materials> =>
-  new ENUM<Materials>(initial, Materials, Materials.MATERIALS_UNSPECIFIED);
+const createEnum = (initial?: Materials): ENUM<Materials> => new ENUM<Materials>(initial, Materials, Materials.MATERIALS_UNSPECIFIED);
 
 /**
  * Drive a UI-side selection without going through the UI5 popover. Clears
@@ -72,9 +71,7 @@ describe("FuroUi5SelectEnum", () => {
     let elLocator: LocatorSelectors;
 
     beforeAll(async () => {
-      el = await fixture(
-        html` <furo-ui5-select-enum accessible-name="name" data-testid="test"></furo-ui5-select-enum> `,
-      );
+      el = await fixture(html` <furo-ui5-select-enum accessible-name="name" data-testid="test"></furo-ui5-select-enum> `);
       elLocator = utils.getElementLocatorSelectors(el);
       // dummy method call, you can remove it as soon you use elLocator in the tests
       elLocator.getByTestId("test");
@@ -197,9 +194,7 @@ describe("FuroUi5SelectEnum", () => {
       const model = createEnum();
       el.bindData(model);
       await delay(0);
-      const target = el.querySelector<HTMLElement & { selected: boolean }>(
-        "furo-ui5-option[id='MATERIALS_PLASTICS']",
-      );
+      const target = el.querySelector<HTMLElement & { selected: boolean }>("furo-ui5-option[id='MATERIALS_PLASTICS']");
       assert.isOk(target);
       el.querySelectorAll("furo-ui5-option").forEach((opt) => {
         (opt as HTMLElement & { selected: boolean }).selected = false;
@@ -292,21 +287,12 @@ describe("FuroUi5SelectEnum", () => {
       const modelA = createEnum(Materials.MATERIALS_GLASS);
       const modelB = createEnum(Materials.MATERIALS_WOOD);
       el.bindData(modelA);
-      assert.equal(
-        el.querySelector<HTMLElement & { selected: boolean }>("furo-ui5-option[id='MATERIALS_GLASS']")?.selected,
-        true,
-      );
+      assert.equal(el.querySelector<HTMLElement & { selected: boolean }>("furo-ui5-option[id='MATERIALS_GLASS']")?.selected, true);
       el.bindData(modelB);
-      assert.equal(
-        el.querySelector<HTMLElement & { selected: boolean }>("furo-ui5-option[id='MATERIALS_WOOD']")?.selected,
-        true,
-      );
+      assert.equal(el.querySelector<HTMLElement & { selected: boolean }>("furo-ui5-option[id='MATERIALS_WOOD']")?.selected, true);
       modelA.value = Materials.MATERIALS_METALS;
       // selection still reflects modelB
-      assert.equal(
-        el.querySelector<HTMLElement & { selected: boolean }>("furo-ui5-option[id='MATERIALS_WOOD']")?.selected,
-        true,
-      );
+      assert.equal(el.querySelector<HTMLElement & { selected: boolean }>("furo-ui5-option[id='MATERIALS_WOOD']")?.selected, true);
     });
 
     it("UI writes go to the new model only after rebind", async () => {

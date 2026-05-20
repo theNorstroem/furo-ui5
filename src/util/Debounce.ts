@@ -17,11 +17,7 @@
  * @param {boolean} option.trailing
  *
  */
-export default function DebounceBuilder<TArgs extends unknown[]>(
-  func: (...args: TArgs) => unknown,
-  delay = 250,
-  option = { leading: false, trailing: true },
-) {
+export default function DebounceBuilder<TArgs extends unknown[]>(func: (...args: TArgs) => unknown, delay = 250, option = { leading: false, trailing: true }) {
   let timer: ReturnType<typeof setTimeout> | undefined;
   let trailingArgs: TArgs | undefined;
 

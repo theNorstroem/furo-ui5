@@ -300,9 +300,7 @@ describe("FuroUi5Textarea", () => {
     });
 
     it("pre-set HTML 'placeholder' wins over FAT attribute", async () => {
-      const el: FuroUi5Textarea = await fixture(
-        html`<furo-ui5-textarea placeholder="local"></furo-ui5-textarea>`,
-      );
+      const el: FuroUi5Textarea = await fixture(html`<furo-ui5-textarea placeholder="local"></furo-ui5-textarea>`);
       const model = createFatString({ attributes: { placeholder: "from-fat" } });
       el.bindData(model);
       assert.equal(el.placeholder, "local");
@@ -323,9 +321,7 @@ describe("FuroUi5Textarea", () => {
     });
 
     it("pre-set accessible-name wins over model __label", async () => {
-      const el: FuroUi5Textarea = await fixture(
-        html`<furo-ui5-textarea accessible-name="preset"></furo-ui5-textarea>`,
-      );
+      const el: FuroUi5Textarea = await fixture(html`<furo-ui5-textarea accessible-name="preset"></furo-ui5-textarea>`);
       const model = createFatString();
       el.bindData(model);
       assert.equal(el.accessibleName, "preset");

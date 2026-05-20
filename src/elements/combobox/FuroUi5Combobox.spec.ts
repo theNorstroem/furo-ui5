@@ -299,9 +299,7 @@ describe("FuroUi5Combobox", () => {
     });
 
     it("pre-set accessible-name wins over model __label", async () => {
-      const el: FuroUi5Combobox = await fixture(
-        html`<furo-ui5-combobox accessible-name="preset"></furo-ui5-combobox>`,
-      );
+      const el: FuroUi5Combobox = await fixture(html`<furo-ui5-combobox accessible-name="preset"></furo-ui5-combobox>`);
       const model = createFatString();
       el.bindData(model);
       assert.equal(el.accessibleName, "preset");

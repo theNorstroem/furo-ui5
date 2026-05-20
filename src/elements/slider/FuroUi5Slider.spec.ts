@@ -56,9 +56,7 @@ describe("FuroUi5Slider", () => {
     let elLocator: LocatorSelectors;
 
     beforeAll(async () => {
-      el = await fixture(
-        html` <furo-ui5-slider accessible-name="name" min="0" max="100" value="50" data-testid="test"></furo-ui5-slider> `,
-      );
+      el = await fixture(html` <furo-ui5-slider accessible-name="name" min="0" max="100" value="50" data-testid="test"></furo-ui5-slider> `);
       elLocator = utils.getElementLocatorSelectors(el);
       // dummy method call, you can remove it as soon you use elLocator in the tests
       elLocator.getByTestId("test");

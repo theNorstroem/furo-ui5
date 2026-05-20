@@ -45,12 +45,14 @@ chai.use(chaiA11yAxe);
 const stringArray = (items: string[]): ARRAY<STRING, string> => ARRAY.Builder(STRING, items);
 
 const fatStringArray = (items: string[]): ARRAY<FuroFatString, IFuroFatString> =>
-  ARRAY.Builder(FuroFatString, items.map((v) => ({ value: v })));
+  ARRAY.Builder(
+    FuroFatString,
+    items.map((v) => ({ value: v }))
+  );
 
 const identifiableList = (items: ICubeOptions[]): IdentifiableList => ARRAY.Builder(CubeOptions, items);
 
-const selectedIds = (el: FuroUi5MultiCombobox): string[] =>
-  [...el.querySelectorAll("furo-ui5-mcb-item[selected]")].map((node) => node.id);
+const selectedIds = (el: FuroUi5MultiCombobox): string[] => [...el.querySelectorAll("furo-ui5-mcb-item[selected]")].map((node) => node.id);
 
 describe("FuroUi5MultiCombobox", () => {
   // ───────────────────────────────────────────────────────────────────────
@@ -61,9 +63,7 @@ describe("FuroUi5MultiCombobox", () => {
     let elLocator: LocatorSelectors;
 
     beforeAll(async () => {
-      el = await fixture(
-        html`<furo-ui5-multi-combobox accessible-name="name" data-testid="test"></furo-ui5-multi-combobox>`,
-      );
+      el = await fixture(html`<furo-ui5-multi-combobox accessible-name="name" data-testid="test"></furo-ui5-multi-combobox>`);
       elLocator = utils.getElementLocatorSelectors(el);
       // dummy method call, you can remove it as soon you use elLocator in the tests
       elLocator.getByTestId("test");
@@ -206,9 +206,7 @@ describe("FuroUi5MultiCombobox", () => {
 
     const fireSelectionChange = (host: FuroUi5MultiCombobox, selectedItemIds: string[]) => {
       const items = selectedItemIds.map((id) => host.querySelector(`furo-ui5-mcb-item[id="${id}"]`));
-      host.dispatchEvent(
-        new CustomEvent("selection-change", { bubbles: true, composed: true, detail: { items } }),
-      );
+      host.dispatchEvent(new CustomEvent("selection-change", { bubbles: true, composed: true, detail: { items } }));
     };
 
     it("writes selected ids back to an ARRAY<STRING> model", () => {
@@ -238,7 +236,7 @@ describe("FuroUi5MultiCombobox", () => {
       fireSelectionChange(el, ["1", "2"]);
       assert.deepEqual(
         model.map((item) => item.value.toString()),
-        ["1", "2"],
+        ["1", "2"]
       );
     });
 
@@ -333,9 +331,7 @@ describe("FuroUi5MultiCombobox", () => {
     });
 
     it("pre-set accessible-name wins over model __label", async () => {
-      const el: FuroUi5MultiCombobox = await fixture(
-        html`<furo-ui5-multi-combobox accessible-name="preset"></furo-ui5-multi-combobox>`,
-      );
+      const el: FuroUi5MultiCombobox = await fixture(html`<furo-ui5-multi-combobox accessible-name="preset"></furo-ui5-multi-combobox>`);
       const model = stringArray([]);
       el.bindData(model);
       assert.equal(el.accessibleName, "preset");
@@ -387,9 +383,7 @@ describe("FuroUi5MultiCombobox", () => {
       const modelB = stringArray(["2"]);
       el.bindData(modelA);
       el.bindData(modelB);
-      el.dispatchEvent(
-        new CustomEvent("selection-change", { bubbles: true, composed: true, detail: { items: [] } }),
-      );
+      el.dispatchEvent(new CustomEvent("selection-change", { bubbles: true, composed: true, detail: { items: [] } }));
       // writeToModel clears the currently-bound model only
       assert.equal(modelB.length, 0);
       assert.equal(modelA.length, 1);
@@ -401,9 +395,7 @@ describe("FuroUi5MultiCombobox", () => {
       const ref = el.model;
       el.bindData(model);
       assert.strictEqual(el.model, ref);
-      el.dispatchEvent(
-        new CustomEvent("selection-change", { bubbles: true, composed: true, detail: { items: [] } }),
-      );
+      el.dispatchEvent(new CustomEvent("selection-change", { bubbles: true, composed: true, detail: { items: [] } }));
       // a single bound listener clears the model exactly once
       assert.equal(model.length, 0);
     });

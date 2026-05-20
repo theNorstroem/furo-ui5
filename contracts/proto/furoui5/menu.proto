@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package furoui5;
+
+option go_package = "github.com/theNorstroem/furo-ui5/gen/go/furoui5;furoui5pb";
+option java_multiple_files = true;
+option java_package = "pro.furoui5";
+
+// Item signature for a context menu.
+message Menuitem {
+  // Id of the item.
+  string id = 1;
+
+  // String representation of the menu item. Menu item text.
+  string display_name = 2;
+
+  // Display actions as disabled when they can only be used sometimes and
+  // under certain conditions.
+  bool disabled = 3;
+
+  // Keyboard command hint.
+  string command = 4;
+
+  // Item has a leading divider line.
+  bool leading_divider = 5;
+
+  // Children of this item.
+  repeated Menuitem children = 6;
+
+  // Leading icon of the menu.
+  string icon = 7;
+}

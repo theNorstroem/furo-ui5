@@ -90,11 +90,7 @@ export class FuroUi5Checkbox extends CheckBox {
     this._model = fieldNode;
     // init model
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5Checkbox>(this, "checked", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.boolReaderWriters.getWriters(),
-      this.boolReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.boolReaderWriters.getWriters(), this.boolReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);

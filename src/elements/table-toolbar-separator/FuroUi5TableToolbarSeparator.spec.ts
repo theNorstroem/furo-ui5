@@ -14,9 +14,7 @@ describe("TableToolbarSeparator Component", async () => {
   let el: FuroUi5TableToolbarSeparator;
 
   beforeAll(async () => {
-    el = await fixture(
-      html` <furo-ui5-table-toolbar-separator data-testid="test"></furo-ui5-table-toolbar-separator> `
-    );
+    el = await fixture(html` <furo-ui5-table-toolbar-separator data-testid="test"></furo-ui5-table-toolbar-separator> `);
     await el.updateComplete;
   });
 

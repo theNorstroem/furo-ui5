@@ -7,7 +7,7 @@ import * as React from "react";
 
 import type { FuroFatBool } from "@/models/index.js";
 
-export interface FuroUiBusyIndicator extends React.HTMLAttributes<HTMLElement> {
+export interface BusyIndicator extends React.HTMLAttributes<HTMLElement> {
   // no events defined.
   // properties
 
@@ -129,7 +129,7 @@ declare module "react" {
        *
        * Base class for all UI5 Web Components
        */
-      "furo-ui5-busy-indicator": FuroUiBusyIndicator;
+      "furo-ui5-busy-indicator": BusyIndicator;
     }
   }
 }

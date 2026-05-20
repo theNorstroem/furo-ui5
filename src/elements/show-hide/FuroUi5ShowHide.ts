@@ -94,11 +94,7 @@ export class FuroUi5ShowHide extends LitElement {
     this._model = fieldNode;
     // init model
     this.boolReaderWriters = new BoolReaderWriters<FuroUi5ShowHide>(this, "value", this._model);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.boolReaderWriters.getWriters(),
-      this.boolReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.boolReaderWriters.getWriters(), this.boolReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.readonlyState.listenToStateChanged(fieldNode);

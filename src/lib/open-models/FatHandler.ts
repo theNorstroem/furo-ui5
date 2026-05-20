@@ -1,14 +1,6 @@
 import { BOOLEAN, STRING, ValueState } from "@furo/open-models";
 
-import {
-  type FuroFatBool,
-  FuroFatFloat,
-  FuroFatInt32,
-  FuroFatInt64,
-  type FuroFatString,
-  FuroFatUint32,
-  FuroFatUint64,
-} from "@/models";
+import { type FuroFatBool, FuroFatFloat, FuroFatInt32, FuroFatInt64, type FuroFatString, FuroFatUint32, FuroFatUint64 } from "@/models";
 
 export class FatHandler<T> {
   private target: T;
@@ -57,20 +49,22 @@ export class FatHandler<T> {
     fat.attributes.forEach((val, key) => {
       if (this.fatAttributesToMap.includes(key as keyof T) && !this._initialAttributes.includes(key)) {
         switch (typeof (this.target as unknown as Record<string, string>)[key]) {
-          case "number": {
-            // assign numeric target as number
-            const num: unknown = JSON.parse(val.value);
-            if (val.value && typeof num === "number") {
-              (this.target as unknown as Record<string, number>)[key] = num;
+          case "number":
+            {
+              // assign numeric target as number
+              const num: unknown = JSON.parse(val.value);
+              if (val.value && typeof num === "number") {
+                (this.target as unknown as Record<string, number>)[key] = num;
+              }
             }
-          }
             break;
-          case "boolean": {
-            const bol: unknown = JSON.parse(val.value);
-            if (val.value && typeof bol === "boolean") {
-              (this.target as unknown as Record<string, boolean>)[key] = bol;
+          case "boolean":
+            {
+              const bol: unknown = JSON.parse(val.value);
+              if (val.value && typeof bol === "boolean") {
+                (this.target as unknown as Record<string, boolean>)[key] = bol;
+              }
             }
-          }
             break;
           case "string":
             (this.target as unknown as Record<string, string>)[key] = val.value;

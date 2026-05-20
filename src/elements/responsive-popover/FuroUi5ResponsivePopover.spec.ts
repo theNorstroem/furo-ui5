@@ -14,9 +14,7 @@ describe("ResponsivePopover Component", async () => {
   let el: FuroUi5ResponsivePopover;
 
   beforeAll(async () => {
-    el = await fixture(
-      html` <furo-ui5-responsive-popover data-testid="test" header-text="rp">Content</furo-ui5-responsive-popover> `
-    );
+    el = await fixture(html` <furo-ui5-responsive-popover data-testid="test" header-text="rp">Content</furo-ui5-responsive-popover> `);
   });
 
   afterAll(() => {

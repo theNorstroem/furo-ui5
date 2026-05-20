@@ -40,9 +40,7 @@ describe("FuroUi5PasswordInput", () => {
     let elLocator: LocatorSelectors;
 
     beforeAll(async () => {
-      el = await fixture(
-        html` <furo-ui5-password-input accessible-name="name" data-testid="test"></furo-ui5-password-input> `,
-      );
+      el = await fixture(html` <furo-ui5-password-input accessible-name="name" data-testid="test"></furo-ui5-password-input> `);
       elLocator = utils.getElementLocatorSelectors(el);
       // dummy method call, you can remove it as soon you use elLocator in the tests
       elLocator.getByTestId("test");
@@ -310,9 +308,7 @@ describe("FuroUi5PasswordInput", () => {
     });
 
     it("pre-set HTML 'placeholder' wins over FAT attribute", async () => {
-      const el: FuroUi5PasswordInput = await fixture(
-        html`<furo-ui5-password-input placeholder="local"></furo-ui5-password-input>`,
-      );
+      const el: FuroUi5PasswordInput = await fixture(html`<furo-ui5-password-input placeholder="local"></furo-ui5-password-input>`);
       const model = createFatString({ attributes: { placeholder: "from-fat" } });
       el.bindData(model);
       assert.equal(el.placeholder, "local");
@@ -326,9 +322,7 @@ describe("FuroUi5PasswordInput", () => {
     });
 
     it("pre-set accessible-name wins over model __label", async () => {
-      const el: FuroUi5PasswordInput = await fixture(
-        html`<furo-ui5-password-input accessible-name="preset"></furo-ui5-password-input>`,
-      );
+      const el: FuroUi5PasswordInput = await fixture(html`<furo-ui5-password-input accessible-name="preset"></furo-ui5-password-input>`);
       const model = createFatString();
       el.bindData(model);
       assert.equal(el.accessibleName, "preset");

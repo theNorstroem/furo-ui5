@@ -109,11 +109,7 @@ export class FuroUi5Select extends Select {
     this._model = fieldNode;
     // init model
     this.stringReaderWriters = new StringReaderWriters<FuroUi5Select>(this, "value", this._model, this.fatHandler);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.stringReaderWriters.getWriters(),
-      this.stringReaderWriters.getReaders(),
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.stringReaderWriters.getWriters(), this.stringReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);
@@ -190,7 +186,7 @@ export class FuroUi5Select extends Select {
     // reflects what bindData() seeded from the model. Once we assign
     // this.value below, UI5 Select reconciles the visible selection on its
     // next render via _applySelectionByValue.
-    const firstOption = this.optionsModel.at(0);
+    const firstOption = fieldNode.at(0);
     if (this.value === "" && firstOption !== undefined) {
       this.value = firstOption.id.toString();
       this.writeToModel();

@@ -23,7 +23,7 @@ describe("Label Component", async () => {
         <furo-ui5-text-input id="input1"></furo-ui5-text-input>
       </div>
     `);
-    el =container.querySelector("furo-ui5-label")!;
+    el = container.querySelector("furo-ui5-label")!;
     await delay(16);
   });
 
