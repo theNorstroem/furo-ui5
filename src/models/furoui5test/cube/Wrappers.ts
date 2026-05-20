@@ -16,6 +16,8 @@ import {
   UInt64Value,
 } from "@furo/open-models/dist/index";
 
+import { XDate as GoogleTypeDate, type IXDate as IGoogleTypeDate, type TXDate as TGoogleTypeDate } from "../../google/type/Date";
+
 /**
  * @interface IWrappers
  */
@@ -30,6 +32,7 @@ export interface IWrappers {
   uint64Value?: string;
   bytesValue?: string;
   boolPrimitive?: boolean;
+  date?: IGoogleTypeDate;
 }
 
 /**
@@ -46,6 +49,7 @@ export interface TWrappers {
   uint64_value?: string;
   bytes_value?: string;
   bool_primitive?: boolean;
+  date?: TGoogleTypeDate;
 }
 
 /**
@@ -91,6 +95,10 @@ export class Wrappers extends FieldNode {
   /**
    **/
   private _boolPrimitive: BOOLEAN;
+
+  /**
+   **/
+  private _date: GoogleTypeDate;
 
   public __defaultValues: IWrappers;
 
@@ -170,6 +178,13 @@ export class Wrappers extends FieldNode {
         constraints: {},
         description: "",
       },
+      {
+        fieldName: "date",
+        protoName: "date",
+        FieldConstructor: GoogleTypeDate,
+        constraints: {},
+        description: "",
+      },
     ];
 
     // Initialize the fields
@@ -214,6 +229,10 @@ export class Wrappers extends FieldNode {
     /**
      **/
     this._boolPrimitive = new BOOLEAN(undefined, this, "boolPrimitive");
+
+    /**
+     **/
+    this._date = new GoogleTypeDate(undefined, this, "date");
 
     // Set required fields
     [].forEach((fieldName) => {
@@ -376,6 +395,20 @@ export class Wrappers extends FieldNode {
    **/
   public set boolPrimitive(v: boolean) {
     this.__PrimitivesSetter(this._boolPrimitive, v);
+  }
+
+  /**
+   * The getter receives the FieldNode
+   **/
+  public get date(): GoogleTypeDate {
+    return this._date;
+  }
+
+  /**
+   * The setter receives `IGoogleTypeDate`
+   **/
+  public set date(v: IGoogleTypeDate) {
+    this.__TypeSetter(this._date, v);
   }
 
   fromLiteral(data: IWrappers): void {

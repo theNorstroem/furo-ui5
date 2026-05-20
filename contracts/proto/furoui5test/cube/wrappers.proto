@@ -7,6 +7,7 @@ option java_multiple_files = true;
 option java_package = "pro.furoui5test.cube";
 option go_package = "furoui5test/cube;cubepb";
 import "google/protobuf/wrappers.proto";
+import "google/type/date.proto";
 
 message Wrappers {
   google.protobuf.StringValue string_value = 1;
@@ -19,4 +20,5 @@ message Wrappers {
   google.protobuf.UInt64Value uint64_value = 8;
   google.protobuf.BytesValue bytes_value = 9;
   bool bool_primitive =10;
+  google.type.Date  date =11;
 }
