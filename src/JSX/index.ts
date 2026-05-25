@@ -8,6 +8,7 @@ import "./Checkbox";
 import "./Combobox";
 import "./ContextMenu";
 import "./DatePicker";
+import "./DateTimePicker";
 import "./Dialog";
 import "./FormFieldSegmenter";
 import "./FormGroup";

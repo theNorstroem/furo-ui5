@@ -69,6 +69,10 @@
       "types": "./dist/elements/date-picker/index.d.ts",
       "default": "./dist/elements/date-picker/index.js"
     },
+    "./date-time-picker": {
+      "types": "./dist/elements/date-time-picker/index.d.ts",
+      "default": "./dist/elements/date-time-picker/index.js"
+    },
     "./dialog": {
       "types": "./dist/elements/dialog/index.d.ts",
       "default": "./dist/elements/dialog/index.js"
