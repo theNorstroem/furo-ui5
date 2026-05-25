@@ -1,4 +1,4 @@
-import { DisplayDouble } from "./display-double.js";
+import { DisplayDouble } from "@/type-renderers/display-double/DisplayDouble";
 
 /**
  * `display-float`
@@ -11,9 +11,3 @@ import { DisplayDouble } from "./display-double.js";
  * @element display-float
  */
 export class DisplayFloat extends DisplayDouble {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-float": DisplayFloat;
-  }
-}

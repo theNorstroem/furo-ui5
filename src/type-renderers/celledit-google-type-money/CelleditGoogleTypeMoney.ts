@@ -10,6 +10,13 @@ import { FuroUi5MoneyInput } from "@/impl/impl/furo-ui5-money-input";
  * @element celledit-google-type-money
  */
 export class CelleditGoogleTypeMoney extends FuroUi5MoneyInput {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "celledit-google-type-money" };
+  }
+
   static get styles() {
     return [
       super.styles,
@@ -19,5 +26,3 @@ export class CelleditGoogleTypeMoney extends FuroUi5MoneyInput {
     ];
   }
 }
-
-window.customElements.define("celledit-google-type-money", CelleditGoogleTypeMoney);

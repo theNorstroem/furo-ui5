@@ -13,7 +13,7 @@ import "@ui5/webcomponents/dist/ColorPalette.js";
  * @summary cell display renderer for `google.type.Color`
  * @element cell-google-type-color
  */
-export class CellGoolgeTypeColor extends LitElement {
+export class CellGoogleTypeColor extends LitElement {
   constructor() {
     super();
     this._red = "";
@@ -95,11 +95,5 @@ export class CellGoolgeTypeColor extends LitElement {
   render() {
     // language=HTML
     return html` ${this._getTemplate()} `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-google-type-color": CellGoolgeTypeColor;
   }
 }

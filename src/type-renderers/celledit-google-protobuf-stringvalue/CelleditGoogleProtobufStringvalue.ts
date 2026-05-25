@@ -1,4 +1,4 @@
-import { CelleditString } from './celledit-string.js';
+import { CelleditString } from "@/type-renderers/celledit-string/CelleditString";
 
 /**
  *
@@ -10,19 +10,10 @@ export class CelleditGoogleProtobufStringvalue extends CelleditString {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-google-protobuf-stringvalue' };
+    return { tag: "celledit-google-protobuf-stringvalue" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditGoogleProtobufStringvalue": CelleditGoogleProtobufStringvalue;
-  }
-}
-
-import CelleditGoogleProtobufStringvalue from "@/type-renderers/impl/CelleditGoogleProtobufStringvalue
-CelleditGoogleProtobufStringvalue.define()

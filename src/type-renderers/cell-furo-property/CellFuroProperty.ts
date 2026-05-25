@@ -160,9 +160,3 @@ export class CellFuroProperty extends FBP(LitElement) {
     return html` ${this.noDataText} `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-property": CellFuroProperty;
-  }
-}

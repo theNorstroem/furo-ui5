@@ -34,9 +34,3 @@ export class CelleditBool extends FuroUi5CheckboxInput {
     ];
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "celledit-bool": CelleditBool;
-  }
-}

@@ -83,9 +83,3 @@ export class DisplayFuroReference extends FBP(LitElement) {
     return html`<ui5-link wrap at-click="-^selected">${this._displayValue}</ui5-link>`;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-reference": DisplayFuroReference;
-  }
-}

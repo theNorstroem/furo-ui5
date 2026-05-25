@@ -1,4 +1,4 @@
-import { CellFuroFatInt32 } from "./cell-furo-fat-int32.js";
+import { CellFuroFatInt32 } from "@/type-renderers/cell-furo-fat-int32/CellFuroFatInt32";
 
 /**
  * `cell-furo-fat-int64`
@@ -14,9 +14,3 @@ import { CellFuroFatInt32 } from "./cell-furo-fat-int32.js";
  * @element cell-furo-fat-int64
  */
 export class CellFuroFatInt64 extends CellFuroFatInt32 {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-fat-int64": CellFuroFatInt64;
-  }
-}

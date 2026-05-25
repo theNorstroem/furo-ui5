@@ -7,9 +7,14 @@ import { FuroUi5SelectLabeled } from "@/impl/impl/furo-ui5-select-labeled";
  * @element form-furo-stringoptionproperty
  */
 export class FormFuroStringoptionproperty extends FuroUi5SelectLabeled {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-furo-stringoptionproperty" };
+  }
+
   bindData(fieldNode) {
     super.bindData(fieldNode);
   }
 }
-
-window.customElements.define("form-furo-stringoptionproperty", FormFuroStringoptionproperty);

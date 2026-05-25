@@ -1,4 +1,4 @@
-import { FormBool } from "./form-bool.js";
+import { FormBool } from "@/type-renderers/form-bool/FormBool";
 
 /**
  * `form-google-protobuf-boolvalue` is a `form` context renderer.
@@ -9,6 +9,11 @@ import { FormBool } from "./form-bool.js";
  * @element form-google-protobuf-boolvalue
  */
 
-export class FormGoogleProtobufBoolvalue extends FormBool {}
-
-window.customElements.define("form-google-protobuf-boolvalue", FormGoogleProtobufBoolvalue);
+export class FormGoogleProtobufBoolvalue extends FormBool {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-google-protobuf-boolvalue" };
+  }
+}

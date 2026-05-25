@@ -10,7 +10,7 @@ import { LitElement, css } from "lit";
  * @summary celledit renderer for `google.protobuf.Any`
  * @element celledit-google-protobuf-any
  */
-export class CelleditGoolgeProtobufAny extends LitElement {
+export class CelleditGoogleProtobufAny extends LitElement {
   constructor() {
     super();
 
@@ -109,5 +109,3 @@ export class CelleditGoolgeProtobufAny extends LitElement {
     console.warn(`No type specific renderer ${this.renderName} found. Check your imports.`, this._field._spec.type);
   }
 }
-
-window.customElements.define("celledit-google-protobuf-any", CelleditGoolgeProtobufAny);

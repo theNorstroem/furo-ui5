@@ -1,4 +1,4 @@
-import { CelleditInt32 } from './celledit-int32.js';
+import { CelleditInt32 } from "@/type-renderers/celledit-int32/CelleditInt32";
 
 /**
  * `celledit-float` is a `celledit` context renderer.
@@ -13,19 +13,10 @@ export class CelleditFloat extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-float' };
+    return { tag: "celledit-float" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditFloat": CelleditFloat;
-  }
-}
-
-import CelleditFloat from "@/type-renderers/impl/CelleditFloat
-CelleditFloat.define()

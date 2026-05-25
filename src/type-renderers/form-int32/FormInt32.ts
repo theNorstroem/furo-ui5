@@ -7,14 +7,15 @@ import { FuroUi5NumberInputLabeled } from "@/impl/impl/furo-ui5-number-input-lab
  * @element form-int32
  */
 export class FormInt32 extends FuroUi5NumberInputLabeled {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-int32" };
+  }
+
   connectedCallback() {
     super.connectedCallback();
     this.style.width = "100%";
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "form-int32": FormInt32;
   }
 }

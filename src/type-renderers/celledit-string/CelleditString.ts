@@ -12,7 +12,7 @@ export class CelleditString extends FuroUi5TextInput {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-string' };
+    return { tag: "celledit-string" };
   }
 
   /**
@@ -28,12 +28,3 @@ export class CelleditString extends FuroUi5TextInput {
     ];
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditString": CelleditString;
-  }
-}
-
-import CelleditString from "@/type-renderers/impl/CelleditString
-CelleditString.define()

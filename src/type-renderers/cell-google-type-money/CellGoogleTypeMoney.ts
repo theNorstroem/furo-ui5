@@ -140,9 +140,3 @@ export class CellGoogleTypeMoney extends LitElement {
     return html` <span>${this._displayValue}</span> `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-google-type-money": CellGoogleTypeMoney;
-  }
-}

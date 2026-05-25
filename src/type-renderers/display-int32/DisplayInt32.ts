@@ -95,9 +95,3 @@ export class DisplayInt32 extends FieldNodeAdapter(LitElement) {
     return html`${this._displayValue}`;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-int32": DisplayInt32;
-  }
-}

@@ -114,9 +114,3 @@ export class CellFuroFatString extends LitElement {
     return html`${nl2br(this._displayValue)}`;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-fat-string": CellFuroFatString;
-  }
-}

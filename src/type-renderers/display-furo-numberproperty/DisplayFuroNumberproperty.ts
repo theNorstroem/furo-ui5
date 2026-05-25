@@ -1,4 +1,4 @@
-import { DisplayFuroIntegerproperty } from "./display-furo-integerproperty.js";
+import { DisplayFuroIntegerproperty } from "@/type-renderers/display-furo-integerproperty/DisplayFuroIntegerproperty";
 
 /**
  * `display-furo-numberproperty`
@@ -11,5 +11,3 @@ import { DisplayFuroIntegerproperty } from "./display-furo-integerproperty.js";
  * @element display-furo-numberproperty
  */
 export class DisplayFuroNumberproperty extends DisplayFuroIntegerproperty {}
-
-window.customElements.define("display-furo-numberproperty", DisplayFuroNumberproperty);

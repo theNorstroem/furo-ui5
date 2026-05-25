@@ -1,4 +1,4 @@
-import { CelleditInt32 } from './celledit-int32.js';
+import { CelleditInt32 } from "@/type-renderers/celledit-int32/CelleditInt32";
 
 /**
  * `celledit-double` is a `celledit` context renderer.
@@ -13,19 +13,10 @@ export class CelleditDouble extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-double' };
+    return { tag: "celledit-double" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditDouble": CelleditDouble;
-  }
-}
-
-import CelleditDouble from "@/type-renderers/impl/CelleditDouble
-CelleditDouble.define()

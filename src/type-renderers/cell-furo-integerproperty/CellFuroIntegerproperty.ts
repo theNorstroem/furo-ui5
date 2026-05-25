@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { CellInt32 } from "./cell-int32.js";
+import { CellInt32 } from "@/type-renderers/cell-int32/CellInt32";
 
 /**
  * `cell-furo-integerproperty`
@@ -26,5 +26,3 @@ export class CellFuroIntegerproperty extends CellInt32 {
     }
   }
 }
-
-window.customElements.define("cell-furo-integerproperty", CellFuroIntegerproperty);

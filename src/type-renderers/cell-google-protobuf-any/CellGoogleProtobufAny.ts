@@ -10,7 +10,7 @@ import { LitElement, css } from "lit";
  * @summary cell display renderer for `google.protobuf.Any`
  * @element cell-google-protobuf-any
  */
-export class CellGoolgeProtobufAny extends LitElement {
+export class CellGoogleProtobufAny extends LitElement {
   constructor() {
     super();
 
@@ -107,11 +107,5 @@ export class CellGoolgeProtobufAny extends LitElement {
   _warning() {
     // eslint-disable-next-line no-console
     console.warn(`No type specific renderer ${this.renderName} found. Check your imports.`, this._field._spec.type);
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-google-protobuf-any": CellGoolgeProtobufAny;
   }
 }

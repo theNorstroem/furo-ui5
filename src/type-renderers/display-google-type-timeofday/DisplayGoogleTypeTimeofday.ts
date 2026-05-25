@@ -108,5 +108,3 @@ export class DisplayGoogleTypeTimeofday extends LitElement {
     return html`${this._displayValue}`;
   }
 }
-
-window.customElements.define("display-google-type-timeofday", DisplayGoogleTypeTimeofday);

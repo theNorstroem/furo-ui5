@@ -1,4 +1,4 @@
-import { CellFloat } from "./CellFloat.ts";
+import { CellFloat } from "@/type-renderers/cell-float/CellFloat";
 
 /**
  * `cell-google-protobuf-floatvalue`
@@ -10,6 +10,4 @@ import { CellFloat } from "./CellFloat.ts";
  * @summary cell display renderer for `google.protobuf.`
  * @element cell-google-protobuf-
  */
-export class CellGoolgeProtobufFloatvalue extends CellFloat {}
-
-window.customElements.define("cell-google-protobuf-floatvalue", CellGoolgeProtobufFloatvalue);
+export class CellGoogleProtobufFloatvalue extends CellFloat {}

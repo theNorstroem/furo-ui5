@@ -1,4 +1,4 @@
-import { CelleditString } from './celledit-string.js';
+import { CelleditString } from "@/type-renderers/celledit-string/CelleditString";
 
 /**
  * `celledit-furo-fat-string` is a `celledit` context renderer.
@@ -13,19 +13,10 @@ export class CelleditFuroFatString extends CelleditString {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-furo-fat-string' };
+    return { tag: "celledit-furo-fat-string" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditFuroFatString": CelleditFuroFatString;
-  }
-}
-
-import CelleditFuroFatString from "@/type-renderers/impl/CelleditFuroFatString
-CelleditFuroFatString.define()

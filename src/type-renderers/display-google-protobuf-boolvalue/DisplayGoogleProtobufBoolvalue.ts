@@ -1,4 +1,4 @@
-import { DisplayBool } from "./display-bool.js";
+import { DisplayBool } from "@/type-renderers/display-bool/DisplayBool";
 /**
  * `display-google-protobuf-boolvalue`
  * The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.
@@ -9,6 +9,4 @@ import { DisplayBool } from "./display-bool.js";
  * @summary display renderer for `google.protobuf.BoolValue`
  * @element display-google-protobuf-boolvalue
  */
-export class DisplayGoolgeProtobufBoolvalue extends DisplayBool {}
-
-window.customElements.define("display-google-protobuf-boolvalue", DisplayGoolgeProtobufBoolvalue);
+export class DisplayGoogleProtobufBoolvalue extends DisplayBool {}

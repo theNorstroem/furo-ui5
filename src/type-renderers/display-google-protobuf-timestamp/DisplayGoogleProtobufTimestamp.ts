@@ -105,5 +105,3 @@ export class DisplayGoogleProtobufTimestamp extends LitElement {
     return html`${this._displayValue}`;
   }
 }
-
-window.customElements.define("display-google-protobuf-timestamp", DisplayGoogleProtobufTimestamp);

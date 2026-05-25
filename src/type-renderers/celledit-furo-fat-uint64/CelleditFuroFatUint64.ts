@@ -1,4 +1,4 @@
-import { CelleditInt32 } from './celledit-int32.js';
+import { CelleditInt32 } from "@/type-renderers/celledit-int32/CelleditInt32";
 
 /**
  * `celledit-furo-fat-uint64` is a `celledit` context renderer.
@@ -14,19 +14,10 @@ export class CelleditFuroFatUint64 extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-furo-fat-uint64' };
+    return { tag: "celledit-furo-fat-uint64" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditFuroFatUint64": CelleditFuroFatUint64;
-  }
-}
-
-import CelleditFuroFatUint64 from "@/type-renderers/impl/CelleditFuroFatUint64
-CelleditFuroFatUint64.define()

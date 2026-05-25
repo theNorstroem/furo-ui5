@@ -161,9 +161,3 @@ export class DisplayFuroBigdecimal extends LitElement {
     return html`${this._displayValue}`;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-bigdecimal": DisplayFuroBigdecimal;
-  }
-}

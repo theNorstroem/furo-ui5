@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { CellInt32 } from "./cell-int32.js";
+import { CellInt32 } from "@/type-renderers/cell-int32/CellInt32";
 
 /**
  * `cell-int32`
@@ -38,11 +38,5 @@ export class CellFuroFatInt32 extends CellInt32 {
         this.requestUpdate();
       }
     }
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-fat-int32": CellFuroFatInt32;
   }
 }

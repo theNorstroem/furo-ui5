@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { CellFloat } from "./CellFloat.ts";
+import { CellFloat } from "@/type-renderers/cell-float/CellFloat";
 
 /**
  * The `cell-furo-bigdecimal`  component displays a FieldNode of type `furo.BigDecimal` in read only mode.
@@ -41,11 +41,5 @@ export class CellFuroBigdecimal extends CellFloat {
     }
 
     this.requestUpdate();
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-bigdecimal": CellFuroBigdecimal;
   }
 }

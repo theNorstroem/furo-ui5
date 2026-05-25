@@ -10,7 +10,7 @@ import { LitElement, css } from "lit";
  * @summary display renderer for `google.protobuf.`
  * @element display-google-protobuf-
  */
-export class DisplayGoolgeProtobufAny extends LitElement {
+export class DisplayGoogleProtobufAny extends LitElement {
   constructor() {
     super();
     this._typeResolved = false;
@@ -110,5 +110,3 @@ export class DisplayGoolgeProtobufAny extends LitElement {
     console.warn(`No type specific renderer ${this.renderName} found. Check your imports.`, this._field._spec.type);
   }
 }
-
-window.customElements.define("display-google-protobuf-any", DisplayGoolgeProtobufAny);

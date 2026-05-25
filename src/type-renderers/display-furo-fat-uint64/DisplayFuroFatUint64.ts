@@ -1,4 +1,4 @@
-import { DisplayFuroFatInt64 } from "./display-furo-fat-int64.js";
+import { DisplayFuroFatInt64 } from "@/type-renderers/display-furo-fat-int64/DisplayFuroFatInt64";
 /**
  * `display-furo-fat-uint64`
  * The display-furo-fat-uint64 component displays a FieldNode of type `furo.fat.uint64` in read only mode.
@@ -13,9 +13,3 @@ import { DisplayFuroFatInt64 } from "./display-furo-fat-int64.js";
  * @element display-furo-fat-uint64
  */
 export class DisplayFuroFatUint64 extends DisplayFuroFatInt64 {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-fat-uint64": DisplayFuroFatUint64;
-  }
-}

@@ -111,5 +111,3 @@ export class CellGoogleTypeTimeofday extends LitElement {
     return html` ${this._displayValue} `;
   }
 }
-
-window.customElements.define("cell-google-type-timeofday", CellGoogleTypeTimeofday);

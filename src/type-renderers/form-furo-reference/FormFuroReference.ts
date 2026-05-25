@@ -6,10 +6,11 @@ import { FuroUi5ReferenceSearchLabeled } from "@/impl/impl/furo-ui5-reference-se
  * @summary form renderer for `furo.Reference`
  * @element form-furo-reference
  */
-export class FormFuroReference extends FuroUi5ReferenceSearchLabeled {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "form-furo-reference": FormFuroReference;
+export class FormFuroReference extends FuroUi5ReferenceSearchLabeled {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-furo-reference" };
   }
 }

@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { DisplayInt32 } from "./display-int32.js";
+import { DisplayInt32 } from "@/type-renderers/display-int32/DisplayInt32";
 
 /**
  * `display-furo-integerproperty`
@@ -20,5 +20,3 @@ export class DisplayFuroIntegerproperty extends DisplayInt32 {
     }
   }
 }
-
-window.customElements.define("display-furo-integerproperty", DisplayFuroIntegerproperty);

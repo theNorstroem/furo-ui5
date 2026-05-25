@@ -1,7 +1,7 @@
 import { LitElement, html, css } from "lit";
 
 import { Env } from "@furo/framework/src/furo.js";
-import { CellBool } from "@/type-renderers/impl/cell/CellBool";
+import { CellBool } from "@/type-renderers/cell-bool/CellBool";
 /**
  * `cell-double`
  * The cell-double component displays a FieldNode of type `double` in read only mode.
@@ -101,11 +101,5 @@ export class CellDouble extends LitElement {
   render() {
     // language=HTML
     return html` ${this._displayValue} `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-double": CellDouble;
   }
 }

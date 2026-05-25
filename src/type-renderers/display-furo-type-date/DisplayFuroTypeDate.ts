@@ -1,4 +1,4 @@
-import { DisplayGoogleTypeDate } from "./display-google-type-date.js";
+import { DisplayGoogleTypeDate } from "@/type-renderers/display-google-type-date/DisplayGoogleTypeDate";
 
 /**
  * `display-furo-type-date`
@@ -26,11 +26,5 @@ export class DisplayFuroTypeDate extends DisplayGoogleTypeDate {
       }
     }
     this.requestUpdate();
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-type-date": DisplayFuroTypeDate;
   }
 }

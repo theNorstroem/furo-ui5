@@ -9,10 +9,11 @@ import { FuroUi5MoneyInputLabeled } from "@/impl/impl/furo-ui5-money-input-label
  * @summary form renderer for `google.type.Money`
  * @element form-google-type-money
  */
-export class FormGoogleTypeMoney extends FuroUi5MoneyInputLabeled {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "form-google-type-money": FormGoogleTypeMoney;
+export class FormGoogleTypeMoney extends FuroUi5MoneyInputLabeled {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-google-type-money" };
   }
 }

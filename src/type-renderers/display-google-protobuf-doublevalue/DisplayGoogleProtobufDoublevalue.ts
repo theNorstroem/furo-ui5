@@ -1,4 +1,4 @@
-import { DisplayDouble } from "./display-double.js";
+import { DisplayDouble } from "@/type-renderers/display-double/DisplayDouble";
 /**
  * `display-double`
  * The display-double component displays a FieldNode of type `google.protobuf.DoubleValue` in read only mode.
@@ -10,5 +10,3 @@ import { DisplayDouble } from "./display-double.js";
  * @element display-google-protobuf-doublevalue
  */
 export class DisplayGoogleProtobufDoublevalue extends DisplayDouble {}
-
-window.customElements.define("display-google-protobuf-doublevalue", DisplayGoogleProtobufDoublevalue);

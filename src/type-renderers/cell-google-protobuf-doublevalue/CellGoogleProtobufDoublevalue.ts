@@ -1,4 +1,4 @@
-import { CellDouble } from "./CellDouble.ts";
+import { CellDouble } from "@/type-renderers/cell-double/CellDouble";
 /**
  * `cell-double`
  * The cell-double component displays a FieldNode of type `google.protobuf.DoubleValue` in read only mode.
@@ -10,5 +10,3 @@ import { CellDouble } from "./CellDouble.ts";
  * @element cell-google-protobuf-doublevalue
  */
 export class CellGoogleProtobufDoublevalue extends CellDouble {}
-
-window.customElements.define("cell-google-protobuf-doublevalue", CellGoogleProtobufDoublevalue);

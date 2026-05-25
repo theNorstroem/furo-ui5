@@ -1,4 +1,4 @@
-import { CellFuroIntegerproperty } from "./CellFuroIntegerproperty";
+import { CellFuroIntegerproperty } from "@/type-renderers/cell-furo-integerproperty/CellFuroIntegerproperty";
 
 /**
  * `cell-furo-numberproperty`
@@ -12,5 +12,3 @@ import { CellFuroIntegerproperty } from "./CellFuroIntegerproperty";
  *
  */
 export class CellFuroNumberproperty extends CellFuroIntegerproperty {}
-
-window.customElements.define("cell-furo-numberproperty", CellFuroNumberproperty);

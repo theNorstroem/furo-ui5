@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { DisplayInt32 } from "./display-int32.js";
+import { DisplayInt32 } from "@/type-renderers/display-int32/DisplayInt32";
 
 /**
  * `display-int32`
@@ -34,11 +34,5 @@ export class DisplayFuroFatInt32 extends DisplayInt32 {
         this.requestUpdate();
       }
     }
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-fat-int32": DisplayFuroFatInt32;
   }
 }

@@ -106,9 +106,3 @@ export class CellInt64 extends LitElement {
     return html` ${this._displayValue} `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-int64": CellInt64;
-  }
-}

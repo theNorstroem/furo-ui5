@@ -79,9 +79,3 @@ export class DisplayString extends FieldNodeAdapter(LitElement) {
     return html`${nl2br(this._text)}`;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-string": DisplayString;
-  }
-}

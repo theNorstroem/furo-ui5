@@ -99,9 +99,3 @@ export class CellFloat extends LitElement {
     return html` ${this._displayValue} `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-float": CellFloat;
-  }
-}

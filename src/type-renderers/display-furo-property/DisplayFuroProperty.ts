@@ -159,9 +159,3 @@ export class DisplayFuroProperty extends FBP(LitElement) {
     return html` ${this.noDataText} `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-property": DisplayFuroProperty;
-  }
-}

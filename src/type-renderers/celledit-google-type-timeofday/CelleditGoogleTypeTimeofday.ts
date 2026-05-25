@@ -14,19 +14,10 @@ export class CelleditGoogleTypeTimeofday extends FuroUi5TimePicker {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-google-type-timeofday' };
+    return { tag: "celledit-google-type-timeofday" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditGoogleTypeTimeofday": CelleditGoogleTypeTimeofday;
-  }
-}
-
-import CelleditGoogleTypeTimeofday from "@/type-renderers/impl/CelleditGoogleTypeTimeofday
-CelleditGoogleTypeTimeofday.define()

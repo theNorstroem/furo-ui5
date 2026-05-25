@@ -11,19 +11,10 @@ export class CelleditFuroTypeDate extends FuroUi5DatePicker {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-furo-type-date' };
+    return { tag: "celledit-furo-type-date" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditFuroTypeDate": CelleditFuroTypeDate;
-  }
-}
-
-import CelleditFuroTypeDate from "@/type-renderers/impl/CelleditFuroTypeDate
-CelleditFuroTypeDate.define()

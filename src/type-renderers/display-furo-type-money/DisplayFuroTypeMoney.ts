@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { DisplayGoogleTypeMoney } from "./display-google-type-money.js";
+import { DisplayGoogleTypeMoney } from "@/type-renderers/display-google-type-money/DisplayGoogleTypeMoney";
 
 /**
  * `display-furo-type-money`
@@ -30,11 +30,5 @@ export class DisplayFuroTypeMoney extends DisplayGoogleTypeMoney {
     }
 
     this.requestUpdate();
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-type-money": DisplayFuroTypeMoney;
   }
 }

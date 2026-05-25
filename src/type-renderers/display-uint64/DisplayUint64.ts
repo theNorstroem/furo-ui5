@@ -1,4 +1,4 @@
-import { DisplayInt32 } from "./display-int32.js";
+import { DisplayInt32 } from "@/type-renderers/display-int32/DisplayInt32";
 /**
  * `display-uint64`
  * The display-uint64 component displays a FieldNode of type `uint64` in read only mode.
@@ -13,9 +13,3 @@ import { DisplayInt32 } from "./display-int32.js";
  * @element display-uint64
  */
 export class DisplayUint64 extends DisplayInt32 {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-uint64": DisplayUint64;
-  }
-}

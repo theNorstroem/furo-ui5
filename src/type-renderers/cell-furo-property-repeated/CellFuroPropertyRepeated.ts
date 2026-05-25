@@ -107,5 +107,3 @@ export class CellFuroPropertyRepeated extends FBP(LitElement) {
     return html` ${this.noDataText} `;
   }
 }
-
-window.customElements.define("cell-furo-property-repeated", CellFuroPropertyRepeated);

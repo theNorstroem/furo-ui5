@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { DisplayFloat } from "./display-float.js";
+import { DisplayFloat } from "@/type-renderers/display-float/DisplayFloat";
 /**
  * `display-furo-fat-float`
  * The display-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.
@@ -30,11 +30,5 @@ export class DisplayFuroFatFloat extends DisplayFloat {
         this.requestUpdate();
       }
     }
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-fat-float": DisplayFuroFatFloat;
   }
 }

@@ -1,4 +1,4 @@
-import { CelleditBool } from './celledit-bool.js';
+import { CelleditBool } from "@/type-renderers/celledit-bool/CelleditBool";
 
 /**
  * `celledit-furo-fat-bool` is a `celledit` context renderer.
@@ -13,19 +13,10 @@ export class CelleditFuroFatBool extends CelleditBool {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-furo-fat-bool' };
+    return { tag: "celledit-furo-fat-bool" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditFuroFatBool": CelleditFuroFatBool;
-  }
-}
-
-import CelleditFuroFatBool from "@/type-renderers/impl/CelleditFuroFatBool
-CelleditFuroFatBool.define()

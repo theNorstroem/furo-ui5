@@ -22,7 +22,7 @@ export class CelleditGoogleTypeDate extends FuroUi5DatePicker {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-google-type-date' };
+    return { tag: "celledit-google-type-date" };
   }
 
   static get styles() {
@@ -34,12 +34,3 @@ export class CelleditGoogleTypeDate extends FuroUi5DatePicker {
     ];
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditGoogleTypeDate": CelleditGoogleTypeDate;
-  }
-}
-
-import CelleditGoogleTypeDate from "@/type-renderers/impl/CelleditGoogleTypeDate
-CelleditGoogleTypeDate.define()

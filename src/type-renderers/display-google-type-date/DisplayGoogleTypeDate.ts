@@ -126,9 +126,3 @@ export class DisplayGoogleTypeDate extends LitElement {
     return html`${this._displayValue}`;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-google-type-date": DisplayGoogleTypeDate;
-  }
-}

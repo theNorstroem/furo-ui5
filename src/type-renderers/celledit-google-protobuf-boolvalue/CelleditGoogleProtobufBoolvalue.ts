@@ -1,4 +1,4 @@
-import { CelleditBool } from './celledit-bool.js';
+import { CelleditBool } from "@/type-renderers/celledit-bool/CelleditBool";
 
 /**
  * `celledit-google-protobuf-boolvalue` is a `celledit` context renderer.
@@ -14,19 +14,10 @@ export class CelleditGoogleProtobufBoolvalue extends CelleditBool {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-google-protobuf-boolvalue' };
+    return { tag: "celledit-google-protobuf-boolvalue" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditGoogleProtobufBoolvalue": CelleditGoogleProtobufBoolvalue;
-  }
-}
-
-import CelleditGoogleProtobufBoolvalue from "@/type-renderers/impl/CelleditGoogleProtobufBoolvalue
-CelleditGoogleProtobufBoolvalue.define()

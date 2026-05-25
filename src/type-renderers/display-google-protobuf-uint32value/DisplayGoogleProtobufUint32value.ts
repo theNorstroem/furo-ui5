@@ -1,4 +1,4 @@
-import { DisplayUint32 } from "./display-uint32.js";
+import { DisplayUint32 } from "@/type-renderers/display-uint32/DisplayUint32";
 /**
  * `display-google-protobuf-boolvalue`
  * The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Uint32Value` in read only mode.
@@ -9,6 +9,4 @@ import { DisplayUint32 } from "./display-uint32.js";
  * @summary display renderer for `google.protobuf.Uint32Value`
  * @element display-google-protobuf-uint32value
  */
-export class DisplayGoolgeProtobufUin32value extends DisplayUint32 {}
-
-window.customElements.define("display-google-protobuf-uint32value", DisplayGoolgeProtobufUin32value);
+export class DisplayGoogleProtobufUint32value extends DisplayUint32 {}

@@ -1,4 +1,4 @@
-import { CelleditInt32 } from './celledit-int32.js';
+import { CelleditInt32 } from "@/type-renderers/celledit-int32/CelleditInt32";
 
 /**
  * `celledit-furo-integerproperty` is a `celledit` context renderer.
@@ -13,19 +13,10 @@ export class CelleditFuroIntegerproperty extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-furo-integerproperty' };
+    return { tag: "celledit-furo-integerproperty" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditFuroIntegerproperty": CelleditFuroIntegerproperty;
-  }
-}
-
-import CelleditFuroIntegerproperty from "@/type-renderers/impl/CelleditFuroIntegerproperty
-CelleditFuroIntegerproperty.define()

@@ -1,4 +1,4 @@
-import { FormInt32 } from "./form-int32.js";
+import { FormInt32 } from "@/type-renderers/form-int32/FormInt32";
 
 /**
  * `form-google-protobuf-int64value` is a `form` context renderer.
@@ -8,6 +8,11 @@ import { FormInt32 } from "./form-int32.js";
  * @summary form renderer for `google.protobuf.Int64Value`
  * @element form-google-protobuf-int64value
  */
-export class FormGoolgeProtobufIn64value extends FormInt32 {}
-
-window.customElements.define("form-google-protobuf-int64value", FormGoolgeProtobufIn64value);
+export class FormGoogleProtobufInt64value extends FormInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-google-protobuf-int64value" };
+  }
+}

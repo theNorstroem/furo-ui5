@@ -91,9 +91,3 @@ export class DisplayBool extends FieldNodeAdapter(LitElement) {
     return html` ${this._getTemplate()} `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-bool": DisplayBool;
-  }
-}

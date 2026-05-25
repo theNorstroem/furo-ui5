@@ -103,5 +103,3 @@ export class CellGoogleProtobufStringvalue extends LitElement {
     return html` ${this._displayValue ? html` ${this._displayValue} ` : html``} `;
   }
 }
-
-window.customElements.define("cell-google-protobuf-stringvalue", CellGoogleProtobufStringvalue);

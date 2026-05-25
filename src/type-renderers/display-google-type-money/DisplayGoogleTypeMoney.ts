@@ -136,5 +136,3 @@ export class DisplayGoogleTypeMoney extends LitElement {
     return html`${this._displayValue}`;
   }
 }
-
-window.customElements.define("display-google-type-money", DisplayGoogleTypeMoney);

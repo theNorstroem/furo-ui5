@@ -1,4 +1,4 @@
-import { DisplayString } from "./display-string.js";
+import { DisplayString } from "@/type-renderers/display-string/DisplayString";
 
 /**
  * `display-google-protobuf-stringvalue`
@@ -11,5 +11,3 @@ import { DisplayString } from "./display-string.js";
  * @element display-google-protobuf-stringvalue
  */
 export class DisplayGoogleProtobufStringvalue extends DisplayString {}
-
-window.customElements.define("display-google-protobuf-stringvalue", DisplayGoogleProtobufStringvalue);

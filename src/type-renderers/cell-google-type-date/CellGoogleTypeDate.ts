@@ -129,9 +129,3 @@ export class CellGoogleTypeDate extends LitElement {
     return html` ${this._displayValue} `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-google-type-date": CellGoogleTypeDate;
-  }
-}

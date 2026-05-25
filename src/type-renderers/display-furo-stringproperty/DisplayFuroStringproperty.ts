@@ -1,5 +1,5 @@
 import { html } from "lit";
-import { DisplayString } from "./display-string.js";
+import { DisplayString } from "@/type-renderers/display-string/DisplayString";
 
 /**
  * `display-furo-stringproperty`
@@ -22,5 +22,3 @@ export class DisplayFuroStringproperty extends DisplayString {
     return html` ${this._field ? html` ${this._field.data._value} ` : html``} `;
   }
 }
-
-window.customElements.define("display-furo-stringproperty", DisplayFuroStringproperty);

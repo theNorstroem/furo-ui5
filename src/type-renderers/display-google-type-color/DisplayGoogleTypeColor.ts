@@ -13,7 +13,7 @@ import "@ui5/webcomponents/dist/ColorPalette.js";
  * @summary display renderer for `google.type.Color`
  * @element display-google-type-color
  */
-export class DisplayGoolgeTypeColor extends LitElement {
+export class DisplayGoogleTypeColor extends LitElement {
   constructor() {
     super();
     this._red = "";
@@ -98,5 +98,3 @@ export class DisplayGoolgeTypeColor extends LitElement {
     return html`${this._getTemplate()}`;
   }
 }
-
-window.customElements.define("display-google-type-color", DisplayGoolgeTypeColor);

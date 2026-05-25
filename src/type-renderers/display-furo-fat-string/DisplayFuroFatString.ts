@@ -113,9 +113,3 @@ export class DisplayFuroFatString extends LitElement {
     return html` ${nl2br(this._displayValue)}`;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-fat-string": DisplayFuroFatString;
-  }
-}

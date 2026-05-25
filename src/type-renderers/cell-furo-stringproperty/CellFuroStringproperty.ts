@@ -1,5 +1,5 @@
 import { html } from "lit";
-import { CellString } from "./cell-string.js";
+import { CellString } from "@/type-renderers/cell-string/CellString";
 
 /**
  * `cell-furo-stringproperty`
@@ -23,5 +23,3 @@ export class CellFuroStringproperty extends CellString {
     return html` ${this._field ? html` ${this._field.data._value} ` : html``} `;
   }
 }
-
-window.customElements.define("cell-furo-stringproperty", CellFuroStringproperty);

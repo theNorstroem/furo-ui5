@@ -1,5 +1,5 @@
 import { html } from "lit";
-import { DisplayFuroStringproperty } from "./display-furo-stringproperty.js";
+import { DisplayFuroStringproperty } from "@/type-renderers/display-furo-stringproperty/DisplayFuroStringproperty";
 
 /**
  * `display-furo-stringoptionproperty`
@@ -22,5 +22,3 @@ export class DisplayFuroStringoptionproperty extends DisplayFuroStringproperty {
     return html` ${this._field ? html` ${this._field.display_name} ` : html``} `;
   }
 }
-
-window.customElements.define("display-furo-stringoptionproperty", DisplayFuroStringoptionproperty);

@@ -96,9 +96,3 @@ export class CellBool extends LitElement {
     return html` ${this._getTemplate()} `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-bool": CellBool;
-  }
-}

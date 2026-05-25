@@ -1,5 +1,5 @@
 import { html } from "lit";
-import { CellBool } from "./CellBool";
+import { CellBool } from "@/type-renderers/cell-bool/CellBool";
 
 /**
  * `cell-furo-fat-bool`
@@ -50,11 +50,5 @@ export class CellFuroFatBool extends CellBool {
   render() {
     // language=HTML
     return html` ${this._getTemplate()} `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-fat-bool": CellFuroFatBool;
   }
 }

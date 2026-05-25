@@ -1,4 +1,4 @@
-import { FormInt32 } from "./form-int32.js";
+import { FormInt32 } from "@/type-renderers/form-int32/FormInt32";
 
 /**
  * `form-furo-fat-uint64` is a `form` context renderer.
@@ -9,10 +9,11 @@ import { FormInt32 } from "./form-int32.js";
  * @element form-furo-fat-uint64
  */
 
-export class FormFuroFatUint64 extends FormInt32 {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "form-furo-fat-uint64": FormFuroFatUint64;
+export class FormFuroFatUint64 extends FormInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-furo-fat-uint64" };
   }
 }

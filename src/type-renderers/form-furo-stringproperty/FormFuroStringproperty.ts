@@ -7,9 +7,14 @@ import { FuroUi5TextInputLabeled } from "@/impl/impl/furo-ui5-text-input-labeled
  * @element form-furo-stringproperty
  */
 export class FormFuroStringproperty extends FuroUi5TextInputLabeled {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-furo-stringproperty" };
+  }
+
   bindData(fieldNode) {
     super.bindData(fieldNode.data);
   }
 }
-
-window.customElements.define("form-furo-stringproperty", FormFuroStringproperty);

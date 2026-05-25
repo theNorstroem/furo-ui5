@@ -1,4 +1,4 @@
-import { CellInt32 } from "./cell-int32.js";
+import { CellInt32 } from "@/type-renderers/cell-int32/CellInt32";
 /**
  * `cell-google-protobuf-boolvalue`
  * The cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Int32Value` in read only mode.
@@ -9,6 +9,4 @@ import { CellInt32 } from "./cell-int32.js";
  * @summary cell display renderer for `google.protobuf.Int32Value`
  * @element cell-google-protobuf-int32value
  */
-export class CellGoolgeProtobufIn32value extends CellInt32 {}
-
-window.customElements.define("cell-google-protobuf-int32value", CellGoolgeProtobufIn32value);
+export class CellGoogleProtobufInt32value extends CellInt32 {}

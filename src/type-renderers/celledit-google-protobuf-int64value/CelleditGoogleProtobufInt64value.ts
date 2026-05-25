@@ -1,4 +1,4 @@
-import { CelleditInt32 } from './celledit-int32.js';
+import { CelleditInt32 } from "@/type-renderers/celledit-int32/CelleditInt32";
 
 /**
  * `celledit-google-protobuf-int64value` is a `celledit` context renderer.
@@ -8,24 +8,15 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @summary celledit renderer for `google.protobuf.Int64Value`
  * @element celledit-google-protobuf-int64value
  */
-export class CelleditGoolgeProtobufIn64value extends CelleditInt32 {
+export class CelleditGoogleProtobufInt64value extends CelleditInt32 {
   /**
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-google-protobuf-int64value' };
+    return { tag: "celledit-google-protobuf-int64value" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditGoolgeProtobufIn64value": CelleditGoolgeProtobufIn64value;
-  }
-}
-
-import CelleditGoolgeProtobufIn64value from "@/type-renderers/impl/CelleditGoolgeProtobufIn64value
-CelleditGoolgeProtobufIn64value.define()

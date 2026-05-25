@@ -1,4 +1,4 @@
-import { DisplayFuroFatInt32 } from "./display-furo-fat-int32.js";
+import { DisplayFuroFatInt32 } from "@/type-renderers/display-furo-fat-int32/DisplayFuroFatInt32";
 
 /**
  * `display-furo-fat-int64`
@@ -14,9 +14,3 @@ import { DisplayFuroFatInt32 } from "./display-furo-fat-int32.js";
  * @element display-furo-fat-int64
  */
 export class DisplayFuroFatInt64 extends DisplayFuroFatInt32 {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-fat-int64": DisplayFuroFatInt64;
-  }
-}

@@ -1,4 +1,4 @@
-import { FormInt32 } from "./form-int32.js";
+import { FormInt32 } from "@/type-renderers/form-int32/FormInt32";
 
 /**
  * `form-furo-integerproperty` is a `form` context renderer.
@@ -9,9 +9,14 @@ import { FormInt32 } from "./form-int32.js";
  * @element form-furo-integerproperty
  */
 export class FormFuroNumberproperty extends FormInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-furo-numberproperty" };
+  }
+
   bindData(fieldNode) {
     super.bindData(fieldNode.data);
   }
 }
-
-window.customElements.define("form-furo-numberproperty", FormFuroNumberproperty);

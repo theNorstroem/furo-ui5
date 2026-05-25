@@ -1,4 +1,4 @@
-import { CellFuroFatInt64 } from "./cell-furo-fat-int64.js";
+import { CellFuroFatInt64 } from "@/type-renderers/cell-furo-fat-int64/CellFuroFatInt64";
 /**
  * `cell-furo-fat-uint64`
  * The cell-furo-fat-uint64 component displays a FieldNode of type `furo.fat.uint64` in read only mode.
@@ -13,9 +13,3 @@ import { CellFuroFatInt64 } from "./cell-furo-fat-int64.js";
  * @element cell-furo-fat-uint64
  */
 export class CellFuroFatUint64 extends CellFuroFatInt64 {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-fat-uint64": CellFuroFatUint64;
-  }
-}

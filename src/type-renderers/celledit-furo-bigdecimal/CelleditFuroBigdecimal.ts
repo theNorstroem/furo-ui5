@@ -1,4 +1,4 @@
-import { CelleditInt32 } from './celledit-int32.js';
+import { CelleditInt32 } from "@/type-renderers/celledit-int32/CelleditInt32";
 /**
  *
  *
@@ -10,19 +10,10 @@ export class CelleditFuroBigdecimal extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-furo-bigdecimal' };
+    return { tag: "celledit-furo-bigdecimal" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditFuroBigdecimal": CelleditFuroBigdecimal;
-  }
-}
-
-import CelleditFuroBigdecimal from "@/type-renderers/impl/CelleditFuroBigdecimal
-CelleditFuroBigdecimal.define()

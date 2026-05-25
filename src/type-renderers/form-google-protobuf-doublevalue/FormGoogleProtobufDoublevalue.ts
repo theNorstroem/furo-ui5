@@ -1,4 +1,4 @@
-import { FormInt32 } from "./form-int32.js";
+import { FormInt32 } from "@/type-renderers/form-int32/FormInt32";
 
 /**
  * `form-google-protobuf-doublevalue` is a `form` context renderer.
@@ -8,6 +8,11 @@ import { FormInt32 } from "./form-int32.js";
  * @summary form renderer for `google.protobuf.Double`
  * @element form-google-protobuf-doublevalue
  */
-export class FormGoogleProtobufDoublevalue extends FormInt32 {}
-
-window.customElements.define("form-google-protobuf-doublevalue", FormGoogleProtobufDoublevalue);
+export class FormGoogleProtobufDoublevalue extends FormInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-google-protobuf-doublevalue" };
+  }
+}

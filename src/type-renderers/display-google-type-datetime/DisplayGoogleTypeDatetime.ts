@@ -96,5 +96,3 @@ export class DisplayGoogleTypeDatetime extends FieldNodeAdapter(LitElement) {
     return html`${this._displayValue}`;
   }
 }
-
-window.customElements.define("display-google-type-datetime", DisplayGoogleTypeDatetime);

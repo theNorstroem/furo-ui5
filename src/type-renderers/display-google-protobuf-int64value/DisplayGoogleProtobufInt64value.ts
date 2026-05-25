@@ -1,4 +1,4 @@
-import { DisplayInt64 } from "./display-int64.js";
+import { DisplayInt64 } from "@/type-renderers/display-int64/DisplayInt64";
 /**
  * `display-google-protobuf-boolvalue`
  * The display-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Int64Value` in read only mode.
@@ -9,6 +9,4 @@ import { DisplayInt64 } from "./display-int64.js";
  * @summary display renderer for `google.protobuf.Int64Value`
  * @element display-google-protobuf-int64Value
  */
-export class DisplayGoolgeProtobufIn64value extends DisplayInt64 {}
-
-window.customElements.define("display-google-protobuf-int64value", DisplayGoolgeProtobufIn64value);
+export class DisplayGoogleProtobufInt64value extends DisplayInt64 {}

@@ -9,10 +9,11 @@ import { FuroUi5DatePickerLabeled } from "@/impl/impl/furo-ui5-date-picker-label
  * @summary form renderer for `google.type.Date`
  * @element form-google-type-date
  */
-export class FormGoogleTypeDate extends FuroUi5DatePickerLabeled {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "form-google-type-date": FormGoogleTypeDate;
+export class FormGoogleTypeDate extends FuroUi5DatePickerLabeled {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-google-type-date" };
   }
 }

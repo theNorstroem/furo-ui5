@@ -1,5 +1,5 @@
 import { html } from "lit";
-import { CellFuroStringproperty } from "./cell-furo-stringproperty.js";
+import { CellFuroStringproperty } from "@/type-renderers/cell-furo-stringproperty/CellFuroStringproperty";
 
 /**
  * `cell-furo-stringoptionproperty`
@@ -23,5 +23,3 @@ export class CellFuroStringoptionproperty extends CellFuroStringproperty {
     return html` ${this._field ? html` ${this._field.display_name} ` : html``} `;
   }
 }
-
-window.customElements.define("cell-furo-stringoptionproperty", CellFuroStringoptionproperty);

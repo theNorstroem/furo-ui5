@@ -1,4 +1,4 @@
-import { CellUint64 } from "./cell-uint64.js";
+import { CellUint64 } from "@/type-renderers/cell-uint64/CellUint64";
 /**
  * `cell-google-protobuf-boolvalue`
  * The cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.Uint64Value` in read only mode.
@@ -9,6 +9,4 @@ import { CellUint64 } from "./cell-uint64.js";
  * @summary cell display renderer for `google.protobuf.Uint64Value`
  * @element cell-google-protobuf-uint64value
  */
-export class CellGoolgeProtobufUin64value extends CellUint64 {}
-
-window.customElements.define("cell-google-protobuf-uint64value", CellGoolgeProtobufUin64value);
+export class CellGoogleProtobufUint64value extends CellUint64 {}

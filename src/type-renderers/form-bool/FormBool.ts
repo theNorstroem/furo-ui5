@@ -10,13 +10,15 @@ import { FuroUi5CheckboxInputLabeled } from "@/impl/impl/furo-ui5-checkbox-label
  * @element form-bool
  */
 export class FormBool extends FuroUi5CheckboxInputLabeled {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-bool" };
+  }
+
   connectedCallback() {
     // eslint-disable-next-line wc/guard-super-call
     super.connectedCallback();
-  }
-}
-declare global {
-  interface HTMLElementTagNameMap {
-    "form-bool": FormBool;
   }
 }

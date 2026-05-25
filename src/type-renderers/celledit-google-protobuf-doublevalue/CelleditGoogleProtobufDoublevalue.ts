@@ -1,4 +1,4 @@
-import { CelleditInt32 } from './celledit-int32.js';
+import { CelleditInt32 } from "@/type-renderers/celledit-int32/CelleditInt32";
 
 /**
  * `celledit-google-protobuf-doublevalue` is a `celledit` context renderer.
@@ -13,19 +13,10 @@ export class CelleditGoogleProtobufDoublevalue extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-google-protobuf-doublevalue' };
+    return { tag: "celledit-google-protobuf-doublevalue" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditGoogleProtobufDoublevalue": CelleditGoogleProtobufDoublevalue;
-  }
-}
-
-import CelleditGoogleProtobufDoublevalue from "@/type-renderers/impl/CelleditGoogleProtobufDoublevalue
-CelleditGoogleProtobufDoublevalue.define()

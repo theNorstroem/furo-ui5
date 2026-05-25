@@ -6,9 +6,14 @@ import { FuroUi5TextInputLabeled } from "@/impl/impl/furo-ui5-text-input-labeled
  * @element form-google-protobuf-stringValue
  */
 export class FormGoogleProtobufStringvalue extends FuroUi5TextInputLabeled {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-google-protobuf-stringvalue" };
+  }
+
   bindData(fieldNode) {
     super.bindData(fieldNode);
   }
 }
-
-window.customElements.define("form-google-protobuf-stringvalue", FormGoogleProtobufStringvalue);

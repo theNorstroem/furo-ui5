@@ -1,4 +1,4 @@
-import { CelleditInt32 } from './celledit-int32.js';
+import { CelleditInt32 } from "@/type-renderers/celledit-int32/CelleditInt32";
 
 /**
  * `celledit-google-protobuf-floatvalue` is a `celledit` context renderer.
@@ -8,24 +8,15 @@ import { CelleditInt32 } from './celledit-int32.js';
  * @summary celledit renderer for `google.protobuf.FloatValue`
  * @element celledit-google-protobuf-floatvalue
  */
-export class CelleditGoolgeProtobufFloatvalue extends CelleditInt32 {
+export class CelleditGoogleProtobufFloatvalue extends CelleditInt32 {
   /**
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-google-protobuf-floatvalue' };
+    return { tag: "celledit-google-protobuf-floatvalue" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditGoolgeProtobufFloatvalue": CelleditGoolgeProtobufFloatvalue;
-  }
-}
-
-import CelleditGoolgeProtobufFloatvalue from "@/type-renderers/impl/CelleditGoolgeProtobufFloatvalue
-CelleditGoolgeProtobufFloatvalue.define()

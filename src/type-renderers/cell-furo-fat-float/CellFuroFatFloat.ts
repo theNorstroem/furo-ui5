@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { CellFloat } from "./CellFloat.ts";
+import { CellFloat } from "@/type-renderers/cell-float/CellFloat";
 /**
  * `cell-furo-fat-float`
  * The cell-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.
@@ -32,11 +32,5 @@ export class CellFuroFatFloat extends CellFloat {
       this._displayValue = displayValue;
       this.requestUpdate();
     }
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-fat-float": CellFuroFatFloat;
   }
 }

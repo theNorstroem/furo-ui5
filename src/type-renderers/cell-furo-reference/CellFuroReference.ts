@@ -85,9 +85,3 @@ export class CellFuroReference extends LitElement {
     return html` <ui5-link href="" wrap>${this._displayValue}</ui5-link> `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-reference": CellFuroReference;
-  }
-}

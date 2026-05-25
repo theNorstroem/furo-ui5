@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { DisplayDouble } from "./display-double.js";
+import { DisplayDouble } from "@/type-renderers/display-double/DisplayDouble";
 /**
  * `display-furo-fat-double`
  * The display-furo-fat-double component displays a FieldNode of type `furo.fat.Double` in read only mode.
@@ -30,11 +30,5 @@ export class DisplayFuroFatDouble extends DisplayDouble {
         this.requestUpdate();
       }
     }
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-fat-double": DisplayFuroFatDouble;
   }
 }

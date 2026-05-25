@@ -90,9 +90,3 @@ export class DisplayDouble extends FieldNodeAdapter(LitElement) {
     return html` ${this._displayValue} `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-double": DisplayDouble;
-  }
-}

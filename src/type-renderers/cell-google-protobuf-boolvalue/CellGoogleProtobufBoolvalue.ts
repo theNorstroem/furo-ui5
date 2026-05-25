@@ -1,4 +1,4 @@
-import { CellBool } from "./CellBool";
+import { CellBool } from "@/type-renderers/cell-bool/CellBool";
 /**
  * `cell-google-protobuf-boolvalue`
  * The cell-google-protobuf-boolvalue component displays a FieldNode of type `google.protobuf.BoolValue` in read only mode.
@@ -9,6 +9,4 @@ import { CellBool } from "./CellBool";
  * @summary cell display renderer for `google.protobuf.BoolValue`
  * @element cell-google-protobuf-boolvalue
  */
-export class CellGoolgeProtobufBoolvalue extends CellBool {}
-
-window.customElements.define("cell-google-protobuf-boolvalue", CellGoolgeProtobufBoolvalue);
+export class CellGoogleProtobufBoolvalue extends CellBool {}

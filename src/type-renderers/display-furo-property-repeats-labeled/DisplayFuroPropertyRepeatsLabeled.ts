@@ -1,4 +1,4 @@
-import { DisplayFuroPropertyRepeated } from "./display-furo-property-repeated.js";
+import { DisplayFuroPropertyRepeated } from "@/type-renderers/display-furo-property-repeated/DisplayFuroPropertyRepeated";
 
 /**
  * `display-furo-property-repeats-labeled`
@@ -70,5 +70,3 @@ export class DisplayFuroPropertyRepeatsLabeled extends DisplayFuroPropertyRepeat
     return label || item.display_name;
   }
 }
-
-window.customElements.define("display-furo-property-repeats-labeled", DisplayFuroPropertyRepeatsLabeled);

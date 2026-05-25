@@ -10,7 +10,7 @@ export class CelleditGoogleProtobufTimestamp extends FuroUi5DateTimePicker {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-google-protobuf-timestamp' };
+    return { tag: "celledit-google-protobuf-timestamp" };
   }
 
   static get styles() {
@@ -22,12 +22,3 @@ export class CelleditGoogleProtobufTimestamp extends FuroUi5DateTimePicker {
     ];
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditGoogleProtobufTimestamp": CelleditGoogleProtobufTimestamp;
-  }
-}
-
-import CelleditGoogleProtobufTimestamp from "@/type-renderers/impl/CelleditGoogleProtobufTimestamp
-CelleditGoogleProtobufTimestamp.define()

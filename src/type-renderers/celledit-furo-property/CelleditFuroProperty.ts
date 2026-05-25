@@ -164,9 +164,3 @@ export class CelleditFuroProperty extends FBP(LitElement) {
     return html` ${this.noDataText} `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "celledit-furo-property": CelleditFuroProperty;
-  }
-}

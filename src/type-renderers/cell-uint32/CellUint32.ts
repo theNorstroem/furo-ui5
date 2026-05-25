@@ -1,4 +1,4 @@
-import { CellInt32 } from "./cell-int32.js";
+import { CellInt32 } from "@/type-renderers/cell-int32/CellInt32";
 /**
  * `cell-uint32`
  * The cell-uint32 component displays a FieldNode of type `uint32` in read only mode.
@@ -13,9 +13,3 @@ import { CellInt32 } from "./cell-int32.js";
  * @element cell-uint32
  */
 export class CellUint32 extends CellInt32 {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-uint32": CellUint32;
-  }
-}

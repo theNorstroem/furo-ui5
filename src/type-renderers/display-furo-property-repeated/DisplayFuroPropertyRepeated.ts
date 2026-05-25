@@ -106,5 +106,3 @@ export class DisplayFuroPropertyRepeated extends FBP(LitElement) {
     return html` ${this.noDataText} `;
   }
 }
-
-window.customElements.define("display-furo-property-repeated", DisplayFuroPropertyRepeated);

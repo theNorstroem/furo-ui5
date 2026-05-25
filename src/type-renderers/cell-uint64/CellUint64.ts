@@ -1,4 +1,4 @@
-import { CellInt64 } from "./cell-int64.js";
+import { CellInt64 } from "@/type-renderers/cell-int64/CellInt64";
 /**
  * `cell-uint64`
  * The cell-uint64 component displays a FieldNode of type `uint64` in read only mode.
@@ -13,9 +13,3 @@ import { CellInt64 } from "./cell-int64.js";
  * @element cell-uint64
  */
 export class CellUint64 extends CellInt64 {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-uint64": CellUint64;
-  }
-}

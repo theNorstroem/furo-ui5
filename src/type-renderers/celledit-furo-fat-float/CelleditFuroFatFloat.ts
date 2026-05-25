@@ -1,4 +1,4 @@
-import { CelleditInt32 } from './celledit-int32.js';
+import { CelleditInt32 } from "@/type-renderers/celledit-int32/CelleditInt32";
 
 /**
  * `celledit-furo-fat-float` is a `celledit` context renderer.
@@ -13,19 +13,10 @@ export class CelleditFuroFatFloat extends CelleditInt32 {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-furo-fat-float' };
+    return { tag: "celledit-furo-fat-float" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditFuroFatFloat": CelleditFuroFatFloat;
-  }
-}
-
-import CelleditFuroFatFloat from "@/type-renderers/impl/CelleditFuroFatFloat
-CelleditFuroFatFloat.define()

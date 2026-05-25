@@ -1,4 +1,4 @@
-import { CelleditInt32 } from "./celledit-int32.js";
+import { CelleditInt32 } from "@/type-renderers/celledit-int32/CelleditInt32";
 /**
  *
  *
@@ -15,11 +15,5 @@ export class CelleditUint32 extends CelleditInt32 {
 
   static get styles() {
     return super.styles;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    CelleditUint32: CelleditUint32;
   }
 }

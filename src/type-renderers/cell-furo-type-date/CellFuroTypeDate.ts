@@ -1,4 +1,4 @@
-import { CellGoogleTypeDate } from "./cell-google-type-date.js";
+import { CellGoogleTypeDate } from "@/type-renderers/cell-google-type-date/CellGoogleTypeDate";
 
 /**
  * `cell-furo-type-date`
@@ -30,11 +30,5 @@ export class CellFuroTypeDate extends CellGoogleTypeDate {
       }
     }
     this.requestUpdate();
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-type-date": CellFuroTypeDate;
   }
 }

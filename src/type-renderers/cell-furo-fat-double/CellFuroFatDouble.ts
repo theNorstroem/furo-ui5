@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { CellDouble } from "./CellDouble.ts";
+import { CellDouble } from "@/type-renderers/cell-double/CellDouble";
 /**
  * `cell-furo-fat-double`
  * The cell-furo-fat-double component displays a FieldNode of type `furo.fat.Double` in read only mode.
@@ -32,11 +32,5 @@ export class CellFuroFatDouble extends CellDouble {
       this._displayValue = displayValue;
       this.requestUpdate();
     }
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-fat-double": CellFuroFatDouble;
   }
 }

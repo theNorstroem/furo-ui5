@@ -76,9 +76,3 @@ export class CellString extends LitElement {
     return html` ${this._field ? html` ${nl2br(this._field._value)} ` : html``} `;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-string": CellString;
-  }
-}

@@ -1,5 +1,5 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { CellGoogleTypeMoney } from "./cell-google-type-money.js";
+import { CellGoogleTypeMoney } from "@/type-renderers/cell-google-type-money/CellGoogleTypeMoney";
 
 /**
  * `cell-furo-type-money`
@@ -34,11 +34,5 @@ export class CellFuroTypeMoney extends CellGoogleTypeMoney {
     }
 
     this.requestUpdate();
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "cell-furo-type-money": CellFuroTypeMoney;
   }
 }

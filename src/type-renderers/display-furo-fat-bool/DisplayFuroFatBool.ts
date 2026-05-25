@@ -1,5 +1,5 @@
 import { html } from "lit";
-import { DisplayBool } from "./display-bool.js";
+import { DisplayBool } from "@/type-renderers/display-bool/DisplayBool";
 
 /**
  * `display-furo-fat-bool`
@@ -57,11 +57,5 @@ export class DisplayFuroFatBool extends DisplayBool {
   render() {
     // language=HTML
     return html` ${this._getTemplate()} `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-furo-fat-bool": DisplayFuroFatBool;
   }
 }

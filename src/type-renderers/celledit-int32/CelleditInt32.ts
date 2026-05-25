@@ -17,19 +17,10 @@ export class CelleditInt32 extends FuroUi5NumberInput {
    * @private
    */
   static get metadata() {
-    return { tag: 'celledit-int32' };
+    return { tag: "celledit-int32" };
   }
 
   static get styles() {
     return super.styles;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "CelleditInt32": CelleditInt32;
-  }
-}
-
-import CelleditInt32 from "@/type-renderers/impl/CelleditInt32
-CelleditInt32.define()

@@ -1,4 +1,4 @@
-import { DisplayInt32 } from "./display-int32.js";
+import { DisplayInt32 } from "@/type-renderers/display-int32/DisplayInt32";
 
 /**
  * `display-int64`
@@ -14,9 +14,3 @@ import { DisplayInt32 } from "./display-int32.js";
  * @element display-int64
  */
 export class DisplayInt64 extends DisplayInt32 {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "display-int64": DisplayInt64;
-  }
-}

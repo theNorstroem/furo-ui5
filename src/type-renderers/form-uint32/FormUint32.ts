@@ -1,13 +1,14 @@
-import { FormInt32 } from "./form-int32.js";
+import { FormInt32 } from "@/type-renderers/form-int32/FormInt32";
 /**
  *
  * @summary form renderer for `uint32`
  * @element form-uint32
  */
-export class FormUint32 extends FormInt32 {}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    "form-uint32": FormUint32;
+export class FormUint32 extends FormInt32 {
+  /**
+   * @private
+   */
+  static get metadata() {
+    return { tag: "form-uint32" };
   }
 }

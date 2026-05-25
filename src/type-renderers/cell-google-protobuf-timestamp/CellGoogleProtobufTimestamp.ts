@@ -108,5 +108,3 @@ export class CellGoogleProtobufTimestamp extends LitElement {
     return html` ${this._displayValue} `;
   }
 }
-
-window.customElements.define("cell-google-protobuf-timestamp", CellGoogleProtobufTimestamp);
