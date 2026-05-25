@@ -3292,7 +3292,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The furo-ui5-context-menu binds a `furoui5.Menuitem` model (or an ARRAY of them) to\na SAP `furo-ui5-menu`. Because `furo-ui5-menu` is itself a self-contained popover, no separate\ndisplay element is required.\n\nThe opener is wired up using the standard UI5 convention via the `opener` attribute\n(element id or `HTMLElement` reference) and `show()` / `trigger()`. Hierarchical\nsub-menus, keyboard navigation, separators and a11y are inherited from `furo-ui5-menu`.\n\n### Sample\n```html\n<furo-ui5-button id=\"opener\" at-click=\"--openClicked\">Open</furo-ui5-button>\n<furo-ui5-context-menu\n  opener=\"opener\"\n  fn-show=\"--openClicked\"\n  .model=\"${menu}\"\n\n### Overview\n\n`furo-ui5-menu` component represents a hierarchical menu structure.\n\n### Structure\n\nThe `furo-ui5-menu` can hold two types of entities:\n\n- `furo-ui5-menu-item` components\n- `furo-ui5-menu-separator` - used to separate menu items with a line\n\nAn arbitrary hierarchy structure can be represented by recursively nesting menu items.\n\n### Keyboard Handling\n\nThe `furo-ui5-menu` provides advanced keyboard handling.\nThe user can use the following keyboard shortcuts in order to navigate trough the tree:\n\n- `Arrow Up` / `Arrow Down` - Navigates up and down the menu items that are currently visible.\n- `Arrow Right`, `Space` or `Enter` - Opens a sub-menu if there are menu items nested\nin the currently clicked menu item.\n- `Arrow Left` or `Escape` - Closes the currently opened sub-menu.\n\nwhen there is `endContent` :\n- `Arrow Left` or `ArrowRight` - Navigate between the menu item actions and the menu item itself\n- `Arrow Up` / `Arrow Down` - Navigates up and down the currently visible menu items\n\n**Note:** If the text direction is set to Right-to-left (RTL), `Arrow Right` and `Arrow Left` functionality is swapped.\n\nApplication developers are responsible for ensuring that interactive elements placed in the `endContent` slot\nhave the correct accessibility behaviour, including their enabled or disabled states.\nThe menu does not manage these aspects when the menu item state changes.\n\n\n",
+          "description": "The furo-ui5-context-menu binds a `furoui5.Menuitem` model (or an ARRAY of them) to\na SAP `furo-ui5-menu`. Because `furo-ui5-menu` is itself a self-contained popover, no separate\ndisplay element is required.\n\nThe opener is wired up using the standard UI5 convention via the `opener` attribute\n(element id or `HTMLElement` reference) and `show()` / `trigger()`. Hierarchical\nsub-menus, keyboard navigation, separators and a11y are inherited from `furo-ui5-menu`.\n\n### Overview\n\n`furo-ui5-menu` component represents a hierarchical menu structure.\n\n### Structure\n\nThe `furo-ui5-menu` can hold two types of entities:\n\n- `furo-ui5-menu-item` components\n- `furo-ui5-menu-separator` - used to separate menu items with a line\n\nAn arbitrary hierarchy structure can be represented by recursively nesting menu items.\n\n### Keyboard Handling\n\nThe `furo-ui5-menu` provides advanced keyboard handling.\nThe user can use the following keyboard shortcuts in order to navigate trough the tree:\n\n- `Arrow Up` / `Arrow Down` - Navigates up and down the menu items that are currently visible.\n- `Arrow Right`, `Space` or `Enter` - Opens a sub-menu if there are menu items nested\nin the currently clicked menu item.\n- `Arrow Left` or `Escape` - Closes the currently opened sub-menu.\n\nwhen there is `endContent` :\n- `Arrow Left` or `ArrowRight` - Navigate between the menu item actions and the menu item itself\n- `Arrow Up` / `Arrow Down` - Navigates up and down the currently visible menu items\n\n**Note:** If the text direction is set to Right-to-left (RTL), `Arrow Right` and `Arrow Left` functionality is swapped.\n\nApplication developers are responsible for ensuring that interactive elements placed in the `endContent` slot\nhave the correct accessibility behaviour, including their enabled or disabled states.\nThe menu does not manage these aspects when the menu item state changes.\n\n\n",
           "name": "ContextMenu",
           "members": [
             {
@@ -3914,6 +3914,1094 @@
     {
       "kind": "javascript-module",
       "path": "dist/elements/context-menu/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/date-picker/FuroUi5DatePicker.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The 'furo-ui5-date-picker' component lets the user select a date, with data binding.\n\nIt supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/ui5-webcomponents/playground/components/DatePicker/).\n\nYou can bind a `string` (ISO 8601, e.g. \"2020-12-31\") or a `google.type.Date`. Because the UI5\nDatePicker is date-only, the bindable value is always handled as an ISO `YYYY-MM-DD` string.\n\n## supported meta and constraints\n- **readonly: true** — set the element to readonly\n- **required: true** — mark the element as required\n- **placeholder:\"some string\"** — set the placeholder for the element\n- **min:\"1999-12-31\"** — set the minDate for the element (use iso date in the constraint)\n- **max:\"1999-12-31\"** — set the maxDate for the element (use iso date in the constraint)\n\n### Overview\n\nThe `furo-ui5-date-picker` component provides an input field with assigned calendar which opens on user action.\nThe `furo-ui5-date-picker` allows users to select a localized date using touch,\nmouse, or keyboard input. It consists of two parts: the date input field and the\ndate picker.\n\n### Usage\n\nThe user can enter a date by:\n\n- Using the calendar that opens in a popup\n- Typing it in directly in the input field\n\nWhen the user makes an entry and presses the enter key, the calendar shows the corresponding date.\nWhen the user directly triggers the calendar display, the actual date is displayed.\n\n### Formatting\n\nIf a date is entered by typing it into\nthe input field, it must fit to the used date format.\n\nSupported format options are pattern-based on Unicode LDML Date Format notation.\nFor more information, see [UTS #35: Unicode Locale Data Markup Language](https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table).\n\nFor example, if the valueFormat is \"yyyy-MM-dd\", the displayFormat is \"MMM d, y\", and the used locale is English, a valid value string is \"2015-07-30\", which leads to an output of \"Jul 30, 2015\".\nIf no placeholder is set to the DatePicker, the used displayFormat is displayed as a placeholder. If another placeholder is needed, it must be set.\n\n### Keyboard Handling\nThe `furo-ui5-date-picker` provides advanced keyboard handling.\nIf the `furo-ui5-date-picker` is focused,\nyou can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.\nOnce the drop-down is opened, you can use the [Up], [Down], [Left] or [Right] arrow keys\nto navigate through the dates and select one by pressing the `Space` or `Enter` keys. Moreover you can\nuse TAB to reach the buttons for changing month and year.\n\nIf the `furo-ui5-date-picker` input field is focused and its corresponding picker dialog is not opened,\nthen users can increment or decrement the date referenced by `dateValue` property\nby using the following shortcuts:\n\n- [Page Down] - Decrements the corresponding day of the month by one\n- [Shift] + [Page Down] - Decrements the corresponding month by one\n- [Shift] + [Ctrl] + [Page Down] - Decrements the corresponding year by one\n- [Page Up] - Increments the corresponding day of the month by one\n- [Shift] + [Page Up] - Increments the corresponding month by one\n- [Shift] + [Ctrl] + [Page Up] - Increments the corresponding year by one\n\n### Calendar types\nThe component supports several calendar types - Gregorian, Buddhist, Islamic, Japanese and Persian.\nBy default the Gregorian Calendar is used. In order to use the Buddhist, Islamic, Japanese or Persian calendar,\nyou need to set the `primaryCalendarType` property and import one or more of the following modules:\n\n\n\n\n\n\n\n\n\nOr, you can use the global configuration and set the `calendarType` key:\n\n```html\n<script data-id=\"sap-ui-config\" type=\"application/json\">\n\t{\n\t\t\"calendarType\": \"Japanese\"\n\t}\n<script>\n```\n\n\n",
+          "name": "DatePicker",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING | XDate"
+              },
+              "privacy": "private",
+              "default": "new XDate()"
+            },
+            {
+              "kind": "field",
+              "name": "accessibleDescription",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible description of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleDescriptionRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Receives id(or many ids) of the elements that describe the input.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the aria-label attribute for the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING | XDate | undefined",
+                    "references": [
+                      {
+                        "name": "XDate",
+                        "package": "@/models",
+                        "module": "google/type/Date"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component."
+            },
+            {
+              "kind": "field",
+              "name": "calendarWeekNumbering",
+              "type": {
+                "text": "CalendarWeekNumbering",
+                "references": [
+                  {
+                    "name": "CalendarWeekNumbering",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/CalendarWeekNumbering.js"
+                  }
+                ]
+              },
+              "default": "\"Default\"",
+              "description": "Defines how to calculate calendar weeks and first day of the week.\nIf not set, the calendar will be displayed according to the currently set global configuration.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "clear",
+              "description": "Clears the value of the date picker.",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "dateAndTimeReaderWriters",
+              "type": {
+                "text": "DateAndTimeReaderWriters<FuroUi5DatePicker> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "dateValue",
+              "type": {
+                "text": "Date | null"
+              },
+              "description": "Currently selected date represented as a Local JavaScript Date instance.\nNote: this getter can only be reliably used after the component is fully defined. Use dateValueAsync which resolves only when this condition is met.",
+              "privacy": "public",
+              "default": "null",
+              "deprecated": "Use dateValueAsync instead",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "dateValueAsync",
+              "type": {
+                "text": "Promise<Date | null>"
+              },
+              "description": "Promise that resolves to the currently selected date represented as a Local JavaScript Date instance.",
+              "privacy": "public",
+              "default": "Promise",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines whether the component is displayed as disabled.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "displayFormat",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines the format, displayed in the input field.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "formatPattern",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines the format, displayed in the input field.",
+              "default": "undefined",
+              "deprecated": "Use displayFormat and valueFormat instead",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "formatValue",
+              "return": {
+                "type": {
+                  "text": "string"
+                },
+                "description": "The date as string"
+              },
+              "parameters": [
+                {
+                  "name": "date",
+                  "type": {
+                    "text": "Date"
+                  },
+                  "description": "A Java Script date object to be formatted as string"
+                }
+              ],
+              "description": "Formats a Java Script date object into a string representing a locale date\naccording to the `formatPattern` property of the DatePicker instance",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleConstraints",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "fieldConstraints",
+                  "type": {
+                    "text": "FieldConstraints | undefined"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "hideWeekNumbers",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines the visibility of the week numbers column.\n\n**Note:** For calendars other than Gregorian,\nthe week numbers are not displayed regardless of what is set.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "isInValidRange",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": {
+                    "text": "string"
+                  },
+                  "description": "A value to be checked"
+                }
+              ],
+              "description": "Checks if a date is between the minimum and maximum date.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "isValid",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": {
+                    "text": "string"
+                  },
+                  "description": "A value to be tested against the current date format"
+                }
+              ],
+              "description": "Checks if a value is valid against the current date format of the DatePicker.",
+              "privacy": "public",
+              "deprecated": "Use isValidValue or isValidDisplayValue instead",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "isValidDisplayValue",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": {
+                    "text": "string"
+                  },
+                  "description": "A value to be tested against the current date format"
+                }
+              ],
+              "description": "Checks if a value is valid against the current date format of the DatePicker.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "isValidValue",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": {
+                    "text": "string"
+                  },
+                  "description": "A value to be tested against the current date format"
+                }
+              ],
+              "description": "Checks if a value is valid against the current date format of the DatePicker.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "maxDate",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Determines the maximum date available for selection.\n\n**Note:** If the formatPattern property is not set, the maxDate value must be provided in the ISO date format (yyyy-MM-dd).",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "minDate",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Determines the minimum date available for selection.\n\n**Note:** If the formatPattern property is not set, the minDate value must be provided in the ISO date format (yyyy-MM-dd).",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING | XDate",
+                "references": [
+                  {
+                    "name": "STRING",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "XDate",
+                    "package": "@/models",
+                    "module": "google/type/Date"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a model field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines the name by which the component will be identified upon submission in an HTML form.\n\n**Note:** This property is only applicable within the context of an HTML Form element.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines the open or closed state of the popover.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "placeholder",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines a short hint, intended to aid the user with data entry when the\ncomponent has no value.\n\n**Note:** When no placeholder is set, the format pattern is displayed as a placeholder.\nPassing an empty string as the value of this property will make the component appear empty - without placeholder or format pattern.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "primaryCalendarType",
+              "type": {
+                "text": "CalendarType | undefined",
+                "references": [
+                  {
+                    "name": "CalendarType",
+                    "package": "@ui5/webcomponents-base",
+                    "module": "dist/types/CalendarType.js"
+                  }
+                ]
+              },
+              "description": "Sets a calendar type used for display.\nIf not set, the calendar type of the global configuration is used.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "readFromModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines whether the component is displayed as read-only.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "readonlyState",
+              "type": {
+                "text": "ReadonlyState"
+              },
+              "privacy": "private",
+              "default": "new ReadonlyState(this)"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is required.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "secondaryCalendarType",
+              "type": {
+                "text": "CalendarType | undefined",
+                "references": [
+                  {
+                    "name": "CalendarType",
+                    "package": "@ui5/webcomponents-base",
+                    "module": "dist/types/CalendarType.js"
+                  }
+                ]
+              },
+              "description": "Defines the secondary calendar type.\nIf not set, the calendar will only show the primary calendar type.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "showClearIcon",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the clear icon of the input will be shown.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Defines a formatted date value.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "valueFormat",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Determines the format, used for the value attribute.",
+              "default": "\"yyyy-MM-dd\"",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "valueState",
+              "type": {
+                "text": "ValueState",
+                "references": [
+                  {
+                    "name": "ValueState",
+                    "package": "@ui5/webcomponents-base",
+                    "module": "dist/types/ValueState.js"
+                  }
+                ]
+              },
+              "default": "\"None\"",
+              "description": "Defines the value state of the component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "valueStateManager",
+              "type": {
+                "text": "FieldNodeValueState"
+              },
+              "privacy": "private",
+              "readonly": true,
+              "default": "new FieldNodeValueState(this)"
+            },
+            {
+              "kind": "field",
+              "name": "writeToModel",
+              "privacy": "private"
+            }
+          ],
+          "superclass": {
+            "name": "DatePicker",
+            "package": "@ui5/webcomponents",
+            "module": "dist/DatePicker.js"
+          },
+          "tagName": "furo-ui5-date-picker",
+          "customElement": true,
+          "slots": [
+            {
+              "name": "valueStateMessage",
+              "description": "Defines the value state message that will be displayed as pop up under the component.\n\n**Note:** If not specified, a default text (in the respective language) will be displayed.\n\n**Note:** The `valueStateMessage` would be displayed,\nwhen the component is in `Information`, `Critical` or `Negative` value state.",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Used to style the input element. This part is forwarded to the underlying ui5-input element.",
+              "name": "input",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines the accessible description of the component.",
+              "name": "accessible-description",
+              "default": "undefined",
+              "fieldName": "accessibleDescription",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Receives id(or many ids) of the elements that describe the input.",
+              "name": "accessible-description-ref",
+              "default": "undefined",
+              "fieldName": "accessibleDescriptionRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Defines the aria-label attribute for the component.",
+              "name": "accessible-name",
+              "default": "undefined",
+              "fieldName": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "name": "accessible-name-ref",
+              "default": "undefined",
+              "fieldName": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Defines how to calculate calendar weeks and first day of the week.\nIf not set, the calendar will be displayed according to the currently set global configuration.",
+              "name": "calendar-week-numbering",
+              "default": "\"Default\"",
+              "fieldName": "calendarWeekNumbering",
+              "type": {
+                "text": "\"Default\" | \"ISO_8601\" | \"MiddleEastern\" | \"WesternTraditional\""
+              },
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "description": "Currently selected date represented as a Local JavaScript Date instance.\nNote: this getter can only be reliably used after the component is fully defined. Use dateValueAsync which resolves only when this condition is met.",
+              "name": "date-value",
+              "default": "null",
+              "fieldName": "dateValue",
+              "type": {
+                "text": "any"
+              },
+              "deprecated": "Use dateValueAsync instead",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Promise that resolves to the currently selected date represented as a Local JavaScript Date instance.",
+              "name": "date-value-async",
+              "default": "Promise",
+              "fieldName": "dateValueAsync",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Determines whether the component is displayed as disabled.",
+              "name": "disabled",
+              "default": "false",
+              "fieldName": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Determines the format, displayed in the input field.",
+              "name": "display-format",
+              "default": "undefined",
+              "fieldName": "displayFormat",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Determines the format, displayed in the input field.",
+              "name": "format-pattern",
+              "default": "undefined",
+              "fieldName": "formatPattern",
+              "type": {
+                "text": "string | undefined"
+              },
+              "deprecated": "Use displayFormat and valueFormat instead",
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "description": "Defines the visibility of the week numbers column.\n\n**Note:** For calendars other than Gregorian,\nthe week numbers are not displayed regardless of what is set.",
+              "name": "hide-week-numbers",
+              "default": "false",
+              "fieldName": "hideWeekNumbers",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Determines the maximum date available for selection.\n\n**Note:** If the formatPattern property is not set, the maxDate value must be provided in the ISO date format (yyyy-MM-dd).",
+              "name": "max-date",
+              "default": "\"\"",
+              "fieldName": "maxDate",
+              "type": {
+                "text": "string"
+              },
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "description": "Determines the minimum date available for selection.\n\n**Note:** If the formatPattern property is not set, the minDate value must be provided in the ISO date format (yyyy-MM-dd).",
+              "name": "min-date",
+              "default": "\"\"",
+              "fieldName": "minDate",
+              "type": {
+                "text": "string"
+              },
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "description": "Determines the name by which the component will be identified upon submission in an HTML form.\n\n**Note:** This property is only applicable within the context of an HTML Form element.",
+              "name": "name",
+              "default": "undefined",
+              "fieldName": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Defines the open or closed state of the popover.",
+              "name": "open",
+              "default": "false",
+              "fieldName": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Defines a short hint, intended to aid the user with data entry when the\ncomponent has no value.\n\n**Note:** When no placeholder is set, the format pattern is displayed as a placeholder.\nPassing an empty string as the value of this property will make the component appear empty - without placeholder or format pattern.",
+              "name": "placeholder",
+              "default": "undefined",
+              "fieldName": "placeholder",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Sets a calendar type used for display.\nIf not set, the calendar type of the global configuration is used.",
+              "name": "primary-calendar-type",
+              "default": "undefined",
+              "fieldName": "primaryCalendarType",
+              "type": {
+                "text": "\"Gregorian\" | \"Islamic\" | \"Japanese\" | \"Buddhist\" | \"Persian\" | undefined"
+              },
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "description": "Determines whether the component is displayed as read-only.",
+              "name": "readonly",
+              "default": "false",
+              "fieldName": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is required.",
+              "name": "required",
+              "default": "false",
+              "fieldName": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Defines the secondary calendar type.\nIf not set, the calendar will only show the primary calendar type.",
+              "name": "secondary-calendar-type",
+              "default": "undefined",
+              "fieldName": "secondaryCalendarType",
+              "type": {
+                "text": "\"Gregorian\" | \"Islamic\" | \"Japanese\" | \"Buddhist\" | \"Persian\" | undefined"
+              },
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "description": "Defines whether the clear icon of the input will be shown.",
+              "name": "show-clear-icon",
+              "default": "false",
+              "fieldName": "showClearIcon",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Defines a formatted date value.",
+              "name": "value",
+              "default": "\"\"",
+              "fieldName": "value",
+              "type": {
+                "text": "string"
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "description": "Determines the format, used for the value attribute.",
+              "name": "value-format",
+              "default": "undefined",
+              "fieldName": "valueFormat",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "DateComponentBase",
+                "module": "dist/DateComponentBase.js"
+              }
+            },
+            {
+              "description": "Defines the value state of the component.",
+              "name": "value-state",
+              "default": "\"None\"",
+              "fieldName": "valueState",
+              "type": {
+                "text": "\"None\" | \"Positive\" | \"Critical\" | \"Negative\" | \"Information\""
+              },
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "change",
+              "type": {
+                "text": "CustomEvent<DatePickerChangeEventDetail>",
+                "references": [
+                  {
+                    "name": "DatePickerChangeEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/DatePicker.js"
+                  }
+                ]
+              },
+              "description": "Fired when the input operation has finished by pressing Enter or on focusout.",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "name": "close",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired after the component's picker is closed.",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "name": "input",
+              "type": {
+                "text": "CustomEvent<DatePickerInputEventDetail>",
+                "references": [
+                  {
+                    "name": "DatePickerInputEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/DatePicker.js"
+                  }
+                ]
+              },
+              "description": "Fired when the value of the component is changed at each key stroke.",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "name": "open",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired after the component's picker is opened.",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "name": "value-state-change",
+              "type": {
+                "text": "CustomEvent<DatePickerValueStateChangeEventDetail>",
+                "references": [
+                  {
+                    "name": "DatePickerValueStateChangeEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/DatePicker.js"
+                  }
+                ]
+              },
+              "description": "Fired before the value state of the component is updated internally.\nThe event is preventable, meaning that if it's default action is\nprevented, the component will not update the value state.",
+              "inheritedFrom": {
+                "name": "DatePicker",
+                "module": "dist/DatePicker.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5DatePicker",
+          "declaration": {
+            "name": "FuroUi5DatePicker",
+            "module": "src/elements/date-picker/FuroUi5DatePicker.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/date-picker/index.js",
       "declarations": [],
       "exports": []
     },

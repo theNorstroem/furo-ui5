@@ -24,16 +24,6 @@ export interface MenuItemSelectedEventDetail {
  * (element id or `HTMLElement` reference) and `show()` / `trigger()`. Hierarchical
  * sub-menus, keyboard navigation, separators and a11y are inherited from `ui5-menu`.
  *
- * ### Sample
- * ```html
- * <furo-ui5-button id="opener" at-click="--openClicked">Open</furo-ui5-button>
- * <furo-ui5-context-menu
- *   opener="opener"
- *   fn-show="--openClicked"
- *   .model="${menu}" @menu-item-selected="${onSelect}">
- * </furo-ui5-context-menu>
- * ```
- *
  *
  * @tagname furo-ui5-context-menu
  * @eventref menu-item-selected - MenuItemSelectedEventDetail - "@furo/ui5/dist/index.js"

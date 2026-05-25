@@ -3,6 +3,7 @@ export * from "@/elements/select-enum/FuroUi5SelectEnum";
 export * from "@/elements/button/FuroUi5Button";
 export * from "@/elements/checkbox/FuroUi5Checkbox";
 export * from "@/elements/context-menu/FuroUi5ContextMenu";
+export * from "@/elements/date-picker/FuroUi5DatePicker";
 export * from "@/elements/header-panel/FuroUi5HeaderPanel";
 export * from "@/elements/icon/FuroUi5Icon";
 export * from "@/elements/popover/FuroUi5Popover";

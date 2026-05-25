@@ -84,14 +84,6 @@ declare module "react" {
        * (element id or `HTMLElement` reference) and `show()` / `trigger()`. Hierarchical
        * sub-menus, keyboard navigation, separators and a11y are inherited from `furo-furo-ui5-menu`.
        *
-       * ### Sample
-       * ```html
-       * <furo-furo-furo-ui5-button id="opener" at-click="--openClicked">Open</furo-furo-furo-ui5-button>
-       * <furo-furo-furo-ui5-context-menu
-       * opener="opener"
-       * fn-show="--openClicked"
-       * .model="${menu}"
-       *
        * ### Overview
        *
        * `furo-furo-ui5-menu` component represents a hierarchical menu structure.

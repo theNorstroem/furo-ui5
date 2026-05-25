@@ -65,6 +65,10 @@
       "types": "./dist/elements/context-menu/index.d.ts",
       "default": "./dist/elements/context-menu/index.js"
     },
+    "./date-picker": {
+      "types": "./dist/elements/date-picker/index.d.ts",
+      "default": "./dist/elements/date-picker/index.js"
+    },
     "./dialog": {
       "types": "./dist/elements/dialog/index.d.ts",
       "default": "./dist/elements/dialog/index.js"

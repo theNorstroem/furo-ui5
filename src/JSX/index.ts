@@ -7,6 +7,7 @@ import "./CbItem";
 import "./Checkbox";
 import "./Combobox";
 import "./ContextMenu";
+import "./DatePicker";
 import "./Dialog";
 import "./FormFieldSegmenter";
 import "./FormGroup";

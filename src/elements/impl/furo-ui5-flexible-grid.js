@@ -4,7 +4,7 @@ import { FBP } from '@furo/fbp';
 
 /**
  * The furo-ui5-flexible-grid will split your screen contents horizontally (in cols) and put them vertically (left at top)
- * when the available space is to small.
+ * when the available space is too small.
  *
  * ```html
  *  <!-- a simple layout manager with two columns  -->
