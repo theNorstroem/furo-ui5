@@ -229,6 +229,10 @@
       "types": "./dist/elements/textarea/index.d.ts",
       "default": "./dist/elements/textarea/index.js"
     },
+    "./time-picker": {
+      "types": "./dist/elements/time-picker/index.d.ts",
+      "default": "./dist/elements/time-picker/index.js"
+    },
     "./title": {
       "types": "./dist/elements/title/index.d.ts",
       "default": "./dist/elements/title/index.js"

@@ -48,6 +48,7 @@ import "./Switch";
 import "./TableToolbarSeparator";
 import "./TextInput";
 import "./Textarea";
+import "./TimePicker";
 import "./Title";
 import "./Toast";
 import "./ToggleButton";
