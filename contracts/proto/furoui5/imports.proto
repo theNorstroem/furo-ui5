@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package furoui5;
+
+option go_package = "github.com/theNorstroem/furo-ui5/gen/go/furoui5;furoui5pb";
+option java_multiple_files = true;
+option java_package = "pro.furoui5";
+
+import "google/type/date.proto";
+import "google/type/timeofday.proto";
+
+// DummyImportType is used to have additional types generated
+message DummyImportType {
+  // imports the google.type.Date
+  google.type.Date  date = 1;
+  // imports the google.type.TimeOfDay
+  google.type.TimeOfDay  time_of_day = 2;
+
+}
