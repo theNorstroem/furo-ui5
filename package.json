@@ -121,6 +121,10 @@
       "types": "./dist/elements/multi-combobox/index.d.ts",
       "default": "./dist/elements/multi-combobox/index.js"
     },
+    "./multi-input": {
+      "types": "./dist/elements/multi-input/index.d.ts",
+      "default": "./dist/elements/multi-input/index.js"
+    },
     "./number-input": {
       "types": "./dist/elements/number-input/index.d.ts",
       "default": "./dist/elements/number-input/index.js"
