@@ -153,6 +153,14 @@
       "types": "./dist/elements/rating-indicator/index.d.ts",
       "default": "./dist/elements/rating-indicator/index.js"
     },
+    "./relative-time-badge": {
+      "types": "./dist/elements/relative-time-badge/index.d.ts",
+      "default": "./dist/elements/relative-time-badge/index.js"
+    },
+    "./relative-time-display": {
+      "types": "./dist/elements/relative-time-display/index.d.ts",
+      "default": "./dist/elements/relative-time-display/index.js"
+    },
     "./responsive-popover": {
       "types": "./dist/elements/responsive-popover/index.d.ts",
       "default": "./dist/elements/responsive-popover/index.js"

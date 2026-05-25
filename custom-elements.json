@@ -14597,6 +14597,737 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/elements/relative-time-badge/FuroUi5RelativeTimeBadge.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The 'furo-ui5-relative-time-badge' is a small, non-interactive, display-only component which shows\nrelative time information (e.g. \"in 2 days\", \"5 days ago\"), with data binding.\n\nIt extends the [SAP ui5 Tag element](https://sap.github.io/ui5-webcomponents/playground/components/Tag/)\nand drives its text and `colorScheme` from the bound value: a future time uses the POSITIVE scheme,\na past time the NEGATIVE one.\n\nYou can bind a `string` (ISO 8601), a `google.protobuf.Timestamp`, a unix-seconds `int32` / `int64`,\nor a `google.type.Date`. `int32` / `int64` are interpreted as seconds since epoch.\n\nConfiguration is set via properties: `colorSchemePositive`, `colorSchemeNegative`, `optionStyle`\n(`long` | `short` | `narrow`) and `optionNumeric` (`always` | `auto`).\n\n```html\n <furo-ui5-relative-time-badge .model=\"${fieldNode}\"></furo-ui5-relative-time-badge>\n```\n\n### Overview\n\nThe `furo-ui5-tag` is a component which serves\nthe purpose to attract the user attention to some piece\nof information (state, quantity, condition, etc.).\nIt can contain icon and text information, and its design can be chosen from specific design types.\n\n### Usage Guidelines\n\n- If the text is longer than the width of the component, it can wrap, or it can show ellipsis, depending on the `wrappingType` property.\n- Colors can be semantic or not semantic.\n\n\n",
+          "name": "RelativeTimeBadge",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_formatDisplay",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Computes the relative-time text, tooltip and color scheme from the current ISO `value`, and\napplies them to the inherited Tag (slotted text + `colorScheme`)."
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING | Timestamp | INT32 | INT64 | XDate"
+              },
+              "privacy": "private",
+              "default": "new Timestamp()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING | Timestamp | INT32 | INT64 | XDate | undefined",
+                    "references": [
+                      {
+                        "name": "Timestamp",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component. Display-only: the badge reads from the model but\nnever writes back."
+            },
+            {
+              "kind": "field",
+              "name": "colorScheme",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"1\"",
+              "description": "Defines the color scheme of the component.\nThere are 10 predefined schemes.\nTo use one you can set a number from `\"1\"` to `\"10\"`. The `colorScheme` `\"1\"` will be set by default.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "colorSchemeNegative",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"2\"",
+              "description": "The color scheme (`\"1\"`–`\"10\"`) applied when the bound time is in the past (NEGATIVE)."
+            },
+            {
+              "kind": "field",
+              "name": "colorSchemePositive",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"1\"",
+              "description": "The color scheme (`\"1\"`–`\"10\"`) applied when the bound time is in the future (POSITIVE)."
+            },
+            {
+              "kind": "field",
+              "name": "dateAndTimeReaderWriters",
+              "type": {
+                "text": "DateAndTimeReaderWriters<FuroUi5RelativeTimeBadge> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "design",
+              "type": {
+                "text": "TagDesign",
+                "references": [
+                  {
+                    "name": "TagDesign",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/TagDesign.js"
+                  }
+                ]
+              },
+              "default": "\"Neutral\"",
+              "description": "Defines the design type of the component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hidden",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true"
+            },
+            {
+              "kind": "field",
+              "name": "hideStateIcon",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines if the default state icon is shown.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "interactive",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines if the component is interactive (focusable and pressable).",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING | Timestamp | INT32 | INT64 | XDate",
+                "references": [
+                  {
+                    "name": "STRING",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "Timestamp",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "XDate",
+                    "package": "@/models",
+                    "module": "google/type/Date"
+                  },
+                  {
+                    "name": "INT32",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "INT64",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a model field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "optionNumeric",
+              "type": {
+                "text": "\"always\" | \"auto\""
+              },
+              "privacy": "public",
+              "default": "\"auto\"",
+              "description": "The output format of the relative time: `always` or `auto`. Default: `auto`."
+            },
+            {
+              "kind": "field",
+              "name": "optionStyle",
+              "type": {
+                "text": "\"long\" | \"short\" | \"narrow\""
+              },
+              "privacy": "public",
+              "default": "\"long\"",
+              "description": "The output style of the relative time: `long`, `short` or `narrow`. Default: `long`."
+            },
+            {
+              "kind": "field",
+              "name": "readFromModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "TagSize",
+                "references": [
+                  {
+                    "name": "TagSize",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/TagSize.js"
+                  }
+                ]
+              },
+              "default": "\"S\"",
+              "description": "Defines predefined size of the component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"\"",
+              "description": "The bound value, as a canonical ISO 8601 string. Populated by the reader from the bound model."
+            },
+            {
+              "kind": "field",
+              "name": "wrappingType",
+              "type": {
+                "text": "WrappingType",
+                "references": [
+                  {
+                    "name": "WrappingType",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/WrappingType.js"
+                  }
+                ]
+              },
+              "default": "\"Normal\"",
+              "description": "Defines how the text of a component will be displayed when there is not enough space.\n\n**Note:** For option \"Normal\" the text will wrap and the\nwords will not be broken based on hyphenation.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "Tag",
+            "package": "@ui5/webcomponents",
+            "module": "dist/Tag.js"
+          },
+          "tagName": "furo-ui5-relative-time-badge",
+          "customElement": true,
+          "summary": "bindable, display-only relative time badge",
+          "slots": [
+            {
+              "name": "default",
+              "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "name": "icon",
+              "description": "Defines the icon to be displayed in the component.",
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Used to style the root element.",
+              "name": "root",
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines the color scheme of the component.\nThere are 10 predefined schemes.\nTo use one you can set a number from `\"1\"` to `\"10\"`. The `colorScheme` `\"1\"` will be set by default.",
+              "name": "color-scheme",
+              "default": "\"1\"",
+              "fieldName": "colorScheme",
+              "type": {
+                "text": "string"
+              },
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "description": "Defines the design type of the component.",
+              "name": "design",
+              "default": "\"Neutral\"",
+              "fieldName": "design",
+              "type": {
+                "text": "\"Positive\" | \"Critical\" | \"Negative\" | \"Information\" | \"Neutral\" | \"Set1\" | \"Set2\""
+              },
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines if the default state icon is shown.",
+              "name": "hide-state-icon",
+              "default": "false",
+              "fieldName": "hideStateIcon",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "description": "Defines if the component is interactive (focusable and pressable).",
+              "name": "interactive",
+              "default": "false",
+              "fieldName": "interactive",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines predefined size of the component.",
+              "name": "size",
+              "default": "\"S\"",
+              "fieldName": "size",
+              "type": {
+                "text": "\"S\" | \"L\""
+              },
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            },
+            {
+              "description": "Defines how the text of a component will be displayed when there is not enough space.\n\n**Note:** For option \"Normal\" the text will wrap and the\nwords will not be broken based on hyphenation.",
+              "name": "wrapping-type",
+              "default": "\"Normal\"",
+              "fieldName": "wrappingType",
+              "type": {
+                "text": "\"None\" | \"Normal\""
+              },
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "click",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired when the user clicks on an interactive tag.\n\n**Note:** The event will be fired if the `interactive` property is `true`",
+              "inheritedFrom": {
+                "name": "Tag",
+                "module": "dist/Tag.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5RelativeTimeBadge",
+          "declaration": {
+            "name": "FuroUi5RelativeTimeBadge",
+            "module": "src/elements/relative-time-badge/FuroUi5RelativeTimeBadge.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/relative-time-badge/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/relative-time-display/FuroUi5RelativeTimeDisplay.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The 'furo-ui5-relative-time-display' is a display-only component which shows relative time\ninformation as plain text (e.g. \"in 2 days\", \"5 days ago\"), with data binding.\n\nIt extends the [SAP ui5 Text element](https://sap.github.io/ui5-webcomponents/playground/components/Text/)\nand is the chrome-less sibling of `furo-ui5-relative-time-badge` (no color scheme).\n\nYou can bind a `string` (ISO 8601), a `google.protobuf.Timestamp`, a unix-seconds `int32` / `int64`,\nor a `google.type.Date`. `int32` / `int64` are interpreted as seconds since epoch.\n\nConfiguration is set via properties: `optionStyle` (`long` | `short` | `narrow`) and `optionNumeric`\n(`always` | `auto`).\n\n```html\n <furo-ui5-relative-time-display .model=\"${fieldNode}\"></furo-ui5-relative-time-display>\n```\n\n### Overview\n\nThe `furo-ui5-text` component displays text that can be used in any content area of an application.\n\n### Usage\n\n- Use the `furo-ui5-text` if you want to display text inside a form, table, or any other content area.\n- Do not use the `furo-ui5-text` if you need to reference input type of components (use furo-ui5-label).\n\n### Responsive behavior\n\nThe `furo-ui5-text` component is fully adaptive to all screen sizes.\nBy default, the text will wrap when the space is not enough.\nIn addition, the component supports truncation via the `max-lines` property,\nby defining the number of lines the text should wrap before start truncating.\n\n\n",
+          "name": "RelativeTimeDisplay",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_formatDisplay",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Computes the relative-time text and tooltip from the current ISO `value`, and applies them to the\ninherited Text (slotted text + `title`)."
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING | Timestamp | INT32 | INT64 | XDate"
+              },
+              "privacy": "private",
+              "default": "new Timestamp()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING | Timestamp | INT32 | INT64 | XDate | undefined",
+                    "references": [
+                      {
+                        "name": "Timestamp",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component. Display-only: the component reads from the model but\nnever writes back."
+            },
+            {
+              "kind": "field",
+              "name": "dateAndTimeReaderWriters",
+              "type": {
+                "text": "DateAndTimeReaderWriters<FuroUi5RelativeTimeDisplay> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "emptyIndicatorMode",
+              "type": {
+                "text": "TextEmptyIndicatorMode",
+                "references": [
+                  {
+                    "name": "TextEmptyIndicatorMode",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/TextEmptyIndicatorMode.js"
+                  }
+                ]
+              },
+              "default": "\"Off\"",
+              "description": "Specifies if an empty indicator should be displayed when there is no text.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Text",
+                "module": "dist/Text.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hidden",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true"
+            },
+            {
+              "kind": "field",
+              "name": "maxLines",
+              "type": {
+                "text": "number"
+              },
+              "default": "Infinity",
+              "description": "Defines the number of lines the text should wrap before it truncates.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Text",
+                "module": "dist/Text.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING | Timestamp | INT32 | INT64 | XDate",
+                "references": [
+                  {
+                    "name": "STRING",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "INT32",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "INT64",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "Timestamp",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "XDate",
+                    "package": "@/models",
+                    "module": "google/type/Date"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a model field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "optionNumeric",
+              "type": {
+                "text": "\"always\" | \"auto\""
+              },
+              "privacy": "public",
+              "default": "\"auto\"",
+              "description": "The output format of the relative time: `always` or `auto`. Default: `auto`."
+            },
+            {
+              "kind": "field",
+              "name": "optionStyle",
+              "type": {
+                "text": "\"long\" | \"short\" | \"narrow\""
+              },
+              "privacy": "public",
+              "default": "\"long\"",
+              "description": "The output style of the relative time: `long`, `short` or `narrow`. Default: `long`."
+            },
+            {
+              "kind": "field",
+              "name": "readFromModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"\"",
+              "description": "The bound value, as a canonical ISO 8601 string. Populated by the reader from the bound model."
+            }
+          ],
+          "superclass": {
+            "name": "Text",
+            "package": "@ui5/webcomponents",
+            "module": "dist/Text.js"
+          },
+          "tagName": "furo-ui5-relative-time-display",
+          "customElement": true,
+          "summary": "bindable, display-only relative time text",
+          "slots": [
+            {
+              "name": "default",
+              "description": "Defines the text of the component.",
+              "inheritedFrom": {
+                "name": "Text",
+                "module": "dist/Text.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Specifies if an empty indicator should be displayed when there is no text.",
+              "name": "empty-indicator-mode",
+              "default": "\"Off\"",
+              "fieldName": "emptyIndicatorMode",
+              "type": {
+                "text": "\"On\" | \"Off\""
+              },
+              "inheritedFrom": {
+                "name": "Text",
+                "module": "dist/Text.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the number of lines the text should wrap before it truncates.",
+              "name": "max-lines",
+              "default": "Infinity",
+              "fieldName": "maxLines",
+              "type": {
+                "text": "number"
+              },
+              "inheritedFrom": {
+                "name": "Text",
+                "module": "dist/Text.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5RelativeTimeDisplay",
+          "declaration": {
+            "name": "FuroUi5RelativeTimeDisplay",
+            "module": "src/elements/relative-time-display/FuroUi5RelativeTimeDisplay.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/relative-time-display/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/elements/responsive-popover/FuroUi5ResponsivePopover.js",
       "declarations": [
         {

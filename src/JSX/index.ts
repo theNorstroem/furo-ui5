@@ -29,6 +29,8 @@ import "./PrettyJson";
 import "./ProgressIndicator";
 import "./RadioButton";
 import "./RatingIndicator";
+import "./RelativeTimeBadge";
+import "./RelativeTimeDisplay";
 import "./ResponsivePopover";
 import "./Section";
 import "./SelectEnum";

@@ -8,6 +8,8 @@ export * from "@/elements/date-time-picker/FuroUi5DateTimePicker";
 export * from "@/elements/header-panel/FuroUi5HeaderPanel";
 export * from "@/elements/icon/FuroUi5Icon";
 export * from "@/elements/popover/FuroUi5Popover";
+export * from "@/elements/relative-time-badge/FuroUi5RelativeTimeBadge";
+export * from "@/elements/relative-time-display/FuroUi5RelativeTimeDisplay";
 export * from "@/elements/responsive-popover/FuroUi5ResponsivePopover";
 export * from "@/elements/show-hide/FuroUi5ShowHide";
 export * from "@/elements/table-toolbar-separator/FuroUi5TableToolbarSeparator";
