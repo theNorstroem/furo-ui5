@@ -17,6 +17,7 @@ export * from "@/elements/table-toolbar-separator/FuroUi5TableToolbarSeparator";
 export * from "@/elements/text-input/FuroUi5TextInput";
 export * from "@/elements/time-picker/FuroUi5TimePicker";
 export * from "@/elements/user-menu/FuroUi5UserMenu";
+export * from "@/type-renderers";
 export * from "./lib/open-models/signatures";
 export { type InputSelectionChangeEventDetail, type InputSuggestionScrollEventDetail } from "@ui5/webcomponents/dist/Input.js";
 export { type LinkClickEventDetail } from "@ui5/webcomponents/dist/Link.js";

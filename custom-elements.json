@@ -6934,7 +6934,7 @@
               "kind": "field",
               "name": "headingLevel",
               "type": {
-                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "privacy": "public",
               "default": "\"H5\"",
@@ -6968,7 +6968,7 @@
             {
               "name": "heading-level",
               "type": {
-                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "default": "\"H5\"",
               "description": "Level for the heading.",
@@ -26635,6 +26635,111 @@
           "declaration": {
             "name": "FuroUi5ZGrid",
             "module": "/src/elements/z-grid/FuroUi5ZGrid"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-int64/CellInt64.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-int64`\nThe cell-int64 component displays a FieldNode of type `int64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellInt64",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "INT64"
+              },
+              "privacy": "private",
+              "default": "new INT64()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "INT64 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "INT64"
+              }
+            }
+          ],
+          "tagName": "cell-int64",
+          "customElement": true,
+          "summary": "cell display renderer for `int64`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellInt64",
+          "declaration": {
+            "name": "CellInt64",
+            "module": "src/type-renderers/cell-int64/CellInt64.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-int64/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-int64",
+          "declaration": {
+            "name": "CellInt64",
+            "module": "/src/type-renderers/cell-int64/CellInt64"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-int64/CellInt64"
           }
         }
       ]

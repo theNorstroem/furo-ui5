@@ -169,6 +169,8 @@ declare module "react" {
        * </furo-furo-furo-ui5-combobox>
        * ```
        *
+       * ---
+       *
        * ### Overview
        *
        * The `furo-furo-ui5-combobox` component represents a drop-down menu with a list of the available options and a text input field to narrow down the options.

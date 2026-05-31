@@ -19,7 +19,7 @@ export default tseslint.config(
       ".agents/**",
       "dist/**",
       "node_modules/**",
-      "src/type-renderers/**",
+      "src/type-renderers-wip/**", // WIP renderers — not yet ported to strict TS
       "src/x/models/**", // Generated protobuf models
     ],
   },
