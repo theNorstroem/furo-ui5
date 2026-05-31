@@ -6934,7 +6934,7 @@
               "kind": "field",
               "name": "headingLevel",
               "type": {
-                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "privacy": "public",
               "default": "\"H5\"",
@@ -6968,7 +6968,7 @@
             {
               "name": "heading-level",
               "type": {
-                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "default": "\"H5\"",
               "description": "Level for the heading.",
@@ -27091,6 +27091,96 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-float/CellFuroFatFloat.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-furo-fat-float`\nThe cell-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellFuroFatFloat",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatFloat"
+              },
+              "privacy": "private",
+              "default": "new FuroFatFloat()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatFloat | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatFloat"
+              }
+            }
+          ],
+          "tagName": "cell-furo-fat-float",
+          "customElement": true,
+          "summary": "cell display renderer for `furo.fat.Float`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellFuroFatFloat",
+          "declaration": {
+            "name": "CellFuroFatFloat",
+            "module": "src/type-renderers/cell-furo-fat-float/CellFuroFatFloat.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-float/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-furo-fat-float",
+          "declaration": {
+            "name": "CellFuroFatFloat",
+            "module": "/src/type-renderers/cell-furo-fat-float/CellFuroFatFloat"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/type-renderers/cell-furo-fat-int32/CellFuroFatInt32.js",
       "declarations": [
         {
@@ -27355,6 +27445,96 @@
           "declaration": {
             "name": "CellGoogleProtobufDoublevalue",
             "module": "/src/type-renderers/cell-google-protobuf-doublevalue/CellGoogleProtobufDoublevalue"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-floatvalue/CellGoogleProtobufFloatvalue.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-google-protobuf-floatvalue`\nThe cell-google-protobuf-floatvalue component displays a FieldNode of type\n`google.protobuf.FloatValue` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellGoogleProtobufFloatvalue",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FloatValue"
+              },
+              "privacy": "private",
+              "default": "new FloatValue()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FloatValue | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FloatValue"
+              }
+            }
+          ],
+          "tagName": "cell-google-protobuf-floatvalue",
+          "customElement": true,
+          "summary": "cell display renderer for `google.protobuf.FloatValue`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellGoogleProtobufFloatvalue",
+          "declaration": {
+            "name": "CellGoogleProtobufFloatvalue",
+            "module": "src/type-renderers/cell-google-protobuf-floatvalue/CellGoogleProtobufFloatvalue.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-floatvalue/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-google-protobuf-floatvalue",
+          "declaration": {
+            "name": "CellGoogleProtobufFloatvalue",
+            "module": "/src/type-renderers/cell-google-protobuf-floatvalue/CellGoogleProtobufFloatvalue"
           }
         }
       ]
@@ -27949,6 +28129,14 @@
           "name": "*",
           "declaration": {
             "name": "*",
+            "module": "src/type-renderers/cell-furo-fat-float/CellFuroFatFloat"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
             "module": "src/type-renderers/cell-furo-fat-int32/CellFuroFatInt32"
           }
         },
@@ -27966,6 +28154,14 @@
           "declaration": {
             "name": "*",
             "module": "src/type-renderers/cell-google-protobuf-doublevalue/CellGoogleProtobufDoublevalue"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-google-protobuf-floatvalue/CellGoogleProtobufFloatvalue"
           }
         },
         {
