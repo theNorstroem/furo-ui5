@@ -3,7 +3,7 @@ import React from "react";
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-import { Primary,  Subtitle, Title,Controls } from "@storybook/addon-docs/blocks";
+import { Primary,  Subtitle, Title,Controls, Source } from "@storybook/addon-docs/blocks";
 import {getCustomElements } from "@storybook/web-components-vite";
 
 
@@ -78,7 +78,20 @@ const DocumentationTemplate = (args: DocsPageArgs) => {
 
 
       <Subtitle />
-      <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
+      <Markdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          pre: ({ children }) => <>{children}</>,
+          code({ className, children, ...rest }) {
+            const m = /language-(\w+)/.exec(className || "");
+            return m ? (
+              <Source dark language={m[1]} code={String(children).replace(/\n$/, "")} />
+            ) : (
+              <code className={className} {...rest}>{children}</code>
+            );
+          },
+        }}
+      >{markdown}</Markdown>
       <br />
       <Primary />
 <Controls />

@@ -1,0 +1,69 @@
+syntax = "proto3";
+package furoui5test;
+
+
+option go_package = "github.com/theNorstroem/furo-ui5/gen/go/furoui5test;furoui5testpb";
+option java_multiple_files = true;
+option java_package = "pro.furoui5";
+
+import "google/protobuf/any.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+import "google/type/date.proto";
+import "google/type/money.proto";
+import "google/type/timeofday.proto";
+import "furo/fat/fat.proto";
+import "furo/property.proto";
+import "furo/type/type.proto";
+import "openapiv3/annotations.proto";
+
+message AllTypesTest{
+  bool primitive_bool = 1 [(openapi.v3.property) = {default: {boolean: true}}];
+  float primitive_float = 2 [(openapi.v3.property) = {default: {number: 22.123}}];
+  double primitive_double = 3 [(openapi.v3.property) = {default: {number: 22.123}}];
+  int32 primitive_int32 = 4 [(openapi.v3.property) = {default: {number: 37}}];
+  int64 primitive_int64 = 5  [(openapi.v3.property) = {default: {string: "33223"}}];
+  string primitive_string = 6 [(openapi.v3.property) = {default: {string: "primitive string"}}];
+  uint32 primitive_uint32 = 7 [(openapi.v3.property) = {default: {number: 37}}];
+  uint64 primitive_uint64 = 8  [(openapi.v3.property) = {default: {string: "33223"}}];
+
+
+  // FAT types (furo.fat.*) — value lives in the `value` sub-field
+  furo.fat.Bool   furo_fat_bool   = 9  [(openapi.v3.property) = {default: {string: '{"value":true}'}}];
+  furo.fat.Double furo_fat_double = 10 [(openapi.v3.property) = {default: {string: '{"value":22.123}'}}];
+  furo.fat.Float  furo_fat_float  = 11 [(openapi.v3.property) = {default: {string: '{"value":22.123}'}}];
+  furo.fat.Int32  furo_fat_int32  = 12 [(openapi.v3.property) = {default: {string: '{"value":37}'}}];
+  furo.fat.Int64  furo_fat_int64  = 13 [(openapi.v3.property) = {default: {string: '{"value":"433223"}'}}];
+  furo.fat.String furo_fat_string = 14 [(openapi.v3.property) = {default: {string: '{"value":"fat string"}'}}];
+  furo.fat.Uint32 furo_fat_uint32 = 15 [(openapi.v3.property) = {default: {string: '{"value":37}'}}];
+  furo.fat.Uint64 furo_fat_uint64 = 16 [(openapi.v3.property) = {default: {string: '{"value":"333223"}'}}];
+
+  // furo property types (package furo / furo.type)
+  furo.IntegerProperty      furo_integerproperty      = 17 [(openapi.v3.property) = {default: {string: '{"data":37}'}}];
+  furo.NumberProperty       furo_numberproperty       = 18 [(openapi.v3.property) = {default: {string: '{"data":22.123}'}}];
+  furo.Property             furo_property             = 19 [(openapi.v3.property) = {default: {string: '{"id":"prop-1","displayName":"Property One"}'}}];
+  repeated furo.Property    furo_property_repeated    = 20;
+  furo.StringOptionProperty furo_stringoptionproperty = 21 [(openapi.v3.property) = {default: {string: '{"id":"opt-1","displayName":"Option One"}'}}];
+  furo.StringProperty       furo_stringproperty       = 22 [(openapi.v3.property) = {default: {string: '{"data":"string property"}'}}];
+  furo.type.Date            furo_type_date            = 23 [(openapi.v3.property) = {default: {string: '{"year":2026,"month":5,"day":31,"displayName":"2026-05-31"}'}}];
+  furo.type.Money           furo_type_money           = 24 [(openapi.v3.property) = {default: {string: '{"currencyCode":"EUR","units":42,"nanos":500000000,"displayName":"42.50 EUR"}'}}];
+
+  // google.protobuf wrappers — value in `value` sub-field
+  google.protobuf.BoolValue   google_protobuf_boolvalue   = 25 [(openapi.v3.property) = {default: {string: '{"value":true}'}}];
+  google.protobuf.DoubleValue google_protobuf_doublevalue = 26 [(openapi.v3.property) = {default: {string: '{"value":22.123}'}}];
+  google.protobuf.FloatValue  google_protobuf_floatvalue  = 27 [(openapi.v3.property) = {default: {string: '{"value":22.123}'}}];
+  google.protobuf.Int32Value  google_protobuf_int32value  = 28 [(openapi.v3.property) = {default: {number: 23}}];
+  google.protobuf.Int64Value  google_protobuf_int64value  = 29 [(openapi.v3.property) = {default: {string: "2323332"}}];
+  google.protobuf.StringValue google_protobuf_stringvalue = 30 [(openapi.v3.property) = {default: {string: '{"value":"wrapped string"}'}}];
+  google.protobuf.UInt32Value google_protobuf_uint32value = 31 [(openapi.v3.property) = {default: {number: 23}}];
+  google.protobuf.UInt64Value google_protobuf_uint64value = 32 [(openapi.v3.property) = {default: {string: '443232323'}}];
+
+  // google.protobuf core
+  google.protobuf.Any       google_protobuf_any       = 33;  // no meaningful default
+  google.protobuf.Timestamp google_protobuf_timestamp = 34 [(openapi.v3.property) = {default: {string: "2026-05-31T08:30:00Z"}}];
+
+  // google.type
+  google.type.Date      google_type_date      = 35 [(openapi.v3.property) = {default: {string: '{"year":2026,"month":5,"day":31}'}}];
+  google.type.Money     google_type_money     = 36 [(openapi.v3.property) = {default: {string: '{"currencyCode":"EUR","units":42,"nanos":500000000}'}}];
+  google.type.TimeOfDay google_type_timeofday = 37 [(openapi.v3.property) = {default: {string: '{"hours":8,"minutes":30,"seconds":0}'}}];
+}

@@ -35,6 +35,7 @@ import { FuroFatString } from "@/models";
  * </furo-ui5-combobox>
  * ```
  *
+ * ---
  *
  * @tagname furo-ui5-combobox
  * @demo demo-furo-ui5-combobox Basic usage (scalar , fat, wrapper values)
