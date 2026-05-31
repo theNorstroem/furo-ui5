@@ -1,0 +1,105 @@
+import { Env } from "@furo/framework/src/furo.js";
+import { LitElement, html, css } from "lit";
+import { state } from "lit/decorators.js";
+
+import { Timestamp } from "@/models/google/protobuf/Timestamp";
+
+/**
+ * `cell-google-protobuf-timestamp`
+ * The cell-google-protobuf-timestamp component displays a FieldNode of type
+ * `google.protobuf.Timestamp` in read only mode.
+ *
+ * The component uses locale from the environment to display the date/time value accordingly.
+ * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
+ *
+ * Every cell-xxx component should implement the following API:
+ * - function: bindData(fieldNode){...}
+ *
+ * @summary cell display renderer for `google.protobuf.Timestamp`
+ * @element cell-google-protobuf-timestamp
+ */
+export class CellGoogleProtobufTimestamp extends LitElement {
+
+  @state()
+  private displayValue = "";
+
+  private _model: Timestamp = new Timestamp();
+
+  get model(): Timestamp {
+    return this._model;
+  }
+
+  set model(value: Timestamp) {
+    this.bindData(value);
+  }
+
+  static override get styles() {
+    // language=CSS
+    return css`
+      :host {
+        display: block;
+        white-space: nowrap;
+      }
+
+      :host([hidden]) {
+        display: none;
+      }
+
+      :host([disabled]) {
+        opacity: var(--_ui5_input_disabled_opacity, 0.4);
+      }
+    `;
+  }
+
+  override disconnectedCallback(): void {
+    super.disconnectedCallback();
+    this._model.__removeEventListener("update", this._formatCell);
+  }
+
+  /**
+   * Binds a field node to the component
+   * @param fieldNode
+   * @public
+   */
+  bindData(fieldNode: Timestamp | undefined): void {
+    if (fieldNode === undefined || fieldNode === this._model) {
+      return;
+    }
+
+    // swap listeners from the old field node to the new one
+    this._model.__removeEventListener("update", this._formatCell);
+    this._model = fieldNode;
+    this._model.__addEventListener("update", this._formatCell);
+
+    // initial read
+    this._formatCell();
+  }
+
+  /**
+   * @private
+   */
+  private _formatCell = (): void => {
+    const seconds = this._model.seconds.value;
+    const nanos = this._model.nanos.value;
+    const date = new Date(Number(seconds) * 1000 + nanos / 1e6);
+    if (!Number.isNaN(date.getTime())) {
+      this.displayValue = new Intl.DateTimeFormat([Env.locale, "de-CH"], {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      }).format(date);
+    }
+  };
+
+  /**
+   * render function
+   * @private
+   */
+  override render() {
+    // language=HTML
+    return html` ${this.displayValue} `;
+  }
+}

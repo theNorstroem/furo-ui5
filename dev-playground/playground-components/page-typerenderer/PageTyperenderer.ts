@@ -31,6 +31,16 @@ import "@/type-renderers/cell-furo-fat-uint64";
 import "@/type-renderers/cell-google-protobuf-uint64value";
 import "@/type-renderers/cell-furo-fat-int32";
 import "@/type-renderers/cell-google-protobuf-int32value";
+import "@/type-renderers/cell-furo-integerproperty";
+import "@/type-renderers/cell-furo-numberproperty";
+import "@/type-renderers/cell-furo-stringproperty";
+import "@/type-renderers/cell-furo-stringoptionproperty";
+import "@/type-renderers/cell-google-type-date";
+import "@/type-renderers/cell-furo-type-date";
+import "@/type-renderers/cell-google-type-money";
+import "@/type-renderers/cell-furo-type-money";
+import "@/type-renderers/cell-google-type-timeofday";
+import "@/type-renderers/cell-google-protobuf-timestamp";
 
 import {AllTypesTest} from "@/models/furoui5test/AllTypesTest"
 import "@/elements/section";
@@ -222,6 +232,60 @@ export class PageTyperenderer extends LitElement {
           <furo-ui5-text-input .model="${this.data.googleProtobufStringvalue}"></furo-ui5-text-input>
           <cell-google-protobuf-stringvalue .model="${this.data.googleProtobufStringvalue}"></cell-google-protobuf-stringvalue>
           <cell-google-protobuf-stringvalue .model="${this.data.googleProtobufStringvalue}"></cell-google-protobuf-stringvalue>
+        </furo-ui5-subsection>
+      </furo-ui5-section>
+
+      <furo-ui5-section heading="Property">
+        <furo-ui5-subsection heading="furo.IntegerProperty">
+          <cell-furo-integerproperty .model="${this.data.furoIntegerproperty}"></cell-furo-integerproperty>
+          <cell-furo-integerproperty .model="${this.data.furoIntegerproperty}"></cell-furo-integerproperty>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="furo.NumberProperty">
+          <cell-furo-numberproperty .model="${this.data.furoNumberproperty}"></cell-furo-numberproperty>
+          <cell-furo-numberproperty .model="${this.data.furoNumberproperty}"></cell-furo-numberproperty>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="furo.StringProperty">
+          <cell-furo-stringproperty .model="${this.data.furoStringproperty}"></cell-furo-stringproperty>
+          <cell-furo-stringproperty .model="${this.data.furoStringproperty}"></cell-furo-stringproperty>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="furo.StringOptionProperty">
+          <cell-furo-stringoptionproperty .model="${this.data.furoStringoptionproperty}"></cell-furo-stringoptionproperty>
+          <cell-furo-stringoptionproperty .model="${this.data.furoStringoptionproperty}"></cell-furo-stringoptionproperty>
+        </furo-ui5-subsection>
+      </furo-ui5-section>
+
+      <furo-ui5-section heading="Date / Time / Money">
+        <furo-ui5-subsection heading="google.type.Date">
+          <cell-google-type-date .model="${this.data.googleTypeDate}"></cell-google-type-date>
+          <cell-google-type-date .model="${this.data.googleTypeDate}"></cell-google-type-date>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="furo.type.Date">
+          <cell-furo-type-date .model="${this.data.furoTypeDate}"></cell-furo-type-date>
+          <cell-furo-type-date .model="${this.data.furoTypeDate}"></cell-furo-type-date>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="google.protobuf.Timestamp">
+          <cell-google-protobuf-timestamp .model="${this.data.googleProtobufTimestamp}"></cell-google-protobuf-timestamp>
+          <cell-google-protobuf-timestamp .model="${this.data.googleProtobufTimestamp}"></cell-google-protobuf-timestamp>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="google.type.TimeOfDay">
+          <cell-google-type-timeofday .model="${this.data.googleTypeTimeofday}"></cell-google-type-timeofday>
+          <cell-google-type-timeofday .model="${this.data.googleTypeTimeofday}"></cell-google-type-timeofday>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="google.type.Money">
+          <cell-google-type-money .model="${this.data.googleTypeMoney}"></cell-google-type-money>
+          <cell-google-type-money .model="${this.data.googleTypeMoney}"></cell-google-type-money>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="furo.type.Money">
+          <cell-furo-type-money .model="${this.data.furoTypeMoney}"></cell-furo-type-money>
+          <cell-furo-type-money .model="${this.data.furoTypeMoney}"></cell-furo-type-money>
         </furo-ui5-subsection>
       </furo-ui5-section>
     </furo-vertical-flex>`;

@@ -5,20 +5,10 @@
 
 // cell
 export * from "./cell-furo-bigdecimal/CellFuroBigdecimal";
-export * from "./cell-furo-integerproperty/CellFuroIntegerproperty";
-export * from "./cell-furo-numberproperty/CellFuroNumberproperty";
 export * from "./cell-furo-property/CellFuroProperty";
 export * from "./cell-furo-property-repeated/CellFuroPropertyRepeated";
-export * from "./cell-furo-stringoptionproperty/CellFuroStringoptionproperty";
-export * from "./cell-furo-stringproperty/CellFuroStringproperty";
-export * from "./cell-furo-type-date/CellFuroTypeDate";
-export * from "./cell-furo-type-money/CellFuroTypeMoney";
 export * from "./cell-google-protobuf-any/CellGoogleProtobufAny";
-export * from "./cell-google-protobuf-timestamp/CellGoogleProtobufTimestamp";
 export * from "./cell-google-type-color/CellGoogleTypeColor";
-export * from "./cell-google-type-date/CellGoogleTypeDate";
-export * from "./cell-google-type-money/CellGoogleTypeMoney";
-export * from "./cell-google-type-timeofday/CellGoogleTypeTimeofday";
 
 // celledit
 export * from "./celledit-bool/CelleditBool";
