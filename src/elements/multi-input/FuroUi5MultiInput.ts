@@ -96,7 +96,7 @@ export class FuroUi5MultiInput extends MultiInput {
     /**
      * remove existing listeners
      * - from readonly watcher
-     * - from model: "array-changed", "field-value-changed"
+     * - from model: "array-changed", "update"
      * - from ui: change, token-delete
      */
     this.readonlyState.detach();
@@ -148,12 +148,12 @@ export class FuroUi5MultiInput extends MultiInput {
 
   private attachModelListeners() {
     this._model.__addEventListener("array-changed", this.readFromModel);
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
   }
 
   private detachModelListeners() {
     this._model.__removeEventListener("array-changed", this.readFromModel);
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
   }
 
   /**
@@ -182,7 +182,7 @@ export class FuroUi5MultiInput extends MultiInput {
 
   /**
    * Commits the typed value as a new array element (UI → model). Model listeners are
-   * detached around the mutation so the `array-changed` / `field-value-changed` events
+   * detached around the mutation so the `array-changed` / `update` events
    * it emits don't trigger a cascade of rebuilds — we rebuild once, explicitly.
    */
   private writeToModel = (): void => {

@@ -1,20 +1,37 @@
+import { BoolValue } from "@furo/open-models";
 import { LitElement, html, css } from "lit";
+import { state } from "lit/decorators.js";
 
 import "@ui5/webcomponents/dist/Icon.js";
 import "@ui5/webcomponents-icons/dist/accept.js";
 import "@ui5/webcomponents-icons/dist/border.js";
 
 /**
- * `cell-bool`
- * The cell-bool component displays a FieldNode of type `bool` in read only mode.
+ * `cell-google-protobuf-boolvalue`
+ * The cell-google-protobuf-boolvalue component displays a FieldNode of type
+ * `google.protobuf.BoolValue` in read only mode.
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
  *
- * @summary cell display renderer for `bool`
- * @element cell-bool
+ * @summary cell display renderer for `google.protobuf.BoolValue`
+ * @element cell-google-protobuf-boolvalue
  */
-export class CellBool extends LitElement {
+export class CellGoogleProtobufBoolvalue extends LitElement {
+
+  @state()
+  private checked = false;
+
+  private _model: BoolValue = new BoolValue();
+
+  get model(): BoolValue {
+    return this._model;
+  }
+
+  set model(value: BoolValue) {
+    this.bindData(value);
+  }
+
   static override get styles() {
     // language=CSS
     return css`
@@ -55,44 +72,47 @@ export class CellBool extends LitElement {
     `;
   }
 
-  /**
-   * Binds a field node to the component
-   * @param {FieldNode} fieldNode of type bool, furo.fat.Bool, google.wrapper.BoolValue
-   */
-  bindData(fieldNode) {
-    this._field = fieldNode;
-    if (this._field) {
-      this._field.addEventListener("field-value-changed", () => {
-        this.requestUpdate();
-      });
-      this.requestUpdate();
-    }
+  override disconnectedCallback(): void {
+    super.disconnectedCallback();
+    this._model.__removeEventListener("update", this._readValue);
   }
 
   /**
-   * Template logic
-   * @returns {*}
+   * Binds a field node to the component
+   * @param fieldNode
+   * @public
+   */
+  bindData(fieldNode: BoolValue | undefined): void {
+    if (fieldNode === undefined || fieldNode === this._model) {
+      return;
+    }
+
+    // swap listeners from the old field node to the new one
+    this._model.__removeEventListener("update", this._readValue);
+    this._model = fieldNode;
+    this._model.__addEventListener("update", this._readValue);
+
+    // initial read
+    this._readValue();
+  }
+
+  /**
    * @private
    */
-  _getTemplate() {
-    let tmpl = "";
-    if (this._field) {
-      if (!this._field._value || this._field._value === "false") {
-        tmpl = html` <ui5-icon name="border"></ui5-icon> `;
-      } else {
-        tmpl = html` <ui5-icon name="accept"></ui5-icon> `;
-      }
-    }
-    return tmpl;
-  }
+  private _readValue = (): void => {
+    this.checked = this._model.value;
+  };
 
   /**
    * render function
    * @private
-   * @returns {TemplateResult|TemplateResult}
    */
-  render() {
+  override render() {
     // language=HTML
-    return html` ${this._getTemplate()} `;
+    return html`
+      ${this.checked
+        ? html` <ui5-icon name="accept" value-state="Success"></ui5-icon> `
+        : html` <ui5-icon name="border"></ui5-icon> `}
+    `;
   }
 }

@@ -184,7 +184,7 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
     });
 
     // listen to open close state
-    this.fieldNode.open.addEventListener('field-value-changed', e => {
+    this.fieldNode.open.addEventListener('update', e => {
       e.cancelBubble = true;
       if (e.detail._value === false) {
         e.detail.__parentNode.children.broadcastEvent(
@@ -237,7 +237,7 @@ export class FuroUi5TreeItem extends FBP(LitElement) {
     this.__addSearchListeners();
 
     // This item is  in the search results
-    this.fieldNode.addEventListener('field-value-changed', () => {
+    this.fieldNode.addEventListener('update', () => {
       this.requestUpdate();
     });
   }

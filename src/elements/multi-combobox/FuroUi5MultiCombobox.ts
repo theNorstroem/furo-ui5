@@ -74,11 +74,11 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     /**
      * remove existing listeners
      * - from readonly watcher
-     * - from model: "this-field-value-changed",listenToStateChanged
+     * - from model: "this-update",listenToStateChanged
      * - from ui: input, change
      */
     this.readonlyState.detach();
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
     this.removeEventListener("selection-change", this.writeToModel);
 
     // connect the model
@@ -90,7 +90,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
 
     // listen on changes from UI
     this.addEventListener("selection-change", this.writeToModel);
@@ -151,7 +151,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     /**
      * remove existing listeners
      * - from readonly watcher
-     * - from model: "this-field-value-changed",listenToStateChanged
+     * - from model: "this-update",listenToStateChanged
      * - from ui: input, change
      */
 
@@ -321,7 +321,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     // Prevent feedback loop: detach the model listener around the mutation,
     // then re-attach. The UI is already in the correct selected state, so
     // re-running setSelectedItems() via readFromModel would be redundant.
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
     this._model.__clear();
 
     ids.forEach((id) => {
@@ -339,7 +339,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
       }
     });
 
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
   }
 
   /**

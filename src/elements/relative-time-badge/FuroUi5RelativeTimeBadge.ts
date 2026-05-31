@@ -96,7 +96,7 @@ export class FuroUi5RelativeTimeBadge extends Tag {
     }
 
     // remove the listener from the previous model
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
@@ -104,7 +104,7 @@ export class FuroUi5RelativeTimeBadge extends Tag {
     this.modelReaderWriter = new ModelReaderWriter(this._model, this.dateAndTimeReaderWriters.getWriters(), this.dateAndTimeReaderWriters.getReaders());
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
 
     // initial read
     this.readFromModel();

@@ -245,7 +245,7 @@ describe("FuroUi5ShowHide", () => {
 
   // ───────────────────────────────────────────────────────────────────────
   // [TEMPLATE] Lifecycle — disconnecting the element must stop reacting to
-  // subsequent model mutations (the field-value-changed listener registered
+  // subsequent model mutations (the update listener registered
   // in bindData should not leave the element in a broken state).
   // ───────────────────────────────────────────────────────────────────────
   describe("lifecycle [TEMPLATE]", () => {

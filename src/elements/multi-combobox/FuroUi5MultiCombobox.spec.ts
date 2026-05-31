@@ -186,7 +186,7 @@ describe("FuroUi5MultiCombobox", () => {
   // The multi-combobox listens for `selection-change` and pushes the ids of
   // the currently-selected items in `event.detail.items` back into the bound
   // array. The model is cleared first, then rebuilt — listener detach/re-attach
-  // around the mutation prevents the field-value-changed → setSelectedItems
+  // around the mutation prevents the update → setSelectedItems
   // feedback loop.
   // ───────────────────────────────────────────────────────────────────────
   describe("UI → model value sync [TEMPLATE]", () => {

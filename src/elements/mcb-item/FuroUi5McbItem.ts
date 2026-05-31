@@ -50,17 +50,17 @@ export class FuroUi5McbItem extends MultiComboBoxItem {
     /**
      * remove existing listeners
      * - from readonly watcher
-     * - from model: "this-field-value-changed",listenToStateChanged
+     * - from model: "this-update",listenToStateChanged
      * - from ui: input, change
      */
 
-    this._model?.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model?.__removeEventListener("update", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
 
     // initial read
     this.readFromModel();

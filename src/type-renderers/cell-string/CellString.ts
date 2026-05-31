@@ -1,5 +1,8 @@
+import { STRING } from "@furo/open-models";
 import { LitElement, html, css } from "lit";
-import { nl2br } from "@/impl/directives/nl2br";
+import { state } from "lit/decorators.js";
+
+import { nl2br } from "@/directives/nl2br";
 
 /**
  * `cell-string`
@@ -12,7 +15,21 @@ import { nl2br } from "@/impl/directives/nl2br";
  * @element cell-string
  */
 export class CellString extends LitElement {
-  static get styles() {
+
+  @state()
+  private displayValue = "";
+
+  private _model: STRING = new STRING();
+
+  get model(): STRING {
+    return this._model;
+  }
+
+  set model(value: STRING) {
+    this.bindData(value);
+  }
+
+  static override get styles() {
     // language=CSS
     return css`
       :host {
@@ -36,14 +53,17 @@ export class CellString extends LitElement {
       :host([value-state="Success"]) {
         color: var(--sapPositiveColor, #107e3e);
       }
+
       :host([value-state="Informative"]),
       :host([value-state="Information"]) {
         color: var(--sapInformativeColor, #0a6ed1);
       }
+
       :host([value-state="Negative"]),
       :host([value-state="Error"]) {
         color: var(--sapNegativeColor, #b00);
       }
+
       :host([value-state="Critical"]),
       :host([value-state="Warning"]) {
         color: var(--sapCrticalColor, #e9730c);
@@ -51,28 +71,43 @@ export class CellString extends LitElement {
     `;
   }
 
+  override disconnectedCallback(): void {
+    super.disconnectedCallback();
+    this._model.__removeEventListener("update", this._readValue);
+  }
+
   /**
    * Binds a field node to the component
-   * @param {FieldNode} fieldNode
+   * @param fieldNode
+   * @public
    */
-  bindData(fieldNode) {
-    this._field = fieldNode;
-    if (this._field) {
-      this._field.addEventListener("field-value-changed", () => {
-        this.requestUpdate();
-      });
-
-      this.requestUpdate();
+  bindData(fieldNode: STRING | undefined): void {
+    if (fieldNode === undefined || fieldNode === this._model) {
+      return;
     }
+
+    // swap listeners from the old field node to the new one
+    this._model.__removeEventListener("update", this._readValue);
+    this._model = fieldNode;
+    this._model.__addEventListener("update", this._readValue);
+
+    // initial read
+    this._readValue();
   }
+
+  /**
+   * @private
+   */
+  private _readValue = (): void => {
+    this.displayValue = this._model.value;
+  };
 
   /**
    * render function
    * @private
-   * @returns {TemplateResult|TemplateResult}
    */
-  render() {
+  override render() {
     // language=HTML
-    return html` ${this._field ? html` ${nl2br(this._field._value)} ` : html``} `;
+    return html` ${nl2br(this.displayValue)} `;
   }
 }

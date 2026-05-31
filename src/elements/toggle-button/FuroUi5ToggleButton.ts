@@ -83,11 +83,11 @@ export class FuroUi5ToggleButton extends ToggleButton {
     /**
      * remove existing listeners
      * - from readonly watcher
-     * - from model: "field-value-changed", listenToStateChanged
+     * - from model: "update", listenToStateChanged
      * - from ui: click, change
      */
     this.readonlyState.detach();
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
     this.removeEventListener("click", this.writeToModel);
     this.removeEventListener("change", this.writeToModel);
 
@@ -101,7 +101,7 @@ export class FuroUi5ToggleButton extends ToggleButton {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
 
     // listen on changes from UI
     this.addEventListener("click", this.writeToModel);

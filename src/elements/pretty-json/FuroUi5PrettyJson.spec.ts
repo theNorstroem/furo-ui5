@@ -14,7 +14,7 @@
  *   - Display-only element (extends LitElement, not a UI5 input). The
  *     template's UI->model, FAT, readonly, value-state, and field-constraint
  *     blocks have no analogue here and are omitted.
- *   - Custom reader: `bindData` registers a `field-value-changed` listener
+ *   - Custom reader: `bindData` registers a `update` listener
  *     that calls `readFromModel`, which forwards `__toLiteral()` to
  *     `injectData()`.
  *   - The default model is a `STRING("")` constructed in the field
@@ -127,7 +127,7 @@ describe("FuroUi5PrettyJson", () => {
       assert.equal(stringSpan.textContent, '"hello"');
     });
 
-    it("propagates STRING.value changes through field-value-changed", async () => {
+    it("propagates STRING.value changes through update", async () => {
       const model = new STRING();
       el.bindData(model);
       model.value = "world";
@@ -251,7 +251,7 @@ describe("FuroUi5PrettyJson", () => {
   // [element-specific] Lifecycle
   //
   // `FuroUi5PrettyJson.disconnectedCallback` detaches the
-  // `field-value-changed` listener from the currently bound model. After
+  // `update` listener from the currently bound model. After
   // `el.remove()` a subsequent model mutation must NOT trigger `injectData`
   // → `content` state change → Lit re-render of the (now detached) shadow
   // root, mirroring the markdown reference.

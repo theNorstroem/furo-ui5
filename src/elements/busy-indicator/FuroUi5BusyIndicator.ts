@@ -51,7 +51,7 @@ export class FuroUi5BusyIndicator extends BusyIndicator {
     }
 
     // remove existing listeners — display-only, no UI listeners to clean up
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
@@ -60,7 +60,7 @@ export class FuroUi5BusyIndicator extends BusyIndicator {
     this.modelReaderWriter = new ModelReaderWriter(this._model, new Map<string, () => void>(), this.boolReaderWriters.getReaders());
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
 
     // initial read
     this.readFromModel();

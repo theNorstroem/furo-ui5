@@ -4,14 +4,9 @@
 // move its export line into src/type-renderers/index.ts.
 
 // cell
-export * from "./cell-bool/CellBool";
-export * from "./cell-double/CellDouble";
-export * from "./cell-float/CellFloat";
 export * from "./cell-furo-bigdecimal/CellFuroBigdecimal";
-export * from "./cell-furo-fat-bool/CellFuroFatBool";
 export * from "./cell-furo-fat-double/CellFuroFatDouble";
 export * from "./cell-furo-fat-float/CellFuroFatFloat";
-export * from "./cell-furo-fat-int32/CellFuroFatInt32";
 export * from "./cell-furo-fat-int64/CellFuroFatInt64";
 export * from "./cell-furo-fat-string/CellFuroFatString";
 export * from "./cell-furo-fat-uint32/CellFuroFatUint32";
@@ -25,10 +20,8 @@ export * from "./cell-furo-stringproperty/CellFuroStringproperty";
 export * from "./cell-furo-type-date/CellFuroTypeDate";
 export * from "./cell-furo-type-money/CellFuroTypeMoney";
 export * from "./cell-google-protobuf-any/CellGoogleProtobufAny";
-export * from "./cell-google-protobuf-boolvalue/CellGoogleProtobufBoolvalue";
 export * from "./cell-google-protobuf-doublevalue/CellGoogleProtobufDoublevalue";
 export * from "./cell-google-protobuf-floatvalue/CellGoogleProtobufFloatvalue";
-export * from "./cell-google-protobuf-int32value/CellGoogleProtobufInt32value";
 export * from "./cell-google-protobuf-int64value/CellGoogleProtobufInt64value";
 export * from "./cell-google-protobuf-stringvalue/CellGoogleProtobufStringvalue";
 export * from "./cell-google-protobuf-timestamp/CellGoogleProtobufTimestamp";
@@ -38,10 +31,6 @@ export * from "./cell-google-type-color/CellGoogleTypeColor";
 export * from "./cell-google-type-date/CellGoogleTypeDate";
 export * from "./cell-google-type-money/CellGoogleTypeMoney";
 export * from "./cell-google-type-timeofday/CellGoogleTypeTimeofday";
-export * from "./cell-int32/CellInt32";
-export * from "./cell-string/CellString";
-export * from "./cell-uint32/CellUint32";
-export * from "./cell-uint64/CellUint64";
 
 // celledit
 export * from "./celledit-bool/CelleditBool";

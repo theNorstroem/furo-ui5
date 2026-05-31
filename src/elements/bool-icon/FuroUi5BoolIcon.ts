@@ -121,11 +121,11 @@ export class FuroUi5BoolIcon extends LitElement {
     /**
      * remove existing listeners
      * - from readonly watcher
-     * - from model: "field-value-changed", listenToStateChanged
+     * - from model: "update", listenToStateChanged
      * (no UI listeners — click is bound declaratively in the template)
      */
     this.readonlyState.detach();
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
@@ -137,7 +137,7 @@ export class FuroUi5BoolIcon extends LitElement {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
 
     // initial read
     this.readFromModel();

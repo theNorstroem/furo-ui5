@@ -1,34 +1,34 @@
-
 import { Env } from "@furo/framework/src/furo.js";
-import { INT64 } from "@furo/open-models";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
+import { FuroFatInt32 } from "@/models";
+
 /**
- * `cell-int64`
- * The cell-int64 component displays a FieldNode of type `int64` in read only mode.
+ * `cell-furo-fat-int32`
+ * The cell-furo-fat-int32 component displays a FieldNode of type `furo.fat.Int32` in read only mode.
  *
- * The component uses locale from the environment to display the date value accordingly.
+ * The component uses locale from the environment to display the value accordingly.
  * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
  *
- * @summary cell display renderer for `int64`
- * @element cell-int64
+ * @summary cell display renderer for `furo.fat.Int32`
+ * @element cell-furo-fat-int32
  */
-export class CellInt64 extends LitElement {
+export class CellFuroFatInt32 extends LitElement {
 
   @state()
   private displayValue = "";
 
-  private _model: INT64 = new INT64();
+  private _model: FuroFatInt32 = new FuroFatInt32();
 
-  get model(): INT64 {
+  get model(): FuroFatInt32 {
     return this._model;
   }
 
-  set model(value: INT64) {
+  set model(value: FuroFatInt32) {
     this.bindData(value);
   }
 
@@ -86,7 +86,7 @@ export class CellInt64 extends LitElement {
    * @param fieldNode
    * @public
    */
-  bindData(fieldNode: INT64 | undefined): void {
+  bindData(fieldNode: FuroFatInt32 | undefined): void {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -104,7 +104,18 @@ export class CellInt64 extends LitElement {
    * @private
    */
   private _formatCell = (): void => {
-    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._model.value);
+    // apply the value-state attribute (and its message as title) from the fat attributes
+    const valueState = this._model.attributes.get("value-state");
+    if (valueState) {
+      const valueStateName = valueState.toString();
+      this.setAttribute("value-state", valueStateName);
+      const message = this._model.attributes.get("value-state-message");
+      if (valueStateName !== "None" && message) {
+        this.setAttribute("title", message.toString());
+      }
+    }
+
+    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._model.value.value);
     if (displayValue !== "NaN") {
       this.displayValue = displayValue;
     }

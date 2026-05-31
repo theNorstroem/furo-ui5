@@ -194,7 +194,7 @@ export class FuroUi5ContextMenu extends Menu {
   };
 
   /**
-   * Listener attached to the bound model's `array-changed` and `field-value-changed`
+   * Listener attached to the bound model's `array-changed` and `update`
    * events; re-renders the menu items on any change to the model tree.
    * @private
    */
@@ -204,7 +204,7 @@ export class FuroUi5ContextMenu extends Menu {
 
   /**
    * Subscribes `handleModelChanged` to the currently bound `_model`'s `array-changed`
-   * and `field-value-changed` events. No-op when no model is bound.
+   * and `update` events. No-op when no model is bound.
    * @private
    */
   private attachModelListeners(): void {
@@ -212,7 +212,7 @@ export class FuroUi5ContextMenu extends Menu {
       return;
     }
     this._model.__addEventListener("array-changed", this.handleModelChanged);
-    this._model.__addEventListener("field-value-changed", this.handleModelChanged);
+    this._model.__addEventListener("update", this.handleModelChanged);
   }
 
   /**
@@ -225,7 +225,7 @@ export class FuroUi5ContextMenu extends Menu {
       return;
     }
     this._model.__removeEventListener("array-changed", this.handleModelChanged);
-    this._model.__removeEventListener("field-value-changed", this.handleModelChanged);
+    this._model.__removeEventListener("update", this.handleModelChanged);
   }
 
   /**

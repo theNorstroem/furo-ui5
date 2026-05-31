@@ -1,34 +1,33 @@
-
 import { Env } from "@furo/framework/src/furo.js";
-import { INT64 } from "@furo/open-models";
+import { UINT32 } from "@furo/open-models";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
 /**
- * `cell-int64`
- * The cell-int64 component displays a FieldNode of type `int64` in read only mode.
+ * `cell-uint32`
+ * The cell-uint32 component displays a FieldNode of type `uint32` in read only mode.
  *
- * The component uses locale from the environment to display the date value accordingly.
+ * The component uses locale from the environment to display the value accordingly.
  * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
  *
- * @summary cell display renderer for `int64`
- * @element cell-int64
+ * @summary cell display renderer for `uint32`
+ * @element cell-uint32
  */
-export class CellInt64 extends LitElement {
+export class CellUint32 extends LitElement {
 
   @state()
   private displayValue = "";
 
-  private _model: INT64 = new INT64();
+  private _model: UINT32 = new UINT32();
 
-  get model(): INT64 {
+  get model(): UINT32 {
     return this._model;
   }
 
-  set model(value: INT64) {
+  set model(value: UINT32) {
     this.bindData(value);
   }
 
@@ -86,7 +85,7 @@ export class CellInt64 extends LitElement {
    * @param fieldNode
    * @public
    */
-  bindData(fieldNode: INT64 | undefined): void {
+  bindData(fieldNode: UINT32 | undefined): void {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }

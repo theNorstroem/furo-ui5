@@ -3357,7 +3357,7 @@
                   "text": "void"
                 }
               },
-              "description": "Subscribes `handleModelChanged` to the currently bound `_model`'s `array-changed`\nand `field-value-changed` events. No-op when no model is bound."
+              "description": "Subscribes `handleModelChanged` to the currently bound `_model`'s `array-changed`\nand `update` events. No-op when no model is bound."
             },
             {
               "kind": "method",
@@ -3418,7 +3418,7 @@
               "name": "handleModelChanged",
               "privacy": "private",
               "readonly": true,
-              "description": "Listener attached to the bound model's `array-changed` and `field-value-changed`\nevents; re-renders the menu items on any change to the model tree."
+              "description": "Listener attached to the bound model's `array-changed` and `update`\nevents; re-renders the menu items on any change to the model tree."
             },
             {
               "kind": "field",
@@ -10573,7 +10573,7 @@
               "kind": "field",
               "name": "writeToModel",
               "privacy": "private",
-              "description": "Commits the typed value as a new array element (UI → model). Model listeners are\ndetached around the mutation so the `array-changed` / `field-value-changed` events\nit emits don't trigger a cascade of rebuilds — we rebuild once, explicitly."
+              "description": "Commits the typed value as a new array element (UI → model). Model listeners are\ndetached around the mutation so the `array-changed` / `update` events\nit emits don't trigger a cascade of rebuilds — we rebuild once, explicitly."
             }
           ],
           "superclass": {
@@ -26641,6 +26641,726 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-bool/CellBool.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-bool`\nThe cell-bool component displays a FieldNode of type `bool` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellBool",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "BOOLEAN"
+              },
+              "privacy": "private",
+              "default": "new BOOLEAN()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "BOOLEAN | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "BOOLEAN"
+              }
+            }
+          ],
+          "tagName": "cell-bool",
+          "customElement": true,
+          "summary": "cell display renderer for `bool`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellBool",
+          "declaration": {
+            "name": "CellBool",
+            "module": "src/type-renderers/cell-bool/CellBool.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-bool/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-bool",
+          "declaration": {
+            "name": "CellBool",
+            "module": "/src/type-renderers/cell-bool/CellBool"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-double/CellDouble.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-double`\nThe cell-double component displays a FieldNode of type `double` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellDouble",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "DOUBLE"
+              },
+              "privacy": "private",
+              "default": "new DOUBLE()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "DOUBLE | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "DOUBLE"
+              }
+            }
+          ],
+          "tagName": "cell-double",
+          "customElement": true,
+          "summary": "cell display renderer for `double`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellDouble",
+          "declaration": {
+            "name": "CellDouble",
+            "module": "src/type-renderers/cell-double/CellDouble.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-double/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-double",
+          "declaration": {
+            "name": "CellDouble",
+            "module": "/src/type-renderers/cell-double/CellDouble"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-float/CellFloat.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-float`\nThe cell-float component displays a FieldNode of type `float` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellFloat",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FLOAT"
+              },
+              "privacy": "private",
+              "default": "new FLOAT()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FLOAT | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FLOAT"
+              }
+            }
+          ],
+          "tagName": "cell-float",
+          "customElement": true,
+          "summary": "cell display renderer for `float`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellFloat",
+          "declaration": {
+            "name": "CellFloat",
+            "module": "src/type-renderers/cell-float/CellFloat.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-float/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-float",
+          "declaration": {
+            "name": "CellFloat",
+            "module": "/src/type-renderers/cell-float/CellFloat"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-bool/CellFuroFatBool.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-furo-fat-bool`\nThe cell-furo-fat-bool component displays a FieldNode of type `furo.fat.Bool` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellFuroFatBool",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatBool"
+              },
+              "privacy": "private",
+              "default": "new FuroFatBool()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatBool | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatBool"
+              }
+            }
+          ],
+          "tagName": "cell-furo-fat-bool",
+          "customElement": true,
+          "summary": "cell display renderer for `furo.fat.Bool`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellFuroFatBool",
+          "declaration": {
+            "name": "CellFuroFatBool",
+            "module": "src/type-renderers/cell-furo-fat-bool/CellFuroFatBool.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-bool/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-furo-fat-bool",
+          "declaration": {
+            "name": "CellFuroFatBool",
+            "module": "/src/type-renderers/cell-furo-fat-bool/CellFuroFatBool"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-int32/CellFuroFatInt32.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-furo-fat-int32`\nThe cell-furo-fat-int32 component displays a FieldNode of type `furo.fat.Int32` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellFuroFatInt32",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatInt32"
+              },
+              "privacy": "private",
+              "default": "new FuroFatInt32()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatInt32 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatInt32"
+              }
+            }
+          ],
+          "tagName": "cell-furo-fat-int32",
+          "customElement": true,
+          "summary": "cell display renderer for `furo.fat.Int32`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellFuroFatInt32",
+          "declaration": {
+            "name": "CellFuroFatInt32",
+            "module": "src/type-renderers/cell-furo-fat-int32/CellFuroFatInt32.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-int32/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-furo-fat-int32",
+          "declaration": {
+            "name": "CellFuroFatInt32",
+            "module": "/src/type-renderers/cell-furo-fat-int32/CellFuroFatInt32"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-boolvalue/CellGoogleProtobufBoolvalue.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-google-protobuf-boolvalue`\nThe cell-google-protobuf-boolvalue component displays a FieldNode of type\n`google.protobuf.BoolValue` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellGoogleProtobufBoolvalue",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "BoolValue"
+              },
+              "privacy": "private",
+              "default": "new BoolValue()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "BoolValue | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "BoolValue"
+              }
+            }
+          ],
+          "tagName": "cell-google-protobuf-boolvalue",
+          "customElement": true,
+          "summary": "cell display renderer for `google.protobuf.BoolValue`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellGoogleProtobufBoolvalue",
+          "declaration": {
+            "name": "CellGoogleProtobufBoolvalue",
+            "module": "src/type-renderers/cell-google-protobuf-boolvalue/CellGoogleProtobufBoolvalue.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-boolvalue/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-google-protobuf-boolvalue",
+          "declaration": {
+            "name": "CellGoogleProtobufBoolvalue",
+            "module": "/src/type-renderers/cell-google-protobuf-boolvalue/CellGoogleProtobufBoolvalue"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-int32value/CellGoogleProtobufInt32value.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-google-protobuf-int32value`\nThe cell-google-protobuf-int32value component displays a FieldNode of type\n`google.protobuf.Int32Value` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellGoogleProtobufInt32value",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "Int32Value"
+              },
+              "privacy": "private",
+              "default": "new Int32Value()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "Int32Value | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "Int32Value"
+              }
+            }
+          ],
+          "tagName": "cell-google-protobuf-int32value",
+          "customElement": true,
+          "summary": "cell display renderer for `google.protobuf.Int32Value`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellGoogleProtobufInt32value",
+          "declaration": {
+            "name": "CellGoogleProtobufInt32value",
+            "module": "src/type-renderers/cell-google-protobuf-int32value/CellGoogleProtobufInt32value.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-int32value/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-google-protobuf-int32value",
+          "declaration": {
+            "name": "CellGoogleProtobufInt32value",
+            "module": "/src/type-renderers/cell-google-protobuf-int32value/CellGoogleProtobufInt32value"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-int32/CellInt32.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-int32`\nThe cell-int32 component displays a FieldNode of type `int32` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellInt32",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "INT32"
+              },
+              "privacy": "private",
+              "default": "new INT32()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "INT32 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "INT32"
+              }
+            }
+          ],
+          "tagName": "cell-int32",
+          "customElement": true,
+          "summary": "cell display renderer for `int32`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellInt32",
+          "declaration": {
+            "name": "CellInt32",
+            "module": "src/type-renderers/cell-int32/CellInt32.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-int32/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-int32",
+          "declaration": {
+            "name": "CellInt32",
+            "module": "/src/type-renderers/cell-int32/CellInt32"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/type-renderers/cell-int64/CellInt64.js",
       "declarations": [
         {
@@ -26731,6 +27451,276 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-string/CellString.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-string`\nThe cell-string component displays a FieldNode of type `string` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellString",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING"
+              },
+              "privacy": "private",
+              "default": "new STRING()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING"
+              }
+            }
+          ],
+          "tagName": "cell-string",
+          "customElement": true,
+          "summary": "cell display renderer for `string`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellString",
+          "declaration": {
+            "name": "CellString",
+            "module": "src/type-renderers/cell-string/CellString.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-string/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-string",
+          "declaration": {
+            "name": "CellString",
+            "module": "/src/type-renderers/cell-string/CellString"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-uint32/CellUint32.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-uint32`\nThe cell-uint32 component displays a FieldNode of type `uint32` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellUint32",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "UINT32"
+              },
+              "privacy": "private",
+              "default": "new UINT32()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "UINT32 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "UINT32"
+              }
+            }
+          ],
+          "tagName": "cell-uint32",
+          "customElement": true,
+          "summary": "cell display renderer for `uint32`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellUint32",
+          "declaration": {
+            "name": "CellUint32",
+            "module": "src/type-renderers/cell-uint32/CellUint32.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-uint32/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-uint32",
+          "declaration": {
+            "name": "CellUint32",
+            "module": "/src/type-renderers/cell-uint32/CellUint32"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-uint64/CellUint64.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-uint64`\nThe cell-uint64 component displays a FieldNode of type `uint64` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellUint64",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "UINT64"
+              },
+              "privacy": "private",
+              "default": "new UINT64()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "UINT64 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "UINT64"
+              }
+            }
+          ],
+          "tagName": "cell-uint64",
+          "customElement": true,
+          "summary": "cell display renderer for `uint64`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellUint64",
+          "declaration": {
+            "name": "CellUint64",
+            "module": "src/type-renderers/cell-uint64/CellUint64.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-uint64/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-uint64",
+          "declaration": {
+            "name": "CellUint64",
+            "module": "/src/type-renderers/cell-uint64/CellUint64"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/type-renderers/index.js",
       "declarations": [],
       "exports": [
@@ -26739,7 +27729,95 @@
           "name": "*",
           "declaration": {
             "name": "*",
+            "module": "src/type-renderers/cell-bool/CellBool"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-double/CellDouble"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-float/CellFloat"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-furo-fat-bool/CellFuroFatBool"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-furo-fat-int32/CellFuroFatInt32"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-google-protobuf-boolvalue/CellGoogleProtobufBoolvalue"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-google-protobuf-int32value/CellGoogleProtobufInt32value"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-int32/CellInt32"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
             "module": "src/type-renderers/cell-int64/CellInt64"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-string/CellString"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-uint32/CellUint32"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-uint64/CellUint64"
           }
         }
       ]

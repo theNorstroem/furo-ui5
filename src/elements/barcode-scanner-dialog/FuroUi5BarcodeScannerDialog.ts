@@ -76,7 +76,7 @@ export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {
      * - from ui: scan-success
      *
      * This component is write-only by design — the scanner produces values, it never displays
-     * the bound model's value — so there is no model `field-value-changed` listener or initial read.
+     * the bound model's value — so there is no model `update` listener or initial read.
      */
     this.removeEventListener("scan-success", this.writeToModel as EventListener);
 

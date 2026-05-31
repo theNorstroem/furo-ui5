@@ -63,7 +63,7 @@ export class FuroUi5Markdown extends LitElement {
 
   override disconnectedCallback(): void {
     super.disconnectedCallback();
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
     this._model.__removeCustomEventListener("stream-begins", this.setStreamBegins);
     this._model.__removeCustomEventListener("stream-ends", this.setStreamEnds);
   }
@@ -75,10 +75,10 @@ export class FuroUi5Markdown extends LitElement {
 
     /**
      * remove existing listeners
-     * - from model: "field-value-changed"
+     * - from model: "update"
      * - from model custom: stream-begins, stream-ends
      */
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
     this._model.__removeCustomEventListener("stream-begins", this.setStreamBegins);
     this._model.__removeCustomEventListener("stream-ends", this.setStreamEnds);
 
@@ -86,7 +86,7 @@ export class FuroUi5Markdown extends LitElement {
     this._model = fieldNode;
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
     this._model.__addCustomEventListener("stream-begins", this.setStreamBegins);
     this._model.__addCustomEventListener("stream-ends", this.setStreamEnds);
 

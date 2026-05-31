@@ -156,7 +156,7 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
     }
 
     // remove existing listeners — display-only, no UI listeners to clean up
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
 
     // connect the model
     this._model = fieldNode;
@@ -169,7 +169,7 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
     this.valueStateManager.listenToStateChanges(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
 
     // initial read
     this.readFromModel();

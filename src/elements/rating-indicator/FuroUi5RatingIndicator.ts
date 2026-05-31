@@ -211,11 +211,11 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
     /**
      * remove existing listeners
      * - from readonly watcher
-     * - from model: "this-field-value-changed",listenToStateChanged
+     * - from model: "this-update",listenToStateChanged
      * - from ui: input, change
      */
     this.readonlyState.detach();
-    this._model.__removeEventListener("field-value-changed", this.readFromModel);
+    this._model.__removeEventListener("update", this.readFromModel);
     this.removeEventListener("input", this.writeToModel);
     this.removeEventListener("change", this.writeToModel);
 
@@ -231,7 +231,7 @@ export class FuroUi5RatingIndicator extends RatingIndicator {
     this.readonlyState.listenToStateChanged(fieldNode);
 
     // listen on changes from the model
-    this._model.__addEventListener("field-value-changed", this.readFromModel);
+    this._model.__addEventListener("update", this.readFromModel);
 
     // listen on changes from UI
     this.addEventListener("input", this.writeToModel);
