@@ -27001,6 +27001,96 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-double/CellFuroFatDouble.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-furo-fat-double`\nThe cell-furo-fat-double component displays a FieldNode of type `furo.fat.Double` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellFuroFatDouble",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatDouble"
+              },
+              "privacy": "private",
+              "default": "new FuroFatDouble()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatDouble | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatDouble"
+              }
+            }
+          ],
+          "tagName": "cell-furo-fat-double",
+          "customElement": true,
+          "summary": "cell display renderer for `furo.fat.Double`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellFuroFatDouble",
+          "declaration": {
+            "name": "CellFuroFatDouble",
+            "module": "src/type-renderers/cell-furo-fat-double/CellFuroFatDouble.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-double/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-furo-fat-double",
+          "declaration": {
+            "name": "CellFuroFatDouble",
+            "module": "/src/type-renderers/cell-furo-fat-double/CellFuroFatDouble"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/type-renderers/cell-furo-fat-int32/CellFuroFatInt32.js",
       "declarations": [
         {
@@ -27175,6 +27265,96 @@
           "declaration": {
             "name": "CellGoogleProtobufBoolvalue",
             "module": "/src/type-renderers/cell-google-protobuf-boolvalue/CellGoogleProtobufBoolvalue"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-doublevalue/CellGoogleProtobufDoublevalue.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-google-protobuf-doublevalue`\nThe cell-google-protobuf-doublevalue component displays a FieldNode of type\n`google.protobuf.DoubleValue` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellGoogleProtobufDoublevalue",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "DoubleValue"
+              },
+              "privacy": "private",
+              "default": "new DoubleValue()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "DoubleValue | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "DoubleValue"
+              }
+            }
+          ],
+          "tagName": "cell-google-protobuf-doublevalue",
+          "customElement": true,
+          "summary": "cell display renderer for `google.protobuf.DoubleValue`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellGoogleProtobufDoublevalue",
+          "declaration": {
+            "name": "CellGoogleProtobufDoublevalue",
+            "module": "src/type-renderers/cell-google-protobuf-doublevalue/CellGoogleProtobufDoublevalue.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-doublevalue/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-google-protobuf-doublevalue",
+          "declaration": {
+            "name": "CellGoogleProtobufDoublevalue",
+            "module": "/src/type-renderers/cell-google-protobuf-doublevalue/CellGoogleProtobufDoublevalue"
           }
         }
       ]
@@ -27761,6 +27941,14 @@
           "name": "*",
           "declaration": {
             "name": "*",
+            "module": "src/type-renderers/cell-furo-fat-double/CellFuroFatDouble"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
             "module": "src/type-renderers/cell-furo-fat-int32/CellFuroFatInt32"
           }
         },
@@ -27770,6 +27958,14 @@
           "declaration": {
             "name": "*",
             "module": "src/type-renderers/cell-google-protobuf-boolvalue/CellGoogleProtobufBoolvalue"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-google-protobuf-doublevalue/CellGoogleProtobufDoublevalue"
           }
         },
         {

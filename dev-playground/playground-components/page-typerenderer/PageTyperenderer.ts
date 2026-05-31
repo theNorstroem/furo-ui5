@@ -11,6 +11,8 @@ import "@/type-renderers/cell-furo-fat-bool";
 import "@/type-renderers/cell-google-protobuf-boolvalue";
 import "@/type-renderers/cell-int64"
 import "@/type-renderers/cell-double"
+import "@/type-renderers/cell-furo-fat-double";
+import "@/type-renderers/cell-google-protobuf-doublevalue";
 import "@/type-renderers/cell-float"
 import "@/type-renderers/cell-int32"
 import "@/type-renderers/cell-uint32"
@@ -91,6 +93,18 @@ export class PageTyperenderer extends LitElement {
           <furo-ui5-slider .model="${this.data.primitiveDouble}"></furo-ui5-slider>
           <cell-double .model="${this.data.primitiveDouble}"></cell-double>
           <cell-double .model="${this.data.primitiveDouble}"></cell-double>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="furo.fat.Double">
+          <furo-ui5-number-input .model="${this.data.furoFatDouble}"></furo-ui5-number-input>
+          <cell-furo-fat-double .model="${this.data.furoFatDouble}"></cell-furo-fat-double>
+          <cell-furo-fat-double .model="${this.data.furoFatDouble}"></cell-furo-fat-double>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="google.protobuf.DoubleValue">
+          <furo-ui5-number-input .model="${this.data.googleProtobufDoublevalue}"></furo-ui5-number-input>
+          <cell-google-protobuf-doublevalue .model="${this.data.googleProtobufDoublevalue}"></cell-google-protobuf-doublevalue>
+          <cell-google-protobuf-doublevalue .model="${this.data.googleProtobufDoublevalue}"></cell-google-protobuf-doublevalue>
         </furo-ui5-subsection>
 
         <furo-ui5-subsection heading="Float">
