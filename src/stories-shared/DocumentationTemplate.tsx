@@ -85,7 +85,7 @@ const DocumentationTemplate = (args: DocsPageArgs) => {
           code({ className, children, ...rest }) {
             const m = /language-(\w+)/.exec(className || "");
             return m ? (
-              <Source dark language={m[1]} code={String(children).replace(/\n$/, "")} />
+              <Source dark language={m[1] as React.ComponentProps<typeof Source>["language"]} code={String(children).replace(/\n$/, "")} />
             ) : (
               <code className={className} {...rest}>{children}</code>
             );
