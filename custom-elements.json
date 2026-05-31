@@ -6934,7 +6934,7 @@
               "kind": "field",
               "name": "headingLevel",
               "type": {
-                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "privacy": "public",
               "default": "\"H5\"",
@@ -6968,7 +6968,7 @@
             {
               "name": "heading-level",
               "type": {
-                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "default": "\"H5\"",
               "description": "Level for the heading.",
@@ -27271,6 +27271,96 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-string/CellFuroFatString.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-furo-fat-string`\nThe cell-furo-fat-string component displays a FieldNode of type `furo.fat.String` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellFuroFatString",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatString"
+              },
+              "privacy": "private",
+              "default": "new FuroFatString()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatString | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatString"
+              }
+            }
+          ],
+          "tagName": "cell-furo-fat-string",
+          "customElement": true,
+          "summary": "cell display renderer for `furo.fat.String`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellFuroFatString",
+          "declaration": {
+            "name": "CellFuroFatString",
+            "module": "src/type-renderers/cell-furo-fat-string/CellFuroFatString.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-string/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-furo-fat-string",
+          "declaration": {
+            "name": "CellFuroFatString",
+            "module": "/src/type-renderers/cell-furo-fat-string/CellFuroFatString"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/type-renderers/cell-google-protobuf-boolvalue/CellGoogleProtobufBoolvalue.js",
       "declarations": [
         {
@@ -27625,6 +27715,96 @@
           "declaration": {
             "name": "CellGoogleProtobufInt32value",
             "module": "/src/type-renderers/cell-google-protobuf-int32value/CellGoogleProtobufInt32value"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-stringvalue/CellGoogleProtobufStringvalue.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-google-protobuf-stringvalue`\nThe cell-google-protobuf-stringvalue component displays a FieldNode of type\n`google.protobuf.StringValue` in read only mode.\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellGoogleProtobufStringvalue",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "StringValue"
+              },
+              "privacy": "private",
+              "default": "new StringValue()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "StringValue | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "StringValue"
+              }
+            }
+          ],
+          "tagName": "cell-google-protobuf-stringvalue",
+          "customElement": true,
+          "summary": "cell display renderer for `google.protobuf.StringValue`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellGoogleProtobufStringvalue",
+          "declaration": {
+            "name": "CellGoogleProtobufStringvalue",
+            "module": "src/type-renderers/cell-google-protobuf-stringvalue/CellGoogleProtobufStringvalue.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-stringvalue/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-google-protobuf-stringvalue",
+          "declaration": {
+            "name": "CellGoogleProtobufStringvalue",
+            "module": "/src/type-renderers/cell-google-protobuf-stringvalue/CellGoogleProtobufStringvalue"
           }
         }
       ]
@@ -28145,6 +28325,14 @@
           "name": "*",
           "declaration": {
             "name": "*",
+            "module": "src/type-renderers/cell-furo-fat-string/CellFuroFatString"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
             "module": "src/type-renderers/cell-google-protobuf-boolvalue/CellGoogleProtobufBoolvalue"
           }
         },
@@ -28170,6 +28358,14 @@
           "declaration": {
             "name": "*",
             "module": "src/type-renderers/cell-google-protobuf-int32value/CellGoogleProtobufInt32value"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-google-protobuf-stringvalue/CellGoogleProtobufStringvalue"
           }
         },
         {

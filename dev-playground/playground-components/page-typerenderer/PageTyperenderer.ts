@@ -6,6 +6,10 @@ import "@/elements/shellbar"
 import "@/elements/number-input"
 import "@/elements/slider"
 import "@/elements/checkbox"
+import "@/elements/text-input"
+import "@/type-renderers/cell-string"
+import "@/type-renderers/cell-furo-fat-string";
+import "@/type-renderers/cell-google-protobuf-stringvalue";
 import "@/type-renderers/cell-bool"
 import "@/type-renderers/cell-furo-fat-bool";
 import "@/type-renderers/cell-google-protobuf-boolvalue";
@@ -156,6 +160,26 @@ export class PageTyperenderer extends LitElement {
           <furo-ui5-number-input .model="${this.data.furoFatInt32}"></furo-ui5-number-input>
           <cell-furo-fat-int32 .model="${this.data.furoFatInt32}"></cell-furo-fat-int32>
           <cell-furo-fat-int32 .model="${this.data.furoFatInt32}"></cell-furo-fat-int32>
+        </furo-ui5-subsection>
+      </furo-ui5-section>
+
+      <furo-ui5-section heading="String">
+        <furo-ui5-subsection heading="String">
+          <furo-ui5-text-input .model="${this.data.primitiveString}"></furo-ui5-text-input>
+          <cell-string .model="${this.data.primitiveString}"></cell-string>
+          <cell-string .model="${this.data.primitiveString}"></cell-string>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="furo.fat.String">
+          <furo-ui5-text-input .model="${this.data.furoFatString}"></furo-ui5-text-input>
+          <cell-furo-fat-string .model="${this.data.furoFatString}"></cell-furo-fat-string>
+          <cell-furo-fat-string .model="${this.data.furoFatString}"></cell-furo-fat-string>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="google.protobuf.StringValue">
+          <furo-ui5-text-input .model="${this.data.googleProtobufStringvalue}"></furo-ui5-text-input>
+          <cell-google-protobuf-stringvalue .model="${this.data.googleProtobufStringvalue}"></cell-google-protobuf-stringvalue>
+          <cell-google-protobuf-stringvalue .model="${this.data.googleProtobufStringvalue}"></cell-google-protobuf-stringvalue>
         </furo-ui5-subsection>
       </furo-ui5-section>
     </furo-vertical-flex>`;

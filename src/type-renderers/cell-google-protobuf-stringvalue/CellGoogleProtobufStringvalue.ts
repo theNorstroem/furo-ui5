@@ -1,8 +1,13 @@
+import { StringValue } from "@furo/open-models";
 import { LitElement, html, css } from "lit";
+import { state } from "lit/decorators.js";
+
+import { nl2br } from "@/directives/nl2br";
 
 /**
  * `cell-google-protobuf-stringvalue`
- * The cell-google-protobuf-stringvalue component displays a FieldNode of type `google.protobuf.StringValue` in read only mode.
+ * The cell-google-protobuf-stringvalue component displays a FieldNode of type
+ * `google.protobuf.StringValue` in read only mode.
  *
  * Every cell-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
@@ -11,21 +16,21 @@ import { LitElement, html, css } from "lit";
  * @element cell-google-protobuf-stringvalue
  */
 export class CellGoogleProtobufStringvalue extends LitElement {
-  constructor() {
-    super();
-    /**
-     *
-     * @type {string}
-     * @private
-     */
-    this._displayValue = "";
+
+  @state()
+  private displayValue = "";
+
+  private _model: StringValue = new StringValue();
+
+  get model(): StringValue {
+    return this._model;
   }
 
-  /**
-   * Component styles
-   * @returns {*}
-   */
-  static get styles() {
+  set model(value: StringValue) {
+    this.bindData(value);
+  }
+
+  static override get styles() {
     // language=CSS
     return css`
       :host {
@@ -67,39 +72,43 @@ export class CellGoogleProtobufStringvalue extends LitElement {
     `;
   }
 
+  override disconnectedCallback(): void {
+    super.disconnectedCallback();
+    this._model.__removeEventListener("update", this._readValue);
+  }
+
   /**
    * Binds a field node to the component
-   * @param {FieldNode} fieldNode
+   * @param fieldNode
+   * @public
    */
-  bindData(fieldNode) {
-    this._field = fieldNode;
-    if (this._field) {
-      this._field.addEventListener("field-value-changed", () => {
-        this._updateValue();
-      });
-
-      this._updateValue();
+  bindData(fieldNode: StringValue | undefined): void {
+    if (fieldNode === undefined || fieldNode === this._model) {
+      return;
     }
+
+    // swap listeners from the old field node to the new one
+    this._model.__removeEventListener("update", this._readValue);
+    this._model = fieldNode;
+    this._model.__addEventListener("update", this._readValue);
+
+    // initial read
+    this._readValue();
   }
 
   /**
-   *
    * @private
    */
-  _updateValue() {
-    if (this._field && this._field.value) {
-      this._displayValue = this._field.value._value;
-      this.requestUpdate();
-    }
-  }
+  private _readValue = (): void => {
+    this.displayValue = this._model.value;
+  };
 
   /**
    * render function
    * @private
-   * @returns {TemplateResult|TemplateResult}
    */
-  render() {
+  override render() {
     // language=HTML
-    return html` ${this._displayValue ? html` ${this._displayValue} ` : html``} `;
+    return html`${nl2br(this.displayValue)}`;
   }
 }
