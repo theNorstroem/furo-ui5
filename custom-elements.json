@@ -27271,6 +27271,96 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-int64/CellFuroFatInt64.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-furo-fat-int64`\nThe cell-furo-fat-int64 component displays a FieldNode of type `furo.fat.Int64` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellFuroFatInt64",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatInt64"
+              },
+              "privacy": "private",
+              "default": "new FuroFatInt64()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatInt64 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatInt64"
+              }
+            }
+          ],
+          "tagName": "cell-furo-fat-int64",
+          "customElement": true,
+          "summary": "cell display renderer for `furo.fat.Int64`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellFuroFatInt64",
+          "declaration": {
+            "name": "CellFuroFatInt64",
+            "module": "src/type-renderers/cell-furo-fat-int64/CellFuroFatInt64.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-int64/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-furo-fat-int64",
+          "declaration": {
+            "name": "CellFuroFatInt64",
+            "module": "/src/type-renderers/cell-furo-fat-int64/CellFuroFatInt64"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/type-renderers/cell-furo-fat-string/CellFuroFatString.js",
       "declarations": [
         {
@@ -27355,6 +27445,186 @@
           "declaration": {
             "name": "CellFuroFatString",
             "module": "/src/type-renderers/cell-furo-fat-string/CellFuroFatString"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-uint32/CellFuroFatUint32.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-furo-fat-uint32`\nThe cell-furo-fat-uint32 component displays a FieldNode of type `furo.fat.Uint32` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellFuroFatUint32",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatUint32"
+              },
+              "privacy": "private",
+              "default": "new FuroFatUint32()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatUint32 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatUint32"
+              }
+            }
+          ],
+          "tagName": "cell-furo-fat-uint32",
+          "customElement": true,
+          "summary": "cell display renderer for `furo.fat.Uint32`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellFuroFatUint32",
+          "declaration": {
+            "name": "CellFuroFatUint32",
+            "module": "src/type-renderers/cell-furo-fat-uint32/CellFuroFatUint32.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-uint32/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-furo-fat-uint32",
+          "declaration": {
+            "name": "CellFuroFatUint32",
+            "module": "/src/type-renderers/cell-furo-fat-uint32/CellFuroFatUint32"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-uint64/CellFuroFatUint64.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-furo-fat-uint64`\nThe cell-furo-fat-uint64 component displays a FieldNode of type `furo.fat.Uint64` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellFuroFatUint64",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatUint64"
+              },
+              "privacy": "private",
+              "default": "new FuroFatUint64()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatUint64 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatUint64"
+              }
+            }
+          ],
+          "tagName": "cell-furo-fat-uint64",
+          "customElement": true,
+          "summary": "cell display renderer for `furo.fat.Uint64`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellFuroFatUint64",
+          "declaration": {
+            "name": "CellFuroFatUint64",
+            "module": "src/type-renderers/cell-furo-fat-uint64/CellFuroFatUint64.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-furo-fat-uint64/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-furo-fat-uint64",
+          "declaration": {
+            "name": "CellFuroFatUint64",
+            "module": "/src/type-renderers/cell-furo-fat-uint64/CellFuroFatUint64"
           }
         }
       ]
@@ -27721,6 +27991,96 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-int64value/CellGoogleProtobufInt64value.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-google-protobuf-int64value`\nThe cell-google-protobuf-int64value component displays a FieldNode of type\n`google.protobuf.Int64Value` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellGoogleProtobufInt64value",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "Int64Value"
+              },
+              "privacy": "private",
+              "default": "new Int64Value()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "Int64Value | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "Int64Value"
+              }
+            }
+          ],
+          "tagName": "cell-google-protobuf-int64value",
+          "customElement": true,
+          "summary": "cell display renderer for `google.protobuf.Int64Value`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellGoogleProtobufInt64value",
+          "declaration": {
+            "name": "CellGoogleProtobufInt64value",
+            "module": "src/type-renderers/cell-google-protobuf-int64value/CellGoogleProtobufInt64value.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-int64value/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-google-protobuf-int64value",
+          "declaration": {
+            "name": "CellGoogleProtobufInt64value",
+            "module": "/src/type-renderers/cell-google-protobuf-int64value/CellGoogleProtobufInt64value"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/type-renderers/cell-google-protobuf-stringvalue/CellGoogleProtobufStringvalue.js",
       "declarations": [
         {
@@ -27805,6 +28165,186 @@
           "declaration": {
             "name": "CellGoogleProtobufStringvalue",
             "module": "/src/type-renderers/cell-google-protobuf-stringvalue/CellGoogleProtobufStringvalue"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-uint32value/CellGoogleProtobufUint32value.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-google-protobuf-uint32value`\nThe cell-google-protobuf-uint32value component displays a FieldNode of type\n`google.protobuf.UInt32Value` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellGoogleProtobufUint32value",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "UInt32Value"
+              },
+              "privacy": "private",
+              "default": "new UInt32Value()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "UInt32Value | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "UInt32Value"
+              }
+            }
+          ],
+          "tagName": "cell-google-protobuf-uint32value",
+          "customElement": true,
+          "summary": "cell display renderer for `google.protobuf.UInt32Value`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellGoogleProtobufUint32value",
+          "declaration": {
+            "name": "CellGoogleProtobufUint32value",
+            "module": "src/type-renderers/cell-google-protobuf-uint32value/CellGoogleProtobufUint32value.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-uint32value/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-google-protobuf-uint32value",
+          "declaration": {
+            "name": "CellGoogleProtobufUint32value",
+            "module": "/src/type-renderers/cell-google-protobuf-uint32value/CellGoogleProtobufUint32value"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-uint64value/CellGoogleProtobufUint64value.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`cell-google-protobuf-uint64value`\nThe cell-google-protobuf-uint64value component displays a FieldNode of type\n`google.protobuf.UInt64Value` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery cell-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "CellGoogleProtobufUint64value",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "UInt64Value"
+              },
+              "privacy": "private",
+              "default": "new UInt64Value()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "UInt64Value | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "UInt64Value"
+              }
+            }
+          ],
+          "tagName": "cell-google-protobuf-uint64value",
+          "customElement": true,
+          "summary": "cell display renderer for `google.protobuf.UInt64Value`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CellGoogleProtobufUint64value",
+          "declaration": {
+            "name": "CellGoogleProtobufUint64value",
+            "module": "src/type-renderers/cell-google-protobuf-uint64value/CellGoogleProtobufUint64value.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/cell-google-protobuf-uint64value/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "cell-google-protobuf-uint64value",
+          "declaration": {
+            "name": "CellGoogleProtobufUint64value",
+            "module": "/src/type-renderers/cell-google-protobuf-uint64value/CellGoogleProtobufUint64value"
           }
         }
       ]
@@ -28325,7 +28865,31 @@
           "name": "*",
           "declaration": {
             "name": "*",
+            "module": "src/type-renderers/cell-furo-fat-int64/CellFuroFatInt64"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
             "module": "src/type-renderers/cell-furo-fat-string/CellFuroFatString"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-furo-fat-uint32/CellFuroFatUint32"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-furo-fat-uint64/CellFuroFatUint64"
           }
         },
         {
@@ -28365,7 +28929,31 @@
           "name": "*",
           "declaration": {
             "name": "*",
+            "module": "src/type-renderers/cell-google-protobuf-int64value/CellGoogleProtobufInt64value"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
             "module": "src/type-renderers/cell-google-protobuf-stringvalue/CellGoogleProtobufStringvalue"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-google-protobuf-uint32value/CellGoogleProtobufUint32value"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/cell-google-protobuf-uint64value/CellGoogleProtobufUint64value"
           }
         },
         {

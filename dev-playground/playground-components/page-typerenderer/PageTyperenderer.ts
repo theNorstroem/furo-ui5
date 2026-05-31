@@ -14,6 +14,8 @@ import "@/type-renderers/cell-bool"
 import "@/type-renderers/cell-furo-fat-bool";
 import "@/type-renderers/cell-google-protobuf-boolvalue";
 import "@/type-renderers/cell-int64"
+import "@/type-renderers/cell-furo-fat-int64";
+import "@/type-renderers/cell-google-protobuf-int64value";
 import "@/type-renderers/cell-double"
 import "@/type-renderers/cell-furo-fat-double";
 import "@/type-renderers/cell-google-protobuf-doublevalue";
@@ -22,7 +24,11 @@ import "@/type-renderers/cell-furo-fat-float";
 import "@/type-renderers/cell-google-protobuf-floatvalue";
 import "@/type-renderers/cell-int32"
 import "@/type-renderers/cell-uint32"
+import "@/type-renderers/cell-furo-fat-uint32";
+import "@/type-renderers/cell-google-protobuf-uint32value";
 import "@/type-renderers/cell-uint64"
+import "@/type-renderers/cell-furo-fat-uint64";
+import "@/type-renderers/cell-google-protobuf-uint64value";
 import "@/type-renderers/cell-furo-fat-int32";
 import "@/type-renderers/cell-google-protobuf-int32value";
 
@@ -94,6 +100,18 @@ export class PageTyperenderer extends LitElement {
           <cell-int64 .model="${this.data.primitiveInt64}"></cell-int64>
         </furo-ui5-subsection>
 
+        <furo-ui5-subsection heading="furo.fat.Int64">
+          <furo-ui5-number-input .model="${this.data.furoFatInt64}"></furo-ui5-number-input>
+          <cell-furo-fat-int64 .model="${this.data.furoFatInt64}"></cell-furo-fat-int64>
+          <cell-furo-fat-int64 .model="${this.data.furoFatInt64}"></cell-furo-fat-int64>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="google.protobuf.Int64Value">
+          <furo-ui5-number-input .model="${this.data.googleProtobufInt64value}"></furo-ui5-number-input>
+          <cell-google-protobuf-int64value .model="${this.data.googleProtobufInt64value}"></cell-google-protobuf-int64value>
+          <cell-google-protobuf-int64value .model="${this.data.googleProtobufInt64value}"></cell-google-protobuf-int64value>
+        </furo-ui5-subsection>
+
         <furo-ui5-subsection heading="Double">
           <furo-ui5-number-input .model="${this.data.primitiveDouble}"></furo-ui5-number-input>
           <furo-ui5-slider .model="${this.data.primitiveDouble}"></furo-ui5-slider>
@@ -138,6 +156,18 @@ export class PageTyperenderer extends LitElement {
           <cell-uint64 .model="${this.data.primitiveUint64}"></cell-uint64>
         </furo-ui5-subsection>
 
+        <furo-ui5-subsection heading="furo.fat.Uint64">
+          <furo-ui5-number-input .model="${this.data.furoFatUint64}"></furo-ui5-number-input>
+          <cell-furo-fat-uint64 .model="${this.data.furoFatUint64}"></cell-furo-fat-uint64>
+          <cell-furo-fat-uint64 .model="${this.data.furoFatUint64}"></cell-furo-fat-uint64>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="google.protobuf.UInt64Value">
+          <furo-ui5-number-input .model="${this.data.googleProtobufUint64value}"></furo-ui5-number-input>
+          <cell-google-protobuf-uint64value .model="${this.data.googleProtobufUint64value}"></cell-google-protobuf-uint64value>
+          <cell-google-protobuf-uint64value .model="${this.data.googleProtobufUint64value}"></cell-google-protobuf-uint64value>
+        </furo-ui5-subsection>
+
         <furo-ui5-subsection heading="Int32">
           <furo-ui5-number-input .model="${this.data.primitiveInt32}"></furo-ui5-number-input>
           <cell-int32 .model="${this.data.primitiveInt32}"></cell-int32>
@@ -148,6 +178,18 @@ export class PageTyperenderer extends LitElement {
           <furo-ui5-number-input .model="${this.data.primitiveUint32}"></furo-ui5-number-input>
           <cell-uint32 .model="${this.data.primitiveUint32}"></cell-uint32>
           <cell-uint32 .model="${this.data.primitiveUint32}"></cell-uint32>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="furo.fat.Uint32">
+          <furo-ui5-number-input .model="${this.data.furoFatUint32}"></furo-ui5-number-input>
+          <cell-furo-fat-uint32 .model="${this.data.furoFatUint32}"></cell-furo-fat-uint32>
+          <cell-furo-fat-uint32 .model="${this.data.furoFatUint32}"></cell-furo-fat-uint32>
+        </furo-ui5-subsection>
+
+        <furo-ui5-subsection heading="google.protobuf.UInt32Value">
+          <furo-ui5-number-input .model="${this.data.googleProtobufUint32value}"></furo-ui5-number-input>
+          <cell-google-protobuf-uint32value .model="${this.data.googleProtobufUint32value}"></cell-google-protobuf-uint32value>
+          <cell-google-protobuf-uint32value .model="${this.data.googleProtobufUint32value}"></cell-google-protobuf-uint32value>
         </furo-ui5-subsection>
 
         <furo-ui5-subsection heading="google.protobuf.int32value">

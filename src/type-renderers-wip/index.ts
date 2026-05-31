@@ -5,9 +5,6 @@
 
 // cell
 export * from "./cell-furo-bigdecimal/CellFuroBigdecimal";
-export * from "./cell-furo-fat-int64/CellFuroFatInt64";
-export * from "./cell-furo-fat-uint32/CellFuroFatUint32";
-export * from "./cell-furo-fat-uint64/CellFuroFatUint64";
 export * from "./cell-furo-integerproperty/CellFuroIntegerproperty";
 export * from "./cell-furo-numberproperty/CellFuroNumberproperty";
 export * from "./cell-furo-property/CellFuroProperty";
@@ -17,10 +14,7 @@ export * from "./cell-furo-stringproperty/CellFuroStringproperty";
 export * from "./cell-furo-type-date/CellFuroTypeDate";
 export * from "./cell-furo-type-money/CellFuroTypeMoney";
 export * from "./cell-google-protobuf-any/CellGoogleProtobufAny";
-export * from "./cell-google-protobuf-int64value/CellGoogleProtobufInt64value";
 export * from "./cell-google-protobuf-timestamp/CellGoogleProtobufTimestamp";
-export * from "./cell-google-protobuf-uint32value/CellGoogleProtobufUint32value";
-export * from "./cell-google-protobuf-uint64value/CellGoogleProtobufUint64value";
 export * from "./cell-google-type-color/CellGoogleTypeColor";
 export * from "./cell-google-type-date/CellGoogleTypeDate";
 export * from "./cell-google-type-money/CellGoogleTypeMoney";
