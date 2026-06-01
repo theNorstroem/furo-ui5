@@ -4,11 +4,8 @@
 // move its export line into src/type-renderers/index.ts.
 
 // cell
-export * from "./cell-furo-bigdecimal/CellFuroBigdecimal";
-export * from "./cell-furo-property/CellFuroProperty";
-export * from "./cell-furo-property-repeated/CellFuroPropertyRepeated";
 export * from "./cell-google-protobuf-any/CellGoogleProtobufAny";
-export * from "./cell-google-type-color/CellGoogleTypeColor";
+
 
 // celledit
 export * from "./celledit-double/CelleditDouble";
@@ -22,14 +19,6 @@ export * from "./celledit-furo-fat-int64/CelleditFuroFatInt64";
 export * from "./celledit-furo-fat-string/CelleditFuroFatString";
 export * from "./celledit-furo-fat-uint32/CelleditFuroFatUint32";
 export * from "./celledit-furo-fat-uint64/CelleditFuroFatUint64";
-export * from "./celledit-furo-integerproperty/CelleditFuroIntegerproperty";
-export * from "./celledit-furo-link/CelleditFuroLink";
-export * from "./celledit-furo-numberproperty/CelleditFuroNumberproperty";
-export * from "./celledit-furo-property/CelleditFuroProperty";
-export * from "./celledit-furo-property-repeated/CelleditFuroPropertyRepeated";
-export * from "./celledit-furo-reference/CelleditFuroReference";
-export * from "./celledit-furo-stringoptionproperty/CelleditFuroStringoptionproperty";
-export * from "./celledit-furo-stringproperty/CelleditFuroStringproperty";
 export * from "./celledit-furo-type-date/CelleditFuroTypeDate";
 export * from "./celledit-furo-type-money/CelleditFuroTypeMoney";
 export * from "./celledit-google-protobuf-any/CelleditGoogleProtobufAny";
@@ -52,15 +41,7 @@ export * from "./celledit-uint32/CelleditUint32";
 export * from "./celledit-uint64/CelleditUint64";
 
 // display
-export * from "./display-furo-bigdecimal/DisplayFuroBigdecimal";
-export * from "./display-furo-link/DisplayFuroLink";
-export * from "./display-furo-property/DisplayFuroProperty";
-export * from "./display-furo-property-repeated/DisplayFuroPropertyRepeated";
-export * from "./display-furo-property-repeats-labeled/DisplayFuroPropertyRepeatsLabeled";
-export * from "./display-furo-reference/DisplayFuroReference";
 export * from "./display-google-protobuf-any/DisplayGoogleProtobufAny";
-export * from "./display-google-type-color/DisplayGoogleTypeColor";
-export * from "./display-google-type-datetime/DisplayGoogleTypeDatetime";
 
 // form
 export * from "./form-bool/FormBool";
@@ -75,11 +56,6 @@ export * from "./form-furo-fat-int64/FormFuroFatInt64";
 export * from "./form-furo-fat-string/FormFuroFatString";
 export * from "./form-furo-fat-uint32/FormFuroFatUint32";
 export * from "./form-furo-fat-uint64/FormFuroFatUint64";
-export * from "./form-furo-integerproperty/FormFuroIntegerproperty";
-export * from "./form-furo-numberproperty/FormFuroNumberproperty";
-export * from "./form-furo-reference/FormFuroReference";
-export * from "./form-furo-stringoptionproperty/FormFuroStringoptionproperty";
-export * from "./form-furo-stringproperty/FormFuroStringproperty";
 export * from "./form-furo-type-date/FormFuroTypeDate";
 export * from "./form-furo-type-money/FormFuroTypeMoney";
 export * from "./form-google-protobuf-boolvalue/FormGoogleProtobufBoolvalue";
