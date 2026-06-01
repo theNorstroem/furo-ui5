@@ -3,7 +3,6 @@
 
 import {
   ANY,
-  ARRAY,
   BOOLEAN,
   BoolValue,
   DOUBLE,
@@ -34,27 +33,6 @@ import { Int64 as FuroFatInt64, type IInt64 as IFuroFatInt64, type TInt64 as TFu
 import { XString as FuroFatString, type IXString as IFuroFatString, type TXString as TFuroFatString } from "../furo/fat/String";
 import { Uint32 as FuroFatUint32, type IUint32 as IFuroFatUint32, type TUint32 as TFuroFatUint32 } from "../furo/fat/Uint32";
 import { Uint64 as FuroFatUint64, type IUint64 as IFuroFatUint64, type TUint64 as TFuroFatUint64 } from "../furo/fat/Uint64";
-import {
-  IntegerProperty as FuroIntegerProperty,
-  type IIntegerProperty as IFuroIntegerProperty,
-  type TIntegerProperty as TFuroIntegerProperty,
-} from "../furo/IntegerProperty";
-import {
-  NumberProperty as FuroNumberProperty,
-  type INumberProperty as IFuroNumberProperty,
-  type TNumberProperty as TFuroNumberProperty,
-} from "../furo/NumberProperty";
-import { Property as FuroProperty, type IProperty as IFuroProperty, type TProperty as TFuroProperty } from "../furo/Property";
-import {
-  StringOptionProperty as FuroStringOptionProperty,
-  type IStringOptionProperty as IFuroStringOptionProperty,
-  type TStringOptionProperty as TFuroStringOptionProperty,
-} from "../furo/StringOptionProperty";
-import {
-  StringProperty as FuroStringProperty,
-  type IStringProperty as IFuroStringProperty,
-  type TStringProperty as TFuroStringProperty,
-} from "../furo/StringProperty";
 import { XDate as FuroTypeDate, type IXDate as IFuroTypeDate, type TXDate as TFuroTypeDate } from "../furo/type/Date";
 import { Money as FuroTypeMoney, type IMoney as IFuroTypeMoney, type TMoney as TFuroTypeMoney } from "../furo/type/Money";
 import { XDate as GoogleTypeDate, type IXDate as IGoogleTypeDate, type TXDate as TGoogleTypeDate } from "../google/type/Date";
@@ -87,12 +65,6 @@ export interface IAllTypesTest {
   /**
    *  furo property types (package furo / furo.type)
    */
-  furoIntegerproperty?: IFuroIntegerProperty;
-  furoNumberproperty?: IFuroNumberProperty;
-  furoProperty?: IFuroProperty;
-  furoPropertyRepeated?: IFuroProperty[];
-  furoStringoptionproperty?: IFuroStringOptionProperty;
-  furoStringproperty?: IFuroStringProperty;
   furoTypeDate?: IFuroTypeDate;
   furoTypeMoney?: IFuroTypeMoney;
   /**
@@ -146,12 +118,6 @@ export interface TAllTypesTest {
   /**
    *  furo property types (package furo / furo.type)
    */
-  furo_integerproperty?: TFuroIntegerProperty;
-  furo_numberproperty?: TFuroNumberProperty;
-  furo_property?: TFuroProperty;
-  furo_property_repeated?: TFuroProperty[];
-  furo_stringoptionproperty?: TFuroStringOptionProperty;
-  furo_stringproperty?: TFuroStringProperty;
   furo_type_date?: TFuroTypeDate;
   furo_type_money?: TFuroTypeMoney;
   /**
@@ -250,30 +216,6 @@ export class AllTypesTest extends FieldNode {
 
   /**
    * furo property types (package furo / furo.type)
-   **/
-  private _furoIntegerproperty: FuroIntegerProperty;
-
-  /**
-   **/
-  private _furoNumberproperty: FuroNumberProperty;
-
-  /**
-   **/
-  private _furoProperty: FuroProperty;
-
-  /**
-   **/
-  private _furoPropertyRepeated: ARRAY<FuroProperty, IFuroProperty>;
-
-  /**
-   **/
-  private _furoStringoptionproperty: FuroStringOptionProperty;
-
-  /**
-   **/
-  private _furoStringproperty: FuroStringProperty;
-
-  /**
    **/
   private _furoTypeDate: FuroTypeDate;
 
@@ -457,53 +399,11 @@ export class AllTypesTest extends FieldNode {
         description: "",
       },
       {
-        fieldName: "furoIntegerproperty",
-        protoName: "furo_integerproperty",
-        FieldConstructor: FuroIntegerProperty,
-        constraints: {},
-        description: "furo property types (package furo / furo.type)",
-      },
-      {
-        fieldName: "furoNumberproperty",
-        protoName: "furo_numberproperty",
-        FieldConstructor: FuroNumberProperty,
-        constraints: {},
-        description: "",
-      },
-      {
-        fieldName: "furoProperty",
-        protoName: "furo_property",
-        FieldConstructor: FuroProperty,
-        constraints: {},
-        description: "",
-      },
-      {
-        fieldName: "furoPropertyRepeated",
-        protoName: "furo_property_repeated",
-        FieldConstructor: FuroProperty,
-        constraints: {},
-        description: "",
-      },
-      {
-        fieldName: "furoStringoptionproperty",
-        protoName: "furo_stringoptionproperty",
-        FieldConstructor: FuroStringOptionProperty,
-        constraints: {},
-        description: "",
-      },
-      {
-        fieldName: "furoStringproperty",
-        protoName: "furo_stringproperty",
-        FieldConstructor: FuroStringProperty,
-        constraints: {},
-        description: "",
-      },
-      {
         fieldName: "furoTypeDate",
         protoName: "furo_type_date",
         FieldConstructor: FuroTypeDate,
         constraints: {},
-        description: "",
+        description: "furo property types (package furo / furo.type)",
       },
       {
         fieldName: "furoTypeMoney",
@@ -676,30 +576,6 @@ export class AllTypesTest extends FieldNode {
     /**
      *  furo property types (package furo / furo.type)
      **/
-    this._furoIntegerproperty = new FuroIntegerProperty(undefined, this, "furoIntegerproperty");
-
-    /**
-     **/
-    this._furoNumberproperty = new FuroNumberProperty(undefined, this, "furoNumberproperty");
-
-    /**
-     **/
-    this._furoProperty = new FuroProperty(undefined, this, "furoProperty");
-
-    /**
-     **/
-    this._furoPropertyRepeated = new ARRAY<FuroProperty, IFuroProperty>(undefined, this, "furoPropertyRepeated");
-
-    /**
-     **/
-    this._furoStringoptionproperty = new FuroStringOptionProperty(undefined, this, "furoStringoptionproperty");
-
-    /**
-     **/
-    this._furoStringproperty = new FuroStringProperty(undefined, this, "furoStringproperty");
-
-    /**
-     **/
     this._furoTypeDate = new FuroTypeDate(undefined, this, "furoTypeDate");
 
     /**
@@ -776,11 +652,6 @@ export class AllTypesTest extends FieldNode {
       furoFatString: { value: "fat string" },
       furoFatUint32: { value: 37 },
       furoFatUint64: { value: "333223" },
-      furoIntegerproperty: { data: 37 },
-      furoNumberproperty: { data: 22.123 },
-      furoProperty: { id: "prop-1", displayName: "Property One" },
-      furoStringoptionproperty: { id: "opt-1", displayName: "Option One" },
-      furoStringproperty: { data: "string property" },
       furoTypeDate: { year: 2026, month: 5, day: 31, displayName: "2026-05-31" },
       furoTypeMoney: { currencyCode: "EUR", units: "42", nanos: 500000000, displayName: "42.50 EUR" },
       googleProtobufBoolvalue: true,
@@ -1047,90 +918,6 @@ export class AllTypesTest extends FieldNode {
 
   /**
    *  furo property types (package furo / furo.type)
-   * The getter receives the FieldNode
-   **/
-  public get furoIntegerproperty(): FuroIntegerProperty {
-    return this._furoIntegerproperty;
-  }
-
-  /**
-   * The setter receives `IFuroIntegerProperty`
-   **/
-  public set furoIntegerproperty(v: IFuroIntegerProperty) {
-    this.__TypeSetter(this._furoIntegerproperty, v);
-  }
-
-  /**
-   * The getter receives the FieldNode
-   **/
-  public get furoNumberproperty(): FuroNumberProperty {
-    return this._furoNumberproperty;
-  }
-
-  /**
-   * The setter receives `IFuroNumberProperty`
-   **/
-  public set furoNumberproperty(v: IFuroNumberProperty) {
-    this.__TypeSetter(this._furoNumberproperty, v);
-  }
-
-  /**
-   * The getter receives the FieldNode
-   **/
-  public get furoProperty(): FuroProperty {
-    return this._furoProperty;
-  }
-
-  /**
-   * The setter receives `IFuroProperty`
-   **/
-  public set furoProperty(v: IFuroProperty) {
-    this.__TypeSetter(this._furoProperty, v);
-  }
-
-  /**
-   * The getter receives the FieldNode
-   **/
-  public get furoPropertyRepeated(): ARRAY<FuroProperty, IFuroProperty> {
-    return this._furoPropertyRepeated;
-  }
-
-  /**
-   * The setter receives `IFuroProperty[]`
-   **/
-  public set furoPropertyRepeated(v: IFuroProperty[]) {
-    this.__TypeSetter(this._furoPropertyRepeated, v);
-  }
-
-  /**
-   * The getter receives the FieldNode
-   **/
-  public get furoStringoptionproperty(): FuroStringOptionProperty {
-    return this._furoStringoptionproperty;
-  }
-
-  /**
-   * The setter receives `IFuroStringOptionProperty`
-   **/
-  public set furoStringoptionproperty(v: IFuroStringOptionProperty) {
-    this.__TypeSetter(this._furoStringoptionproperty, v);
-  }
-
-  /**
-   * The getter receives the FieldNode
-   **/
-  public get furoStringproperty(): FuroStringProperty {
-    return this._furoStringproperty;
-  }
-
-  /**
-   * The setter receives `IFuroStringProperty`
-   **/
-  public set furoStringproperty(v: IFuroStringProperty) {
-    this.__TypeSetter(this._furoStringproperty, v);
-  }
-
-  /**
    * The getter receives the FieldNode
    **/
   public get furoTypeDate(): FuroTypeDate {

@@ -11,7 +11,6 @@ export * from "./cell-google-protobuf-any/CellGoogleProtobufAny";
 export * from "./cell-google-type-color/CellGoogleTypeColor";
 
 // celledit
-export * from "./celledit-bool/CelleditBool";
 export * from "./celledit-double/CelleditDouble";
 export * from "./celledit-float/CelleditFloat";
 export * from "./celledit-furo-bigdecimal/CelleditFuroBigdecimal";
@@ -53,49 +52,15 @@ export * from "./celledit-uint32/CelleditUint32";
 export * from "./celledit-uint64/CelleditUint64";
 
 // display
-export * from "./display-bool/DisplayBool";
-export * from "./display-double/DisplayDouble";
-export * from "./display-float/DisplayFloat";
 export * from "./display-furo-bigdecimal/DisplayFuroBigdecimal";
-export * from "./display-furo-fat-bool/DisplayFuroFatBool";
-export * from "./display-furo-fat-double/DisplayFuroFatDouble";
-export * from "./display-furo-fat-float/DisplayFuroFatFloat";
-export * from "./display-furo-fat-int32/DisplayFuroFatInt32";
-export * from "./display-furo-fat-int64/DisplayFuroFatInt64";
-export * from "./display-furo-fat-string/DisplayFuroFatString";
-export * from "./display-furo-fat-uint32/DisplayFuroFatUint32";
-export * from "./display-furo-fat-uint64/DisplayFuroFatUint64";
-export * from "./display-furo-integerproperty/DisplayFuroIntegerproperty";
 export * from "./display-furo-link/DisplayFuroLink";
-export * from "./display-furo-numberproperty/DisplayFuroNumberproperty";
 export * from "./display-furo-property/DisplayFuroProperty";
 export * from "./display-furo-property-repeated/DisplayFuroPropertyRepeated";
 export * from "./display-furo-property-repeats-labeled/DisplayFuroPropertyRepeatsLabeled";
 export * from "./display-furo-reference/DisplayFuroReference";
-export * from "./display-furo-stringoptionproperty/DisplayFuroStringoptionproperty";
-export * from "./display-furo-stringproperty/DisplayFuroStringproperty";
-export * from "./display-furo-type-date/DisplayFuroTypeDate";
-export * from "./display-furo-type-money/DisplayFuroTypeMoney";
 export * from "./display-google-protobuf-any/DisplayGoogleProtobufAny";
-export * from "./display-google-protobuf-boolvalue/DisplayGoogleProtobufBoolvalue";
-export * from "./display-google-protobuf-doublevalue/DisplayGoogleProtobufDoublevalue";
-export * from "./display-google-protobuf-floatvalue/DisplayGoogleProtobufFloatvalue";
-export * from "./display-google-protobuf-int32value/DisplayGoogleProtobufInt32value";
-export * from "./display-google-protobuf-int64value/DisplayGoogleProtobufInt64value";
-export * from "./display-google-protobuf-stringvalue/DisplayGoogleProtobufStringvalue";
-export * from "./display-google-protobuf-timestamp/DisplayGoogleProtobufTimestamp";
-export * from "./display-google-protobuf-uint32value/DisplayGoogleProtobufUint32value";
-export * from "./display-google-protobuf-uint64value/DisplayGoogleProtobufUint64value";
 export * from "./display-google-type-color/DisplayGoogleTypeColor";
-export * from "./display-google-type-date/DisplayGoogleTypeDate";
 export * from "./display-google-type-datetime/DisplayGoogleTypeDatetime";
-export * from "./display-google-type-money/DisplayGoogleTypeMoney";
-export * from "./display-google-type-timeofday/DisplayGoogleTypeTimeofday";
-export * from "./display-int32/DisplayInt32";
-export * from "./display-int64/DisplayInt64";
-export * from "./display-string/DisplayString";
-export * from "./display-uint32/DisplayUint32";
-export * from "./display-uint64/DisplayUint64";
 
 // form
 export * from "./form-bool/FormBool";

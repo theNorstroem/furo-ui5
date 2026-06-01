@@ -29741,6 +29741,3106 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/type-renderers/display-bool/DisplayBool.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-bool`\nThe display-bool component displays a FieldNode of type `bool` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayBool",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "BOOLEAN"
+              },
+              "privacy": "private",
+              "default": "new BOOLEAN()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "BOOLEAN | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "BOOLEAN"
+              }
+            }
+          ],
+          "tagName": "display-bool",
+          "customElement": true,
+          "summary": "display renderer for `bool`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayBool",
+          "declaration": {
+            "name": "DisplayBool",
+            "module": "src/type-renderers/display-bool/DisplayBool.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-bool/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-bool",
+          "declaration": {
+            "name": "DisplayBool",
+            "module": "/src/type-renderers/display-bool/DisplayBool"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-double/DisplayDouble.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-double`\nThe display-double component displays a FieldNode of type `double` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayDouble",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "DOUBLE"
+              },
+              "privacy": "private",
+              "default": "new DOUBLE()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "DOUBLE | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "DOUBLE"
+              }
+            }
+          ],
+          "tagName": "display-double",
+          "customElement": true,
+          "summary": "display renderer for `double`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayDouble",
+          "declaration": {
+            "name": "DisplayDouble",
+            "module": "src/type-renderers/display-double/DisplayDouble.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-double/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-double",
+          "declaration": {
+            "name": "DisplayDouble",
+            "module": "/src/type-renderers/display-double/DisplayDouble"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-float/DisplayFloat.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-float`\nThe display-float component displays a FieldNode of type `float` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFloat",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FLOAT"
+              },
+              "privacy": "private",
+              "default": "new FLOAT()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FLOAT | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FLOAT"
+              }
+            }
+          ],
+          "tagName": "display-float",
+          "customElement": true,
+          "summary": "display renderer for `float`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFloat",
+          "declaration": {
+            "name": "DisplayFloat",
+            "module": "src/type-renderers/display-float/DisplayFloat.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-float/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-float",
+          "declaration": {
+            "name": "DisplayFloat",
+            "module": "/src/type-renderers/display-float/DisplayFloat"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-bool/DisplayFuroFatBool.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-fat-bool`\nThe display-furo-fat-bool component displays a FieldNode of type `furo.fat.Bool` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroFatBool",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatBool"
+              },
+              "privacy": "private",
+              "default": "new FuroFatBool()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatBool | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatBool"
+              }
+            }
+          ],
+          "tagName": "display-furo-fat-bool",
+          "customElement": true,
+          "summary": "display renderer for `furo.fat.Bool`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroFatBool",
+          "declaration": {
+            "name": "DisplayFuroFatBool",
+            "module": "src/type-renderers/display-furo-fat-bool/DisplayFuroFatBool.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-bool/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-fat-bool",
+          "declaration": {
+            "name": "DisplayFuroFatBool",
+            "module": "/src/type-renderers/display-furo-fat-bool/DisplayFuroFatBool"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-double/DisplayFuroFatDouble.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-fat-double`\nThe display-furo-fat-double component displays a FieldNode of type `furo.fat.Double` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroFatDouble",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatDouble"
+              },
+              "privacy": "private",
+              "default": "new FuroFatDouble()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatDouble | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatDouble"
+              }
+            }
+          ],
+          "tagName": "display-furo-fat-double",
+          "customElement": true,
+          "summary": "display renderer for `furo.fat.Double`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroFatDouble",
+          "declaration": {
+            "name": "DisplayFuroFatDouble",
+            "module": "src/type-renderers/display-furo-fat-double/DisplayFuroFatDouble.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-double/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-fat-double",
+          "declaration": {
+            "name": "DisplayFuroFatDouble",
+            "module": "/src/type-renderers/display-furo-fat-double/DisplayFuroFatDouble"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-float/DisplayFuroFatFloat.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-fat-float`\nThe display-furo-fat-float component displays a FieldNode of type `furo.fat.Float` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroFatFloat",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatFloat"
+              },
+              "privacy": "private",
+              "default": "new FuroFatFloat()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatFloat | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatFloat"
+              }
+            }
+          ],
+          "tagName": "display-furo-fat-float",
+          "customElement": true,
+          "summary": "display renderer for `furo.fat.Float`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroFatFloat",
+          "declaration": {
+            "name": "DisplayFuroFatFloat",
+            "module": "src/type-renderers/display-furo-fat-float/DisplayFuroFatFloat.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-float/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-fat-float",
+          "declaration": {
+            "name": "DisplayFuroFatFloat",
+            "module": "/src/type-renderers/display-furo-fat-float/DisplayFuroFatFloat"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-int32/DisplayFuroFatInt32.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-fat-int32`\nThe display-furo-fat-int32 component displays a FieldNode of type `furo.fat.Int32` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroFatInt32",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatInt32"
+              },
+              "privacy": "private",
+              "default": "new FuroFatInt32()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatInt32 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatInt32"
+              }
+            }
+          ],
+          "tagName": "display-furo-fat-int32",
+          "customElement": true,
+          "summary": "display renderer for `furo.fat.Int32`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroFatInt32",
+          "declaration": {
+            "name": "DisplayFuroFatInt32",
+            "module": "src/type-renderers/display-furo-fat-int32/DisplayFuroFatInt32.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-int32/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-fat-int32",
+          "declaration": {
+            "name": "DisplayFuroFatInt32",
+            "module": "/src/type-renderers/display-furo-fat-int32/DisplayFuroFatInt32"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-int64/DisplayFuroFatInt64.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-fat-int64`\nThe display-furo-fat-int64 component displays a FieldNode of type `furo.fat.Int64` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroFatInt64",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatInt64"
+              },
+              "privacy": "private",
+              "default": "new FuroFatInt64()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatInt64 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatInt64"
+              }
+            }
+          ],
+          "tagName": "display-furo-fat-int64",
+          "customElement": true,
+          "summary": "display renderer for `furo.fat.Int64`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroFatInt64",
+          "declaration": {
+            "name": "DisplayFuroFatInt64",
+            "module": "src/type-renderers/display-furo-fat-int64/DisplayFuroFatInt64.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-int64/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-fat-int64",
+          "declaration": {
+            "name": "DisplayFuroFatInt64",
+            "module": "/src/type-renderers/display-furo-fat-int64/DisplayFuroFatInt64"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-string/DisplayFuroFatString.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-fat-string`\nThe display-furo-fat-string component displays a FieldNode of type `furo.fat.String` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroFatString",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatString"
+              },
+              "privacy": "private",
+              "default": "new FuroFatString()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatString | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatString"
+              }
+            }
+          ],
+          "tagName": "display-furo-fat-string",
+          "customElement": true,
+          "summary": "display renderer for `furo.fat.String`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroFatString",
+          "declaration": {
+            "name": "DisplayFuroFatString",
+            "module": "src/type-renderers/display-furo-fat-string/DisplayFuroFatString.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-string/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-fat-string",
+          "declaration": {
+            "name": "DisplayFuroFatString",
+            "module": "/src/type-renderers/display-furo-fat-string/DisplayFuroFatString"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-uint32/DisplayFuroFatUint32.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-fat-uint32`\nThe display-furo-fat-uint32 component displays a FieldNode of type `furo.fat.Uint32` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroFatUint32",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatUint32"
+              },
+              "privacy": "private",
+              "default": "new FuroFatUint32()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatUint32 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatUint32"
+              }
+            }
+          ],
+          "tagName": "display-furo-fat-uint32",
+          "customElement": true,
+          "summary": "display renderer for `furo.fat.Uint32`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroFatUint32",
+          "declaration": {
+            "name": "DisplayFuroFatUint32",
+            "module": "src/type-renderers/display-furo-fat-uint32/DisplayFuroFatUint32.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-uint32/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-fat-uint32",
+          "declaration": {
+            "name": "DisplayFuroFatUint32",
+            "module": "/src/type-renderers/display-furo-fat-uint32/DisplayFuroFatUint32"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-uint64/DisplayFuroFatUint64.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-fat-uint64`\nThe display-furo-fat-uint64 component displays a FieldNode of type `furo.fat.Uint64` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroFatUint64",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FuroFatUint64"
+              },
+              "privacy": "private",
+              "default": "new FuroFatUint64()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FuroFatUint64 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FuroFatUint64"
+              }
+            }
+          ],
+          "tagName": "display-furo-fat-uint64",
+          "customElement": true,
+          "summary": "display renderer for `furo.fat.Uint64`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroFatUint64",
+          "declaration": {
+            "name": "DisplayFuroFatUint64",
+            "module": "src/type-renderers/display-furo-fat-uint64/DisplayFuroFatUint64.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-fat-uint64/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-fat-uint64",
+          "declaration": {
+            "name": "DisplayFuroFatUint64",
+            "module": "/src/type-renderers/display-furo-fat-uint64/DisplayFuroFatUint64"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-integerproperty/DisplayFuroIntegerproperty.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-integerproperty`\nThe display-furo-integerproperty component displays a FieldNode of type `furo.IntegerProperty` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroIntegerproperty",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "IntegerProperty"
+              },
+              "privacy": "private",
+              "default": "new IntegerProperty()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "IntegerProperty | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "IntegerProperty"
+              }
+            }
+          ],
+          "tagName": "display-furo-integerproperty",
+          "customElement": true,
+          "summary": "display renderer for `furo.IntegerProperty`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroIntegerproperty",
+          "declaration": {
+            "name": "DisplayFuroIntegerproperty",
+            "module": "src/type-renderers/display-furo-integerproperty/DisplayFuroIntegerproperty.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-integerproperty/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-integerproperty",
+          "declaration": {
+            "name": "DisplayFuroIntegerproperty",
+            "module": "/src/type-renderers/display-furo-integerproperty/DisplayFuroIntegerproperty"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-numberproperty/DisplayFuroNumberproperty.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-numberproperty`\nThe display-furo-numberproperty component displays a FieldNode of type `furo.NumberProperty` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroNumberproperty",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "NumberProperty"
+              },
+              "privacy": "private",
+              "default": "new NumberProperty()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "NumberProperty | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "NumberProperty"
+              }
+            }
+          ],
+          "tagName": "display-furo-numberproperty",
+          "customElement": true,
+          "summary": "display renderer for `furo.NumberProperty`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroNumberproperty",
+          "declaration": {
+            "name": "DisplayFuroNumberproperty",
+            "module": "src/type-renderers/display-furo-numberproperty/DisplayFuroNumberproperty.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-numberproperty/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-numberproperty",
+          "declaration": {
+            "name": "DisplayFuroNumberproperty",
+            "module": "/src/type-renderers/display-furo-numberproperty/DisplayFuroNumberproperty"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-stringoptionproperty/DisplayFuroStringoptionproperty.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-stringoptionproperty`\nThe display-furo-stringoptionproperty component displays a FieldNode of type\n`furo.StringOptionProperty` in read only mode. It shows the option's `display_name`.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroStringoptionproperty",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "StringOptionProperty"
+              },
+              "privacy": "private",
+              "default": "new StringOptionProperty()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "StringOptionProperty | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "StringOptionProperty"
+              }
+            }
+          ],
+          "tagName": "display-furo-stringoptionproperty",
+          "customElement": true,
+          "summary": "display renderer for `furo.StringOptionProperty`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroStringoptionproperty",
+          "declaration": {
+            "name": "DisplayFuroStringoptionproperty",
+            "module": "src/type-renderers/display-furo-stringoptionproperty/DisplayFuroStringoptionproperty.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-stringoptionproperty/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-stringoptionproperty",
+          "declaration": {
+            "name": "DisplayFuroStringoptionproperty",
+            "module": "/src/type-renderers/display-furo-stringoptionproperty/DisplayFuroStringoptionproperty"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-stringproperty/DisplayFuroStringproperty.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-stringproperty`\nThe display-furo-stringproperty component displays a FieldNode of type `furo.StringProperty` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroStringproperty",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "StringProperty"
+              },
+              "privacy": "private",
+              "default": "new StringProperty()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "StringProperty | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "StringProperty"
+              }
+            }
+          ],
+          "tagName": "display-furo-stringproperty",
+          "customElement": true,
+          "summary": "display renderer for `furo.StringProperty`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroStringproperty",
+          "declaration": {
+            "name": "DisplayFuroStringproperty",
+            "module": "src/type-renderers/display-furo-stringproperty/DisplayFuroStringproperty.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-stringproperty/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-stringproperty",
+          "declaration": {
+            "name": "DisplayFuroStringproperty",
+            "module": "/src/type-renderers/display-furo-stringproperty/DisplayFuroStringproperty"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-type-date/DisplayFuroTypeDate.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-type-date`\nThe display-furo-type-date component displays a FieldNode of type `furo.type.Date` in read only mode.\n\nIf the field `display_name` is set, the component uses that value for the display, otherwise it\nformats the date according to the environment locale.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroTypeDate",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "XDate"
+              },
+              "privacy": "private",
+              "default": "new XDate()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "XDate | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "XDate"
+              }
+            }
+          ],
+          "tagName": "display-furo-type-date",
+          "customElement": true,
+          "summary": "display renderer for `furo.type.Date`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroTypeDate",
+          "declaration": {
+            "name": "DisplayFuroTypeDate",
+            "module": "src/type-renderers/display-furo-type-date/DisplayFuroTypeDate.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-type-date/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-type-date",
+          "declaration": {
+            "name": "DisplayFuroTypeDate",
+            "module": "/src/type-renderers/display-furo-type-date/DisplayFuroTypeDate"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-type-money/DisplayFuroTypeMoney.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-furo-type-money`\nThe display-furo-type-money component displays a FieldNode of type `furo.type.Money` in read only mode.\n\nIf the field `display_name` is set, the component uses that value for the display, otherwise it\nformats the amount as a currency according to the environment locale.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayFuroTypeMoney",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "Money"
+              },
+              "privacy": "private",
+              "default": "new Money()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "Money | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "Money"
+              }
+            }
+          ],
+          "tagName": "display-furo-type-money",
+          "customElement": true,
+          "summary": "display renderer for `furo.type.Money`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayFuroTypeMoney",
+          "declaration": {
+            "name": "DisplayFuroTypeMoney",
+            "module": "src/type-renderers/display-furo-type-money/DisplayFuroTypeMoney.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-furo-type-money/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-furo-type-money",
+          "declaration": {
+            "name": "DisplayFuroTypeMoney",
+            "module": "/src/type-renderers/display-furo-type-money/DisplayFuroTypeMoney"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-boolvalue/DisplayGoogleProtobufBoolvalue.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-protobuf-boolvalue`\nThe display-google-protobuf-boolvalue component displays a FieldNode of type\n`google.protobuf.BoolValue` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleProtobufBoolvalue",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "BoolValue"
+              },
+              "privacy": "private",
+              "default": "new BoolValue()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "BoolValue | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "BoolValue"
+              }
+            }
+          ],
+          "tagName": "display-google-protobuf-boolvalue",
+          "customElement": true,
+          "summary": "display renderer for `google.protobuf.BoolValue`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleProtobufBoolvalue",
+          "declaration": {
+            "name": "DisplayGoogleProtobufBoolvalue",
+            "module": "src/type-renderers/display-google-protobuf-boolvalue/DisplayGoogleProtobufBoolvalue.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-boolvalue/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-protobuf-boolvalue",
+          "declaration": {
+            "name": "DisplayGoogleProtobufBoolvalue",
+            "module": "/src/type-renderers/display-google-protobuf-boolvalue/DisplayGoogleProtobufBoolvalue"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-doublevalue/DisplayGoogleProtobufDoublevalue.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-protobuf-doublevalue`\nThe display-google-protobuf-doublevalue component displays a FieldNode of type\n`google.protobuf.DoubleValue` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleProtobufDoublevalue",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "DoubleValue"
+              },
+              "privacy": "private",
+              "default": "new DoubleValue()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "DoubleValue | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "DoubleValue"
+              }
+            }
+          ],
+          "tagName": "display-google-protobuf-doublevalue",
+          "customElement": true,
+          "summary": "display renderer for `google.protobuf.DoubleValue`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleProtobufDoublevalue",
+          "declaration": {
+            "name": "DisplayGoogleProtobufDoublevalue",
+            "module": "src/type-renderers/display-google-protobuf-doublevalue/DisplayGoogleProtobufDoublevalue.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-doublevalue/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-protobuf-doublevalue",
+          "declaration": {
+            "name": "DisplayGoogleProtobufDoublevalue",
+            "module": "/src/type-renderers/display-google-protobuf-doublevalue/DisplayGoogleProtobufDoublevalue"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-floatvalue/DisplayGoogleProtobufFloatvalue.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-protobuf-floatvalue`\nThe display-google-protobuf-floatvalue component displays a FieldNode of type\n`google.protobuf.FloatValue` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleProtobufFloatvalue",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "FloatValue"
+              },
+              "privacy": "private",
+              "default": "new FloatValue()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "FloatValue | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "FloatValue"
+              }
+            }
+          ],
+          "tagName": "display-google-protobuf-floatvalue",
+          "customElement": true,
+          "summary": "display renderer for `google.protobuf.FloatValue`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleProtobufFloatvalue",
+          "declaration": {
+            "name": "DisplayGoogleProtobufFloatvalue",
+            "module": "src/type-renderers/display-google-protobuf-floatvalue/DisplayGoogleProtobufFloatvalue.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-floatvalue/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-protobuf-floatvalue",
+          "declaration": {
+            "name": "DisplayGoogleProtobufFloatvalue",
+            "module": "/src/type-renderers/display-google-protobuf-floatvalue/DisplayGoogleProtobufFloatvalue"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-int32value/DisplayGoogleProtobufInt32value.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-protobuf-int32value`\nThe display-google-protobuf-int32value component displays a FieldNode of type\n`google.protobuf.Int32Value` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleProtobufInt32value",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "Int32Value"
+              },
+              "privacy": "private",
+              "default": "new Int32Value()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "Int32Value | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "Int32Value"
+              }
+            }
+          ],
+          "tagName": "display-google-protobuf-int32value",
+          "customElement": true,
+          "summary": "display renderer for `google.protobuf.Int32Value`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleProtobufInt32value",
+          "declaration": {
+            "name": "DisplayGoogleProtobufInt32value",
+            "module": "src/type-renderers/display-google-protobuf-int32value/DisplayGoogleProtobufInt32value.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-int32value/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-protobuf-int32value",
+          "declaration": {
+            "name": "DisplayGoogleProtobufInt32value",
+            "module": "/src/type-renderers/display-google-protobuf-int32value/DisplayGoogleProtobufInt32value"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-int64value/DisplayGoogleProtobufInt64value.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-protobuf-int64value`\nThe display-google-protobuf-int64value component displays a FieldNode of type\n`google.protobuf.Int64Value` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleProtobufInt64value",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "Int64Value"
+              },
+              "privacy": "private",
+              "default": "new Int64Value()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "Int64Value | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "Int64Value"
+              }
+            }
+          ],
+          "tagName": "display-google-protobuf-int64value",
+          "customElement": true,
+          "summary": "display renderer for `google.protobuf.Int64Value`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleProtobufInt64value",
+          "declaration": {
+            "name": "DisplayGoogleProtobufInt64value",
+            "module": "src/type-renderers/display-google-protobuf-int64value/DisplayGoogleProtobufInt64value.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-int64value/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-protobuf-int64value",
+          "declaration": {
+            "name": "DisplayGoogleProtobufInt64value",
+            "module": "/src/type-renderers/display-google-protobuf-int64value/DisplayGoogleProtobufInt64value"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-stringvalue/DisplayGoogleProtobufStringvalue.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-protobuf-stringvalue`\nThe display-google-protobuf-stringvalue component displays a FieldNode of type\n`google.protobuf.StringValue` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleProtobufStringvalue",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "StringValue"
+              },
+              "privacy": "private",
+              "default": "new StringValue()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "StringValue | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "StringValue"
+              }
+            }
+          ],
+          "tagName": "display-google-protobuf-stringvalue",
+          "customElement": true,
+          "summary": "display renderer for `google.protobuf.StringValue`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleProtobufStringvalue",
+          "declaration": {
+            "name": "DisplayGoogleProtobufStringvalue",
+            "module": "src/type-renderers/display-google-protobuf-stringvalue/DisplayGoogleProtobufStringvalue.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-stringvalue/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-protobuf-stringvalue",
+          "declaration": {
+            "name": "DisplayGoogleProtobufStringvalue",
+            "module": "/src/type-renderers/display-google-protobuf-stringvalue/DisplayGoogleProtobufStringvalue"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-timestamp/DisplayGoogleProtobufTimestamp.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-protobuf-timestamp`\nThe display-google-protobuf-timestamp component displays a FieldNode of type\n`google.protobuf.Timestamp` in read only mode.\n\nThe component uses locale from the environment to display the date/time value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleProtobufTimestamp",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "Timestamp"
+              },
+              "privacy": "private",
+              "default": "new Timestamp()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "Timestamp | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "Timestamp"
+              }
+            }
+          ],
+          "tagName": "display-google-protobuf-timestamp",
+          "customElement": true,
+          "summary": "display renderer for `google.protobuf.Timestamp`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleProtobufTimestamp",
+          "declaration": {
+            "name": "DisplayGoogleProtobufTimestamp",
+            "module": "src/type-renderers/display-google-protobuf-timestamp/DisplayGoogleProtobufTimestamp.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-timestamp/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-protobuf-timestamp",
+          "declaration": {
+            "name": "DisplayGoogleProtobufTimestamp",
+            "module": "/src/type-renderers/display-google-protobuf-timestamp/DisplayGoogleProtobufTimestamp"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-uint32value/DisplayGoogleProtobufUint32value.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-protobuf-uint32value`\nThe display-google-protobuf-uint32value component displays a FieldNode of type\n`google.protobuf.UInt32Value` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleProtobufUint32value",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "UInt32Value"
+              },
+              "privacy": "private",
+              "default": "new UInt32Value()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "UInt32Value | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "UInt32Value"
+              }
+            }
+          ],
+          "tagName": "display-google-protobuf-uint32value",
+          "customElement": true,
+          "summary": "display renderer for `google.protobuf.UInt32Value`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleProtobufUint32value",
+          "declaration": {
+            "name": "DisplayGoogleProtobufUint32value",
+            "module": "src/type-renderers/display-google-protobuf-uint32value/DisplayGoogleProtobufUint32value.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-uint32value/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-protobuf-uint32value",
+          "declaration": {
+            "name": "DisplayGoogleProtobufUint32value",
+            "module": "/src/type-renderers/display-google-protobuf-uint32value/DisplayGoogleProtobufUint32value"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-uint64value/DisplayGoogleProtobufUint64value.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-protobuf-uint64value`\nThe display-google-protobuf-uint64value component displays a FieldNode of type\n`google.protobuf.UInt64Value` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleProtobufUint64value",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "UInt64Value"
+              },
+              "privacy": "private",
+              "default": "new UInt64Value()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "UInt64Value | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "UInt64Value"
+              }
+            }
+          ],
+          "tagName": "display-google-protobuf-uint64value",
+          "customElement": true,
+          "summary": "display renderer for `google.protobuf.UInt64Value`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleProtobufUint64value",
+          "declaration": {
+            "name": "DisplayGoogleProtobufUint64value",
+            "module": "src/type-renderers/display-google-protobuf-uint64value/DisplayGoogleProtobufUint64value.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-protobuf-uint64value/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-protobuf-uint64value",
+          "declaration": {
+            "name": "DisplayGoogleProtobufUint64value",
+            "module": "/src/type-renderers/display-google-protobuf-uint64value/DisplayGoogleProtobufUint64value"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-type-date/DisplayGoogleTypeDate.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-type-date`\nThe display-google-type-date component displays a FieldNode of type `google.type.Date` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleTypeDate",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "XDate"
+              },
+              "privacy": "private",
+              "default": "new XDate()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "XDate | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "convertDateToString",
+              "privacy": "private",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "date",
+                  "type": {
+                    "text": "XDate"
+                  }
+                }
+              ],
+              "description": "Converts a `google.type.Date` field node to a locale-formatted date string,\nor \"N/A\" when the date is incomplete."
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "XDate"
+              }
+            }
+          ],
+          "tagName": "display-google-type-date",
+          "customElement": true,
+          "summary": "display renderer for `google.type.Date`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleTypeDate",
+          "declaration": {
+            "name": "DisplayGoogleTypeDate",
+            "module": "src/type-renderers/display-google-type-date/DisplayGoogleTypeDate.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-type-date/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-type-date",
+          "declaration": {
+            "name": "DisplayGoogleTypeDate",
+            "module": "/src/type-renderers/display-google-type-date/DisplayGoogleTypeDate"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-type-money/DisplayGoogleTypeMoney.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-type-money`\nThe display-google-type-money component displays a FieldNode of type `google.type.Money` in read only mode.\n\nThe component uses locale from the environment to display the amount as a currency.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleTypeMoney",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "Money"
+              },
+              "privacy": "private",
+              "default": "new Money()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "Money | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "convertToNumber",
+              "privacy": "private",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "number"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "money",
+                  "type": {
+                    "text": "Money"
+                  }
+                }
+              ],
+              "description": "Converts a money field node (units + nanos) to a decimal amount."
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "Money"
+              }
+            }
+          ],
+          "tagName": "display-google-type-money",
+          "customElement": true,
+          "summary": "display renderer for `google.type.Money`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleTypeMoney",
+          "declaration": {
+            "name": "DisplayGoogleTypeMoney",
+            "module": "src/type-renderers/display-google-type-money/DisplayGoogleTypeMoney.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-type-money/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-type-money",
+          "declaration": {
+            "name": "DisplayGoogleTypeMoney",
+            "module": "/src/type-renderers/display-google-type-money/DisplayGoogleTypeMoney"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-type-timeofday/DisplayGoogleTypeTimeofday.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-google-type-timeofday`\nThe display-google-type-timeofday component displays a FieldNode of type `google.type.TimeOfDay` in read only mode.\n\nThe component uses locale from the environment to display the time value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayGoogleTypeTimeofday",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "TimeOfDay"
+              },
+              "privacy": "private",
+              "default": "new TimeOfDay()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "TimeOfDay | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "TimeOfDay"
+              }
+            }
+          ],
+          "tagName": "display-google-type-timeofday",
+          "customElement": true,
+          "summary": "display renderer for `google.type.TimeOfDay`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayGoogleTypeTimeofday",
+          "declaration": {
+            "name": "DisplayGoogleTypeTimeofday",
+            "module": "src/type-renderers/display-google-type-timeofday/DisplayGoogleTypeTimeofday.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-google-type-timeofday/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-google-type-timeofday",
+          "declaration": {
+            "name": "DisplayGoogleTypeTimeofday",
+            "module": "/src/type-renderers/display-google-type-timeofday/DisplayGoogleTypeTimeofday"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-int32/DisplayInt32.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-int32`\nThe display-int32 component displays a FieldNode of type `int32` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayInt32",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "INT32"
+              },
+              "privacy": "private",
+              "default": "new INT32()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "INT32 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "INT32"
+              }
+            }
+          ],
+          "tagName": "display-int32",
+          "customElement": true,
+          "summary": "display renderer for `int32`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayInt32",
+          "declaration": {
+            "name": "DisplayInt32",
+            "module": "src/type-renderers/display-int32/DisplayInt32.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-int32/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-int32",
+          "declaration": {
+            "name": "DisplayInt32",
+            "module": "/src/type-renderers/display-int32/DisplayInt32"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-int64/DisplayInt64.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-int64`\nThe display-int64 component displays a FieldNode of type `int64` in read only mode.\n\nThe component uses locale from the environment to display the date value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayInt64",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "INT64"
+              },
+              "privacy": "private",
+              "default": "new INT64()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "INT64 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "INT64"
+              }
+            }
+          ],
+          "tagName": "display-int64",
+          "customElement": true,
+          "summary": "display renderer for `int64`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayInt64",
+          "declaration": {
+            "name": "DisplayInt64",
+            "module": "src/type-renderers/display-int64/DisplayInt64.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-int64/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-int64",
+          "declaration": {
+            "name": "DisplayInt64",
+            "module": "/src/type-renderers/display-int64/DisplayInt64"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-string/DisplayString.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-string`\nThe display-string component displays a FieldNode of type `string` in read only mode.\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayString",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING"
+              },
+              "privacy": "private",
+              "default": "new STRING()"
+            },
+            {
+              "kind": "field",
+              "name": "_readValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING"
+              }
+            }
+          ],
+          "tagName": "display-string",
+          "customElement": true,
+          "summary": "display renderer for `string`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayString",
+          "declaration": {
+            "name": "DisplayString",
+            "module": "src/type-renderers/display-string/DisplayString.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-string/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-string",
+          "declaration": {
+            "name": "DisplayString",
+            "module": "/src/type-renderers/display-string/DisplayString"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-uint32/DisplayUint32.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-uint32`\nThe display-uint32 component displays a FieldNode of type `uint32` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayUint32",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "UINT32"
+              },
+              "privacy": "private",
+              "default": "new UINT32()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "UINT32 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "UINT32"
+              }
+            }
+          ],
+          "tagName": "display-uint32",
+          "customElement": true,
+          "summary": "display renderer for `uint32`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayUint32",
+          "declaration": {
+            "name": "DisplayUint32",
+            "module": "src/type-renderers/display-uint32/DisplayUint32.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-uint32/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-uint32",
+          "declaration": {
+            "name": "DisplayUint32",
+            "module": "/src/type-renderers/display-uint32/DisplayUint32"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-uint64/DisplayUint64.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`display-uint64`\nThe display-uint64 component displays a FieldNode of type `uint64` in read only mode.\n\nThe component uses locale from the environment to display the value accordingly.\nhttps://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat\n\nEvery display-xxx component should implement the following API:\n- function: bindData(fieldNode){...}",
+          "name": "DisplayUint64",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_formatCell",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "UINT64"
+              },
+              "privacy": "private",
+              "default": "new UINT64()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "UINT64 | undefined"
+                  }
+                }
+              ],
+              "description": "Binds a field node to the component",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "displayValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "UINT64"
+              }
+            }
+          ],
+          "tagName": "display-uint64",
+          "customElement": true,
+          "summary": "display renderer for `uint64`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DisplayUint64",
+          "declaration": {
+            "name": "DisplayUint64",
+            "module": "src/type-renderers/display-uint64/DisplayUint64.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/type-renderers/display-uint64/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "display-uint64",
+          "declaration": {
+            "name": "DisplayUint64",
+            "module": "/src/type-renderers/display-uint64/DisplayUint64"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/type-renderers/index.js",
       "declarations": [],
       "exports": [
@@ -30014,6 +33114,278 @@
           "declaration": {
             "name": "*",
             "module": "src/type-renderers/cell-uint64/CellUint64"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-bool/DisplayBool"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-double/DisplayDouble"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-float/DisplayFloat"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-fat-bool/DisplayFuroFatBool"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-fat-double/DisplayFuroFatDouble"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-fat-float/DisplayFuroFatFloat"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-fat-int32/DisplayFuroFatInt32"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-fat-int64/DisplayFuroFatInt64"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-fat-string/DisplayFuroFatString"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-fat-uint32/DisplayFuroFatUint32"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-fat-uint64/DisplayFuroFatUint64"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-integerproperty/DisplayFuroIntegerproperty"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-numberproperty/DisplayFuroNumberproperty"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-stringoptionproperty/DisplayFuroStringoptionproperty"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-stringproperty/DisplayFuroStringproperty"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-type-date/DisplayFuroTypeDate"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-furo-type-money/DisplayFuroTypeMoney"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-protobuf-boolvalue/DisplayGoogleProtobufBoolvalue"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-protobuf-doublevalue/DisplayGoogleProtobufDoublevalue"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-protobuf-floatvalue/DisplayGoogleProtobufFloatvalue"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-protobuf-int32value/DisplayGoogleProtobufInt32value"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-protobuf-int64value/DisplayGoogleProtobufInt64value"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-protobuf-stringvalue/DisplayGoogleProtobufStringvalue"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-protobuf-timestamp/DisplayGoogleProtobufTimestamp"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-protobuf-uint32value/DisplayGoogleProtobufUint32value"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-protobuf-uint64value/DisplayGoogleProtobufUint64value"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-type-date/DisplayGoogleTypeDate"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-type-money/DisplayGoogleTypeMoney"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-google-type-timeofday/DisplayGoogleTypeTimeofday"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-int32/DisplayInt32"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-int64/DisplayInt64"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-string/DisplayString"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-uint32/DisplayUint32"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/type-renderers/display-uint64/DisplayUint64"
           }
         }
       ]

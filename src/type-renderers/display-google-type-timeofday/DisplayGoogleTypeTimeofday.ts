@@ -1,34 +1,34 @@
 import { Env } from "@furo/framework/src/furo.js";
-import { Timestamp } from "@furo/open-models";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
+import { TimeOfDay } from "@/models/google/type/TimeOfDay";
+
 /**
- * `cell-google-protobuf-timestamp`
- * The cell-google-protobuf-timestamp component displays a FieldNode of type
- * `google.protobuf.Timestamp` in read only mode.
+ * `display-google-type-timeofday`
+ * The display-google-type-timeofday component displays a FieldNode of type `google.type.TimeOfDay` in read only mode.
  *
- * The component uses locale from the environment to display the date/time value accordingly.
- * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
+ * The component uses locale from the environment to display the time value accordingly.
+ * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
  *
- * Every cell-xxx component should implement the following API:
+ * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
  *
- * @summary cell display renderer for `google.protobuf.Timestamp`
- * @element cell-google-protobuf-timestamp
+ * @summary display renderer for `google.type.TimeOfDay`
+ * @element display-google-type-timeofday
  */
-export class CellGoogleProtobufTimestamp extends LitElement {
+export class DisplayGoogleTypeTimeofday extends LitElement {
 
   @state()
   private displayValue = "";
 
-  private _model: Timestamp = new Timestamp();
+  private _model: TimeOfDay = new TimeOfDay();
 
-  get model(): Timestamp {
+  get model(): TimeOfDay {
     return this._model;
   }
 
-  set model(value: Timestamp) {
+  set model(value: TimeOfDay) {
     this.bindData(value);
   }
 
@@ -36,7 +36,7 @@ export class CellGoogleProtobufTimestamp extends LitElement {
     // language=CSS
     return css`
       :host {
-        display: block;
+        display: inline;
         white-space: nowrap;
       }
 
@@ -46,6 +46,11 @@ export class CellGoogleProtobufTimestamp extends LitElement {
 
       :host([disabled]) {
         opacity: var(--_ui5_input_disabled_opacity, 0.4);
+      }
+
+      :host([data-size*="size-l"]),
+      :host([data-size*="size-xl"]) {
+        padding-top: 0.5rem;
       }
     `;
   }
@@ -60,7 +65,7 @@ export class CellGoogleProtobufTimestamp extends LitElement {
    * @param fieldNode
    * @public
    */
-  bindData(fieldNode: Timestamp | undefined): void {
+  bindData(fieldNode: TimeOfDay | undefined): void {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -78,20 +83,17 @@ export class CellGoogleProtobufTimestamp extends LitElement {
    * @private
    */
   private _formatCell = (): void => {
-    const value = this._model.value;
-    if (!value) {
-      return;
-    }
-    const date = new Date(value);
+    const hours = this._model.hours.value;
+    const minutes = this._model.minutes.value;
+    const seconds = this._model.seconds.value;
+    const date = new Date(2000, 0, 1, hours, minutes, seconds);
     if (!Number.isNaN(date.getTime())) {
-      this.displayValue = new Intl.DateTimeFormat([Env.locale, "de-CH"], {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
+      this.displayValue = date.toLocaleTimeString([Env.locale, "de-CH"], {
+        hour: "numeric",
         minute: "2-digit",
         second: "2-digit",
-      }).format(date);
+        hour12: false,
+      });
     }
   };
 

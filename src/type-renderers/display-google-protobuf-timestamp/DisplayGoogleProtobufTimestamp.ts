@@ -4,20 +4,20 @@ import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
 /**
- * `cell-google-protobuf-timestamp`
- * The cell-google-protobuf-timestamp component displays a FieldNode of type
+ * `display-google-protobuf-timestamp`
+ * The display-google-protobuf-timestamp component displays a FieldNode of type
  * `google.protobuf.Timestamp` in read only mode.
  *
  * The component uses locale from the environment to display the date/time value accordingly.
  * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
  *
- * Every cell-xxx component should implement the following API:
+ * Every display-xxx component should implement the following API:
  * - function: bindData(fieldNode){...}
  *
- * @summary cell display renderer for `google.protobuf.Timestamp`
- * @element cell-google-protobuf-timestamp
+ * @summary display renderer for `google.protobuf.Timestamp`
+ * @element display-google-protobuf-timestamp
  */
-export class CellGoogleProtobufTimestamp extends LitElement {
+export class DisplayGoogleProtobufTimestamp extends LitElement {
 
   @state()
   private displayValue = "";
@@ -36,7 +36,7 @@ export class CellGoogleProtobufTimestamp extends LitElement {
     // language=CSS
     return css`
       :host {
-        display: block;
+        display: inline;
         white-space: nowrap;
       }
 
