@@ -53,11 +53,17 @@ export class CelleditBool extends CheckBox {
     this.bindData(value);
   }
 
-  override connectedCallback(): Promise<void> {
-    this.style.display = "block";
-    this.style.padding = "2px 0";
-    this.style.setProperty("--_ui5_checkbox_width_height", "0");
-    return super.connectedCallback();
+  static override get styles() {
+    return [
+      super.styles,
+      // language=CSS
+      ` :host(:not([hidden])){
+        display:block;
+        padding: 2px 0;
+        /** --_ui5_checkbox_width_height:0; **/
+      }
+      `,
+    ];
   }
 
   /**

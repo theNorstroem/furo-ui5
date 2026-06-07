@@ -1,5 +1,6 @@
 import { INT32, INT64, STRING, Timestamp } from "@furo/open-models";
 
+import { XDate as FuroXDate } from "@/models/furo/type/Date";
 import { XDate } from "@/models/google/type/Date";
 import { TimeOfDay } from "@/models/google/type/TimeOfDay";
 
@@ -12,22 +13,23 @@ import { TimeOfDay } from "@/models/google/type/TimeOfDay";
  *  - `primitives.INT32`              — unix seconds (number); empty UI writes `0`
  *  - `primitives.INT64`              — unix seconds (bigint); empty UI writes `0n`
  *  - `google.type.Date` (`XDate`)    — `{year, month, day}` as INT32 children
+ *  - `furo.type.Date` (`FuroXDate`)  — `{year, month, day}` as INT32 children (+ `displayName`)
  *  - `google.type.TimeOfDay`         — `{hours, minutes, seconds, nanos}` as INT32 children
  *
  * The element-side `valueField` is a `string` carrying canonical ISO 8601:
  * full RFC 3339 (`YYYY-MM-DDTHH:mm:ss.sssZ`) for Timestamp/INT32/INT64/STRING,
- * calendar-only (`YYYY-MM-DD`) for XDate, time-only (`HH:mm:ss`) for TimeOfDay.
+ * calendar-only (`YYYY-MM-DD`) for XDate/FuroXDate, time-only (`HH:mm:ss`) for TimeOfDay.
  */
 type StringKeys<T> = { [k in keyof T]: T[k] extends string ? k : never }[keyof T];
 
 export class DateAndTimeReaderWriters<T> {
   private clazz: T;
 
-  private modelField: STRING | Timestamp | INT32 | INT64 | XDate | TimeOfDay;
+  private modelField: STRING | Timestamp | INT32 | INT64 | XDate | FuroXDate | TimeOfDay;
 
   private valueField: StringKeys<T>;
 
-  constructor(clazz: T, valueField: StringKeys<T>, modelField: STRING | Timestamp | INT32 | INT64 | XDate | TimeOfDay) {
+  constructor(clazz: T, valueField: StringKeys<T>, modelField: STRING | Timestamp | INT32 | INT64 | XDate | FuroXDate | TimeOfDay) {
     this.clazz = clazz;
     this.modelField = modelField;
     this.valueField = valueField;
@@ -68,6 +70,20 @@ export class DateAndTimeReaderWriters<T> {
 
     readers.set("google.type.Date", () => {
       const xd = this.modelField as XDate;
+      const y = xd.year.value;
+      const m = xd.month.value;
+      const d = xd.day.value;
+      const v =
+        y === 0 && m === 0 && d === 0
+          ? ""
+          : `${y.toString().padStart(4, "0")}-${m.toString().padStart(2, "0")}-${d.toString().padStart(2, "0")}`;
+      if (v !== this.clazz[this.valueField]) {
+        (this.clazz[this.valueField] as string) = v;
+      }
+    });
+
+    readers.set("furo.type.Date", () => {
+      const xd = this.modelField as FuroXDate;
       const y = xd.year.value;
       const m = xd.month.value;
       const d = xd.day.value;
@@ -148,6 +164,21 @@ export class DateAndTimeReaderWriters<T> {
 
     writers.set("google.type.Date", () => {
       const xd = this.modelField as XDate;
+      const ui = this.clazz[this.valueField] as string;
+      const parts = /^(\d{4})-(\d{2})-(\d{2})/.exec(ui);
+      if (parts === null) {
+        xd.year = 0;
+        xd.month = 0;
+        xd.day = 0;
+        return;
+      }
+      xd.year = parseInt(parts[1], 10);
+      xd.month = parseInt(parts[2], 10);
+      xd.day = parseInt(parts[3], 10);
+    });
+
+    writers.set("furo.type.Date", () => {
+      const xd = this.modelField as FuroXDate;
       const ui = this.clazz[this.valueField] as string;
       const parts = /^(\d{4})-(\d{2})-(\d{2})/.exec(ui);
       if (parts === null) {

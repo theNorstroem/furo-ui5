@@ -156,8 +156,8 @@ export class FuroUi5NumberInput extends Input {
   override disconnectedCallback(): void {
     super.disconnectedCallback();
     this._model.__removeEventListener("update", this.readFromModel);
-    this.removeEventListener("input", this.writeToModel);
-    this.removeEventListener("change", this.readFromModel);
+    this.removeEventListener("input", this.writeInputToModel);
+    this.removeEventListener("change", this.writeToModel);
   }
 
   /**
@@ -215,8 +215,8 @@ export class FuroUi5NumberInput extends Input {
      */
     this.readonlyState.detach();
     this._model.__removeEventListener("update", this.readFromModel);
-    this.removeEventListener("input", this.writeToModel);
-    this.removeEventListener("change", this.readFromModel);
+    this.removeEventListener("input", this.writeInputToModel);
+    this.removeEventListener("change", this.writeToModel);
 
     // connect the model
     this._model = fieldNode;
@@ -233,8 +233,12 @@ export class FuroUi5NumberInput extends Input {
     this._model.__addEventListener("update", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("input", this.writeToModel);
-    this.addEventListener("change", this.readFromModel);
+    this.addEventListener("input", (d) => {
+      console.log(d);
+      console.log(this.value);
+    });
+    this.addEventListener("input", this.writeInputToModel);
+    this.addEventListener("change", this.writeToModel);
 
     // initial read
     this.readFromModel();
@@ -271,6 +275,14 @@ export class FuroUi5NumberInput extends Input {
 
   private writeToModel = (): void => {
     this.modelReaderWriter?.writeModel();
+  };
+
+  // workaround for invalid states while typing
+  private writeInputToModel = (): void => {
+    if(this.value != ''){
+      this.modelReaderWriter?.writeModel();
+    }
+
   };
 
   /**

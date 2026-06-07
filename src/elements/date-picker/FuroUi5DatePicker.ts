@@ -95,11 +95,7 @@ export class FuroUi5DatePicker extends DatePicker {
     this._model = fieldNode;
     // init model
     this.dateAndTimeReaderWriters = new DateAndTimeReaderWriters<FuroUi5DatePicker>(this, "value", this._model);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.dateAndTimeReaderWriters.getWriters(),
-      this.dateAndTimeReaderWriters.getReaders()
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.dateAndTimeReaderWriters.getWriters(), this.dateAndTimeReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);
@@ -152,6 +148,7 @@ export class FuroUi5DatePicker extends DatePicker {
   };
 
   private writeToModel = (): void => {
+    this.dateValueUTC
     this.modelReaderWriter?.writeModel();
   };
 
@@ -162,6 +159,14 @@ export class FuroUi5DatePicker extends DatePicker {
   clear() {
     this.value = "";
     this.writeToModel();
+  }
+
+  static override get styles() {
+    return [
+      super.styles,
+      // language=css
+      `ui5-datetime-input{width:inherit}`,
+    ];
   }
 
   /**

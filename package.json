@@ -9,11 +9,7 @@
     "email": "",
     "url": "https://github.com/theNorstroem/"
   },
-  "keywords": [
-    "web-components",
-    "flow based programming",
-    "fbp"
-  ],
+  "keywords": ["web-components", "flow based programming", "fbp"],
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",
@@ -288,7 +284,7 @@
   "peerDependencies": {
     "@furo/fbp": "^6.15.0",
     "@furo/layout": "/Users/veith/Projects/theNorstroem/eclipsefuro-web/packages/furo-layout/furo-layout-3.0.0-RC.11.tgz",
-    "@furo/open-models": "^1.20.0",
+    "@furo/open-models": "^1.20.1",
     "@furo/route": "^4.0.0",
     "@furo/util": "^2.2.2",
     "@ui5/webcomponents": "2.22.0",

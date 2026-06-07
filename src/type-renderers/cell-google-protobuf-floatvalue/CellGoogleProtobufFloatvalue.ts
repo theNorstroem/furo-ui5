@@ -104,6 +104,10 @@ export class CellGoogleProtobufFloatvalue extends LitElement {
    * @private
    */
   private _formatCell = (): void => {
+    if (this._model.value === null) {
+      this.displayValue = "";
+      return;
+    }
     const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._model.value);
     if (displayValue !== "NaN") {
       this.displayValue = displayValue;

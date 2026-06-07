@@ -62,7 +62,7 @@ export class FuroUi5FormGroup extends LitElement {
     }
 
     @container (min-width: 501px) {
-      --spacerDisplay: none;
+
       legend {
         margin-bottom: var(--MediaSizeIndentationBottom);
       }
@@ -70,6 +70,7 @@ export class FuroUi5FormGroup extends LitElement {
       fieldset {
         grid-row-gap: 1rem;
         grid-column-gap: 1rem;
+        --spacerDisplay: none;
       }
     }
     @container (min-width: 1296px) {

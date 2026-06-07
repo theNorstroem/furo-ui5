@@ -1,5 +1,12 @@
 // celledit
 export * from "./celledit-bool/CelleditBool";
+export * from "./celledit-furo-fat-bool/CelleditFuroFatBool";
+export * from "./celledit-uint32/CelleditUint32";
+export * from "./celledit-uint64/CelleditUint64";
+export * from "./celledit-double/CelleditDouble";
+export * from "./celledit-int32/CelleditInt32";
+export * from "./celledit-int64/CelleditInt64";
+export * from "./celledit-furo-fat-string/CelleditFuroFatString";
 
 // cell
 export * from "./cell-bool/CellBool";

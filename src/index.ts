@@ -7,6 +7,7 @@ export * from "@/elements/date-picker/FuroUi5DatePicker";
 export * from "@/elements/date-time-picker/FuroUi5DateTimePicker";
 export * from "@/elements/header-panel/FuroUi5HeaderPanel";
 export * from "@/elements/icon/FuroUi5Icon";
+export * from "@/elements/money-input/FuroUi5MoneyInput";
 export * from "@/elements/multi-input/FuroUi5MultiInput";
 export * from "@/elements/popover/FuroUi5Popover";
 export * from "@/elements/relative-time-badge/FuroUi5RelativeTimeBadge";
