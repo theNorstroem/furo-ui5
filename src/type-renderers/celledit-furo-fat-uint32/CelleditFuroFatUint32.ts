@@ -15,5 +15,4 @@ export class CelleditFuroFatUint32 extends CelleditInt32 {
   static override get metadata() {
     return { tag: "celledit-furo-fat-uint32" };
   }
-
 }

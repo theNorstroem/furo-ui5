@@ -18,7 +18,6 @@ import "@ui5/webcomponents-icons/dist/border.js";
  * @element display-google-protobuf-boolvalue
  */
 export class DisplayGoogleProtobufBoolvalue extends LitElement {
-
   @state()
   private checked = false;
 
@@ -108,10 +107,6 @@ export class DisplayGoogleProtobufBoolvalue extends LitElement {
    */
   override render() {
     // language=HTML
-    return html`
-      ${this.checked
-        ? html` <ui5-icon name="accept" value-state="Success"></ui5-icon> `
-        : html` <ui5-icon name="border"></ui5-icon> `}
-    `;
+    return html` ${this.checked ? html` <ui5-icon name="accept" value-state="Success"></ui5-icon> ` : html` <ui5-icon name="border"></ui5-icon> `} `;
   }
 }

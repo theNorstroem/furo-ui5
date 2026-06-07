@@ -18,7 +18,6 @@ import { state } from "lit/decorators.js";
  * @element cell-google-protobuf-int64value
  */
 export class CellGoogleProtobufInt64value extends LitElement {
-
   @state()
   private displayValue = "";
 
@@ -106,7 +105,7 @@ export class CellGoogleProtobufInt64value extends LitElement {
   private _formatCell = (): void => {
     if (this._model.value === null) {
       this.displayValue = "";
-      return
+      return;
     }
     const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._model.value);
     if (displayValue !== "NaN") {

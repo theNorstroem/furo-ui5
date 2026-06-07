@@ -53,26 +53,26 @@ export const Default: StoryObj = {
     accessibleName: "Amount",
     currencies: "CHF,EUR,USD",
   },
-  render: (renderArgs) =>
+  render: renderArgs =>
     html` <furo-ui5-money-input
-      accessible-name="${ifDefined(renderArgs.accessibleName)}"
-      currencies="${ifDefined(renderArgs.currencies)}"
-      ?disabled="${renderArgs.disabled}"
-      ?required="${renderArgs.required}"
-      ?readonly="${renderArgs.readonly}"
-      placeholder="${ifDefined(renderArgs.placeholder)}"
-      .model="${money}"
-    ></furo-ui5-money-input>
-    <hr>
-    <furo-ui5-money-input
-      accessible-name="${ifDefined(renderArgs.accessibleName)}"
-      currencies="${ifDefined(renderArgs.currencies)}"
-      ?disabled="${renderArgs.disabled}"
-      ?required="${renderArgs.required}"
-      ?readonly="${renderArgs.readonly}"
-      placeholder="${ifDefined(renderArgs.placeholder)}"
-      .model="${money}"
-    ></furo-ui5-money-input>`,
+        accessible-name="${ifDefined(renderArgs.accessibleName)}"
+        currencies="${ifDefined(renderArgs.currencies)}"
+        ?disabled="${renderArgs.disabled}"
+        ?required="${renderArgs.required}"
+        ?readonly="${renderArgs.readonly}"
+        placeholder="${ifDefined(renderArgs.placeholder)}"
+        .model="${money}"
+      ></furo-ui5-money-input>
+      <hr />
+      <furo-ui5-money-input
+        accessible-name="${ifDefined(renderArgs.accessibleName)}"
+        currencies="${ifDefined(renderArgs.currencies)}"
+        ?disabled="${renderArgs.disabled}"
+        ?required="${renderArgs.required}"
+        ?readonly="${renderArgs.readonly}"
+        placeholder="${ifDefined(renderArgs.placeholder)}"
+        .model="${money}"
+      ></furo-ui5-money-input>`,
 };
 
 export const WithLabel: StoryObj = {
@@ -80,7 +80,7 @@ export const WithLabel: StoryObj = {
     accessibleName: "Amount",
     currencies: "CHF,EUR,USD",
   },
-  render: (renderArgs) => html`
+  render: renderArgs => html`
     <furo-ui5-form-row>
       <furo-ui5-label required show-colon for="money" slot="label">Price</furo-ui5-label>
       <furo-ui5-money-input

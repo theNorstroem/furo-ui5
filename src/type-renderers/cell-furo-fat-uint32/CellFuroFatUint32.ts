@@ -18,7 +18,6 @@ import { FuroFatUint32 } from "@/models";
  * @element cell-furo-fat-uint32
  */
 export class CellFuroFatUint32 extends LitElement {
-
   @state()
   private displayValue = "";
 

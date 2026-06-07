@@ -18,7 +18,6 @@ import { FuroFatFloat } from "@/models";
  * @element cell-furo-fat-float
  */
 export class CellFuroFatFloat extends LitElement {
-
   @state()
   private displayValue = "";
 

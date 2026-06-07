@@ -17,7 +17,6 @@ import { state } from "lit/decorators.js";
  * @element display-float
  */
 export class DisplayFloat extends LitElement {
-
   @state()
   private displayValue = "";
 

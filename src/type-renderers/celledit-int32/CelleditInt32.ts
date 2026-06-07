@@ -1,4 +1,4 @@
-import { FuroUi5NumberInput } from '@/elements/number-input/FuroUi5NumberInput';
+import { FuroUi5NumberInput } from "@/elements/number-input/FuroUi5NumberInput";
 
 /**
  *
@@ -7,7 +7,6 @@ import { FuroUi5NumberInput } from '@/elements/number-input/FuroUi5NumberInput';
  * @element celledit-int32
  */
 export class CelleditInt32 extends FuroUi5NumberInput {
-
   /**
    * @private
    */
@@ -25,5 +24,4 @@ export class CelleditInt32 extends FuroUi5NumberInput {
       `,
     ];
   }
-
 }

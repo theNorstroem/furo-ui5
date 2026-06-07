@@ -1,4 +1,3 @@
-
 import { Env } from "@furo/framework/src/furo.js";
 import { INT64 } from "@furo/open-models";
 import { LitElement, html, css } from "lit";
@@ -18,7 +17,6 @@ import { state } from "lit/decorators.js";
  * @element display-int64
  */
 export class DisplayInt64 extends LitElement {
-
   @state()
   private displayValue = "";
 

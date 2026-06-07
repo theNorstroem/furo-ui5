@@ -64,37 +64,36 @@ export default meta;
 export const Default: StoryObj = {
   args: {},
   render: renderArgs =>
-    html`
- <furo-ui5-number-input
-      accessible-name="${ifDefined(renderArgs.accessibleName)}"
-      ?disabled="${renderArgs.disabled}"
-      ?show-clear-icon="${renderArgs.showClearIcon}"
-      ?show-suggestions="${renderArgs.showSuggestion}"
-      ?required="${renderArgs.required}"
-      ?readonly="${renderArgs.readonly}"
-      value="${ifDefined(renderArgs.value)}"
-      placeholder="${ifDefined(renderArgs.placeholder)}"
-      .model="${intVal}"
-      value-state="${ifDefined(renderArgs.valueState)}"
-      >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
-    </furo-ui5-number-input>
+    html` <furo-ui5-number-input
+        accessible-name="${ifDefined(renderArgs.accessibleName)}"
+        ?disabled="${renderArgs.disabled}"
+        ?show-clear-icon="${renderArgs.showClearIcon}"
+        ?show-suggestions="${renderArgs.showSuggestion}"
+        ?required="${renderArgs.required}"
+        ?readonly="${renderArgs.readonly}"
+        value="${ifDefined(renderArgs.value)}"
+        placeholder="${ifDefined(renderArgs.placeholder)}"
+        .model="${intVal}"
+        value-state="${ifDefined(renderArgs.valueState)}"
+        >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+      </furo-ui5-number-input>
 
- <hr>
- Float
- <hr>
- <furo-ui5-number-input
-      accessible-name="${ifDefined(renderArgs.accessibleName)}"
-      ?disabled="${renderArgs.disabled}"
-      ?show-clear-icon="${renderArgs.showClearIcon}"
-      ?show-suggestions="${renderArgs.showSuggestion}"
-      ?required="${renderArgs.required}"
-      ?readonly="${renderArgs.readonly}"
-      value="${ifDefined(renderArgs.value)}"
-      placeholder="${ifDefined(renderArgs.placeholder)}"
-      .model="${floatVal}"
-      value-state="${ifDefined(renderArgs.valueState)}"
-      >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
-    </furo-ui5-number-input>`,
+      <hr />
+      Float
+      <hr />
+      <furo-ui5-number-input
+        accessible-name="${ifDefined(renderArgs.accessibleName)}"
+        ?disabled="${renderArgs.disabled}"
+        ?show-clear-icon="${renderArgs.showClearIcon}"
+        ?show-suggestions="${renderArgs.showSuggestion}"
+        ?required="${renderArgs.required}"
+        ?readonly="${renderArgs.readonly}"
+        value="${ifDefined(renderArgs.value)}"
+        placeholder="${ifDefined(renderArgs.placeholder)}"
+        .model="${floatVal}"
+        value-state="${ifDefined(renderArgs.valueState)}"
+        >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
+      </furo-ui5-number-input>`,
 };
 
 export const WithIcon: StoryObj = {

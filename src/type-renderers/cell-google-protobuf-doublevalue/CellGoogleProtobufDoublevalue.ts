@@ -18,7 +18,6 @@ import { state } from "lit/decorators.js";
  * @element cell-google-protobuf-doublevalue
  */
 export class CellGoogleProtobufDoublevalue extends LitElement {
-
   @state()
   private displayValue = "";
 

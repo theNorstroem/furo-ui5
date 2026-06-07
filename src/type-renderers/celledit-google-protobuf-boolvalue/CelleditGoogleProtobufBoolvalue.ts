@@ -16,5 +16,4 @@ export class CelleditGoogleProtobufBoolvalue extends CelleditBool {
   static override get metadata() {
     return { tag: "celledit-google-protobuf-boolvalue" };
   }
-
 }

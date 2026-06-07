@@ -18,7 +18,6 @@ import { state } from "lit/decorators.js";
  * @element cell-google-protobuf-uint32value
  */
 export class CellGoogleProtobufUint32value extends LitElement {
-
   @state()
   private displayValue = "";
 

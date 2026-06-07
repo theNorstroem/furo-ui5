@@ -115,7 +115,9 @@ export class FatHandler<T> {
     this._initialAttributes = [...(this.target as HTMLElement).attributes].map((item) => item.name);
   }
 
-  applyReceivedFatAttributesAndLabels(fat: FuroFatBool | FuroFatString | FuroFatInt32 | FuroFatInt64 | FuroFatUint32 | FuroFatUint64 | FuroFatFloat | FuroFatDouble) {
+  applyReceivedFatAttributesAndLabels(
+    fat: FuroFatBool | FuroFatString | FuroFatInt32 | FuroFatInt64 | FuroFatUint32 | FuroFatUint64 | FuroFatFloat | FuroFatDouble
+  ) {
     this.applyLabels(fat.labels.value);
     this.applyAttributes(fat);
   }

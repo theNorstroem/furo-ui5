@@ -1,4 +1,4 @@
-import { FuroUi5DateTimePicker } from '@/elements/date-time-picker/FuroUi5DateTimePicker';
+import { FuroUi5DateTimePicker } from "@/elements/date-time-picker/FuroUi5DateTimePicker";
 /**
  *
  * @summary celledit renderer for `google.protobuf.Timestamp`

@@ -19,7 +19,6 @@ import { XDate } from "@/models/furo/type/Date";
  * @element cell-furo-type-date
  */
 export class CellFuroTypeDate extends LitElement {
-
   @state()
   private displayValue = "";
 

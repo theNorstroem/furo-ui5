@@ -16,7 +16,6 @@ import { nl2br } from "@/directives/nl2br";
  * @element cell-google-protobuf-stringvalue
  */
 export class CellGoogleProtobufStringvalue extends LitElement {
-
   @state()
   private displayValue = "";
 

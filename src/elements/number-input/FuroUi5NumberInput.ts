@@ -279,10 +279,9 @@ export class FuroUi5NumberInput extends Input {
 
   // workaround for invalid states while typing
   private writeInputToModel = (): void => {
-    if(this.value != ''){
+    if (this.value != "") {
       this.modelReaderWriter?.writeModel();
     }
-
   };
 
   /**

@@ -6,7 +6,6 @@
 // cell
 export * from "./cell-google-protobuf-any/CellGoogleProtobufAny";
 
-
 // celledit
 export * from "./celledit-double/CelleditDouble";
 export * from "./celledit-float/CelleditFloat";

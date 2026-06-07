@@ -15,5 +15,4 @@ export class CelleditGoogleProtobufInt32value extends CelleditInt32 {
   static override get metadata() {
     return { tag: "celledit-google-protobuf-int32value" };
   }
-
 }

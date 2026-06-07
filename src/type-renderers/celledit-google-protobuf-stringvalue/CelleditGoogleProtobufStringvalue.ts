@@ -12,5 +12,4 @@ export class CelleditGoogleProtobufStringvalue extends CelleditString {
   static override get metadata() {
     return { tag: "celledit-google-protobuf-stringvalue" };
   }
-
 }

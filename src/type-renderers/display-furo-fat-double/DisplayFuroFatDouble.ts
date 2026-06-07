@@ -18,7 +18,6 @@ import { FuroFatDouble } from "@/models";
  * @element display-furo-fat-double
  */
 export class DisplayFuroFatDouble extends LitElement {
-
   @state()
   private displayValue = "";
 

@@ -18,7 +18,6 @@ import { TimeOfDay } from "@/models/google/type/TimeOfDay";
  * @element cell-google-type-timeofday
  */
 export class CellGoogleTypeTimeofday extends LitElement {
-
   @state()
   private displayValue = "";
 

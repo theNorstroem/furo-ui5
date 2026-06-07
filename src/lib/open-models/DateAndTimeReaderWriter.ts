@@ -73,10 +73,7 @@ export class DateAndTimeReaderWriters<T> {
       const y = xd.year.value;
       const m = xd.month.value;
       const d = xd.day.value;
-      const v =
-        y === 0 && m === 0 && d === 0
-          ? ""
-          : `${y.toString().padStart(4, "0")}-${m.toString().padStart(2, "0")}-${d.toString().padStart(2, "0")}`;
+      const v = y === 0 && m === 0 && d === 0 ? "" : `${y.toString().padStart(4, "0")}-${m.toString().padStart(2, "0")}-${d.toString().padStart(2, "0")}`;
       if (v !== this.clazz[this.valueField]) {
         (this.clazz[this.valueField] as string) = v;
       }
@@ -87,10 +84,7 @@ export class DateAndTimeReaderWriters<T> {
       const y = xd.year.value;
       const m = xd.month.value;
       const d = xd.day.value;
-      const v =
-        y === 0 && m === 0 && d === 0
-          ? ""
-          : `${y.toString().padStart(4, "0")}-${m.toString().padStart(2, "0")}-${d.toString().padStart(2, "0")}`;
+      const v = y === 0 && m === 0 && d === 0 ? "" : `${y.toString().padStart(4, "0")}-${m.toString().padStart(2, "0")}-${d.toString().padStart(2, "0")}`;
       if (v !== this.clazz[this.valueField]) {
         (this.clazz[this.valueField] as string) = v;
       }
@@ -101,10 +95,7 @@ export class DateAndTimeReaderWriters<T> {
       const h = t.hours.value;
       const m = t.minutes.value;
       const s = t.seconds.value;
-      const v =
-        h === 0 && m === 0 && s === 0
-          ? ""
-          : `${h.toString().padStart(2, "0")}:${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
+      const v = h === 0 && m === 0 && s === 0 ? "" : `${h.toString().padStart(2, "0")}:${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
       if (v !== this.clazz[this.valueField]) {
         (this.clazz[this.valueField] as string) = v;
       }

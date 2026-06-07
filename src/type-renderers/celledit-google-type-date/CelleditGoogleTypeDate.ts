@@ -1,4 +1,4 @@
-import { FuroUi5DatePicker } from '@/elements/date-picker/FuroUi5DatePicker';
+import { FuroUi5DatePicker } from "@/elements/date-picker/FuroUi5DatePicker";
 
 /**
  * `celledit-google-type-date` is a `celledit` context renderer.
@@ -11,7 +11,7 @@ import { FuroUi5DatePicker } from '@/elements/date-picker/FuroUi5DatePicker';
 export class CelleditGoogleTypeDate extends FuroUi5DatePicker {
   constructor() {
     super();
-    this.addEventListener('click', (e) => {
+    this.addEventListener("click", (e) => {
       e.stopPropagation();
       e.preventDefault();
     });
@@ -28,8 +28,7 @@ export class CelleditGoogleTypeDate extends FuroUi5DatePicker {
     return [
       super.styles,
       // language=css
-      `:host{width:100%}`
-
+      `:host{width:100%}`,
     ];
   }
 }

@@ -18,7 +18,6 @@ import { Money } from "@/models/google/type/Money";
  * @element cell-google-type-money
  */
 export class CellGoogleTypeMoney extends LitElement {
-
   @state()
   private displayValue = "";
 

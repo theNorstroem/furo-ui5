@@ -148,7 +148,7 @@ export class FuroUi5DatePicker extends DatePicker {
   };
 
   private writeToModel = (): void => {
-    this.dateValueUTC
+    this.dateValueUTC;
     this.modelReaderWriter?.writeModel();
   };
 

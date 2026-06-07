@@ -18,7 +18,6 @@ import { FuroFatInt32 } from "@/models";
  * @element display-furo-fat-int32
  */
 export class DisplayFuroFatInt32 extends LitElement {
-
   @state()
   private displayValue = "";
 

@@ -19,7 +19,6 @@ import { Money } from "@/models/furo/type/Money";
  * @element display-furo-type-money
  */
 export class DisplayFuroTypeMoney extends LitElement {
-
   @state()
   private displayValue = "";
 

@@ -1,4 +1,4 @@
-import { FuroUi5DatePicker } from '@/elements/date-picker/FuroUi5DatePicker';
+import { FuroUi5DatePicker } from "@/elements/date-picker/FuroUi5DatePicker";
 
 /**
  *

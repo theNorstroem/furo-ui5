@@ -18,7 +18,6 @@ import { state } from "lit/decorators.js";
  * @element display-google-protobuf-timestamp
  */
 export class DisplayGoogleProtobufTimestamp extends LitElement {
-
   @state()
   private displayValue = "";
 

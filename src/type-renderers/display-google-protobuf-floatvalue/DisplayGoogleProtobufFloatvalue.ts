@@ -18,7 +18,6 @@ import { state } from "lit/decorators.js";
  * @element display-google-protobuf-floatvalue
  */
 export class DisplayGoogleProtobufFloatvalue extends LitElement {
-
   @state()
   private displayValue = "";
 

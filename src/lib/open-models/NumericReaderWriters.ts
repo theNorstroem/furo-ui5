@@ -1,17 +1,4 @@
-import {
-  DOUBLE,
-  DoubleValue,
-  FLOAT,
-  FloatValue,
-  INT32,
-  Int32Value,
-  INT64,
-  Int64Value,
-  UINT32,
-  UInt32Value,
-  UINT64,
-  UInt64Value,
-} from "@furo/open-models";
+import { DOUBLE, DoubleValue, FLOAT, FloatValue, INT32, Int32Value, INT64, Int64Value, UINT32, UInt32Value, UINT64, UInt64Value } from "@furo/open-models";
 
 import type { FatHandler } from "@/lib/open-models/FatHandler";
 import { FuroFatDouble, FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
@@ -73,7 +60,7 @@ export class NumericReaderWriters<T> {
       | Int64Value
       | UInt32Value
       | UInt64Value,
-    fatHandler?: FatHandler<T>,
+    fatHandler?: FatHandler<T>
   ) {
     this.clazz = clazz;
     this.modelField = modelField;

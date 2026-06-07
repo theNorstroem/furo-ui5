@@ -15,7 +15,6 @@ import { nl2br } from "@/directives/nl2br";
  * @element display-string
  */
 export class DisplayString extends LitElement {
-
   @state()
   private displayValue = "";
 

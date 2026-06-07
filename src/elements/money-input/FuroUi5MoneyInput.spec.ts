@@ -262,7 +262,10 @@ describe("FuroUi5MoneyInput", () => {
       await el.updateComplete;
       const options = currencyOf(el).optionList;
       assert.isOk(options);
-      assert.deepEqual(options.map((o) => o.id), ["CHF", "EUR", "USD"]);
+      assert.deepEqual(
+        options.map((o) => o.id),
+        ["CHF", "EUR", "USD"]
+      );
     });
   });
 

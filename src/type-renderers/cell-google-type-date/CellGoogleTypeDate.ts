@@ -18,7 +18,6 @@ import { XDate } from "@/models/google/type/Date";
  * @element cell-google-type-date
  */
 export class CellGoogleTypeDate extends LitElement {
-
   @state()
   private displayValue = "";
 

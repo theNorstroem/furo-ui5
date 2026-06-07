@@ -17,7 +17,6 @@ import { state } from "lit/decorators.js";
  * @element display-double
  */
 export class DisplayDouble extends LitElement {
-
   @state()
   private displayValue = "";
 

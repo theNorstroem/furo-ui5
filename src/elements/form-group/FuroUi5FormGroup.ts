@@ -62,7 +62,6 @@ export class FuroUi5FormGroup extends LitElement {
     }
 
     @container (min-width: 501px) {
-
       legend {
         margin-bottom: var(--MediaSizeIndentationBottom);
       }

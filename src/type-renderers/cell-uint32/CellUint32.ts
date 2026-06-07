@@ -17,7 +17,6 @@ import { state } from "lit/decorators.js";
  * @element cell-uint32
  */
 export class CellUint32 extends LitElement {
-
   @state()
   private displayValue = "";
 

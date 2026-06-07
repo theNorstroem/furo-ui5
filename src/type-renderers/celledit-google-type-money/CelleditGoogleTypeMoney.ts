@@ -19,4 +19,3 @@ export class CelleditGoogleTypeMoney extends FuroUi5MoneyInput {
     `,
   ];
 }
-

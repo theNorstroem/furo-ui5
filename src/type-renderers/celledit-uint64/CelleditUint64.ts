@@ -12,5 +12,4 @@ export class CelleditUint64 extends CelleditInt32 {
   static override get metadata() {
     return { tag: "celledit-uint64" };
   }
-
 }

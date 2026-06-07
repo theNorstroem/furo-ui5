@@ -17,7 +17,6 @@ import "@ui5/webcomponents-icons/dist/border.js";
  * @element display-bool
  */
 export class DisplayBool extends LitElement {
-
   @state()
   private checked = false;
 
@@ -107,10 +106,6 @@ export class DisplayBool extends LitElement {
    */
   override render() {
     // language=HTML
-    return html`
-      ${this.checked
-        ? html` <ui5-icon name="accept"></ui5-icon> `
-        : html` <ui5-icon name="border"></ui5-icon> `}
-    `;
+    return html` ${this.checked ? html` <ui5-icon name="accept"></ui5-icon> ` : html` <ui5-icon name="border"></ui5-icon> `} `;
   }
 }

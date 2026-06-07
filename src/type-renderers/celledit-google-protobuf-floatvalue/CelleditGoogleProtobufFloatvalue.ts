@@ -15,5 +15,4 @@ export class CelleditGoogleProtobufFloatvalue extends CelleditInt32 {
   static override get metadata() {
     return { tag: "celledit-google-protobuf-floatvalue" };
   }
-
 }

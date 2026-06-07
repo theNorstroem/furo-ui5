@@ -1,4 +1,4 @@
-import { FuroUi5TimePicker } from '@/elements/time-picker/FuroUi5TimePicker';
+import { FuroUi5TimePicker } from "@/elements/time-picker/FuroUi5TimePicker";
 
 /**
  * `celledit-google-type-timeofday` is a `celledit` context renderer.

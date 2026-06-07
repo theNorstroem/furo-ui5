@@ -15,5 +15,4 @@ export class CelleditFuroFatBool extends CelleditBool {
   static override get metadata() {
     return { tag: "celledit-furo-fat-bool" };
   }
-
 }

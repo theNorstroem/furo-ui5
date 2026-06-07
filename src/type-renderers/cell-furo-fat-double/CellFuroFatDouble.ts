@@ -18,7 +18,6 @@ import { FuroFatDouble } from "@/models";
  * @element cell-furo-fat-double
  */
 export class CellFuroFatDouble extends LitElement {
-
   @state()
   private displayValue = "";
 

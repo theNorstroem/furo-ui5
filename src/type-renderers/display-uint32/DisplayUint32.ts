@@ -17,7 +17,6 @@ import { state } from "lit/decorators.js";
  * @element display-uint32
  */
 export class DisplayUint32 extends LitElement {
-
   @state()
   private displayValue = "";
 

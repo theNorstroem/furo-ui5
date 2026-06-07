@@ -1,4 +1,4 @@
-import { FuroUi5TextInput } from '@/elements/text-input/FuroUi5TextInput';
+import { FuroUi5TextInput } from "@/elements/text-input/FuroUi5TextInput";
 
 /**
  *

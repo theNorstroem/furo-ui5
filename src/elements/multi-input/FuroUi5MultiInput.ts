@@ -88,7 +88,6 @@ export class FuroUi5MultiInput extends MultiInput {
    * @public
    */
   public bindData(fieldNode: ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | ARRAY<StringValue, string> | undefined) {
-
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }

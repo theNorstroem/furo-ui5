@@ -18,7 +18,6 @@ import { state } from "lit/decorators.js";
  * @element display-google-protobuf-int32value
  */
 export class DisplayGoogleProtobufInt32value extends LitElement {
-
   @state()
   private displayValue = "";
 

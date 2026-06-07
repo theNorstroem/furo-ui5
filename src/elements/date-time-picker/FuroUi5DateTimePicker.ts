@@ -96,11 +96,7 @@ export class FuroUi5DateTimePicker extends DateTimePicker {
     this._model = fieldNode;
     // init model
     this.dateAndTimeReaderWriters = new DateAndTimeReaderWriters<FuroUi5DateTimePicker>(this, "value", this._model);
-    this.modelReaderWriter = new ModelReaderWriter(
-      this._model,
-      this.dateAndTimeReaderWriters.getWriters(),
-      this.dateAndTimeReaderWriters.getReaders()
-    );
+    this.modelReaderWriter = new ModelReaderWriter(this._model, this.dateAndTimeReaderWriters.getWriters(), this.dateAndTimeReaderWriters.getReaders());
 
     // listen on state changes on the model
     this.valueStateManager.listenToStateChanges(fieldNode);

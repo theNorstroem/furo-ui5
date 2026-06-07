@@ -15,7 +15,6 @@ import { FuroFatString } from "@/models";
  * @element cell-furo-fat-string
  */
 export class CellFuroFatString extends LitElement {
-
   @state()
   private displayValue = "";
 
