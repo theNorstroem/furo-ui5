@@ -1,9 +1,9 @@
 import {html, css, LitElement} from "lit";
-
 import "@furo/layout/furo-vertical-flex"
 import "@furo/layout/furo-layout-indent"
 import "@/elements/shellbar"
 import "@/elements/number-input"
+import "@/elements/label"
 import "@/elements/slider"
 import "@/elements/date-picker"
 import "@/elements/date-time-picker"
@@ -161,7 +161,7 @@ export class PageTyperenderer extends LitElement {
               </tr>
             </thead>
             <tr>
-              <td>BOOLEAN</td>
+              <td><furo-ui5-label>BOOLEAN</furo-ui5-label></td>
               <td>
                 <display-bool .model="${this.data.primitiveBool}"></display-bool>
               </td>
@@ -272,6 +272,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
                 <td>
                   <celledit-google-type-date .model="${this.data.googleTypeDate}"></celledit-google-type-date>
+                  <celledit-google-type-date .model="${this.data.googleTypeDate}"></celledit-google-type-date>
                 </td>
               </tr>
               <tr>
@@ -283,6 +284,7 @@ export class PageTyperenderer extends LitElement {
                   <cell-furo-type-date .model="${this.data.furoTypeDate}"></cell-furo-type-date>
                 </td>
                 <td>
+                  <celledit-furo-type-date .model="${this.data.furoTypeDate}"></celledit-furo-type-date>
                   <celledit-furo-type-date .model="${this.data.furoTypeDate}"></celledit-furo-type-date>
                 </td>
               </tr>
@@ -296,6 +298,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
                 <td>
                   <celledit-google-protobuf-timestamp .model="${this.data.googleProtobufTimestamp}"></celledit-google-protobuf-timestamp>
+                  <celledit-google-protobuf-timestamp .model="${this.data.googleProtobufTimestamp}"></celledit-google-protobuf-timestamp>
                 </td>
               </tr>
               <tr>
@@ -307,6 +310,7 @@ export class PageTyperenderer extends LitElement {
                   <cell-google-type-timeofday .model="${this.data.googleTypeTimeofday}"></cell-google-type-timeofday>
                 </td>
                 <td>
+                  <celledit-google-type-timeofday .model="${this.data.googleTypeTimeofday}"></celledit-google-type-timeofday>
                   <celledit-google-type-timeofday .model="${this.data.googleTypeTimeofday}"></celledit-google-type-timeofday>
                 </td>
               </tr>
@@ -333,7 +337,10 @@ export class PageTyperenderer extends LitElement {
                 <td>
                   <cell-google-type-money .model="${this.data.googleTypeMoney}"></cell-google-type-money>
                 </td>
-                <td>!!!<celledit-google-type-money .model="${this.data.googleTypeMoney}"></celledit-google-type-money></td>
+                <td>
+                  <celledit-google-type-money .model="${this.data.googleTypeMoney}"></celledit-google-type-money>
+                  <celledit-google-type-money .model="${this.data.googleTypeMoney}"></celledit-google-type-money>
+                </td>
               </tr>
               <tr>
                 <td>furo.type.Money</td>
@@ -343,7 +350,10 @@ export class PageTyperenderer extends LitElement {
                 <td>
                   <cell-furo-type-money .model="${this.data.furoTypeMoney}"></cell-furo-type-money>
                 </td>
-                <td>!!!<celledit-furo-type-money .model="${this.data.furoTypeMoney}"></celledit-furo-type-money></td>
+                <td>
+                  <celledit-furo-type-money .model="${this.data.furoTypeMoney}"></celledit-furo-type-money>
+                  <celledit-furo-type-money .model="${this.data.furoTypeMoney}"></celledit-furo-type-money>
+                </td>
               </tr>
             </tbody>
           </table>

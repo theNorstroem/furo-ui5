@@ -1,4 +1,4 @@
-import { STRING, type FieldConstraints } from "@furo/open-models";
+import { type FieldConstraints, STRING } from "@furo/open-models";
 import TimePicker from "@ui5/webcomponents/dist/TimePicker.js";
 
 import { DateAndTimeReaderWriters } from "@/lib/open-models/DateAndTimeReaderWriter";
@@ -81,7 +81,7 @@ export class FuroUi5TimePicker extends TimePicker {
     // connect the model
     this._model = fieldNode;
     // init model
-    this.dateAndTimeReaderWriters = new DateAndTimeReaderWriters<FuroUi5TimePicker>(this, "value", this._model);
+    this.dateAndTimeReaderWriters = new DateAndTimeReaderWriters<FuroUi5TimePicker>(this, "isoValue", this._model);
     this.modelReaderWriter = new ModelReaderWriter(this._model, this.dateAndTimeReaderWriters.getWriters(), this.dateAndTimeReaderWriters.getReaders());
 
     // listen on state changes on the model
@@ -119,6 +119,29 @@ export class FuroUi5TimePicker extends TimePicker {
       }
       // Note: UI5 TimePicker has no minDate/maxDate, so min/max constraints are not applied.
     }
+  }
+
+  /**
+   * Canonical 24h `HH:mm:ss` bridge between the model and the UI5 input.
+   *
+   * Reading derives the time from UI5's already-parsed `dateValue` instead of
+   * re-parsing the locale/format dependent `value` string; it is `null`-safe
+   * (returns `""` on invalid input). Writing assigns the string to `value`
+   * (valueFormat is `HH:mm:ss`).
+   *
+   * @private
+   */
+  get isoValue(): string {
+    const d = this.dateValue;
+
+    if (d === null) {
+      return "";
+    }
+    return `${d.getHours().toString().padStart(2, "0")}:${d.getMinutes().toString().padStart(2, "0")}:${d.getSeconds().toString().padStart(2, "0")}`;
+  }
+
+  set isoValue(v: string) {
+    this.value = v;
   }
 
   private readFromModel = (): void => {

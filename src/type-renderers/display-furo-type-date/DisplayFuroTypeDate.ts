@@ -103,16 +103,15 @@ export class DisplayFuroTypeDate extends LitElement {
    * @private
    */
   private _formatCell = (): void => {
-    const displayName = this._model.displayName.value;
-    if (displayName.length) {
-      this.displayValue = displayName;
-      return;
-    }
-
     const year = this._model.year.value;
     const month = this._model.month.value;
     const day = this._model.day.value;
     if (!year || !month || !day) {
+      // incomplete date: fall back to display_name if the writer provided one
+      const displayName = this._model.displayName.value;
+      if (displayName.length) {
+        this.displayValue = displayName;
+      }
       return;
     }
     const jsDate = new Date(Date.UTC(year, month - 1, day, 0, 0, 0, 0));

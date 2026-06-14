@@ -3928,6 +3928,15 @@
           "members": [
             {
               "kind": "field",
+              "name": "_isoValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
               "name": "_model",
               "type": {
                 "text": "STRING | XDate"
@@ -4196,6 +4205,15 @@
                 "name": "DatePicker",
                 "module": "dist/DatePicker.js"
               }
+            },
+            {
+              "kind": "field",
+              "name": "isoValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Canonical ISO `YYYY-MM-DD` bridge between the model and the UI5 input.\n\nThe getter is synchronous (the model writers read it synchronously) and\nreturns the value cached by writeToModel, which sources it from\nUI5's already-parsed `dateValueAsync` (local calendar parts, so the date is\nexactly the one displayed — no timezone day-shift) rather than re-parsing\nthe locale/format dependent `value` string. The setter (used on model → UI\nreads) keeps the cache and the displayed `value` (valueFormat `yyyy-MM-dd`)\nin sync.",
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -5016,6 +5034,15 @@
           "members": [
             {
               "kind": "field",
+              "name": "_isoValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
               "name": "_model",
               "type": {
                 "text": "STRING | Timestamp | INT32 | INT64"
@@ -5284,6 +5311,15 @@
                 "name": "DatePicker",
                 "module": "dist/DatePicker.js"
               }
+            },
+            {
+              "kind": "field",
+              "name": "isoValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Canonical RFC 3339 bridge between the model and the UI5 input.\n\nThe getter is synchronous (the model writers read it synchronously) and\nreturns the value cached by writeToModel, which sources it from\nUI5's already-parsed `dateValueAsync` rather than re-parsing the\nlocale/format dependent `value` string. The setter (used on model → UI\nreads) keeps the cache and the displayed `value` in sync.",
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -24723,6 +24759,15 @@
               ]
             },
             {
+              "kind": "field",
+              "name": "isoValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Canonical 24h `HH:mm:ss` bridge between the model and the UI5 input.\n\nReading derives the time from UI5's already-parsed `dateValue` instead of\nre-parsing the locale/format dependent `value` string; it is `null`-safe\n(returns `\"\"` on invalid input). Writing assigns the string to `value`\n(valueFormat is `HH:mm:ss`).",
+              "privacy": "private"
+            },
+            {
               "kind": "method",
               "name": "isValid",
               "return": {
@@ -39551,6 +39596,19 @@
           "members": [
             {
               "kind": "field",
+              "name": "_isoValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\"",
+              "inheritedFrom": {
+                "name": "FuroUi5DatePicker",
+                "module": "dist/elements/date-picker/FuroUi5DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "_model",
               "type": {
                 "text": "STRING | XDate"
@@ -39838,6 +39896,19 @@
               "inheritedFrom": {
                 "name": "DatePicker",
                 "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isoValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Canonical ISO `YYYY-MM-DD` bridge between the model and the UI5 input.\n\nThe getter is synchronous (the model writers read it synchronously) and\nreturns the value cached by writeToModel, which sources it from\nUI5's already-parsed `dateValueAsync` (local calendar parts, so the date is\nexactly the one displayed — no timezone day-shift) rather than re-parsing\nthe locale/format dependent `value` string. The setter (used on model → UI\nreads) keeps the cache and the displayed `value` (valueFormat `yyyy-MM-dd`)\nin sync.",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "FuroUi5DatePicker",
+                "module": "dist/elements/date-picker/FuroUi5DatePicker.js"
               }
             },
             {
@@ -46518,6 +46589,19 @@
           "members": [
             {
               "kind": "field",
+              "name": "_isoValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\"",
+              "inheritedFrom": {
+                "name": "FuroUi5DateTimePicker",
+                "module": "dist/elements/date-time-picker/FuroUi5DateTimePicker.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "_model",
               "type": {
                 "text": "STRING | Timestamp | INT32 | INT64"
@@ -46805,6 +46889,19 @@
               "inheritedFrom": {
                 "name": "DatePicker",
                 "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isoValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Canonical RFC 3339 bridge between the model and the UI5 input.\n\nThe getter is synchronous (the model writers read it synchronously) and\nreturns the value cached by writeToModel, which sources it from\nUI5's already-parsed `dateValueAsync` rather than re-parsing the\nlocale/format dependent `value` string. The setter (used on model → UI\nreads) keeps the cache and the displayed `value` in sync.",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "FuroUi5DateTimePicker",
+                "module": "dist/elements/date-time-picker/FuroUi5DateTimePicker.js"
               }
             },
             {
@@ -49586,6 +49683,19 @@
           "members": [
             {
               "kind": "field",
+              "name": "_isoValue",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\"",
+              "inheritedFrom": {
+                "name": "FuroUi5DatePicker",
+                "module": "dist/elements/date-picker/FuroUi5DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "_model",
               "type": {
                 "text": "STRING | XDate"
@@ -49873,6 +49983,19 @@
               "inheritedFrom": {
                 "name": "DatePicker",
                 "module": "dist/DatePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isoValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Canonical ISO `YYYY-MM-DD` bridge between the model and the UI5 input.\n\nThe getter is synchronous (the model writers read it synchronously) and\nreturns the value cached by writeToModel, which sources it from\nUI5's already-parsed `dateValueAsync` (local calendar parts, so the date is\nexactly the one displayed — no timezone day-shift) rather than re-parsing\nthe locale/format dependent `value` string. The setter (used on model → UI\nreads) keeps the cache and the displayed `value` (valueFormat `yyyy-MM-dd`)\nin sync.",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "FuroUi5DatePicker",
+                "module": "dist/elements/date-picker/FuroUi5DatePicker.js"
               }
             },
             {
@@ -51357,6 +51480,19 @@
                   }
                 }
               ],
+              "inheritedFrom": {
+                "name": "FuroUi5TimePicker",
+                "module": "dist/elements/time-picker/FuroUi5TimePicker.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isoValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Canonical 24h `HH:mm:ss` bridge between the model and the UI5 input.\n\nReading derives the time from UI5's already-parsed `dateValue` instead of\nre-parsing the locale/format dependent `value` string; it is `null`-safe\n(returns `\"\"` on invalid input). Writing assigns the string to `value`\n(valueFormat is `HH:mm:ss`).",
+              "privacy": "private",
               "inheritedFrom": {
                 "name": "FuroUi5TimePicker",
                 "module": "dist/elements/time-picker/FuroUi5TimePicker.js"

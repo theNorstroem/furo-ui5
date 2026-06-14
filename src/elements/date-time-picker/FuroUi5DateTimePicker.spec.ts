@@ -157,39 +157,46 @@ describe("FuroUi5DateTimePicker", () => {
       fixtureCleanup();
     });
 
-    it("writes to a STRING model on user input", () => {
+    // The date-time picker writes asynchronously: writeToModel resolves UI5's
+    // `dateValueAsync` before writing, so assertions await a tick.
+    it("writes to a STRING model on user input", async () => {
       const model = new STRING();
       el.bindData(model);
       setInputValue(el, ISO);
+      await delay(50);
       assert.equal(model.value, ISO);
     });
 
-    it("writes to a Timestamp model on user input", () => {
+    it("writes to a Timestamp model on user input", async () => {
       const model = new Timestamp();
       el.bindData(model);
       setInputValue(el, ISO);
+      await delay(50);
       assert.equal(model.value, ISO);
     });
 
-    it("writes unix seconds to an INT32 model on user input", () => {
+    it("writes unix seconds to an INT32 model on user input", async () => {
       const model = new INT32();
       el.bindData(model);
       setInputValue(el, ISO);
+      await delay(50);
       assert.equal(model.value, ISO_SECONDS);
     });
 
-    it("writes unix seconds to an INT64 model on user input", () => {
+    it("writes unix seconds to an INT64 model on user input", async () => {
       const model = new INT64();
       el.bindData(model);
       setInputValue(el, ISO);
+      await delay(50);
       assert.equal(model.value, BigInt(ISO_SECONDS));
     });
 
-    it("writes 0 to an INT32 model when the value is cleared", () => {
+    it("writes 0 to an INT32 model when the value is cleared", async () => {
       const model = new INT32();
       model.value = ISO_SECONDS;
       el.bindData(model);
       setInputValue(el, "");
+      await delay(50);
       assert.equal(model.value, 0);
     });
   });
@@ -318,23 +325,25 @@ describe("FuroUi5DateTimePicker", () => {
       assert.equal(el.value, "2010-02-02T10:20:30.000Z");
     });
 
-    it("UI writes go to the new model only after rebind", () => {
+    it("UI writes go to the new model only after rebind", async () => {
       const modelA = new STRING("2000-01-01T00:00:00.000Z");
       const modelB = new STRING("2010-02-02T10:20:30.000Z");
       el.bindData(modelA);
       el.bindData(modelB);
       setInputValue(el, ISO);
+      await delay(50);
       assert.equal(modelB.value, ISO);
       assert.equal(modelA.value, "2000-01-01T00:00:00.000Z");
     });
 
-    it("bindData(sameModel) is a no-op (no duplicate listeners)", () => {
+    it("bindData(sameModel) is a no-op (no duplicate listeners)", async () => {
       const model = new STRING("2000-01-01T00:00:00.000Z");
       el.bindData(model);
       const ref = el.model;
       el.bindData(model);
       assert.strictEqual(el.model, ref);
       setInputValue(el, ISO);
+      await delay(50);
       assert.equal(model.value, ISO);
     });
   });
@@ -353,12 +362,13 @@ describe("FuroUi5DateTimePicker", () => {
       fixtureCleanup();
     });
 
-    it("clear() empties the value and writes it back to the model", () => {
+    it("clear() empties the value and writes it back to the model", async () => {
       const model = new STRING(ISO);
       el.bindData(model);
       assert.equal(el.value, ISO);
       el.clear();
       assert.equal(el.value, "");
+      await delay(50);
       assert.equal(model.value, "");
     });
   });

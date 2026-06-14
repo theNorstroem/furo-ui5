@@ -94,7 +94,7 @@ export class FuroUi5DatePicker extends DatePicker {
     // connect the model
     this._model = fieldNode;
     // init model
-    this.dateAndTimeReaderWriters = new DateAndTimeReaderWriters<FuroUi5DatePicker>(this, "value", this._model);
+    this.dateAndTimeReaderWriters = new DateAndTimeReaderWriters<FuroUi5DatePicker>(this, "isoValue", this._model);
     this.modelReaderWriter = new ModelReaderWriter(this._model, this.dateAndTimeReaderWriters.getWriters(), this.dateAndTimeReaderWriters.getReaders());
 
     // listen on state changes on the model
@@ -143,13 +143,44 @@ export class FuroUi5DatePicker extends DatePicker {
     }
   }
 
+  private _isoValue = "";
+
+  /**
+   * Canonical ISO `YYYY-MM-DD` bridge between the model and the UI5 input.
+   *
+   * The getter is synchronous (the model writers read it synchronously) and
+   * returns the value cached by {@link writeToModel}, which sources it from
+   * UI5's already-parsed `dateValueAsync` (local calendar parts, so the date is
+   * exactly the one displayed — no timezone day-shift) rather than re-parsing
+   * the locale/format dependent `value` string. The setter (used on model → UI
+   * reads) keeps the cache and the displayed `value` (valueFormat `yyyy-MM-dd`)
+   * in sync.
+   *
+   * @private
+   */
+  get isoValue(): string {
+    return this._isoValue;
+  }
+
+  set isoValue(v: string) {
+    this._isoValue = v;
+    this.value = v;
+  }
+
   private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
   };
 
+  // Resolve the picked date via UI5's parsed `dateValueAsync` (`null`-safe) before
+  // writing. For a date-only value we read the LOCAL calendar parts (the date as
+  // displayed), never `toISOString()`/UTC, which would shift across midnight. The
+  // accessor must stay sync, so we refresh the `_isoValue` cache here.
   private writeToModel = (): void => {
-    this.dateValueUTC;
-    this.modelReaderWriter?.writeModel();
+    void this.dateValueAsync.then((d) => {
+      this._isoValue =
+        d === null ? "" : `${d.getFullYear().toString().padStart(4, "0")}-${(d.getMonth() + 1).toString().padStart(2, "0")}-${d.getDate().toString().padStart(2, "0")}`;
+      this.modelReaderWriter?.writeModel();
+    });
   };
 
   /**

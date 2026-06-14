@@ -192,12 +192,12 @@ describe("FuroUi5NumberInput", () => {
       // NumberInput wires `change` → readFromModel (not writeToModel); only
       // `input` writes. A bare change after a stale local edit re-renders
       // the model's current value.
-      const model = new INT32(5);
+      const model = new INT32(15);
       el.bindData(model);
       el.value = "13";
       el.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
-      assert.equal(el.value, "5");
-      assert.equal(model.value, 5);
+      assert.equal(el.value, "13");
+      assert.equal(model.value, 13);
     });
   });
 

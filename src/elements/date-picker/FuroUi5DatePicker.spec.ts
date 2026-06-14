@@ -149,35 +149,41 @@ describe("FuroUi5DatePicker", () => {
       fixtureCleanup();
     });
 
-    it("writes to a STRING model on user input", () => {
+    // The date picker writes asynchronously: writeToModel resolves UI5's
+    // `dateValueAsync` before writing, so assertions await a tick.
+    it("writes to a STRING model on user input", async () => {
       const model = new STRING();
       el.bindData(model);
       setInputValue(el, "2020-12-31");
+      await delay(50);
       assert.equal(model.value, "2020-12-31");
     });
 
-    it("writes to a google.type.Date model on user input", () => {
+    it("writes to a google.type.Date model on user input", async () => {
       const model = new XDate();
       el.bindData(model);
       setInputValue(el, "2020-12-31");
+      await delay(50);
       assert.equal(model.year.value, 2020);
       assert.equal(model.month.value, 12);
       assert.equal(model.day.value, 31);
     });
 
-    it("writes on a bare 'input' event", () => {
+    it("writes on a bare 'input' event", async () => {
       const model = new STRING();
       el.bindData(model);
       el.value = "2019-01-01";
       el.dispatchEvent(new Event("input", { bubbles: true, composed: true }));
+      await delay(50);
       assert.equal(model.value, "2019-01-01");
     });
 
-    it("writes on a bare 'change' event", () => {
+    it("writes on a bare 'change' event", async () => {
       const model = new STRING();
       el.bindData(model);
       el.value = "2019-01-01";
       el.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
+      await delay(50);
       assert.equal(model.value, "2019-01-01");
     });
   });
@@ -313,23 +319,25 @@ describe("FuroUi5DatePicker", () => {
       assert.equal(el.value, "2010-02-02");
     });
 
-    it("UI writes go to the new model only after rebind", () => {
+    it("UI writes go to the new model only after rebind", async () => {
       const modelA = new STRING("2000-01-01");
       const modelB = new STRING("2010-02-02");
       el.bindData(modelA);
       el.bindData(modelB);
       setInputValue(el, "2020-12-31");
+      await delay(50);
       assert.equal(modelB.value, "2020-12-31");
       assert.equal(modelA.value, "2000-01-01");
     });
 
-    it("bindData(sameModel) is a no-op (no duplicate listeners)", () => {
+    it("bindData(sameModel) is a no-op (no duplicate listeners)", async () => {
       const model = new STRING("2000-01-01");
       el.bindData(model);
       const ref = el.model;
       el.bindData(model);
       assert.strictEqual(el.model, ref);
       setInputValue(el, "2020-12-31");
+      await delay(50);
       assert.equal(model.value, "2020-12-31");
     });
   });
@@ -348,12 +356,13 @@ describe("FuroUi5DatePicker", () => {
       fixtureCleanup();
     });
 
-    it("clear() empties the value and writes it back to the model", () => {
+    it("clear() empties the value and writes it back to the model", async () => {
       const model = new STRING("2020-12-31");
       el.bindData(model);
       assert.equal(el.value, "2020-12-31");
       el.clear();
       assert.equal(el.value, "");
+      await delay(50);
       assert.equal(model.value, "");
     });
   });

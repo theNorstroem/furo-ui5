@@ -95,7 +95,7 @@ export class FuroUi5DateTimePicker extends DateTimePicker {
     // connect the model
     this._model = fieldNode;
     // init model
-    this.dateAndTimeReaderWriters = new DateAndTimeReaderWriters<FuroUi5DateTimePicker>(this, "value", this._model);
+    this.dateAndTimeReaderWriters = new DateAndTimeReaderWriters<FuroUi5DateTimePicker>(this, "isoValue", this._model);
     this.modelReaderWriter = new ModelReaderWriter(this._model, this.dateAndTimeReaderWriters.getWriters(), this.dateAndTimeReaderWriters.getReaders());
 
     // listen on state changes on the model
@@ -145,12 +145,40 @@ export class FuroUi5DateTimePicker extends DateTimePicker {
     }
   }
 
+  private _isoValue = "";
+
+  /**
+   * Canonical RFC 3339 bridge between the model and the UI5 input.
+   *
+   * The getter is synchronous (the model writers read it synchronously) and
+   * returns the value cached by {@link writeToModel}, which sources it from
+   * UI5's already-parsed `dateValueAsync` rather than re-parsing the
+   * locale/format dependent `value` string. The setter (used on model → UI
+   * reads) keeps the cache and the displayed `value` in sync.
+   *
+   * @private
+   */
+  get isoValue(): string {
+    return this._isoValue;
+  }
+
+  set isoValue(v: string) {
+    this._isoValue = v;
+    this.value = v;
+  }
+
   private readFromModel = (): void => {
     this.modelReaderWriter?.readModel();
   };
 
+  // Resolve the picked instant via UI5's parsed `dateValueAsync` (local → UTC,
+  // timezone-aware, `null`-safe) before writing. The accessor must stay sync, so
+  // we refresh the `_isoValue` cache here and write once the promise resolves.
   private writeToModel = (): void => {
-    this.modelReaderWriter?.writeModel();
+    void this.dateValueAsync.then((d) => {
+      this._isoValue = d === null ? "" : d.toISOString();
+      this.modelReaderWriter?.writeModel();
+    });
   };
 
   /**
