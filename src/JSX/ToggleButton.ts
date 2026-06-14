@@ -10,228 +10,225 @@ import * as React from "react";
 import type { FuroFatBool } from "@/models/index.js";
 
 export interface ToggleButton extends React.HTMLAttributes<HTMLElement> {
-"onclick"?:(d:CustomEvent<ButtonClickEventDetail>)=>void;
-// properties
+  onclick?: (d: CustomEvent<ButtonClickEventDetail>) => void;
+  // properties
 
-/**
- * FieldNode setter
- */
-"model"?:BOOLEAN | FuroFatBool | BoolValue;
+  /**
+   * FieldNode setter
+   */
+  model?: BOOLEAN | FuroFatBool | BoolValue;
 
-// attributes
+  // attributes
 
-/**
- * Defines the additional accessibility attributes that will be applied to the component.
- * The following fields are supported:
- * 
- * - **expanded**: Indicates whether the button, or another grouping element it controls, is currently expanded or collapsed.
- * Accepts the following string values: `true` or `false`
- * 
- * - **hasPopup**: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the button.
- * Accepts the following string values: `dialog`, `grid`, `listbox`, `menu` or `tree`.
- * 
- * - **ariaLabel**: Defines the accessible ARIA name of the component.
- * Accepts any string value.
- * 
- * - **ariaKeyShortcuts**: Defines keyboard shortcuts that activate or give focus to the button.
- * 
- * - **controls**: Identifies the element (or elements) whose contents or presence are controlled by the button element.
- * Accepts a lowercase string value.
- */
-"accessibilityAttributes"?:ButtonAccessibilityAttributes;
+  /**
+   * Defines the additional accessibility attributes that will be applied to the component.
+   * The following fields are supported:
+   *
+   * - **expanded**: Indicates whether the button, or another grouping element it controls, is currently expanded or collapsed.
+   * Accepts the following string values: `true` or `false`
+   *
+   * - **hasPopup**: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the button.
+   * Accepts the following string values: `dialog`, `grid`, `listbox`, `menu` or `tree`.
+   *
+   * - **ariaLabel**: Defines the accessible ARIA name of the component.
+   * Accepts any string value.
+   *
+   * - **ariaKeyShortcuts**: Defines keyboard shortcuts that activate or give focus to the button.
+   *
+   * - **controls**: Identifies the element (or elements) whose contents or presence are controlled by the button element.
+   * Accepts a lowercase string value.
+   */
+  accessibilityAttributes?: ButtonAccessibilityAttributes;
 
-/**
- * Defines the accessible description of the component.
- */
-"accessibleDescription"?:string | undefined;
+  /**
+   * Defines the accessible description of the component.
+   */
+  accessibleDescription?: string | undefined;
 
-/**
- * Defines the accessible ARIA name of the component.
- */
-"accessibleName"?:string | undefined;
+  /**
+   * Defines the accessible ARIA name of the component.
+   */
+  accessibleName?: string | undefined;
 
-/**
- * Receives id(or many ids) of the elements that label the component.
- */
-"accessibleNameRef"?:string | undefined;
+  /**
+   * Receives id(or many ids) of the elements that label the component.
+   */
+  accessibleNameRef?: string | undefined;
 
-/**
- * Describes the accessibility role of the button.
- * 
- * **Note:** Use <code>ButtonAccessibleRole.Link</code> role only with a press handler, which performs a navigation. In all other scenarios the default button semantics are recommended.
- */
-"accessibleRole"?:ButtonAccessibleRole | keyof typeof ButtonAccessibleRole;
+  /**
+   * Describes the accessibility role of the button.
+   *
+   * **Note:** Use <code>ButtonAccessibleRole.Link</code> role only with a press handler, which performs a navigation. In all other scenarios the default button semantics are recommended.
+   */
+  accessibleRole?: ButtonAccessibleRole | keyof typeof ButtonAccessibleRole;
 
-/**
- * Defines the component design.
- */
-"design"?:ButtonDesign | keyof typeof ButtonDesign;
+  /**
+   * Defines the component design.
+   */
+  design?: ButtonDesign | keyof typeof ButtonDesign;
 
-/**
- * Defines whether the component is disabled.
- * A disabled component can't be pressed or
- * focused, and it is not in the tab chain.
- */
-"disabled"?:boolean;
+  /**
+   * Defines whether the component is disabled.
+   * A disabled component can't be pressed or
+   * focused, and it is not in the tab chain.
+   */
+  disabled?: boolean;
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Defines the icon, displayed as graphical element within the component after the button text.
- * 
- * **Note:** It is highly recommended to use `endIcon` property only together with `icon` and/or `text` properties.
- * Usage of `endIcon` only should be avoided.
- * 
- * The SAP-icons font provides numerous options.
- * 
- * Example:
- * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
- */
-"endIcon"?:string | undefined;
+  /**
+   * Defines the icon, displayed as graphical element within the component after the button text.
+   *
+   * **Note:** It is highly recommended to use `endIcon` property only together with `icon` and/or `text` properties.
+   * Usage of `endIcon` only should be avoided.
+   *
+   * The SAP-icons font provides numerous options.
+   *
+   * Example:
+   * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
+   */
+  endIcon?: string | undefined;
 
-/**
- * Associates the button with a form element by the form's `id` attribute.
- * When set, the button can submit or reset the specified form even if the button
- * is not a descendant of that form.
- * 
- * **Note:** This property takes effect only when the button's "type" property is set to "Submit" or "Reset".
- */
-"form"?:string | undefined;
+  /**
+   * Associates the button with a form element by the form's `id` attribute.
+   * When set, the button can submit or reset the specified form even if the button
+   * is not a descendant of that form.
+   *
+   * **Note:** This property takes effect only when the button's "type" property is set to "Submit" or "Reset".
+   */
+  form?: string | undefined;
 
-/**
- * Defines the icon, displayed as graphical element within the component.
- * The SAP-icons font provides numerous options.
- * 
- * Example:
- * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
- */
-"icon"?:string | undefined;
+  /**
+   * Defines the icon, displayed as graphical element within the component.
+   * The SAP-icons font provides numerous options.
+   *
+   * Example:
+   * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
+   */
+  icon?: string | undefined;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Defines whether the button shows a loading indicator.
- * 
- * **Note:** If set to `true`, a busy indicator component will be displayed on the related button.
- */
-"loading"?:boolean;
+  /**
+   * Defines whether the button shows a loading indicator.
+   *
+   * **Note:** If set to `true`, a busy indicator component will be displayed on the related button.
+   */
+  loading?: boolean;
 
-/**
- * Specifies the delay in milliseconds before the loading indicator appears within the associated button.
- */
-"loadingDelay"?:number;
+  /**
+   * Specifies the delay in milliseconds before the loading indicator appears within the associated button.
+   */
+  loadingDelay?: number;
 
-/**
- * Determines whether the component is displayed as pressed.
- */
-"pressed"?:boolean;
+  /**
+   * Determines whether the component is displayed as pressed.
+   */
+  pressed?: boolean;
 
-/**
- * When set to `true`, the component will
- * automatically submit the nearest HTML form element on `press`.
- * 
- * **Note:** This property is only applicable within the context of an HTML Form element.`
- */
-"submits"?:boolean;
+  /**
+   * When set to `true`, the component will
+   * automatically submit the nearest HTML form element on `press`.
+   *
+   * **Note:** This property is only applicable within the context of an HTML Form element.`
+   */
+  submits?: boolean;
 
-/**
- * Defines the tooltip of the component.
- * 
- * **Note:** A tooltip attribute should be provided for icon-only buttons, in order to represent their exact meaning/function.
- */
-"tooltip"?:string | undefined;
+  /**
+   * Defines the tooltip of the component.
+   *
+   * **Note:** A tooltip attribute should be provided for icon-only buttons, in order to represent their exact meaning/function.
+   */
+  tooltip?: string | undefined;
 
-/**
- * Defines whether the button has special form-related functionality.
- * 
- * **Note:** This property is only applicable within the context of an HTML Form element.
- */
-"type"?:ButtonType | keyof typeof ButtonType;
-
+  /**
+   * Defines whether the button has special form-related functionality.
+   *
+   * **Note:** This property is only applicable within the context of an HTML Form element.
+   */
+  type?: ButtonType | keyof typeof ButtonType;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * The 'furo-furo-furo-ui5-toggle-button' component allows the user to switch true and false for Bool with data binding.
- * 
- * You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
- * 
- * 
- * ## supported FAT labels
- * - **"disabled":"true"** set the element to disabled
- * 
- * ## supported FAT attributes
- * - **"icon":""** set the icon
- * - **"iconEnd":""** set the icon
- * - **"design":""** set the design
- * 
- * ### Overview
- * 
- * The `furo-furo-ui5-toggle-button` component is an enhanced `furo-furo-ui5-button`
- * that can be toggled between pressed and normal states.
- * Users can use the `furo-furo-ui5-toggle-button` as a switch to turn a setting on or off.
- * It can also be used to represent an independent choice similar to a check box.
- * 
- * Clicking or tapping on a `furo-furo-ui5-toggle-button` changes its state to `pressed`. The button returns to
- * its initial state when the user clicks or taps on it again.
- * By applying additional custom CSS-styling classes, apps can give a different style to any `furo-furo-ui5-toggle-button`.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/ToggleButton.js";`
- * 
- * ### Overview
- * 
- * The `furo-ui5-toggle-button` component is an enhanced `furo-ui5-button`
- * that can be toggled between pressed and normal states.
- * Users can use the `furo-ui5-toggle-button` as a switch to turn a setting on or off.
- * It can also be used to represent an independent choice similar to a check box.
- * 
- * Clicking or tapping on a `furo-ui5-toggle-button` changes its state to `pressed`. The button returns to
- * its initial state when the user clicks or taps on it again.
- * By applying additional custom CSS-styling classes, apps can give a different style to any `furo-ui5-toggle-button`.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/ToggleButton.js";`
- * 
- * ### Overview
- * 
- * The `furo-ui5-button` component represents a simple push button.
- * It enables users to trigger actions by clicking or tapping the `furo-ui5-button`, or by pressing
- * certain keyboard keys, such as Enter.
- * 
- * ### Usage
- * 
- * For the `furo-ui5-button` UI, you can define text, icon, or both. You can also specify
- * whether the text or the icon is displayed first.
- * 
- * You can choose from a set of predefined types that offer different
- * styling to correspond to the triggered action.
- * 
- * You can set the `furo-ui5-button` as enabled or disabled. An enabled
- * `furo-ui5-button` can be pressed by clicking or tapping it. The button changes
- * its style to provide visual feedback to the user that it is pressed or hovered over with
- * the mouse cursor. A disabled `furo-ui5-button` appears inactive and cannot be pressed.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/Button.js";`
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       * The 'furo-furo-furo-ui5-toggle-button' component allows the user to switch true and false for Bool with data binding.
+       *
+       * You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
+       *
+       *
+       * ## supported FAT labels
+       * - **"disabled":"true"** set the element to disabled
+       *
+       * ## supported FAT attributes
+       * - **"icon":""** set the icon
+       * - **"iconEnd":""** set the icon
+       * - **"design":""** set the design
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-toggle-button` component is an enhanced `furo-furo-ui5-button`
+       * that can be toggled between pressed and normal states.
+       * Users can use the `furo-furo-ui5-toggle-button` as a switch to turn a setting on or off.
+       * It can also be used to represent an independent choice similar to a check box.
+       *
+       * Clicking or tapping on a `furo-furo-ui5-toggle-button` changes its state to `pressed`. The button returns to
+       * its initial state when the user clicks or taps on it again.
+       * By applying additional custom CSS-styling classes, apps can give a different style to any `furo-furo-ui5-toggle-button`.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/ToggleButton.js";`
+       *
+       * ### Overview
+       *
+       * The `furo-ui5-toggle-button` component is an enhanced `furo-ui5-button`
+       * that can be toggled between pressed and normal states.
+       * Users can use the `furo-ui5-toggle-button` as a switch to turn a setting on or off.
+       * It can also be used to represent an independent choice similar to a check box.
+       *
+       * Clicking or tapping on a `furo-ui5-toggle-button` changes its state to `pressed`. The button returns to
+       * its initial state when the user clicks or taps on it again.
+       * By applying additional custom CSS-styling classes, apps can give a different style to any `furo-ui5-toggle-button`.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/ToggleButton.js";`
+       *
+       * ### Overview
+       *
+       * The `furo-ui5-button` component represents a simple push button.
+       * It enables users to trigger actions by clicking or tapping the `furo-ui5-button`, or by pressing
+       * certain keyboard keys, such as Enter.
+       *
+       * ### Usage
+       *
+       * For the `furo-ui5-button` UI, you can define text, icon, or both. You can also specify
+       * whether the text or the icon is displayed first.
+       *
+       * You can choose from a set of predefined types that offer different
+       * styling to correspond to the triggered action.
+       *
+       * You can set the `furo-ui5-button` as enabled or disabled. An enabled
+       * `furo-ui5-button` can be pressed by clicking or tapping it. The button changes
+       * its style to provide visual feedback to the user that it is pressed or hovered over with
+       * the mouse cursor. A disabled `furo-ui5-button` appears inactive and cannot be pressed.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Button.js";`
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-toggle-button": ToggleButton;
     }
   }
 }
-

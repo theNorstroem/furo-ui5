@@ -18,6 +18,7 @@ export * from "@/elements/table-toolbar-separator/FuroUi5TableToolbarSeparator";
 export * from "@/elements/text-input/FuroUi5TextInput";
 export * from "@/elements/time-picker/FuroUi5TimePicker";
 export * from "@/elements/tree-table/FuroUi5TreeTable";
+export * from "@/elements/tree-table/TreeTableMode";
 export * from "@/elements/user-menu/FuroUi5UserMenu";
 export * from "@/type-renderers";
 export * from "./lib/open-models/signatures";

@@ -252,7 +252,7 @@ export class FuroUi5ContextMenu extends Menu {
    * @private
    */
   private renderItems(): void {
-    this.querySelectorAll("ui5-menu-item, ui5-menu-separator").forEach((el) => {
+    this.querySelectorAll("ui5-menu-item, ui5-menu-separator").forEach(el => {
       el.remove();
     });
 
@@ -261,7 +261,7 @@ export class FuroUi5ContextMenu extends Menu {
       return;
     }
 
-    items.forEach((node) => {
+    items.forEach(node => {
       this.appendChildrenFor(node, this);
     });
   }
@@ -298,7 +298,7 @@ export class FuroUi5ContextMenu extends Menu {
 
     this.itemSources.set(item, node);
 
-    node.children.forEach((child) => {
+    node.children.forEach(child => {
       this.appendChildrenFor(child, item);
     });
 

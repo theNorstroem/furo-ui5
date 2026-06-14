@@ -181,9 +181,11 @@ export class FuroUi5DatePicker extends DatePicker {
   // displayed), never `toISOString()`/UTC, which would shift across midnight. The
   // accessor must stay sync, so we refresh the `_isoValue` cache here.
   private writeToModel = (): void => {
-    void this.dateValueAsync.then((d) => {
+    void this.dateValueAsync.then(d => {
       this._isoValue =
-        d === null ? "" : `${d.getFullYear().toString().padStart(4, "0")}-${(d.getMonth() + 1).toString().padStart(2, "0")}-${d.getDate().toString().padStart(2, "0")}`;
+        d === null
+          ? ""
+          : `${d.getFullYear().toString().padStart(4, "0")}-${(d.getMonth() + 1).toString().padStart(2, "0")}-${d.getDate().toString().padStart(2, "0")}`;
       this.modelReaderWriter?.writeModel();
     });
   };

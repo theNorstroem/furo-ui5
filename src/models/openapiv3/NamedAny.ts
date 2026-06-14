@@ -88,7 +88,7 @@ export class NamedAny extends FieldNode {
     this._value = new OpenapiV3Any(undefined, this, "value");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof NamedAny] as FieldNode).__meta.required = true;
     });
 
@@ -103,7 +103,7 @@ export class NamedAny extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof NamedAny] as FieldNode).__readonly = true;
     });
 

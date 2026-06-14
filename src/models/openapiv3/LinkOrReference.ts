@@ -74,7 +74,7 @@ export class LinkOrReference extends FieldNode {
     this._reference = new OpenapiV3Reference(undefined, this, "reference");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof LinkOrReference] as FieldNode).__meta.required = true;
     });
 
@@ -89,7 +89,7 @@ export class LinkOrReference extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof LinkOrReference] as FieldNode).__readonly = true;
     });
 

@@ -376,7 +376,7 @@ export class Timestamp extends FieldNode {
     this._nanos = new INT32(undefined, this, "nanos");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Timestamp] as FieldNode).__meta.required = true;
     });
 
@@ -391,7 +391,7 @@ export class Timestamp extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Timestamp] as FieldNode).__readonly = true;
     });
 

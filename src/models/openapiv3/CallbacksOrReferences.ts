@@ -56,7 +56,7 @@ export class CallbacksOrReferences extends FieldNode {
     this._additionalProperties = new ARRAY<OpenapiV3NamedCallbackOrReference, IOpenapiV3NamedCallbackOrReference>(undefined, this, "additionalProperties");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof CallbacksOrReferences] as FieldNode).__meta.required = true;
     });
 
@@ -71,7 +71,7 @@ export class CallbacksOrReferences extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof CallbacksOrReferences] as FieldNode).__readonly = true;
     });
 

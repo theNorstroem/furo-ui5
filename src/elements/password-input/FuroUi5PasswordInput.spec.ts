@@ -402,7 +402,7 @@ describe("FuroUi5PasswordInput", () => {
     it("fires once after a single input following the debounce window", async () => {
       let count = 0;
       let detail = "";
-      el.addEventListener("search-requested", (e) => {
+      el.addEventListener("search-requested", e => {
         count += 1;
         detail = (e as CustomEvent<string>).detail;
       });
@@ -415,7 +415,7 @@ describe("FuroUi5PasswordInput", () => {
     it("coalesces a burst of inputs into one search-requested with the final value", async () => {
       let count = 0;
       let detail = "";
-      el.addEventListener("search-requested", (e) => {
+      el.addEventListener("search-requested", e => {
         count += 1;
         detail = (e as CustomEvent<string>).detail;
       });

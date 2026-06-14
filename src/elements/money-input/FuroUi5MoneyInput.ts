@@ -103,8 +103,8 @@ export class FuroUi5MoneyInput extends LitElement {
   /**
    * Use this to bind a model field by attribute.
    *
-   * @typeref GoogleMoney - "@/models/google/type/Money"
-   * @typeref FuroMoney - "@/models/furo/type/Money"
+   * @typeref Money as GoogleMoney - "@/models/google/type/Money"
+   * @typeref Money as FuroMoney - "@/models/furo/type/Money"
    * @public
    */
   public set model(value: GoogleMoney | FuroMoney) {
@@ -210,9 +210,9 @@ export class FuroUi5MoneyInput extends LitElement {
     }
     const options: SelectOption[] = this.currencies
       .split(",")
-      .map((c) => c.trim())
-      .filter((id) => id !== "")
-      .map((id) => ({ id, displayName: id }));
+      .map(c => c.trim())
+      .filter(id => id !== "")
+      .map(id => ({ id, displayName: id }));
     currencyEl.optionList = options;
   }
 

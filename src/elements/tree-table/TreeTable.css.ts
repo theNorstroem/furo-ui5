@@ -73,30 +73,21 @@ const TreeTableCSS = css`
   *[furo-ui5-tree-table] tr:focus:hover th,
   *[furo-ui5-tree-table] tr:focus:hover td {
     box-shadow: unset;
-    background: linear-gradient(
-      var(--sapList_Hover_SelectionBackground),
-      var(--sapList_Hover_SelectionBackground)
-    );
+    background: linear-gradient(var(--sapList_Hover_SelectionBackground), var(--sapList_Hover_SelectionBackground));
     background-size: calc(100% - 2px) calc(100% - 4px);
     background-repeat: no-repeat;
     background-position: right;
   }
 
   *[furo-ui5-tree-table][show-selected-row] tr[selected] td {
-    background: linear-gradient(
-      var(--sapList_SelectionBackgroundColor),
-      var(--sapList_SelectionBackgroundColor)
-    );
+    background: linear-gradient(var(--sapList_SelectionBackgroundColor), var(--sapList_SelectionBackgroundColor));
   }
 
   /* increase the specifity because otherwise the selected will always be used*/
   *[furo-ui5-tree-table][furo-ui5-tree-table] tr:focus th,
   *[furo-ui5-tree-table][furo-ui5-tree-table] tr:focus td {
     box-shadow: unset;
-    background: linear-gradient(
-      var(--sapList_SelectionBackgroundColor),
-      var(--sapList_SelectionBackgroundColor)
-    );
+    background: linear-gradient(var(--sapList_SelectionBackgroundColor), var(--sapList_SelectionBackgroundColor));
     background-size: calc(100% - 2px) calc(100% - 4px);
     background-repeat: no-repeat;
     background-position: right;

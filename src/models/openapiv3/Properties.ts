@@ -56,7 +56,7 @@ export class Properties extends FieldNode {
     this._additionalProperties = new ARRAY<OpenapiV3NamedSchemaOrReference, IOpenapiV3NamedSchemaOrReference>(undefined, this, "additionalProperties");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Properties] as FieldNode).__meta.required = true;
     });
 
@@ -71,7 +71,7 @@ export class Properties extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Properties] as FieldNode).__readonly = true;
     });
 

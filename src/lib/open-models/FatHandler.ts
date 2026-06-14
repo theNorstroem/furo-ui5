@@ -15,7 +15,7 @@ export class FatHandler<T> {
   public allowedLabels = new Set<string>(["hidden", "readonly", "disabled", "required"]);
 
   // eslint-disable-next-line class-methods-use-this
-  private _cutomAttributes: (attributes: Map<string, STRING>) => void = (_) => {
+  private _cutomAttributes: (attributes: Map<string, STRING>) => void = _ => {
     return;
   };
 
@@ -104,7 +104,7 @@ export class FatHandler<T> {
       }
     });
     // remove attributes which was set before, but not received anymore
-    this._receivedFatAttributes.forEach((attribute) => {
+    this._receivedFatAttributes.forEach(attribute => {
       if (!labels.has(attribute)) {
         (this.target as HTMLElement).removeAttribute(attribute);
       }
@@ -112,7 +112,7 @@ export class FatHandler<T> {
   }
 
   readAttributes() {
-    this._initialAttributes = [...(this.target as HTMLElement).attributes].map((item) => item.name);
+    this._initialAttributes = [...(this.target as HTMLElement).attributes].map(item => item.name);
   }
 
   applyReceivedFatAttributesAndLabels(

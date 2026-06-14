@@ -2,36 +2,33 @@
 import * as React from "react";
 
 export interface SignPad extends React.HTMLAttributes<HTMLElement> {
-"onsign-updated"?:(d:string)=>void;
-// properties
+  "onsign-updated"?: (d: string) => void;
+  // properties
 
-/**
- * Read this to get the image data-url.
- */
-"image"?:string;
+  /**
+   * Read this to get the image data-url.
+   */
+  image?: string;
 
-// attributes
+  // attributes
 
-/**
- * Set to true to disable the drawing features.
- * 
- * Tipp: You can also use the `disable()` and `enable()` methods.
- */
-"disabled"?:boolean;
-
+  /**
+   * Set to true to disable the drawing features.
+   *
+   * Tipp: You can also use the `disable()` and `enable()` methods.
+   */
+  disabled?: boolean;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * `furo-sign-pad`
- * Simple pad to sign or draw something
- */
+      /**
+       *
+       * `furo-sign-pad`
+       * Simple pad to sign or draw something
+       */
       "furo-ui5-sign-pad": SignPad;
     }
   }
 }
-

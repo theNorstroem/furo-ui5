@@ -1194,7 +1194,7 @@ export class HttpRule extends FieldNode {
     this._additionalBindings = new ARRAY<HttpRule, IHttpRule>(undefined, this, "additionalBindings");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof HttpRule] as FieldNode).__meta.required = true;
     });
 
@@ -1209,7 +1209,7 @@ export class HttpRule extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof HttpRule] as FieldNode).__readonly = true;
     });
 

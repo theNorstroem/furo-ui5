@@ -84,7 +84,7 @@ describe("FuroUi5ZGrid Component", () => {
       // grid-template-columns resolves to an explicit list of px tracks. We expect more
       // than one track because auto-fill on a 1200px container with ~6-8rem minimums
       // will always produce several columns.
-      const tracks = styles.gridTemplateColumns.split(/\s+/).filter((t) => /\dpx$/.test(t));
+      const tracks = styles.gridTemplateColumns.split(/\s+/).filter(t => /\dpx$/.test(t));
       assert.isAbove(tracks.length, 1, `expected multiple grid columns at width 1200, got ${String(tracks.length)} (${styles.gridTemplateColumns})`);
     });
   });

@@ -8,384 +8,381 @@ import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
 import * as React from "react";
 
 export interface DateTimePicker extends React.HTMLAttributes<HTMLElement> {
-"onchange"?:(d:CustomEvent<DatePickerChangeEventDetail>)=>void;
-"onclose"?:(d:CustomEvent)=>void;
-"oninput"?:(d:CustomEvent<DatePickerInputEventDetail>)=>void;
-"onopen"?:(d:CustomEvent)=>void;
-"onvalue-state-change"?:(d:CustomEvent<DatePickerValueStateChangeEventDetail>)=>void;
-// properties
+  onchange?: (d: CustomEvent<DatePickerChangeEventDetail>) => void;
+  onclose?: (d: CustomEvent) => void;
+  oninput?: (d: CustomEvent<DatePickerInputEventDetail>) => void;
+  onopen?: (d: CustomEvent) => void;
+  "onvalue-state-change"?: (d: CustomEvent<DatePickerValueStateChangeEventDetail>) => void;
+  // properties
 
-/**
- * Use this to bind a model field by attribute.
- */
-"model"?:STRING | Timestamp | INT32 | INT64;
+  /**
+   * Use this to bind a model field by attribute.
+   */
+  model?: STRING | Timestamp | INT32 | INT64;
 
-// attributes
+  // attributes
 
-/**
- * Defines the accessible description of the component.
- */
-"accessibleDescription"?:string | undefined;
+  /**
+   * Defines the accessible description of the component.
+   */
+  accessibleDescription?: string | undefined;
 
-/**
- * Receives id(or many ids) of the elements that describe the input.
- */
-"accessibleDescriptionRef"?:string | undefined;
+  /**
+   * Receives id(or many ids) of the elements that describe the input.
+   */
+  accessibleDescriptionRef?: string | undefined;
 
-/**
- * Defines the aria-label attribute for the component.
- */
-"accessibleName"?:string | undefined;
+  /**
+   * Defines the aria-label attribute for the component.
+   */
+  accessibleName?: string | undefined;
 
-/**
- * Receives id(or many ids) of the elements that label the component.
- */
-"accessibleNameRef"?:string | undefined;
+  /**
+   * Receives id(or many ids) of the elements that label the component.
+   */
+  accessibleNameRef?: string | undefined;
 
-/**
- * Defines how to calculate calendar weeks and first day of the week.
- * If not set, the calendar will be displayed according to the currently set global configuration.
- */
-"calendarWeekNumbering"?:CalendarWeekNumbering | keyof typeof CalendarWeekNumbering;
+  /**
+   * Defines how to calculate calendar weeks and first day of the week.
+   * If not set, the calendar will be displayed according to the currently set global configuration.
+   */
+  calendarWeekNumbering?: CalendarWeekNumbering | keyof typeof CalendarWeekNumbering;
 
-/**
- * Currently selected date represented as a Local JavaScript Date instance.
- * Note: this getter can only be reliably used after the component is fully defined. Use dateValueAsync which resolves only when this condition is met.
- */
-"dateValue"?:Date | null;
+  /**
+   * Currently selected date represented as a Local JavaScript Date instance.
+   * Note: this getter can only be reliably used after the component is fully defined. Use dateValueAsync which resolves only when this condition is met.
+   */
+  dateValue?: Date | null;
 
-/**
- * Promise that resolves to the currently selected date represented as a Local JavaScript Date instance.
- */
-"dateValueAsync"?:Promise<Date | null>;
+  /**
+   * Promise that resolves to the currently selected date represented as a Local JavaScript Date instance.
+   */
+  dateValueAsync?: Promise<Date | null>;
 
-/**
- * Determines whether the component is displayed as disabled.
- */
-"disabled"?:boolean;
+  /**
+   * Determines whether the component is displayed as disabled.
+   */
+  disabled?: boolean;
 
-/**
- * Determines the format, displayed in the input field.
- */
-"displayFormat"?:string | undefined;
+  /**
+   * Determines the format, displayed in the input field.
+   */
+  displayFormat?: string | undefined;
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Determines the format, displayed in the input field.
- */
-"formatPattern"?:string | undefined;
+  /**
+   * Determines the format, displayed in the input field.
+   */
+  formatPattern?: string | undefined;
 
-/**
- * Defines the visibility of the week numbers column.
- * 
- * **Note:** For calendars other than Gregorian,
- * the week numbers are not displayed regardless of what is set.
- */
-"hideWeekNumbers"?:boolean;
+  /**
+   * Defines the visibility of the week numbers column.
+   *
+   * **Note:** For calendars other than Gregorian,
+   * the week numbers are not displayed regardless of what is set.
+   */
+  hideWeekNumbers?: boolean;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Determines the maximum date available for selection.
- * 
- * **Note:** If the formatPattern property is not set, the maxDate value must be provided in the ISO date format (yyyy-MM-dd).
- */
-"maxDate"?:string;
+  /**
+   * Determines the maximum date available for selection.
+   *
+   * **Note:** If the formatPattern property is not set, the maxDate value must be provided in the ISO date format (yyyy-MM-dd).
+   */
+  maxDate?: string;
 
-/**
- * Determines the minimum date available for selection.
- * 
- * **Note:** If the formatPattern property is not set, the minDate value must be provided in the ISO date format (yyyy-MM-dd).
- */
-"minDate"?:string;
+  /**
+   * Determines the minimum date available for selection.
+   *
+   * **Note:** If the formatPattern property is not set, the minDate value must be provided in the ISO date format (yyyy-MM-dd).
+   */
+  minDate?: string;
 
-/**
- * Determines the name by which the component will be identified upon submission in an HTML form.
- * 
- * **Note:** This property is only applicable within the context of an HTML Form element.
- */
-"name"?:string | undefined;
+  /**
+   * Determines the name by which the component will be identified upon submission in an HTML form.
+   *
+   * **Note:** This property is only applicable within the context of an HTML Form element.
+   */
+  name?: string | undefined;
 
-/**
- * Defines the open or closed state of the popover.
- */
-"open"?:boolean;
+  /**
+   * Defines the open or closed state of the popover.
+   */
+  open?: boolean;
 
-/**
- * Defines a short hint, intended to aid the user with data entry when the
- * component has no value.
- * 
- * **Note:** When no placeholder is set, the format pattern is displayed as a placeholder.
- * Passing an empty string as the value of this property will make the component appear empty - without placeholder or format pattern.
- */
-"placeholder"?:string | undefined;
+  /**
+   * Defines a short hint, intended to aid the user with data entry when the
+   * component has no value.
+   *
+   * **Note:** When no placeholder is set, the format pattern is displayed as a placeholder.
+   * Passing an empty string as the value of this property will make the component appear empty - without placeholder or format pattern.
+   */
+  placeholder?: string | undefined;
 
-/**
- * Sets a calendar type used for display.
- * If not set, the calendar type of the global configuration is used.
- */
-"primaryCalendarType"?:CalendarType | undefined | keyof typeof CalendarType  ;
+  /**
+   * Sets a calendar type used for display.
+   * If not set, the calendar type of the global configuration is used.
+   */
+  primaryCalendarType?: CalendarType | undefined | keyof typeof CalendarType;
 
-/**
- * Determines whether the component is displayed as read-only.
- */
-"readonly"?:boolean;
+  /**
+   * Determines whether the component is displayed as read-only.
+   */
+  readonly?: boolean;
 
-/**
- * Defines whether the component is required.
- */
-"required"?:boolean;
+  /**
+   * Defines whether the component is required.
+   */
+  required?: boolean;
 
-/**
- * Defines the secondary calendar type.
- * If not set, the calendar will only show the primary calendar type.
- */
-"secondaryCalendarType"?:CalendarType | undefined | keyof typeof CalendarType  ;
+  /**
+   * Defines the secondary calendar type.
+   * If not set, the calendar will only show the primary calendar type.
+   */
+  secondaryCalendarType?: CalendarType | undefined | keyof typeof CalendarType;
 
-/**
- * Defines whether the clear icon of the input will be shown.
- */
-"showClearIcon"?:boolean;
+  /**
+   * Defines whether the clear icon of the input will be shown.
+   */
+  showClearIcon?: boolean;
 
-/**
- * Defines a formatted date value.
- */
-"value"?:string;
+  /**
+   * Defines a formatted date value.
+   */
+  value?: string;
 
-/**
- * Determines the format, used for the value attribute.
- */
-"valueFormat"?:string | undefined;
+  /**
+   * Determines the format, used for the value attribute.
+   */
+  valueFormat?: string | undefined;
 
-/**
- * Defines the value state of the component.
- */
-"valueState"?:ValueState | keyof typeof ValueState;
-
+  /**
+   * Defines the value state of the component.
+   */
+  valueState?: ValueState | keyof typeof ValueState;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * The 'furo-furo-furo-ui5-date-time-picker' component lets the user select a date and time, with data binding.
- * 
- * It supports all features from the [SAP ui5 DateTimePicker element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/DateTimePicker/).
- * 
- * You can bind a `string` (ISO 8601 / RFC 3339, e.g. "2017-01-15T01:30:15.000Z"), a
- * `google.protobuf.Timestamp`, or a unix-seconds `int32` / `int64`. The bound value is always
- * handled as a canonical RFC 3339 string; `int32` / `int64` are interpreted as seconds since epoch.
- * 
- * ## supported meta and constraints
- * - **readonly: true** — set the element to readonly
- * - **required: true** — mark the element as required
- * - **placeholder:"some string"** — set the placeholder for the element
- * - **min:"1999-12-31"** — set the minDate for the element (use iso date in the constraint)
- * - **max:"1999-12-31"** — set the maxDate for the element (use iso date in the constraint)
- * 
- * ### Overview
- * The `DateTimePicker` component alows users to select both date (day, month and year) and time (hours, minutes and seconds)
- * and for the purpose it consists of input field and Date/Time picker.
- * 
- * ### Usage
- * 
- * Use the `DateTimePicker` if you need a combined date and time input component.
- * Don't use it if you want to use either date, or time value.
- * In this case, use the `DatePicker` or the `TimePicker` components instead.
- * 
- * The user can set date/time by:
- * 
- * - using the calendar and the time selectors
- * - typing in the input field
- * 
- * Programmatically, to set date/time for the `DateTimePicker`, use the `value` property
- * 
- * ### Formatting
- * 
- * The value entered by typing into the input field must fit to the used date/time format.
- * 
- * Supported format options are pattern-based on Unicode LDML Date Format notation.
- * For more information, see [UTS #35: Unicode Locale Data Markup Language](https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table).
- * 
- * **Example:** the following format `dd/MM/yyyy, hh:mm:ss aa`
- * corresponds the `13/04/2020, 03:16:16 AM` value.
- * 
- * The small 'h' defines "12" hours format and the "aa" symbols - "AM/PM" time periods.
- * 
- * **Example:** the following format `dd/MM/yyyy, HH:mm:ss`
- * corresponds the `13/04/2020, 15:16:16` value.
- * 
- * The capital 'H' indicates "24" hours format.
- * 
- * **Note:** If the `formatPattern` does NOT include time,
- * the `DateTimePicker` will fallback to the default time format according to the locale.
- * 
- * **Note:** If no placeholder is set to the `DateTimePicker`,
- * the current `formatPattern` is displayed as a placeholder.
- * If another placeholder is needed, it must be set or in case no placeholder is needed - it can be set to an empty string.
- * 
- * **Note:** If the user input does NOT match the `formatPattern`,
- * the `DateTimePicker` makes an attempt to parse it based on the
- * locale settings.
- * 
- * ### Responsive behavior
- * 
- * The `DateTimePicker` is responsive and fully adapts to all devices.
- * For larger screens, such as tablet or desktop, it is displayed as a popover, while
- * on phone devices, it is displayed full screen.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/DateTimePicker.js";`
- * 
- * ### Overview
- * The `DateTimePicker` component alows users to select both date (day, month and year) and time (hours, minutes and seconds)
- * and for the purpose it consists of input field and Date/Time picker.
- * 
- * ### Usage
- * 
- * Use the `DateTimePicker` if you need a combined date and time input component.
- * Don't use it if you want to use either date, or time value.
- * In this case, use the `DatePicker` or the `TimePicker` components instead.
- * 
- * The user can set date/time by:
- * 
- * - using the calendar and the time selectors
- * - typing in the input field
- * 
- * Programmatically, to set date/time for the `DateTimePicker`, use the `value` property
- * 
- * ### Formatting
- * 
- * The value entered by typing into the input field must fit to the used date/time format.
- * 
- * Supported format options are pattern-based on Unicode LDML Date Format notation.
- * For more information, see [UTS #35: Unicode Locale Data Markup Language](https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table).
- * 
- * **Example:** the following format `dd/MM/yyyy, hh:mm:ss aa`
- * corresponds the `13/04/2020, 03:16:16 AM` value.
- * 
- * The small 'h' defines "12" hours format and the "aa" symbols - "AM/PM" time periods.
- * 
- * **Example:** the following format `dd/MM/yyyy, HH:mm:ss`
- * corresponds the `13/04/2020, 15:16:16` value.
- * 
- * The capital 'H' indicates "24" hours format.
- * 
- * **Note:** If the `formatPattern` does NOT include time,
- * the `DateTimePicker` will fallback to the default time format according to the locale.
- * 
- * **Note:** If no placeholder is set to the `DateTimePicker`,
- * the current `formatPattern` is displayed as a placeholder.
- * If another placeholder is needed, it must be set or in case no placeholder is needed - it can be set to an empty string.
- * 
- * **Note:** If the user input does NOT match the `formatPattern`,
- * the `DateTimePicker` makes an attempt to parse it based on the
- * locale settings.
- * 
- * ### Responsive behavior
- * 
- * The `DateTimePicker` is responsive and fully adapts to all devices.
- * For larger screens, such as tablet or desktop, it is displayed as a popover, while
- * on phone devices, it is displayed full screen.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/DateTimePicker.js";`
- * 
- * ### Overview
- * 
- * The `furo-ui5-date-picker` component provides an input field with assigned calendar which opens on user action.
- * The `furo-ui5-date-picker` allows users to select a localized date using touch,
- * mouse, or keyboard input. It consists of two parts: the date input field and the
- * date picker.
- * 
- * ### Usage
- * 
- * The user can enter a date by:
- * 
- * - Using the calendar that opens in a popup
- * - Typing it in directly in the input field
- * 
- * When the user makes an entry and presses the enter key, the calendar shows the corresponding date.
- * When the user directly triggers the calendar display, the actual date is displayed.
- * 
- * ### Formatting
- * 
- * If a date is entered by typing it into
- * the input field, it must fit to the used date format.
- * 
- * Supported format options are pattern-based on Unicode LDML Date Format notation.
- * For more information, see [UTS #35: Unicode Locale Data Markup Language](https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table).
- * 
- * For example, if the valueFormat is "yyyy-MM-dd", the displayFormat is "MMM d, y", and the used locale is English, a valid value string is "2015-07-30", which leads to an output of "Jul 30, 2015".
- * If no placeholder is set to the DatePicker, the used displayFormat is displayed as a placeholder. If another placeholder is needed, it must be set.
- * 
- * ### Keyboard Handling
- * The `furo-ui5-date-picker` provides advanced keyboard handling.
- * If the `furo-ui5-date-picker` is focused,
- * you can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.
- * Once the drop-down is opened, you can use the [Up], [Down], [Left] or [Right] arrow keys
- * to navigate through the dates and select one by pressing the `Space` or `Enter` keys. Moreover you can
- * use TAB to reach the buttons for changing month and year.
- * 
- * If the `furo-ui5-date-picker` input field is focused and its corresponding picker dialog is not opened,
- * then users can increment or decrement the date referenced by `dateValue` property
- * by using the following shortcuts:
- * 
- * - [Page Down] - Decrements the corresponding day of the month by one
- * - [Shift] + [Page Down] - Decrements the corresponding month by one
- * - [Shift] + [Ctrl] + [Page Down] - Decrements the corresponding year by one
- * - [Page Up] - Increments the corresponding day of the month by one
- * - [Shift] + [Page Up] - Increments the corresponding month by one
- * - [Shift] + [Ctrl] + [Page Up] - Increments the corresponding year by one
- * 
- * ### Calendar types
- * The component supports several calendar types - Gregorian, Buddhist, Islamic, Japanese and Persian.
- * By default the Gregorian Calendar is used. In order to use the Buddhist, Islamic, Japanese or Persian calendar,
- * you need to set the `primaryCalendarType` property and import one or more of the following modules:
- * 
- * `import "@ui5/webcomponents-localization/dist/features/calendar/Buddhist.js";`
- * 
- * `import "@ui5/webcomponents-localization/dist/features/calendar/Islamic.js";`
- * 
- * `import "@ui5/webcomponents-localization/dist/features/calendar/Japanese.js";`
- * 
- * `import "@ui5/webcomponents-localization/dist/features/calendar/Persian.js";`
- * 
- * Or, you can use the global configuration and set the `calendarType` key:
- * 
- * ```html
- * <script data-id="sap-ui-config" type="application/json">
- * {
- * "calendarType": "Japanese"
- * }
- * <script>
- * ```
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/DatePicker.js";`
- * 
- * Abstract class that provides common functionality for date-related components (day picker, month picker, year picker, calendar, date picker, date range picker, date time picker)
- * This includes:
- * - "languageAware: true" metadata setting, CLDR fetch and i18n initialization
- * - common properties (primaryCalendar, minDate, maxDate and formatPattern) declaration and methods that operate on them
- * - additional common methods
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       * The 'furo-furo-furo-ui5-date-time-picker' component lets the user select a date and time, with data binding.
+       *
+       * It supports all features from the [SAP ui5 DateTimePicker element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/DateTimePicker/).
+       *
+       * You can bind a `string` (ISO 8601 / RFC 3339, e.g. "2017-01-15T01:30:15.000Z"), a
+       * `google.protobuf.Timestamp`, or a unix-seconds `int32` / `int64`. The bound value is always
+       * handled as a canonical RFC 3339 string; `int32` / `int64` are interpreted as seconds since epoch.
+       *
+       * ## supported meta and constraints
+       * - **readonly: true** — set the element to readonly
+       * - **required: true** — mark the element as required
+       * - **placeholder:"some string"** — set the placeholder for the element
+       * - **min:"1999-12-31"** — set the minDate for the element (use iso date in the constraint)
+       * - **max:"1999-12-31"** — set the maxDate for the element (use iso date in the constraint)
+       *
+       * ### Overview
+       * The `DateTimePicker` component alows users to select both date (day, month and year) and time (hours, minutes and seconds)
+       * and for the purpose it consists of input field and Date/Time picker.
+       *
+       * ### Usage
+       *
+       * Use the `DateTimePicker` if you need a combined date and time input component.
+       * Don't use it if you want to use either date, or time value.
+       * In this case, use the `DatePicker` or the `TimePicker` components instead.
+       *
+       * The user can set date/time by:
+       *
+       * - using the calendar and the time selectors
+       * - typing in the input field
+       *
+       * Programmatically, to set date/time for the `DateTimePicker`, use the `value` property
+       *
+       * ### Formatting
+       *
+       * The value entered by typing into the input field must fit to the used date/time format.
+       *
+       * Supported format options are pattern-based on Unicode LDML Date Format notation.
+       * For more information, see [UTS #35: Unicode Locale Data Markup Language](https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table).
+       *
+       * **Example:** the following format `dd/MM/yyyy, hh:mm:ss aa`
+       * corresponds the `13/04/2020, 03:16:16 AM` value.
+       *
+       * The small 'h' defines "12" hours format and the "aa" symbols - "AM/PM" time periods.
+       *
+       * **Example:** the following format `dd/MM/yyyy, HH:mm:ss`
+       * corresponds the `13/04/2020, 15:16:16` value.
+       *
+       * The capital 'H' indicates "24" hours format.
+       *
+       * **Note:** If the `formatPattern` does NOT include time,
+       * the `DateTimePicker` will fallback to the default time format according to the locale.
+       *
+       * **Note:** If no placeholder is set to the `DateTimePicker`,
+       * the current `formatPattern` is displayed as a placeholder.
+       * If another placeholder is needed, it must be set or in case no placeholder is needed - it can be set to an empty string.
+       *
+       * **Note:** If the user input does NOT match the `formatPattern`,
+       * the `DateTimePicker` makes an attempt to parse it based on the
+       * locale settings.
+       *
+       * ### Responsive behavior
+       *
+       * The `DateTimePicker` is responsive and fully adapts to all devices.
+       * For larger screens, such as tablet or desktop, it is displayed as a popover, while
+       * on phone devices, it is displayed full screen.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/DateTimePicker.js";`
+       *
+       * ### Overview
+       * The `DateTimePicker` component alows users to select both date (day, month and year) and time (hours, minutes and seconds)
+       * and for the purpose it consists of input field and Date/Time picker.
+       *
+       * ### Usage
+       *
+       * Use the `DateTimePicker` if you need a combined date and time input component.
+       * Don't use it if you want to use either date, or time value.
+       * In this case, use the `DatePicker` or the `TimePicker` components instead.
+       *
+       * The user can set date/time by:
+       *
+       * - using the calendar and the time selectors
+       * - typing in the input field
+       *
+       * Programmatically, to set date/time for the `DateTimePicker`, use the `value` property
+       *
+       * ### Formatting
+       *
+       * The value entered by typing into the input field must fit to the used date/time format.
+       *
+       * Supported format options are pattern-based on Unicode LDML Date Format notation.
+       * For more information, see [UTS #35: Unicode Locale Data Markup Language](https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table).
+       *
+       * **Example:** the following format `dd/MM/yyyy, hh:mm:ss aa`
+       * corresponds the `13/04/2020, 03:16:16 AM` value.
+       *
+       * The small 'h' defines "12" hours format and the "aa" symbols - "AM/PM" time periods.
+       *
+       * **Example:** the following format `dd/MM/yyyy, HH:mm:ss`
+       * corresponds the `13/04/2020, 15:16:16` value.
+       *
+       * The capital 'H' indicates "24" hours format.
+       *
+       * **Note:** If the `formatPattern` does NOT include time,
+       * the `DateTimePicker` will fallback to the default time format according to the locale.
+       *
+       * **Note:** If no placeholder is set to the `DateTimePicker`,
+       * the current `formatPattern` is displayed as a placeholder.
+       * If another placeholder is needed, it must be set or in case no placeholder is needed - it can be set to an empty string.
+       *
+       * **Note:** If the user input does NOT match the `formatPattern`,
+       * the `DateTimePicker` makes an attempt to parse it based on the
+       * locale settings.
+       *
+       * ### Responsive behavior
+       *
+       * The `DateTimePicker` is responsive and fully adapts to all devices.
+       * For larger screens, such as tablet or desktop, it is displayed as a popover, while
+       * on phone devices, it is displayed full screen.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/DateTimePicker.js";`
+       *
+       * ### Overview
+       *
+       * The `furo-ui5-date-picker` component provides an input field with assigned calendar which opens on user action.
+       * The `furo-ui5-date-picker` allows users to select a localized date using touch,
+       * mouse, or keyboard input. It consists of two parts: the date input field and the
+       * date picker.
+       *
+       * ### Usage
+       *
+       * The user can enter a date by:
+       *
+       * - Using the calendar that opens in a popup
+       * - Typing it in directly in the input field
+       *
+       * When the user makes an entry and presses the enter key, the calendar shows the corresponding date.
+       * When the user directly triggers the calendar display, the actual date is displayed.
+       *
+       * ### Formatting
+       *
+       * If a date is entered by typing it into
+       * the input field, it must fit to the used date format.
+       *
+       * Supported format options are pattern-based on Unicode LDML Date Format notation.
+       * For more information, see [UTS #35: Unicode Locale Data Markup Language](https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table).
+       *
+       * For example, if the valueFormat is "yyyy-MM-dd", the displayFormat is "MMM d, y", and the used locale is English, a valid value string is "2015-07-30", which leads to an output of "Jul 30, 2015".
+       * If no placeholder is set to the DatePicker, the used displayFormat is displayed as a placeholder. If another placeholder is needed, it must be set.
+       *
+       * ### Keyboard Handling
+       * The `furo-ui5-date-picker` provides advanced keyboard handling.
+       * If the `furo-ui5-date-picker` is focused,
+       * you can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.
+       * Once the drop-down is opened, you can use the [Up], [Down], [Left] or [Right] arrow keys
+       * to navigate through the dates and select one by pressing the `Space` or `Enter` keys. Moreover you can
+       * use TAB to reach the buttons for changing month and year.
+       *
+       * If the `furo-ui5-date-picker` input field is focused and its corresponding picker dialog is not opened,
+       * then users can increment or decrement the date referenced by `dateValue` property
+       * by using the following shortcuts:
+       *
+       * - [Page Down] - Decrements the corresponding day of the month by one
+       * - [Shift] + [Page Down] - Decrements the corresponding month by one
+       * - [Shift] + [Ctrl] + [Page Down] - Decrements the corresponding year by one
+       * - [Page Up] - Increments the corresponding day of the month by one
+       * - [Shift] + [Page Up] - Increments the corresponding month by one
+       * - [Shift] + [Ctrl] + [Page Up] - Increments the corresponding year by one
+       *
+       * ### Calendar types
+       * The component supports several calendar types - Gregorian, Buddhist, Islamic, Japanese and Persian.
+       * By default the Gregorian Calendar is used. In order to use the Buddhist, Islamic, Japanese or Persian calendar,
+       * you need to set the `primaryCalendarType` property and import one or more of the following modules:
+       *
+       * `import "@ui5/webcomponents-localization/dist/features/calendar/Buddhist.js";`
+       *
+       * `import "@ui5/webcomponents-localization/dist/features/calendar/Islamic.js";`
+       *
+       * `import "@ui5/webcomponents-localization/dist/features/calendar/Japanese.js";`
+       *
+       * `import "@ui5/webcomponents-localization/dist/features/calendar/Persian.js";`
+       *
+       * Or, you can use the global configuration and set the `calendarType` key:
+       *
+       * ```html
+       * <script data-id="sap-ui-config" type="application/json">
+       * {
+       * "calendarType": "Japanese"
+       * }
+       * <script>
+       * ```
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/DatePicker.js";`
+       *
+       * Abstract class that provides common functionality for date-related components (day picker, month picker, year picker, calendar, date picker, date range picker, date time picker)
+       * This includes:
+       * - "languageAware: true" metadata setting, CLDR fetch and i18n initialization
+       * - common properties (primaryCalendar, minDate, maxDate and formatPattern) declaration and methods that operate on them
+       * - additional common methods
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-date-time-picker": DateTimePicker;
     }
   }
 }
-

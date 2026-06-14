@@ -87,7 +87,7 @@ export class FeatureSetDefaultsFeatureSetEditionDefault extends FieldNode {
     this._features = new GoogleProtobufFeatureSet(undefined, this, "features");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof FeatureSetDefaultsFeatureSetEditionDefault] as FieldNode).__meta.required = true;
     });
 
@@ -102,7 +102,7 @@ export class FeatureSetDefaultsFeatureSetEditionDefault extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof FeatureSetDefaultsFeatureSetEditionDefault] as FieldNode).__readonly = true;
     });
 

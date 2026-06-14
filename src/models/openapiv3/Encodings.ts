@@ -56,7 +56,7 @@ export class Encodings extends FieldNode {
     this._additionalProperties = new ARRAY<OpenapiV3NamedEncoding, IOpenapiV3NamedEncoding>(undefined, this, "additionalProperties");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Encodings] as FieldNode).__meta.required = true;
     });
 
@@ -71,7 +71,7 @@ export class Encodings extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Encodings] as FieldNode).__readonly = true;
     });
 

@@ -71,7 +71,7 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
 
     // Observe resizes
     const debouncedResize = DebounceBuilder(this.handleResize, 100);
-    const ro = new ResizeObserver((_) => {
+    const ro = new ResizeObserver(_ => {
       debouncedResize();
     });
     ro.observe(this);

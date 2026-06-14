@@ -89,7 +89,7 @@ export class DummyImportType extends FieldNode {
     this._timeOfDay = new GoogleTypeTimeOfDay(undefined, this, "timeOfDay");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof DummyImportType] as FieldNode).__meta.required = true;
     });
 
@@ -104,7 +104,7 @@ export class DummyImportType extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof DummyImportType] as FieldNode).__readonly = true;
     });
 

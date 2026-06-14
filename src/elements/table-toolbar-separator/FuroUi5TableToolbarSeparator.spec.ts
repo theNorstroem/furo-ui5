@@ -37,7 +37,7 @@ describe("TableToolbarSeparator Component", async () => {
 
   it("should render nothing into the shadow root", () => {
     // render() returns `nothing` — shadow root should have no element children
-    const elementChildren = Array.from(el.shadowRoot!.childNodes).filter((n) => n.nodeType === Node.ELEMENT_NODE);
+    const elementChildren = Array.from(el.shadowRoot!.childNodes).filter(n => n.nodeType === Node.ELEMENT_NODE);
     assert.equal(elementChildren.length, 0);
   });
 

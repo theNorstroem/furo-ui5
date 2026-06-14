@@ -65,10 +65,10 @@ describe("Link Component", async () => {
   });
 
   it("should fire a click event", () =>
-    new Promise((done) => {
+    new Promise(done => {
       el.addEventListener(
         "click",
-        (e) => {
+        e => {
           e.preventDefault();
           done(1);
         },

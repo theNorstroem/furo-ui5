@@ -11,241 +11,238 @@ import type { IdentifiableList, McbItem, OptionLikeList } from "../index";
 import type { FuroFatString, IFuroFatString } from "@/models/index.js";
 
 export interface MultiCombobox extends React.HTMLAttributes<HTMLElement> {
-"onchange"?:(d:CustomEvent)=>void;
-"onclose"?:(d:CustomEvent)=>void;
-"oninput"?:(d:CustomEvent)=>void;
-"onopen"?:(d:CustomEvent)=>void;
-"onselection-change"?:(d:CustomEvent<MultiComboBoxSelectionChangeEventDetail>)=>void;
-"onvalue-state-change"?:(d:CustomEvent<MultiComboBoxValueStateChangeEventDetail>)=>void;
-// properties
+  onchange?: (d: CustomEvent) => void;
+  onclose?: (d: CustomEvent) => void;
+  oninput?: (d: CustomEvent) => void;
+  onopen?: (d: CustomEvent) => void;
+  "onselection-change"?: (d: CustomEvent<MultiComboBoxSelectionChangeEventDetail>) => void;
+  "onvalue-state-change"?: (d: CustomEvent<MultiComboBoxValueStateChangeEventDetail>) => void;
+  // properties
 
-/**
- * Use this to bind a model field by attribute.
- */
-"model"?:ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList;
+  /**
+   * Use this to bind a model field by attribute.
+   */
+  model?: ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList;
 
-/**
- * Use this to bind a options field by attribute.
- */
-"optionList"?:McbItem[] | undefined;
+  /**
+   * Use this to bind a options field by attribute.
+   */
+  optionList?: McbItem[] | undefined;
 
-/**
- * Use this to bind a options field by attribute.
- */
-"optionsModel"?:OptionLikeList | undefined;
+  /**
+   * Use this to bind a options field by attribute.
+   */
+  optionsModel?: OptionLikeList | undefined;
 
-// attributes
+  // attributes
 
-/**
- * Defines the accessible ARIA name of the component.
- */
-"accessibleName"?:string | undefined;
+  /**
+   * Defines the accessible ARIA name of the component.
+   */
+  accessibleName?: string | undefined;
 
-/**
- * Receives id(or many ids) of the elements that label the component.
- */
-"accessibleNameRef"?:string | undefined;
+  /**
+   * Receives id(or many ids) of the elements that label the component.
+   */
+  accessibleNameRef?: string | undefined;
 
-/**
- * Defines whether the component is in disabled state.
- * 
- * **Note:** A disabled component is completely noninteractive.
- */
-"disabled"?:boolean;
+  /**
+   * Defines whether the component is in disabled state.
+   *
+   * **Note:** A disabled component is completely noninteractive.
+   */
+  disabled?: boolean;
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Defines the filter type of the component.
- */
-"filter"?:ComboBoxFilter | keyof typeof ComboBoxFilter;
+  /**
+   * Defines the filter type of the component.
+   */
+  filter?: ComboBoxFilter | keyof typeof ComboBoxFilter;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Indicates whether a loading indicator should be shown in the picker.
- */
-"loading"?:boolean;
+  /**
+   * Indicates whether a loading indicator should be shown in the picker.
+   */
+  loading?: boolean;
 
-/**
- * Determines the name by which the component will be identified upon submission in an HTML form.
- * 
- * **Note:** This property is only applicable within the context of an HTML Form element.
- * **Note:** When the component is used inside a form element,
- * the value is sent as the first element in the form data, even if it's empty.
- */
-"name"?:string | undefined;
+  /**
+   * Determines the name by which the component will be identified upon submission in an HTML form.
+   *
+   * **Note:** This property is only applicable within the context of an HTML Form element.
+   * **Note:** When the component is used inside a form element,
+   * the value is sent as the first element in the form data, even if it's empty.
+   */
+  name?: string | undefined;
 
-/**
- * Defines whether the value will be autcompleted to match an item
- */
-"noTypeahead"?:boolean;
+  /**
+   * Defines whether the value will be autcompleted to match an item
+   */
+  noTypeahead?: boolean;
 
-/**
- * Defines if the user input will be prevented, if no matching item has been found
- */
-"noValidation"?:boolean;
+  /**
+   * Defines if the user input will be prevented, if no matching item has been found
+   */
+  noValidation?: boolean;
 
-/**
- * Indicates whether the items picker is open.
- */
-"open"?:boolean;
+  /**
+   * Indicates whether the items picker is open.
+   */
+  open?: boolean;
 
-/**
- * Defines a short hint intended to aid the user with data entry when the
- * component has no value.
- */
-"placeholder"?:string | undefined;
+  /**
+   * Defines a short hint intended to aid the user with data entry when the
+   * component has no value.
+   */
+  placeholder?: string | undefined;
 
-/**
- * Defines whether the component is read-only.
- * 
- * **Note:** A read-only component is not editable,
- * but still provides visual feedback upon user interaction.
- */
-"readonly"?:boolean;
+  /**
+   * Defines whether the component is read-only.
+   *
+   * **Note:** A read-only component is not editable,
+   * but still provides visual feedback upon user interaction.
+   */
+  readonly?: boolean;
 
-/**
- * Defines whether the component is required.
- */
-"required"?:boolean;
+  /**
+   * Defines whether the component is required.
+   */
+  required?: boolean;
 
-/**
- * Defines the values of the selected items.
- * 
- * Use this property to programmatically select items by their `value` property.
- * Each string in the array should match the `value` attribute of a `furo-furo-ui5-mcb-item`.
- * 
- * **Note:** If an item doesn't have a `value` attribute set, it cannot be selected via this property.
- * 
- * **Note:** The recommended approach is to set the `value` property on each `furo-furo-ui5-mcb-item`
- * and use `selectedValues` for programmatic selection. The `selected` property on items is
- * deprecated and should not be used together with `selectedValues`.
- */
-"selectedValues"?:string[];
+  /**
+   * Defines the values of the selected items.
+   *
+   * Use this property to programmatically select items by their `value` property.
+   * Each string in the array should match the `value` attribute of a `furo-furo-ui5-mcb-item`.
+   *
+   * **Note:** If an item doesn't have a `value` attribute set, it cannot be selected via this property.
+   *
+   * **Note:** The recommended approach is to set the `value` property on each `furo-furo-ui5-mcb-item`
+   * and use `selectedValues` for programmatic selection. The `selected` property on items is
+   * deprecated and should not be used together with `selectedValues`.
+   */
+  selectedValues?: string[];
 
-/**
- * Defines whether the clear icon of the multi-combobox will be shown.
- */
-"showClearIcon"?:boolean;
+  /**
+   * Defines whether the clear icon of the multi-combobox will be shown.
+   */
+  showClearIcon?: boolean;
 
-/**
- * Determines if the select all checkbox is visible on top of suggestions.
- */
-"showSelectAll"?:boolean;
+  /**
+   * Determines if the select all checkbox is visible on top of suggestions.
+   */
+  showSelectAll?: boolean;
 
-/**
- * Defines the value of the component.
- * 
- * **Note:** The property is updated upon typing.
- */
-"value"?:string;
+  /**
+   * Defines the value of the component.
+   *
+   * **Note:** The property is updated upon typing.
+   */
+  value?: string;
 
-/**
- * Defines the value state of the component.
- */
-"valueState"?:ValueState | keyof typeof ValueState;
-
+  /**
+   * Defines the value state of the component.
+   */
+  valueState?: ValueState | keyof typeof ValueState;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * The furo-furo-furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-furo-furo-ui5-multi-combobox define
- * the available options by using the furo-furo-ui5-mcb-item component. Use the function bindOptions to bind a RepeaterNode as a option list.
- * 
- * ```html
- * <furo-furo-furo-ui5-multi-combobox
- * fn-bind-data="--entity(*.data.description)"
- * fn-bind-options="--collection(*.entities)">
- * </furo-furo-furo-ui5-multi-combobox>
- * ```
- * *
- * 
- * ### Overview
- * 
- * The `furo-furo-ui5-multi-combobox` component consists of a list box with items and a text field allowing the user to either type a value directly into the text field, or choose from the list of existing items.
- * 
- * The drop-down list is used for selecting and filtering values, it enables users to select one or more options from a predefined list. The control provides an editable input field to filter the list, and a dropdown arrow to expand/collapse the list of available options.
- * The options in the list have checkboxes that permit multi-selection. Entered values are displayed as tokens.
- * ### Structure
- * The `furo-furo-ui5-multi-combobox` consists of the following elements:
- * 
- * -  Tokenizer - a list of tokens with selected options.
- * -  Input field - displays the selected option/s as token/s. Users can type to filter the list.
- * -  Drop-down arrow - expands\collapses the option list.
- * -  Option list - the list of available options.
- * 
- * ### Keyboard Handling
- * 
- * The `furo-furo-ui5-multi-combobox` provides advanced keyboard handling.
- * 
- * #### Picker
- * If the `furo-furo-ui5-multi-combobox` is focused,
- * you can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.
- * Once the drop-down is opened, you can use the `UP` and `DOWN` arrow keys
- * to navigate through the available options and select one by pressing the `Space` or `Enter` keys.
- * [Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.
- * 
- * #### Tokens
- * 
- * -  Left/Right arrow keys - moves the focus selection form the currently focused token to the previous/next one (if available).
- * -  Delete -  deletes the token and focuses the previous token.
- * -  Backspace -  deletes the token and focus the next token.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/MultiComboBox.js";`
- * 
- * ### Overview
- * 
- * The `furo-ui5-multi-combobox` component consists of a list box with items and a text field allowing the user to either type a value directly into the text field, or choose from the list of existing items.
- * 
- * The drop-down list is used for selecting and filtering values, it enables users to select one or more options from a predefined list. The control provides an editable input field to filter the list, and a dropdown arrow to expand/collapse the list of available options.
- * The options in the list have checkboxes that permit multi-selection. Entered values are displayed as tokens.
- * ### Structure
- * The `furo-ui5-multi-combobox` consists of the following elements:
- * 
- * -  Tokenizer - a list of tokens with selected options.
- * -  Input field - displays the selected option/s as token/s. Users can type to filter the list.
- * -  Drop-down arrow - expands\collapses the option list.
- * -  Option list - the list of available options.
- * 
- * ### Keyboard Handling
- * 
- * The `furo-ui5-multi-combobox` provides advanced keyboard handling.
- * 
- * #### Picker
- * If the `furo-ui5-multi-combobox` is focused,
- * you can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.
- * Once the drop-down is opened, you can use the `UP` and `DOWN` arrow keys
- * to navigate through the available options and select one by pressing the `Space` or `Enter` keys.
- * [Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.
- * 
- * #### Tokens
- * 
- * -  Left/Right arrow keys - moves the focus selection form the currently focused token to the previous/next one (if available).
- * -  Delete -  deletes the token and focuses the previous token.
- * -  Backspace -  deletes the token and focus the next token.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/MultiComboBox.js";`
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       *
+       * The furo-furo-furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-furo-furo-ui5-multi-combobox define
+       * the available options by using the furo-furo-ui5-mcb-item component. Use the function bindOptions to bind a RepeaterNode as a option list.
+       *
+       * ```html
+       * <furo-furo-furo-ui5-multi-combobox
+       * fn-bind-data="--entity(*.data.description)"
+       * fn-bind-options="--collection(*.entities)">
+       * </furo-furo-furo-ui5-multi-combobox>
+       * ```
+       * *
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-multi-combobox` component consists of a list box with items and a text field allowing the user to either type a value directly into the text field, or choose from the list of existing items.
+       *
+       * The drop-down list is used for selecting and filtering values, it enables users to select one or more options from a predefined list. The control provides an editable input field to filter the list, and a dropdown arrow to expand/collapse the list of available options.
+       * The options in the list have checkboxes that permit multi-selection. Entered values are displayed as tokens.
+       * ### Structure
+       * The `furo-furo-ui5-multi-combobox` consists of the following elements:
+       *
+       * -  Tokenizer - a list of tokens with selected options.
+       * -  Input field - displays the selected option/s as token/s. Users can type to filter the list.
+       * -  Drop-down arrow - expands\collapses the option list.
+       * -  Option list - the list of available options.
+       *
+       * ### Keyboard Handling
+       *
+       * The `furo-furo-ui5-multi-combobox` provides advanced keyboard handling.
+       *
+       * #### Picker
+       * If the `furo-furo-ui5-multi-combobox` is focused,
+       * you can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.
+       * Once the drop-down is opened, you can use the `UP` and `DOWN` arrow keys
+       * to navigate through the available options and select one by pressing the `Space` or `Enter` keys.
+       * [Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.
+       *
+       * #### Tokens
+       *
+       * -  Left/Right arrow keys - moves the focus selection form the currently focused token to the previous/next one (if available).
+       * -  Delete -  deletes the token and focuses the previous token.
+       * -  Backspace -  deletes the token and focus the next token.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/MultiComboBox.js";`
+       *
+       * ### Overview
+       *
+       * The `furo-ui5-multi-combobox` component consists of a list box with items and a text field allowing the user to either type a value directly into the text field, or choose from the list of existing items.
+       *
+       * The drop-down list is used for selecting and filtering values, it enables users to select one or more options from a predefined list. The control provides an editable input field to filter the list, and a dropdown arrow to expand/collapse the list of available options.
+       * The options in the list have checkboxes that permit multi-selection. Entered values are displayed as tokens.
+       * ### Structure
+       * The `furo-ui5-multi-combobox` consists of the following elements:
+       *
+       * -  Tokenizer - a list of tokens with selected options.
+       * -  Input field - displays the selected option/s as token/s. Users can type to filter the list.
+       * -  Drop-down arrow - expands\collapses the option list.
+       * -  Option list - the list of available options.
+       *
+       * ### Keyboard Handling
+       *
+       * The `furo-ui5-multi-combobox` provides advanced keyboard handling.
+       *
+       * #### Picker
+       * If the `furo-ui5-multi-combobox` is focused,
+       * you can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.
+       * Once the drop-down is opened, you can use the `UP` and `DOWN` arrow keys
+       * to navigate through the available options and select one by pressing the `Space` or `Enter` keys.
+       * [Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.
+       *
+       * #### Tokens
+       *
+       * -  Left/Right arrow keys - moves the focus selection form the currently focused token to the previous/next one (if available).
+       * -  Delete -  deletes the token and focuses the previous token.
+       * -  Backspace -  deletes the token and focus the next token.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/MultiComboBox.js";`
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-multi-combobox": MultiCombobox;
     }
   }
 }
-

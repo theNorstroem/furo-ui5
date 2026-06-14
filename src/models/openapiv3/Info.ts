@@ -177,7 +177,7 @@ export class Info extends FieldNode {
     this._summary = new STRING(undefined, this, "summary");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Info] as FieldNode).__meta.required = true;
     });
 
@@ -192,7 +192,7 @@ export class Info extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Info] as FieldNode).__readonly = true;
     });
 

@@ -111,7 +111,7 @@ describe("FormGroup Component", async () => {
       return gridTemplateColumns
         .trim()
         .split(/\s+/)
-        .filter((s) => s.length > 0).length;
+        .filter(s => s.length > 0).length;
     };
 
     it("should render 1 column below 501px host width", async () => {

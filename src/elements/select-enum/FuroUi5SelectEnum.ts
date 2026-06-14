@@ -80,7 +80,7 @@ export class FuroUi5SelectEnum extends Select {
     // connect the model
     this._model = fieldNode;
     // remove existing children
-    this.querySelectorAll("furo-ui5-option").forEach((el) => {
+    this.querySelectorAll("furo-ui5-option").forEach(el => {
       el.remove();
     });
 
@@ -99,7 +99,7 @@ export class FuroUi5SelectEnum extends Select {
       }
       options.push(select);
     });
-    options.forEach((option) => this.appendChild(option));
+    options.forEach(option => this.appendChild(option));
 
     // init model — dispatch-by-typeName via ModelReaderWriter (single entry: primitives.ENUM)
     const readers = new Map<string, () => void>();

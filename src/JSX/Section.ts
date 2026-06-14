@@ -2,48 +2,45 @@
 import * as React from "react";
 
 export interface Section extends React.HTMLAttributes<HTMLElement> {
-// no events defined.
-// properties
+  // no events defined.
+  // properties
 
-// attributes
+  // attributes
 
-/**
- * Heading title of the section
- */
-"heading"?:string;
+  /**
+   * Heading title of the section
+   */
+  heading?: string;
 
-/**
- * Defines the heading level. Available options are: "H6" to "H1".
- */
-"headingLevel"?:string;
-
+  /**
+   * Defines the heading level. Available options are: "H6" to "H1".
+   */
+  headingLevel?: string;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * `furo-furo-furo-ui5-section`
- * The object page content according to the SAP Design System Fiori guidelines consists of sections and subsections
- * arranged in a column layout.
- * The furo-furo-furo-ui5-section is basically a layout manager component to structure object pages. Sections can only
- * contain subsections, not content.
- * 
- * ```html
- * <furo-furo-furo-ui5-section heading="STRING">
- * <furo-furo-furo-ui5-subsection></furo-furo-furo-ui5-subsection>
- * <furo-furo-furo-ui5-subsection></furo-furo-furo-ui5-subsection>
- * </furo-furo-furo-ui5-section>
- * ```
- * 
- * <p>If a section contains only one subsection, the title of the subsection is used as the name of the section. In this case, there is no subsection submenu in the anchor bar.</p>
- * 
- * <p>Sections can only contain subsections, not content. Because of this, the object page only provides toolbars for local actions at the subsection level.</p>
- */
+      /**
+       *
+       * `furo-furo-furo-ui5-section`
+       * The object page content according to the SAP Design System Fiori guidelines consists of sections and subsections
+       * arranged in a column layout.
+       * The furo-furo-furo-ui5-section is basically a layout manager component to structure object pages. Sections can only
+       * contain subsections, not content.
+       *
+       * ```html
+       * <furo-furo-furo-ui5-section heading="STRING">
+       * <furo-furo-furo-ui5-subsection></furo-furo-furo-ui5-subsection>
+       * <furo-furo-furo-ui5-subsection></furo-furo-furo-ui5-subsection>
+       * </furo-furo-furo-ui5-section>
+       * ```
+       *
+       * <p>If a section contains only one subsection, the title of the subsection is used as the name of the section. In this case, there is no subsection submenu in the anchor bar.</p>
+       *
+       * <p>Sections can only contain subsections, not content. Because of this, the object page only provides toolbars for local actions at the subsection level.</p>
+       */
       "furo-ui5-section": Section;
     }
   }
 }
-

@@ -197,7 +197,7 @@ export class FeatureSet extends FieldNode {
     );
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof FeatureSet] as FieldNode).__meta.required = true;
     });
 
@@ -212,7 +212,7 @@ export class FeatureSet extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof FeatureSet] as FieldNode).__readonly = true;
     });
 

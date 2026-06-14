@@ -62,7 +62,7 @@ export class FileDescriptorSet extends FieldNode {
     this._file = new ARRAY<GoogleProtobufFileDescriptorProto, IGoogleProtobufFileDescriptorProto>(undefined, this, "file");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof FileDescriptorSet] as FieldNode).__meta.required = true;
     });
 
@@ -77,7 +77,7 @@ export class FileDescriptorSet extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof FileDescriptorSet] as FieldNode).__readonly = true;
     });
 

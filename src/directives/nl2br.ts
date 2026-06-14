@@ -13,7 +13,7 @@ class DirectiveNl2br extends Directive {
   render(str: string) {
     const lines = str.split("\n");
     if (lines.length > 1) {
-      return html`${map(lines, (line) => html`${line}<br />`)}`;
+      return html`${map(lines, line => html`${line}<br />`)}`;
     }
     return html`${str}`;
   }

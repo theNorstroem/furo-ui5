@@ -67,7 +67,7 @@ export class Uint64LabelsEntry extends FieldNode {
     this._value = new BOOLEAN(undefined, this, "value");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Uint64LabelsEntry] as FieldNode).__meta.required = true;
     });
 
@@ -82,7 +82,7 @@ export class Uint64LabelsEntry extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Uint64LabelsEntry] as FieldNode).__readonly = true;
     });
 

@@ -235,7 +235,7 @@ export class Wrappers extends FieldNode {
     this._date = new GoogleTypeDate(undefined, this, "date");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Wrappers] as FieldNode).__meta.required = true;
     });
 
@@ -250,7 +250,7 @@ export class Wrappers extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Wrappers] as FieldNode).__readonly = true;
     });
 

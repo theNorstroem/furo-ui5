@@ -56,7 +56,7 @@ export class ServerVariables extends FieldNode {
     this._additionalProperties = new ARRAY<OpenapiV3NamedServerVariable, IOpenapiV3NamedServerVariable>(undefined, this, "additionalProperties");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof ServerVariables] as FieldNode).__meta.required = true;
     });
 
@@ -71,7 +71,7 @@ export class ServerVariables extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof ServerVariables] as FieldNode).__readonly = true;
     });
 

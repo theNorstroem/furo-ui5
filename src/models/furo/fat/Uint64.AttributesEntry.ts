@@ -67,7 +67,7 @@ export class Uint64AttributesEntry extends FieldNode {
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Uint64AttributesEntry] as FieldNode).__meta.required = true;
     });
 
@@ -82,7 +82,7 @@ export class Uint64AttributesEntry extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Uint64AttributesEntry] as FieldNode).__readonly = true;
     });
 

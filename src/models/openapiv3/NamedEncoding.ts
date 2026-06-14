@@ -88,7 +88,7 @@ export class NamedEncoding extends FieldNode {
     this._value = new OpenapiV3Encoding(undefined, this, "value");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof NamedEncoding] as FieldNode).__meta.required = true;
     });
 
@@ -103,7 +103,7 @@ export class NamedEncoding extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof NamedEncoding] as FieldNode).__readonly = true;
     });
 

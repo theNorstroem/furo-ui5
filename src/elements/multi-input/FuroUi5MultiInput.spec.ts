@@ -118,7 +118,7 @@ describe("FuroUi5MultiInput", () => {
     it("renders one token per STRING element on bind", () => {
       el.bindData(ARRAY.Builder(STRING, ["a", "b"]));
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["a", "b"]
       );
     });
@@ -128,7 +128,7 @@ describe("FuroUi5MultiInput", () => {
       el.bindData(model);
       model.push("c");
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["a", "b", "c"]
       );
     });
@@ -138,7 +138,7 @@ describe("FuroUi5MultiInput", () => {
       el.bindData(model);
       model.delete(0);
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["b"]
       );
     });
@@ -146,7 +146,7 @@ describe("FuroUi5MultiInput", () => {
     it("renders one token per FuroFatString element on bind", () => {
       el.bindData(ARRAY.Builder(FuroFatString, [{ value: "x" }, { value: "y" }] as IFuroFatString[]));
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["x", "y"]
       );
     });
@@ -154,7 +154,7 @@ describe("FuroUi5MultiInput", () => {
     it("renders one token per StringValue element on bind", () => {
       el.bindData(ARRAY.Builder(StringValue, ["s1", "s2"]));
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["s1", "s2"]
       );
     });
@@ -183,7 +183,7 @@ describe("FuroUi5MultiInput", () => {
       assert.equal(model.at(0)?.value, "new");
       assert.equal(el.value, "");
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["new"]
       );
     });
@@ -219,7 +219,7 @@ describe("FuroUi5MultiInput", () => {
       el.dispatchEvent(new CustomEvent("token-delete", { detail: { tokens: [second] } }));
       assert.deepEqual(model.__toLiteral(), ["a", "c"]);
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["a", "c"]
       );
     });
@@ -303,12 +303,12 @@ describe("FuroUi5MultiInput", () => {
       el.bindData(modelA);
       el.bindData(modelB);
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["B"]
       );
       modelA.push("A2");
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["B"]
       );
     });
@@ -356,7 +356,7 @@ describe("FuroUi5MultiInput", () => {
       el.dispatchEvent(new CustomEvent("token-delete", { detail: { tokens: [second] } }));
       assert.equal(tokensOf(el).length, model.length);
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["a", "c"]
       );
 
@@ -364,7 +364,7 @@ describe("FuroUi5MultiInput", () => {
       setInputValue(el, "d");
       assert.equal(tokensOf(el).length, model.length);
       assert.deepEqual(
-        tokensOf(el).map((t) => t.text),
+        tokensOf(el).map(t => t.text),
         ["a", "c", "d"]
       );
     });

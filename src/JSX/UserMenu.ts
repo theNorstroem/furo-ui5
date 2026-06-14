@@ -3,94 +3,91 @@ import type { UserMenuItemClickEventDetail, UserMenuOtherAccountClickEventDetail
 import * as React from "react";
 
 export interface UserMenu extends React.HTMLAttributes<HTMLElement> {
-"onavatar-click"?:(d:CustomEvent)=>void;
-"onchange-account"?:(d:CustomEvent<UserMenuOtherAccountClickEventDetail>)=>void;
-"onclose"?:(d:CustomEvent)=>void;
-"onedit-accounts-click"?:(d:CustomEvent)=>void;
-"onitem-click"?:(d:CustomEvent<UserMenuItemClickEventDetail>)=>void;
-"onmanage-account-click"?:(d:CustomEvent)=>void;
-"onopen"?:(d:CustomEvent)=>void;
-"onsign-out-click"?:(d:CustomEvent)=>void;
-// properties
+  "onavatar-click"?: (d: CustomEvent) => void;
+  "onchange-account"?: (d: CustomEvent<UserMenuOtherAccountClickEventDetail>) => void;
+  onclose?: (d: CustomEvent) => void;
+  "onedit-accounts-click"?: (d: CustomEvent) => void;
+  "onitem-click"?: (d: CustomEvent<UserMenuItemClickEventDetail>) => void;
+  "onmanage-account-click"?: (d: CustomEvent) => void;
+  onopen?: (d: CustomEvent) => void;
+  "onsign-out-click"?: (d: CustomEvent) => void;
+  // properties
 
-// attributes
+  // attributes
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Defines if the User Menu is opened.
- */
-"open"?:boolean;
+  /**
+   * Defines if the User Menu is opened.
+   */
+  open?: boolean;
 
-/**
- * Defines the ID or DOM Reference of the element at which the user menu is shown.
- * When using this attribute in a declarative way, you must only use the `id` (as a string) of the element at which you want to show the popover.
- * You can only set the `opener` attribute to a DOM Reference when using JavaScript.
- */
-"opener"?:HTMLElement | string | null | undefined;
+  /**
+   * Defines the ID or DOM Reference of the element at which the user menu is shown.
+   * When using this attribute in a declarative way, you must only use the `id` (as a string) of the element at which you want to show the popover.
+   * You can only set the `opener` attribute to a DOM Reference when using JavaScript.
+   */
+  opener?: HTMLElement | string | null | undefined;
 
-/**
- * Defines if the User Menu shows the Edit Accounts option.
- */
-"showEditAccounts"?:boolean;
+  /**
+   * Defines if the User Menu shows the Edit Accounts option.
+   */
+  showEditAccounts?: boolean;
 
-/**
- * Defines if the User menu shows edit button.
- */
-"showEditButton"?:boolean;
+  /**
+   * Defines if the User menu shows edit button.
+   */
+  showEditButton?: boolean;
 
-/**
- * Defines if the User Menu shows the Manage Account option.
- */
-"showManageAccount"?:boolean;
+  /**
+   * Defines if the User Menu shows the Manage Account option.
+   */
+  showManageAccount?: boolean;
 
-/**
- * Defines if the User Menu shows the Other Accounts option.
- */
-"showOtherAccounts"?:boolean;
-
+  /**
+   * Defines if the User Menu shows the Other Accounts option.
+   */
+  showOtherAccounts?: boolean;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * 
- * ### Overview
- * 
- * The `furo-furo-ui5-user-menu` is an SAP Fiori specific web component that is used in `furo-furo-ui5-shellbar`
- * and allows the user to easily see information and settings for the current user and all other logged in accounts.
- * 
- * ### ES6 Module Import
- * `import "@furo/ui5/dist/UserMenu.js";`
- * 
- * `import "@furo/ui5/dist/UserMenuItem.js";` (for `furo-furo-ui5-user-menu-item`)
- * 
- * ### Overview
- * 
- * The `furo-ui5-user-menu` is an SAP Fiori specific web component that is used in `furo-ui5-shellbar`
- * and allows the user to easily see information and settings for the current user and all other logged in accounts.
- * 
- * ### ES6 Module Import
- * `import "@furo/ui5/dist/UserMenu.js";`
- * 
- * `import "@furo/ui5/dist/UserMenuItem.js";` (for `furo-ui5-user-menu-item`)
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       *
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-user-menu` is an SAP Fiori specific web component that is used in `furo-furo-ui5-shellbar`
+       * and allows the user to easily see information and settings for the current user and all other logged in accounts.
+       *
+       * ### ES6 Module Import
+       * `import "@furo/ui5/dist/UserMenu.js";`
+       *
+       * `import "@furo/ui5/dist/UserMenuItem.js";` (for `furo-furo-ui5-user-menu-item`)
+       *
+       * ### Overview
+       *
+       * The `furo-ui5-user-menu` is an SAP Fiori specific web component that is used in `furo-ui5-shellbar`
+       * and allows the user to easily see information and settings for the current user and all other logged in accounts.
+       *
+       * ### ES6 Module Import
+       * `import "@furo/ui5/dist/UserMenu.js";`
+       *
+       * `import "@furo/ui5/dist/UserMenuItem.js";` (for `furo-ui5-user-menu-item`)
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-user-menu": UserMenu;
     }
   }
 }
-

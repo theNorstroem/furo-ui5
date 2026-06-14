@@ -6,169 +6,166 @@ import * as React from "react";
 import type { FuroFatBool } from "@/models/index.js";
 
 export interface Switch extends React.HTMLAttributes<HTMLElement> {
-"onchange"?:(d:CustomEvent)=>void;
-// properties
+  onchange?: (d: CustomEvent) => void;
+  // properties
 
-/**
- * FieldNode setter
- */
-"model"?:BOOLEAN | FuroFatBool | BoolValue;
+  /**
+   * FieldNode setter
+   */
+  model?: BOOLEAN | FuroFatBool | BoolValue;
 
-// attributes
+  // attributes
 
-/**
- * Sets the accessible ARIA name of the component.
- * 
- * **Note**: We recommend that you set an accessibleNameRef pointing to an external label or at least an `accessibleName`.
- * Providing an `accessibleNameRef` or an `accessibleName` is mandatory in the cases when `textOn` and `textOff` properties aren't set.
- */
-"accessibleName"?:string | undefined;
+  /**
+   * Sets the accessible ARIA name of the component.
+   *
+   * **Note**: We recommend that you set an accessibleNameRef pointing to an external label or at least an `accessibleName`.
+   * Providing an `accessibleNameRef` or an `accessibleName` is mandatory in the cases when `textOn` and `textOff` properties aren't set.
+   */
+  accessibleName?: string | undefined;
 
-/**
- * Receives id(or many ids) of the elements that label the component.
- * 
- * **Note**: We recommend that you set an accessibleNameRef pointing to an external label or at least an `accessibleName`.
- * Providing an `accessibleNameRef` or an `accessibleName` is mandatory in the cases when `textOn` and `textOff` properties aren't set.
- */
-"accessibleNameRef"?:string | undefined;
+  /**
+   * Receives id(or many ids) of the elements that label the component.
+   *
+   * **Note**: We recommend that you set an accessibleNameRef pointing to an external label or at least an `accessibleName`.
+   * Providing an `accessibleNameRef` or an `accessibleName` is mandatory in the cases when `textOn` and `textOff` properties aren't set.
+   */
+  accessibleNameRef?: string | undefined;
 
-/**
- * Defines if the component is checked.
- * 
- * **Note:** The property can be changed with user interaction,
- * either by clicking the component, or by pressing the `Enter` or `Space` key.
- */
-"checked"?:boolean;
+  /**
+   * Defines if the component is checked.
+   *
+   * **Note:** The property can be changed with user interaction,
+   * either by clicking the component, or by pressing the `Enter` or `Space` key.
+   */
+  checked?: boolean;
 
-/**
- * Defines the component design.
- * 
- * **Note:** If `Graphical` type is set,
- * positive and negative icons will replace the `textOn` and `textOff`.
- */
-"design"?:SwitchDesign | keyof typeof SwitchDesign;
+  /**
+   * Defines the component design.
+   *
+   * **Note:** If `Graphical` type is set,
+   * positive and negative icons will replace the `textOn` and `textOff`.
+   */
+  design?: SwitchDesign | keyof typeof SwitchDesign;
 
-/**
- * Defines whether the component is disabled.
- * 
- * **Note:** A disabled component is noninteractive.
- */
-"disabled"?:boolean;
+  /**
+   * Defines whether the component is disabled.
+   *
+   * **Note:** A disabled component is noninteractive.
+   */
+  disabled?: boolean;
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Determines the name by which the component will be identified upon submission in an HTML form.
- * 
- * **Note:** This property is only applicable within the context of an HTML Form element.
- */
-"name"?:string | undefined;
+  /**
+   * Determines the name by which the component will be identified upon submission in an HTML form.
+   *
+   * **Note:** This property is only applicable within the context of an HTML Form element.
+   */
+  name?: string | undefined;
 
-/**
- * Defines whether the component is in readonly state.
- * 
- * **Note:** A readonly switch cannot be toggled by user interaction,
- * but can still be focused and its value read programmatically.
- */
-"readonly"?:boolean;
+  /**
+   * Defines whether the component is in readonly state.
+   *
+   * **Note:** A readonly switch cannot be toggled by user interaction,
+   * but can still be focused and its value read programmatically.
+   */
+  readonly?: boolean;
 
-/**
- * Defines whether the component is required.
- */
-"required"?:boolean;
+  /**
+   * Defines whether the component is required.
+   */
+  required?: boolean;
 
-/**
- * Defines the text, displayed when the component is not checked.
- * 
- * **Note:** We recommend using short texts, up to 3 letters (larger texts would be cut off).
- */
-"textOff"?:string | undefined;
+  /**
+   * Defines the text, displayed when the component is not checked.
+   *
+   * **Note:** We recommend using short texts, up to 3 letters (larger texts would be cut off).
+   */
+  textOff?: string | undefined;
 
-/**
- * Defines the text, displayed when the component is checked.
- * 
- * **Note:** We recommend using short texts, up to 3 letters (larger texts would be cut off).
- */
-"textOn"?:string | undefined;
+  /**
+   * Defines the text, displayed when the component is checked.
+   *
+   * **Note:** We recommend using short texts, up to 3 letters (larger texts would be cut off).
+   */
+  textOn?: string | undefined;
 
-/**
- * Defines the tooltip of the component.
- * 
- * **Note:** If applicable an external label reference should always be the preferred option to provide context to the `furo-furo-ui5-switch` component over a tooltip.
- */
-"tooltip"?:string | undefined;
+  /**
+   * Defines the tooltip of the component.
+   *
+   * **Note:** If applicable an external label reference should always be the preferred option to provide context to the `furo-furo-ui5-switch` component over a tooltip.
+   */
+  tooltip?: string | undefined;
 
-/**
- * Defines the form value of the component.
- */
-"value"?:string;
-
+  /**
+   * Defines the form value of the component.
+   */
+  value?: string;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * The 'furo-furo-furo-ui5-switch' component allows the user to switch true and false for type Bool with data binding.
- * 
- * 
- * Bindable FieldNodes: `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
- * 
- * 
- * ## supported FAT attributes
- * - **"disabled":"true"** set the element to disabled
- * 
- * ## supported meta and constraints
- * - **readonly: true** , set the element to readonly
- * 
- * ### Overview
- * The `furo-furo-ui5-switch` component is used for changing between binary states.
- * 
- * The component can display texts, that will be switched, based on the component state, via the `textOn` and `textOff` properties,
- * but texts longer than 3 letters will be cutted off.
- * 
- * However, users are able to customize the width of `furo-furo-ui5-switch` with pure CSS (`<furo-furo-ui5-switch style="width: 200px">`), and set widths, depending on the texts they would use.
- * 
- * Note: the component would not automatically stretch to fit the whole text width.
- * 
- * ### Keyboard Handling
- * The state can be changed by pressing the Space and Enter keys.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/Switch";`
- * 
- * ### Overview
- * The `furo-ui5-switch` component is used for changing between binary states.
- * 
- * The component can display texts, that will be switched, based on the component state, via the `textOn` and `textOff` properties,
- * but texts longer than 3 letters will be cutted off.
- * 
- * However, users are able to customize the width of `furo-ui5-switch` with pure CSS (`<furo-ui5-switch style="width: 200px">`), and set widths, depending on the texts they would use.
- * 
- * Note: the component would not automatically stretch to fit the whole text width.
- * 
- * ### Keyboard Handling
- * The state can be changed by pressing the Space and Enter keys.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/Switch";`
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       * The 'furo-furo-furo-ui5-switch' component allows the user to switch true and false for type Bool with data binding.
+       *
+       *
+       * Bindable FieldNodes: `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
+       *
+       *
+       * ## supported FAT attributes
+       * - **"disabled":"true"** set the element to disabled
+       *
+       * ## supported meta and constraints
+       * - **readonly: true** , set the element to readonly
+       *
+       * ### Overview
+       * The `furo-furo-ui5-switch` component is used for changing between binary states.
+       *
+       * The component can display texts, that will be switched, based on the component state, via the `textOn` and `textOff` properties,
+       * but texts longer than 3 letters will be cutted off.
+       *
+       * However, users are able to customize the width of `furo-furo-ui5-switch` with pure CSS (`<furo-furo-ui5-switch style="width: 200px">`), and set widths, depending on the texts they would use.
+       *
+       * Note: the component would not automatically stretch to fit the whole text width.
+       *
+       * ### Keyboard Handling
+       * The state can be changed by pressing the Space and Enter keys.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Switch";`
+       *
+       * ### Overview
+       * The `furo-ui5-switch` component is used for changing between binary states.
+       *
+       * The component can display texts, that will be switched, based on the component state, via the `textOn` and `textOff` properties,
+       * but texts longer than 3 letters will be cutted off.
+       *
+       * However, users are able to customize the width of `furo-ui5-switch` with pure CSS (`<furo-ui5-switch style="width: 200px">`), and set widths, depending on the texts they would use.
+       *
+       * Note: the component would not automatically stretch to fit the whole text width.
+       *
+       * ### Keyboard Handling
+       * The state can be changed by pressing the Space and Enter keys.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Switch";`
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-switch": Switch;
     }
   }
 }
-

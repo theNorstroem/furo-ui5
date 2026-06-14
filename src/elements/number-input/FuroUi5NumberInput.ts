@@ -238,7 +238,7 @@ export class FuroUi5NumberInput extends Input {
     this._model.__addEventListener("update", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("input", (d) => {
+    this.addEventListener("input", d => {
       console.log(d);
       console.log(this.value);
     });

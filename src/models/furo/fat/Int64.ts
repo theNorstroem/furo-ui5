@@ -114,7 +114,7 @@ export class Int64 extends FieldNode {
     this._attributes = new MAP<string, STRING, string>(undefined, this, "attributes");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Int64] as FieldNode).__meta.required = true;
     });
 
@@ -129,7 +129,7 @@ export class Int64 extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Int64] as FieldNode).__readonly = true;
     });
 

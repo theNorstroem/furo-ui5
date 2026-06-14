@@ -175,7 +175,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
 
   private readFromOptionsModel = (): void => {
     // clear existing options
-    this.querySelectorAll("furo-ui5-mcb-item").forEach((el) => {
+    this.querySelectorAll("furo-ui5-mcb-item").forEach(el => {
       el.setAttribute("deleteme", "");
     });
 
@@ -191,14 +191,14 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
       }
     });
     // delete
-    this.querySelectorAll("furo-ui5-mcb-item[deleteme]").forEach((el) => {
+    this.querySelectorAll("furo-ui5-mcb-item[deleteme]").forEach(el => {
       el.remove();
     });
 
     // sort
     [...this.querySelectorAll("furo-ui5-mcb-item")]
       .sort((a, b) => Number((a as HTMLElement).style.order) - Number((b as HTMLElement).style.order))
-      .forEach((el) => {
+      .forEach(el => {
         this.appendChild(el);
       });
 
@@ -208,7 +208,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
 
   public setSelectedItems() {
     // Clear ALL existing UI selections first — this is the only deselect path.
-    this.querySelectorAll(`furo-ui5-mcb-item[selected]`).forEach((el) => {
+    this.querySelectorAll(`furo-ui5-mcb-item[selected]`).forEach(el => {
       el.removeAttribute("selected");
     });
 
@@ -221,12 +221,12 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     if (firstElement.__meta.typeName === "primitives.STRING") {
       items.push(...(this._model as ARRAY<STRING, string>).__toLiteral());
     } else if (firstElement.__meta.typeName === "furo.fat.String") {
-      items.push(...(this._model as ARRAY<FuroFatString, IFuroFatString>).map((i) => i.value.toString()));
+      items.push(...(this._model as ARRAY<FuroFatString, IFuroFatString>).map(i => i.value.toString()));
     } else {
-      items.push(...(this._model as IdentifiableList).map((e) => e.id.toString()));
+      items.push(...(this._model as IdentifiableList).map(e => e.id.toString()));
     }
 
-    items.forEach((id) => {
+    items.forEach(id => {
       const mcb = this.querySelector(`furo-ui5-mcb-item[id="${CSS.escape(id)}"]`);
       if (mcb) {
         mcb.setAttribute("selected", "");
@@ -274,7 +274,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
       return;
     }
     // set marker to clear existing options
-    this.querySelectorAll("furo-ui5-mcb-item").forEach((el) => {
+    this.querySelectorAll("furo-ui5-mcb-item").forEach(el => {
       el.setAttribute("deleteme", "");
     });
 
@@ -296,7 +296,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
       }
     });
     // delete
-    this.querySelectorAll("furo-ui5-mcb-item[deleteme]").forEach((el) => {
+    this.querySelectorAll("furo-ui5-mcb-item[deleteme]").forEach(el => {
       el.remove();
     });
 
@@ -304,7 +304,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     if (this._optionList) {
       [...this.querySelectorAll("furo-ui5-mcb-item")]
         .sort((a, b) => Number((a as HTMLElement).style.order) - Number((b as HTMLElement).style.order))
-        .forEach((el) => {
+        .forEach(el => {
           this.appendChild(el);
         });
     }
@@ -319,7 +319,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
 
   private writeToModel = (event: Event): void => {
     const detail = (event as CustomEvent<{ items: (HTMLElement & { id: string })[] }>).detail as { items?: (HTMLElement & { id: string })[] } | undefined;
-    const selectedIds = (detail?.items ?? []).map((it) => it.id);
+    const selectedIds = (detail?.items ?? []).map(it => it.id);
     this._writeIdsToModel(selectedIds);
   };
 
@@ -330,7 +330,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
     this._model.__removeEventListener("update", this.readFromModel);
     this._model.__clear();
 
-    ids.forEach((id) => {
+    ids.forEach(id => {
       if (this._modelItemType === "STRING") {
         (this._model as ARRAY<STRING, string>).push(id);
       } else if (this._modelItemType === "FAT_STRING") {
@@ -339,7 +339,7 @@ export class FuroUi5MultiCombobox extends MultiComboBox {
         // IDENTIFIABLE: look up the full object in optionsModel so we preserve
         // displayName/additionalText/etc. Falls back to a bare `{ id }` shape
         // if optionsModel isn't bound (degrades gracefully).
-        const opt = this._optionsModel?.find((o) => o.id.toString() === id);
+        const opt = this._optionsModel?.find(o => o.id.toString() === id);
         const literal = opt && "__toLiteral" in opt ? (opt as { __toLiteral: () => unknown }).__toLiteral() : { id };
         (this._model as unknown as { push: (literal: unknown) => number }).push(literal);
       }

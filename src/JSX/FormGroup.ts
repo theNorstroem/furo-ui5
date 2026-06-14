@@ -2,27 +2,24 @@
 import * as React from "react";
 
 export interface FormGroup extends React.HTMLAttributes<HTMLElement> {
-// no events defined.
-// properties
+  // no events defined.
+  // properties
 
-// attributes
+  // attributes
 
-/**
- * The label of the form-group.
- */
-"label"?:string;
-
+  /**
+   * The label of the form-group.
+   */
+  label?: string;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * ### Description
- */
+      /**
+       * ### Description
+       */
       "furo-ui5-form-group": FormGroup;
     }
   }
 }
-

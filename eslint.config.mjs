@@ -59,7 +59,7 @@ export default tseslint.config(
 
       // Rules formerly from @open-wc/eslint-config
       "no-underscore-dangle": "off",
-      "arrow-parens": ["error", "always"],
+
       "no-restricted-syntax": [
         "error",
         {

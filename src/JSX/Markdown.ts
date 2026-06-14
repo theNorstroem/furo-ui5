@@ -2,44 +2,41 @@
 import * as React from "react";
 
 export interface Markdown extends React.HTMLAttributes<HTMLElement> {
-// no events defined.
-// properties
+  // no events defined.
+  // properties
 
-// attributes
+  // attributes
 
-/**
- * The markdown string to render
- */
-"markdown"?:string;
-
+  /**
+   * The markdown string to render
+   */
+  markdown?: string;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * `furo-furo-furo-ui5-markdown`
- * 
- * Renders given md data directly to html.
- * 
- * #### Stream rendering
- * The stream rendering mode renders the pure markdown while the stream is running and makes a final render with all added plugins.
- * This save a lot of resources by not rendering incomplete mermaid, svg or any other custom renderers.
- * 
- * ##### In combination with field nodes
- * - To notify the stream started, send a `FieldNode` event `stream-begins`.
- * - To notify the stream has ended send a `FieldNode` event `stream-ends`.
- * 
- * ##### When using the properties directly (html with js)
- * - Enable the streaming mode with setting the attribute `streaming` to true.
- * - To notify the stream has ended set the attribute `streaming` to false and the final markdown to the property `markdown`
- * 
- * #### Adding custom renderers
- */
+      /**
+       *
+       * `furo-furo-furo-ui5-markdown`
+       *
+       * Renders given md data directly to html.
+       *
+       * #### Stream rendering
+       * The stream rendering mode renders the pure markdown while the stream is running and makes a final render with all added plugins.
+       * This save a lot of resources by not rendering incomplete mermaid, svg or any other custom renderers.
+       *
+       * ##### In combination with field nodes
+       * - To notify the stream started, send a `FieldNode` event `stream-begins`.
+       * - To notify the stream has ended send a `FieldNode` event `stream-ends`.
+       *
+       * ##### When using the properties directly (html with js)
+       * - Enable the streaming mode with setting the attribute `streaming` to true.
+       * - To notify the stream has ended set the attribute `streaming` to false and the final markdown to the property `markdown`
+       *
+       * #### Adding custom renderers
+       */
       "furo-ui5-markdown": Markdown;
     }
   }
 }
-

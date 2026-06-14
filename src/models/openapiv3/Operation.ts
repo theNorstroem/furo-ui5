@@ -286,7 +286,7 @@ export class Operation extends FieldNode {
     this._specificationExtension = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "specificationExtension");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Operation] as FieldNode).__meta.required = true;
     });
 
@@ -301,7 +301,7 @@ export class Operation extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Operation] as FieldNode).__readonly = true;
     });
 

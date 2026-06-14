@@ -436,7 +436,7 @@ export class FieldDescriptorProto extends FieldNode {
     this._proto3Optional = new BOOLEAN(undefined, this, "proto3Optional");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof FieldDescriptorProto] as FieldNode).__meta.required = true;
     });
 
@@ -451,7 +451,7 @@ export class FieldDescriptorProto extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof FieldDescriptorProto] as FieldNode).__readonly = true;
     });
 

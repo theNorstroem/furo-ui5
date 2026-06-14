@@ -132,7 +132,7 @@ export class FeatureSetDefaults extends FieldNode {
     this._maximumEdition = new ENUM<GoogleProtobufEdition>(undefined, GoogleProtobufEdition, GoogleProtobufEdition.EDITION_UNKNOWN, this, "maximumEdition");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof FeatureSetDefaults] as FieldNode).__meta.required = true;
     });
 
@@ -147,7 +147,7 @@ export class FeatureSetDefaults extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof FeatureSetDefaults] as FieldNode).__readonly = true;
     });
 

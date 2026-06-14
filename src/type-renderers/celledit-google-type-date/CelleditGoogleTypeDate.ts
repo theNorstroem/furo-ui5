@@ -11,7 +11,7 @@ import { FuroUi5DatePicker } from "@/elements/date-picker/FuroUi5DatePicker";
 export class CelleditGoogleTypeDate extends FuroUi5DatePicker {
   constructor() {
     super();
-    this.addEventListener("click", (e) => {
+    this.addEventListener("click", e => {
       e.stopPropagation();
       e.preventDefault();
     });

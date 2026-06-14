@@ -339,7 +339,7 @@ export class FuroUi5HeaderPanel extends LitElement {
     void this.updateComplete.then(() => {
       let wrappersize = 390;
       // set wrap if content is smaller then 390px
-      const ro = new ResizeObserver((entries) => {
+      const ro = new ResizeObserver(entries => {
         window.requestAnimationFrame(() => {
           const { width } = entries[0].contentRect;
           if (width > 0 && width < 406) {

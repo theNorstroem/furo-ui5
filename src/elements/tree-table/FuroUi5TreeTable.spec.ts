@@ -261,7 +261,7 @@ describe("FuroUi5TreeTable", () => {
 
     it("emits row-click when a row is clicked", () => {
       let clicked: HTMLTableRowElement | undefined;
-      el.addEventListener("row-click", (e) => {
+      el.addEventListener("row-click", e => {
         clicked = (e as CustomEvent<HTMLTableRowElement>).detail;
       });
       el.querySelector<HTMLElement>("#a td")?.click();
@@ -297,7 +297,7 @@ describe("FuroUi5TreeTable", () => {
 
     it("fires node-focused (debounced 250ms) when a row receives focus", async () => {
       let focused: HTMLTableRowElement | undefined;
-      el.addEventListener("node-focused", (e) => {
+      el.addEventListener("node-focused", e => {
         focused = (e as CustomEvent<HTMLTableRowElement>).detail;
       });
       el.querySelector<HTMLElement>("#a")?.dispatchEvent(new FocusEvent("focusin", { bubbles: true, composed: true }));

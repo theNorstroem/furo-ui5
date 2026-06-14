@@ -268,7 +268,7 @@ export class CubeDefinition extends FieldNode {
     this._multipleCubeOptions = new ARRAY<Furoui5TestCubeCubeOptions, IFuroui5TestCubeCubeOptions>(undefined, this, "multipleCubeOptions");
 
     // Set required fields
-    ["length", "breadth", "height"].forEach((fieldName) => {
+    ["length", "breadth", "height"].forEach(fieldName => {
       (this[fieldName as keyof CubeDefinition] as FieldNode).__meta.required = true;
     });
 
@@ -288,7 +288,7 @@ export class CubeDefinition extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof CubeDefinition] as FieldNode).__readonly = true;
     });
 

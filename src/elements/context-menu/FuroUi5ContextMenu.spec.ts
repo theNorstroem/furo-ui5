@@ -26,7 +26,7 @@ const sampleItems: IMenuitem[] = [
 const buildSample = (): ARRAY<Menuitem, IMenuitem> =>
   ARRAY.Builder(
     Menuitem,
-    sampleItems.map((i) => ({ ...i }))
+    sampleItems.map(i => ({ ...i }))
   );
 
 const nestedItems: IMenuitem[] = [
@@ -169,7 +169,7 @@ describe("FuroUi5ContextMenu", () => {
     });
 
     it("uses the root's children array as the root items", () => {
-      const root = new Menuitem({ children: sampleItems.map((i) => ({ ...i })) });
+      const root = new Menuitem({ children: sampleItems.map(i => ({ ...i })) });
       el.bindData(root);
       const items = el.querySelectorAll("ui5-menu-item");
       assert.equal(items.length, 4);
@@ -194,14 +194,14 @@ describe("FuroUi5ContextMenu", () => {
 
     it("inserts a ui5-menu-separator before items flagged leadingDivider", () => {
       const children = Array.from(el.children);
-      const duplicateIdx = children.findIndex((c) => c.tagName.toLowerCase() === "ui5-menu-item" && (c as MenuItem).text === "Duplicate");
+      const duplicateIdx = children.findIndex(c => c.tagName.toLowerCase() === "ui5-menu-item" && (c as MenuItem).text === "Duplicate");
       assert.isAbove(duplicateIdx, 0, "Duplicate item is present");
       assert.equal(children[duplicateIdx - 1].tagName.toLowerCase(), "ui5-menu-separator", "separator immediately precedes the flagged item");
     });
 
     it("does not insert a separator before items without the flag", () => {
       const children = Array.from(el.children);
-      const newIdx = children.findIndex((c) => c.tagName.toLowerCase() === "ui5-menu-item" && (c as MenuItem).text === "New");
+      const newIdx = children.findIndex(c => c.tagName.toLowerCase() === "ui5-menu-item" && (c as MenuItem).text === "New");
       assert.equal(newIdx, 0, "first item is at index 0 — no leading separator");
     });
   });
@@ -222,7 +222,7 @@ describe("FuroUi5ContextMenu", () => {
     });
 
     it("renders child items as light-DOM children of the parent item", () => {
-      const share = Array.from(el.querySelectorAll(":scope > ui5-menu-item")).find((i) => (i as MenuItem).text === "Share") as MenuItem | undefined;
+      const share = Array.from(el.querySelectorAll(":scope > ui5-menu-item")).find(i => (i as MenuItem).text === "Share") as MenuItem | undefined;
       assert.isOk(share, "Share item rendered at root level");
 
       const shareChildren = Array.from(share.querySelectorAll<MenuItem>(":scope > ui5-menu-item"));
@@ -232,8 +232,8 @@ describe("FuroUi5ContextMenu", () => {
     });
 
     it("recurses at least two levels deep", () => {
-      const share = Array.from(el.querySelectorAll(":scope > ui5-menu-item")).find((i) => (i as MenuItem).text === "Share") as MenuItem | undefined;
-      const team = Array.from(share!.querySelectorAll(":scope > ui5-menu-item")).find((i) => (i as MenuItem).text === "Team") as MenuItem | undefined;
+      const share = Array.from(el.querySelectorAll(":scope > ui5-menu-item")).find(i => (i as MenuItem).text === "Share") as MenuItem | undefined;
+      const team = Array.from(share!.querySelectorAll(":scope > ui5-menu-item")).find(i => (i as MenuItem).text === "Team") as MenuItem | undefined;
       assert.isOk(team, "Team submenu rendered");
       const teamChildren = Array.from(team.querySelectorAll<MenuItem>(":scope > ui5-menu-item"));
       assert.equal(teamChildren.length, 2);
@@ -361,7 +361,7 @@ describe("FuroUi5ContextMenu", () => {
     it("dispatches menu-item-selected with the source Menuitem and current context", () => {
       const firstItem = el.querySelectorAll("ui5-menu-item")[0] as MenuItem;
       let received: MenuItemSelectedEventDetail | undefined;
-      el.addEventListener("menu-item-selected", (e) => {
+      el.addEventListener("menu-item-selected", e => {
         received = (e as CustomEvent<MenuItemSelectedEventDetail>).detail;
       });
 
@@ -376,7 +376,7 @@ describe("FuroUi5ContextMenu", () => {
     it("triggerContext sets the context observed by a subsequent selection", () => {
       const firstItem = el.querySelectorAll("ui5-menu-item")[0] as MenuItem;
       let received: MenuItemSelectedEventDetail | undefined;
-      el.addEventListener("menu-item-selected", (e) => {
+      el.addEventListener("menu-item-selected", e => {
         received = (e as CustomEvent<MenuItemSelectedEventDetail>).detail;
       });
 
@@ -435,7 +435,7 @@ describe("FuroUi5ContextMenu", () => {
       el.bindData(b);
 
       b.push({ id: "extra", displayName: "Extra-In-B" });
-      const texts = Array.from(el.querySelectorAll("ui5-menu-item")).map((i) => (i as MenuItem).text);
+      const texts = Array.from(el.querySelectorAll("ui5-menu-item")).map(i => (i as MenuItem).text);
       assert.deepEqual(texts, ["OnlyInB", "Extra-In-B"]);
     });
 

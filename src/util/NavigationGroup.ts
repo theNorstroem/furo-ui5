@@ -26,7 +26,7 @@ export const NavigationGroup = (container: HTMLElement | HTMLSlotElement | null,
 
     if (container instanceof HTMLSlotElement) {
       nodes = [];
-      container.assignedElements({ flatten: true }).forEach((n) => {
+      container.assignedElements({ flatten: true }).forEach(n => {
         if (n.matches(itemselector)) {
           nodes.push(n);
         }
@@ -38,7 +38,7 @@ export const NavigationGroup = (container: HTMLElement | HTMLSlotElement | null,
     const currentIndex = nodes.indexOf(current) || 0;
     if (e.key === "ArrowRight" || e.key === "ArrowDown") {
       if (currentIndex + 1 < nodes.length) {
-        nodes.forEach((k) => {
+        nodes.forEach(k => {
           (k as HTMLElement).setAttribute("tabindex", "-1");
         });
         const closable = nodes[currentIndex] as Closable;
@@ -50,7 +50,7 @@ export const NavigationGroup = (container: HTMLElement | HTMLSlotElement | null,
     }
     if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
       if (currentIndex - 1 >= 0) {
-        nodes.forEach((k) => {
+        nodes.forEach(k => {
           (k as HTMLElement).setAttribute("tabindex", "-1");
         });
         const closable = nodes[currentIndex] as Closable;
@@ -63,7 +63,7 @@ export const NavigationGroup = (container: HTMLElement | HTMLSlotElement | null,
 
   if (container instanceof HTMLSlotElement) {
     nodes = [];
-    container.assignedElements({ flatten: true }).forEach((n) => {
+    container.assignedElements({ flatten: true }).forEach(n => {
       if (n.matches(itemselector)) {
         nodes.push(n);
       }
@@ -76,7 +76,7 @@ export const NavigationGroup = (container: HTMLElement | HTMLSlotElement | null,
   }
 
   if (nodes.length) {
-    nodes.forEach((k) => {
+    nodes.forEach(k => {
       (k as HTMLElement).setAttribute("tabindex", "-1");
     });
     if (nodes[0] !== undefined) {

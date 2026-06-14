@@ -3,13 +3,19 @@ import { isRegistredEnumType } from "./registredEnums.js";
 /** @type {Map<string, { defaults: Set<string>, named: Set<string> }>} */
 let resolvedImports = new Map();
 
-function addImport(modulePath, name, asDefault) {
+function addImport(modulePath, name, asDefault, asAlias) {
   let entry = resolvedImports.get(modulePath);
   if (!entry) {
     entry = { defaults: new Set(), named: new Set() };
     resolvedImports.set(modulePath, entry);
   }
-  (asDefault ? entry.defaults : entry.named).add(name);
+  const hasAlias = asAlias && asAlias !== name;
+  if (asDefault) {
+    // default imports cannot use `Name as Alias`; the binding name is the alias
+    entry.defaults.add(hasAlias ? asAlias : name);
+  } else {
+    entry.named.add(hasAlias ? `${name} as ${asAlias}` : name);
+  }
 }
 
 function emitImports() {
@@ -176,7 +182,7 @@ function propTyping(attribute) {
     const modulePath = ref.package === "@furo/ui5"
       ? `../${ref.module.slice(0, -3).replace("dist/", "")}`
       : `${ref.package}/${ref.module}`;
-    addImport(modulePath, ref.name, isEnum);
+    addImport(modulePath, ref.name, isEnum, ref.as);
   });
 
   return type;

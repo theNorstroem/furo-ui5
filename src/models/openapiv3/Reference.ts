@@ -88,7 +88,7 @@ export class Reference extends FieldNode {
     this._description = new STRING(undefined, this, "description");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Reference] as FieldNode).__meta.required = true;
     });
 
@@ -103,7 +103,7 @@ export class Reference extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Reference] as FieldNode).__readonly = true;
     });
 

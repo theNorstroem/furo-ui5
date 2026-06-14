@@ -3,40 +3,37 @@ import type { FieldNode } from "@furo/open-models/";
 import * as React from "react";
 
 export interface PrettyJson extends React.HTMLAttributes<HTMLElement> {
-// no events defined.
-// properties
+  // no events defined.
+  // properties
 
-/**
- * Set the json
- */
-"json"?:object;
+  /**
+   * Set the json
+   */
+  json?: object;
 
-/**
- * Use this to bind a model field by attribute.
- */
-"model"?:FieldNode;
+  /**
+   * Use this to bind a model field by attribute.
+   */
+  model?: FieldNode;
 
-// attributes
-// no attributes defined.
-
+  // attributes
+  // no attributes defined.
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * `furo-pretty-json`
- * Pretty json with highlighting
- * 
- * ```html
- * <furo-pretty-json
- * fn-inject-json="--data"></furo-pretty-json>
- * ```
- */
+      /**
+       *
+       * `furo-pretty-json`
+       * Pretty json with highlighting
+       *
+       * ```html
+       * <furo-pretty-json
+       * fn-inject-json="--data"></furo-pretty-json>
+       * ```
+       */
       "furo-ui5-pretty-json": PrettyJson;
     }
   }
 }
-

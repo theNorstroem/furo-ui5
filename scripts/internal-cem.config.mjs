@@ -160,13 +160,12 @@ export default {
                         if (!currDocMember.type["references"]) {
                           currDocMember.type["references"] = [];
                         }
-                        const matches = /^([^\s]+)\s+-\s+"([^\/]+\/[^\/]+)\/(.*)"/.exec(tag.comment);
-                        if (matches !== null && matches.length === 4) {
-                          currDocMember.type["references"].push({
-                            name: matches[1],
-                            package: matches[2],
-                            module: matches[3],
-                          });
+                        const matches = /^([^\s]+)(?:\s+as\s+([^\s]+))?\s+-\s+"([^\/]+\/[^\/]+)\/(.*)"/.exec(tag.comment);
+                        if (matches !== null && matches.length === 5) {
+                          const ref = matches[2]
+                            ? { name: matches[1], as: matches[2], package: matches[3], module: matches[4] }
+                            : { name: matches[1], package: matches[3], module: matches[4] };
+                          currDocMember.type["references"].push(ref);
                         }
                       }
                     });
@@ -194,16 +193,15 @@ export default {
                           currDocMember.type["references"] = [];
                         }
 
-                        const matches = /^([^\s]+)\s+-\s+"([^\/]+\/[^\/]+)\/(.*)"/.exec(tag.comment);
-                        if (matches !== null && matches.length === 4) {
+                        const matches = /^([^\s]+)(?:\s+as\s+([^\s]+))?\s+-\s+"([^\/]+\/[^\/]+)\/(.*)"/.exec(tag.comment);
+                        if (matches !== null && matches.length === 5) {
                           if (!currDocMember.type.text) {
-                            currDocMember.type.text = matches[1];
+                            currDocMember.type.text = matches[2] ?? matches[1];
                           }
-                          currDocMember.type["references"].push({
-                            name: matches[1],
-                            package: matches[2],
-                            module: matches[3],
-                          });
+                          const ref = matches[2]
+                            ? { name: matches[1], as: matches[2], package: matches[3], module: matches[4] }
+                            : { name: matches[1], package: matches[3], module: matches[4] };
+                          currDocMember.type["references"].push(ref);
                         }
                       }
                     });

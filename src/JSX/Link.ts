@@ -8,210 +8,207 @@ import type WrappingType from "@ui5/webcomponents/dist/types/WrappingType.js";
 import * as React from "react";
 
 export interface Link extends React.HTMLAttributes<HTMLElement> {
-"onclick"?:(d:CustomEvent<LinkClickEventDetail>)=>void;
-// properties
+  onclick?: (d: CustomEvent<LinkClickEventDetail>) => void;
+  // properties
 
-// attributes
+  // attributes
 
-/**
- * Defines the additional accessibility attributes that will be applied to the component.
- * The following fields are supported:
- * 
- * - **expanded**: Indicates whether the button, or another grouping element it controls, is currently expanded or collapsed.
- * Accepts the following string values: `true` or `false`.
- * 
- * - **hasPopup**: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the button.
- * Accepts the following string values: `dialog`, `grid`, `listbox`, `menu` or `tree`.
- */
-"accessibilityAttributes"?:LinkAccessibilityAttributes;
+  /**
+   * Defines the additional accessibility attributes that will be applied to the component.
+   * The following fields are supported:
+   *
+   * - **expanded**: Indicates whether the button, or another grouping element it controls, is currently expanded or collapsed.
+   * Accepts the following string values: `true` or `false`.
+   *
+   * - **hasPopup**: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the button.
+   * Accepts the following string values: `dialog`, `grid`, `listbox`, `menu` or `tree`.
+   */
+  accessibilityAttributes?: LinkAccessibilityAttributes;
 
-/**
- * Defines the accessible description of the component.
- */
-"accessibleDescription"?:string | undefined;
+  /**
+   * Defines the accessible description of the component.
+   */
+  accessibleDescription?: string | undefined;
 
-/**
- * Defines the accessible ARIA name of the component.
- */
-"accessibleName"?:string | undefined;
+  /**
+   * Defines the accessible ARIA name of the component.
+   */
+  accessibleName?: string | undefined;
 
-/**
- * Receives id(or many ids) of the elements that label the input
- */
-"accessibleNameRef"?:string | undefined;
+  /**
+   * Receives id(or many ids) of the elements that label the input
+   */
+  accessibleNameRef?: string | undefined;
 
-/**
- * Defines the ARIA role of the component.
- * 
- * **Note:** Use the <code>LinkAccessibleRole.Button</code> role in cases when navigation is not expected to occur and the href property is not defined.
- */
-"accessibleRole"?:LinkAccessibleRole | keyof typeof LinkAccessibleRole;
+  /**
+   * Defines the ARIA role of the component.
+   *
+   * **Note:** Use the <code>LinkAccessibleRole.Button</code> role in cases when navigation is not expected to occur and the href property is not defined.
+   */
+  accessibleRole?: LinkAccessibleRole | keyof typeof LinkAccessibleRole;
 
-/**
- * Defines the component design.
- * 
- * **Note:** Avaialble options are `Default`, `Subtle`, and `Emphasized`.
- */
-"design"?:LinkDesign | keyof typeof LinkDesign;
+  /**
+   * Defines the component design.
+   *
+   * **Note:** Avaialble options are `Default`, `Subtle`, and `Emphasized`.
+   */
+  design?: LinkDesign | keyof typeof LinkDesign;
 
-/**
- * Defines whether the component is disabled.
- * 
- * **Note:** When disabled, the click event cannot be triggered by the user.
- */
-"disabled"?:boolean;
+  /**
+   * Defines whether the component is disabled.
+   *
+   * **Note:** When disabled, the click event cannot be triggered by the user.
+   */
+  disabled?: boolean;
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Defines the icon, displayed as graphical element within the component after the link's text.
- * The SAP-icons font provides numerous options.
- * 
- * **Note:** Usage of icon-only link is not supported, the link must always have a text.
- * 
- * **Note:** We recommend using аn icon in the beginning or the end only, and with text.
- * 
- * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
- */
-"endIcon"?:string | undefined;
+  /**
+   * Defines the icon, displayed as graphical element within the component after the link's text.
+   * The SAP-icons font provides numerous options.
+   *
+   * **Note:** Usage of icon-only link is not supported, the link must always have a text.
+   *
+   * **Note:** We recommend using аn icon in the beginning or the end only, and with text.
+   *
+   * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
+   */
+  endIcon?: string | undefined;
 
-/**
- * Defines the component href.
- * 
- * **Note:** Standard hyperlink behavior is supported.
- */
-"href"?:string | undefined;
+  /**
+   * Defines the component href.
+   *
+   * **Note:** Standard hyperlink behavior is supported.
+   */
+  href?: string | undefined;
 
-/**
- * Defines the icon, displayed as graphical element within the component before the link's text.
- * The SAP-icons font provides numerous options.
- * 
- * **Note:** Usage of icon-only link is not supported, the link must always have a text.
- * 
- * **Note:** We recommend using аn icon in the beginning or the end only, and with text.
- * 
- * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
- */
-"icon"?:string | undefined;
+  /**
+   * Defines the icon, displayed as graphical element within the component before the link's text.
+   * The SAP-icons font provides numerous options.
+   *
+   * **Note:** Usage of icon-only link is not supported, the link must always have a text.
+   *
+   * **Note:** We recommend using аn icon in the beginning or the end only, and with text.
+   *
+   * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
+   */
+  icon?: string | undefined;
 
-/**
- * Defines the target area size of the link:
- * - **InteractiveAreaSize.Normal**: The default target area size.
- * - **InteractiveAreaSize.Large**: The target area size is enlarged to 24px in height.
- * 
- * **Note:**The property is designed to make links easier to activate and helps meet the WCAG 2.2 Target Size requirement. It is applicable only for the SAP Horizon themes.
- * **Note:**To improve <code>furo-furo-ui5-link</code>'s reliability and usability, it is recommended to use the <code>InteractiveAreaSize.Large</code> value in scenarios where the <code>furo-furo-ui5-link</code> component is placed inside another interactive component, such as a list item or a table cell.
- * Setting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.
- */
-"interactiveAreaSize"?:InteractiveAreaSize | keyof typeof InteractiveAreaSize;
+  /**
+   * Defines the target area size of the link:
+   * - **InteractiveAreaSize.Normal**: The default target area size.
+   * - **InteractiveAreaSize.Large**: The target area size is enlarged to 24px in height.
+   *
+   * **Note:**The property is designed to make links easier to activate and helps meet the WCAG 2.2 Target Size requirement. It is applicable only for the SAP Horizon themes.
+   * **Note:**To improve <code>furo-furo-ui5-link</code>'s reliability and usability, it is recommended to use the <code>InteractiveAreaSize.Large</code> value in scenarios where the <code>furo-furo-ui5-link</code> component is placed inside another interactive component, such as a list item or a table cell.
+   * Setting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.
+   */
+  interactiveAreaSize?: InteractiveAreaSize | keyof typeof InteractiveAreaSize;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Defines the component target.
- * 
- * **Notes:**
- * 
- * - `_self`
- * - `_top`
- * - `_blank`
- * - `_parent`
- * - `_search`
- * 
- * **This property must only be used when the `href` property is set.**
- */
-"target"?:string | undefined;
+  /**
+   * Defines the component target.
+   *
+   * **Notes:**
+   *
+   * - `_self`
+   * - `_top`
+   * - `_blank`
+   * - `_parent`
+   * - `_search`
+   *
+   * **This property must only be used when the `href` property is set.**
+   */
+  target?: string | undefined;
 
-/**
- * Defines the tooltip of the component.
- */
-"tooltip"?:string | undefined;
+  /**
+   * Defines the tooltip of the component.
+   */
+  tooltip?: string | undefined;
 
-/**
- * Defines how the text of a component will be displayed when there is not enough space.
- * 
- * **Note:** By default the text will wrap. If "None" is set - the text will truncate.
- */
-"wrappingType"?:WrappingType | keyof typeof WrappingType;
-
+  /**
+   * Defines how the text of a component will be displayed when there is not enough space.
+   *
+   * **Note:** By default the text will wrap. If "None" is set - the text will truncate.
+   */
+  wrappingType?: WrappingType | keyof typeof WrappingType;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * 
- * ### Overview
- * The `furo-furo-ui5-link` is a hyperlink component that is used to navigate to other
- * apps and web pages, or to trigger actions.
- * It is a clickable text element, visualized in such a way that it stands out
- * from the standard text.
- * On hover, it changes its style to an underlined text to provide additional feedback to the user.
- * 
- * ### Usage
- * 
- * You can set the `furo-furo-ui5-link` to be enabled or disabled.
- * 
- * To create a visual hierarchy in large lists of links, you can set the less important links as
- * `Subtle` or the more important ones as `Emphasized`,
- * by using the `design` property.
- * 
- * If the `href` property is set, the link behaves as the HTML
- * anchor tag (`<a></a>`) and opens the specified URL in the given target frame (`target` property).
- * To specify where the linked content is opened, you can use the `target` property.
- * 
- * ### Responsive behavior
- * 
- * If there is not enough space, the text of the `furo-furo-ui5-link` becomes truncated.
- * If the `wrappingType` property is set to `"Normal"`, the text is displayed
- * on several lines instead of being truncated.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/Link";`
- * 
- * ### Overview
- * The `furo-ui5-link` is a hyperlink component that is used to navigate to other
- * apps and web pages, or to trigger actions.
- * It is a clickable text element, visualized in such a way that it stands out
- * from the standard text.
- * On hover, it changes its style to an underlined text to provide additional feedback to the user.
- * 
- * ### Usage
- * 
- * You can set the `furo-ui5-link` to be enabled or disabled.
- * 
- * To create a visual hierarchy in large lists of links, you can set the less important links as
- * `Subtle` or the more important ones as `Emphasized`,
- * by using the `design` property.
- * 
- * If the `href` property is set, the link behaves as the HTML
- * anchor tag (`<a></a>`) and opens the specified URL in the given target frame (`target` property).
- * To specify where the linked content is opened, you can use the `target` property.
- * 
- * ### Responsive behavior
- * 
- * If there is not enough space, the text of the `furo-ui5-link` becomes truncated.
- * If the `wrappingType` property is set to `"Normal"`, the text is displayed
- * on several lines instead of being truncated.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/Link";`
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       *
+       *
+       * ### Overview
+       * The `furo-furo-ui5-link` is a hyperlink component that is used to navigate to other
+       * apps and web pages, or to trigger actions.
+       * It is a clickable text element, visualized in such a way that it stands out
+       * from the standard text.
+       * On hover, it changes its style to an underlined text to provide additional feedback to the user.
+       *
+       * ### Usage
+       *
+       * You can set the `furo-furo-ui5-link` to be enabled or disabled.
+       *
+       * To create a visual hierarchy in large lists of links, you can set the less important links as
+       * `Subtle` or the more important ones as `Emphasized`,
+       * by using the `design` property.
+       *
+       * If the `href` property is set, the link behaves as the HTML
+       * anchor tag (`<a></a>`) and opens the specified URL in the given target frame (`target` property).
+       * To specify where the linked content is opened, you can use the `target` property.
+       *
+       * ### Responsive behavior
+       *
+       * If there is not enough space, the text of the `furo-furo-ui5-link` becomes truncated.
+       * If the `wrappingType` property is set to `"Normal"`, the text is displayed
+       * on several lines instead of being truncated.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Link";`
+       *
+       * ### Overview
+       * The `furo-ui5-link` is a hyperlink component that is used to navigate to other
+       * apps and web pages, or to trigger actions.
+       * It is a clickable text element, visualized in such a way that it stands out
+       * from the standard text.
+       * On hover, it changes its style to an underlined text to provide additional feedback to the user.
+       *
+       * ### Usage
+       *
+       * You can set the `furo-ui5-link` to be enabled or disabled.
+       *
+       * To create a visual hierarchy in large lists of links, you can set the less important links as
+       * `Subtle` or the more important ones as `Emphasized`,
+       * by using the `design` property.
+       *
+       * If the `href` property is set, the link behaves as the HTML
+       * anchor tag (`<a></a>`) and opens the specified URL in the given target frame (`target` property).
+       * To specify where the linked content is opened, you can use the `target` property.
+       *
+       * ### Responsive behavior
+       *
+       * If there is not enough space, the text of the `furo-ui5-link` becomes truncated.
+       * If the `wrappingType` property is set to `"Normal"`, the text is displayed
+       * on several lines instead of being truncated.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Link";`
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-link": Link;
     }
   }
 }
-

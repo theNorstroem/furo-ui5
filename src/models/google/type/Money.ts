@@ -136,7 +136,7 @@ export class Money extends FieldNode {
     this._nanos = new INT32(undefined, this, "nanos");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Money] as FieldNode).__meta.required = true;
     });
 
@@ -151,7 +151,7 @@ export class Money extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Money] as FieldNode).__readonly = true;
     });
 

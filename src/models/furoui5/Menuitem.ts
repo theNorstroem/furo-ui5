@@ -215,7 +215,7 @@ export class Menuitem extends FieldNode {
     this._icon = new STRING(undefined, this, "icon");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Menuitem] as FieldNode).__meta.required = true;
     });
 
@@ -230,7 +230,7 @@ export class Menuitem extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Menuitem] as FieldNode).__readonly = true;
     });
 

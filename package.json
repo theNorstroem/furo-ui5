@@ -9,11 +9,7 @@
     "email": "",
     "url": "https://github.com/theNorstroem/"
   },
-  "keywords": [
-    "web-components",
-    "flow based programming",
-    "fbp"
-  ],
+  "keywords": ["web-components", "flow based programming", "fbp"],
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",
@@ -116,6 +112,10 @@
     "./mcb-item": {
       "types": "./dist/elements/mcb-item/index.d.ts",
       "default": "./dist/elements/mcb-item/index.js"
+    },
+    "./money-input": {
+      "types": "./dist/elements/money-input/index.d.ts",
+      "default": "./dist/elements/money-input/index.js"
     },
     "./multi-combobox": {
       "types": "./dist/elements/multi-combobox/index.d.ts",
@@ -248,6 +248,10 @@
     "./toggle-button": {
       "types": "./dist/elements/toggle-button/index.d.ts",
       "default": "./dist/elements/toggle-button/index.js"
+    },
+    "./tree-table": {
+      "types": "./dist/elements/tree-table/index.d.ts",
+      "default": "./dist/elements/tree-table/index.js"
     },
     "./user-menu": {
       "types": "./dist/elements/user-menu/index.d.ts",

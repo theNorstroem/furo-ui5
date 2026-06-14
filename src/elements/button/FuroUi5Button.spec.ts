@@ -43,7 +43,7 @@ describe("Button Component", async () => {
   });
 
   it("should be clickable", () =>
-    new Promise((done) => {
+    new Promise(done => {
       const handler = () => {
         el.removeEventListener("click", handler);
         done(1);

@@ -4,101 +4,98 @@ import * as React from "react";
 import type { OptionLike } from "../index";
 
 export interface Option extends React.HTMLAttributes<HTMLElement> {
-// no events defined.
-// properties
+  // no events defined.
+  // properties
 
-/**
- * Use this to bind a options field by attribute.
- */
-"model"?:OptionLike | undefined;
+  /**
+   * Use this to bind a options field by attribute.
+   */
+  model?: OptionLike | undefined;
 
-// attributes
+  // attributes
 
-/**
- * Defines the `additionalText`, displayed in the end of the option.
- */
-"additionalText"?:string | undefined;
+  /**
+   * Defines the `additionalText`, displayed in the end of the option.
+   */
+  additionalText?: string | undefined;
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Defines the `icon` source URI.
- * 
- * **Note:**
- * SAP-icons font provides numerous built-in icons. To find all the available icons, see the
- * [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
- */
-"icon"?:string | undefined;
+  /**
+   * Defines the `icon` source URI.
+   *
+   * **Note:**
+   * SAP-icons font provides numerous built-in icons. To find all the available icons, see the
+   * [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
+   */
+  icon?: string | undefined;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Defines the selected state of the component.
- */
-"selected"?:boolean;
+  /**
+   * Defines the selected state of the component.
+   */
+  selected?: boolean;
 
-/**
- * Defines the tooltip of the option.
- */
-"tooltip"?:string | undefined;
+  /**
+   * Defines the tooltip of the option.
+   */
+  tooltip?: string | undefined;
 
-/**
- * Defines the value of the `furo-furo-ui5-select` inside an HTML Form element when this component is selected.
- * For more information on HTML Form support, see the `name` property of `furo-furo-ui5-select`.
- */
-"value"?:string | undefined;
-
+  /**
+   * Defines the value of the `furo-furo-ui5-select` inside an HTML Form element when this component is selected.
+   * For more information on HTML Form support, see the `name` property of `furo-furo-ui5-select`.
+   */
+  value?: string | undefined;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * The `furo-furo-furo-ui5-option` is meant to be used inside a `furo-furo-furo-ui5-select`. It is also automatically used by the `furo-furo-furo-ui5-select-enum`.
- * 
- * You can bind any OptionLike field to it.
- * ```js
- * export interface OptionLike extends FieldNode {
- * id: STRING;
- * displayName: STRING;
- * icon?: STRING;
- * additionalText?: STRING;
- * tooltip?: STRING;
- * }
- * ```
- * 
- * ### Overview
- * 
- * The `furo-furo-ui5-option` component defines the content of an option in the `furo-furo-ui5-select`.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/Option.js";`
- * 
- * ### Overview
- * 
- * The `furo-ui5-option` component defines the content of an option in the `furo-ui5-select`.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/Option.js";`
- * 
- * A class to serve as a foundation
- * for the `ListItem` and `ListItemGroupHeader` classes.
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       *
+       * The `furo-furo-furo-ui5-option` is meant to be used inside a `furo-furo-furo-ui5-select`. It is also automatically used by the `furo-furo-furo-ui5-select-enum`.
+       *
+       * You can bind any OptionLike field to it.
+       * ```js
+       * export interface OptionLike extends FieldNode {
+       * id: STRING;
+       * displayName: STRING;
+       * icon?: STRING;
+       * additionalText?: STRING;
+       * tooltip?: STRING;
+       * }
+       * ```
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-option` component defines the content of an option in the `furo-furo-ui5-select`.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Option.js";`
+       *
+       * ### Overview
+       *
+       * The `furo-ui5-option` component defines the content of an option in the `furo-ui5-select`.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Option.js";`
+       *
+       * A class to serve as a foundation
+       * for the `ListItem` and `ListItemGroupHeader` classes.
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-option": Option;
     }
   }
 }
-

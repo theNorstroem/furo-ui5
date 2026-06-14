@@ -98,7 +98,7 @@ export class ServiceDescriptorProto extends FieldNode {
     this._options = new GoogleProtobufServiceOptions(undefined, this, "options");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof ServiceDescriptorProto] as FieldNode).__meta.required = true;
     });
 
@@ -113,7 +113,7 @@ export class ServiceDescriptorProto extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof ServiceDescriptorProto] as FieldNode).__readonly = true;
     });
 

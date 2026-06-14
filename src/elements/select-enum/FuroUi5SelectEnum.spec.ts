@@ -53,7 +53,7 @@ const createEnum = (initial?: Materials): ENUM<Materials> => new ENUM<Materials>
  */
 const selectOption = (el: FuroUi5SelectEnum, optionId: string): void => {
   const options = el.querySelectorAll("furo-ui5-option");
-  options.forEach((opt) => {
+  options.forEach(opt => {
     (opt as HTMLElement & { selected: boolean }).selected = false;
   });
   const target = el.querySelector<HTMLElement & { selected: boolean }>(`furo-ui5-option#${optionId}`);
@@ -196,7 +196,7 @@ describe("FuroUi5SelectEnum", () => {
       await delay(0);
       const target = el.querySelector<HTMLElement & { selected: boolean }>("furo-ui5-option[id='MATERIALS_PLASTICS']");
       assert.isOk(target);
-      el.querySelectorAll("furo-ui5-option").forEach((opt) => {
+      el.querySelectorAll("furo-ui5-option").forEach(opt => {
         (opt as HTMLElement & { selected: boolean }).selected = false;
       });
       target.selected = true;
@@ -342,8 +342,8 @@ describe("FuroUi5SelectEnum", () => {
     it("sets each option's id to the enum key", () => {
       const model = createEnum();
       el.bindData(model);
-      const ids = Array.from(el.querySelectorAll("furo-ui5-option")).map((opt) => opt.id);
-      Object.keys(Materials).forEach((key) => {
+      const ids = Array.from(el.querySelectorAll("furo-ui5-option")).map(opt => opt.id);
+      Object.keys(Materials).forEach(key => {
         assert.include(ids, key);
       });
     });

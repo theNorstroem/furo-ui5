@@ -79,7 +79,7 @@ export class DescriptorProtoReservedRange extends FieldNode {
     this._end = new INT32(undefined, this, "end");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof DescriptorProtoReservedRange] as FieldNode).__meta.required = true;
     });
 
@@ -94,7 +94,7 @@ export class DescriptorProtoReservedRange extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof DescriptorProtoReservedRange] as FieldNode).__readonly = true;
     });
 

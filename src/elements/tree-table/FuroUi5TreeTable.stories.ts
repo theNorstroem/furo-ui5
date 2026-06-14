@@ -88,7 +88,7 @@ export const Default: StoryObj = {
   args: {
     mode: TreeTableMode.SingleSelect,
   },
-  render: (renderArgs) =>
+  render: renderArgs =>
     html`<furo-ui5-tree-table
       mode="${renderArgs.mode ?? TreeTableMode.None}"
       ?busy="${renderArgs.busy}"

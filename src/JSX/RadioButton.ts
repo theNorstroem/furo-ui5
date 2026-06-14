@@ -7,193 +7,190 @@ import * as React from "react";
 import type { FuroFatBool } from "@/models/index.js";
 
 export interface RadioButton extends React.HTMLAttributes<HTMLElement> {
-"onchange"?:(d:CustomEvent)=>void;
-// properties
+  onchange?: (d: CustomEvent) => void;
+  // properties
 
-/**
- * FieldNode setter
- */
-"model"?:BOOLEAN | FuroFatBool | BoolValue;
+  /**
+   * FieldNode setter
+   */
+  model?: BOOLEAN | FuroFatBool | BoolValue;
 
-// attributes
+  // attributes
 
-/**
- * Defines the accessible ARIA name of the component.
- */
-"accessibleName"?:string | undefined;
+  /**
+   * Defines the accessible ARIA name of the component.
+   */
+  accessibleName?: string | undefined;
 
-/**
- * Defines the IDs of the elements that label the component.
- */
-"accessibleNameRef"?:string | undefined;
+  /**
+   * Defines the IDs of the elements that label the component.
+   */
+  accessibleNameRef?: string | undefined;
 
-/**
- * Defines whether the component is checked or not.
- * 
- * **Note:** The property value can be changed with user interaction,
- * either by clicking/tapping on the component,
- * or by using the Space or Enter key.
- * 
- * **Note:** Only enabled radio buttons can be checked.
- * Read-only radio buttons are not selectable, and therefore are always unchecked.
- */
-"checked"?:boolean;
+  /**
+   * Defines whether the component is checked or not.
+   *
+   * **Note:** The property value can be changed with user interaction,
+   * either by clicking/tapping on the component,
+   * or by using the Space or Enter key.
+   *
+   * **Note:** Only enabled radio buttons can be checked.
+   * Read-only radio buttons are not selectable, and therefore are always unchecked.
+   */
+  checked?: boolean;
 
-/**
- * Defines whether the component is disabled.
- * 
- * **Note:** A disabled component is completely noninteractive.
- */
-"disabled"?:boolean;
+  /**
+   * Defines whether the component is disabled.
+   *
+   * **Note:** A disabled component is completely noninteractive.
+   */
+  disabled?: boolean;
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Determines the name by which the component will be identified upon submission in an HTML form.
- * 
- * Radio buttons with the same `name` will form a radio button group.
- * 
- * **Note:** By this name the component will be identified upon submission in an HTML form.
- * 
- * **Note:** The selection can be changed with `ARROW_UP/DOWN` and `ARROW_LEFT/RIGHT` keys between radio buttons in same group.
- * 
- * **Note:** Only one radio button can be selected per group.
- */
-"name"?:string | undefined;
+  /**
+   * Determines the name by which the component will be identified upon submission in an HTML form.
+   *
+   * Radio buttons with the same `name` will form a radio button group.
+   *
+   * **Note:** By this name the component will be identified upon submission in an HTML form.
+   *
+   * **Note:** The selection can be changed with `ARROW_UP/DOWN` and `ARROW_LEFT/RIGHT` keys between radio buttons in same group.
+   *
+   * **Note:** Only one radio button can be selected per group.
+   */
+  name?: string | undefined;
 
-/**
- * Defines whether the component is read-only.
- * 
- * **Note:** A read-only component isn't editable or selectable.
- * However, because it's focusable, it still provides visual feedback upon user interaction.
- */
-"readonly"?:boolean;
+  /**
+   * Defines whether the component is read-only.
+   *
+   * **Note:** A read-only component isn't editable or selectable.
+   * However, because it's focusable, it still provides visual feedback upon user interaction.
+   */
+  readonly?: boolean;
 
-/**
- * Defines whether the component is required.
- */
-"required"?:boolean;
+  /**
+   * Defines whether the component is required.
+   */
+  required?: boolean;
 
-/**
- * Defines the text of the component.
- */
-"text"?:string | undefined;
+  /**
+   * Defines the text of the component.
+   */
+  text?: string | undefined;
 
-/**
- * Defines the form value of the component.
- * When a form with a radio button group is submitted, the group's value
- * will be the value of the currently selected radio button.
- */
-"value"?:string;
+  /**
+   * Defines the form value of the component.
+   * When a form with a radio button group is submitted, the group's value
+   * will be the value of the currently selected radio button.
+   */
+  value?: string;
 
-/**
- * Defines the value state of the component.
- */
-"valueState"?:ValueState | keyof typeof ValueState;
+  /**
+   * Defines the value state of the component.
+   */
+  valueState?: ValueState | keyof typeof ValueState;
 
-/**
- * Defines whether the component text wraps when there is not enough space.
- * 
- * **Note:** for option "Normal" the text will wrap and the words will not be broken based on hyphenation.
- */
-"wrappingType"?:WrappingType | keyof typeof WrappingType;
-
+  /**
+   * Defines whether the component text wraps when there is not enough space.
+   *
+   * **Note:** for option "Normal" the text will wrap and the words will not be broken based on hyphenation.
+   */
+  wrappingType?: WrappingType | keyof typeof WrappingType;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * The 'furo-furo-furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.
- * 
- * It supports all features from the [SAP ui5 toggleButton element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/ToggleButton/).
- * 
- * You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
- * 
- * ```html
- * <furo-furo-furo-ui5-radio-button
- * name="groupA"
- * .model=${this.BoolFieldNode}
- * ></furo-furo-furo-ui5-radio-button>
- * <furo-furo-furo-ui5-radio-button
- * name="groupA"
- * fn-bind-data="--dao(OTHERFIELDNODE)"
- * ></furo-furo-furo-ui5-radio-button>
- * ```
- * 
- * ## supported FAT attributes
- * - **"readonly":"true"** set the element to readonly
- * - **"disabled":"true"** set the element to disabled
- * - **"value-state":""** set the value-state
- * 
- * ## supported  constraints
- * - **readonly: true** , set the element to readonly
- * 
- * The constraint **required** will mark the element as required
- * 
- * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
- * 
- * ### Overview
- * 
- * The `furo-furo-ui5-radio-button` component enables users to select a single option from a set of options.
- * When a `furo-furo-ui5-radio-button` is selected by the user, the
- * `change` event is fired.
- * When a `furo-furo-ui5-radio-button` that is within a group is selected, the one
- * that was previously selected gets automatically deselected. You can group radio buttons by using the `name` property.
- * 
- * **Note:** If `furo-furo-ui5-radio-button` is not part of a group, it can be selected once, but can not be deselected back.
- * 
- * ### Keyboard Handling
- * 
- * Once the `furo-furo-ui5-radio-button` is on focus, it might be selected by pressing the Space and Enter keys.
- * 
- * The Arrow Down/Arrow Up and Arrow Left/Arrow Right keys can be used to change selection between next/previous radio buttons in one group,
- * while TAB and SHIFT + TAB can be used to enter or leave the radio button group.
- * 
- * **Note:** On entering radio button group, the focus goes to the currently selected radio button.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/RadioButton";`
- * 
- * ### Overview
- * 
- * The `furo-ui5-radio-button` component enables users to select a single option from a set of options.
- * When a `furo-ui5-radio-button` is selected by the user, the
- * `change` event is fired.
- * When a `furo-ui5-radio-button` that is within a group is selected, the one
- * that was previously selected gets automatically deselected. You can group radio buttons by using the `name` property.
- * 
- * **Note:** If `furo-ui5-radio-button` is not part of a group, it can be selected once, but can not be deselected back.
- * 
- * ### Keyboard Handling
- * 
- * Once the `furo-ui5-radio-button` is on focus, it might be selected by pressing the Space and Enter keys.
- * 
- * The Arrow Down/Arrow Up and Arrow Left/Arrow Right keys can be used to change selection between next/previous radio buttons in one group,
- * while TAB and SHIFT + TAB can be used to enter or leave the radio button group.
- * 
- * **Note:** On entering radio button group, the focus goes to the currently selected radio button.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/RadioButton";`
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       *
+       * The 'furo-furo-furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.
+       *
+       * It supports all features from the [SAP ui5 toggleButton element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/ToggleButton/).
+       *
+       * You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
+       *
+       * ```html
+       * <furo-furo-furo-ui5-radio-button
+       * name="groupA"
+       * .model=${this.BoolFieldNode}
+       * ></furo-furo-furo-ui5-radio-button>
+       * <furo-furo-furo-ui5-radio-button
+       * name="groupA"
+       * fn-bind-data="--dao(OTHERFIELDNODE)"
+       * ></furo-furo-furo-ui5-radio-button>
+       * ```
+       *
+       * ## supported FAT attributes
+       * - **"readonly":"true"** set the element to readonly
+       * - **"disabled":"true"** set the element to disabled
+       * - **"value-state":""** set the value-state
+       *
+       * ## supported  constraints
+       * - **readonly: true** , set the element to readonly
+       *
+       * The constraint **required** will mark the element as required
+       *
+       * When you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-radio-button` component enables users to select a single option from a set of options.
+       * When a `furo-furo-ui5-radio-button` is selected by the user, the
+       * `change` event is fired.
+       * When a `furo-furo-ui5-radio-button` that is within a group is selected, the one
+       * that was previously selected gets automatically deselected. You can group radio buttons by using the `name` property.
+       *
+       * **Note:** If `furo-furo-ui5-radio-button` is not part of a group, it can be selected once, but can not be deselected back.
+       *
+       * ### Keyboard Handling
+       *
+       * Once the `furo-furo-ui5-radio-button` is on focus, it might be selected by pressing the Space and Enter keys.
+       *
+       * The Arrow Down/Arrow Up and Arrow Left/Arrow Right keys can be used to change selection between next/previous radio buttons in one group,
+       * while TAB and SHIFT + TAB can be used to enter or leave the radio button group.
+       *
+       * **Note:** On entering radio button group, the focus goes to the currently selected radio button.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/RadioButton";`
+       *
+       * ### Overview
+       *
+       * The `furo-ui5-radio-button` component enables users to select a single option from a set of options.
+       * When a `furo-ui5-radio-button` is selected by the user, the
+       * `change` event is fired.
+       * When a `furo-ui5-radio-button` that is within a group is selected, the one
+       * that was previously selected gets automatically deselected. You can group radio buttons by using the `name` property.
+       *
+       * **Note:** If `furo-ui5-radio-button` is not part of a group, it can be selected once, but can not be deselected back.
+       *
+       * ### Keyboard Handling
+       *
+       * Once the `furo-ui5-radio-button` is on focus, it might be selected by pressing the Space and Enter keys.
+       *
+       * The Arrow Down/Arrow Up and Arrow Left/Arrow Right keys can be used to change selection between next/previous radio buttons in one group,
+       * while TAB and SHIFT + TAB can be used to enter or leave the radio button group.
+       *
+       * **Note:** On entering radio button group, the focus goes to the currently selected radio button.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/RadioButton";`
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-radio-button": RadioButton;
     }
   }
 }
-

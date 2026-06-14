@@ -73,10 +73,10 @@ describe("DynamicHeader Component", async () => {
   });
 
   it("should notify variant-icon-clicked on the header button click", () =>
-    new Promise((done) => {
+    new Promise(done => {
       el.addEventListener(
         "variant-icon-clicked",
-        (e) => {
+        e => {
           assert.equal(headerButton, (e as CustomEvent<HTMLElement>).detail);
           done(1);
         },
@@ -86,10 +86,10 @@ describe("DynamicHeader Component", async () => {
     }));
 
   it("should notify variant-icon-clicked on ArrowDown keydown", () =>
-    new Promise((done) => {
+    new Promise(done => {
       el.addEventListener(
         "variant-icon-clicked",
-        (e) => {
+        e => {
           assert.equal(headerButton, (e as CustomEvent<HTMLElement>).detail);
           done(1);
         },
@@ -100,7 +100,7 @@ describe("DynamicHeader Component", async () => {
     }));
 
   it("should notify favorite-icon-clicked when the favorite icon is clicked", () =>
-    new Promise((done) => {
+    new Promise(done => {
       el.addEventListener(
         "favorite-icon-clicked",
         () => {
@@ -112,7 +112,7 @@ describe("DynamicHeader Component", async () => {
     }));
 
   it("should notify object-icon-clicked when the object icon is clicked", () =>
-    new Promise((done) => {
+    new Promise(done => {
       el.addEventListener(
         "object-icon-clicked",
         () => {
@@ -152,7 +152,7 @@ describe("DynamicHeader Component", async () => {
   // pin tests run consecutively: first click sets pinned=true and fires "pinned",
   // second click sets pinned=false and fires "unpinned". Order matters.
   it("clicking the pin icon should fire pinned and set isPinned=true", () =>
-    new Promise((done) => {
+    new Promise(done => {
       el.addEventListener(
         "pinned",
         () => {
@@ -176,7 +176,7 @@ describe("DynamicHeader Component", async () => {
   });
 
   it("clicking the pin icon again should fire unpinned and set isPinned=false", () =>
-    new Promise((done) => {
+    new Promise(done => {
       el.addEventListener(
         "unpinned",
         () => {

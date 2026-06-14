@@ -93,7 +93,7 @@ export class EnumValueDescriptorProto extends FieldNode {
     this._options = new GoogleProtobufEnumValueOptions(undefined, this, "options");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof EnumValueDescriptorProto] as FieldNode).__meta.required = true;
     });
 
@@ -108,7 +108,7 @@ export class EnumValueDescriptorProto extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof EnumValueDescriptorProto] as FieldNode).__readonly = true;
     });
 

@@ -67,10 +67,10 @@ describe("SignPad Component", async () => {
   });
 
   it("encodeImage() should populate the image data URL and fire sign-updated", () =>
-    new Promise((done) => {
+    new Promise(done => {
       el.addEventListener(
         "sign-updated",
-        (e) => {
+        e => {
           const detail = (e as CustomEvent<string>).detail;
           assert.isString(detail);
           assert.match(detail, /^data:image\/png/);
@@ -83,10 +83,10 @@ describe("SignPad Component", async () => {
     }));
 
   it("clear() should fire sign-updated with the empty-canvas data URL", () =>
-    new Promise((done) => {
+    new Promise(done => {
       el.addEventListener(
         "sign-updated",
-        (e) => {
+        e => {
           const detail = (e as CustomEvent<string>).detail;
           assert.isString(detail);
           assert.match(detail, /^data:image\/png/);

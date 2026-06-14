@@ -5,74 +5,71 @@ import type WrappingType from "@ui5/webcomponents/dist/types/WrappingType.js";
 import * as React from "react";
 
 export interface Title extends React.HTMLAttributes<HTMLElement> {
-// no events defined.
-// properties
+  // no events defined.
+  // properties
 
-// attributes
+  // attributes
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Defines the component level.
- * Available options are: `"H6"` to `"H1"`.
- * This property does not influence the style of the component.
- * Use the property `size` for this purpose instead.
- */
-"level"?:TitleLevel | keyof typeof TitleLevel;
+  /**
+   * Defines the component level.
+   * Available options are: `"H6"` to `"H1"`.
+   * This property does not influence the style of the component.
+   * Use the property `size` for this purpose instead.
+   */
+  level?: TitleLevel | keyof typeof TitleLevel;
 
-/**
- * Defines the visual appearance of the title.
- * Available options are: `"H6"` to `"H1"`.
- */
-"size"?:TitleLevel | keyof typeof TitleLevel;
+  /**
+   * Defines the visual appearance of the title.
+   * Available options are: `"H6"` to `"H1"`.
+   */
+  size?: TitleLevel | keyof typeof TitleLevel;
 
-/**
- * Defines how the text of a component will be displayed when there is not enough space.
- * 
- * **Note:** for option "Normal" the text will wrap and the words will not be broken based on hyphenation.
- */
-"wrappingType"?:WrappingType | keyof typeof WrappingType;
-
+  /**
+   * Defines how the text of a component will be displayed when there is not enough space.
+   *
+   * **Note:** for option "Normal" the text will wrap and the words will not be broken based on hyphenation.
+   */
+  wrappingType?: WrappingType | keyof typeof WrappingType;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * 
- * ### Overview
- * 
- * The `furo-furo-ui5-title` component is used to display titles inside a page.
- * It is a simple, large-sized text with explicit header/title semantics.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/Title.js";`
- * 
- * ### Overview
- * 
- * The `furo-ui5-title` component is used to display titles inside a page.
- * It is a simple, large-sized text with explicit header/title semantics.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/Title.js";`
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       *
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-title` component is used to display titles inside a page.
+       * It is a simple, large-sized text with explicit header/title semantics.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Title.js";`
+       *
+       * ### Overview
+       *
+       * The `furo-ui5-title` component is used to display titles inside a page.
+       * It is a simple, large-sized text with explicit header/title semantics.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Title.js";`
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-title": Title;
     }
   }
 }
-

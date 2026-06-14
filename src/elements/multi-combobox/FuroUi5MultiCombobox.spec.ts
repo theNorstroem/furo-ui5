@@ -47,12 +47,12 @@ const stringArray = (items: string[]): ARRAY<STRING, string> => ARRAY.Builder(ST
 const fatStringArray = (items: string[]): ARRAY<FuroFatString, IFuroFatString> =>
   ARRAY.Builder(
     FuroFatString,
-    items.map((v) => ({ value: v }))
+    items.map(v => ({ value: v }))
   );
 
 const identifiableList = (items: ICubeOptions[]): IdentifiableList => ARRAY.Builder(CubeOptions, items);
 
-const selectedIds = (el: FuroUi5MultiCombobox): string[] => [...el.querySelectorAll("furo-ui5-mcb-item[selected]")].map((node) => node.id);
+const selectedIds = (el: FuroUi5MultiCombobox): string[] => [...el.querySelectorAll("furo-ui5-mcb-item[selected]")].map(node => node.id);
 
 describe("FuroUi5MultiCombobox", () => {
   // ───────────────────────────────────────────────────────────────────────
@@ -205,7 +205,7 @@ describe("FuroUi5MultiCombobox", () => {
     });
 
     const fireSelectionChange = (host: FuroUi5MultiCombobox, selectedItemIds: string[]) => {
-      const items = selectedItemIds.map((id) => host.querySelector(`furo-ui5-mcb-item[id="${id}"]`));
+      const items = selectedItemIds.map(id => host.querySelector(`furo-ui5-mcb-item[id="${id}"]`));
       host.dispatchEvent(new CustomEvent("selection-change", { bubbles: true, composed: true, detail: { items } }));
     };
 
@@ -235,7 +235,7 @@ describe("FuroUi5MultiCombobox", () => {
       el.bindData(model);
       fireSelectionChange(el, ["1", "2"]);
       assert.deepEqual(
-        model.map((item) => item.value.toString()),
+        model.map(item => item.value.toString()),
         ["1", "2"]
       );
     });

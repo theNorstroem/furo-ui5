@@ -5,44 +5,41 @@ import * as React from "react";
 import type { FuroFatBool } from "@/models/index.js";
 
 export interface ShowHide extends React.HTMLAttributes<HTMLElement> {
-"onhid"?:(d:CustomEvent<boolean>)=>void;
-"onshowed"?:(d:CustomEvent<boolean>)=>void;
-"ontoggled"?:(d:CustomEvent<boolean>)=>void;
-// properties
+  onhid?: (d: CustomEvent<boolean>) => void;
+  onshowed?: (d: CustomEvent<boolean>) => void;
+  ontoggled?: (d: CustomEvent<boolean>) => void;
+  // properties
 
-/**
- * Use this to bind a model field by attribute.
- */
-"model"?:BOOLEAN | FuroFatBool | BoolValue;
+  /**
+   * Use this to bind a model field by attribute.
+   */
+  model?: BOOLEAN | FuroFatBool | BoolValue;
 
-/**
- * Set is-hiddden to start in a closed state. The name is used by intention, to avoid css trouble with
- * a global `[hidden]{display:none}`.
- */
-"value"?:boolean;
+  /**
+   * Set is-hiddden to start in a closed state. The name is used by intention, to avoid css trouble with
+   * a global `[hidden]{display:none}`.
+   */
+  value?: boolean;
 
-// attributes
+  // attributes
 
-// undocumented
-"hideOnFalse"?:boolean;
+  // undocumented
+  hideOnFalse?: boolean;
 
-/**
- * Indicates whether the transition between the expanded and the collapsed state of the component is animated.
- * By default, the animation is enabled.
- */
-"NoAnimation"?:boolean;
-
+  /**
+   * Indicates whether the transition between the expanded and the collapsed state of the component is animated.
+   * By default, the animation is enabled.
+   */
+  NoAnimation?: boolean;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- */
+      /**
+       *
+       */
       "furo-ui5-show-hide": ShowHide;
     }
   }
 }
-

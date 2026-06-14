@@ -180,7 +180,7 @@ export class FuroUi5Combobox extends ComboBox {
 
   private readFromOptionsModel = (): void => {
     // clear existing options
-    this.querySelectorAll("furo-ui5-cb-item").forEach((el) => {
+    this.querySelectorAll("furo-ui5-cb-item").forEach(el => {
       el.setAttribute("deleteme", "");
     });
 
@@ -196,14 +196,14 @@ export class FuroUi5Combobox extends ComboBox {
       }
     });
     // delete
-    this.querySelectorAll("furo-ui5-cb-item[deleteme]").forEach((el) => {
+    this.querySelectorAll("furo-ui5-cb-item[deleteme]").forEach(el => {
       el.remove();
     });
 
     // sort
     [...this.querySelectorAll("furo-ui5-cb-item")]
       .sort((a, b) => Number((a as HTMLElement).style.order) - Number((b as HTMLElement).style.order))
-      .forEach((el) => {
+      .forEach(el => {
         this.appendChild(el);
       });
   };
@@ -250,7 +250,7 @@ export class FuroUi5Combobox extends ComboBox {
       return;
     }
     // set marker to clear existing options
-    this.querySelectorAll("furo-ui5-cb-item").forEach((el) => {
+    this.querySelectorAll("furo-ui5-cb-item").forEach(el => {
       el.setAttribute("deleteme", "");
     });
 
@@ -271,7 +271,7 @@ export class FuroUi5Combobox extends ComboBox {
       }
     });
     // delete
-    this.querySelectorAll("furo-ui5-cb-item[deleteme]").forEach((el) => {
+    this.querySelectorAll("furo-ui5-cb-item[deleteme]").forEach(el => {
       el.remove();
     });
 
@@ -279,7 +279,7 @@ export class FuroUi5Combobox extends ComboBox {
     if (this._optionList) {
       [...this.querySelectorAll("furo-ui5-cb-item")]
         .sort((a, b) => Number((a as HTMLElement).style.order) - Number((b as HTMLElement).style.order))
-        .forEach((el) => {
+        .forEach(el => {
           this.appendChild(el);
         });
     }

@@ -7,15 +7,16 @@ import * as React from "react";
 import type { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models/index.js";
 
 export interface StepInput extends React.HTMLAttributes<HTMLElement> {
-"onchange"?:(d:CustomEvent)=>void;
-"oninput"?:(d:CustomEvent)=>void;
-"onvalue-state-change"?:(d:CustomEvent<StepInputValueStateChangeEventDetail>)=>void;
-// properties
+  onchange?: (d: CustomEvent) => void;
+  oninput?: (d: CustomEvent) => void;
+  "onvalue-state-change"?: (d: CustomEvent<StepInputValueStateChangeEventDetail>) => void;
+  // properties
 
-/**
- * Use this to bind a model field by attribute.
- */
-"model"?:| INT32
+  /**
+   * Use this to bind a model field by attribute.
+   */
+  model?:
+    | INT32
     | INT64
     | UINT32
     | UINT64
@@ -32,194 +33,191 @@ export interface StepInput extends React.HTMLAttributes<HTMLElement> {
     | UInt32Value
     | UInt64Value;
 
-// attributes
+  // attributes
 
-/**
- * Defines the accessible ARIA name of the component.
- */
-"accessibleName"?:string | undefined;
+  /**
+   * Defines the accessible ARIA name of the component.
+   */
+  accessibleName?: string | undefined;
 
-/**
- * Receives id(or many ids) of the elements that label the component.
- */
-"accessibleNameRef"?:string | undefined;
+  /**
+   * Receives id(or many ids) of the elements that label the component.
+   */
+  accessibleNameRef?: string | undefined;
 
-/**
- * Determines whether the component is displayed as disabled.
- */
-"disabled"?:boolean;
+  /**
+   * Determines whether the component is displayed as disabled.
+   */
+  disabled?: boolean;
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Defines a maximum value of the component.
- */
-"max"?:number | undefined;
+  /**
+   * Defines a maximum value of the component.
+   */
+  max?: number | undefined;
 
-/**
- * Defines a minimum value of the component.
- */
-"min"?:number | undefined;
+  /**
+   * Defines a minimum value of the component.
+   */
+  min?: number | undefined;
 
-/**
- * Determines the name by which the component will be identified upon submission in an HTML form.
- * 
- * **Note:** This property is only applicable within the context of an HTML Form element.
- */
-"name"?:string | undefined;
+  /**
+   * Determines the name by which the component will be identified upon submission in an HTML form.
+   *
+   * **Note:** This property is only applicable within the context of an HTML Form element.
+   */
+  name?: string | undefined;
 
-/**
- * Defines a short hint, intended to aid the user with data entry when the
- * component has no value.
- * 
- * **Note:** When no placeholder is set, the format pattern is displayed as a placeholder.
- * Passing an empty string as the value of this property will make the component appear empty - without placeholder or format pattern.
- */
-"placeholder"?:string | undefined;
+  /**
+   * Defines a short hint, intended to aid the user with data entry when the
+   * component has no value.
+   *
+   * **Note:** When no placeholder is set, the format pattern is displayed as a placeholder.
+   * Passing an empty string as the value of this property will make the component appear empty - without placeholder or format pattern.
+   */
+  placeholder?: string | undefined;
 
-/**
- * Determines whether the component is displayed as read-only.
- */
-"readonly"?:boolean;
+  /**
+   * Determines whether the component is displayed as read-only.
+   */
+  readonly?: boolean;
 
-/**
- * Defines whether the component is required.
- */
-"required"?:boolean;
+  /**
+   * Defines whether the component is required.
+   */
+  required?: boolean;
 
-/**
- * Defines a step of increasing/decreasing the value of the component.
- */
-"step"?:number;
+  /**
+   * Defines a step of increasing/decreasing the value of the component.
+   */
+  step?: number;
 
-/**
- * Defines a value of the component.
- */
-"value"?:number;
+  /**
+   * Defines a value of the component.
+   */
+  value?: number;
 
-/**
- * Determines the number of digits after the decimal point of the component.
- */
-"valuePrecision"?:number;
+  /**
+   * Determines the number of digits after the decimal point of the component.
+   */
+  valuePrecision?: number;
 
-/**
- * Defines the value state of the component.
- */
-"valueState"?:ValueState | keyof typeof ValueState;
-
+  /**
+   * Defines the value state of the component.
+   */
+  valueState?: ValueState | keyof typeof ValueState;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * The furo-furo-furo-ui5-step-input component allows the user to enter and edit numbers with data binding. It consists of an
- * input field and buttons with icons to increase/decrease the value with the predefined step.
- * It supports all features from the [SAP ui5 Input element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/StepInput/).
- * 
- * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
- * 
- * ```html
- * <furo-furo-furo-ui5-number-input
- * fn-bind-data="--dao(FIELDNODE)"
- * ></furo-furo-furo-ui5-number-input>
- * ```
- * 
- * 
- * ## supported FAT attributes
- * - **"readonly":"true"** set the element to readonly
- * - **"required":"true"** set the element to required
- * - **"disabled":"true"** set the element to disabled
- * - **"placeholder":"string"** set the placeholder for the element
- * 
- * ## supported meta and constraints
- * - **readonly: true** , set the element to readonly
- * - **placeholder:"some string"** set the placeholder for the element
- * 
- * The constraint **required** will mark the element as required
- * 
- * ### Overview
- * 
- * The `furo-furo-ui5-step-input` consists of an input field and buttons with icons to increase/decrease the value
- * with the predefined step.
- * 
- * The user can change the value of the component by pressing the increase/decrease buttons,
- * by typing a number directly, by using the keyboard up/down and page up/down,
- * or by using the mouse scroll wheel. Decimal values are supported.
- * 
- * ### Usage
- * 
- * The default step is 1 but the app developer can set a different one.
- * 
- * App developers can set a maximum and minimum value for the `StepInput`.
- * The increase/decrease button and the up/down keyboard navigation become disabled when
- * the value reaches the max/min or a new value is entered from the input which is greater/less than the max/min.
- * 
- * #### When to use:
- * 
- * - To adjust amounts, quantities, or other values quickly.
- * - To adjust values for a specific step.
- * 
- * #### When not to use:
- * 
- * - To enter a static number (for example, postal code, phone number, or ID). In this case,
- * use the regular `furo-furo-ui5-input` instead.
- * - To display a value that rarely needs to be adjusted and does not pertain to a particular step.
- * In this case, use the regular `furo-furo-ui5-input` instead.
- * - To enter dates and times. In this case, use date/time related components instead.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/StepInput.js";`
- * 
- * ### Overview
- * 
- * The `furo-ui5-step-input` consists of an input field and buttons with icons to increase/decrease the value
- * with the predefined step.
- * 
- * The user can change the value of the component by pressing the increase/decrease buttons,
- * by typing a number directly, by using the keyboard up/down and page up/down,
- * or by using the mouse scroll wheel. Decimal values are supported.
- * 
- * ### Usage
- * 
- * The default step is 1 but the app developer can set a different one.
- * 
- * App developers can set a maximum and minimum value for the `StepInput`.
- * The increase/decrease button and the up/down keyboard navigation become disabled when
- * the value reaches the max/min or a new value is entered from the input which is greater/less than the max/min.
- * 
- * #### When to use:
- * 
- * - To adjust amounts, quantities, or other values quickly.
- * - To adjust values for a specific step.
- * 
- * #### When not to use:
- * 
- * - To enter a static number (for example, postal code, phone number, or ID). In this case,
- * use the regular `furo-ui5-input` instead.
- * - To display a value that rarely needs to be adjusted and does not pertain to a particular step.
- * In this case, use the regular `furo-ui5-input` instead.
- * - To enter dates and times. In this case, use date/time related components instead.
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/StepInput.js";`
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       * The furo-furo-furo-ui5-step-input component allows the user to enter and edit numbers with data binding. It consists of an
+       * input field and buttons with icons to increase/decrease the value with the predefined step.
+       * It supports all features from the [SAP ui5 Input element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/StepInput/).
+       *
+       * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
+       *
+       * ```html
+       * <furo-furo-furo-ui5-number-input
+       * fn-bind-data="--dao(FIELDNODE)"
+       * ></furo-furo-furo-ui5-number-input>
+       * ```
+       *
+       *
+       * ## supported FAT attributes
+       * - **"readonly":"true"** set the element to readonly
+       * - **"required":"true"** set the element to required
+       * - **"disabled":"true"** set the element to disabled
+       * - **"placeholder":"string"** set the placeholder for the element
+       *
+       * ## supported meta and constraints
+       * - **readonly: true** , set the element to readonly
+       * - **placeholder:"some string"** set the placeholder for the element
+       *
+       * The constraint **required** will mark the element as required
+       *
+       * ### Overview
+       *
+       * The `furo-furo-ui5-step-input` consists of an input field and buttons with icons to increase/decrease the value
+       * with the predefined step.
+       *
+       * The user can change the value of the component by pressing the increase/decrease buttons,
+       * by typing a number directly, by using the keyboard up/down and page up/down,
+       * or by using the mouse scroll wheel. Decimal values are supported.
+       *
+       * ### Usage
+       *
+       * The default step is 1 but the app developer can set a different one.
+       *
+       * App developers can set a maximum and minimum value for the `StepInput`.
+       * The increase/decrease button and the up/down keyboard navigation become disabled when
+       * the value reaches the max/min or a new value is entered from the input which is greater/less than the max/min.
+       *
+       * #### When to use:
+       *
+       * - To adjust amounts, quantities, or other values quickly.
+       * - To adjust values for a specific step.
+       *
+       * #### When not to use:
+       *
+       * - To enter a static number (for example, postal code, phone number, or ID). In this case,
+       * use the regular `furo-furo-ui5-input` instead.
+       * - To display a value that rarely needs to be adjusted and does not pertain to a particular step.
+       * In this case, use the regular `furo-furo-ui5-input` instead.
+       * - To enter dates and times. In this case, use date/time related components instead.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/StepInput.js";`
+       *
+       * ### Overview
+       *
+       * The `furo-ui5-step-input` consists of an input field and buttons with icons to increase/decrease the value
+       * with the predefined step.
+       *
+       * The user can change the value of the component by pressing the increase/decrease buttons,
+       * by typing a number directly, by using the keyboard up/down and page up/down,
+       * or by using the mouse scroll wheel. Decimal values are supported.
+       *
+       * ### Usage
+       *
+       * The default step is 1 but the app developer can set a different one.
+       *
+       * App developers can set a maximum and minimum value for the `StepInput`.
+       * The increase/decrease button and the up/down keyboard navigation become disabled when
+       * the value reaches the max/min or a new value is entered from the input which is greater/less than the max/min.
+       *
+       * #### When to use:
+       *
+       * - To adjust amounts, quantities, or other values quickly.
+       * - To adjust values for a specific step.
+       *
+       * #### When not to use:
+       *
+       * - To enter a static number (for example, postal code, phone number, or ID). In this case,
+       * use the regular `furo-ui5-input` instead.
+       * - To display a value that rarely needs to be adjusted and does not pertain to a particular step.
+       * In this case, use the regular `furo-ui5-input` instead.
+       * - To enter dates and times. In this case, use date/time related components instead.
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/StepInput.js";`
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-step-input": StepInput;
     }
   }
 }
-

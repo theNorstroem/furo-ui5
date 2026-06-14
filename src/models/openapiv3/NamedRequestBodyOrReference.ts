@@ -93,7 +93,7 @@ export class NamedRequestBodyOrReference extends FieldNode {
     this._value = new OpenapiV3RequestBodyOrReference(undefined, this, "value");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof NamedRequestBodyOrReference] as FieldNode).__meta.required = true;
     });
 
@@ -108,7 +108,7 @@ export class NamedRequestBodyOrReference extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof NamedRequestBodyOrReference] as FieldNode).__readonly = true;
     });
 

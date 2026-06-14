@@ -94,7 +94,7 @@ export class DescriptorProtoExtensionRange extends FieldNode {
     this._options = new GoogleProtobufExtensionRangeOptions(undefined, this, "options");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof DescriptorProtoExtensionRange] as FieldNode).__meta.required = true;
     });
 
@@ -109,7 +109,7 @@ export class DescriptorProtoExtensionRange extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof DescriptorProtoExtensionRange] as FieldNode).__readonly = true;
     });
 

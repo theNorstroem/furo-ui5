@@ -67,7 +67,7 @@ export class BytesAttributesEntry extends FieldNode {
     this._value = new STRING(undefined, this, "value");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof BytesAttributesEntry] as FieldNode).__meta.required = true;
     });
 
@@ -82,7 +82,7 @@ export class BytesAttributesEntry extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof BytesAttributesEntry] as FieldNode).__readonly = true;
     });
 

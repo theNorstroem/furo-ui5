@@ -97,7 +97,7 @@ export class DateAndTimeReaderWriters<T> {
       const s = t.seconds.value;
       const v = h === 0 && m === 0 && s === 0 ? "" : `${h.toString().padStart(2, "0")}:${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
       //if (v !== this.clazz[this.valueField]) {
-        (this.clazz[this.valueField] as string) = v;
+      (this.clazz[this.valueField] as string) = v;
       //}
     });
 

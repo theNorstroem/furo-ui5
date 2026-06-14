@@ -202,7 +202,7 @@ export class FuroUi5Select extends Select {
 
   private readFromOptionsModel = (): void => {
     // clear existing options
-    this.querySelectorAll("furo-ui5-option").forEach((el) => {
+    this.querySelectorAll("furo-ui5-option").forEach(el => {
       el.setAttribute("deleteme", "");
     });
 
@@ -218,14 +218,14 @@ export class FuroUi5Select extends Select {
       }
     });
     // delete
-    this.querySelectorAll("furo-ui5-option[deleteme]").forEach((el) => {
+    this.querySelectorAll("furo-ui5-option[deleteme]").forEach(el => {
       el.remove();
     });
 
     // sort
     [...this.querySelectorAll("furo-ui5-option")]
       .sort((a, b) => Number((a as HTMLElement).style.order) - Number((b as HTMLElement).style.order))
-      .forEach((el) => {
+      .forEach(el => {
         this.appendChild(el);
       });
   };
@@ -272,7 +272,7 @@ export class FuroUi5Select extends Select {
       return;
     }
     // set marker to clear existing options
-    this.querySelectorAll("furo-ui5-option").forEach((el) => {
+    this.querySelectorAll("furo-ui5-option").forEach(el => {
       el.setAttribute("deleteme", "");
     });
 
@@ -300,7 +300,7 @@ export class FuroUi5Select extends Select {
       }
     });
     // delete
-    this.querySelectorAll("furo-ui5-option[deleteme]").forEach((el) => {
+    this.querySelectorAll("furo-ui5-option[deleteme]").forEach(el => {
       el.remove();
     });
 
@@ -308,7 +308,7 @@ export class FuroUi5Select extends Select {
     if (this._optionList) {
       [...this.querySelectorAll("furo-ui5-option")]
         .sort((a, b) => Number((a as HTMLElement).style.order) - Number((b as HTMLElement).style.order))
-        .forEach((el) => {
+        .forEach(el => {
           this.appendChild(el);
         });
     }

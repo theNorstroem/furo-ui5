@@ -638,7 +638,7 @@ export class AllTypesTest extends FieldNode {
     this._googleTypeTimeofday = new GoogleTypeTimeOfDay(undefined, this, "googleTypeTimeofday");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof AllTypesTest] as FieldNode).__meta.required = true;
     });
 
@@ -684,7 +684,7 @@ export class AllTypesTest extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof AllTypesTest] as FieldNode).__readonly = true;
     });
 

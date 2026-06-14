@@ -132,7 +132,7 @@ export class ServiceOptions extends FieldNode {
     this._uninterpretedOption = new ARRAY<GoogleProtobufUninterpretedOption, IGoogleProtobufUninterpretedOption>(undefined, this, "uninterpretedOption");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof ServiceOptions] as FieldNode).__meta.required = true;
     });
 
@@ -147,7 +147,7 @@ export class ServiceOptions extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof ServiceOptions] as FieldNode).__readonly = true;
     });
 

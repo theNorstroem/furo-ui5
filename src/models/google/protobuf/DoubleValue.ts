@@ -67,7 +67,7 @@ export class DoubleValue extends FieldNode {
     this._value = new DOUBLE(undefined, this, "value");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof DoubleValue] as FieldNode).__meta.required = true;
     });
 
@@ -82,7 +82,7 @@ export class DoubleValue extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof DoubleValue] as FieldNode).__readonly = true;
     });
 

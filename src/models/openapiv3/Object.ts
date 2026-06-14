@@ -52,7 +52,7 @@ export class XObject extends FieldNode {
     this._additionalProperties = new ARRAY<OpenapiV3NamedAny, IOpenapiV3NamedAny>(undefined, this, "additionalProperties");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof XObject] as FieldNode).__meta.required = true;
     });
 
@@ -67,7 +67,7 @@ export class XObject extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof XObject] as FieldNode).__readonly = true;
     });
 

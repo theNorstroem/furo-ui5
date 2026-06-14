@@ -56,7 +56,7 @@ export class CubeServiceGetResponse extends FieldNode {
     this._entity = new Furoui5TestCubeCubeEntity(undefined, this, "entity");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof CubeServiceGetResponse] as FieldNode).__meta.required = true;
     });
 
@@ -71,7 +71,7 @@ export class CubeServiceGetResponse extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof CubeServiceGetResponse] as FieldNode).__readonly = true;
     });
 

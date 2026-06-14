@@ -77,7 +77,7 @@ export class AdditionalPropertiesItem extends FieldNode {
     this._boolean = new BOOLEAN(undefined, this, "boolean");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof AdditionalPropertiesItem] as FieldNode).__meta.required = true;
     });
 
@@ -92,7 +92,7 @@ export class AdditionalPropertiesItem extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof AdditionalPropertiesItem] as FieldNode).__readonly = true;
     });
 

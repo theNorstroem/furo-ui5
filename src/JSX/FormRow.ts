@@ -2,24 +2,20 @@
 import * as React from "react";
 
 export interface FormRow extends React.HTMLAttributes<HTMLElement> {
-// no events defined.
-// properties
-
-// attributes
-// no attributes defined.
-
+  // no events defined.
+  // properties
+  // attributes
+  // no attributes defined.
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * The furo-furo-furo-ui5-form-row gives the user a layout to manage
- * input field and labels according to the design specification of SAP Fiori.
- */
+      /**
+       * The furo-furo-furo-ui5-form-row gives the user a layout to manage
+       * input field and labels according to the design specification of SAP Fiori.
+       */
       "furo-ui5-form-row": FormRow;
     }
   }
 }
-

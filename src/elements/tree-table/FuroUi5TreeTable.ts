@@ -131,10 +131,12 @@ export interface TreeTableSelectionChange {
  * @usecase Use when tabular data has parent-child relationships requiring expansion.
  *
  * @event {CustomEvent<HTMLTableRowElement>} row-click - Fired when the tree table is in SingleSelect and a row is clicked or `Enter` key is pressed.
+ * @eventref selection-change - TreeTableSelectionChange - "@furo/ui5/dist/index.js"
  * @event {CustomEvent<TreeTableSelectionChange>} selection-change - Fired when a row is selected.
  * @event {CustomEvent<HTMLTableRowElement>} node-focused - Is fired when a node or a child of it receives the focus. The event detail contains the focused row. This event is trailing debounced with 250ms.
  * @event {CustomEvent<HTMLTableRowElement>} node-expanded - Is fired when a node was expanded.
  * @event {CustomEvent<HTMLTableRowElement>} node-collapsed - Is fired when a node was collapsed.
+ * @eventref load-more - FuroUi5TreeTable - "@furo/ui5/dist/index.js"
  * @event {CustomEvent<FuroUi5TreeTable>} load-more - Fired when the user scrolls to the table's end. Also fired after 1 second if you start with an empty list or a list which to small to scroll.
  * @slot {HTMLElement[]} default - Add your table with `thead` and `tbody` here.
  * @tagname furo-ui5-tree-table
@@ -170,7 +172,7 @@ export class FuroUi5TreeTable extends LitElement {
             composed: true,
             bubbles: true,
             detail: targetTR,
-          }),
+          })
         );
         this._lastFocusedTarget = targetTR;
       }
@@ -223,6 +225,8 @@ export class FuroUi5TreeTable extends LitElement {
    * - None (Default)
    * - SingleSelect, enables keyboard and mouse select of a row.
    * - MultiSelect **NOT IMPLEMENTED**
+   * @default None
+   * @typeref TreeTableMode - "@furo/ui5/dist/index.js"
    */
   @property({ type: String, attribute: "mode" })
   mode: TreeTableMode = TreeTableMode.None;
@@ -241,7 +245,7 @@ export class FuroUi5TreeTable extends LitElement {
     const config = { attributes: false, childList: true, subtree: false };
 
     // Callback function to execute when mutations are observed
-    const callback: MutationCallback = (mutationList) => {
+    const callback: MutationCallback = mutationList => {
       for (const mutation of mutationList) {
         if (mutation.type === "childList") {
           this._init();
@@ -258,20 +262,20 @@ export class FuroUi5TreeTable extends LitElement {
     }
 
     const loadMoreObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             this.dispatchEvent(
               new CustomEvent("load-more", {
                 composed: true,
                 bubbles: false,
                 detail: this,
-              }),
+              })
             );
           }
         });
       },
-      { threshold: 1 },
+      { threshold: 1 }
     );
 
     // Delay of 1000 is chosen because you could have a tree which
@@ -297,7 +301,7 @@ export class FuroUi5TreeTable extends LitElement {
 
     if (this.stickyTree) {
       const headTreeCells = this.querySelectorAll("thead th:first-child");
-      Array.from(headTreeCells).forEach((headTreeCell) => {
+      Array.from(headTreeCells).forEach(headTreeCell => {
         headTreeCell.setAttribute("sticky-left", "");
       });
     }
@@ -311,7 +315,7 @@ export class FuroUi5TreeTable extends LitElement {
 
     rows.forEach((node, i) => {
       // set aria cell
-      node.querySelectorAll("td").forEach((cell) => {
+      node.querySelectorAll("td").forEach(cell => {
         cell.setAttribute("role", "gridcell");
       });
 
@@ -356,7 +360,10 @@ export class FuroUi5TreeTable extends LitElement {
         parent.removeAttribute("is-leave");
         lastParent = node;
       }
-      if ((node.nextElementSibling !== null && currentNodeLevel >= this._getLevel(node.nextElementSibling as HTMLTableRowElement)) || node.nextElementSibling === null) {
+      if (
+        (node.nextElementSibling !== null && currentNodeLevel >= this._getLevel(node.nextElementSibling as HTMLTableRowElement)) ||
+        node.nextElementSibling === null
+      ) {
         const nodeIcon = node.querySelector("[tree-icon]");
         if (nodeIcon) {
           nodeIcon.remove();
@@ -364,7 +371,7 @@ export class FuroUi5TreeTable extends LitElement {
       }
     });
 
-    rows.forEach((node) => {
+    rows.forEach(node => {
       // hide subnodes which are not expanded
       if (node.getAttribute("aria-expanded") === null || node.getAttribute("aria-expanded") === "false") {
         this._collapseNode(node);
@@ -404,7 +411,7 @@ export class FuroUi5TreeTable extends LitElement {
     const targetTR = (e.target as HTMLElement).closest("tr");
     if (targetTR !== null) {
       // set all tabindexes to -1
-      this.querySelectorAll("tbody tr").forEach((node) => {
+      this.querySelectorAll("tbody tr").forEach(node => {
         node.removeAttribute("selected");
         node.setAttribute("tabindex", "-1");
       });
@@ -442,7 +449,7 @@ export class FuroUi5TreeTable extends LitElement {
           composed: true,
           bubbles: true,
           detail: targetElement.closest("tr"),
-        }),
+        })
       );
     } else {
       this._expandNode(targetElement);
@@ -455,7 +462,7 @@ export class FuroUi5TreeTable extends LitElement {
         detail: targetElement,
         composed: true,
         bubbles: false,
-      }),
+      })
     );
 
     // notify selection-change
@@ -471,7 +478,7 @@ export class FuroUi5TreeTable extends LitElement {
             detail: changes,
             composed: true,
             bubbles: false,
-          }),
+          })
         );
       }
     }
@@ -519,7 +526,12 @@ export class FuroUi5TreeTable extends LitElement {
         lockCollapse = false;
       }
 
-      if (node.getAttribute("is-leave") === null && node !== targetNode && (node.getAttribute("aria-expanded") === null || node.getAttribute("aria-expanded") === "false") && !lockCollapse) {
+      if (
+        node.getAttribute("is-leave") === null &&
+        node !== targetNode &&
+        (node.getAttribute("aria-expanded") === null || node.getAttribute("aria-expanded") === "false") &&
+        !lockCollapse
+      ) {
         collapsedLevel = this._getLevel(node);
         lockCollapse = true;
       }
@@ -539,7 +551,7 @@ export class FuroUi5TreeTable extends LitElement {
         composed: true,
         bubbles: true,
         detail: targetNode,
-      }),
+      })
     );
   }
 
@@ -560,7 +572,7 @@ export class FuroUi5TreeTable extends LitElement {
     }
     // set aria expanded to true
     const nodes: NodeListOf<HTMLTableRowElement> = this.querySelectorAll("tbody tr[aria-expanded]");
-    nodes.forEach((n) => {
+    nodes.forEach(n => {
       n.setAttribute("aria-expanded", "true");
     });
   }
@@ -588,7 +600,7 @@ export class FuroUi5TreeTable extends LitElement {
     }
     // set aria expanded to true
     const nodes: NodeListOf<HTMLTableRowElement> = this.querySelectorAll("tbody tr[aria-expanded]");
-    nodes.forEach((n) => {
+    nodes.forEach(n => {
       n.setAttribute("aria-expanded", "false");
     });
   }
@@ -773,7 +785,7 @@ export class FuroUi5TreeTable extends LitElement {
               composed: true,
               bubbles: true,
               detail: target,
-            }),
+            })
           );
         } else {
           // focus parent

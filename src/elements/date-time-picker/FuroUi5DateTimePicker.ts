@@ -180,7 +180,7 @@ export class FuroUi5DateTimePicker extends DateTimePicker {
   // timezone-aware, `null`-safe) before writing. The accessor must stay sync, so
   // we refresh the `_isoValue` cache here and write once the promise resolves.
   private writeToModel = (): void => {
-    void this.dateValueAsync.then((d) => {
+    void this.dateValueAsync.then(d => {
       this._isoValue = d === null ? "" : d.toISOString();
       this.modelReaderWriter?.writeModel();
     });

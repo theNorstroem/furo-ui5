@@ -239,7 +239,7 @@ export class SourceCodeInfo extends FieldNode {
     this._location = new ARRAY<GoogleProtobufSourceCodeInfoLocation, IGoogleProtobufSourceCodeInfoLocation>(undefined, this, "location");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof SourceCodeInfo] as FieldNode).__meta.required = true;
     });
 
@@ -254,7 +254,7 @@ export class SourceCodeInfo extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof SourceCodeInfo] as FieldNode).__readonly = true;
     });
 

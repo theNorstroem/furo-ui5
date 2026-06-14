@@ -93,7 +93,7 @@ export class NamedExampleOrReference extends FieldNode {
     this._value = new OpenapiV3ExampleOrReference(undefined, this, "value");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof NamedExampleOrReference] as FieldNode).__meta.required = true;
     });
 
@@ -108,7 +108,7 @@ export class NamedExampleOrReference extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof NamedExampleOrReference] as FieldNode).__readonly = true;
     });
 

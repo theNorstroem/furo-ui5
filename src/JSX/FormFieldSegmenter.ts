@@ -4,35 +4,32 @@ import * as React from "react";
 import type FormFieldSegmentationPatterns from "../types/FormFieldSegmentationPatterns";
 
 export interface FormFieldSegmenter extends React.HTMLAttributes<HTMLElement> {
-// no events defined.
-// properties
+  // no events defined.
+  // properties
 
-// attributes
+  // attributes
 
-/**
- * Field patterns, defaults to a single field with optional value.
- */
-"pattern"?:FormFieldSegmentationPatterns | keyof typeof FormFieldSegmentationPatterns;
+  /**
+   * Field patterns, defaults to a single field with optional value.
+   */
+  pattern?: FormFieldSegmentationPatterns | keyof typeof FormFieldSegmentationPatterns;
 
-/**
- * Optional unit for the form field.
- */
-"unit"?:string;
-
+  /**
+   * Optional unit for the form field.
+   */
+  unit?: string;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * ### Description
- * If you need to place some units for the fields or want to have a small field followed by a large field, you should use this component.
- * 
- * ### ES6 Module Import
- */
+      /**
+       * ### Description
+       * If you need to place some units for the fields or want to have a small field followed by a large field, you should use this component.
+       *
+       * ### ES6 Module Import
+       */
       "furo-ui5-form-field-segmenter": FormFieldSegmenter;
     }
   }
 }
-

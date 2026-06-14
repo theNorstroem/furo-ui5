@@ -47,7 +47,7 @@ export class FuroUi5ToggleButton extends ToggleButton {
 
     this.fatHandler = new FatHandler<FuroUi5ToggleButton>(this, ["icon", "endIcon", "design"]);
     this.fatHandler.readAttributes();
-    this.fatHandler.setCustomAttributesHandler((attributes) => {
+    this.fatHandler.setCustomAttributesHandler(attributes => {
       // reset the design to the initial design if none was received
       if (attributes.has("design")) {
         return;

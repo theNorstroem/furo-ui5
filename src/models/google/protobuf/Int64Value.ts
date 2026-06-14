@@ -67,7 +67,7 @@ export class Int64Value extends FieldNode {
     this._value = new INT64(undefined, this, "value");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Int64Value] as FieldNode).__meta.required = true;
     });
 
@@ -82,7 +82,7 @@ export class Int64Value extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof Int64Value] as FieldNode).__readonly = true;
     });
 

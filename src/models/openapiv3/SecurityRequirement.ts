@@ -60,7 +60,7 @@ export class SecurityRequirement extends FieldNode {
     this._additionalProperties = new ARRAY<OpenapiV3NamedStringArray, IOpenapiV3NamedStringArray>(undefined, this, "additionalProperties");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof SecurityRequirement] as FieldNode).__meta.required = true;
     });
 
@@ -75,7 +75,7 @@ export class SecurityRequirement extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof SecurityRequirement] as FieldNode).__readonly = true;
     });
 

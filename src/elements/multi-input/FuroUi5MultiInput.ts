@@ -167,13 +167,13 @@ export class FuroUi5MultiInput extends MultiInput {
    * tag selector — see `renderedTokens`) and recreated in array order.
    */
   private readFromModel = (): void => {
-    this.renderedTokens.forEach((token) => {
+    this.renderedTokens.forEach(token => {
       token.remove();
     });
     this.renderedTokens = [];
     this.tokenToNode = new WeakMap<HTMLElement, FieldNode>();
 
-    this._arr.forEach((element) => {
+    this._arr.forEach(element => {
       const token = new Token();
       // `element.value` is a STRING node for FuroFatString and a primitive string for
       // STRING / StringValue — toString() yields the text uniformly for all three.
@@ -213,14 +213,14 @@ export class FuroUi5MultiInput extends MultiInput {
   private onTokenDelete = (event: Event): void => {
     const { tokens } = (event as CustomEvent<MultiInputTokenDeleteEventDetail>).detail;
     const indices = tokens
-      .map((token) => this.tokenToNode.get(token)?.__meta.index)
+      .map(token => this.tokenToNode.get(token)?.__meta.index)
       .filter((index): index is number => index !== undefined)
       .sort((a, b) => b - a);
     if (indices.length === 0) {
       return;
     }
     this.detachModelListeners();
-    indices.forEach((index) => {
+    indices.forEach(index => {
       this._arr.delete(index);
     });
     this.attachModelListeners();

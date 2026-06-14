@@ -2,27 +2,23 @@
 import * as React from "react";
 
 export interface TableToolbarSeparator extends React.HTMLAttributes<HTMLElement> {
-// no events defined.
-// properties
-
-// attributes
-// no attributes defined.
-
+  // no events defined.
+  // properties
+  // attributes
+  // no attributes defined.
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * ### Description
- * This is a separator for the table toolbar component.
- * 
- * ### ES6 Module Import
- * `import '@furo/ui5/dist/table-toolbar-separator.js'`
- */
+      /**
+       * ### Description
+       * This is a separator for the table toolbar component.
+       *
+       * ### ES6 Module Import
+       * `import '@furo/ui5/dist/table-toolbar-separator.js'`
+       */
       "furo-ui5-table-toolbar-separator": TableToolbarSeparator;
     }
   }
 }
-

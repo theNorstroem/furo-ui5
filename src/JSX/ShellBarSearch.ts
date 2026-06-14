@@ -3,135 +3,132 @@ import type { SearchFieldScopeSelectionChangeDetails } from "@ui5/webcomponents-
 import * as React from "react";
 
 export interface ShellBarSearch extends React.HTMLAttributes<HTMLElement> {
-"onclose"?:(d:CustomEvent)=>void;
-"oninput"?:(d:CustomEvent)=>void;
-"onopen"?:(d:CustomEvent)=>void;
-"onscope-change"?:(d:CustomEvent<SearchFieldScopeSelectionChangeDetails>)=>void;
-"onsearch"?:(d:CustomEvent)=>void;
-// properties
+  onclose?: (d: CustomEvent) => void;
+  oninput?: (d: CustomEvent) => void;
+  onopen?: (d: CustomEvent) => void;
+  "onscope-change"?: (d: CustomEvent<SearchFieldScopeSelectionChangeDetails>) => void;
+  onsearch?: (d: CustomEvent) => void;
+  // properties
 
-// attributes
+  // attributes
 
-/**
- * Defines the accessible ARIA description of the field.
- */
-"accessibleDescription"?:string | undefined;
+  /**
+   * Defines the accessible ARIA description of the field.
+   */
+  accessibleDescription?: string | undefined;
 
-/**
- * Defines the accessible ARIA name of the component.
- */
-"accessibleName"?:string | undefined;
+  /**
+   * Defines the accessible ARIA name of the component.
+   */
+  accessibleName?: string | undefined;
 
-/**
- * Indicates whether the suggestions popover should be opened on focus.
- */
-"autoOpen"?:boolean;
+  /**
+   * Indicates whether the suggestions popover should be opened on focus.
+   */
+  autoOpen?: boolean;
 
-/**
- * Determines whether the component should be rendered in RTL mode or not.
- * Returns: "rtl", "ltr" or undefined
- */
-"effectiveDir"?:string | undefined;
+  /**
+   * Determines whether the component should be rendered in RTL mode or not.
+   * Returns: "rtl", "ltr" or undefined
+   */
+  effectiveDir?: string | undefined;
 
-/**
- * Indicates whether a loading indicator should be shown in the input field.
- */
-"fieldLoading"?:boolean;
+  /**
+   * Indicates whether a loading indicator should be shown in the input field.
+   */
+  fieldLoading?: boolean;
 
-/**
- * Used to duck-type UI5 elements without using instanceof
- */
-"isUI5Element"?:boolean;
+  /**
+   * Used to duck-type UI5 elements without using instanceof
+   */
+  isUI5Element?: boolean;
 
-/**
- * Indicates whether a loading indicator should be shown in the popup.
- */
-"loading"?:boolean;
+  /**
+   * Indicates whether a loading indicator should be shown in the popup.
+   */
+  loading?: boolean;
 
-/**
- * Defines whether the value will be autcompleted to match an item.
- */
-"noTypeahead"?:boolean;
+  /**
+   * Defines whether the value will be autcompleted to match an item.
+   */
+  noTypeahead?: boolean;
 
-/**
- * Indicates whether the items picker is open.
- */
-"open"?:boolean;
+  /**
+   * Indicates whether the items picker is open.
+   */
+  open?: boolean;
 
-/**
- * Defines a short hint intended to aid the user with data entry when the
- * component has no value.
- */
-"placeholder"?:string | undefined;
+  /**
+   * Defines a short hint intended to aid the user with data entry when the
+   * component has no value.
+   */
+  placeholder?: string | undefined;
 
-/**
- * Defines the value of the component:
- * 
- * Applications are responsible for setting the correct scope value.
- * 
- * **Note:** If the given value does not match any existing scopes,
- * no scope will be selected and the SearchField scope component will be displayed as empty.
- */
-"scopeValue"?:string | undefined;
+  /**
+   * Defines the value of the component:
+   *
+   * Applications are responsible for setting the correct scope value.
+   *
+   * **Note:** If the given value does not match any existing scopes,
+   * no scope will be selected and the SearchField scope component will be displayed as empty.
+   */
+  scopeValue?: string | undefined;
 
-/**
- * Defines whether the clear icon of the search will be shown.
- */
-"showClearIcon"?:boolean;
+  /**
+   * Defines whether the clear icon of the search will be shown.
+   */
+  showClearIcon?: boolean;
 
-/**
- * Defines the value of the component.
- * 
- * **Note:** The property is updated upon typing.
- */
-"value"?:string;
-
+  /**
+   * Defines the value of the component.
+   *
+   * **Note:** The property is updated upon typing.
+   */
+  value?: string;
 }
 
-declare module 'react' {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
-    
-/**
- * 
- * 
- * Search field for the ShellBar component.
- * 
- * Search field for the ShellBar component.
- * 
- * ### Overview
- * 
- * A `furo-ui5-search` is an input with suggestions, used for user search.
- * 
- * The `furo-ui5-search` consists of several elements parts:
- * - Scope - displays a select in the beggining of the component, used for filtering results by their scope.
- * - Input field - for user input value
- * - Clear button - gives the possibility for deleting the entered value
- * - Search button - a primary button for performing search, when the user has entered a search term
- * - Suggestions - a list with available search suggestions
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/Search.js";`
- * 
- * ### Overview
- * 
- * A `furo-ui5-search-field` is an input field, used for user search.
- * 
- * The `furo-ui5-search-field` consists of several elements parts:
- * - Scope - displays a select in the beggining of the component, used for filtering results by their scope.
- * - Input field - for user input value
- * - Clear button - gives the possibility for deleting the entered value
- * - Search button - a primary button for performing search, when the user has entered a search term
- * 
- * ### ES6 Module Import
- * 
- * `import "@furo/ui5/dist/SearchField.js";`
- * 
- * Base class for all UI5 Web Components
- */
+      /**
+       *
+       *
+       * Search field for the ShellBar component.
+       *
+       * Search field for the ShellBar component.
+       *
+       * ### Overview
+       *
+       * A `furo-ui5-search` is an input with suggestions, used for user search.
+       *
+       * The `furo-ui5-search` consists of several elements parts:
+       * - Scope - displays a select in the beggining of the component, used for filtering results by their scope.
+       * - Input field - for user input value
+       * - Clear button - gives the possibility for deleting the entered value
+       * - Search button - a primary button for performing search, when the user has entered a search term
+       * - Suggestions - a list with available search suggestions
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/Search.js";`
+       *
+       * ### Overview
+       *
+       * A `furo-ui5-search-field` is an input field, used for user search.
+       *
+       * The `furo-ui5-search-field` consists of several elements parts:
+       * - Scope - displays a select in the beggining of the component, used for filtering results by their scope.
+       * - Input field - for user input value
+       * - Clear button - gives the possibility for deleting the entered value
+       * - Search button - a primary button for performing search, when the user has entered a search term
+       *
+       * ### ES6 Module Import
+       *
+       * `import "@furo/ui5/dist/SearchField.js";`
+       *
+       * Base class for all UI5 Web Components
+       */
       "furo-ui5-shellbar-search": ShellBarSearch;
     }
   }
 }
-

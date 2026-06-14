@@ -165,7 +165,7 @@ export class XDate extends FieldNode {
     this._day = new INT32(undefined, this, "day");
 
     // Set required fields
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof XDate] as FieldNode).__meta.required = true;
     });
 
@@ -180,7 +180,7 @@ export class XDate extends FieldNode {
     }
 
     // Set readonly fields after the init, so child nodes are readonly too
-    [].forEach((fieldName) => {
+    [].forEach(fieldName => {
       (this[fieldName as keyof XDate] as FieldNode).__readonly = true;
     });
 
