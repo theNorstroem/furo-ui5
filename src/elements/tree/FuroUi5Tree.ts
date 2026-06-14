@@ -31,7 +31,6 @@ import { RootNode } from "@/models/furoui5/RootNode";
  * @fires {NavigationNode} branch-focused - Fired when a node with children receives the focus.
  * @fires {NavigationNode} leaf-focused - Fired when a leaf receives the focus.
  * @fires {NavigationNode} node-selected - Fired when a node gets selected (not fired in `qp` mode).
- * @fires {Object} qp-change-requested - Fired in `qp` mode instead of `node-selected`.
  * @fires {NavigationNode} branch-selected - Fired when a node with children gets selected.
  * @fires {NavigationNode} leaf-selected - Fired when a leaf gets selected.
  * @fires {NavigationNode} node-opened - Fired when a node is opened.
@@ -62,13 +61,6 @@ export class FuroUi5Tree extends LitElement {
    */
   @property({ type: Number, attribute: "expand-depth" })
   public expandDepth = 2;
-
-  /**
-   * Query param to watch. When set, `node-selected` is only fired via `selectById`; otherwise
-   * a `qp-change-requested` event is emitted.
-   */
-  @property({ type: String })
-  public qp = "";
 
   /**
    * Render the root node as a header section.
@@ -122,10 +114,6 @@ export class FuroUi5Tree extends LitElement {
   private _searchTerm = "";
 
   private _foundSearchItems: NavigationNode[] = [];
-
-  private __tmpQP: string | undefined;
-
-  private __lastQP: string | undefined;
 
   private readonly _wiredOpenNodes = new WeakSet<NavigationNode>();
 
@@ -221,14 +209,6 @@ export class FuroUi5Tree extends LitElement {
       this.focusNode(this._focusedField);
     }
 
-    if (this.__tmpQP !== undefined) {
-      const qp = this.__tmpQP;
-      // the tree is built async
-      setTimeout(() => {
-        this.selectById(qp);
-        this.__tmpQP = undefined;
-      }, 0);
-    }
   }
 
   private _buildFlatTree(root: NavigationNode): void {
@@ -355,13 +335,6 @@ export class FuroUi5Tree extends LitElement {
     while (parent !== undefined) {
       parent.open.value = true;
       parent = getParentNode(parent);
-    }
-
-    if (!this.qp) {
-      this._fire("node-selected", node);
-    } else if (this.__lastQP !== node.id.value) {
-      this.__lastQP = node.id.value;
-      this._fire("qp-change-requested", { [this.qp]: node.id.value });
     }
 
     this._fire(FuroUi5Tree.isBranch(node) ? "branch-selected" : "leaf-selected", node);
@@ -713,10 +686,7 @@ export class FuroUi5Tree extends LitElement {
       if (node.id.value === nodeID) {
         this.selectNode(node);
         this._focusedField = this._selectedField ?? this._focusedField;
-        // selectNode does not emit node-selected in qp mode, so emit it here
-        if (this.qp && this._selectedField !== undefined) {
           this._fire("node-selected", this._selectedField);
-        }
         return node;
       }
     }

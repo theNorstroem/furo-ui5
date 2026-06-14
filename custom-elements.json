@@ -26955,22 +26955,6 @@
           ],
           "members": [
             {
-              "kind": "field",
-              "name": "__lastQP",
-              "type": {
-                "text": "string | undefined"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "__tmpQP",
-              "type": {
-                "text": "string | undefined"
-              },
-              "privacy": "private"
-            },
-            {
               "kind": "method",
               "name": "_buildFlatTree",
               "privacy": "private",
@@ -27632,17 +27616,6 @@
               ]
             },
             {
-              "kind": "field",
-              "name": "qp",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "public",
-              "default": "\"\"",
-              "description": "Query param to watch. When set, `node-selected` is only fired via `selectById`; otherwise\na `qp-change-requested` event is emitted.",
-              "attribute": "qp"
-            },
-            {
               "kind": "method",
               "name": "resetSearch",
               "privacy": "public",
@@ -27907,13 +27880,6 @@
               },
               "description": "Fired when nodes are expanded recursively.",
               "name": "nodes-expanded"
-            },
-            {
-              "type": {
-                "text": "Object"
-              },
-              "description": "Fired in `qp` mode instead of `node-selected`.",
-              "name": "qp-change-requested"
             }
           ],
           "attributes": [
@@ -27964,15 +27930,6 @@
               "description": "Hide the root node.",
               "fieldName": "hideRootNode",
               "attribute": "hide-root-node"
-            },
-            {
-              "name": "qp",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Query param to watch. When set, `node-selected` is only fired via `selectById`; otherwise\na `qp-change-requested` event is emitted.",
-              "fieldName": "qp"
             },
             {
               "name": "root-as-header",
