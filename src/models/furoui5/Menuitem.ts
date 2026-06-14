@@ -120,7 +120,7 @@ export class Menuitem extends FieldNode {
 
   constructor(initData?: IMenuitem, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
-    this.__meta.typeName = "furoui5.Menuitem";
+    this.__meta.typeName = "menu.Menuitem";
     this.__meta.description = "Menuitem Item signature for a context menu.";
 
     this.__meta.nodeFields = [
@@ -352,4 +352,4 @@ export class Menuitem extends FieldNode {
   }
 }
 
-Registry.register("furoui5.Menuitem", Menuitem);
+Registry.register("menu.Menuitem", Menuitem);

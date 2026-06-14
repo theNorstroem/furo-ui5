@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package tree;
+
+option go_package = "github.com/theNorstroem/furo-ui5/gen/go/tree;treepb";
+option java_multiple_files = true;
+option java_package = "pro.tree";
+
+// Navigation tree type with recursive navigation nodes.
+message Tree {
+  // Root node of the tree.
+  Navigationnode root = 1;
+
+  // Id of the tree. [optional]
+  string id = 2;
+
+  // String representation of the tree. [optional]
+  string display_name = 3;
+
+  // Description of the tree. [optional]
+  string description = 4;
+}
+
+// Item of the navigation tree.
+message Navigationnode {
+  // Id of the node.
+  string id = 1;
+
+  // String representation of the node.
+  string display_name = 2;
+
+  // Children of this node.
+  repeated Navigationnode children = 3;
+
+  // Node is open or not.
+  bool open = 4;
+
+  // Secondary text of the node. [optional]
+  string secondary_text = 5;
+
+  // Searchable description of the node. [optional]
+  string description = 6;
+
+  // Icon of the node. [optional]
+  string icon = 7;
+
+  // Searchable key words of the node. [optional]
+  string key_words = 8;
+
+  // Error indicator. [optional]
+  bool has_error = 9;
+
+  // Mark node as group label. [optional]
+  bool is_group_label = 10;
+}
