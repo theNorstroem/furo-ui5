@@ -76,7 +76,7 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-context-menu binds a `furoui5.Menuitem` model (or an ARRAY of them) to
+       * The furo-furo-furo-ui5-context-menu binds a `menu.Menuitem` model (or an ARRAY of them) to
        * a SAP `furo-furo-ui5-menu`. Because `furo-furo-ui5-menu` is itself a self-contained popover, no separate
        * display element is required.
        *

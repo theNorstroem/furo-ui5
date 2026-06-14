@@ -10,3 +10,5 @@ export { XString as FuroFatString } from "./furo/fat/String";
 export { type IXString as IFuroFatString } from "./furo/fat/String";
 export { Uint32 as FuroFatUint32 } from "./furo/fat/Uint32";
 export { Uint64 as FuroFatUint64 } from "./furo/fat/Uint64";
+export * from "./furoui5/NavigationNode";
+export * from "./furoui5/RootNode";

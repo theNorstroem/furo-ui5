@@ -4,10 +4,10 @@
 import { ARRAY, BOOLEAN, FieldNode, Registry, STRING } from "@furo/open-models/dist/index";
 
 /**
- * @interface INavigationnode
+ * @interface INavigationNode
  *  Item of the navigation tree.
  */
-export interface INavigationnode {
+export interface INavigationNode {
   /**
    *  Id of the node.
    */
@@ -19,7 +19,7 @@ export interface INavigationnode {
   /**
    *  Children of this node.
    */
-  children?: INavigationnode[];
+  children?: INavigationNode[];
   /**
    *  Node is open or not.
    */
@@ -51,10 +51,10 @@ export interface INavigationnode {
 }
 
 /**
- * @interface TNavigationnode
+ * @interface TNavigationNode
  *  Item of the navigation tree.
  */
-export interface TNavigationnode {
+export interface TNavigationNode {
   /**
    *  Id of the node.
    */
@@ -66,7 +66,7 @@ export interface TNavigationnode {
   /**
    *  Children of this node.
    */
-  children?: TNavigationnode[];
+  children?: TNavigationNode[];
   /**
    *  Node is open or not.
    */
@@ -98,10 +98,10 @@ export interface TNavigationnode {
 }
 
 /**
- * Navigationnode
+ * NavigationNode
  *  Item of the navigation tree.
  */
-export class Navigationnode extends FieldNode {
+export class NavigationNode extends FieldNode {
   /**
    * Id of the node.
    **/
@@ -115,7 +115,7 @@ export class Navigationnode extends FieldNode {
   /**
    * Children of this node.
    **/
-  private _children: ARRAY<Navigationnode, INavigationnode>;
+  private _children: ARRAY<NavigationNode, INavigationNode>;
 
   /**
    * Node is open or not.
@@ -152,12 +152,12 @@ export class Navigationnode extends FieldNode {
    **/
   private _isGroupLabel: BOOLEAN;
 
-  public __defaultValues: INavigationnode;
+  public __defaultValues: INavigationNode;
 
-  constructor(initData?: INavigationnode, parent?: FieldNode, parentAttributeName?: string) {
+  constructor(initData?: INavigationNode, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
-    this.__meta.typeName = "tree.Navigationnode";
-    this.__meta.description = "Navigationnode Item of the navigation tree.";
+    this.__meta.typeName = "tree.NavigationNode";
+    this.__meta.description = "NavigationNode Item of the navigation tree.";
 
     this.__meta.nodeFields = [
       {
@@ -177,7 +177,7 @@ export class Navigationnode extends FieldNode {
       {
         fieldName: "children",
         protoName: "children",
-        FieldConstructor: Navigationnode,
+        FieldConstructor: NavigationNode,
         constraints: {},
         description: "Children of this node.",
       },
@@ -248,7 +248,7 @@ export class Navigationnode extends FieldNode {
     /**
      *  Children of this node.
      **/
-    this._children = new ARRAY<Navigationnode, INavigationnode>(undefined, this, "children");
+    this._children = new ARRAY<NavigationNode, INavigationNode>(undefined, this, "children");
 
     /**
      *  Node is open or not.
@@ -287,7 +287,7 @@ export class Navigationnode extends FieldNode {
 
     // Set required fields
     [].forEach(fieldName => {
-      (this[fieldName as keyof Navigationnode] as FieldNode).__meta.required = true;
+      (this[fieldName as keyof NavigationNode] as FieldNode).__meta.required = true;
     });
 
     // Default values from openAPI annotations
@@ -302,7 +302,7 @@ export class Navigationnode extends FieldNode {
 
     // Set readonly fields after the init, so child nodes are readonly too
     [].forEach(fieldName => {
-      (this[fieldName as keyof Navigationnode] as FieldNode).__readonly = true;
+      (this[fieldName as keyof NavigationNode] as FieldNode).__readonly = true;
     });
 
     this.__meta.isPristine = true;
@@ -342,14 +342,14 @@ export class Navigationnode extends FieldNode {
    *  Children of this node.
    * The getter receives the FieldNode
    **/
-  public get children(): ARRAY<Navigationnode, INavigationnode> {
+  public get children(): ARRAY<NavigationNode, INavigationNode> {
     return this._children;
   }
 
   /**
-   * The setter receives `INavigationnode[]`
+   * The setter receives `INavigationNode[]`
    **/
-  public set children(v: INavigationnode[]) {
+  public set children(v: INavigationNode[]) {
     this.__TypeSetter(this._children, v);
   }
 
@@ -458,13 +458,13 @@ export class Navigationnode extends FieldNode {
     this.__PrimitivesSetter(this._isGroupLabel, v);
   }
 
-  fromLiteral(data: INavigationnode): void {
+  fromLiteral(data: INavigationNode): void {
     super.__fromLiteral(data);
   }
 
-  toLiteral(): INavigationnode {
-    return super.__toLiteral() as INavigationnode;
+  toLiteral(): INavigationNode {
+    return super.__toLiteral() as INavigationNode;
   }
 }
 
-Registry.register("tree.Navigationnode", Navigationnode);
+Registry.register("tree.NavigationNode", NavigationNode);

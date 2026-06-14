@@ -55,5 +55,7 @@ import "./Title";
 import "./Toast";
 import "./ToggleButton";
 import "./TreeTable";
+import "./Tree";
+import "./TreeItem";
 import "./UserMenu";
 import "./ZGrid";

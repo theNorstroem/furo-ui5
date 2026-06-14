@@ -7,9 +7,9 @@ option java_multiple_files = true;
 option java_package = "pro.tree";
 
 // Navigation tree type with recursive navigation nodes.
-message Tree {
+message RootNode {
   // Root node of the tree.
-  Navigationnode root = 1;
+  NavigationNode root = 1;
 
   // Id of the tree. [optional]
   string id = 2;
@@ -22,7 +22,7 @@ message Tree {
 }
 
 // Item of the navigation tree.
-message Navigationnode {
+message NavigationNode {
   // Id of the node.
   string id = 1;
 
@@ -30,7 +30,7 @@ message Navigationnode {
   string display_name = 2;
 
   // Children of this node.
-  repeated Navigationnode children = 3;
+  repeated NavigationNode children = 3;
 
   // Node is open or not.
   bool open = 4;

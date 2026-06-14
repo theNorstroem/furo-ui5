@@ -4,20 +4,20 @@
 import { FieldNode, RECURSION, Registry, STRING } from "@furo/open-models/dist/index";
 
 import {
-  Navigationnode as TreeNavigationnode,
-  type INavigationnode as ITreeNavigationnode,
-  type TNavigationnode as TTreeNavigationnode,
-} from "./Navigationnode";
+  NavigationNode as TreeNavigationNode,
+  type INavigationNode as ITreeNavigationNode,
+  type TNavigationNode as TTreeNavigationNode,
+} from "./NavigationNode";
 
 /**
- * @interface ITree
+ * @interface IRootNode
  *  Navigation tree type with recursive navigation nodes.
  */
-export interface ITree {
+export interface IRootNode {
   /**
    *  Root node of the tree.
    */
-  root?: ITreeNavigationnode;
+  root?: ITreeNavigationNode;
   /**
    *  Id of the tree. [optional]
    */
@@ -33,14 +33,14 @@ export interface ITree {
 }
 
 /**
- * @interface TTree
+ * @interface TRootNode
  *  Navigation tree type with recursive navigation nodes.
  */
-export interface TTree {
+export interface TRootNode {
   /**
    *  Root node of the tree.
    */
-  root?: TTreeNavigationnode;
+  root?: TTreeNavigationNode;
   /**
    *  Id of the tree. [optional]
    */
@@ -56,14 +56,14 @@ export interface TTree {
 }
 
 /**
- * Tree
+ * RootNode
  *  Navigation tree type with recursive navigation nodes.
  */
-export class Tree extends FieldNode {
+export class RootNode extends FieldNode {
   /**
    * Root node of the tree.
    **/
-  private _root: RECURSION<TreeNavigationnode, ITreeNavigationnode>;
+  private _root: RECURSION<TreeNavigationNode, ITreeNavigationNode>;
 
   /**
    * Id of the tree. [optional]
@@ -80,18 +80,18 @@ export class Tree extends FieldNode {
    **/
   private _description: STRING;
 
-  public __defaultValues: ITree;
+  public __defaultValues: IRootNode;
 
-  constructor(initData?: ITree, parent?: FieldNode, parentAttributeName?: string) {
+  constructor(initData?: IRootNode, parent?: FieldNode, parentAttributeName?: string) {
     super(undefined, parent, parentAttributeName);
-    this.__meta.typeName = "tree.Tree";
-    this.__meta.description = "Tree Navigation tree type with recursive navigation nodes.";
+    this.__meta.typeName = "tree.RootNode";
+    this.__meta.description = "RootNode Navigation tree type with recursive navigation nodes.";
 
     this.__meta.nodeFields = [
       {
         fieldName: "root",
         protoName: "root",
-        FieldConstructor: TreeNavigationnode,
+        FieldConstructor: TreeNavigationNode,
         constraints: {},
         description: "Root node of the tree.",
       },
@@ -124,7 +124,7 @@ export class Tree extends FieldNode {
     /**
      *  Root node of the tree.
      **/
-    this._root = new RECURSION<TreeNavigationnode, ITreeNavigationnode>(undefined, this, "root");
+    this._root = new RECURSION<TreeNavigationNode, ITreeNavigationNode>(undefined, this, "root");
 
     /**
      *  Id of the tree. [optional]
@@ -143,7 +143,7 @@ export class Tree extends FieldNode {
 
     // Set required fields
     [].forEach(fieldName => {
-      (this[fieldName as keyof Tree] as FieldNode).__meta.required = true;
+      (this[fieldName as keyof RootNode] as FieldNode).__meta.required = true;
     });
 
     // Default values from openAPI annotations
@@ -158,7 +158,7 @@ export class Tree extends FieldNode {
 
     // Set readonly fields after the init, so child nodes are readonly too
     [].forEach(fieldName => {
-      (this[fieldName as keyof Tree] as FieldNode).__readonly = true;
+      (this[fieldName as keyof RootNode] as FieldNode).__readonly = true;
     });
 
     this.__meta.isPristine = true;
@@ -168,14 +168,14 @@ export class Tree extends FieldNode {
    *  Root node of the tree.
    * The getter receives the FieldNode
    **/
-  public get root(): RECURSION<TreeNavigationnode, ITreeNavigationnode> {
+  public get root(): RECURSION<TreeNavigationNode, ITreeNavigationNode> {
     return this._root;
   }
 
   /**
-   * The setter receives `ITreeNavigationnode`
+   * The setter receives `ITreeNavigationNode`
    **/
-  public set root(v: ITreeNavigationnode) {
+  public set root(v: ITreeNavigationNode) {
     this.__TypeSetter(this._root, v);
   }
 
@@ -224,13 +224,13 @@ export class Tree extends FieldNode {
     this.__PrimitivesSetter(this._description, v);
   }
 
-  fromLiteral(data: ITree): void {
+  fromLiteral(data: IRootNode): void {
     super.__fromLiteral(data);
   }
 
-  toLiteral(): ITree {
-    return super.__toLiteral() as ITree;
+  toLiteral(): IRootNode {
+    return super.__toLiteral() as IRootNode;
   }
 }
 
-Registry.register("tree.Tree", Tree);
+Registry.register("tree.RootNode", RootNode);

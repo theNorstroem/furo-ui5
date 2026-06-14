@@ -249,6 +249,10 @@
       "types": "./dist/elements/toggle-button/index.d.ts",
       "default": "./dist/elements/toggle-button/index.js"
     },
+    "./tree": {
+      "types": "./dist/elements/tree/index.d.ts",
+      "default": "./dist/elements/tree/index.js"
+    },
     "./tree-table": {
       "types": "./dist/elements/tree-table/index.d.ts",
       "default": "./dist/elements/tree-table/index.js"

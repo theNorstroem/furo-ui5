@@ -26929,6 +26929,1607 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/elements/tree/FuroUi5Tree.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`furo-ui5-tree`\nRenders a recursive navigation tree from a `tree.Tree` or `tree.NavigationNode` model.\n\nEach node is rendered as a `furo-ui5-tree-item`. Expand / collapse, selection and focus\nare propagated through the open-models event tree (`__broadcastEvent` / `__dispatchEvent`),\nmirroring the behavior of the original `@furo/data` based implementation.\n\n## Data signature\n\n```yaml\n- type: 'tree.Tree #Navigation tree type with recursive navigation nodes'\n  fields:\n    root: 'tree.NavigationNode:1 #Root node of the tree'\n```",
+          "name": "Tree",
+          "cssProperties": [
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 1",
+              "name": "--tree-indentation-1",
+              "default": "16px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 2",
+              "name": "--tree-indentation-2",
+              "default": "32px"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "__lastQP",
+              "type": {
+                "text": "string | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "__tmpQP",
+              "type": {
+                "text": "string | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "_buildFlatTree",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "root",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_fire",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": {
+                    "text": "string"
+                  }
+                },
+                {
+                  "name": "detail",
+                  "type": {
+                    "text": "unknown"
+                  }
+                },
+                {
+                  "name": "bubbles",
+                  "default": "true"
+                },
+                {
+                  "name": "composed",
+                  "default": "true"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_fireOpenClose",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_flatTree",
+              "type": {
+                "text": "NavigationNode[]"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "_focusedField",
+              "type": {
+                "text": "NavigationNode | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_foundSearchItems",
+              "type": {
+                "text": "NavigationNode[]"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "method",
+              "name": "_init",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Builds the flat tree and (re)renders."
+            },
+            {
+              "kind": "method",
+              "name": "_isVisible",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_onFocusIn",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_onFocusOut",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_onItemSelect",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_onTreeChanged",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "_parseTreeRecursive",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                },
+                {
+                  "name": "level",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "maxdepth",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_rootNode",
+              "type": {
+                "text": "NavigationNode | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_searchIsActive",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "description": "Indicates an active search. Use it to style items depending on this attribute.",
+              "attribute": "searching",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "_searchTerm",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "_selectedField",
+              "type": {
+                "text": "NavigationNode | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "_setTitle",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_treeItems",
+              "type": {
+                "text": "NodeListOf<FuroUi5TreeItem>"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "_updateSearchmatchAttributesOnItems",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "_walkSubtree",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                },
+                {
+                  "name": "fn",
+                  "type": {
+                    "text": "(n: NavigationNode) => void"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_wiredOpenNodes",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new WeakSet<NavigationNode>()"
+            },
+            {
+              "kind": "method",
+              "name": "addSubNode",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "rawNode",
+                  "type": {
+                    "text": "INavigationNode"
+                  }
+                }
+              ],
+              "description": "Adds a sub node to the currently selected node and selects it."
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "treeNode",
+                  "type": {
+                    "text": "RootNode | NavigationNode | undefined",
+                    "references": [
+                      {
+                        "name": "Tree",
+                        "package": "@/models",
+                        "module": "index.js"
+                      },
+                      {
+                        "name": "NavigationNode",
+                        "package": "@/models",
+                        "module": "index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Binds a `tree.Tree` or `tree.NavigationNode` FieldNode."
+            },
+            {
+              "kind": "method",
+              "name": "collapseAll",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Collapses the whole tree (from the root)."
+            },
+            {
+              "kind": "method",
+              "name": "collapseFocused",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Collapses the focused node. If it is already closed, the parent is focused."
+            },
+            {
+              "kind": "method",
+              "name": "collapseFocusedRecursive",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Collapses the focused node recursively."
+            },
+            {
+              "kind": "method",
+              "name": "collapseNodeRecursive",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Collapses the currently selected node recursively."
+            },
+            {
+              "kind": "method",
+              "name": "collapseRecursive",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "deleteNode",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Deletes the currently selected node."
+            },
+            {
+              "kind": "field",
+              "name": "depth",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "public",
+              "default": "0",
+              "description": "Maximal depth for the tree. `0` (default) means infinite.",
+              "attribute": "depth"
+            },
+            {
+              "kind": "method",
+              "name": "expandAll",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Expands the whole tree (from the root)."
+            },
+            {
+              "kind": "field",
+              "name": "expandDepth",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "public",
+              "default": "2",
+              "description": "Maximal expand level relative to the current node when expanding recursively.",
+              "attribute": "expand-depth"
+            },
+            {
+              "kind": "method",
+              "name": "expandFocused",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Expands the focused node. If it is already open, the next node is focused."
+            },
+            {
+              "kind": "method",
+              "name": "expandFocusedRecursive",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Expands the focused node recursively."
+            },
+            {
+              "kind": "method",
+              "name": "expandNodeRecursive",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Expands the currently selected node recursively."
+            },
+            {
+              "kind": "method",
+              "name": "expandRecursive",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "focused",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "description": "Indicates that the element is focused.",
+              "attribute": "focused",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "focusFirst",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Focuses the first node."
+            },
+            {
+              "kind": "method",
+              "name": "focusLast",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Focuses the last visible node."
+            },
+            {
+              "kind": "method",
+              "name": "focusNext",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Focuses the next visible node."
+            },
+            {
+              "kind": "method",
+              "name": "focusNode",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "focusParent",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Focuses the parent of the focused node."
+            },
+            {
+              "kind": "method",
+              "name": "focusPrevious",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Focuses the previous visible node."
+            },
+            {
+              "kind": "method",
+              "name": "focusSelected",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Focuses the currently selected node."
+            },
+            {
+              "kind": "method",
+              "name": "getNextVisibleElement",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "NavigationNode | undefined"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getPrevElement",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "NavigationNode | undefined"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "headerText",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"\"",
+              "description": "Override the display name of the root object.",
+              "attribute": "header-text"
+            },
+            {
+              "kind": "field",
+              "name": "hideRootNode",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "description": "Hide the root node.",
+              "attribute": "hide-root-node"
+            },
+            {
+              "kind": "method",
+              "name": "isBranch",
+              "privacy": "private",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "qp",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"\"",
+              "description": "Query param to watch. When set, `node-selected` is only fired via `selectById`; otherwise\na `qp-change-requested` event is emitted.",
+              "attribute": "qp"
+            },
+            {
+              "kind": "method",
+              "name": "resetSearch",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Disables search mode and clears the term."
+            },
+            {
+              "kind": "field",
+              "name": "rootAsHeader",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "description": "Render the root node as a header section.",
+              "attribute": "root-as-header"
+            },
+            {
+              "kind": "method",
+              "name": "search",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "NavigationNode[]"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "term",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Searches the visible nodes. Returns the matching nodes."
+            },
+            {
+              "kind": "method",
+              "name": "searchOpenTree",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "secondaryText",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"\"",
+              "description": "Override the description of the root object.",
+              "attribute": "secondary-text"
+            },
+            {
+              "kind": "method",
+              "name": "selectById",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "NavigationNode | false"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "nodeID",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Selects a node by its id. Returns the node, or `false` when not found."
+            },
+            {
+              "kind": "method",
+              "name": "selectFocused",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Selects the focused node."
+            },
+            {
+              "kind": "method",
+              "name": "selectNext",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Selects the next visible node."
+            },
+            {
+              "kind": "method",
+              "name": "selectNode",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "selectPrev",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Selects the previous visible node."
+            },
+            {
+              "kind": "method",
+              "name": "toggle",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Toggles the currently selected node."
+            },
+            {
+              "kind": "method",
+              "name": "toggleNode",
+              "privacy": "private",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "triggerNavigation",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "key",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Dispatches a keyboard navigation by key name. Intended to be wired to an external\nnavigation pad."
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "Fired when a node with children receives the focus.",
+              "name": "branch-focused"
+            },
+            {
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "Fired when a node with children gets selected.",
+              "name": "branch-selected"
+            },
+            {
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "Fired when a leaf receives the focus.",
+              "name": "leaf-focused"
+            },
+            {
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "Fired when a leaf gets selected.",
+              "name": "leaf-selected"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "CustomEvent"
+              }
+            },
+            {
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "Fired when a node is closed.",
+              "name": "node-closed"
+            },
+            {
+              "type": {
+                "text": "NavigationNode",
+                "references": [
+                  {
+                    "name": "NavigationNode",
+                    "package": "@/models",
+                    "module": "index.js"
+                  }
+                ]
+              },
+              "description": "Fired when a node receives the focus.",
+              "name": "node-focused"
+            },
+            {
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "Fired when a node is opened.",
+              "name": "node-opened"
+            },
+            {
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "Fired when a node gets selected (not fired in `qp` mode).",
+              "name": "node-selected"
+            },
+            {
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "Fired when nodes are collapsed recursively.",
+              "name": "nodes-collapsed"
+            },
+            {
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "Fired when nodes are expanded recursively.",
+              "name": "nodes-expanded"
+            },
+            {
+              "type": {
+                "text": "Object"
+              },
+              "description": "Fired in `qp` mode instead of `node-selected`.",
+              "name": "qp-change-requested"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "depth",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "Maximal depth for the tree. `0` (default) means infinite.",
+              "fieldName": "depth"
+            },
+            {
+              "name": "expand-depth",
+              "type": {
+                "text": "number"
+              },
+              "default": "2",
+              "description": "Maximal expand level relative to the current node when expanding recursively.",
+              "fieldName": "expandDepth",
+              "attribute": "expand-depth"
+            },
+            {
+              "name": "focused",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates that the element is focused.",
+              "fieldName": "focused"
+            },
+            {
+              "name": "header-text",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Override the display name of the root object.",
+              "fieldName": "headerText",
+              "attribute": "header-text"
+            },
+            {
+              "name": "hide-root-node",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Hide the root node.",
+              "fieldName": "hideRootNode",
+              "attribute": "hide-root-node"
+            },
+            {
+              "name": "qp",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Query param to watch. When set, `node-selected` is only fired via `selectById`; otherwise\na `qp-change-requested` event is emitted.",
+              "fieldName": "qp"
+            },
+            {
+              "name": "root-as-header",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Render the root node as a header section.",
+              "fieldName": "rootAsHeader",
+              "attribute": "root-as-header"
+            },
+            {
+              "name": "searching",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates an active search. Use it to style items depending on this attribute.",
+              "fieldName": "_searchIsActive",
+              "attribute": "searching"
+            },
+            {
+              "name": "secondary-text",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Override the description of the root object.",
+              "fieldName": "secondaryText",
+              "attribute": "secondary-text"
+            }
+          ],
+          "tagName": "furo-ui5-tree",
+          "customElement": true,
+          "summary": "Hierarchical tree view with expandable/collapsible nodes."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5Tree",
+          "declaration": {
+            "name": "FuroUi5Tree",
+            "module": "src/elements/tree/FuroUi5Tree.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/tree/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "furo-ui5-tree",
+          "declaration": {
+            "name": "FuroUi5Tree",
+            "module": "/src/elements/tree/FuroUi5Tree"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/tree/tree-item/FuroUi5TreeItem.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`furo-ui5-tree-item`\n\n# INTERNAL COMPONENT\nRow of a `furo-ui5-tree`. Renders a single `tree.NavigationNode`, reflects its\nvisible / selected / focused / search-match state, and emits a `tree-select` intent\nwhen its label is clicked. Open / close is delegated to the embedded\n`furo-ui5-bool-icon`, which writes back to the node's `open` field.",
+          "name": "TreeItem",
+          "cssProperties": [
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 1",
+              "name": "--tree-indentation-1",
+              "default": "16px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 2",
+              "name": "--tree-indentation-2",
+              "default": "32px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 3",
+              "name": "--tree-indentation-3",
+              "default": "48px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 4",
+              "name": "--tree-indentation-4",
+              "default": "56px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 5",
+              "name": "--tree-indentation-5",
+              "default": "64px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 6",
+              "name": "--tree-indentation-6",
+              "default": "72px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 7",
+              "name": "--tree-indentation-7",
+              "default": "80px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 8",
+              "name": "--tree-indentation-8",
+              "default": "88px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 9",
+              "name": "--tree-indentation-9",
+              "default": "92px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 10",
+              "name": "--tree-indentation-10",
+              "default": "96px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 11",
+              "name": "--tree-indentation-11",
+              "default": "100px"
+            },
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "tree indention level 12",
+              "name": "--tree-indentation-12",
+              "default": "104px"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "_fieldNode",
+              "type": {
+                "text": "NavigationNode | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_icon",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "\"border\""
+            },
+            {
+              "kind": "field",
+              "name": "_labelClick",
+              "privacy": "private",
+              "readonly": true,
+              "description": "Emits the `tree-select` intent for the host tree."
+            },
+            {
+              "kind": "field",
+              "name": "_labelKeydown",
+              "privacy": "private",
+              "readonly": true,
+              "description": "Keyboard equivalent of _labelClick: Enter / Space selects the node."
+            },
+            {
+              "kind": "method",
+              "name": "_scrollIntoView",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Bring the focused / selected element into the visible part of the screen.\n`scrollIntoViewIfNeeded` is a non-standard (Blink) API; we feature-detect it."
+            },
+            {
+              "kind": "field",
+              "name": "_searchTokens",
+              "privacy": "private",
+              "default": "new Set<string>()",
+              "description": "Token index used by search."
+            },
+            {
+              "kind": "field",
+              "name": "_toggle",
+              "privacy": "private",
+              "readonly": true,
+              "description": "Toggles open / close on double click."
+            },
+            {
+              "kind": "method",
+              "name": "_updateSearchIndex",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "(Re)builds the search-token index from the node's string fields."
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "NavigationNode"
+                  }
+                }
+              ],
+              "description": "Binds a navigation node to this item."
+            },
+            {
+              "kind": "field",
+              "name": "fieldNode",
+              "type": {
+                "text": "NavigationNode | undefined",
+                "references": [
+                  {
+                    "name": "NavigationNode",
+                    "package": "@/models",
+                    "module": "furoui5/NavigationNode"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Setter for the bound navigation node."
+            },
+            {
+              "kind": "field",
+              "name": "focused",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "focused",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "haserror",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "haserror",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "indentation",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private",
+              "default": "0"
+            },
+            {
+              "kind": "field",
+              "name": "inedit",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "inedit",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "isGroupLabel",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "is-group-label",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "noicon",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "noicon"
+            },
+            {
+              "kind": "method",
+              "name": "search",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TreeSearchRequest"
+                  }
+                }
+              ],
+              "description": "Tests this item against a search request and, on a match, pushes its `fieldNode`\nonto `event.results`."
+            },
+            {
+              "kind": "field",
+              "name": "searchmatch",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "searchmatch",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "selected",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "focused",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "focused"
+            },
+            {
+              "name": "haserror",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "haserror"
+            },
+            {
+              "name": "inedit",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "inedit"
+            },
+            {
+              "name": "is-group-label",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "isGroupLabel"
+            },
+            {
+              "name": "noicon",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "noicon"
+            },
+            {
+              "name": "searchmatch",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "searchmatch"
+            },
+            {
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "selected"
+            }
+          ],
+          "tagName": "furo-ui5-tree-item",
+          "customElement": true,
+          "summary": "tree item"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5TreeItem",
+          "declaration": {
+            "name": "FuroUi5TreeItem",
+            "module": "src/elements/tree/tree-item/FuroUi5TreeItem.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/tree/tree-item/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "furo-ui5-tree-item",
+          "declaration": {
+            "name": "FuroUi5TreeItem",
+            "module": "/src/elements/tree/tree-item/FuroUi5TreeItem"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/tree/tree-view-state.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "treeNodeView",
+          "default": "new WeakMap<NavigationNode, TreeNodeView>()",
+          "description": "Side-table holding the TreeNodeView for every node of the currently bound tree."
+        },
+        {
+          "kind": "function",
+          "name": "getParentNode",
+          "return": {
+            "type": {
+              "text": "NavigationNode | undefined"
+            }
+          },
+          "parameters": [
+            {
+              "name": "node",
+              "type": {
+                "text": "NavigationNode"
+              }
+            }
+          ],
+          "description": "Returns the parent navigation node of `node`, skipping the intermediate `children`\nARRAY node (`node.__parentNode` is the ARRAY, its `__parentNode` is the real parent)."
+        },
+        {
+          "kind": "function",
+          "name": "isNodeVisible",
+          "return": {
+            "type": {
+              "text": "boolean"
+            }
+          },
+          "parameters": [
+            {
+              "name": "hideRootNode",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "whether the root row itself is hidden"
+            },
+            {
+              "name": "node",
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "the node to test"
+            },
+            {
+              "name": "rootNode",
+              "type": {
+                "text": "NavigationNode"
+              },
+              "description": "the root node of the bound tree"
+            }
+          ],
+          "description": "A node is visible when every ancestor up to (and including) the root is open."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "getParentNode",
+          "declaration": {
+            "name": "getParentNode",
+            "module": "src/elements/tree/tree-view-state.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "isNodeVisible",
+          "declaration": {
+            "name": "isNodeVisible",
+            "module": "src/elements/tree/tree-view-state.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "treeNodeView",
+          "declaration": {
+            "name": "treeNodeView",
+            "module": "src/elements/tree/tree-view-state.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/elements/user-menu/FuroUi5UserMenu.js",
       "declarations": [
         {
