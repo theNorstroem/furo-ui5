@@ -9,6 +9,7 @@ import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import type { FuroFatBool } from "@/models";
 
 /**
+ *
  * The 'furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.
  *
  * It supports all features from the [SAP ui5 toggleButton element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).
@@ -41,6 +42,12 @@ import type { FuroFatBool } from "@/models";
  * @fires {Boolean} change -  Fired when the component checked state changes.
  *
  * @summary boolean toggle button
+ *
+ * @summary Single selection control within a mutually exclusive group.
+ * @keywords radio, button, selection, exclusive, choice, form, option
+ * @category Form
+ * @usecase Use for selecting exactly one option from a small set of mutually exclusive choices.
+ * @related furo-ui5-checkbox, furo-ui5-select, furo-ui5-segmented-button
  * @tagname furo-ui5-radio-button
  */
 export class FuroUi5RadioButton extends RadioButton {

@@ -174,7 +174,7 @@ export class PageTyperenderer extends LitElement {
             </tr>
 
             <tr>
-              <td>furo.fat.Bool</td>
+              <td><furo-ui5-label>furo.fat.Bool</furo-ui5-label></td>
               <td>
                 <display-furo-fat-bool .model="${this.data.furoFatBool}"></display-furo-fat-bool>
               </td>
@@ -186,7 +186,7 @@ export class PageTyperenderer extends LitElement {
               </td>
             </tr>
             <tr>
-              <td>google.Protobuf.Boolvalue</td>
+              <td><furo-ui5-label>google.Protobuf.Boolvalue</furo-ui5-label></td>
               <td>
                 <display-google-protobuf-boolvalue .model="${this.data.googleProtobufBoolvalue}"></display-google-protobuf-boolvalue>
               </td>
@@ -212,7 +212,7 @@ export class PageTyperenderer extends LitElement {
             </thead>
             <tbody>
               <tr>
-                <td>STRING</td>
+                <td><furo-ui5-label>STRING</furo-ui5-label></td>
                 <td>
                   <display-string .model="${this.data.primitiveString}"></display-string>
                 </td>
@@ -224,7 +224,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>furo.fat.String</td>
+                <td><furo-ui5-label>furo.fat.String</furo-ui5-label></td>
                 <td>
                   <display-furo-fat-string .model="${this.data.furoFatString}"></display-furo-fat-string>
                 </td>
@@ -236,7 +236,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>google.protobuf.StringValue</td>
+                <td><furo-ui5-label>google.protobuf.StringValue</furo-ui5-label></td>
                 <td>
                   <display-google-protobuf-stringvalue .model="${this.data.googleProtobufStringvalue}"></display-google-protobuf-stringvalue>
                 </td>
@@ -263,7 +263,7 @@ export class PageTyperenderer extends LitElement {
             </thead>
             <tbody>
               <tr>
-                <td>google.type.Date</td>
+                <td><furo-ui5-label>google.type.Date</furo-ui5-label></td>
                 <td>
                   <display-google-type-date .model="${this.data.googleTypeDate}"></display-google-type-date>
                 </td>
@@ -276,7 +276,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>furo.type.Date</td>
+                <td><furo-ui5-label>furo.type.Date</furo-ui5-label></td>
                 <td>
                   <display-furo-type-date .model="${this.data.furoTypeDate}"></display-furo-type-date>
                 </td>
@@ -289,7 +289,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>google.protobuf.Timestamp</td>
+                <td><furo-ui5-label>google.protobuf.Timestamp</furo-ui5-label></td>
                 <td>
                   <display-google-protobuf-timestamp .model="${this.data.googleProtobufTimestamp}"></display-google-protobuf-timestamp>
                 </td>
@@ -302,7 +302,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>google.type.TimeOfDay</td>
+                <td><furo-ui5-label>google.type.TimeOfDay</furo-ui5-label></td>
                 <td>
                   <display-google-type-timeofday .model="${this.data.googleTypeTimeofday}"></display-google-type-timeofday>
                 </td>
@@ -330,7 +330,7 @@ export class PageTyperenderer extends LitElement {
             </thead>
             <tbody>
               <tr>
-                <td>google.type.Money</td>
+                <td><furo-ui5-label>google.type.Money</furo-ui5-label></td>
                 <td>
                   <display-google-type-money .model="${this.data.googleTypeMoney}"></display-google-type-money>
                 </td>
@@ -343,7 +343,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>furo.type.Money</td>
+                <td><furo-ui5-label>furo.type.Money</furo-ui5-label></td>
                 <td>
                   <display-furo-type-money .model="${this.data.furoTypeMoney}"></display-furo-type-money>
                 </td>
@@ -373,7 +373,7 @@ export class PageTyperenderer extends LitElement {
             </thead>
             <tbody>
               <tr>
-                <td>Int64</td>
+                <td><furo-ui5-label>Int64</furo-ui5-label></td>
                 <td>
                   <display-int64 .model="${this.data.primitiveInt64}"></display-int64>
                 </td>
@@ -386,7 +386,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>furo.fat.Int64</td>
+                <td><furo-ui5-label>furo.fat.Int64</furo-ui5-label></td>
                 <td>
                   <display-furo-fat-int64 .model="${this.data.furoFatInt64}"></display-furo-fat-int64>
                 </td>
@@ -398,7 +398,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>google.protobuf.Int64Value</td>
+                <td><furo-ui5-label>google.protobuf.Int64Value</furo-ui5-label></td>
                 <td>
                   <display-google-protobuf-int64value .model="${this.data.googleProtobufInt64value}"></display-google-protobuf-int64value>
                 </td>
@@ -425,7 +425,7 @@ export class PageTyperenderer extends LitElement {
             </thead>
             <tbody>
               <tr>
-                <td>Double</td>
+                <td><furo-ui5-label>Double</furo-ui5-label></td>
                 <td>
                   <display-double .model="${this.data.primitiveDouble}"></display-double>
                 </td>
@@ -438,7 +438,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>furo.fat.Double</td>
+                <td><furo-ui5-label>furo.fat.Double</furo-ui5-label></td>
                 <td>
                   <display-furo-fat-double .model="${this.data.furoFatDouble}"></display-furo-fat-double>
                 </td>
@@ -450,7 +450,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>google.protobuf.DoubleValue</td>
+                <td><furo-ui5-label>google.protobuf.DoubleValue</furo-ui5-label></td>
                 <td>
                   <display-google-protobuf-doublevalue .model="${this.data.googleProtobufDoublevalue}"></display-google-protobuf-doublevalue>
                 </td>
@@ -477,7 +477,7 @@ export class PageTyperenderer extends LitElement {
             </thead>
             <tbody>
               <tr>
-                <td>Float</td>
+                <td><furo-ui5-label>Float</furo-ui5-label></td>
                 <td>
                   <display-float .model="${this.data.primitiveFloat}"></display-float>
                 </td>
@@ -490,7 +490,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>furo.fat.Float</td>
+                <td><furo-ui5-label>furo.fat.Float</furo-ui5-label></td>
                 <td>
                   <display-furo-fat-float .model="${this.data.furoFatFloat}"></display-furo-fat-float>
                 </td>
@@ -502,7 +502,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>google.protobuf.FloatValue</td>
+                <td><furo-ui5-label>google.protobuf.FloatValue</furo-ui5-label></td>
                 <td>
                   <display-google-protobuf-floatvalue .model="${this.data.googleProtobufFloatvalue}"></display-google-protobuf-floatvalue>
                 </td>
@@ -529,7 +529,7 @@ export class PageTyperenderer extends LitElement {
             </thead>
             <tbody>
               <tr>
-                <td>Uint64</td>
+                <td><furo-ui5-label>Uint64</furo-ui5-label></td>
                 <td>
                   <display-uint64 .model="${this.data.primitiveUint64}"></display-uint64>
                 </td>
@@ -541,7 +541,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>furo.fat.Uint64</td>
+                <td><furo-ui5-label>furo.fat.Uint64</furo-ui5-label></td>
                 <td>
                   <display-furo-fat-uint64 .model="${this.data.furoFatUint64}"></display-furo-fat-uint64>
                 </td>
@@ -553,7 +553,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>google.protobuf.UInt64Value</td>
+                <td><furo-ui5-label>google.protobuf.UInt64Value</furo-ui5-label></td>
                 <td>
                   <display-google-protobuf-uint64value .model="${this.data.googleProtobufUint64value}"></display-google-protobuf-uint64value>
                 </td>
@@ -580,7 +580,7 @@ export class PageTyperenderer extends LitElement {
             </thead>
             <tbody>
               <tr>
-                <td>Int32</td>
+                <td><furo-ui5-label>Int32</furo-ui5-label></td>
                 <td>
                   <display-int32 .model="${this.data.primitiveInt32}"></display-int32>
                 </td>
@@ -592,7 +592,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>furo.fat.int32</td>
+                <td><furo-ui5-label>furo.fat.int32</furo-ui5-label></td>
                 <td>
                   <display-furo-fat-int32 .model="${this.data.furoFatInt32}"></display-furo-fat-int32>
                 </td>
@@ -604,7 +604,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>google.protobuf.int32value</td>
+                <td><furo-ui5-label>google.protobuf.int32value</furo-ui5-label></td>
                 <td>
                   <display-google-protobuf-int32value .model="${this.data.googleProtobufInt32value}"></display-google-protobuf-int32value>
                 </td>
@@ -631,7 +631,7 @@ export class PageTyperenderer extends LitElement {
             </thead>
             <tbody>
               <tr>
-                <td>Uint32</td>
+                <td><furo-ui5-label>Uint32</furo-ui5-label></td>
                 <td>
                   <display-uint32 .model="${this.data.primitiveUint32}"></display-uint32>
                 </td>
@@ -643,7 +643,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>furo.fat.Uint32</td>
+                <td><furo-ui5-label>furo.fat.Uint32</furo-ui5-label></td>
                 <td>
                   <display-furo-fat-uint32 .model="${this.data.furoFatUint32}"></display-furo-fat-uint32>
                 </td>
@@ -655,7 +655,7 @@ export class PageTyperenderer extends LitElement {
                 </td>
               </tr>
               <tr>
-                <td>google.protobuf.UInt32Value</td>
+                <td><furo-ui5-label>google.protobuf.UInt32Value</furo-ui5-label></td>
                 <td>
                   <display-google-protobuf-uint32value .model="${this.data.googleProtobufUint32value}"></display-google-protobuf-uint32value>
                 </td>

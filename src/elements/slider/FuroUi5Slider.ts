@@ -39,7 +39,11 @@ import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 
  * - **placeholder:"some string"** set the placeholder for the element
  *
  *
- * @summary data number input field
+ * @summary Horizontal slider for selecting numeric values within a range.
+ * @keywords slider, range, numeric, input, value, draggable
+ * @category Form
+ * @usecase Use for selecting a single numeric value from a continuous range.
+ * @related furo-ui5-range-slider, furo-ui5-step-input
  * @tagname furo-ui5-slider
  */
 export class FuroUi5Slider extends Slider {

@@ -199,7 +199,7 @@
           },
           "tagName": "furo-ui5-barcode-scanner-dialog",
           "customElement": true,
-          "summary": "data barcode scanner dialog",
+          "summary": "Dialog with camera integration for barcode scanning.",
           "slots": [
             {
               "name": "footer",
@@ -284,7 +284,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "Displays a icon/symbol for a boolean value\n\nThis component uses the SAP Ui5 icons.\nhttps://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\n\n```html\n<furo-ui5-bool-icon fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-bool-icon>\n```\n\nOnly `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are auto imported.\nIf you set other icons, please do not forget to import them.",
+          "description": "\nDisplays a icon/symbol for a boolean value\n\nThis component uses the SAP Ui5 icons.\nhttps://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html\n\n```html\n<furo-ui5-bool-icon fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-bool-icon>\n```\n\nOnly `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are auto imported.\nIf you set other icons, please do not forget to import them.",
           "name": "BoolIcon",
           "members": [
             {
@@ -552,7 +552,7 @@
           ],
           "tagName": "furo-ui5-bool-icon",
           "customElement": true,
-          "summary": "Displays an icon for a boolean value"
+          "summary": "Display-only icon that reflects a boolean value."
         }
       ],
       "exports": [
@@ -775,7 +775,7 @@
           },
           "tagName": "furo-ui5-busy-indicator",
           "customElement": true,
-          "summary": "ui5 busy indicator with methods",
+          "summary": "Loading spinner overlay indicating ongoing background activity.",
           "slots": [
             {
               "description": "Determines the content over which the component will appear.",
@@ -969,6 +969,7 @@
           },
           "tagName": "furo-ui5-button-badge",
           "customElement": true,
+          "summary": "Badge indicator attached to buttons for counts or status.",
           "attributes": [
             {
               "description": "Defines the badge placement and appearance.\n- **InlineText** - displayed inside the button after its text, and recommended for **compact** density.\n- **OverlayText** - displayed at the top-end corner of the button, and recommended for **cozy** density.\n- **AttentionDot** - displayed at the top-end corner of the button as a dot, and suitable for both **cozy** and **compact** densities.",
@@ -1337,6 +1338,7 @@
           },
           "tagName": "furo-ui5-button",
           "customElement": true,
+          "summary": "Primary interactive button for triggering actions and navigation.",
           "slots": [
             {
               "name": "badge",
@@ -1786,6 +1788,7 @@
           },
           "tagName": "furo-ui5-cb-item",
           "customElement": true,
+          "summary": "Item option for ComboBox selection lists.",
           "attributes": [
             {
               "description": "Defines the additional text of the component.",
@@ -2239,7 +2242,7 @@
           },
           "tagName": "furo-ui5-checkbox",
           "customElement": true,
-          "summary": "data checkbox input field",
+          "summary": "Binary selection control for enabling or disabling options.",
           "cssParts": [
             {
               "description": "Used to style the icon of the `ui5-checkbox`",
@@ -2954,6 +2957,7 @@
           },
           "tagName": "furo-ui5-combobox",
           "customElement": true,
+          "summary": "Filterable dropdown with type-ahead search functionality.",
           "slots": [
             {
               "name": "default",
@@ -3768,7 +3772,7 @@
           },
           "tagName": "furo-ui5-context-menu",
           "customElement": true,
-          "summary": "Context menu bound to a `furoui5.Menuitem` model.",
+          "summary": "Popup menu with hierarchical menu items for actions or navigation.",
           "slots": [
             {
               "name": "default",
@@ -4564,6 +4568,7 @@
           },
           "tagName": "furo-ui5-date-picker",
           "customElement": true,
+          "summary": "Date selection input with calendar popup for picking single dates.",
           "slots": [
             {
               "name": "valueStateMessage",
@@ -5680,6 +5685,7 @@
           },
           "tagName": "furo-ui5-date-time-picker",
           "customElement": true,
+          "summary": "Combined date and time selection in a single input.",
           "slots": [
             {
               "name": "valueStateMessage",
@@ -6412,7 +6418,7 @@
           },
           "tagName": "furo-ui5-dialog",
           "customElement": true,
-          "summary": "Dialog element",
+          "summary": "Modal dialog for displaying content requiring user attention or action.",
           "slots": [
             {
               "name": "default",
@@ -6822,7 +6828,8 @@
             }
           ],
           "tagName": "furo-ui5-form-field-segmenter",
-          "customElement": true
+          "customElement": true,
+          "summary": "Splits form field space for segmented layouts like value-unit pairs."
         }
       ],
       "exports": [
@@ -6893,7 +6900,8 @@
             }
           ],
           "tagName": "furo-ui5-form-group",
-          "customElement": true
+          "customElement": true,
+          "summary": "Logical grouping of related form fields within a form layout."
         }
       ],
       "exports": [
@@ -7023,7 +7031,8 @@
             }
           ],
           "tagName": "furo-ui5-form-layout",
-          "customElement": true
+          "customElement": true,
+          "summary": "Responsive form container organizing form groups with adaptive column layout."
         }
       ],
       "exports": [
@@ -7084,7 +7093,8 @@
             }
           ],
           "tagName": "furo-ui5-form-row",
-          "customElement": true
+          "customElement": true,
+          "summary": "Single row within a form containing label and input field."
         }
       ],
       "exports": [
@@ -7744,7 +7754,8 @@
             }
           ],
           "tagName": "furo-ui5-header-panel",
-          "customElement": true
+          "customElement": true,
+          "summary": "Collapsible panel with a header for grouping content."
         }
       ],
       "exports": [
@@ -7890,6 +7901,7 @@
           },
           "tagName": "furo-ui5-icon",
           "customElement": true,
+          "summary": "Scalable icon from the icon font library.",
           "cssParts": [
             {
               "description": "Used to style the outermost wrapper of the `ui5-icon`.",
@@ -8120,6 +8132,7 @@
           },
           "tagName": "furo-ui5-label",
           "customElement": true,
+          "summary": "Text label for form fields and descriptive text.",
           "slots": [
             {
               "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
@@ -8492,6 +8505,7 @@
           },
           "tagName": "furo-ui5-link",
           "customElement": true,
+          "summary": "Clickable text link for navigation or actions.",
           "slots": [
             {
               "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
@@ -8775,7 +8789,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "`furo-ui5-markdown`\n\n Renders given md data directly to html.\n\n #### Stream rendering\n The stream rendering mode renders the pure markdown while the stream is running and makes a final render with all added plugins.\n This save a lot of resources by not rendering incomplete mermaid, svg or any other custom renderers.\n\n ##### In combination with field nodes\n - To notify the stream started, send a `FieldNode` event `stream-begins`.\n - To notify the stream has ended send a `FieldNode` event `stream-ends`.\n\n ##### When using the properties directly (html with js)\n - Enable the streaming mode with setting the attribute `streaming` to true.\n - To notify the stream has ended set the attribute `streaming` to false and the final markdown to the property `markdown`\n\n#### Adding custom renderers",
+          "description": "\n`furo-ui5-markdown`\n\n Renders given md data directly to html.\n\n #### Stream rendering\n The stream rendering mode renders the pure markdown while the stream is running and makes a final render with all added plugins.\n This save a lot of resources by not rendering incomplete mermaid, svg or any other custom renderers.\n\n ##### In combination with field nodes\n - To notify the stream started, send a `FieldNode` event `stream-begins`.\n - To notify the stream has ended send a `FieldNode` event `stream-ends`.\n\n ##### When using the properties directly (html with js)\n - Enable the streaming mode with setting the attribute `streaming` to true.\n - To notify the stream has ended set the attribute `streaming` to false and the final markdown to the property `markdown`\n\n#### Adding custom renderers",
           "name": "Markdown",
           "members": [
             {
@@ -8908,7 +8922,7 @@
           ],
           "tagName": "furo-ui5-markdown",
           "customElement": true,
-          "summary": "renders markdown data"
+          "summary": "Renders bound markdown text as formatted HTML."
         }
       ],
       "exports": [
@@ -8943,7 +8957,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The `furo-ui5-mcb-item` is meant to be used inside a `furo-ui5-multi-combobox`.\n\nThe `furo-ui5-mcb-item` represents the item for a `furo-ui5-multi-combobox`.",
+          "description": "\nThe `furo-ui5-mcb-item` is meant to be used inside a `furo-ui5-multi-combobox`.\n\nThe `furo-ui5-mcb-item` represents the item for a `furo-ui5-multi-combobox`.",
           "name": "McbItem",
           "cssParts": [
             {
@@ -9086,6 +9100,7 @@
           },
           "tagName": "furo-ui5-mcb-item",
           "customElement": true,
+          "summary": "Item option for MultiComboBox selection lists.",
           "attributes": [
             {
               "description": "Defines the additional text of the component.",
@@ -9192,7 +9207,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The `furo-ui5-money-input` binds a `google.type.Money` or `furo.type.Money` field to a\ncomposition of an amount input (`furo-ui5-input` type Number) and a currency\n`furo-ui5-combobox`. The amount round-trips through the model's `units` (INT64) and\n`nanos` (INT32) fields; the currency is bound to the model's `currencyCode` field.\n\nYou can offer a fixed currency list with the `currencies` attribute:\n\n```html\n <furo-ui5-money-input currencies=\"CHF,EUR,USD\"></furo-ui5-money-input>\n```\n\n## supported meta and constraints\n- **readonly: true** — set the element to readonly\n- **required: true** — mark the element as required",
+          "description": "\nThe `furo-ui5-money-input` binds a `google.type.Money` or `furo.type.Money` field to a\ncomposition of an amount input (`furo-ui5-input` type Number) and a currency\n`furo-ui5-combobox`. The amount round-trips through the model's `units` (INT64) and\n`nanos` (INT32) fields; the currency is bound to the model's `currencyCode` field.\n\nYou can offer a fixed currency list with the `currencies` attribute:\n\n```html\n <furo-ui5-money-input currencies=\"CHF,EUR,USD\"></furo-ui5-money-input>\n```\n\n## supported meta and constraints\n- **readonly: true** — set the element to readonly\n- **required: true** — mark the element as required",
           "name": "MoneyInput",
           "members": [
             {
@@ -9466,7 +9481,8 @@
             }
           ],
           "tagName": "furo-ui5-money-input",
-          "customElement": true
+          "customElement": true,
+          "summary": "Composite input for a monetary amount together with its currency."
         }
       ],
       "exports": [
@@ -9501,7 +9517,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-ui5-multi-combobox define\nthe available options by using the furo-ui5-mcb-item component. Use the function bindOptions to bind a RepeaterNode as a option list.\n\n```html\n<furo-ui5-multi-combobox\n   fn-bind-data=\"--entity(*.data.description)\"\n   fn-bind-options=\"--collection(*.entities)\">\n</furo-ui5-multi-combobox>\n```\n*\n\n### Overview\n\nThe `furo-ui5-multi-combobox` component consists of a list box with items and a text field allowing the user to either type a value directly into the text field, or choose from the list of existing items.\n\nThe drop-down list is used for selecting and filtering values, it enables users to select one or more options from a predefined list. The control provides an editable input field to filter the list, and a dropdown arrow to expand/collapse the list of available options.\nThe options in the list have checkboxes that permit multi-selection. Entered values are displayed as tokens.\n### Structure\nThe `furo-ui5-multi-combobox` consists of the following elements:\n\n-  Tokenizer - a list of tokens with selected options.\n-  Input field - displays the selected option/s as token/s. Users can type to filter the list.\n-  Drop-down arrow - expands\\collapses the option list.\n-  Option list - the list of available options.\n\n### Keyboard Handling\n\nThe `furo-ui5-multi-combobox` provides advanced keyboard handling.\n\n#### Picker\nIf the `furo-ui5-multi-combobox` is focused,\nyou can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.\nOnce the drop-down is opened, you can use the `UP` and `DOWN` arrow keys\nto navigate through the available options and select one by pressing the `Space` or `Enter` keys.\n[Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.\n\n#### Tokens\n\n-  Left/Right arrow keys - moves the focus selection form the currently focused token to the previous/next one (if available).\n-  Delete -  deletes the token and focuses the previous token.\n-  Backspace -  deletes the token and focus the next token.\n\n\n",
+          "description": "\nThe furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-ui5-multi-combobox define\nthe available options by using the furo-ui5-mcb-item component. Use the function bindOptions to bind a RepeaterNode as a option list.\n\n```html\n<furo-ui5-multi-combobox\n   fn-bind-data=\"--entity(*.data.description)\"\n   fn-bind-options=\"--collection(*.entities)\">\n</furo-ui5-multi-combobox>\n```\n*\n\n### Overview\n\nThe `furo-ui5-multi-combobox` component consists of a list box with items and a text field allowing the user to either type a value directly into the text field, or choose from the list of existing items.\n\nThe drop-down list is used for selecting and filtering values, it enables users to select one or more options from a predefined list. The control provides an editable input field to filter the list, and a dropdown arrow to expand/collapse the list of available options.\nThe options in the list have checkboxes that permit multi-selection. Entered values are displayed as tokens.\n### Structure\nThe `furo-ui5-multi-combobox` consists of the following elements:\n\n-  Tokenizer - a list of tokens with selected options.\n-  Input field - displays the selected option/s as token/s. Users can type to filter the list.\n-  Drop-down arrow - expands\\collapses the option list.\n-  Option list - the list of available options.\n\n### Keyboard Handling\n\nThe `furo-ui5-multi-combobox` provides advanced keyboard handling.\n\n#### Picker\nIf the `furo-ui5-multi-combobox` is focused,\nyou can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.\nOnce the drop-down is opened, you can use the `UP` and `DOWN` arrow keys\nto navigate through the available options and select one by pressing the `Space` or `Enter` keys.\n[Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.\n\n#### Tokens\n\n-  Left/Right arrow keys - moves the focus selection form the currently focused token to the previous/next one (if available).\n-  Delete -  deletes the token and focuses the previous token.\n-  Backspace -  deletes the token and focus the next token.\n\n\n",
           "name": "MultiCombobox",
           "members": [
             {
@@ -10055,7 +10071,7 @@
           },
           "tagName": "furo-ui5-multi-combobox",
           "customElement": true,
-          "summary": "data select field",
+          "summary": "Filterable dropdown allowing multiple selections as tokens.",
           "slots": [
             {
               "name": "default",
@@ -10448,7 +10464,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The 'furo-ui5-multi-input' component lets the user enter and edit a list of strings with data binding.\n\nIt supports all features from the [SAP ui5 MultiInput element](https://sap.github.io/ui5-webcomponents/playground/components/MultiInput/).\nEach bound array element is rendered as a deletable `furo-ui5-token`. Typing a value and committing it\n(Enter / focus-out → `change`) appends an element to the model; deleting a token (`token-delete`)\nremoves the matching element from the model. The model is the single source of truth — tokens are\n(re)rendered from the array whenever it changes.\n\nYou can bind a repeated `string` type: an array of `primitives.STRING`, of `furo.fat.String`, or of\n`google.protobuf.StringValue`.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **required: true** , set the element to required\n- **max:\"number\"** set the maximum number of characters available in the input field.\n\n### Overview\nA `furo-ui5-multi-input` field allows the user to enter multiple values, which are displayed as `furo-ui5-token`.\n\nUser can choose interaction for creating tokens.\nFiori Guidelines say that user should create tokens when:\n\n- Type a value in the input and press enter or focus out the input field (`change` event is fired)\n- Move between suggestion items (`selection-change` event is fired)\n- Clicking on a suggestion item (`selection-change` event is fired if the clicked item is different than the current value. Also `change` event is fired )\n\n\n",
+          "description": "\nThe 'furo-ui5-multi-input' component lets the user enter and edit a list of strings with data binding.\n\nIt supports all features from the [SAP ui5 MultiInput element](https://sap.github.io/ui5-webcomponents/playground/components/MultiInput/).\nEach bound array element is rendered as a deletable `furo-ui5-token`. Typing a value and committing it\n(Enter / focus-out → `change`) appends an element to the model; deleting a token (`token-delete`)\nremoves the matching element from the model. The model is the single source of truth — tokens are\n(re)rendered from the array whenever it changes.\n\nYou can bind a repeated `string` type: an array of `primitives.STRING`, of `furo.fat.String`, or of\n`google.protobuf.StringValue`.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **required: true** , set the element to required\n- **max:\"number\"** set the maximum number of characters available in the input field.\n\n### Overview\nA `furo-ui5-multi-input` field allows the user to enter multiple values, which are displayed as `furo-ui5-token`.\n\nUser can choose interaction for creating tokens.\nFiori Guidelines say that user should create tokens when:\n\n- Type a value in the input and press enter or focus out the input field (`change` event is fired)\n- Move between suggestion items (`selection-change` event is fired)\n- Clicking on a suggestion item (`selection-change` event is fired if the clicked item is different than the current value. Also `change` event is fired )\n\n\n",
           "name": "MultiInput",
           "members": [
             {
@@ -10928,6 +10944,7 @@
           },
           "tagName": "furo-ui5-multi-input",
           "customElement": true,
+          "summary": "Text input supporting multiple values displayed as tokens.",
           "slots": [
             {
               "name": "default",
@@ -11392,7 +11409,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.\n\nYou can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.\n\n## supported FAT attributes\n - **\"placeholder\":\"string\"** set the placeholder for the element\n\n## supported FAT labels\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"hidden\":\"true\"** hides the element\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n\n### Overview\n\nThe `furo-ui5-input` component allows the user to enter and edit text or numeric values in one line.\n\nAdditionally, you can provide `suggestionItems`\nthat are displayed in a popover right under the input. Keep in mind that `furo-ui5-input` with type `Number` does not support suggestions.\n\nThe text field can be editable or read-only (`readonly` property),\nand it can be enabled or disabled (`disabled` property).\nTo visualize semantic states, such as \"Negative\" or \"Critical\", the `valueState` property is provided.\nWhen the user makes changes to the text, the change event is fired,\nwhich enables you to react on any text change.\n\n### Keyboard Handling\nThe `furo-ui5-input` provides the following keyboard shortcuts:\n\n- [Escape] - Closes the suggestion list, if open. If closed or not enabled, cancels changes and reverts to the value which the Input field had when it got the focus.\n- [Enter] or [Return] - If suggestion list is open takes over the current matching item and closes it. If value state or group header is focused, does nothing.\n- [Down] - Focuses the next matching item in the suggestion list. Selection-change event is fired.\n- [Up] - Focuses the previous matching item in the suggestion list. Selection-change event is fired.\n- [Home] - If focus is in the text input, moves caret before the first character. If focus is in the list, highlights the first item and updates the input accordingly.\n- [End] - If focus is in the text input, moves caret after the last character. If focus is in the list, highlights the last item and updates the input accordingly.\n- [Page Up] - If focus is in the list, moves highlight up by page size (10 items by default). If focus is in the input, does nothing.\n- [Page Down] - If focus is in the list, moves highlight down by page size (10 items by default). If focus is in the input, does nothing.\n- [Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.\n\n\n",
+          "description": "\nThe furo-ui5-number-input component allows the user to enter and edit numbers with data binding.\n\nYou can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.\n\n## supported FAT attributes\n - **\"placeholder\":\"string\"** set the placeholder for the element\n\n## supported FAT labels\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"hidden\":\"true\"** hides the element\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n\n### Overview\n\nThe `furo-ui5-input` component allows the user to enter and edit text or numeric values in one line.\n\nAdditionally, you can provide `suggestionItems`\nthat are displayed in a popover right under the input. Keep in mind that `furo-ui5-input` with type `Number` does not support suggestions.\n\nThe text field can be editable or read-only (`readonly` property),\nand it can be enabled or disabled (`disabled` property).\nTo visualize semantic states, such as \"Negative\" or \"Critical\", the `valueState` property is provided.\nWhen the user makes changes to the text, the change event is fired,\nwhich enables you to react on any text change.\n\n### Keyboard Handling\nThe `furo-ui5-input` provides the following keyboard shortcuts:\n\n- [Escape] - Closes the suggestion list, if open. If closed or not enabled, cancels changes and reverts to the value which the Input field had when it got the focus.\n- [Enter] or [Return] - If suggestion list is open takes over the current matching item and closes it. If value state or group header is focused, does nothing.\n- [Down] - Focuses the next matching item in the suggestion list. Selection-change event is fired.\n- [Up] - Focuses the previous matching item in the suggestion list. Selection-change event is fired.\n- [Home] - If focus is in the text input, moves caret before the first character. If focus is in the list, highlights the first item and updates the input accordingly.\n- [End] - If focus is in the text input, moves caret after the last character. If focus is in the list, highlights the last item and updates the input accordingly.\n- [Page Up] - If focus is in the list, moves highlight up by page size (10 items by default). If focus is in the input, does nothing.\n- [Page Down] - If focus is in the list, moves highlight down by page size (10 items by default). If focus is in the input, does nothing.\n- [Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.\n\n\n",
           "name": "NumberInput",
           "members": [
             {
@@ -11883,7 +11900,7 @@
           },
           "tagName": "furo-ui5-number-input",
           "customElement": true,
-          "summary": "data number input field",
+          "summary": "Numeric input field for entering numbers bound to numeric types.",
           "slots": [
             {
               "name": "default",
@@ -12298,7 +12315,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The `furo-ui5-option` is meant to be used inside a `furo-ui5-select`. It is also automatically used by the `furo-ui5-select-enum`.\n\nYou can bind any OptionLike field to it.\n```js\nexport interface OptionLike extends FieldNode {\n  id: STRING;\n  displayName: STRING;\n  icon?: STRING;\n  additionalText?: STRING;\n  tooltip?: STRING;\n}\n```\n\n### Overview\n\nThe `furo-ui5-option` component defines the content of an option in the `furo-ui5-select`.\n\n\n",
+          "description": "\nThe `furo-ui5-option` is meant to be used inside a `furo-ui5-select`. It is also automatically used by the `furo-ui5-select-enum`.\n\nYou can bind any OptionLike field to it.\n```js\nexport interface OptionLike extends FieldNode {\n  id: STRING;\n  displayName: STRING;\n  icon?: STRING;\n  additionalText?: STRING;\n  tooltip?: STRING;\n}\n```\n\n### Overview\n\nThe `furo-ui5-option` component defines the content of an option in the `furo-ui5-select`.\n\n\n",
           "name": "Option",
           "cssParts": [
             {
@@ -12455,6 +12472,7 @@
           },
           "tagName": "furo-ui5-option",
           "customElement": true,
+          "summary": "Option item for use within Select components.",
           "slots": [
             {
               "name": "default",
@@ -12584,7 +12602,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The 'furo-ui5-password-input' component allows the user to enter and edit password with data binding.\nIt supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).\n\nYou can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.\n\n```html\n <furo-ui5-password-input\n    fn-bind-data=\"--dao(FIELDNODE)\"\n ></furo-ui5-password-input>\n```\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"icon\":\"home\"** set the icon\n - **\"placeholder\":\"string\"** set the placeholder for the element\n - **\"max\":\"number\"** set the maximum number of characters available in the input field.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **maxlength:\"number\"** set the maximum number of characters available in the input field.\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)\n\n### Overview\n\nThe `furo-ui5-input` component allows the user to enter and edit text or numeric values in one line.\n\nAdditionally, you can provide `suggestionItems`\nthat are displayed in a popover right under the input. Keep in mind that `furo-ui5-input` with type `Number` does not support suggestions.\n\nThe text field can be editable or read-only (`readonly` property),\nand it can be enabled or disabled (`disabled` property).\nTo visualize semantic states, such as \"Negative\" or \"Critical\", the `valueState` property is provided.\nWhen the user makes changes to the text, the change event is fired,\nwhich enables you to react on any text change.\n\n### Keyboard Handling\nThe `furo-ui5-input` provides the following keyboard shortcuts:\n\n- [Escape] - Closes the suggestion list, if open. If closed or not enabled, cancels changes and reverts to the value which the Input field had when it got the focus.\n- [Enter] or [Return] - If suggestion list is open takes over the current matching item and closes it. If value state or group header is focused, does nothing.\n- [Down] - Focuses the next matching item in the suggestion list. Selection-change event is fired.\n- [Up] - Focuses the previous matching item in the suggestion list. Selection-change event is fired.\n- [Home] - If focus is in the text input, moves caret before the first character. If focus is in the list, highlights the first item and updates the input accordingly.\n- [End] - If focus is in the text input, moves caret after the last character. If focus is in the list, highlights the last item and updates the input accordingly.\n- [Page Up] - If focus is in the list, moves highlight up by page size (10 items by default). If focus is in the input, does nothing.\n- [Page Down] - If focus is in the list, moves highlight down by page size (10 items by default). If focus is in the input, does nothing.\n- [Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.\n\n\n",
+          "description": "\nThe 'furo-ui5-password-input' component allows the user to enter and edit password with data binding.\nIt supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).\n\nYou can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.\n\n```html\n <furo-ui5-password-input\n    fn-bind-data=\"--dao(FIELDNODE)\"\n ></furo-ui5-password-input>\n```\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"required\":\"true\"** set the element to required\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"icon\":\"home\"** set the icon\n - **\"placeholder\":\"string\"** set the placeholder for the element\n - **\"max\":\"number\"** set the maximum number of characters available in the input field.\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n- **placeholder:\"some string\"** set the placeholder for the element\n- **maxlength:\"number\"** set the maximum number of characters available in the input field.\n\nThe constraint **required** will mark the element as required\n\n## Methods\n**bind-data(fieldNode)**\nBind a entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)\n\n### Overview\n\nThe `furo-ui5-input` component allows the user to enter and edit text or numeric values in one line.\n\nAdditionally, you can provide `suggestionItems`\nthat are displayed in a popover right under the input. Keep in mind that `furo-ui5-input` with type `Number` does not support suggestions.\n\nThe text field can be editable or read-only (`readonly` property),\nand it can be enabled or disabled (`disabled` property).\nTo visualize semantic states, such as \"Negative\" or \"Critical\", the `valueState` property is provided.\nWhen the user makes changes to the text, the change event is fired,\nwhich enables you to react on any text change.\n\n### Keyboard Handling\nThe `furo-ui5-input` provides the following keyboard shortcuts:\n\n- [Escape] - Closes the suggestion list, if open. If closed or not enabled, cancels changes and reverts to the value which the Input field had when it got the focus.\n- [Enter] or [Return] - If suggestion list is open takes over the current matching item and closes it. If value state or group header is focused, does nothing.\n- [Down] - Focuses the next matching item in the suggestion list. Selection-change event is fired.\n- [Up] - Focuses the previous matching item in the suggestion list. Selection-change event is fired.\n- [Home] - If focus is in the text input, moves caret before the first character. If focus is in the list, highlights the first item and updates the input accordingly.\n- [End] - If focus is in the text input, moves caret after the last character. If focus is in the list, highlights the last item and updates the input accordingly.\n- [Page Up] - If focus is in the list, moves highlight up by page size (10 items by default). If focus is in the input, does nothing.\n- [Page Down] - If focus is in the list, moves highlight down by page size (10 items by default). If focus is in the input, does nothing.\n- [Ctrl]+[Alt]+[F8] or [Command]+[Option]+[F8] - Focuses the first link in the value state message, if available. Pressing [Tab] moves the focus to the next link in the value state message, or closes the value state message if there are no more links.\n\n\n",
           "name": "PasswordInput",
           "members": [
             {
@@ -13116,7 +13134,7 @@
           },
           "tagName": "furo-ui5-password-input",
           "customElement": true,
-          "summary": "data password input field",
+          "summary": "Masked single-line input for password entry.",
           "slots": [
             {
               "name": "default",
@@ -13801,6 +13819,7 @@
           },
           "tagName": "furo-ui5-popover",
           "customElement": true,
+          "summary": "Non-modal floating container attached to a trigger element.",
           "slots": [
             {
               "name": "default",
@@ -14193,7 +14212,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "`furo-pretty-json`\nPretty json with highlighting\n\n```html\n<furo-pretty-json\n  fn-inject-json=\"--data\"></furo-pretty-json>\n```",
+          "description": "\n`furo-pretty-json`\nPretty json with highlighting\n\n```html\n<furo-pretty-json\n  fn-inject-json=\"--data\"></furo-pretty-json>\n```",
           "name": "PrettyJson",
           "members": [
             {
@@ -14301,7 +14320,7 @@
           ],
           "tagName": "furo-ui5-pretty-json",
           "customElement": true,
-          "summary": "pretty prints json data"
+          "summary": "Display-only pretty printer for JSON data."
         }
       ],
       "exports": [
@@ -14336,7 +14355,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "A furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..\nhttps://sap.github.io/ui5-webcomponents/playground/components/ProgressIndicator/\n\nSupported type: You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types\n\n```html\n<furo-ui5-progress-indicator fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-progress-indicator>\n```\n\n### Overview\nShows the progress of a process in a graphical way. To indicate the progress,\nthe inside of the component is filled with a color.\n\n### Responsive Behavior\nYou can change the size of the Progress Indicator by changing its `width` or `height` CSS properties.\n\n\n",
+          "description": "\nA furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..\nhttps://sap.github.io/ui5-webcomponents/playground/components/ProgressIndicator/\n\nSupported type: You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types\n\n```html\n<furo-ui5-progress-indicator fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-progress-indicator>\n```\n\n### Overview\nShows the progress of a process in a graphical way. To indicate the progress,\nthe inside of the component is filled with a color.\n\n### Responsive Behavior\nYou can change the size of the Progress Indicator by changing its `width` or `height` CSS properties.\n\n\n",
           "name": "ProgressIndicator",
           "members": [
             {
@@ -14583,7 +14602,7 @@
           },
           "tagName": "furo-ui5-progress-indicator",
           "customElement": true,
-          "summary": "repeated strings",
+          "summary": "Linear progress bar showing completion percentage.",
           "cssParts": [
             {
               "description": "Used to style the main bar of the `ui5-progress-indicator`",
@@ -14720,7 +14739,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The 'furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.\n\nIt supports all features from the [SAP ui5 toggleButton element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).\n\nYou can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.\n\n```html\n <furo-ui5-radio-button\n    name=\"groupA\"\n    .model=${this.BoolFieldNode}\n ></furo-ui5-radio-button>\n <furo-ui5-radio-button\n    name=\"groupA\"\n    fn-bind-data=\"--dao(OTHERFIELDNODE)\"\n ></furo-ui5-radio-button>\n```\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"value-state\":\"\"** set the value-state\n\n## supported  constraints\n- **readonly: true** , set the element to readonly\n\nThe constraint **required** will mark the element as required\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)\n\n### Overview\n\nThe `furo-ui5-radio-button` component enables users to select a single option from a set of options.\nWhen a `furo-ui5-radio-button` is selected by the user, the\n`change` event is fired.\nWhen a `furo-ui5-radio-button` that is within a group is selected, the one\nthat was previously selected gets automatically deselected. You can group radio buttons by using the `name` property.\n\n**Note:** If `furo-ui5-radio-button` is not part of a group, it can be selected once, but can not be deselected back.\n\n### Keyboard Handling\n\nOnce the `furo-ui5-radio-button` is on focus, it might be selected by pressing the Space and Enter keys.\n\nThe Arrow Down/Arrow Up and Arrow Left/Arrow Right keys can be used to change selection between next/previous radio buttons in one group,\nwhile TAB and SHIFT + TAB can be used to enter or leave the radio button group.\n\n**Note:** On entering radio button group, the focus goes to the currently selected radio button.\n\n\n",
+          "description": "\nThe 'furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.\n\nIt supports all features from the [SAP ui5 toggleButton element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).\n\nYou can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.\n\n```html\n <furo-ui5-radio-button\n    name=\"groupA\"\n    .model=${this.BoolFieldNode}\n ></furo-ui5-radio-button>\n <furo-ui5-radio-button\n    name=\"groupA\"\n    fn-bind-data=\"--dao(OTHERFIELDNODE)\"\n ></furo-ui5-radio-button>\n```\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n - **\"value-state\":\"\"** set the value-state\n\n## supported  constraints\n- **readonly: true** , set the element to readonly\n\nThe constraint **required** will mark the element as required\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)\n\n### Overview\n\nThe `furo-ui5-radio-button` component enables users to select a single option from a set of options.\nWhen a `furo-ui5-radio-button` is selected by the user, the\n`change` event is fired.\nWhen a `furo-ui5-radio-button` that is within a group is selected, the one\nthat was previously selected gets automatically deselected. You can group radio buttons by using the `name` property.\n\n**Note:** If `furo-ui5-radio-button` is not part of a group, it can be selected once, but can not be deselected back.\n\n### Keyboard Handling\n\nOnce the `furo-ui5-radio-button` is on focus, it might be selected by pressing the Space and Enter keys.\n\nThe Arrow Down/Arrow Up and Arrow Left/Arrow Right keys can be used to change selection between next/previous radio buttons in one group,\nwhile TAB and SHIFT + TAB can be used to enter or leave the radio button group.\n\n**Note:** On entering radio button group, the focus goes to the currently selected radio button.\n\n\n",
           "name": "RadioButton",
           "members": [
             {
@@ -15058,7 +15077,7 @@
           },
           "tagName": "furo-ui5-radio-button",
           "customElement": true,
-          "summary": "boolean toggle button",
+          "summary": "Single selection control within a mutually exclusive group.",
           "cssParts": [
             {
               "description": "Used to style the inner ring of the `ui5-radio-button`.",
@@ -15273,7 +15292,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The furo-ui5-rating-indicator  is used to display a specific number of icons that are used to rate an item.\nAdditionally, it is also used to display the average and overall ratings.\nhttps://sap.github.io/ui5-webcomponents/playground/components/RatingIndicator/\n\nYou can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.\n\n```html\n <furo-ui5-rating-indicator\n    fn-bind-data=\"--dao(FIELDNODE)\"\n ></furo-ui5-rating-indicator>\n```\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n\n## Methods\n**bind-data(fieldNode)**\nBind aa entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)\n\n### Overview\nThe Rating Indicator is used to display a specific number of icons that are used to rate an item.\nAdditionally, it is also used to display the average and overall ratings.\n\n### Usage\nThe recommended number of icons is between 5 and 7.\n\n### Responsive Behavior\nYou can change the size of the Rating Indicator by changing its `font-size` CSS property.\n\nExample: `<ui5-rating-indicator style=\"font-size: 3rem;\"></ui5-rating-indicator>`\n\n### Keyboard Handling\nWhen the `furo-ui5-rating-indicator` is focused, the user can change the rating\nwith the following keyboard shortcuts:\n\n- [RIGHT/UP] - Increases the value of the rating by one step. If the highest value is reached, does nothing\n- [LEFT/DOWN] - Decreases the value of the rating by one step. If the lowest value is reached, does nothing.\n- [Home] - Sets the lowest value.\n- [End] - Sets the highest value.\n- [SPACE/ENTER/RETURN] - Increases the value of the rating by one step. If the highest value is reached, sets the rating to the lowest value.\n- Any number - Changes value to the corresponding number. If typed number is larger than the number of values, sets the highest value.\n\n\n",
+          "description": "\nThe furo-ui5-rating-indicator  is used to display a specific number of icons that are used to rate an item.\nAdditionally, it is also used to display the average and overall ratings.\nhttps://sap.github.io/ui5-webcomponents/playground/components/RatingIndicator/\n\nYou can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.\n\n```html\n <furo-ui5-rating-indicator\n    fn-bind-data=\"--dao(FIELDNODE)\"\n ></furo-ui5-rating-indicator>\n```\n\n## supported FAT attributes\n - **\"readonly\":\"true\"** set the element to readonly\n - **\"disabled\":\"true\"** set the element to disabled\n\n## supported meta and constraints\n- **readonly: true** , set the element to readonly\n\n## Methods\n**bind-data(fieldNode)**\nBind aa entity field. You can use the entity even when no data was received.\n\nWhen you use at-object-ready from a furo-data-object which emits a EntityNode, just bind the field with --entity(*.fields.fieldname)\n\n### Overview\nThe Rating Indicator is used to display a specific number of icons that are used to rate an item.\nAdditionally, it is also used to display the average and overall ratings.\n\n### Usage\nThe recommended number of icons is between 5 and 7.\n\n### Responsive Behavior\nYou can change the size of the Rating Indicator by changing its `font-size` CSS property.\n\nExample: `<ui5-rating-indicator style=\"font-size: 3rem;\"></ui5-rating-indicator>`\n\n### Keyboard Handling\nWhen the `furo-ui5-rating-indicator` is focused, the user can change the rating\nwith the following keyboard shortcuts:\n\n- [RIGHT/UP] - Increases the value of the rating by one step. If the highest value is reached, does nothing\n- [LEFT/DOWN] - Decreases the value of the rating by one step. If the lowest value is reached, does nothing.\n- [Home] - Sets the lowest value.\n- [End] - Sets the highest value.\n- [SPACE/ENTER/RETURN] - Increases the value of the rating by one step. If the highest value is reached, sets the rating to the lowest value.\n- Any number - Changes value to the corresponding number. If typed number is larger than the number of values, sets the highest value.\n\n\n",
           "name": "RatingIndicator",
           "members": [
             {
@@ -15869,7 +15888,7 @@
           },
           "tagName": "furo-ui5-rating-indicator",
           "customElement": true,
-          "summary": "data rating input field"
+          "summary": "Star-based rating input for feedback collection."
         }
       ],
       "exports": [
@@ -15895,7 +15914,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The 'furo-ui5-relative-time-badge' is a small, non-interactive, display-only component which shows\nrelative time information (e.g. \"in 2 days\", \"5 days ago\"), with data binding.\n\nIt extends the [SAP ui5 Tag element](https://sap.github.io/ui5-webcomponents/playground/components/Tag/)\nand drives its text and `colorScheme` from the bound value: a future time uses the POSITIVE scheme,\na past time the NEGATIVE one.\n\nYou can bind a `string` (ISO 8601), a `google.protobuf.Timestamp`, a unix-seconds `int32` / `int64`,\nor a `google.type.Date`. `int32` / `int64` are interpreted as seconds since epoch.\n\nConfiguration is set via properties: `colorSchemePositive`, `colorSchemeNegative`, `optionStyle`\n(`long` | `short` | `narrow`) and `optionNumeric` (`always` | `auto`).\n\n```html\n <furo-ui5-relative-time-badge .model=\"${fieldNode}\"></furo-ui5-relative-time-badge>\n```\n\n### Overview\n\nThe `furo-ui5-tag` is a component which serves\nthe purpose to attract the user attention to some piece\nof information (state, quantity, condition, etc.).\nIt can contain icon and text information, and its design can be chosen from specific design types.\n\n### Usage Guidelines\n\n- If the text is longer than the width of the component, it can wrap, or it can show ellipsis, depending on the `wrappingType` property.\n- Colors can be semantic or not semantic.\n\n\n",
+          "description": "\nThe 'furo-ui5-relative-time-badge' is a small, non-interactive, display-only component which shows\nrelative time information (e.g. \"in 2 days\", \"5 days ago\"), with data binding.\n\nIt extends the [SAP ui5 Tag element](https://sap.github.io/ui5-webcomponents/playground/components/Tag/)\nand drives its text and `colorScheme` from the bound value: a future time uses the POSITIVE scheme,\na past time the NEGATIVE one.\n\nYou can bind a `string` (ISO 8601), a `google.protobuf.Timestamp`, a unix-seconds `int32` / `int64`,\nor a `google.type.Date`. `int32` / `int64` are interpreted as seconds since epoch.\n\nConfiguration is set via properties: `colorSchemePositive`, `colorSchemeNegative`, `optionStyle`\n(`long` | `short` | `narrow`) and `optionNumeric` (`always` | `auto`).\n\n```html\n <furo-ui5-relative-time-badge .model=\"${fieldNode}\"></furo-ui5-relative-time-badge>\n```\n\n### Overview\n\nThe `furo-ui5-tag` is a component which serves\nthe purpose to attract the user attention to some piece\nof information (state, quantity, condition, etc.).\nIt can contain icon and text information, and its design can be chosen from specific design types.\n\n### Usage Guidelines\n\n- If the text is longer than the width of the component, it can wrap, or it can show ellipsis, depending on the `wrappingType` property.\n- Colors can be semantic or not semantic.\n\n\n",
           "name": "RelativeTimeBadge",
           "members": [
             {
@@ -16174,7 +16193,7 @@
           },
           "tagName": "furo-ui5-relative-time-badge",
           "customElement": true,
-          "summary": "bindable, display-only relative time badge",
+          "summary": "Display-only badge showing a relative time (e.g. \"3 days ago\").",
           "slots": [
             {
               "name": "default",
@@ -16347,7 +16366,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The 'furo-ui5-relative-time-display' is a display-only component which shows relative time\ninformation as plain text (e.g. \"in 2 days\", \"5 days ago\"), with data binding.\n\nIt extends the [SAP ui5 Text element](https://sap.github.io/ui5-webcomponents/playground/components/Text/)\nand is the chrome-less sibling of `furo-ui5-relative-time-badge` (no color scheme).\n\nYou can bind a `string` (ISO 8601), a `google.protobuf.Timestamp`, a unix-seconds `int32` / `int64`,\nor a `google.type.Date`. `int32` / `int64` are interpreted as seconds since epoch.\n\nConfiguration is set via properties: `optionStyle` (`long` | `short` | `narrow`) and `optionNumeric`\n(`always` | `auto`).\n\n```html\n <furo-ui5-relative-time-display .model=\"${fieldNode}\"></furo-ui5-relative-time-display>\n```\n\n### Overview\n\nThe `furo-ui5-text` component displays text that can be used in any content area of an application.\n\n### Usage\n\n- Use the `furo-ui5-text` if you want to display text inside a form, table, or any other content area.\n- Do not use the `furo-ui5-text` if you need to reference input type of components (use furo-ui5-label).\n\n### Responsive behavior\n\nThe `furo-ui5-text` component is fully adaptive to all screen sizes.\nBy default, the text will wrap when the space is not enough.\nIn addition, the component supports truncation via the `max-lines` property,\nby defining the number of lines the text should wrap before start truncating.\n\n\n",
+          "description": "\nThe 'furo-ui5-relative-time-display' is a display-only component which shows relative time\ninformation as plain text (e.g. \"in 2 days\", \"5 days ago\"), with data binding.\n\nIt extends the [SAP ui5 Text element](https://sap.github.io/ui5-webcomponents/playground/components/Text/)\nand is the chrome-less sibling of `furo-ui5-relative-time-badge` (no color scheme).\n\nYou can bind a `string` (ISO 8601), a `google.protobuf.Timestamp`, a unix-seconds `int32` / `int64`,\nor a `google.type.Date`. `int32` / `int64` are interpreted as seconds since epoch.\n\nConfiguration is set via properties: `optionStyle` (`long` | `short` | `narrow`) and `optionNumeric`\n(`always` | `auto`).\n\n```html\n <furo-ui5-relative-time-display .model=\"${fieldNode}\"></furo-ui5-relative-time-display>\n```\n\n### Overview\n\nThe `furo-ui5-text` component displays text that can be used in any content area of an application.\n\n### Usage\n\n- Use the `furo-ui5-text` if you want to display text inside a form, table, or any other content area.\n- Do not use the `furo-ui5-text` if you need to reference input type of components (use furo-ui5-label).\n\n### Responsive behavior\n\nThe `furo-ui5-text` component is fully adaptive to all screen sizes.\nBy default, the text will wrap when the space is not enough.\nIn addition, the component supports truncation via the `max-lines` property,\nby defining the number of lines the text should wrap before start truncating.\n\n\n",
           "name": "RelativeTimeDisplay",
           "members": [
             {
@@ -16536,7 +16555,7 @@
           },
           "tagName": "furo-ui5-relative-time-display",
           "customElement": true,
-          "summary": "bindable, display-only relative time text",
+          "summary": "Display-only text showing a relative time (e.g. \"in 2 hours\").",
           "slots": [
             {
               "name": "default",
@@ -16971,6 +16990,7 @@
           },
           "tagName": "furo-ui5-responsive-popover",
           "customElement": true,
+          "summary": "Popover that adapts between desktop popover and mobile fullscreen dialog.",
           "slots": [
             {
               "name": "default",
@@ -17363,7 +17383,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "`furo-ui5-section`\nThe object page content according to the SAP Design System Fiori guidelines consists of sections and subsections\narranged in a column layout.\nThe furo-ui5-section is basically a layout manager component to structure object pages. Sections can only\ncontain subsections, not content.\n\n```html\n <furo-ui5-section heading=\"STRING\">\n   <furo-ui5-subsection></furo-ui5-subsection>\n   <furo-ui5-subsection></furo-ui5-subsection>\n </furo-ui5-section>\n```\n\n<p>If a section contains only one subsection, the title of the subsection is used as the name of the section. In this case, there is no subsection submenu in the anchor bar.</p>\n\n<p>Sections can only contain subsections, not content. Because of this, the object page only provides toolbars for local actions at the subsection level.</p>",
+          "description": "\n`furo-ui5-section`\nThe object page content according to the SAP Design System Fiori guidelines consists of sections and subsections\narranged in a column layout.\nThe furo-ui5-section is basically a layout manager component to structure object pages. Sections can only\ncontain subsections, not content.\n\n```html\n <furo-ui5-section heading=\"STRING\">\n   <furo-ui5-subsection></furo-ui5-subsection>\n   <furo-ui5-subsection></furo-ui5-subsection>\n </furo-ui5-section>\n```\n\n<p>If a section contains only one subsection, the title of the subsection is used as the name of the section. In this case, there is no subsection submenu in the anchor bar.</p>\n\n<p>Sections can only contain subsections, not content. Because of this, the object page only provides toolbars for local actions at the subsection level.</p>",
           "name": "Section",
           "slots": [
             {
@@ -17426,7 +17446,8 @@
             }
           ],
           "tagName": "furo-ui5-section",
-          "customElement": true
+          "customElement": true,
+          "summary": "Major content section within object pages."
         }
       ],
       "exports": [
@@ -17461,7 +17482,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "### FuroUi5SelectEnum\nWith FuroUi5SelectEnum you can bind a ENUM field to the model. It will build up all defined options from the ENUM.\n\nIt extends the UI5 Select.\n\n---\n\n### Overview\n\nThe `furo-ui5-select` component is used to create a drop-down list.\n\n### Usage\n\nThere are two main usages of the `furo-ui5-select>`.\n\n- With Option (`furo-ui5-option`) web component:\n\nThe available options of the Select are defined by using the Option component.\nThe Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.\n\n- With OptionCustom (`furo-ui5-option-custom`) web component.\n\nOptions with custom content are defined by using the OptionCustom component.\nThe OptionCustom component comes with no predefined layout and it expects consumers to define it.\n\n### Selection\n\nThe options can be selected via user interaction (click or with the use of the Space and Enter keys)\nand programmatically - the Select component supports two distinct selection APIs, though mixing them is not supported:\n- The \"value\" property of the Select component\n- The \"selected\" property on individual options\n\n**Note:** If the \"value\" property is set but does not match any option,\nno option will be selected and the Select component will be displayed as empty.\n\n**Note:** when both \"value\" and \"selected\" are both used (although discouraged),\nthe \"value\" property will take precedence.\n\n### Keyboard Handling\n\nThe `furo-ui5-select` provides advanced keyboard handling.\n\n- [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.\n- [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.\n- [Space], [Enter] - If the drop-down is opened - selects the focused option.\n- [Escape] - Closes the drop-down without changing the selection.\n- [Home] - Navigates to first option\n- [End] - Navigates to the last option\n\n\n\n\n\n",
+          "description": "\n### FuroUi5SelectEnum\nWith FuroUi5SelectEnum you can bind a ENUM field to the model. It will build up all defined options from the ENUM.\n\nIt extends the UI5 Select.\n\n---\n\n### Overview\n\nThe `furo-ui5-select` component is used to create a drop-down list.\n\n### Usage\n\nThere are two main usages of the `furo-ui5-select>`.\n\n- With Option (`furo-ui5-option`) web component:\n\nThe available options of the Select are defined by using the Option component.\nThe Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.\n\n- With OptionCustom (`furo-ui5-option-custom`) web component.\n\nOptions with custom content are defined by using the OptionCustom component.\nThe OptionCustom component comes with no predefined layout and it expects consumers to define it.\n\n### Selection\n\nThe options can be selected via user interaction (click or with the use of the Space and Enter keys)\nand programmatically - the Select component supports two distinct selection APIs, though mixing them is not supported:\n- The \"value\" property of the Select component\n- The \"selected\" property on individual options\n\n**Note:** If the \"value\" property is set but does not match any option,\nno option will be selected and the Select component will be displayed as empty.\n\n**Note:** when both \"value\" and \"selected\" are both used (although discouraged),\nthe \"value\" property will take precedence.\n\n### Keyboard Handling\n\nThe `furo-ui5-select` provides advanced keyboard handling.\n\n- [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.\n- [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.\n- [Space], [Enter] - If the drop-down is opened - selects the focused option.\n- [Escape] - Closes the drop-down without changing the selection.\n- [Home] - Navigates to first option\n- [End] - Navigates to the last option\n\n\n\n\n\n",
           "name": "SelectEnum",
           "members": [
             {
@@ -18007,6 +18028,7 @@
           },
           "tagName": "furo-ui5-select-enum",
           "customElement": true,
+          "summary": "Dropdown selection bound to a protobuf enum field.",
           "slots": [
             {
               "name": "default",
@@ -18128,7 +18150,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define\nthe available options by using the furo-ui5-option component.\n\n### Possible ways to set the option list\n- Use `bindOptions()` or `optionsModel=` to bind a RepeaterNode as an option list.\n- Add the options manually to the html\n- Use `setOptionList()` or `optionList=` to build up the option list.\n\n\n### Warning\n- This component updates the model with the first option, if the value was empty, to keep the data in sync with the visual impression.\n- This component will render an empty value if the value is not in the list of options\n\n**Note:** Use either the Select's value or the Options' selected property. Mixed usage could result in unexpected behavior.\n\n**Note:** If the given value does not match any existing option, no option will be selected and the Select component will be displayed as empty.\n\n### OptionLikeList Signature\nThe optionsModel uses a FieldNode which fulfills the `IdentiableList` interface,\nthis means that you have an ARRAY FieldNode where the items have at least an id:string and a displayName:string field.\n\n\n### Sample\n```html\n<furo-ui5-select\n   .model=\"${this.model.stringlike}\"\n   .optionsModel=\"${this.OptionLikeListKind}\">\n</furo-ui5-select>\n```\n\n### Overview\n\nThe `furo-ui5-select` component is used to create a drop-down list.\n\n### Usage\n\nThere are two main usages of the `furo-ui5-select>`.\n\n- With Option (`furo-ui5-option`) web component:\n\nThe available options of the Select are defined by using the Option component.\nThe Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.\n\n- With OptionCustom (`furo-ui5-option-custom`) web component.\n\nOptions with custom content are defined by using the OptionCustom component.\nThe OptionCustom component comes with no predefined layout and it expects consumers to define it.\n\n### Selection\n\nThe options can be selected via user interaction (click or with the use of the Space and Enter keys)\nand programmatically - the Select component supports two distinct selection APIs, though mixing them is not supported:\n- The \"value\" property of the Select component\n- The \"selected\" property on individual options\n\n**Note:** If the \"value\" property is set but does not match any option,\nno option will be selected and the Select component will be displayed as empty.\n\n**Note:** when both \"value\" and \"selected\" are both used (although discouraged),\nthe \"value\" property will take precedence.\n\n### Keyboard Handling\n\nThe `furo-ui5-select` provides advanced keyboard handling.\n\n- [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.\n- [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.\n- [Space], [Enter] - If the drop-down is opened - selects the focused option.\n- [Escape] - Closes the drop-down without changing the selection.\n- [Home] - Navigates to first option\n- [End] - Navigates to the last option\n\n\n\n\n\n",
+          "description": "\nThe furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define\nthe available options by using the furo-ui5-option component.\n\n### Possible ways to set the option list\n- Use `bindOptions()` or `optionsModel=` to bind a RepeaterNode as an option list.\n- Add the options manually to the html\n- Use `setOptionList()` or `optionList=` to build up the option list.\n\n\n### Warning\n- This component updates the model with the first option, if the value was empty, to keep the data in sync with the visual impression.\n- This component will render an empty value if the value is not in the list of options\n\n**Note:** Use either the Select's value or the Options' selected property. Mixed usage could result in unexpected behavior.\n\n**Note:** If the given value does not match any existing option, no option will be selected and the Select component will be displayed as empty.\n\n### OptionLikeList Signature\nThe optionsModel uses a FieldNode which fulfills the `IdentiableList` interface,\nthis means that you have an ARRAY FieldNode where the items have at least an id:string and a displayName:string field.\n\n\n### Sample\n```html\n<furo-ui5-select\n   .model=\"${this.model.stringlike}\"\n   .optionsModel=\"${this.OptionLikeListKind}\">\n</furo-ui5-select>\n```\n\n### Overview\n\nThe `furo-ui5-select` component is used to create a drop-down list.\n\n### Usage\n\nThere are two main usages of the `furo-ui5-select>`.\n\n- With Option (`furo-ui5-option`) web component:\n\nThe available options of the Select are defined by using the Option component.\nThe Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.\n\n- With OptionCustom (`furo-ui5-option-custom`) web component.\n\nOptions with custom content are defined by using the OptionCustom component.\nThe OptionCustom component comes with no predefined layout and it expects consumers to define it.\n\n### Selection\n\nThe options can be selected via user interaction (click or with the use of the Space and Enter keys)\nand programmatically - the Select component supports two distinct selection APIs, though mixing them is not supported:\n- The \"value\" property of the Select component\n- The \"selected\" property on individual options\n\n**Note:** If the \"value\" property is set but does not match any option,\nno option will be selected and the Select component will be displayed as empty.\n\n**Note:** when both \"value\" and \"selected\" are both used (although discouraged),\nthe \"value\" property will take precedence.\n\n### Keyboard Handling\n\nThe `furo-ui5-select` provides advanced keyboard handling.\n\n- [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.\n- [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.\n- [Space], [Enter] - If the drop-down is opened - selects the focused option.\n- [Escape] - Closes the drop-down without changing the selection.\n- [Home] - Navigates to first option\n- [End] - Navigates to the last option\n\n\n\n\n\n",
           "name": "Select",
           "members": [
             {
@@ -18574,7 +18596,7 @@
           },
           "tagName": "furo-ui5-select",
           "customElement": true,
-          "summary": "data select field",
+          "summary": "Dropdown selection from a predefined list of options.",
           "slots": [
             {
               "name": "default",
@@ -18974,6 +18996,7 @@
           },
           "tagName": "furo-ui5-shellbar-item",
           "customElement": true,
+          "summary": "Action item for the ShellBar header component.",
           "attributes": [
             {
               "description": "Defines additional accessibility attributes on Shellbar Items.\n\nThe accessibility attributes support the following values:\n\n- **expanded**: Indicates whether the button, or another grouping element it controls,\nis currently expanded or collapsed.\nAccepts the following string values: `true` or `false`.\n\n- **hasPopup**: Indicates the availability and type of interactive popup element,\nsuch as menu or dialog, that can be triggered by the button.\n\n- **controls**: Identifies the element (or elements) whose contents\nor presence are controlled by the component.\nAccepts a lowercase string value, referencing the ID of the element it controls.",
@@ -19271,6 +19294,7 @@
           },
           "tagName": "furo-ui5-shellbar-search",
           "customElement": true,
+          "summary": "Search input integrated into the ShellBar header.",
           "slots": [
             {
               "name": "action",
@@ -19599,6 +19623,7 @@
           },
           "tagName": "furo-ui5-shellbar-spacer",
           "customElement": true,
+          "summary": "Flexible spacer for distributing space in ShellBar.",
           "attributes": [
             {
               "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
@@ -20125,6 +20150,7 @@
           },
           "tagName": "furo-ui5-shellbar",
           "customElement": true,
+          "summary": "Application header bar with branding, navigation, and user actions.",
           "slots": [
             {
               "name": "assistant",
@@ -20688,7 +20714,8 @@
             }
           ],
           "tagName": "furo-ui5-show-hide",
-          "customElement": true
+          "customElement": true,
+          "summary": "Container for conditionally showing or hiding content."
         }
       ],
       "exports": [
@@ -20723,7 +20750,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "`furo-sign-pad`\n Simple pad to sign or draw something",
+          "description": "\n`furo-sign-pad`\n Simple pad to sign or draw something",
           "name": "SignPad",
           "members": [
             {
@@ -20857,7 +20884,7 @@
           ],
           "tagName": "furo-ui5-sign-pad",
           "customElement": true,
-          "summary": "draw or sign"
+          "summary": "Canvas pad for drawing or capturing a signature."
         }
       ],
       "exports": [
@@ -21242,7 +21269,7 @@
           },
           "tagName": "furo-ui5-slider",
           "customElement": true,
-          "summary": "data number input field",
+          "summary": "Horizontal slider for selecting numeric values within a range.",
           "cssParts": [
             {
               "description": "Used to style the handle of the `ui5-slider`.",
@@ -21884,7 +21911,7 @@
           },
           "tagName": "furo-ui5-step-input",
           "customElement": true,
-          "summary": "data step input field",
+          "summary": "Numeric input with increment/decrement buttons.",
           "slots": [
             {
               "name": "valueStateMessage",
@@ -22347,7 +22374,8 @@
             }
           ],
           "tagName": "furo-ui5-subsection",
-          "customElement": true
+          "customElement": true,
+          "summary": "Sub-level content section within an object page section."
         }
       ],
       "exports": [
@@ -22712,7 +22740,7 @@
           },
           "tagName": "furo-ui5-switch",
           "customElement": true,
-          "summary": "data switch input field",
+          "summary": "Toggle control for immediate on/off state changes.",
           "cssParts": [
             {
               "description": "Used to style the handle of the switch",
@@ -22960,7 +22988,8 @@
           "name": "TableToolbarSeparator",
           "members": [],
           "tagName": "furo-ui5-table-toolbar-separator",
-          "customElement": true
+          "customElement": true,
+          "summary": "Separator for table toolbar items."
         }
       ],
       "exports": [
@@ -23508,6 +23537,7 @@
           },
           "tagName": "furo-ui5-text-input",
           "customElement": true,
+          "summary": "Single-line text input field for user data entry.",
           "slots": [
             {
               "name": "default",
@@ -24225,6 +24255,7 @@
           },
           "tagName": "furo-ui5-textarea",
           "customElement": true,
+          "summary": "Multi-line text input for longer content entry.",
           "slots": [
             {
               "name": "valueStateMessage",
@@ -25007,6 +25038,7 @@
           },
           "tagName": "furo-ui5-time-picker",
           "customElement": true,
+          "summary": "Time selection input for picking hours, minutes, and optionally seconds.",
           "slots": [
             {
               "name": "valueStateMessage",
@@ -25430,6 +25462,7 @@
           },
           "tagName": "furo-ui5-title",
           "customElement": true,
+          "summary": "Heading text with semantic level for page and section titles.",
           "slots": [
             {
               "description": "Defines the text of the component.\nThis component supports nesting a `Link` component inside.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
@@ -25605,7 +25638,7 @@
           },
           "tagName": "furo-ui5-toast",
           "customElement": true,
-          "summary": "Toast element",
+          "summary": "Brief, auto-dismissing notification message.",
           "slots": [
             {
               "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
@@ -26145,7 +26178,7 @@
           },
           "tagName": "furo-ui5-toggle-button",
           "customElement": true,
-          "summary": "boolean toggle button",
+          "summary": "Button that maintains an on/off pressed state.",
           "slots": [
             {
               "name": "badge",
@@ -26605,6 +26638,7 @@
           },
           "tagName": "furo-ui5-user-menu",
           "customElement": true,
+          "summary": "User account menu accessible from the ShellBar.",
           "slots": [
             {
               "name": "accounts",
@@ -26866,7 +26900,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "`z-grid`\nis a grid which places your elements in a **z** pattern.\nIt creates a grid which can be imagined as a grid with cells of the size *8rem x 8rem*.~\n\nThe size on the x-axis can vary a little bit, according to the the available space.\n\n\nThis component is nestable.\n\n```html\n\n <furo-ui5-z-grid>\n   <your-component hspace=\"2\" vspace=\"4\"></your-component>\n   <your-component hspace=\"2\" vspace=\"2\"></your-component>\n </furo-ui5-z-grid>\n\n <!-- with automatic padding -->\n <furo-ui5-z-grid padding>\n   <your-component hspan=\"2\" vspan=\"4\"></your-component>\n   <your-component hspan=\"2\" vspan=\"2\"></your-component>\n </furo-ui5-z-grid>\n```\n\n\n ## sizes\n The sizes are calculated from the available space that the grid becomes from its parent.\n\n ### Sizes are calculated as following\n\n ```\n  |  small  |   medium   |    large    |    xlarge   |\n  |         |            |             |             |\n  | 0...599 | 600...1023 | 1024...1439 | 1440...nnnn |\n\n ```\n\n ## hspan\n Set the horizontal space (the width) with the *hspan* attribute.\n\n Available ranges are from 1 to 9 and full.\n\n To tell a element that it has to use the full width use `hspan=\"full\"` or use the alias `full` or `full-width`.\n\n `hspan=\"1\"`, `hspan=\"2\"`,...,`hspan=\"9\"`, `hspan=\"full\"`\n\n ## vspan\n Set the vertical space (the height) with the *vspan* attribute.\n\n Available ranges are from 1 to 9.\n\n `vspan=\"1\"`, `vspan=\"2\"`,...,`vspan=\"9\"`\n\n ## newline\n To force a placement on a new line use `newline`\n\n ## padding\n Set the attribute *padding* to add paddings according to the size of the furo-z-grid automatically.\n\n :host([size='size-s']) ==> **0.25rem 1rem;**\n\n :host([size='size-m'] ==> **0.25rem 2rem;**\n\n :host([size='size-l'] ==> **1rem 2rem;**\n\n :host([size='size-xl'] ==> **1rem 3rem;**\n\n ## full-on-[size]\n To set full width on a specific current size, use `full-on-size-small` , `full-on-size-medium` , `full-on-size-large` ,`full-on-size-xlarge`.\n\n When the available space has the given size, the default hspan are overridden and the full width is used.\n\n ## hide-on-[size]\n To hide a element on a specific current size, use `hide-on-size-small` , `hide-on-size-medium` , `hide-on-size-large` ,`hide-on-size-xlarge`.\n\n ## show-on-[size]\n To show a element only on a specific current size, use `show-on-size-small` , `show-on-size-medium` , `show-on-size-large` ,`show-on-size-xlarge`.\n\n ## custom span sizes on different sizes (hspan-on-[size])\n To set a specific width (hspan) on a specific current size, use `hspan-on-size-small=\"1...9\"` , `hspan-on-size-medium=\"1...9\"` , `hspan-on-size-large=\"1...9\"` , `hspan-on-size-xlarge=\"1...9\"` .\n\n ## Ohter attributes\n\n The attributes *full* and *full-width* are aliases for `hspan=\"full\"`.\n\n## Named lines and columns\n**last-col** refers to the last column.\n**last-row** refers to the last line/row.",
+          "description": "\n`z-grid`\nis a grid which places your elements in a **z** pattern.\nIt creates a grid which can be imagined as a grid with cells of the size *8rem x 8rem*.~\n\nThe size on the x-axis can vary a little bit, according to the the available space.\n\n\nThis component is nestable.\n\n```html\n\n <furo-ui5-z-grid>\n   <your-component hspace=\"2\" vspace=\"4\"></your-component>\n   <your-component hspace=\"2\" vspace=\"2\"></your-component>\n </furo-ui5-z-grid>\n\n <!-- with automatic padding -->\n <furo-ui5-z-grid padding>\n   <your-component hspan=\"2\" vspan=\"4\"></your-component>\n   <your-component hspan=\"2\" vspan=\"2\"></your-component>\n </furo-ui5-z-grid>\n```\n\n\n ## sizes\n The sizes are calculated from the available space that the grid becomes from its parent.\n\n ### Sizes are calculated as following\n\n ```\n  |  small  |   medium   |    large    |    xlarge   |\n  |         |            |             |             |\n  | 0...599 | 600...1023 | 1024...1439 | 1440...nnnn |\n\n ```\n\n ## hspan\n Set the horizontal space (the width) with the *hspan* attribute.\n\n Available ranges are from 1 to 9 and full.\n\n To tell a element that it has to use the full width use `hspan=\"full\"` or use the alias `full` or `full-width`.\n\n `hspan=\"1\"`, `hspan=\"2\"`,...,`hspan=\"9\"`, `hspan=\"full\"`\n\n ## vspan\n Set the vertical space (the height) with the *vspan* attribute.\n\n Available ranges are from 1 to 9.\n\n `vspan=\"1\"`, `vspan=\"2\"`,...,`vspan=\"9\"`\n\n ## newline\n To force a placement on a new line use `newline`\n\n ## padding\n Set the attribute *padding* to add paddings according to the size of the furo-z-grid automatically.\n\n :host([size='size-s']) ==> **0.25rem 1rem;**\n\n :host([size='size-m'] ==> **0.25rem 2rem;**\n\n :host([size='size-l'] ==> **1rem 2rem;**\n\n :host([size='size-xl'] ==> **1rem 3rem;**\n\n ## full-on-[size]\n To set full width on a specific current size, use `full-on-size-small` , `full-on-size-medium` , `full-on-size-large` ,`full-on-size-xlarge`.\n\n When the available space has the given size, the default hspan are overridden and the full width is used.\n\n ## hide-on-[size]\n To hide a element on a specific current size, use `hide-on-size-small` , `hide-on-size-medium` , `hide-on-size-large` ,`hide-on-size-xlarge`.\n\n ## show-on-[size]\n To show a element only on a specific current size, use `show-on-size-small` , `show-on-size-medium` , `show-on-size-large` ,`show-on-size-xlarge`.\n\n ## custom span sizes on different sizes (hspan-on-[size])\n To set a specific width (hspan) on a specific current size, use `hspan-on-size-small=\"1...9\"` , `hspan-on-size-medium=\"1...9\"` , `hspan-on-size-large=\"1...9\"` , `hspan-on-size-xlarge=\"1...9\"` .\n\n ## Ohter attributes\n\n The attributes *full* and *full-width* are aliases for `hspan=\"full\"`.\n\n## Named lines and columns\n**last-col** refers to the last column.\n**last-row** refers to the last line/row.",
           "name": "ZGrid",
           "cssProperties": [
             {
@@ -26969,7 +27003,7 @@
           ],
           "tagName": "furo-ui5-z-grid",
           "customElement": true,
-          "summary": "grid with a z pattern"
+          "summary": "Grid layout that arranges children in a Z-shaped reading flow."
         }
       ],
       "exports": [

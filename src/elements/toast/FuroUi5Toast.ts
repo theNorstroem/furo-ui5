@@ -17,7 +17,11 @@ import Toast from "@ui5/webcomponents/dist/Toast.js";
  * <button at-click="--openToastClicked">Open toast</button>
  * ```
  *
- * @summary Toast element
+ * @summary Brief, auto-dismissing notification message.
+ * @keywords toast, notification, snackbar, message, alert, feedback, temporary
+ * @category Feedback
+ * @usecase Use for non-blocking confirmations or status updates that auto-dismiss.
+ * @related furo-ui5-message-strip, furo-ui5-busy-indicator
  * @tagname furo-ui5-toast
  */
 export class FuroUi5Toast extends Toast {

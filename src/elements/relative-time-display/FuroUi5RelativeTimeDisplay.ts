@@ -7,6 +7,7 @@ import { XDate } from "@/models/google/type/Date";
 import { formatRelativeTime } from "@/util/formatRelativeTime";
 
 /**
+ *
  * The 'furo-ui5-relative-time-display' is a display-only component which shows relative time
  * information as plain text (e.g. "in 2 days", "5 days ago"), with data binding.
  *
@@ -23,7 +24,11 @@ import { formatRelativeTime } from "@/util/formatRelativeTime";
  *  <furo-ui5-relative-time-display .model="${fieldNode}"></furo-ui5-relative-time-display>
  * ```
  *
- * @summary bindable, display-only relative time text
+ * @summary Display-only text showing a relative time (e.g. "in 2 hours").
+ * @keywords relative-time, time, ago, timestamp, display, text
+ * @category Display
+ * @usecase Use to show a timestamp as human-friendly relative time text.
+ * @related furo-ui5-relative-time-badge
  * @tagname furo-ui5-relative-time-display
  */
 export class FuroUi5RelativeTimeDisplay extends Text {

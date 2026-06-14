@@ -27,6 +27,11 @@ import { FuroFatString } from "@/models";
  * - **placeholder:"some string"** set the placeholder for the element
  * - **max:"number"** set the maximum number of characters available in the input field.
  *
+ * @summary Multi-line text input for longer content entry.
+ * @keywords textarea, multiline, text, input, form, description, notes
+ * @category Form
+ * @usecase Use when users need to enter multiple lines of text like descriptions or comments.
+ * @related furo-ui5-input, furo-ui5-expandable-text
  * @tagname furo-ui5-textarea
  */
 export class FuroUi5Textarea extends TextArea {

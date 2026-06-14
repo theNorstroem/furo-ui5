@@ -30,6 +30,12 @@ import DebounceBuilder from "@/util/Debounce";
  *
  * @fires search-requested {CustomEvent<String>}
  * @event {CustomEvent<String>} search-requested - Fired when typing in input (debounced, default 500ms).
+ *
+ * @summary Single-line text input field for user data entry.
+ * @keywords input, text, field, form, textbox, entry, value
+ * @category Form
+ * @usecase Use for single-line text entry like names, emails, or short values.
+ * @related furo-ui5-textarea, furo-ui5-multi-input, furo-ui5-combobox
  * @tagname furo-ui5-text-input
  */
 export class FuroUi5TextInput extends Input {

@@ -1,6 +1,12 @@
 import ResponsivePopover from "@ui5/webcomponents/dist/ResponsivePopover.js";
 
 /**
+ *
+ * @summary Popover that adapts between desktop popover and mobile fullscreen dialog.
+ * @keywords responsive, popover, dialog, mobile, adaptive, overlay
+ * @category Container
+ * @usecase Use when you need popover on desktop but fullscreen dialog on mobile.
+ * @related furo-ui5-popover, furo-ui5-dialog
  * @tagname furo-ui5-responsive-popover
  */
 export class FuroUi5ResponsivePopover extends ResponsivePopover {

@@ -32,7 +32,11 @@ import { FuroFatString } from "@/models";
  * @fires {String} scan-error -  Fires when the scan fails with error.
  * @fires {String} furo-value-changed - Fires the field value when it changes.
  *
- * @summary data barcode scanner dialog
+ * @summary Dialog with camera integration for barcode scanning.
+ * @keywords barcode, scanner, camera, qr-code, dialog, scan
+ * @category Form
+ * @usecase Use for mobile barcode/QR code scanning functionality.
+ * @related furo-ui5-dialog
  * @tagname furo-ui5-barcode-scanner-dialog
  */
 export class FuroUi5BarcodeScannerDialog extends BarcodeScannerDialog {

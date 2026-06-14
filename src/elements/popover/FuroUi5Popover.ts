@@ -1,5 +1,11 @@
 import Popover from "@ui5/webcomponents/dist/Popover.js";
 /**
+ *
+ * @summary Non-modal floating container attached to a trigger element.
+ * @keywords popover, dropdown, tooltip, floating, overlay, popup
+ * @category Container
+ * @usecase Use for contextual information or actions that don't require modal blocking.
+ * @related furo-ui5-dialog, furo-ui5-responsive-popover, furo-ui5-menu
  * @tagname furo-ui5-popover
  */
 export class FuroUi5Popover extends Popover {

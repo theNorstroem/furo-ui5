@@ -26,7 +26,11 @@ import type { FuroFatBool } from "@/models";
  *
  * @fires {Boolean} change -  Fired when the checkbox checked state changes.
  *
- * @summary data checkbox input field
+ * @summary Binary selection control for enabling or disabling options.
+ * @keywords checkbox, check, toggle, boolean, selection, tick, form
+ * @category Form
+ * @usecase Use for independent on/off choices or multiple selections from a group.
+ * @related furo-ui5-switch, furo-ui5-radio-button
  * @tagname furo-ui5-checkbox
  */
 export class FuroUi5Checkbox extends CheckBox {

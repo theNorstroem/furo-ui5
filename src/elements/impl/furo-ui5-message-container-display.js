@@ -18,11 +18,17 @@ import '../subcomponents/furo-ui5-message-container-item.js';
 import { NodeEvent } from '@furo/framework/src/EventTreeNode';
 
 /**
+ *
  * `furo-ui5-message-container-display`
  *  Renders the contenst of a `furo.MessageContainer` or `google.rpc.Status` message.
  *
  * @fires {Object} message-item-clicked - fired when a
  *
+ * @summary Container that displays a list of message items.
+ * @keywords message, container, messages, list, feedback, display
+ * @category Feedback
+ * @usecase Use to display a collection of message items to the user.
+ * @related furo-ui5-message-container-item
  * @customElement
  * @appliesMixin FBP
  */

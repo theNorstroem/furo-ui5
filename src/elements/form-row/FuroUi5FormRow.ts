@@ -10,6 +10,12 @@ import { css, CSSResult, html, LitElement } from "lit";
  * @slot {HTMLElement[]} label - Slot for the label.
  *
  * @author veith
+ *
+ * @summary Single row within a form containing label and input field.
+ * @keywords form-row, field, label, input, row
+ * @category FormLayout
+ * @usecase Use for each label-field pair in a form.
+ * @related furo-ui5-form-group, furo-ui5-form-layout, furo-ui5-label
  * @tagname furo-ui5-form-row
  * @public
  */

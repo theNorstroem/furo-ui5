@@ -34,6 +34,11 @@ import { property } from "lit/decorators.js";
  * @slot {HTMLElement[]} action - defines the heading bar of the subsection.
  * @slot {HTMLElement[]} more - defines the additional content in the `show more` section.
  *
+ * @summary Sub-level content section within an object page section.
+ * @keywords sub-section, nested, section, content, object-page
+ * @category Container
+ * @usecase Use to organize content within furo-ui5-section.
+ * @related furo-ui5-section
  * @tagname furo-ui5-subsection
  */
 export class FuroUi5Subsection extends LitFBP(LitElement) {

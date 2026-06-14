@@ -48,7 +48,11 @@ import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 
  * The constraint **required** will mark the element as required
  *
  *
- * @summary data step input field
+ * @summary Numeric input with increment/decrement buttons.
+ * @keywords step-input, spinner, numeric, increment, decrement, number
+ * @category Form
+ * @usecase Use for precise numeric input with step controls.
+ * @related furo-ui5-input, furo-ui5-slider
  * @tagname furo-ui5-step-input
  * @demo demo-furo-ui5-number-input Basic usage (scalar , fat, wrapper values)
  * @demo demo-furo-ui5-text-input Basic usage (scalar , fat, wrapper values)

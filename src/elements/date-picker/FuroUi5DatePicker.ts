@@ -33,6 +33,11 @@ interface DateFieldConstraints extends FieldConstraints {
  * - **min:"1999-12-31"** — set the minDate for the element (use iso date in the constraint)
  * - **max:"1999-12-31"** — set the maxDate for the element (use iso date in the constraint)
  *
+ * @summary Date selection input with calendar popup for picking single dates.
+ * @keywords date, picker, calendar, input, selection, form
+ * @category Form
+ * @usecase Use for selecting a single date value.
+ * @related furo-ui5-daterange-picker, furo-ui5-datetime-picker, furo-ui5-calendar
  * @tagname furo-ui5-date-picker
  */
 export class FuroUi5DatePicker extends DatePicker {

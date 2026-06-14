@@ -23,7 +23,11 @@ import type { FuroFatBool } from "@/models";
  *
  *
  *
- * @summary boolean toggle button
+ * @summary Button that maintains an on/off pressed state.
+ * @keywords toggle, switch, on-off, pressed, state, button
+ * @category Button
+ * @usecase Use when action has two states (active/inactive) that persist after click.
+ * @related furo-ui5-button, furo-ui5-switch, furo-ui5-segmented-button
  * @tagname furo-ui5-toggle-button
  */
 export class FuroUi5ToggleButton extends ToggleButton {

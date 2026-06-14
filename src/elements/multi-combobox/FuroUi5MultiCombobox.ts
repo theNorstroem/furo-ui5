@@ -14,6 +14,7 @@ import { FuroFatString, type IFuroFatString } from "@/models";
 type ModelItemType = "STRING" | "FAT_STRING" | "IDENTIFIABLE";
 
 /**
+ *
  * The furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-ui5-multi-combobox define
  * the available options by using the ui5-mcb-item component. Use the function bindOptions to bind a RepeaterNode as a option list.
  *
@@ -24,7 +25,12 @@ type ModelItemType = "STRING" | "FAT_STRING" | "IDENTIFIABLE";
  * </furo-ui5-multi-combobox>
  * ```
  **
- * @summary data select field
+ *
+ * @summary Filterable dropdown allowing multiple selections as tokens.
+ * @keywords multi-combobox, multiple, selection, tokens, tags, filter, multiselect
+ * @category Form
+ * @usecase Use for selecting multiple items from a searchable list displayed as tokens.
+ * @related furo-ui5-combobox, furo-ui5-multi-input, furo-ui5-mcb-item
  * @tagname furo-ui5-multi-combobox
  */
 export class FuroUi5MultiCombobox extends MultiComboBox {

@@ -33,6 +33,11 @@ interface DateFieldConstraints extends FieldConstraints {
  * - **min:"1999-12-31"** — set the minDate for the element (use iso date in the constraint)
  * - **max:"1999-12-31"** — set the maxDate for the element (use iso date in the constraint)
  *
+ * @summary Combined date and time selection in a single input.
+ * @keywords datetime, date, time, picker, calendar, combined
+ * @category Form
+ * @usecase Use when both date and time need to be selected together.
+ * @related furo-ui5-date-picker, furo-ui5-time-picker
  * @tagname furo-ui5-date-time-picker
  */
 export class FuroUi5DateTimePicker extends DateTimePicker {

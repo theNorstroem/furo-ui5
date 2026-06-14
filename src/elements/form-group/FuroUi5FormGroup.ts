@@ -8,6 +8,11 @@ import { property } from "lit/decorators.js";
  *
  * @slot {HTMLElement[]}  - Slot for `FormRows`.
  *
+ * @summary Logical grouping of related form fields within a form layout.
+ * @keywords form-group, section, fieldset, grouping, fields
+ * @category FormLayout
+ * @usecase Use to group related form fields under a common heading.
+ * @related furo-ui5-form-layout, furo-ui5-form-row
  * @tagname furo-ui5-form-group
  * @public
  */

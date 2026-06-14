@@ -14,6 +14,7 @@ import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
 import { FuroFatString } from "@/models";
 
 /**
+ *
  * The furo-ui5-select component is used to create a drop-down list. The items inside the furo-ui5-select define
  * the available options by using the ui5-option component.
  *
@@ -46,6 +47,12 @@ import { FuroFatString } from "@/models";
  *
  *
  * @summary data select field
+ *
+ * @summary Dropdown selection from a predefined list of options.
+ * @keywords select, dropdown, picker, options, choice, form, list
+ * @category Form
+ * @usecase Use when selecting from a fixed list without typing; for searchable lists use combobox.
+ * @related furo-ui5-combobox, furo-ui5-option, furo-ui5-radio-button
  * @tagname furo-ui5-select
  * @demo demo-furo-ui5-select Basic usage (scalar , fat, wrapper values)
  */

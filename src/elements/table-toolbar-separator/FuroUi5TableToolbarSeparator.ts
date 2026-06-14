@@ -9,6 +9,12 @@ import { css, LitElement, nothing } from "lit";
  *
  *
  * @author FURO
+ *
+ * @summary Separator for table toolbar items.
+ * @keywords table-toolbar-separator, divider
+ * @category Table
+ * @usecase Use to separate groups of actions in table toolbar.
+ * @related furo-ui5-table-toolbar
  * @tagname furo-ui5-table-toolbar-separator
  * @public
  */

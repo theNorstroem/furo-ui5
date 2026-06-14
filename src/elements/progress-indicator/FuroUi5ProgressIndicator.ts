@@ -7,6 +7,7 @@ import { NumericReaderWriters } from "@/lib/open-models/NumericReaderWriters";
 import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
 
 /**
+ *
  * A furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..
  * https://sap.github.io/ui5-webcomponents/playground/components/ProgressIndicator/
  *
@@ -16,7 +17,11 @@ import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 
  * <furo-ui5-progress-indicator fn-bind-data="--dao(FIELDNODE)"></furo-ui5-progress-indicator>
  * ```
  *
- * @summary repeated strings
+ * @summary Linear progress bar showing completion percentage.
+ * @keywords progress, bar, percentage, loading, completion, indicator
+ * @category Feedback
+ * @usecase Use to show determinate progress of an operation.
+ * @related furo-ui5-busy-indicator
  * @tagname furo-ui5-progress-indicator
  * @appliesMixin FieldNodeAdapter
  */

@@ -1,6 +1,12 @@
 import UserMenu from "@ui5/webcomponents-fiori/dist/UserMenu.js";
 
 /**
+ *
+ * @summary User account menu accessible from the ShellBar.
+ * @keywords user-menu, account, profile, settings, logout
+ * @category PageStructure
+ * @usecase Use for user account actions like profile, settings, and logout.
+ * @related furo-ui5-shellbar, furo-ui5-user-menu-item, furo-ui5-user-menu-account
  * @tagname furo-ui5-user-menu
  */
 export class FuroUi5UserMenu extends UserMenu {

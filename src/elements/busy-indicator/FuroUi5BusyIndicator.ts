@@ -14,7 +14,11 @@ import type { FuroFatBool } from "@/models";
  *
  * https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
  *
- * @summary ui5 busy indicator with methods
+ * @summary Loading spinner overlay indicating ongoing background activity.
+ * @keywords busy, loading, spinner, progress, wait, indicator
+ * @category Feedback
+ * @usecase Use to indicate loading or processing state.
+ * @related furo-ui5-busy-indicator-block, furo-ui5-progress-indicator
  * @tagname furo-ui5-busy-indicator
  */
 export class FuroUi5BusyIndicator extends BusyIndicator {

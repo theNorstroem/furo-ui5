@@ -23,6 +23,7 @@ import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 
 import ValueState from "@/types/ValueState";
 
 /**
+ *
  * The furo-ui5-rating-indicator  is used to display a specific number of icons that are used to rate an item.
  * Additionally, it is also used to display the average and overall ratings.
  * https://sap.github.io/ui5-webcomponents/playground/components/RatingIndicator/
@@ -52,6 +53,12 @@ import ValueState from "@/types/ValueState";
  * @fires {`number`} change -  Fired when the values change.
  * @fires {`number`} furo-value-changed - Fires the field value when it changes.
  * @summary data rating input field
+ *
+ * @summary Star-based rating input for feedback collection.
+ * @keywords rating, stars, feedback, score, review, indicator
+ * @category Form
+ * @usecase Use for collecting user ratings or displaying scores.
+ * @related furo-ui5-slider
  * @tagname furo-ui5-rating-indicator
  */
 export class FuroUi5RatingIndicator extends RatingIndicator {

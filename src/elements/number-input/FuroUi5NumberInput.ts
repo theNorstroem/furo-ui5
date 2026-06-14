@@ -24,6 +24,7 @@ import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
 
 /**
+ *
  * The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.
  *
  * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
@@ -42,7 +43,11 @@ import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 
  * - **placeholder:"some string"** set the placeholder for the element
  *
  *
- * @summary data number input field
+ * @summary Numeric input field for entering numbers bound to numeric types.
+ * @keywords number, numeric, input, integer, float, decimal, form
+ * @category Form
+ * @usecase Use for entering numeric values such as quantities or measurements.
+ * @related furo-ui5-text-input, furo-ui5-step-input, furo-ui5-slider
  * @tagname furo-ui5-number-input
  */
 export class FuroUi5NumberInput extends Input {

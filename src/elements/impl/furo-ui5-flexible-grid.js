@@ -3,6 +3,7 @@ import { LitElement, html, css } from 'lit';
 import { FBP } from '@furo/fbp';
 
 /**
+ *
  * The furo-ui5-flexible-grid will split your screen contents horizontally (in cols) and put them vertically (left at top)
  * when the available space is too small.
  *
@@ -49,7 +50,12 @@ import { FBP } from '@furo/fbp';
  *
  * @slot left {HTMLElement} - slot to add a component on the left hand side.
  * @slot {HTMLElement[]} - default slot to add content.
- * @summary a grid splitter
+ *
+ * @summary Responsive grid layout with configurable columns and row spanning.
+ * @keywords grid, layout, responsive, columns, rows, flexible, z-flow
+ * @category Layout
+ * @usecase Use for card-based layouts or content that needs flexible grid positioning.
+ * @related furo-ui5-flexible-grid-item, furo-ui5-responsive-layout
  * @tagname furo-ui5-flexible-grid
  * @appliesMixin FBP
  */

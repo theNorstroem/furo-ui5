@@ -60,6 +60,12 @@ import Throttle from "@/util/Throttle";
  * @event {CustomEvent<HTMLElement>} object-icon-clicked - fired when the object icon is clicked, sends the node ref of the icon.
  * @event {CustomEvent<HTMLElement>} favorite-icon-clicked - fired when the favorite icon is clicked, sends the node ref of the icon.
  * @author Furo
+ *
+ * @summary Collapsible panel with a header for grouping content.
+ * @keywords header, panel, collapsible, group, container, expand
+ * @category Container
+ * @usecase Use to group related content under a collapsible header.
+ * @related furo-ui5-section, furo-ui5-subsection
  * @tagname furo-ui5-header-panel
  * @public
  */

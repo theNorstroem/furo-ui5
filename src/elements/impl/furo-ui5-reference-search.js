@@ -15,6 +15,7 @@ import './furo-ui5-reference-search-item.js';
 import './FuroUi5Dialog.ts';
 
 /**
+ *
  * The furo-ui5-reference-search is a search input field with the capability to open and extended search component.
  *
  * Bound data must fullfill the furo.Reference signature. The service, deeplink,... is taken from the spec of your field.
@@ -105,7 +106,11 @@ import './FuroUi5Dialog.ts';
  * @fires {`text`} change -  Fired when the input operation has finished by pressing Enter or on focusout.
  * @fires {} input -  Fired when the value of the ui5-input changes at each keystroke, and when a suggestion item has been selected.
  *
- * @summary furo ui5 data reference search
+ * @summary Searchable input for selecting a referenced data entity.
+ * @keywords reference, search, lookup, autocomplete, entity, form
+ * @category Form
+ * @usecase Use to search and select a reference to another data record.
+ * @related furo-ui5-combobox, furo-ui5-reference-search-item
  * @tagname furo-ui5-reference-search
  * @demo demo-furo-ui5-reference-search Basic Usage
  */

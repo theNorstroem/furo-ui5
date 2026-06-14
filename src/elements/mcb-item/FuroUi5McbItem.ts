@@ -3,12 +3,19 @@ import MultiComboBoxItem from "@ui5/webcomponents/dist/MultiComboBoxItem.js";
 import type { MultiComboBoxItemLike } from "@/lib/open-models/signatures";
 
 /**
+ *
  * The `furo-ui5-mcb-item` is meant to be used inside a `furo-ui5-multi-combobox`.
  *
  * @csspart native-li - Use this to format the `li` inside the shadow root of the component.
  * @csspart content - Use this to format the content `div` inside the shadow root of the component, which surrounds the title and the additional-text `spans`.
  * @csspart title - Use this to format the "title" `span` inside the shadow root of the component, which surrounds the default slot.
  * @csspart additional-text - Use this to format the additional-text `span` inside the shadow root of the component.
+ *
+ * @summary Item option for MultiComboBox selection lists.
+ * @keywords multi-combobox-item, option, selection, token
+ * @category Form
+ * @usecase Use as children of furo-ui5-multi-combobox.
+ * @related furo-ui5-multi-combobox, furo-ui5-mcb-item-group
  * @tagname furo-ui5-mcb-item
  */
 export class FuroUi5McbItem extends MultiComboBoxItem {

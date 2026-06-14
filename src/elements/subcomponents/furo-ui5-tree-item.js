@@ -9,6 +9,7 @@ import '@ui5/webcomponents-icons/dist/border.js';
 import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
 
 /**
+ *
  * `furo-tree-item`
  /**
  * # INTERNAL COMPONENT
@@ -28,7 +29,11 @@ import { NodeEvent } from '@furo/framework/src/EventTreeNode.js';
  * @cssprop {N/A} [--tree-indentation-11=100px] - tree indention level 11
  * @cssprop {N/A} [--tree-indentation-12=104px] - tree indention level 12
  *
- * @summary tree item
+ * @summary Standard item node within a tree component.
+ * @keywords tree-item, node, hierarchical, nested
+ * @category List
+ * @usecase Use as children of furo-ui5-tree.
+ * @related furo-ui5-tree
  * @element furo-ui5-tree-item
  * @appliesMixin FBP
  */

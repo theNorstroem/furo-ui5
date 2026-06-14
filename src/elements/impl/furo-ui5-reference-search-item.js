@@ -1,11 +1,17 @@
 import StandardListItem from '@ui5/webcomponents/dist/StandardListItem.js';
 
 /**
+ *
  * `reference-search-item`
  * Repeated item to display the search result set
  *
  * @fires {item} item-selected -  Fired when item is selected
- * @summary representation of a result item
+ *
+ * @summary Result item within a reference search.
+ * @keywords reference, search, item, result, option
+ * @category Form
+ * @usecase Use as children of the reference search to represent a result.
+ * @related furo-ui5-reference-search
  * @element
  * @appliesMixin FBP
  */

@@ -9,6 +9,12 @@ import type { MultiComboBoxItemLike } from "@/lib/open-models/signatures";
  * @csspart content - Use this to format the content `div` inside the shadow root of the component, which surrounds the title and the additional-text `spans`.
  * @csspart title - Use this to format the "title" `span` inside the shadow root of the component, which surrounds the default slot.
  * @csspart additional-text - Use this to format the additional-text `span` inside the shadow root of the component.
+ *
+ * @summary Item option for ComboBox selection lists.
+ * @keywords combobox-item, option, selection, dropdown
+ * @category Form
+ * @usecase Use as children of furo-ui5-combobox.
+ * @related furo-ui5-combobox, furo-ui5-cb-item-group
  * @tagname furo-ui5-cb-item
  */
 export class FuroUi5CbItem extends ComboBoxItem {

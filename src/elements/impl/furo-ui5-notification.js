@@ -2,6 +2,7 @@ import { LitElement, css } from 'lit';
 import { Env } from '@furo/framework';
 
 /**
+ *
  *  furo-ui5-notification should be used together witch furo-ui5-notification-list-display or furo-ui5-notification-group-display. you can place those two web-components into different places.
  *  best place the furo-ui5-notification-list(or group)-display on the main site. then you only need one furo-ui5-notification-list(or group)-display. it can work with n furo-ui5-notification.
  *
@@ -11,7 +12,11 @@ import { Env } from '@furo/framework';
  * @fires {{Object}  payload} notification-custom-action -  Fired when notification custom action is triggered. this is a general action event.
  * @fires {{Object}  payload} notification-custom-action-`commandName` -  Fired when notification custom action is triggered.
  *
- * @summary trigger component for notifications
+ * @summary Individual notification item with title, description, and actions.
+ * @keywords notification-item, alert, message, action
+ * @category Feedback
+ * @usecase Use as children of furo-ui5-notification-list-display.
+ * @related furo-ui5-notification-list-display, furo-ui5-notification-group-display
  * @element
  */
 export class FuroUi5Notification extends LitElement {

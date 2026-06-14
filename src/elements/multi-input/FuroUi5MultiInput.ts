@@ -7,6 +7,7 @@ import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import { FuroFatString, type IFuroFatString } from "@/models";
 
 /**
+ *
  * The 'furo-ui5-multi-input' component lets the user enter and edit a list of strings with data binding.
  *
  * It supports all features from the [SAP ui5 MultiInput element](https://sap.github.io/ui5-webcomponents/playground/components/MultiInput/).
@@ -23,6 +24,11 @@ import { FuroFatString, type IFuroFatString } from "@/models";
  * - **required: true** , set the element to required
  * - **max:"number"** set the maximum number of characters available in the input field.
  *
+ * @summary Text input supporting multiple values displayed as tokens.
+ * @keywords multi-input, tokens, tags, multiple, values, input, form
+ * @category Form
+ * @usecase Use when users need to enter multiple freeform values displayed as tokens.
+ * @related furo-ui5-multi-combobox, furo-ui5-input, furo-ui5-token
  * @tagname furo-ui5-multi-input
  */
 export class FuroUi5MultiInput extends MultiInput {

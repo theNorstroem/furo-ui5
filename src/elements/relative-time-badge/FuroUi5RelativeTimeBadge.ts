@@ -7,6 +7,7 @@ import { XDate } from "@/models/google/type/Date";
 import { formatRelativeTime } from "@/util/formatRelativeTime";
 
 /**
+ *
  * The 'furo-ui5-relative-time-badge' is a small, non-interactive, display-only component which shows
  * relative time information (e.g. "in 2 days", "5 days ago"), with data binding.
  *
@@ -24,7 +25,11 @@ import { formatRelativeTime } from "@/util/formatRelativeTime";
  *  <furo-ui5-relative-time-badge .model="${fieldNode}"></furo-ui5-relative-time-badge>
  * ```
  *
- * @summary bindable, display-only relative time badge
+ * @summary Display-only badge showing a relative time (e.g. "3 days ago").
+ * @keywords relative-time, time, badge, ago, timestamp, display
+ * @category Display
+ * @usecase Use to show a timestamp as a human-friendly relative time badge.
+ * @related furo-ui5-relative-time-display
  * @tagname furo-ui5-relative-time-badge
  */
 export class FuroUi5RelativeTimeBadge extends Tag {

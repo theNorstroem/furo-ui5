@@ -8,6 +8,7 @@ import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 
 /**
+ *
  * ### FuroUi5SelectEnum
  * With FuroUi5SelectEnum you can bind a ENUM field to the model. It will build up all defined options from the ENUM.
  *
@@ -15,6 +16,11 @@ import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
  *
  * ---
  *
+ * @summary Dropdown selection bound to a protobuf enum field.
+ * @keywords select, enum, dropdown, options, choice, form, list
+ * @category Form
+ * @usecase Use to select a single value from an enum-typed field.
+ * @related furo-ui5-select, furo-ui5-option
  * @tagname furo-ui5-select-enum
  *
  */

@@ -13,6 +13,7 @@ import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import type { FuroFatBool } from "@/models";
 
 /**
+ *
  * Displays a icon/symbol for a boolean value
  *
  * This component uses the SAP Ui5 icons.
@@ -25,7 +26,11 @@ import type { FuroFatBool } from "@/models";
  * Only `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are auto imported.
  * If you set other icons, please do not forget to import them.
  *
- * @summary  Displays an icon for a boolean value
+ * @summary Display-only icon that reflects a boolean value.
+ * @keywords bool, boolean, icon, display, indicator, true-false
+ * @category Display
+ * @usecase Use to visualize a boolean field as an icon (e.g. yes/no, on/off).
+ * @related furo-ui5-icon, furo-ui5-checkbox
  * @tagname furo-ui5-bool-icon
  * @appliesMixin FBP
  */

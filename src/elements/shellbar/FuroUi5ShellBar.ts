@@ -2,6 +2,11 @@ import ShellBar from "@ui5/webcomponents-fiori/dist/ShellBar.js";
 
 /**
  *
+ * @summary Application header bar with branding, navigation, and user actions.
+ * @keywords shellbar, header, app-bar, navigation, branding, toolbar
+ * @category PageStructure
+ * @usecase Use as the main application header for branding and global navigation.
+ * @related furo-ui5-shellbar-item, furo-ui5-shellbar-search, furo-ui5-user-menu
  * @tagname furo-ui5-shellbar
  * @attribute {boolean} shadow - Drops a shadow below the shellbar
  *

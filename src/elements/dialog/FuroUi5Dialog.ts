@@ -20,7 +20,11 @@ import Dialog from "@ui5/webcomponents/dist/Dialog.js";
  * <button at-click="--openDialogClicked">Open dialog</button>
  * ```
  *
- * @summary Dialog element
+ * @summary Modal dialog for displaying content requiring user attention or action.
+ * @keywords dialog, modal, popup, overlay, confirmation, alert, lightbox
+ * @category Container
+ * @usecase Use for confirmations, forms, or content requiring user action before continuing.
+ * @related furo-ui5-popover, furo-ui5-responsive-popover, furo-ui5-bar
  * @tagname furo-ui5-dialog
  */
 export class FuroUi5Dialog extends Dialog {

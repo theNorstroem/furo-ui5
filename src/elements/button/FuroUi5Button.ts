@@ -4,6 +4,11 @@ export * from "@ui5/webcomponents/dist/Button.js";
 
 /**
  *
+ * @summary Primary interactive button for triggering actions and navigation.
+ * @keywords button, action, click, submit, primary, trigger, call-to-action
+ * @category Button
+ * @usecase Use for primary and secondary actions in forms, toolbars, and dialogs.
+ * @related furo-ui5-toggle-button, furo-ui5-split-button, furo-ui5-segmented-button, furo-ui5-button-badge
  * @tagname furo-ui5-button
  */
 export class FuroUi5Button extends Button {

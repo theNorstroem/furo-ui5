@@ -23,6 +23,7 @@ interface AmountInput extends HTMLElement {
 }
 
 /**
+ *
  * The `furo-ui5-money-input` binds a `google.type.Money` or `furo.type.Money` field to a
  * composition of an amount input (`ui5-input` type Number) and a currency
  * `furo-ui5-combobox`. The amount round-trips through the model's `units` (INT64) and
@@ -38,6 +39,11 @@ interface AmountInput extends HTMLElement {
  * - **readonly: true** — set the element to readonly
  * - **required: true** — mark the element as required
  *
+ * @summary Composite input for a monetary amount together with its currency.
+ * @keywords money, currency, amount, price, input, decimal, form
+ * @category Form
+ * @usecase Use for entering a monetary value together with its currency.
+ * @related furo-ui5-number-input, furo-ui5-combobox
  * @tagname furo-ui5-money-input
  */
 export class FuroUi5MoneyInput extends LitElement {

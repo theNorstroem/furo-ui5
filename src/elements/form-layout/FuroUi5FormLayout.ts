@@ -101,6 +101,11 @@ import { property, query } from "lit/decorators.js";
  * @slot {HTMLElement[]} action - Slot for action items, prefer transparent design on buttons.
  * @slot {HTMLElement[]} - Slot for form groups. Not limited to form groups, when you know what you do.
  *
+ * @summary Responsive form container organizing form groups with adaptive column layout.
+ * @keywords form, layout, responsive, groups, columns, structure
+ * @category FormLayout
+ * @usecase Use as the main container for forms with one or more form groups.
+ * @related furo-ui5-form-group, furo-ui5-form-row, furo-ui5-form-facet
  * @tagname furo-ui5-form-layout
  * @public
  */

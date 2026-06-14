@@ -30,6 +30,12 @@ import { FuroFatBool } from "@/models";
  *
  * @author FURO
  * @extends LitElement
+ *
+ * @summary Container for conditionally showing or hiding content.
+ * @keywords show, hide, visibility, conditional, toggle
+ * @category Layout
+ * @usecase Use for toggling content visibility.
+ * @related furo-ui5-expandable-text
  * @tagname furo-ui5-show-hide
  * @public
  */

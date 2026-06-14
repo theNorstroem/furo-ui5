@@ -6,13 +6,18 @@ import SignaturePad from "signature_pad";
 import DebounceBuilder from "@/util/Debounce";
 
 /**
+ *
  * `furo-sign-pad`
  *  Simple pad to sign or draw something
  *
  *
  * @fires {string} sign-updated - Fired when sign gets new painting, with base encoded image.
  *
- * @summary draw or sign
+ * @summary Canvas pad for drawing or capturing a signature.
+ * @keywords signature, sign, draw, canvas, pad, input
+ * @category Form
+ * @usecase Use to capture a handwritten signature or freehand drawing.
+ * @related furo-ui5-button
  * @tagname furo-ui5-sign-pad
 
  */

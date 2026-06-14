@@ -5,6 +5,7 @@ import { state } from "lit/decorators.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 /**
+ *
  * `furo-pretty-json`
  * Pretty json with highlighting
  *
@@ -13,7 +14,11 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
  *   fn-inject-json="--data"></furo-pretty-json>
  * ```
  *
- * @summary pretty prints json data
+ * @summary Display-only pretty printer for JSON data.
+ * @keywords json, pretty-print, debug, display, format, code
+ * @category Display
+ * @usecase Use to render JSON data in a readable, indented form.
+ * @related furo-ui5-markdown
  * @customElement
  */
 export class FuroUi5PrettyJson extends LitElement {

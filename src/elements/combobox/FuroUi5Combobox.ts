@@ -37,6 +37,11 @@ import { FuroFatString } from "@/models";
  *
  * ---
  *
+ * @summary Filterable dropdown with type-ahead search functionality.
+ * @keywords combobox, autocomplete, dropdown, search, filter, typeahead, select
+ * @category Form
+ * @usecase Use when users benefit from searching/filtering a large list of options.
+ * @related furo-ui5-select, furo-ui5-multi-combobox, furo-ui5-cb-item
  * @tagname furo-ui5-combobox
  * @demo demo-furo-ui5-combobox Basic usage (scalar , fat, wrapper values)
  */

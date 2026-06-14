@@ -1,6 +1,7 @@
 import { css, html, LitElement } from "lit";
 
 /**
+ *
  * `z-grid`
  * is a grid which places your elements in a **z** pattern.
  * It creates a grid which can be imagined as a grid with cells of the size *8rem x 8rem*.~
@@ -101,7 +102,12 @@ import { css, html, LitElement } from "lit";
  * @cssprop {N/A} [--furo-ui5-cardContentHeight=36rem] - card content height with vspan=9, --furo-ui5-cardContentHeight is calculated by span * 2 - cardHeaderHeight
  *
  * @slot {HTMLElement[]} - default slot to add content.
- * @summary grid with a z pattern
+ *
+ * @summary Grid layout that arranges children in a Z-shaped reading flow.
+ * @keywords grid, layout, z-pattern, columns, responsive, arrange
+ * @category Layout
+ * @usecase Use to lay out form content in a Z-pattern reading order.
+ * @related furo-ui5-form-layout
  * @element
  * @demo demo-furo-z-grid
  * @appliesMixin FBP

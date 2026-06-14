@@ -4,6 +4,11 @@ export * from "@ui5/webcomponents/dist/ButtonBadge.js";
 
 /**
  *
+ * @summary Badge indicator attached to buttons for counts or status.
+ * @keywords badge, button, counter, notification, indicator
+ * @category Button
+ * @usecase Use to add a count or status indicator to buttons.
+ * @related furo-ui5-button
  * @tagname furo-ui5-button-badge
  */
 export class FuroUi5ButtonBadge extends ButtonBadge {

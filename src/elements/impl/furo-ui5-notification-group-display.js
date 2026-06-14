@@ -7,12 +7,17 @@ import '@ui5/webcomponents-fiori/dist/NotificationAction.js';
 import '@ui5/webcomponents/dist/List.js';
 
 /**
+ *
  *  Notification display component that works together with furo-ui5-notification.
  *  Best place the furo-ui5-notification-group-display on the main site. then you only need one furo-ui5-notification-group-display.
  *  you can also use more furo-ui5-notification-group-display's for special needs. But You have to be sure the furo-ui5-notification-group-display can receive the notification events.
  *
  *
- * @summary ui5 notification group display
+ * @summary Group container for related notification items.
+ * @keywords notification-group, grouping, collection, alerts
+ * @category Feedback
+ * @usecase Use to group related notifications together.
+ * @related furo-ui5-notification-list-display, furo-ui5-notification
  * @element
  * @demo demo-furo-ui5-notification-group-display Basic Usage
  */

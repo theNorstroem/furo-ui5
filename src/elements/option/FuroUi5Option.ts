@@ -3,6 +3,7 @@ import Option from "@ui5/webcomponents/dist/Option.js";
 import type { OptionLike } from "@/lib/open-models/signatures";
 
 /**
+ *
  * The `furo-ui5-option` is meant to be used inside a `furo-ui5-select`. It is also automatically used by the `furo-ui5-select-enum`.
  *
  * You can bind any OptionLike field to it.
@@ -21,6 +22,12 @@ import type { OptionLike } from "@/lib/open-models/signatures";
  * @csspart content - Use this to format the content `div` inside the shadow root of the component, which surrounds the title and the additional-text `spans`.
  * @csspart title - Use this to format the "title" `span` inside the shadow root of the component, which surrounds the default slot.
  * @csspart additional-text - Use this to format the additional-text `span` inside the shadow root of the component.
+ *
+ * @summary Option item for use within Select components.
+ * @keywords option, item, select, dropdown, choice
+ * @category Form
+ * @usecase Use as children of furo-ui5-select.
+ * @related furo-ui5-select, furo-ui5-option-custom
  * @tagname furo-ui5-option
  */
 export class FuroUi5Option extends Option {

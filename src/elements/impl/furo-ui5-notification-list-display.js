@@ -9,6 +9,7 @@ import '@ui5/webcomponents/dist/List.js';
 import { i18n } from '@furo/framework';
 
 /**
+ *
  *  Notification display component that works together with furo-ui5-notification.
  *  Displays google.rpc.Status messages in a grouped list.
  *  https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto.
@@ -19,7 +20,11 @@ import { i18n } from '@furo/framework';
  *
  * @fires {Number} furo-value-changed - Fires a notification counter changed. Use this event to show the amount of notifications to the user.
  *
- * @summary ui5 notification list
+ * @summary Container for displaying a list of notification items.
+ * @keywords notification, list, alerts, messages, feed
+ * @category Feedback
+ * @usecase Use for displaying a collection of notification items.
+ * @related furo-ui5-notification-group-display, furo-ui5-notification
  * @tagname furo-ui5-notification-list-display
  * @demo demo-furo-ui5-notification-list-display ui5 notification display demo
  */

@@ -8,6 +8,7 @@ import '../subcomponents/furo-ui5-tree-item.js';
 // import { html as statichtml, literal } from 'lit/static-html.js';
 
 /**
+ *
  * `furo-tree`
  * renders a tree structure
  *
@@ -67,7 +68,11 @@ import '../subcomponents/furo-ui5-tree-item.js';
  * @cssprop {N/A} [--tree-indentation-11=100px] - tree indention level 11
  * @cssprop {N/A} [--tree-indentation-12=104px] - tree indention level 12
  *
- * @summary tree navigation menu
+ * @summary Hierarchical tree view with expandable/collapsible nodes.
+ * @keywords tree, hierarchy, nodes, expandable, collapsible, nested
+ * @category List
+ * @usecase Use for displaying hierarchical data structures with expand/collapse.
+ * @related furo-ui5-tree-item, furo-ui5-list
  * @tagname  furo-ui5-tree
  * @appliesMixin FBP
  */

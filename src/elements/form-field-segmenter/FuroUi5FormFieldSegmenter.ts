@@ -11,6 +11,11 @@ import FormFieldSegmentationPatterns from "@/types/FormFieldSegmentationPatterns
  *
  * @slot {HTMLElement[]} slot-name - slot description
  *
+ * @summary Splits form field space for segmented layouts like value-unit pairs.
+ * @keywords segmenter, split, field, unit, compound, paired
+ * @category FormLayout
+ * @usecase Use for compound fields like amount-currency or value-unit pairs.
+ * @related furo-ui5-form-row
  * @tagname furo-ui5-form-field-segmenter
  * @public
  */

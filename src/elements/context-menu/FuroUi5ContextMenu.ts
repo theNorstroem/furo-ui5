@@ -25,10 +25,14 @@ export interface MenuItemSelectedEventDetail {
  * sub-menus, keyboard navigation, separators and a11y are inherited from `ui5-menu`.
  *
  *
+ * @summary Popup menu with hierarchical menu items for actions or navigation.
+ * @keywords menu, context-menu, dropdown, actions, navigation, popup
+ * @category Navigation
+ * @usecase Use for action menus, context menus, or hierarchical navigation.
+ * @related furo-ui5-menu-item, furo-ui5-popover, furo-ui5-split-button
  * @tagname furo-ui5-context-menu
  * @eventref menu-item-selected - MenuItemSelectedEventDetail - "@furo/ui5/dist/index.js"
  * @event {CustomEvent<MenuItemSelectedEventDetail>} menu-item-selected - Fired when a menu item was clicked.
- * @summary Context menu bound to a `furoui5.Menuitem` model.
  */
 export class FuroUi5ContextMenu extends Menu {
   /**

@@ -3,6 +3,7 @@ import { css, html, LitElement, nothing } from "lit";
 import { property } from "lit/decorators.js";
 
 /**
+ *
  * `furo-ui5-section`
  * The object page content according to the SAP Design System Fiori guidelines consists of sections and subsections
  * arranged in a column layout.
@@ -23,6 +24,11 @@ import { property } from "lit/decorators.js";
  * @slot {FuroUi5SubSection[]} - defines the content of the section.
  *
  *
+ * @summary Major content section within object pages.
+ * @keywords section, page, object-page, content, area
+ * @category Container
+ * @usecase Use within object pages to define major content sections.
+ * @related furo-ui5-subsection, furo-ui5-page
  * @tagname furo-ui5-section
  * @public
  */

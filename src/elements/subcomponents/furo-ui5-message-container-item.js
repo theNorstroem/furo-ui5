@@ -3,10 +3,15 @@ import { FBP } from '@furo/fbp';
 import '@furo/data/src/furo-type-renderer.js';
 
 /**
+ *
  * `furo-ui5-message-container-item`
  * todo Describe your element
  *
- * @summary todo shortdescription
+ * @summary Single message item within a message container.
+ * @keywords message, item, container, feedback, entry
+ * @category Feedback
+ * @usecase Use as children of the message container to represent one message.
+ * @related furo-ui5-message-container-display
  * @customElement
  * @appliesMixin FBP
  */

@@ -5,6 +5,7 @@ import '@ui5/webcomponents/dist/SegmentedButtonItem.js';
 
 
 /**
+ *
  * The furo-ui5-segmented-button component represents a drop-down list. The items inside define the available
  * options by using the furo-ui5-segmented-button component.
  *
@@ -24,7 +25,11 @@ import '@ui5/webcomponents/dist/SegmentedButtonItem.js';
  *
  * @fires {optionNodeList} options-updated - Fired  after the option list was rebuilt
  *
- * @summary segmented button
+ * @summary Group of mutually exclusive toggle buttons for single selection.
+ * @keywords segmented, toggle, group, selection, mutually-exclusive, tabs
+ * @category Button
+ * @usecase Use for switching between related views or filtering data in place.
+ * @related furo-ui5-toggle-button, furo-ui5-button
  * @tagname furo-ui5-segmented-button
  * @demo demo-furo-ui5-segmented-button Basic Usage
  * @appliesMixin FBP

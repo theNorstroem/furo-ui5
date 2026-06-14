@@ -22,6 +22,11 @@ import { TimeOfDay } from "@/models/google/type/TimeOfDay";
  *
  * Note: UI5 `TimePicker` has no min/max date range, so `min` / `max` constraints are not applied.
  *
+ * @summary Time selection input for picking hours, minutes, and optionally seconds.
+ * @keywords time, picker, hours, minutes, clock, input
+ * @category Form
+ * @usecase Use for selecting time values without date.
+ * @related furo-ui5-datetime-picker, furo-ui5-date-picker
  * @tagname furo-ui5-time-picker
  */
 export class FuroUi5TimePicker extends TimePicker {

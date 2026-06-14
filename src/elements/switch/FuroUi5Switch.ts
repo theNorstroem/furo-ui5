@@ -23,7 +23,11 @@ import type { FuroFatBool } from "@/models";
  *
  * @fires {Boolean} change -  Fired when the switch checked state changes.
  *
- * @summary data switch input field
+ * @summary Toggle control for immediate on/off state changes.
+ * @keywords switch, toggle, on-off, boolean, slider, form
+ * @category Form
+ * @usecase Use when the state change should take effect immediately without form submission.
+ * @related furo-ui5-checkbox, furo-ui5-toggle-button
  * @tagname furo-ui5-switch
  */
 export class FuroUi5Switch extends Switch {

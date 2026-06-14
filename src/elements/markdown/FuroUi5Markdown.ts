@@ -7,6 +7,7 @@ import MarkdownIt from "markdown-it";
 import { TableCss } from "@/styles/table.css";
 
 /**
+ *
  * `furo-ui5-markdown`
  *
  *  Renders given md data directly to html.
@@ -25,7 +26,11 @@ import { TableCss } from "@/styles/table.css";
  *
  * #### Adding custom renderers
  *
- * @summary renders markdown data
+ * @summary Renders bound markdown text as formatted HTML.
+ * @keywords markdown, md, render, formatted-text, html, display
+ * @category Display
+ * @usecase Use to display rich text authored in markdown from a data field.
+ * @related furo-ui5-text-input
  * @tagname furo-ui5-markdown
  * @appliesMixin FBP
  */
