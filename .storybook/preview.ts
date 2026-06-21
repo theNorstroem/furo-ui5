@@ -11,7 +11,7 @@ setStorybookHelpersConfig(options);
 customElements.modules.forEach((module: any) => {
   module.declarations.forEach((declaration: any) => {
     if(!declaration.members){
-      console.log(declaration)
+      // console.log(declaration)
     }
     declaration.members?.forEach((member: any,i:number ) => {
       if(member.privacy === "private"){

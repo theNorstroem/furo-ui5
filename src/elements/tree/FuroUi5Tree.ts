@@ -18,13 +18,23 @@ import { RootNode } from "@/models/furoui5/RootNode";
  * are propagated through the open-models event tree (`__broadcastEvent` / `__dispatchEvent`),
  * mirroring the behavior of the original `@furo/data` based implementation.
  *
- * ## Data signature
+ * ### Keyboard navigation
  *
- * ```yaml
- * - type: 'tree.Tree #Navigation tree type with recursive navigation nodes'
- *   fields:
- *     root: 'tree.NavigationNode:1 #Root node of the tree'
- * ```
+ * The `furo-ui5-tree` provides advanced keyboard handling.
+ *
+ * We follow the rules from
+ * [ARIA: treegrid role - Accessibility | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role#keyboard_interactions)
+ * and [Treegrid Pattern | APG | WAI | W3C](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/). Cell navigation is not supported at the moment.
+ *
+ * The user can use the following keyboard shortcuts in order to navigate through the tree (cell navigation is not yet supported):
+ *
+ *
+ * - [UP/DOWN] - Navigates up and down the tree items that are currently visible.
+ * - [RIGHT] - Opens a node when it is not expanded and drills down the tree when the node is already opened.
+ * - [SHIFT + RIGHT] - Opens **all sub nodes** of the focused node. The focus stays on the current node. This is an additional key command.
+ * - [LEFT] - Collapses an open node and otherwise goes up the tree to the parent node and collapses the tree nodes.
+ * - [HOME] - Focuses the first visible item.
+ * - [END] - Focuses the last visible item.
  *
  * @eventref node-focused - NavigationNode - "@/models/index.js"
  * @event {NavigationNode} node-focused - Fired when a node receives the focus.
@@ -333,7 +343,9 @@ export class FuroUi5Tree extends LitElement {
     // open the path up to the selected node
     let parent = getParentNode(node);
     while (parent !== undefined) {
-      parent.open.value = true;
+      if (parent.__meta.typeName !== "tree.RootNode"){
+        parent.open.value = true;
+      }
       parent = getParentNode(parent);
     }
 
@@ -710,6 +722,7 @@ export class FuroUi5Tree extends LitElement {
     }
 
     .tablewrapper {
+      height: 100%;
       overflow: auto;
     }
 
@@ -720,7 +733,6 @@ export class FuroUi5Tree extends LitElement {
     table {
       border-spacing: 0;
       min-width: 100%;
-      padding: 0.25rem 1rem;
       box-sizing: border-box;
     }
 

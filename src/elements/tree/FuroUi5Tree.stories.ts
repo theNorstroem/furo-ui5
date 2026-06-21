@@ -59,7 +59,10 @@ const tree = new RootNode({
         displayName: "docs",
         icon: "folder",
         secondaryText: "markdown",
-        children: [{ id: "readme", displayName: "README.md", icon: "document" }],
+        children: [
+          { id: "readme", displayName: "README.md", icon: "document" },
+          { id: "readme", displayName: "README.md", icon: "document" },
+        ],
       },
       { id: "pkg", displayName: "package.json", icon: "document", secondaryText: "has issues", hasError: true },
     ],
@@ -95,7 +98,7 @@ export default meta;
 export const Default: StoryObj = {
   args: {},
   render: renderArgs => html`
-    <div style="height: 420px; border: 1px solid var(--sapList_BorderColor, #e5e5e5);">
+    <div style="height: 220px; border: 1px solid var(--sapList_BorderColor, #e5e5e5);">
       <furo-ui5-tree
         ?hide-root-node="${renderArgs.hideRootNode}"
         ?root-as-header="${renderArgs.rootAsHeader}"

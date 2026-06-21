@@ -292,7 +292,9 @@ export class FuroUi5TreeItem extends LitElement {
       font-weight: 400;
       user-select: none;
       position: relative;
-      transition: color 0.2s, background-color 0.2s;
+      transition:
+        color 0.2s,
+        background-color 0.2s;
     }
 
     :host([hidden]) {
@@ -420,47 +422,47 @@ export class FuroUi5TreeItem extends LitElement {
     }
 
     .indentation {
-      height: 40px;
+      height: 16px;
     }
 
     .indentation-0 .indentation {
       width: var(--tree-indentation-0, 0);
     }
     .indentation-1 .indentation {
-      width: var(--tree-indentation-1, 16px);
+      width: var(--tree-indentation-1, 12px);
     }
     .indentation-2 .indentation {
-      width: var(--tree-indentation-2, 32px);
+      width: var(--tree-indentation-2, 24px);
     }
     .indentation-3 .indentation {
-      width: var(--tree-indentation-3, 48px);
+      width: var(--tree-indentation-3, 36px);
     }
     .indentation-4 .indentation {
-      width: var(--tree-indentation-4, 56px);
+      width: var(--tree-indentation-4, 48px);
     }
     .indentation-5 .indentation {
-      width: var(--tree-indentation-5, 64px);
+      width: var(--tree-indentation-5, 60px);
     }
     .indentation-6 .indentation {
       width: var(--tree-indentation-6, 72px);
     }
     .indentation-7 .indentation {
-      width: var(--tree-indentation-7, 80px);
+      width: var(--tree-indentation-7, 84px);
     }
     .indentation-8 .indentation {
-      width: var(--tree-indentation-8, 88px);
+      width: var(--tree-indentation-8, 96px);
     }
     .indentation-9 .indentation {
-      width: var(--tree-indentation-9, 92px);
+      width: var(--tree-indentation-9, 108px);
     }
     .indentation-10 .indentation {
-      width: var(--tree-indentation-10, 96px);
+      width: var(--tree-indentation-10, 120px);
     }
     .indentation-11 .indentation {
-      width: var(--tree-indentation-11, 100px);
+      width: var(--tree-indentation-11, 132px);
     }
     .indentation-12 .indentation {
-      width: var(--tree-indentation-12, 104px);
+      width: var(--tree-indentation-12, 144px);
     }
 
     furo-ui5-bool-icon {
@@ -469,7 +471,7 @@ export class FuroUi5TreeItem extends LitElement {
     }
 
     span {
-      line-height: 38px;
+      line-height: var(--tree-line-height, 32px);
     }
   `;
 
@@ -483,11 +485,13 @@ export class FuroUi5TreeItem extends LitElement {
       <div class="row indentation-${this.indentation}" @dblclick="${this._toggle}">
         <div class="indentation" @click="${this._labelClick}" @keydown="${this._labelKeydown}"></div>
 
-        <furo-ui5-bool-icon ?hidden="${node.children.length === 0}" .model="${node.open}"></furo-ui5-bool-icon>
+        ${node.children.length > 0
+          ? html`<furo-ui5-bool-icon ?hidden="${node.children.length === 0}" .model="${node.open}"></furo-ui5-bool-icon>`
+          : html`<div style="width: 1.5rem;"></div>`}
 
         <div class="label" @click="${this._labelClick}" @keydown="${this._labelKeydown}">
           <ui5-icon ?hidden="${this.noicon}" name="${this._icon}" ?error="${node.hasError.value}"></ui5-icon>
-          <span>${node.displayName.value}<span class="desc">${node.secondaryText.value}</span></span>
+          <span>${node.displayName.value} <span class="desc">${node.secondaryText.value}</span></span>
         </div>
       </div>
     `;
