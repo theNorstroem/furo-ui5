@@ -334,10 +334,6 @@ export class FuroUi5TreeItem extends LitElement {
       white-space: nowrap;
     }
 
-    :host([selected]) .oc {
-      color: var(--sapList_Active_Background);
-    }
-
     :host([searchmatch]) {
       background-color: var(--sapList_Active_Background);
     }
