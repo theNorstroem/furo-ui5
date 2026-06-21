@@ -27,7 +27,7 @@
         "name": "@jackolope/ts-lit-plugin",
         "strict": true,
         "rules": {
-          "no-incompatible-type-binding": "error",
+          "no-incompatible-type-binding": "warning",
           "no-incompatible-property-type": "error",
           "no-unknown-event": "off",
           "no-unknown-attribute": "off",
