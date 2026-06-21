@@ -2,6 +2,7 @@ const enums = new Set([
   "@ui5/webcomponents/dist/types/SelectTextSeparator.js",
   "@ui5/webcomponents/dist/types/InputSuggestionsFilter.js",
   "@ui5/webcomponents/dist/types/AvatarColorScheme.js",
+  "@ui5/webcomponents/dist/types/AvatarMode.js",
   "@ui5/webcomponents/dist/types/AvatarSize.js",
   "@furo/ui5/dist/types/ValueState.js",
   "@furo/ui5/dist/types/AvatarSize.js",

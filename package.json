@@ -29,6 +29,18 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./avatar": {
+      "types": "./dist/elements/avatar/index.d.ts",
+      "default": "./dist/elements/avatar/index.js"
+    },
+    "./avatar-badge": {
+      "types": "./dist/elements/avatar-badge/index.d.ts",
+      "default": "./dist/elements/avatar-badge/index.js"
+    },
+    "./avatar-group": {
+      "types": "./dist/elements/avatar-group/index.d.ts",
+      "default": "./dist/elements/avatar-group/index.js"
+    },
     "./barcode-scanner-dialog": {
       "types": "./dist/elements/barcode-scanner-dialog/index.d.ts",
       "default": "./dist/elements/barcode-scanner-dialog/index.js"
@@ -36,6 +48,14 @@
     "./bool-icon": {
       "types": "./dist/elements/bool-icon/index.d.ts",
       "default": "./dist/elements/bool-icon/index.js"
+    },
+    "./breadcrumbs": {
+      "types": "./dist/elements/breadcrumbs/index.d.ts",
+      "default": "./dist/elements/breadcrumbs/index.js"
+    },
+    "./breadcrumbs-item": {
+      "types": "./dist/elements/breadcrumbs-item/index.d.ts",
+      "default": "./dist/elements/breadcrumbs-item/index.js"
     },
     "./busy-indicator": {
       "types": "./dist/elements/busy-indicator/index.d.ts",
@@ -57,6 +77,10 @@
       "types": "./dist/elements/checkbox/index.d.ts",
       "default": "./dist/elements/checkbox/index.js"
     },
+    "./color-picker": {
+      "types": "./dist/elements/color-picker/index.d.ts",
+      "default": "./dist/elements/color-picker/index.js"
+    },
     "./combobox": {
       "types": "./dist/elements/combobox/index.d.ts",
       "default": "./dist/elements/combobox/index.js"
@@ -73,9 +97,21 @@
       "types": "./dist/elements/date-time-picker/index.d.ts",
       "default": "./dist/elements/date-time-picker/index.js"
     },
+    "./daterange-picker": {
+      "types": "./dist/elements/daterange-picker/index.d.ts",
+      "default": "./dist/elements/daterange-picker/index.js"
+    },
     "./dialog": {
       "types": "./dist/elements/dialog/index.d.ts",
       "default": "./dist/elements/dialog/index.js"
+    },
+    "./expandable-text": {
+      "types": "./dist/elements/expandable-text/index.d.ts",
+      "default": "./dist/elements/expandable-text/index.js"
+    },
+    "./file-uploader": {
+      "types": "./dist/elements/file-uploader/index.d.ts",
+      "default": "./dist/elements/file-uploader/index.js"
     },
     "./form-field-segmenter": {
       "types": "./dist/elements/form-field-segmenter/index.d.ts",
@@ -109,6 +145,10 @@
       "types": "./dist/elements/link/index.d.ts",
       "default": "./dist/elements/link/index.js"
     },
+    "./list": {
+      "types": "./dist/elements/list/index.d.ts",
+      "default": "./dist/elements/list/index.js"
+    },
     "./markdown": {
       "types": "./dist/elements/markdown/index.d.ts",
       "default": "./dist/elements/markdown/index.js"
@@ -116,6 +156,10 @@
     "./mcb-item": {
       "types": "./dist/elements/mcb-item/index.d.ts",
       "default": "./dist/elements/mcb-item/index.js"
+    },
+    "./message-strip": {
+      "types": "./dist/elements/message-strip/index.d.ts",
+      "default": "./dist/elements/message-strip/index.js"
     },
     "./money-input": {
       "types": "./dist/elements/money-input/index.d.ts",
@@ -156,6 +200,10 @@
     "./radio-button": {
       "types": "./dist/elements/radio-button/index.d.ts",
       "default": "./dist/elements/radio-button/index.js"
+    },
+    "./range-slider": {
+      "types": "./dist/elements/range-slider/index.d.ts",
+      "default": "./dist/elements/range-slider/index.js"
     },
     "./rating-indicator": {
       "types": "./dist/elements/rating-indicator/index.d.ts",
@@ -233,9 +281,25 @@
       "types": "./dist/elements/switch/index.d.ts",
       "default": "./dist/elements/switch/index.js"
     },
+    "./tab": {
+      "types": "./dist/elements/tab/index.d.ts",
+      "default": "./dist/elements/tab/index.js"
+    },
+    "./tabcontainer": {
+      "types": "./dist/elements/tabcontainer/index.d.ts",
+      "default": "./dist/elements/tabcontainer/index.js"
+    },
     "./table-toolbar-separator": {
       "types": "./dist/elements/table-toolbar-separator/index.d.ts",
       "default": "./dist/elements/table-toolbar-separator/index.js"
+    },
+    "./tag": {
+      "types": "./dist/elements/tag/index.d.ts",
+      "default": "./dist/elements/tag/index.js"
+    },
+    "./text": {
+      "types": "./dist/elements/text/index.d.ts",
+      "default": "./dist/elements/text/index.js"
     },
     "./text-input": {
       "types": "./dist/elements/text-input/index.d.ts",
