@@ -1,4 +1,4 @@
-import  { type Preview, setCustomElementsManifest } from '@storybook/web-components'
+import  { type Preview, setCustomElementsManifest } from '@storybook/web-components-vite'
 import customElements from "../custom-elements.json";
 import { setStorybookHelpersConfig, type Options } from "@wc-toolkit/storybook-helpers";
 

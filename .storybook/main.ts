@@ -70,26 +70,17 @@ function furoCemDeepWatch() {
 const config: StorybookConfig = {
   stories: ["../src/stories-shared/**/*.mdx", "../src/elements/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   staticDirs: [{ from: "../src/stories-shared/assets", to: "assets" }],
-  addons: [
-    {
-      name: "@storybook/addon-docs",
-      options: {
-        csfPluginOptions: null,
-        mdxPluginOptions: {
-          mdxCompileOptions: {
-            remarkPlugins: [remarkGfm],
-          },
+  addons: [{
+    name: "@storybook/addon-docs",
+    options: {
+      csfPluginOptions: null,
+      mdxPluginOptions: {
+        mdxCompileOptions: {
+          remarkPlugins: [remarkGfm],
         },
       },
     },
-    {
-      name: "@storybook/addon-essentials",
-      options: {
-        docs: true,
-      },
-    },
-    "@storybook/addon-a11y",
-  ],
+  }, "@storybook/addon-a11y"],
   framework: {
     name: "@storybook/web-components-vite",
     options: {},
