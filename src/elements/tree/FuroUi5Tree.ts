@@ -31,8 +31,8 @@ import { RootNode } from "@/models/furoui5/RootNode";
  *
  * - [UP/DOWN] - Navigates up and down the tree items that are currently visible.
  * - [RIGHT] - Opens a node when it is not expanded and drills down the tree when the node is already opened.
- * - [SHIFT + RIGHT] - Opens **all sub nodes** of the focused node. The focus stays on the current node. This is an additional key command.
- * - [LEFT] - Collapses an open node and otherwise goes up the tree to the parent node and collapses the tree nodes.
+ * - [SHIFT + RIGHT] - Opens **all sub nodes** of the focused node while respecting the `expandDepth` attribute. The focus stays on the current node. This is an additional key command.
+ * - [LEFT] - Collapses an open node, on a closed node goes up the tree to the parent node.
  * - [HOME] - Focuses the first visible item.
  * - [END] - Focuses the last visible item.
  *
