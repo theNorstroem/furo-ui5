@@ -339,7 +339,7 @@ export class FuroUi5TreeItem extends LitElement {
     }
 
     :host([searchmatch]) {
-      color: var(--sapList_Active_Background);
+      background-color: var(--sapList_Active_Background);
     }
 
     ui5-icon[error] {

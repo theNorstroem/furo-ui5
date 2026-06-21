@@ -1,5 +1,6 @@
 import "@/Assets";
 import "@/elements/tree";
+import "@/elements/text-input";
 import "@ui5/webcomponents-icons/dist/folder.js";
 import "@ui5/webcomponents-icons/dist/document.js";
 
@@ -127,4 +128,41 @@ export const HiddenRoot: StoryObj = {
     hideRootNode: true,
   },
   render: Default.render,
+};
+
+/**
+ * Drives the tree's `search()` method from a standalone, **unbound** `furo-ui5-text-input`.
+ * The input emits a debounced `search-requested` event (500ms trailing edge) carrying the
+ * current value; the handler forwards that term to `tree.search(term)`, which highlights the
+ * matching nodes and focuses the first hit. Terms of one character or less reset the search.
+ *
+ * Try typing `ts`, `read` or `package`.
+ */
+export const SearchViaTextInput: StoryObj = {
+  args: {},
+  render: () => {
+    let treeEl: FuroUi5Tree | undefined;
+
+    const grabTree = (el?: Element): void => {
+      if (el !== undefined) {
+        treeEl = el as FuroUi5Tree;
+        treeEl.bindData(tree);
+      }
+    };
+
+    const onSearchRequested = (e: Event): void => {
+      treeEl?.search((e as CustomEvent<string>).detail);
+    };
+
+    return html`
+      <furo-ui5-text-input
+        placeholder="Search the tree…"
+        show-clear-icon
+        @search-requested="${onSearchRequested}"
+      ></furo-ui5-text-input>
+      <div style="height: 220px; margin-top: 0.5rem; border: 1px solid var(--sapList_BorderColor, #e5e5e5);">
+        <furo-ui5-tree expand-depth="2" ${ref(grabTree)}></furo-ui5-tree>
+      </div>
+    `;
+  },
 };

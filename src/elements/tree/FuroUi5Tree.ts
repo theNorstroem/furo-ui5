@@ -35,6 +35,8 @@ import { RootNode } from "@/models/furoui5/RootNode";
  * - [LEFT] - Collapses an open node, on a closed node goes up the tree to the parent node.
  * - [HOME] - Focuses the first visible item.
  * - [END] - Focuses the last visible item.
+ * - [ENTER] - Selects the focused node. If the node is already selected, toggles its open/close state.
+ * - [SPACE] - Same as [ENTER].
  *
  * @eventref node-focused - NavigationNode - "@/models/index.js"
  * @event {NavigationNode} node-focused - Fired when a node receives the focus.
@@ -105,7 +107,7 @@ export class FuroUi5Tree extends LitElement {
    * @attr {boolean} searching
    */
   @property({ type: Boolean, attribute: "searching", reflect: true })
-  public _searchIsActive = false;
+  public searchIsActive = false;
 
   /**
    * Indicates that the element is focused.
@@ -138,6 +140,7 @@ export class FuroUi5Tree extends LitElement {
     this.addEventListener("tree-select", this._onItemSelect);
     this.addEventListener("focusin", this._onFocusIn);
     this.addEventListener("focusout", this._onFocusOut);
+    this.addEventListener("keydown", this._onKeyDown);
   }
 
   override disconnectedCallback() {
@@ -145,6 +148,7 @@ export class FuroUi5Tree extends LitElement {
     this.removeEventListener("tree-select", this._onItemSelect);
     this.removeEventListener("focusin", this._onFocusIn);
     this.removeEventListener("focusout", this._onFocusOut);
+    this.removeEventListener("keydown", this._onKeyDown);
   }
 
   private readonly _onItemSelect = (e: Event): void => {
@@ -157,6 +161,15 @@ export class FuroUi5Tree extends LitElement {
 
   private readonly _onFocusOut = (): void => {
     this.focused = false;
+  };
+
+  private readonly _onKeyDown = (e: KeyboardEvent): void => {
+    const handledKeys = ["Enter", " ", "Spacebar", "ArrowDown", "ArrowUp", "PageDown", "PageUp", "End", "Home", "ArrowLeft", "ArrowRight"];
+    if (!handledKeys.includes(e.key)) {
+      return;
+    }
+    e.preventDefault();
+    this.triggerNavigation(e.key, e.shiftKey);
   };
 
   private readonly _onTreeChanged = (): void => {
@@ -218,7 +231,6 @@ export class FuroUi5Tree extends LitElement {
       this._focusedField = this._flatTree[0];
       this.focusNode(this._focusedField);
     }
-
   }
 
   private _buildFlatTree(root: NavigationNode): void {
@@ -343,7 +355,7 @@ export class FuroUi5Tree extends LitElement {
     // open the path up to the selected node
     let parent = getParentNode(node);
     while (parent !== undefined) {
-      if (parent.__meta.typeName !== "tree.RootNode"){
+      if (parent.__meta.typeName !== "tree.RootNode") {
         parent.open.value = true;
       }
       parent = getParentNode(parent);
@@ -451,7 +463,7 @@ export class FuroUi5Tree extends LitElement {
       return;
     }
     let prev: NavigationNode | undefined;
-    if (this._searchIsActive) {
+    if (this.searchIsActive) {
       const focusedIndex = treeNodeView.get(this._focusedField)?.flatIndex ?? 0;
       for (let i = 0; i < this._foundSearchItems.length; i += 1) {
         if ((treeNodeView.get(this._foundSearchItems[i])?.flatIndex ?? 0) >= focusedIndex) {
@@ -476,7 +488,7 @@ export class FuroUi5Tree extends LitElement {
       return;
     }
     let next: NavigationNode | undefined;
-    if (this._searchIsActive) {
+    if (this.searchIsActive) {
       const focusedIndex = treeNodeView.get(this._focusedField)?.flatIndex ?? 0;
       for (let i = this._foundSearchItems.length - 1; i >= 0; i -= 1) {
         if ((treeNodeView.get(this._foundSearchItems[i])?.flatIndex ?? 0) <= focusedIndex) {
@@ -596,9 +608,11 @@ export class FuroUi5Tree extends LitElement {
    * Dispatches a keyboard navigation by key name. Intended to be wired to an external
    * navigation pad.
    */
-  public triggerNavigation(key: string): void {
+  public triggerNavigation(key: string, shiftKey = false): void {
     switch (key) {
       case "Enter":
+      case " ":
+      case "Spacebar":
         if (this._focusedField !== undefined) {
           if (this._focusedField === this._selectedField) {
             FuroUi5Tree.toggleNode(this._focusedField);
@@ -633,7 +647,11 @@ export class FuroUi5Tree extends LitElement {
         this.collapseFocused();
         break;
       case "ArrowRight":
-        this.expandFocused();
+        if (shiftKey) {
+          this.expandFocusedRecursive();
+        } else {
+          this.expandFocused();
+        }
         break;
       default:
     }
@@ -657,7 +675,7 @@ export class FuroUi5Tree extends LitElement {
   }
 
   private searchOpenTree(): void {
-    this._searchIsActive = true;
+    this.searchIsActive = true;
     const request: TreeSearchRequest = { term: this._searchTerm, results: [] };
     this._foundSearchItems = request.results;
     this._treeItems.forEach(item => {
@@ -673,7 +691,7 @@ export class FuroUi5Tree extends LitElement {
 
   /** Disables search mode and clears the term. */
   public resetSearch(): void {
-    this._searchIsActive = false;
+    this.searchIsActive = false;
     this._searchTerm = "";
     this._foundSearchItems = [];
     this._updateSearchmatchAttributesOnItems();
@@ -698,7 +716,7 @@ export class FuroUi5Tree extends LitElement {
       if (node.id.value === nodeID) {
         this.selectNode(node);
         this._focusedField = this._selectedField ?? this._focusedField;
-          this._fire("node-selected", this._selectedField);
+        this._fire("node-selected", this._selectedField);
         return node;
       }
     }
@@ -740,13 +758,8 @@ export class FuroUi5Tree extends LitElement {
       border-top: none;
     }
 
-    td > furo-ui5-tree-item:hover,
-    :host([focused]) td > furo-ui5-tree-item[focused] {
+    td > furo-ui5-tree-item:hover {
       background: var(--sapList_Hover_Background);
-    }
-
-    :host([focused]) td > furo-ui5-tree-item[focused] {
-      background: var(--sapList_Hover_SelectionBackground);
     }
 
     td > furo-ui5-tree-item[selected],
@@ -755,15 +768,17 @@ export class FuroUi5Tree extends LitElement {
     }
 
     :host([focused]) td > furo-ui5-tree-item[selected] {
+      background: var(--sapList_SelectionBackgroundColor);
+    }
+
+    :host([focused]) td > furo-ui5-tree-item[selected]:hover,
+    :host(:not([focused])) td > furo-ui5-tree-item[selected]:hover {
       background: var(--sapList_Hover_SelectionBackground);
     }
 
-    td:hover > furo-ui5-tree-item[selected][focused] {
-      background: var(--sapList_Hover_SelectionBackground);
-    }
-
-    :host([focused]) td > furo-ui5-tree-item[selected][focused] {
-      background: var(--sapList_Hover_SelectionBackground);
+    :host([focused]) td > furo-ui5-tree-item[focused] {
+      outline: 0.125rem var(--sapContent_FocusStyle) var(--sapContent_FocusColor);
+      outline-offset: -0.125rem;
     }
 
     :host([root-as-header]) td furo-ui5-tree-item[selected][isheader],

@@ -28,7 +28,6 @@ import DebounceBuilder from "@/util/Debounce";
  * - **placeholder:"some string"** set the placeholder for the element
  * - **max:"number"** set the maximum number of characters available in the input field.
  *
- * @fires search-requested {CustomEvent<String>}
  * @event {CustomEvent<String>} search-requested - Fired when typing in input (debounced, default 500ms).
  *
  * @summary Single-line text input field for user data entry.

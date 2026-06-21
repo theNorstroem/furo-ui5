@@ -6978,7 +6978,7 @@
               "kind": "field",
               "name": "headingLevel",
               "type": {
-                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "privacy": "public",
               "default": "\"H5\"",
@@ -7012,7 +7012,7 @@
             {
               "name": "heading-level",
               "type": {
-                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "default": "\"H5\"",
               "description": "Level for the heading.",
@@ -23496,11 +23496,11 @@
               }
             },
             {
-              "description": "Fired when typing in input (debounced, default 500ms).",
-              "name": "search-requested",
               "type": {
                 "text": "CustomEvent<String>"
-              }
+              },
+              "description": "Fired when typing in input (debounced, default 500ms).",
+              "name": "search-requested"
             },
             {
               "name": "select",
@@ -26933,7 +26933,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "`furo-ui5-tree`\nRenders a recursive navigation tree from a `tree.Tree` or `tree.NavigationNode` model.\n\nEach node is rendered as a `furo-ui5-tree-item`. Expand / collapse, selection and focus\nare propagated through the open-models event tree (`__broadcastEvent` / `__dispatchEvent`),\nmirroring the behavior of the original `@furo/data` based implementation.\n\n### Keyboard navigation\n\nThe `furo-ui5-tree` provides advanced keyboard handling.\n\nWe follow the rules from\n[ARIA: treegrid role - Accessibility | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role#keyboard_interactions)\nand [Treegrid Pattern | APG | WAI | W3C](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/). Cell navigation is not supported at the moment.\n\nThe user can use the following keyboard shortcuts in order to navigate through the tree (cell navigation is not yet supported):\n\n\n- [UP/DOWN] - Navigates up and down the tree items that are currently visible.\n- [RIGHT] - Opens a node when it is not expanded and drills down the tree when the node is already opened.\n- [SHIFT + RIGHT] - Opens **all sub nodes** of the focused node while respecting the `expandDepth` attribute. The focus stays on the current node. This is an additional key command.\n- [LEFT] - Collapses an open node, on a closed node goes up the tree to the parent node.\n- [HOME] - Focuses the first visible item.\n- [END] - Focuses the last visible item.",
+          "description": "`furo-ui5-tree`\nRenders a recursive navigation tree from a `tree.Tree` or `tree.NavigationNode` model.\n\nEach node is rendered as a `furo-ui5-tree-item`. Expand / collapse, selection and focus\nare propagated through the open-models event tree (`__broadcastEvent` / `__dispatchEvent`),\nmirroring the behavior of the original `@furo/data` based implementation.\n\n### Keyboard navigation\n\nThe `furo-ui5-tree` provides advanced keyboard handling.\n\nWe follow the rules from\n[ARIA: treegrid role - Accessibility | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role#keyboard_interactions)\nand [Treegrid Pattern | APG | WAI | W3C](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/). Cell navigation is not supported at the moment.\n\nThe user can use the following keyboard shortcuts in order to navigate through the tree (cell navigation is not yet supported):\n\n\n- [UP/DOWN] - Navigates up and down the tree items that are currently visible.\n- [RIGHT] - Opens a node when it is not expanded and drills down the tree when the node is already opened.\n- [SHIFT + RIGHT] - Opens **all sub nodes** of the focused node while respecting the `expandDepth` attribute. The focus stays on the current node. This is an additional key command.\n- [LEFT] - Collapses an open node, on a closed node goes up the tree to the parent node.\n- [HOME] - Focuses the first visible item.\n- [END] - Focuses the last visible item.\n- [ENTER] - Selects the focused node. If the node is already selected, toggles its open/close state.\n- [SPACE] - Same as [ENTER].",
           "name": "Tree",
           "cssProperties": [
             {
@@ -27097,6 +27097,12 @@
             },
             {
               "kind": "field",
+              "name": "_onKeyDown",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
               "name": "_onTreeChanged",
               "privacy": "private",
               "readonly": true
@@ -27138,18 +27144,6 @@
                 "text": "NavigationNode | undefined"
               },
               "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "_searchIsActive",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "public",
-              "default": "false",
-              "description": "Indicates an active search. Use it to style items depending on this attribute.",
-              "attribute": "searching",
-              "reflects": true
             },
             {
               "kind": "field",
@@ -27657,6 +27651,18 @@
               "description": "Searches the visible nodes. Returns the matching nodes."
             },
             {
+              "kind": "field",
+              "name": "searchIsActive",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "description": "Indicates an active search. Use it to style items depending on this attribute.",
+              "attribute": "searching",
+              "reflects": true
+            },
+            {
               "kind": "method",
               "name": "searchOpenTree",
               "privacy": "private",
@@ -27792,6 +27798,10 @@
                   "type": {
                     "text": "string"
                   }
+                },
+                {
+                  "name": "shiftKey",
+                  "default": "false"
                 }
               ],
               "description": "Dispatches a keyboard navigation by key name. Intended to be wired to an external\nnavigation pad."
@@ -27948,7 +27958,7 @@
               },
               "default": "false",
               "description": "Indicates an active search. Use it to style items depending on this attribute.",
-              "fieldName": "_searchIsActive",
+              "fieldName": "searchIsActive",
               "attribute": "searching"
             },
             {
