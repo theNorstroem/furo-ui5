@@ -9,7 +9,11 @@
     "email": "",
     "url": "https://github.com/theNorstroem/"
   },
-  "keywords": ["web-components", "flow based programming", "fbp"],
+  "keywords": [
+    "web-components",
+    "flow based programming",
+    "fbp"
+  ],
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",
@@ -172,6 +176,14 @@
     "./section": {
       "types": "./dist/elements/section/index.d.ts",
       "default": "./dist/elements/section/index.js"
+    },
+    "./segmented-button": {
+      "types": "./dist/elements/segmented-button/index.d.ts",
+      "default": "./dist/elements/segmented-button/index.js"
+    },
+    "./segmented-button-item": {
+      "types": "./dist/elements/segmented-button-item/index.d.ts",
+      "default": "./dist/elements/segmented-button-item/index.js"
     },
     "./select": {
       "types": "./dist/elements/select/index.d.ts",

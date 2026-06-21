@@ -15,7 +15,6 @@ export interface Tree extends React.HTMLAttributes<HTMLElement> {
   "onnode-selected"?: (d: NavigationNode) => void;
   "onnodes-collapsed"?: (d: NavigationNode) => void;
   "onnodes-expanded"?: (d: NavigationNode) => void;
-  "onqp-change-requested"?: (d: object) => void;
   // properties
 
   // attributes
@@ -46,12 +45,6 @@ export interface Tree extends React.HTMLAttributes<HTMLElement> {
   hideRootNode?: boolean;
 
   /**
-   * Query param to watch. When set, `node-selected` is only fired via `selectById`; otherwise
-   * a `qp-change-requested` event is emitted.
-   */
-  qp?: string;
-
-  /**
    * Render the root node as a header section.
    */
   rootAsHeader?: boolean;
@@ -59,7 +52,7 @@ export interface Tree extends React.HTMLAttributes<HTMLElement> {
   /**
    * Indicates an active search. Use it to style items depending on this attribute.
    */
-  _searchIsActive?: boolean;
+  searchIsActive?: boolean;
 
   /**
    * Override the description of the root object.
@@ -78,13 +71,25 @@ declare module "react" {
        * are propagated through the open-models event tree (`__broadcastEvent` / `__dispatchEvent`),
        * mirroring the behavior of the original `@furo/data` based implementation.
        *
-       * ## Data signature
+       * ### Keyboard navigation
        *
-       * ```yaml
-       * - type: 'tree.Tree #Navigation tree type with recursive navigation nodes'
-       * fields:
-       * root: 'tree.NavigationNode:1 #Root node of the tree'
-       * ```
+       * The `furo-furo-furo-ui5-tree` provides advanced keyboard handling.
+       *
+       * We follow the rules from
+       * [ARIA: treegrid role - Accessibility | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role#keyboard_interactions)
+       * and [Treegrid Pattern | APG | WAI | W3C](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/). Cell navigation is not supported at the moment.
+       *
+       * The user can use the following keyboard shortcuts in order to navigate through the tree (cell navigation is not yet supported):
+       *
+       *
+       * - [UP/DOWN] - Navigates up and down the tree items that are currently visible.
+       * - [RIGHT] - Opens a node when it is not expanded and drills down the tree when the node is already opened.
+       * - [SHIFT + RIGHT] - Opens **all sub nodes** of the focused node while respecting the `expandDepth` attribute. The focus stays on the current node. This is an additional key command.
+       * - [LEFT] - Collapses an open node, on a closed node goes up the tree to the parent node.
+       * - [HOME] - Focuses the first visible item.
+       * - [END] - Focuses the last visible item.
+       * - [ENTER] - Selects the focused node. If the node is already selected, toggles its open/close state.
+       * - [SPACE] - Same as [ENTER].
        */
       "furo-ui5-tree": Tree;
     }

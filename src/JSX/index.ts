@@ -35,6 +35,8 @@ import "./RelativeTimeBadge";
 import "./RelativeTimeDisplay";
 import "./ResponsivePopover";
 import "./Section";
+import "./SegmentedButtonItem";
+import "./SegmentedButton";
 import "./SelectEnum";
 import "./Select";
 import "./ShellBarItem";

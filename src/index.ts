@@ -13,6 +13,8 @@ export * from "@/elements/popover/FuroUi5Popover";
 export * from "@/elements/relative-time-badge/FuroUi5RelativeTimeBadge";
 export * from "@/elements/relative-time-display/FuroUi5RelativeTimeDisplay";
 export * from "@/elements/responsive-popover/FuroUi5ResponsivePopover";
+export * from "@/elements/segmented-button/FuroUi5SegmentedButton";
+export * from "@/elements/segmented-button-item/FuroUi5SegmentedButtonItem";
 export * from "@/elements/show-hide/FuroUi5ShowHide";
 export * from "@/elements/table-toolbar-separator/FuroUi5TableToolbarSeparator";
 export * from "@/elements/text-input/FuroUi5TextInput";

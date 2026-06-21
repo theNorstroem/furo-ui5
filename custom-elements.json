@@ -17480,6 +17480,1114 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/elements/segmented-button-item/FuroUi5SegmentedButtonItem.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "\nThe `furo-ui5-segmented-button-item` is meant to be used inside a `furo-ui5-segmented-button`. It is also\nautomatically used by the `furo-ui5-segmented-button` when you bind an `optionsModel`, an `optionList` or\nan `ENUM`.\n\nYou can bind any OptionLike field to it.\n```js\nexport interface OptionLike extends FieldNode {\n  id: STRING;\n  displayName: STRING;\n  icon?: STRING;\n  additionalText?: STRING;\n  tooltip?: STRING;\n}\n```\n\nThe bound `id` is written to the `data-id` attribute and is used by the parent `furo-ui5-segmented-button`\nto map the selection back to the model.\n\n### Overview\n\nUsers can use the `furo-ui5-segmented-button-item` as part of a `furo-ui5-segmented-button`.\n\nClicking or tapping on a `furo-ui5-segmented-button-item` changes its state to `selected`.\nThe item returns to its initial state when the user clicks or taps on it again.\nBy applying additional custom CSS-styling classes, apps can give a different style to any\n`furo-ui5-segmented-button-item`.\n\n\n",
+          "name": "SegmentedButtonItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "OptionLike | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "accessibleDescription",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible description of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleDescriptionRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the IDs of the HTML Elements that describe the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible ARIA name of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "OptionLike | undefined",
+                    "references": [
+                      {
+                        "name": "OptionLike",
+                        "package": "@furo/ui5",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component."
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is disabled.\nA disabled component can't be selected or\nfocused, and it is not in the tab chain.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the icon, displayed as graphical element within the component.\nThe SAP-icons font provides numerous options.\n\nExample:\nSee all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "OptionLike | undefined",
+                "references": [
+                  {
+                    "name": "OptionLike",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind an options field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "readFromModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines whether the component is displayed as selected.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the tooltip of the component.\n\n**Note:** A tooltip attribute should be provided for icon-only buttons, in order to represent their exact meaning/function.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "SegmentedButtonItem",
+            "package": "@ui5/webcomponents",
+            "module": "dist/SegmentedButtonItem.js"
+          },
+          "tagName": "furo-ui5-segmented-button-item",
+          "customElement": true,
+          "summary": "Item button for use within SegmentedButton components.",
+          "slots": [
+            {
+              "name": "default",
+              "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines the accessible description of the component.",
+              "name": "accessible-description",
+              "default": "undefined",
+              "fieldName": "accessibleDescription",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "description": "Defines the IDs of the HTML Elements that describe the component.",
+              "name": "accessible-description-ref",
+              "default": "undefined",
+              "fieldName": "accessibleDescriptionRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "description": "Defines the accessible ARIA name of the component.",
+              "name": "accessible-name",
+              "default": "undefined",
+              "fieldName": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "name": "accessible-name-ref",
+              "default": "undefined",
+              "fieldName": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is disabled.\nA disabled component can't be selected or\nfocused, and it is not in the tab chain.",
+              "name": "disabled",
+              "default": "false",
+              "fieldName": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the icon, displayed as graphical element within the component.\nThe SAP-icons font provides numerous options.\n\nExample:\nSee all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).",
+              "name": "icon",
+              "default": "undefined",
+              "fieldName": "icon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Determines whether the component is displayed as selected.",
+              "name": "selected",
+              "default": "false",
+              "fieldName": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            },
+            {
+              "description": "Defines the tooltip of the component.\n\n**Note:** A tooltip attribute should be provided for icon-only buttons, in order to represent their exact meaning/function.",
+              "name": "tooltip",
+              "default": "undefined",
+              "fieldName": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "click",
+              "type": {
+                "text": "CustomEvent<SegmentedButtonItemClickEventDetail>",
+                "references": [
+                  {
+                    "name": "SegmentedButtonItemClickEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/SegmentedButtonItem.js"
+                  }
+                ]
+              },
+              "description": "Fired when the component is activated either with a mouse/tap or by using the Enter or Space key.\n\n**Note:** The event will not be fired if the `disabled` property is set to `true`.",
+              "inheritedFrom": {
+                "name": "SegmentedButtonItem",
+                "module": "dist/SegmentedButtonItem.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5SegmentedButtonItem",
+          "declaration": {
+            "name": "FuroUi5SegmentedButtonItem",
+            "module": "src/elements/segmented-button-item/FuroUi5SegmentedButtonItem.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/segmented-button-item/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/segmented-button/FuroUi5SegmentedButton.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "\nThe furo-ui5-segmented-button component shows a group of items. When the user clicks an item it stays\npressed. It extends the UI5 SegmentedButton and adds `bindData()` support for several model shapes:\n\n- **ENUM** — single selection; the items are generated from the enum descriptor (like `furo-ui5-select-enum`).\n- **STRING | FuroFatString | StringValue** — single selection (`selectionMode=\"Single\"`, like `furo-ui5-select`).\n- **ARRAY&lt;STRING&gt; | ARRAY&lt;FuroFatString&gt; | IdentifiableList** — multiple selection\n  (`selectionMode=\"Multiple\"`, like `furo-ui5-multi-combobox`).\n\nIt also works without any data binding — just declare `furo-ui5-segmented-button-item` children yourself.\n\n### Possible ways to set the item list (for STRING / ARRAY bindings)\n- Use `bindOptions()` or `optionsModel=` to bind a RepeaterNode as an item list.\n- Add the items manually to the html.\n\nThe bound value is mapped to the item's `data-id` attribute.\n\n```html\n<furo-ui5-segmented-button\n   .model=\"${this.model.choice}\"\n   .optionsModel=\"${this.options}\">\n</furo-ui5-segmented-button>\n```\n\n### Overview\n\nThe `furo-ui5-segmented-button` shows a group of items. When the user clicks or taps\none of the items, it stays in a pressed state. It automatically resizes the items\nto fit proportionally within the component. When no width is set, the component uses the available width.\n\n\n\n",
+          "name": "SegmentedButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_buildEnumItems",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "ENUM<unknown>"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_detectMode",
+              "privacy": "private",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "ModelMode"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_detectModelItemType",
+              "privacy": "private",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "ModelItemType"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "arr",
+                  "type": {
+                    "text": "ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_ensureSingleSelection",
+              "privacy": "private",
+              "description": "In single-selection modes the SegmentedButton always renders exactly one pressed item\n(UI5 auto-selects the first item when none is selected). When the bound model is empty or\nholds a value that is not in the item list, we adopt the first item and write it back so the\nmodel matches the visual state — mirroring `furo-furo-ui5-select`."
+            },
+            {
+              "kind": "method",
+              "name": "_itemId",
+              "privacy": "private",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": {
+                    "text": "ISegmentedButtonItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_items",
+              "type": {
+                "text": "ISegmentedButtonItem[]"
+              },
+              "privacy": "private",
+              "description": "The item elements, read directly from the light DOM. We deliberately do NOT use the\ninherited `this.items` slot accessor here: UI5 repopulates that slot on a microtask, so it\nis empty right after `appendChild`, which would make the initial selection unreliable.",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_mode",
+              "type": {
+                "text": "ModelMode"
+              },
+              "privacy": "private",
+              "default": "\"SINGLE_STRING\""
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList"
+              },
+              "privacy": "private",
+              "default": "new STRING()"
+            },
+            {
+              "kind": "field",
+              "name": "_modelItemType",
+              "type": {
+                "text": "ModelItemType"
+              },
+              "privacy": "private",
+              "default": "\"STRING\""
+            },
+            {
+              "kind": "field",
+              "name": "_optionList",
+              "type": {
+                "text": "SelectOption[] | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_optionsModel",
+              "type": {
+                "text": "OptionLikeList | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "_writeIdsToModel",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "ids",
+                  "type": {
+                    "text": "string[]"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_writeSelectionToArray",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "accessibleDescription",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible description of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleDescriptionRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the IDs of the HTML Elements that describe the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible ARIA name of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the IDs of the HTML Elements that label the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "applyEnumValueToSelection",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList | undefined",
+                    "references": [
+                      {
+                        "name": "ENUM",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      },
+                      {
+                        "name": "STRING",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      },
+                      {
+                        "name": "StringValue",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      },
+                      {
+                        "name": "ARRAY",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      },
+                      {
+                        "name": "FuroFatString",
+                        "package": "@/models",
+                        "module": "index.js"
+                      },
+                      {
+                        "name": "IFuroFatString",
+                        "package": "@/models",
+                        "module": "index.js"
+                      },
+                      {
+                        "name": "IdentifiableList",
+                        "package": "@furo/ui5",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component."
+            },
+            {
+              "kind": "method",
+              "name": "bindOptions",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "OptionLikeList | undefined",
+                    "references": [
+                      {
+                        "name": "OptionLikeList",
+                        "package": "@furo/ui5",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your options data model to this component."
+            },
+            {
+              "kind": "field",
+              "name": "captureSelectionIntoEnum",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "clear",
+              "description": "Clears the selection of the segmented button.",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "fatHandler",
+              "type": {
+                "text": "FatHandler<FuroUi5SegmentedButton>"
+              },
+              "privacy": "private",
+              "default": "new FatHandler<FuroUi5SegmentedButton>(this, [])"
+            },
+            {
+              "kind": "method",
+              "name": "handleConstraints",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "fieldConstraints",
+                  "type": {
+                    "text": "FieldConstraints | undefined"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "itemsFitContent",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines whether the segmented button items should be sized to fit their content.\n\nIf set to `true`, each item will be sized to fit its content, with any extra space distributed after the last item.\nIf set to `false` (the default), all items will be equally sized to fill the available space.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList",
+                "references": [
+                  {
+                    "name": "ENUM",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "STRING",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "StringValue",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "ARRAY",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "FuroFatString",
+                    "package": "@/models",
+                    "module": "index.js"
+                  },
+                  {
+                    "name": "IFuroFatString",
+                    "package": "@/models",
+                    "module": "index.js"
+                  },
+                  {
+                    "name": "IdentifiableList",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a model field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "optionList",
+              "type": {
+                "text": "SelectOption[] | undefined",
+                "references": [
+                  {
+                    "name": "SelectOption",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to set and render the optionList as an attribute."
+            },
+            {
+              "kind": "field",
+              "name": "optionsModel",
+              "type": {
+                "text": "OptionLikeList | undefined",
+                "references": [
+                  {
+                    "name": "OptionLikeList",
+                    "package": "@furo/ui5",
+                    "module": "dist/index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind an options field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "readFromModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "readFromOptionsModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "renderOptionList",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "optionList",
+                  "type": {
+                    "text": "SelectOption[] | undefined",
+                    "references": [
+                      {
+                        "name": "SelectOption",
+                        "package": "@furo/ui5",
+                        "module": "dist/index.js"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Renders a list of options and stores the list in `optionList`."
+            },
+            {
+              "kind": "field",
+              "name": "selectedId",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "description": "The id (`data-id`) of the currently selected item — drives the single-selection bindings."
+            },
+            {
+              "kind": "field",
+              "name": "selectedItems",
+              "type": {
+                "text": "Array<ISegmentedButtonItem>",
+                "references": [
+                  {
+                    "name": "ISegmentedButtonItem",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/SegmentedButton.js"
+                  }
+                ]
+              },
+              "description": "Returns an array of the currently selected items.",
+              "privacy": "public",
+              "default": "[]",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "selectionMode",
+              "type": {
+                "text": "SegmentedButtonSelectionMode",
+                "references": [
+                  {
+                    "name": "SegmentedButtonSelectionMode",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/SegmentedButtonSelectionMode.js"
+                  }
+                ]
+              },
+              "default": "\"Single\"",
+              "description": "Defines the component selection mode.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "setSelectedItems",
+              "privacy": "private",
+              "description": "Applies the bound array onto the UI item selection (multiple mode)."
+            },
+            {
+              "kind": "field",
+              "name": "showUnspecifiedOption",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "show-unspecified"
+            },
+            {
+              "kind": "field",
+              "name": "stringReaderWriters",
+              "type": {
+                "text": "StringReaderWriters<FuroUi5SegmentedButton> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "writeToModel",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines the accessible description of the component.",
+              "name": "accessible-description",
+              "default": "undefined",
+              "fieldName": "accessibleDescription",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "description": "Defines the IDs of the HTML Elements that describe the component.",
+              "name": "accessible-description-ref",
+              "default": "undefined",
+              "fieldName": "accessibleDescriptionRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "description": "Defines the accessible ARIA name of the component.",
+              "name": "accessible-name",
+              "default": "undefined",
+              "fieldName": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "description": "Defines the IDs of the HTML Elements that label the component.",
+              "name": "accessible-name-ref",
+              "default": "undefined",
+              "fieldName": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Determines whether the segmented button items should be sized to fit their content.\n\nIf set to `true`, each item will be sized to fit its content, with any extra space distributed after the last item.\nIf set to `false` (the default), all items will be equally sized to fill the available space.",
+              "name": "items-fit-content",
+              "default": "false",
+              "fieldName": "itemsFitContent",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "description": "Returns an array of the currently selected items.",
+              "name": "selected-items",
+              "default": "[]",
+              "fieldName": "selectedItems",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "description": "Defines the component selection mode.",
+              "name": "selection-mode",
+              "default": "\"Single\"",
+              "fieldName": "selectionMode",
+              "type": {
+                "text": "\"Single\" | \"Multiple\""
+              },
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            },
+            {
+              "name": "show-unspecified",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "showUnspecifiedOption",
+              "description": "Allows you to select the `unspecified` option of an enum."
+            }
+          ],
+          "superclass": {
+            "name": "SegmentedButton",
+            "package": "@ui5/webcomponents",
+            "module": "dist/SegmentedButton.js"
+          },
+          "tagName": "furo-ui5-segmented-button",
+          "customElement": true,
+          "summary": "Group of toggle buttons for single or multiple selection.",
+          "slots": [
+            {
+              "name": "default",
+              "description": "Defines the items of `ui5-segmented-button`.\n\n**Note:** Multiple items are allowed.\n\n**Note:** Use the `ui5-segmented-button-item` for the intended design.",
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "selection-change",
+              "type": {
+                "text": "CustomEvent<SegmentedButtonSelectionChangeEventDetail>",
+                "references": [
+                  {
+                    "name": "SegmentedButtonSelectionChangeEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/SegmentedButton.js"
+                  }
+                ]
+              },
+              "description": "Fired when the selected item changes.",
+              "inheritedFrom": {
+                "name": "SegmentedButton",
+                "module": "dist/SegmentedButton.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5SegmentedButton",
+          "declaration": {
+            "name": "FuroUi5SegmentedButton",
+            "module": "src/elements/segmented-button/FuroUi5SegmentedButton.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/segmented-button/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/elements/select-enum/FuroUi5SelectEnum.js",
       "declarations": [
         {
