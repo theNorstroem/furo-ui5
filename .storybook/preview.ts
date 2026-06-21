@@ -33,6 +33,17 @@ customElements.modules.forEach((module: any) => {
 setCustomElementsManifest(customElements);
 
 
-const preview: Preview = {};
+const preview: Preview = {
+  parameters: {
+    docs: {
+      // Disable Storybook's built-in custom-elements docgen. argTypes are
+      // supplied per story via `@wc-toolkit/storybook-helpers` + the camelCase
+      // `ArgTypesTransormer`; letting the native extractor also run merges in
+      // duplicate dashed-attribute rows (e.g. `value-state` with a broken
+      // `object` control alongside the correct `valueState` select).
+      extractArgTypes: () => null,
+    },
+  },
+};
 
 export default preview;

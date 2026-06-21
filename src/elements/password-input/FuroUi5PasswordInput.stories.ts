@@ -15,13 +15,14 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import type { FuroUi5Icon } from "@/elements/icon/FuroUi5Icon";
 import type { FuroUi5PasswordInput } from "@/elements/password-input/FuroUi5PasswordInput";
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
-import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
+import { ArgsSetEnum, ArgsTransormAll, ArgsTransormer } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
 import ValueState from "@/types/ValueState";
 
 const component = "furo-ui5-password-input";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, ["type", "noTypeahead", "showSuggestions"]);
+ArgsTransormer(args);
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 // set up the model
