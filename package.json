@@ -273,10 +273,6 @@
       "types": "./dist/elements/user-menu/index.d.ts",
       "default": "./dist/elements/user-menu/index.js"
     },
-    "./z-grid": {
-      "types": "./dist/elements/z-grid/index.d.ts",
-      "default": "./dist/elements/z-grid/index.js"
-    },
     "./package.json": "./package.json",
     "./custom-elements.json": "./custom-elements.json",
     "./web-types.json": "./web-types.json",
