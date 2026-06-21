@@ -56,17 +56,6 @@ export interface SegmentedButton extends React.HTMLAttributes<HTMLElement> {
   accessibleNameRef?: string | undefined;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
-
-  /**
    * Determines whether the segmented button items should be sized to fit their content.
    *
    * If set to `true`, each item will be sized to fit its content, with any extra space distributed after the last item.

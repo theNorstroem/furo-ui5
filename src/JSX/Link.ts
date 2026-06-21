@@ -62,12 +62,6 @@ export interface Link extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the icon, displayed as graphical element within the component after the link's text.
    * The SAP-icons font provides numerous options.
    *
@@ -108,11 +102,6 @@ export interface Link extends React.HTMLAttributes<HTMLElement> {
    * Setting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.
    */
   interactiveAreaSize?: InteractiveAreaSize | keyof typeof InteractiveAreaSize;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Defines the component target.

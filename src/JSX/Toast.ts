@@ -18,17 +18,6 @@ export interface Toast extends React.HTMLAttributes<HTMLElement> {
   duration?: number;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
-
-  /**
    * Indicates whether the component is open (visible).
    */
   open?: boolean;

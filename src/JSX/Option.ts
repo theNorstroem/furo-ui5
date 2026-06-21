@@ -20,12 +20,6 @@ export interface Option extends React.HTMLAttributes<HTMLElement> {
   additionalText?: string | undefined;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the `icon` source URI.
    *
    * **Note:**
@@ -33,11 +27,6 @@ export interface Option extends React.HTMLAttributes<HTMLElement> {
    * [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
    */
   icon?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Defines the selected state of the component.

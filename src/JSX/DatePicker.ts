@@ -72,12 +72,6 @@ export interface DatePicker extends React.HTMLAttributes<HTMLElement> {
   displayFormat?: string | undefined;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Determines the format, displayed in the input field.
    */
   formatPattern?: string | undefined;
@@ -89,11 +83,6 @@ export interface DatePicker extends React.HTMLAttributes<HTMLElement> {
    * the week numbers are not displayed regardless of what is set.
    */
   hideWeekNumbers?: boolean;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Determines the maximum date available for selection.

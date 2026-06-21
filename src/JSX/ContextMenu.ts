@@ -24,12 +24,6 @@ export interface ContextMenu extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the header text of the menu (displayed on mobile).
    */
   headerText?: string | undefined;
@@ -38,11 +32,6 @@ export interface ContextMenu extends React.HTMLAttributes<HTMLElement> {
    * Determines the horizontal alignment of the menu relative to its opener control.
    */
   horizontalAlign?: PopoverHorizontalAlign | keyof typeof PopoverHorizontalAlign;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Defines if a loading indicator would be displayed inside the corresponding furo-furo-ui5-menu popover.

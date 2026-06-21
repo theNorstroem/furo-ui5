@@ -29,17 +29,6 @@ export interface BusyIndicator extends React.HTMLAttributes<HTMLElement> {
   delay?: number;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
-
-  /**
    * Defines the size of the component.
    */
   size?: BusyIndicatorSize | keyof typeof BusyIndicatorSize;

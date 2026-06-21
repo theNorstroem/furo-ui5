@@ -48,12 +48,6 @@ export interface Textarea extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Enables the component to automatically grow and shrink dynamically with its content.
    */
   growing?: boolean;
@@ -62,11 +56,6 @@ export interface Textarea extends React.HTMLAttributes<HTMLElement> {
    * Defines the maximum number of rows that the component can grow.
    */
   growingMaxRows?: number;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Defines the maximum number of characters that the `value` can have.

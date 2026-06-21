@@ -54,20 +54,9 @@ export interface TextInput extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the filter type of the component.
    */
   filter?: InputSuggestionsFilter | keyof typeof InputSuggestionsFilter;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Sets the maximum number of characters available in the input field.

@@ -56,12 +56,6 @@ export interface TimePicker extends React.HTMLAttributes<HTMLElement> {
   displayFormat?: string | undefined;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Determines the format, displayed in the input field.
    *
    * Example:
@@ -70,11 +64,6 @@ export interface TimePicker extends React.HTMLAttributes<HTMLElement> {
    * mm:ss -> 12:04 (only minutes and seconds)
    */
   formatPattern?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Determines the name by which the component will be identified upon submission in an HTML form.

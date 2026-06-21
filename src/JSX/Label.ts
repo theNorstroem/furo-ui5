@@ -9,22 +9,11 @@ export interface Label extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the labeled input by providing its ID.
    *
    * **Note:** Can be used with both `furo-furo-ui5-input` and native input.
    */
   for?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Defines whether an asterisk character is added to the component text.

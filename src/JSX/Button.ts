@@ -67,12 +67,6 @@ export interface Button extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the icon, displayed as graphical element within the component after the button text.
    *
    * **Note:** It is highly recommended to use `endIcon` property only together with `icon` and/or `text` properties.
@@ -102,11 +96,6 @@ export interface Button extends React.HTMLAttributes<HTMLElement> {
    * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
    */
   icon?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Defines whether the button shows a loading indicator.

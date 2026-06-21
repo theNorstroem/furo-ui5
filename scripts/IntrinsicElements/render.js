@@ -1,3 +1,4 @@
+import { EXCLUDED_MEMBERS } from "./recursiveManifestResolver.js";
 import { isRegistredEnumType } from "./registredEnums.js";
 
 /** @type {Map<string, { defaults: Set<string>, named: Set<string> }>} */
@@ -86,6 +87,7 @@ function attributes(attributes, members) {
   if (attributes) {
     let lines = []
      attributes
+      .filter(attr => !EXCLUDED_MEMBERS.has(attr.fieldName) && !EXCLUDED_MEMBERS.has(attr.name))
       .forEach(attr => {
         lines.push(multilineCommentWithReplace(attr.description))
         // get the type from the field members where attr.fieldName == member.name
@@ -111,6 +113,7 @@ function members(members, attributes) {
     let lines = []
      members
       .filter(m => m.privacy == "public" && m.kind == "field")
+      .filter(m => !EXCLUDED_MEMBERS.has(m.name))
       .filter(field => isNotAttribute(field, attributes))
       .forEach(m => {
         lines.push(multilineCommentWithReplace(m.description))

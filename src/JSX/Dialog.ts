@@ -52,12 +52,6 @@ export interface Dialog extends React.HTMLAttributes<HTMLElement> {
   draggable?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the header text.
    *
    * **Note:** If `header` slot is provided, the `headerText` is ignored.
@@ -71,11 +65,6 @@ export interface Dialog extends React.HTMLAttributes<HTMLElement> {
    * `initialFocus` won't take effect.
    */
   initialFocus?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Indicates if the element is open

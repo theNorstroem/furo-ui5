@@ -57,12 +57,6 @@ export interface RelativeTimeBadge extends React.HTMLAttributes<HTMLElement> {
   design?: TagDesign | keyof typeof TagDesign;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines if the default state icon is shown.
    */
   hideStateIcon?: boolean;
@@ -71,11 +65,6 @@ export interface RelativeTimeBadge extends React.HTMLAttributes<HTMLElement> {
    * Defines if the component is interactive (focusable and pressable).
    */
   interactive?: boolean;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Defines predefined size of the component.

@@ -17,17 +17,6 @@ export interface ButtonBadge extends React.HTMLAttributes<HTMLElement> {
   design?: ButtonBadgeDesign | keyof typeof ButtonBadgeDesign;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
-
-  /**
    * Defines the text of the component.
    *
    * **Note:** Text is not applied when the `design` property is set to `AttentionDot`.

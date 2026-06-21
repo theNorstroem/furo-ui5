@@ -48,20 +48,9 @@ export interface ProgressIndicator extends React.HTMLAttributes<HTMLElement> {
   displayValue?: string | undefined;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines whether the component value is shown.
    */
   hideValue?: boolean;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Specifies the numerical value in percent for the length of the component.

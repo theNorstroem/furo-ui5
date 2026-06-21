@@ -4,19 +4,7 @@ import * as React from "react";
 export interface ShellBarSpacer extends React.HTMLAttributes<HTMLElement> {
   // no events defined.
   // properties
-
   // attributes
-
-  /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 }
 
 declare module "react" {

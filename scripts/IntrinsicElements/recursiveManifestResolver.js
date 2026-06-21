@@ -1,6 +1,6 @@
 import { getCEM } from './cem-reader.js';
 const fieldsToMerge = ['members', 'slots', 'events', 'cssParts','attributes'];
-const EXCLUDED_MEMBERS = new Set([
+export const EXCLUDED_MEMBERS = new Set([
   "detachComponentStateFinalized",
   "attachComponentStateFinalized",
   "effectiveDir",

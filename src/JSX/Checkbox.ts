@@ -54,12 +54,6 @@ export interface Checkbox extends React.HTMLAttributes<HTMLElement> {
   displayOnly?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines whether the component is displayed as partially checked.
    *
    * **Note:** The indeterminate state can be set only programmatically and can’t be achieved by user
@@ -71,11 +65,6 @@ export interface Checkbox extends React.HTMLAttributes<HTMLElement> {
    * -  If the component is not checked, it will be displayed as not checked regardless value of the indeterminate attribute
    */
   indeterminate?: boolean;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Determines the name by which the component will be identified upon submission in an HTML form.

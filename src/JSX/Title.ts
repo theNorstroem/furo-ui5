@@ -11,17 +11,6 @@ export interface Title extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
-
-  /**
    * Defines the component level.
    * Available options are: `"H6"` to `"H1"`.
    * This property does not influence the style of the component.

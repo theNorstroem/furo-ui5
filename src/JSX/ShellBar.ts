@@ -67,22 +67,11 @@ export interface ShellBar extends React.HTMLAttributes<HTMLElement> {
   disableSearchCollapse?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the visibility state of the search button.
    *
    * **Note:** The `hideSearchButton` property is in an experimental state and is a subject to change.
    */
   hideSearchButton?: boolean;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Returns the `logo` DOM ref.

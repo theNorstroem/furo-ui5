@@ -43,12 +43,6 @@ export interface SegmentedButtonItem extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the icon, displayed as graphical element within the component.
    * The SAP-icons font provides numerous options.
    *
@@ -56,11 +50,6 @@ export interface SegmentedButtonItem extends React.HTMLAttributes<HTMLElement> {
    * See all the available icons within the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
    */
   icon?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Determines whether the component is displayed as selected.

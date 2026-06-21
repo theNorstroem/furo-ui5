@@ -26,17 +26,6 @@ export interface BarcodeScannerDialog extends React.HTMLAttributes<HTMLElement> 
   // attributes
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
-
-  /**
    * Indicates whether the dialog is open.
    */
   open?: boolean;

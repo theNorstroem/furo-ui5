@@ -20,17 +20,6 @@ export interface McbItem extends React.HTMLAttributes<HTMLElement> {
   additionalText?: string | undefined;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
-
-  /**
    * Defines the selected state of the component.
    */
   selected?: boolean;

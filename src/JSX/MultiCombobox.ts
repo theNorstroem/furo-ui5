@@ -54,20 +54,9 @@ export interface MultiCombobox extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Defines the filter type of the component.
    */
   filter?: ComboBoxFilter | keyof typeof ComboBoxFilter;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Indicates whether a loading indicator should be shown in the picker.

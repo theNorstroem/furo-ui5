@@ -32,20 +32,9 @@ export interface RelativeTimeDisplay extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
-   * Determines whether the component should be rendered in RTL mode or not.
-   * Returns: "rtl", "ltr" or undefined
-   */
-  effectiveDir?: string | undefined;
-
-  /**
    * Specifies if an empty indicator should be displayed when there is no text.
    */
   emptyIndicatorMode?: TextEmptyIndicatorMode | keyof typeof TextEmptyIndicatorMode;
-
-  /**
-   * Used to duck-type UI5 elements without using instanceof
-   */
-  isUI5Element?: boolean;
 
   /**
    * Defines the number of lines the text should wrap before it truncates.
