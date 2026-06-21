@@ -59,8 +59,7 @@ export const Default: StoryObj = {
       id="story-toast"
       placement="${ifDefined(renderArgs.placement)}"
       duration="${ifDefined(renderArgs.duration)}"
-    >
-      ${renderArgs.message}
+    >${renderArgs.message}
     </furo-ui5-toast>
   `,
 };

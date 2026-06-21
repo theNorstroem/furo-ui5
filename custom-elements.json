@@ -3837,6 +3837,1079 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/elements/color-palette-item/FuroUi5ColorPaletteItem.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The `furo-ui5-color-palette-item` is a single color swatch, meant to be used inside a\n`furo-ui5-color-palette` or `furo-ui5-color-palette-popover`.\n\nIt extends the [SAP ui5 ColorPaletteItem element](https://sap.github.io/ui5-webcomponents/playground/components/ColorPalette/).\n\nYou can bind any `string` type (a CSS color): `primitives.STRING`, the `furo.fat.String` type or the\n`google.protobuf.StringValue` type. Display-only: the component reads the color from the model into\nthe inherited `value` property and never writes back.\n\n### Overview\n\nThe `furo-ui5-color-palette-item` component represents a color in the the `furo-ui5-color-palette`.",
+          "name": "ColorPaletteItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING | FuroFatString | StringValue"
+              },
+              "privacy": "private",
+              "default": "new STRING()"
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING | FuroFatString | StringValue | undefined",
+                    "references": [
+                      {
+                        "name": "STRING",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects your data model to this component. Display-only: the component reads from the model but\nnever writes back."
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING | FuroFatString | StringValue",
+                "references": [
+                  {
+                    "name": "STRING",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "StringValue",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "FuroFatString",
+                    "package": "@/models",
+                    "module": "index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a model field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "readFromModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines if the component is selected.\n\n**Note:** Only one item must be selected per <code>furo-ui5-color-palette</code>.\nIf more than one item is defined as selected, the last one would be considered as the selected one.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPaletteItem",
+                "module": "dist/ColorPaletteItem.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "stringReaderWriters",
+              "type": {
+                "text": "StringReaderWriters<FuroUi5ColorPaletteItem> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the tooltip of the component. When not set, the color value is used as the tooltip.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPaletteItem",
+                "module": "dist/ColorPaletteItem.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Defines the colour of the component.\n\n**Note:** The value should be a valid CSS color.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPaletteItem",
+                "module": "dist/ColorPaletteItem.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "ColorPaletteItem",
+            "package": "@ui5/webcomponents",
+            "module": "dist/ColorPaletteItem.js"
+          },
+          "tagName": "furo-ui5-color-palette-item",
+          "customElement": true,
+          "summary": "A single color swatch bound to a string (CSS color) field.",
+          "attributes": [
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines if the component is selected.\n\n**Note:** Only one item must be selected per <code>furo-ui5-color-palette</code>.\nIf more than one item is defined as selected, the last one would be considered as the selected one.",
+              "name": "selected",
+              "default": "false",
+              "fieldName": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "ColorPaletteItem",
+                "module": "dist/ColorPaletteItem.js"
+              }
+            },
+            {
+              "description": "Defines the tooltip of the component. When not set, the color value is used as the tooltip.",
+              "name": "tooltip",
+              "default": "undefined",
+              "fieldName": "tooltip",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "ColorPaletteItem",
+                "module": "dist/ColorPaletteItem.js"
+              }
+            },
+            {
+              "description": "Defines the colour of the component.\n\n**Note:** The value should be a valid CSS color.",
+              "name": "value",
+              "default": "\"\"",
+              "fieldName": "value",
+              "type": {
+                "text": "string"
+              },
+              "inheritedFrom": {
+                "name": "ColorPaletteItem",
+                "module": "dist/ColorPaletteItem.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "click",
+              "type": {
+                "text": "CustomEvent<ColorPaletteItemNativeClickEventDetail>",
+                "references": [
+                  {
+                    "name": "ColorPaletteItemNativeClickEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/ColorPaletteItem.js"
+                  }
+                ]
+              },
+              "description": "Fired when the component is activated either with a mouse/tap or by using the Enter or Space key.\n\n**Note:** The event will not be fired if the `disabled` property is set to `true`.",
+              "inheritedFrom": {
+                "name": "ColorPaletteItem",
+                "module": "dist/ColorPaletteItem.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5ColorPaletteItem",
+          "declaration": {
+            "name": "FuroUi5ColorPaletteItem",
+            "module": "src/elements/color-palette-item/FuroUi5ColorPaletteItem.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/color-palette-item/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/color-palette-popover/FuroUi5ColorPalettePopover.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The furo-ui5-color-palette-popover shows a predefined set of color swatches in a popover and binds\nthe selected color.\n\nIt supports all features from the [SAP ui5 ColorPalettePopover element](https://sap.github.io/ui5-webcomponents/playground/components/ColorPalettePopover/),\nincluding `open` / `opener` / `placement` and the \"more colors\" / \"default color\" buttons.\n\n### Selected color (`model`)\nBind any `string` type (a CSS color). The component writes the picked color to the model on the\n`item-click` event and marks the matching swatch as selected when the model changes.\n\n### Swatches (`colorsModel`)\nBind an `ARRAY` of `string` colors to generate the `furo-ui5-color-palette-item` swatches. You can\nalso place `furo-ui5-color-palette-item` children manually.\n\n### Overview\nRepresents a predefined range of colors for easier selection.\n\nOverview\nThe ColorPalettePopover provides the users with a slot to predefine colors.\n\nYou can customize them with the use of the colors property. You can specify a defaultColor and display a \"Default color\" button for the user to choose directly.\nYou can display a \"More colors...\" button that opens an additional color picker for the user to choose specific colors that are not present in the predefined range.\n\n### Usage\n\nThe palette is intended for users, who don't want to check and remember the different values of the colors and spend large amount of time to configure the right color through the color picker.\n\nFor the `furo-ui5-color-palette-popover`\n\n",
+          "name": "ColorPalettePopover",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_colorsModel",
+              "type": {
+                "text": "ARRAY<STRING, string> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "_markSelected",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING | FuroFatString | StringValue"
+              },
+              "privacy": "private",
+              "default": "new STRING()"
+            },
+            {
+              "kind": "field",
+              "name": "_onItemClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible name of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "bindColors",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "ARRAY<STRING, string> | undefined",
+                    "references": [
+                      {
+                        "name": "ARRAY",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects a list of color strings; each entry renders one `furo-furo-ui5-color-palette-item` swatch."
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING | FuroFatString | StringValue | undefined",
+                    "references": [
+                      {
+                        "name": "STRING",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects the selected-color data model to this component."
+            },
+            {
+              "kind": "field",
+              "name": "colorsModel",
+              "type": {
+                "text": "ARRAY<STRING, string> | undefined",
+                "references": [
+                  {
+                    "name": "ARRAY",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a list of color strings that generate the swatches."
+            },
+            {
+              "kind": "field",
+              "name": "defaultColor",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the default color of the component.\n\n**Note:** The default color should be a part of the ColorPalette colors`",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING | FuroFatString | StringValue",
+                "references": [
+                  {
+                    "name": "STRING",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "StringValue",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "FuroFatString",
+                    "package": "@/models",
+                    "module": "index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind the selected-color model field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines the open | closed state of the popover.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "opener",
+              "type": {
+                "text": "HTMLElement | string | null | undefined"
+              },
+              "description": "Defines the ID or DOM Reference of the element that the popover is shown at.\nWhen using this attribute in a declarative way, you must only use the `id` (as a string) of the element at which you want to show the popover.\nYou can only set the `opener` attribute to a DOM Reference when using JavaScript.",
+              "privacy": "public",
+              "default": "undefined",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "placement",
+              "type": {
+                "text": "PopoverPlacement",
+                "references": [
+                  {
+                    "name": "PopoverPlacement",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/types/PopoverPlacement.js"
+                  }
+                ]
+              },
+              "default": "\"Bottom\"",
+              "description": "Determines on which side the component is placed at.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "readFromColorsModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "readFromModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "showDefaultColor",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the user can choose the default color from a button.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "showMoreColors",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the user can choose a custom color from a component.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "showRecentColors",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the user can see the last used colors in the bottom of the component",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "stringReaderWriters",
+              "type": {
+                "text": "StringReaderWriters<FuroUi5ColorPalettePopover> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"\"",
+              "description": "The selected color as a string. Bridged between the model and the swatch selection."
+            }
+          ],
+          "superclass": {
+            "name": "ColorPalettePopover",
+            "package": "@ui5/webcomponents",
+            "module": "dist/ColorPalettePopover.js"
+          },
+          "tagName": "furo-ui5-color-palette-popover",
+          "customElement": true,
+          "summary": "Color swatches in a popover with selected-color data binding.",
+          "slots": [
+            {
+              "name": "default",
+              "description": "Defines the content of the component.",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines the accessible name of the component.",
+              "name": "accessible-name",
+              "default": "undefined",
+              "fieldName": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "name": "accessible-name-ref",
+              "default": "undefined",
+              "fieldName": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "description": "Defines the default color of the component.\n\n**Note:** The default color should be a part of the ColorPalette colors`",
+              "name": "default-color",
+              "default": "undefined",
+              "fieldName": "defaultColor",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines the open | closed state of the popover.",
+              "name": "open",
+              "default": "false",
+              "fieldName": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "description": "Defines the ID or DOM Reference of the element that the popover is shown at.\nWhen using this attribute in a declarative way, you must only use the `id` (as a string) of the element at which you want to show the popover.\nYou can only set the `opener` attribute to a DOM Reference when using JavaScript.",
+              "name": "opener",
+              "default": "undefined",
+              "fieldName": "opener",
+              "type": {
+                "text": "string | HTMLElement | null | undefined"
+              },
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "description": "Determines on which side the component is placed at.",
+              "name": "placement",
+              "default": "\"Bottom\"",
+              "fieldName": "placement",
+              "type": {
+                "text": "\"Top\" | \"Bottom\" | \"Start\" | \"End\""
+              },
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "description": "Defines whether the user can choose the default color from a button.",
+              "name": "show-default-color",
+              "default": "false",
+              "fieldName": "showDefaultColor",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "description": "Defines whether the user can choose a custom color from a component.",
+              "name": "show-more-colors",
+              "default": "false",
+              "fieldName": "showMoreColors",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "description": "Defines whether the user can see the last used colors in the bottom of the component",
+              "name": "show-recent-colors",
+              "default": "false",
+              "fieldName": "showRecentColors",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "close",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Fired when the `furo-ui5-color-palette-popover` is closed due to user interaction.",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            },
+            {
+              "name": "item-click",
+              "type": {
+                "text": "CustomEvent<ColorPalettePopoverItemClickEventDetail>",
+                "references": [
+                  {
+                    "name": "ColorPalettePopoverItemClickEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/ColorPalettePopover.js"
+                  }
+                ]
+              },
+              "description": "Fired when the user selects a color.",
+              "inheritedFrom": {
+                "name": "ColorPalettePopover",
+                "module": "dist/ColorPalettePopover.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5ColorPalettePopover",
+          "declaration": {
+            "name": "FuroUi5ColorPalettePopover",
+            "module": "src/elements/color-palette-popover/FuroUi5ColorPalettePopover.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/color-palette-popover/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/color-palette/FuroUi5ColorPalette.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The furo-ui5-color-palette displays a predefined set of color swatches and binds the selected color.\n\nIt supports all features from the [SAP ui5 ColorPalette element](https://sap.github.io/ui5-webcomponents/playground/components/ColorPalette/).\n\n### Selected color (`model`)\nBind any `string` type (a CSS color). The component writes the picked color to the model on the\n`item-click` event and marks the matching swatch as selected when the model changes.\n\n### Swatches (`colorsModel`)\nBind an `ARRAY` of `string` colors to generate the `furo-ui5-color-palette-item` swatches. You can\nalso place `furo-ui5-color-palette-item` children manually.\n\n```html\n <furo-ui5-color-palette .model=\"${selected}\" .colorsModel=\"${colorList}\"></furo-ui5-color-palette>\n```\n\n### Overview\nThe `furo-ui5-color-palette` provides the users with a range of predefined colors. The colors are fixed and do not change with the theme.\n\n### Usage\n\nThe `furo-ui5-color-palette` is meant for users that need to select a color from a predefined set.\nTo define the colors, use the `furo-ui5-color-palette-item` component inside the default slot of the `furo-ui5-color-palette`.\n\n\n",
+          "name": "ColorPalette",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_colorsModel",
+              "type": {
+                "text": "ARRAY<STRING, string> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "_markSelected",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_model",
+              "type": {
+                "text": "STRING | FuroFatString | StringValue"
+              },
+              "privacy": "private",
+              "default": "new STRING()"
+            },
+            {
+              "kind": "field",
+              "name": "_onItemClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible name of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPalette",
+                "module": "dist/ColorPalette.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "ColorPalette",
+                "module": "dist/ColorPalette.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "bindColors",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "ARRAY<STRING, string> | undefined",
+                    "references": [
+                      {
+                        "name": "ARRAY",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects a list of color strings; each entry renders one `furo-furo-ui5-color-palette-item` swatch."
+            },
+            {
+              "kind": "method",
+              "name": "bindData",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "fieldNode",
+                  "type": {
+                    "text": "STRING | FuroFatString | StringValue | undefined",
+                    "references": [
+                      {
+                        "name": "STRING",
+                        "package": "@furo/open-models",
+                        "module": ""
+                      }
+                    ]
+                  }
+                }
+              ],
+              "description": "Connects the selected-color data model to this component."
+            },
+            {
+              "kind": "field",
+              "name": "colorsModel",
+              "type": {
+                "text": "ARRAY<STRING, string> | undefined",
+                "references": [
+                  {
+                    "name": "ARRAY",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind a list of color strings that generate the swatches."
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "model",
+              "type": {
+                "text": "STRING | FuroFatString | StringValue",
+                "references": [
+                  {
+                    "name": "STRING",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "StringValue",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "FuroFatString",
+                    "package": "@/models",
+                    "module": "index.js"
+                  }
+                ]
+              },
+              "privacy": "public",
+              "description": "Use this to bind the selected-color model field by attribute."
+            },
+            {
+              "kind": "field",
+              "name": "modelReaderWriter",
+              "type": {
+                "text": "ModelReaderWriter | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "readFromColorsModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "readFromModel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "stringReaderWriters",
+              "type": {
+                "text": "StringReaderWriters<FuroUi5ColorPalette> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "\"\"",
+              "description": "The selected color as a string. Bridged between the model and the swatch selection."
+            }
+          ],
+          "superclass": {
+            "name": "ColorPalette",
+            "package": "@ui5/webcomponents",
+            "module": "dist/ColorPalette.js"
+          },
+          "tagName": "furo-ui5-color-palette",
+          "customElement": true,
+          "summary": "Predefined color swatches with selected-color data binding.",
+          "slots": [
+            {
+              "name": "default",
+              "description": "Defines the `ui5-color-palette-item` elements.",
+              "inheritedFrom": {
+                "name": "ColorPalette",
+                "module": "dist/ColorPalette.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Defines the accessible name of the component.",
+              "name": "accessible-name",
+              "default": "undefined",
+              "fieldName": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "ColorPalette",
+                "module": "dist/ColorPalette.js"
+              }
+            },
+            {
+              "description": "Receives id(or many ids) of the elements that label the component.",
+              "name": "accessible-name-ref",
+              "default": "undefined",
+              "fieldName": "accessibleNameRef",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "ColorPalette",
+                "module": "dist/ColorPalette.js"
+              }
+            },
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "item-click",
+              "type": {
+                "text": "CustomEvent<ColorPaletteItemClickEventDetail>",
+                "references": [
+                  {
+                    "name": "ColorPaletteItemClickEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/ColorPalette.js"
+                  }
+                ]
+              },
+              "description": "Fired when the user selects a color.",
+              "inheritedFrom": {
+                "name": "ColorPalette",
+                "module": "dist/ColorPalette.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5ColorPalette",
+          "declaration": {
+            "name": "FuroUi5ColorPalette",
+            "module": "src/elements/color-palette/FuroUi5ColorPalette.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/color-palette/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/elements/color-picker/FuroUi5ColorPicker.js",
       "declarations": [
         {

@@ -77,6 +77,18 @@
       "types": "./dist/elements/checkbox/index.d.ts",
       "default": "./dist/elements/checkbox/index.js"
     },
+    "./color-palette": {
+      "types": "./dist/elements/color-palette/index.d.ts",
+      "default": "./dist/elements/color-palette/index.js"
+    },
+    "./color-palette-item": {
+      "types": "./dist/elements/color-palette-item/index.d.ts",
+      "default": "./dist/elements/color-palette-item/index.js"
+    },
+    "./color-palette-popover": {
+      "types": "./dist/elements/color-palette-popover/index.d.ts",
+      "default": "./dist/elements/color-palette-popover/index.js"
+    },
     "./color-picker": {
       "types": "./dist/elements/color-picker/index.d.ts",
       "default": "./dist/elements/color-picker/index.js"
