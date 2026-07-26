@@ -43,26 +43,10 @@ export * from "./celledit-uint64/CelleditUint64";
 export * from "./display-google-protobuf-any/DisplayGoogleProtobufAny";
 
 // form
-export * from "./form-double/FormDouble";
-export * from "./form-float/FormFloat";
 export * from "./form-furo-bigdecimal/FormFuroBigdecimal";
-export * from "./form-furo-fat-double/FormFuroFatDouble";
-export * from "./form-furo-fat-float/FormFuroFatFloat";
-export * from "./form-furo-fat-int32/FormFuroFatInt32";
-export * from "./form-furo-fat-int64/FormFuroFatInt64";
-export * from "./form-furo-fat-uint32/FormFuroFatUint32";
-export * from "./form-furo-fat-uint64/FormFuroFatUint64";
 export * from "./form-furo-type-date/FormFuroTypeDate";
 export * from "./form-furo-type-money/FormFuroTypeMoney";
-export * from "./form-google-protobuf-doublevalue/FormGoogleProtobufDoublevalue";
-export * from "./form-google-protobuf-floatvalue/FormGoogleProtobufFloatvalue";
-export * from "./form-google-protobuf-int32value/FormGoogleProtobufInt32value";
-export * from "./form-google-protobuf-int64value/FormGoogleProtobufInt64value";
 export * from "./form-google-protobuf-timestamp/FormGoogleProtobufTimestamp";
 export * from "./form-google-type-date/FormGoogleTypeDate";
 export * from "./form-google-type-money/FormGoogleTypeMoney";
 export * from "./form-google-type-timeofday/FormGoogleTypeTimeofday";
-export * from "./form-int32/FormInt32";
-export * from "./form-int64/FormInt64";
-export * from "./form-uint32/FormUint32";
-export * from "./form-uint64/FormUint64";

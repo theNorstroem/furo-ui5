@@ -1772,6 +1772,20 @@
           "members": [
             {
               "kind": "field",
+              "name": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the accessible name of the component.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Breadcrumbs",
+                "module": "dist/Breadcrumbs.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "design",
               "type": {
                 "text": "BreadcrumbsDesign",
@@ -1839,6 +1853,19 @@
             }
           ],
           "attributes": [
+            {
+              "description": "Defines the accessible name of the component.",
+              "name": "accessible-name",
+              "default": "undefined",
+              "fieldName": "accessibleName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Breadcrumbs",
+                "module": "dist/Breadcrumbs.js"
+              }
+            },
             {
               "description": "Defines the visual appearance of the last BreadcrumbsItem.\n\nThe Breadcrumbs supports two visual appearances for the last BreadcrumbsItem:\n- \"Standard\" - displaying the last item as \"current page\" (bold and without separator)\n- \"NoCurrentPage\" - displaying the last item as a regular BreadcrumbsItem, followed by separator",
               "name": "design",
@@ -3203,6 +3230,26 @@
               "inheritedFrom": {
                 "name": "ComboBoxItem",
                 "module": "dist/ComboBoxItem.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "click",
+              "type": {
+                "text": "CustomEvent<ListItemBaseClickEventDetail>",
+                "references": [
+                  {
+                    "name": "ListItemBaseClickEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/ListItemBase.js"
+                  }
+                ]
+              },
+              "description": "Fired when the component is activated either with a mouse/tap or by using the Enter or Space key.\n\n**Note:** The event will not be fired if the `disabled` property is set to `true`.",
+              "inheritedFrom": {
+                "name": "ListItemBase",
+                "module": "dist/ListItemBase.js"
               }
             }
           ]
@@ -10108,7 +10155,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The furo-ui5-dialog is a extended furo-ui5-dialog which can attach itself to a parent dom element.\n\nThis is helpful, when you have used z-indexes in one of the parents, which put the original furo-ui5-dialog behind the backdrop.\n\nUse this component like a regular furo-ui5-dialog and do not forget to place the furo-ui5-dialog-display in one of the parent elements.\n\nIt supports all features from the [SAP ui5 Dialog element](https://sap.github.io/ui5-webcomponents/playground/components/Dialog/).\n\n**important:** Place a furo-ui5-dialog-display in any dom parent of the component where you use furo-ui5-dialog. Your app-shell or body is a good place to do that.\n\n```html\n<furo-ui5-dialog header-text=\"Dialog title\" fn-show=\"--openDialogClicked\" fn-close=\"--closeDialogClicked\">\n  <p>Content</p>\n  <div slot=\"footer\"> <button at-click=\"--closeDialogClicked\">close dialog</button></div>\n</furo-ui5-dialog>\n\n<button at-click=\"--openDialogClicked\">Open dialog</button>\n```\n\n### Overview\nThe `furo-ui5-dialog` component is used to temporarily display some information in a\nsize-limited window in front of the regular app screen.\nIt is used to prompt the user for an action or a confirmation.\nThe `furo-ui5-dialog` interrupts the current app processing as it is the only focused UI element and\nthe main screen is dimmed/blocked.\nThe dialog combines concepts known from other technologies where the windows have\nnames such as dialog box, dialog window, pop-up, pop-up window, alert box, or message box.\n\nThe `furo-ui5-dialog` is modal, which means that a user action is required before it is possible to return to the parent window.\nTo open multiple dialogs, each dialog element should be separate in the markup. This will ensure the correct modal behavior. Avoid nesting dialogs within each other.\nThe content of the `furo-ui5-dialog` is fully customizable.\n\n### Structure\nA `furo-ui5-dialog` consists of a header, content, and a footer for action buttons.\nThe `furo-ui5-dialog` is usually displayed at the center of the screen.\nIts position can be changed by the user. To enable this, you need to set the property `draggable` accordingly.\n\n\n### Responsive Behavior\nThe `stretch` property can be used to stretch the `furo-ui5-dialog` to full screen. For better usability, it's recommended to stretch the dialog to full screen on phone devices.\n\n**Note:** When a `furo-ui5-bar` is used in the header or in the footer, you should remove the default dialog's paddings.\n\nFor more information see the sample \"Bar in Header/Footer\".\n\n### Keyboard Handling\n\n#### Basic Navigation\nWhen the `furo-ui5-dialog` has the `draggable` property set to `true` and the header is focused, the user can move the dialog\nwith the following keyboard shortcuts:\n\n- [Up] or [Down] arrow keys - Move the dialog up/down.\n- [Left] or [Right] arrow keys - Move the dialog left/right.\n\n#### Resizing\nWhen the `furo-ui5-dialog` has the `resizable` property set to `true` and the header is focused, the user can change the size of the dialog\nwith the following keyboard shortcuts:\n\n- [Shift] + [Up] or [Down] - Decrease/Increase the height of the dialog.\n- [Shift] + [Left] or [Right] - Decrease/Increase the width of the dialog.\n\n\n",
+          "description": "The furo-ui5-dialog is a extended furo-ui5-dialog which can attach itself to a parent dom element.\n\nThis is helpful, when you have used z-indexes in one of the parents, which put the original furo-ui5-dialog behind the backdrop.\n\nUse this component like a regular furo-ui5-dialog and do not forget to place the furo-ui5-dialog-display in one of the parent elements.\n\nIt supports all features from the [SAP ui5 Dialog element](https://sap.github.io/ui5-webcomponents/playground/components/Dialog/).\n\n**important:** Place a furo-ui5-dialog-display in any dom parent of the component where you use furo-ui5-dialog. Your app-shell or body is a good place to do that.\n\n```html\n<furo-ui5-dialog header-text=\"Dialog title\" fn-show=\"--openDialogClicked\" fn-close=\"--closeDialogClicked\">\n  <p>Content</p>\n  <div slot=\"footer\"> <button at-click=\"--closeDialogClicked\">close dialog</button></div>\n</furo-ui5-dialog>\n\n<button at-click=\"--openDialogClicked\">Open dialog</button>\n```\n\n### Overview\nThe `furo-ui5-dialog` component is used to temporarily display some information in a\nsize-limited window in front of the regular app screen.\nIt is used to prompt the user for an action or a confirmation.\nThe `furo-ui5-dialog` interrupts the current app processing as it is the only focused UI element and\nthe main screen is dimmed/blocked.\nThe dialog combines concepts known from other technologies where the windows have\nnames such as dialog box, dialog window, pop-up, pop-up window, alert box, or message box.\n\nThe `furo-ui5-dialog` is modal, which means that a user action is required before it is possible to return to the parent window.\nTo open multiple dialogs, each dialog element should be separate in the markup. This will ensure the correct modal behavior. Avoid nesting dialogs within each other.\nThe content of the `furo-ui5-dialog` is fully customizable.\n\n### Structure\nA `furo-ui5-dialog` consists of a header, content, and a footer for action buttons.\nThe `furo-ui5-dialog` is usually displayed at the center of the screen.\nIts position can be changed by the user. To enable this, you need to set the property `draggable` accordingly.\n\n\n### Responsive Behavior\nThe `stretch` property can be used to stretch the `furo-ui5-dialog` to full screen. For better usability, it's recommended to stretch the dialog to full screen on phone devices.\n\n**Note:** When a `furo-ui5-bar` is used in the header or in the footer, you should remove the default dialog's paddings.\n\nFor more information see the sample \"Bar in Header/Footer\".\n\n### Keyboard Handling\n\n#### Basic Navigation\nWhen the `furo-ui5-dialog` has the `draggable` property set to `true`, the user can move the dialog\nwith the following keyboard shortcuts:\n\n- [Up] or [Down] arrow keys - Move the dialog up/down.\n- [Left] or [Right] arrow keys - Move the dialog left/right.\n\n#### Resizing\nWhen the `furo-ui5-dialog` has the `resizable` property set to `true`, the user can change the size of the dialog\nwith the following keyboard shortcuts:\n\n- [Shift] + [Up] or [Down] - Decrease/Increase the height of the dialog.\n- [Shift] + [Left] or [Right] - Decrease/Increase the width of the dialog.\n\n\n",
           "name": "Dialog",
           "members": [
             {
@@ -12681,6 +12728,16 @@
           "tagName": "furo-ui5-icon",
           "customElement": true,
           "summary": "Scalable icon from the icon font library.",
+          "slots": [
+            {
+              "name": "fontIcon",
+              "description": "Defines the font icon to be used as an icon.\nIntended for font-based icon libraries where\nthe application loads the font and provides a slotted element with the unicode character.\nWhen this slot is used, the component renders a `<span>` instead of an `<svg>`.\nAccessibility is fully delegated to the application — set `accessible-name` and `mode` explicitly.\n\n**Example:**\n```html\n<ui5-icon mode=\"Image\" accessible-name=\"Home\">\n  <i class=\"fa fa-home\" slot=\"fontIcon\"></i>\n</ui5-icon>\n```",
+              "inheritedFrom": {
+                "name": "Icon",
+                "module": "dist/Icon.js"
+              }
+            }
+          ],
           "cssParts": [
             {
               "description": "Used to style the outermost wrapper of the `ui5-icon`.",
@@ -14734,6 +14791,26 @@
               "inheritedFrom": {
                 "name": "ComboBoxItem",
                 "module": "dist/ComboBoxItem.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "click",
+              "type": {
+                "text": "CustomEvent<ListItemBaseClickEventDetail>",
+                "references": [
+                  {
+                    "name": "ListItemBaseClickEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/ListItemBase.js"
+                  }
+                ]
+              },
+              "description": "Fired when the component is activated either with a mouse/tap or by using the Enter or Space key.\n\n**Note:** The event will not be fired if the `disabled` property is set to `true`.",
+              "inheritedFrom": {
+                "name": "ListItemBase",
+                "module": "dist/ListItemBase.js"
               }
             }
           ]
@@ -17278,7 +17355,7 @@
               "kind": "field",
               "name": "_model",
               "type": {
-                "text": "| INT32\n    | INT64\n    | UINT32\n    | UINT64\n    | DOUBLE\n    | FLOAT\n    | FuroFatFloat\n    | FuroFatInt32\n    | FuroFatInt64\n    | FuroFatUint32\n    | FuroFatUint64\n    | FloatValue\n    | Int32Value\n    | Int64Value\n    | UInt32Value\n    | UInt64Value"
+                "text": "| INT32\n    | INT64\n    | UINT32\n    | UINT64\n    | DOUBLE\n    | FLOAT\n    | FuroFatDouble\n    | FuroFatFloat\n    | FuroFatInt32\n    | FuroFatInt64\n    | FuroFatUint32\n    | FuroFatUint64\n    | DoubleValue\n    | FloatValue\n    | Int32Value\n    | Int64Value\n    | UInt32Value\n    | UInt64Value"
               },
               "privacy": "private",
               "default": "new FLOAT()"
@@ -17347,7 +17424,7 @@
                 {
                   "name": "fieldNode",
                   "type": {
-                    "text": "| INT32\n      | INT64\n      | UINT32\n      | UINT64\n      | DOUBLE\n      | FLOAT\n      | FuroFatFloat\n      | FuroFatInt32\n      | FuroFatInt64\n      | FuroFatUint32\n      | FuroFatUint64\n      | FloatValue\n      | Int32Value\n      | Int64Value\n      | UInt32Value\n      | UInt64Value\n      | undefined",
+                    "text": "| INT32\n      | INT64\n      | UINT32\n      | UINT64\n      | DOUBLE\n      | FLOAT\n      | FuroFatDouble\n      | FuroFatFloat\n      | FuroFatInt32\n      | FuroFatInt64\n      | FuroFatUint32\n      | FuroFatUint64\n      | DoubleValue\n      | FloatValue\n      | Int32Value\n      | Int64Value\n      | UInt32Value\n      | UInt64Value\n      | undefined",
                     "references": [
                       {
                         "name": "Int32Value",
@@ -17442,7 +17519,7 @@
               "kind": "field",
               "name": "model",
               "type": {
-                "text": "| INT32\n    | INT64\n    | UINT32\n    | UINT64\n    | DOUBLE\n    | FLOAT\n    | FuroFatFloat\n    | FuroFatInt32\n    | FuroFatInt64\n    | FuroFatUint32\n    | FuroFatUint64\n    | FloatValue\n    | Int32Value\n    | Int64Value\n    | UInt32Value\n    | UInt64Value",
+                "text": "| INT32\n    | INT64\n    | UINT32\n    | UINT64\n    | DOUBLE\n    | FLOAT\n    | FuroFatDouble\n    | FuroFatFloat\n    | FuroFatInt32\n    | FuroFatInt64\n    | FuroFatUint32\n    | FuroFatUint64\n    | DoubleValue\n    | FloatValue\n    | Int32Value\n    | Int64Value\n    | UInt32Value\n    | UInt64Value",
                 "references": [
                   {
                     "name": "Int32Value",
@@ -17461,6 +17538,11 @@
                   },
                   {
                     "name": "UInt64Value",
+                    "package": "@furo/open-models",
+                    "module": ""
+                  },
+                  {
+                    "name": "DoubleValue",
                     "package": "@furo/open-models",
                     "module": ""
                   },
@@ -17521,6 +17603,11 @@
                   },
                   {
                     "name": "FuroFatFloat",
+                    "package": "@/models",
+                    "module": "index.js"
+                  },
+                  {
+                    "name": "FuroFatDouble",
                     "package": "@/models",
                     "module": "index.js"
                   }
@@ -18436,6 +18523,26 @@
               "inheritedFrom": {
                 "name": "Option",
                 "module": "dist/Option.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "click",
+              "type": {
+                "text": "CustomEvent<ListItemBaseClickEventDetail>",
+                "references": [
+                  {
+                    "name": "ListItemBaseClickEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/ListItemBase.js"
+                  }
+                ]
+              },
+              "description": "Fired when the component is activated either with a mouse/tap or by using the Enter or Space key.\n\n**Note:** The event will not be fired if the `disabled` property is set to `true`.",
+              "inheritedFrom": {
+                "name": "ListItemBase",
+                "module": "dist/ListItemBase.js"
               }
             }
           ]
@@ -20956,6 +21063,14 @@
                 "name": "RadioButton",
                 "module": "dist/RadioButton.js"
               }
+            },
+            {
+              "description": "Used to style the root DOM element of the component.",
+              "name": "root",
+              "inheritedFrom": {
+                "name": "RadioButton",
+                "module": "dist/RadioButton.js"
+              }
             }
           ],
           "attributes": [
@@ -21318,7 +21433,7 @@
                 "text": "number"
               },
               "default": "0",
-              "description": "Displays a label with a value on every N-th step.\n\n**Note:** The step and tickmarks properties must be enabled.\nExample - if the step value is set to 2 and the label interval is also specified to 2 - then every second\ntickmark will be labelled, which means every 4th value number.",
+              "description": "Displays a label with a value on every N-th step.\n\n**Note:** The step and tickmarks properties must be enabled.\nExample - if the step value is set to 2 and the label interval is also specified to 2 - then every second\ntickmark will be labelled, which means every 4th value number.\n\n**Note:** This property is ignored when the `tickmarks` property is used.\nIn that case every custom tickmark is labelled with its own `label`.",
               "privacy": "public",
               "inheritedFrom": {
                 "name": "SliderBase",
@@ -21649,6 +21764,27 @@
             },
             {
               "kind": "field",
+              "name": "tickmarks",
+              "type": {
+                "text": "Array<Tickmark>",
+                "references": [
+                  {
+                    "name": "Tickmark",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/SliderScale.js"
+                  }
+                ]
+              },
+              "default": "[]",
+              "description": "Defines custom tickmarks with labels on the slider scale.\nEach tickmark object has a numeric `value` and an optional `label` string.\nTickmarks are purely visual — they display labeled markers at specific positions\nbut do not affect the slider's movement behavior. The slider still moves\naccording to `min`, `max`, and `step`.\n\nWhen the current value matches a tickmark value, the tickmark's label\nis shown in the tooltip and announced via `aria-valuetext`.\n\n**Note:** When `tickmarks` is provided, the scale is automatically shown\n(equivalent to `showTickmarks`), and `labelInterval` is ignored - every\ncustom tickmark is rendered with its own `label`.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SliderBase",
+                "module": "dist/SliderBase.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "writeToModel",
               "privacy": "private"
             }
@@ -21767,7 +21903,7 @@
               }
             },
             {
-              "description": "Displays a label with a value on every N-th step.\n\n**Note:** The step and tickmarks properties must be enabled.\nExample - if the step value is set to 2 and the label interval is also specified to 2 - then every second\ntickmark will be labelled, which means every 4th value number.",
+              "description": "Displays a label with a value on every N-th step.\n\n**Note:** The step and tickmarks properties must be enabled.\nExample - if the step value is set to 2 and the label interval is also specified to 2 - then every second\ntickmark will be labelled, which means every 4th value number.\n\n**Note:** This property is ignored when the `tickmarks` property is used.\nIn that case every custom tickmark is labelled with its own `label`.",
               "name": "label-interval",
               "default": "0",
               "fieldName": "labelInterval",
@@ -21864,6 +22000,19 @@
               "fieldName": "step",
               "type": {
                 "text": "number"
+              },
+              "inheritedFrom": {
+                "name": "SliderBase",
+                "module": "dist/SliderBase.js"
+              }
+            },
+            {
+              "description": "Defines custom tickmarks with labels on the slider scale.\nEach tickmark object has a numeric `value` and an optional `label` string.\nTickmarks are purely visual — they display labeled markers at specific positions\nbut do not affect the slider's movement behavior. The slider still moves\naccording to `min`, `max`, and `step`.\n\nWhen the current value matches a tickmark value, the tickmark's label\nis shown in the tooltip and announced via `aria-valuetext`.\n\n**Note:** When `tickmarks` is provided, the scale is automatically shown\n(equivalent to `showTickmarks`), and `labelInterval` is ignored - every\ncustom tickmark is rendered with its own `label`.",
+              "name": "tickmarks",
+              "default": "[]",
+              "fieldName": "tickmarks",
+              "type": {
+                "text": "Tickmark[]"
               },
               "inheritedFrom": {
                 "name": "SliderBase",
@@ -27081,6 +27230,16 @@
               }
             }
           ],
+          "cssParts": [
+            {
+              "description": "Used to style the suggestions popup",
+              "name": "popover",
+              "inheritedFrom": {
+                "name": "Search",
+                "module": "dist/Search.js"
+              }
+            }
+          ],
           "attributes": [
             {
               "description": "Defines the accessible ARIA description of the field.",
@@ -28759,7 +28918,7 @@
                 "text": "number"
               },
               "default": "0",
-              "description": "Displays a label with a value on every N-th step.\n\n**Note:** The step and tickmarks properties must be enabled.\nExample - if the step value is set to 2 and the label interval is also specified to 2 - then every second\ntickmark will be labelled, which means every 4th value number.",
+              "description": "Displays a label with a value on every N-th step.\n\n**Note:** The step and tickmarks properties must be enabled.\nExample - if the step value is set to 2 and the label interval is also specified to 2 - then every second\ntickmark will be labelled, which means every 4th value number.\n\n**Note:** This property is ignored when the `tickmarks` property is used.\nIn that case every custom tickmark is labelled with its own `label`.",
               "privacy": "public",
               "inheritedFrom": {
                 "name": "SliderBase",
@@ -28980,6 +29139,27 @@
             },
             {
               "kind": "field",
+              "name": "tickmarks",
+              "type": {
+                "text": "Array<Tickmark>",
+                "references": [
+                  {
+                    "name": "Tickmark",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/SliderScale.js"
+                  }
+                ]
+              },
+              "default": "[]",
+              "description": "Defines custom tickmarks with labels on the slider scale.\nEach tickmark object has a numeric `value` and an optional `label` string.\nTickmarks are purely visual — they display labeled markers at specific positions\nbut do not affect the slider's movement behavior. The slider still moves\naccording to `min`, `max`, and `step`.\n\nWhen the current value matches a tickmark value, the tickmark's label\nis shown in the tooltip and announced via `aria-valuetext`.\n\n**Note:** When `tickmarks` is provided, the scale is automatically shown\n(equivalent to `showTickmarks`), and `labelInterval` is ignored - every\ncustom tickmark is rendered with its own `label`.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "SliderBase",
+                "module": "dist/SliderBase.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "value",
               "type": {
                 "text": "number"
@@ -29099,7 +29279,7 @@
               }
             },
             {
-              "description": "Displays a label with a value on every N-th step.\n\n**Note:** The step and tickmarks properties must be enabled.\nExample - if the step value is set to 2 and the label interval is also specified to 2 - then every second\ntickmark will be labelled, which means every 4th value number.",
+              "description": "Displays a label with a value on every N-th step.\n\n**Note:** The step and tickmarks properties must be enabled.\nExample - if the step value is set to 2 and the label interval is also specified to 2 - then every second\ntickmark will be labelled, which means every 4th value number.\n\n**Note:** This property is ignored when the `tickmarks` property is used.\nIn that case every custom tickmark is labelled with its own `label`.",
               "name": "label-interval",
               "default": "0",
               "fieldName": "labelInterval",
@@ -29183,6 +29363,19 @@
               "fieldName": "step",
               "type": {
                 "text": "number"
+              },
+              "inheritedFrom": {
+                "name": "SliderBase",
+                "module": "dist/SliderBase.js"
+              }
+            },
+            {
+              "description": "Defines custom tickmarks with labels on the slider scale.\nEach tickmark object has a numeric `value` and an optional `label` string.\nTickmarks are purely visual — they display labeled markers at specific positions\nbut do not affect the slider's movement behavior. The slider still moves\naccording to `min`, `max`, and `step`.\n\nWhen the current value matches a tickmark value, the tickmark's label\nis shown in the tooltip and announced via `aria-valuetext`.\n\n**Note:** When `tickmarks` is provided, the scale is automatically shown\n(equivalent to `showTickmarks`), and `labelInterval` is ignored - every\ncustom tickmark is rendered with its own `label`.",
+              "name": "tickmarks",
+              "default": "[]",
+              "fieldName": "tickmarks",
+              "type": {
+                "text": "Tickmark[]"
               },
               "inheritedFrom": {
                 "name": "SliderBase",
@@ -30990,6 +31183,26 @@
               "type": {
                 "text": "string | undefined"
               },
+              "inheritedFrom": {
+                "name": "Tab",
+                "module": "dist/Tab.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "click",
+              "type": {
+                "text": "CustomEvent<TabClickEventDetail>",
+                "references": [
+                  {
+                    "name": "TabClickEventDetail",
+                    "package": "@ui5/webcomponents",
+                    "module": "dist/Tab.js"
+                  }
+                ]
+              },
+              "description": "Fired when the tab is selected either with a mouse/tap or by using the Enter or Space key.",
               "inheritedFrom": {
                 "name": "Tab",
                 "module": "dist/Tab.js"
@@ -37550,6 +37763,20 @@
           "name": "UserMenu",
           "members": [
             {
+              "kind": "field",
+              "name": "avatarInteractive",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the avatar of the selected account is interactive (focusable and pressable).\n\nWhen `false` (default), the avatar is rendered as a non-interactive image\nand is not announced as a button by screen readers.\n\n**Note:** When `showEditButton` is set to `true`, the avatar is treated as interactive\nregardless of this property's value, to preserve the edit affordance.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "UserMenu",
+                "module": "dist/UserMenu.js"
+              }
+            },
+            {
               "kind": "method",
               "name": "close",
               "return": {
@@ -37704,9 +37931,30 @@
                 "name": "UserMenu",
                 "module": "dist/UserMenu.js"
               }
+            },
+            {
+              "name": "infoArea",
+              "description": "Defines the content of the info area inside the User Menu's account block.\n\n**Note:** When empty, the User Menu renders unchanged.",
+              "inheritedFrom": {
+                "name": "UserMenu",
+                "module": "dist/UserMenu.js"
+              }
             }
           ],
           "attributes": [
+            {
+              "description": "Defines whether the avatar of the selected account is interactive (focusable and pressable).\n\nWhen `false` (default), the avatar is rendered as a non-interactive image\nand is not announced as a button by screen readers.\n\n**Note:** When `showEditButton` is set to `true`, the avatar is treated as interactive\nregardless of this property's value, to preserve the edit affordance.",
+              "name": "avatar-interactive",
+              "default": "false",
+              "fieldName": "avatarInteractive",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "UserMenu",
+                "module": "dist/UserMenu.js"
+              }
+            },
             {
               "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
               "name": "effective-dir",

@@ -16,6 +16,17 @@ export interface UserMenu extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
+   * Defines whether the avatar of the selected account is interactive (focusable and pressable).
+   *
+   * When `false` (default), the avatar is rendered as a non-interactive image
+   * and is not announced as a button by screen readers.
+   *
+   * **Note:** When `showEditButton` is set to `true`, the avatar is treated as interactive
+   * regardless of this property's value, to preserve the edit affordance.
+   */
+  avatarInteractive?: boolean;
+
+  /**
    * Defines if the User Menu is opened.
    */
   open?: boolean;

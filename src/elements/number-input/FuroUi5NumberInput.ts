@@ -2,6 +2,7 @@ import "@ui5/webcomponents/dist/features/InputSuggestions.js";
 
 import {
   DOUBLE,
+  DoubleValue,
   type FieldConstraints,
   FLOAT,
   FloatValue,
@@ -21,7 +22,7 @@ import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { NumericReaderWriters } from "@/lib/open-models/NumericReaderWriters";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
-import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
+import { FuroFatDouble, FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
 
 /**
  *
@@ -84,11 +85,13 @@ export class FuroUi5NumberInput extends Input {
     | UINT64
     | DOUBLE
     | FLOAT
+    | FuroFatDouble
     | FuroFatFloat
     | FuroFatInt32
     | FuroFatInt64
     | FuroFatUint32
     | FuroFatUint64
+    | DoubleValue
     | FloatValue
     | Int32Value
     | Int64Value
@@ -102,11 +105,13 @@ export class FuroUi5NumberInput extends Input {
     | UINT64
     | DOUBLE
     | FLOAT
+    | FuroFatDouble
     | FuroFatFloat
     | FuroFatInt32
     | FuroFatInt64
     | FuroFatUint32
     | FuroFatUint64
+    | DoubleValue
     | FloatValue
     | Int32Value
     | Int64Value
@@ -122,6 +127,7 @@ export class FuroUi5NumberInput extends Input {
    * @typeref UInt32Value - "@furo/open-models/"
    * @typeref Int64Value - "@furo/open-models/"
    * @typeref UInt64Value - "@furo/open-models/"
+   * @typeref DoubleValue - "@furo/open-models/"
    * @typeref FloatValue - "@furo/open-models/"
    * @typeref INT32 - "@furo/open-models/"
    * @typeref INT64 - "@furo/open-models/"
@@ -134,6 +140,7 @@ export class FuroUi5NumberInput extends Input {
    * @typeref FuroFatInt32 - "@/models/index.js"
    * @typeref FuroFatInt64 - "@/models/index.js"
    * @typeref FuroFatFloat - "@/models/index.js"
+   * @typeref FuroFatDouble - "@/models/index.js"
    * @public
    */
   set model(
@@ -144,11 +151,13 @@ export class FuroUi5NumberInput extends Input {
       | UINT64
       | DOUBLE
       | FLOAT
+      | FuroFatDouble
       | FuroFatFloat
       | FuroFatInt32
       | FuroFatInt64
       | FuroFatUint32
       | FuroFatUint64
+      | DoubleValue
       | FloatValue
       | Int32Value
       | Int64Value
@@ -173,6 +182,7 @@ export class FuroUi5NumberInput extends Input {
    * @paramref fieldNode UInt32Value - "@furo/open-models/"
    * @paramref fieldNode Int64Value - "@furo/open-models/"
    * @paramref fieldNode UInt64Value - "@furo/open-models/"
+   * @paramref fieldNode DoubleValue - "@furo/open-models/"
    * @paramref fieldNode FloatValue - "@furo/open-models/"
    * @paramref fieldNode INT32 - "@furo/open-models/"
    * @paramref fieldNode INT64 - "@furo/open-models/"
@@ -185,6 +195,7 @@ export class FuroUi5NumberInput extends Input {
    * @paramref fieldNode FuroFatInt32 - "@/models/index.js"
    * @paramref fieldNode FuroFatInt64 - "@/models/index.js"
    * @paramref fieldNode FuroFatFloat - "@/models/index.js"
+   * @paramref fieldNode FuroFatDouble - "@/models/index.js"
    * @param fieldNode
    * @public
    */
@@ -196,11 +207,13 @@ export class FuroUi5NumberInput extends Input {
       | UINT64
       | DOUBLE
       | FLOAT
+      | FuroFatDouble
       | FuroFatFloat
       | FuroFatInt32
       | FuroFatInt64
       | FuroFatUint32
       | FuroFatUint64
+      | DoubleValue
       | FloatValue
       | Int32Value
       | Int64Value
@@ -238,10 +251,6 @@ export class FuroUi5NumberInput extends Input {
     this._model.__addEventListener("update", this.readFromModel);
 
     // listen on changes from UI
-    this.addEventListener("input", d => {
-      console.log(d);
-      console.log(this.value);
-    });
     this.addEventListener("input", this.writeInputToModel);
     this.addEventListener("change", this.writeToModel);
 

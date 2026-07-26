@@ -162,14 +162,14 @@ declare module "react" {
        * ### Keyboard Handling
        *
        * #### Basic Navigation
-       * When the `furo-furo-ui5-dialog` has the `draggable` property set to `true` and the header is focused, the user can move the dialog
+       * When the `furo-furo-ui5-dialog` has the `draggable` property set to `true`, the user can move the dialog
        * with the following keyboard shortcuts:
        *
        * - [Up] or [Down] arrow keys - Move the dialog up/down.
        * - [Left] or [Right] arrow keys - Move the dialog left/right.
        *
        * #### Resizing
-       * When the `furo-furo-ui5-dialog` has the `resizable` property set to `true` and the header is focused, the user can change the size of the dialog
+       * When the `furo-furo-ui5-dialog` has the `resizable` property set to `true`, the user can change the size of the dialog
        * with the following keyboard shortcuts:
        *
        * - [Shift] + [Up] or [Down] - Decrease/Increase the height of the dialog.
@@ -208,14 +208,14 @@ declare module "react" {
        * ### Keyboard Handling
        *
        * #### Basic Navigation
-       * When the `furo-ui5-dialog` has the `draggable` property set to `true` and the header is focused, the user can move the dialog
+       * When the `furo-ui5-dialog` has the `draggable` property set to `true`, the user can move the dialog
        * with the following keyboard shortcuts:
        *
        * - [Up] or [Down] arrow keys - Move the dialog up/down.
        * - [Left] or [Right] arrow keys - Move the dialog left/right.
        *
        * #### Resizing
-       * When the `furo-ui5-dialog` has the `resizable` property set to `true` and the header is focused, the user can change the size of the dialog
+       * When the `furo-ui5-dialog` has the `resizable` property set to `true`, the user can change the size of the dialog
        * with the following keyboard shortcuts:
        *
        * - [Shift] + [Up] or [Down] - Decrease/Increase the height of the dialog.

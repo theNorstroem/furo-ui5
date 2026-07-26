@@ -107,6 +107,24 @@ import "@/type-renderers/form-google-protobuf-boolvalue"
 import "@/type-renderers/form-string"
 import "@/type-renderers/form-furo-fat-string"
 import "@/type-renderers/form-google-protobuf-stringvalue"
+import "@/type-renderers/form-int32"
+import "@/type-renderers/form-int64"
+import "@/type-renderers/form-uint32"
+import "@/type-renderers/form-uint64"
+import "@/type-renderers/form-double"
+import "@/type-renderers/form-float"
+import "@/type-renderers/form-furo-fat-int32"
+import "@/type-renderers/form-furo-fat-int64"
+import "@/type-renderers/form-furo-fat-uint32"
+import "@/type-renderers/form-furo-fat-uint64"
+import "@/type-renderers/form-furo-fat-double"
+import "@/type-renderers/form-furo-fat-float"
+import "@/type-renderers/form-google-protobuf-int32value"
+import "@/type-renderers/form-google-protobuf-int64value"
+import "@/type-renderers/form-google-protobuf-uint32value"
+import "@/type-renderers/form-google-protobuf-uint64value"
+import "@/type-renderers/form-google-protobuf-doublevalue"
+import "@/type-renderers/form-google-protobuf-floatvalue"
 import {TableCss} from "@/styles/table.css"
 import {AllTypesTest} from "@/models/furoui5test/AllTypesTest"
 import "@/elements/section";
@@ -424,6 +442,10 @@ export class PageTyperenderer extends LitElement {
               </tr>
             </tbody>
           </table>
+          <hr />
+          <form-int64 label="form int64" .model="${this.data.primitiveInt64}"></form-int64>
+          <form-furo-fat-int64 label="form furo fat int64" .model="${this.data.furoFatInt64}"></form-furo-fat-int64>
+          <form-google-protobuf-int64value label="form google protobuf int64value" .model="${this.data.googleProtobufInt64value}"></form-google-protobuf-int64value>
         </furo-ui5-subsection>
 
         <furo-ui5-subsection heading="Double">
@@ -476,6 +498,10 @@ export class PageTyperenderer extends LitElement {
               </tr>
             </tbody>
           </table>
+          <hr />
+          <form-double label="form double" .model="${this.data.primitiveDouble}"></form-double>
+          <form-furo-fat-double label="form furo fat double" .model="${this.data.furoFatDouble}"></form-furo-fat-double>
+          <form-google-protobuf-doublevalue label="form google protobuf doublevalue" .model="${this.data.googleProtobufDoublevalue}"></form-google-protobuf-doublevalue>
         </furo-ui5-subsection>
 
         <furo-ui5-subsection heading="Float">
@@ -528,6 +554,10 @@ export class PageTyperenderer extends LitElement {
               </tr>
             </tbody>
           </table>
+          <hr />
+          <form-float label="form float" .model="${this.data.primitiveFloat}"></form-float>
+          <form-furo-fat-float label="form furo fat float" .model="${this.data.furoFatFloat}"></form-furo-fat-float>
+          <form-google-protobuf-floatvalue label="form google protobuf floatvalue" .model="${this.data.googleProtobufFloatvalue}"></form-google-protobuf-floatvalue>
         </furo-ui5-subsection>
 
         <furo-ui5-subsection heading="Uint64">
@@ -579,6 +609,10 @@ export class PageTyperenderer extends LitElement {
               </tr>
             </tbody>
           </table>
+          <hr />
+          <form-uint64 label="form uint64" .model="${this.data.primitiveUint64}"></form-uint64>
+          <form-furo-fat-uint64 label="form furo fat uint64" .model="${this.data.furoFatUint64}"></form-furo-fat-uint64>
+          <form-google-protobuf-uint64value label="form google protobuf uint64value" .model="${this.data.googleProtobufUint64value}"></form-google-protobuf-uint64value>
         </furo-ui5-subsection>
 
         <furo-ui5-subsection heading="Int32">
@@ -630,6 +664,10 @@ export class PageTyperenderer extends LitElement {
               </tr>
             </tbody>
           </table>
+          <hr />
+          <form-int32 label="form int32" .model="${this.data.primitiveInt32}"></form-int32>
+          <form-furo-fat-int32 label="form furo fat int32" .model="${this.data.furoFatInt32}"></form-furo-fat-int32>
+          <form-google-protobuf-int32value label="form google protobuf int32value" .model="${this.data.googleProtobufInt32value}"></form-google-protobuf-int32value>
         </furo-ui5-subsection>
 
         <furo-ui5-subsection heading="Uint32">
@@ -681,6 +719,10 @@ export class PageTyperenderer extends LitElement {
               </tr>
             </tbody>
           </table>
+          <hr />
+          <form-uint32 label="form uint32" .model="${this.data.primitiveUint32}"></form-uint32>
+          <form-furo-fat-uint32 label="form furo fat uint32" .model="${this.data.furoFatUint32}"></form-furo-fat-uint32>
+          <form-google-protobuf-uint32value label="form google protobuf uint32value" .model="${this.data.googleProtobufUint32value}"></form-google-protobuf-uint32value>
         </furo-ui5-subsection>
       </furo-ui5-section>
     </furo-vertical-flex>`;

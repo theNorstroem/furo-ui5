@@ -12,6 +12,11 @@ export interface Breadcrumbs extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
+   * Defines the accessible name of the component.
+   */
+  accessibleName?: string | undefined;
+
+  /**
    * Defines the visual appearance of the last BreadcrumbsItem.
    *
    * The Breadcrumbs supports two visual appearances for the last BreadcrumbsItem:

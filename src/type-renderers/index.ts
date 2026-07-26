@@ -74,8 +74,26 @@ export * from "./display-uint64/DisplayUint64";
 
 // form
 export * from "./form-bool/FormBool";
+export * from "./form-double/FormDouble";
+export * from "./form-float/FormFloat";
 export * from "./form-furo-fat-bool/FormFuroFatBool";
+export * from "./form-furo-fat-double/FormFuroFatDouble";
+export * from "./form-furo-fat-float/FormFuroFatFloat";
+export * from "./form-furo-fat-int32/FormFuroFatInt32";
+export * from "./form-furo-fat-int64/FormFuroFatInt64";
 export * from "./form-furo-fat-string/FormFuroFatString";
+export * from "./form-furo-fat-uint32/FormFuroFatUint32";
+export * from "./form-furo-fat-uint64/FormFuroFatUint64";
 export * from "./form-google-protobuf-boolvalue/FormGoogleProtobufBoolvalue";
+export * from "./form-google-protobuf-doublevalue/FormGoogleProtobufDoublevalue";
+export * from "./form-google-protobuf-floatvalue/FormGoogleProtobufFloatvalue";
+export * from "./form-google-protobuf-int32value/FormGoogleProtobufInt32value";
+export * from "./form-google-protobuf-int64value/FormGoogleProtobufInt64value";
 export * from "./form-google-protobuf-stringvalue/FormGoogleProtobufStringvalue";
+export * from "./form-google-protobuf-uint32value/FormGoogleProtobufUint32value";
+export * from "./form-google-protobuf-uint64value/FormGoogleProtobufUint64value";
+export * from "./form-int32/FormInt32";
+export * from "./form-int64/FormInt64";
 export * from "./form-string/FormString";
+export * from "./form-uint32/FormUint32";
+export * from "./form-uint64/FormUint64";
