@@ -125,6 +125,10 @@ import "@/type-renderers/form-google-protobuf-uint32value"
 import "@/type-renderers/form-google-protobuf-uint64value"
 import "@/type-renderers/form-google-protobuf-doublevalue"
 import "@/type-renderers/form-google-protobuf-floatvalue"
+import "@/type-renderers/form-google-type-date"
+import "@/type-renderers/form-furo-type-date"
+import "@/type-renderers/form-google-protobuf-timestamp"
+import "@/type-renderers/form-google-type-timeofday"
 import {TableCss} from "@/styles/table.css"
 import {AllTypesTest} from "@/models/furoui5test/AllTypesTest"
 import "@/elements/section";
@@ -347,6 +351,11 @@ export class PageTyperenderer extends LitElement {
               </tr>
             </tbody>
           </table>
+          <hr />
+          <form-google-type-date label="form google type date" .model="${this.data.googleTypeDate}"></form-google-type-date>
+          <form-furo-type-date label="form furo type date" .model="${this.data.furoTypeDate}"></form-furo-type-date>
+          <form-google-protobuf-timestamp label="form google protobuf timestamp" .model="${this.data.googleProtobufTimestamp}"></form-google-protobuf-timestamp>
+          <form-google-type-timeofday label="form google type timeofday" .model="${this.data.googleTypeTimeofday}"></form-google-type-timeofday>
         </furo-ui5-subsection>
 
         <furo-ui5-subsection heading="Money">

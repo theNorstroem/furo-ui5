@@ -1,9 +1,9 @@
 import { FormGoogleTypeDate } from "./FormGoogleTypeDate";
 
-FormGoogleTypeDate.define();
-
 declare global {
   interface HTMLElementTagNameMap {
     "form-google-type-date": FormGoogleTypeDate;
   }
 }
+
+window.customElements.define("form-google-type-date", FormGoogleTypeDate);
