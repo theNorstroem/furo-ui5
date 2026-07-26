@@ -34,12 +34,12 @@ export interface ContextMenu extends React.HTMLAttributes<HTMLElement> {
   horizontalAlign?: PopoverHorizontalAlign | keyof typeof PopoverHorizontalAlign;
 
   /**
-   * Defines if a loading indicator would be displayed inside the corresponding furo-furo-ui5-menu popover.
+   * Defines if a loading indicator would be displayed inside the corresponding furo-ui5-menu popover.
    */
   loading?: boolean;
 
   /**
-   * Defines the delay in milliseconds, after which the loading indicator will be displayed inside the corresponding furo-furo-ui5-menu popover.
+   * Defines the delay in milliseconds, after which the loading indicator will be displayed inside the corresponding furo-ui5-menu popover.
    */
   loadingDelay?: number;
 
@@ -65,30 +65,30 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-context-menu binds a `menu.Menuitem` model (or an ARRAY of them) to
-       * a SAP `furo-furo-ui5-menu`. Because `furo-furo-ui5-menu` is itself a self-contained popover, no separate
+       * The furo-ui5-context-menu binds a `menu.Menuitem` model (or an ARRAY of them) to
+       * a SAP `furo-ui5-menu`. Because `furo-ui5-menu` is itself a self-contained popover, no separate
        * display element is required.
        *
        * The opener is wired up using the standard UI5 convention via the `opener` attribute
        * (element id or `HTMLElement` reference) and `show()` / `trigger()`. Hierarchical
-       * sub-menus, keyboard navigation, separators and a11y are inherited from `furo-furo-ui5-menu`.
+       * sub-menus, keyboard navigation, separators and a11y are inherited from `furo-ui5-menu`.
        *
        * ### Overview
        *
-       * `furo-furo-ui5-menu` component represents a hierarchical menu structure.
+       * `furo-ui5-menu` component represents a hierarchical menu structure.
        *
        * ### Structure
        *
-       * The `furo-furo-ui5-menu` can hold two types of entities:
+       * The `furo-ui5-menu` can hold two types of entities:
        *
-       * - `furo-furo-ui5-menu-item` components
-       * - `furo-furo-ui5-menu-separator` - used to separate menu items with a line
+       * - `furo-ui5-menu-item` components
+       * - `furo-ui5-menu-separator` - used to separate menu items with a line
        *
        * An arbitrary hierarchy structure can be represented by recursively nesting menu items.
        *
        * ### Keyboard Handling
        *
-       * The `furo-furo-ui5-menu` provides advanced keyboard handling.
+       * The `furo-ui5-menu` provides advanced keyboard handling.
        * The user can use the following keyboard shortcuts in order to navigate trough the tree:
        *
        * - `Arrow Up` / `Arrow Down` - Navigates up and down the menu items that are currently visible.

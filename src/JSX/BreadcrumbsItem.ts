@@ -40,15 +40,15 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-breadcrumbs-item' is a thin wrapper around the
-       * [SAP ui5 BreadcrumbsItem element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Breadcrumbs/).
+       * The 'furo-ui5-breadcrumbs-item' is a thin wrapper around the
+       * [SAP ui5 BreadcrumbsItem element](https://ui5.github.io/webcomponents/components/Breadcrumbs/).
        *
        * It exposes the full UI5 BreadcrumbsItem API unchanged and is meant to be placed inside
-       * `furo-furo-furo-ui5-breadcrumbs`. There is intentionally **no data binding**.
+       * `furo-ui5-breadcrumbs`. There is intentionally **no data binding**.
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-breadcrumbs-item` component defines the content of an item in `furo-furo-ui5-breadcrumbs`.
+       * The `furo-ui5-breadcrumbs-item` component defines the content of an item in `furo-ui5-breadcrumbs`.
        *
        * ### Overview
        *

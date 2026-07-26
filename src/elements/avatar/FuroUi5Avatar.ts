@@ -9,7 +9,7 @@ import { FuroFatString } from "@/models";
  * The 'furo-ui5-avatar' is a display-only component which renders a bound `string` value as the
  * avatar's initials, with data binding.
  *
- * It extends the [SAP ui5 Avatar element](https://sap.github.io/ui5-webcomponents/playground/components/Avatar/).
+ * It extends the [SAP ui5 Avatar element](https://ui5.github.io/webcomponents/components/main/Avatar/).
  * Use the inherited `icon` / `colorScheme` / `shape` / `size` properties for styling.
  *
  * You can bind any `string` type: `primitives.STRING`, the `furo.fat.String` type or the

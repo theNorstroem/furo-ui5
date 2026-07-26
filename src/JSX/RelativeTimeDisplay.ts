@@ -47,11 +47,11 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The 'furo-furo-furo-ui5-relative-time-display' is a display-only component which shows relative time
+       * The 'furo-ui5-relative-time-display' is a display-only component which shows relative time
        * information as plain text (e.g. "in 2 days", "5 days ago"), with data binding.
        *
-       * It extends the [SAP ui5 Text element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Text/)
-       * and is the chrome-less sibling of `furo-furo-furo-ui5-relative-time-badge` (no color scheme).
+       * It extends the [SAP ui5 Text element](https://ui5.github.io/webcomponents/components/Text/)
+       * and is the chrome-less sibling of `furo-ui5-relative-time-badge` (no color scheme).
        *
        * You can bind a `string` (ISO 8601), a `google.protobuf.Timestamp`, a unix-seconds `int32` / `int64`,
        * or a `google.type.Date`. `int32` / `int64` are interpreted as seconds since epoch.
@@ -60,21 +60,21 @@ declare module "react" {
        * (`always` | `auto`).
        *
        * ```html
-       * <furo-furo-furo-ui5-relative-time-display .model="${fieldNode}"></furo-furo-furo-ui5-relative-time-display>
+       * <furo-ui5-relative-time-display .model="${fieldNode}"></furo-ui5-relative-time-display>
        * ```
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-text` component displays text that can be used in any content area of an application.
+       * The `furo-ui5-text` component displays text that can be used in any content area of an application.
        *
        * ### Usage
        *
-       * - Use the `furo-furo-ui5-text` if you want to display text inside a form, table, or any other content area.
-       * - Do not use the `furo-furo-ui5-text` if you need to reference input type of components (use furo-furo-ui5-label).
+       * - Use the `furo-ui5-text` if you want to display text inside a form, table, or any other content area.
+       * - Do not use the `furo-ui5-text` if you need to reference input type of components (use furo-ui5-label).
        *
        * ### Responsive behavior
        *
-       * The `furo-furo-ui5-text` component is fully adaptive to all screen sizes.
+       * The `furo-ui5-text` component is fully adaptive to all screen sizes.
        * By default, the text will wrap when the space is not enough.
        * In addition, the component supports truncation via the `max-lines` property,
        * by defining the number of lines the text should wrap before start truncating.

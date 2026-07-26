@@ -102,21 +102,21 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The 'furo-furo-furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.
+       * The 'furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.
        *
-       * It supports all features from the [SAP ui5 toggleButton element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/ToggleButton/).
+       * It supports all features from the [SAP ui5 toggleButton element](https://ui5.github.io/webcomponents/components/ToggleButton/).
        *
        * You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
        *
        * ```html
-       * <furo-furo-furo-ui5-radio-button
+       * <furo-ui5-radio-button
        * name="groupA"
        * .model=${this.BoolFieldNode}
-       * ></furo-furo-furo-ui5-radio-button>
-       * <furo-furo-furo-ui5-radio-button
+       * ></furo-ui5-radio-button>
+       * <furo-ui5-radio-button
        * name="groupA"
        * fn-bind-data="--dao(OTHERFIELDNODE)"
-       * ></furo-furo-furo-ui5-radio-button>
+       * ></furo-ui5-radio-button>
        * ```
        *
        * ## supported FAT attributes
@@ -133,17 +133,17 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-radio-button` component enables users to select a single option from a set of options.
-       * When a `furo-furo-ui5-radio-button` is selected by the user, the
+       * The `furo-ui5-radio-button` component enables users to select a single option from a set of options.
+       * When a `furo-ui5-radio-button` is selected by the user, the
        * `change` event is fired.
-       * When a `furo-furo-ui5-radio-button` that is within a group is selected, the one
+       * When a `furo-ui5-radio-button` that is within a group is selected, the one
        * that was previously selected gets automatically deselected. You can group radio buttons by using the `name` property.
        *
-       * **Note:** If `furo-furo-ui5-radio-button` is not part of a group, it can be selected once, but can not be deselected back.
+       * **Note:** If `furo-ui5-radio-button` is not part of a group, it can be selected once, but can not be deselected back.
        *
        * ### Keyboard Handling
        *
-       * Once the `furo-furo-ui5-radio-button` is on focus, it might be selected by pressing the Space and Enter keys.
+       * Once the `furo-ui5-radio-button` is on focus, it might be selected by pressing the Space and Enter keys.
        *
        * The Arrow Down/Arrow Up and Arrow Left/Arrow Right keys can be used to change selection between next/previous radio buttons in one group,
        * while TAB and SHIFT + TAB can be used to enter or leave the radio button group.

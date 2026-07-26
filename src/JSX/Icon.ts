@@ -70,8 +70,8 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-icon` component represents an SVG icon.
-       * There are two main scenarios how the `furo-furo-ui5-icon` component is used:
+       * The `furo-ui5-icon` component represents an SVG icon.
+       * There are two main scenarios how the `furo-ui5-icon` component is used:
        * as a purely decorative element,
        * or as an interactive element that can be focused and clicked.
        *
@@ -114,13 +114,13 @@ declare module "react" {
        *
        * `import "@ui5/webcomponents-icons-business-suite/dist/ab-testing.js";`
        *
-       * 4. **Display the icon using the `furo-furo-ui5-icon` web component.**
+       * 4. **Display the icon using the `furo-ui5-icon` web component.**
        * Set the icon collection ("SAP-icons", "tnt" or "business-suite" - "SAP-icons" is the default icon collection and can be skipped)
        * and the icon name to the `name` property.
        *
-       * `<furo-furo-ui5-icon name="employee"></furo-furo-ui5-icon>`
-       * `<furo-furo-ui5-icon name="tnt/antenna"></furo-furo-ui5-icon>`
-       * `<furo-furo-ui5-icon name="business-suite/ab-testing"></furo-furo-ui5-icon>`
+       * `<furo-ui5-icon name="employee"></furo-ui5-icon>`
+       * `<furo-ui5-icon name="tnt/antenna"></furo-ui5-icon>`
+       * `<furo-ui5-icon name="business-suite/ab-testing"></furo-ui5-icon>`
        *
        * ### Keyboard Handling
        *

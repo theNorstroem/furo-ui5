@@ -152,10 +152,10 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-range-slider component lets the user select a numeric range (a lower and an upper
+       * The furo-ui5-range-slider component lets the user select a numeric range (a lower and an upper
        * bound), with data binding.
        *
-       * It supports all features from the [SAP ui5 RangeSlider element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/RangeSlider/).
+       * It supports all features from the [SAP ui5 RangeSlider element](https://ui5.github.io/webcomponents/components/RangeSlider/).
        *
        * A range has two ends, so it binds two separate numeric field nodes:
        * - `model` (or `bindData`) binds the **start** value (`startValue`).

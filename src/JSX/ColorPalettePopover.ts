@@ -82,10 +82,10 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-color-palette-popover shows a predefined set of color swatches in a popover and binds
+       * The furo-ui5-color-palette-popover shows a predefined set of color swatches in a popover and binds
        * the selected color.
        *
-       * It supports all features from the [SAP ui5 ColorPalettePopover element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/ColorPalettePopover/),
+       * It supports all features from the [SAP ui5 ColorPalettePopover element](https://ui5.github.io/webcomponents/components/ColorPalettePopover/),
        * including `open` / `opener` / `placement` and the "more colors" / "default color" buttons.
        *
        * ### Selected color (`model`)
@@ -93,8 +93,8 @@ declare module "react" {
        * `item-click` event and marks the matching swatch as selected when the model changes.
        *
        * ### Swatches (`colorsModel`)
-       * Bind an `ARRAY` of `string` colors to generate the `furo-furo-furo-ui5-color-palette-item` swatches. You can
-       * also place `furo-furo-furo-ui5-color-palette-item` children manually.
+       * Bind an `ARRAY` of `string` colors to generate the `furo-ui5-color-palette-item` swatches. You can
+       * also place `furo-ui5-color-palette-item` children manually.
        *
        * ### Overview
        * Represents a predefined range of colors for easier selection.
@@ -109,7 +109,7 @@ declare module "react" {
        *
        * The palette is intended for users, who don't want to check and remember the different values of the colors and spend large amount of time to configure the right color through the color picker.
        *
-       * For the `furo-furo-ui5-color-palette-popover`
+       * For the `furo-ui5-color-palette-popover`
        * ### ES6 Module Import
        *
        * `import @furo/ui5/dist/ColorPalettePopover.js";`

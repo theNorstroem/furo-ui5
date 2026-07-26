@@ -126,7 +126,7 @@ declare module "react" {
        *
        *
        * ### Overview
-       * The `furo-furo-ui5-responsive-popover` acts as a Popover on desktop and tablet, while on phone it acts as a Dialog.
+       * The `furo-ui5-responsive-popover` acts as a Popover on desktop and tablet, while on phone it acts as a Dialog.
        * The component improves tremendously the user experience on mobile.
        *
        * ### Usage

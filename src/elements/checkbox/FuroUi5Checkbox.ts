@@ -11,7 +11,7 @@ import type { FuroFatBool } from "@/models";
 /**
  * The 'furo-ui5-checkbox' component allows the user to switch true and false for type Bool with data binding.
  *
- * It supports all features from the [SAP ui5 checkbox element](https://sap.github.io/ui5-webcomponents/playground/components/CheckBox/).
+ * It supports all features from the [SAP ui5 checkbox element](https://ui5.github.io/webcomponents/components/CheckBox/).
  *
  * Bindable FieldNodes: `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
  *

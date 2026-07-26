@@ -68,7 +68,7 @@ export interface Avatar extends React.HTMLAttributes<HTMLElement> {
    *
    * `import "@ui5/webcomponents-icons/dist/{icon_name}.js"`
    *
-   * `<furo-furo-ui5-avatar fallback-icon="alert">`
+   * `<furo-ui5-avatar fallback-icon="alert">`
    *
    * See all the available icons in the [Icon Explorer](https://sdk.openui5.org/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
    */
@@ -83,7 +83,7 @@ export interface Avatar extends React.HTMLAttributes<HTMLElement> {
    *
    * `import "@ui5/webcomponents-icons/dist/{icon_name}.js"`
    *
-   * `<furo-furo-ui5-avatar icon="employee">`
+   * `<furo-ui5-avatar icon="employee">`
    *
    * **Note:** If no icon or an empty one is provided, by default the "employee" icon should be displayed.
    *
@@ -137,17 +137,17 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-avatar' is a display-only component which renders a bound `string` value as the
+       * The 'furo-ui5-avatar' is a display-only component which renders a bound `string` value as the
        * avatar's initials, with data binding.
        *
-       * It extends the [SAP ui5 Avatar element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Avatar/).
+       * It extends the [SAP ui5 Avatar element](https://ui5.github.io/webcomponents/components/main/Avatar/).
        * Use the inherited `icon` / `colorScheme` / `shape` / `size` properties for styling.
        *
        * You can bind any `string` type: `primitives.STRING`, the `furo.fat.String` type or the
        * `google.protobuf.StringValue` type. Display-only: the component reads from the model but never writes back.
        *
        * ```html
-       * <furo-furo-furo-ui5-avatar .model="${fieldNode}"></furo-furo-furo-ui5-avatar>
+       * <furo-ui5-avatar .model="${fieldNode}"></furo-ui5-avatar>
        * ```
        *
        * ### Overview

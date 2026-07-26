@@ -42,21 +42,21 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * `furo-furo-furo-ui5-subsection`
-       * The furo-furo-furo-ui5-subsection component is a containers for actual content. It is envisaged that this component will be
-       * used within a furo-furo-furo-ui5-section
+       * `furo-ui5-subsection`
+       * The furo-ui5-subsection component is a containers for actual content. It is envisaged that this component will be
+       * used within a furo-ui5-section
        * Subsections have a progressive disclosure mechanism to show and hide content
        *
        * https://experience.sap.com/fiori-design-web/object-page/#content-area
        *
        * ```html
-       * <furo-furo-furo-ui5-section heading="STRING">
-       * <furo-furo-furo-ui5-subsection heading="Subsection Title">
+       * <furo-ui5-section heading="STRING">
+       * <furo-ui5-subsection heading="Subsection Title">
        * <furo-horizontal-flex slot="action">...</furo-horizontal-flex>
        * <my-content></my-content>
        * <more-content slot="more"></more-content>
-       * </furo-furo-furo-ui5-subsection>
-       * </furo-furo-furo-ui5-section>
+       * </furo-ui5-subsection>
+       * </furo-ui5-section>
        * ```
        * ## Methods
        * **bindData(fieldNode)**

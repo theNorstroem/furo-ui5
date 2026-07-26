@@ -127,7 +127,7 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-popover` component displays additional information for an object
+       * The `furo-ui5-popover` component displays additional information for an object
        * in a compact way and without leaving the page.
        * The Popover can contain various UI elements, such as fields, tables, images, and charts.
        * It can also include actions in the footer.
@@ -140,7 +140,7 @@ declare module "react" {
        * - Content
        * - Footer (optional)
        *
-       * **Note:** The `furo-furo-ui5-popover` is closed when the user clicks
+       * **Note:** The `furo-ui5-popover` is closed when the user clicks
        * or taps outside the popover
        * or selects an action within the popover. You can prevent this with the
        * `modal` property.

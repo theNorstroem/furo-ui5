@@ -19,7 +19,7 @@ export interface ColorPaletteItem extends React.HTMLAttributes<HTMLElement> {
   /**
    * Defines if the component is selected.
    *
-   * **Note:** Only one item must be selected per <code>furo-furo-ui5-color-palette</code>.
+   * **Note:** Only one item must be selected per <code>furo-ui5-color-palette</code>.
    * If more than one item is defined as selected, the last one would be considered as the selected one.
    */
   selected?: boolean;
@@ -41,10 +41,10 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The `furo-furo-furo-ui5-color-palette-item` is a single color swatch, meant to be used inside a
-       * `furo-furo-furo-ui5-color-palette` or `furo-furo-furo-ui5-color-palette-popover`.
+       * The `furo-ui5-color-palette-item` is a single color swatch, meant to be used inside a
+       * `furo-ui5-color-palette` or `furo-ui5-color-palette-popover`.
        *
-       * It extends the [SAP ui5 ColorPaletteItem element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/ColorPalette/).
+       * It extends the [SAP ui5 ColorPaletteItem element](https://ui5.github.io/webcomponents/components/ColorPalette/).
        *
        * You can bind any `string` type (a CSS color): `primitives.STRING`, the `furo.fat.String` type or the
        * `google.protobuf.StringValue` type. Display-only: the component reads the color from the model into
@@ -52,7 +52,7 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-color-palette-item` component represents a color in the the `furo-furo-ui5-color-palette`.
+       * The `furo-ui5-color-palette-item` component represents a color in the the `furo-ui5-color-palette`.
        *
        * ### Overview
        *

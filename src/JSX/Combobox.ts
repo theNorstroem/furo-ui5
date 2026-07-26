@@ -101,7 +101,7 @@ export interface Combobox extends React.HTMLAttributes<HTMLElement> {
   required?: boolean;
 
   /**
-   * Defines the value of the selected item (references the `value` property of `furo-furo-ui5-cb-item`).
+   * Defines the value of the selected item (references the `value` property of `furo-ui5-cb-item`).
    *
    * Use this property to work with unique identifiers (IDs, codes) instead of display text.
    * When set, the ComboBox finds and selects the item whose `value` property matches this property.
@@ -137,7 +137,7 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-combobox component is used to create a drop-down list for quick data entry, but allows you to enter any string.
+       * The furo-ui5-combobox component is used to create a drop-down list for quick data entry, but allows you to enter any string.
        *
        * ### Possible ways to set the option list
        * - Use `bindOptions()` or `optionsModel=` to bind a RepeaterNode as an option list.
@@ -152,22 +152,22 @@ declare module "react" {
        *
        * ### Sample
        * ```html
-       * <furo-furo-furo-ui5-combobox
+       * <furo-ui5-combobox
        * .model="${this.model.stringlike}"
        * .optionsModel="${this.OptionLikeListKind}">
-       * </furo-furo-furo-ui5-combobox>
+       * </furo-ui5-combobox>
        * ```
        *
        * ---
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-combobox` component represents a drop-down menu with a list of the available options and a text input field to narrow down the options.
+       * The `furo-ui5-combobox` component represents a drop-down menu with a list of the available options and a text input field to narrow down the options.
        *
        * It is commonly used to enable users to select an option from a predefined list.
        *
        * ### Structure
-       * The `furo-furo-ui5-combobox` consists of the following elements:
+       * The `furo-ui5-combobox` consists of the following elements:
        *
        * -  Input field - displays the selected option or a custom user entry. Users can type to narrow down the list or enter their own value.
        * -  Drop-down arrow - expands\collapses the option list.
@@ -179,19 +179,19 @@ declare module "react" {
        *
        * **1. Display Text Only (using `value`):**
        * ```html
-       * <furo-furo-ui5-combobox value="Germany">
-       * <furo-furo-ui5-cb-item text="Germany"></furo-furo-ui5-cb-item>
-       * <furo-furo-ui5-cb-item text="France"></furo-furo-ui5-cb-item>
-       * </furo-furo-ui5-combobox>
+       * <furo-ui5-combobox value="Germany">
+       * <furo-ui5-cb-item text="Germany"></furo-ui5-cb-item>
+       * <furo-ui5-cb-item text="France"></furo-ui5-cb-item>
+       * </furo-ui5-combobox>
        * ```
        * Use this approach when the displayed text is sufficient for your needs.
        *
        * **2. Unique Identifiers - Recommended (using `selectedValue` and item `value`):**
        * ```html
-       * <furo-furo-ui5-combobox value="Germany" selected-value="DE">
-       * <furo-furo-ui5-cb-item text="Germany" value="DE"></furo-furo-ui5-cb-item>
-       * <furo-furo-ui5-cb-item text="France" value="FR"></furo-furo-ui5-cb-item>
-       * </furo-furo-ui5-combobox>
+       * <furo-ui5-combobox value="Germany" selected-value="DE">
+       * <furo-ui5-cb-item text="Germany" value="DE"></furo-ui5-cb-item>
+       * <furo-ui5-cb-item text="France" value="FR"></furo-ui5-cb-item>
+       * </furo-ui5-combobox>
        * ```
        * This is the recommended approach when you need to work with unique identifiers (IDs, codes) separate from display text.
        * The `selectedValue` property references the `value` property of the selected item.
@@ -201,7 +201,7 @@ declare module "react" {
        *
        * ### Keyboard Handling
        *
-       * The `furo-furo-ui5-combobox` provides advanced keyboard handling.
+       * The `furo-ui5-combobox` provides advanced keyboard handling.
        *
        * - [F4], [Alt]+[Up], or [Alt]+[Down] - Toggles the picker.
        * - [Escape] - Closes the picker, if open. If closed, cancels changes and reverts the typed in value.

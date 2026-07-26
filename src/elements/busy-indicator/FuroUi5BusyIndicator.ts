@@ -12,7 +12,7 @@ import type { FuroFatBool } from "@/models";
  * <furo-ui5-busy-indicator></furo-ui5-busy-indicator>
  * ```
  *
- * https://sap.github.io/ui5-webcomponents/playground/components/BusyIndicator/
+ * https://ui5.github.io/webcomponents/components/BusyIndicator/
  *
  * @summary Loading spinner overlay indicating ongoing background activity.
  * @keywords busy, loading, spinner, progress, wait, indicator

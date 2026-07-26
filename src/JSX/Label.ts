@@ -11,7 +11,7 @@ export interface Label extends React.HTMLAttributes<HTMLElement> {
   /**
    * Defines the labeled input by providing its ID.
    *
-   * **Note:** Can be used with both `furo-furo-ui5-input` and native input.
+   * **Note:** Can be used with both `furo-ui5-input` and native input.
    */
   for?: string | undefined;
 
@@ -47,11 +47,11 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-label` is a component used to represent a label for elements like input, textarea, select.
-       * The `for` property of the `furo-furo-ui5-label` must be the same as the id attribute of the related input element.
+       * The `furo-ui5-label` is a component used to represent a label for elements like input, textarea, select.
+       * The `for` property of the `furo-ui5-label` must be the same as the id attribute of the related input element.
        * Screen readers read out the label, when the user focuses the labelled control.
        *
-       * The `furo-furo-ui5-label` appearance can be influenced by properties,
+       * The `furo-ui5-label` appearance can be influenced by properties,
        * such as `required` and `wrappingType`.
        * The appearance of the Label can be configured in a limited way by using the design property.
        * For a broader choice of designs, you can use custom styles.

@@ -14,7 +14,7 @@ import DebounceBuilder from "@/util/Debounce";
 /**
  *
  * The 'furo-ui5-password-input' component allows the user to enter and edit password with data binding.
- * It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
+ * It supports all features from the [SAP ui5 Input element](https://ui5.github.io/webcomponents/components/Input/).
  *
  * You can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.
  *

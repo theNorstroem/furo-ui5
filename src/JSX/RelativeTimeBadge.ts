@@ -85,10 +85,10 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The 'furo-furo-furo-ui5-relative-time-badge' is a small, non-interactive, display-only component which shows
+       * The 'furo-ui5-relative-time-badge' is a small, non-interactive, display-only component which shows
        * relative time information (e.g. "in 2 days", "5 days ago"), with data binding.
        *
-       * It extends the [SAP ui5 Tag element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Tag/)
+       * It extends the [SAP ui5 Tag element](https://ui5.github.io/webcomponents/components/Tag/)
        * and drives its text and `colorScheme` from the bound value: a future time uses the POSITIVE scheme,
        * a past time the NEGATIVE one.
        *
@@ -99,12 +99,12 @@ declare module "react" {
        * (`long` | `short` | `narrow`) and `optionNumeric` (`always` | `auto`).
        *
        * ```html
-       * <furo-furo-furo-ui5-relative-time-badge .model="${fieldNode}"></furo-furo-furo-ui5-relative-time-badge>
+       * <furo-ui5-relative-time-badge .model="${fieldNode}"></furo-ui5-relative-time-badge>
        * ```
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-tag` is a component which serves
+       * The `furo-ui5-tag` is a component which serves
        * the purpose to attract the user attention to some piece
        * of information (state, quantity, condition, etc.).
        * It can contain icon and text information, and its design can be chosen from specific design types.

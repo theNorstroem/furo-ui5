@@ -126,7 +126,7 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-slider component allows the user to enter and edit numbers with data binding.
+       * The furo-ui5-slider component allows the user to enter and edit numbers with data binding.
        *
        * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
        *
@@ -163,7 +163,7 @@ declare module "react" {
        * The most common use case is to select values on a continuous numerical scale (e.g. temperature, volume, etc. ).
        *
        * ### Responsive Behavior
-       * The `furo-furo-ui5-slider` component adjusts to the size of its parent container by recalculating and
+       * The `furo-ui5-slider` component adjusts to the size of its parent container by recalculating and
        * resizing the width of the control. You can move the slider handle in several different ways:
        *
        * - Drag and drop the handle to the desired value.

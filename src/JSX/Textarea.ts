@@ -128,9 +128,9 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-textarea' component allows the user to enter and edit texts with data binding.
+       * The 'furo-ui5-textarea' component allows the user to enter and edit texts with data binding.
        *
-       * It supports all features from the [SAP ui5 Input element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Input/).
+       * It supports all features from the [SAP ui5 Input element](https://ui5.github.io/webcomponents/components/Input/).
        *
        * You can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.
        * ## supported FAT attributes
@@ -148,10 +148,10 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-textarea` component is used to enter multiple rows of text.
+       * The `furo-ui5-textarea` component is used to enter multiple rows of text.
        *
-       * When empty, it can hold a placeholder similar to a `furo-furo-ui5-input`.
-       * You can define the rows of the `furo-furo-ui5-textarea` and also determine specific behavior when handling long texts.
+       * When empty, it can hold a placeholder similar to a `furo-ui5-input`.
+       * You can define the rows of the `furo-ui5-textarea` and also determine specific behavior when handling long texts.
        *
        * ### ES6 Module Import
        *

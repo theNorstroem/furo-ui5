@@ -41,29 +41,29 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-color-palette displays a predefined set of color swatches and binds the selected color.
+       * The furo-ui5-color-palette displays a predefined set of color swatches and binds the selected color.
        *
-       * It supports all features from the [SAP ui5 ColorPalette element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/ColorPalette/).
+       * It supports all features from the [SAP ui5 ColorPalette element](https://ui5.github.io/webcomponents/components/ColorPalette/).
        *
        * ### Selected color (`model`)
        * Bind any `string` type (a CSS color). The component writes the picked color to the model on the
        * `item-click` event and marks the matching swatch as selected when the model changes.
        *
        * ### Swatches (`colorsModel`)
-       * Bind an `ARRAY` of `string` colors to generate the `furo-furo-furo-ui5-color-palette-item` swatches. You can
-       * also place `furo-furo-furo-ui5-color-palette-item` children manually.
+       * Bind an `ARRAY` of `string` colors to generate the `furo-ui5-color-palette-item` swatches. You can
+       * also place `furo-ui5-color-palette-item` children manually.
        *
        * ```html
-       * <furo-furo-furo-ui5-color-palette .model="${selected}" .colorsModel="${colorList}"></furo-furo-furo-ui5-color-palette>
+       * <furo-ui5-color-palette .model="${selected}" .colorsModel="${colorList}"></furo-ui5-color-palette>
        * ```
        *
        * ### Overview
-       * The `furo-furo-ui5-color-palette` provides the users with a range of predefined colors. The colors are fixed and do not change with the theme.
+       * The `furo-ui5-color-palette` provides the users with a range of predefined colors. The colors are fixed and do not change with the theme.
        *
        * ### Usage
        *
-       * The `furo-furo-ui5-color-palette` is meant for users that need to select a color from a predefined set.
-       * To define the colors, use the `furo-furo-ui5-color-palette-item` component inside the default slot of the `furo-furo-ui5-color-palette`.
+       * The `furo-ui5-color-palette` is meant for users that need to select a color from a predefined set.
+       * To define the colors, use the `furo-ui5-color-palette-item` component inside the default slot of the `furo-ui5-color-palette`.
        *
        * ### ES6 Module Import
        *

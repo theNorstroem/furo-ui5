@@ -167,9 +167,9 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-date-picker' component lets the user select a date, with data binding.
+       * The 'furo-ui5-date-picker' component lets the user select a date, with data binding.
        *
-       * It supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/DatePicker/).
+       * It supports all features from the [SAP ui5 DatePicker element](https://ui5.github.io/webcomponents/components/DatePicker/).
        *
        * You can bind a `string` (ISO 8601, e.g. "2020-12-31"), a `google.type.Date` or a `furo.type.Date`.
        * Because the UI5 DatePicker is date-only, the bindable value is always handled as an ISO
@@ -184,8 +184,8 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-date-picker` component provides an input field with assigned calendar which opens on user action.
-       * The `furo-furo-ui5-date-picker` allows users to select a localized date using touch,
+       * The `furo-ui5-date-picker` component provides an input field with assigned calendar which opens on user action.
+       * The `furo-ui5-date-picker` allows users to select a localized date using touch,
        * mouse, or keyboard input. It consists of two parts: the date input field and the
        * date picker.
        *
@@ -211,14 +211,14 @@ declare module "react" {
        * If no placeholder is set to the DatePicker, the used displayFormat is displayed as a placeholder. If another placeholder is needed, it must be set.
        *
        * ### Keyboard Handling
-       * The `furo-furo-ui5-date-picker` provides advanced keyboard handling.
-       * If the `furo-furo-ui5-date-picker` is focused,
+       * The `furo-ui5-date-picker` provides advanced keyboard handling.
+       * If the `furo-ui5-date-picker` is focused,
        * you can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.
        * Once the drop-down is opened, you can use the [Up], [Down], [Left] or [Right] arrow keys
        * to navigate through the dates and select one by pressing the `Space` or `Enter` keys. Moreover you can
        * use TAB to reach the buttons for changing month and year.
        *
-       * If the `furo-furo-ui5-date-picker` input field is focused and its corresponding picker dialog is not opened,
+       * If the `furo-ui5-date-picker` input field is focused and its corresponding picker dialog is not opened,
        * then users can increment or decrement the date referenced by `dateValue` property
        * by using the following shortcuts:
        *

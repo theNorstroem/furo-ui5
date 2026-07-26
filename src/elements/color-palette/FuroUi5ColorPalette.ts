@@ -11,7 +11,7 @@ import { FuroFatString } from "@/models";
 /**
  * The furo-ui5-color-palette displays a predefined set of color swatches and binds the selected color.
  *
- * It supports all features from the [SAP ui5 ColorPalette element](https://sap.github.io/ui5-webcomponents/playground/components/ColorPalette/).
+ * It supports all features from the [SAP ui5 ColorPalette element](https://ui5.github.io/webcomponents/components/ColorPalette/).
  *
  * ### Selected color (`model`)
  * Bind any `string` type (a CSS color). The component writes the picked color to the model on the

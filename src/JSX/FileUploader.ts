@@ -99,15 +99,15 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-file-uploader' is a thin wrapper around the
-       * [SAP ui5 FileUploader element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/FileUploader/).
+       * The 'furo-ui5-file-uploader' is a thin wrapper around the
+       * [SAP ui5 FileUploader element](https://ui5.github.io/webcomponents/components/FileUploader/).
        *
        * It exposes the full UI5 FileUploader API unchanged. There is intentionally **no data binding** —
        * read the selected files from the inherited `files` / `value` API and the `change` event.
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-file-uploader` opens a file explorer dialog and enables users to upload files.
+       * The `furo-ui5-file-uploader` opens a file explorer dialog and enables users to upload files.
        * The component consists of input field, but you can provide an HTML element by your choice
        * to trigger the file upload, by using the default slot.
        * Furthermore, you can set the property "hideInput" to "true" to hide the input field.
@@ -117,7 +117,7 @@ declare module "react" {
        *
        * And, similar to all input based components, the FileUploader supports "valueState", "placeholder", "name", and "disabled" properties.
        *
-       * For the `furo-furo-ui5-file-uploader`
+       * For the `furo-ui5-file-uploader`
        * ### ES6 Module Import
        *
        * `import "@furo/ui5/dist/FileUploader.js";`

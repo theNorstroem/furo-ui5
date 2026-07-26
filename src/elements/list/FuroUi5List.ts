@@ -2,7 +2,7 @@ import List from "@ui5/webcomponents/dist/List.js";
 
 /**
  * The 'furo-ui5-list' is a thin wrapper around the
- * [SAP ui5 List element](https://sap.github.io/ui5-webcomponents/playground/components/List/).
+ * [SAP ui5 List element](https://ui5.github.io/webcomponents/components/List/).
  *
  * It exposes the full UI5 List API unchanged. There is intentionally **no data binding** — place
  * `ui5-li*` items as children yourself.

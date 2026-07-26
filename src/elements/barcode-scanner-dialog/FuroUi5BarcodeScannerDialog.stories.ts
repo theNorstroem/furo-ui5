@@ -42,7 +42,7 @@ const meta: Meta = {
       page: DocumentationTemplate({
         component,
         since: "2.0.0",
-        originalComponent: "https://ui5.github.io/webcomponents/components/BarcodeScannerDialog/",
+        originalComponent: "https://ui5.github.io/webcomponents/components/fiori/BarcodeScannerDialog/",
       }),
     },
   },

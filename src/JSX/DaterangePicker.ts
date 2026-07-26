@@ -197,17 +197,17 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-daterange-picker' component lets the user select a date range (a start and an end
+       * The 'furo-ui5-daterange-picker' component lets the user select a date range (a start and an end
        * date), with data binding.
        *
-       * It supports all features from the [SAP ui5 DateRangePicker element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/DateRangePicker/).
+       * It supports all features from the [SAP ui5 DateRangePicker element](https://ui5.github.io/webcomponents/components/DateRangePicker/).
        *
        * The bound value is the formatted range `string` ("from - to", joined by the `delimiter`). You can
        * bind any `string` type: `primitives.STRING`, the `furo.fat.String` type or the
        * `google.protobuf.StringValue` type. Use `startDateValue` / `endDateValue` to read the parsed ends.
        *
        * ```html
-       * <furo-furo-furo-ui5-daterange-picker .model="${fieldNode}"></furo-furo-furo-ui5-daterange-picker>
+       * <furo-ui5-daterange-picker .model="${fieldNode}"></furo-ui5-daterange-picker>
        * ```
        *
        * ### Overview
@@ -216,7 +216,7 @@ declare module "react" {
        * ### Usage
        * The user can enter a date by:
        * Using the calendar that opens in a popup or typing it in directly in the input field (not available for mobile devices).
-       * For the `furo-furo-ui5-daterange-picker`:
+       * For the `furo-ui5-daterange-picker`:
        *
        * **Note:** Relative date values such as "today", "yesterday", or "tomorrow" are not supported.
        * Entering a relative date sets the component to an error state.
@@ -225,9 +225,9 @@ declare module "react" {
        * `import "@furo/ui5/dist/DateRangePicker.js";`
        *
        * ### Keyboard Handling
-       * The `furo-furo-ui5-daterange-picker` provides advanced keyboard handling.
+       * The `furo-ui5-daterange-picker` provides advanced keyboard handling.
        *
-       * When the `furo-furo-ui5-daterange-picker` input field is focused the user can
+       * When the `furo-ui5-daterange-picker` input field is focused the user can
        * increment or decrement respectively the range start or end date, depending on where the cursor is.
        * The following shortcuts are available:
        *

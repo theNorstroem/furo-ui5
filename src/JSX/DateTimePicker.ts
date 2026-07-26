@@ -164,9 +164,9 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-date-time-picker' component lets the user select a date and time, with data binding.
+       * The 'furo-ui5-date-time-picker' component lets the user select a date and time, with data binding.
        *
-       * It supports all features from the [SAP ui5 DateTimePicker element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/DateTimePicker/).
+       * It supports all features from the [SAP ui5 DateTimePicker element](https://ui5.github.io/webcomponents/components/DateTimePicker/).
        *
        * You can bind a `string` (ISO 8601 / RFC 3339, e.g. "2017-01-15T01:30:15.000Z"), a
        * `google.protobuf.Timestamp`, or a unix-seconds `int32` / `int64`. The bound value is always

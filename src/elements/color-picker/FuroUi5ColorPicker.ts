@@ -8,7 +8,7 @@ import { FuroFatString } from "@/models";
 /**
  * The 'furo-ui5-color-picker' component lets the user select a color, with data binding.
  *
- * It supports all features from the [SAP ui5 ColorPicker element](https://sap.github.io/ui5-webcomponents/playground/components/ColorPicker/).
+ * It supports all features from the [SAP ui5 ColorPicker element](https://ui5.github.io/webcomponents/components/ColorPicker/).
  *
  * The selected color is a plain `string` (HEX, RGB, RGBA, HSV or a CSS color name). You can bind any
  * `string` type: `primitives.STRING`, the `furo.fat.String` type or the `google.protobuf.StringValue` type.

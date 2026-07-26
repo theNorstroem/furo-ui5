@@ -45,9 +45,9 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The `furo-furo-furo-ui5-mcb-item` is meant to be used inside a `furo-furo-furo-ui5-multi-combobox`.
+       * The `furo-ui5-mcb-item` is meant to be used inside a `furo-ui5-multi-combobox`.
        *
-       * The `furo-furo-ui5-mcb-item` represents the item for a `furo-furo-ui5-multi-combobox`.
+       * The `furo-ui5-mcb-item` represents the item for a `furo-ui5-multi-combobox`.
        *
        * The `furo-ui5-mcb-item` represents the item for a `furo-ui5-multi-combobox`.
        *

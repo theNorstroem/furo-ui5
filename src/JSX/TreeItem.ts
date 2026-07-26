@@ -40,13 +40,13 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * `furo-furo-furo-ui5-tree-item`
+       * `furo-ui5-tree-item`
        *
        * # INTERNAL COMPONENT
-       * Row of a `furo-furo-furo-ui5-tree`. Renders a single `tree.NavigationNode`, reflects its
+       * Row of a `furo-ui5-tree`. Renders a single `tree.NavigationNode`, reflects its
        * visible / selected / focused / search-match state, and emits a `tree-select` intent
        * when its label is clicked. Open / close is delegated to the embedded
-       * `furo-furo-furo-ui5-bool-icon`, which writes back to the node's `open` field.
+       * `furo-ui5-bool-icon`, which writes back to the node's `open` field.
        */
       "furo-ui5-tree-item": TreeItem;
     }

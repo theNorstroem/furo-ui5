@@ -149,7 +149,7 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-toggle-button' component allows the user to switch true and false for Bool with data binding.
+       * The 'furo-ui5-toggle-button' component allows the user to switch true and false for Bool with data binding.
        *
        * You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
        *
@@ -164,14 +164,14 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-toggle-button` component is an enhanced `furo-furo-ui5-button`
+       * The `furo-ui5-toggle-button` component is an enhanced `furo-ui5-button`
        * that can be toggled between pressed and normal states.
-       * Users can use the `furo-furo-ui5-toggle-button` as a switch to turn a setting on or off.
+       * Users can use the `furo-ui5-toggle-button` as a switch to turn a setting on or off.
        * It can also be used to represent an independent choice similar to a check box.
        *
-       * Clicking or tapping on a `furo-furo-ui5-toggle-button` changes its state to `pressed`. The button returns to
+       * Clicking or tapping on a `furo-ui5-toggle-button` changes its state to `pressed`. The button returns to
        * its initial state when the user clicks or taps on it again.
-       * By applying additional custom CSS-styling classes, apps can give a different style to any `furo-furo-ui5-toggle-button`.
+       * By applying additional custom CSS-styling classes, apps can give a different style to any `furo-ui5-toggle-button`.
        *
        * ### ES6 Module Import
        *

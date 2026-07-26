@@ -2,7 +2,7 @@ import AvatarBadge from "@ui5/webcomponents/dist/AvatarBadge.js";
 
 /**
  * The 'furo-ui5-avatar-badge' is a thin wrapper around the
- * [SAP ui5 AvatarBadge element](https://sap.github.io/ui5-webcomponents/playground/components/Avatar/).
+ * [SAP ui5 AvatarBadge element](https://ui5.github.io/webcomponents/components/main/Avatar/).
  *
  * It exposes the full UI5 AvatarBadge API unchanged and is meant to be slotted into
  * `furo-ui5-avatar`. There is intentionally **no data binding**.

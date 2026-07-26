@@ -69,8 +69,8 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The `furo-furo-furo-ui5-segmented-button-item` is meant to be used inside a `furo-furo-furo-ui5-segmented-button`. It is also
-       * automatically used by the `furo-furo-furo-ui5-segmented-button` when you bind an `optionsModel`, an `optionList` or
+       * The `furo-ui5-segmented-button-item` is meant to be used inside a `furo-ui5-segmented-button`. It is also
+       * automatically used by the `furo-ui5-segmented-button` when you bind an `optionsModel`, an `optionList` or
        * an `ENUM`.
        *
        * You can bind any OptionLike field to it.
@@ -84,17 +84,17 @@ declare module "react" {
        * }
        * ```
        *
-       * The bound `id` is written to the `data-id` attribute and is used by the parent `furo-furo-furo-ui5-segmented-button`
+       * The bound `id` is written to the `data-id` attribute and is used by the parent `furo-ui5-segmented-button`
        * to map the selection back to the model.
        *
        * ### Overview
        *
-       * Users can use the `furo-furo-ui5-segmented-button-item` as part of a `furo-furo-ui5-segmented-button`.
+       * Users can use the `furo-ui5-segmented-button-item` as part of a `furo-ui5-segmented-button`.
        *
-       * Clicking or tapping on a `furo-furo-ui5-segmented-button-item` changes its state to `selected`.
+       * Clicking or tapping on a `furo-ui5-segmented-button-item` changes its state to `selected`.
        * The item returns to its initial state when the user clicks or taps on it again.
        * By applying additional custom CSS-styling classes, apps can give a different style to any
-       * `furo-furo-ui5-segmented-button-item`.
+       * `furo-ui5-segmented-button-item`.
        *
        * ### ES6 Module Import
        *

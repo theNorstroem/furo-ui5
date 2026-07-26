@@ -98,8 +98,8 @@ export interface Link extends React.HTMLAttributes<HTMLElement> {
    * - **InteractiveAreaSize.Large**: The target area size is enlarged to 24px in height.
    *
    * **Note:**The property is designed to make links easier to activate and helps meet the WCAG 2.2 Target Size requirement. It is applicable only for the SAP Horizon themes.
-   * **Note:**To improve <code>furo-furo-ui5-link</code>'s reliability and usability, it is recommended to use the <code>InteractiveAreaSize.Large</code> value in scenarios where the <code>furo-furo-ui5-link</code> component is placed inside another interactive component, such as a list item or a table cell.
-   * Setting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.
+   * **Note:**To improve <code>furo-ui5-link</code>'s reliability and usability, it is recommended to use the <code>InteractiveAreaSize.Large</code> value in scenarios where the <code>furo-ui5-link</code> component is placed inside another interactive component, such as a list item or a table cell.
+   * Setting the <code>interactiveAreaSize</code> property to <code>InteractiveAreaSize.Large</code> increases the <code>furo-ui5-link</code>'s invisible touch area. As a result, the user's intended one-time selection command is more likely to activate the desired <code>furo-ui5-link</code>, with minimal chance of unintentionally activating the underlying component.
    */
   interactiveAreaSize?: InteractiveAreaSize | keyof typeof InteractiveAreaSize;
 
@@ -138,7 +138,7 @@ declare module "react" {
        *
        *
        * ### Overview
-       * The `furo-furo-ui5-link` is a hyperlink component that is used to navigate to other
+       * The `furo-ui5-link` is a hyperlink component that is used to navigate to other
        * apps and web pages, or to trigger actions.
        * It is a clickable text element, visualized in such a way that it stands out
        * from the standard text.
@@ -146,7 +146,7 @@ declare module "react" {
        *
        * ### Usage
        *
-       * You can set the `furo-furo-ui5-link` to be enabled or disabled.
+       * You can set the `furo-ui5-link` to be enabled or disabled.
        *
        * To create a visual hierarchy in large lists of links, you can set the less important links as
        * `Subtle` or the more important ones as `Emphasized`,
@@ -158,7 +158,7 @@ declare module "react" {
        *
        * ### Responsive behavior
        *
-       * If there is not enough space, the text of the `furo-furo-ui5-link` becomes truncated.
+       * If there is not enough space, the text of the `furo-ui5-link` becomes truncated.
        * If the `wrappingType` property is set to `"Normal"`, the text is displayed
        * on several lines instead of being truncated.
        *

@@ -146,7 +146,7 @@ declare module "react" {
        *
        * ### Keyboard navigation
        *
-       * The `furo-furo-furo-ui5-tree-table` provides advanced keyboard handling. We follow the rules from
+       * The `furo-ui5-tree-table` provides advanced keyboard handling. We follow the rules from
        * [ARIA: treegrid role - Accessibility | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role#keyboard_interactions)
        * and [Treegrid Pattern | APG | WAI | W3C](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/). Cell navigation is not supported at the moment.
        *
@@ -163,7 +163,7 @@ declare module "react" {
        * ### Styling
        *
        * The tree table styles the consumer's light-DOM `<table>`, so importing this element adopts a global
-       * stylesheet (`TreeTableCSS`) into `document`. If you render a `furo-furo-furo-ui5-tree-table` inside another
+       * stylesheet (`TreeTableCSS`) into `document`. If you render a `furo-ui5-tree-table` inside another
        * web-component's shadow DOM, adopt `TreeTableCSS` into that shadow root as well.
        */
       "furo-ui5-tree-table": TreeTable;

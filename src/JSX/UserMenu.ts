@@ -67,13 +67,13 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-user-menu` is an SAP Fiori specific web component that is used in `furo-furo-ui5-shellbar`
+       * The `furo-ui5-user-menu` is an SAP Fiori specific web component that is used in `furo-ui5-shellbar`
        * and allows the user to easily see information and settings for the current user and all other logged in accounts.
        *
        * ### ES6 Module Import
        * `import "@furo/ui5/dist/UserMenu.js";`
        *
-       * `import "@furo/ui5/dist/UserMenuItem.js";` (for `furo-furo-ui5-user-menu-item`)
+       * `import "@furo/ui5/dist/UserMenuItem.js";` (for `furo-ui5-user-menu-item`)
        *
        * ### Overview
        *

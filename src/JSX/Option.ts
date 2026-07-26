@@ -40,8 +40,8 @@ export interface Option extends React.HTMLAttributes<HTMLElement> {
   tooltip?: string | undefined;
 
   /**
-   * Defines the value of the `furo-furo-ui5-select` inside an HTML Form element when this component is selected.
-   * For more information on HTML Form support, see the `name` property of `furo-furo-ui5-select`.
+   * Defines the value of the `furo-ui5-select` inside an HTML Form element when this component is selected.
+   * For more information on HTML Form support, see the `name` property of `furo-ui5-select`.
    */
   value?: string | undefined;
 }
@@ -51,7 +51,7 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The `furo-furo-furo-ui5-option` is meant to be used inside a `furo-furo-furo-ui5-select`. It is also automatically used by the `furo-furo-furo-ui5-select-enum`.
+       * The `furo-ui5-option` is meant to be used inside a `furo-ui5-select`. It is also automatically used by the `furo-ui5-select-enum`.
        *
        * You can bind any OptionLike field to it.
        * ```js
@@ -66,7 +66,7 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-option` component defines the content of an option in the `furo-furo-ui5-select`.
+       * The `furo-ui5-option` component defines the content of an option in the `furo-ui5-select`.
        *
        * ### ES6 Module Import
        *

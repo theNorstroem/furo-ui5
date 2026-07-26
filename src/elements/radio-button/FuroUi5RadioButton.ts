@@ -12,7 +12,7 @@ import type { FuroFatBool } from "@/models";
  *
  * The 'furo-ui5-radio-button' component allows the user to switch true and false for Bool with data binding.
  *
- * It supports all features from the [SAP ui5 toggleButton element](https://sap.github.io/ui5-webcomponents/playground/components/ToggleButton/).
+ * It supports all features from the [SAP ui5 toggleButton element](https://ui5.github.io/webcomponents/components/ToggleButton/).
 
  * You can bind  `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
  *

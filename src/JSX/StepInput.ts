@@ -111,16 +111,16 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-step-input component allows the user to enter and edit numbers with data binding. It consists of an
+       * The furo-ui5-step-input component allows the user to enter and edit numbers with data binding. It consists of an
        * input field and buttons with icons to increase/decrease the value with the predefined step.
-       * It supports all features from the [SAP ui5 Input element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/StepInput/).
+       * It supports all features from the [SAP ui5 Input element](https://ui5.github.io/webcomponents/components/StepInput/).
        *
        * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
        *
        * ```html
-       * <furo-furo-furo-ui5-number-input
+       * <furo-ui5-number-input
        * fn-bind-data="--dao(FIELDNODE)"
-       * ></furo-furo-furo-ui5-number-input>
+       * ></furo-ui5-number-input>
        * ```
        *
        *
@@ -138,7 +138,7 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-step-input` consists of an input field and buttons with icons to increase/decrease the value
+       * The `furo-ui5-step-input` consists of an input field and buttons with icons to increase/decrease the value
        * with the predefined step.
        *
        * The user can change the value of the component by pressing the increase/decrease buttons,
@@ -161,9 +161,9 @@ declare module "react" {
        * #### When not to use:
        *
        * - To enter a static number (for example, postal code, phone number, or ID). In this case,
-       * use the regular `furo-furo-ui5-input` instead.
+       * use the regular `furo-ui5-input` instead.
        * - To display a value that rarely needs to be adjusted and does not pertain to a particular step.
-       * In this case, use the regular `furo-furo-ui5-input` instead.
+       * In this case, use the regular `furo-ui5-input` instead.
        * - To enter dates and times. In this case, use date/time related components instead.
        *
        * ### ES6 Module Import

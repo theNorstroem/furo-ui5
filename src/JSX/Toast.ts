@@ -32,25 +32,25 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-toast is a extended furo-furo-ui5-toast which can attach itself to a parent dom element.
+       * The furo-ui5-toast is a extended furo-ui5-toast which can attach itself to a parent dom element.
        *
-       * This is helpful, when you have used z-indexes in one of the parents, which put the original furo-furo-ui5-toast behind the backdrop.
+       * This is helpful, when you have used z-indexes in one of the parents, which put the original furo-ui5-toast behind the backdrop.
        *
-       * Use this component like a regular furo-furo-ui5-toast and do not forget to place the furo-furo-furo-ui5-toast-display in one of the parent elements.
+       * Use this component like a regular furo-ui5-toast and do not forget to place the furo-ui5-toast-display in one of the parent elements.
        *
-       * It supports all features from the [SAP ui5 Toast element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Toast/).
+       * It supports all features from the [SAP ui5 Toast element](https://ui5.github.io/webcomponents/components/Toast/).
        *
-       * **important:** Place a furo-furo-furo-ui5-toast-display in any dom parent of the component where you use furo-furo-furo-ui5-toast. Your app-shell or body is a good place to do that.
+       * **important:** Place a furo-ui5-toast-display in any dom parent of the component where you use furo-ui5-toast. Your app-shell or body is a good place to do that.
        *
        * ```html
-       * <furo-furo-furo-ui5-toast  fn-show="--openToastClicked" placement="MiddleCenter">Content</furo-furo-furo-ui5-toast>
+       * <furo-ui5-toast  fn-show="--openToastClicked" placement="MiddleCenter">Content</furo-ui5-toast>
        *
        * <button at-click="--openToastClicked">Open toast</button>
        * ```
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-toast` is a small, non-disruptive popup for success or information messages that
+       * The `furo-ui5-toast` is a small, non-disruptive popup for success or information messages that
        * disappears automatically after a few seconds.
        *
        * ### Usage

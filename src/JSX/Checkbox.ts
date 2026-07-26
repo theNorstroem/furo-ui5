@@ -44,9 +44,9 @@ export interface Checkbox extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
-   * Determines whether the `furo-furo-ui5-checkbox` is in display only state.
+   * Determines whether the `furo-ui5-checkbox` is in display only state.
    *
-   * When set to `true`, the `furo-furo-ui5-checkbox` is not interactive, not editable, not focusable
+   * When set to `true`, the `furo-ui5-checkbox` is not interactive, not editable, not focusable
    * and not in the tab chain. This setting is used for forms in review mode.
    *
    * **Note:** When the property `disabled` is set to `true` this property has no effect.
@@ -97,7 +97,7 @@ export interface Checkbox extends React.HTMLAttributes<HTMLElement> {
   /**
    * Defines the form value of the component that is submitted when the checkbox is checked.
    *
-   * When a form containing `furo-furo-ui5-checkbox` elements is submitted, only the values of the
+   * When a form containing `furo-ui5-checkbox` elements is submitted, only the values of the
    * **checked** checkboxes are included in the form data sent to the server. Unchecked
    * checkboxes do not contribute any data to the form submission.
    *
@@ -123,9 +123,9 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-checkbox' component allows the user to switch true and false for type Bool with data binding.
+       * The 'furo-ui5-checkbox' component allows the user to switch true and false for type Bool with data binding.
        *
-       * It supports all features from the [SAP ui5 checkbox element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/CheckBox/).
+       * It supports all features from the [SAP ui5 checkbox element](https://ui5.github.io/webcomponents/components/CheckBox/).
        *
        * Bindable FieldNodes: `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
        *
@@ -141,28 +141,28 @@ declare module "react" {
        *
        * Allows the user to set a binary value, such as true/false or yes/no for an item.
        *
-       * The `furo-furo-ui5-checkbox` component consists of a box and a label that describes its purpose.
+       * The `furo-ui5-checkbox` component consists of a box and a label that describes its purpose.
        * If it's checked, an indicator is displayed inside the box.
-       * To check/uncheck the `furo-furo-ui5-checkbox`, the user has to click or tap the square
+       * To check/uncheck the `furo-ui5-checkbox`, the user has to click or tap the square
        * box or its label.
        *
-       * The `furo-furo-ui5-checkbox` component only has 2 states - checked and unchecked.
-       * Clicking or tapping toggles the `furo-furo-ui5-checkbox` between checked and unchecked state.
+       * The `furo-ui5-checkbox` component only has 2 states - checked and unchecked.
+       * Clicking or tapping toggles the `furo-ui5-checkbox` between checked and unchecked state.
        *
        * ### Usage
        *
        * You can define the checkbox text with via the `text` property. If the text exceeds the available width, it is truncated by default.
        * In case you prefer text to truncate, set the `wrappingType` property to "None".
-       * The touchable area for toggling the `furo-furo-ui5-checkbox` ends where the text ends.
+       * The touchable area for toggling the `furo-ui5-checkbox` ends where the text ends.
        *
-       * You can disable the `furo-furo-ui5-checkbox` by setting the `disabled` property to
+       * You can disable the `furo-ui5-checkbox` by setting the `disabled` property to
        * `true`,
-       * or use the `furo-furo-ui5-checkbox` in read-only mode by setting the `readonly`
+       * or use the `furo-ui5-checkbox` in read-only mode by setting the `readonly`
        * property to `true`.
        *
        * ### Keyboard Handling
        *
-       * The user can use the following keyboard shortcuts to toggle the checked state of the `furo-furo-ui5-checkbox`.
+       * The user can use the following keyboard shortcuts to toggle the checked state of the `furo-ui5-checkbox`.
        *
        * - [Space],[Enter] - Toggles between different states: checked, not checked.
        *

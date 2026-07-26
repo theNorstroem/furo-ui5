@@ -66,7 +66,7 @@ export interface SelectEnum extends React.HTMLAttributes<HTMLElement> {
   required?: boolean;
 
   /**
-   * Currently selected `furo-furo-ui5-option` element.
+   * Currently selected `furo-ui5-option` element.
    */
   selectedOption?: IOption | undefined;
 
@@ -119,18 +119,18 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-select` component is used to create a drop-down list.
+       * The `furo-ui5-select` component is used to create a drop-down list.
        *
        * ### Usage
        *
-       * There are two main usages of the `furo-furo-ui5-select>`.
+       * There are two main usages of the `furo-ui5-select>`.
        *
-       * - With Option (`furo-furo-ui5-option`) web component:
+       * - With Option (`furo-ui5-option`) web component:
        *
        * The available options of the Select are defined by using the Option component.
        * The Option comes with predefined design and layout, including `icon`, `text` and `additional-text`.
        *
-       * - With OptionCustom (`furo-furo-ui5-option-custom`) web component.
+       * - With OptionCustom (`furo-ui5-option-custom`) web component.
        *
        * Options with custom content are defined by using the OptionCustom component.
        * The OptionCustom component comes with no predefined layout and it expects consumers to define it.
@@ -150,7 +150,7 @@ declare module "react" {
        *
        * ### Keyboard Handling
        *
-       * The `furo-furo-ui5-select` provides advanced keyboard handling.
+       * The `furo-ui5-select` provides advanced keyboard handling.
        *
        * - [F4] / [Alt] + [Up] / [Alt] + [Down] / [Space] or [Enter] - Opens/closes the drop-down.
        * - [Up] or [Down] - If the drop-down is closed - changes selection to the next or the previous option. If the drop-down is opened - moves focus to the next or the previous option.

@@ -9,7 +9,7 @@ import { FuroFatString } from "@/models";
  * The 'furo-ui5-text' is a display-only component which renders a bound `string` value as plain text,
  * with data binding.
  *
- * It extends the [SAP ui5 Text element](https://sap.github.io/ui5-webcomponents/playground/components/Text/).
+ * It extends the [SAP ui5 Text element](https://ui5.github.io/webcomponents/components/Text/).
  *
  * You can bind any `string` type: `primitives.STRING`, the `furo.fat.String` type or the
  * `google.protobuf.StringValue` type. Display-only: the component reads from the model but never writes back.

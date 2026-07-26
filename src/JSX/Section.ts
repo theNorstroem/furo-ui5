@@ -23,17 +23,17 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * `furo-furo-furo-ui5-section`
+       * `furo-ui5-section`
        * The object page content according to the SAP Design System Fiori guidelines consists of sections and subsections
        * arranged in a column layout.
-       * The furo-furo-furo-ui5-section is basically a layout manager component to structure object pages. Sections can only
+       * The furo-ui5-section is basically a layout manager component to structure object pages. Sections can only
        * contain subsections, not content.
        *
        * ```html
-       * <furo-furo-furo-ui5-section heading="STRING">
-       * <furo-furo-furo-ui5-subsection></furo-furo-furo-ui5-subsection>
-       * <furo-furo-furo-ui5-subsection></furo-furo-furo-ui5-subsection>
-       * </furo-furo-furo-ui5-section>
+       * <furo-ui5-section heading="STRING">
+       * <furo-ui5-subsection></furo-ui5-subsection>
+       * <furo-ui5-subsection></furo-ui5-subsection>
+       * </furo-ui5-section>
        * ```
        *
        * <p>If a section contains only one subsection, the title of the subsection is used as the name of the section. In this case, there is no subsection submenu in the anchor bar.</p>

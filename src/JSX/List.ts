@@ -150,33 +150,33 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-list' is a thin wrapper around the
-       * [SAP ui5 List element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/List/).
+       * The 'furo-ui5-list' is a thin wrapper around the
+       * [SAP ui5 List element](https://ui5.github.io/webcomponents/components/List/).
        *
        * It exposes the full UI5 List API unchanged. There is intentionally **no data binding** — place
-       * `furo-furo-ui5-li*` items as children yourself.
+       * `furo-ui5-li*` items as children yourself.
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-list` component allows displaying a list of items, advanced keyboard
+       * The `furo-ui5-list` component allows displaying a list of items, advanced keyboard
        * handling support for navigating between items, and predefined modes to improve the development efficiency.
        *
-       * The `furo-furo-ui5-list` is a container for the available list items:
+       * The `furo-ui5-list` is a container for the available list items:
        *
-       * - `furo-furo-ui5-li`
-       * - `furo-furo-ui5-li-custom`
-       * - `furo-furo-ui5-li-group`
+       * - `furo-ui5-li`
+       * - `furo-ui5-li-custom`
+       * - `furo-ui5-li-group`
        *
        * To benefit from the built-in selection mechanism, you can use the available
        * selection modes, such as
        * `Single`, `Multiple` and `Delete`.
        *
-       * Additionally, the `furo-furo-ui5-list` provides header, footer, and customization for the list item separators.
+       * Additionally, the `furo-ui5-list` provides header, footer, and customization for the list item separators.
        *
        * ### Keyboard Handling
        *
        * #### Basic Navigation
-       * The `furo-furo-ui5-list` provides advanced keyboard handling.
+       * The `furo-ui5-list` provides advanced keyboard handling.
        * When a list is focused the user can use the following keyboard
        * shortcuts in order to perform a navigation:
        *
@@ -199,11 +199,11 @@ declare module "react" {
        *
        * `import "@furo/ui5/dist/List.js";`
        *
-       * `import "@furo/ui5/dist/ListItemStandard.js";` (for `furo-furo-ui5-li`)
+       * `import "@furo/ui5/dist/ListItemStandard.js";` (for `furo-ui5-li`)
        *
-       * `import "@furo/ui5/dist/ListItemCustom.js";` (for `furo-furo-ui5-li-custom`)
+       * `import "@furo/ui5/dist/ListItemCustom.js";` (for `furo-ui5-li-custom`)
        *
-       * `import "@furo/ui5/dist/ListItemGroup.js";` (for `furo-furo-ui5-li-group`)
+       * `import "@furo/ui5/dist/ListItemGroup.js";` (for `furo-ui5-li-group`)
        *
        * ### Overview
        *

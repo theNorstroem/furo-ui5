@@ -22,7 +22,7 @@ interface DateFieldConstraints extends FieldConstraints {
 /**
  * The 'furo-ui5-date-picker' component lets the user select a date, with data binding.
  *
- * It supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/ui5-webcomponents/playground/components/DatePicker/).
+ * It supports all features from the [SAP ui5 DatePicker element](https://ui5.github.io/webcomponents/components/DatePicker/).
  *
  * You can bind a `string` (ISO 8601, e.g. "2020-12-31"), a `google.type.Date` or a `furo.type.Date`.
  * Because the UI5 DatePicker is date-only, the bindable value is always handled as an ISO

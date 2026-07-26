@@ -12,7 +12,7 @@ import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
 const component = "furo-ui5-tree-table";
 const componentInfo = {
   guideline: "https://www.sap.com/design-system/fiori-design-web/v1-142/ui-elements/tree-table/",
-  originalComponent: "https://ui5.github.io/webcomponents/components/main/Table/",
+  originalComponent: "https://ui5.github.io/webcomponents/components/Table/",
 };
 
 const { events, args, argTypes } = getStorybookHelpers(component);

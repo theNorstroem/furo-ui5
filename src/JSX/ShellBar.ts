@@ -149,12 +149,12 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-shellbar` is meant to serve as an application header
+       * The `furo-ui5-shellbar` is meant to serve as an application header
        * and includes numerous built-in features, such as: logo, profile image/icon, title, search field, notifications and so on.
        *
        * ### Stable DOM Refs
        *
-       * You can use the following stable DOM refs for the `furo-furo-ui5-shellbar`:
+       * You can use the following stable DOM refs for the `furo-ui5-shellbar`:
        *
        * - logo
        * - notifications

@@ -2,7 +2,7 @@ import TabContainer from "@ui5/webcomponents/dist/TabContainer.js";
 
 /**
  * The 'furo-ui5-tabcontainer' is a thin wrapper around the
- * [SAP ui5 TabContainer element](https://sap.github.io/ui5-webcomponents/playground/components/TabContainer/).
+ * [SAP ui5 TabContainer element](https://ui5.github.io/webcomponents/components/TabContainer/).
  *
  * It exposes the full UI5 TabContainer API unchanged. There is intentionally **no data binding** —
  * place `furo-ui5-tab` children yourself.

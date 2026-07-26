@@ -116,9 +116,9 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-time-picker' component lets the user select a time of day, with data binding.
+       * The 'furo-ui5-time-picker' component lets the user select a time of day, with data binding.
        *
-       * It supports all features from the [SAP ui5 TimePicker element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/TimePicker/).
+       * It supports all features from the [SAP ui5 TimePicker element](https://ui5.github.io/webcomponents/components/TimePicker/).
        *
        * You can bind a `string` (e.g. "11:42:35") or a `google.type.TimeOfDay`. The bound value is always
        * handled as a 24-hour `HH:mm:ss` string.
@@ -131,8 +131,8 @@ declare module "react" {
        * Note: UI5 `TimePicker` has no min/max date range, so `min` / `max` constraints are not applied.
        *
        * ### Overview
-       * The `furo-furo-ui5-time-picker` component provides an input field with assigned clocks which are opened on user action.
-       * The `furo-furo-ui5-time-picker` allows users to select a localized time using touch, mouse, or keyboard input.
+       * The `furo-ui5-time-picker` component provides an input field with assigned clocks which are opened on user action.
+       * The `furo-ui5-time-picker` allows users to select a localized time using touch, mouse, or keyboard input.
        * It consists of two parts: the time input field and the clocks.
        *
        * ### Usage
@@ -143,7 +143,7 @@ declare module "react" {
        *
        * When the user makes an entry and chooses the enter key, the clocks show the corresponding time (hours, minutes and seconds separately).
        * When the user directly triggers the clocks display, the actual time is displayed.
-       * For the `furo-furo-ui5-time-picker`
+       * For the `furo-ui5-time-picker`
        *
        * ### Formatting
        *

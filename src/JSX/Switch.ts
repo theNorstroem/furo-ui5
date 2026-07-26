@@ -92,7 +92,7 @@ export interface Switch extends React.HTMLAttributes<HTMLElement> {
   /**
    * Defines the tooltip of the component.
    *
-   * **Note:** If applicable an external label reference should always be the preferred option to provide context to the `furo-furo-ui5-switch` component over a tooltip.
+   * **Note:** If applicable an external label reference should always be the preferred option to provide context to the `furo-ui5-switch` component over a tooltip.
    */
   tooltip?: string | undefined;
 
@@ -106,7 +106,7 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-switch' component allows the user to switch true and false for type Bool with data binding.
+       * The 'furo-ui5-switch' component allows the user to switch true and false for type Bool with data binding.
        *
        *
        * Bindable FieldNodes: `bool` type, `furo.fat.Bool` type or the `google.wrapper.BoolValue`  type.
@@ -119,12 +119,12 @@ declare module "react" {
        * - **readonly: true** , set the element to readonly
        *
        * ### Overview
-       * The `furo-furo-ui5-switch` component is used for changing between binary states.
+       * The `furo-ui5-switch` component is used for changing between binary states.
        *
        * The component can display texts, that will be switched, based on the component state, via the `textOn` and `textOff` properties,
        * but texts longer than 3 letters will be cutted off.
        *
-       * However, users are able to customize the width of `furo-furo-ui5-switch` with pure CSS (`<furo-furo-ui5-switch style="width: 200px">`), and set widths, depending on the texts they would use.
+       * However, users are able to customize the width of `furo-ui5-switch` with pure CSS (`<furo-ui5-switch style="width: 200px">`), and set widths, depending on the texts they would use.
        *
        * Note: the component would not automatically stretch to fit the whole text width.
        *

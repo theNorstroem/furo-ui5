@@ -42,25 +42,25 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-avatar-badge' is a thin wrapper around the
-       * [SAP ui5 AvatarBadge element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Avatar/).
+       * The 'furo-ui5-avatar-badge' is a thin wrapper around the
+       * [SAP ui5 AvatarBadge element](https://ui5.github.io/webcomponents/components/main/Avatar/).
        *
        * It exposes the full UI5 AvatarBadge API unchanged and is meant to be slotted into
-       * `furo-furo-furo-ui5-avatar`. There is intentionally **no data binding**.
+       * `furo-ui5-avatar`. There is intentionally **no data binding**.
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-avatar-badge` component is used to display a badge on top of `furo-furo-ui5-avatar` component.
+       * The `furo-ui5-avatar-badge` component is used to display a badge on top of `furo-ui5-avatar` component.
        * The badge can display an icon and supports different states for visual affordance.
        *
        * ### Usage
        *
-       * The badge should be used as a child element of `furo-furo-ui5-avatar` in the `badge` slot.
+       * The badge should be used as a child element of `furo-ui5-avatar` in the `badge` slot.
        *
        * ```html
-       * <furo-furo-ui5-avatar>
-       * <furo-furo-ui5-avatar-badge icon="edit" slot="badge"></furo-furo-ui5-avatar-badge>
-       * </furo-furo-ui5-avatar>
+       * <furo-ui5-avatar>
+       * <furo-ui5-avatar-badge icon="edit" slot="badge"></furo-ui5-avatar-badge>
+       * </furo-ui5-avatar>
        * ```
        *
        * ### Keyboard Handling

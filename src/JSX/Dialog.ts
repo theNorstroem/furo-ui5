@@ -114,62 +114,62 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-dialog is a extended furo-furo-ui5-dialog which can attach itself to a parent dom element.
+       * The furo-ui5-dialog is a extended furo-ui5-dialog which can attach itself to a parent dom element.
        *
-       * This is helpful, when you have used z-indexes in one of the parents, which put the original furo-furo-ui5-dialog behind the backdrop.
+       * This is helpful, when you have used z-indexes in one of the parents, which put the original furo-ui5-dialog behind the backdrop.
        *
-       * Use this component like a regular furo-furo-ui5-dialog and do not forget to place the furo-furo-furo-ui5-dialog-display in one of the parent elements.
+       * Use this component like a regular furo-ui5-dialog and do not forget to place the furo-ui5-dialog-display in one of the parent elements.
        *
-       * It supports all features from the [SAP ui5 Dialog element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Dialog/).
+       * It supports all features from the [SAP ui5 Dialog element](https://ui5.github.io/webcomponents/components/Dialog/).
        *
-       * **important:** Place a furo-furo-furo-ui5-dialog-display in any dom parent of the component where you use furo-furo-furo-ui5-dialog. Your app-shell or body is a good place to do that.
+       * **important:** Place a furo-ui5-dialog-display in any dom parent of the component where you use furo-ui5-dialog. Your app-shell or body is a good place to do that.
        *
        * ```html
-       * <furo-furo-furo-ui5-dialog header-text="Dialog title" fn-show="--openDialogClicked" fn-close="--closeDialogClicked">
+       * <furo-ui5-dialog header-text="Dialog title" fn-show="--openDialogClicked" fn-close="--closeDialogClicked">
        * <p>Content</p>
        * <div slot="footer"> <button at-click="--closeDialogClicked">close dialog</button></div>
-       * </furo-furo-furo-ui5-dialog>
+       * </furo-ui5-dialog>
        *
        * <button at-click="--openDialogClicked">Open dialog</button>
        * ```
        *
        * ### Overview
-       * The `furo-furo-ui5-dialog` component is used to temporarily display some information in a
+       * The `furo-ui5-dialog` component is used to temporarily display some information in a
        * size-limited window in front of the regular app screen.
        * It is used to prompt the user for an action or a confirmation.
-       * The `furo-furo-ui5-dialog` interrupts the current app processing as it is the only focused UI element and
+       * The `furo-ui5-dialog` interrupts the current app processing as it is the only focused UI element and
        * the main screen is dimmed/blocked.
        * The dialog combines concepts known from other technologies where the windows have
        * names such as dialog box, dialog window, pop-up, pop-up window, alert box, or message box.
        *
-       * The `furo-furo-ui5-dialog` is modal, which means that a user action is required before it is possible to return to the parent window.
+       * The `furo-ui5-dialog` is modal, which means that a user action is required before it is possible to return to the parent window.
        * To open multiple dialogs, each dialog element should be separate in the markup. This will ensure the correct modal behavior. Avoid nesting dialogs within each other.
-       * The content of the `furo-furo-ui5-dialog` is fully customizable.
+       * The content of the `furo-ui5-dialog` is fully customizable.
        *
        * ### Structure
-       * A `furo-furo-ui5-dialog` consists of a header, content, and a footer for action buttons.
-       * The `furo-furo-ui5-dialog` is usually displayed at the center of the screen.
+       * A `furo-ui5-dialog` consists of a header, content, and a footer for action buttons.
+       * The `furo-ui5-dialog` is usually displayed at the center of the screen.
        * Its position can be changed by the user. To enable this, you need to set the property `draggable` accordingly.
        *
        *
        * ### Responsive Behavior
-       * The `stretch` property can be used to stretch the `furo-furo-ui5-dialog` to full screen. For better usability, it's recommended to stretch the dialog to full screen on phone devices.
+       * The `stretch` property can be used to stretch the `furo-ui5-dialog` to full screen. For better usability, it's recommended to stretch the dialog to full screen on phone devices.
        *
-       * **Note:** When a `furo-furo-ui5-bar` is used in the header or in the footer, you should remove the default dialog's paddings.
+       * **Note:** When a `furo-ui5-bar` is used in the header or in the footer, you should remove the default dialog's paddings.
        *
        * For more information see the sample "Bar in Header/Footer".
        *
        * ### Keyboard Handling
        *
        * #### Basic Navigation
-       * When the `furo-furo-ui5-dialog` has the `draggable` property set to `true`, the user can move the dialog
+       * When the `furo-ui5-dialog` has the `draggable` property set to `true`, the user can move the dialog
        * with the following keyboard shortcuts:
        *
        * - [Up] or [Down] arrow keys - Move the dialog up/down.
        * - [Left] or [Right] arrow keys - Move the dialog left/right.
        *
        * #### Resizing
-       * When the `furo-furo-ui5-dialog` has the `resizable` property set to `true`, the user can change the size of the dialog
+       * When the `furo-ui5-dialog` has the `resizable` property set to `true`, the user can change the size of the dialog
        * with the following keyboard shortcuts:
        *
        * - [Shift] + [Up] or [Down] - Decrease/Increase the height of the dialog.

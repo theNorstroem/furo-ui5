@@ -37,30 +37,30 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-text' is a display-only component which renders a bound `string` value as plain text,
+       * The 'furo-ui5-text' is a display-only component which renders a bound `string` value as plain text,
        * with data binding.
        *
-       * It extends the [SAP ui5 Text element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Text/).
+       * It extends the [SAP ui5 Text element](https://ui5.github.io/webcomponents/components/Text/).
        *
        * You can bind any `string` type: `primitives.STRING`, the `furo.fat.String` type or the
        * `google.protobuf.StringValue` type. Display-only: the component reads from the model but never writes back.
        *
        * ```html
-       * <furo-furo-furo-ui5-text .model="${fieldNode}"></furo-furo-furo-ui5-text>
+       * <furo-ui5-text .model="${fieldNode}"></furo-ui5-text>
        * ```
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-text` component displays text that can be used in any content area of an application.
+       * The `furo-ui5-text` component displays text that can be used in any content area of an application.
        *
        * ### Usage
        *
-       * - Use the `furo-furo-ui5-text` if you want to display text inside a form, table, or any other content area.
-       * - Do not use the `furo-furo-ui5-text` if you need to reference input type of components (use furo-furo-ui5-label).
+       * - Use the `furo-ui5-text` if you want to display text inside a form, table, or any other content area.
+       * - Do not use the `furo-ui5-text` if you need to reference input type of components (use furo-ui5-label).
        *
        * ### Responsive behavior
        *
-       * The `furo-furo-ui5-text` component is fully adaptive to all screen sizes.
+       * The `furo-ui5-text` component is fully adaptive to all screen sizes.
        * By default, the text will wrap when the space is not enough.
        * In addition, the component supports truncation via the `max-lines` property,
        * by defining the number of lines the text should wrap before start truncating.

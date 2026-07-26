@@ -12,7 +12,7 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-form-row gives the user a layout to manage
+       * The furo-ui5-form-row gives the user a layout to manage
        * input field and labels according to the design specification of SAP Fiori.
        */
       "furo-ui5-form-row": FormRow;

@@ -10,7 +10,7 @@ import { TimeOfDay } from "@/models/google/type/TimeOfDay";
 /**
  * The 'furo-ui5-time-picker' component lets the user select a time of day, with data binding.
  *
- * It supports all features from the [SAP ui5 TimePicker element](https://sap.github.io/ui5-webcomponents/playground/components/TimePicker/).
+ * It supports all features from the [SAP ui5 TimePicker element](https://ui5.github.io/webcomponents/components/TimePicker/).
  *
  * You can bind a `string` (e.g. "11:42:35") or a `google.type.TimeOfDay`. The bound value is always
  * handled as a 24-hour `HH:mm:ss` string.

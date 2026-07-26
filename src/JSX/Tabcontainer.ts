@@ -68,24 +68,24 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-tabcontainer' is a thin wrapper around the
-       * [SAP ui5 TabContainer element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/TabContainer/).
+       * The 'furo-ui5-tabcontainer' is a thin wrapper around the
+       * [SAP ui5 TabContainer element](https://ui5.github.io/webcomponents/components/TabContainer/).
        *
        * It exposes the full UI5 TabContainer API unchanged. There is intentionally **no data binding** —
-       * place `furo-furo-furo-ui5-tab` children yourself.
+       * place `furo-ui5-tab` children yourself.
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-tabcontainer` represents a collection of tabs with associated content.
+       * The `furo-ui5-tabcontainer` represents a collection of tabs with associated content.
        * Navigation through the tabs changes the content display of the currently active content area.
        * A tab can be labeled with text only, or icons with text.
        *
        * ### Structure
        *
-       * The `furo-furo-ui5-tabcontainer` can hold two types of entities:
+       * The `furo-ui5-tabcontainer` can hold two types of entities:
        *
-       * - `furo-furo-ui5-tab` - contains all the information on an item (text and icon)
-       * - `furo-furo-ui5-tab-separator` - used to separate tabs with a line
+       * - `furo-ui5-tab` - contains all the information on an item (text and icon)
+       * - `furo-ui5-tab-separator` - used to separate tabs with a line
        *
        * ### Hierarchies
        * Multiple sub tabs could be placed underneath one main tab. Nesting allows deeper hierarchies with indentations
@@ -103,9 +103,9 @@ declare module "react" {
        *
        * `import "@furo/ui5/dist/TabContainer.js";`
        *
-       * `import "@furo/ui5/dist/Tab.js";` (for `furo-furo-ui5-tab`)
+       * `import "@furo/ui5/dist/Tab.js";` (for `furo-ui5-tab`)
        *
-       * `import "@furo/ui5/dist/TabSeparator.js";` (for `furo-furo-ui5-tab-separator`)
+       * `import "@furo/ui5/dist/TabSeparator.js";` (for `furo-ui5-tab-separator`)
        *
        * ### Overview
        *

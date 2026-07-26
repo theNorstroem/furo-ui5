@@ -12,7 +12,7 @@ import { FuroFatString } from "@/models";
  * The furo-ui5-color-palette-popover shows a predefined set of color swatches in a popover and binds
  * the selected color.
  *
- * It supports all features from the [SAP ui5 ColorPalettePopover element](https://sap.github.io/ui5-webcomponents/playground/components/ColorPalettePopover/),
+ * It supports all features from the [SAP ui5 ColorPalettePopover element](https://ui5.github.io/webcomponents/components/ColorPalettePopover/),
  * including `open` / `opener` / `placement` and the "more colors" / "default color" buttons.
  *
  * ### Selected color (`model`)

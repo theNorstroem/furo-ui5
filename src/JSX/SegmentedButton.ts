@@ -84,15 +84,15 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The furo-furo-furo-ui5-segmented-button component shows a group of items. When the user clicks an item it stays
+       * The furo-ui5-segmented-button component shows a group of items. When the user clicks an item it stays
        * pressed. It extends the UI5 SegmentedButton and adds `bindData()` support for several model shapes:
        *
-       * - **ENUM** — single selection; the items are generated from the enum descriptor (like `furo-furo-furo-ui5-select-enum`).
-       * - **STRING | FuroFatString | StringValue** — single selection (`selectionMode="Single"`, like `furo-furo-furo-ui5-select`).
+       * - **ENUM** — single selection; the items are generated from the enum descriptor (like `furo-ui5-select-enum`).
+       * - **STRING | FuroFatString | StringValue** — single selection (`selectionMode="Single"`, like `furo-ui5-select`).
        * - **ARRAY&lt;STRING&gt; | ARRAY&lt;FuroFatString&gt; | IdentifiableList** — multiple selection
-       * (`selectionMode="Multiple"`, like `furo-furo-furo-ui5-multi-combobox`).
+       * (`selectionMode="Multiple"`, like `furo-ui5-multi-combobox`).
        *
-       * It also works without any data binding — just declare `furo-furo-ui5-segmented-button-item` children yourself.
+       * It also works without any data binding — just declare `furo-ui5-segmented-button-item` children yourself.
        *
        * ### Possible ways to set the item list (for STRING / ARRAY bindings)
        * - Use `bindOptions()` or `optionsModel=` to bind a RepeaterNode as an item list.
@@ -101,15 +101,15 @@ declare module "react" {
        * The bound value is mapped to the item's `data-id` attribute.
        *
        * ```html
-       * <furo-furo-furo-ui5-segmented-button
+       * <furo-ui5-segmented-button
        * .model="${this.model.choice}"
        * .optionsModel="${this.options}">
-       * </furo-furo-furo-ui5-segmented-button>
+       * </furo-ui5-segmented-button>
        * ```
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-segmented-button` shows a group of items. When the user clicks or taps
+       * The `furo-ui5-segmented-button` shows a group of items. When the user clicks or taps
        * one of the items, it stays in a pressed state. It automatically resizes the items
        * to fit proportionally within the component. When no width is set, the component uses the available width.
        *

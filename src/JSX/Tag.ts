@@ -65,23 +65,23 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-tag' is a display-only component which renders a bound `string` value as a tag /
+       * The 'furo-ui5-tag' is a display-only component which renders a bound `string` value as a tag /
        * status label, with data binding.
        *
-       * It extends the [SAP ui5 Tag element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Tag/).
+       * It extends the [SAP ui5 Tag element](https://ui5.github.io/webcomponents/components/Tag/).
        * Use the inherited `design` / `colorScheme` / `icon` properties for styling. The date-specific sibling
-       * is `furo-furo-furo-ui5-relative-time-badge`.
+       * is `furo-ui5-relative-time-badge`.
        *
        * You can bind any `string` type: `primitives.STRING`, the `furo.fat.String` type or the
        * `google.protobuf.StringValue` type. Display-only: the component reads from the model but never writes back.
        *
        * ```html
-       * <furo-furo-furo-ui5-tag .model="${fieldNode}"></furo-furo-furo-ui5-tag>
+       * <furo-ui5-tag .model="${fieldNode}"></furo-ui5-tag>
        * ```
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-tag` is a component which serves
+       * The `furo-ui5-tag` is a component which serves
        * the purpose to attract the user attention to some piece
        * of information (state, quantity, condition, etc.).
        * It can contain icon and text information, and its design can be chosen from specific design types.

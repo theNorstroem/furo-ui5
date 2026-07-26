@@ -42,15 +42,15 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The `furo-furo-furo-ui5-money-input` binds a `google.type.Money` or `furo.type.Money` field to a
-       * composition of an amount input (`furo-furo-ui5-input` type Number) and a currency
-       * `furo-furo-furo-ui5-combobox`. The amount round-trips through the model's `units` (INT64) and
+       * The `furo-ui5-money-input` binds a `google.type.Money` or `furo.type.Money` field to a
+       * composition of an amount input (`furo-ui5-input` type Number) and a currency
+       * `furo-ui5-combobox`. The amount round-trips through the model's `units` (INT64) and
        * `nanos` (INT32) fields; the currency is bound to the model's `currencyCode` field.
        *
        * You can offer a fixed currency list with the `currencies` attribute:
        *
        * ```html
-       * <furo-furo-furo-ui5-money-input currencies="CHF,EUR,USD"></furo-furo-furo-ui5-money-input>
+       * <furo-ui5-money-input currencies="CHF,EUR,USD"></furo-ui5-money-input>
        * ```
        *
        * ## supported meta and constraints

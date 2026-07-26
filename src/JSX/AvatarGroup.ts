@@ -40,7 +40,7 @@ export interface AvatarGroup extends React.HTMLAttributes<HTMLElement> {
   colorScheme?: AvatarColorScheme[];
 
   /**
-   * Returns an array containing the `furo-furo-ui5-avatar` instances that are currently not displayed due to lack of space.
+   * Returns an array containing the `furo-ui5-avatar` instances that are currently not displayed due to lack of space.
    */
   hiddenItems?: IAvatarGroupItem[];
 
@@ -54,11 +54,11 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-avatar-group' is a thin wrapper around the
-       * [SAP ui5 AvatarGroup element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/AvatarGroup/).
+       * The 'furo-ui5-avatar-group' is a thin wrapper around the
+       * [SAP ui5 AvatarGroup element](https://ui5.github.io/webcomponents/components/AvatarGroup/).
        *
        * It exposes the full UI5 AvatarGroup API unchanged. There is intentionally **no data binding** —
-       * place `furo-furo-furo-ui5-avatar` children yourself.
+       * place `furo-ui5-avatar` children yourself.
        *
        * ### Overview
        *
@@ -107,12 +107,12 @@ declare module "react" {
        * - [Right] - Navigate one avatar to the right
        * - [Home] - Navigate to the first avatar
        * - [End] - Navigate to the last avatar
-       * - [Space] / [Enter] or [Return] - Trigger `furo-furo-ui5-click` event
+       * - [Space] / [Enter] or [Return] - Trigger `furo-ui5-click` event
        *
        * `type` Group:
        *
        * - [Tab] - Move focus to the next interactive element after the component
-       * - [Space] / [Enter] or [Return] - Trigger `furo-furo-ui5-click` event
+       * - [Space] / [Enter] or [Return] - Trigger `furo-ui5-click` event
        *
        * ### Overview
        *

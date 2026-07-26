@@ -10,7 +10,7 @@ import { FuroFatString, type IFuroFatString } from "@/models";
  *
  * The 'furo-ui5-multi-input' component lets the user enter and edit a list of strings with data binding.
  *
- * It supports all features from the [SAP ui5 MultiInput element](https://sap.github.io/ui5-webcomponents/playground/components/MultiInput/).
+ * It supports all features from the [SAP ui5 MultiInput element](https://ui5.github.io/webcomponents/components/MultiInput/).
  * Each bound array element is rendered as a deletable `ui5-token`. Typing a value and committing it
  * (Enter / focus-out → `change`) appends an element to the model; deleting a token (`token-delete`)
  * removes the matching element from the model. The model is the single source of truth — tokens are

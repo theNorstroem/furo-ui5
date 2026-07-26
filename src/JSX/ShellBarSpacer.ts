@@ -14,8 +14,8 @@ declare module "react" {
        *
        *
        * ### Overview
-       * The `furo-furo-ui5-shellbar-spacer` is an element, used for visual separation between the two content parts of the `furo-furo-ui5-shellbar`.
-       * **Note:** The `furo-furo-ui5-shellbar-spacer` component is in an experimental state and is a subject to change.
+       * The `furo-ui5-shellbar-spacer` is an element, used for visual separation between the two content parts of the `furo-ui5-shellbar`.
+       * **Note:** The `furo-ui5-shellbar-spacer` component is in an experimental state and is a subject to change.
        *
        * ### Overview
        * The `furo-ui5-shellbar-spacer` is an element, used for visual separation between the two content parts of the `furo-ui5-shellbar`.

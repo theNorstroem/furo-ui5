@@ -24,7 +24,7 @@ import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 
 /**
  * The furo-ui5-step-input component allows the user to enter and edit numbers with data binding. It consists of an
  * input field and buttons with icons to increase/decrease the value with the predefined step.
- * It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/StepInput/).
+ * It supports all features from the [SAP ui5 Input element](https://ui5.github.io/webcomponents/components/StepInput/).
  *
  * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
  *

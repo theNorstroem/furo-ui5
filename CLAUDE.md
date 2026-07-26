@@ -39,7 +39,26 @@ When adding a component, mirror an existing one (e.g. `src/elements/text-input/`
 - `dist/`, `custom-elements.json`, `web-types.json` — produced by `npm run build`.
 
 ### Type renderers
-`src/type-renderers/` ships display/edit/form/cell/celledit components per Furo and Google well-known type (e.g. `display-google-protobuf-timestamp.ts`). They are **excluded from `tsconfig.json` and eslint** and are bundled separately via `analyze:deep`. Build issues here won't surface during `tsc` — run the full build to validate.
+`src/type-renderers/` ships one component per (context, type) pair — currently the full cross product of 4 contexts × 30 type slugs. They are **eslint-ignored** (`src/type-renderers-wip/**` is additionally excluded from `tsconfig.json`) and are bundled separately via `analyze:deep`.
+
+The directory name *is* the tag name, and it follows a strict convention that `furo-ui5-typerenderer` depends on:
+
+```
+<context>-<type-slug>          e.g. display-google-protobuf-timestamp
+```
+
+- **context** — `display`, `cell`, `celledit`, `form`. Any other string works for renderers you supply yourself.
+- **type-slug** — the field node's `__meta.typeName`, lowercased, with `.` and `_` replaced by `-`. Open-models primitives lose their `primitives.` prefix (`primitives.INT64` → `int64`), and `primitives.BOOLEAN` maps to `bool`.
+- **repeated fields** append `-array` to the *item* type's slug (`display-string-array`); **map fields** append `-map` to the *value* type's slug (`display-string-map`). Neither exists yet — `furo-ui5-typerenderer` falls back to repeating the plain item/value renderer, so writing one is an optimization, not a requirement.
+
+### furo-ui5-typerenderer
+`src/elements/typerenderer/` resolves and instantiates the right renderer for any field node at runtime — it is what makes generic tables and generated forms possible. It is a normal `src/elements/` component (fully typechecked and linted, unlike the renderers themselves) and deliberately imports **no** renderer: consumers import the ones they need, and the element reports missing ones via a `renderer-missing` attribute/event after a 300 ms grace period.
+
+Two things worth knowing when touching it, both of which come from `@furo/open-models` and are not obvious:
+- `ARRAY.__meta.typeName` is the constant `"primitives.ARRAY<>"` and carries no item type. Resolve the item type from `atT(0)` or, for an empty array, the private `__getConstructor()` (same access as `FuroUi5SegmentedButton._detectModelItemType`).
+- `MAP.__meta.typeName` is never assigned and stays `""`. Detect maps with `instanceof MAP` and take the value type from the parent's `FieldDescriptor.ValueConstructor` — its presence is also the only reliable descriptor-level way to tell a map field from a repeated one.
+
+It renders into the **light DOM** with `display: contents` (a document-level adopted stylesheet, since light DOM has no `:host`), so the renderer participates in the surrounding layout and application CSS still reaches it.
 
 ### Path alias
 `@/*` resolves to `src/*` (tsconfig + vite). After `tsc`, `tsc-alias` rewrites these to relative paths in `dist/`. Use `@/...` in source, never relative-up-out-of-src.

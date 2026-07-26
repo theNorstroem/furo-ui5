@@ -32,7 +32,7 @@ declare module "react" {
       /**
        *
        *
-       * The `furo-furo-ui5-button-badge` component defines a badge that appears in the `furo-furo-ui5-button`.
+       * The `furo-ui5-button-badge` component defines a badge that appears in the `furo-ui5-button`.
        *
        * ### ES6 Module Import
        *

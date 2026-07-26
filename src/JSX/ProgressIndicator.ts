@@ -71,13 +71,13 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * A furo-furo-furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..
-       * https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/ProgressIndicator/
+       * A furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..
+       * https://ui5.github.io/webcomponents/components/ProgressIndicator/
        *
        * Supported type: You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types
        *
        * ```html
-       * <furo-furo-furo-ui5-progress-indicator fn-bind-data="--dao(FIELDNODE)"></furo-furo-furo-ui5-progress-indicator>
+       * <furo-ui5-progress-indicator fn-bind-data="--dao(FIELDNODE)"></furo-ui5-progress-indicator>
        * ```
        *
        * ### Overview

@@ -11,7 +11,7 @@ import { formatRelativeTime } from "@/util/formatRelativeTime";
  * The 'furo-ui5-relative-time-display' is a display-only component which shows relative time
  * information as plain text (e.g. "in 2 days", "5 days ago"), with data binding.
  *
- * It extends the [SAP ui5 Text element](https://sap.github.io/ui5-webcomponents/playground/components/Text/)
+ * It extends the [SAP ui5 Text element](https://ui5.github.io/webcomponents/components/Text/)
  * and is the chrome-less sibling of `furo-ui5-relative-time-badge` (no color scheme).
  *
  * You can bind a `string` (ISO 8601), a `google.protobuf.Timestamp`, a unix-seconds `int32` / `int64`,

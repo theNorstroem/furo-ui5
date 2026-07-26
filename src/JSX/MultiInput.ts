@@ -63,7 +63,7 @@ export interface MultiInput extends React.HTMLAttributes<HTMLElement> {
   /**
    * Sets the maximum number of characters available in the input field.
    *
-   * **Note:** This property is not compatible with the furo-furo-ui5-input type InputType.Number. If the furo-furo-ui5-input type is set to Number, the maxlength value is ignored.
+   * **Note:** This property is not compatible with the furo-ui5-input type InputType.Number. If the furo-ui5-input type is set to Number, the maxlength value is ignored.
    */
   maxlength?: number | undefined;
 
@@ -154,10 +154,10 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The 'furo-furo-furo-ui5-multi-input' component lets the user enter and edit a list of strings with data binding.
+       * The 'furo-ui5-multi-input' component lets the user enter and edit a list of strings with data binding.
        *
-       * It supports all features from the [SAP ui5 MultiInput element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/MultiInput/).
-       * Each bound array element is rendered as a deletable `furo-furo-ui5-token`. Typing a value and committing it
+       * It supports all features from the [SAP ui5 MultiInput element](https://ui5.github.io/webcomponents/components/MultiInput/).
+       * Each bound array element is rendered as a deletable `furo-ui5-token`. Typing a value and committing it
        * (Enter / focus-out → `change`) appends an element to the model; deleting a token (`token-delete`)
        * removes the matching element from the model. The model is the single source of truth — tokens are
        * (re)rendered from the array whenever it changes.
@@ -171,7 +171,7 @@ declare module "react" {
        * - **max:"number"** set the maximum number of characters available in the input field.
        *
        * ### Overview
-       * A `furo-furo-ui5-multi-input` field allows the user to enter multiple values, which are displayed as `furo-furo-ui5-token`.
+       * A `furo-ui5-multi-input` field allows the user to enter multiple values, which are displayed as `furo-ui5-token`.
        *
        * User can choose interaction for creating tokens.
        * Fiori Guidelines say that user should create tokens when:

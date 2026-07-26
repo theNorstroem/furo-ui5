@@ -35,11 +35,11 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-breadcrumbs' is a thin wrapper around the
-       * [SAP ui5 Breadcrumbs element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/Breadcrumbs/).
+       * The 'furo-ui5-breadcrumbs' is a thin wrapper around the
+       * [SAP ui5 Breadcrumbs element](https://ui5.github.io/webcomponents/components/Breadcrumbs/).
        *
        * It exposes the full UI5 Breadcrumbs API unchanged. There is intentionally **no data binding** —
-       * place `furo-furo-furo-ui5-breadcrumbs-item` children yourself.
+       * place `furo-ui5-breadcrumbs-item` children yourself.
        *
        * ### Overview
        * Enables users to navigate between items by providing a list of links to previous steps in the user's navigation path.
@@ -51,7 +51,7 @@ declare module "react" {
        * You can choose the type of separator to be used from a number of predefined options.
        *
        * ### Keyboard Handling
-       * The `furo-furo-ui5-breadcrumbs` provides advanced keyboard handling.
+       * The `furo-ui5-breadcrumbs` provides advanced keyboard handling.
        *
        * - [F4], [Alt] + [Up], [Alt] + [Down], [Space], or [Enter] - If the dropdown arrow is focused - opens/closes the drop-down.
        * - [Space],[Enter] - Activates the focused item and triggers the `item-click` event.

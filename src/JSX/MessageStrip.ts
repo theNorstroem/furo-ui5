@@ -52,10 +52,10 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-message-strip' is a display-only component which renders a bound `string` value as an
+       * The 'furo-ui5-message-strip' is a display-only component which renders a bound `string` value as an
        * inline message, with data binding.
        *
-       * It extends the [SAP ui5 MessageStrip element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/MessageStrip/).
+       * It extends the [SAP ui5 MessageStrip element](https://ui5.github.io/webcomponents/components/MessageStrip/).
        * Use the inherited `design` (`Information` | `Positive` | `Negative` | `Critical`) and `hideIcon` /
        * `hideCloseButton` properties to control the appearance.
        *
@@ -63,19 +63,19 @@ declare module "react" {
        * `google.protobuf.StringValue` type. Display-only: the component reads from the model but never writes back.
        *
        * ```html
-       * <furo-furo-furo-ui5-message-strip design="Negative" .model="${fieldNode}"></furo-furo-furo-ui5-message-strip>
+       * <furo-ui5-message-strip design="Negative" .model="${fieldNode}"></furo-ui5-message-strip>
        * ```
        *
        * ### Overview
        *
-       * The furo-furo-ui5-message-strip component allows for the embedding of application-related messages.
+       * The furo-ui5-message-strip component allows for the embedding of application-related messages.
        * It supports four semantic designs, each with its own color and icon: "Information", "Positive", "Critical", and "Negative".
        * Additionally, users can choose from two color sets ("ColorSet1" and "ColorSet2"), each containing 10 predefined color schemes.
        * Each message shows a "Close" button, so that it can be removed from the UI, if needed.
        *
        * ### Usage
        *
-       * For the `furo-furo-ui5-message-strip` component, you can define whether it displays
+       * For the `furo-ui5-message-strip` component, you can define whether it displays
        * an icon in the beginning and a close button. Moreover, its size and background
        * can be controlled with CSS.
        *

@@ -11,7 +11,7 @@ import { FuroFatString } from "@/models";
  * The 'furo-ui5-daterange-picker' component lets the user select a date range (a start and an end
  * date), with data binding.
  *
- * It supports all features from the [SAP ui5 DateRangePicker element](https://sap.github.io/ui5-webcomponents/playground/components/DateRangePicker/).
+ * It supports all features from the [SAP ui5 DateRangePicker element](https://ui5.github.io/webcomponents/components/DateRangePicker/).
  *
  * The bound value is the formatted range `string` ("from - to", joined by the `delimiter`). You can
  * bind any `string` type: `primitives.STRING`, the `furo.fat.String` type or the

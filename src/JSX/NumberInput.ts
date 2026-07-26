@@ -91,7 +91,7 @@ export interface NumberInput extends React.HTMLAttributes<HTMLElement> {
   /**
    * Sets the maximum number of characters available in the input field.
    *
-   * **Note:** This property is not compatible with the furo-furo-ui5-input type InputType.Number. If the furo-furo-ui5-input type is set to Number, the maxlength value is ignored.
+   * **Note:** This property is not compatible with the furo-ui5-input type InputType.Number. If the furo-ui5-input type is set to Number, the maxlength value is ignored.
    */
   maxlength?: number | undefined;
 
@@ -174,7 +174,7 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The furo-furo-furo-ui5-number-input component allows the user to enter and edit numbers with data binding.
+       * The furo-ui5-number-input component allows the user to enter and edit numbers with data binding.
        *
        * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
        *
@@ -193,10 +193,10 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-input` component allows the user to enter and edit text or numeric values in one line.
+       * The `furo-ui5-input` component allows the user to enter and edit text or numeric values in one line.
        *
        * Additionally, you can provide `suggestionItems`
-       * that are displayed in a popover right under the input. Keep in mind that `furo-furo-ui5-input` with type `Number` does not support suggestions.
+       * that are displayed in a popover right under the input. Keep in mind that `furo-ui5-input` with type `Number` does not support suggestions.
        *
        * The text field can be editable or read-only (`readonly` property),
        * and it can be enabled or disabled (`disabled` property).
@@ -205,7 +205,7 @@ declare module "react" {
        * which enables you to react on any text change.
        *
        * ### Keyboard Handling
-       * The `furo-furo-ui5-input` provides the following keyboard shortcuts:
+       * The `furo-ui5-input` provides the following keyboard shortcuts:
        *
        * - [Escape] - Closes the suggestion list, if open. If closed or not enabled, cancels changes and reverts to the value which the Input field had when it got the focus.
        * - [Enter] or [Return] - If suggestion list is open takes over the current matching item and closes it. If value state or group header is focused, does nothing.

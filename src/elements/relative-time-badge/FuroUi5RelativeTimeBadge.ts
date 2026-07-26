@@ -11,7 +11,7 @@ import { formatRelativeTime } from "@/util/formatRelativeTime";
  * The 'furo-ui5-relative-time-badge' is a small, non-interactive, display-only component which shows
  * relative time information (e.g. "in 2 days", "5 days ago"), with data binding.
  *
- * It extends the [SAP ui5 Tag element](https://sap.github.io/ui5-webcomponents/playground/components/Tag/)
+ * It extends the [SAP ui5 Tag element](https://ui5.github.io/webcomponents/components/Tag/)
  * and drives its text and `colorScheme` from the bound value: a future time uses the POSITIVE scheme,
  * a past time the NEGATIVE one.
  *

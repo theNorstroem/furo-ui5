@@ -2,7 +2,7 @@ import AvatarGroup from "@ui5/webcomponents/dist/AvatarGroup.js";
 
 /**
  * The 'furo-ui5-avatar-group' is a thin wrapper around the
- * [SAP ui5 AvatarGroup element](https://sap.github.io/ui5-webcomponents/playground/components/AvatarGroup/).
+ * [SAP ui5 AvatarGroup element](https://ui5.github.io/webcomponents/components/AvatarGroup/).
  *
  * It exposes the full UI5 AvatarGroup API unchanged. There is intentionally **no data binding** —
  * place `furo-ui5-avatar` children yourself.

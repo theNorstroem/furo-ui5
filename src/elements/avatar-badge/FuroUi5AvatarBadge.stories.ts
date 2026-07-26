@@ -27,7 +27,7 @@ const meta: Meta = {
       page: DocumentationTemplate({
         component,
         since: "0.8.0",
-        originalComponent: "https://ui5.github.io/webcomponents/components/Avatar/",
+        originalComponent: "https://ui5.github.io/webcomponents/components/main/Avatar/",
         guideline: "https://www.sap.com/design-system/fiori-design-web/v1-142/ui-elements/avatar/",
       }),
     },

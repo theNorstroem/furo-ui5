@@ -110,11 +110,11 @@ export interface MultiCombobox extends React.HTMLAttributes<HTMLElement> {
    * Defines the values of the selected items.
    *
    * Use this property to programmatically select items by their `value` property.
-   * Each string in the array should match the `value` attribute of a `furo-furo-ui5-mcb-item`.
+   * Each string in the array should match the `value` attribute of a `furo-ui5-mcb-item`.
    *
    * **Note:** If an item doesn't have a `value` attribute set, it cannot be selected via this property.
    *
-   * **Note:** The recommended approach is to set the `value` property on each `furo-furo-ui5-mcb-item`
+   * **Note:** The recommended approach is to set the `value` property on each `furo-ui5-mcb-item`
    * and use `selectedValues` for programmatic selection. The `selected` property on items is
    * deprecated and should not be used together with `selectedValues`.
    */
@@ -148,25 +148,25 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The furo-furo-furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-furo-furo-ui5-multi-combobox define
-       * the available options by using the furo-furo-ui5-mcb-item component. Use the function bindOptions to bind a RepeaterNode as a option list.
+       * The furo-ui5-multi-combobox component is used to create a drop-down list. The items inside the furo-ui5-multi-combobox define
+       * the available options by using the furo-ui5-mcb-item component. Use the function bindOptions to bind a RepeaterNode as a option list.
        *
        * ```html
-       * <furo-furo-furo-ui5-multi-combobox
+       * <furo-ui5-multi-combobox
        * fn-bind-data="--entity(*.data.description)"
        * fn-bind-options="--collection(*.entities)">
-       * </furo-furo-furo-ui5-multi-combobox>
+       * </furo-ui5-multi-combobox>
        * ```
        * *
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-multi-combobox` component consists of a list box with items and a text field allowing the user to either type a value directly into the text field, or choose from the list of existing items.
+       * The `furo-ui5-multi-combobox` component consists of a list box with items and a text field allowing the user to either type a value directly into the text field, or choose from the list of existing items.
        *
        * The drop-down list is used for selecting and filtering values, it enables users to select one or more options from a predefined list. The control provides an editable input field to filter the list, and a dropdown arrow to expand/collapse the list of available options.
        * The options in the list have checkboxes that permit multi-selection. Entered values are displayed as tokens.
        * ### Structure
-       * The `furo-furo-ui5-multi-combobox` consists of the following elements:
+       * The `furo-ui5-multi-combobox` consists of the following elements:
        *
        * -  Tokenizer - a list of tokens with selected options.
        * -  Input field - displays the selected option/s as token/s. Users can type to filter the list.
@@ -175,10 +175,10 @@ declare module "react" {
        *
        * ### Keyboard Handling
        *
-       * The `furo-furo-ui5-multi-combobox` provides advanced keyboard handling.
+       * The `furo-ui5-multi-combobox` provides advanced keyboard handling.
        *
        * #### Picker
-       * If the `furo-furo-ui5-multi-combobox` is focused,
+       * If the `furo-ui5-multi-combobox` is focused,
        * you can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.
        * Once the drop-down is opened, you can use the `UP` and `DOWN` arrow keys
        * to navigate through the available options and select one by pressing the `Space` or `Enter` keys.

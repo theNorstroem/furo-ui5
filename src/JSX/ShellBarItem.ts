@@ -50,7 +50,7 @@ declare module "react" {
       /**
        *
        *
-       * The `furo-furo-ui5-shellbar-item` represents a custom item for `furo-furo-ui5-shellbar`.
+       * The `furo-ui5-shellbar-item` represents a custom item for `furo-ui5-shellbar`.
        *
        * ### ES6 Module Import
        * `import "@furo/ui5/dist/ShellBarItem.js";`

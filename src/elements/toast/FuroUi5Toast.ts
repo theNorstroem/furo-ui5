@@ -7,7 +7,7 @@ import Toast from "@ui5/webcomponents/dist/Toast.js";
  *
  * Use this component like a regular ui5-toast and do not forget to place the furo-ui5-toast-display in one of the parent elements.
  *
- * It supports all features from the [SAP ui5 Toast element](https://sap.github.io/ui5-webcomponents/playground/components/Toast/).
+ * It supports all features from the [SAP ui5 Toast element](https://ui5.github.io/webcomponents/components/Toast/).
  *
  * **important:** Place a furo-ui5-toast-display in any dom parent of the component where you use furo-ui5-toast. Your app-shell or body is a good place to do that.
  *

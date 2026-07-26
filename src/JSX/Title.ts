@@ -40,7 +40,7 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-title` component is used to display titles inside a page.
+       * The `furo-ui5-title` component is used to display titles inside a page.
        * It is a simple, large-sized text with explicit header/title semantics.
        *
        * ### ES6 Module Import

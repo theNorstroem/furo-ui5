@@ -9,7 +9,7 @@ import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 
 /**
  *
  * A furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..
- * https://sap.github.io/ui5-webcomponents/playground/components/ProgressIndicator/
+ * https://ui5.github.io/webcomponents/components/ProgressIndicator/
  *
  * Supported type: You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types
  *

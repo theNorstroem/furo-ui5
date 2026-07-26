@@ -9,7 +9,7 @@ import { FuroFatString } from "@/models";
  * The 'furo-ui5-message-strip' is a display-only component which renders a bound `string` value as an
  * inline message, with data binding.
  *
- * It extends the [SAP ui5 MessageStrip element](https://sap.github.io/ui5-webcomponents/playground/components/MessageStrip/).
+ * It extends the [SAP ui5 MessageStrip element](https://ui5.github.io/webcomponents/components/MessageStrip/).
  * Use the inherited `design` (`Information` | `Positive` | `Negative` | `Critical`) and `hideIcon` /
  * `hideCloseButton` properties to control the appearance.
  *

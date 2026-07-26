@@ -48,27 +48,27 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The furo-furo-furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.
+       * The furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.
        *
        * ```html
-       * <furo-furo-furo-ui5-busy-indicator></furo-furo-furo-ui5-busy-indicator>
+       * <furo-ui5-busy-indicator></furo-ui5-busy-indicator>
        * ```
        *
-       * https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/BusyIndicator/
+       * https://ui5.github.io/webcomponents/components/BusyIndicator/
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-busy-indicator` signals that some operation is going on and that the
+       * The `furo-ui5-busy-indicator` signals that some operation is going on and that the
        * user must wait. It does not block the current UI screen so other operations could be triggered in parallel.
        * It displays 3 dots and each dot expands and shrinks at a different rate, resulting in a cascading flow of animation.
        *
        * ### Usage
-       * For the `furo-furo-ui5-busy-indicator` you can define the size, the text and whether it is shown or hidden.
+       * For the `furo-ui5-busy-indicator` you can define the size, the text and whether it is shown or hidden.
        * In order to hide it, use the "active" property.
        *
-       * In order to show busy state over an HTML element, simply nest the HTML element in a `furo-furo-ui5-busy-indicator` instance.
+       * In order to show busy state over an HTML element, simply nest the HTML element in a `furo-ui5-busy-indicator` instance.
        *
-       * **Note:** Since `furo-furo-ui5-busy-indicator` has `display: inline-block;` by default and no width of its own,
+       * **Note:** Since `furo-ui5-busy-indicator` has `display: inline-block;` by default and no width of its own,
        * whenever you need to wrap a block-level element, you should set `display: block` to the busy indicator as well.
        *
        * #### When to use:

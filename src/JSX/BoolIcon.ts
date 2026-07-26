@@ -61,7 +61,7 @@ declare module "react" {
        * https://openui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html
        *
        * ```html
-       * <furo-furo-furo-ui5-bool-icon fn-bind-data="--dao(FIELDNODE)"></furo-furo-furo-ui5-bool-icon>
+       * <furo-ui5-bool-icon fn-bind-data="--dao(FIELDNODE)"></furo-ui5-bool-icon>
        * ```
        *
        * Only `@ui5/webcomponents-icons/dist/navigation-down-arrow.js` and `@ui5/webcomponents-icons/dist/navigation-right-arrow.js` are auto imported.

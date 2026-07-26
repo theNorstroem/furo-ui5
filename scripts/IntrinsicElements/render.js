@@ -1,3 +1,4 @@
+import { furoizeDocText } from "../furoizeDocText.mjs";
 import { EXCLUDED_MEMBERS } from "./recursiveManifestResolver.js";
 import { isRegistredEnumType } from "./registredEnums.js";
 
@@ -74,9 +75,7 @@ function multilineCommentWithReplace(comment) {
   if(comment===undefined) {
     return "\n// undocumented";
   }
-  const lines = comment.replaceAll("ui5-", "furo-ui5-")
-    .replaceAll("@ui5/webcomponents/", "@furo/ui5/")
-    .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/")
+  const lines = furoizeDocText(comment)
     .split("\n").map(line => " * " + line.trim());
   lines.unshift("\n/**");
   lines.push(" */");

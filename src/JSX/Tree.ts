@@ -64,16 +64,16 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * `furo-furo-furo-ui5-tree`
+       * `furo-ui5-tree`
        * Renders a recursive navigation tree from a `tree.Tree` or `tree.NavigationNode` model.
        *
-       * Each node is rendered as a `furo-furo-furo-ui5-tree-item`. Expand / collapse, selection and focus
+       * Each node is rendered as a `furo-ui5-tree-item`. Expand / collapse, selection and focus
        * are propagated through the open-models event tree (`__broadcastEvent` / `__dispatchEvent`),
        * mirroring the behavior of the original `@furo/data` based implementation.
        *
        * ### Keyboard navigation
        *
-       * The `furo-furo-furo-ui5-tree` provides advanced keyboard handling.
+       * The `furo-ui5-tree` provides advanced keyboard handling.
        *
        * We follow the rules from
        * [ARIA: treegrid role - Accessibility | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role#keyboard_interactions)

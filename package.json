@@ -9,7 +9,11 @@
     "email": "",
     "url": "https://github.com/theNorstroem/"
   },
-  "keywords": ["web-components", "flow based programming", "fbp"],
+  "keywords": [
+    "web-components",
+    "flow based programming",
+    "fbp"
+  ],
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",
@@ -340,6 +344,10 @@
     "./tree-table": {
       "types": "./dist/elements/tree-table/index.d.ts",
       "default": "./dist/elements/tree-table/index.js"
+    },
+    "./typerenderer": {
+      "types": "./dist/elements/typerenderer/index.d.ts",
+      "default": "./dist/elements/typerenderer/index.js"
     },
     "./user-menu": {
       "types": "./dist/elements/user-menu/index.d.ts",

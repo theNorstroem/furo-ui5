@@ -49,19 +49,19 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-color-picker' component lets the user select a color, with data binding.
+       * The 'furo-ui5-color-picker' component lets the user select a color, with data binding.
        *
-       * It supports all features from the [SAP ui5 ColorPicker element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/ColorPicker/).
+       * It supports all features from the [SAP ui5 ColorPicker element](https://ui5.github.io/webcomponents/components/ColorPicker/).
        *
        * The selected color is a plain `string` (HEX, RGB, RGBA, HSV or a CSS color name). You can bind any
        * `string` type: `primitives.STRING`, the `furo.fat.String` type or the `google.protobuf.StringValue` type.
        *
        * ```html
-       * <furo-furo-furo-ui5-color-picker .model="${fieldNode}"></furo-furo-furo-ui5-color-picker>
+       * <furo-ui5-color-picker .model="${fieldNode}"></furo-ui5-color-picker>
        * ```
        *
        * ### Overview
-       * The `furo-furo-ui5-color-picker` allows users to choose any color and provides different input options for selecting colors.
+       * The `furo-ui5-color-picker` allows users to choose any color and provides different input options for selecting colors.
        *
        * ### Usage
        *

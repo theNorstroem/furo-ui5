@@ -48,21 +48,21 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-expandable-text' is a display-only component which renders a bound `string` value as
+       * The 'furo-ui5-expandable-text' is a display-only component which renders a bound `string` value as
        * collapsible text with a "show more / show less" toggle, with data binding.
        *
-       * It extends the [SAP ui5 ExpandableText element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/ExpandableText/).
+       * It extends the [SAP ui5 ExpandableText element](https://ui5.github.io/webcomponents/components/ExpandableText/).
        *
        * You can bind any `string` type: `primitives.STRING`, the `furo.fat.String` type or the
        * `google.protobuf.StringValue` type. Display-only: the component reads from the model but never writes back.
        *
        * ```html
-       * <furo-furo-furo-ui5-expandable-text .model="${fieldNode}"></furo-furo-furo-ui5-expandable-text>
+       * <furo-ui5-expandable-text .model="${fieldNode}"></furo-ui5-expandable-text>
        * ```
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-expandable-text` component allows displaying a large body of text in a small space. It provides an "expand/collapse" functionality, which shows/hides potentially truncated text.
+       * The `furo-ui5-expandable-text` component allows displaying a large body of text in a small space. It provides an "expand/collapse" functionality, which shows/hides potentially truncated text.
        *
        * ### Usage
        *

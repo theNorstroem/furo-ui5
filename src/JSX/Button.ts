@@ -140,22 +140,22 @@ declare module "react" {
        *
        * ### Overview
        *
-       * The `furo-furo-ui5-button` component represents a simple push button.
-       * It enables users to trigger actions by clicking or tapping the `furo-furo-ui5-button`, or by pressing
+       * The `furo-ui5-button` component represents a simple push button.
+       * It enables users to trigger actions by clicking or tapping the `furo-ui5-button`, or by pressing
        * certain keyboard keys, such as Enter.
        *
        * ### Usage
        *
-       * For the `furo-furo-ui5-button` UI, you can define text, icon, or both. You can also specify
+       * For the `furo-ui5-button` UI, you can define text, icon, or both. You can also specify
        * whether the text or the icon is displayed first.
        *
        * You can choose from a set of predefined types that offer different
        * styling to correspond to the triggered action.
        *
-       * You can set the `furo-furo-ui5-button` as enabled or disabled. An enabled
-       * `furo-furo-ui5-button` can be pressed by clicking or tapping it. The button changes
+       * You can set the `furo-ui5-button` as enabled or disabled. An enabled
+       * `furo-ui5-button` can be pressed by clicking or tapping it. The button changes
        * its style to provide visual feedback to the user that it is pressed or hovered over with
-       * the mouse cursor. A disabled `furo-furo-ui5-button` appears inactive and cannot be pressed.
+       * the mouse cursor. A disabled `furo-ui5-button` appears inactive and cannot be pressed.
        *
        * ### ES6 Module Import
        *

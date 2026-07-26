@@ -18,7 +18,7 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * `furo-furo-furo-ui5-markdown`
+       * `furo-ui5-markdown`
        *
        * Renders given md data directly to html.
        *

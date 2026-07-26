@@ -62,14 +62,14 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-tab' is a thin wrapper around the
-       * [SAP ui5 Tab element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/TabContainer/).
+       * The 'furo-ui5-tab' is a thin wrapper around the
+       * [SAP ui5 Tab element](https://ui5.github.io/webcomponents/components/TabContainer/).
        *
        * It exposes the full UI5 Tab API unchanged and is meant to be placed inside
-       * `furo-furo-furo-ui5-tabcontainer`. There is intentionally **no data binding**.
+       * `furo-ui5-tabcontainer`. There is intentionally **no data binding**.
        *
-       * The `furo-furo-ui5-tab` represents a selectable item inside a `furo-furo-ui5-tabcontainer`.
-       * It defines both the item in the tab strip (top part of the `furo-furo-ui5-tabcontainer`) and the
+       * The `furo-ui5-tab` represents a selectable item inside a `furo-ui5-tabcontainer`.
+       * It defines both the item in the tab strip (top part of the `furo-ui5-tabcontainer`) and the
        * content that is presented to the user once the tab is selected.
        *
        * The `furo-ui5-tab` represents a selectable item inside a `furo-ui5-tabcontainer`.

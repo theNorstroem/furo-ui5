@@ -78,4 +78,5 @@ import "./ToggleButton";
 import "./TreeTable";
 import "./Tree";
 import "./TreeItem";
+import "./Typerenderer";
 import "./UserMenu";

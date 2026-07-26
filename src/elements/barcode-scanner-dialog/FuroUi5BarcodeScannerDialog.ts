@@ -11,7 +11,7 @@ import { FuroFatString } from "@/models";
  * Internally, the component uses the zxing-js/library third party OSS. For a list of supported barcode formats, see the
  * zxing-js/library documentation. https://github.com/zxing-js/library
  *
- * It supports all features from the [SAP ui5 Barcode Scanner Dialog element](https://sap.github.io/ui5-webcomponents/playground/components/BarcodeScannerDialog/).
+ * It supports all features from the [SAP ui5 Barcode Scanner Dialog element](https://ui5.github.io/webcomponents/components/fiori/BarcodeScannerDialog/).
  *
  * You can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.
  *

@@ -35,19 +35,19 @@ declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       /**
-       * The 'furo-furo-furo-ui5-barcode-scanner-dialog' component  provides barcode scanning functionality for all devices that
+       * The 'furo-ui5-barcode-scanner-dialog' component  provides barcode scanning functionality for all devices that
        * support the MediaDevices.getUserMedia() native API. Opening the dialog launches the device camera and scans for known barcode formats.
        * Internally, the component uses the zxing-js/library third party OSS. For a list of supported barcode formats, see the
        * zxing-js/library documentation. https://github.com/zxing-js/library
        *
-       * It supports all features from the [SAP ui5 Barcode Scanner Dialog element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/BarcodeScannerDialog/).
+       * It supports all features from the [SAP ui5 Barcode Scanner Dialog element](https://ui5.github.io/webcomponents/components/fiori/BarcodeScannerDialog/).
        *
        * You can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.
        *
        * ```html
-       * <furo-furo-furo-ui5-button at-click=--openClicked>Open Scanner</furo-furo-furo-ui5-button>
-       * <furo-furo-furo-ui5-barcode-scanner-dialog fn-show="--openClicked"
-       * fn-bind-data="--dao(*.field)"></furo-furo-furo-ui5-barcode-scanner-dialog>
+       * <furo-ui5-button at-click=--openClicked>Open Scanner</furo-ui5-button>
+       * <furo-ui5-barcode-scanner-dialog fn-show="--openClicked"
+       * fn-bind-data="--dao(*.field)"></furo-ui5-barcode-scanner-dialog>
        *
        * ```
        *

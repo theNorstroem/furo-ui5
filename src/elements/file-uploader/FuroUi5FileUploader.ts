@@ -2,7 +2,7 @@ import FileUploader from "@ui5/webcomponents/dist/FileUploader.js";
 
 /**
  * The 'furo-ui5-file-uploader' is a thin wrapper around the
- * [SAP ui5 FileUploader element](https://sap.github.io/ui5-webcomponents/playground/components/FileUploader/).
+ * [SAP ui5 FileUploader element](https://ui5.github.io/webcomponents/components/FileUploader/).
  *
  * It exposes the full UI5 FileUploader API unchanged. There is intentionally **no data binding** —
  * read the selected files from the inherited `files` / `value` API and the `change` event.

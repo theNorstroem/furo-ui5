@@ -26,7 +26,7 @@ import ValueState from "@/types/ValueState";
  *
  * The furo-ui5-rating-indicator  is used to display a specific number of icons that are used to rate an item.
  * Additionally, it is also used to display the average and overall ratings.
- * https://sap.github.io/ui5-webcomponents/playground/components/RatingIndicator/
+ * https://ui5.github.io/webcomponents/components/RatingIndicator/
  *
  * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
  *

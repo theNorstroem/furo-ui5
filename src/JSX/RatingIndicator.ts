@@ -117,16 +117,16 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * The furo-furo-furo-ui5-rating-indicator  is used to display a specific number of icons that are used to rate an item.
+       * The furo-ui5-rating-indicator  is used to display a specific number of icons that are used to rate an item.
        * Additionally, it is also used to display the average and overall ratings.
-       * https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/RatingIndicator/
+       * https://ui5.github.io/webcomponents/components/RatingIndicator/
        *
        * You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types.
        *
        * ```html
-       * <furo-furo-furo-ui5-rating-indicator
+       * <furo-ui5-rating-indicator
        * fn-bind-data="--dao(FIELDNODE)"
-       * ></furo-furo-furo-ui5-rating-indicator>
+       * ></furo-ui5-rating-indicator>
        * ```
        *
        * ## supported FAT attributes
@@ -152,10 +152,10 @@ declare module "react" {
        * ### Responsive Behavior
        * You can change the size of the Rating Indicator by changing its `font-size` CSS property.
        *
-       * Example: `<furo-furo-ui5-rating-indicator style="font-size: 3rem;"></furo-furo-ui5-rating-indicator>`
+       * Example: `<furo-ui5-rating-indicator style="font-size: 3rem;"></furo-ui5-rating-indicator>`
        *
        * ### Keyboard Handling
-       * When the `furo-furo-ui5-rating-indicator` is focused, the user can change the rating
+       * When the `furo-ui5-rating-indicator` is focused, the user can change the rating
        * with the following keyboard shortcuts:
        *
        * - [RIGHT/UP] - Increases the value of the rating by one step. If the highest value is reached, does nothing

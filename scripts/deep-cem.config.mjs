@@ -3,6 +3,8 @@ import { customElementJetBrainsPlugin } from 'custom-element-jet-brains-integrat
 import path from 'path';
 import fs from 'fs';
 
+import { furoizeDocText } from './furoizeDocText.mjs';
+
 let typeChecker;
 let typeProgram;
 
@@ -312,10 +314,7 @@ export default {
 
           // Replace inherited ui5 descriptions with furo in attributes description
           decl.attributes?.map(attribute => {
-            attribute.description = attribute.description
-              ?.replaceAll("ui5-", "furo-ui5-")
-              .replaceAll("@ui5/webcomponents/", "@furo/ui5/")
-              .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/");
+            attribute.description = furoizeDocText(attribute.description);
           });
 
           // Filter out UI5Element methods
@@ -325,17 +324,11 @@ export default {
 
           // Replace inherited ui5 descriptions with furo/ui5 in members description
           decl.members?.map(member => {
-            member.description = member.description
-              ?.replaceAll("ui5-", "furo-ui5-")
-              .replaceAll("@ui5/webcomponents/", "@furo/ui5/")
-              .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/");
+            member.description = furoizeDocText(member.description);
           });
           // Replace inherited ui5 descriptions with furo/ui5 in events description
           decl.events?.map(event => {
-            event.description = event.description
-              ?.replaceAll("ui5-", "furo-ui5-")
-              .replaceAll("@ui5/webcomponents/", "@furo/ui5/")
-              .replaceAll("@ui5/webcomponents-fiori/", "@furo/ui5/");
+            event.description = furoizeDocText(event.description);
           });
         }
 

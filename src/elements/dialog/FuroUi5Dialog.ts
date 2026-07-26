@@ -7,7 +7,7 @@ import Dialog from "@ui5/webcomponents/dist/Dialog.js";
  *
  * Use this component like a regular ui5-dialog and do not forget to place the furo-ui5-dialog-display in one of the parent elements.
  *
- * It supports all features from the [SAP ui5 Dialog element](https://sap.github.io/ui5-webcomponents/playground/components/Dialog/).
+ * It supports all features from the [SAP ui5 Dialog element](https://ui5.github.io/webcomponents/components/Dialog/).
  *
  * **important:** Place a furo-ui5-dialog-display in any dom parent of the component where you use furo-ui5-dialog. Your app-shell or body is a good place to do that.
  *

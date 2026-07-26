@@ -11,7 +11,7 @@ import { FuroFatString } from "@/models";
 /**
  * The 'furo-ui5-textarea' component allows the user to enter and edit texts with data binding.
  *
- * It supports all features from the [SAP ui5 Input element](https://sap.github.io/ui5-webcomponents/playground/components/Input/).
+ * It supports all features from the [SAP ui5 Input element](https://ui5.github.io/webcomponents/components/Input/).
  *
  * You can bind any `string` type, like `furo.fat.String` type or the `google.protobuf.StringValue` type.
  * ## supported FAT attributes

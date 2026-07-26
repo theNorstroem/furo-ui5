@@ -9,7 +9,7 @@ import { FuroFatString } from "@/models";
  * The `furo-ui5-color-palette-item` is a single color swatch, meant to be used inside a
  * `furo-ui5-color-palette` or `furo-ui5-color-palette-popover`.
  *
- * It extends the [SAP ui5 ColorPaletteItem element](https://sap.github.io/ui5-webcomponents/playground/components/ColorPalette/).
+ * It extends the [SAP ui5 ColorPaletteItem element](https://ui5.github.io/webcomponents/components/ColorPalette/).
  *
  * You can bind any `string` type (a CSS color): `primitives.STRING`, the `furo.fat.String` type or the
  * `google.protobuf.StringValue` type. Display-only: the component reads the color from the model into

@@ -9,7 +9,7 @@ import { FuroFatString } from "@/models";
  * The 'furo-ui5-tag' is a display-only component which renders a bound `string` value as a tag /
  * status label, with data binding.
  *
- * It extends the [SAP ui5 Tag element](https://sap.github.io/ui5-webcomponents/playground/components/Tag/).
+ * It extends the [SAP ui5 Tag element](https://ui5.github.io/webcomponents/components/Tag/).
  * Use the inherited `design` / `colorScheme` / `icon` properties for styling. The date-specific sibling
  * is `furo-ui5-relative-time-badge`.
  *
