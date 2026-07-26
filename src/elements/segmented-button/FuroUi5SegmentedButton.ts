@@ -500,6 +500,10 @@ export class FuroUi5SegmentedButton extends SegmentedButton {
   clear() {
     if (this._mode === "MULTIPLE") {
       this._writeIdsToModel([]);
+      // `_writeIdsToModel` detaches the model listener around the mutation, so nothing syncs
+      // the UI back — drop the item selection explicitly (the single-selection branch below
+      // does the same through `selectedId`).
+      this.setSelectedItems();
     } else {
       this.selectedId = "";
       this.modelReaderWriter?.writeModel();
