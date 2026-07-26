@@ -237,7 +237,7 @@ describe("FuroUi5Typerenderer", () => {
           context="tstov"
           .rendererOverrides="${{ "tstov-string": "tstov-from-instance" }}"
           .model="${new STRING("x")}"
-        ></furo-ui5-typerenderer>`,
+        ></furo-ui5-typerenderer>`
       );
       await el.updateComplete;
 
@@ -375,7 +375,7 @@ describe("FuroUi5Typerenderer", () => {
       assert.deepEqual(tags(el), ["tstmf-string", "tstmf-string"]);
       assert.deepEqual(
         children(el).map(child => child.getAttribute("map-key")),
-        ["de", "en"],
+        ["de", "en"]
       );
       assert.strictEqual(boundModel(children(el)[0]), map.get("de"));
     });
@@ -402,7 +402,7 @@ describe("FuroUi5Typerenderer", () => {
 
     it("reports the tags it tried and renders nothing", async () => {
       const el: FuroUi5Typerenderer = await fixture(
-        html`<furo-ui5-typerenderer context="tstmissing" renderer-timeout="20" .model="${new STRING("x")}"></furo-ui5-typerenderer>`,
+        html`<furo-ui5-typerenderer context="tstmissing" renderer-timeout="20" .model="${new STRING("x")}"></furo-ui5-typerenderer>`
       );
 
       const seen = new Promise<CustomEvent>(resolve => {
@@ -421,7 +421,7 @@ describe("FuroUi5Typerenderer", () => {
 
     it("lists both candidates for a repeated field", async () => {
       const el: FuroUi5Typerenderer = await fixture(
-        html`<furo-ui5-typerenderer context="tstmissing" renderer-timeout="20" .model="${stringArray(["a"])}"></furo-ui5-typerenderer>`,
+        html`<furo-ui5-typerenderer context="tstmissing" renderer-timeout="20" .model="${stringArray(["a"])}"></furo-ui5-typerenderer>`
       );
       await delay(80);
 
@@ -430,7 +430,7 @@ describe("FuroUi5Typerenderer", () => {
 
     it("clears renderer-missing once a resolvable model is bound", async () => {
       const el: FuroUi5Typerenderer = await fixture(
-        html`<furo-ui5-typerenderer context="tstmissing" renderer-timeout="20" .model="${new STRING("x")}"></furo-ui5-typerenderer>`,
+        html`<furo-ui5-typerenderer context="tstmissing" renderer-timeout="20" .model="${new STRING("x")}"></furo-ui5-typerenderer>`
       );
       await delay(80);
       assert.isTrue(el.hasAttribute("renderer-missing"));
@@ -501,7 +501,7 @@ describe("FuroUi5Typerenderer", () => {
 
     it("copies host attributes onto the renderer but keeps its own", async () => {
       const el: FuroUi5Typerenderer = await fixture(
-        html`<furo-ui5-typerenderer context="cell" value-state="Error" id="host" .model="${new INT64("1")}"></furo-ui5-typerenderer>`,
+        html`<furo-ui5-typerenderer context="cell" value-state="Error" id="host" .model="${new INT64("1")}"></furo-ui5-typerenderer>`
       );
       await el.updateComplete;
 

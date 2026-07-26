@@ -64,8 +64,6 @@ export const Default: StoryObj = {
 export const Designs: StoryObj = {
   render: () =>
     html`<div style="display: flex; gap: 1.5rem; align-items: center;">
-      ${Object.values(LinkDesign).map(
-        design => html`<furo-ui5-link design="${ifDefined(design)}">${design} link</furo-ui5-link>`,
-      )}
+      ${Object.values(LinkDesign).map(design => html`<furo-ui5-link design="${ifDefined(design)}">${design} link</furo-ui5-link>`)}
     </div>`,
 };

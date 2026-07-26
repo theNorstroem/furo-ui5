@@ -72,7 +72,8 @@ export class FuroUi5SegmentedButton extends SegmentedButton {
     this.fatHandler.readAttributes();
   }
 
-  private _model: ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList = new STRING();
+  private _model: ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList =
+    new STRING();
 
   public get model(): ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList {
     return this._model;
@@ -90,7 +91,9 @@ export class FuroUi5SegmentedButton extends SegmentedButton {
    * @typeref IdentifiableList - "@furo/ui5/dist/index.js"
    * @public
    */
-  public set model(value: ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList) {
+  public set model(
+    value: ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList
+  ) {
     this.bindData(value);
   }
 
@@ -106,7 +109,10 @@ export class FuroUi5SegmentedButton extends SegmentedButton {
    * @paramref fieldNode - IdentifiableList - "@furo/ui5/dist/index.js"
    * @public
    */
-  public bindData(fieldNode: ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList | undefined) {
+  public bindData(
+    fieldNode:
+      ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList | undefined
+  ) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -126,7 +132,9 @@ export class FuroUi5SegmentedButton extends SegmentedButton {
 
     if (this._mode === "MULTIPLE") {
       this.selectionMode = SegmentedButtonSelectionMode.Multiple;
-      this._modelItemType = FuroUi5SegmentedButton._detectModelItemType(fieldNode as ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList);
+      this._modelItemType = FuroUi5SegmentedButton._detectModelItemType(
+        fieldNode as ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList
+      );
     } else {
       this.selectionMode = SegmentedButtonSelectionMode.Single;
       if (this._mode === "ENUM") {
@@ -138,7 +146,12 @@ export class FuroUi5SegmentedButton extends SegmentedButton {
         this.modelReaderWriter = new ModelReaderWriter(this._model, writers, readers);
       } else {
         // SINGLE_STRING — reuse the generic string readers/writers against the `selectedId` accessor.
-        this.stringReaderWriters = new StringReaderWriters<FuroUi5SegmentedButton>(this, "selectedId", this._model as STRING | FuroFatString | StringValue, this.fatHandler);
+        this.stringReaderWriters = new StringReaderWriters<FuroUi5SegmentedButton>(
+          this,
+          "selectedId",
+          this._model as STRING | FuroFatString | StringValue,
+          this.fatHandler
+        );
         this.modelReaderWriter = new ModelReaderWriter(this._model, this.stringReaderWriters.getWriters(), this.stringReaderWriters.getReaders());
       }
     }
@@ -180,7 +193,9 @@ export class FuroUi5SegmentedButton extends SegmentedButton {
     this.modelReaderWriter?.writeModel();
   }
 
-  private static _detectMode(node: ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList): ModelMode {
+  private static _detectMode(
+    node: ENUM<unknown> | STRING | FuroFatString | StringValue | ARRAY<STRING, string> | ARRAY<FuroFatString, IFuroFatString> | IdentifiableList
+  ): ModelMode {
     if (node.__meta.typeName === "primitives.ENUM") return "ENUM";
     if (node instanceof ARRAY) return "MULTIPLE";
     return "SINGLE_STRING";

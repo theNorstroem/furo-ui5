@@ -56,19 +56,8 @@ export const Default: StoryObj = {
       ?show-other-accounts="${renderArgs.showOtherAccounts}"
       ?show-edit-accounts="${renderArgs.showEditAccounts}"
     >
-      <ui5-user-menu-account
-        slot="accounts"
-        selected
-        avatar-initials="JD"
-        title-text="Jane Doe"
-        subtitle-text="jane.doe@example.com"
-      ></ui5-user-menu-account>
-      <ui5-user-menu-account
-        slot="accounts"
-        avatar-initials="AB"
-        title-text="Alex Brown"
-        subtitle-text="alex.brown@example.com"
-      ></ui5-user-menu-account>
+      <ui5-user-menu-account slot="accounts" selected avatar-initials="JD" title-text="Jane Doe" subtitle-text="jane.doe@example.com"></ui5-user-menu-account>
+      <ui5-user-menu-account slot="accounts" avatar-initials="AB" title-text="Alex Brown" subtitle-text="alex.brown@example.com"></ui5-user-menu-account>
       <ui5-user-menu-item icon="action-settings" text="Settings"></ui5-user-menu-item>
       <ui5-user-menu-item icon="opportunity" text="Privacy Policy"></ui5-user-menu-item>
     </furo-ui5-user-menu>

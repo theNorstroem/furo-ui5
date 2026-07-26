@@ -31,8 +31,7 @@ export const treeNodeView = new WeakMap<NavigationNode, TreeNodeView>();
  * Returns the parent navigation node of `node`, skipping the intermediate `children`
  * ARRAY node (`node.__parentNode` is the ARRAY, its `__parentNode` is the real parent).
  */
-export const getParentNode = (node: NavigationNode): NavigationNode | undefined =>
-  node.__parentNode?.__parentNode as NavigationNode | undefined;
+export const getParentNode = (node: NavigationNode): NavigationNode | undefined => node.__parentNode?.__parentNode as NavigationNode | undefined;
 
 /**
  * A node is visible when every ancestor up to (and including) the root is open.

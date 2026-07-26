@@ -667,30 +667,34 @@ export class FuroUi5HeaderPanel extends LitElement {
     return html`
       <furo-responsive-layout layout="four" style="align-items: start">
         <div data-sap-ui-fastnavgroup="${this.showDropdown ? "true" : "false"}" ?tripple="${!this.bigAction}" ?double="${this.bigAction}" id="titleblock">
-          ${this.showDropdown
-            ? html` <furo-ui5-button
-                @click="${this.fireVariantIconClicked}"
-                @keydown="${this.variantButtonKeyboardHandler}"
-                design="Transparent"
-                style="margin-left:-0.5rem;--sapButton_Lite_Hover_Background:none;height:2rem;"
-              >
-                <furo-ui5-title level="${this.headerTextLevel}" wrapping-type="None" style="display: inline-block;cursor: pointer;">
-                  <span style="display: flex;align-items: center;"
-                    >${this.headerText}
+          ${
+            this.showDropdown
+              ? html` <furo-ui5-button
+                  @click="${this.fireVariantIconClicked}"
+                  @keydown="${this.variantButtonKeyboardHandler}"
+                  design="Transparent"
+                  style="margin-left:-0.5rem;--sapButton_Lite_Hover_Background:none;height:2rem;"
+                >
+                  <furo-ui5-title level="${this.headerTextLevel}" wrapping-type="None" style="display: inline-block;cursor: pointer;">
+                    <span style="display: flex;align-items: center;"
+                      >${this.headerText}
 
-                    <furo-ui5-icon
-                      id="variantIcon"
-                      design="Default"
-                      name="navigation-down-arrow"
-                      style="margin-left: 0.25rem; height: 1.5rem; width: 1.5rem"
-                    ></furo-ui5-icon>
-                  </span>
-                </furo-ui5-title>
-              </furo-ui5-button>`
-            : html` <furo-ui5-title wrapping-type="None" style="display: inline-block" level="${this.headerTextLevel}"> ${this.headerText} </furo-ui5-title> `}
-          ${this.objectIcon !== ""
-            ? html` <furo-ui5-icon @click="${this.fireObjectIconClicked}" design="Transparent" mode="Interactive" name="${this.objectIcon}"></furo-ui5-icon>`
-            : ""}
+                      <furo-ui5-icon
+                        id="variantIcon"
+                        design="Default"
+                        name="navigation-down-arrow"
+                        style="margin-left: 0.25rem; height: 1.5rem; width: 1.5rem"
+                      ></furo-ui5-icon>
+                    </span>
+                  </furo-ui5-title>
+                </furo-ui5-button>`
+              : html` <furo-ui5-title wrapping-type="None" style="display: inline-block" level="${this.headerTextLevel}"> ${this.headerText} </furo-ui5-title> `
+          }
+          ${
+            this.objectIcon !== ""
+              ? html` <furo-ui5-icon @click="${this.fireObjectIconClicked}" design="Transparent" mode="Interactive" name="${this.objectIcon}"></furo-ui5-icon>`
+              : ""
+          }
 
           <furo-ui5-icon
             ?hidden="${!this.isFavorite}"
@@ -719,13 +723,15 @@ export class FuroUi5HeaderPanel extends LitElement {
       <furo-ui5-show-hide id="showHide" ?is-hidden="${this.collapsed}">
         <div class="wrapper">
           ${this.icon ? html` <ui5-avatar class="avatar" icon="${this.icon}" size="${this.iconSize}" shape="${this.iconShape}"></ui5-avatar> ` : nothing}
-          ${this.image && this.icon === ""
-            ? html`
-                <ui5-avatar shape="${this.iconShape}" class="avatar" size="${this.iconSize}">
-                  <img src="${this.image}" alt=" " />
-                </ui5-avatar>
-              `
-            : nothing}
+          ${
+            this.image && this.icon === ""
+              ? html`
+                  <ui5-avatar shape="${this.iconShape}" class="avatar" size="${this.iconSize}">
+                    <img src="${this.image}" alt=" " />
+                  </ui5-avatar>
+                `
+              : nothing
+          }
           <div class="content">
             <slot></slot>
           </div>

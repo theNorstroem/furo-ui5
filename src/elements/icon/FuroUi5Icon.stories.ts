@@ -62,12 +62,7 @@ export const Designs: StoryObj = {
   render: () =>
     html`<div style="display: flex; gap: 1rem; align-items: center;">
       ${Object.values(IconDesign).map(
-        design =>
-          html`<furo-ui5-icon
-            name="employee"
-            accessible-name="${design}"
-            design="${ifDefined(design)}"
-          ></furo-ui5-icon>`,
+        design => html`<furo-ui5-icon name="employee" accessible-name="${design}" design="${ifDefined(design)}"></furo-ui5-icon>`
       )}
     </div>`,
 };

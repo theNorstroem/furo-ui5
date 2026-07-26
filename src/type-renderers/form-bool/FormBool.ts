@@ -1,5 +1,5 @@
 import { BOOLEAN } from "@furo/open-models";
-import {html, css, LitElement} from "lit";
+import { html, css, LitElement } from "lit";
 import { property } from "lit/decorators.js";
 import "@/elements/form-row";
 import "@/elements/label";

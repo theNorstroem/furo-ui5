@@ -55,11 +55,8 @@ export const Default: StoryObj = {
   render: renderArgs => html`
     <furo-ui5-button design="Emphasized" @click="${showToast}">Show toast</furo-ui5-button>
 
-    <furo-ui5-toast
-      id="story-toast"
-      placement="${ifDefined(renderArgs.placement)}"
-      duration="${ifDefined(renderArgs.duration)}"
-    >${renderArgs.message}
+    <furo-ui5-toast id="story-toast" placement="${ifDefined(renderArgs.placement)}" duration="${ifDefined(renderArgs.duration)}"
+      >${renderArgs.message}
     </furo-ui5-toast>
   `,
 };

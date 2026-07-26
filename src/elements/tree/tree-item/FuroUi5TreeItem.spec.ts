@@ -423,10 +423,7 @@ describe("FuroUi5TreeItem", () => {
     const request = (term: string): TreeSearchRequest => ({ term, results: [] });
 
     /** The token index is built in a `setTimeout(…, 50)`. */
-    const indexedItem = async (
-      literal: INavigationNode,
-      view: Partial<TreeNodeView> = {}
-    ): Promise<{ item: FuroUi5TreeItem; node: NavigationNode }> => {
+    const indexedItem = async (literal: INavigationNode, view: Partial<TreeNodeView> = {}): Promise<{ item: FuroUi5TreeItem; node: NavigationNode }> => {
       const bound = await boundItem(literal, view);
       await delay(60);
       return bound;

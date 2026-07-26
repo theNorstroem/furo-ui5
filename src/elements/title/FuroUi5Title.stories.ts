@@ -48,9 +48,7 @@ export const Default: StoryObj = {
   },
 
   render: renderArgs =>
-    html`<furo-ui5-title
-      level="${ifDefined(renderArgs.level)}"
-      wrapping-type="${ifDefined(renderArgs.wrappingType)}"
+    html`<furo-ui5-title level="${ifDefined(renderArgs.level)}" wrapping-type="${ifDefined(renderArgs.wrappingType)}"
       >${unsafeHTML(renderArgs.defaultSlot)}</furo-ui5-title
     >`,
 };
@@ -58,8 +56,6 @@ export const Default: StoryObj = {
 export const Levels: StoryObj = {
   render: () =>
     html`<div style="display: flex; flex-direction: column; gap: 0.5rem;">
-      ${Object.values(TitleLevel).map(
-        level => html`<furo-ui5-title level="${ifDefined(level)}">${level} title</furo-ui5-title>`,
-      )}
+      ${Object.values(TitleLevel).map(level => html`<furo-ui5-title level="${ifDefined(level)}">${level} title</furo-ui5-title>`)}
     </div>`,
 };

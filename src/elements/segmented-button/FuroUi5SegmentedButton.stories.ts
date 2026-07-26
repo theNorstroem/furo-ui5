@@ -243,8 +243,7 @@ const optionList: SelectOption[] = [
     displayName: "Third from list",
   },
 ];
-    </pre
-    >
+    </pre>
   `,
 };
 

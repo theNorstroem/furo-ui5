@@ -36,7 +36,11 @@ describe("FuroUi5ColorPalette", () => {
 
     beforeAll(async () => {
       el = await fixture(html`
-        <furo-ui5-color-palette accessible-name="palette" data-testid="test" .colorsModel="${ARRAY.Builder(STRING, ["#ff0000", "#00ff00", "#0000ff"])}"></furo-ui5-color-palette>
+        <furo-ui5-color-palette
+          accessible-name="palette"
+          data-testid="test"
+          .colorsModel="${ARRAY.Builder(STRING, ["#ff0000", "#00ff00", "#0000ff"])}"
+        ></furo-ui5-color-palette>
       `);
     });
 

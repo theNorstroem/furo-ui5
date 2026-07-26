@@ -155,11 +155,7 @@ export const SearchViaTextInput: StoryObj = {
     };
 
     return html`
-      <furo-ui5-text-input
-        placeholder="Search the tree…"
-        show-clear-icon
-        @search-requested="${onSearchRequested}"
-      ></furo-ui5-text-input>
+      <furo-ui5-text-input placeholder="Search the tree…" show-clear-icon @search-requested="${onSearchRequested}"></furo-ui5-text-input>
       <div style="height: 220px; margin-top: 0.5rem; border: 1px solid var(--sapList_BorderColor, #e5e5e5);">
         <furo-ui5-tree expand-depth="2" ${ref(grabTree)}></furo-ui5-tree>
       </div>

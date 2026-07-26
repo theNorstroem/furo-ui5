@@ -8,7 +8,7 @@ import { property, state } from "lit/decorators.js";
 
 import { getParentNode, treeNodeView } from "../tree-view-state";
 
-import type {  NavigationNode } from "@/models/furoui5/NavigationNode";
+import type { NavigationNode } from "@/models/furoui5/NavigationNode";
 
 /**
  * Search request passed down from `furo-ui5-tree` to each visible item. Matching items push
@@ -481,9 +481,11 @@ export class FuroUi5TreeItem extends LitElement {
       <div class="row indentation-${this.indentation}" @dblclick="${this._toggle}">
         <div class="indentation" @click="${this._labelClick}" @keydown="${this._labelKeydown}"></div>
 
-        ${node.children.length > 0
-          ? html`<furo-ui5-bool-icon ?hidden="${node.children.length === 0}" .model="${node.open}"></furo-ui5-bool-icon>`
-          : html`<div style="width: 1.5rem;"></div>`}
+        ${
+          node.children.length > 0
+            ? html`<furo-ui5-bool-icon ?hidden="${node.children.length === 0}" .model="${node.open}"></furo-ui5-bool-icon>`
+            : html`<div style="width: 1.5rem;"></div>`
+        }
 
         <div class="label" @click="${this._labelClick}" @keydown="${this._labelKeydown}">
           <ui5-icon ?hidden="${this.noicon}" name="${this._icon}" ?error="${node.hasError.value}"></ui5-icon>

@@ -46,7 +46,11 @@ const createString = (initial?: string): STRING => {
 
 const stringArray = (items: string[]): ARRAY<STRING, string> => ARRAY.Builder(STRING, items);
 
-const fatArray = (values: string[]): ARRAY<FuroFatString, IFuroFatString> => ARRAY.Builder(FuroFatString, values.map(value => ({ value })));
+const fatArray = (values: string[]): ARRAY<FuroFatString, IFuroFatString> =>
+  ARRAY.Builder(
+    FuroFatString,
+    values.map(value => ({ value }))
+  );
 
 /** An `IdentifiableList` built from the `CubeOptions` test model. */
 const optionArray = (init: ICubeOptions[]): IdentifiableList => ARRAY.Builder(CubeOptions, init);
@@ -125,7 +129,9 @@ describe("FuroUi5SegmentedButton", () => {
   // no binding — plain inherited behavior still works
   // ───────────────────────────────────────────────────────────────────────
   describe("without data binding", () => {
-    afterEach(() => { fixtureCleanup(); });
+    afterEach(() => {
+      fixtureCleanup();
+    });
 
     it("works as a plain segmented button (default selectionMode Single)", async () => {
       const el: FuroUi5SegmentedButton = await fixture(html`
@@ -149,7 +155,9 @@ describe("FuroUi5SegmentedButton", () => {
       el = await fixture(html`<furo-ui5-segmented-button accessible-name="material"></furo-ui5-segmented-button>`);
     });
 
-    afterEach(() => { fixtureCleanup(); });
+    afterEach(() => {
+      fixtureCleanup();
+    });
 
     it("sets selectionMode=Single and builds one item per enum key (UNSPECIFIED omitted)", () => {
       el.bindData(createEnum(Materials.MATERIALS_GLASS));
@@ -209,7 +217,9 @@ describe("FuroUi5SegmentedButton", () => {
       el = await fixture(html`<furo-ui5-segmented-button accessible-name="choice"></furo-ui5-segmented-button>`);
     });
 
-    afterEach(() => { fixtureCleanup(); });
+    afterEach(() => {
+      fixtureCleanup();
+    });
 
     it("sets selectionMode=Single and selects the item matching the bound value", () => {
       el.optionList = OPTIONS;
@@ -261,7 +271,9 @@ describe("FuroUi5SegmentedButton", () => {
       el = await fixture(html`<furo-ui5-segmented-button accessible-name="choices"></furo-ui5-segmented-button>`);
     });
 
-    afterEach(() => { fixtureCleanup(); });
+    afterEach(() => {
+      fixtureCleanup();
+    });
 
     it("sets selectionMode=Multiple and selects every bound id", () => {
       el.optionList = OPTIONS;
@@ -311,7 +323,9 @@ describe("FuroUi5SegmentedButton", () => {
       el = await fixture(html`<furo-ui5-segmented-button accessible-name="choice"></furo-ui5-segmented-button>`);
     });
 
-    afterEach(() => { fixtureCleanup(); });
+    afterEach(() => {
+      fixtureCleanup();
+    });
 
     it("UI writes go to the new model only after rebind", () => {
       const a = createString("1");
@@ -507,10 +521,7 @@ describe("FuroUi5SegmentedButton", () => {
       const model = fatArray(["1"]);
       el.bindData(model);
       selectByIds(el, ["2", "3"]);
-      assert.deepEqual(
-        model.map(item => item.value.toString()).sort(),
-        ["2", "3"]
-      );
+      assert.deepEqual(model.map(item => item.value.toString()).sort(), ["2", "3"]);
     });
 
     it("keeps the FAT item shape on write-back for an initially empty array", () => {
@@ -546,7 +557,12 @@ describe("FuroUi5SegmentedButton", () => {
 
     it("selects the items whose id is in the bound list", () => {
       el.optionList = OPTIONS;
-      el.bindData(optionArray([{ id: "1", displayName: "One" }, { id: "3", displayName: "Three" }]));
+      el.bindData(
+        optionArray([
+          { id: "1", displayName: "One" },
+          { id: "3", displayName: "Three" },
+        ])
+      );
       assert.equal(el.selectionMode, "Multiple");
       assert.deepEqual(selectedIds(el).sort(), ["1", "3"]);
     });

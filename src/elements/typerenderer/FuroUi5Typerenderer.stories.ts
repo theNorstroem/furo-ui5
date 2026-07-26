@@ -127,9 +127,7 @@ export const Default: StoryObj = {
   args: {
     context: "display",
   },
-  render: renderArgs => html`
-    <furo-ui5-typerenderer context="${renderArgs.context}" .model="${data.primitiveString}"></furo-ui5-typerenderer>
-  `,
+  render: renderArgs => html` <furo-ui5-typerenderer context="${renderArgs.context}" .model="${data.primitiveString}"></furo-ui5-typerenderer> `,
 };
 
 /**
@@ -192,9 +190,7 @@ export const MapField: StoryObj = {
   args: {
     context: "display",
   },
-  render: renderArgs => html`
-    <furo-ui5-typerenderer context="${renderArgs.context}" .model="${fat.attributes}"></furo-ui5-typerenderer>
-  `,
+  render: renderArgs => html` <furo-ui5-typerenderer context="${renderArgs.context}" .model="${fat.attributes}"></furo-ui5-typerenderer> `,
 };
 
 /**
@@ -214,10 +210,7 @@ export const RendererOverrides: StoryObj = {
         <tr>
           <th scope="row"><furo-ui5-label>.rendererOverrides</furo-ui5-label></th>
           <td>
-            <furo-ui5-typerenderer
-              .rendererOverrides="${{ "display-string": "story-loud-string" }}"
-              .model="${data.primitiveString}"
-            ></furo-ui5-typerenderer>
+            <furo-ui5-typerenderer .rendererOverrides="${{ "display-string": "story-loud-string" }}" .model="${data.primitiveString}"></furo-ui5-typerenderer>
           </td>
         </tr>
         <tr>

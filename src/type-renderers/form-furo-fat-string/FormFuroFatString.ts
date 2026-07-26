@@ -83,7 +83,12 @@ export class FormFuroFatString extends LitElement {
   override render() {
     return html`<furo-ui5-form-row>
       <furo-ui5-label for="input-field" slot="label" show-colon ?required="${this._model.__meta.required}">${this.label ?? this.LABEL}</furo-ui5-label>
-      <furo-ui5-text-input .model="${this.model}" id="input-field" ?disabled="${this.disabled}" accessible-name="${this.label ?? this.LABEL}"></furo-ui5-text-input>
+      <furo-ui5-text-input
+        .model="${this.model}"
+        id="input-field"
+        ?disabled="${this.disabled}"
+        accessible-name="${this.label ?? this.LABEL}"
+      ></furo-ui5-text-input>
     </furo-ui5-form-row>`;
   }
 }

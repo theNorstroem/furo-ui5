@@ -21,11 +21,8 @@ ArgsTransormer(args);
 
 const padFor = (e: Event): (HTMLElement & { clear: () => void; enable: () => void; disable: () => void }) | null => {
   const btn = e.target as HTMLElement;
-  return btn
-    .closest(".sign-pad-demo")
-    ?.querySelector("furo-ui5-sign-pad") as
-    | (HTMLElement & { clear: () => void; enable: () => void; disable: () => void })
-    | null;
+  return btn.closest(".sign-pad-demo")?.querySelector("furo-ui5-sign-pad") as
+    (HTMLElement & { clear: () => void; enable: () => void; disable: () => void }) | null;
 };
 
 const meta: Meta = {
@@ -57,9 +54,7 @@ export const Default: StoryObj = {
         ?disabled="${renderArgs.disabled}"
         style="border: 1px solid var(--sapField_BorderColor, #89919a);"
         @sign-updated="${(e: CustomEvent<string>) => {
-          const preview = (e.target as HTMLElement)
-            .closest(".sign-pad-demo")
-            ?.querySelector("img");
+          const preview = (e.target as HTMLElement).closest(".sign-pad-demo")?.querySelector("img");
           if (preview) preview.src = e.detail;
         }}"
       ></furo-ui5-sign-pad>
@@ -78,7 +73,5 @@ export const Default: StoryObj = {
 
 export const Disabled: StoryObj = {
   args: {},
-  render: () => html`
-    <furo-ui5-sign-pad disabled style="border: 1px solid var(--sapField_BorderColor, #89919a);"></furo-ui5-sign-pad>
-  `,
+  render: () => html` <furo-ui5-sign-pad disabled style="border: 1px solid var(--sapField_BorderColor, #89919a);"></furo-ui5-sign-pad> `,
 };

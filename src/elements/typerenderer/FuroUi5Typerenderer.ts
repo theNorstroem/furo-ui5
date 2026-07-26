@@ -331,6 +331,7 @@ export class FuroUi5Typerenderer extends LitElement {
    * and interpolate the tag name via `unsafeStatic`. eslint-plugin-lit parses every `html` tag as
    * plain lit-html and cannot model that, hence the two disabled rules.
    */
+
   /* eslint-disable lit/binding-positions, lit/no-invalid-html */
   override render() {
     const plan = this._plan;
@@ -344,7 +345,8 @@ export class FuroUi5Typerenderer extends LitElement {
       return html`${repeat(
         plan.items,
         item => item,
-        item => html`<${tag} .model="${item}"></${tag}>`,
+        item => html`
+          <${tag} .model="${item}"></${tag}>`
       )}`;
     }
 
@@ -352,12 +354,15 @@ export class FuroUi5Typerenderer extends LitElement {
       return html`${repeat(
         plan.entries,
         entry => entry.key,
-        entry => html`<${tag} map-key="${entry.key}" .model="${entry.node}"></${tag}>`,
+        entry => html`
+          <${tag} map-key="${entry.key}" .model="${entry.node}"></${tag}>`
       )}`;
     }
 
-    return html`<${tag} .model="${plan.node}"></${tag}>`;
+    return html`
+      <${tag} .model="${plan.node}"></${tag}>`;
   }
+
   /* eslint-enable lit/binding-positions, lit/no-invalid-html */
 
   /**
@@ -448,7 +453,10 @@ export class FuroUi5Typerenderer extends LitElement {
       return { kind: "array", tag: candidate.tag, items: [...(node as ARRAY<FieldNode, unknown>).value] };
     }
     if (candidate.kind === "map") {
-      const entries = [...(node as MAP<string, FieldNode, unknown>).value.entries()].map(([key, value]) => ({ key, node: value }));
+      const entries = [...(node as MAP<string, FieldNode, unknown>).value.entries()].map(([key, value]) => ({
+        key,
+        node: value,
+      }));
       return { kind: "map", tag: candidate.tag, entries };
     }
     return { kind: "single", tag: candidate.tag, node };
@@ -503,7 +511,11 @@ export class FuroUi5Typerenderer extends LitElement {
    * @private
    */
   private _applyOverrides(conventionalTag: string): string {
-    return FuroUi5Typerenderer._lookup(this.rendererOverrides, conventionalTag) ?? FuroUi5Typerenderer._lookup(FuroUi5Typerenderer.defaultOverrides, conventionalTag) ?? conventionalTag;
+    return (
+      FuroUi5Typerenderer._lookup(this.rendererOverrides, conventionalTag) ??
+      FuroUi5Typerenderer._lookup(FuroUi5Typerenderer.defaultOverrides, conventionalTag) ??
+      conventionalTag
+    );
   }
 
   /**
@@ -531,7 +543,13 @@ export class FuroUi5Typerenderer extends LitElement {
     // `ARRAY.Builder()` or the parent's field descriptor. It is private upstream — same access as
     // `FuroUi5SegmentedButton._detectModelItemType`. It throws on a parentless built-by-hand array.
     try {
-      return FuroUi5Typerenderer._typeNameOfConstructor((node as unknown as { __getConstructor?: () => unknown }).__getConstructor?.());
+      return FuroUi5Typerenderer._typeNameOfConstructor(
+        (
+          node as unknown as {
+            __getConstructor?: () => unknown;
+          }
+        ).__getConstructor?.()
+      );
     } catch {
       return undefined;
     }
@@ -589,14 +607,17 @@ export class FuroUi5Typerenderer extends LitElement {
     this._activeCandidate = undefined;
     this.setAttribute("renderer-missing", tags.join(" "));
 
-    console.error(`furo-ui5-typerenderer: no renderer registered for "${typeName}" in context "${this.context}". Tried ${tags.join(", ")}. Did you import it?`, this);
+    console.error(
+      `furo-ui5-typerenderer: no renderer registered for "${typeName}" in context "${this.context}". Tried ${tags.join(", ")}. Did you import it?`,
+      this
+    );
 
     this.dispatchEvent(
       new CustomEvent("renderer-missing", {
         bubbles: true,
         composed: true,
         detail: { tags, context: this.context, typeName },
-      }),
+      })
     );
   }
 
