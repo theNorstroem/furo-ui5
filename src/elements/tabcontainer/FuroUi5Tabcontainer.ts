@@ -16,6 +16,14 @@ import TabContainer from "@ui5/webcomponents/dist/TabContainer.js";
  */
 export class FuroUi5Tabcontainer extends TabContainer {
   /**
+   * Added for compatibility
+   */
+  override connectedCallback() {
+    this.setAttribute("ui5-tabcontainer", "");
+    return super.connectedCallback();
+  }
+
+  /**
    * @private
    */
   static override get metadata() {

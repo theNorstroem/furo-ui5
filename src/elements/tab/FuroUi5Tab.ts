@@ -16,6 +16,14 @@ import Tab from "@ui5/webcomponents/dist/Tab.js";
  */
 export class FuroUi5Tab extends Tab {
   /**
+   * Added for compatibility
+   */
+  override connectedCallback() {
+    this.setAttribute("ui5-tab", "");
+    return super.connectedCallback();
+  }
+
+  /**
    * @private
    */
   static override get metadata() {
