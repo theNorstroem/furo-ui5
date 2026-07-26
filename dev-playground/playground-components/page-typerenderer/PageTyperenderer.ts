@@ -104,6 +104,9 @@ import "@/type-renderers/display-uint64";
 import "@/type-renderers/form-bool"
 import "@/type-renderers/form-furo-fat-bool"
 import "@/type-renderers/form-google-protobuf-boolvalue"
+import "@/type-renderers/form-string"
+import "@/type-renderers/form-furo-fat-string"
+import "@/type-renderers/form-google-protobuf-stringvalue"
 import {TableCss} from "@/styles/table.css"
 import {AllTypesTest} from "@/models/furoui5test/AllTypesTest"
 import "@/elements/section";
@@ -255,6 +258,10 @@ export class PageTyperenderer extends LitElement {
               </tr>
             </tbody>
           </table>
+          <hr />
+          <form-string label="form string" .model="${this.data.primitiveString}"></form-string>
+          <form-furo-fat-string label="form furo fat string" .model="${this.data.furoFatString}"></form-furo-fat-string>
+          <form-google-protobuf-stringvalue label="form google protobuf stringvalue" .model="${this.data.googleProtobufStringvalue}"></form-google-protobuf-stringvalue>
         </furo-ui5-subsection>
 
         <furo-ui5-subsection heading="Date / Time">

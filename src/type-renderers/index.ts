@@ -75,4 +75,7 @@ export * from "./display-uint64/DisplayUint64";
 // form
 export * from "./form-bool/FormBool";
 export * from "./form-furo-fat-bool/FormFuroFatBool";
+export * from "./form-furo-fat-string/FormFuroFatString";
 export * from "./form-google-protobuf-boolvalue/FormGoogleProtobufBoolvalue";
+export * from "./form-google-protobuf-stringvalue/FormGoogleProtobufStringvalue";
+export * from "./form-string/FormString";
