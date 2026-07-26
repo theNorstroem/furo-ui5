@@ -43,11 +43,9 @@ export * from "./celledit-uint64/CelleditUint64";
 export * from "./display-google-protobuf-any/DisplayGoogleProtobufAny";
 
 // form
-export * from "./form-bool/FormBool";
 export * from "./form-double/FormDouble";
 export * from "./form-float/FormFloat";
 export * from "./form-furo-bigdecimal/FormFuroBigdecimal";
-export * from "./form-furo-fat-bool/FormFuroFatBool";
 export * from "./form-furo-fat-double/FormFuroFatDouble";
 export * from "./form-furo-fat-float/FormFuroFatFloat";
 export * from "./form-furo-fat-int32/FormFuroFatInt32";
@@ -57,7 +55,6 @@ export * from "./form-furo-fat-uint32/FormFuroFatUint32";
 export * from "./form-furo-fat-uint64/FormFuroFatUint64";
 export * from "./form-furo-type-date/FormFuroTypeDate";
 export * from "./form-furo-type-money/FormFuroTypeMoney";
-export * from "./form-google-protobuf-boolvalue/FormGoogleProtobufBoolvalue";
 export * from "./form-google-protobuf-doublevalue/FormGoogleProtobufDoublevalue";
 export * from "./form-google-protobuf-floatvalue/FormGoogleProtobufFloatvalue";
 export * from "./form-google-protobuf-int32value/FormGoogleProtobufInt32value";

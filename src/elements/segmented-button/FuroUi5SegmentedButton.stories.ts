@@ -7,7 +7,7 @@ import "@/elements/label";
 import "@/elements/title";
 import "@/elements/text-input";
 import "@/elements/pretty-json";
-import "@ui5/webcomponents-icons/AllIcons";
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 
 import { ARRAY } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";

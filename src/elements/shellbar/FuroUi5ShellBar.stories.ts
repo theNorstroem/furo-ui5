@@ -5,7 +5,7 @@ import "@/elements/shellbar-spacer";
 import "@/elements/user-menu";
 import "@/elements/button";
 import "@ui5/webcomponents/dist/Avatar.js";
-import "@ui5/webcomponents-icons/AllIcons";
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import "@ui5/webcomponents-fiori/dist/SearchItem.js";
 import "@ui5/webcomponents-fiori/dist/UserMenuItem.js";
 import "@ui5/webcomponents-fiori/dist/UserMenuAccount.js";

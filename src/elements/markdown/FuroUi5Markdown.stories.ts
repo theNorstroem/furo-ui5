@@ -6,7 +6,7 @@ import "@/elements/button";
 import "@/elements/label";
 import "@/elements/markdown";
 import "@furo/layout/furo-horizontal-flex";
-import "@ui5/webcomponents-icons/dist/AllIcons";
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";

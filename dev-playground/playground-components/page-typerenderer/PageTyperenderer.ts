@@ -101,6 +101,9 @@ import "@/type-renderers/display-int64";
 import "@/type-renderers/display-string";
 import "@/type-renderers/display-uint32";
 import "@/type-renderers/display-uint64";
+import "@/type-renderers/form-bool"
+import "@/type-renderers/form-furo-fat-bool"
+import "@/type-renderers/form-google-protobuf-boolvalue"
 import {TableCss} from "@/styles/table.css"
 import {AllTypesTest} from "@/models/furoui5test/AllTypesTest"
 import "@/elements/section";
@@ -172,7 +175,6 @@ export class PageTyperenderer extends LitElement {
                 <celledit-bool .model="${this.data.primitiveBool}"></celledit-bool>
               </td>
             </tr>
-
             <tr>
               <td><furo-ui5-label>furo.fat.Bool</furo-ui5-label></td>
               <td>
@@ -198,6 +200,10 @@ export class PageTyperenderer extends LitElement {
               </td>
             </tr>
           </table>
+          <hr />
+          <form-bool label="form bool" .model="${this.data.primitiveBool}"></form-bool>
+          <form-furo-fat-bool label="form furo fat bool" .model="${this.data.furoFatBool}"></form-furo-fat-bool>
+          <form-google-protobuf-boolvalue label="form google protobuf boolvalue" .model="${this.data.googleProtobufBoolvalue}"></form-google-protobuf-boolvalue>
         </furo-ui5-subsection>
 
         <furo-ui5-subsection heading="Strings">

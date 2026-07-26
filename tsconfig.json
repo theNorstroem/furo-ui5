@@ -5,7 +5,6 @@
     "moduleResolution": "Bundler",
     "noEmitOnError": true,
     "strict": true,
-    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "importHelpers": true,

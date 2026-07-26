@@ -1,9 +1,9 @@
 import { FormBool } from "./FormBool";
 
-FormBool.define();
-
 declare global {
   interface HTMLElementTagNameMap {
     "form-bool": FormBool;
   }
 }
+
+window.customElements.define("form-bool", FormBool);

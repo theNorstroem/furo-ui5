@@ -1,7 +1,7 @@
 import "@/elements/shellbar";
 import "@/elements/shellbar-item";
 import "@/elements/shellbar-spacer";
-import "@ui5/webcomponents-icons/AllIcons";
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";

@@ -1,6 +1,6 @@
 import "@/Assets";
 import "@/elements/link";
-import "@ui5/webcomponents-icons/AllIcons";
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import LinkDesign from "@ui5/webcomponents/dist/types/LinkDesign.js";

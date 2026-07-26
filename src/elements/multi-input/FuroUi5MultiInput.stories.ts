@@ -127,6 +127,9 @@ export const Minimal: StoryObj = {
       .model="${tags}"
       value-state="${ifDefined(renderArgs.valueState)}"
     ></furo-ui5-multi-input>
+
+    <br />
+    <furo-ui5-pretty-json .model="${tags}"></furo-ui5-pretty-json>
   `,
 };
 
@@ -143,6 +146,9 @@ export const FatStrings: StoryObj = {
       .model="${fatTags}"
       value-state="${ifDefined(renderArgs.valueState)}"
     ></furo-ui5-multi-input>
+
+    <br />
+    <furo-ui5-pretty-json .model="${fatTags}"></furo-ui5-pretty-json>
   `,
 };
 

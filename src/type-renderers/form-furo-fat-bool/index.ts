@@ -1,9 +1,9 @@
 import { FormFuroFatBool } from "./FormFuroFatBool";
 
-FormFuroFatBool.define();
-
 declare global {
   interface HTMLElementTagNameMap {
     "form-furo-fat-bool": FormFuroFatBool;
   }
 }
+
+window.customElements.define("form-furo-fat-bool", FormFuroFatBool);

@@ -4,7 +4,7 @@ import "@/elements/form-row";
 import "@/elements/button";
 import "@/elements/icon";
 import "@/elements/label";
-import "@ui5/webcomponents-icons/dist/AllIcons";
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
