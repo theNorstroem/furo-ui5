@@ -6699,7 +6699,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The 'furo-ui5-date-picker' component lets the user select a date, with data binding.\n\nIt supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/ui5-webcomponents/playground/components/DatePicker/).\n\nYou can bind a `string` (ISO 8601, e.g. \"2020-12-31\") or a `google.type.Date`. Because the UI5\nDatePicker is date-only, the bindable value is always handled as an ISO `YYYY-MM-DD` string.\n\n## supported meta and constraints\n- **readonly: true** — set the element to readonly\n- **required: true** — mark the element as required\n- **placeholder:\"some string\"** — set the placeholder for the element\n- **min:\"1999-12-31\"** — set the minDate for the element (use iso date in the constraint)\n- **max:\"1999-12-31\"** — set the maxDate for the element (use iso date in the constraint)\n\n### Overview\n\nThe `furo-ui5-date-picker` component provides an input field with assigned calendar which opens on user action.\nThe `furo-ui5-date-picker` allows users to select a localized date using touch,\nmouse, or keyboard input. It consists of two parts: the date input field and the\ndate picker.\n\n### Usage\n\nThe user can enter a date by:\n\n- Using the calendar that opens in a popup\n- Typing it in directly in the input field\n\nWhen the user makes an entry and presses the enter key, the calendar shows the corresponding date.\nWhen the user directly triggers the calendar display, the actual date is displayed.\n\n### Formatting\n\nIf a date is entered by typing it into\nthe input field, it must fit to the used date format.\n\nSupported format options are pattern-based on Unicode LDML Date Format notation.\nFor more information, see [UTS #35: Unicode Locale Data Markup Language](https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table).\n\nFor example, if the valueFormat is \"yyyy-MM-dd\", the displayFormat is \"MMM d, y\", and the used locale is English, a valid value string is \"2015-07-30\", which leads to an output of \"Jul 30, 2015\".\nIf no placeholder is set to the DatePicker, the used displayFormat is displayed as a placeholder. If another placeholder is needed, it must be set.\n\n### Keyboard Handling\nThe `furo-ui5-date-picker` provides advanced keyboard handling.\nIf the `furo-ui5-date-picker` is focused,\nyou can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.\nOnce the drop-down is opened, you can use the [Up], [Down], [Left] or [Right] arrow keys\nto navigate through the dates and select one by pressing the `Space` or `Enter` keys. Moreover you can\nuse TAB to reach the buttons for changing month and year.\n\nIf the `furo-ui5-date-picker` input field is focused and its corresponding picker dialog is not opened,\nthen users can increment or decrement the date referenced by `dateValue` property\nby using the following shortcuts:\n\n- [Page Down] - Decrements the corresponding day of the month by one\n- [Shift] + [Page Down] - Decrements the corresponding month by one\n- [Shift] + [Ctrl] + [Page Down] - Decrements the corresponding year by one\n- [Page Up] - Increments the corresponding day of the month by one\n- [Shift] + [Page Up] - Increments the corresponding month by one\n- [Shift] + [Ctrl] + [Page Up] - Increments the corresponding year by one\n\n### Calendar types\nThe component supports several calendar types - Gregorian, Buddhist, Islamic, Japanese and Persian.\nBy default the Gregorian Calendar is used. In order to use the Buddhist, Islamic, Japanese or Persian calendar,\nyou need to set the `primaryCalendarType` property and import one or more of the following modules:\n\n\n\n\n\n\n\n\n\nOr, you can use the global configuration and set the `calendarType` key:\n\n```html\n<script data-id=\"sap-ui-config\" type=\"application/json\">\n\t{\n\t\t\"calendarType\": \"Japanese\"\n\t}\n<script>\n```\n\n\n",
+          "description": "The 'furo-ui5-date-picker' component lets the user select a date, with data binding.\n\nIt supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/ui5-webcomponents/playground/components/DatePicker/).\n\nYou can bind a `string` (ISO 8601, e.g. \"2020-12-31\"), a `google.type.Date` or a `furo.type.Date`.\nBecause the UI5 DatePicker is date-only, the bindable value is always handled as an ISO\n`YYYY-MM-DD` string.\n\n## supported meta and constraints\n- **readonly: true** — set the element to readonly\n- **required: true** — mark the element as required\n- **placeholder:\"some string\"** — set the placeholder for the element\n- **min:\"1999-12-31\"** — set the minDate for the element (use iso date in the constraint)\n- **max:\"1999-12-31\"** — set the maxDate for the element (use iso date in the constraint)\n\n### Overview\n\nThe `furo-ui5-date-picker` component provides an input field with assigned calendar which opens on user action.\nThe `furo-ui5-date-picker` allows users to select a localized date using touch,\nmouse, or keyboard input. It consists of two parts: the date input field and the\ndate picker.\n\n### Usage\n\nThe user can enter a date by:\n\n- Using the calendar that opens in a popup\n- Typing it in directly in the input field\n\nWhen the user makes an entry and presses the enter key, the calendar shows the corresponding date.\nWhen the user directly triggers the calendar display, the actual date is displayed.\n\n### Formatting\n\nIf a date is entered by typing it into\nthe input field, it must fit to the used date format.\n\nSupported format options are pattern-based on Unicode LDML Date Format notation.\nFor more information, see [UTS #35: Unicode Locale Data Markup Language](https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table).\n\nFor example, if the valueFormat is \"yyyy-MM-dd\", the displayFormat is \"MMM d, y\", and the used locale is English, a valid value string is \"2015-07-30\", which leads to an output of \"Jul 30, 2015\".\nIf no placeholder is set to the DatePicker, the used displayFormat is displayed as a placeholder. If another placeholder is needed, it must be set.\n\n### Keyboard Handling\nThe `furo-ui5-date-picker` provides advanced keyboard handling.\nIf the `furo-ui5-date-picker` is focused,\nyou can open or close the drop-down by pressing [F4], [Alt] + [Up] or [Alt] + [Down] keys.\nOnce the drop-down is opened, you can use the [Up], [Down], [Left] or [Right] arrow keys\nto navigate through the dates and select one by pressing the `Space` or `Enter` keys. Moreover you can\nuse TAB to reach the buttons for changing month and year.\n\nIf the `furo-ui5-date-picker` input field is focused and its corresponding picker dialog is not opened,\nthen users can increment or decrement the date referenced by `dateValue` property\nby using the following shortcuts:\n\n- [Page Down] - Decrements the corresponding day of the month by one\n- [Shift] + [Page Down] - Decrements the corresponding month by one\n- [Shift] + [Ctrl] + [Page Down] - Decrements the corresponding year by one\n- [Page Up] - Increments the corresponding day of the month by one\n- [Shift] + [Page Up] - Increments the corresponding month by one\n- [Shift] + [Ctrl] + [Page Up] - Increments the corresponding year by one\n\n### Calendar types\nThe component supports several calendar types - Gregorian, Buddhist, Islamic, Japanese and Persian.\nBy default the Gregorian Calendar is used. In order to use the Buddhist, Islamic, Japanese or Persian calendar,\nyou need to set the `primaryCalendarType` property and import one or more of the following modules:\n\n\n\n\n\n\n\n\n\nOr, you can use the global configuration and set the `calendarType` key:\n\n```html\n<script data-id=\"sap-ui-config\" type=\"application/json\">\n\t{\n\t\t\"calendarType\": \"Japanese\"\n\t}\n<script>\n```\n\n\n",
           "name": "DatePicker",
           "members": [
             {
@@ -6715,7 +6715,7 @@
               "kind": "field",
               "name": "_model",
               "type": {
-                "text": "STRING | XDate"
+                "text": "STRING | XDate | FuroXDate"
               },
               "privacy": "private",
               "default": "new XDate()"
@@ -6784,7 +6784,7 @@
                 {
                   "name": "fieldNode",
                   "type": {
-                    "text": "STRING | XDate | undefined",
+                    "text": "STRING | XDate | FuroXDate | undefined",
                     "references": [
                       {
                         "name": "XDate",
@@ -7103,7 +7103,7 @@
               "kind": "field",
               "name": "model",
               "type": {
-                "text": "STRING | XDate",
+                "text": "STRING | XDate | FuroXDate",
                 "references": [
                   {
                     "name": "STRING",
@@ -7114,6 +7114,12 @@
                     "name": "XDate",
                     "package": "@/models",
                     "module": "google/type/Date"
+                  },
+                  {
+                    "name": "XDate",
+                    "as": "FuroXDate",
+                    "package": "@/models",
+                    "module": "furo/type/Date"
                   }
                 ]
               },

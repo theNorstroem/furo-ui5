@@ -7,6 +7,7 @@ import type CalendarType from "@ui5/webcomponents-base/dist/types/CalendarType.j
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
 import * as React from "react";
 
+import type { XDate as FuroXDate } from "@/models/furo/type/Date";
 import type { XDate } from "@/models/google/type/Date";
 
 export interface DatePicker extends React.HTMLAttributes<HTMLElement> {
@@ -20,7 +21,7 @@ export interface DatePicker extends React.HTMLAttributes<HTMLElement> {
   /**
    * Use this to bind a model field by attribute.
    */
-  model?: STRING | XDate;
+  model?: STRING | XDate | FuroXDate;
 
   // attributes
 
@@ -170,8 +171,9 @@ declare module "react" {
        *
        * It supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/furo-furo-ui5-webcomponents/playground/components/DatePicker/).
        *
-       * You can bind a `string` (ISO 8601, e.g. "2020-12-31") or a `google.type.Date`. Because the UI5
-       * DatePicker is date-only, the bindable value is always handled as an ISO `YYYY-MM-DD` string.
+       * You can bind a `string` (ISO 8601, e.g. "2020-12-31"), a `google.type.Date` or a `furo.type.Date`.
+       * Because the UI5 DatePicker is date-only, the bindable value is always handled as an ISO
+       * `YYYY-MM-DD` string.
        *
        * ## supported meta and constraints
        * - **readonly: true** — set the element to readonly

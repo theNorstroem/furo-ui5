@@ -5,6 +5,7 @@ import { DateAndTimeReaderWriters } from "@/lib/open-models/DateAndTimeReaderWri
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
+import { XDate as FuroXDate } from "@/models/furo/type/Date";
 import { XDate } from "@/models/google/type/Date";
 
 /**
@@ -23,8 +24,9 @@ interface DateFieldConstraints extends FieldConstraints {
  *
  * It supports all features from the [SAP ui5 DatePicker element](https://sap.github.io/ui5-webcomponents/playground/components/DatePicker/).
  *
- * You can bind a `string` (ISO 8601, e.g. "2020-12-31") or a `google.type.Date`. Because the UI5
- * DatePicker is date-only, the bindable value is always handled as an ISO `YYYY-MM-DD` string.
+ * You can bind a `string` (ISO 8601, e.g. "2020-12-31"), a `google.type.Date` or a `furo.type.Date`.
+ * Because the UI5 DatePicker is date-only, the bindable value is always handled as an ISO
+ * `YYYY-MM-DD` string.
  *
  * ## supported meta and constraints
  * - **readonly: true** — set the element to readonly
@@ -57,9 +59,9 @@ export class FuroUi5DatePicker extends DatePicker {
     this.valueFormat = "yyyy-MM-dd";
   }
 
-  private _model: STRING | XDate = new XDate();
+  private _model: STRING | XDate | FuroXDate = new XDate();
 
-  public get model(): STRING | XDate {
+  public get model(): STRING | XDate | FuroXDate {
     return this._model;
   }
 
@@ -68,9 +70,10 @@ export class FuroUi5DatePicker extends DatePicker {
    *
    * @typeref STRING - "@furo/open-models/"
    * @typeref XDate - "@/models/google/type/Date"
+   * @typeref XDate as FuroXDate - "@/models/furo/type/Date"
    * @public
    */
-  public set model(value: STRING | XDate) {
+  public set model(value: STRING | XDate | FuroXDate) {
     this.bindData(value);
   }
 
@@ -78,9 +81,10 @@ export class FuroUi5DatePicker extends DatePicker {
    * Connects your data model to this component.
    *
    * @paramref fieldNode - XDate - "@/models/google/type/Date"
+   * @paramref fieldNode FuroXDate - "@/models/furo/type/Date"
    * @public
    */
-  public bindData(fieldNode: STRING | XDate | undefined) {
+  public bindData(fieldNode: STRING | XDate | FuroXDate | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
