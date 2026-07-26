@@ -129,6 +129,8 @@ import "@/type-renderers/form-google-type-date"
 import "@/type-renderers/form-furo-type-date"
 import "@/type-renderers/form-google-protobuf-timestamp"
 import "@/type-renderers/form-google-type-timeofday"
+import "@/type-renderers/form-google-type-money"
+import "@/type-renderers/form-furo-type-money"
 import {TableCss} from "@/styles/table.css"
 import {AllTypesTest} from "@/models/furoui5test/AllTypesTest"
 import "@/elements/section";
@@ -397,6 +399,9 @@ export class PageTyperenderer extends LitElement {
               </tr>
             </tbody>
           </table>
+          <hr />
+          <form-google-type-money label="form google type money" .model="${this.data.googleTypeMoney}"></form-google-type-money>
+          <form-furo-type-money label="form furo type money" .model="${this.data.furoTypeMoney}"></form-furo-type-money>
         </furo-ui5-subsection>
       </furo-ui5-section>
 

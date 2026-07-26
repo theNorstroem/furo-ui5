@@ -1,9 +1,9 @@
 import { FormFuroTypeMoney } from "./FormFuroTypeMoney";
 
-FormFuroTypeMoney.define();
-
 declare global {
   interface HTMLElementTagNameMap {
     "form-furo-type-money": FormFuroTypeMoney;
   }
 }
+
+window.customElements.define("form-furo-type-money", FormFuroTypeMoney);

@@ -44,5 +44,3 @@ export * from "./display-google-protobuf-any/DisplayGoogleProtobufAny";
 
 // form
 export * from "./form-furo-bigdecimal/FormFuroBigdecimal";
-export * from "./form-furo-type-money/FormFuroTypeMoney";
-export * from "./form-google-type-money/FormGoogleTypeMoney";
