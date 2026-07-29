@@ -84,8 +84,9 @@ const TableCss = css`
     position: relative;
   }
 
-  tr[value-state="Negative"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapShell_NegativeColor);
+  /* the indicator bar itself — the per-state rules below only pick its color */
+  tr[value-state] td:first-child:before {
+    border-left: 0.4rem solid var(--_furo-table-value-state-color, transparent);
     content: "";
     display: block;
     position: absolute;
@@ -94,114 +95,52 @@ const TableCss = css`
     left: 0;
   }
 
-  tr[value-state="Positive"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapShell_PositiveColor);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Negative"] {
+    --_furo-table-value-state-color: var(--sapShell_NegativeColor);
   }
 
-  tr[value-state="Information"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapShell_InformativeColor);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Positive"] {
+    --_furo-table-value-state-color: var(--sapShell_PositiveColor);
   }
 
-  tr[value-state="Critical"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapShell_CriticalColor);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Information"] {
+    --_furo-table-value-state-color: var(--sapShell_InformativeColor);
   }
 
-  tr[value-state="Indication1"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapIndicationColor_1_Background);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Critical"] {
+    --_furo-table-value-state-color: var(--sapShell_CriticalColor);
   }
 
-  tr[value-state="Indication2"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapIndicationColor_2_Background);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Indication1"] {
+    --_furo-table-value-state-color: var(--sapIndicationColor_1_Background);
   }
 
-  tr[value-state="Indication3"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapIndicationColor_3_Background);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Indication2"] {
+    --_furo-table-value-state-color: var(--sapIndicationColor_2_Background);
   }
 
-  tr[value-state="Indication4"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapIndicationColor_4_Background);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Indication3"] {
+    --_furo-table-value-state-color: var(--sapIndicationColor_3_Background);
   }
 
-  tr[value-state="Indication5"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapIndicationColor_5_Background);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Indication4"] {
+    --_furo-table-value-state-color: var(--sapIndicationColor_4_Background);
   }
 
-  tr[value-state="Indication6"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapIndicationColor_6_Background);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Indication5"] {
+    --_furo-table-value-state-color: var(--sapIndicationColor_5_Background);
   }
 
-  tr[value-state="Indication7"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapIndicationColor_7_Background);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Indication6"] {
+    --_furo-table-value-state-color: var(--sapIndicationColor_6_Background);
   }
 
-  tr[value-state="Indication8"] td:first-child:before {
-    border-left: 0.4rem solid var(--sapIndicationColor_8_Background);
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  tr[value-state="Indication7"] {
+    --_furo-table-value-state-color: var(--sapIndicationColor_7_Background);
+  }
+
+  tr[value-state="Indication8"] {
+    --_furo-table-value-state-color: var(--sapIndicationColor_8_Background);
   }
 `;
 
