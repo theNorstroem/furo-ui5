@@ -1,4 +1,3 @@
-import { LitFBP } from "@furo/fbp/dist/LitFBP";
 import { css, html, LitElement } from "lit";
 import { property, query } from "lit/decorators.js";
 import SignaturePad from "signature_pad";
@@ -21,7 +20,7 @@ import DebounceBuilder from "@/util/Debounce";
  * @tagname furo-ui5-sign-pad
 
  */
-export class FuroUi5SignPad extends LitFBP(LitElement) {
+export class FuroUi5SignPad extends LitElement {
   @query("canvas") private canvas!: HTMLCanvasElement;
 
   private signaturePad: SignaturePad | undefined;
@@ -55,12 +54,10 @@ export class FuroUi5SignPad extends LitFBP(LitElement) {
   }
 
   /**
-   * flow is ready lifecycle method
+   * lit lifecycle: build the SignaturePad once the shadow DOM exists
    * @private
    */
-  override _FBPReady() {
-    super._FBPReady();
-
+  override firstUpdated() {
     this.signaturePad = new SignaturePad(this.canvas, {});
     const processChanges = DebounceBuilder(() => {
       this.encodeImage();

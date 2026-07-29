@@ -1,4 +1,3 @@
-import { LitFBP } from "@furo/fbp/dist/LitFBP";
 import { css, CSSResult, html, LitElement } from "lit";
 
 /**
@@ -19,7 +18,7 @@ import { css, CSSResult, html, LitElement } from "lit";
  * @tagname furo-ui5-form-row
  * @public
  */
-export class FuroUi5FormRow extends LitFBP(LitElement) {
+export class FuroUi5FormRow extends LitElement {
   override render() {
     return html` <div class="label"><slot name="label"></slot></div>
       <div class="field">

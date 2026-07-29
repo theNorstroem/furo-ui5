@@ -17,7 +17,7 @@ describe("SignPad Component", async () => {
 
   beforeAll(async () => {
     el = await fixture(html` <furo-ui5-sign-pad role="application" aria-label="signature"></furo-ui5-sign-pad> `);
-    // allow _FBPReady to construct the internal SignaturePad
+    // allow firstUpdated to construct the internal SignaturePad
     await delay(50);
   });
 

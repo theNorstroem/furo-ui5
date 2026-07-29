@@ -1,4 +1,3 @@
-import { LitFBP } from "@furo/fbp/dist/LitFBP";
 import { css, html, LitElement, nothing } from "lit";
 import { property } from "lit/decorators.js";
 
@@ -32,7 +31,7 @@ import { property } from "lit/decorators.js";
  * @tagname furo-ui5-section
  * @public
  */
-export class FuroUi5Section extends LitFBP(LitElement) {
+export class FuroUi5Section extends LitElement {
   override connectedCallback() {
     super.connectedCallback();
     this.setAttribute("furo-ui5-section", "");

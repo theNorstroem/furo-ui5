@@ -11918,12 +11918,6 @@
             }
           ],
           "members": [],
-          "mixins": [
-            {
-              "name": "LitFBP",
-              "package": "@furo/fbp/dist/LitFBP"
-            }
-          ],
           "tagName": "furo-ui5-form-row",
           "customElement": true,
           "summary": "Single row within a form containing label and input field."
@@ -24222,12 +24216,6 @@
               "attribute": "heading-level"
             }
           ],
-          "mixins": [
-            {
-              "name": "LitFBP",
-              "package": "@furo/fbp/dist/LitFBP"
-            }
-          ],
           "tagName": "furo-ui5-section",
           "customElement": true,
           "summary": "Major content section within object pages."
@@ -28664,12 +28652,6 @@
               "default": "false"
             },
             {
-              "kind": "method",
-              "name": "_FBPReady",
-              "description": "flow is ready lifecycle method",
-              "privacy": "private"
-            },
-            {
               "kind": "field",
               "name": "_field",
               "type": {
@@ -28775,12 +28757,6 @@
               },
               "description": "Set to true to disable the drawing features.\n\nTipp: You can also use the `disable()` and `enable()` methods.",
               "fieldName": "disabled"
-            }
-          ],
-          "mixins": [
-            {
-              "name": "LitFBP",
-              "package": "@furo/fbp/dist/LitFBP"
             }
           ],
           "tagName": "furo-ui5-sign-pad",
@@ -30162,11 +30138,6 @@
           ],
           "members": [
             {
-              "kind": "method",
-              "name": "_FBPReady",
-              "privacy": "protected"
-            },
-            {
               "kind": "field",
               "name": "expanded",
               "type": {
@@ -30196,7 +30167,8 @@
               "type": {
                 "text": "boolean"
               },
-              "privacy": "private"
+              "privacy": "private",
+              "default": "false"
             },
             {
               "kind": "field",
@@ -30219,6 +30191,19 @@
               "description": "Defines the heading level. Available options are: \"H6\" to \"H1\".",
               "privacy": "public",
               "attribute": "heading-level"
+            },
+            {
+              "kind": "field",
+              "name": "moreSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "onToggleMoreClicked",
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -30300,12 +30285,6 @@
               "description": "Defines the text that will be displayed for `show more`",
               "fieldName": "showMoreText",
               "attribute": "show-more-text"
-            }
-          ],
-          "mixins": [
-            {
-              "name": "LitFBP",
-              "package": "@furo/fbp/dist/LitFBP"
             }
           ],
           "tagName": "furo-ui5-subsection",

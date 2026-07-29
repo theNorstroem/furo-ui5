@@ -1,0 +1,29 @@
+import {Meta} from '@storybook/addon-docs/blocks';
+
+<Meta title="how to's/Using styled plain html tables"/>
+
+todo: explain how to use table.css.ts with lit (systems without shadowroot already have the styles from global styles)
+
+```
+import { TableCss } from "@furo/ui5/styles/table.css";
+
+  /**
+   * Styles
+   * @private
+   */
+  static styles = [
+    TableCss,
+    css`
+      :host {
+        display: block;
+        position: relative;
+        padding: var(--MediaSizeIndentation);
+      }
+
+      :host([hidden]) {
+        display: none;
+      }
+ ]
+```
+
+todo: explain how to use value state and indication colors and link to https://www.sap.com/design-system/fiori-design-web/v1-148/foundations/visual/colors/colors#semantic-colors

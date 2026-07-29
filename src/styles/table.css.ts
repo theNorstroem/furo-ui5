@@ -2,6 +2,7 @@ import { css } from "lit";
 
 const TableCss = css`
   /* raw HTML tables */
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -28,6 +29,7 @@ const TableCss = css`
   thead tr {
     border-top: none;
   }
+
   tr {
     background-color: var(--sapList_Background);
     border-top: 1px solid var(--sapList_BorderColor);
@@ -114,6 +116,86 @@ const TableCss = css`
 
   tr[value-state="Critical"] td:first-child:before {
     border-left: 0.4rem solid var(--sapShell_CriticalColor);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  tr[value-state="Indication1"] td:first-child:before {
+    border-left: 0.4rem solid var(--sapIndicationColor_1_Background);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  tr[value-state="Indication2"] td:first-child:before {
+    border-left: 0.4rem solid var(--sapIndicationColor_2_Background);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  tr[value-state="Indication3"] td:first-child:before {
+    border-left: 0.4rem solid var(--sapIndicationColor_3_Background);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  tr[value-state="Indication4"] td:first-child:before {
+    border-left: 0.4rem solid var(--sapIndicationColor_4_Background);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  tr[value-state="Indication5"] td:first-child:before {
+    border-left: 0.4rem solid var(--sapIndicationColor_5_Background);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  tr[value-state="Indication6"] td:first-child:before {
+    border-left: 0.4rem solid var(--sapIndicationColor_6_Background);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  tr[value-state="Indication7"] td:first-child:before {
+    border-left: 0.4rem solid var(--sapIndicationColor_7_Background);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  tr[value-state="Indication8"] td:first-child:before {
+    border-left: 0.4rem solid var(--sapIndicationColor_8_Background);
     content: "";
     display: block;
     position: absolute;

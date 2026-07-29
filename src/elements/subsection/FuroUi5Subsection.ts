@@ -3,9 +3,8 @@ import "@ui5/webcomponents/dist/Link.js";
 import "@/elements/link";
 import "@/elements/title";
 
-import { LitFBP } from "@furo/fbp/dist/LitFBP";
 import { css, html, LitElement, nothing } from "lit";
-import { property } from "lit/decorators.js";
+import { property, query, state } from "lit/decorators.js";
 
 /**
  * `furo-ui5-subsection`
@@ -41,8 +40,10 @@ import { property } from "lit/decorators.js";
  * @related furo-ui5-section
  * @tagname furo-ui5-subsection
  */
-export class FuroUi5Subsection extends LitFBP(LitElement) {
-  private hasMoreContent!: boolean;
+export class FuroUi5Subsection extends LitElement {
+  @state() private hasMoreContent = false;
+
+  @query('slot[name="more"]') private moreSlot!: HTMLSlotElement;
 
   /**
    * Heading text of the subsection
@@ -90,24 +91,20 @@ export class FuroUi5Subsection extends LitFBP(LitElement) {
   @property({ type: Boolean, attribute: "full-width", reflect: true })
   fullWidth = false;
 
-  protected override _FBPReady() {
-    super._FBPReady();
-
-    this._FBPAddWireHook(
-      "--clicked",
-      () => {
-        // toggle the read more content section
-        this.expanded = !this.expanded;
-      },
-      false
-    );
-  }
+  private onToggleMoreClicked = () => {
+    // toggle the read more content section
+    this.expanded = !this.expanded;
+  };
 
   override connectedCallback() {
     super.connectedCallback();
     this.setAttribute("furo-ui5-subsection", "");
+  }
 
-    this.hasMoreContent = !!this.querySelector("*[slot=more]");
+  override firstUpdated() {
+    this.moreSlot.addEventListener("slotchange", () => {
+      this.hasMoreContent = this.moreSlot.assignedElements().length > 0;
+    });
   }
 
   override render() {
@@ -124,14 +121,14 @@ export class FuroUi5Subsection extends LitFBP(LitElement) {
       <slot id="default"></slot>
       <furo-horizontal-flex class="more">
         <span flex></span>
-        <furo-ui5-link at-click="--clicked" ?hidden="${!this.hasMoreContent}">${this.showMoreText} </furo-ui5-link>
+        <furo-ui5-link @click="${this.onToggleMoreClicked}" ?hidden="${!this.hasMoreContent}">${this.showMoreText} </furo-ui5-link>
       </furo-horizontal-flex>
 
       <slot name="more"></slot>
 
       <furo-horizontal-flex class="less">
         <div flex></div>
-        <furo-ui5-link at-click="--clicked">${this.showLessText} </furo-ui5-link>
+        <furo-ui5-link @click="${this.onToggleMoreClicked}">${this.showLessText} </furo-ui5-link>
       </furo-horizontal-flex>`;
   }
 

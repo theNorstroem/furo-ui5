@@ -35,7 +35,7 @@ const meta: Meta = {
       page: DocumentationTemplate({
         component,
         since: "2.0.0",
-        guideline: "https://www.sap.com/design-system/fiori-design-web/ui-elements/object-page/",
+        guideline: "https://www.sap.com/design-system/fiori-design-web/v1-148/page-types/floorplans/object-page#sections",
       }),
     },
   },

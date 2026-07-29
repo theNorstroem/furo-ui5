@@ -92,6 +92,21 @@ describe("Subsection Component", async () => {
     assert.equal(el.hasAttribute("full-width"), false);
   });
 
+  it("should reveal the 'show more' link reactively when a more-slot child is appended", async () => {
+    const dyn = await fixture<FuroUi5Subsection>(html` <furo-ui5-subsection heading="Dyn"><div>content</div></furo-ui5-subsection> `);
+    await delay(16);
+    const moreLink = dyn.shadowRoot!.querySelector<HTMLElement>("furo-horizontal-flex.more furo-ui5-link")!;
+    assert.equal(moreLink.hasAttribute("hidden"), true, "link hidden without more content");
+
+    const extra = document.createElement("div");
+    extra.slot = "more";
+    extra.textContent = "MORE";
+    dyn.appendChild(extra);
+    await delay(16);
+
+    assert.equal(moreLink.hasAttribute("hidden"), false, "link visible after appending more content");
+  });
+
   it("should expose default, action, and more slot content", () => {
     assert.isNotNull(el.querySelector('[data-testid="content"]'));
     assert.isNotNull(el.querySelector('[data-testid="action"]'));

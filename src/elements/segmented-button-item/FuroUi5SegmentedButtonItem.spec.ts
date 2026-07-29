@@ -19,6 +19,7 @@ import "../segmented-button/index";
 import "./index";
 
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
+import { renderFinished } from "@ui5/webcomponents-base/dist/Render.js";
 import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
@@ -295,7 +296,7 @@ describe("FuroUi5SegmentedButtonItem", () => {
       el.bindData(createOption({ id: "1", displayName: "One" }));
       assert.isFalse(el.selected);
       el.selected = true;
-      await el.updateComplete;
+      await renderFinished();
       assert.isTrue(el.selected);
     });
 
@@ -303,7 +304,7 @@ describe("FuroUi5SegmentedButtonItem", () => {
       const el = await itemFixture();
       el.bindData(createOption({ id: "1", displayName: "One" }));
       el.disabled = true;
-      await el.updateComplete;
+      await renderFinished();
       assert.isTrue(el.disabled);
     });
 
@@ -313,7 +314,7 @@ describe("FuroUi5SegmentedButtonItem", () => {
       el.bindData(model);
       el.selected = true;
       model.displayName.value = "Uno";
-      await el.updateComplete;
+      await renderFinished();
       assert.isTrue(el.selected);
       assert.equal(el.textContent, "Uno");
     });

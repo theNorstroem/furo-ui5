@@ -349,6 +349,14 @@
       "types": "./dist/elements/user-menu/index.d.ts",
       "default": "./dist/elements/user-menu/index.js"
     },
+    "./JSX": {
+      "types": "./dist/JSX/index.d.ts",
+      "default": "./dist/JSX/index.js"
+    },
+    "./JSX/*": {
+      "types": "./dist/JSX/*.d.ts",
+      "default": "./dist/JSX/*.js"
+    },
     "./package.json": "./package.json",
     "./custom-elements.json": "./custom-elements.json",
     "./web-types.json": "./web-types.json",
@@ -378,7 +386,6 @@
     "build-storybook": "storybook build"
   },
   "peerDependencies": {
-    "@furo/fbp": "^6.15.0",
     "@furo/layout": "/Users/veith/Projects/theNorstroem/eclipsefuro-web/packages/furo-layout/furo-layout-3.0.0-RC.11.tgz",
     "@furo/open-models": "^1.21.2",
     "@furo/route": "^4.0.0",
@@ -403,6 +410,7 @@
     "@axe-core/playwright": "^4.12.1",
     "@custom-elements-manifest/analyzer": "^0.11.0",
     "@eslint/js": "^10.0.1",
+    "@furo/fbp": "^6.15.0",
     "@furo/web-types": "^0.1.0",
     "@jackolope/ts-lit-plugin": "^3.1.6",
     "@open-wc/testing-helpers": "^3.0.1",

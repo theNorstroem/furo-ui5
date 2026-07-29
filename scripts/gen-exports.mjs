@@ -29,6 +29,16 @@ const STATIC_ENTRIES = {
     types: "./dist/index.d.ts",
     default: "./dist/index.js",
   },
+  // JSX intrinsic element declarations (React >= 19). `./JSX` pulls in every
+  // component's augmentation at once; `./JSX/*` exposes a single one.
+  "./JSX": {
+    types: "./dist/JSX/index.d.ts",
+    default: "./dist/JSX/index.js",
+  },
+  "./JSX/*": {
+    types: "./dist/JSX/*.d.ts",
+    default: "./dist/JSX/*.js",
+  },
   "./package.json": "./package.json",
   "./custom-elements.json": "./custom-elements.json",
   "./web-types.json": "./web-types.json",
@@ -77,12 +87,15 @@ function buildExportsMap(componentEntries) {
   // Preserve a stable, readable order:
   //   1. root "."
   //   2. per-component entries (alphabetical)
-  //   3. static metadata entries
+  //   3. JSX intrinsic declarations
+  //   4. static metadata entries
   const out = {};
   out["."] = STATIC_ENTRIES["."];
   for (const [key, val] of Object.entries(componentEntries)) {
     out[key] = val;
   }
+  out["./JSX"] = STATIC_ENTRIES["./JSX"];
+  out["./JSX/*"] = STATIC_ENTRIES["./JSX/*"];
   out["./package.json"] = STATIC_ENTRIES["./package.json"];
   out["./custom-elements.json"] = STATIC_ENTRIES["./custom-elements.json"];
   out["./web-types.json"] = STATIC_ENTRIES["./web-types.json"];

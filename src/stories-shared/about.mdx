@@ -6,11 +6,14 @@ import { Meta } from '@storybook/addon-docs/blocks';
 # フロー Furo UI5 components
 
 The [SAP UI5 web components](https://ui5.github.io/webcomponents/) extended with data binding for Eclipse Furo open models (`@furo/open-models`).
-Every element here is the real UI5 element with one thing added: a `bindData(fieldNode)` interface that connects it to a field of your data model.
+The one thing every element here has in common is a `bindData(fieldNode)` interface that connects it to a field of your data model.
+
+Most of them are the real UI5 element with exactly that added. A smaller set — `furo-ui5-tree-table`, `furo-ui5-money-input`, `furo-ui5-typerenderer` and the form layout elements among them — are Lit components written to cover ground the UI5 library does not, styled to match Fiori and bound the same way.
 
 ## What you get
 
-- **The full UI5 component.** Each Furo element subclasses its SAP counterpart, so every property, slot, event, CSS part and theme works exactly as documented by SAP. Nothing is reimplemented and nothing is taken away.
+- **The full UI5 component.** Where a UI5 counterpart exists, the Furo element subclasses it, so every property, slot, event, CSS part and theme works exactly as documented by SAP. Nothing is reimplemented and nothing is taken away.
+- **Plus what UI5 does not ship.** Tables with a tree, a money input, generic type renderers and the form layout primitives are Lit components on our side. They are not UI5 elements, so their API is ours — but they carry the same `bindData()` interface and the same Fiori look.
 - **Data binding on top.** Bind a field node and the element keeps itself and your model in sync, in both directions.
 - **The enterprise standards come along.** Fiori design language, accessibility, i18n and theming are inherited from UI5.
 - **IDE completion out of the box.** The package ships a custom-elements manifest, `web-types.json` and JSX intrinsic types, so your editor knows the tags, attributes and events. See [Using it with React](#using-it-with-react) for the typed `.tsx` story.
@@ -21,7 +24,7 @@ The only thing `@furo/ui5` adds over stock UI5 is the `@furo/open-models` bindin
 
 **If your project does not use `@furo/open-models`, use [`@ui5/webcomponents`](https://ui5.github.io/webcomponents/) directly.** Taking this package instead would mean an extra dependency and a second tag namespace in exchange for a feature you would never call.
 
-That is not a one-way door. Because the Furo elements subclass the UI5 ones, moving over later is a tag rename plus a `.model` binding — every UI5 attribute, event handler and style you already wrote keeps working untouched.
+That is not a one-way door. For every element that wraps a UI5 counterpart — the large majority — moving over later is a tag rename plus a `.model` binding, because the Furo element subclasses the UI5 one and every attribute, event handler and style you already wrote keeps working untouched. Only the Lit-based additions have an API of their own to learn.
 
 ## Install
 
@@ -33,7 +36,7 @@ Import the elements you use, or the whole set:
 
 ```js
 import "@furo/ui5/text-input"; // a single element
-import "@furo/ui5";            // everything
+import {FuroUi5TextInput} from "@furo/ui5"; // get the class / type
 ```
 
 Importing registers the custom element. There is nothing else to call.
@@ -74,7 +77,16 @@ FAT types are supported as well. Each component declares which FAT attributes it
 
 ## Using it with React
 
-The package ships JSX intrinsic element declarations — one per component, generated from the custom-elements manifest — so the `furo-ui5-*` tags are fully typed in `.tsx`. You get completion and type-checking on every UI5 attribute, on the events, and on the `model` property, which is typed with the field types that component actually accepts:
+The package ships JSX intrinsic element declarations — one per component, generated from the custom-elements manifest — so the `furo-ui5-*` tags are fully typed in `.tsx`. Pull them in once, anywhere TypeScript sees them (your app entry or a `.d.ts`):
+
+```ts
+import "@furo/ui5/JSX";              // types every furo-ui5-* tag
+import "@furo/ui5/JSX/TextInput";    // or just the one you need
+```
+
+These are type-only declarations — the emitted JavaScript is empty, so the import adds nothing to your bundle.
+
+You then get completion and type-checking on every UI5 attribute, on the events, and on the `model` property, which is typed with the field types that component actually accepts:
 
 ```tsx
 import "@furo/ui5/text-input";
@@ -94,8 +106,7 @@ Attributes are written in camelCase (`accessibleName`, `showClearIcon`), and eve
 
 ## Framework agnostic
 
-The Furo UI5 web components are regular web components.
-Some are based on lit, some are extensions of the SAP UI5 web components, and some are native components.
+Whatever an element is built on — a UI5 base class, Lit, or nothing at all — it is a regular web component.
 They work anywhere you use HTML, with any framework or none at all.
 As a result of following the best practices for building web components, our components are also [FBP](https://fbp.furo.pro/) friendly.
 
