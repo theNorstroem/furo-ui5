@@ -1,5 +1,36 @@
 import { css } from "lit";
 
+/**
+ * Adoptable styles for plain HTML tables
+ *
+ * Makes an ordinary `<table>` look like the rest of Fiori — list colours and dividers,
+ * header and footer treatment, hover, focus and active states. It styles element selectors
+ * only (`table`, `caption`, `thead`, `th`, `tr`, `td`, `tfoot`) and contains no class names,
+ * so semantic HTML is styled as-is with nothing to add to your markup.
+ *
+ * In the light DOM you get this for free: `@furo/ui5/Assets` adopts it into `document`.
+ * A table inside a shadow root needs the rules adopted there too:
+ *
+ * ```js
+ * // lit
+ * static styles = [TableCss, css`:host { display: block; }`];
+ *
+ * // without lit — the same sheet, ready to adopt
+ * this.shadowRoot.adoptedStyleSheets = [...this.shadowRoot.adoptedStyleSheets, GlobalStyles.table];
+ * ```
+ *
+ * A `value-state` attribute on a `<tr>` draws a coloured bar down the row's leading edge.
+ * Recognised values are `Positive`, `Negative`, `Critical`, `Information` and
+ * `Indication1`–`Indication8`; anything else (including `None`) renders no bar, so the
+ * attribute can be bound to a value that is often empty. Each of those rules only sets
+ * `--_furo-table-value-state-color`, so setting that property yourself — on the row or any
+ * ancestor — colours a state of your own. It is internal by name: an escape hatch, not API.
+ *
+ * Row height follows `--ui5_table_row_height`, which the UI5 content density drives, and
+ * `<caption>` padding follows the responsive `--MediaSizeIndentation`.
+ *
+ * See the "Using styled plain html tables" how-to for the full picture.
+ */
 const TableCss = css`
   /* raw HTML tables */
 

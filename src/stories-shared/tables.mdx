@@ -1,16 +1,71 @@
-import {Meta} from '@storybook/addon-docs/blocks';
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
+
+import "@/Assets";
+import "@/elements/rating-indicator";
+import "@ui5/webcomponents-icons/dist/favorite.js";
+import "@ui5/webcomponents-icons/dist/unfavorite.js";
 
 <Meta title="how to's/Using styled plain html tables"/>
 
-todo: explain how to use table.css.ts with lit (systems without shadowroot already have the styles from global styles)
+# Using styled plain HTML tables
 
+`@furo/ui5` ships a stylesheet that makes an ordinary `<table>` look like the rest of Fiori: list colours and dividers, header and footer treatment, hover, focus and active states, and a value-state indicator per row.
+
+It styles **element selectors only** — `table`, `caption`, `thead`, `th`, `tr`, `td`, `tfoot`. There is not a single class name in it. You write semantic HTML and it is styled; there is nothing to add to your markup and nothing to opt into per element.
+
+Reach for this when you want a table you control completely — your own markup, your own column layout, no component API in the way. If you need hierarchy, expand/collapse or row selection, see [when a table is not enough](#when-a-table-is-not-enough).
+
+## In the light DOM
+
+Import the assets once, anywhere in your app:
+
+```js
+import "@furo/ui5/Assets";
 ```
+
+That is all. `Assets` adopts the furo global stylesheet — size and typography variables, scrollbars and the table styling — onto `document.adoptedStyleSheets`, and refills it whenever the UI5 theme changes. From then on every `<table>` in the document is styled:
+
+```html
+<table>
+  <caption>Open items</caption>
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Paperclips</td>
+      <td>1000</td>
+      <td>10.00</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="2">Total</th>
+      <td>10.00</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+`<caption>`, `<thead>`, `<tfoot>` and `colspan` are all covered — the caption picks up the responsive page indentation, the footer gets the list footer colours, and the header row drops its divider. Components sit in cells without any extra work, so a `furo-ui5-*` element is just another cell child.
+
+One thing `Assets` does not do on its own is load the theme. Every colour above is a `--sap*` variable that UI5 publishes when it boots, and UI5 boots as soon as the first component is imported. Any real app has crossed that line long before it renders a table — but a page that imports *only* `Assets` and no component at all gets the layout without the colours.
+
+## Inside a shadow root
+
+A document stylesheet does not cross a shadow boundary. If your table lives in the shadow DOM of your own component, pull the styles in there as well.
+
+With lit, add `TableCss` to `static styles`:
+
+```js
+import { css, LitElement } from "lit";
 import { TableCss } from "@furo/ui5/styles/table.css";
 
-  /**
-   * Styles
-   * @private
-   */
+class MyReport extends LitElement {
   static styles = [
     TableCss,
     css`
@@ -23,7 +78,162 @@ import { TableCss } from "@furo/ui5/styles/table.css";
       :host([hidden]) {
         display: none;
       }
- ]
+    `,
+  ];
+}
 ```
 
-todo: explain how to use value state and indication colors and link to https://www.sap.com/design-system/fiori-design-web/v1-148/foundations/visual/colors/colors#semantic-colors
+Without lit, adopt the sheet directly. `GlobalStyles` exposes the same CSS as a ready-made, shared `CSSStyleSheet`:
+
+```js
+import GlobalStyles from "@furo/ui5/styles/GlobalStyles";
+
+this.shadowRoot.adoptedStyleSheets = [...this.shadowRoot.adoptedStyleSheets, GlobalStyles.table];
+```
+
+Both give you the identical rules — pick whichever fits how the component is written.
+
+## Marking a row with a value state
+
+Put a `value-state` attribute on the `<tr>`. It draws a coloured bar down the leading edge of the row:
+
+```html
+<tr value-state="Negative">
+  <td>Envelopes</td>
+  <td>Out of stock</td>
+  <td>12.50</td>
+</tr>
+```
+
+Which, in the theme this page is running in, looks like this:
+
+<Unstyled>
+  <div style={{ padding: "1rem", background: "var(--sapBackgroundColor)" }}>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Status</th>
+          <th scope="col">Rating</th>
+          <th scope="col">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paperclips</td>
+          <td>Nothing to report</td>
+          <td><furo-ui5-rating-indicator value={3} readonly></furo-ui5-rating-indicator></td>
+          <td>10.00</td>
+        </tr>
+        <tr value-state="Positive">
+          <td>Notebooks</td>
+          <td>Delivered</td>
+          <td><furo-ui5-rating-indicator value={5} readonly></furo-ui5-rating-indicator></td>
+          <td>956.00</td>
+        </tr>
+        <tr value-state="Critical">
+          <td>Staples</td>
+          <td>Delayed</td>
+          <td><furo-ui5-rating-indicator value={2} readonly></furo-ui5-rating-indicator></td>
+          <td>100.00</td>
+        </tr>
+        <tr value-state="Negative">
+          <td>Envelopes</td>
+          <td>Out of stock</td>
+          <td><furo-ui5-rating-indicator value={1} readonly></furo-ui5-rating-indicator></td>
+          <td>12.50</td>
+        </tr>
+        <tr value-state="Information">
+          <td>Folders</td>
+          <td>Awaiting approval</td>
+          <td><furo-ui5-rating-indicator value={4} readonly></furo-ui5-rating-indicator></td>
+          <td>48.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Unstyled>
+
+Four of the states are semantic — they say what the row *means*, and the theme decides how that reads:
+
+| `value-state` | Theme colour |
+| --- | --- |
+| `Positive` | `--sapShell_PositiveColor` |
+| `Negative` | `--sapShell_NegativeColor` |
+| `Critical` | `--sapShell_CriticalColor` |
+| `Information` | `--sapShell_InformativeColor` |
+
+The other eight carry no meaning of their own. Use them for categories the semantic four do not describe — a status, a workstream, a category legend you define yourself:
+
+| `value-state` | Theme colour |
+| --- | --- |
+| `Indication1` … `Indication8` | `--sapIndicationColor_1_Background` … `--sapIndicationColor_8_Background` |
+
+<Unstyled>
+  <div style={{ padding: "1rem", background: "var(--sapBackgroundColor)" }}>
+    <table>
+      <tbody>
+        <tr value-state="Indication1"><td>Indication1</td></tr>
+        <tr value-state="Indication2"><td>Indication2</td></tr>
+        <tr value-state="Indication3"><td>Indication3</td></tr>
+        <tr value-state="Indication4"><td>Indication4</td></tr>
+        <tr value-state="Indication5"><td>Indication5</td></tr>
+        <tr value-state="Indication6"><td>Indication6</td></tr>
+        <tr value-state="Indication7"><td>Indication7</td></tr>
+        <tr value-state="Indication8"><td>Indication8</td></tr>
+      </tbody>
+    </table>
+  </div>
+</Unstyled>
+
+Prefer the semantic four wherever a row really is good, bad, at risk or informational — they stay correct in high-contrast themes and carry the meaning SAP's [semantic colours](https://www.sap.com/design-system/fiori-design-web/v1-148/foundations/visual/colors/colors#semantic-colors) guideline describes.
+
+Anything else — including `None` — renders no bar at all, so you can bind the attribute straight to a value that is often empty without special-casing it. That also means a typo fails silently: the older UI5 spellings `Error`, `Warning` and `Success` are not these names and draw nothing.
+
+**The bar is decoration, not information.** It is a `:before` on the first cell, invisible to assistive technology. If the state matters, put it in the row as text or as an element too, the way the `Status` column does above.
+
+## Colouring a state yourself
+
+Each state rule does one thing: set `--_furo-table-value-state-color` on the row. The bar itself is drawn for any `value-state` value, so you can invent your own state and give it a colour:
+
+```html
+<tr value-state="Stale" style="--_furo-table-value-state-color: var(--sapIndicationColor_6);">
+  <td>Legacy stock</td>
+</tr>
+```
+
+The property inherits, so setting it on a `<tbody>` colours the whole block. The underscore prefix marks it as internal to the stylesheet — it is a useful escape hatch, but do not build on it the way you would on a documented attribute.
+
+## Density and wide tables
+
+Row height comes from `--ui5_table_row_height` (`2.75rem`). Fiori's compact density halves it to `2rem`, and the table follows automatically as soon as one of the density classes is on an ancestor:
+
+```html
+<body class="sapUiSizeCompact">
+```
+
+`.ui5-content-density-compact` and `[data-ui5-compact-size]` work the same way. To change the height for one table only, set the property yourself.
+
+Tables are `width: 100%` and cells wrap on `word-break: break-word`, so a table fits its container by default. When the columns genuinely need more room, give them a `min-width` and let a wrapper scroll:
+
+```html
+<div style="overflow: auto;">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col" style="min-width: 450px;">Description</th>
+      </tr>
+    </thead>
+  </table>
+</div>
+```
+
+The scrollbar in that wrapper is themed too — see <a href="/?path=/docs/how-to-s-styling-scrollbars--docs" target="_top">Styling scrollbars</a>.
+
+## When a table is not enough
+
+Plain tables have no behaviour — no expanding, no selection, no sorting. That is the point, and for a read-only list it is usually all you need.
+
+When you do need those, use <a href="/?path=/docs/display-treetable--docs" target="_top">furo-ui5-tree-table</a>. It styles your own light-DOM `<table>` as well, so the markup stays yours, and adds hierarchy through `aria-level` / `aria-expanded`, plus selection modes. It accepts the same `value-state` values and additionally the aliases `Danger`, `Success`, `Informative` and `Warning`, which plain table styling does not.
+
+To render the cells of a table from a data model rather than writing them out, start at <a href="/?path=/docs/display-typerenderer--docs" target="_top">furo-ui5-typerenderer</a> — it resolves the right renderer for any field node at runtime.

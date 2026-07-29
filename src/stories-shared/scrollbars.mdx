@@ -1,0 +1,137 @@
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
+
+import "@/Assets";
+import "@/elements/rating-indicator";
+import "@/stories-shared/scrollbar-demo";
+
+<Meta title="how to's/Styling scrollbars"/>
+
+# Styling scrollbars
+
+Every UI5 theme defines a set of `--sapScrollBar_*` variables — a width, a track colour, a thumb colour and a hover colour. **UI5 itself never applies them to a scrollbar.** The stylesheet in this package is the only thing in the stack that turns those variables into actual pixels.
+
+It is built entirely on the `::-webkit-scrollbar` pseudo-elements, so there is nothing to put in your markup and no class to add. Anything that scrolls and is in scope of the sheet gets a Fiori scrollbar.
+
+## In the light DOM
+
+The same import that gives you everything else gives you this:
+
+```js
+import "@furo/ui5/Assets";
+```
+
+`Assets` adopts the furo global stylesheet onto `document.adoptedStyleSheets`, and the scrollbar rules are part of it. Because the selectors are bare pseudo-elements with no element in front of them, every scroll container in the document is covered at once — yours, and any that third-party code creates later.
+
+So a scroll container is just a scroll container:
+
+```html
+<div style="height: 8rem; overflow: auto;">
+  …
+</div>
+```
+
+Which, in the theme this page is running in, looks like this:
+
+<Unstyled>
+  <div style={{ padding: "1rem", background: "var(--sapBackgroundColor)" }}>
+    <div tabIndex={0} aria-label="Scrollbar example" style={{ height: "8rem", overflow: "auto", border: "1px solid var(--sapList_BorderColor)", background: "var(--sapList_Background)", padding: "0.5rem" }}>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 1 — scroll me.</p>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 2 — scroll me.</p>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 3 — scroll me.</p>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 4 — scroll me.</p>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 5 — scroll me.</p>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 6 — scroll me.</p>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 7 — scroll me.</p>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 8 — scroll me.</p>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 9 — scroll me.</p>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 10 — scroll me.</p>
+      <p style={{ margin: "0 0 0.5rem" }}>Line 11 — scroll me.</p>
+      <p style={{ margin: "0" }}>Line 12 — scroll me.</p>
+    </div>
+  </div>
+</Unstyled>
+
+## Inside a shadow root
+
+A document stylesheet does not cross a shadow boundary. A scroll container inside your component's shadow DOM keeps the browser's default scrollbar until that shadow root adopts the rules itself.
+
+Here are two of them side by side. Both are the same element; the one on the right adopted the sheet. **Scroll them** — on macOS, and on any touch device, scrollbars are overlays that stay hidden until you do:
+
+<Unstyled>
+  <div style={{ padding: "1rem", background: "var(--sapBackgroundColor)", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+    <div>
+      <p style={{ margin: "0 0 0.5rem", font: "var(--sapFontSize) var(--sapFontFamily)" }}>Not adopted — browser default</p>
+      <furo-scrollbar-demo></furo-scrollbar-demo>
+    </div>
+    <div>
+      <p style={{ margin: "0 0 0.5rem", font: "var(--sapFontSize) var(--sapFontFamily)" }}>Adopted — themed</p>
+      <furo-scrollbar-demo adopt></furo-scrollbar-demo>
+    </div>
+  </div>
+</Unstyled>
+
+With lit, add `ScrollbarCSS` to `static styles`:
+
+```js
+import { css, LitElement } from "lit";
+import { ScrollbarCSS } from "@furo/ui5/styles/scrollbar.css";
+
+class MyPanel extends LitElement {
+  static styles = [
+    ScrollbarCSS,
+    css`
+      .content {
+        height: 100%;
+        overflow: auto;
+      }
+    `,
+  ];
+}
+```
+
+Without lit, adopt the ready-made sheet. `GlobalStyles` exposes it as a single shared `CSSStyleSheet`, so adopting it in a hundred shadow roots costs one sheet, not a hundred copies:
+
+```js
+import GlobalStyles from "@furo/ui5/styles/GlobalStyles";
+
+this.shadowRoot.adoptedStyleSheets = [...this.shadowRoot.adoptedStyleSheets, GlobalStyles.scrollbar];
+```
+
+The theme variables themselves *do* cross the boundary — they are inherited custom properties on `:root`. You only ever need to re-adopt the rules, never the colours.
+
+This applies to the elements in this package too. `furo-ui5-tree` scrolls its body, and `furo-ui5-markdown` scrolls long code blocks; neither adopts the sheet today, so both show the browser's scrollbar inside their shadow root.
+
+## A thinner scrollbar
+
+`MiniScrollbarCSS` is the same sheet with a fixed `0.5rem` track, for places where the full width is too heavy — a popover list, a narrow sidebar, an inline code block:
+
+```js
+import { MiniScrollbarCSS } from "@furo/ui5/styles/scrollbar.css";
+```
+
+It is a straight swap for `ScrollbarCSS`, with one trade-off worth knowing: the `0.5rem` is hardcoded, so unlike `ScrollbarCSS` it does not follow `--sapScrollBar_Dimension` and will not change if the theme does. Nothing in this package uses it yet — it is here for your own dense scroll areas.
+
+## The theme variables
+
+Four variables drive the sheet. Set them to override it — on `:root` for the whole app, or on a container for one region:
+
+| Variable | What it sets | `sap_horizon` | `sap_horizon_dark` |
+| --- | --- | --- | --- |
+| `--sapScrollBar_Dimension` | Track width and height | `0.75rem` | `0.75rem` |
+| `--sapScrollBar_TrackColor` | The groove behind the thumb | `#fff` | `#1d232a` |
+| `--sapScrollBar_FaceColor` | The thumb | `#7b91a8` | `#647891` |
+| `--sapScrollBar_Hover_FaceColor` | The thumb on hover | `#5b728b` | `#8697ac` |
+
+Themes define two more that this sheet does not read — `--sapScrollBar_BorderColor` (a thumb border, identical to the face colour in every shipped theme) and `--sapScrollBar_SymbolColor` (the arrow-button glyph). They are there if you extend the sheet yourself.
+
+The sheet sets only size and background. `::-webkit-scrollbar` is an opt-in to a *fully* custom scrollbar, so what it does not set stays unset: there is no rounding, no pressed state, and no `::-webkit-scrollbar-corner` rule, which leaves the corner between a horizontal and a vertical bar at the browser default.
+
+One edge to be aware of: the rules carry hardcoded fallback colours for the case where no theme has loaded. Those fallbacks are Quartz Dark values, so importing `ScrollbarCSS` without UI5 theming gives you a dark scrollbar with a bright blue thumb on whatever background you have. Load a theme — which `Assets` does — and you will never see them.
+
+## Browser support
+
+The sheet is built on `::-webkit-scrollbar`, so it applies in Chromium and WebKit browsers: Chrome, Edge, Safari.
+
+**Firefox renders its own native scrollbar.** It never implemented these pseudo-elements, so the rules are simply ignored — nothing breaks, the scrollbar just is not themed. If you need it themed there too, the standard properties are `scrollbar-width` and `scrollbar-color`; this package does not set them.
+
+One more platform difference to expect: on macOS, and on touch devices, scrollbars are overlays. They take no layout space and stay hidden until you scroll, so a themed scrollbar looks like no scrollbar at all until it is in use. On Windows and Linux the same rules produce a classic scrollbar that is always visible and reserves its width.
