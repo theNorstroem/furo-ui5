@@ -39,6 +39,27 @@ const STATIC_ENTRIES = {
     types: "./dist/JSX/*.d.ts",
     default: "./dist/JSX/*.js",
   },
+  // Side-effect import that registers the UI5 assets and adopts the furo
+  // global stylesheet (theme vars, scrollbar, raw <table> styling) onto
+  // document.adoptedStyleSheets.
+  "./Assets": {
+    types: "./dist/Assets.d.ts",
+    default: "./dist/Assets.js",
+  },
+  // Adoptable stylesheets for shadow-DOM consumers. The light DOM gets these
+  // for free via "./Assets"; a component with a shadow root has to adopt them.
+  "./styles/table.css": {
+    types: "./dist/styles/table.css.d.ts",
+    default: "./dist/styles/table.css.js",
+  },
+  "./styles/scrollbar.css": {
+    types: "./dist/styles/scrollbar.css.d.ts",
+    default: "./dist/styles/scrollbar.css.js",
+  },
+  "./styles/GlobalStyles": {
+    types: "./dist/styles/GlobalStyles.d.ts",
+    default: "./dist/styles/GlobalStyles.js",
+  },
   "./package.json": "./package.json",
   "./custom-elements.json": "./custom-elements.json",
   "./web-types.json": "./web-types.json",
@@ -88,7 +109,8 @@ function buildExportsMap(componentEntries) {
   //   1. root "."
   //   2. per-component entries (alphabetical)
   //   3. JSX intrinsic declarations
-  //   4. static metadata entries
+  //   4. assets + adoptable stylesheets
+  //   5. static metadata entries
   const out = {};
   out["."] = STATIC_ENTRIES["."];
   for (const [key, val] of Object.entries(componentEntries)) {
@@ -96,6 +118,10 @@ function buildExportsMap(componentEntries) {
   }
   out["./JSX"] = STATIC_ENTRIES["./JSX"];
   out["./JSX/*"] = STATIC_ENTRIES["./JSX/*"];
+  out["./Assets"] = STATIC_ENTRIES["./Assets"];
+  out["./styles/table.css"] = STATIC_ENTRIES["./styles/table.css"];
+  out["./styles/scrollbar.css"] = STATIC_ENTRIES["./styles/scrollbar.css"];
+  out["./styles/GlobalStyles"] = STATIC_ENTRIES["./styles/GlobalStyles"];
   out["./package.json"] = STATIC_ENTRIES["./package.json"];
   out["./custom-elements.json"] = STATIC_ENTRIES["./custom-elements.json"];
   out["./web-types.json"] = STATIC_ENTRIES["./web-types.json"];

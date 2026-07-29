@@ -357,6 +357,22 @@
       "types": "./dist/JSX/*.d.ts",
       "default": "./dist/JSX/*.js"
     },
+    "./Assets": {
+      "types": "./dist/Assets.d.ts",
+      "default": "./dist/Assets.js"
+    },
+    "./styles/table.css": {
+      "types": "./dist/styles/table.css.d.ts",
+      "default": "./dist/styles/table.css.js"
+    },
+    "./styles/scrollbar.css": {
+      "types": "./dist/styles/scrollbar.css.d.ts",
+      "default": "./dist/styles/scrollbar.css.js"
+    },
+    "./styles/GlobalStyles": {
+      "types": "./dist/styles/GlobalStyles.d.ts",
+      "default": "./dist/styles/GlobalStyles.js"
+    },
     "./package.json": "./package.json",
     "./custom-elements.json": "./custom-elements.json",
     "./web-types.json": "./web-types.json",
