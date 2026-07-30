@@ -11,6 +11,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { ArgsSetEnum, ArgsTransormer, ArgTypesTransormer } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { PopupAccessibleRole } from "@/types";
 import ValueState from "@/types/ValueState";
 
 const component = "furo-ui5-dialog";
@@ -22,6 +23,7 @@ const componentInfo = {
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgTypesTransormer(argTypes);
 ArgsTransormer(args);
+ArgsSetEnum(argTypes, "accessibleRole", Object.values(PopupAccessibleRole));
 ArgsSetEnum(argTypes, "state", Object.values(ValueState));
 
 const openDialog = (): void => {
@@ -45,10 +47,8 @@ const meta: Meta = {
   tags: ["autodocs"],
   argTypes,
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({ ...componentInfo, component, since: "2.0.0" }),

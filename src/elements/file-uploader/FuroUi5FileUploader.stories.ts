@@ -4,11 +4,16 @@ import "@/elements/button";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
+import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { ValueState } from "@/types";
 
 const component = "furo-ui5-file-uploader";
-const { events, argTypes } = getStorybookHelpers(component);
+const { events, args, argTypes } = getStorybookHelpers(component);
+ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 const meta: Meta = {
   title: "form/FileUploader",
@@ -18,10 +23,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -36,9 +39,26 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  args: {},
-  render: () => html`
-    <furo-ui5-file-uploader placeholder="Choose a file...">
+  args: {
+    placeholder: "Choose a file...",
+  },
+  render: renderArgs => html`
+    <furo-ui5-file-uploader
+      accept="${ifDefined(renderArgs.accept)}"
+      accessible-description="${ifDefined(renderArgs.accessibleDescription)}"
+      accessible-description-ref="${ifDefined(renderArgs.accessibleDescriptionRef)}"
+      accessible-name="${ifDefined(renderArgs.accessibleName)}"
+      accessible-name-ref="${ifDefined(renderArgs.accessibleNameRef)}"
+      ?disabled="${renderArgs.disabled}"
+      ?hide-input="${renderArgs.hideInput}"
+      max-file-size="${ifDefined(renderArgs.maxFileSize)}"
+      ?multiple="${renderArgs.multiple}"
+      name="${ifDefined(renderArgs.name)}"
+      placeholder="${ifDefined(renderArgs.placeholder)}"
+      ?required="${renderArgs.required}"
+      value="${ifDefined(renderArgs.value)}"
+      value-state="${ifDefined(renderArgs.valueState)}"
+    >
       <furo-ui5-button>Upload</furo-ui5-button>
     </furo-ui5-file-uploader>
   `,

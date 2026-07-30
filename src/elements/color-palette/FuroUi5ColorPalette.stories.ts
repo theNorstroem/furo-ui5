@@ -7,11 +7,14 @@ import { ARRAY, STRING } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
+import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
 
 const component = "furo-ui5-color-palette";
-const { events, argTypes } = getStorybookHelpers(component);
+const { events, args, argTypes } = getStorybookHelpers(component);
+ArgsTransormAll(argTypes, args, []);
 
 const selected = new STRING("#00ff00");
 const colors = ARRAY.Builder(STRING, ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"]);
@@ -24,10 +27,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -43,11 +44,16 @@ export default meta;
 
 export const Default: StoryObj = {
   args: {},
-  render: () => html`
+  render: renderArgs => html`
     <furo-ui5-form-layout form-title="Color Palette">
       <furo-ui5-form-row>
         <furo-ui5-label slot="label">Pick a color</furo-ui5-label>
-        <furo-ui5-color-palette .model="${selected}" .colorsModel="${colors}"></furo-ui5-color-palette>
+        <furo-ui5-color-palette
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          accessible-name-ref="${ifDefined(renderArgs.accessibleNameRef)}"
+          .model="${selected}"
+          .colorsModel="${colors}"
+        ></furo-ui5-color-palette>
       </furo-ui5-form-row>
     </furo-ui5-form-layout>
   `,

@@ -15,10 +15,13 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { ButtonAccessibleRole, ButtonType } from "@/types";
 
 const component = "furo-ui5-toggle-button";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "accessibleRole", Object.values(ButtonAccessibleRole));
+ArgsSetEnum(argTypes, "type", Object.values(ButtonType));
 ArgsSetEnum(argTypes, "design", Object.values(ButtonDesign));
 
 // set up the model
@@ -35,10 +38,8 @@ const meta: Meta = {
   // args,
   argTypes,
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

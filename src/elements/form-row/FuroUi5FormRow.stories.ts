@@ -12,14 +12,12 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
-import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
+import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
-import ValueState from "@/types/ValueState";
 
 const component = "furo-ui5-form-row";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, ["type", "maxlength", "minlength"]);
-ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 // set up the model
 const cube = new CubeEntity();
@@ -36,10 +34,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

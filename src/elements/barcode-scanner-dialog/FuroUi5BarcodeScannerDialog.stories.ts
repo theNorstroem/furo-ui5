@@ -33,10 +33,8 @@ const meta: Meta = {
   // args,
   argTypes,
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -51,7 +49,7 @@ export default meta;
 
 export const Default: StoryObj = {
   args: {},
-  render: () => {
+  render: renderArgs => {
     let dialogEl: FuroUi5BarcodeScannerDialog | undefined;
 
     const grabDialog = (el?: Element): void => {
@@ -83,7 +81,7 @@ export const Default: StoryObj = {
           <furo-ui5-pretty-json .model="${cube.cube.str}"></furo-ui5-pretty-json>
         </furo-ui5-form-row>
 
-        <furo-ui5-barcode-scanner-dialog ${ref(grabDialog)} .model="${cube.cube.str}"></furo-ui5-barcode-scanner-dialog>
+        <furo-ui5-barcode-scanner-dialog ?open="${renderArgs.open}" ${ref(grabDialog)} .model="${cube.cube.str}"></furo-ui5-barcode-scanner-dialog>
       </furo-ui5-form-layout>
     `;
   },

@@ -4,11 +4,19 @@ import "@/elements/tab";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
+import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { BackgroundDesign, OverflowMode, TabLayout } from "@/types";
 
 const component = "furo-ui5-tabcontainer";
-const { events, argTypes } = getStorybookHelpers(component);
+const { events, args, argTypes } = getStorybookHelpers(component);
+ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "contentBackgroundDesign", Object.values(BackgroundDesign));
+ArgsSetEnum(argTypes, "headerBackgroundDesign", Object.values(BackgroundDesign));
+ArgsSetEnum(argTypes, "overflowMode", Object.values(OverflowMode));
+ArgsSetEnum(argTypes, "tabLayout", Object.values(TabLayout));
 
 const meta: Meta = {
   title: "container/TabContainer",
@@ -18,10 +26,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -37,8 +43,15 @@ export default meta;
 
 export const Default: StoryObj = {
   args: {},
-  render: () => html`
-    <furo-ui5-tabcontainer>
+  render: renderArgs => html`
+    <furo-ui5-tabcontainer
+      ?collapsed="${renderArgs.collapsed}"
+      content-background-design="${ifDefined(renderArgs.contentBackgroundDesign)}"
+      header-background-design="${ifDefined(renderArgs.headerBackgroundDesign)}"
+      ?no-auto-selection="${renderArgs.noAutoSelection}"
+      overflow-mode="${ifDefined(renderArgs.overflowMode)}"
+      tab-layout="${ifDefined(renderArgs.tabLayout)}"
+    >
       <furo-ui5-tab text="Overview">Overview content</furo-ui5-tab>
       <furo-ui5-tab text="Details">Details content</furo-ui5-tab>
       <furo-ui5-tab text="Settings">Settings content</furo-ui5-tab>

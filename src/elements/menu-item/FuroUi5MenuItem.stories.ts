@@ -5,13 +5,17 @@ import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
-import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
+import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { Highlight, ListItemType } from "@/types";
 
 const component = "furo-ui5-menu-item";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "highlight", Object.values(Highlight));
+ArgsSetEnum(argTypes, "type", Object.values(ListItemType));
 
 const meta: Meta = {
   title: "layout/ContextMenu/MenuItem",
@@ -21,10 +25,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -38,11 +40,30 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  render: () => html`
+  args: {
+    icon: "open-folder",
+    text: "Open",
+  },
+  render: renderArgs => html`
     <furo-ui5-context-menu open opener="anchor">
-          <furo-ui5-menu-item text="Open" icon="open-folder"></furo-ui5-menu-item>
-          <furo-ui5-menu-item text="Rename" icon="edit"></furo-ui5-menu-item>
-        </furo-ui5-context-menu>
-        <div id="anchor">Right-click target</div>
+      <furo-ui5-menu-item
+        accessible-name="${ifDefined(renderArgs.accessibleName)}"
+        accessible-role="${ifDefined(renderArgs.accessibleRole)}"
+        additional-text="${ifDefined(renderArgs.additionalText)}"
+        ?checked="${renderArgs.checked}"
+        ?disabled="${renderArgs.disabled}"
+        highlight="${ifDefined(renderArgs.highlight)}"
+        icon="${ifDefined(renderArgs.icon)}"
+        ?loading="${renderArgs.loading}"
+        loading-delay="${ifDefined(renderArgs.loadingDelay)}"
+        ?navigated="${renderArgs.navigated}"
+        ?selected="${renderArgs.selected}"
+        text="${ifDefined(renderArgs.text)}"
+        tooltip="${ifDefined(renderArgs.tooltip)}"
+        type="${ifDefined(renderArgs.type)}"
+      ></furo-ui5-menu-item>
+      <furo-ui5-menu-item text="Rename" icon="edit"></furo-ui5-menu-item>
+    </furo-ui5-context-menu>
+    <div id="anchor">Right-click target</div>
   `,
 };

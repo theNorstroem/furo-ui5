@@ -4,7 +4,6 @@ import "@/elements/button-badge";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import ButtonBadgeDesign from "@ui5/webcomponents/dist/types/ButtonBadgeDesign.js";
-import ButtonType from "@ui5/webcomponents/dist/types/ButtonType.js";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -23,7 +22,6 @@ const { events, args, argTypes } = getStorybookHelpers(component);
 ArgTypesTransormer(argTypes);
 ArgsTransormer(args);
 ArgsSetEnum(argTypes, "design", Object.values(ButtonBadgeDesign));
-ArgsSetEnum(argTypes, "type", Object.values(ButtonType));
 
 const meta: Meta = {
   title: "input/Button/Badge",

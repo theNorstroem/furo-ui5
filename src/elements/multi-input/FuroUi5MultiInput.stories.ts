@@ -14,11 +14,14 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { FuroFatString, type IFuroFatString } from "@/models";
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { InputSuggestionsFilter, InputType } from "@/types";
 import ValueState from "@/types/ValueState";
 
 const component = "furo-ui5-multi-input";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "filter", Object.values(InputSuggestionsFilter));
+ArgsSetEnum(argTypes, "type", Object.values(InputType));
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 // set up the models — standalone repeated-string arrays, one per accepted element type
@@ -40,10 +43,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

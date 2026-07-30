@@ -12,11 +12,13 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { CalendarWeekNumbering } from "@/types";
 import ValueState from "@/types/ValueState";
 
 const component = "furo-ui5-date-time-picker";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, ["formatPattern"]);
+ArgsSetEnum(argTypes, "calendarWeekNumbering", Object.values(CalendarWeekNumbering));
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 // a google.protobuf.Timestamp field carrying an RFC 3339 value
@@ -41,10 +43,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

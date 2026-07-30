@@ -7,11 +7,14 @@ import { STRING } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
+import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
 
 const component = "furo-ui5-color-picker";
-const { events, argTypes } = getStorybookHelpers(component);
+const { events, args, argTypes } = getStorybookHelpers(component);
+ArgsTransormAll(argTypes, args, []);
 
 const color = new STRING("#3f51b5");
 
@@ -23,10 +26,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -42,11 +43,18 @@ export default meta;
 
 export const Default: StoryObj = {
   args: {},
-  render: () => html`
+  render: renderArgs => html`
     <furo-ui5-form-layout form-title="Color Picker">
       <furo-ui5-form-row>
         <furo-ui5-label slot="label">Pick a color</furo-ui5-label>
-        <furo-ui5-color-picker .model="${color}"></furo-ui5-color-picker>
+        <furo-ui5-color-picker
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          accessible-name-ref="${ifDefined(renderArgs.accessibleNameRef)}"
+          name="${ifDefined(renderArgs.name)}"
+          ?simplified="${renderArgs.simplified}"
+          value="${ifDefined(renderArgs.value)}"
+          .model="${color}"
+        ></furo-ui5-color-picker>
       </furo-ui5-form-row>
     </furo-ui5-form-layout>
   `,

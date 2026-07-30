@@ -4,11 +4,16 @@ import "@/elements/tab";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
+import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { SemanticColor } from "@/types";
 
 const component = "furo-ui5-tab";
-const { events, argTypes } = getStorybookHelpers(component);
+const { events, args, argTypes } = getStorybookHelpers(component);
+ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "design", Object.values(SemanticColor));
 
 const meta: Meta = {
   title: "container/Tab",
@@ -18,10 +23,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -37,8 +40,17 @@ export default meta;
 
 export const Default: StoryObj = {
   args: {},
-  render: () => html`
-    <furo-ui5-tabcontainer>
+  render: renderArgs => html`
+    <furo-ui5-tab
+      additional-text="${ifDefined(renderArgs.additionalText)}"
+      design="${ifDefined(renderArgs.design)}"
+      ?disabled="${renderArgs.disabled}"
+      icon="${ifDefined(renderArgs.icon)}"
+      ?movable="${renderArgs.movable}"
+      ?selected="${renderArgs.selected}"
+      text="${ifDefined(renderArgs.text)}"
+      container
+    >
       <furo-ui5-tab text="A single tab in context">Tab content</furo-ui5-tab>
     </furo-ui5-tabcontainer>
   `,

@@ -21,10 +21,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -40,8 +38,8 @@ export default meta;
 export const Default: StoryObj = {
   render: () => html`
     <furo-ui5-product-switch>
-          <furo-ui5-product-switch-item title-text="Home" subtitle-text="Overview" icon="home"></furo-ui5-product-switch-item>
-          <furo-ui5-product-switch-item title-text="Analytics" subtitle-text="Reports" icon="bar-chart"></furo-ui5-product-switch-item>
-        </furo-ui5-product-switch>
+      <furo-ui5-product-switch-item title-text="Home" subtitle-text="Overview" icon="home"></furo-ui5-product-switch-item>
+      <furo-ui5-product-switch-item title-text="Analytics" subtitle-text="Reports" icon="bar-chart"></furo-ui5-product-switch-item>
+    </furo-ui5-product-switch>
   `,
 };

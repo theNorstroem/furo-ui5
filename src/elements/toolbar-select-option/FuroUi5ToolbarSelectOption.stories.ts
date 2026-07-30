@@ -22,10 +22,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -41,10 +39,10 @@ export default meta;
 export const Default: StoryObj = {
   render: () => html`
     <furo-ui5-toolbar>
-          <furo-ui5-toolbar-select>
-            <furo-ui5-toolbar-select-option selected>All</furo-ui5-toolbar-select-option>
-            <furo-ui5-toolbar-select-option>Open</furo-ui5-toolbar-select-option>
-          </furo-ui5-toolbar-select>
-        </furo-ui5-toolbar>
+      <furo-ui5-toolbar-select>
+        <furo-ui5-toolbar-select-option selected>All</furo-ui5-toolbar-select-option>
+        <furo-ui5-toolbar-select-option>Open</furo-ui5-toolbar-select-option>
+      </furo-ui5-toolbar-select>
+    </furo-ui5-toolbar>
   `,
 };

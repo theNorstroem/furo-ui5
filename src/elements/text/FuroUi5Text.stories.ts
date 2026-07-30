@@ -4,11 +4,16 @@ import { STRING } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
+import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { TextEmptyIndicatorMode } from "@/types";
 
 const component = "furo-ui5-text";
-const { events, argTypes } = getStorybookHelpers(component);
+const { events, args, argTypes } = getStorybookHelpers(component);
+ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "emptyIndicatorMode", Object.values(TextEmptyIndicatorMode));
 
 const text = new STRING("The quick brown fox jumps over the lazy dog.");
 
@@ -20,10 +25,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -39,5 +42,11 @@ export default meta;
 
 export const Default: StoryObj = {
   args: {},
-  render: () => html` <furo-ui5-text .model="${text}"></furo-ui5-text> `,
+  render: renderArgs => html`
+    <furo-ui5-text
+      empty-indicator-mode="${ifDefined(renderArgs.emptyIndicatorMode)}"
+      max-lines="${ifDefined(renderArgs.maxLines)}"
+      .model="${text}"
+    ></furo-ui5-text>
+  `,
 };

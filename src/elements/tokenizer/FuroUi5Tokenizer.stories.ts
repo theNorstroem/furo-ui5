@@ -5,6 +5,7 @@ import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
@@ -21,10 +22,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -38,11 +37,20 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  render: () => html`
-    <furo-ui5-tokenizer style="width:20rem">
-          <ui5-token text="Zurich"></ui5-token>
-          <ui5-token text="Berlin"></ui5-token>
-          <ui5-token text="Tokyo"></ui5-token>
-        </furo-ui5-tokenizer>
+  render: renderArgs => html`
+    <furo-ui5-tokenizer
+      accessible-name="${ifDefined(renderArgs.accessibleName)}"
+      accessible-name-ref="${ifDefined(renderArgs.accessibleNameRef)}"
+      ?disabled="${renderArgs.disabled}"
+      ?multi-line="${renderArgs.multiLine}"
+      name="${ifDefined(renderArgs.name)}"
+      ?readonly="${renderArgs.readonly}"
+      ?show-clear-all="${renderArgs.showClearAll}"
+      style="width:20rem"
+    >
+      <ui5-token text="Zurich"></ui5-token>
+      <ui5-token text="Berlin"></ui5-token>
+      <ui5-token text="Tokyo"></ui5-token>
+    </furo-ui5-tokenizer>
   `,
 };

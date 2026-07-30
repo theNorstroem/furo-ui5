@@ -6,6 +6,7 @@ import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
@@ -22,10 +23,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -39,13 +38,14 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  render: () => html`
+  args: {
+    text: "Zurich",
+  },
+  render: renderArgs => html`
     <furo-ui5-multi-combobox placeholder="Pick cities">
-          <furo-ui5-mcb-item-custom text="Zurich">
-            <div style="display:flex;gap:.5rem;align-items:center">
-              <furo-ui5-icon name="building"></furo-ui5-icon><span>Zurich</span>
-            </div>
-          </furo-ui5-mcb-item-custom>
-        </furo-ui5-multi-combobox>
+      <furo-ui5-mcb-item-custom text="${ifDefined(renderArgs.text)}" value="${ifDefined(renderArgs.value)}">
+        <div style="display:flex;gap:.5rem;align-items:center"><furo-ui5-icon name="building"></furo-ui5-icon><span>Zurich</span></div>
+      </furo-ui5-mcb-item-custom>
+    </furo-ui5-multi-combobox>
   `,
 };

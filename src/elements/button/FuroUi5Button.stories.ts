@@ -3,8 +3,7 @@ import "@/elements/button";
 import "@/elements/button-badge";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
-import {ButtonDesign} from "@/types";
-import {ButtonType} from "@/types";
+import { ButtonAccessibleRole, ButtonDesign, ButtonType } from "@/types";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -22,6 +21,7 @@ const componentInfo = {
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgTypesTransormer(argTypes);
 ArgsTransormer(args);
+ArgsSetEnum(argTypes, "accessibleRole", Object.values(ButtonAccessibleRole));
 ArgsSetEnum(argTypes, "design", Object.values(ButtonDesign));
 ArgsSetEnum(argTypes, "type", Object.values(ButtonType));
 

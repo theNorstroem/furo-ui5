@@ -22,10 +22,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -41,10 +39,10 @@ export default meta;
 export const Default: StoryObj = {
   render: () => html`
     <furo-ui5-context-menu open opener="anchor">
-          <furo-ui5-menu-item text="Open" icon="open-folder"></furo-ui5-menu-item>
-          <furo-ui5-menu-separator></furo-ui5-menu-separator>
-          <furo-ui5-menu-item text="Delete" icon="delete"></furo-ui5-menu-item>
-        </furo-ui5-context-menu>
-        <div id="anchor">Right-click target</div>
+      <furo-ui5-menu-item text="Open" icon="open-folder"></furo-ui5-menu-item>
+      <furo-ui5-menu-separator></furo-ui5-menu-separator>
+      <furo-ui5-menu-item text="Delete" icon="delete"></furo-ui5-menu-item>
+    </furo-ui5-context-menu>
+    <div id="anchor">Right-click target</div>
   `,
 };

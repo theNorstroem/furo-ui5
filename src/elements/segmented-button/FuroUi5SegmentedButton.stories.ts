@@ -19,12 +19,14 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import type { SelectOption } from "@/lib/open-models/signatures";
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
 import { CubeOptions, type ICubeOptions } from "@/models/furoui5test/cube/CubeOptions";
-import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
+import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { SegmentedButtonSelectionMode } from "@/types";
 
 const component = "furo-ui5-segmented-button";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "selectionMode", Object.values(SegmentedButtonSelectionMode));
 
 // set up the model
 const cube = new CubeEntity();
@@ -86,10 +88,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

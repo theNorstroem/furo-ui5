@@ -23,10 +23,8 @@ const meta: Meta = {
   // args,
   argTypes,
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

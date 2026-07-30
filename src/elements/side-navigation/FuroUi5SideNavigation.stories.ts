@@ -6,6 +6,7 @@ import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
@@ -22,10 +23,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -39,13 +38,13 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  render: () => html`
-    <furo-ui5-side-navigation style="height:260px">
-          <furo-ui5-side-navigation-item text="Home" icon="home" selected></furo-ui5-side-navigation-item>
-          <furo-ui5-side-navigation-item text="Reports" icon="bar-chart">
-            <furo-ui5-side-navigation-sub-item text="Monthly"></furo-ui5-side-navigation-sub-item>
-          </furo-ui5-side-navigation-item>
-          <furo-ui5-side-navigation-item slot="fixedItems" text="Help" icon="sys-help"></furo-ui5-side-navigation-item>
-        </furo-ui5-side-navigation>
+  render: renderArgs => html`
+    <furo-ui5-side-navigation accessible-name="${ifDefined(renderArgs.accessibleName)}" ?collapsed="${renderArgs.collapsed}" style="height:260px">
+      <furo-ui5-side-navigation-item text="Home" icon="home" selected></furo-ui5-side-navigation-item>
+      <furo-ui5-side-navigation-item text="Reports" icon="bar-chart">
+        <furo-ui5-side-navigation-sub-item text="Monthly"></furo-ui5-side-navigation-sub-item>
+      </furo-ui5-side-navigation-item>
+      <furo-ui5-side-navigation-item slot="fixedItems" text="Help" icon="sys-help"></furo-ui5-side-navigation-item>
+    </furo-ui5-side-navigation>
   `,
 };

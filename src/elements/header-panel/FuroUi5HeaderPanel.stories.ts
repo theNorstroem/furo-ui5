@@ -10,14 +10,17 @@ import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { ArgsTransormer, ArgTypesTransormer } from "@/stories-shared/ArgTypesTransormer";
+import { ArgTypesTransormer, ArgsSetEnum, ArgsTransormer } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { IconShape, IconSize } from "@/types";
 
 const component = "furo-ui5-header-panel";
 
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgTypesTransormer(argTypes);
 ArgsTransormer(args);
+ArgsSetEnum(argTypes, "iconShape", Object.values(IconShape));
+ArgsSetEnum(argTypes, "iconSize", Object.values(IconSize));
 
 const meta: Meta = {
   title: "layout/HeaderPanel",
@@ -26,10 +29,8 @@ const meta: Meta = {
   tags: ["autodocs"],
   argTypes,
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

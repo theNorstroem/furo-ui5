@@ -13,11 +13,13 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { SelectTextSeparator } from "@/types";
 import ValueState from "@/types/ValueState";
 
 const component = "furo-ui5-select-enum";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "textSeparator", Object.values(SelectTextSeparator));
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 // set up the model
@@ -35,10 +37,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

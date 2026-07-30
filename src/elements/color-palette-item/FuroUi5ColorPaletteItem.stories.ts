@@ -5,11 +5,14 @@ import { STRING } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
+import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
 
 const component = "furo-ui5-color-palette-item";
-const { events, argTypes } = getStorybookHelpers(component);
+const { events, args, argTypes } = getStorybookHelpers(component);
+ArgsTransormAll(argTypes, args, []);
 
 const red = new STRING("#ff0000");
 const green = new STRING("#00ff00");
@@ -22,10 +25,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -41,9 +42,14 @@ export default meta;
 
 export const Default: StoryObj = {
   args: {},
-  render: () => html`
+  render: renderArgs => html`
     <furo-ui5-color-palette accessible-name="palette">
-      <furo-ui5-color-palette-item .model="${red}"></furo-ui5-color-palette-item>
+      <furo-ui5-color-palette-item
+        ?selected="${renderArgs.selected}"
+        tooltip="${ifDefined(renderArgs.tooltip)}"
+        value="${ifDefined(renderArgs.value)}"
+        .model="${red}"
+      ></furo-ui5-color-palette-item>
       <furo-ui5-color-palette-item .model="${green}"></furo-ui5-color-palette-item>
     </furo-ui5-color-palette>
   `,

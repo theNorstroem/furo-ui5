@@ -17,12 +17,14 @@ import type { FuroUi5PasswordInput } from "@/elements/password-input/FuroUi5Pass
 import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
 import { ArgsSetEnum, ArgsTransormAll, ArgsTransormer } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { InputSuggestionsFilter } from "@/types";
 import ValueState from "@/types/ValueState";
 
 const component = "furo-ui5-password-input";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, ["type", "noTypeahead", "showSuggestions"]);
 ArgsTransormer(args);
+ArgsSetEnum(argTypes, "filter", Object.values(InputSuggestionsFilter));
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 // set up the model
@@ -40,10 +42,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

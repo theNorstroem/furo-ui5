@@ -196,11 +196,7 @@ export const Growing: StoryObj = {
 export const HeaderAndFooter: StoryObj = {
   args: {},
   render: () => html`
-    <furo-ui5-list
-      sticky-header
-      footer-text="3 of 128 shown"
-      style="max-width:22rem;height:14rem;overflow:auto"
-    >
+    <furo-ui5-list sticky-header footer-text="3 of 128 shown" style="max-width:22rem;height:14rem;overflow:auto">
       <div slot="header" style="display:flex;align-items:center;gap:.5rem;padding:.5rem">
         <furo-ui5-icon name="world"></furo-ui5-icon>
         <furo-ui5-title level="H5">Countries</furo-ui5-title>

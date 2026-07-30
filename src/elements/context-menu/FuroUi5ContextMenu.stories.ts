@@ -8,15 +8,19 @@ import { ARRAY } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import type { MenuItemSelectedEventDetail } from "@/elements/context-menu/FuroUi5ContextMenu";
 import { type IMenuitem, Menuitem } from "@/models/furoui5/Menuitem";
-import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
+import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { PopoverHorizontalAlign, PopoverPlacement } from "@/types";
 
 const component = "furo-ui5-context-menu";
 const { events, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, {}, []);
+ArgsSetEnum(argTypes, "horizontalAlign", Object.values(PopoverHorizontalAlign));
+ArgsSetEnum(argTypes, "placement", Object.values(PopoverPlacement));
 
 const flatMenu: ARRAY<Menuitem, IMenuitem> = ARRAY.Builder(Menuitem, [
   { id: "new", displayName: "New", icon: "create", command: "Ctrl+N" },
@@ -103,7 +107,7 @@ const renderSelection = (id: string) => (e: Event) => {
 };
 
 export const Default: StoryObj = {
-  render: () => html`
+  render: renderArgs => html`
     <furo-ui5-button
       id="cm-default-opener"
       @click="${() => {
@@ -117,7 +121,18 @@ export const Default: StoryObj = {
       >Open menu</furo-ui5-button
     >
 
-    <furo-ui5-context-menu id="cm-default-menu" .model="${flatMenu}" @menu-item-selected="${renderSelection("cm-default-log")}"></furo-ui5-context-menu>
+    <furo-ui5-context-menu
+      header-text="${ifDefined(renderArgs.headerText)}"
+      horizontal-align="${ifDefined(renderArgs.horizontalAlign)}"
+      ?loading="${renderArgs.loading}"
+      loading-delay="${ifDefined(renderArgs.loadingDelay)}"
+      ?open="${renderArgs.open}"
+      opener="${ifDefined(renderArgs.opener)}"
+      placement="${ifDefined(renderArgs.placement)}"
+      id="cm-default-menu"
+      .model="${flatMenu}"
+      @menu-item-selected="${renderSelection("cm-default-log")}"
+    ></furo-ui5-context-menu>
 
     <furo-ui5-title>Last selection</furo-ui5-title>
     <pre id="cm-default-log">(nothing selected)</pre>

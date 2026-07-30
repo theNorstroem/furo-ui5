@@ -12,6 +12,7 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 import { ArgsSetEnum, ArgsTransormer, ArgTypesTransormer } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { InteractiveAreaSize, LinkAccessibleRole } from "@/types";
 
 const component = "furo-ui5-link";
 const componentInfo = {
@@ -22,6 +23,8 @@ const componentInfo = {
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgTypesTransormer(argTypes);
 ArgsTransormer(args);
+ArgsSetEnum(argTypes, "accessibleRole", Object.values(LinkAccessibleRole));
+ArgsSetEnum(argTypes, "interactiveAreaSize", Object.values(InteractiveAreaSize));
 ArgsSetEnum(argTypes, "design", Object.values(LinkDesign));
 ArgsSetEnum(argTypes, "wrappingType", Object.values(WrappingType));
 

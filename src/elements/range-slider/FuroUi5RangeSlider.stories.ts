@@ -7,11 +7,14 @@ import { FLOAT } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
+import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
 
 const component = "furo-ui5-range-slider";
-const { events, argTypes } = getStorybookHelpers(component);
+const { events, args, argTypes } = getStorybookHelpers(component);
+ArgsTransormAll(argTypes, args, []);
 
 // the two ends of the range bind to two separate numeric fields
 const lower = new FLOAT(250);
@@ -25,10 +28,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -50,12 +51,30 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  args: {},
-  render: () => html`
+  args: {
+    max: "1000",
+    min: "0",
+    step: "50",
+  },
+  render: renderArgs => html`
     <furo-ui5-form-layout form-title="Range Slider">
       <furo-ui5-form-row>
         <furo-ui5-label slot="label">Price range</furo-ui5-label>
-        <furo-ui5-range-slider min="0" max="1000" step="50" .model="${lower}" .modelTo="${upper}"></furo-ui5-range-slider>
+        <furo-ui5-range-slider
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?editable-tooltip="${renderArgs.editableTooltip}"
+          label-interval="${ifDefined(renderArgs.labelInterval)}"
+          max="${ifDefined(renderArgs.max)}"
+          min="${ifDefined(renderArgs.min)}"
+          name="${ifDefined(renderArgs.name)}"
+          ?show-tickmarks="${renderArgs.showTickmarks}"
+          ?show-tooltip="${renderArgs.showTooltip}"
+          step="${ifDefined(renderArgs.step)}"
+          tickmarks="${ifDefined(renderArgs.tickmarks)}"
+          .model="${lower}"
+          .modelTo="${upper}"
+        ></furo-ui5-range-slider>
       </furo-ui5-form-row>
     </furo-ui5-form-layout>
   `,

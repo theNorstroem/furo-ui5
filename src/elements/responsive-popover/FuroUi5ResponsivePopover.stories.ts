@@ -14,6 +14,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { ArgsSetEnum, ArgsTransormer, ArgTypesTransormer } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { PopupAccessibleRole } from "@/types";
 
 const component = "furo-ui5-responsive-popover";
 const componentInfo = {
@@ -24,6 +25,7 @@ const componentInfo = {
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgTypesTransormer(argTypes);
 ArgsTransormer(args);
+ArgsSetEnum(argTypes, "accessibleRole", Object.values(PopupAccessibleRole));
 ArgsSetEnum(argTypes, "placement", Object.values(PopoverPlacement));
 ArgsSetEnum(argTypes, "horizontalAlign", Object.values(PopoverHorizontalAlign));
 ArgsSetEnum(argTypes, "verticalAlign", Object.values(PopoverVerticalAlign));
@@ -40,10 +42,8 @@ const meta: Meta = {
   tags: ["autodocs"],
   argTypes,
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({ ...componentInfo, component, since: "2.0.0" }),

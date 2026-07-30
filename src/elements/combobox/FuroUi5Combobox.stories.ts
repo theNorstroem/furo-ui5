@@ -21,11 +21,13 @@ import { CubeEntity } from "@/models/furoui5test/cube/CubeEntity";
 import { CubeOptions, type ICubeOptions } from "@/models/furoui5test/cube/CubeOptions";
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { ComboBoxFilter } from "@/types";
 import ValueState from "@/types/ValueState";
 
 const component = "furo-ui5-combobox";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "filter", Object.values(ComboBoxFilter));
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 // set up the model
@@ -90,10 +92,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

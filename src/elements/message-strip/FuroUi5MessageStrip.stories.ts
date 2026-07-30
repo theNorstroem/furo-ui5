@@ -4,11 +4,16 @@ import { STRING } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
+import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { MessageStripDesign } from "@/types";
 
 const component = "furo-ui5-message-strip";
-const { events, argTypes } = getStorybookHelpers(component);
+const { events, args, argTypes } = getStorybookHelpers(component);
+ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "design", Object.values(MessageStripDesign));
 
 const message = new STRING("Your changes have been saved.");
 
@@ -20,10 +25,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -38,6 +41,16 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  args: {},
-  render: () => html` <furo-ui5-message-strip design="Positive" .model="${message}"></furo-ui5-message-strip> `,
+  args: {
+    design: "Positive",
+  },
+  render: renderArgs => html`
+    <furo-ui5-message-strip
+      color-scheme="${ifDefined(renderArgs.colorScheme)}"
+      design="${ifDefined(renderArgs.design)}"
+      ?hide-close-button="${renderArgs.hideCloseButton}"
+      ?hide-icon="${renderArgs.hideIcon}"
+      .model="${message}"
+    ></furo-ui5-message-strip>
+  `,
 };

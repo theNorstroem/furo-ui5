@@ -23,10 +23,8 @@ const meta: Meta = {
   tags: ["autodocs"],
   argTypes,
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({

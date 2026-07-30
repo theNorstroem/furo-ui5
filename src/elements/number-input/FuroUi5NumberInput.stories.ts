@@ -13,6 +13,7 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { InputSuggestionsFilter } from "@/types";
 import ValueState from "@/types/ValueState";
 
 const component = "furo-ui5-number-input";
@@ -24,6 +25,7 @@ const componentInfo = {
 
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, ["type", "maxlength", "minlength", "modelValue"]);
+ArgsSetEnum(argTypes, "filter", Object.values(InputSuggestionsFilter));
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 // models

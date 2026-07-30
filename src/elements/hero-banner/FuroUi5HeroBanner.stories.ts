@@ -6,13 +6,18 @@ import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
-import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
+import { ArgsSetEnum, ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
+import { HeroBannerActionsPlacement, HeroBannerColumnsRatio, HeroBannerHeaderBlockPlacement } from "@/types";
 
 const component = "furo-ui5-hero-banner";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
+ArgsSetEnum(argTypes, "actionsPlacement", Object.values(HeroBannerActionsPlacement));
+ArgsSetEnum(argTypes, "columnsRatio", Object.values(HeroBannerColumnsRatio));
+ArgsSetEnum(argTypes, "headerBlockPlacement", Object.values(HeroBannerHeaderBlockPlacement));
 
 const meta: Meta = {
   title: "display/HeroBanner",
@@ -22,10 +27,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -39,10 +42,17 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  render: () => html`
-    <furo-ui5-hero-banner style="height:200px">
-          <furo-ui5-title slot="title" level="H2">Welcome</furo-ui5-title>
-          <furo-ui5-text slot="subtitle">Everything you need, in one place.</furo-ui5-text>
-        </furo-ui5-hero-banner>
+  render: renderArgs => html`
+    <furo-ui5-hero-banner
+      actions-placement="${ifDefined(renderArgs.actionsPlacement)}"
+      columns-ratio="${ifDefined(renderArgs.columnsRatio)}"
+      header-block-placement="${ifDefined(renderArgs.headerBlockPlacement)}"
+      header-text="${ifDefined(renderArgs.headerText)}"
+      overline-text="${ifDefined(renderArgs.overlineText)}"
+      style="height:200px"
+    >
+      <furo-ui5-title slot="title" level="H2">Welcome</furo-ui5-title>
+      <furo-ui5-text slot="subtitle">Everything you need, in one place.</furo-ui5-text>
+    </furo-ui5-hero-banner>
   `,
 };

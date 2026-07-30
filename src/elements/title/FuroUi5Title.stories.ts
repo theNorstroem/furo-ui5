@@ -21,6 +21,7 @@ const componentInfo = {
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgTypesTransormer(argTypes);
 ArgsTransormer(args);
+ArgsSetEnum(argTypes, "size", Object.values(TitleLevel));
 ArgsSetEnum(argTypes, "level", Object.values(TitleLevel));
 ArgsSetEnum(argTypes, "wrappingType", Object.values(WrappingType));
 

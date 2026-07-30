@@ -6,6 +6,7 @@ import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
@@ -22,10 +23,8 @@ const meta: Meta = {
   argTypes,
 
   parameters: {
-    parameters: {
-      actions: {
-        handles: events,
-      },
+    actions: {
+      handles: events,
     },
     docs: {
       page: DocumentationTemplate({
@@ -39,12 +38,12 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  render: () => html`
+  render: renderArgs => html`
     <furo-ui5-timeline>
-          <furo-ui5-timeline-group-item item-name="Yesterday">
-            <furo-ui5-timeline-item title-text="Created" icon="add">Order created.</furo-ui5-timeline-item>
-            <furo-ui5-timeline-item title-text="Paid" icon="money-bills">Payment received.</furo-ui5-timeline-item>
-          </furo-ui5-timeline-group-item>
-        </furo-ui5-timeline>
+      <furo-ui5-timeline-group-item ?collapsed="${renderArgs.collapsed}" group-name="${ifDefined(renderArgs.groupName)}" item-name="Yesterday">
+        <furo-ui5-timeline-item title-text="Created" icon="add">Order created.</furo-ui5-timeline-item>
+        <furo-ui5-timeline-item title-text="Paid" icon="money-bills">Payment received.</furo-ui5-timeline-item>
+      </furo-ui5-timeline-group-item>
+    </furo-ui5-timeline>
   `,
 };
