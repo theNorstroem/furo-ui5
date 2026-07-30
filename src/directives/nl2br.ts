@@ -7,7 +7,10 @@ import { map } from "lit/directives/map.js";
  * in a string with <br> tags for rendering in the DOM.
  *
  * ### Usage
- * import the `nl2br` directive and use it in your template `${nl2br("-a\n-b\n-c")}`
+ * ```js
+ * import { nl2br } from "@furo/ui5/directives/nl2br";
+ * ```
+ * then use it in your template: `${nl2br("-a\n-b\n-c")}`
  */
 class DirectiveNl2br extends Directive {
   render(str: string) {

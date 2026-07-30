@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
-  "version": "2.0.0-RC.8",
+  "version": "2.0.0-RC.10",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": {
     "type": "git",
@@ -369,6 +369,10 @@
       "types": "./dist/type-renderers/*/index.d.ts",
       "default": "./dist/type-renderers/*/index.js"
     },
+    "./models": {
+      "types": "./dist/models/index.d.ts",
+      "default": "./dist/models/index.js"
+    },
     "./JSX": {
       "types": "./dist/JSX/index.d.ts",
       "default": "./dist/JSX/index.js"
@@ -381,6 +385,10 @@
       "types": "./dist/Assets.d.ts",
       "default": "./dist/Assets.js"
     },
+    "./Icons": {
+      "types": "./dist/Icons.d.ts",
+      "default": "./dist/Icons.js"
+    },
     "./styles/table.css": {
       "types": "./dist/styles/table.css.d.ts",
       "default": "./dist/styles/table.css.js"
@@ -392,6 +400,10 @@
     "./styles/GlobalStyles": {
       "types": "./dist/styles/GlobalStyles.d.ts",
       "default": "./dist/styles/GlobalStyles.js"
+    },
+    "./directives/nl2br": {
+      "types": "./dist/directives/nl2br.d.ts",
+      "default": "./dist/directives/nl2br.js"
     },
     "./package.json": "./package.json",
     "./custom-elements.json": "./custom-elements.json",

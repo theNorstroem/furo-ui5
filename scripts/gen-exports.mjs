@@ -52,12 +52,29 @@ const STATIC_ENTRIES = {
     types: "./dist/type-renderers/*/index.d.ts",
     default: "./dist/type-renderers/*/index.js",
   },
+  // Generated open-models types (from contracts/proto via `npm run gen:contracts`).
+  // These names appear in the public signatures of component `model` accessors
+  // (FuroFatString, IFuroFatString, NavigationNode, …), so consumers need to be
+  // able to spell them. Barrel only — deliberately no `./models/*`: the per-file
+  // tree is ~200 modules of generated code whose layout churns with the .proto
+  // files, and the barrel already re-exports every model type used publicly.
+  "./models": {
+    types: "./dist/models/index.d.ts",
+    default: "./dist/models/index.js",
+  },
   // Side-effect import that registers the UI5 assets and adopts the furo
   // global stylesheet (theme vars, scrollbar, raw <table> styling) onto
   // document.adoptedStyleSheets.
   "./Assets": {
     types: "./dist/Assets.d.ts",
     default: "./dist/Assets.js",
+  },
+  // Side-effect import registering all SAP icon sets at once (icons + tnt +
+  // business-suite), so consumers write one line instead of three
+  // package-internal AllIcons.js paths.
+  "./Icons": {
+    types: "./dist/Icons.d.ts",
+    default: "./dist/Icons.js",
   },
   // Adoptable stylesheets for shadow-DOM consumers. The light DOM gets these
   // for free via "./Assets"; a component with a shadow root has to adopt them.
@@ -72,6 +89,14 @@ const STATIC_ENTRIES = {
   "./styles/GlobalStyles": {
     types: "./dist/styles/GlobalStyles.d.ts",
     default: "./dist/styles/GlobalStyles.js",
+  },
+  // Lit directives. Exported per-file rather than via a `./directives/*`
+  // wildcard: the sibling files in that folder (nl2br-test-helper, nl2br.spec)
+  // are deliberately excluded from the published tarball by the `files`
+  // negations, so a wildcard would advertise subpaths that resolve to nothing.
+  "./directives/nl2br": {
+    types: "./dist/directives/nl2br.d.ts",
+    default: "./dist/directives/nl2br.js",
   },
   "./package.json": "./package.json",
   "./custom-elements.json": "./custom-elements.json",
@@ -122,9 +147,11 @@ function buildExportsMap(componentEntries) {
   //   1. root "."
   //   2. per-component entries (alphabetical)
   //   3. type renderers (barrel + per-renderer wildcard)
-  //   4. JSX intrinsic declarations
-  //   5. assets + adoptable stylesheets
-  //   6. static metadata entries
+  //   4. generated open-models types (barrel)
+  //   5. JSX intrinsic declarations
+  //   6. assets, icons + adoptable stylesheets
+  //   7. lit directives
+  //   8. static metadata entries
   const out = {};
   out["."] = STATIC_ENTRIES["."];
   for (const [key, val] of Object.entries(componentEntries)) {
@@ -132,12 +159,15 @@ function buildExportsMap(componentEntries) {
   }
   out["./type-renderers"] = STATIC_ENTRIES["./type-renderers"];
   out["./type-renderers/*"] = STATIC_ENTRIES["./type-renderers/*"];
+  out["./models"] = STATIC_ENTRIES["./models"];
   out["./JSX"] = STATIC_ENTRIES["./JSX"];
   out["./JSX/*"] = STATIC_ENTRIES["./JSX/*"];
   out["./Assets"] = STATIC_ENTRIES["./Assets"];
+  out["./Icons"] = STATIC_ENTRIES["./Icons"];
   out["./styles/table.css"] = STATIC_ENTRIES["./styles/table.css"];
   out["./styles/scrollbar.css"] = STATIC_ENTRIES["./styles/scrollbar.css"];
   out["./styles/GlobalStyles"] = STATIC_ENTRIES["./styles/GlobalStyles"];
+  out["./directives/nl2br"] = STATIC_ENTRIES["./directives/nl2br"];
   out["./package.json"] = STATIC_ENTRIES["./package.json"];
   out["./custom-elements.json"] = STATIC_ENTRIES["./custom-elements.json"];
   out["./web-types.json"] = STATIC_ENTRIES["./web-types.json"];

@@ -6,9 +6,8 @@ weight: 100
 
 # DirectiveNl2br
 
-**@furo/components** <small>v1.18.0</small>
-<br>`import '@furo/components/src/src/directives/nl2br.js';`<small>
-<br>exports *DirectiveNl2br* js
+**@furo/ui5**
+<br>`import { nl2br } from '@furo/ui5/directives/nl2br';`<small>
 <br>exports *nl2br* js
 <br>superclass *Directive*</small>
 
