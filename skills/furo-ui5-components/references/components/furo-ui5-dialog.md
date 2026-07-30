@@ -14,7 +14,7 @@ use-when: Use for confirmations, forms, or content requiring user action before 
 **Extends:** `Dialog`
 **Category:** Container
 
-**Related:** [`furo-ui5-popover`](furo-ui5-popover.md), [`furo-ui5-responsive-popover`](furo-ui5-responsive-popover.md)
+**Related:** [`furo-ui5-popover`](furo-ui5-popover.md), [`furo-ui5-responsive-popover`](furo-ui5-responsive-popover.md), [`furo-ui5-bar`](furo-ui5-bar.md)
 
 ## Overview
 

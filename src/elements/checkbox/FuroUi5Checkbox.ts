@@ -157,11 +157,19 @@ export class FuroUi5Checkbox extends CheckBox {
   }
 
   /**
+   * UI5 detects checkboxes by the original tag name used as an attribute, not by tag
+   * name (see the `hasAttribute("ui5-checkbox")` checks in @ui5/webcomponents).
+   * Without this marker a parent silently ignores the element.
+   */
+  override connectedCallback() {
+    this.setAttribute("ui5-checkbox", "");
+    return super.connectedCallback();
+  }
+
+  /**
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-checkbox";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-checkbox" };
   }
 }

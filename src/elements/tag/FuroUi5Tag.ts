@@ -92,8 +92,6 @@ export class FuroUi5Tag extends Tag {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-tag";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-tag" };
   }
 }

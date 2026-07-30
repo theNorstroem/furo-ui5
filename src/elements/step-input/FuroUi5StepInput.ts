@@ -273,8 +273,6 @@ export class FuroUi5StepInput extends StepInput {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-step";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-step" };
   }
 }

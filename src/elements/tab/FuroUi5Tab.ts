@@ -27,8 +27,6 @@ export class FuroUi5Tab extends Tab {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-tab";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-tab" };
   }
 }

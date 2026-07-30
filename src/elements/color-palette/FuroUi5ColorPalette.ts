@@ -175,8 +175,6 @@ export class FuroUi5ColorPalette extends ColorPalette {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-color-palette";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-color-palette" };
   }
 }

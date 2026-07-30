@@ -14,7 +14,7 @@ use-when: Use for primary and secondary actions in forms, toolbars, and dialogs.
 **Extends:** `Button`
 **Category:** Button
 
-**Related:** [`furo-ui5-toggle-button`](furo-ui5-toggle-button.md), [`furo-ui5-segmented-button`](furo-ui5-segmented-button.md), [`furo-ui5-button-badge`](furo-ui5-button-badge.md)
+**Related:** [`furo-ui5-toggle-button`](furo-ui5-toggle-button.md), [`furo-ui5-split-button`](furo-ui5-split-button.md), [`furo-ui5-segmented-button`](furo-ui5-segmented-button.md), [`furo-ui5-button-badge`](furo-ui5-button-badge.md)
 
 ## Overview
 

@@ -14,7 +14,7 @@ use-when: Use for action menus, context menus, or hierarchical navigation.
 **Extends:** `Menu`
 **Category:** Navigation
 
-**Related:** [`furo-ui5-popover`](furo-ui5-popover.md)
+**Related:** [`furo-ui5-menu-item`](furo-ui5-menu-item.md), [`furo-ui5-popover`](furo-ui5-popover.md), [`furo-ui5-split-button`](furo-ui5-split-button.md)
 
 ## Overview
 

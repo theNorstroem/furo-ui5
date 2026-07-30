@@ -14,9 +14,7 @@ export class FuroUi5ShellBarSearch extends ShellBarSearch {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-shellbar-search";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-shellbar-search" };
   }
 
   /**

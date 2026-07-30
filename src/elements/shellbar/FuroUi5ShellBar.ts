@@ -16,9 +16,7 @@ export class FuroUi5ShellBar extends ShellBar {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-shellbar";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-shellbar" };
   }
 
   /**

@@ -19,8 +19,6 @@ export class FuroUi5Breadcrumbs extends Breadcrumbs {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-breadcrumbs";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-breadcrumbs" };
   }
 }

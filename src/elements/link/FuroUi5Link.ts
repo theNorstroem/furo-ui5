@@ -11,11 +11,19 @@ import Link from "@ui5/webcomponents/dist/Link.js";
  */
 export class FuroUi5Link extends Link {
   /**
+   * UI5 detects links by the original tag name used as an attribute, not by tag name
+   * (see the `hasAttribute("ui5-link")` check in @ui5/webcomponents — `furo-ui5-breadcrumbs`
+   * relies on it). Without this marker a parent silently ignores the element.
+   */
+  override connectedCallback() {
+    this.setAttribute("ui5-link", "");
+    return super.connectedCallback();
+  }
+
+  /**
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-link";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-link" };
   }
 }

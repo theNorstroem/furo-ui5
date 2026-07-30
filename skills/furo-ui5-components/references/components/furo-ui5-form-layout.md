@@ -114,7 +114,7 @@ If you want to add text content instead of input elements (for readonly forms), 
 | Attribute | Type | Default | Description |
 |-----------|------|---------|-------------|
 | `form-title` | `string` | "" | Title of the form. |
-| `heading-level` | `"H2" \| "H1" \| "H3" \| "H4" \| "H5" \| "H6"` | "H5" | Level for the heading. |
+| `heading-level` | `"H1" \| "H2" \| "H3" \| "H4" \| "H5" \| "H6"` | "H5" | Level for the heading. |
 | `multi-columns` | `boolean` | false | Private auto calculated attribute, do not set. |
 
 ## Slots

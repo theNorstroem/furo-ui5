@@ -308,9 +308,7 @@ export class FuroUi5Combobox extends ComboBox {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-combobox";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-combobox" };
   }
 }
 

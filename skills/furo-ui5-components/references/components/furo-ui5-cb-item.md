@@ -14,7 +14,7 @@ use-when: Use as children of furo-ui5-combobox.
 **Extends:** `ComboBoxItem`
 **Category:** Form
 
-**Related:** [`furo-ui5-combobox`](furo-ui5-combobox.md)
+**Related:** [`furo-ui5-combobox`](furo-ui5-combobox.md), [`furo-ui5-cb-item-group`](furo-ui5-cb-item-group.md)
 
 ## Overview
 

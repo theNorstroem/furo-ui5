@@ -13,7 +13,7 @@ use-when: Use within object pages to define major content sections.
 **Import:** `import "@furo/ui5/section"`
 **Category:** Container
 
-**Related:** [`furo-ui5-subsection`](furo-ui5-subsection.md)
+**Related:** [`furo-ui5-subsection`](furo-ui5-subsection.md), [`furo-ui5-page`](furo-ui5-page.md)
 
 ## Overview
 

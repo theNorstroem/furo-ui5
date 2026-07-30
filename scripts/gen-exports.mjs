@@ -62,6 +62,15 @@ const STATIC_ENTRIES = {
     types: "./dist/models/index.d.ts",
     default: "./dist/models/index.js",
   },
+  // Enums for every enum-valued component property — mostly one-line re-exports of
+  // the corresponding @ui5/webcomponents(-fiori) enum, so consumers can spell
+  // `TitleLevel.H2` without reaching into a transitive dependency's dist/.
+  // Barrel only — deliberately no `./types/*`, for the same reason as `./models`:
+  // a wildcard would freeze every filename as public API.
+  "./types": {
+    types: "./dist/types/index.d.ts",
+    default: "./dist/types/index.js",
+  },
   // Side-effect import that registers the UI5 assets and adopts the furo
   // global stylesheet (theme vars, scrollbar, raw <table> styling) onto
   // document.adoptedStyleSheets.
@@ -147,7 +156,7 @@ function buildExportsMap(componentEntries) {
   //   1. root "."
   //   2. per-component entries (alphabetical)
   //   3. type renderers (barrel + per-renderer wildcard)
-  //   4. generated open-models types (barrel)
+  //   4. generated open-models types (barrel) + property enums (barrel)
   //   5. JSX intrinsic declarations
   //   6. assets, icons + adoptable stylesheets
   //   7. lit directives
@@ -160,6 +169,7 @@ function buildExportsMap(componentEntries) {
   out["./type-renderers"] = STATIC_ENTRIES["./type-renderers"];
   out["./type-renderers/*"] = STATIC_ENTRIES["./type-renderers/*"];
   out["./models"] = STATIC_ENTRIES["./models"];
+  out["./types"] = STATIC_ENTRIES["./types"];
   out["./JSX"] = STATIC_ENTRIES["./JSX"];
   out["./JSX/*"] = STATIC_ENTRIES["./JSX/*"];
   out["./Assets"] = STATIC_ENTRIES["./Assets"];

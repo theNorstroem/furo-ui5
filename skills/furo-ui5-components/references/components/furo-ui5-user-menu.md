@@ -14,7 +14,7 @@ use-when: Use for user account actions like profile, settings, and logout.
 **Extends:** `UserMenu`
 **Category:** PageStructure
 
-**Related:** [`furo-ui5-shellbar`](furo-ui5-shellbar.md)
+**Related:** [`furo-ui5-shellbar`](furo-ui5-shellbar.md), [`furo-ui5-user-menu-item`](furo-ui5-user-menu-item.md), [`furo-ui5-user-menu-account`](furo-ui5-user-menu-account.md)
 
 ## Overview
 

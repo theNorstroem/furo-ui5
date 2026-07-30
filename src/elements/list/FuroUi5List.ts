@@ -19,8 +19,6 @@ export class FuroUi5List extends List {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-list";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-list" };
   }
 }

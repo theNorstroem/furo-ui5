@@ -19,8 +19,6 @@ export class FuroUi5AvatarGroup extends AvatarGroup {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-avatar-group";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-avatar-group" };
   }
 }

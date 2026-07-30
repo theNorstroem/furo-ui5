@@ -25,8 +25,6 @@ export class FuroUi5Label extends Label {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-label";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-label" };
   }
 }

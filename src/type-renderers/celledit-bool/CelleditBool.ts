@@ -134,8 +134,6 @@ export class CelleditBool extends CheckBox {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "celledit-bool";
-    return md;
+    return { tag: "celledit-bool" };
   }
 }

@@ -92,8 +92,6 @@ export class FuroUi5MessageStrip extends MessageStrip {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-message-strip";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-message-strip" };
   }
 }

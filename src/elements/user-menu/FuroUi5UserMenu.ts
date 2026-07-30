@@ -14,9 +14,7 @@ export class FuroUi5UserMenu extends UserMenu {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-user-menu";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-user-menu" };
   }
 
   /**

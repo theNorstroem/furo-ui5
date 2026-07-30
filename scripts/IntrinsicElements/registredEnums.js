@@ -1,4 +1,10 @@
 const enums = new Set([
+  "@ui5/webcomponents/dist/types/ListItemAccessibleRole.js",
+  "@ui5/webcomponents/dist/types/MenuItemGroupCheckMode.js",
+  "@ui5/webcomponents-fiori/dist/types/HeroBannerActionsPlacement.js",
+  "@ui5/webcomponents-fiori/dist/types/HeroBannerColumnsRatio.js",
+  "@ui5/webcomponents-fiori/dist/types/HeroBannerHeaderBlockPlacement.js",
+  "@ui5/webcomponents-fiori/dist/types/NavigationLayoutMode.js",
   "@ui5/webcomponents/dist/types/SelectTextSeparator.js",
   "@ui5/webcomponents/dist/types/InputSuggestionsFilter.js",
   "@ui5/webcomponents/dist/types/AvatarColorScheme.js",

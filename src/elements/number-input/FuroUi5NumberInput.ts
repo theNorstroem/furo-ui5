@@ -299,11 +299,19 @@ export class FuroUi5NumberInput extends Input {
   };
 
   /**
+   * UI5 detects inputs by the original tag name used as an attribute, not by tag name
+   * (see the `hasAttribute("ui5-input")` checks in @ui5/webcomponents). Without this
+   * marker a parent silently ignores the element.
+   */
+  override connectedCallback() {
+    this.setAttribute("ui5-input", "");
+    return super.connectedCallback();
+  }
+
+  /**
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-number-input";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-number-input" };
   }
 }

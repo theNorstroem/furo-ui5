@@ -13,9 +13,7 @@ export class FuroUi5Popover extends Popover {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-popover";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-popover" };
   }
 
   /**

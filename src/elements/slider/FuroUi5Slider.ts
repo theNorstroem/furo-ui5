@@ -253,8 +253,6 @@ export class FuroUi5Slider extends Slider {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-slider";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-slider" };
   }
 }

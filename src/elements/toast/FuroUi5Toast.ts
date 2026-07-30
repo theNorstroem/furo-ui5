@@ -37,8 +37,6 @@ export class FuroUi5Toast extends Toast {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-toast";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-toast" };
   }
 }

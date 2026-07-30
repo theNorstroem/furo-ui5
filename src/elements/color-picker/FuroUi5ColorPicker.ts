@@ -93,8 +93,6 @@ export class FuroUi5ColorPicker extends ColorPicker {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-color-picker";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-color-picker" };
   }
 }

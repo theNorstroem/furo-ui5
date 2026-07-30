@@ -27,8 +27,6 @@ export class FuroUi5Tabcontainer extends TabContainer {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-tabcontainer";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-tabcontainer" };
   }
 }

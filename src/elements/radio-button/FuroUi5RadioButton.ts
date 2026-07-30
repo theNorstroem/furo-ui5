@@ -182,11 +182,19 @@ export class FuroUi5RadioButton extends RadioButton {
   }
 
   /**
+   * UI5 detects radio buttons by the original tag name used as an attribute, not by tag
+   * name (see the `hasAttribute("ui5-radio-button")` check in @ui5/webcomponents).
+   * Without this marker a parent silently ignores the element.
+   */
+  override connectedCallback() {
+    this.setAttribute("ui5-radio-button", "");
+    return super.connectedCallback();
+  }
+
+  /**
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-radio-button";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-radio-button" };
   }
 }

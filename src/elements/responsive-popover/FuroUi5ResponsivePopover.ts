@@ -14,9 +14,7 @@ export class FuroUi5ResponsivePopover extends ResponsivePopover {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-responsive-popover";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-responsive-popover" };
   }
 
   /**

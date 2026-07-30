@@ -97,9 +97,7 @@ export class FuroUi5BusyIndicator extends BusyIndicator {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-busy-indicator";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-busy-indicator" };
   }
 
   static override get styles() {

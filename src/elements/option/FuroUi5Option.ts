@@ -107,8 +107,6 @@ export class FuroUi5Option extends Option {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-option";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-option" };
   }
 }

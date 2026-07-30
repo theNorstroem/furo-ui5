@@ -86,8 +86,12 @@ export class FuroUi5PasswordInput extends Input {
 
   /**
    * Listen on input event to trigger the search event.
+   *
+   * The `ui5-input` marker attribute is required because UI5 detects inputs by the
+   * original tag name used as an attribute, not by tag name.
    */
   override connectedCallback() {
+    this.setAttribute("ui5-input", "");
     this.addEventListener("input", this.debouncedSearch);
 
     return super.connectedCallback();
@@ -240,8 +244,6 @@ export class FuroUi5PasswordInput extends Input {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-password-input";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-password-input" };
   }
 }

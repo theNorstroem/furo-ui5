@@ -90,8 +90,6 @@ export class FuroUi5Text extends Text {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-text";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-text" };
   }
 }

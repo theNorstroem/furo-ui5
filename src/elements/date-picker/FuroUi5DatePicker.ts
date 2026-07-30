@@ -215,8 +215,6 @@ export class FuroUi5DatePicker extends DatePicker {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-date-picker";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-date-picker" };
   }
 }

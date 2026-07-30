@@ -144,8 +144,6 @@ export class FuroUi5RelativeTimeBadge extends Tag {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-relative-time-badge";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-relative-time-badge" };
   }
 }

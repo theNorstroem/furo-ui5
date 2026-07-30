@@ -309,8 +309,6 @@ export class FuroUi5ContextMenu extends Menu {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-context-menu";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-context-menu" };
   }
 }

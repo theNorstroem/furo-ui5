@@ -3,8 +3,8 @@ import "@/elements/button";
 import "@/elements/button-badge";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
-import ButtonDesign from "@ui5/webcomponents/dist/types/ButtonDesign.js";
-import ButtonType from "@ui5/webcomponents/dist/types/ButtonType.js";
+import {ButtonDesign} from "@/types";
+import {ButtonType} from "@/types";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
 import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";

@@ -132,8 +132,6 @@ export class FuroUi5RelativeTimeDisplay extends Text {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-relative-time-display";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-relative-time-display" };
   }
 }

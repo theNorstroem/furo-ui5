@@ -158,8 +158,6 @@ export class FuroUi5Textarea extends TextArea {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-textarea";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-textarea" };
   }
 }

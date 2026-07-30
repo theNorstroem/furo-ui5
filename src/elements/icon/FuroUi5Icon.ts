@@ -25,8 +25,6 @@ export class FuroUi5Icon extends Icon {
    * @private
    */
   static override get metadata() {
-    const md = super.metadata;
-    md.tag = "furo-ui5-icon";
-    return md;
+    return { ...super.metadata, tag: "furo-ui5-icon" };
   }
 }

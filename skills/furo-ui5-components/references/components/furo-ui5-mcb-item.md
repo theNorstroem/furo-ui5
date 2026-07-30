@@ -14,7 +14,7 @@ use-when: Use as children of furo-ui5-multi-combobox.
 **Extends:** `MultiComboBoxItem`
 **Category:** Form
 
-**Related:** [`furo-ui5-multi-combobox`](furo-ui5-multi-combobox.md)
+**Related:** [`furo-ui5-multi-combobox`](furo-ui5-multi-combobox.md), [`furo-ui5-mcb-item-group`](furo-ui5-mcb-item-group.md)
 
 ## Overview
 

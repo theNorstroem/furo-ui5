@@ -49,6 +49,10 @@
       "types": "./dist/elements/avatar-group/index.d.ts",
       "default": "./dist/elements/avatar-group/index.js"
     },
+    "./bar": {
+      "types": "./dist/elements/bar/index.d.ts",
+      "default": "./dist/elements/bar/index.js"
+    },
     "./barcode-scanner-dialog": {
       "types": "./dist/elements/barcode-scanner-dialog/index.d.ts",
       "default": "./dist/elements/barcode-scanner-dialog/index.js"
@@ -77,9 +81,29 @@
       "types": "./dist/elements/button-badge/index.d.ts",
       "default": "./dist/elements/button-badge/index.js"
     },
+    "./card": {
+      "types": "./dist/elements/card/index.d.ts",
+      "default": "./dist/elements/card/index.js"
+    },
+    "./card-header": {
+      "types": "./dist/elements/card-header/index.d.ts",
+      "default": "./dist/elements/card-header/index.js"
+    },
+    "./carousel": {
+      "types": "./dist/elements/carousel/index.d.ts",
+      "default": "./dist/elements/carousel/index.js"
+    },
     "./cb-item": {
       "types": "./dist/elements/cb-item/index.d.ts",
       "default": "./dist/elements/cb-item/index.js"
+    },
+    "./cb-item-custom": {
+      "types": "./dist/elements/cb-item-custom/index.d.ts",
+      "default": "./dist/elements/cb-item-custom/index.js"
+    },
+    "./cb-item-group": {
+      "types": "./dist/elements/cb-item-group/index.d.ts",
+      "default": "./dist/elements/cb-item-group/index.js"
     },
     "./checkbox": {
       "types": "./dist/elements/checkbox/index.d.ts",
@@ -125,6 +149,10 @@
       "types": "./dist/elements/dialog/index.d.ts",
       "default": "./dist/elements/dialog/index.js"
     },
+    "./dynamic-side-content": {
+      "types": "./dist/elements/dynamic-side-content/index.d.ts",
+      "default": "./dist/elements/dynamic-side-content/index.js"
+    },
     "./expandable-text": {
       "types": "./dist/elements/expandable-text/index.d.ts",
       "default": "./dist/elements/expandable-text/index.js"
@@ -132,6 +160,10 @@
     "./file-uploader": {
       "types": "./dist/elements/file-uploader/index.d.ts",
       "default": "./dist/elements/file-uploader/index.js"
+    },
+    "./flexible-column-layout": {
+      "types": "./dist/elements/flexible-column-layout/index.d.ts",
+      "default": "./dist/elements/flexible-column-layout/index.js"
     },
     "./form-field-segmenter": {
       "types": "./dist/elements/form-field-segmenter/index.d.ts",
@@ -153,13 +185,37 @@
       "types": "./dist/elements/header-panel/index.d.ts",
       "default": "./dist/elements/header-panel/index.js"
     },
+    "./hero-banner": {
+      "types": "./dist/elements/hero-banner/index.d.ts",
+      "default": "./dist/elements/hero-banner/index.js"
+    },
     "./icon": {
       "types": "./dist/elements/icon/index.d.ts",
       "default": "./dist/elements/icon/index.js"
     },
+    "./illustrated-message": {
+      "types": "./dist/elements/illustrated-message/index.d.ts",
+      "default": "./dist/elements/illustrated-message/index.js"
+    },
     "./label": {
       "types": "./dist/elements/label/index.d.ts",
       "default": "./dist/elements/label/index.js"
+    },
+    "./li": {
+      "types": "./dist/elements/li/index.d.ts",
+      "default": "./dist/elements/li/index.js"
+    },
+    "./li-custom": {
+      "types": "./dist/elements/li-custom/index.d.ts",
+      "default": "./dist/elements/li-custom/index.js"
+    },
+    "./li-group": {
+      "types": "./dist/elements/li-group/index.d.ts",
+      "default": "./dist/elements/li-group/index.js"
+    },
+    "./li-group-header": {
+      "types": "./dist/elements/li-group-header/index.d.ts",
+      "default": "./dist/elements/li-group-header/index.js"
     },
     "./link": {
       "types": "./dist/elements/link/index.d.ts",
@@ -177,6 +233,26 @@
       "types": "./dist/elements/mcb-item/index.d.ts",
       "default": "./dist/elements/mcb-item/index.js"
     },
+    "./mcb-item-custom": {
+      "types": "./dist/elements/mcb-item-custom/index.d.ts",
+      "default": "./dist/elements/mcb-item-custom/index.js"
+    },
+    "./mcb-item-group": {
+      "types": "./dist/elements/mcb-item-group/index.d.ts",
+      "default": "./dist/elements/mcb-item-group/index.js"
+    },
+    "./menu-item": {
+      "types": "./dist/elements/menu-item/index.d.ts",
+      "default": "./dist/elements/menu-item/index.js"
+    },
+    "./menu-item-group": {
+      "types": "./dist/elements/menu-item-group/index.d.ts",
+      "default": "./dist/elements/menu-item-group/index.js"
+    },
+    "./menu-separator": {
+      "types": "./dist/elements/menu-separator/index.d.ts",
+      "default": "./dist/elements/menu-separator/index.js"
+    },
     "./message-strip": {
       "types": "./dist/elements/message-strip/index.d.ts",
       "default": "./dist/elements/message-strip/index.js"
@@ -193,6 +269,18 @@
       "types": "./dist/elements/multi-input/index.d.ts",
       "default": "./dist/elements/multi-input/index.js"
     },
+    "./navigation-layout": {
+      "types": "./dist/elements/navigation-layout/index.d.ts",
+      "default": "./dist/elements/navigation-layout/index.js"
+    },
+    "./navigation-menu": {
+      "types": "./dist/elements/navigation-menu/index.d.ts",
+      "default": "./dist/elements/navigation-menu/index.js"
+    },
+    "./navigation-menu-item": {
+      "types": "./dist/elements/navigation-menu-item/index.d.ts",
+      "default": "./dist/elements/navigation-menu-item/index.js"
+    },
     "./number-input": {
       "types": "./dist/elements/number-input/index.d.ts",
       "default": "./dist/elements/number-input/index.js"
@@ -200,6 +288,18 @@
     "./option": {
       "types": "./dist/elements/option/index.d.ts",
       "default": "./dist/elements/option/index.js"
+    },
+    "./option-custom": {
+      "types": "./dist/elements/option-custom/index.d.ts",
+      "default": "./dist/elements/option-custom/index.js"
+    },
+    "./page": {
+      "types": "./dist/elements/page/index.d.ts",
+      "default": "./dist/elements/page/index.js"
+    },
+    "./panel": {
+      "types": "./dist/elements/panel/index.d.ts",
+      "default": "./dist/elements/panel/index.js"
     },
     "./password-input": {
       "types": "./dist/elements/password-input/index.d.ts",
@@ -212,6 +312,14 @@
     "./pretty-json": {
       "types": "./dist/elements/pretty-json/index.d.ts",
       "default": "./dist/elements/pretty-json/index.js"
+    },
+    "./product-switch": {
+      "types": "./dist/elements/product-switch/index.d.ts",
+      "default": "./dist/elements/product-switch/index.js"
+    },
+    "./product-switch-item": {
+      "types": "./dist/elements/product-switch-item/index.d.ts",
+      "default": "./dist/elements/product-switch-item/index.js"
     },
     "./progress-indicator": {
       "types": "./dist/elements/progress-indicator/index.d.ts",
@@ -265,6 +373,10 @@
       "types": "./dist/elements/shellbar/index.d.ts",
       "default": "./dist/elements/shellbar/index.js"
     },
+    "./shellbar-branding": {
+      "types": "./dist/elements/shellbar-branding/index.d.ts",
+      "default": "./dist/elements/shellbar-branding/index.js"
+    },
     "./shellbar-item": {
       "types": "./dist/elements/shellbar-item/index.d.ts",
       "default": "./dist/elements/shellbar-item/index.js"
@@ -281,6 +393,22 @@
       "types": "./dist/elements/show-hide/index.d.ts",
       "default": "./dist/elements/show-hide/index.js"
     },
+    "./side-navigation": {
+      "types": "./dist/elements/side-navigation/index.d.ts",
+      "default": "./dist/elements/side-navigation/index.js"
+    },
+    "./side-navigation-group": {
+      "types": "./dist/elements/side-navigation-group/index.d.ts",
+      "default": "./dist/elements/side-navigation-group/index.js"
+    },
+    "./side-navigation-item": {
+      "types": "./dist/elements/side-navigation-item/index.d.ts",
+      "default": "./dist/elements/side-navigation-item/index.js"
+    },
+    "./side-navigation-sub-item": {
+      "types": "./dist/elements/side-navigation-sub-item/index.d.ts",
+      "default": "./dist/elements/side-navigation-sub-item/index.js"
+    },
     "./sign-pad": {
       "types": "./dist/elements/sign-pad/index.d.ts",
       "default": "./dist/elements/sign-pad/index.js"
@@ -288,6 +416,10 @@
     "./slider": {
       "types": "./dist/elements/slider/index.d.ts",
       "default": "./dist/elements/slider/index.js"
+    },
+    "./split-button": {
+      "types": "./dist/elements/split-button/index.d.ts",
+      "default": "./dist/elements/split-button/index.js"
     },
     "./step-input": {
       "types": "./dist/elements/step-input/index.d.ts",
@@ -297,6 +429,18 @@
       "types": "./dist/elements/subsection/index.d.ts",
       "default": "./dist/elements/subsection/index.js"
     },
+    "./suggestion-item": {
+      "types": "./dist/elements/suggestion-item/index.d.ts",
+      "default": "./dist/elements/suggestion-item/index.js"
+    },
+    "./suggestion-item-custom": {
+      "types": "./dist/elements/suggestion-item-custom/index.d.ts",
+      "default": "./dist/elements/suggestion-item-custom/index.js"
+    },
+    "./suggestion-item-group": {
+      "types": "./dist/elements/suggestion-item-group/index.d.ts",
+      "default": "./dist/elements/suggestion-item-group/index.js"
+    },
     "./switch": {
       "types": "./dist/elements/switch/index.d.ts",
       "default": "./dist/elements/switch/index.js"
@@ -304,6 +448,10 @@
     "./tab": {
       "types": "./dist/elements/tab/index.d.ts",
       "default": "./dist/elements/tab/index.js"
+    },
+    "./tab-separator": {
+      "types": "./dist/elements/tab-separator/index.d.ts",
+      "default": "./dist/elements/tab-separator/index.js"
     },
     "./tabcontainer": {
       "types": "./dist/elements/tabcontainer/index.d.ts",
@@ -333,6 +481,18 @@
       "types": "./dist/elements/time-picker/index.d.ts",
       "default": "./dist/elements/time-picker/index.js"
     },
+    "./timeline": {
+      "types": "./dist/elements/timeline/index.d.ts",
+      "default": "./dist/elements/timeline/index.js"
+    },
+    "./timeline-group-item": {
+      "types": "./dist/elements/timeline-group-item/index.d.ts",
+      "default": "./dist/elements/timeline-group-item/index.js"
+    },
+    "./timeline-item": {
+      "types": "./dist/elements/timeline-item/index.d.ts",
+      "default": "./dist/elements/timeline-item/index.js"
+    },
     "./title": {
       "types": "./dist/elements/title/index.d.ts",
       "default": "./dist/elements/title/index.js"
@@ -344,6 +504,34 @@
     "./toggle-button": {
       "types": "./dist/elements/toggle-button/index.d.ts",
       "default": "./dist/elements/toggle-button/index.js"
+    },
+    "./tokenizer": {
+      "types": "./dist/elements/tokenizer/index.d.ts",
+      "default": "./dist/elements/tokenizer/index.js"
+    },
+    "./toolbar": {
+      "types": "./dist/elements/toolbar/index.d.ts",
+      "default": "./dist/elements/toolbar/index.js"
+    },
+    "./toolbar-button": {
+      "types": "./dist/elements/toolbar-button/index.d.ts",
+      "default": "./dist/elements/toolbar-button/index.js"
+    },
+    "./toolbar-select": {
+      "types": "./dist/elements/toolbar-select/index.d.ts",
+      "default": "./dist/elements/toolbar-select/index.js"
+    },
+    "./toolbar-select-option": {
+      "types": "./dist/elements/toolbar-select-option/index.d.ts",
+      "default": "./dist/elements/toolbar-select-option/index.js"
+    },
+    "./toolbar-separator": {
+      "types": "./dist/elements/toolbar-separator/index.d.ts",
+      "default": "./dist/elements/toolbar-separator/index.js"
+    },
+    "./toolbar-spacer": {
+      "types": "./dist/elements/toolbar-spacer/index.d.ts",
+      "default": "./dist/elements/toolbar-spacer/index.js"
     },
     "./tree": {
       "types": "./dist/elements/tree/index.d.ts",
@@ -361,6 +549,26 @@
       "types": "./dist/elements/user-menu/index.d.ts",
       "default": "./dist/elements/user-menu/index.js"
     },
+    "./user-menu-account": {
+      "types": "./dist/elements/user-menu-account/index.d.ts",
+      "default": "./dist/elements/user-menu-account/index.js"
+    },
+    "./user-menu-item": {
+      "types": "./dist/elements/user-menu-item/index.d.ts",
+      "default": "./dist/elements/user-menu-item/index.js"
+    },
+    "./user-menu-item-group": {
+      "types": "./dist/elements/user-menu-item-group/index.d.ts",
+      "default": "./dist/elements/user-menu-item-group/index.js"
+    },
+    "./wizard": {
+      "types": "./dist/elements/wizard/index.d.ts",
+      "default": "./dist/elements/wizard/index.js"
+    },
+    "./wizard-step": {
+      "types": "./dist/elements/wizard-step/index.d.ts",
+      "default": "./dist/elements/wizard-step/index.js"
+    },
     "./type-renderers": {
       "types": "./dist/type-renderers/index.d.ts",
       "default": "./dist/type-renderers/index.js"
@@ -372,6 +580,10 @@
     "./models": {
       "types": "./dist/models/index.d.ts",
       "default": "./dist/models/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/types/index.js"
     },
     "./JSX": {
       "types": "./dist/JSX/index.d.ts",

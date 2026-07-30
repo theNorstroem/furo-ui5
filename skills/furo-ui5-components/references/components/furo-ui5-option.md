@@ -14,7 +14,7 @@ use-when: Use as children of furo-ui5-select.
 **Extends:** `Option`
 **Category:** Form
 
-**Related:** [`furo-ui5-select`](furo-ui5-select.md)
+**Related:** [`furo-ui5-select`](furo-ui5-select.md), [`furo-ui5-option-custom`](furo-ui5-option-custom.md)
 
 ## Overview
 
