@@ -6,12 +6,11 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 /**
  *
- * `furo-pretty-json`
+ * `furo-ui5-pretty-json`
  * Pretty json with highlighting
  *
  * ```html
- * <furo-pretty-json
- *   fn-inject-json="--data"></furo-pretty-json>
+ * <furo-ui5-pretty-json .model="${this.someFieldNode}"></furo-ui5-pretty-json>
  * ```
  *
  * @summary Display-only pretty printer for JSON data.

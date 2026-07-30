@@ -76,6 +76,17 @@
           "tagName": "furo-ui5-avatar-badge",
           "customElement": true,
           "summary": "A badge overlay for an avatar (no data binding).",
+          "keywords": [
+            "avatar",
+            "badge",
+            "status",
+            "overlay"
+          ],
+          "category": "Display",
+          "useCase": "Use as the badge slot of furo-ui5-avatar to show a status indicator.",
+          "relatedComponents": [
+            "furo-ui5-avatar"
+          ],
           "attributes": [
             {
               "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
@@ -301,6 +312,17 @@
           "tagName": "furo-ui5-avatar-group",
           "customElement": true,
           "summary": "Grouped/overlapping avatars container (no data binding).",
+          "keywords": [
+            "avatar",
+            "group",
+            "people",
+            "stack"
+          ],
+          "category": "Display",
+          "useCase": "Use to display a group of avatars; provide avatars as children.",
+          "relatedComponents": [
+            "furo-ui5-avatar"
+          ],
           "slots": [
             {
               "name": "default",
@@ -777,6 +799,18 @@
           "tagName": "furo-ui5-avatar",
           "customElement": true,
           "summary": "Display-only avatar whose initials are bound to a string field.",
+          "keywords": [
+            "avatar",
+            "initials",
+            "person",
+            "display",
+            "string"
+          ],
+          "category": "Display",
+          "useCase": "Use to render a person's initials from a bound string value.",
+          "relatedComponents": [
+            "furo-ui5-avatar-group"
+          ],
           "slots": [
             {
               "name": "badge",
@@ -1197,6 +1231,19 @@
           "tagName": "furo-ui5-barcode-scanner-dialog",
           "customElement": true,
           "summary": "Dialog with camera integration for barcode scanning.",
+          "keywords": [
+            "barcode",
+            "scanner",
+            "camera",
+            "qr-code",
+            "dialog",
+            "scan"
+          ],
+          "category": "Form",
+          "useCase": "Use for mobile barcode/QR code scanning functionality.",
+          "relatedComponents": [
+            "furo-ui5-dialog"
+          ],
           "slots": [
             {
               "name": "footer",
@@ -1549,7 +1596,21 @@
           ],
           "tagName": "furo-ui5-bool-icon",
           "customElement": true,
-          "summary": "Display-only icon that reflects a boolean value."
+          "summary": "Display-only icon that reflects a boolean value.",
+          "keywords": [
+            "bool",
+            "boolean",
+            "icon",
+            "display",
+            "indicator",
+            "true-false"
+          ],
+          "category": "Display",
+          "useCase": "Use to visualize a boolean field as an icon (e.g. yes/no, on/off).",
+          "relatedComponents": [
+            "furo-ui5-icon",
+            "furo-ui5-checkbox"
+          ]
         }
       ],
       "exports": [
@@ -1645,6 +1706,17 @@
           "tagName": "furo-ui5-breadcrumbs-item",
           "customElement": true,
           "summary": "A single breadcrumb item (no data binding).",
+          "keywords": [
+            "breadcrumb",
+            "item",
+            "navigation",
+            "link"
+          ],
+          "category": "Navigation",
+          "useCase": "Use as a child of furo-ui5-breadcrumbs to represent one trail entry.",
+          "relatedComponents": [
+            "furo-ui5-breadcrumbs"
+          ],
           "slots": [
             {
               "name": "default",
@@ -1842,6 +1914,17 @@
           "tagName": "furo-ui5-breadcrumbs",
           "customElement": true,
           "summary": "Breadcrumb navigation trail (no data binding).",
+          "keywords": [
+            "breadcrumbs",
+            "navigation",
+            "trail",
+            "path"
+          ],
+          "category": "Navigation",
+          "useCase": "Use to show a navigation trail; provide breadcrumb items as children.",
+          "relatedComponents": [
+            "furo-ui5-breadcrumbs-item"
+          ],
           "slots": [
             {
               "name": "default",
@@ -2153,6 +2236,20 @@
           "tagName": "furo-ui5-busy-indicator",
           "customElement": true,
           "summary": "Loading spinner overlay indicating ongoing background activity.",
+          "keywords": [
+            "busy",
+            "loading",
+            "spinner",
+            "progress",
+            "wait",
+            "indicator"
+          ],
+          "category": "Feedback",
+          "useCase": "Use to indicate loading or processing state.",
+          "relatedComponents": [
+            "furo-ui5-busy-indicator-block",
+            "furo-ui5-progress-indicator"
+          ],
           "slots": [
             {
               "description": "Determines the content over which the component will appear.",
@@ -2347,6 +2444,18 @@
           "tagName": "furo-ui5-button-badge",
           "customElement": true,
           "summary": "Badge indicator attached to buttons for counts or status.",
+          "keywords": [
+            "badge",
+            "button",
+            "counter",
+            "notification",
+            "indicator"
+          ],
+          "category": "Button",
+          "useCase": "Use to add a count or status indicator to buttons.",
+          "relatedComponents": [
+            "furo-ui5-button"
+          ],
           "attributes": [
             {
               "description": "Defines the badge placement and appearance.\n- **InlineText** - displayed inside the button after its text, and recommended for **compact** density.\n- **OverlayText** - displayed at the top-end corner of the button, and recommended for **cozy** density.\n- **AttentionDot** - displayed at the top-end corner of the button as a dot, and suitable for both **cozy** and **compact** densities.",
@@ -2716,6 +2825,23 @@
           "tagName": "furo-ui5-button",
           "customElement": true,
           "summary": "Primary interactive button for triggering actions and navigation.",
+          "keywords": [
+            "button",
+            "action",
+            "click",
+            "submit",
+            "primary",
+            "trigger",
+            "call-to-action"
+          ],
+          "category": "Button",
+          "useCase": "Use for primary and secondary actions in forms, toolbars, and dialogs.",
+          "relatedComponents": [
+            "furo-ui5-toggle-button",
+            "furo-ui5-split-button",
+            "furo-ui5-segmented-button",
+            "furo-ui5-button-badge"
+          ],
           "slots": [
             {
               "name": "badge",
@@ -3166,6 +3292,18 @@
           "tagName": "furo-ui5-cb-item",
           "customElement": true,
           "summary": "Item option for ComboBox selection lists.",
+          "keywords": [
+            "combobox-item",
+            "option",
+            "selection",
+            "dropdown"
+          ],
+          "category": "Form",
+          "useCase": "Use as children of furo-ui5-combobox.",
+          "relatedComponents": [
+            "furo-ui5-combobox",
+            "furo-ui5-cb-item-group"
+          ],
           "attributes": [
             {
               "description": "Defines the additional text of the component.",
@@ -3640,6 +3778,21 @@
           "tagName": "furo-ui5-checkbox",
           "customElement": true,
           "summary": "Binary selection control for enabling or disabling options.",
+          "keywords": [
+            "checkbox",
+            "check",
+            "toggle",
+            "boolean",
+            "selection",
+            "tick",
+            "form"
+          ],
+          "category": "Form",
+          "useCase": "Use for independent on/off choices or multiple selections from a group.",
+          "relatedComponents": [
+            "furo-ui5-switch",
+            "furo-ui5-radio-button"
+          ],
           "cssParts": [
             {
               "description": "Used to style the icon of the `ui5-checkbox`",
@@ -4026,6 +4179,18 @@
           "tagName": "furo-ui5-color-palette-item",
           "customElement": true,
           "summary": "A single color swatch bound to a string (CSS color) field.",
+          "keywords": [
+            "color",
+            "palette",
+            "item",
+            "swatch"
+          ],
+          "category": "Form",
+          "useCase": "Use as a child of furo-ui5-color-palette / furo-ui5-color-palette-popover.",
+          "relatedComponents": [
+            "furo-ui5-color-palette",
+            "furo-ui5-color-palette-popover"
+          ],
           "attributes": [
             {
               "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
@@ -4442,6 +4607,21 @@
           "tagName": "furo-ui5-color-palette-popover",
           "customElement": true,
           "summary": "Color swatches in a popover with selected-color data binding.",
+          "keywords": [
+            "color",
+            "palette",
+            "popover",
+            "swatch",
+            "picker",
+            "value"
+          ],
+          "category": "Form",
+          "useCase": "Use to let users pick a color from a predefined set shown in a popover.",
+          "relatedComponents": [
+            "furo-ui5-color-palette",
+            "furo-ui5-color-palette-item",
+            "furo-ui5-color-picker"
+          ],
           "slots": [
             {
               "name": "default",
@@ -4852,6 +5032,20 @@
           "tagName": "furo-ui5-color-palette",
           "customElement": true,
           "summary": "Predefined color swatches with selected-color data binding.",
+          "keywords": [
+            "color",
+            "palette",
+            "swatch",
+            "picker",
+            "value"
+          ],
+          "category": "Form",
+          "useCase": "Use to let users pick a color from a predefined set stored as a string.",
+          "relatedComponents": [
+            "furo-ui5-color-palette-popover",
+            "furo-ui5-color-palette-item",
+            "furo-ui5-color-picker"
+          ],
           "slots": [
             {
               "name": "default",
@@ -5132,6 +5326,19 @@
           "tagName": "furo-ui5-color-picker",
           "customElement": true,
           "summary": "Color selection control bound to a string field.",
+          "keywords": [
+            "color",
+            "picker",
+            "hex",
+            "rgb",
+            "swatch",
+            "value"
+          ],
+          "category": "Form",
+          "useCase": "Use to let users pick a color value stored as a string.",
+          "relatedComponents": [
+            "furo-ui5-text-input"
+          ],
           "attributes": [
             {
               "description": "Defines the accessible name of the component.",
@@ -5730,6 +5937,22 @@
           "tagName": "furo-ui5-combobox",
           "customElement": true,
           "summary": "Filterable dropdown with type-ahead search functionality.",
+          "keywords": [
+            "combobox",
+            "autocomplete",
+            "dropdown",
+            "search",
+            "filter",
+            "typeahead",
+            "select"
+          ],
+          "category": "Form",
+          "useCase": "Use when users benefit from searching/filtering a large list of options.",
+          "relatedComponents": [
+            "furo-ui5-select",
+            "furo-ui5-multi-combobox",
+            "furo-ui5-cb-item"
+          ],
           "slots": [
             {
               "name": "default",
@@ -6545,6 +6768,21 @@
           "tagName": "furo-ui5-context-menu",
           "customElement": true,
           "summary": "Popup menu with hierarchical menu items for actions or navigation.",
+          "keywords": [
+            "menu",
+            "context-menu",
+            "dropdown",
+            "actions",
+            "navigation",
+            "popup"
+          ],
+          "category": "Navigation",
+          "useCase": "Use for action menus, context menus, or hierarchical navigation.",
+          "relatedComponents": [
+            "furo-ui5-menu-item",
+            "furo-ui5-popover",
+            "furo-ui5-split-button"
+          ],
           "slots": [
             {
               "name": "default",
@@ -7347,6 +7585,20 @@
           "tagName": "furo-ui5-date-picker",
           "customElement": true,
           "summary": "Date selection input with calendar popup for picking single dates.",
+          "keywords": [
+            "date",
+            "picker",
+            "calendar",
+            "input",
+            "selection",
+            "form"
+          ],
+          "category": "Form",
+          "useCase": "Use for selecting a single date value.",
+          "relatedComponents": [
+            "furo-ui5-daterange-picker",
+            "furo-ui5-date-time-picker"
+          ],
           "slots": [
             {
               "name": "valueStateMessage",
@@ -8464,6 +8716,20 @@
           "tagName": "furo-ui5-date-time-picker",
           "customElement": true,
           "summary": "Combined date and time selection in a single input.",
+          "keywords": [
+            "datetime",
+            "date",
+            "time",
+            "picker",
+            "calendar",
+            "combined"
+          ],
+          "category": "Form",
+          "useCase": "Use when both date and time need to be selected together.",
+          "relatedComponents": [
+            "furo-ui5-date-picker",
+            "furo-ui5-time-picker"
+          ],
           "slots": [
             {
               "name": "valueStateMessage",
@@ -9631,6 +9897,21 @@
           "tagName": "furo-ui5-daterange-picker",
           "customElement": true,
           "summary": "Date range selection (start and end date) in a single input.",
+          "keywords": [
+            "daterange",
+            "range",
+            "date",
+            "picker",
+            "calendar",
+            "from",
+            "to"
+          ],
+          "category": "Form",
+          "useCase": "Use to let users select a start and end date as a single range.",
+          "relatedComponents": [
+            "furo-ui5-date-picker",
+            "furo-ui5-date-time-picker"
+          ],
           "slots": [
             {
               "name": "valueStateMessage",
@@ -10429,6 +10710,22 @@
           "tagName": "furo-ui5-dialog",
           "customElement": true,
           "summary": "Modal dialog for displaying content requiring user attention or action.",
+          "keywords": [
+            "dialog",
+            "modal",
+            "popup",
+            "overlay",
+            "confirmation",
+            "alert",
+            "lightbox"
+          ],
+          "category": "Container",
+          "useCase": "Use for confirmations, forms, or content requiring user action before continuing.",
+          "relatedComponents": [
+            "furo-ui5-popover",
+            "furo-ui5-responsive-popover",
+            "furo-ui5-bar"
+          ],
           "slots": [
             {
               "name": "default",
@@ -10945,6 +11242,18 @@
           "tagName": "furo-ui5-expandable-text",
           "customElement": true,
           "summary": "Display-only collapsible text bound to a string field.",
+          "keywords": [
+            "expandable",
+            "text",
+            "display",
+            "show-more",
+            "string"
+          ],
+          "category": "Display",
+          "useCase": "Use to render a long bound string with a show-more / show-less toggle.",
+          "relatedComponents": [
+            "furo-ui5-text"
+          ],
           "attributes": [
             {
               "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
@@ -11287,6 +11596,18 @@
           "tagName": "furo-ui5-file-uploader",
           "customElement": true,
           "summary": "File selection control (no data binding).",
+          "keywords": [
+            "file",
+            "upload",
+            "uploader",
+            "attachment",
+            "input"
+          ],
+          "category": "Form",
+          "useCase": "Use to let users pick one or more files; handle the `change` event yourself.",
+          "relatedComponents": [
+            "furo-ui5-text-input"
+          ],
           "slots": [
             {
               "name": "default",
@@ -11661,7 +11982,20 @@
           ],
           "tagName": "furo-ui5-form-field-segmenter",
           "customElement": true,
-          "summary": "Splits form field space for segmented layouts like value-unit pairs."
+          "summary": "Splits form field space for segmented layouts like value-unit pairs.",
+          "keywords": [
+            "segmenter",
+            "split",
+            "field",
+            "unit",
+            "compound",
+            "paired"
+          ],
+          "category": "FormLayout",
+          "useCase": "Use for compound fields like amount-currency or value-unit pairs.",
+          "relatedComponents": [
+            "furo-ui5-form-row"
+          ]
         }
       ],
       "exports": [
@@ -11733,7 +12067,20 @@
           ],
           "tagName": "furo-ui5-form-group",
           "customElement": true,
-          "summary": "Logical grouping of related form fields within a form layout."
+          "summary": "Logical grouping of related form fields within a form layout.",
+          "keywords": [
+            "form-group",
+            "section",
+            "fieldset",
+            "grouping",
+            "fields"
+          ],
+          "category": "FormLayout",
+          "useCase": "Use to group related form fields under a common heading.",
+          "relatedComponents": [
+            "furo-ui5-form-layout",
+            "furo-ui5-form-row"
+          ]
         }
       ],
       "exports": [
@@ -11864,7 +12211,22 @@
           ],
           "tagName": "furo-ui5-form-layout",
           "customElement": true,
-          "summary": "Responsive form container organizing form groups with adaptive column layout."
+          "summary": "Responsive form container organizing form groups with adaptive column layout.",
+          "keywords": [
+            "form",
+            "layout",
+            "responsive",
+            "groups",
+            "columns",
+            "structure"
+          ],
+          "category": "FormLayout",
+          "useCase": "Use as the main container for forms with one or more form groups.",
+          "relatedComponents": [
+            "furo-ui5-form-group",
+            "furo-ui5-form-row",
+            "furo-ui5-form-facet"
+          ]
         }
       ],
       "exports": [
@@ -11920,7 +12282,21 @@
           "members": [],
           "tagName": "furo-ui5-form-row",
           "customElement": true,
-          "summary": "Single row within a form containing label and input field."
+          "summary": "Single row within a form containing label and input field.",
+          "keywords": [
+            "form-row",
+            "field",
+            "label",
+            "input",
+            "row"
+          ],
+          "category": "FormLayout",
+          "useCase": "Use for each label-field pair in a form.",
+          "relatedComponents": [
+            "furo-ui5-form-group",
+            "furo-ui5-form-layout",
+            "furo-ui5-label"
+          ]
         }
       ],
       "exports": [
@@ -12581,7 +12957,21 @@
           ],
           "tagName": "furo-ui5-header-panel",
           "customElement": true,
-          "summary": "Collapsible panel with a header for grouping content."
+          "summary": "Collapsible panel with a header for grouping content.",
+          "keywords": [
+            "header",
+            "panel",
+            "collapsible",
+            "group",
+            "container",
+            "expand"
+          ],
+          "category": "Container",
+          "useCase": "Use to group related content under a collapsible header.",
+          "relatedComponents": [
+            "furo-ui5-section",
+            "furo-ui5-subsection"
+          ]
         }
       ],
       "exports": [
@@ -12728,6 +13118,19 @@
           "tagName": "furo-ui5-icon",
           "customElement": true,
           "summary": "Scalable icon from the icon font library.",
+          "keywords": [
+            "icon",
+            "glyph",
+            "symbol",
+            "image",
+            "sap-icons"
+          ],
+          "category": "Display",
+          "useCase": "Use to display icons alongside text or as standalone indicators.",
+          "relatedComponents": [
+            "furo-ui5-button",
+            "furo-ui5-avatar"
+          ],
           "slots": [
             {
               "name": "fontIcon",
@@ -12969,6 +13372,21 @@
           "tagName": "furo-ui5-label",
           "customElement": true,
           "summary": "Text label for form fields and descriptive text.",
+          "keywords": [
+            "label",
+            "form",
+            "text",
+            "field",
+            "caption",
+            "description"
+          ],
+          "category": "Display",
+          "useCase": "Use to label form fields or display short descriptive text.",
+          "relatedComponents": [
+            "furo-ui5-text",
+            "furo-ui5-title",
+            "furo-ui5-form-row"
+          ],
           "slots": [
             {
               "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
@@ -13342,6 +13760,20 @@
           "tagName": "furo-ui5-link",
           "customElement": true,
           "summary": "Clickable text link for navigation or actions.",
+          "keywords": [
+            "link",
+            "anchor",
+            "hyperlink",
+            "navigation",
+            "url",
+            "href"
+          ],
+          "category": "Navigation",
+          "useCase": "Use for text-based navigation or triggering actions.",
+          "relatedComponents": [
+            "furo-ui5-button",
+            "furo-ui5-breadcrumbs-item"
+          ],
           "slots": [
             {
               "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
@@ -13939,6 +14371,17 @@
           "tagName": "furo-ui5-list",
           "customElement": true,
           "summary": "Vertical list container (no data binding).",
+          "keywords": [
+            "list",
+            "items",
+            "collection",
+            "vertical"
+          ],
+          "category": "Display",
+          "useCase": "Use as a styled list container; provide list items as children.",
+          "relatedComponents": [
+            "furo-ui5-tree"
+          ],
           "slots": [
             {
               "name": "default",
@@ -14534,7 +14977,20 @@
           ],
           "tagName": "furo-ui5-markdown",
           "customElement": true,
-          "summary": "Renders bound markdown text as formatted HTML."
+          "summary": "Renders bound markdown text as formatted HTML.",
+          "keywords": [
+            "markdown",
+            "md",
+            "render",
+            "formatted-text",
+            "html",
+            "display"
+          ],
+          "category": "Display",
+          "useCase": "Use to display rich text authored in markdown from a data field.",
+          "relatedComponents": [
+            "furo-ui5-text-input"
+          ]
         }
       ],
       "exports": [
@@ -14713,6 +15169,18 @@
           "tagName": "furo-ui5-mcb-item",
           "customElement": true,
           "summary": "Item option for MultiComboBox selection lists.",
+          "keywords": [
+            "multi-combobox-item",
+            "option",
+            "selection",
+            "token"
+          ],
+          "category": "Form",
+          "useCase": "Use as children of furo-ui5-multi-combobox.",
+          "relatedComponents": [
+            "furo-ui5-multi-combobox",
+            "furo-ui5-mcb-item-group"
+          ],
           "attributes": [
             {
               "description": "Defines the additional text of the component.",
@@ -15008,6 +15476,19 @@
           "tagName": "furo-ui5-message-strip",
           "customElement": true,
           "summary": "Display-only inline message bound to a string field.",
+          "keywords": [
+            "message",
+            "strip",
+            "banner",
+            "notification",
+            "display",
+            "string"
+          ],
+          "category": "Display",
+          "useCase": "Use to render a bound string value as an inline status / info message.",
+          "relatedComponents": [
+            "furo-ui5-toast"
+          ],
           "slots": [
             {
               "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
@@ -15421,7 +15902,22 @@
           ],
           "tagName": "furo-ui5-money-input",
           "customElement": true,
-          "summary": "Composite input for a monetary amount together with its currency."
+          "summary": "Composite input for a monetary amount together with its currency.",
+          "keywords": [
+            "money",
+            "currency",
+            "amount",
+            "price",
+            "input",
+            "decimal",
+            "form"
+          ],
+          "category": "Form",
+          "useCase": "Use for entering a monetary value together with its currency.",
+          "relatedComponents": [
+            "furo-ui5-number-input",
+            "furo-ui5-combobox"
+          ]
         }
       ],
       "exports": [
@@ -16011,6 +16507,22 @@
           "tagName": "furo-ui5-multi-combobox",
           "customElement": true,
           "summary": "Filterable dropdown allowing multiple selections as tokens.",
+          "keywords": [
+            "multi-combobox",
+            "multiple",
+            "selection",
+            "tokens",
+            "tags",
+            "filter",
+            "multiselect"
+          ],
+          "category": "Form",
+          "useCase": "Use for selecting multiple items from a searchable list displayed as tokens.",
+          "relatedComponents": [
+            "furo-ui5-combobox",
+            "furo-ui5-multi-input",
+            "furo-ui5-mcb-item"
+          ],
           "slots": [
             {
               "name": "default",
@@ -16884,6 +17396,21 @@
           "tagName": "furo-ui5-multi-input",
           "customElement": true,
           "summary": "Text input supporting multiple values displayed as tokens.",
+          "keywords": [
+            "multi-input",
+            "tokens",
+            "tags",
+            "multiple",
+            "values",
+            "input",
+            "form"
+          ],
+          "category": "Form",
+          "useCase": "Use when users need to enter multiple freeform values displayed as tokens.",
+          "relatedComponents": [
+            "furo-ui5-multi-combobox",
+            "furo-ui5-text-input"
+          ],
           "slots": [
             {
               "name": "default",
@@ -17850,6 +18377,22 @@
           "tagName": "furo-ui5-number-input",
           "customElement": true,
           "summary": "Numeric input field for entering numbers bound to numeric types.",
+          "keywords": [
+            "number",
+            "numeric",
+            "input",
+            "integer",
+            "float",
+            "decimal",
+            "form"
+          ],
+          "category": "Form",
+          "useCase": "Use for entering numeric values such as quantities or measurements.",
+          "relatedComponents": [
+            "furo-ui5-text-input",
+            "furo-ui5-step-input",
+            "furo-ui5-slider"
+          ],
           "slots": [
             {
               "name": "default",
@@ -18422,6 +18965,19 @@
           "tagName": "furo-ui5-option",
           "customElement": true,
           "summary": "Option item for use within Select components.",
+          "keywords": [
+            "option",
+            "item",
+            "select",
+            "dropdown",
+            "choice"
+          ],
+          "category": "Form",
+          "useCase": "Use as children of furo-ui5-select.",
+          "relatedComponents": [
+            "furo-ui5-select",
+            "furo-ui5-option-custom"
+          ],
           "slots": [
             {
               "name": "default",
@@ -19104,6 +19660,19 @@
           "tagName": "furo-ui5-password-input",
           "customElement": true,
           "summary": "Masked single-line input for password entry.",
+          "keywords": [
+            "password",
+            "masked",
+            "secret",
+            "input",
+            "credentials",
+            "form"
+          ],
+          "category": "Form",
+          "useCase": "Use for entering passwords or other sensitive masked values.",
+          "relatedComponents": [
+            "furo-ui5-text-input"
+          ],
           "slots": [
             {
               "name": "default",
@@ -19789,6 +20358,21 @@
           "tagName": "furo-ui5-popover",
           "customElement": true,
           "summary": "Non-modal floating container attached to a trigger element.",
+          "keywords": [
+            "popover",
+            "dropdown",
+            "tooltip",
+            "floating",
+            "overlay",
+            "popup"
+          ],
+          "category": "Container",
+          "useCase": "Use for contextual information or actions that don't require modal blocking.",
+          "relatedComponents": [
+            "furo-ui5-dialog",
+            "furo-ui5-responsive-popover",
+            "furo-ui5-menu"
+          ],
           "slots": [
             {
               "name": "default",
@@ -20181,7 +20765,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "\n`furo-pretty-json`\nPretty json with highlighting\n\n```html\n<furo-pretty-json\n  fn-inject-json=\"--data\"></furo-pretty-json>\n```",
+          "description": "\n`furo-ui5-pretty-json`\nPretty json with highlighting\n\n```html\n<furo-ui5-pretty-json .model=\"${this.someFieldNode}\"></furo-ui5-pretty-json>\n```",
           "name": "PrettyJson",
           "members": [
             {
@@ -20289,7 +20873,20 @@
           ],
           "tagName": "furo-ui5-pretty-json",
           "customElement": true,
-          "summary": "Display-only pretty printer for JSON data."
+          "summary": "Display-only pretty printer for JSON data.",
+          "keywords": [
+            "json",
+            "pretty-print",
+            "debug",
+            "display",
+            "format",
+            "code"
+          ],
+          "category": "Display",
+          "useCase": "Use to render JSON data in a readable, indented form.",
+          "relatedComponents": [
+            "furo-ui5-markdown"
+          ]
         }
       ],
       "exports": [
@@ -20572,6 +21169,19 @@
           "tagName": "furo-ui5-progress-indicator",
           "customElement": true,
           "summary": "Linear progress bar showing completion percentage.",
+          "keywords": [
+            "progress",
+            "bar",
+            "percentage",
+            "loading",
+            "completion",
+            "indicator"
+          ],
+          "category": "Feedback",
+          "useCase": "Use to show determinate progress of an operation.",
+          "relatedComponents": [
+            "furo-ui5-busy-indicator"
+          ],
           "cssParts": [
             {
               "description": "Used to style the main bar of the `ui5-progress-indicator`",
@@ -21047,6 +21657,22 @@
           "tagName": "furo-ui5-radio-button",
           "customElement": true,
           "summary": "Single selection control within a mutually exclusive group.",
+          "keywords": [
+            "radio",
+            "button",
+            "selection",
+            "exclusive",
+            "choice",
+            "form",
+            "option"
+          ],
+          "category": "Form",
+          "useCase": "Use for selecting exactly one option from a small set of mutually exclusive choices.",
+          "relatedComponents": [
+            "furo-ui5-checkbox",
+            "furo-ui5-select",
+            "furo-ui5-segmented-button"
+          ],
           "cssParts": [
             {
               "description": "Used to style the inner ring of the `ui5-radio-button`.",
@@ -21797,6 +22423,20 @@
           "tagName": "furo-ui5-range-slider",
           "customElement": true,
           "summary": "Horizontal slider for selecting a numeric range (lower/upper bound).",
+          "keywords": [
+            "slider",
+            "range",
+            "numeric",
+            "lower",
+            "upper",
+            "bound"
+          ],
+          "category": "Form",
+          "useCase": "Use for selecting a numeric range between two values.",
+          "relatedComponents": [
+            "furo-ui5-slider",
+            "furo-ui5-step-input"
+          ],
           "cssParts": [
             {
               "description": "Used to style the handles of the `ui5-range-slider`.",
@@ -22665,7 +23305,20 @@
           },
           "tagName": "furo-ui5-rating-indicator",
           "customElement": true,
-          "summary": "Star-based rating input for feedback collection."
+          "summary": "Star-based rating input for feedback collection.",
+          "keywords": [
+            "rating",
+            "stars",
+            "feedback",
+            "score",
+            "review",
+            "indicator"
+          ],
+          "category": "Form",
+          "useCase": "Use for collecting user ratings or displaying scores.",
+          "relatedComponents": [
+            "furo-ui5-slider"
+          ]
         }
       ],
       "exports": [
@@ -22971,6 +23624,19 @@
           "tagName": "furo-ui5-relative-time-badge",
           "customElement": true,
           "summary": "Display-only badge showing a relative time (e.g. \"3 days ago\").",
+          "keywords": [
+            "relative-time",
+            "time",
+            "badge",
+            "ago",
+            "timestamp",
+            "display"
+          ],
+          "category": "Display",
+          "useCase": "Use to show a timestamp as a human-friendly relative time badge.",
+          "relatedComponents": [
+            "furo-ui5-relative-time-display"
+          ],
           "slots": [
             {
               "name": "default",
@@ -23333,6 +23999,19 @@
           "tagName": "furo-ui5-relative-time-display",
           "customElement": true,
           "summary": "Display-only text showing a relative time (e.g. \"in 2 hours\").",
+          "keywords": [
+            "relative-time",
+            "time",
+            "ago",
+            "timestamp",
+            "display",
+            "text"
+          ],
+          "category": "Display",
+          "useCase": "Use to show a timestamp as human-friendly relative time text.",
+          "relatedComponents": [
+            "furo-ui5-relative-time-badge"
+          ],
           "slots": [
             {
               "name": "default",
@@ -23768,6 +24447,20 @@
           "tagName": "furo-ui5-responsive-popover",
           "customElement": true,
           "summary": "Popover that adapts between desktop popover and mobile fullscreen dialog.",
+          "keywords": [
+            "responsive",
+            "popover",
+            "dialog",
+            "mobile",
+            "adaptive",
+            "overlay"
+          ],
+          "category": "Container",
+          "useCase": "Use when you need popover on desktop but fullscreen dialog on mobile.",
+          "relatedComponents": [
+            "furo-ui5-popover",
+            "furo-ui5-dialog"
+          ],
           "slots": [
             {
               "name": "default",
@@ -24218,7 +24911,20 @@
           ],
           "tagName": "furo-ui5-section",
           "customElement": true,
-          "summary": "Major content section within object pages."
+          "summary": "Major content section within object pages.",
+          "keywords": [
+            "section",
+            "page",
+            "object-page",
+            "content",
+            "area"
+          ],
+          "category": "Container",
+          "useCase": "Use within object pages to define major content sections.",
+          "relatedComponents": [
+            "furo-ui5-subsection",
+            "furo-ui5-page"
+          ]
         }
       ],
       "exports": [
@@ -24434,6 +25140,17 @@
           "tagName": "furo-ui5-segmented-button-item",
           "customElement": true,
           "summary": "Item button for use within SegmentedButton components.",
+          "keywords": [
+            "segmented-button-item",
+            "item",
+            "toggle",
+            "selection"
+          ],
+          "category": "Button",
+          "useCase": "Use as children of furo-ui5-segmented-button.",
+          "relatedComponents": [
+            "furo-ui5-segmented-button"
+          ],
           "slots": [
             {
               "name": "default",
@@ -25306,6 +26023,23 @@
           "tagName": "furo-ui5-segmented-button",
           "customElement": true,
           "summary": "Group of toggle buttons for single or multiple selection.",
+          "keywords": [
+            "segmented",
+            "toggle",
+            "group",
+            "selection",
+            "tabs",
+            "enum",
+            "multiselect"
+          ],
+          "category": "Button",
+          "useCase": "Use for switching between related views or selecting one/several values in place.",
+          "relatedComponents": [
+            "furo-ui5-segmented-button-item",
+            "furo-ui5-select",
+            "furo-ui5-select-enum",
+            "furo-ui5-multi-combobox"
+          ],
           "slots": [
             {
               "name": "default",
@@ -25908,6 +26642,21 @@
           "tagName": "furo-ui5-select-enum",
           "customElement": true,
           "summary": "Dropdown selection bound to a protobuf enum field.",
+          "keywords": [
+            "select",
+            "enum",
+            "dropdown",
+            "options",
+            "choice",
+            "form",
+            "list"
+          ],
+          "category": "Form",
+          "useCase": "Use to select a single value from an enum-typed field.",
+          "relatedComponents": [
+            "furo-ui5-select",
+            "furo-ui5-option"
+          ],
           "slots": [
             {
               "name": "default",
@@ -26476,6 +27225,22 @@
           "tagName": "furo-ui5-select",
           "customElement": true,
           "summary": "Dropdown selection from a predefined list of options.",
+          "keywords": [
+            "select",
+            "dropdown",
+            "picker",
+            "options",
+            "choice",
+            "form",
+            "list"
+          ],
+          "category": "Form",
+          "useCase": "Use when selecting from a fixed list without typing; for searchable lists use combobox.",
+          "relatedComponents": [
+            "furo-ui5-combobox",
+            "furo-ui5-option",
+            "furo-ui5-radio-button"
+          ],
           "slots": [
             {
               "name": "default",
@@ -26876,6 +27641,19 @@
           "tagName": "furo-ui5-shellbar-item",
           "customElement": true,
           "summary": "Action item for the ShellBar header component.",
+          "keywords": [
+            "shellbar-item",
+            "action",
+            "header",
+            "button",
+            "icon"
+          ],
+          "category": "PageStructure",
+          "useCase": "Use as children of furo-ui5-shellbar for custom header actions.",
+          "relatedComponents": [
+            "furo-ui5-shellbar",
+            "furo-ui5-shellbar-search"
+          ],
           "attributes": [
             {
               "description": "Defines additional accessibility attributes on Shellbar Items.\n\nThe accessibility attributes support the following values:\n\n- **expanded**: Indicates whether the button, or another grouping element it controls,\nis currently expanded or collapsed.\nAccepts the following string values: `true` or `false`.\n\n- **hasPopup**: Indicates the availability and type of interactive popup element,\nsuch as menu or dialog, that can be triggered by the button.\n\n- **controls**: Identifies the element (or elements) whose contents\nor presence are controlled by the component.\nAccepts a lowercase string value, referencing the ID of the element it controls.",
@@ -27174,6 +27952,20 @@
           "tagName": "furo-ui5-shellbar-search",
           "customElement": true,
           "summary": "Search input integrated into the ShellBar header.",
+          "keywords": [
+            "search",
+            "shellbar",
+            "header",
+            "find",
+            "lookup",
+            "global-search"
+          ],
+          "category": "PageStructure",
+          "useCase": "Use within furo-ui5-shellbar for application-wide search.",
+          "relatedComponents": [
+            "furo-ui5-shellbar",
+            "furo-ui5-search"
+          ],
           "slots": [
             {
               "name": "action",
@@ -27513,6 +28305,19 @@
           "tagName": "furo-ui5-shellbar-spacer",
           "customElement": true,
           "summary": "Flexible spacer for distributing space in ShellBar.",
+          "keywords": [
+            "spacer",
+            "shellbar",
+            "flex",
+            "gap",
+            "separator"
+          ],
+          "category": "PageStructure",
+          "useCase": "Use to create flexible space between ShellBar items.",
+          "relatedComponents": [
+            "furo-ui5-shellbar",
+            "furo-ui5-toolbar-spacer"
+          ],
           "attributes": [
             {
               "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
@@ -28040,6 +28845,21 @@
           "tagName": "furo-ui5-shellbar",
           "customElement": true,
           "summary": "Application header bar with branding, navigation, and user actions.",
+          "keywords": [
+            "shellbar",
+            "header",
+            "app-bar",
+            "navigation",
+            "branding",
+            "toolbar"
+          ],
+          "category": "PageStructure",
+          "useCase": "Use as the main application header for branding and global navigation.",
+          "relatedComponents": [
+            "furo-ui5-shellbar-item",
+            "furo-ui5-shellbar-search",
+            "furo-ui5-user-menu"
+          ],
           "slots": [
             {
               "name": "assistant",
@@ -28604,7 +29424,19 @@
           ],
           "tagName": "furo-ui5-show-hide",
           "customElement": true,
-          "summary": "Container for conditionally showing or hiding content."
+          "summary": "Container for conditionally showing or hiding content.",
+          "keywords": [
+            "show",
+            "hide",
+            "visibility",
+            "conditional",
+            "toggle"
+          ],
+          "category": "Layout",
+          "useCase": "Use for toggling content visibility.",
+          "relatedComponents": [
+            "furo-ui5-expandable-text"
+          ]
         }
       ],
       "exports": [
@@ -28761,7 +29593,20 @@
           ],
           "tagName": "furo-ui5-sign-pad",
           "customElement": true,
-          "summary": "Canvas pad for drawing or capturing a signature."
+          "summary": "Canvas pad for drawing or capturing a signature.",
+          "keywords": [
+            "signature",
+            "sign",
+            "draw",
+            "canvas",
+            "pad",
+            "input"
+          ],
+          "category": "Form",
+          "useCase": "Use to capture a handwritten signature or freehand drawing.",
+          "relatedComponents": [
+            "furo-ui5-button"
+          ]
         }
       ],
       "exports": [
@@ -29168,6 +30013,20 @@
           "tagName": "furo-ui5-slider",
           "customElement": true,
           "summary": "Horizontal slider for selecting numeric values within a range.",
+          "keywords": [
+            "slider",
+            "range",
+            "numeric",
+            "input",
+            "value",
+            "draggable"
+          ],
+          "category": "Form",
+          "useCase": "Use for selecting a single numeric value from a continuous range.",
+          "relatedComponents": [
+            "furo-ui5-range-slider",
+            "furo-ui5-step-input"
+          ],
           "cssParts": [
             {
               "description": "Used to style the handle of the `ui5-slider`.",
@@ -29823,6 +30682,20 @@
           "tagName": "furo-ui5-step-input",
           "customElement": true,
           "summary": "Numeric input with increment/decrement buttons.",
+          "keywords": [
+            "step-input",
+            "spinner",
+            "numeric",
+            "increment",
+            "decrement",
+            "number"
+          ],
+          "category": "Form",
+          "useCase": "Use for precise numeric input with step controls.",
+          "relatedComponents": [
+            "furo-ui5-text-input",
+            "furo-ui5-slider"
+          ],
           "slots": [
             {
               "name": "valueStateMessage",
@@ -30289,7 +31162,19 @@
           ],
           "tagName": "furo-ui5-subsection",
           "customElement": true,
-          "summary": "Sub-level content section within an object page section."
+          "summary": "Sub-level content section within an object page section.",
+          "keywords": [
+            "sub-section",
+            "nested",
+            "section",
+            "content",
+            "object-page"
+          ],
+          "category": "Container",
+          "useCase": "Use to organize content within furo-ui5-section.",
+          "relatedComponents": [
+            "furo-ui5-section"
+          ]
         }
       ],
       "exports": [
@@ -30655,6 +31540,20 @@
           "tagName": "furo-ui5-switch",
           "customElement": true,
           "summary": "Toggle control for immediate on/off state changes.",
+          "keywords": [
+            "switch",
+            "toggle",
+            "on-off",
+            "boolean",
+            "slider",
+            "form"
+          ],
+          "category": "Form",
+          "useCase": "Use when the state change should take effect immediately without form submission.",
+          "relatedComponents": [
+            "furo-ui5-checkbox",
+            "furo-ui5-toggle-button"
+          ],
           "cssParts": [
             {
               "description": "Used to style the handle of the switch",
@@ -31037,6 +31936,17 @@
           "tagName": "furo-ui5-tab",
           "customElement": true,
           "summary": "A single tab (no data binding).",
+          "keywords": [
+            "tab",
+            "item",
+            "navigation",
+            "section"
+          ],
+          "category": "Container",
+          "useCase": "Use as a child of furo-ui5-tabcontainer to represent one tab.",
+          "relatedComponents": [
+            "furo-ui5-tabcontainer"
+          ],
           "slots": [
             {
               "name": "default",
@@ -31372,6 +32282,17 @@
           "tagName": "furo-ui5-tabcontainer",
           "customElement": true,
           "summary": "Tab strip container (no data binding).",
+          "keywords": [
+            "tabs",
+            "tabcontainer",
+            "navigation",
+            "sections"
+          ],
+          "category": "Container",
+          "useCase": "Use to organize content into tabs; provide tabs as children.",
+          "relatedComponents": [
+            "furo-ui5-tab"
+          ],
           "slots": [
             {
               "name": "default",
@@ -31621,7 +32542,16 @@
           "members": [],
           "tagName": "furo-ui5-table-toolbar-separator",
           "customElement": true,
-          "summary": "Separator for table toolbar items."
+          "summary": "Separator for table toolbar items.",
+          "keywords": [
+            "table-toolbar-separator",
+            "divider"
+          ],
+          "category": "Table",
+          "useCase": "Use to separate groups of actions in table toolbar.",
+          "relatedComponents": [
+            "furo-ui5-table-toolbar"
+          ]
         }
       ],
       "exports": [
@@ -31867,6 +32797,19 @@
           "tagName": "furo-ui5-tag",
           "customElement": true,
           "summary": "Display-only tag / status label bound to a string field.",
+          "keywords": [
+            "tag",
+            "badge",
+            "status",
+            "label",
+            "display",
+            "string"
+          ],
+          "category": "Display",
+          "useCase": "Use to render a bound string value as a styled status tag.",
+          "relatedComponents": [
+            "furo-ui5-relative-time-badge"
+          ],
           "slots": [
             {
               "name": "default",
@@ -32553,6 +33496,22 @@
           "tagName": "furo-ui5-text-input",
           "customElement": true,
           "summary": "Single-line text input field for user data entry.",
+          "keywords": [
+            "input",
+            "text",
+            "field",
+            "form",
+            "textbox",
+            "entry",
+            "value"
+          ],
+          "category": "Form",
+          "useCase": "Use for single-line text entry like names, emails, or short values.",
+          "relatedComponents": [
+            "furo-ui5-textarea",
+            "furo-ui5-multi-input",
+            "furo-ui5-combobox"
+          ],
           "slots": [
             {
               "name": "default",
@@ -33033,6 +33992,19 @@
           "tagName": "furo-ui5-text",
           "customElement": true,
           "summary": "Display-only text bound to a string field.",
+          "keywords": [
+            "text",
+            "display",
+            "label",
+            "string",
+            "value"
+          ],
+          "category": "Display",
+          "useCase": "Use to render a bound string value as read-only text.",
+          "relatedComponents": [
+            "furo-ui5-label",
+            "furo-ui5-expandable-text"
+          ],
           "slots": [
             {
               "name": "default",
@@ -33501,6 +34473,21 @@
           "tagName": "furo-ui5-textarea",
           "customElement": true,
           "summary": "Multi-line text input for longer content entry.",
+          "keywords": [
+            "textarea",
+            "multiline",
+            "text",
+            "input",
+            "form",
+            "description",
+            "notes"
+          ],
+          "category": "Form",
+          "useCase": "Use when users need to enter multiple lines of text like descriptions or comments.",
+          "relatedComponents": [
+            "furo-ui5-text-input",
+            "furo-ui5-expandable-text"
+          ],
           "slots": [
             {
               "name": "valueStateMessage",
@@ -34284,6 +35271,20 @@
           "tagName": "furo-ui5-time-picker",
           "customElement": true,
           "summary": "Time selection input for picking hours, minutes, and optionally seconds.",
+          "keywords": [
+            "time",
+            "picker",
+            "hours",
+            "minutes",
+            "clock",
+            "input"
+          ],
+          "category": "Form",
+          "useCase": "Use for selecting time values without date.",
+          "relatedComponents": [
+            "furo-ui5-date-time-picker",
+            "furo-ui5-date-picker"
+          ],
           "slots": [
             {
               "name": "valueStateMessage",
@@ -34708,6 +35709,21 @@
           "tagName": "furo-ui5-title",
           "customElement": true,
           "summary": "Heading text with semantic level for page and section titles.",
+          "keywords": [
+            "title",
+            "heading",
+            "h1",
+            "h2",
+            "header",
+            "typography",
+            "section"
+          ],
+          "category": "Display",
+          "useCase": "Use for page titles, section headers, and semantic headings.",
+          "relatedComponents": [
+            "furo-ui5-text",
+            "furo-ui5-label"
+          ],
           "slots": [
             {
               "description": "Defines the text of the component.\nThis component supports nesting a `Link` component inside.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
@@ -34884,6 +35900,21 @@
           "tagName": "furo-ui5-toast",
           "customElement": true,
           "summary": "Brief, auto-dismissing notification message.",
+          "keywords": [
+            "toast",
+            "notification",
+            "snackbar",
+            "message",
+            "alert",
+            "feedback",
+            "temporary"
+          ],
+          "category": "Feedback",
+          "useCase": "Use for non-blocking confirmations or status updates that auto-dismiss.",
+          "relatedComponents": [
+            "furo-ui5-message-strip",
+            "furo-ui5-busy-indicator"
+          ],
           "slots": [
             {
               "description": "Defines the text of the component.\n\n**Note:** Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.",
@@ -35424,6 +36455,21 @@
           "tagName": "furo-ui5-toggle-button",
           "customElement": true,
           "summary": "Button that maintains an on/off pressed state.",
+          "keywords": [
+            "toggle",
+            "switch",
+            "on-off",
+            "pressed",
+            "state",
+            "button"
+          ],
+          "category": "Button",
+          "useCase": "Use when action has two states (active/inactive) that persist after click.",
+          "relatedComponents": [
+            "furo-ui5-button",
+            "furo-ui5-switch",
+            "furo-ui5-segmented-button"
+          ],
           "slots": [
             {
               "name": "badge",
@@ -36105,7 +37151,21 @@
           ],
           "tagName": "furo-ui5-tree-table",
           "customElement": true,
-          "summary": "Hierarchical table with expandable parent-child rows."
+          "summary": "Hierarchical table with expandable parent-child rows.",
+          "keywords": [
+            "tree-table",
+            "hierarchical",
+            "nested",
+            "expandable",
+            "parent-child",
+            "table"
+          ],
+          "category": "Table",
+          "useCase": "Use when tabular data has parent-child relationships requiring expansion.",
+          "relatedComponents": [
+            "furo-ui5-tree",
+            "furo-ui5-tree-item"
+          ]
         }
       ],
       "exports": [
@@ -37217,7 +38277,20 @@
           ],
           "tagName": "furo-ui5-tree",
           "customElement": true,
-          "summary": "Hierarchical tree view with expandable/collapsible nodes."
+          "summary": "Hierarchical tree view with expandable/collapsible nodes.",
+          "keywords": [
+            "tree",
+            "hierarchy",
+            "nodes",
+            "expandable",
+            "collapsible",
+            "nested"
+          ],
+          "category": "List",
+          "useCase": "Use for displaying hierarchical data structures with expand/collapse.",
+          "relatedComponents": [
+            "furo-ui5-tree-item"
+          ]
         }
       ],
       "exports": [
@@ -37620,7 +38693,22 @@
           ],
           "tagName": "furo-ui5-tree-item",
           "customElement": true,
-          "summary": "tree item"
+          "summary": "Single node of a furo-ui5-tree, with expand/collapse and indentation.",
+          "keywords": [
+            "tree-item",
+            "node",
+            "leaf",
+            "branch",
+            "hierarchy",
+            "expandable",
+            "indentation"
+          ],
+          "category": "List",
+          "useCase": "Use as the child of furo-ui5-tree to render one node of a hierarchy.",
+          "relatedComponents": [
+            "furo-ui5-tree",
+            "furo-ui5-tree-table"
+          ]
         }
       ],
       "exports": [
@@ -38272,7 +39360,24 @@
           },
           "tagName": "furo-ui5-typerenderer",
           "customElement": true,
-          "summary": "Renders any field node with the type renderer matching its type and the requested context."
+          "summary": "Renders any field node with the type renderer matching its type and the requested context.",
+          "keywords": [
+            "typerenderer",
+            "dynamic",
+            "renderer",
+            "any",
+            "generic",
+            "display",
+            "cell",
+            "celledit",
+            "form"
+          ],
+          "category": "TypeRenderers",
+          "useCase": "Use when the type of a field is not known at authoring time.",
+          "relatedComponents": [
+            "furo-ui5-table",
+            "furo-ui5-form-row"
+          ]
         }
       ],
       "exports": [
@@ -38455,6 +39560,20 @@
           "tagName": "furo-ui5-user-menu",
           "customElement": true,
           "summary": "User account menu accessible from the ShellBar.",
+          "keywords": [
+            "user-menu",
+            "account",
+            "profile",
+            "settings",
+            "logout"
+          ],
+          "category": "PageStructure",
+          "useCase": "Use for user account actions like profile, settings, and logout.",
+          "relatedComponents": [
+            "furo-ui5-shellbar",
+            "furo-ui5-user-menu-item",
+            "furo-ui5-user-menu-account"
+          ],
           "slots": [
             {
               "name": "accounts",

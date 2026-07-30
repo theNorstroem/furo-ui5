@@ -39,6 +39,19 @@ const STATIC_ENTRIES = {
     types: "./dist/JSX/*.d.ts",
     default: "./dist/JSX/*.js",
   },
+  // Type renderers. `./type-renderers/<slug>` is the side-effect import that
+  // registers one renderer (`import "@furo/ui5/type-renderers/display-string"`)
+  // — this is the form furo-ui5-typerenderer's docs tell consumers to use.
+  // `./type-renderers` is the barrel: it re-exports the renderer *classes* for
+  // typing only and registers nothing, so it is not a substitute for the above.
+  "./type-renderers": {
+    types: "./dist/type-renderers/index.d.ts",
+    default: "./dist/type-renderers/index.js",
+  },
+  "./type-renderers/*": {
+    types: "./dist/type-renderers/*/index.d.ts",
+    default: "./dist/type-renderers/*/index.js",
+  },
   // Side-effect import that registers the UI5 assets and adopts the furo
   // global stylesheet (theme vars, scrollbar, raw <table> styling) onto
   // document.adoptedStyleSheets.
@@ -108,14 +121,17 @@ function buildExportsMap(componentEntries) {
   // Preserve a stable, readable order:
   //   1. root "."
   //   2. per-component entries (alphabetical)
-  //   3. JSX intrinsic declarations
-  //   4. assets + adoptable stylesheets
-  //   5. static metadata entries
+  //   3. type renderers (barrel + per-renderer wildcard)
+  //   4. JSX intrinsic declarations
+  //   5. assets + adoptable stylesheets
+  //   6. static metadata entries
   const out = {};
   out["."] = STATIC_ENTRIES["."];
   for (const [key, val] of Object.entries(componentEntries)) {
     out[key] = val;
   }
+  out["./type-renderers"] = STATIC_ENTRIES["./type-renderers"];
+  out["./type-renderers/*"] = STATIC_ENTRIES["./type-renderers/*"];
   out["./JSX"] = STATIC_ENTRIES["./JSX"];
   out["./JSX/*"] = STATIC_ENTRIES["./JSX/*"];
   out["./Assets"] = STATIC_ENTRIES["./Assets"];

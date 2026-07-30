@@ -31,7 +31,7 @@ import { FuroFatString } from "@/models";
  * @keywords textarea, multiline, text, input, form, description, notes
  * @category Form
  * @usecase Use when users need to enter multiple lines of text like descriptions or comments.
- * @related furo-ui5-input, furo-ui5-expandable-text
+ * @related furo-ui5-text-input, furo-ui5-expandable-text
  * @tagname furo-ui5-textarea
  */
 export class FuroUi5Textarea extends TextArea {

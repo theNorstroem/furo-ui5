@@ -129,6 +129,7 @@ export interface TreeTableSelectionChange {
  * @keywords tree-table, hierarchical, nested, expandable, parent-child, table
  * @category Table
  * @usecase Use when tabular data has parent-child relationships requiring expansion.
+ * @related furo-ui5-tree, furo-ui5-tree-item
  *
  * @event {CustomEvent<HTMLTableRowElement>} row-click - Fired when the tree table is in SingleSelect and a row is clicked or `Enter` key is pressed.
  * @eventref selection-change - TreeTableSelectionChange - "@furo/ui5/dist/index.js"

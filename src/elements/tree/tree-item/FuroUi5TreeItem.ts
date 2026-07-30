@@ -41,7 +41,11 @@ export interface TreeSearchRequest {
  * @cssprop {N/A} [--tree-indentation-11=100px] - tree indention level 11
  * @cssprop {N/A} [--tree-indentation-12=104px] - tree indention level 12
  *
- * @summary tree item
+ * @summary Single node of a furo-ui5-tree, with expand/collapse and indentation.
+ * @keywords tree-item, node, leaf, branch, hierarchy, expandable, indentation
+ * @category List
+ * @usecase Use as the child of furo-ui5-tree to render one node of a hierarchy.
+ * @related furo-ui5-tree, furo-ui5-tree-table
  * @element furo-ui5-tree-item
  * @tagname furo-ui5-tree-item
  */

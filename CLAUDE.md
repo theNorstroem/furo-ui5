@@ -14,6 +14,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run build` — full pipeline: `analyze` (public CEM) → `analyze:internal` → `analyze:deep` (writes/validates `web-types.json`) → `gen:intrinsic` (regenerates `src/JSX/*` from CEM) → `tsc` → `tsc-alias` (rewrites `@/*` imports in the emitted `dist/`).
 - `npm run gen:contracts` — regenerates `src/models/` from `.proto` files via `contracts/protoc-gen-open-models.sh` (requires `protoc` + the `open-models` plugin on PATH). The shell script reads from `contracts/proto` and `contracts/proto_dependencies` despite still naming `proto/` internally — run it from the repo root.
 - `npm run storybook` — Storybook 10 on port 6006. Stories are co-located: `src/elements/<name>/FuroUi5<Name>.stories.ts`. Shared helpers/assets/MDX live in `src/stories-shared/`.
+- `npm run audit:metadata` / `audit:metadata:strict` — check AI-retrieval metadata completeness across all tagged components (see *AI skills* below). `--json` for machine output; the `:strict` variant exits 1 on any gap or unknown category.
+- `npm run skills:update` — regenerate the component reference docs consumed by the `furo-ui5-components` skill.
 
 The husky `pre-commit` hook runs `npm run lint` and aborts if lint modifies files that weren't already staged — stage fixes before committing.
 
@@ -67,6 +69,32 @@ It renders into the **light DOM** with `display: contents` (a document-level ado
 Tests run inside Chromium with `slowMo: 100` and devtools enabled. They use `@open-wc/testing-helpers` `fixture` + Lit `html`, vitest's `LocatorSelectors`, and `chai-a11y-axe` for a11y assertions (`await assert.isAccessible(el)`). Specs sit next to their component (`src/elements/<name>/FuroUi5<Name>.spec.ts`) and typically `import "@/Assets"` plus `import "./index"` to trigger registration, then `import { FuroUi5<Name> } from "./FuroUi5<Name>"` directly. Shared helpers live in `src/util/test-helpers/`. JUnit output lands in `test-results/junit.xml`; coverage is off by default (toggle in `vite.config.ts`).
 
 The canonical reference spec is `src/elements/text-input/FuroUi5TextInput.spec.ts`. Its `describe` blocks tagged `[TEMPLATE]` (element identity & a11y, default model state, model → UI value sync, UI → model value sync, model-driven state, FAT attribute mapping, rebinding cleanliness, lifecycle) are designed to be copied into other element specs with only the tag name, model type(s), and FAT-attribute list changed. Blocks tagged `[element-specific]` cover element-only surface (custom events, methods like `clear()` / `closePopover()`). When writing tests for a new element, invoke the `test-element` skill (`.claude/skills/test-element/SKILL.md`) — it walks through the copy-and-adapt procedure and points at the reusable helpers (`createFatString`, `setInputValue`, `delay`).
+
+### AI skills (`skills/`)
+`skills/` holds agent skill packages. Only `skills/furo-ui5-components/references/` is machine-generated; everything else there is hand-written prose. SKILL.md front-matter is `name` + `description` only — **no `version` field**.
+
+The metadata pipeline is: **JSDoc tags on the element class → CEM analyzer plugin → `custom-elements.json` → generator → skill reference docs.**
+
+Every element carries five AI-retrieval tags in its class JSDoc, alongside the existing `@tagname`/`@event`/`@slot` ones:
+
+```ts
+/**
+ * @summary  Single-line text input field for user data entry.
+ * @keywords input, text, field, form, textbox, entry, value
+ * @category Form
+ * @usecase  Use for single-line text entry like names, emails, or short values.
+ * @related  furo-ui5-textarea, furo-ui5-multi-input, furo-ui5-combobox
+ * @tagname  furo-ui5-text-input
+ */
+```
+
+`@summary` is handled by the analyzer itself; the other four are hoisted onto the declaration by the `deep-cem` plugin in `scripts/deep-cem.config.mjs`. **Note the tag→field renaming**: `@usecase` → `useCase`, `@related` → `relatedComponents`. Adding a tag without also handling it there means it is silently dropped.
+
+`@category` must be one of the values in `VALID_CATEGORIES` in `scripts/AuditComponentMetadata.js` (`Form`, `FormLayout`, `Button`, `Table`, `List`, `Navigation`, `Container`, `Layout`, `PageStructure`, `Display`, `Feedback`, `TypeRenderers`) — the audit fails on anything else.
+
+When adding a component, add all five tags, then run `npm run analyze:deep && npm run audit:metadata` (coverage is currently 100% — keep it there) and `npm run skills:update`.
+
+`skills/furo-ui5-components/references/components/*.md` and `components-index.md` are **generated — never hand-edit them**. `scripts/generate-webcomponents-skills-reference-docs.cjs` deletes every `.md` in that directory before writing. Per-component description overrides go in its `FALLBACK_DESCRIPTIONS` map. It reads the root `custom-elements.json` (the `analyze:deep` output, the only one with inherited UI5 members resolved), derives each `**Import:**` line from the `exports` map in `package.json` rather than the raw module path, and takes the class name from the module's own `src/` export — `declarations[0].name` reports the inherited UI5 base class, not the furo subclass.
 
 ### Peer dependencies & local linking
 `@furo/layout` is pinned to a local `.tgz` path under `/Users/veith/Projects/theNorstroem/eclipsefuro-web/...` — `npm install` will fail on machines without that file. `npm run bootstrap` does `npm install && npm link && npm link @furo/ui5` for cross-package development against sibling Furo packages.

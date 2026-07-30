@@ -187,7 +187,7 @@ interface NodeFieldDescriptor {
  * @fires {CustomEvent<{ tags: string[]; context: string; typeName: string }>} renderer-missing - Fired when no renderer was registered for the bound node within `renderer-timeout`.
  * @summary Renders any field node with the type renderer matching its type and the requested context.
  * @keywords typerenderer, dynamic, renderer, any, generic, display, cell, celledit, form
- * @category Data
+ * @category TypeRenderers
  * @usecase Use when the type of a field is not known at authoring time.
  * @related furo-ui5-table, furo-ui5-form-row
  * @tagname furo-ui5-typerenderer

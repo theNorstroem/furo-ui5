@@ -26,7 +26,7 @@ import { TimeOfDay } from "@/models/google/type/TimeOfDay";
  * @keywords time, picker, hours, minutes, clock, input
  * @category Form
  * @usecase Use for selecting time values without date.
- * @related furo-ui5-datetime-picker, furo-ui5-date-picker
+ * @related furo-ui5-date-time-picker, furo-ui5-date-picker
  * @tagname furo-ui5-time-picker
  */
 export class FuroUi5TimePicker extends TimePicker {

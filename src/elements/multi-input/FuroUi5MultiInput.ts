@@ -28,7 +28,7 @@ import { FuroFatString, type IFuroFatString } from "@/models";
  * @keywords multi-input, tokens, tags, multiple, values, input, form
  * @category Form
  * @usecase Use when users need to enter multiple freeform values displayed as tokens.
- * @related furo-ui5-multi-combobox, furo-ui5-input, furo-ui5-token
+ * @related furo-ui5-multi-combobox, furo-ui5-text-input
  * @tagname furo-ui5-multi-input
  */
 export class FuroUi5MultiInput extends MultiInput {

@@ -25,12 +25,11 @@ declare module "react" {
     interface IntrinsicElements {
       /**
        *
-       * `furo-pretty-json`
+       * `furo-ui5-pretty-json`
        * Pretty json with highlighting
        *
        * ```html
-       * <furo-pretty-json
-       * fn-inject-json="--data"></furo-pretty-json>
+       * <furo-ui5-pretty-json .model="${this.someFieldNode}"></furo-ui5-pretty-json>
        * ```
        */
       "furo-ui5-pretty-json": PrettyJson;

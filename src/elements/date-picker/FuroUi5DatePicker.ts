@@ -39,7 +39,7 @@ interface DateFieldConstraints extends FieldConstraints {
  * @keywords date, picker, calendar, input, selection, form
  * @category Form
  * @usecase Use for selecting a single date value.
- * @related furo-ui5-daterange-picker, furo-ui5-datetime-picker, furo-ui5-calendar
+ * @related furo-ui5-daterange-picker, furo-ui5-date-time-picker
  * @tagname furo-ui5-date-picker
  */
 export class FuroUi5DatePicker extends DatePicker {

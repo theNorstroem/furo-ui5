@@ -3,13 +3,20 @@
   "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
   "version": "2.0.0-RC.8",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
-  "repository": "git@github.com:eclipse/eclipsefuro-web.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/eclipse/eclipsefuro-web.git"
+  },
   "author": {
     "name": "theNorstroem",
     "email": "",
     "url": "https://github.com/theNorstroem/"
   },
-  "keywords": ["web-components", "flow based programming", "fbp"],
+  "keywords": [
+    "web-components",
+    "flow based programming",
+    "fbp"
+  ],
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",
@@ -349,6 +356,14 @@
       "types": "./dist/elements/user-menu/index.d.ts",
       "default": "./dist/elements/user-menu/index.js"
     },
+    "./type-renderers": {
+      "types": "./dist/type-renderers/index.d.ts",
+      "default": "./dist/type-renderers/index.js"
+    },
+    "./type-renderers/*": {
+      "types": "./dist/type-renderers/*/index.d.ts",
+      "default": "./dist/type-renderers/*/index.js"
+    },
     "./JSX": {
       "types": "./dist/JSX/index.d.ts",
       "default": "./dist/JSX/index.js"
@@ -399,7 +414,10 @@
     "analyze:internal": "cem analyze --config scripts/internal-cem.config.mjs && mv tmp/custom-elements.json dist/custom-elements-internal.json",
     "analyze:deep": "cem analyze --config ./scripts/deep-cem.config.mjs &&  ./scripts/WebtypesPostprocessor.mjs && ./scripts/CheckWebtypes.mjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "audit:metadata": "./scripts/AuditComponentMetadata.js",
+    "audit:metadata:strict": "./scripts/AuditComponentMetadata.js --strict",
+    "skills:update": "node scripts/generate-webcomponents-skills-reference-docs.cjs"
   },
   "peerDependencies": {
     "@furo/layout": "/Users/veith/Projects/theNorstroem/eclipsefuro-web/packages/furo-layout/furo-layout-3.0.0-RC.11.tgz",
