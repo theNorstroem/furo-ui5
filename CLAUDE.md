@@ -11,7 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm start` — vite dev server (port 8080) + tsc watch. Loads `index.html` linking to `dev-playground/*.html` sandboxes. `/api/*` is proxied to `localhost:7070/api`.
 - `npm test` / `npm run test:watch` / `npm run test:ui` — vitest **in a real Chromium browser** (`@vitest/browser` + Playwright). Specs are co-located: `src/elements/<name>/FuroUi5<Name>.spec.ts` (vite.config picks up `src/**/*.spec.ts`). Run a single file: `npx vitest run src/elements/text-input/FuroUi5TextInput.spec.ts`.
 - `npm run lint` / `npm run lint:fix` — eslint with full type-checking (strict-type-checked + stylistic-type-checked + lit + lit-a11y + wc plugins).
-- `npm run build` — full pipeline: `analyze` (public CEM) → `analyze:internal` → `analyze:deep` (writes/validates `web-types.json`) → `gen:intrinsic` (regenerates `src/JSX/*` from CEM) → `tsc` → `tsc-alias` (rewrites `@/*` imports in the emitted `dist/`).
+- `npm run build` — full pipeline: `analyze` (public CEM) → `analyze:internal` → `analyze:deep` (writes/validates `web-types.json`) → `gen:intrinsic` (regenerates `src/JSX/*` from CEM) → `tsc` → `tsc-alias` (rewrites `@/*` imports **and** completes every relative specifier with `.js` / `/index.js` in the emitted `dist/` — see *ESM import specifiers* below) → `gen:exports`.
 - `npm run gen:contracts` — regenerates `src/models/` from `.proto` files via `contracts/protoc-gen-open-models.sh` (requires `protoc` + the `open-models` plugin on PATH). The shell script reads from `contracts/proto` and `contracts/proto_dependencies` despite still naming `proto/` internally — run it from the repo root.
 - `npm run storybook` — Storybook 10 on port 6006. Stories are co-located: `src/elements/<name>/FuroUi5<Name>.stories.ts`. Shared helpers/assets/MDX live in `src/stories-shared/`.
 - `npm run audit:metadata` / `audit:metadata:strict` — check AI-retrieval metadata completeness across all tagged components (see *AI skills* below). `--json` for machine output; the `:strict` variant exits 1 on any gap or unknown category.
@@ -64,6 +64,30 @@ It renders into the **light DOM** with `display: contents` (a document-level ado
 
 ### Path alias
 `@/*` resolves to `src/*` (tsconfig + vite). After `tsc`, `tsc-alias` rewrites these to relative paths in `dist/`. Use `@/...` in source, never relative-up-out-of-src.
+
+### ESM import specifiers in `dist/` (load-bearing config)
+Source deliberately writes **extensionless** relative imports — `moduleResolution` is `Bundler`, so `tsc` accepts them and emits them verbatim. Node ESM and browsers loading modules natively both require full specifiers, so the emitted output is completed by the top-level `"tsc-alias"` block in `tsconfig.json`:
+
+```jsonc
+"tsc-alias": { "resolveFullPaths": true, "verbose": false }
+```
+
+`resolveFullPaths` appends `.js` to every relative specifier in `dist/**/*.{js,d.ts}` and turns directory imports into `/index.js`, verifying each against the emitted tree. **Do not remove it** — without it the package silently reverts to bundler-only and `import("./dist/index.js")` fails with `ERR_MODULE_NOT_FOUND` on the first internal hop. It also fixes the `allowArbitraryExtensions` CSS imports (`./table.css` → `./table.css.js`). This mirrors `tsconfig-ts-base.json` in the `eclipsefuro-web` monorepo, which the sibling Furo packages inherit.
+
+Sanity check after touching the build: `grep -rhoE '"\.\.?/[^"]*"' dist --include='*.js' | grep -vE '\.(js|json)"$'` must print nothing.
+
+### Keeping test artifacts out of the published package
+`tsc` compiles specs, stories and test fixtures into `dist/` (they are needed there for nothing, but see the warning below for why they are still compiled). They are kept out of the **published tarball** by negation patterns in `package.json` `"files"`:
+
+```jsonc
+"files": ["./dist", "!dist/**/*.spec.*", "!dist/**/*.stories.*",
+          "!dist/util/test-helpers/**", "!dist/stories-shared/**",
+          "!dist/directives/nl2br-test-helper.*", ...]
+```
+
+This removes ~520 files (2705 → 2183, tarball 2.03 MB → 1.53 MB). Two gotchas:
+- The negation patterns must **not** carry a `./` prefix. `"!./dist/**/*.spec.*"` is silently ignored by npm's packlist; `"!dist/**/*.spec.*"` works. Verify with `npm pack --dry-run --json`.
+- ⚠️ **Do not instead exclude these files from `tsconfig.json`.** It looks like the tidier fix (and the `eclipsefuro-web` base config does exclude `src/**/*.spec.ts`), but here it **breaks the test suite**: vite/esbuild applies the project's `compilerOptions` only to files the tsconfig actually matches, so an excluded spec is transpiled with default TS options instead of this project's `experimentalDecorators` / `useDefineForClassFields: false`. Empirically, excluding `src/**/*.spec.ts` makes `src/directives/nl2br.spec.ts` fail (`el.shadowRoot` is null — the element never upgrades). Keep specs inside `tsconfig.json`; that also keeps `npm run build` as their type gate, since vitest transpiles without typechecking.
 
 ### Testing
 Tests run inside Chromium with `slowMo: 100` and devtools enabled. They use `@open-wc/testing-helpers` `fixture` + Lit `html`, vitest's `LocatorSelectors`, and `chai-a11y-axe` for a11y assertions (`await assert.isAccessible(el)`). Specs sit next to their component (`src/elements/<name>/FuroUi5<Name>.spec.ts`) and typically `import "@/Assets"` plus `import "./index"` to trigger registration, then `import { FuroUi5<Name> } from "./FuroUi5<Name>"` directly. Shared helpers live in `src/util/test-helpers/`. JUnit output lands in `test-results/junit.xml`; coverage is off by default (toggle in `vite.config.ts`).

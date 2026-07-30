@@ -22,6 +22,11 @@
   "type": "module",
   "files": [
     "./dist",
+    "!dist/**/*.spec.*",
+    "!dist/**/*.stories.*",
+    "!dist/util/test-helpers/**",
+    "!dist/stories-shared/**",
+    "!dist/directives/nl2br-test-helper.*",
     "icon.svg",
     "README.md",
     "custom-elements.json",

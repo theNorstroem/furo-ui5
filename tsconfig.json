@@ -56,6 +56,10 @@
       ]
     }
   },
+  "tsc-alias": {
+    "resolveFullPaths": true,
+    "verbose": false
+  },
   "include": [
     "src/**/*.ts",
     "global.d.ts"
