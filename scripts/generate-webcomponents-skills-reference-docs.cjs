@@ -509,8 +509,6 @@ function generateIndex(components) {
   const lines = [];
   lines.push('# Furo UI5 Components Reference');
   lines.push('');
-  lines.push(`Auto-generated from \`${PACKAGE_NAME}/custom-elements.json\``);
-  lines.push('');
   lines.push('> **For AI assistants:** Each component entry includes keywords in parentheses and use-case descriptions to help match user requests.');
   lines.push('');
   lines.push('## Components');

@@ -42,6 +42,10 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
+  args: {
+    headerText: "Welcome",
+    overlineText: "Everything you need, in one place.",
+  },
   render: renderArgs => html`
     <furo-ui5-hero-banner
       actions-placement="${ifDefined(renderArgs.actionsPlacement)}"
@@ -49,10 +53,7 @@ export const Default: StoryObj = {
       header-block-placement="${ifDefined(renderArgs.headerBlockPlacement)}"
       header-text="${ifDefined(renderArgs.headerText)}"
       overline-text="${ifDefined(renderArgs.overlineText)}"
-      style="height:200px"
     >
-      <furo-ui5-title slot="title" level="H2">Welcome</furo-ui5-title>
-      <furo-ui5-text slot="subtitle">Everything you need, in one place.</furo-ui5-text>
     </furo-ui5-hero-banner>
   `,
 };

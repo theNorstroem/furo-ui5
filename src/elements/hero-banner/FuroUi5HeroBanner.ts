@@ -4,9 +4,7 @@ import HeroBanner from "@ui5/webcomponents-fiori/dist/HeroBanner.js";
  * A prominent, full-width banner combining a headline, supporting text and an optional background image.
  *
  * ```html
- * <furo-ui5-hero-banner style="height:200px">
- *   <furo-ui5-title slot="title" level="H2">Welcome</furo-ui5-title>
- *   <furo-ui5-text slot="subtitle">Everything you need, in one place.</furo-ui5-text>
+ * <furo-ui5-hero-banner header-text="Welcome" overline-text="Everything you need, in one place.">
  * </furo-ui5-hero-banner>
  * ```
  *

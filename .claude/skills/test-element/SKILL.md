@@ -1,6 +1,6 @@
 ---
 name: test-element
-description: Write or extend a vitest browser spec for a furo-ui5 binding element (any element under `src/elements/` that extends a UI5 component and exposes `bindData(fieldNode)`). Use when the user asks to "add tests / write a spec / test the bindData / test the model binding / test value-state / test FAT attributes" for a furo-ui5 element, or asks to apply the test template to a new element.
+description: Write or extend a vitest browser spec for a furo-ui5 binding element (any element under `src/elements/` that exposes `bindData(fieldNode)`). Use when the user asks to "add tests / write a spec / test the bindData / test the model binding / test value-state / test FAT attributes" for a furo-ui5 element, or asks to apply the test template to a new element.
 ---
 
 # Writing tests for a furo-ui5 binding element

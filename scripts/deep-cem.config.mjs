@@ -378,6 +378,7 @@ export default {
       outdir: "dist",
       cssFileName: null,
       cssPropertiesDocs: true,
+      htmlFileName: "furo-ui5.html-data.json",
     }),
     customElementJetBrainsPlugin({
       outdir: "./",

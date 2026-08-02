@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
-  "version": "2.0.0-RC.10",
+  "version": "2.0.0-RC.15",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": {
     "type": "git",
@@ -620,7 +620,8 @@
     "./package.json": "./package.json",
     "./custom-elements.json": "./custom-elements.json",
     "./web-types.json": "./web-types.json",
-    "./dist/custom-elements-internal.json": "./dist/custom-elements-internal.json"
+    "./dist/custom-elements-internal.json": "./dist/custom-elements-internal.json",
+    "./dist/furo-ui5.html-data.json": "./dist/furo-ui5.html-data.json"
   },
   "scripts": {
     "start": "tsc && concurrently -k -r 'vite dev' 'tsc --watch'",
@@ -641,7 +642,7 @@
     "docs:publish": "./scripts/publishDocs.sh",
     "analyze": "cem analyze --litelement --globs ./src/* --outdir ./dist",
     "analyze:internal": "cem analyze --config scripts/internal-cem.config.mjs && mv tmp/custom-elements.json dist/custom-elements-internal.json",
-    "analyze:deep": "cem analyze --config ./scripts/deep-cem.config.mjs &&  ./scripts/WebtypesPostprocessor.mjs && ./scripts/CheckWebtypes.mjs",
+    "analyze:deep": "cem analyze --config ./scripts/deep-cem.config.mjs &&  ./scripts/WebtypesPostprocessor.mjs && ./scripts/HtmlDataPostprocessor.mjs && ./scripts/CheckWebtypes.mjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "audit:metadata": "./scripts/AuditComponentMetadata.js",
@@ -649,7 +650,7 @@
     "skills:update": "node scripts/generate-webcomponents-skills-reference-docs.cjs"
   },
   "peerDependencies": {
-    "@furo/layout": "/Users/veith/Projects/theNorstroem/eclipsefuro-web/packages/furo-layout/furo-layout-3.0.0-RC.11.tgz",
+    "@furo/layout": "/Users/veith/Projects/theNorstroem/eclipsefuro-web/packages/furo-layout/furo-layout-3.0.0-RC.13.tgz",
     "@furo/open-models": "^1.21.2",
     "@furo/route": "^4.0.0",
     "@furo/util": "^2.2.2",

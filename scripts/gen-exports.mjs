@@ -112,6 +112,9 @@ const STATIC_ENTRIES = {
   "./web-types.json": "./web-types.json",
   "./dist/custom-elements-internal.json":
     "./dist/custom-elements-internal.json",
+  // VS Code HTML custom data, post-processed by scripts/HtmlDataPostprocessor.mjs.
+  // Consumed by lit-analyzer / ts-lit-plugin via their `customHtmlData` option.
+  "./dist/furo-ui5.html-data.json": "./dist/furo-ui5.html-data.json",
 };
 
 function pickSourceDir() {
@@ -183,6 +186,8 @@ function buildExportsMap(componentEntries) {
   out["./web-types.json"] = STATIC_ENTRIES["./web-types.json"];
   out["./dist/custom-elements-internal.json"] =
     STATIC_ENTRIES["./dist/custom-elements-internal.json"];
+  out["./dist/furo-ui5.html-data.json"] =
+    STATIC_ENTRIES["./dist/furo-ui5.html-data.json"];
   return out;
 }
 

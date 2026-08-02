@@ -1,7 +1,5 @@
 # Furo UI5 Components Reference
 
-Auto-generated from `@furo/ui5/custom-elements.json`
-
 > **For AI assistants:** Each component entry includes keywords in parentheses and use-case descriptions to help match user requests.
 
 ## Components

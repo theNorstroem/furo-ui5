@@ -97,6 +97,8 @@ The canonical reference spec is `src/elements/text-input/FuroUi5TextInput.spec.t
 ### AI skills (`skills/`)
 `skills/` holds agent skill packages. Only `skills/furo-ui5-components/references/` is machine-generated; everything else there is hand-written prose. SKILL.md front-matter is `name` + `description` only — **no `version` field**.
 
+Claude Code only auto-discovers skills under `.claude/skills/`, so a package sitting in `skills/` is invisible to it — that is how a component's slots get invented rather than looked up. `.claude/skills/furo-ui5-components` is therefore a **symlink** to `../../skills/furo-ui5-components`; `skills/` stays the single source of truth (it is where `skills:update` writes) and git stores the symlink, so it survives a clone. Verified with `claude --debug -p …` on 2.1.220: the skill is listed, its body and `references/` load through the link, and no "unsafe or symlinked skill folder" warning appears. The other six packages are not linked yet — one `ln -s` each is all it takes.
+
 The metadata pipeline is: **JSDoc tags on the element class → CEM analyzer plugin → `custom-elements.json` → generator → skill reference docs.**
 
 Every element carries five AI-retrieval tags in its class JSDoc, alongside the existing `@tagname`/`@event`/`@slot` ones:
