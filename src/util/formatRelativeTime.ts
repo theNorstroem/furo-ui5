@@ -1,3 +1,5 @@
+import { getLocale } from "./locale";
+
 export interface RelativeTimeParts {
   /** Relative time text, e.g. "in 5 days" / "5 days ago". */
   text: string;
@@ -8,7 +10,8 @@ export interface RelativeTimeParts {
 }
 
 /**
- * Formats an ISO 8601 datetime as relative time (day granularity) using `Intl`, in the host locale.
+ * Formats an ISO 8601 datetime as relative time (day granularity) using `Intl`, in the locale
+ * reported by {@link getLocale} — the language configured on UI5, or an explicit `setLocale()`.
  *
  * Shared by `furo-ui5-relative-time-badge` and `furo-ui5-relative-time-display`. Pure: no DOM or
  * component access.
@@ -31,7 +34,7 @@ export const formatRelativeTime = (
   const now = Date.now();
   const difference = endTime - now;
 
-  const tooltip = new Intl.DateTimeFormat(undefined, {
+  const tooltip = new Intl.DateTimeFormat(getLocale(), {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
@@ -48,7 +51,7 @@ export const formatRelativeTime = (
     diffValue = Math.round(diffValue);
   }
 
-  const text = new Intl.RelativeTimeFormat(undefined, {
+  const text = new Intl.RelativeTimeFormat(getLocale(), {
     style: options?.style ?? "long",
     numeric: options?.numeric ?? "auto",
   }).format(diffValue, "day");

@@ -1,8 +1,8 @@
-import { Env } from "@furo/framework/src/furo.js";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
 import { FuroFatUint64 } from "@/models";
+import { getLocale } from "@/util/locale";
 
 /**
  * `display-furo-fat-uint64`
@@ -113,7 +113,7 @@ export class DisplayFuroFatUint64 extends LitElement {
       }
     }
 
-    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._model.value.value);
+    const displayValue = new Intl.NumberFormat(getLocale(), {}).format(this._model.value.value);
     if (displayValue !== "NaN") {
       this.displayValue = displayValue;
     }

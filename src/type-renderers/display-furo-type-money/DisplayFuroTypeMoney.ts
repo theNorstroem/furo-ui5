@@ -1,8 +1,8 @@
-import { Env } from "@furo/framework/src/furo.js";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
 import { Money } from "@/models/furo/type/Money";
+import { getLocale } from "@/util/locale";
 
 /**
  * `display-furo-type-money`
@@ -112,7 +112,7 @@ export class DisplayFuroTypeMoney extends LitElement {
     const currency = this._model.currencyCode.value;
     const amount = Number(this._model.units.value) + this._model.nanos.value / 1e9;
     if (currency.length && !Number.isNaN(amount)) {
-      this.displayValue = new Intl.NumberFormat(Env.locale, {
+      this.displayValue = new Intl.NumberFormat(getLocale(), {
         style: "currency",
         currency,
       }).format(amount);

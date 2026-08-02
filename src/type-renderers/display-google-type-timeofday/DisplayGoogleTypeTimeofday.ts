@@ -1,8 +1,8 @@
-import { Env } from "@furo/framework/src/furo.js";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
 import { TimeOfDay } from "@/models/google/type/TimeOfDay";
+import { getLocale } from "@/util/locale";
 
 /**
  * `display-google-type-timeofday`
@@ -87,7 +87,7 @@ export class DisplayGoogleTypeTimeofday extends LitElement {
     const seconds = this._model.seconds.value;
     const date = new Date(2000, 0, 1, hours, minutes, seconds);
     if (!Number.isNaN(date.getTime())) {
-      this.displayValue = date.toLocaleTimeString([Env.locale, "de-CH"], {
+      this.displayValue = date.toLocaleTimeString([getLocale(), "de-CH"], {
         hour: "numeric",
         minute: "2-digit",
         second: "2-digit",

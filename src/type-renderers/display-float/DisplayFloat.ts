@@ -1,7 +1,8 @@
-import { Env } from "@furo/framework/src/furo.js";
 import { FLOAT } from "@furo/open-models";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
+
+import { getLocale } from "@/util/locale";
 
 /**
  * `display-float`
@@ -101,7 +102,7 @@ export class DisplayFloat extends LitElement {
    * @private
    */
   private _formatCell = (): void => {
-    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._model.value);
+    const displayValue = new Intl.NumberFormat(getLocale(), {}).format(this._model.value);
     if (displayValue !== "NaN") {
       this.displayValue = displayValue;
     }

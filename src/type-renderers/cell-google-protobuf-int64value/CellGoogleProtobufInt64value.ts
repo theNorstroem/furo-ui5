@@ -1,7 +1,8 @@
-import { Env } from "@furo/framework/src/furo.js";
 import { Int64Value } from "@furo/open-models";
 import { css, html, LitElement } from "lit";
 import { state } from "lit/decorators.js";
+
+import { getLocale } from "@/util/locale";
 
 /**
  * `cell-google-protobuf-int64value`
@@ -107,7 +108,7 @@ export class CellGoogleProtobufInt64value extends LitElement {
       this.displayValue = "";
       return;
     }
-    const displayValue = new Intl.NumberFormat(Env.locale, {}).format(this._model.value);
+    const displayValue = new Intl.NumberFormat(getLocale(), {}).format(this._model.value);
     if (displayValue !== "NaN") {
       this.displayValue = displayValue;
     }

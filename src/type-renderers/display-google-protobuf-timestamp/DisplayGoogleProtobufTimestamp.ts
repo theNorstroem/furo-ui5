@@ -1,7 +1,8 @@
-import { Env } from "@furo/framework/src/furo.js";
 import { Timestamp } from "@furo/open-models";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
+
+import { getLocale } from "@/util/locale";
 
 /**
  * `display-google-protobuf-timestamp`
@@ -83,7 +84,7 @@ export class DisplayGoogleProtobufTimestamp extends LitElement {
     }
     const date = new Date(value);
     if (!Number.isNaN(date.getTime())) {
-      this.displayValue = new Intl.DateTimeFormat([Env.locale, "de-CH"], {
+      this.displayValue = new Intl.DateTimeFormat([getLocale(), "de-CH"], {
         year: "numeric",
         month: "2-digit",
         day: "2-digit",

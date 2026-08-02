@@ -1,8 +1,8 @@
-import { Env } from "@furo/framework/src/furo.js";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
 import { Money } from "@/models/google/type/Money";
+import { getLocale } from "@/util/locale";
 
 /**
  * `cell-google-type-money`
@@ -115,7 +115,7 @@ export class CellGoogleTypeMoney extends LitElement {
     const currency = this._model.currencyCode.value;
     const amount = CellGoogleTypeMoney.convertToNumber(this._model);
     if (currency.length && !Number.isNaN(amount)) {
-      this.displayValue = new Intl.NumberFormat(Env.locale, {
+      this.displayValue = new Intl.NumberFormat(getLocale(), {
         style: "currency",
         currency,
       }).format(amount);

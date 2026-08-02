@@ -617,6 +617,10 @@
       "types": "./dist/directives/nl2br.d.ts",
       "default": "./dist/directives/nl2br.js"
     },
+    "./util/locale": {
+      "types": "./dist/util/locale.d.ts",
+      "default": "./dist/util/locale.js"
+    },
     "./package.json": "./package.json",
     "./custom-elements.json": "./custom-elements.json",
     "./web-types.json": "./web-types.json",
@@ -652,8 +656,6 @@
   "peerDependencies": {
     "@furo/layout": "/Users/veith/Projects/theNorstroem/eclipsefuro-web/packages/furo-layout/furo-layout-3.0.0-RC.13.tgz",
     "@furo/open-models": "^1.21.2",
-    "@furo/route": "^4.0.0",
-    "@furo/util": "^2.2.2",
     "@ui5/webcomponents": "2.24.2",
     "@ui5/webcomponents-base": "2.24.2",
     "@ui5/webcomponents-compat": "2.24.2",

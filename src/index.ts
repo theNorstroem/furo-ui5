@@ -96,6 +96,7 @@ export * from "@/elements/timeline/FuroUi5Timeline";
 export * from "@/elements/timeline-item/FuroUi5TimelineItem";
 export * from "@/elements/timeline-group-item/FuroUi5TimelineGroupItem";
 export * from "@/type-renderers";
+export { getLocale, setLocale } from "@/util/locale";
 export * from "./lib/open-models/signatures";
 export { type InputSelectionChangeEventDetail, type InputSuggestionScrollEventDetail } from "@ui5/webcomponents/dist/Input.js";
 export { type LinkClickEventDetail } from "@ui5/webcomponents/dist/Link.js";

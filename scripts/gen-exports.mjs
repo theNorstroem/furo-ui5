@@ -107,6 +107,13 @@ const STATIC_ENTRIES = {
     types: "./dist/directives/nl2br.d.ts",
     default: "./dist/directives/nl2br.js",
   },
+  // Formatting locale used by the type renderers. Follows the language configured on UI5 unless
+  // an app calls `setLocale()`. Per-file for the same reason as the directives above: the
+  // sibling `util/test-helpers/**` is excluded from the published tarball.
+  "./util/locale": {
+    types: "./dist/util/locale.d.ts",
+    default: "./dist/util/locale.js",
+  },
   "./package.json": "./package.json",
   "./custom-elements.json": "./custom-elements.json",
   "./web-types.json": "./web-types.json",
@@ -163,7 +170,8 @@ function buildExportsMap(componentEntries) {
   //   5. JSX intrinsic declarations
   //   6. assets, icons + adoptable stylesheets
   //   7. lit directives
-  //   8. static metadata entries
+  //   8. runtime utilities (locale)
+  //   9. static metadata entries
   const out = {};
   out["."] = STATIC_ENTRIES["."];
   for (const [key, val] of Object.entries(componentEntries)) {
@@ -181,6 +189,7 @@ function buildExportsMap(componentEntries) {
   out["./styles/scrollbar.css"] = STATIC_ENTRIES["./styles/scrollbar.css"];
   out["./styles/GlobalStyles"] = STATIC_ENTRIES["./styles/GlobalStyles"];
   out["./directives/nl2br"] = STATIC_ENTRIES["./directives/nl2br"];
+  out["./util/locale"] = STATIC_ENTRIES["./util/locale"];
   out["./package.json"] = STATIC_ENTRIES["./package.json"];
   out["./custom-elements.json"] = STATIC_ENTRIES["./custom-elements.json"];
   out["./web-types.json"] = STATIC_ENTRIES["./web-types.json"];

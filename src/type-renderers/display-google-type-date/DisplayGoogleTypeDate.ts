@@ -1,8 +1,8 @@
-import { Env } from "@furo/framework/src/furo.js";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
 import { XDate } from "@/models/google/type/Date";
+import { getLocale } from "@/util/locale";
 
 /**
  * `display-google-type-date`
@@ -88,7 +88,7 @@ export class DisplayGoogleTypeDate extends LitElement {
       return "N/A";
     }
     const jsDate = new Date(Date.UTC(year, month - 1, day, 0, 0, 0, 0));
-    return new Intl.DateTimeFormat([Env.locale, "de-CH"], {
+    return new Intl.DateTimeFormat([getLocale(), "de-CH"], {
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
