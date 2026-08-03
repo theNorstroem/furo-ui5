@@ -621,6 +621,10 @@
       "types": "./dist/settings/index.d.ts",
       "default": "./dist/settings/index.js"
     },
+    "./settings/init": {
+      "types": "./dist/settings/init.d.ts",
+      "default": "./dist/settings/init.js"
+    },
     "./package.json": "./package.json",
     "./custom-elements.json": "./custom-elements.json",
     "./web-types.json": "./web-types.json",

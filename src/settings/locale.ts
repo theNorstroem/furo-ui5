@@ -1,15 +1,15 @@
 import getUi5Locale from "@ui5/webcomponents-base/dist/locale/getLocale.js";
 import { attachLanguageChange } from "@ui5/webcomponents-base/dist/locale/languageChange.js";
 
+import { LOCALE_STORAGE_KEY } from "./keys";
 import { readSetting, removeSetting, writeSetting } from "./storage";
+
+export { LOCALE_STORAGE_KEY };
 
 /**
  * Callback interface for receiving locale changes.
  */
 type LocaleUpdateFunc = (locale: string) => void;
-
-/** localStorage key holding the user's locale choice, read back by the app on startup. */
-export const LOCALE_STORAGE_KEY = "FuroLocale";
 
 /** Locale set during this session or restored from storage; `undefined` follows the UI5 locale. */
 let _locale: string | undefined;

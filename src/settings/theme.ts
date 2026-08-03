@@ -1,23 +1,15 @@
 import { setTheme as setUi5Theme } from "@ui5/webcomponents-base/dist/config/Theme.js";
 
+import { THEME_STORAGE_KEY } from "./keys";
+import { OPERATING_SYSTEM, resolveTheme } from "./resolveTheme";
 import { readSetting, removeSetting, writeSetting } from "./storage";
+
+export { THEME_STORAGE_KEY, OPERATING_SYSTEM };
 
 /**
  * Callback interface for receiving theme changes.
  */
 type ThemeUpdateFunc = (theme: string) => void;
-
-/** localStorage key holding the user's theme choice, read back by the app on startup. */
-export const THEME_STORAGE_KEY = "FuroTheme";
-
-/** Theme setting meaning "follow the operating system's color scheme and contrast preference". */
-export const OPERATING_SYSTEM = "OperatingSystem";
-
-// UI5's `_auto` themes carry `@media (prefers-color-scheme: dark)` in their parameter bundle, so
-// dark/light switches inside the CSS — instantly, and without refetching theme assets. Only the
-// contrast preference has to be resolved here, because it selects a different bundle.
-const AUTO_THEME = "sap_horizon_auto";
-const AUTO_THEME_HIGH_CONTRAST = "sap_horizon_hc_auto";
 
 /** The chosen setting: {@link OPERATING_SYSTEM} or a concrete UI5 theme name. */
 let _setting: string | undefined;
@@ -40,13 +32,6 @@ const _currentSetting = (): string => {
     _setting = readSetting(THEME_STORAGE_KEY);
   }
   return _setting ?? OPERATING_SYSTEM;
-};
-
-const _resolve = (setting: string): string => {
-  if (setting !== OPERATING_SYSTEM) {
-    return setting;
-  }
-  return _contrastQuery().matches ? AUTO_THEME_HIGH_CONTRAST : AUTO_THEME;
 };
 
 const _announce = (theme: string): void => {
@@ -73,7 +58,7 @@ const _attachContrastListener = (): void => {
 
 const _apply = async (setting: string): Promise<void> => {
   _attachContrastListener();
-  const theme = _resolve(setting);
+  const theme = resolveTheme(setting);
   await setUi5Theme(theme);
   _announce(theme);
 };
@@ -102,7 +87,7 @@ export const getTheme = (updateCallback?: ThemeUpdateFunc): string => {
     _callbacks.push(updateCallback);
   }
 
-  return _resolve(_currentSetting());
+  return resolveTheme(_currentSetting());
 };
 
 /**

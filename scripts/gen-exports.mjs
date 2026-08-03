@@ -116,6 +116,13 @@ const STATIC_ENTRIES = {
     types: "./dist/settings/index.d.ts",
     default: "./dist/settings/index.js",
   },
+  // Applies the persisted settings to UI5's page configuration as an import side effect. A
+  // separate subpath rather than part of the barrel above: it has to be imported first, before
+  // anything reads UI5's configuration, and it must not run just because someone wanted a getter.
+  "./settings/init": {
+    types: "./dist/settings/init.d.ts",
+    default: "./dist/settings/init.js",
+  },
   "./package.json": "./package.json",
   "./custom-elements.json": "./custom-elements.json",
   "./web-types.json": "./web-types.json",
@@ -192,6 +199,7 @@ function buildExportsMap(componentEntries) {
   out["./styles/GlobalStyles"] = STATIC_ENTRIES["./styles/GlobalStyles"];
   out["./directives/nl2br"] = STATIC_ENTRIES["./directives/nl2br"];
   out["./settings"] = STATIC_ENTRIES["./settings"];
+  out["./settings/init"] = STATIC_ENTRIES["./settings/init"];
   out["./package.json"] = STATIC_ENTRIES["./package.json"];
   out["./custom-elements.json"] = STATIC_ENTRIES["./custom-elements.json"];
   out["./web-types.json"] = STATIC_ENTRIES["./web-types.json"];

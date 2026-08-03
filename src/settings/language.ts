@@ -3,15 +3,15 @@ import {
   setLanguage as setUi5Language,
 } from "@ui5/webcomponents-base/dist/config/Language.js";
 
+import { LANGUAGE_STORAGE_KEY } from "./keys";
 import { readSetting, removeSetting, writeSetting } from "./storage";
+
+export { LANGUAGE_STORAGE_KEY };
 
 /**
  * Callback interface for receiving language changes.
  */
 type LanguageUpdateFunc = (language: string) => void;
-
-/** localStorage key holding the user's language choice, read back by the app on startup. */
-export const LANGUAGE_STORAGE_KEY = "FuroLanguage";
 
 /** Language set during this session or restored from storage; `undefined` follows UI5/the browser. */
 let _language: string | undefined;
@@ -25,11 +25,11 @@ let _ui5DefaultCaptured = false;
 
 const _callbacks: LanguageUpdateFunc[] = [];
 
-// Captured before the first write, so an app that configured UI5 directly at startup gets that
-// language back on clear, rather than whatever the user last picked.
 /** UI5 spells "not configured" as the empty string, which `??` would otherwise let through. */
 const _orUndefined = (value: string | undefined): string | undefined => (value === "" ? undefined : value);
 
+// Captured before the first write, so an app that configured UI5 directly at startup gets that
+// language back on clear, rather than whatever the user last picked.
 const _captureUi5Default = (): void => {
   if (!_ui5DefaultCaptured) {
     _ui5DefaultCaptured = true;

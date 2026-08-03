@@ -54974,6 +54974,21 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/types/AnimationMode.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "AnimationMode",
+            "module": "src/types/AnimationMode.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/types/AvatarColorScheme.js",
       "declarations": [],
       "exports": [
@@ -55577,6 +55592,14 @@
       "path": "dist/types/index.js",
       "declarations": [],
       "exports": [
+        {
+          "kind": "js",
+          "name": "AnimationMode",
+          "declaration": {
+            "name": "default",
+            "module": "./AnimationMode"
+          }
+        },
         {
           "kind": "js",
           "name": "AvatarColorScheme",

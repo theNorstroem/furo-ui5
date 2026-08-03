@@ -123,8 +123,12 @@ describe("DynamicHeader Component", async () => {
       objectIcon.click();
     }));
 
-  it("focus() should focus the variant button", () => {
+  it("focus() should focus the variant button", async () => {
     el.focus();
+    // The variant button is a UI5 element, whose focus() is async — it awaits its own DOM ref. The
+    // override does not surface that promise, so yield a task before reading activeElement rather
+    // than racing it. Without this the assertion passes only when the machine is fast enough.
+    await delay(0);
     assert.equal(el.shadowRoot!.activeElement, headerButton);
   });
 

@@ -4,18 +4,15 @@ import {
 } from "@ui5/webcomponents-base/dist/config/CalendarType.js";
 import CalendarType from "@ui5/webcomponents-base/dist/types/CalendarType.js";
 
+import { CALENDAR_STORAGE_KEY, SECONDARY_CALENDAR_STORAGE_KEY } from "./keys";
 import { readSetting, removeSetting, writeSetting } from "./storage";
+
+export { CALENDAR_STORAGE_KEY, SECONDARY_CALENDAR_STORAGE_KEY };
 
 /**
  * Callback interface for receiving calendar changes.
  */
 type CalendarUpdateFunc = (calendar: CalendarType | undefined) => void;
-
-/** localStorage key holding the user's calendar choice, read back by the app on startup. */
-export const CALENDAR_STORAGE_KEY = "FuroCalendar";
-
-/** localStorage key holding the user's secondary calendar choice. */
-export const SECONDARY_CALENDAR_STORAGE_KEY = "FuroSecondaryCalendar";
 
 let _calendar: CalendarType | undefined;
 let _secondaryCalendar: CalendarType | undefined;

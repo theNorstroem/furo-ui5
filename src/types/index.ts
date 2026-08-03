@@ -5,6 +5,7 @@
  * `@ui5/webcomponents-fiori` enum, so consumers never have to reach into a transitive
  * dependency's `dist/` to spell a property value. The rest are furo-owned types.
  */
+export { default as AnimationMode } from "./AnimationMode";
 export { default as AvatarColorScheme } from "./AvatarColorScheme";
 export { default as AvatarGroupType } from "./AvatarGroupType";
 export { default as AvatarMode } from "./AvatarMode";
