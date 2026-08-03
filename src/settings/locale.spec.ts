@@ -59,12 +59,18 @@ describe("settings/locale", () => {
 
   it("should prefer a persisted locale over the UI5 locale", async () => {
     await setLanguage("de-CH");
+    // clearLocale() in beforeEach dropped the memoized read, so this is the page-load path: a
+    // value already in storage is restored on the next resolve and beats the UI5 locale.
     localStorage.setItem(LOCALE_STORAGE_KEY, "en-US");
-
-    // Nothing was set this session, so this is the page-load path: storage beats the UI5 locale.
     assert.equal(getLocale(), "en-US");
+  });
 
-    localStorage.removeItem(LOCALE_STORAGE_KEY);
+  it("should read storage only once, so later direct writes are ignored", async () => {
+    await setLanguage("de-CH");
+    assert.equal(getLocale(), "de-CH");
+
+    // Bypassing setLocale() after the first resolve is deliberately not picked up.
+    localStorage.setItem(LOCALE_STORAGE_KEY, "en-US");
     assert.equal(getLocale(), "de-CH");
   });
 
