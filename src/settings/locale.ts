@@ -1,6 +1,8 @@
 import getUi5Locale from "@ui5/webcomponents-base/dist/locale/getLocale.js";
 import { attachLanguageChange } from "@ui5/webcomponents-base/dist/locale/languageChange.js";
 
+import { readSetting, removeSetting, writeSetting } from "./storage";
+
 /**
  * Callback interface for receiving locale changes.
  */
@@ -20,31 +22,13 @@ let _languageListenerAttached = false;
 
 const _callbacks: LocaleUpdateFunc[] = [];
 
-// localStorage throws instead of returning null where it is unavailable (Safari with cross-site
-// cookies blocked, sandboxed iframes), and a locale is never worth breaking rendering over.
-const _readStored = (): string | undefined => {
-  try {
-    return localStorage.getItem(LOCALE_STORAGE_KEY) ?? undefined;
-  } catch {
-    return undefined;
-  }
-};
-
-const _writeStored = (locale: string): void => {
-  try {
-    localStorage.setItem(LOCALE_STORAGE_KEY, locale);
-  } catch {
-    // storage unavailable — the locale still applies for this session
-  }
-};
-
 // The persisted value is read once and then kept in memory: the app applies its stored settings
 // during startup, before any component resolves a locale, so re-reading per call would buy nothing.
 // A value written to localStorage afterwards is therefore only picked up via setLocale().
 const _current = (): string => {
   if (!_restored) {
     _restored = true;
-    _locale = _readStored();
+    _locale = readSetting(LOCALE_STORAGE_KEY);
   }
   // UI5 derives its locale from the configured language, falling back to the browser language and
   // then to its own default, so this always yields a usable BCP 47 tag.
@@ -107,7 +91,7 @@ export const getLocale = (updateCallback?: LocaleUpdateFunc): string => {
 export const setLocale = (locale: string): void => {
   _locale = locale;
   _restored = true;
-  _writeStored(locale);
+  writeSetting(LOCALE_STORAGE_KEY, locale);
   _notify(locale);
   window.dispatchEvent(new CustomEvent("furo-locale-changed", { detail: locale }));
 };
@@ -123,11 +107,7 @@ export const setLocale = (locale: string): void => {
 export const clearLocale = (): void => {
   _locale = undefined;
   _restored = false;
-  try {
-    localStorage.removeItem(LOCALE_STORAGE_KEY);
-  } catch {
-    // storage unavailable — nothing was persisted anyway
-  }
+  removeSetting(LOCALE_STORAGE_KEY);
   // Both sources were just dropped, so the UI5 locale is what is left — computed directly rather
   // than through _current(), which would re-arm the memo this is meant to release.
   const locale = getUi5Locale().toString();

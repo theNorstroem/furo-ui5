@@ -10,3 +10,4 @@
  * co-located `*.spec` files, which are excluded from the published tarball.
  */
 export { getLocale, setLocale, clearLocale, LOCALE_STORAGE_KEY } from "./locale";
+export { getLanguage, setLanguage, clearLanguage, LANGUAGE_STORAGE_KEY } from "./language";
