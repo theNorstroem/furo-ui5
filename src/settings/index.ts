@@ -9,4 +9,4 @@
  * wildcard would freeze every filename as public API, and would additionally advertise the
  * co-located `*.spec` files, which are excluded from the published tarball.
  */
-export { getLocale, setLocale } from "./locale";
+export { getLocale, setLocale, clearLocale, LOCALE_STORAGE_KEY } from "./locale";
