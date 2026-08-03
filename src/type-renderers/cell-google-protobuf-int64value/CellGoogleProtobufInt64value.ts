@@ -2,7 +2,7 @@ import { Int64Value } from "@furo/open-models";
 import { css, html, LitElement } from "lit";
 import { state } from "lit/decorators.js";
 
-import { getLocale } from "@/util/locale";
+import { getLocale } from "@/settings/locale";
 
 /**
  * `cell-google-protobuf-int64value`

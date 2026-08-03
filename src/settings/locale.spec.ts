@@ -1,10 +1,11 @@
 import { setLanguage } from "@ui5/webcomponents-base/dist/config/Language.js";
 import { afterAll, assert, describe, it } from "vitest";
 
-import { formatRelativeTime } from "./formatRelativeTime";
 import { getLocale, setLocale } from "./locale";
 
-describe("util/locale", () => {
+import { formatRelativeTime } from "@/util/formatRelativeTime";
+
+describe("settings/locale", () => {
   afterAll(async () => {
     // Both the UI5 language and the module-level override are global state, and formatRelativeTime
     // now reads through getLocale() — leave them as the suite found them.

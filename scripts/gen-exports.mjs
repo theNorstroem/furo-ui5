@@ -107,12 +107,14 @@ const STATIC_ENTRIES = {
     types: "./dist/directives/nl2br.d.ts",
     default: "./dist/directives/nl2br.js",
   },
-  // Formatting locale used by the type renderers. Follows the language configured on UI5 unless
-  // an app calls `setLocale()`. Per-file for the same reason as the directives above: the
-  // sibling `util/test-helpers/**` is excluded from the published tarball.
-  "./util/locale": {
-    types: "./dist/util/locale.d.ts",
-    default: "./dist/util/locale.js",
+  // App-level settings. `locale` is the formatting locale used by the type renderers: it follows
+  // the language configured on UI5 unless an app calls `setLocale()`. Listed per-file rather than
+  // via a `./settings/*` wildcard, for the same reason as the directives above — the co-located
+  // `*.spec.ts` files are excluded from the published tarball, so a wildcard would advertise
+  // subpaths that resolve to nothing. Add a line here for each new setting module.
+  "./settings/locale": {
+    types: "./dist/settings/locale.d.ts",
+    default: "./dist/settings/locale.js",
   },
   "./package.json": "./package.json",
   "./custom-elements.json": "./custom-elements.json",
@@ -170,7 +172,7 @@ function buildExportsMap(componentEntries) {
   //   5. JSX intrinsic declarations
   //   6. assets, icons + adoptable stylesheets
   //   7. lit directives
-  //   8. runtime utilities (locale)
+  //   8. app-level settings (locale, …)
   //   9. static metadata entries
   const out = {};
   out["."] = STATIC_ENTRIES["."];
@@ -189,7 +191,7 @@ function buildExportsMap(componentEntries) {
   out["./styles/scrollbar.css"] = STATIC_ENTRIES["./styles/scrollbar.css"];
   out["./styles/GlobalStyles"] = STATIC_ENTRIES["./styles/GlobalStyles"];
   out["./directives/nl2br"] = STATIC_ENTRIES["./directives/nl2br"];
-  out["./util/locale"] = STATIC_ENTRIES["./util/locale"];
+  out["./settings/locale"] = STATIC_ENTRIES["./settings/locale"];
   out["./package.json"] = STATIC_ENTRIES["./package.json"];
   out["./custom-elements.json"] = STATIC_ENTRIES["./custom-elements.json"];
   out["./web-types.json"] = STATIC_ENTRIES["./web-types.json"];

@@ -2,7 +2,7 @@ import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
 import { FuroFatUint64 } from "@/models";
-import { getLocale } from "@/util/locale";
+import { getLocale } from "@/settings/locale";
 
 /**
  * `display-furo-fat-uint64`

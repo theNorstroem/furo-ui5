@@ -2,7 +2,7 @@ import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
 import { Money } from "@/models/google/type/Money";
-import { getLocale } from "@/util/locale";
+import { getLocale } from "@/settings/locale";
 
 /**
  * `display-google-type-money`

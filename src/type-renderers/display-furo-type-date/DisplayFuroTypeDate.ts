@@ -2,7 +2,7 @@ import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
 import { XDate } from "@/models/furo/type/Date";
-import { getLocale } from "@/util/locale";
+import { getLocale } from "@/settings/locale";
 
 /**
  * `display-furo-type-date`

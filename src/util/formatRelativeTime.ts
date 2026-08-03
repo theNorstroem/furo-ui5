@@ -1,4 +1,4 @@
-import { getLocale } from "./locale";
+import { getLocale } from "@/settings/locale";
 
 export interface RelativeTimeParts {
   /** Relative time text, e.g. "in 5 days" / "5 days ago". */
