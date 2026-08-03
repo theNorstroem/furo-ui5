@@ -137,7 +137,7 @@ export class InputFields extends LitFBP(LitElement) {
               <div>xx</div>
             </furo-ui5-busy-indicator>
 
-            <furo-ui5-radio-button slot="action" fn-check="" text="Override" .model="${this.wrappers.boolValue}"></furo-ui5-radio-button>
+            <furo-ui5-radio-button  fn-check="" text="Override" .model="${this.wrappers.boolValue}"></furo-ui5-radio-button>
 
             <furo-ui5-radio-button name="a" value-state="Negative" .model="${this.wrappers.boolValue}"></furo-ui5-radio-button>
             <furo-ui5-radio-button name="a" .model="${this.wrappers.boolPrimitive}"></furo-ui5-radio-button>

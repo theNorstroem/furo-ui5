@@ -1,0 +1,71 @@
+diff --git a/node_modules/@jackolope/lit-analyzer/lib/rules/no-missing-import.js b/node_modules/@jackolope/lit-analyzer/lib/rules/no-missing-import.js
+index 72b2dbd..8dc40e2 100644
+--- a/node_modules/@jackolope/lit-analyzer/lib/rules/no-missing-import.js
++++ b/node_modules/@jackolope/lit-analyzer/lib/rules/no-missing-import.js
+@@ -1,6 +1,7 @@
+ "use strict";
+ Object.defineProperty(exports, "__esModule", { value: true });
+ const path_1 = require("path");
++const fs_1 = require("fs");
+ const is_valid_name_js_1 = require("../analyze/util/is-valid-name.js");
+ const range_util_js_1 = require("../analyze/util/range-util.js");
+ /**
+@@ -63,6 +64,15 @@ exports.default = rule;
+  * @param toFileName
+  */
+ function getRelativePathForImport(fromFileName, toFileName) {
++    // A declaration inside node_modules should be imported through the subpath the
++    // package actually exports, not through its on-disk layout. Stripping up to
++    // "node_modules/" (below) yields e.g. "@furo/ui5/dist/elements/tabcontainer",
++    // which an "exports" map makes unresolvable; the real specifier is
++    // "@furo/ui5/tabcontainer".
++    const exportedSubpath = getPackageSubpathForImport(toFileName);
++    if (exportedSubpath != null) {
++        return exportedSubpath;
++    }
+     const path = path_1.posix.relative((0, path_1.dirname)(fromFileName), (0, path_1.dirname)(toFileName));
+     const filenameWithoutExt = (0, path_1.basename)(toFileName).replace(/\.[^/.]+$/, "");
+     const prefix = path.startsWith("../") ? "" : "./";
+@@ -72,4 +82,41 @@ function getRelativePathForImport(fromFileName, toFileName) {
+         .replace(/\.d$/, "")
+         .replace(/\/index$/, "");
+ }
++/**
++ * Reverse-looks-up a declaration file in the owning package's "exports" map and
++ * returns the public specifier for it (e.g. "@furo/ui5/tabcontainer"), or undefined
++ * when the file isn't in node_modules or isn't reachable through a static export.
++ */
++function getPackageSubpathForImport(toFileName) {
++    const fileName = toFileName.replace(/\\/g, "/");
++    const marker = "/node_modules/";
++    const markerIndex = fileName.lastIndexOf(marker);
++    if (markerIndex < 0)
++        return undefined;
++    const segments = fileName.slice(markerIndex + marker.length).split("/");
++    const packageName = segments[0].startsWith("@") ? `${segments[0]}/${segments[1]}` : segments[0];
++    const packageRoot = fileName.slice(0, markerIndex + marker.length) + packageName;
++    let packageJson;
++    try {
++        packageJson = JSON.parse((0, fs_1.readFileSync)(`${packageRoot}/package.json`, "utf8"));
++    }
++    catch {
++        return undefined;
++    }
++    if (packageJson.exports == null || typeof packageJson.exports !== "object")
++        return undefined;
++    // Match on either the types or the runtime target, since a subpath usually
++    // declares "./x.d.ts" for types and "./x.js" for the default condition.
++    const declaration = `.${fileName.slice(packageRoot.length)}`;
++    const candidates = [declaration, declaration.replace(/\.d\.ts$/, ".js")];
++    for (const [subpath, target] of Object.entries(packageJson.exports)) {
++        if (subpath.includes("*"))
++            continue;
++        const targets = typeof target === "string" ? [target] : Object.values(target ?? {}).filter(value => typeof value === "string");
++        if (targets.some(value => candidates.includes(value))) {
++            return subpath === "." ? packageName : `${packageName}/${subpath.replace(/^\.\//, "")}`;
++        }
++    }
++    return undefined;
++}
+ //# sourceMappingURL=no-missing-import.js.map
+\ No newline at end of file

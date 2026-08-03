@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
-  "version": "2.0.0-RC.16",
+  "version": "2.0.0-RC.17",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": {
     "type": "git",
@@ -12,7 +12,11 @@
     "email": "",
     "url": "https://github.com/theNorstroem/"
   },
-  "keywords": ["web-components", "flow based programming", "fbp"],
+  "keywords": [
+    "web-components",
+    "flow based programming",
+    "fbp"
+  ],
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",
@@ -645,13 +649,17 @@
     "docs:generate": "npm run analyze:components && npm run analyze:typerenderer && ./scripts/cem.sh",
     "docs:publish": "./scripts/publishDocs.sh",
     "analyze": "cem analyze --litelement --globs ./src/* --outdir ./dist",
-    "analyze:internal": "cem analyze --config scripts/internal-cem.config.mjs && mv tmp/custom-elements.json dist/custom-elements-internal.json",
+    "analyze:internal": "cem analyze --config scripts/internal-cem.config.mjs && mv tmp/custom-elements.json dist/custom-elements-internal.json && scripts/GenerateFuroUi5Globals.mjs",
     "analyze:deep": "cem analyze --config ./scripts/deep-cem.config.mjs &&  ./scripts/WebtypesPostprocessor.mjs && ./scripts/HtmlDataPostprocessor.mjs && ./scripts/CheckWebtypes.mjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "audit:metadata": "./scripts/AuditComponentMetadata.js",
     "audit:metadata:strict": "./scripts/AuditComponentMetadata.js --strict",
-    "skills:update": "node scripts/generate-webcomponents-skills-reference-docs.cjs"
+    "skills:update": "node scripts/generate-webcomponents-skills-reference-docs.cjs",
+    "prepare": "patch-package"
+  },
+  "overrides": {
+    "@jackolope/lit-analyzer": "3.2.1"
   },
   "peerDependencies": {
     "@furo/layout": "/Users/veith/Projects/theNorstroem/eclipsefuro-web/packages/furo-layout/furo-layout-3.0.0-RC.13.tgz",
@@ -709,6 +717,7 @@
     "eslint-plugin-wc": "^3.1.0",
     "globals": "^17.7.0",
     "husky": "^9.1.7",
+    "patch-package": "^8.0.1",
     "prettier": "^3.9.6",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",

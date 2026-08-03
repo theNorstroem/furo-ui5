@@ -86,7 +86,7 @@ Sanity check after touching the build: `grep -rhoE '"\.\.?/[^"]*"' dist --includ
 ```
 
 This removes ~520 files (2705 → 2183, tarball 2.03 MB → 1.53 MB). Two gotchas:
-- The negation patterns must **not** carry a `./` prefix. `"!./dist/**/*.spec.*"` is silently ignored by npm's packlist; `"!dist/**/*.spec.*"` works. Verify with `npm pack --dry-run --json`.
+- The negation patterns must **not** carry a `./` prefix. `"!./dist/**/*.spec.*"` is silently ignored by npm's packlist; `"!dist/**/*.spec.*"` works. Verify with `npm pack --dry-run --json --ignore-scripts` — the `--ignore-scripts` is required, because `npm pack` runs the `prepare` script and patch-package prints to stdout ahead of the JSON, which breaks any parse of the output (see *Patched dependencies* below).
 - ⚠️ **Do not instead exclude these files from `tsconfig.json`.** It looks like the tidier fix (and the `eclipsefuro-web` base config does exclude `src/**/*.spec.ts`), but here it **breaks the test suite**: vite/esbuild applies the project's `compilerOptions` only to files the tsconfig actually matches, so an excluded spec is transpiled with default TS options instead of this project's `experimentalDecorators` / `useDefineForClassFields: false`. Empirically, excluding `src/**/*.spec.ts` makes `src/directives/nl2br.spec.ts` fail (`el.shadowRoot` is null — the element never upgrades). Keep specs inside `tsconfig.json`; that also keeps `npm run build` as their type gate, since vitest transpiles without typechecking.
 
 ### Testing
@@ -124,6 +124,16 @@ When adding a component, add all five tags, then run `npm run analyze:deep && np
 
 ### Peer dependencies & local linking
 `@furo/layout` is pinned to a local `.tgz` path under `/Users/veith/Projects/theNorstroem/eclipsefuro-web/...` — `npm install` will fail on machines without that file. `npm run bootstrap` does `npm install && npm link && npm link @furo/ui5` for cross-package development against sibling Furo packages.
+
+### Patched dependencies
+`patches/` holds `patch-package` patches, applied by the `"prepare"` script on `npm install` / `npm ci`. Currently one: `@jackolope+lit-analyzer+3.2.1.patch`, which teaches the `no-missing-import` rule of the `@jackolope/ts-lit-plugin` language-service plugin to reverse-resolve a declaration through the owning package's `exports` map, so its suggested specifier is `@furo/layout/<subpath>` rather than the unresolvable on-disk `.../node_modules/@furo/layout/dist/...`. The same patch lives in the `Blueberry/web-starter` consumer app; keep the two in sync.
+
+Three things to know before touching this:
+- **The hook is `prepare`, not `postinstall`** (which is what the consumer app uses). npm runs a *dependency's* `postinstall` during a consumer's install, so `"postinstall": "patch-package"` would ship in the published `package.json` and make every `npm i @furo/ui5` fail on the missing `patch-package` binary. `prepare` runs locally and on `npm pack`/`publish`, but never for registry/tarball consumers.
+- **`@jackolope/lit-analyzer` is pinned to exactly `3.2.1` via `overrides`.** It is a transitive dep (`ts-lit-plugin@3.1.6` declares `^3.2.1`), and patch-package matches on the version in the patch filename — without the pin, a 3.3.x release would silently stop the patch applying. If you intentionally bump it, re-cut the patch and rename the file. (`overrides` in a library's `package.json` is ignored by consumers, so this only affects local dev.)
+- **`prepare` pollutes stdout on `npm pack`** — see the `--ignore-scripts` note under *Keeping test artifacts out of the published package*.
+
+The plugin is IDE-only (no npm script invokes lit-analyzer's CLI), so a missing patch degrades quick-fix suggestions in WebStorm but never fails a build or CI. Restart the TS server after re-applying.
 
 ## Lint rules worth knowing
 

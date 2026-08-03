@@ -2318,6 +2318,23 @@
           "kind": "class",
           "description": "The furo-ui5-busy-indicator signals that some operation is going on and that the user must wait.\n\n```html\n<furo-ui5-busy-indicator></furo-ui5-busy-indicator>\n```\n\nhttps://ui5.github.io/webcomponents/components/BusyIndicator/\n\n### Overview\n\nThe `furo-ui5-busy-indicator` signals that some operation is going on and that the\nuser must wait. It does not block the current UI screen so other operations could be triggered in parallel.\nIt displays 3 dots and each dot expands and shrinks at a different rate, resulting in a cascading flow of animation.\n\n### Usage\nFor the `furo-ui5-busy-indicator` you can define the size, the text and whether it is shown or hidden.\nIn order to hide it, use the \"active\" property.\n\nIn order to show busy state over an HTML element, simply nest the HTML element in a `furo-ui5-busy-indicator` instance.\n\n**Note:** Since `furo-ui5-busy-indicator` has `display: inline-block;` by default and no width of its own,\nwhenever you need to wrap a block-level element, you should set `display: block` to the busy indicator as well.\n\n#### When to use:\n\n- The user needs to be able to cancel the operation.\n- Only part of the application or a particular component is affected.\n\n#### When not to use:\n\n- The operation takes less than one second.\n- You need to block the screen and prevent the user from starting another activity.\n- Do not show multiple busy indicators at once.\n\n\n",
           "name": "BusyIndicator",
+          "slots": [
+            {
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "description": "Place any content here",
+              "name": ""
+            },
+            {
+              "description": "Determines the content over which the component will appear.",
+              "name": "default",
+              "inheritedFrom": {
+                "name": "BusyIndicator",
+                "module": "dist/BusyIndicator.js"
+              }
+            }
+          ],
           "members": [
             {
               "kind": "field",
@@ -2518,16 +2535,6 @@
           "relatedComponents": [
             "furo-ui5-busy-indicator-block",
             "furo-ui5-progress-indicator"
-          ],
-          "slots": [
-            {
-              "description": "Determines the content over which the component will appear.",
-              "name": "default",
-              "inheritedFrom": {
-                "name": "BusyIndicator",
-                "module": "dist/BusyIndicator.js"
-              }
-            }
           ],
           "attributes": [
             {
@@ -14629,7 +14636,7 @@
               "kind": "field",
               "name": "headingLevel",
               "type": {
-                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "privacy": "public",
               "default": "\"H5\"",
@@ -14663,7 +14670,7 @@
             {
               "name": "heading-level",
               "type": {
-                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "default": "\"H5\"",
               "description": "Level for the heading.",

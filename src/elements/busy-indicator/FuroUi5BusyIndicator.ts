@@ -14,6 +14,7 @@ import type { FuroFatBool } from "@/models";
  *
  * https://ui5.github.io/webcomponents/components/BusyIndicator/
  *
+ * @slot {HTMLElement[]}  - Place any content here
  * @summary Loading spinner overlay indicating ongoing background activity.
  * @keywords busy, loading, spinner, progress, wait, indicator
  * @category Feedback
