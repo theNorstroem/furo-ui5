@@ -14990,6 +14990,11 @@
             {
               "kind": "method",
               "name": "focus",
+              "return": {
+                "type": {
+                  "text": ""
+                }
+              },
               "parameters": [
                 {
                   "name": "options",
@@ -14999,7 +15004,7 @@
                   }
                 }
               ],
-              "description": "Focuses the variant button (dropdown)."
+              "description": "Focuses the variant button (dropdown).\n\nThe target is a UI5 element, whose `focus()` waits for its own DOM ref, so focus lands a task\nlater. The promise is returned rather than dropped, so callers can await it — reading\n`activeElement` straight after this call otherwise races the focus.\n\nNote this widens `HTMLElement.focus()`, which the DOM types as returning `void` — hence the\ndisabled rule below. It matches how every UI5-derived element in this package behaves, so\n`await el.focus()` means the same thing across furo components; callers using it as a plain\nstatement are unaffected."
             },
             {
               "kind": "field",
@@ -15199,7 +15204,7 @@
               "kind": "field",
               "name": "variantIconEl",
               "type": {
-                "text": "HTMLElement | undefined"
+                "text": "FuroUi5Icon | undefined"
               },
               "privacy": "private"
             },

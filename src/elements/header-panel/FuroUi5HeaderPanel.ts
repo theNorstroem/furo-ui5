@@ -20,6 +20,7 @@ import { css, LitElement, nothing } from "lit";
 import { property, query } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
 
+import type { FuroUi5Icon } from "@/elements/icon/FuroUi5Icon";
 import type { FuroUi5ShowHide } from "@/elements/show-hide/FuroUi5ShowHide";
 import IconShape from "@/types/IconShape";
 import IconSize from "@/types/IconSize";
@@ -233,7 +234,7 @@ export class FuroUi5HeaderPanel extends LitElement {
 
   @query("#kpinav") private kpiNavEl?: HTMLElement;
 
-  @query("#variantIcon") private variantIconEl?: HTMLElement;
+  @query("#variantIcon") private variantIconEl?: FuroUi5Icon;
 
   /**
    *
@@ -424,10 +425,22 @@ export class FuroUi5HeaderPanel extends LitElement {
 
   /**
    * Focuses the variant button (dropdown).
+   *
+   * The target is a UI5 element, whose `focus()` waits for its own DOM ref, so focus lands a task
+   * later. The promise is returned rather than dropped, so callers can await it — reading
+   * `activeElement` straight after this call otherwise races the focus.
+   *
+   * Note this widens `HTMLElement.focus()`, which the DOM types as returning `void` — hence the
+   * disabled rule below. It matches how every UI5-derived element in this package behaves, so
+   * `await el.focus()` means the same thing across furo components; callers using it as a plain
+   * statement are unaffected.
+   *
    * @param options
+   * @returns a promise resolving once the variant button holds focus.
    */
-  override focus(options?: FocusOptions) {
-    this.variantIconEl?.focus(options);
+  // eslint-disable-next-line @typescript-eslint/no-misused-promises
+  override focus(options?: FocusOptions): Promise<void> {
+    return this.variantIconEl?.focus(options) ?? Promise.resolve();
   }
 
   /**
