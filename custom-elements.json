@@ -55274,6 +55274,21 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/types/CalendarType.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "CalendarType",
+            "module": "src/types/CalendarType.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/types/CalendarWeekNumbering.js",
       "declarations": [],
       "exports": [
@@ -55720,6 +55735,14 @@
           "declaration": {
             "name": "default",
             "module": "./CalendarSelectionMode"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "CalendarType",
+          "declaration": {
+            "name": "default",
+            "module": "./CalendarType"
           }
         },
         {

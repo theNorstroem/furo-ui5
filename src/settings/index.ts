@@ -12,6 +12,16 @@
 export { getLocale, setLocale, clearLocale, LOCALE_STORAGE_KEY } from "./locale";
 export { getLanguage, setLanguage, clearLanguage, LANGUAGE_STORAGE_KEY } from "./language";
 export {
+  getCalendar,
+  setCalendar,
+  clearCalendar,
+  getSecondaryCalendar,
+  setSecondaryCalendar,
+  clearSecondaryCalendar,
+  CALENDAR_STORAGE_KEY,
+  SECONDARY_CALENDAR_STORAGE_KEY,
+} from "./calendar";
+export {
   getTheme,
   getThemeSetting,
   setTheme,

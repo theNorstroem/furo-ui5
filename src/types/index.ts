@@ -25,6 +25,7 @@ export { default as ButtonType } from "./ButtonType";
 export { default as CalendarLegendItemType } from "./CalendarLegendItemType";
 export { default as CalendarPickersMode } from "./CalendarPickersMode";
 export { default as CalendarSelectionMode } from "./CalendarSelectionMode";
+export { default as CalendarType } from "./CalendarType";
 export { default as CalendarWeekNumbering } from "./CalendarWeekNumbering";
 export { default as CarouselArrowsPlacement } from "./CarouselArrowsPlacement";
 export { default as CarouselPageIndicatorType } from "./CarouselPageIndicatorType";
