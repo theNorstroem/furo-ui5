@@ -617,9 +617,9 @@
       "types": "./dist/directives/nl2br.d.ts",
       "default": "./dist/directives/nl2br.js"
     },
-    "./settings/locale": {
-      "types": "./dist/settings/locale.d.ts",
-      "default": "./dist/settings/locale.js"
+    "./settings": {
+      "types": "./dist/settings/index.d.ts",
+      "default": "./dist/settings/index.js"
     },
     "./package.json": "./package.json",
     "./custom-elements.json": "./custom-elements.json",

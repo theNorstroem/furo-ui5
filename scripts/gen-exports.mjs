@@ -107,14 +107,14 @@ const STATIC_ENTRIES = {
     types: "./dist/directives/nl2br.d.ts",
     default: "./dist/directives/nl2br.js",
   },
-  // App-level settings. `locale` is the formatting locale used by the type renderers: it follows
-  // the language configured on UI5 unless an app calls `setLocale()`. Listed per-file rather than
-  // via a `./settings/*` wildcard, for the same reason as the directives above — the co-located
-  // `*.spec.ts` files are excluded from the published tarball, so a wildcard would advertise
-  // subpaths that resolve to nothing. Add a line here for each new setting module.
-  "./settings/locale": {
-    types: "./dist/settings/locale.d.ts",
-    default: "./dist/settings/locale.js",
+  // App-level settings (locale today; theme, language, calendar, … to follow). Barrel only —
+  // deliberately no `./settings/*`, for the same reason as `./models` and `./types`: a wildcard
+  // would freeze every filename as public API, and would advertise the co-located `*.spec`
+  // files, which are excluded from the published tarball. New settings are added to
+  // `src/settings/index.ts`, not here.
+  "./settings": {
+    types: "./dist/settings/index.d.ts",
+    default: "./dist/settings/index.js",
   },
   "./package.json": "./package.json",
   "./custom-elements.json": "./custom-elements.json",
@@ -191,7 +191,7 @@ function buildExportsMap(componentEntries) {
   out["./styles/scrollbar.css"] = STATIC_ENTRIES["./styles/scrollbar.css"];
   out["./styles/GlobalStyles"] = STATIC_ENTRIES["./styles/GlobalStyles"];
   out["./directives/nl2br"] = STATIC_ENTRIES["./directives/nl2br"];
-  out["./settings/locale"] = STATIC_ENTRIES["./settings/locale"];
+  out["./settings"] = STATIC_ENTRIES["./settings"];
   out["./package.json"] = STATIC_ENTRIES["./package.json"];
   out["./custom-elements.json"] = STATIC_ENTRIES["./custom-elements.json"];
   out["./web-types.json"] = STATIC_ENTRIES["./web-types.json"];
