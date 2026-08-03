@@ -1,0 +1,232 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="how to's/Configuration"/>
+
+# Configuration
+
+`@furo/ui5/settings` is the app-level configuration of this package: theme, language, formatting locale, calendar type, animation mode and the first day of the week.
+
+Every setting is **process-wide** — an app sets it once, and every component reads it at format and render time. Every setting **persists to `localStorage`** under a `Furo*` key, and every one is **read back on the next page load** by `@furo/ui5/settings/init`.
+
+Where UI5 has a runtime API for the same thing, the setting is pushed to UI5 as well, so you configure it in one place instead of two. For everything else, see the [UI5 configuration documentation](https://ui5.github.io/webcomponents/docs/advanced/configuration/) — the page configuration this package writes is exactly the one described there.
+
+## Bootstrap
+
+Import `@furo/ui5/settings/init` as the **first import of your application entry point**, above every `@furo/ui5` and `@ui5/webcomponents` import:
+
+**import from head**
+```html
+<head>
+ <meta name="Description" content="Blueberry app starter" />
+
+ <script type="module">
+      import "@furo/ui5/settings/init"
+ </script>
+</head>
+```
+
+**import from js/ts**
+```js
+import "@furo/ui5/settings/init";
+
+import "@furo/ui5/Assets";
+// …the rest of the app
+```
+
+⚠️ The order is not cosmetic. UI5 parses its `data-ui5-config` tag on the first read of *any* configuration value and caches the result for the life of the page — a tag added after that is ignored. `init` writes the tag from your persisted settings, so it has to run before anything touches UI5.
+
+Importing it is all there is to it; nothing has to be called. It also:
+
+- leaves an existing `data-ui5-config` tag alone, so an app that ships its own configuration keeps it, and
+- kicks off the calendar data download for a non-Gregorian calendar (not awaited — the data only has to be there by the time a date component renders).
+
+Without `init` the settings still work, but only for the current session: the persisted theme is applied by `applyTheme()`, and the calendar type and first day of the week never reach UI5's own components.
+
+## The settings
+
+| Setting | Read | Write | Storage key | Default |
+| --- | --- | --- | --- | --- |
+| Theme | `getTheme()`, `getThemeSetting()` | `setTheme()` | `FuroTheme` | `OperatingSystem` |
+| UI language | `getLanguage()` | `setLanguage()` | `FuroLanguage` | UI5's language, then `navigator.language` |
+| Formatting locale | `getLocale()` | `setLocale()` | `FuroLocale` | UI5's locale |
+| Calendar | `getCalendar()` | `setCalendar()` | `FuroCalendar` | `Gregorian` |
+| Secondary calendar | `getSecondaryCalendar()` | `setSecondaryCalendar()` | `FuroSecondaryCalendar` | none |
+| Animation mode | `getAnimationMode()` | `setAnimationMode()` | `FuroAnimationMode` | `none` |
+| First day of week | `getFirstDayOfWeek()` | `setFirstDayOfWeek()` | `FuroFirstDayOfWeek` | `0` (Sunday) |
+
+Each one also has a `clear*()` that drops the session value and the stored one, falling back to what UI5 is configured with — that is your "restore defaults".
+
+All of them come from one barrel:
+
+```js
+import { getTheme, setTheme, getLocale, setLocale } from "@furo/ui5/settings";
+```
+
+`settings/init` is deliberately *not* on that barrel: it applies the page configuration as an import side effect, and importing the barrel is far too late for that.
+
+Values that are enums — the calendar type and the animation mode — are spelled through `@furo/ui5/types`, so you never have to reach into a transitive `@ui5/webcomponents-base` path:
+
+```js
+import { AnimationMode, CalendarType } from "@furo/ui5/types";
+```
+
+## Reading and subscribing
+
+Every getter takes an optional callback and returns the current value, so a component can read and subscribe in one line:
+
+```js
+class MyElement extends LitElement {
+  connectedCallback() {
+    super.connectedCallback();
+    this.locale = getLocale(locale => {
+      this.locale = locale;
+    });
+  }
+}
+```
+
+There is **no unsubscribe.** A component that subscribes has to guard its callback after leaving the DOM — check a flag, or that it is still connected.
+
+Every change also fires a `CustomEvent` on `window`, which is the better fit for code that is not a component:
+
+| Event | `detail` |
+| --- | --- |
+| `furo-theme-changed` | the UI5 theme now in effect |
+| `furo-language-changed` | the language now in effect |
+| `furo-locale-changed` | the locale now in effect |
+| `furo-calendar-changed` | `CalendarType` |
+| `furo-secondary-calendar-changed` | `CalendarType`, or `undefined` when cleared |
+| `furo-animation-mode-changed` | `AnimationMode` |
+| `furo-first-day-of-week-changed` | `0`–`6` |
+
+## Theme
+
+The theme setting is either a concrete UI5 theme name or the constant `OPERATING_SYSTEM` (`"OperatingSystem"`), which is the default:
+
+```js
+import { OPERATING_SYSTEM, getTheme, getThemeSetting, setTheme } from "@furo/ui5/settings";
+
+await setTheme("sap_horizon_dark");   // a concrete theme
+await setTheme(OPERATING_SYSTEM);     // follow the OS
+```
+
+Two getters, because a theme picker and the renderer want different things:
+
+- `getThemeSetting()` returns what the user *chose* — `OperatingSystem`, or a theme name. Bind your picker to this.
+- `getTheme()` returns the theme *in effect* — `sap_horizon_auto`, or `sap_horizon_hc_auto` when the OS asks for more contrast.
+
+In OS mode the light/dark switch happens **inside the theme's CSS**, via `@media (prefers-color-scheme: dark)`. The theme name therefore does not change when the OS flips to dark — it stays `sap_horizon_auto` and the colors follow, with no assets refetched. Only the contrast preference selects a different bundle, and that one *is* watched: flip "increase contrast" while in OS mode and the theme is swapped for you.
+
+`setTheme()` resolves once UI5 has fetched and applied the theme assets — `await` it before asserting on rendered styles.
+
+`applyTheme()` applies the current setting without changing it. With `settings/init` in place you do not need it; without it, that is how you restore the user's theme on startup.
+
+## Language and locale
+
+Two separate settings, and the distinction matters:
+
+- **`getLanguage()` / `setLanguage()`** — the language of the UI *text*: which message bundles UI5 loads. Pushed to UI5, so setting it re-fetches the bundles and re-renders every language-aware component. `await` it before asserting on rendered text.
+- **`getLocale()` / `setLocale()`** — the locale used for `Intl` *formatting* of numbers, dates and currencies in furo components. It never changes UI5's language, and message bundles are unaffected.
+
+With no explicit locale, `getLocale()` follows UI5's locale — which UI5 derives from the configured language — so by default formatting and UI text stay in sync and you only ever set the language:
+
+```js
+await setLanguage("de");   // UI text in German, formatting follows
+setLocale("de-CH");        // …but format like Switzerland
+```
+
+A locale subscriber is also notified when UI5's language changes, as long as no explicit or stored locale is set.
+
+`clearLanguage()` restores the language UI5 had *before* this module first changed it — your app's own configuration, or the browser language if it never set one.
+
+## Calendar
+
+```js
+import { CalendarType } from "@furo/ui5/types";
+import { setCalendar, setSecondaryCalendar } from "@furo/ui5/settings";
+
+setCalendar(CalendarType.Islamic);
+setSecondaryCalendar(CalendarType.Gregorian);
+```
+
+Unlike the theme and the language, the calendar type is **not pushed to UI5**: UI5 fixes it at startup from the page configuration and has no runtime setter. So:
+
+- UI5's own date components follow it only **after a reload**, once `init` has written the new value into the config tag;
+- until then, hand the value to a component yourself:
+
+```js
+html`<furo-ui5-date-picker primary-calendar-type="${getCalendar()}"></furo-ui5-date-picker>`
+```
+
+A non-Gregorian calendar also needs its **data loaded** — without it, nothing renders. `settings/init` does this for the configured calendars on startup. When you switch calendars at runtime, load the new one yourself:
+
+```js
+import { loadCalendarAssets } from "@furo/ui5/settings";
+
+await loadCalendarAssets(CalendarType.Japanese);
+```
+
+or import it statically, the way the UI5 docs show:
+
+```js
+import "@ui5/webcomponents-localization/dist/features/calendar/Islamic.js";
+```
+
+`Islamic`, `Buddhist`, `Persian` and `Japanese` have data to load; `Gregorian` is built in.
+
+The secondary calendar is what a date picker shows *next to* the primary one. It defaults to none, and clearing it removes it again — UI5 shows a second calendar whenever the key is present in the configuration at all.
+
+## Animation mode
+
+```js
+import { AnimationMode } from "@furo/ui5/types";
+import { setAnimationMode } from "@furo/ui5/settings";
+
+setAnimationMode(AnimationMode.Full);
+```
+
+`Full`, `Basic`, `Minimal` and `None`. This one *is* pushed to UI5 and takes effect immediately.
+
+Note the default: **`None`**, not UI5's `Full` — animations are opt-in here, and `settings/init` writes that into the page configuration. `DEFAULT_ANIMATION_MODE` is exported if you want to compare against it.
+
+## First day of week
+
+`0` (Sunday) through `6` (Saturday); anything else throws a `RangeError`. Like the calendar type, it is fixed at UI5's startup, so a change reaches UI5's own calendars after a reload. `DEFAULT_FIRST_DAY_OF_WEEK` is `0`.
+
+```js
+setFirstDayOfWeek(1);   // Monday
+```
+
+## Building your own bootstrap
+
+`settings/init` is assembled from two side-effect-free pieces, both on the barrel, for apps that want to write the configuration tag themselves — or merge it with configuration of their own:
+
+```js
+import { buildUi5Config, loadCalendarAssets } from "@furo/ui5/settings";
+
+const config = { ...buildUi5Config(), fetchDefaultLanguage: true };
+
+const tag = document.createElement("script");
+tag.setAttribute("data-ui5-config", "");
+tag.type = "application/json";
+tag.textContent = JSON.stringify(config);
+document.head.appendChild(tag);
+
+void loadCalendarAssets(config.calendarType, config.secondaryCalendarType);
+```
+
+`buildUi5Config()` is pure — it reads `localStorage` and the OS contrast preference, and touches neither the DOM nor UI5 — and returns the `Ui5Config` shape UI5 reads: `theme`, `language`, `animationMode`, `calendarType`, an optional `secondaryCalendarType` and `formatSettings.firstDayOfWeek`. Every other key UI5 accepts is yours to add; see the [UI5 configuration documentation](https://ui5.github.io/webcomponents/docs/advanced/configuration/).
+
+`initUi5Config(config?)` from `@furo/ui5/settings/init` does the tag writing above, and returns `undefined` when the page already had one.
+
+## Two things to know
+
+**The stored value is read once.** Each setting reads `localStorage` on its first resolve and then keeps the value in memory — the assumption being that an app applies its stored settings during startup, so re-reading per call would buy nothing. A value written to `localStorage` *directly* after that point is not picked up, and notifies nobody. Always write through the setter. (A `clear*()` releases the memo, which is what makes it usable as a reset in tests.)
+
+**`localStorage` may not be there at all.** It *throws* rather than returning `null` where it is unavailable — Safari with cross-site cookies blocked, sandboxed iframes. Every access is guarded, so nothing breaks: the setting simply applies for the session and does not persist.
+
+Stored values are validated on read, too. Storage is user-writable and outlives the code that wrote it, so a value that is no longer a calendar type or a weekday index is dropped rather than handed to a component as an invalid attribute.
+
+## Further reading
+
+- [UI5 web components — Configuration](https://ui5.github.io/webcomponents/docs/advanced/configuration/) — the full list of configuration keys, the `data-ui5-config` tag, and UI5's own runtime APIs.
