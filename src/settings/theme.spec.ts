@@ -1,7 +1,7 @@
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
-import { getTheme as getUi5Theme } from "@ui5/webcomponents-base/dist/config/Theme.js";
+import { getTheme as getUi5Theme, setTheme as setUi5Theme } from "@ui5/webcomponents-base/dist/config/Theme.js";
 import { html } from "lit";
-import { afterAll, afterEach, assert, describe, it } from "vitest";
+import { afterAll, afterEach, assert, beforeAll, describe, it } from "vitest";
 
 import {
   OPERATING_SYSTEM,
@@ -22,6 +22,15 @@ import "@/elements/button/index";
  * by the resolution assertions rather than by faking a media query.
  */
 describe("settings/theme", () => {
+  // The applied theme is global to the page, not to this file: leaving UI5 on a different theme
+  // makes every later spec render under CSS it did not expect, which shows up as unrelated
+  // focus/visibility failures elsewhere in the suite.
+  let originalTheme: string;
+
+  beforeAll(() => {
+    originalTheme = getUi5Theme();
+  });
+
   afterEach(async () => {
     // The UI5 theme and localStorage are global; start every case from "follow the OS".
     await clearTheme();
@@ -29,6 +38,7 @@ describe("settings/theme", () => {
 
   afterAll(async () => {
     await clearTheme();
+    await setUi5Theme(originalTheme);
   });
 
   it("should follow the operating system while nothing is stored", () => {
