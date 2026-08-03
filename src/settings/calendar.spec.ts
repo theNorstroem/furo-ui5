@@ -1,4 +1,3 @@
-import CalendarType from "@ui5/webcomponents-base/dist/types/CalendarType.js";
 import { afterAll, afterEach, assert, describe, it } from "vitest";
 
 import {
@@ -11,6 +10,8 @@ import {
   setCalendar,
   setSecondaryCalendar,
 } from "./calendar";
+
+import CalendarType from "@/types/CalendarType";
 
 describe("settings/calendar", () => {
   afterEach(() => {

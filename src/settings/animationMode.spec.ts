@@ -1,5 +1,4 @@
 import { getAnimationMode as getUi5AnimationMode } from "@ui5/webcomponents-base/dist/config/AnimationMode.js";
-import AnimationMode from "@ui5/webcomponents-base/dist/types/AnimationMode.js";
 import { afterAll, afterEach, assert, beforeAll, describe, it } from "vitest";
 
 import {
@@ -9,6 +8,8 @@ import {
   getAnimationMode,
   setAnimationMode,
 } from "./animationMode";
+
+import AnimationMode from "@/types/AnimationMode";
 
 describe("settings/animationMode", () => {
   // The mode is global to the page; leaving UI5 on another one would affect later specs.

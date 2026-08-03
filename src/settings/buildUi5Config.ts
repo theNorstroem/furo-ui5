@@ -1,5 +1,3 @@
-import CalendarType from "@ui5/webcomponents-base/dist/types/CalendarType.js";
-
 import {
   ANIMATION_MODE_STORAGE_KEY,
   CALENDAR_STORAGE_KEY,
@@ -10,6 +8,8 @@ import {
 } from "./keys";
 import { OPERATING_SYSTEM, resolveTheme } from "./resolveTheme";
 import { readSetting } from "./storage";
+
+import CalendarType from "@/types/CalendarType";
 
 /**
  * The shape UI5 reads from a `data-ui5-config` script tag.

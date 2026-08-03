@@ -2,10 +2,11 @@ import {
   getCalendarType as getUi5CalendarType,
   getSecondaryCalendarType as getUi5SecondaryCalendarType,
 } from "@ui5/webcomponents-base/dist/config/CalendarType.js";
-import CalendarType from "@ui5/webcomponents-base/dist/types/CalendarType.js";
 
 import { CALENDAR_STORAGE_KEY, SECONDARY_CALENDAR_STORAGE_KEY } from "./keys";
 import { readSetting, removeSetting, writeSetting } from "./storage";
+
+import CalendarType from "@/types/CalendarType";
 
 export { CALENDAR_STORAGE_KEY, SECONDARY_CALENDAR_STORAGE_KEY };
 

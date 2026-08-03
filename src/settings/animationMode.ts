@@ -2,10 +2,11 @@ import {
   getAnimationMode as getUi5AnimationMode,
   setAnimationMode as setUi5AnimationMode,
 } from "@ui5/webcomponents-base/dist/config/AnimationMode.js";
-import AnimationMode from "@ui5/webcomponents-base/dist/types/AnimationMode.js";
 
 import { ANIMATION_MODE_STORAGE_KEY } from "./keys";
 import { readSetting, removeSetting, writeSetting } from "./storage";
+
+import AnimationMode from "@/types/AnimationMode";
 
 export { ANIMATION_MODE_STORAGE_KEY };
 
