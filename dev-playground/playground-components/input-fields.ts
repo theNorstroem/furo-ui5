@@ -186,7 +186,7 @@ export class InputFields extends LitFBP(LitElement) {
               </furo-ui5-form-row>
               <furo-ui5-form-row>
                 <furo-ui5-label show-colon slot="label" for="rating">Step Input </furo-ui5-label>
-                <furo-ui5-step value-state="Positive" .model="${this.cube.cube.length}"></furo-ui5-step>
+                <furo-ui5-step-input value-state="Positive" .model="${this.cube.cube.length}"></furo-ui5-step-input>
               </furo-ui5-form-row>
 
               <furo-ui5-form-row>

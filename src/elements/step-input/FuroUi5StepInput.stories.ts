@@ -79,6 +79,19 @@ export const Default: StoryObj = {
           value-state="${ifDefined(renderArgs.valueState)}"
           .model="${cube.cube.rating}"
         ></furo-ui5-step-input>
+        <furo-ui5-step-input
+          id="stp"
+          accessible-name="${ifDefined(renderArgs.accessibleName)}"
+          ?disabled="${renderArgs.disabled}"
+          ?required="${renderArgs.required}"
+          ?readonly="${renderArgs.readonly}"
+          min="0"
+          max="5"
+          step="1"
+          placeholder="${ifDefined(renderArgs.placeholder)}"
+          value-state="${ifDefined(renderArgs.valueState)}"
+          .model="${cube.cube.rating}"
+        ></furo-ui5-step-input>
       </furo-ui5-form-row>
     </furo-ui5-form-layout>
   `,

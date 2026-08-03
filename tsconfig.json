@@ -25,12 +25,14 @@
       {
         "name": "@jackolope/ts-lit-plugin",
         "strict": true,
+        "customHtmlData": ["./dist/furo-ui5.html-data.json", "./node_modules/@furo/layout/dist/furo-layout.html-data.json"],
+        "globalAttributes": ["flex", "scroll", "padding-inline"],
         "rules": {
-          "no-incompatible-type-binding": "warning",
+          "no-incompatible-type-binding": "warn",
           "no-incompatible-property-type": "error",
-          "no-unknown-event": "off",
-          "no-unknown-attribute": "off",
-          "no-unknown-property": "off",
+          "no-unknown-event": "warn",
+          "no-unknown-attribute": "error",
+          "no-unknown-property": "error",
           "no-complex-attribute-binding": "error"
         }
       }

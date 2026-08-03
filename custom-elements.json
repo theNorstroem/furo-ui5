@@ -14629,7 +14629,7 @@
               "kind": "field",
               "name": "headingLevel",
               "type": {
-                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "privacy": "public",
               "default": "\"H5\"",
@@ -14663,7 +14663,7 @@
             {
               "name": "heading-level",
               "type": {
-                "text": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
+                "text": "\"H2\" | \"H1\" | \"H3\" | \"H4\" | \"H5\" | \"H6\""
               },
               "default": "\"H5\"",
               "description": "Level for the heading.",

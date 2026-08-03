@@ -47,7 +47,7 @@ describe("FuroUi5StepInput", () => {
     let elLocator: LocatorSelectors;
 
     beforeAll(async () => {
-      el = await fixture(html` <furo-ui5-step accessible-name="name" data-testid="test"></furo-ui5-step> `);
+      el = await fixture(html` <furo-ui5-step-input accessible-name="name" data-testid="test"></furo-ui5-step-input> `);
       elLocator = utils.getElementLocatorSelectors(el);
       // dummy method call, you can remove it as soon you use elLocator in the tests
       elLocator.getByTestId("test");
@@ -59,7 +59,7 @@ describe("FuroUi5StepInput", () => {
 
     it("should be a furo-ui5-step element", () => {
       // keep this test on top, so you can recognize a wrong assignment
-      assert.equal(el.nodeName.toLowerCase(), "furo-ui5-step");
+      assert.equal(el.nodeName.toLowerCase(), "furo-ui5-step-input");
     });
 
     it("should be ok", () => {
@@ -79,7 +79,7 @@ describe("FuroUi5StepInput", () => {
     let el: FuroUi5StepInput;
 
     beforeEach(async () => {
-      el = await fixture(html`<furo-ui5-step></furo-ui5-step>`);
+      el = await fixture(html`<furo-ui5-step-input></furo-ui5-step-input>`);
     });
 
     afterEach(() => {
@@ -108,7 +108,7 @@ describe("FuroUi5StepInput", () => {
     let el: FuroUi5StepInput;
 
     beforeEach(async () => {
-      el = await fixture(html`<furo-ui5-step></furo-ui5-step>`);
+      el = await fixture(html`<furo-ui5-step-input></furo-ui5-step-input>`);
     });
 
     afterEach(() => {
@@ -162,7 +162,7 @@ describe("FuroUi5StepInput", () => {
     let el: FuroUi5StepInput;
 
     beforeEach(async () => {
-      el = await fixture(html`<furo-ui5-step></furo-ui5-step>`);
+      el = await fixture(html`<furo-ui5-step-input></furo-ui5-step-input>`);
     });
 
     afterEach(() => {
@@ -214,7 +214,7 @@ describe("FuroUi5StepInput", () => {
     let el: FuroUi5StepInput;
 
     beforeEach(async () => {
-      el = await fixture(html`<furo-ui5-step></furo-ui5-step>`);
+      el = await fixture(html`<furo-ui5-step-input></furo-ui5-step-input>`);
     });
 
     afterEach(() => {
@@ -298,28 +298,28 @@ describe("FuroUi5StepInput", () => {
     });
 
     it("applies 'placeholder' FAT attribute to el.placeholder", async () => {
-      const el: FuroUi5StepInput = await fixture(html`<furo-ui5-step></furo-ui5-step>`);
+      const el: FuroUi5StepInput = await fixture(html`<furo-ui5-step-input></furo-ui5-step-input>`);
       const model = createFatInt32({ attributes: { placeholder: "from-fat" } });
       el.bindData(model);
       assert.equal(el.placeholder, "from-fat");
     });
 
     it("pre-set HTML 'placeholder' wins over FAT attribute", async () => {
-      const el: FuroUi5StepInput = await fixture(html`<furo-ui5-step placeholder="local"></furo-ui5-step>`);
+      const el: FuroUi5StepInput = await fixture(html`<furo-ui5-step-input placeholder="local"></furo-ui5-step-input>`);
       const model = createFatInt32({ attributes: { placeholder: "from-fat" } });
       el.bindData(model);
       assert.equal(el.placeholder, "local");
     });
 
     it("pre-set accessible-name wins over model __label", async () => {
-      const el: FuroUi5StepInput = await fixture(html`<furo-ui5-step accessible-name="preset"></furo-ui5-step>`);
+      const el: FuroUi5StepInput = await fixture(html`<furo-ui5-step-input accessible-name="preset"></furo-ui5-step-input>`);
       const model = createFatInt32();
       el.bindData(model);
       assert.equal(el.accessibleName, "preset");
     });
 
     it("falls back to model __label when accessibleName is not preset", async () => {
-      const el: FuroUi5StepInput = await fixture(html`<furo-ui5-step></furo-ui5-step>`);
+      const el: FuroUi5StepInput = await fixture(html`<furo-ui5-step-input></furo-ui5-step-input>`);
       const model = createFatInt32();
       el.bindData(model);
       assert.equal(el.accessibleName, model.__label);
@@ -333,7 +333,7 @@ describe("FuroUi5StepInput", () => {
     let el: FuroUi5StepInput;
 
     beforeEach(async () => {
-      el = await fixture(html`<furo-ui5-step></furo-ui5-step>`);
+      el = await fixture(html`<furo-ui5-step-input></furo-ui5-step-input>`);
     });
 
     afterEach(() => {
