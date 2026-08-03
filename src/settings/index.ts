@@ -11,3 +11,12 @@
  */
 export { getLocale, setLocale, clearLocale, LOCALE_STORAGE_KEY } from "./locale";
 export { getLanguage, setLanguage, clearLanguage, LANGUAGE_STORAGE_KEY } from "./language";
+export {
+  getTheme,
+  getThemeSetting,
+  setTheme,
+  applyTheme,
+  clearTheme,
+  THEME_STORAGE_KEY,
+  OPERATING_SYSTEM,
+} from "./theme";
