@@ -1,0 +1,131 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="how to's/Unpacking google.protobuf.Any"/>
+
+# Unpacking `google.protobuf.Any`
+
+An `Any` field does not know its own shape. It carries the payload plus a `@type` string, and the
+concrete type is resolved **at runtime, by name**:
+
+```json
+{
+  "@type": "type.googleapis.com/furo.type.Date",
+  "day": 4, "month": 8, "year": 2026
+}
+```
+
+`@furo/open-models` resolves that name through a global registry. Every generated model class
+registers itself when its module is **evaluated**:
+
+```ts
+// src/models/furo/type/Date.ts — generated
+export class XDate extends FieldNode { … }
+Registry.register("furo.type.Date", XDate);
+```
+
+`ANY.__updateWithLiteral()` then takes the last segment of `@type` and asks the registry for it:
+
+```ts
+this.value = Registry.createInstanceByTypeName(this._typeName, data, this, "value");
+```
+
+## The rule
+
+**A type is only resolvable if something in your bundle imported the module that defines it — as a
+value.** Nothing discovers models by name; registration is purely a module side effect.
+
+So for every type you expect to arrive inside an `Any`, make sure it is imported somewhere:
+
+```ts
+import "@furo/ui5/models"; // furo.fat.* + tree.NavigationNode / tree.RootNode
+import { XDate } from "./models/furo/type/Date"; // your generated models
+```
+
+A plain `import type` is **not** enough. It is erased at compile time, so the module never runs and
+the type never registers:
+
+```ts
+import type { XDate } from "./models/furo/type/Date"; // ❌ erased — registers nothing
+import { XDate } from "./models/furo/type/Date";      // ✅ module evaluated — registers
+```
+
+That is the whole trick. If you only need the type for an annotation, `import type` is correct and
+free; if you also need it *registered*, the module has to be loaded.
+
+## When it goes wrong
+
+An unregistered type throws from `Registry.get`:
+
+```
+Error: Cannot find type furo.type.Date, furo.type.Date is not in the registry
+```
+
+`__updateWithLiteral` catches it, logs it, and leaves the node empty — so the symptom is usually a
+blank field plus a console error, not a crash. `__mapProtoNameJsonToJson` does **not** catch it, so
+that path throws outright.
+
+You can check ahead of time:
+
+```ts
+import { Registry } from "@furo/open-models";
+
+Registry.isRegistered("furo.type.Date"); // boolean
+```
+
+A useful assertion at boot, listing whatever your app expects to see inside `Any` fields:
+
+```ts
+["furo.type.Date", "furo.type.Money", "google.type.Date"]
+  .filter(t => !Registry.isRegistered(t))
+  .forEach(t => console.warn(`[models] ${t} is not registered — Any payloads of this type will fail`));
+```
+
+## Importing an element is not enough
+
+Furo elements name model types in their type annotations only — `FuroUi5DatePicker` declares
+`get model(): XDate` and never constructs one. Those annotations are compiled away, so **importing
+an element does not register anything**:
+
+```ts
+import "@furo/ui5/date-picker";
+Registry.isRegistered("furo.type.Date"); // false
+```
+
+Bind the element to a field node from your own model and everything works normally — binding does
+not touch the registry. The registry only matters for `Any`.
+
+<div style={{padding: '0.75rem 1rem', border: '1px solid var(--sapNeutralBorderColor, #ccc)', borderRadius: '0.25rem'}}>
+
+**Behaviour change (unreleased, after 2.0.0-RC.18).** Element modules used to import their model types as values purely to
+name them, which registered those types as a side effect. Those imports are now `import type`, so
+the incidental registration is gone. Nothing about binding changed — only `Any` resolution, which
+was never something an element import should have been responsible for.
+
+If you relied on it, add one import. `@furo/ui5/models` covers the set that most elements pulled in:
+
+```ts
+import "@furo/ui5/models";
+```
+
+That registers `furo.fat.Any`, `furo.fat.Bool`, `furo.fat.Bytes`, `furo.fat.Double`,
+`furo.fat.Empty`, `furo.fat.Float`, `furo.fat.Int32`, `furo.fat.Int64`, `furo.fat.String`,
+`furo.fat.Uint32`, `furo.fat.Uint64`, `tree.NavigationNode` and `tree.RootNode`.
+
+Five types are not in that barrel and come from your generated model package instead:
+
+| Type | Previously registered by |
+| --- | --- |
+| `furo.type.Date` | `date-picker`, `date-time-picker`, `time-picker`, `relative-time-badge`, `relative-time-display` |
+| `google.type.Date` | `date-time-picker`, `time-picker`, `relative-time-badge`, `relative-time-display` |
+| `google.type.TimeOfDay` | `date-picker`, `date-time-picker`, `relative-time-badge`, `relative-time-display` |
+| `furo.type.Money` | `money-input` |
+| `menu.Menuitem` | `context-menu` |
+
+</div>
+
+## Why it works this way
+
+Resolution is by string, so a bundler cannot see the dependency. Registering every known model
+up front would mean shipping all of them to every app; registering none would make `Any`
+unusable. Making it a module side effect puts the choice where the information is — you know
+which types your API returns, so you import those and nothing else.
