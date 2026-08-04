@@ -14,7 +14,7 @@ const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
 
 const meta: Meta = {
-  title: "navigation/BreadcrumbsItem",
+  title: "navigation/Breadcrumbs/BreadcrumbsItem",
   component,
   subcomponents: {},
   tags: ["autodocs"],

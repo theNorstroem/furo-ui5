@@ -269,10 +269,6 @@
       "types": "./dist/elements/multi-input/index.d.ts",
       "default": "./dist/elements/multi-input/index.js"
     },
-    "./navigation-layout": {
-      "types": "./dist/elements/navigation-layout/index.d.ts",
-      "default": "./dist/elements/navigation-layout/index.js"
-    },
     "./navigation-menu": {
       "types": "./dist/elements/navigation-menu/index.d.ts",
       "default": "./dist/elements/navigation-menu/index.js"
@@ -292,10 +288,6 @@
     "./option-custom": {
       "types": "./dist/elements/option-custom/index.d.ts",
       "default": "./dist/elements/option-custom/index.js"
-    },
-    "./page": {
-      "types": "./dist/elements/page/index.d.ts",
-      "default": "./dist/elements/page/index.js"
     },
     "./panel": {
       "types": "./dist/elements/panel/index.d.ts",

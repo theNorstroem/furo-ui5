@@ -28,7 +28,7 @@ const openPopover = (): void => {
 };
 
 const meta: Meta = {
-  title: "form/ColorPalettePopover",
+  title: "input/ColorPalettePopover",
   component,
   subcomponents: {},
   tags: ["autodocs"],

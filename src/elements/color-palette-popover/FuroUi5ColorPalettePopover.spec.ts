@@ -136,5 +136,20 @@ describe("FuroUi5ColorPalettePopover", () => {
       el.closePopover();
       assert.equal(el.open, false);
     });
+
+    it("show() should set open to true; close() should reset it", () => {
+      el.show();
+      assert.equal(el.open, true, "open is true after show()");
+      el.close();
+      assert.equal(el.open, false, "open is false after close()");
+    });
+
+    it("showAt(opener) should assign the opener and set open synchronously", () => {
+      el.showAt(el);
+      assert.equal(el.opener, el, "opener reference assigned");
+      assert.equal(el.open, true, "open is true synchronously after showAt()");
+      el.close();
+      assert.equal(el.open, false);
+    });
   });
 });

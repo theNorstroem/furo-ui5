@@ -18,7 +18,7 @@ ArgsSetEnum(argTypes, "highlight", Object.values(Highlight));
 ArgsSetEnum(argTypes, "type", Object.values(ListItemType));
 
 const meta: Meta = {
-  title: "layout/Shellbar/UserMenuItem",
+  title: "layout/Shellbar/UserMenu/UserMenuItem",
   component,
   subcomponents: {},
   tags: ["autodocs"],

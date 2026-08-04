@@ -1,12 +1,6 @@
 import { afterAll, afterEach, assert, describe, it } from "vitest";
 
-import {
-  DEFAULT_FIRST_DAY_OF_WEEK,
-  FIRST_DAY_OF_WEEK_STORAGE_KEY,
-  clearFirstDayOfWeek,
-  getFirstDayOfWeek,
-  setFirstDayOfWeek,
-} from "./firstDayOfWeek";
+import { DEFAULT_FIRST_DAY_OF_WEEK, FIRST_DAY_OF_WEEK_STORAGE_KEY, clearFirstDayOfWeek, getFirstDayOfWeek, setFirstDayOfWeek } from "./firstDayOfWeek";
 
 describe("settings/firstDayOfWeek", () => {
   afterEach(() => {
@@ -36,9 +30,15 @@ describe("settings/firstDayOfWeek", () => {
       assert.equal(getFirstDayOfWeek(), day);
     }
 
-    assert.throws(() => { setFirstDayOfWeek(7); }, RangeError);
-    assert.throws(() => { setFirstDayOfWeek(-1); }, RangeError);
-    assert.throws(() => { setFirstDayOfWeek(1.5); }, RangeError);
+    assert.throws(() => {
+      setFirstDayOfWeek(7);
+    }, RangeError);
+    assert.throws(() => {
+      setFirstDayOfWeek(-1);
+    }, RangeError);
+    assert.throws(() => {
+      setFirstDayOfWeek(1.5);
+    }, RangeError);
   });
 
   it("should drop the persisted value on clear", () => {
@@ -65,9 +65,13 @@ describe("settings/firstDayOfWeek", () => {
     getFirstDayOfWeek(day => seen.push(day));
 
     let eventDetail: number | undefined;
-    window.addEventListener("furo-first-day-of-week-changed", (e: Event) => {
-      eventDetail = (e as CustomEvent<number>).detail;
-    }, { once: true });
+    window.addEventListener(
+      "furo-first-day-of-week-changed",
+      (e: Event) => {
+        eventDetail = (e as CustomEvent<number>).detail;
+      },
+      { once: true }
+    );
 
     setFirstDayOfWeek(4);
 

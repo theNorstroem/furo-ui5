@@ -1,13 +1,7 @@
 import { getAnimationMode as getUi5AnimationMode } from "@ui5/webcomponents-base/dist/config/AnimationMode.js";
 import { afterAll, afterEach, assert, beforeAll, describe, it } from "vitest";
 
-import {
-  ANIMATION_MODE_STORAGE_KEY,
-  DEFAULT_ANIMATION_MODE,
-  clearAnimationMode,
-  getAnimationMode,
-  setAnimationMode,
-} from "./animationMode";
+import { ANIMATION_MODE_STORAGE_KEY, DEFAULT_ANIMATION_MODE, clearAnimationMode, getAnimationMode, setAnimationMode } from "./animationMode";
 
 import AnimationMode from "@/types/AnimationMode";
 
@@ -25,9 +19,7 @@ describe("settings/animationMode", () => {
 
   afterAll(async () => {
     clearAnimationMode();
-    const { setAnimationMode: setUi5AnimationMode } = await import(
-      "@ui5/webcomponents-base/dist/config/AnimationMode.js"
-    );
+    const { setAnimationMode: setUi5AnimationMode } = await import("@ui5/webcomponents-base/dist/config/AnimationMode.js");
     setUi5AnimationMode(originalMode);
     localStorage.removeItem(ANIMATION_MODE_STORAGE_KEY);
   });
@@ -69,9 +61,13 @@ describe("settings/animationMode", () => {
     getAnimationMode(mode => seen.push(mode));
 
     let eventDetail: AnimationMode | undefined;
-    window.addEventListener("furo-animation-mode-changed", (e: Event) => {
-      eventDetail = (e as CustomEvent<AnimationMode>).detail;
-    }, { once: true });
+    window.addEventListener(
+      "furo-animation-mode-changed",
+      (e: Event) => {
+        eventDetail = (e as CustomEvent<AnimationMode>).detail;
+      },
+      { once: true }
+    );
 
     setAnimationMode(AnimationMode.Basic);
 

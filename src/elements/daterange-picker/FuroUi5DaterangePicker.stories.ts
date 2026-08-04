@@ -22,7 +22,7 @@ ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 const range = new STRING();
 
 const meta: Meta = {
-  title: "form/DaterangePicker",
+  title: "input/DaterangePicker",
   component,
   subcomponents: {},
   tags: ["autodocs"],

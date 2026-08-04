@@ -170,6 +170,34 @@ export class FuroUi5ColorPalettePopover extends ColorPalettePopover {
   };
 
   /**
+   * Shows the popover at the opener position.
+   * Alternatively you can work with the attributes `opener` and `open` to achieve the same.
+   * @param opener
+   * @public
+   */
+  showAt(opener: HTMLElement | string) {
+    this.opener = opener;
+
+    this.open = true;
+  }
+
+  /**
+   * Shows the popover at the opener position defined with attribute opener.
+   * @public
+   */
+  show() {
+    this.open = true;
+  }
+
+  /**
+   * Closes the popup.
+   * @public
+   */
+  close(): void {
+    this.open = false;
+  }
+
+  /**
    * @private
    */
   static override get metadata() {

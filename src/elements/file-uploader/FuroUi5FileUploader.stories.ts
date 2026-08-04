@@ -16,7 +16,7 @@ ArgsTransormAll(argTypes, args, []);
 ArgsSetEnum(argTypes, "valueState", Object.values(ValueState));
 
 const meta: Meta = {
-  title: "form/FileUploader",
+  title: "input/FileUploader",
   component,
   subcomponents: {},
   tags: ["autodocs"],

@@ -29,7 +29,8 @@ A menu specialised for navigation. It is what a collapsed `furo-ui5-side-navigat
 ```
 
 This is a pass-through wrapper around `furo-ui5-navigation-menu`: the UI5 API (properties, events,
-slots) is inherited unchanged and no data binding is added.
+slots) is inherited unchanged and no data binding is added. It only adds the imperative
+`showAt()` / `show()` / `close()` convenience methods the other furo popups expose.
 
 ### Overview
 
@@ -83,3 +84,18 @@ Defines the items of this component.
 | `close` | `CustomEvent` | Fired after the menu is closed. |
 | `item-click` | `CustomEvent<MenuItemClickEventDetail>` | Fired when an item is being clicked. |
 | `open` | `CustomEvent` | Fired after the menu is opened. |
+
+## Methods
+
+### `close(): void`
+
+Closes the popup.
+
+### `show(): void`
+
+Shows the navigation-menu at the opener position defined with attribute opener.
+
+### `showAt(opener: HTMLElement | string): void`
+
+Shows the navigation-menu at the opener position.
+Alternatively you can work with the attributes `opener` and `open` to achieve the same.

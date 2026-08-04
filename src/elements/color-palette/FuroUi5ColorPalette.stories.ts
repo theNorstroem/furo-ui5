@@ -20,7 +20,7 @@ const selected = new STRING("#00ff00");
 const colors = ARRAY.Builder(STRING, ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"]);
 
 const meta: Meta = {
-  title: "form/ColorPalette",
+  title: "input/ColorPalette",
   component,
   subcomponents: {},
   tags: ["autodocs"],

@@ -18,7 +18,7 @@ const red = new STRING("#ff0000");
 const green = new STRING("#00ff00");
 
 const meta: Meta = {
-  title: "form/ColorPaletteItem",
+  title: "input/ColorPalette/ColorPaletteItem",
   component,
   subcomponents: {},
   tags: ["autodocs"],

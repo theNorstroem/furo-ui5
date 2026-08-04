@@ -1,3 +1,4 @@
+import "@/elements/button";
 import "@/elements/navigation-menu";
 import "@/elements/navigation-menu-item";
 import "@ui5/webcomponents-icons/dist/AllIcons.js";
@@ -39,23 +40,49 @@ const meta: Meta = {
 };
 export default meta;
 
+const openMenu = (e: Event): void => {
+  const popover = document.getElementById("nav-menu") as (HTMLElement & { showAt: (o: HTMLElement) => void }) | null;
+  popover?.showAt(e.target as HTMLElement);
+};
+
 export const Default: StoryObj = {
-  args: {
-    opener: "nav-anchor",
-  },
+  args: {},
   render: renderArgs => html`
+    <furo-ui5-button id="menu-opener" @click="${openMenu}">Open navigation menu</furo-ui5-button>
+
     <furo-ui5-navigation-menu
+      id="nav-menu"
       header-text="${ifDefined(renderArgs.headerText)}"
       horizontal-align="${ifDefined(renderArgs.horizontalAlign)}"
       ?loading="${renderArgs.loading}"
       loading-delay="${ifDefined(renderArgs.loadingDelay)}"
-      opener="${ifDefined(renderArgs.opener)}"
+      opener="menu-opener"
       placement="${ifDefined(renderArgs.placement)}"
-      open
     >
       <furo-ui5-navigation-menu-item text="Overview" icon="home"></furo-ui5-navigation-menu-item>
       <furo-ui5-navigation-menu-item text="Reports" icon="bar-chart"></furo-ui5-navigation-menu-item>
     </furo-ui5-navigation-menu>
-    <div id="nav-anchor">Menu anchor</div>
+  `,
+};
+
+export const Highlight: StoryObj = {
+  args: {},
+  render: renderArgs => html`
+    <furo-ui5-button id="menu-opener" @click="${openMenu}">Open navigation menu</furo-ui5-button>
+
+    <furo-ui5-navigation-menu
+      id="nav-menu"
+      header-text="${ifDefined(renderArgs.headerText)}"
+      horizontal-align="${ifDefined(renderArgs.horizontalAlign)}"
+      ?loading="${renderArgs.loading}"
+      loading-delay="${ifDefined(renderArgs.loadingDelay)}"
+      opener="menu-opener"
+      placement="${ifDefined(renderArgs.placement)}"
+    >
+      <furo-ui5-navigation-menu-item text="Overview" icon="home"></furo-ui5-navigation-menu-item>
+      <furo-ui5-navigation-menu-item text="Main" highlight="Critical"> </furo-ui5-navigation-menu-item>
+      <furo-ui5-navigation-menu-item text="Share" icon="share"></furo-ui5-navigation-menu-item>
+      <furo-ui5-navigation-menu-item text="Reports" icon="bar-chart"></furo-ui5-navigation-menu-item>
+    </furo-ui5-navigation-menu>
   `,
 };

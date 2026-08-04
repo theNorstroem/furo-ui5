@@ -26,7 +26,7 @@ const validate = () => {
 };
 
 const meta: Meta = {
-  title: "layout/form/FormGroup",
+  title: "form/FormGroup",
   component,
   subcomponents: {},
   tags: ["autodocs"],

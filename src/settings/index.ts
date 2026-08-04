@@ -16,15 +16,7 @@
  */
 export { getLocale, setLocale, clearLocale, LOCALE_STORAGE_KEY } from "./locale";
 export { getLanguage, setLanguage, clearLanguage, LANGUAGE_STORAGE_KEY } from "./language";
-export {
-  getTheme,
-  getThemeSetting,
-  setTheme,
-  applyTheme,
-  clearTheme,
-  THEME_STORAGE_KEY,
-  OPERATING_SYSTEM,
-} from "./theme";
+export { getTheme, getThemeSetting, setTheme, applyTheme, clearTheme, THEME_STORAGE_KEY, OPERATING_SYSTEM } from "./theme";
 export {
   getCalendar,
   setCalendar,
@@ -35,20 +27,8 @@ export {
   CALENDAR_STORAGE_KEY,
   SECONDARY_CALENDAR_STORAGE_KEY,
 } from "./calendar";
-export {
-  getAnimationMode,
-  setAnimationMode,
-  clearAnimationMode,
-  ANIMATION_MODE_STORAGE_KEY,
-  DEFAULT_ANIMATION_MODE,
-} from "./animationMode";
-export {
-  getFirstDayOfWeek,
-  setFirstDayOfWeek,
-  clearFirstDayOfWeek,
-  FIRST_DAY_OF_WEEK_STORAGE_KEY,
-  DEFAULT_FIRST_DAY_OF_WEEK,
-} from "./firstDayOfWeek";
+export { getAnimationMode, setAnimationMode, clearAnimationMode, ANIMATION_MODE_STORAGE_KEY, DEFAULT_ANIMATION_MODE } from "./animationMode";
+export { getFirstDayOfWeek, setFirstDayOfWeek, clearFirstDayOfWeek, FIRST_DAY_OF_WEEK_STORAGE_KEY, DEFAULT_FIRST_DAY_OF_WEEK } from "./firstDayOfWeek";
 
 // Side-effect free, so they can live on the barrel: the bootstrap pieces `./init` is built from,
 // for apps assembling their own.

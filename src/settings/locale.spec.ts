@@ -30,10 +30,7 @@ describe("settings/locale", () => {
     await setLanguage("de-CH");
     assert.equal(getLocale(), "de-CH");
     // Compare against the locale itself rather than a literal — the grouping glyph is ICU's call.
-    assert.equal(
-      new Intl.NumberFormat(getLocale(), {}).format(1234.5),
-      new Intl.NumberFormat("de-CH", {}).format(1234.5)
-    );
+    assert.equal(new Intl.NumberFormat(getLocale(), {}).format(1234.5), new Intl.NumberFormat("de-CH", {}).format(1234.5));
   });
 
   it("should let setLocale override the UI5 locale without touching the UI5 language", async () => {
@@ -89,9 +86,13 @@ describe("settings/locale", () => {
     getLocale(locale => seen.push(locale));
 
     let eventDetail = "";
-    window.addEventListener("furo-locale-changed", (e: Event) => {
-      eventDetail = (e as CustomEvent<string>).detail;
-    }, { once: true });
+    window.addEventListener(
+      "furo-locale-changed",
+      (e: Event) => {
+        eventDetail = (e as CustomEvent<string>).detail;
+      },
+      { once: true }
+    );
 
     setLocale("fr-FR");
 

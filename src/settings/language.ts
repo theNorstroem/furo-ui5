@@ -1,7 +1,4 @@
-import {
-  getLanguage as getUi5Language,
-  setLanguage as setUi5Language,
-} from "@ui5/webcomponents-base/dist/config/Language.js";
+import { getLanguage as getUi5Language, setLanguage as setUi5Language } from "@ui5/webcomponents-base/dist/config/Language.js";
 
 import { LANGUAGE_STORAGE_KEY } from "./keys";
 import { readSetting, removeSetting, writeSetting } from "./storage";

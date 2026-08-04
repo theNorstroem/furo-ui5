@@ -70,7 +70,7 @@ const contextMenu: ARRAY<Menuitem, IMenuitem> = ARRAY.Builder(Menuitem, [
 ]);
 
 const meta: Meta = {
-  title: "layout/ContextMenu",
+  title: "navigation/ContextMenu",
   component,
   subcomponents: {},
   tags: ["autodocs"],

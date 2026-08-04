@@ -1,15 +1,7 @@
 import { getTheme as getUi5Theme, setTheme as setUi5Theme } from "@ui5/webcomponents-base/dist/config/Theme.js";
 import { afterAll, afterEach, assert, beforeAll, describe, it } from "vitest";
 
-import {
-  OPERATING_SYSTEM,
-  THEME_STORAGE_KEY,
-  applyTheme,
-  clearTheme,
-  getTheme,
-  getThemeSetting,
-  setTheme,
-} from "./theme";
+import { OPERATING_SYSTEM, THEME_STORAGE_KEY, applyTheme, clearTheme, getTheme, getThemeSetting, setTheme } from "./theme";
 
 import "@/Assets";
 
@@ -94,9 +86,13 @@ describe("settings/theme", () => {
     getTheme(theme => seen.push(theme));
 
     let eventDetail = "";
-    window.addEventListener("furo-theme-changed", (e: Event) => {
-      eventDetail = (e as CustomEvent<string>).detail;
-    }, { once: true });
+    window.addEventListener(
+      "furo-theme-changed",
+      (e: Event) => {
+        eventDetail = (e as CustomEvent<string>).detail;
+      },
+      { once: true }
+    );
 
     await setTheme("sap_horizon_dark");
 

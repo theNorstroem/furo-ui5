@@ -21,7 +21,7 @@ const lower = new FLOAT(250);
 const upper = new FLOAT(750);
 
 const meta: Meta = {
-  title: "form/RangeSlider",
+  title: "input/RangeSlider",
   component,
   subcomponents: {},
   tags: ["autodocs"],

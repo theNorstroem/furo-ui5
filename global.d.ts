@@ -4,7 +4,7 @@
 // Registers every Furo element's HTMLElementTagNameMap entry with the TypeScript
 // program so lit-analyzer knows the tag names. Type-only, emits nothing.
 
-// @furo/ui5 (133)
+// @furo/ui5 (131)
 import "@furo/ui5/avatar";
 import "@furo/ui5/avatar-badge";
 import "@furo/ui5/avatar-group";
@@ -63,13 +63,11 @@ import "@furo/ui5/message-strip";
 import "@furo/ui5/money-input";
 import "@furo/ui5/multi-combobox";
 import "@furo/ui5/multi-input";
-import "@furo/ui5/navigation-layout";
 import "@furo/ui5/navigation-menu";
 import "@furo/ui5/navigation-menu-item";
 import "@furo/ui5/number-input";
 import "@furo/ui5/option";
 import "@furo/ui5/option-custom";
-import "@furo/ui5/page";
 import "@furo/ui5/panel";
 import "@furo/ui5/password-input";
 import "@furo/ui5/popover";

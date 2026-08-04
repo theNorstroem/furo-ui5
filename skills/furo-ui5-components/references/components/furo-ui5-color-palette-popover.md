@@ -102,3 +102,16 @@ Connects a list of color strings; each entry renders one `furo-ui5-color-palette
 ### `bindData(fieldNode: STRING | FuroFatString | StringValue | undefined): void`
 
 Connects the selected-color data model to this component.
+
+### `close(): void`
+
+Closes the popup.
+
+### `show(): void`
+
+Shows the popover at the opener position defined with attribute opener.
+
+### `showAt(opener: HTMLElement | string): void`
+
+Shows the popover at the opener position.
+Alternatively you can work with the attributes `opener` and `open` to achieve the same.

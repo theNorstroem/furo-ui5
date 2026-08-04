@@ -1,4 +1,5 @@
 import "@/elements/user-menu";
+import "@/elements/button";
 import "@/elements/user-menu-account";
 import "@ui5/webcomponents-icons/dist/AllIcons.js";
 
@@ -17,7 +18,7 @@ ArgsTransormAll(argTypes, args, []);
 ArgsSetEnum(argTypes, "avatarColorScheme", Object.values(AvatarColorScheme));
 
 const meta: Meta = {
-  title: "layout/Shellbar/UserMenuAccount",
+  title: "layout/Shellbar/UserMenu/UserMenuAccount",
   component,
   subcomponents: {},
   tags: ["autodocs"],
@@ -38,6 +39,11 @@ const meta: Meta = {
 };
 export default meta;
 
+const openMenu = (e: Event): void => {
+  const popover = document.getElementById("user-menu") as (HTMLElement & { showAt: (o: HTMLElement) => void }) | null;
+  popover?.showAt(e.target as HTMLElement);
+};
+
 export const Default: StoryObj = {
   args: {
     avatarSrc: "https://sdk.openui5.org/test-resources/sap/f/images/Woman_avatar_01.png",
@@ -45,7 +51,8 @@ export const Default: StoryObj = {
     titleText: "Jane Doe",
   },
   render: renderArgs => html`
-    <furo-ui5-user-menu open>
+    <furo-ui5-button id="user-menu-opener" @click="${openMenu}">Open user menu</furo-ui5-button>
+    <furo-ui5-user-menu id="user-menu">
       <furo-ui5-user-menu-account
         additional-info="${ifDefined(renderArgs.additionalInfo)}"
         avatar-color-scheme="${ifDefined(renderArgs.avatarColorScheme)}"

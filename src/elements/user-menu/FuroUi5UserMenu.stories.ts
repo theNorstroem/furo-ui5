@@ -38,18 +38,22 @@ const meta: Meta = {
 };
 export default meta;
 
+const openMenu = (e: Event): void => {
+  const popover = document.getElementById("user-menu") as (HTMLElement & { showAt: (o: HTMLElement) => void }) | null;
+  popover?.showAt(e.target as HTMLElement);
+};
+
 // UserMenu is a popup anchored to an opener; rendered open here so it is visible.
 export const Default: StoryObj = {
   args: {
-    open: true,
     showManageAccount: true,
     showOtherAccounts: true,
   },
   render: renderArgs => html`
-    <furo-ui5-button id="user-menu-opener">Open user menu</furo-ui5-button>
+    <furo-ui5-button id="user-menu-opener" @click="${openMenu}">Open user menu</furo-ui5-button>
     <furo-ui5-user-menu
+      id="user-menu"
       opener="user-menu-opener"
-      ?open="${renderArgs.open}"
       ?show-manage-account="${renderArgs.showManageAccount}"
       ?show-other-accounts="${renderArgs.showOtherAccounts}"
       ?show-edit-accounts="${renderArgs.showEditAccounts}"

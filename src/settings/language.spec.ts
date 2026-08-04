@@ -65,9 +65,13 @@ describe("settings/language", () => {
     getLanguage(language => seen.push(language));
 
     let eventDetail = "";
-    window.addEventListener("furo-language-changed", (e: Event) => {
-      eventDetail = (e as CustomEvent<string>).detail;
-    }, { once: true });
+    window.addEventListener(
+      "furo-language-changed",
+      (e: Event) => {
+        eventDetail = (e as CustomEvent<string>).detail;
+      },
+      { once: true }
+    );
 
     await setLanguage("de");
 

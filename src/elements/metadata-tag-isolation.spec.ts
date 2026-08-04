@@ -60,14 +60,10 @@ describe("metadata tag isolation", () => {
       });
 
       it(`no furo subclass has rewritten ${base}'s raw static metadata.tag`, () => {
-        assert.equal(
-          ctorOf(base).metadata.tag,
-          base,
-          `${base}.metadata.tag was mutated by a furo subclass — the override must spread, not assign`,
-        );
+        assert.equal(ctorOf(base).metadata.tag, base, `${base}.metadata.tag was mutated by a furo subclass — the override must spread, not assign`);
       });
 
-      furoTags.forEach((tag) => {
+      furoTags.forEach(tag => {
         it(`${tag} resolves its own tag`, () => {
           assert.equal(ctorOf(tag).getMetadata().getTag(), tag);
         });

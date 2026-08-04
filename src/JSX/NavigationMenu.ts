@@ -68,7 +68,8 @@ declare module "react" {
        * ```
        *
        * This is a pass-through wrapper around `furo-ui5-navigation-menu`: the UI5 API (properties, events,
-       * slots) is inherited unchanged and no data binding is added.
+       * slots) is inherited unchanged and no data binding is added. It only adds the imperative
+       * `showAt()` / `show()` / `close()` convenience methods the other furo popups expose.
        *
        * ### Overview
        *

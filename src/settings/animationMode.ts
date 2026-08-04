@@ -1,7 +1,4 @@
-import {
-  getAnimationMode as getUi5AnimationMode,
-  setAnimationMode as setUi5AnimationMode,
-} from "@ui5/webcomponents-base/dist/config/AnimationMode.js";
+import { getAnimationMode as getUi5AnimationMode, setAnimationMode as setUi5AnimationMode } from "@ui5/webcomponents-base/dist/config/AnimationMode.js";
 
 import { ANIMATION_MODE_STORAGE_KEY } from "./keys";
 import { readSetting, removeSetting, writeSetting } from "./storage";
@@ -29,9 +26,7 @@ const _callbacks: AnimationModeUpdateFunc[] = [];
 // animation mode is dropped rather than handed to UI5.
 const _readStored = (): AnimationMode | undefined => {
   const stored = readSetting(ANIMATION_MODE_STORAGE_KEY);
-  return stored !== undefined && Object.values<string>(AnimationMode).includes(stored)
-    ? (stored as AnimationMode)
-    : undefined;
+  return stored !== undefined && Object.values<string>(AnimationMode).includes(stored) ? (stored as AnimationMode) : undefined;
 };
 
 const _current = (): AnimationMode => {

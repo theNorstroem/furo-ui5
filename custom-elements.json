@@ -6104,6 +6104,17 @@
               "description": "Connects the selected-color data model to this component."
             },
             {
+              "kind": "method",
+              "name": "close",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Closes the popup.",
+              "privacy": "public"
+            },
+            {
               "kind": "field",
               "name": "colorsModel",
               "type": {
@@ -6232,6 +6243,26 @@
               "kind": "field",
               "name": "readFromModel",
               "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "description": "Shows the popover at the opener position defined with attribute opener.",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "showAt",
+              "parameters": [
+                {
+                  "name": "opener",
+                  "type": {
+                    "text": "HTMLElement | string"
+                  }
+                }
+              ],
+              "description": "Shows the popover at the opener position.\nAlternatively you can work with the attributes `opener` and `open` to achieve the same.",
+              "privacy": "public"
             },
             {
               "kind": "field",
@@ -23840,168 +23871,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/elements/navigation-layout/FuroUi5NavigationLayout.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "The application frame: a `header` slot for the shellbar, a `sideContent` slot for the side navigation and a default slot for the page content.\n\n```html\n<furo-ui5-navigation-layout style=\"height:320px\">\n  <furo-ui5-shellbar slot=\"header\" primary-title=\"My App\"></furo-ui5-shellbar>\n  <furo-ui5-side-navigation slot=\"sideContent\">\n    <furo-ui5-side-navigation-item text=\"Home\" icon=\"home\" selected></furo-ui5-side-navigation-item>\n    <furo-ui5-side-navigation-item text=\"Reports\" icon=\"bar-chart\"></furo-ui5-side-navigation-item>\n  </furo-ui5-side-navigation>\n  <div style=\"padding:1rem\">Page content</div>\n</furo-ui5-navigation-layout>\n```\n\nThis is a pass-through wrapper around `furo-ui5-navigation-layout`: the UI5 API (properties, events,\nslots) is inherited unchanged and no data binding is added.\n\n### Overview\n\nThe `furo-ui5-navigation-layout` is a container component that can be used to\ncreate a layout with a header, a side navigation and a content area.\n\n### Usage\n\nUse the `furo-ui5-navigation-layout` to create whole screen of an application with vertical navigation.\n\n### Responsive Behavior\n\nOn larger screens with a width of 600px or more, excluding mobile phone devices, the side navigation is visible\nby default and can be expanded or collapsed using the `mode` property.\nOn mobile phone devices and screens with a width of 599px or less, the side navigation is hidden by\ndefault and can be displayed using the `mode` property.\n\n\n",
-          "name": "NavigationLayout",
-          "members": [
-            {
-              "kind": "method",
-              "name": "isSideCollapsed",
-              "return": {
-                "type": {
-                  "text": "boolean"
-                }
-              },
-              "description": "Gets whether the side navigation is collapsed.",
-              "privacy": "public",
-              "inheritedFrom": {
-                "name": "NavigationLayout",
-                "module": "dist/NavigationLayout.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "metadata",
-              "static": true,
-              "privacy": "private",
-              "readonly": true
-            },
-            {
-              "kind": "field",
-              "name": "mode",
-              "type": {
-                "text": "NavigationLayoutMode",
-                "references": [
-                  {
-                    "name": "NavigationLayoutMode",
-                    "package": "@ui5/webcomponents-fiori",
-                    "module": "dist/types/NavigationLayoutMode.js"
-                  }
-                ]
-              },
-              "default": "\"Auto\"",
-              "description": "Specifies the navigation layout mode.",
-              "privacy": "public",
-              "inheritedFrom": {
-                "name": "NavigationLayout",
-                "module": "dist/NavigationLayout.js"
-              }
-            }
-          ],
-          "superclass": {
-            "name": "NavigationLayout",
-            "package": "@ui5/webcomponents-fiori",
-            "module": "dist/NavigationLayout.js"
-          },
-          "tagName": "furo-ui5-navigation-layout",
-          "customElement": true,
-          "summary": "App shell combining a shellbar, side navigation and content.",
-          "keywords": [
-            "layout",
-            "navigation",
-            "shell",
-            "sidebar",
-            "app",
-            "frame"
-          ],
-          "category": "PageStructure",
-          "useCase": "Use as the top-level frame of an application with a collapsible side navigation.",
-          "relatedComponents": [
-            "furo-ui5-side-navigation",
-            "furo-ui5-shellbar",
-            "furo-ui5-flexible-column-layout"
-          ],
-          "slots": [
-            {
-              "name": "default",
-              "description": "Defines the content.",
-              "inheritedFrom": {
-                "name": "NavigationLayout",
-                "module": "dist/NavigationLayout.js"
-              }
-            },
-            {
-              "name": "header",
-              "description": "Defines the header.",
-              "inheritedFrom": {
-                "name": "NavigationLayout",
-                "module": "dist/NavigationLayout.js"
-              }
-            },
-            {
-              "name": "sideContent",
-              "description": "Defines the side content.",
-              "inheritedFrom": {
-                "name": "NavigationLayout",
-                "module": "dist/NavigationLayout.js"
-              }
-            }
-          ],
-          "attributes": [
-            {
-              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
-              "name": "effective-dir",
-              "default": "undefined",
-              "fieldName": "effectiveDir",
-              "type": {
-                "text": "any"
-              },
-              "inheritedFrom": {
-                "name": "UI5Element",
-                "module": "dist/UI5Element.js"
-              }
-            },
-            {
-              "description": "Used to duck-type UI5 elements without using instanceof",
-              "name": "is-ui5-element",
-              "default": "true",
-              "fieldName": "isUI5Element",
-              "type": {
-                "text": "any"
-              },
-              "inheritedFrom": {
-                "name": "UI5Element",
-                "module": "dist/UI5Element.js"
-              }
-            },
-            {
-              "description": "Specifies the navigation layout mode.",
-              "name": "mode",
-              "default": "\"Auto\"",
-              "fieldName": "mode",
-              "type": {
-                "text": "\"Auto\" | \"Collapsed\" | \"Expanded\""
-              },
-              "inheritedFrom": {
-                "name": "NavigationLayout",
-                "module": "dist/NavigationLayout.js"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "FuroUi5NavigationLayout",
-          "declaration": {
-            "name": "FuroUi5NavigationLayout",
-            "module": "src/elements/navigation-layout/FuroUi5NavigationLayout.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/elements/navigation-layout/index.js",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "dist/elements/navigation-menu-item/FuroUi5NavigationMenuItem.js",
       "declarations": [
         {
@@ -24704,9 +24573,20 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "A menu specialised for navigation. It is what a collapsed `furo-ui5-side-navigation` opens for nested items.\n\n```html\n<furo-ui5-navigation-menu open opener=\"nav-anchor\">\n  <furo-ui5-navigation-menu-item text=\"Overview\" icon=\"home\"></furo-ui5-navigation-menu-item>\n  <furo-ui5-navigation-menu-item text=\"Reports\" icon=\"bar-chart\"></furo-ui5-navigation-menu-item>\n</furo-ui5-navigation-menu>\n<div id=\"nav-anchor\">Menu anchor</div>\n```\n\nThis is a pass-through wrapper around `furo-ui5-navigation-menu`: the UI5 API (properties, events,\nslots) is inherited unchanged and no data binding is added.\n\n### Overview\n\n`furo-ui5-navigation-menu` component represents a hierarchical menu structure, inherits all the functionality of `furo-ui5-menu`.\n\n### Usage\n\n`furo-ui5-navigation-menu` contains `furo-ui5-navigation-menu-item` components.\nAn arbitrary hierarchy structure can be represented by recursively nesting navigation menu items.\n\n\n",
+          "description": "A menu specialised for navigation. It is what a collapsed `furo-ui5-side-navigation` opens for nested items.\n\n```html\n<furo-ui5-navigation-menu open opener=\"nav-anchor\">\n  <furo-ui5-navigation-menu-item text=\"Overview\" icon=\"home\"></furo-ui5-navigation-menu-item>\n  <furo-ui5-navigation-menu-item text=\"Reports\" icon=\"bar-chart\"></furo-ui5-navigation-menu-item>\n</furo-ui5-navigation-menu>\n<div id=\"nav-anchor\">Menu anchor</div>\n```\n\nThis is a pass-through wrapper around `furo-ui5-navigation-menu`: the UI5 API (properties, events,\nslots) is inherited unchanged and no data binding is added. It only adds the imperative\n`showAt()` / `show()` / `close()` convenience methods the other furo popups expose.\n\n### Overview\n\n`furo-ui5-navigation-menu` component represents a hierarchical menu structure, inherits all the functionality of `furo-ui5-menu`.\n\n### Usage\n\n`furo-ui5-navigation-menu` contains `furo-ui5-navigation-menu-item` components.\nAn arbitrary hierarchy structure can be represented by recursively nesting navigation menu items.\n\n\n",
           "name": "NavigationMenu",
           "members": [
+            {
+              "kind": "method",
+              "name": "close",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Closes the popup.",
+              "privacy": "public"
+            },
             {
               "kind": "field",
               "name": "headerText",
@@ -24825,6 +24705,26 @@
                 "name": "Menu",
                 "module": "dist/Menu.js"
               }
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "description": "Shows the navigation-menu at the opener position defined with attribute opener.",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "showAt",
+              "parameters": [
+                {
+                  "name": "opener",
+                  "type": {
+                    "text": "HTMLElement | string"
+                  }
+                }
+              ],
+              "description": "Shows the navigation-menu at the opener position.\nAlternatively you can work with the attributes `opener` and `open` to achieve the same.",
+              "privacy": "public"
             }
           ],
           "superclass": {
@@ -26548,244 +26448,6 @@
     {
       "kind": "javascript-module",
       "path": "dist/elements/option/index.js",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/elements/page/FuroUi5Page.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "A screen container with three areas: a fixed `header`, a scrollable default slot and a fixed `footer`.\n\n```html\n<furo-ui5-page style=\"height:300px\" show-footer>\n  <furo-ui5-bar slot=\"header\" design=\"Header\"><b slot=\"startContent\">Title</b></furo-ui5-bar>\n  <div style=\"padding:1rem\">Scrollable page content.</div>\n  <furo-ui5-bar slot=\"footer\" design=\"FloatingFooter\">\n    <furo-ui5-button slot=\"endContent\" design=\"Emphasized\">Save</furo-ui5-button>\n  </furo-ui5-bar>\n</furo-ui5-page>\n```\n\nThis is a pass-through wrapper around `furo-ui5-page`: the UI5 API (properties, events,\nslots) is inherited unchanged and no data binding is added.\n\n### Overview\n\nThe `furo-ui5-page` is a container component that holds one whole screen of an application.\nThe page has three distinct areas that can hold content - a header, content area and a footer.\n### Structure\n#### Header\nThe top most area of the page is occupied by the header. The standard header includes a navigation button and a title.\n#### Content\nThe content occupies the main part of the page. Only the content area is scrollable by default.\nThis can be prevented by setting `noScrolling` to `true`.\n#### Footer\nThe footer is optional and occupies the part above the bottom part of the content. Alternatively, the footer can be fixed at the bottom of the page by enabling the `fixedFooter` property.\n\n**Note:** `furo-ui5-page` occipues the whole available space of its parent. In order to achieve the intended design you have to make sure\nthat there is enough space for the `furo-ui5-page` to be rendered.\n**Note:** In order for the `furo-ui5-page` to be displayed, the parent element should have fixed height.\n\n\n",
-          "name": "Page",
-          "members": [
-            {
-              "kind": "field",
-              "name": "backgroundDesign",
-              "type": {
-                "text": "PageBackgroundDesign",
-                "references": [
-                  {
-                    "name": "PageBackgroundDesign",
-                    "package": "@ui5/webcomponents-fiori",
-                    "module": "dist/types/PageBackgroundDesign.js"
-                  }
-                ]
-              },
-              "default": "\"Solid\"",
-              "description": "Defines the background color of the `furo-ui5-page`.\n\n**Note:** When a furo-ui5-list is placed inside the page, we recommend using “List” to ensure better color contrast.",
-              "privacy": "public",
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "fixedFooter",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Defines if the footer is fixed at the very bottom of the page.\n\n**Note:** When set to true the footer is fixed at the very bottom of the page, otherwise it floats over the content with a slight offset from the bottom.",
-              "privacy": "public",
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "hideFooter",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Defines the footer visibility.",
-              "privacy": "public",
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "metadata",
-              "static": true,
-              "privacy": "private",
-              "readonly": true
-            },
-            {
-              "kind": "field",
-              "name": "noScrolling",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables vertical scrolling of page content.\nIf set to true, there will be no vertical scrolling at all.",
-              "privacy": "public",
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            }
-          ],
-          "superclass": {
-            "name": "Page",
-            "package": "@ui5/webcomponents-fiori",
-            "module": "dist/Page.js"
-          },
-          "tagName": "furo-ui5-page",
-          "customElement": true,
-          "summary": "Page shell with fixed header, scrollable content and footer.",
-          "keywords": [
-            "page",
-            "layout",
-            "header",
-            "footer",
-            "content",
-            "scroll"
-          ],
-          "category": "PageStructure",
-          "useCase": "Use as the outermost container of a screen that needs a fixed header and footer.",
-          "relatedComponents": [
-            "furo-ui5-bar",
-            "furo-ui5-section",
-            "furo-ui5-flexible-column-layout"
-          ],
-          "slots": [
-            {
-              "name": "default",
-              "description": "Defines the content HTML Element.",
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            },
-            {
-              "name": "footer",
-              "description": "Defines the footer HTML Element.",
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            },
-            {
-              "name": "header",
-              "description": "Defines the header HTML Element.",
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "Used to style the content section of the component",
-              "name": "content",
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            }
-          ],
-          "attributes": [
-            {
-              "description": "Defines the background color of the `furo-ui5-page`.\n\n**Note:** When a furo-ui5-list is placed inside the page, we recommend using “List” to ensure better color contrast.",
-              "name": "background-design",
-              "default": "\"Solid\"",
-              "fieldName": "backgroundDesign",
-              "type": {
-                "text": "\"List\" | \"Solid\" | \"Transparent\""
-              },
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            },
-            {
-              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
-              "name": "effective-dir",
-              "default": "undefined",
-              "fieldName": "effectiveDir",
-              "type": {
-                "text": "any"
-              },
-              "inheritedFrom": {
-                "name": "UI5Element",
-                "module": "dist/UI5Element.js"
-              }
-            },
-            {
-              "description": "Defines if the footer is fixed at the very bottom of the page.\n\n**Note:** When set to true the footer is fixed at the very bottom of the page, otherwise it floats over the content with a slight offset from the bottom.",
-              "name": "fixed-footer",
-              "default": "false",
-              "fieldName": "fixedFooter",
-              "type": {
-                "text": "boolean"
-              },
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            },
-            {
-              "description": "Defines the footer visibility.",
-              "name": "hide-footer",
-              "default": "false",
-              "fieldName": "hideFooter",
-              "type": {
-                "text": "boolean"
-              },
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            },
-            {
-              "description": "Used to duck-type UI5 elements without using instanceof",
-              "name": "is-ui5-element",
-              "default": "true",
-              "fieldName": "isUI5Element",
-              "type": {
-                "text": "any"
-              },
-              "inheritedFrom": {
-                "name": "UI5Element",
-                "module": "dist/UI5Element.js"
-              }
-            },
-            {
-              "description": "Disables vertical scrolling of page content.\nIf set to true, there will be no vertical scrolling at all.",
-              "name": "no-scrolling",
-              "default": "false",
-              "fieldName": "noScrolling",
-              "type": {
-                "text": "boolean"
-              },
-              "inheritedFrom": {
-                "name": "Page",
-                "module": "dist/Page.js"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "FuroUi5Page",
-          "declaration": {
-            "name": "FuroUi5Page",
-            "module": "src/elements/page/FuroUi5Page.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/elements/page/index.js",
       "declarations": [],
       "exports": []
     },

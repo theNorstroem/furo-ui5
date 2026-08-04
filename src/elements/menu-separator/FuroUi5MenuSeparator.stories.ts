@@ -15,7 +15,7 @@ const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
 
 const meta: Meta = {
-  title: "layout/ContextMenu/MenuSeparator",
+  title: "navigation/ContextMenu/MenuSeparator",
   component,
   subcomponents: {},
   tags: ["autodocs"],

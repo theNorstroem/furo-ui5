@@ -103,14 +103,22 @@ describe("settings/calendar", () => {
     getSecondaryCalendar(calendar => seenSecondary.push(calendar));
 
     let eventDetail: CalendarType | undefined;
-    window.addEventListener("furo-calendar-changed", (e: Event) => {
-      eventDetail = (e as CustomEvent<CalendarType>).detail;
-    }, { once: true });
+    window.addEventListener(
+      "furo-calendar-changed",
+      (e: Event) => {
+        eventDetail = (e as CustomEvent<CalendarType>).detail;
+      },
+      { once: true }
+    );
 
     let secondaryEventDetail: CalendarType | undefined;
-    window.addEventListener("furo-secondary-calendar-changed", (e: Event) => {
-      secondaryEventDetail = (e as CustomEvent<CalendarType>).detail;
-    }, { once: true });
+    window.addEventListener(
+      "furo-secondary-calendar-changed",
+      (e: Event) => {
+        secondaryEventDetail = (e as CustomEvent<CalendarType>).detail;
+      },
+      { once: true }
+    );
 
     setCalendar(CalendarType.Islamic);
     setSecondaryCalendar(CalendarType.Japanese);

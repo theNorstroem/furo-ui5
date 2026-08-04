@@ -20,7 +20,7 @@ ArgsTransormer(args);
 ArgsSetEnum(argTypes, "pattern", Object.values(FormFieldSegmentationPatterns));
 
 const meta: Meta = {
-  title: "layout/FormFieldSegmenter",
+  title: "form/FormFieldSegmenter",
   component,
   subcomponents: {},
   tags: ["autodocs"],

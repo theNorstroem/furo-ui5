@@ -36,13 +36,7 @@ describe("settings/init", () => {
 
     const config = JSON.parse(tag.textContent) as Record<string, unknown>;
     assert.deepEqual(config, buildUi5Config() as unknown as Record<string, unknown>);
-    assert.containsAllKeys(config, [
-      "theme",
-      "language",
-      "animationMode",
-      "calendarType",
-      "formatSettings",
-    ]);
+    assert.containsAllKeys(config, ["theme", "language", "animationMode", "calendarType", "formatSettings"]);
   });
 
   it("should write the given configuration as JSON", () => {

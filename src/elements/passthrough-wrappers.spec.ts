@@ -37,10 +37,8 @@ import "@/elements/toolbar-select";
 import "@/elements/toolbar-select-option";
 import "@/elements/toolbar-separator";
 import "@/elements/toolbar-spacer";
-import "@/elements/page";
 import "@/elements/bar";
 import "@/elements/flexible-column-layout";
-import "@/elements/navigation-layout";
 import "@/elements/dynamic-side-content";
 import "@/elements/side-navigation";
 import "@/elements/side-navigation-item";
@@ -105,10 +103,8 @@ const WRAPPERS: { tag: string; marker: string }[] = [
   { tag: "furo-ui5-toolbar-select-option", marker: "ui5-toolbar-select-option" },
   { tag: "furo-ui5-toolbar-separator", marker: "ui5-toolbar-separator" },
   { tag: "furo-ui5-toolbar-spacer", marker: "ui5-toolbar-spacer" },
-  { tag: "furo-ui5-page", marker: "ui5-page" },
   { tag: "furo-ui5-bar", marker: "ui5-bar" },
   { tag: "furo-ui5-flexible-column-layout", marker: "ui5-flexible-column-layout" },
-  { tag: "furo-ui5-navigation-layout", marker: "ui5-navigation-layout" },
   { tag: "furo-ui5-dynamic-side-content", marker: "ui5-dynamic-side-content" },
   { tag: "furo-ui5-side-navigation", marker: "ui5-side-navigation" },
   { tag: "furo-ui5-side-navigation-item", marker: "ui5-side-navigation-item" },
@@ -170,7 +166,7 @@ describe("pass-through UI5 wrappers", () => {
         html`<furo-ui5-list>
           <furo-ui5-li>Zurich</furo-ui5-li>
           <furo-ui5-li>Berlin</furo-ui5-li>
-        </furo-ui5-list>`,
+        </furo-ui5-list>`
       );
       await delay(50);
       assert.lengthOf(el.items, 2);
@@ -182,7 +178,7 @@ describe("pass-through UI5 wrappers", () => {
           <furo-ui5-toolbar-button text="Create"></furo-ui5-toolbar-button>
           <furo-ui5-toolbar-spacer></furo-ui5-toolbar-spacer>
           <furo-ui5-toolbar-button text="Delete"></furo-ui5-toolbar-button>
-        </furo-ui5-toolbar>`,
+        </furo-ui5-toolbar>`
       );
       await delay(50);
       assert.lengthOf(el.items, 3);
@@ -193,7 +189,7 @@ describe("pass-through UI5 wrappers", () => {
         html`<furo-ui5-side-navigation>
           <furo-ui5-side-navigation-item text="Home"></furo-ui5-side-navigation-item>
           <furo-ui5-side-navigation-item text="Reports"></furo-ui5-side-navigation-item>
-        </furo-ui5-side-navigation>`,
+        </furo-ui5-side-navigation>`
       );
       await delay(50);
       assert.lengthOf(el.items, 2);
@@ -203,7 +199,7 @@ describe("pass-through UI5 wrappers", () => {
       const el = await fixture<HTMLElement & { items: HTMLElement[] }>(
         html`<furo-ui5-timeline>
           <furo-ui5-timeline-item title-text="Created"></furo-ui5-timeline-item>
-        </furo-ui5-timeline>`,
+        </furo-ui5-timeline>`
       );
       await delay(50);
       assert.lengthOf(el.items, 1);

@@ -32,11 +32,7 @@ const _readCalendar = (key: string): CalendarType | undefined => {
   return stored !== undefined && stored in CalendarType ? (stored as CalendarType) : undefined;
 };
 
-const _announce = (
-  eventName: string,
-  callbacks: CalendarUpdateFunc[],
-  calendar: CalendarType | undefined
-): void => {
+const _announce = (eventName: string, callbacks: CalendarUpdateFunc[], calendar: CalendarType | undefined): void => {
   callbacks.forEach(f => {
     f(calendar);
   });
@@ -158,9 +154,5 @@ export const clearSecondaryCalendar = (): void => {
   _secondaryCalendar = undefined;
   _secondaryCalendarRestored = false;
   removeSetting(SECONDARY_CALENDAR_STORAGE_KEY);
-  _announce(
-    "furo-secondary-calendar-changed",
-    _secondaryCalendarCallbacks,
-    getUi5SecondaryCalendarType()
-  );
+  _announce("furo-secondary-calendar-changed", _secondaryCalendarCallbacks, getUi5SecondaryCalendarType());
 };

@@ -16,7 +16,7 @@ ArgsTransormAll(argTypes, args, []);
 ArgsSetEnum(argTypes, "design", Object.values(SemanticColor));
 
 const meta: Meta = {
-  title: "container/Tab",
+  title: "container/TabContainer/Tab",
   component,
   subcomponents: {},
   tags: ["autodocs"],
@@ -39,19 +39,22 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
-  args: {},
+  args: {
+    text: "Tab",
+  },
   render: renderArgs => html`
-    <furo-ui5-tab
-      additional-text="${ifDefined(renderArgs.additionalText)}"
-      design="${ifDefined(renderArgs.design)}"
-      ?disabled="${renderArgs.disabled}"
-      icon="${ifDefined(renderArgs.icon)}"
-      ?movable="${renderArgs.movable}"
-      ?selected="${renderArgs.selected}"
-      text="${ifDefined(renderArgs.text)}"
-      container
-    >
-      <furo-ui5-tab text="A single tab in context">Tab content</furo-ui5-tab>
+    <furo-ui5-tabcontainer>
+      <furo-ui5-tab
+        additional-text="${ifDefined(renderArgs.additionalText)}"
+        design="${ifDefined(renderArgs.design)}"
+        ?disabled="${renderArgs.disabled}"
+        icon="${ifDefined(renderArgs.icon)}"
+        ?movable="${renderArgs.movable}"
+        ?selected="${renderArgs.selected}"
+        text="${ifDefined(renderArgs.text)}"
+      >
+        Play around with the controls for the tab
+      </furo-ui5-tab>
     </furo-ui5-tabcontainer>
   `,
 };

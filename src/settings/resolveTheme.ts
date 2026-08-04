@@ -20,7 +20,5 @@ export const resolveTheme = (setting: string): string => {
   if (setting !== OPERATING_SYSTEM) {
     return setting;
   }
-  return window.matchMedia("(prefers-contrast: more)").matches
-    ? AUTO_THEME_HIGH_CONTRAST
-    : AUTO_THEME;
+  return window.matchMedia("(prefers-contrast: more)").matches ? AUTO_THEME_HIGH_CONTRAST : AUTO_THEME;
 };

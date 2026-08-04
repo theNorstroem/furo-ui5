@@ -18,7 +18,7 @@ ArgsTransormAll(argTypes, args, []);
 ArgsSetEnum(argTypes, "checkMode", Object.values(MenuItemGroupCheckMode));
 
 const meta: Meta = {
-  title: "layout/ContextMenu/MenuItemGroup",
+  title: "navigation/ContextMenu/MenuItemGroup",
   component,
   subcomponents: {},
   tags: ["autodocs"],
@@ -42,7 +42,7 @@ export default meta;
 export const Default: StoryObj = {
   render: renderArgs => html`
     <furo-ui5-context-menu open opener="anchor">
-      <furo-ui5-menu-item-group check-mode="${ifDefined(renderArgs.checkMode)}" item-selection-mode="Single">
+      <furo-ui5-menu-item-group check-mode="${ifDefined(renderArgs.checkMode)}">
         <furo-ui5-menu-item text="List view"></furo-ui5-menu-item>
         <furo-ui5-menu-item text="Grid view"></furo-ui5-menu-item>
       </furo-ui5-menu-item-group>

@@ -19,7 +19,7 @@ ArgsTransormAll(argTypes, args, []);
 const color = new STRING("#3f51b5");
 
 const meta: Meta = {
-  title: "form/ColorPicker",
+  title: "input/ColorPicker",
   component,
   subcomponents: {},
   tags: ["autodocs"],

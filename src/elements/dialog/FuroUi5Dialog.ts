@@ -29,10 +29,6 @@ import Dialog from "@ui5/webcomponents/dist/Dialog.js";
  */
 export class FuroUi5Dialog extends Dialog {
   /**
-   * shows the dialog
-   */
-
-  /**
    * Shows the popover at the opener position.
    * Alternatively you can work with the attributes `opener` and `open` to achieve the same.
    * @public

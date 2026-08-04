@@ -12,7 +12,8 @@ import NavigationMenu from "@ui5/webcomponents-fiori/dist/NavigationMenu.js";
  * ```
  *
  * This is a pass-through wrapper around `ui5-navigation-menu`: the UI5 API (properties, events,
- * slots) is inherited unchanged and no data binding is added.
+ * slots) is inherited unchanged and no data binding is added. It only adds the imperative
+ * `showAt()` / `show()` / `close()` convenience methods the other furo popups expose.
  *
  * @summary Popover menu used by collapsed side navigation.
  * @keywords navigation, menu, popover, overflow, side
@@ -30,6 +31,34 @@ export class FuroUi5NavigationMenu extends NavigationMenu {
   override connectedCallback() {
     this.setAttribute("ui5-navigation-menu", "");
     return super.connectedCallback();
+  }
+
+  /**
+   * Shows the navigation-menu at the opener position.
+   * Alternatively you can work with the attributes `opener` and `open` to achieve the same.
+   * @param opener
+   * @public
+   */
+  showAt(opener: HTMLElement | string) {
+    this.opener = opener;
+
+    this.open = true;
+  }
+
+  /**
+   * Shows the navigation-menu at the opener position defined with attribute opener.
+   * @public
+   */
+  show() {
+    this.open = true;
+  }
+
+  /**
+   * Closes the popup.
+   * @public
+   */
+  close(): void {
+    this.open = false;
   }
 
   /**

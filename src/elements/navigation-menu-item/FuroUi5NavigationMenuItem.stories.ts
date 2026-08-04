@@ -18,7 +18,7 @@ ArgsSetEnum(argTypes, "highlight", Object.values(Highlight));
 ArgsSetEnum(argTypes, "type", Object.values(ListItemType));
 
 const meta: Meta = {
-  title: "navigation/NavigationMenuItem",
+  title: "navigation/NavigationMenu/NavigationMenuItem",
   component,
   subcomponents: {},
   tags: ["autodocs"],
