@@ -11,6 +11,7 @@ use-when: Use as the child of furo-ui5-tree to render one node of a hierarchy.
 
 **Class:** `FuroUi5TreeItem`
 **Import:** `import "@furo/ui5/tree"`
+**Import type:** `import type { FuroUi5TreeItem } from "@furo/ui5/tree"`
 **Category:** List
 
 **Related:** [`furo-ui5-tree`](furo-ui5-tree.md), [`furo-ui5-tree-table`](furo-ui5-tree-table.md)

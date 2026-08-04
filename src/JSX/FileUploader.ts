@@ -2,7 +2,7 @@
 
 import type { FileUploaderChangeEventDetail, FileUploaderFileSizeExceedEventDetail } from "@ui5/webcomponents/dist/FileUploader.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface FileUploader extends React.HTMLAttributes<HTMLElement> {
   onchange?: (d: CustomEvent<FileUploaderChangeEventDetail>) => void;

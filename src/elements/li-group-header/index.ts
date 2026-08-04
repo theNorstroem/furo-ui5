@@ -1,5 +1,7 @@
 import { FuroUi5LiGroupHeader } from "./FuroUi5LiGroupHeader";
 
+export * from "./FuroUi5LiGroupHeader";
+
 FuroUi5LiGroupHeader.define();
 
 declare global {

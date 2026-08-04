@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-user-menu to offer a profile action.
 
 **Class:** `FuroUi5UserMenuItem`
 **Import:** `import "@furo/ui5/user-menu-item"`
+**Import type:** `import type { FuroUi5UserMenuItem } from "@furo/ui5/user-menu-item"`
 **Extends:** `UserMenuItem`
 **Category:** Navigation
 

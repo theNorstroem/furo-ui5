@@ -5,7 +5,7 @@ import type BackgroundDesign from "@ui5/webcomponents/dist/types/BackgroundDesig
 import type BorderDesign from "@ui5/webcomponents/dist/types/BorderDesign.js";
 import type CarouselArrowsPlacement from "@ui5/webcomponents/dist/types/CarouselArrowsPlacement.js";
 import type CarouselPageIndicatorType from "@ui5/webcomponents/dist/types/CarouselPageIndicatorType.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Carousel extends React.HTMLAttributes<HTMLElement> {
   onnavigate?: (d: CustomEvent<CarouselNavigateEventDetail>) => void;

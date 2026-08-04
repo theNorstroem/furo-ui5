@@ -1,9 +1,10 @@
-import { STRING, StringValue } from "@furo/open-models";
+import type { StringValue } from "@furo/open-models";
+import { STRING } from "@furo/open-models";
 import ColorPaletteItem from "@ui5/webcomponents/dist/ColorPaletteItem.js";
 
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
-import { FuroFatString } from "@/models";
+import type { FuroFatString } from "@/models";
 
 /**
  * The `furo-ui5-color-palette-item` is a single color swatch, meant to be used inside a

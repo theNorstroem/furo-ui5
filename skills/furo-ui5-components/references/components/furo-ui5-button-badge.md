@@ -11,6 +11,7 @@ use-when: Use to add a count or status indicator to buttons.
 
 **Class:** `FuroUi5ButtonBadge`
 **Import:** `import "@furo/ui5/button-badge"`
+**Import type:** `import type { FuroUi5ButtonBadge } from "@furo/ui5/button-badge"`
 **Extends:** `ButtonBadge`
 **Category:** Button
 

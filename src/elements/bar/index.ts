@@ -1,5 +1,7 @@
 import { FuroUi5Bar } from "./FuroUi5Bar";
 
+export * from "./FuroUi5Bar";
+
 FuroUi5Bar.define();
 
 declare global {

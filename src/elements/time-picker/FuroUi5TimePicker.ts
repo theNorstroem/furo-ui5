@@ -1,4 +1,5 @@
-import { type FieldConstraints, STRING } from "@furo/open-models";
+import type { STRING } from "@furo/open-models";
+import type { FieldConstraints } from "@furo/open-models";
 import TimePicker from "@ui5/webcomponents/dist/TimePicker.js";
 
 import { DateAndTimeReaderWriters } from "@/lib/open-models/DateAndTimeReaderWriter";

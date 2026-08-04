@@ -93,18 +93,27 @@ export * from "@/elements/product-switch-item/FuroUi5ProductSwitchItem";
 export * from "@/elements/timeline/FuroUi5Timeline";
 export * from "@/elements/timeline-item/FuroUi5TimelineItem";
 export * from "@/elements/timeline-group-item/FuroUi5TimelineGroupItem";
-export * from "@/type-renderers";
+// Type renderers are deliberately NOT re-exported here. The 30 form-* renderers each
+// side-effect-import a registering element index (form-string pulls form-row, label and
+// text-input), so re-exporting them made `import { FuroUi5Button } from "@furo/ui5"`
+// define a dozen unrelated tags and pull ~3 MB of renderers.
+// Import them from "@furo/ui5/type-renderers" (classes, registers nothing) or
+// "@furo/ui5/type-renderers/<slug>" (registers one renderer).
 export * from "@/settings";
-export * from "./lib/open-models/signatures";
-export { type InputSelectionChangeEventDetail, type InputSuggestionScrollEventDetail } from "@ui5/webcomponents/dist/Input.js";
-export { type LinkClickEventDetail } from "@ui5/webcomponents/dist/Link.js";
-export { type PopupBeforeCloseEventDetail, type PopupScrollEventDetail } from "@ui5/webcomponents/dist/Popup.js";
-export { type SelectChangeEventDetail, type SelectLiveChangeEventDetail } from "@ui5/webcomponents/dist/Select.js";
-export {
-  type ShellBarLogoClickEventDetail,
-  type ShellBarMenuItemClickEventDetail,
-  type ShellBarNotificationsClickEventDetail,
-  type ShellBarProductSwitchClickEventDetail,
-  type ShellBarProfileClickEventDetail,
+export type * from "./lib/open-models/signatures";
+// `export type { … }`, not `export { type … }`. The latter keeps the statement alive:
+// tsc strips the specifiers and emits `export {} from "@ui5/webcomponents/dist/Input.js"`,
+// which loads and registers the UI5 base component at runtime. consistent-type-exports
+// does not flag exports that already carry inline type specifiers, so this is by hand.
+export type { InputSelectionChangeEventDetail, InputSuggestionScrollEventDetail } from "@ui5/webcomponents/dist/Input.js";
+export type { LinkClickEventDetail } from "@ui5/webcomponents/dist/Link.js";
+export type { PopupBeforeCloseEventDetail, PopupScrollEventDetail } from "@ui5/webcomponents/dist/Popup.js";
+export type { SelectChangeEventDetail, SelectLiveChangeEventDetail } from "@ui5/webcomponents/dist/Select.js";
+export type {
+  ShellBarLogoClickEventDetail,
+  ShellBarMenuItemClickEventDetail,
+  ShellBarNotificationsClickEventDetail,
+  ShellBarProductSwitchClickEventDetail,
+  ShellBarProfileClickEventDetail,
 } from "@ui5/webcomponents-fiori/dist/ShellBar.js";
-export { type ShellBarItemClickEventDetail } from "@ui5/webcomponents-fiori/dist/ShellBarItem.js";
+export type { ShellBarItemClickEventDetail } from "@ui5/webcomponents-fiori/dist/ShellBarItem.js";

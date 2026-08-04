@@ -1,4 +1,4 @@
-import { BOOLEAN, BoolValue } from "@furo/open-models";
+import type { BOOLEAN, BoolValue } from "@furo/open-models";
 
 import type { FatHandler } from "@/lib/open-models/FatHandler";
 import type { FuroFatBool } from "@/models";

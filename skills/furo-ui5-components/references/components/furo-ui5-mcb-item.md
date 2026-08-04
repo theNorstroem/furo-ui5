@@ -11,6 +11,7 @@ use-when: Use as children of furo-ui5-multi-combobox.
 
 **Class:** `FuroUi5McbItem`
 **Import:** `import "@furo/ui5/mcb-item"`
+**Import type:** `import type { FuroUi5McbItem } from "@furo/ui5/mcb-item"`
 **Extends:** `MultiComboBoxItem`
 **Category:** Form
 

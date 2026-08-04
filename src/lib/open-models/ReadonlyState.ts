@@ -1,4 +1,4 @@
-import { FieldNode } from "@furo/open-models";
+import type { FieldNode } from "@furo/open-models";
 
 interface FieldNodeWithReadonly extends HTMLElement {
   readonly: boolean;

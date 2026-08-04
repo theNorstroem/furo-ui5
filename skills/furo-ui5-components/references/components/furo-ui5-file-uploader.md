@@ -11,6 +11,7 @@ use-when: Use to let users pick one or more files; handle the `change` event you
 
 **Class:** `FuroUi5FileUploader`
 **Import:** `import "@furo/ui5/file-uploader"`
+**Import type:** `import type { FuroUi5FileUploader } from "@furo/ui5/file-uploader"`
 **Extends:** `FileUploader`
 **Category:** Form
 

@@ -1,5 +1,7 @@
 import { FuroUi5ShellBarSearch } from "./FuroUi5ShellBarSearch";
 
+export * from "./FuroUi5ShellBarSearch";
+
 FuroUi5ShellBarSearch.define();
 
 declare global {

@@ -2,7 +2,7 @@
 import type { STRING, StringValue } from "@furo/open-models/";
 import type ExpandableTextOverflowMode from "@ui5/webcomponents/dist/types/ExpandableTextOverflowMode.js";
 import type TextEmptyIndicatorMode from "@ui5/webcomponents/dist/types/TextEmptyIndicatorMode.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { FuroFatString } from "@/models/index.js";
 

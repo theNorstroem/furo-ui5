@@ -1,5 +1,7 @@
 import { FuroUi5Carousel } from "./FuroUi5Carousel";
 
+export * from "./FuroUi5Carousel";
+
 FuroUi5Carousel.define();
 
 declare global {

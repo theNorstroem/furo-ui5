@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-list to render a single text/icon entry.
 
 **Class:** `FuroUi5Li`
 **Import:** `import "@furo/ui5/li"`
+**Import type:** `import type { FuroUi5Li } from "@furo/ui5/li"`
 **Extends:** `ListItemStandard`
 **Category:** List
 

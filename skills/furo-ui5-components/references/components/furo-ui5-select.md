@@ -11,6 +11,7 @@ use-when: Use when selecting from a fixed list without typing; for searchable li
 
 **Class:** `FuroUi5Select`
 **Import:** `import "@furo/ui5/select"`
+**Import type:** `import type { FuroUi5Select } from "@furo/ui5/select"`
 **Extends:** `Select`
 **Category:** Form
 

@@ -11,6 +11,7 @@ use-when: Use to capture a handwritten signature or freehand drawing.
 
 **Class:** `FuroUi5SignPad`
 **Import:** `import "@furo/ui5/sign-pad"`
+**Import type:** `import type { FuroUi5SignPad } from "@furo/ui5/sign-pad"`
 **Category:** Form
 
 **Related:** [`furo-ui5-button`](furo-ui5-button.md)

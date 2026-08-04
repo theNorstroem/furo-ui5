@@ -11,6 +11,7 @@ use-when: Use to show determinate progress of an operation.
 
 **Class:** `FuroUi5ProgressIndicator`
 **Import:** `import "@furo/ui5/progress-indicator"`
+**Import type:** `import type { FuroUi5ProgressIndicator } from "@furo/ui5/progress-indicator"`
 **Extends:** `ProgressIndicator`
 **Category:** Feedback
 

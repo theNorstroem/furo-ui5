@@ -18,7 +18,7 @@ import type { InputSelectionChangeEventDetail } from "@ui5/webcomponents/dist/In
 import type InputSuggestionsFilter from "@ui5/webcomponents/dist/types/InputSuggestionsFilter.js";
 import type InputType from "@ui5/webcomponents/dist/types/InputType.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { FuroFatDouble, FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models/index.js";
 

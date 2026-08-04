@@ -3,7 +3,7 @@
 import type { SideNavigationItemClickEventDetail } from "@ui5/webcomponents-fiori/dist/SideNavigationItemBase.js";
 import type SideNavigationItemAccessibilityAttributes from "@ui5/webcomponents-fiori/dist/SideNavigationSelectableItemBase.js";
 import type SideNavigationItemDesign from "@ui5/webcomponents-fiori/dist/types/SideNavigationItemDesign.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface SideNavigationItem extends React.HTMLAttributes<HTMLElement> {
   onclick?: (d: CustomEvent<SideNavigationItemClickEventDetail>) => void;

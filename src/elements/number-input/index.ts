@@ -1,5 +1,7 @@
 import { FuroUi5NumberInput } from "./FuroUi5NumberInput";
 
+export * from "./FuroUi5NumberInput";
+
 FuroUi5NumberInput.define();
 
 declare global {

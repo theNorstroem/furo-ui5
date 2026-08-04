@@ -18,7 +18,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5TimePicker } from "./FuroUi5TimePicker";
+import type { FuroUi5TimePicker } from "./FuroUi5TimePicker";
 
 import { TimeOfDay } from "@/models/google/type/TimeOfDay";
 import { delay } from "@/util/test-helpers/delay";

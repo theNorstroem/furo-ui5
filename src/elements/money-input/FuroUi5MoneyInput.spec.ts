@@ -17,7 +17,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5MoneyInput } from "./FuroUi5MoneyInput";
+import type { FuroUi5MoneyInput } from "./FuroUi5MoneyInput";
 
 import { Money as FuroMoney } from "@/models/furo/type/Money";
 import { Money as GoogleMoney } from "@/models/google/type/Money";

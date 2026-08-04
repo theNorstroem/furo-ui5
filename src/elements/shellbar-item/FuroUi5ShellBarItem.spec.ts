@@ -6,7 +6,7 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
 
-import { FuroUi5ShellBarItem } from "./FuroUi5ShellBarItem";
+import type { FuroUi5ShellBarItem } from "./FuroUi5ShellBarItem";
 
 import { delay } from "@/util/test-helpers/delay";
 

@@ -11,6 +11,7 @@ use-when: Use when one action is the obvious default but variants should stay re
 
 **Class:** `FuroUi5SplitButton`
 **Import:** `import "@furo/ui5/split-button"`
+**Import type:** `import type { FuroUi5SplitButton } from "@furo/ui5/split-button"`
 **Extends:** `SplitButton`
 **Category:** Button
 

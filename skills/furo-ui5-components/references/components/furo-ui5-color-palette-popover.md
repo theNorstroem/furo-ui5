@@ -11,6 +11,7 @@ use-when: Use to let users pick a color from a predefined set shown in a popover
 
 **Class:** `FuroUi5ColorPalettePopover`
 **Import:** `import "@furo/ui5/color-palette-popover"`
+**Import type:** `import type { FuroUi5ColorPalettePopover } from "@furo/ui5/color-palette-popover"`
 **Extends:** `ColorPalettePopover`
 **Category:** Form
 

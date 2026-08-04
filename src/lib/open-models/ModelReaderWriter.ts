@@ -1,4 +1,4 @@
-import { FieldNode } from "@furo/open-models";
+import type { FieldNode } from "@furo/open-models";
 
 export class ModelReaderWriter {
   /**

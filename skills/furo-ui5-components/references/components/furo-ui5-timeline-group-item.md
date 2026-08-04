@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-timeline to fold a run of events under one heading
 
 **Class:** `FuroUi5TimelineGroupItem`
 **Import:** `import "@furo/ui5/timeline-group-item"`
+**Import type:** `import type { FuroUi5TimelineGroupItem } from "@furo/ui5/timeline-group-item"`
 **Extends:** `TimelineGroupItem`
 **Category:** Display
 

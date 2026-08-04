@@ -1,8 +1,8 @@
-import { INT32, INT64, STRING, Timestamp } from "@furo/open-models";
+import type { INT32, INT64, STRING, Timestamp } from "@furo/open-models";
 
-import { XDate as FuroXDate } from "@/models/furo/type/Date";
-import { XDate } from "@/models/google/type/Date";
-import { TimeOfDay } from "@/models/google/type/TimeOfDay";
+import type { XDate as FuroXDate } from "@/models/furo/type/Date";
+import type { XDate } from "@/models/google/type/Date";
+import type { TimeOfDay } from "@/models/google/type/TimeOfDay";
 
 /**
  * Generic readers and writers for date/time like models.

@@ -1,5 +1,7 @@
 import { FuroUi5ColorPalette } from "./FuroUi5ColorPalette";
 
+export * from "./FuroUi5ColorPalette";
+
 FuroUi5ColorPalette.define();
 
 declare global {

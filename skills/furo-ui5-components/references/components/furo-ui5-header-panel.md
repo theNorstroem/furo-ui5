@@ -11,6 +11,7 @@ use-when: Use to group related content under a collapsible header.
 
 **Class:** `FuroUi5HeaderPanel`
 **Import:** `import "@furo/ui5/header-panel"`
+**Import type:** `import type { FuroUi5HeaderPanel } from "@furo/ui5/header-panel"`
 **Category:** Container
 
 **Related:** [`furo-ui5-section`](furo-ui5-section.md), [`furo-ui5-subsection`](furo-ui5-subsection.md)

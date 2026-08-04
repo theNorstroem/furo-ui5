@@ -1,7 +1,7 @@
 import { ToString, ValueOf } from "@furo/open-models";
 
-import { Colour } from "./furoui5test/cube/Colour";
-import { CubeEntity } from "./furoui5test/cube/CubeEntity";
+import type { Colour } from "./furoui5test/cube/Colour";
+import type { CubeEntity } from "./furoui5test/cube/CubeEntity";
 
 /**
  * In this file, we set the toString() and valueOf() methods for our types.

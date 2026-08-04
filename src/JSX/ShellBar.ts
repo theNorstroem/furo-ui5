@@ -11,7 +11,7 @@ import type {
   ShellBarSearchFieldClearEventDetail,
   ShellBarSearchFieldToggleEventDetail,
 } from "@ui5/webcomponents-fiori/dist/ShellBar.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface ShellBar extends React.HTMLAttributes<HTMLElement> {
   "oncontent-item-visibility-change"?: (d: CustomEvent<ShellBarContentItemVisibilityChangeEventDetail>) => void;

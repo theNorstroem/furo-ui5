@@ -11,6 +11,7 @@ use-when: Use as children of furo-ui5-shellbar for custom header actions.
 
 **Class:** `FuroUi5ShellBarItem`
 **Import:** `import "@furo/ui5/shellbar-item"`
+**Import type:** `import type { FuroUi5ShellBarItem } from "@furo/ui5/shellbar-item"`
 **Extends:** `ShellBarItem`
 **Category:** PageStructure
 

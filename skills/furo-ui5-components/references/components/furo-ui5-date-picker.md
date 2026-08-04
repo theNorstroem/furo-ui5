@@ -11,6 +11,7 @@ use-when: Use for selecting a single date value.
 
 **Class:** `FuroUi5DatePicker`
 **Import:** `import "@furo/ui5/date-picker"`
+**Import type:** `import type { FuroUi5DatePicker } from "@furo/ui5/date-picker"`
 **Extends:** `DatePicker`
 **Category:** Form
 

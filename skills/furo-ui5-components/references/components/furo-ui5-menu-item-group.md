@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-context-menu to give a set of items single- or mul
 
 **Class:** `FuroUi5MenuItemGroup`
 **Import:** `import "@furo/ui5/menu-item-group"`
+**Import type:** `import type { FuroUi5MenuItemGroup } from "@furo/ui5/menu-item-group"`
 **Extends:** `MenuItemGroup`
 **Category:** Navigation
 

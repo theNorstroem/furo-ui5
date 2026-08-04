@@ -4,7 +4,7 @@ import type IAvatarGroupItem from "@ui5/webcomponents/dist/AvatarGroup.js";
 import type { AvatarGroupAccessibilityAttributes, AvatarGroupClickEventDetail } from "@ui5/webcomponents/dist/AvatarGroup.js";
 import type AvatarColorScheme from "@ui5/webcomponents/dist/types/AvatarColorScheme.js";
 import type AvatarGroupType from "@ui5/webcomponents/dist/types/AvatarGroupType.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface AvatarGroup extends React.HTMLAttributes<HTMLElement> {
   onclick?: (d: CustomEvent<AvatarGroupClickEventDetail>) => void;

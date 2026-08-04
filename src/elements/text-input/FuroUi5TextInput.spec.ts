@@ -19,7 +19,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5TextInput } from "./FuroUi5TextInput";
+import type { FuroUi5TextInput } from "./FuroUi5TextInput";
 
 import { createFatString } from "@/util/test-helpers/createFatString";
 import { delay } from "@/util/test-helpers/delay";

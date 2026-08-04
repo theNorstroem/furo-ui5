@@ -11,6 +11,7 @@ use-when: Use as a styled list container; provide list items as children.
 
 **Class:** `FuroUi5List`
 **Import:** `import "@furo/ui5/list"`
+**Import type:** `import type { FuroUi5List } from "@furo/ui5/list"`
 **Extends:** `List`
 **Category:** Display
 

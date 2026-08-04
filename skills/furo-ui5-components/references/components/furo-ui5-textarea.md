@@ -11,6 +11,7 @@ use-when: Use when users need to enter multiple lines of text like descriptions 
 
 **Class:** `FuroUi5Textarea`
 **Import:** `import "@furo/ui5/textarea"`
+**Import type:** `import type { FuroUi5Textarea } from "@furo/ui5/textarea"`
 **Extends:** `TextArea`
 **Category:** Form
 

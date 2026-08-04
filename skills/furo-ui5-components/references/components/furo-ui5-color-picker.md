@@ -11,6 +11,7 @@ use-when: Use to let users pick a color value stored as a string.
 
 **Class:** `FuroUi5ColorPicker`
 **Import:** `import "@furo/ui5/color-picker"`
+**Import type:** `import type { FuroUi5ColorPicker } from "@furo/ui5/color-picker"`
 **Extends:** `ColorPicker`
 **Category:** Form
 

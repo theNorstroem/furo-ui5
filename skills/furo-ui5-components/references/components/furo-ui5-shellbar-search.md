@@ -11,6 +11,7 @@ use-when: Use within furo-ui5-shellbar for application-wide search.
 
 **Class:** `FuroUi5ShellBarSearch`
 **Import:** `import "@furo/ui5/shellbar-search"`
+**Import type:** `import type { FuroUi5ShellBarSearch } from "@furo/ui5/shellbar-search"`
 **Extends:** `ShellBarSearch`
 **Category:** PageStructure
 

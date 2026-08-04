@@ -11,6 +11,7 @@ use-when: Use to show nested navigation entries in a popover when the side navig
 
 **Class:** `FuroUi5NavigationMenu`
 **Import:** `import "@furo/ui5/navigation-menu"`
+**Import type:** `import type { FuroUi5NavigationMenu } from "@furo/ui5/navigation-menu"`
 **Extends:** `NavigationMenu`
 **Category:** Navigation
 

@@ -1,5 +1,7 @@
 import { FuroUi5RangeSlider } from "./FuroUi5RangeSlider";
 
+export * from "./FuroUi5RangeSlider";
+
 FuroUi5RangeSlider.define();
 
 declare global {

@@ -1,5 +1,7 @@
 import { FuroUi5SegmentedButton } from "./FuroUi5SegmentedButton";
 
+export * from "./FuroUi5SegmentedButton";
+
 FuroUi5SegmentedButton.define();
 
 declare global {

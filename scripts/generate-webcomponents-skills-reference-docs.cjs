@@ -334,7 +334,12 @@ function generateComponentMarkdown(mod) {
   }
 
   lines.push(`**Class:** \`${resolveClassName(mod, decl)}\``);
+  // The subpath serves both roles: a bare import registers the tag, and the same module
+  // re-exports the class, so the type is reachable without going through the root barrel.
   lines.push(`**Import:** \`import "${resolveImportSpecifier(mod.path)}"\``);
+  lines.push(
+    `**Import type:** \`import type { ${resolveClassName(mod, decl)} } from "${resolveImportSpecifier(mod.path)}"\``
+  );
   if (decl.superclass) {
     lines.push(`**Extends:** \`${decl.superclass.name}\``);
   }

@@ -11,6 +11,7 @@ use-when: Use when action has two states (active/inactive) that persist after cl
 
 **Class:** `FuroUi5ToggleButton`
 **Import:** `import "@furo/ui5/toggle-button"`
+**Import type:** `import type { FuroUi5ToggleButton } from "@furo/ui5/toggle-button"`
 **Extends:** `ToggleButton`
 **Category:** Button
 

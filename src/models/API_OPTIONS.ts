@@ -1,4 +1,4 @@
-import { type IApiOptions } from "@furo/open-models/dist/Fetcher";
+import type { IApiOptions } from "@furo/open-models/dist/Fetcher";
 
 /**
  * Set the API OPTIONS.

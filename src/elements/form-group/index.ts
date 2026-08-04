@@ -1,5 +1,7 @@
 import { FuroUi5FormGroup } from "./FuroUi5FormGroup";
 
+export * from "./FuroUi5FormGroup";
+
 window.customElements.define("furo-ui5-form-group", FuroUi5FormGroup);
 
 declare global {

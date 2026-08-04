@@ -11,6 +11,7 @@ use-when: Use as children of furo-ui5-select.
 
 **Class:** `FuroUi5Option`
 **Import:** `import "@furo/ui5/option"`
+**Import type:** `import type { FuroUi5Option } from "@furo/ui5/option"`
 **Extends:** `Option`
 **Category:** Form
 

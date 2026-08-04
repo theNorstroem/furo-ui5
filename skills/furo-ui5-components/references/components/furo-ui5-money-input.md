@@ -11,6 +11,7 @@ use-when: Use for entering a monetary value together with its currency.
 
 **Class:** `FuroUi5MoneyInput`
 **Import:** `import "@furo/ui5/money-input"`
+**Import type:** `import type { FuroUi5MoneyInput } from "@furo/ui5/money-input"`
 **Category:** Form
 
 **Related:** [`furo-ui5-number-input`](furo-ui5-number-input.md), [`furo-ui5-combobox`](furo-ui5-combobox.md)

@@ -1,5 +1,7 @@
 import { FuroUi5MoneyInput } from "./FuroUi5MoneyInput";
 
+export * from "./FuroUi5MoneyInput";
+
 if (!customElements.get("furo-ui5-money-input")) {
   customElements.define("furo-ui5-money-input", FuroUi5MoneyInput);
 }

@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-combobox to group suggestions into labelled sectio
 
 **Class:** `FuroUi5CbItemGroup`
 **Import:** `import "@furo/ui5/cb-item-group"`
+**Import type:** `import type { FuroUi5CbItemGroup } from "@furo/ui5/cb-item-group"`
 **Extends:** `ComboBoxItemGroup`
 **Category:** Form
 

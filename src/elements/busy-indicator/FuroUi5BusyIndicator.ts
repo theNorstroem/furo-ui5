@@ -1,4 +1,5 @@
-import { BOOLEAN, BoolValue } from "@furo/open-models";
+import type { BoolValue } from "@furo/open-models";
+import { BOOLEAN } from "@furo/open-models";
 import BusyIndicator from "@ui5/webcomponents/dist/BusyIndicator.js";
 
 import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";

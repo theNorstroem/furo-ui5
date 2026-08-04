@@ -11,6 +11,7 @@ use-when: Use to display a group of avatars; provide avatars as children.
 
 **Class:** `FuroUi5AvatarGroup`
 **Import:** `import "@furo/ui5/avatar-group"`
+**Import type:** `import type { FuroUi5AvatarGroup } from "@furo/ui5/avatar-group"`
 **Extends:** `AvatarGroup`
 **Category:** Display
 

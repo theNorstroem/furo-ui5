@@ -2,7 +2,7 @@
 
 import type { SplitButtonAccessibilityAttributes } from "@ui5/webcomponents/dist/SplitButton.js";
 import type ButtonDesign from "@ui5/webcomponents/dist/types/ButtonDesign.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface SplitButton extends React.HTMLAttributes<HTMLElement> {
   "onarrow-click"?: (d: CustomEvent) => void;

@@ -11,6 +11,7 @@ use-when: Use to let users select a start and end date as a single range.
 
 **Class:** `FuroUi5DaterangePicker`
 **Import:** `import "@furo/ui5/daterange-picker"`
+**Import type:** `import type { FuroUi5DaterangePicker } from "@furo/ui5/daterange-picker"`
 **Extends:** `DateRangePicker`
 **Category:** Form
 

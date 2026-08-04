@@ -2,7 +2,7 @@
 import type { STRING } from "@furo/open-models/";
 import type { TimePickerChangeEventDetail, TimePickerInputEventDetail } from "@ui5/webcomponents/dist/TimePicker.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { TimeOfDay } from "@/models/google/type/TimeOfDay";
 

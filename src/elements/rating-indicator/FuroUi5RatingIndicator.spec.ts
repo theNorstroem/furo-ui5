@@ -38,7 +38,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5RatingIndicator } from "./FuroUi5RatingIndicator";
+import type { FuroUi5RatingIndicator } from "./FuroUi5RatingIndicator";
 
 import { createFatFloat } from "@/util/test-helpers/createFatFloat";
 import { delay } from "@/util/test-helpers/delay";

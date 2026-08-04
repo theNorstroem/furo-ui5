@@ -11,6 +11,7 @@ use-when: Use to show a timestamp as human-friendly relative time text.
 
 **Class:** `FuroUi5RelativeTimeDisplay`
 **Import:** `import "@furo/ui5/relative-time-display"`
+**Import type:** `import type { FuroUi5RelativeTimeDisplay } from "@furo/ui5/relative-time-display"`
 **Extends:** `Text`
 **Category:** Display
 

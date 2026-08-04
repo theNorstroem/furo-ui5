@@ -11,6 +11,7 @@ use-when: Use for selecting exactly one option from a small set of mutually excl
 
 **Class:** `FuroUi5RadioButton`
 **Import:** `import "@furo/ui5/radio-button"`
+**Import type:** `import type { FuroUi5RadioButton } from "@furo/ui5/radio-button"`
 **Extends:** `RadioButton`
 **Category:** Form
 

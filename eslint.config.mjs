@@ -121,6 +121,19 @@ export default tseslint.config(
       "no-multiple-empty-lines": ["error", { max: 1 }],
       "max-classes-per-file": ["error", { ignoreExpressions: true, max: 2 }],
 
+      // Bundle-size rules, not style. `import { type X } from "y"` keeps the import
+      // statement alive under verbatimModuleSyntax — tsc strips the specifier and emits
+      // `import {} from "y"`, a side-effect import of the whole module. Separate
+      // `import type` / `export type` statements are elided completely.
+      // See dist/lib/open-models/StringReaderWriters.js, which used to pull the entire
+      // models barrel (~14 Registry.register calls) purely to name a type.
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        { prefer: "type-imports", fixStyle: "separate-type-imports", disallowTypeAnnotations: true },
+      ],
+      "@typescript-eslint/no-import-type-side-effects": "error",
+      "@typescript-eslint/consistent-type-exports": "error",
+
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/no-unnecessary-parameter-property-assignment": "error",
       "@typescript-eslint/no-explicit-any": "error",

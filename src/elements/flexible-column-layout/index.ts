@@ -1,5 +1,7 @@
 import { FuroUi5FlexibleColumnLayout } from "./FuroUi5FlexibleColumnLayout";
 
+export * from "./FuroUi5FlexibleColumnLayout";
+
 FuroUi5FlexibleColumnLayout.define();
 
 declare global {

@@ -11,6 +11,7 @@ use-when: Use to create flexible space between ShellBar items.
 
 **Class:** `FuroUi5ShellBarSpacer`
 **Import:** `import "@furo/ui5/shellbar-spacer"`
+**Import type:** `import type { FuroUi5ShellBarSpacer } from "@furo/ui5/shellbar-spacer"`
 **Extends:** `ShellBarSpacer`
 **Category:** PageStructure
 

@@ -11,6 +11,7 @@ use-when: Use when the type of a field is not known at authoring time.
 
 **Class:** `FuroUi5Typerenderer`
 **Import:** `import "@furo/ui5/typerenderer"`
+**Import type:** `import type { FuroUi5Typerenderer } from "@furo/ui5/typerenderer"`
 **Extends:** `LitElement`
 **Category:** TypeRenderers
 

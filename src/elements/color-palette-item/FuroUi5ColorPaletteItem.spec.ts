@@ -13,7 +13,7 @@ import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { html } from "lit";
 import { afterEach, assert, beforeEach, describe, it } from "vitest";
 
-import { FuroUi5ColorPaletteItem } from "./FuroUi5ColorPaletteItem";
+import type { FuroUi5ColorPaletteItem } from "./FuroUi5ColorPaletteItem";
 
 import { createFatString } from "@/util/test-helpers/createFatString";
 

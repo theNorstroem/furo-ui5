@@ -11,6 +11,7 @@ use-when: Use for precise numeric input with step controls.
 
 **Class:** `FuroUi5StepInput`
 **Import:** `import "@furo/ui5/step-input"`
+**Import type:** `import type { FuroUi5StepInput } from "@furo/ui5/step-input"`
 **Extends:** `StepInput`
 **Category:** Form
 

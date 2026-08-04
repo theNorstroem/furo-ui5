@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-side-navigation to split entries into labelled, co
 
 **Class:** `FuroUi5SideNavigationGroup`
 **Import:** `import "@furo/ui5/side-navigation-group"`
+**Import type:** `import type { FuroUi5SideNavigationGroup } from "@furo/ui5/side-navigation-group"`
 **Extends:** `SideNavigationGroup`
 **Category:** Navigation
 

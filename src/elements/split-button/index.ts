@@ -1,5 +1,7 @@
 import { FuroUi5SplitButton } from "./FuroUi5SplitButton";
 
+export * from "./FuroUi5SplitButton";
+
 FuroUi5SplitButton.define();
 
 declare global {

@@ -24,7 +24,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5RangeSlider } from "./FuroUi5RangeSlider";
+import type { FuroUi5RangeSlider } from "./FuroUi5RangeSlider";
 
 import { createFatFloat } from "@/util/test-helpers/createFatFloat";
 import { delay } from "@/util/test-helpers/delay";

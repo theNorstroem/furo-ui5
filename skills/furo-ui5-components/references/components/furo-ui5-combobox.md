@@ -11,6 +11,7 @@ use-when: Use when users benefit from searching/filtering a large list of option
 
 **Class:** `FuroUi5Combobox`
 **Import:** `import "@furo/ui5/combobox"`
+**Import type:** `import type { FuroUi5Combobox } from "@furo/ui5/combobox"`
 **Extends:** `ComboBox`
 **Category:** Form
 

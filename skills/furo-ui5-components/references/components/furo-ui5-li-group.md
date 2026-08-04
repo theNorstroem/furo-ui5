@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-list to split items into labelled groups.
 
 **Class:** `FuroUi5LiGroup`
 **Import:** `import "@furo/ui5/li-group"`
+**Import type:** `import type { FuroUi5LiGroup } from "@furo/ui5/li-group"`
 **Extends:** `ListItemGroup`
 **Category:** List
 

@@ -1,5 +1,7 @@
 import { FuroUi5DatePicker } from "./FuroUi5DatePicker";
 
+export * from "./FuroUi5DatePicker";
+
 FuroUi5DatePicker.define();
 
 declare global {

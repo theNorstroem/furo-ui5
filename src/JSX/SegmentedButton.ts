@@ -3,7 +3,7 @@ import type { ARRAY, ENUM, STRING, StringValue } from "@furo/open-models/";
 import type ISegmentedButtonItem from "@ui5/webcomponents/dist/SegmentedButton.js";
 import type { SegmentedButtonSelectionChangeEventDetail } from "@ui5/webcomponents/dist/SegmentedButton.js";
 import type SegmentedButtonSelectionMode from "@ui5/webcomponents/dist/types/SegmentedButtonSelectionMode.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { IdentifiableList, OptionLikeList, SelectOption } from "../index";
 

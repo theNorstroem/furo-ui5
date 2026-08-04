@@ -2,7 +2,7 @@
 import type { STRING, StringValue } from "@furo/open-models/";
 import type { TextAreaInputEventDetail } from "@ui5/webcomponents/dist/TextArea.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { FuroFatString } from "@/models/index.js";
 

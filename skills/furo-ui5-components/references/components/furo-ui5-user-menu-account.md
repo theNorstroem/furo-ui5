@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-user-menu to show the signed-in account and allow 
 
 **Class:** `FuroUi5UserMenuAccount`
 **Import:** `import "@furo/ui5/user-menu-account"`
+**Import type:** `import type { FuroUi5UserMenuAccount } from "@furo/ui5/user-menu-account"`
 **Extends:** `UserMenuAccount`
 **Category:** Navigation
 

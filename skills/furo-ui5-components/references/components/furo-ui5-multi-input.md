@@ -11,6 +11,7 @@ use-when: Use when users need to enter multiple freeform values displayed as tok
 
 **Class:** `FuroUi5MultiInput`
 **Import:** `import "@furo/ui5/multi-input"`
+**Import type:** `import type { FuroUi5MultiInput } from "@furo/ui5/multi-input"`
 **Extends:** `MultiInput`
 **Category:** Form
 

@@ -3,7 +3,7 @@
 import type { ToolbarButtonAccessibilityAttributes } from "@ui5/webcomponents/dist/ToolbarButton.js";
 import type ButtonDesign from "@ui5/webcomponents/dist/types/ButtonDesign.js";
 import type ToolbarItemOverflowBehavior from "@ui5/webcomponents/dist/types/ToolbarItemOverflowBehavior.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface ToolbarButton extends React.HTMLAttributes<HTMLElement> {
   onclick?: (d: CustomEvent) => void;

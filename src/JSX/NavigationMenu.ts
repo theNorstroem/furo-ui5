@@ -3,7 +3,7 @@
 import type { MenuBeforeCloseEventDetail, MenuBeforeOpenEventDetail, MenuItemClickEventDetail } from "@ui5/webcomponents/dist/Menu.js";
 import type PopoverHorizontalAlign from "@ui5/webcomponents/dist/types/PopoverHorizontalAlign.js";
 import type PopoverPlacement from "@ui5/webcomponents/dist/types/PopoverPlacement.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface NavigationMenu extends React.HTMLAttributes<HTMLElement> {
   "onbefore-close"?: (d: CustomEvent<MenuBeforeCloseEventDetail>) => void;

@@ -1,4 +1,5 @@
-import { BOOLEAN, BoolValue, type FieldConstraints } from "@furo/open-models";
+import type { BoolValue} from "@furo/open-models";
+import { BOOLEAN, type FieldConstraints } from "@furo/open-models";
 import RadioButton from "@ui5/webcomponents/dist/RadioButton.js";
 
 import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";

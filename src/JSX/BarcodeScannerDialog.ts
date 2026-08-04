@@ -4,7 +4,7 @@ import type {
   BarcodeScannerDialogScanErrorEventDetail,
   BarcodeScannerDialogScanSuccessEventDetail,
 } from "@ui5/webcomponents-fiori/dist/BarcodeScannerDialog.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { FuroFatString } from "@/models/index.js";
 

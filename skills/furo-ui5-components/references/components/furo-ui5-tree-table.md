@@ -11,6 +11,7 @@ use-when: Use when tabular data has parent-child relationships requiring expansi
 
 **Class:** `FuroUi5TreeTable`
 **Import:** `import "@furo/ui5/tree-table"`
+**Import type:** `import type { FuroUi5TreeTable } from "@furo/ui5/tree-table"`
 **Category:** Table
 
 **Related:** [`furo-ui5-tree`](furo-ui5-tree.md), [`furo-ui5-tree-item`](furo-ui5-tree-item.md)

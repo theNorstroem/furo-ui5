@@ -11,6 +11,7 @@ use-when: Use for displaying hierarchical data structures with expand/collapse.
 
 **Class:** `FuroUi5Tree`
 **Import:** `import "@furo/ui5/tree"`
+**Import type:** `import type { FuroUi5Tree } from "@furo/ui5/tree"`
 **Category:** List
 
 **Related:** [`furo-ui5-tree-item`](furo-ui5-tree-item.md)

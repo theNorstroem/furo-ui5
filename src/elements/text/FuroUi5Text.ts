@@ -1,9 +1,10 @@
-import { STRING, StringValue } from "@furo/open-models";
+import type { StringValue } from "@furo/open-models";
+import { STRING } from "@furo/open-models";
 import Text from "@ui5/webcomponents/dist/Text.js";
 
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
-import { FuroFatString } from "@/models";
+import type { FuroFatString } from "@/models";
 
 /**
  * The 'furo-ui5-text' is a display-only component which renders a bound `string` value as plain text,

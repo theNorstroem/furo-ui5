@@ -2,7 +2,7 @@
 
 import type { ListItemGroupMoveEventDetail } from "@ui5/webcomponents/dist/ListItemGroup.js";
 import type WrappingType from "@ui5/webcomponents/dist/types/WrappingType.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface SuggestionItemGroup extends React.HTMLAttributes<HTMLElement> {
   onmove?: (d: CustomEvent<ListItemGroupMoveEventDetail>) => void;

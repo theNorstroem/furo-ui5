@@ -1,5 +1,7 @@
 import { FuroUi5UserMenuAccount } from "./FuroUi5UserMenuAccount";
 
+export * from "./FuroUi5UserMenuAccount";
+
 FuroUi5UserMenuAccount.define();
 
 declare global {

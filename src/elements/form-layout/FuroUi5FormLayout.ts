@@ -1,6 +1,7 @@
 import "@furo/layout/furo-horizontal-flex";
 
-import { css, CSSResult, html, LitElement } from "lit";
+import type { CSSResult} from "lit";
+import { css, html, LitElement } from "lit";
 import { property, query } from "lit/decorators.js";
 
 /**

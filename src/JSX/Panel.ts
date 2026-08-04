@@ -2,7 +2,7 @@
 
 import type PanelAccessibleRole from "@ui5/webcomponents/dist/types/PanelAccessibleRole.js";
 import type TitleLevel from "@ui5/webcomponents/dist/types/TitleLevel.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Panel extends React.HTMLAttributes<HTMLElement> {
   ontoggle?: (d: CustomEvent) => void;

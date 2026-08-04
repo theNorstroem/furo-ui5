@@ -1,5 +1,7 @@
 import { FuroUi5MultiCombobox } from "./FuroUi5MultiCombobox";
 
+export * from "./FuroUi5MultiCombobox";
+
 FuroUi5MultiCombobox.define();
 
 declare global {

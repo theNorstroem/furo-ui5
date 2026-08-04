@@ -11,10 +11,11 @@ use-when: Use to show supporting content beside the main content that folds away
 
 **Class:** `FuroUi5DynamicSideContent`
 **Import:** `import "@furo/ui5/dynamic-side-content"`
+**Import type:** `import type { FuroUi5DynamicSideContent } from "@furo/ui5/dynamic-side-content"`
 **Extends:** `DynamicSideContent`
 **Category:** PageStructure
 
-**Related:** [`furo-ui5-flexible-column-layout`](furo-ui5-flexible-column-layout.md), [`furo-ui5-navigation-layout`](furo-ui5-navigation-layout.md), [`furo-ui5-page`](furo-ui5-page.md)
+**Related:** [`furo-ui5-flexible-column-layout`](furo-ui5-flexible-column-layout.md)
 
 ## Overview
 

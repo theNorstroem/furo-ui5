@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-side-navigation to offer one navigation tar
 
 **Class:** `FuroUi5SideNavigationItem`
 **Import:** `import "@furo/ui5/side-navigation-item"`
+**Import type:** `import type { FuroUi5SideNavigationItem } from "@furo/ui5/side-navigation-item"`
 **Extends:** `SideNavigationItem`
 **Category:** Navigation
 

@@ -30,7 +30,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5Markdown } from "./FuroUi5Markdown";
+import type { FuroUi5Markdown } from "./FuroUi5Markdown";
 
 import { delay } from "@/util/test-helpers/delay";
 

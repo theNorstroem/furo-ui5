@@ -1,5 +1,7 @@
 import { FuroUi5ShellBar } from "./FuroUi5ShellBar";
 
+export * from "./FuroUi5ShellBar";
+
 FuroUi5ShellBar.define();
 
 declare global {

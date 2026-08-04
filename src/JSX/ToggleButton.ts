@@ -5,7 +5,7 @@ import type { ButtonAccessibilityAttributes, ButtonClickEventDetail } from "@ui5
 import type ButtonAccessibleRole from "@ui5/webcomponents/dist/types/ButtonAccessibleRole.js";
 import type ButtonDesign from "@ui5/webcomponents/dist/types/ButtonDesign.js";
 import type ButtonType from "@ui5/webcomponents/dist/types/ButtonType.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { FuroFatBool } from "@/models/index.js";
 

@@ -11,6 +11,7 @@ use-when: Use when you need popover on desktop but fullscreen dialog on mobile.
 
 **Class:** `FuroUi5ResponsivePopover`
 **Import:** `import "@furo/ui5/responsive-popover"`
+**Import type:** `import type { FuroUi5ResponsivePopover } from "@furo/ui5/responsive-popover"`
 **Extends:** `ResponsivePopover`
 **Category:** Container
 

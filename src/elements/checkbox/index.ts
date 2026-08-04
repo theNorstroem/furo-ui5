@@ -1,5 +1,7 @@
 import { FuroUi5Checkbox } from "./FuroUi5Checkbox";
 
+export * from "./FuroUi5Checkbox";
+
 FuroUi5Checkbox.define();
 
 declare global {

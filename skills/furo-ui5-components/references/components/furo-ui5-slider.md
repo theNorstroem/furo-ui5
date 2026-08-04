@@ -11,6 +11,7 @@ use-when: Use for selecting a single numeric value from a continuous range.
 
 **Class:** `FuroUi5Slider`
 **Import:** `import "@furo/ui5/slider"`
+**Import type:** `import type { FuroUi5Slider } from "@furo/ui5/slider"`
 **Extends:** `Slider`
 **Category:** Form
 

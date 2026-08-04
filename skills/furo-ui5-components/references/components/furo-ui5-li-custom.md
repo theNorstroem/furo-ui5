@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-list when the row needs arbitrary markup instead o
 
 **Class:** `FuroUi5LiCustom`
 **Import:** `import "@furo/ui5/li-custom"`
+**Import type:** `import type { FuroUi5LiCustom } from "@furo/ui5/li-custom"`
 **Extends:** `ListItemCustom`
 **Category:** List
 

@@ -1,5 +1,7 @@
 import { FuroUi5TimePicker } from "./FuroUi5TimePicker";
 
+export * from "./FuroUi5TimePicker";
+
 FuroUi5TimePicker.define();
 
 declare global {

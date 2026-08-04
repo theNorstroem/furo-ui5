@@ -20,7 +20,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5Combobox } from "./FuroUi5Combobox";
+import type { FuroUi5Combobox } from "./FuroUi5Combobox";
 
 import type { SelectOption } from "@/lib/open-models/signatures";
 import { CubeOptions, type ICubeOptions } from "@/models/furoui5test/cube/CubeOptions";

@@ -11,10 +11,11 @@ use-when: Use for list-detail screens where the number of visible columns change
 
 **Class:** `FuroUi5FlexibleColumnLayout`
 **Import:** `import "@furo/ui5/flexible-column-layout"`
+**Import type:** `import type { FuroUi5FlexibleColumnLayout } from "@furo/ui5/flexible-column-layout"`
 **Extends:** `FlexibleColumnLayout`
 **Category:** PageStructure
 
-**Related:** [`furo-ui5-navigation-layout`](furo-ui5-navigation-layout.md), [`furo-ui5-page`](furo-ui5-page.md), [`furo-ui5-dynamic-side-content`](furo-ui5-dynamic-side-content.md)
+**Related:** [`furo-ui5-dynamic-side-content`](furo-ui5-dynamic-side-content.md)
 
 ## Overview
 

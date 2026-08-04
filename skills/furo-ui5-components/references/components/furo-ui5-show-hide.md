@@ -11,6 +11,7 @@ use-when: Use for toggling content visibility.
 
 **Class:** `FuroUi5ShowHide`
 **Import:** `import "@furo/ui5/show-hide"`
+**Import type:** `import type { FuroUi5ShowHide } from "@furo/ui5/show-hide"`
 **Category:** Layout
 
 **Related:** [`furo-ui5-expandable-text`](furo-ui5-expandable-text.md)

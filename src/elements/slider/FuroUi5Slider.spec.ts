@@ -39,7 +39,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5Slider } from "./FuroUi5Slider";
+import type { FuroUi5Slider } from "./FuroUi5Slider";
 
 import { createFatFloat } from "@/util/test-helpers/createFatFloat";
 import { delay } from "@/util/test-helpers/delay";

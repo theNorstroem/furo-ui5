@@ -11,6 +11,7 @@ use-when: Use between furo-ui5-toolbar items to separate groups of actions.
 
 **Class:** `FuroUi5ToolbarSeparator`
 **Import:** `import "@furo/ui5/toolbar-separator"`
+**Import type:** `import type { FuroUi5ToolbarSeparator } from "@furo/ui5/toolbar-separator"`
 **Extends:** `ToolbarSeparator`
 **Category:** Layout
 

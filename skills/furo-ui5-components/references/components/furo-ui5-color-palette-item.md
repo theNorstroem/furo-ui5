@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-color-palette / furo-ui5-color-palette-popo
 
 **Class:** `FuroUi5ColorPaletteItem`
 **Import:** `import "@furo/ui5/color-palette-item"`
+**Import type:** `import type { FuroUi5ColorPaletteItem } from "@furo/ui5/color-palette-item"`
 **Extends:** `ColorPaletteItem`
 **Category:** Form
 

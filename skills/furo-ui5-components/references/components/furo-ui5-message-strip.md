@@ -11,6 +11,7 @@ use-when: Use to render a bound string value as an inline status / info message.
 
 **Class:** `FuroUi5MessageStrip`
 **Import:** `import "@furo/ui5/message-strip"`
+**Import type:** `import type { FuroUi5MessageStrip } from "@furo/ui5/message-strip"`
 **Extends:** `MessageStrip`
 **Category:** Display
 

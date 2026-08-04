@@ -20,7 +20,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5DatePicker } from "./FuroUi5DatePicker";
+import type { FuroUi5DatePicker } from "./FuroUi5DatePicker";
 
 import { XDate } from "@/models/google/type/Date";
 import { delay } from "@/util/test-helpers/delay";

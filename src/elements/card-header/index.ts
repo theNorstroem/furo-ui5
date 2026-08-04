@@ -1,5 +1,7 @@
 import { FuroUi5CardHeader } from "./FuroUi5CardHeader";
 
+export * from "./FuroUi5CardHeader";
+
 FuroUi5CardHeader.define();
 
 declare global {

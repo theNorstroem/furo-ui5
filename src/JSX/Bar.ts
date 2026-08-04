@@ -2,7 +2,7 @@
 
 import type BarAccessibleRole from "@ui5/webcomponents/dist/types/BarAccessibleRole.js";
 import type BarDesign from "@ui5/webcomponents/dist/types/BarDesign.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Bar extends React.HTMLAttributes<HTMLElement> {
   // no events defined.

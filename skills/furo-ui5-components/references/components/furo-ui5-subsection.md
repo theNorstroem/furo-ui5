@@ -11,6 +11,7 @@ use-when: Use to organize content within furo-ui5-section.
 
 **Class:** `FuroUi5Subsection`
 **Import:** `import "@furo/ui5/subsection"`
+**Import type:** `import type { FuroUi5Subsection } from "@furo/ui5/subsection"`
 **Category:** Container
 
 **Related:** [`furo-ui5-section`](furo-ui5-section.md)

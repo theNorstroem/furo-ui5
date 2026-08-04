@@ -11,6 +11,7 @@ use-when: Use for each label-field pair in a form.
 
 **Class:** `FuroUi5FormRow`
 **Import:** `import "@furo/ui5/form-row"`
+**Import type:** `import type { FuroUi5FormRow } from "@furo/ui5/form-row"`
 **Category:** FormLayout
 
 **Related:** [`furo-ui5-form-group`](furo-ui5-form-group.md), [`furo-ui5-form-layout`](furo-ui5-form-layout.md), [`furo-ui5-label`](furo-ui5-label.md)

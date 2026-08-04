@@ -11,6 +11,7 @@ use-when: Use when both date and time need to be selected together.
 
 **Class:** `FuroUi5DateTimePicker`
 **Import:** `import "@furo/ui5/date-time-picker"`
+**Import type:** `import type { FuroUi5DateTimePicker } from "@furo/ui5/date-time-picker"`
 **Extends:** `DateTimePicker`
 **Category:** Form
 

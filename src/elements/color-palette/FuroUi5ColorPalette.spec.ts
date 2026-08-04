@@ -19,7 +19,7 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 
-import { FuroUi5ColorPalette } from "./FuroUi5ColorPalette";
+import type { FuroUi5ColorPalette } from "./FuroUi5ColorPalette";
 
 import { createFatString } from "@/util/test-helpers/createFatString";
 import { delay } from "@/util/test-helpers/delay";

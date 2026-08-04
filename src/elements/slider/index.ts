@@ -1,5 +1,7 @@
 import { FuroUi5Slider } from "./FuroUi5Slider";
 
+export * from "./FuroUi5Slider";
+
 FuroUi5Slider.define();
 
 declare global {

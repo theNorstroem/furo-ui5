@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-breadcrumbs to represent one trail entry.
 
 **Class:** `FuroUi5BreadcrumbsItem`
 **Import:** `import "@furo/ui5/breadcrumbs-item"`
+**Import type:** `import type { FuroUi5BreadcrumbsItem } from "@furo/ui5/breadcrumbs-item"`
 **Extends:** `BreadcrumbsItem`
 **Category:** Navigation
 

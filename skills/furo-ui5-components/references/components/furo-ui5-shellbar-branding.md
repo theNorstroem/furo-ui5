@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-shellbar to render the app logo and name as a clic
 
 **Class:** `FuroUi5ShellBarBranding`
 **Import:** `import "@furo/ui5/shellbar-branding"`
+**Import type:** `import type { FuroUi5ShellBarBranding } from "@furo/ui5/shellbar-branding"`
 **Extends:** `ShellBarBranding`
 **Category:** PageStructure
 

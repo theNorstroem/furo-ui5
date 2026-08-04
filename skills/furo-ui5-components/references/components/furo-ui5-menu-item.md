@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-context-menu to offer one action.
 
 **Class:** `FuroUi5MenuItem`
 **Import:** `import "@furo/ui5/menu-item"`
+**Import type:** `import type { FuroUi5MenuItem } from "@furo/ui5/menu-item"`
 **Extends:** `MenuItem`
 **Category:** Navigation
 

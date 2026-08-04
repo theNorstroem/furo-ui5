@@ -4,7 +4,7 @@ import type { STRING, StringValue } from "@furo/open-models/";
 import type { ComboBoxSelectionChangeEventDetail } from "@ui5/webcomponents/dist/ComboBox.js";
 import type ComboBoxFilter from "@ui5/webcomponents/dist/types/ComboBoxFilter.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { OptionLikeList, SelectOption } from "../index";
 

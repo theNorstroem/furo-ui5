@@ -11,6 +11,7 @@ use-when: Use for text-based navigation or triggering actions.
 
 **Class:** `FuroUi5Link`
 **Import:** `import "@furo/ui5/link"`
+**Import type:** `import type { FuroUi5Link } from "@furo/ui5/link"`
 **Extends:** `Link`
 **Category:** Navigation
 

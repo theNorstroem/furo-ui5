@@ -11,6 +11,7 @@ use-when: Use when the state change should take effect immediately without form 
 
 **Class:** `FuroUi5Switch`
 **Import:** `import "@furo/ui5/switch"`
+**Import type:** `import type { FuroUi5Switch } from "@furo/ui5/switch"`
 **Extends:** `Switch`
 **Category:** Form
 

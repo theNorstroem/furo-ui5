@@ -11,6 +11,7 @@ use-when: Use between furo-ui5-tab elements to visually separate groups of tabs.
 
 **Class:** `FuroUi5TabSeparator`
 **Import:** `import "@furo/ui5/tab-separator"`
+**Import type:** `import type { FuroUi5TabSeparator } from "@furo/ui5/tab-separator"`
 **Extends:** `TabSeparator`
 **Category:** Container
 

@@ -11,10 +11,11 @@ use-when: Use as the main navigation of an application, usually inside furo-ui5-
 
 **Class:** `FuroUi5SideNavigation`
 **Import:** `import "@furo/ui5/side-navigation"`
+**Import type:** `import type { FuroUi5SideNavigation } from "@furo/ui5/side-navigation"`
 **Extends:** `SideNavigation`
 **Category:** Navigation
 
-**Related:** [`furo-ui5-side-navigation-item`](furo-ui5-side-navigation-item.md), [`furo-ui5-side-navigation-group`](furo-ui5-side-navigation-group.md), [`furo-ui5-navigation-layout`](furo-ui5-navigation-layout.md)
+**Related:** [`furo-ui5-side-navigation-item`](furo-ui5-side-navigation-item.md), [`furo-ui5-side-navigation-group`](furo-ui5-side-navigation-group.md)
 
 ## Overview
 

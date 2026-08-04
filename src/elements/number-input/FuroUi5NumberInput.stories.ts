@@ -3,6 +3,7 @@ import "@/elements/number-input";
 import "@/elements/form-row";
 import "@/elements/label";
 import "@/elements/icon";
+import "@/type-renderers/display-int32";
 
 import { FLOAT, INT32 } from "@furo/open-models";
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
@@ -79,7 +80,7 @@ export const Default: StoryObj = {
         value-state="${ifDefined(renderArgs.valueState)}"
         >${unsafeHTML(renderArgs.iconSlot)}${unsafeHTML(renderArgs.defaultSlot)}${unsafeHTML(renderArgs.valueStateMessageSlot)}
       </furo-ui5-number-input>
-
+      <display-int32 .model="${intVal}"></display-int32>
       <hr />
       Float
       <hr />

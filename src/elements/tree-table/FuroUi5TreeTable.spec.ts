@@ -19,7 +19,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5TreeTable } from "./FuroUi5TreeTable";
+import type { FuroUi5TreeTable } from "./FuroUi5TreeTable";
 import { TreeTableMode } from "./TreeTableMode";
 
 import { delay } from "@/util/test-helpers/delay";

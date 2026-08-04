@@ -1,5 +1,7 @@
 import { FuroUi5Tabcontainer } from "./FuroUi5Tabcontainer";
 
+export * from "./FuroUi5Tabcontainer";
+
 FuroUi5Tabcontainer.define();
 
 declare global {

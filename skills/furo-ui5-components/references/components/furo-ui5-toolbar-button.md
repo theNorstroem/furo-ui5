@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-toolbar so the action participates in overf
 
 **Class:** `FuroUi5ToolbarButton`
 **Import:** `import "@furo/ui5/toolbar-button"`
+**Import type:** `import type { FuroUi5ToolbarButton } from "@furo/ui5/toolbar-button"`
 **Extends:** `ToolbarButton`
 **Category:** Button
 

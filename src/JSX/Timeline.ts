@@ -2,7 +2,7 @@
 
 import type TimelineGrowingMode from "@ui5/webcomponents-fiori/dist/types/TimelineGrowingMode.js";
 import type TimelineLayout from "@ui5/webcomponents-fiori/dist/types/TimelineLayout.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Timeline extends React.HTMLAttributes<HTMLElement> {
   "onload-more"?: (d: CustomEvent) => void;

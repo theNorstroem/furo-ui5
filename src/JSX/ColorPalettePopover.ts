@@ -2,7 +2,7 @@
 import type { ARRAY, STRING, StringValue } from "@furo/open-models/";
 import type { ColorPalettePopoverItemClickEventDetail } from "@ui5/webcomponents/dist/ColorPalettePopover.js";
 import type PopoverPlacement from "@ui5/webcomponents/dist/types/PopoverPlacement.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { FuroFatString } from "@/models/index.js";
 

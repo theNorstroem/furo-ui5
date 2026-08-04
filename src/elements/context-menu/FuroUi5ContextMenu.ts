@@ -3,10 +3,11 @@ import "@ui5/webcomponents/dist/MenuSeparator.js";
 
 import { ARRAY } from "@furo/open-models";
 import Menu, { type MenuItemClickEventDetail } from "@ui5/webcomponents/dist/Menu.js";
-import MenuItem from "@ui5/webcomponents/dist/MenuItem.js";
-import MenuSeparator from "@ui5/webcomponents/dist/MenuSeparator.js";
+import type MenuItem from "@ui5/webcomponents/dist/MenuItem.js";
+import type MenuSeparator from "@ui5/webcomponents/dist/MenuSeparator.js";
 
-import { type IMenuitem, Menuitem } from "@/models/furoui5/Menuitem";
+import type { Menuitem } from "@/models/furoui5/Menuitem";
+import type { IMenuitem } from "@/models/furoui5/Menuitem";
 
 export type MenuModel = ARRAY<Menuitem, IMenuitem> | Menuitem;
 

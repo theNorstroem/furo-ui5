@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-toolbar to offer a view or filter switch.
 
 **Class:** `FuroUi5ToolbarSelect`
 **Import:** `import "@furo/ui5/toolbar-select"`
+**Import type:** `import type { FuroUi5ToolbarSelect } from "@furo/ui5/toolbar-select"`
 **Extends:** `ToolbarSelect`
 **Category:** Layout
 

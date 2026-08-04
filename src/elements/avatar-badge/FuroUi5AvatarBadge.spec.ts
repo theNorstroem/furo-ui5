@@ -13,7 +13,7 @@ import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, describe, it } from "vitest";
 
-import { FuroUi5AvatarBadge } from "./FuroUi5AvatarBadge";
+import type { FuroUi5AvatarBadge } from "./FuroUi5AvatarBadge";
 
 describe("FuroUi5AvatarBadge", () => {
   describe("element identity [TEMPLATE]", () => {

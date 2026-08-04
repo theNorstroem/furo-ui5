@@ -2,7 +2,7 @@
 
 import type ToolbarAlign from "@ui5/webcomponents/dist/types/ToolbarAlign.js";
 import type ToolbarDesign from "@ui5/webcomponents/dist/types/ToolbarDesign.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Toolbar extends React.HTMLAttributes<HTMLElement> {
   // no events defined.

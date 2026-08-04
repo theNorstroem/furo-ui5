@@ -2,7 +2,7 @@
 
 import type TitleLevel from "@ui5/webcomponents/dist/types/TitleLevel.js";
 import type WrappingType from "@ui5/webcomponents/dist/types/WrappingType.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Title extends React.HTMLAttributes<HTMLElement> {
   // no events defined.

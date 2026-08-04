@@ -2,7 +2,11 @@ import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, describe, it } from "vitest";
 
-import { NL2BRHelper } from "./nl2br-test-helper";
+// The bare import is load-bearing: this module defines <nl2br-test-helper>. A lone
+// `import type` is erased, so the element would never upgrade and shadowRoot stays null.
+import "./nl2br-test-helper";
+
+import type { NL2BRHelper } from "./nl2br-test-helper";
 
 import { delay } from "@/util/test-helpers/delay";
 

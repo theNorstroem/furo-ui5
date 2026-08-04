@@ -2,7 +2,7 @@
 import type { BOOLEAN, BoolValue } from "@furo/open-models/";
 import type WrappingType from "@ui5/webcomponents/dist/types/WrappingType.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { FuroFatBool } from "@/models/index.js";
 

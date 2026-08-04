@@ -11,6 +11,7 @@ use-when: Use for independent on/off choices or multiple selections from a group
 
 **Class:** `FuroUi5Checkbox`
 **Import:** `import "@furo/ui5/checkbox"`
+**Import type:** `import type { FuroUi5Checkbox } from "@furo/ui5/checkbox"`
 **Extends:** `CheckBox`
 **Category:** Form
 

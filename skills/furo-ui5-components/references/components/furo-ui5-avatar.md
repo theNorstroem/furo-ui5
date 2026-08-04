@@ -11,6 +11,7 @@ use-when: Use to render a person's initials from a bound string value.
 
 **Class:** `FuroUi5Avatar`
 **Import:** `import "@furo/ui5/avatar"`
+**Import type:** `import type { FuroUi5Avatar } from "@furo/ui5/avatar"`
 **Extends:** `Avatar`
 **Category:** Display
 

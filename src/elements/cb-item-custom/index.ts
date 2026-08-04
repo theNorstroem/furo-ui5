@@ -1,5 +1,7 @@
 import { FuroUi5CbItemCustom } from "./FuroUi5CbItemCustom";
 
+export * from "./FuroUi5CbItemCustom";
+
 FuroUi5CbItemCustom.define();
 
 declare global {

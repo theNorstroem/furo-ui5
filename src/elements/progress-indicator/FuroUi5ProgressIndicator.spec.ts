@@ -42,7 +42,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5ProgressIndicator } from "./FuroUi5ProgressIndicator";
+import type { FuroUi5ProgressIndicator } from "./FuroUi5ProgressIndicator";
 
 import { createFatFloat } from "@/util/test-helpers/createFatFloat";
 import { delay } from "@/util/test-helpers/delay";

@@ -3,7 +3,7 @@
 import type { PopupBeforeCloseEventDetail } from "@ui5/webcomponents/dist/Popup.js";
 import type PopupAccessibleRole from "@ui5/webcomponents/dist/types/PopupAccessibleRole.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Dialog extends React.HTMLAttributes<HTMLElement> {
   "onbefore-close"?: (d: CustomEvent<PopupBeforeCloseEventDetail>) => void;

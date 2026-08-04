@@ -11,6 +11,7 @@ use-when: Use for switching between related views or selecting one/several value
 
 **Class:** `FuroUi5SegmentedButton`
 **Import:** `import "@furo/ui5/segmented-button"`
+**Import type:** `import type { FuroUi5SegmentedButton } from "@furo/ui5/segmented-button"`
 **Extends:** `SegmentedButton`
 **Category:** Button
 

@@ -1,7 +1,8 @@
 import "@ui5/webcomponents/dist/Option.js";
 import "@/elements/option";
 
-import { type FieldConstraints, STRING, StringValue } from "@furo/open-models";
+import type { StringValue } from "@furo/open-models";
+import { type FieldConstraints, STRING } from "@furo/open-models";
 import Select from "@ui5/webcomponents/dist/Select.js";
 
 import type { FuroUi5Option } from "@/elements/option/FuroUi5Option";
@@ -11,7 +12,7 @@ import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import type { OptionLikeList, SelectOption } from "@/lib/open-models/signatures";
 import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
-import { FuroFatString } from "@/models";
+import type { FuroFatString } from "@/models";
 
 /**
  *

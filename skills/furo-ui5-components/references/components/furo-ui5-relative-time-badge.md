@@ -11,6 +11,7 @@ use-when: Use to show a timestamp as a human-friendly relative time badge.
 
 **Class:** `FuroUi5RelativeTimeBadge`
 **Import:** `import "@furo/ui5/relative-time-badge"`
+**Import type:** `import type { FuroUi5RelativeTimeBadge } from "@furo/ui5/relative-time-badge"`
 **Extends:** `Tag`
 **Category:** Display
 

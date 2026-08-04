@@ -1,5 +1,7 @@
 import { FuroUi5StepInput } from "./FuroUi5StepInput";
 
+export * from "./FuroUi5StepInput";
+
 FuroUi5StepInput.define();
 
 declare global {

@@ -5,7 +5,7 @@ import type InteractiveAreaSize from "@ui5/webcomponents/dist/types/InteractiveA
 import type LinkAccessibleRole from "@ui5/webcomponents/dist/types/LinkAccessibleRole.js";
 import type LinkDesign from "@ui5/webcomponents/dist/types/LinkDesign.js";
 import type WrappingType from "@ui5/webcomponents/dist/types/WrappingType.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Link extends React.HTMLAttributes<HTMLElement> {
   onclick?: (d: CustomEvent<LinkClickEventDetail>) => void;

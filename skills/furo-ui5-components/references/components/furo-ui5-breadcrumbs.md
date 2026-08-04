@@ -11,6 +11,7 @@ use-when: Use to show a navigation trail; provide breadcrumb items as children.
 
 **Class:** `FuroUi5Breadcrumbs`
 **Import:** `import "@furo/ui5/breadcrumbs"`
+**Import type:** `import type { FuroUi5Breadcrumbs } from "@furo/ui5/breadcrumbs"`
 **Extends:** `Breadcrumbs`
 **Category:** Navigation
 

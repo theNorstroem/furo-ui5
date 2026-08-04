@@ -11,6 +11,7 @@ use-when: Use to explain an empty list, a failed search or an error, with an opt
 
 **Class:** `FuroUi5IllustratedMessage`
 **Import:** `import "@furo/ui5/illustrated-message"`
+**Import type:** `import type { FuroUi5IllustratedMessage } from "@furo/ui5/illustrated-message"`
 **Extends:** `IllustratedMessage`
 **Category:** Feedback
 

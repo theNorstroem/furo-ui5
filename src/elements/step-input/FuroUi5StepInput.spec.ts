@@ -30,7 +30,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5StepInput } from "./FuroUi5StepInput";
+import type { FuroUi5StepInput } from "./FuroUi5StepInput";
 
 import { createFatInt32 } from "@/util/test-helpers/createFatInt32";
 import { delay } from "@/util/test-helpers/delay";

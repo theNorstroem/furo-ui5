@@ -6,7 +6,7 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
 
-import { FuroUi5FormRow } from "./FuroUi5FormRow";
+import type { FuroUi5FormRow } from "./FuroUi5FormRow";
 
 chai.use(chaiA11yAxe);
 

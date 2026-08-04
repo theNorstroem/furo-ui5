@@ -7,9 +7,9 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
 
-import { FuroUi5ButtonBadge } from "./FuroUi5ButtonBadge";
+import type { FuroUi5ButtonBadge } from "./FuroUi5ButtonBadge";
 
-import { FuroUi5Button } from "@/elements/button/FuroUi5Button";
+import type { FuroUi5Button } from "@/elements/button/FuroUi5Button";
 import { delay } from "@/util/test-helpers/delay";
 
 chai.use(chaiA11yAxe);

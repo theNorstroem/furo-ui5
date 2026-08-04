@@ -7,7 +7,7 @@ import type ListItemAccessibleRole from "@ui5/webcomponents/dist/types/ListItemA
 import type ListItemType from "@ui5/webcomponents/dist/types/ListItemType.js";
 import type WrappingType from "@ui5/webcomponents/dist/types/WrappingType.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Li extends React.HTMLAttributes<HTMLElement> {
   onclick?: (d: CustomEvent<ListItemBaseClickEventDetail>) => void;

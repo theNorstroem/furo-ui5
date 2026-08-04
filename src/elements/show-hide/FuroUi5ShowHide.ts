@@ -1,5 +1,6 @@
 // import AnimationMode from "@ui5/webcomponents-base/dist/types/AnimationMode.js";
-import { BOOLEAN, BoolValue, type FieldConstraints } from "@furo/open-models";
+import type { BoolValue} from "@furo/open-models";
+import { BOOLEAN, type FieldConstraints } from "@furo/open-models";
 import { getAnimationMode } from "@ui5/webcomponents-base/dist/config/AnimationMode.js";
 import { css, html, LitElement } from "lit";
 import { property, query } from "lit/decorators.js";
@@ -7,7 +8,7 @@ import { property, query } from "lit/decorators.js";
 import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
-import { FuroFatBool } from "@/models";
+import type { FuroFatBool } from "@/models";
 
 /**
  * @class

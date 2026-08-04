@@ -1,5 +1,7 @@
 import { FuroUi5RatingIndicator } from "./FuroUi5RatingIndicator";
 
+export * from "./FuroUi5RatingIndicator";
+
 FuroUi5RatingIndicator.define();
 
 declare global {

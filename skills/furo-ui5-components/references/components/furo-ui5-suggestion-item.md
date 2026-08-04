@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-text-input or furo-ui5-multi-input to offer an aut
 
 **Class:** `FuroUi5SuggestionItem`
 **Import:** `import "@furo/ui5/suggestion-item"`
+**Import type:** `import type { FuroUi5SuggestionItem } from "@furo/ui5/suggestion-item"`
 **Extends:** `SuggestionItem`
 **Category:** Form
 

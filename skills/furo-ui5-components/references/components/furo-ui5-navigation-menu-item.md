@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-navigation-menu to offer one navigation tar
 
 **Class:** `FuroUi5NavigationMenuItem`
 **Import:** `import "@furo/ui5/navigation-menu-item"`
+**Import type:** `import type { FuroUi5NavigationMenuItem } from "@furo/ui5/navigation-menu-item"`
 **Extends:** `NavigationMenuItem`
 **Category:** Navigation
 

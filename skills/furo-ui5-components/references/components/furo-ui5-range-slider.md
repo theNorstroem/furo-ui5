@@ -11,6 +11,7 @@ use-when: Use for selecting a numeric range between two values.
 
 **Class:** `FuroUi5RangeSlider`
 **Import:** `import "@furo/ui5/range-slider"`
+**Import type:** `import type { FuroUi5RangeSlider } from "@furo/ui5/range-slider"`
 **Extends:** `RangeSlider`
 **Category:** Form
 

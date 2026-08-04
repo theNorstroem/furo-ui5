@@ -1,5 +1,7 @@
 import { FuroUi5Label } from "./FuroUi5Label";
 
+export * from "./FuroUi5Label";
+
 FuroUi5Label.define();
 
 declare global {

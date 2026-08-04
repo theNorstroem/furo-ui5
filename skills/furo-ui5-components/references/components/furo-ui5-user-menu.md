@@ -11,6 +11,7 @@ use-when: Use for user account actions like profile, settings, and logout.
 
 **Class:** `FuroUi5UserMenu`
 **Import:** `import "@furo/ui5/user-menu"`
+**Import type:** `import type { FuroUi5UserMenu } from "@furo/ui5/user-menu"`
 **Extends:** `UserMenu`
 **Category:** PageStructure
 

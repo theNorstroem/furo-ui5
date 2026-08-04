@@ -2,7 +2,7 @@
 
 import type { ListItemBaseClickEventDetail } from "@ui5/webcomponents/dist/ListItemBase.js";
 import type WrappingType from "@ui5/webcomponents/dist/types/WrappingType.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface LiGroupHeader extends React.HTMLAttributes<HTMLElement> {
   onclick?: (d: CustomEvent<ListItemBaseClickEventDetail>) => void;

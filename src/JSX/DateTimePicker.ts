@@ -5,7 +5,7 @@ import type { DatePickerChangeEventDetail, DatePickerInputEventDetail, DatePicke
 import type CalendarWeekNumbering from "@ui5/webcomponents/dist/types/CalendarWeekNumbering.js";
 import type CalendarType from "@ui5/webcomponents-base/dist/types/CalendarType.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface DateTimePicker extends React.HTMLAttributes<HTMLElement> {
   onchange?: (d: CustomEvent<DatePickerChangeEventDetail>) => void;

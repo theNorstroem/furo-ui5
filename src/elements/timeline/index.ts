@@ -1,5 +1,7 @@
 import { FuroUi5Timeline } from "./FuroUi5Timeline";
 
+export * from "./FuroUi5Timeline";
+
 FuroUi5Timeline.define();
 
 declare global {

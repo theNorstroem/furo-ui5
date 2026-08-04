@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-wizard to define one stage of the process.
 
 **Class:** `FuroUi5WizardStep`
 **Import:** `import "@furo/ui5/wizard-step"`
+**Import type:** `import type { FuroUi5WizardStep } from "@furo/ui5/wizard-step"`
 **Extends:** `WizardStep`
 **Category:** Container
 

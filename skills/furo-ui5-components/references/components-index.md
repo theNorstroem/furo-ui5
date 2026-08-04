@@ -18,8 +18,6 @@
 - [`furo-ui5-bar`](components/furo-ui5-bar.md) *(bar, header, footer, subheader, toolbar, layout)* — Use as the header or footer of a page, dialog or card.
 - [`furo-ui5-dynamic-side-content`](components/furo-ui5-dynamic-side-content.md) *(side, content, responsive, aside, layout, split)* — Use to show supporting content beside the main content that folds away on small screens.
 - [`furo-ui5-flexible-column-layout`](components/furo-ui5-flexible-column-layout.md) *(layout, columns, master-detail, split, responsive, fcl)* — Use for list-detail screens where the number of visible columns changes with the workflow.
-- [`furo-ui5-navigation-layout`](components/furo-ui5-navigation-layout.md) *(layout, navigation, shell, sidebar, app, frame)* — Use as the top-level frame of an application with a collapsible side navigation.
-- [`furo-ui5-page`](components/furo-ui5-page.md) *(page, layout, header, footer, content, scroll)* — Use as the outermost container of a screen that needs a fixed header and footer.
 - [`furo-ui5-shellbar`](components/furo-ui5-shellbar.md) *(shellbar, header, app-bar, navigation, branding, toolbar)* — Use as the main application header for branding and global navigation.
 - [`furo-ui5-shellbar-branding`](components/furo-ui5-shellbar-branding.md) *(shellbar, branding, logo, product, title)* — Use inside furo-ui5-shellbar to render the app logo and name as a clickable brand area.
 - [`furo-ui5-shellbar-item`](components/furo-ui5-shellbar-item.md) *(shellbar-item, action, header, button, icon)* — Use as children of furo-ui5-shellbar for custom header actions.

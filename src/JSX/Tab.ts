@@ -2,7 +2,7 @@
 
 import type { TabClickEventDetail } from "@ui5/webcomponents/dist/Tab.js";
 import type SemanticColor from "@ui5/webcomponents/dist/types/SemanticColor.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Tab extends React.HTMLAttributes<HTMLElement> {
   onclick?: (d: CustomEvent<TabClickEventDetail>) => void;

@@ -7,7 +7,7 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
 
-import { FuroUi5Button } from "./FuroUi5Button";
+import type { FuroUi5Button } from "./FuroUi5Button";
 
 import { delay } from "@/util/test-helpers/delay";
 

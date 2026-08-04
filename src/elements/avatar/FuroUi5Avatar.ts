@@ -1,9 +1,10 @@
-import { STRING, StringValue } from "@furo/open-models";
+import type { StringValue } from "@furo/open-models";
+import { STRING } from "@furo/open-models";
 import Avatar from "@ui5/webcomponents/dist/Avatar.js";
 
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
-import { FuroFatString } from "@/models";
+import type { FuroFatString } from "@/models";
 
 /**
  * The 'furo-ui5-avatar' is a display-only component which renders a bound `string` value as the

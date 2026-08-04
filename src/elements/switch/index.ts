@@ -1,5 +1,7 @@
 import { FuroUi5Switch } from "./FuroUi5Switch";
 
+export * from "./FuroUi5Switch";
+
 FuroUi5Switch.define();
 
 declare global {

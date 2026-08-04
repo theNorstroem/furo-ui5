@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-toolbar to right-align the items that follow it.
 
 **Class:** `FuroUi5ToolbarSpacer`
 **Import:** `import "@furo/ui5/toolbar-spacer"`
+**Import type:** `import type { FuroUi5ToolbarSpacer } from "@furo/ui5/toolbar-spacer"`
 **Extends:** `ToolbarSpacer`
 **Category:** Layout
 

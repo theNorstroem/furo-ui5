@@ -7,10 +7,10 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
 
-import { FuroUi5HeaderPanel } from "./FuroUi5HeaderPanel";
+import type { FuroUi5HeaderPanel } from "./FuroUi5HeaderPanel";
 
-import { FuroUi5Button } from "@/elements/button/FuroUi5Button";
-import { FuroUi5Icon } from "@/elements/icon/FuroUi5Icon";
+import type { FuroUi5Button } from "@/elements/button/FuroUi5Button";
+import type { FuroUi5Icon } from "@/elements/icon/FuroUi5Icon";
 import { delay } from "@/util/test-helpers/delay";
 
 chai.use(chaiA11yAxe);

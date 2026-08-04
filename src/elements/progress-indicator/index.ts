@@ -1,5 +1,7 @@
 import { FuroUi5ProgressIndicator } from "./FuroUi5ProgressIndicator";
 
+export * from "./FuroUi5ProgressIndicator";
+
 FuroUi5ProgressIndicator.define();
 
 declare global {

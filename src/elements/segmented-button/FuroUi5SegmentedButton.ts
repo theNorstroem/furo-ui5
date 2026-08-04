@@ -1,7 +1,8 @@
 import "@ui5/webcomponents/dist/SegmentedButtonItem.js";
 import "@/elements/segmented-button-item";
 
-import { ARRAY, ENUM, type FieldConstraints, STRING, StringValue } from "@furo/open-models";
+import type { ENUM, StringValue } from "@furo/open-models";
+import { ARRAY, type FieldConstraints, STRING } from "@furo/open-models";
 import SegmentedButton from "@ui5/webcomponents/dist/SegmentedButton.js";
 import type { ISegmentedButtonItem, SegmentedButtonSelectionChangeEventDetail } from "@ui5/webcomponents/dist/SegmentedButton.js";
 import SegmentedButtonSelectionMode from "@ui5/webcomponents/dist/types/SegmentedButtonSelectionMode.js";

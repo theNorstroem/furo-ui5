@@ -1,5 +1,7 @@
 import { FuroUi5SideNavigationGroup } from "./FuroUi5SideNavigationGroup";
 
+export * from "./FuroUi5SideNavigationGroup";
+
 FuroUi5SideNavigationGroup.define();
 
 declare global {

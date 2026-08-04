@@ -5,7 +5,7 @@ import type PopoverHorizontalAlign from "@ui5/webcomponents/dist/types/PopoverHo
 import type PopoverPlacement from "@ui5/webcomponents/dist/types/PopoverPlacement.js";
 import type PopoverVerticalAlign from "@ui5/webcomponents/dist/types/PopoverVerticalAlign.js";
 import type PopupAccessibleRole from "@ui5/webcomponents/dist/types/PopupAccessibleRole.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface ResponsivePopover extends React.HTMLAttributes<HTMLElement> {
   "onbefore-close"?: (d: CustomEvent<PopupBeforeCloseEventDetail>) => void;

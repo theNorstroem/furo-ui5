@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-text-input to group suggestions into labelled sect
 
 **Class:** `FuroUi5SuggestionItemGroup`
 **Import:** `import "@furo/ui5/suggestion-item-group"`
+**Import type:** `import type { FuroUi5SuggestionItemGroup } from "@furo/ui5/suggestion-item-group"`
 **Extends:** `SuggestionItemGroup`
 **Category:** Form
 

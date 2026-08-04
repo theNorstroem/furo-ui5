@@ -11,6 +11,7 @@ use-when: Use for contextual information or actions that don't require modal blo
 
 **Class:** `FuroUi5Popover`
 **Import:** `import "@furo/ui5/popover"`
+**Import type:** `import type { FuroUi5Popover } from "@furo/ui5/popover"`
 **Extends:** `Popover`
 **Category:** Container
 

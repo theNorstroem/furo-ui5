@@ -11,6 +11,7 @@ use-when: Use for action menus, context menus, or hierarchical navigation.
 
 **Class:** `FuroUi5ContextMenu`
 **Import:** `import "@furo/ui5/context-menu"`
+**Import type:** `import type { FuroUi5ContextMenu } from "@furo/ui5/context-menu"`
 **Extends:** `Menu`
 **Category:** Navigation
 

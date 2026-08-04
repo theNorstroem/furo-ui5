@@ -1,7 +1,7 @@
-import { STRING, StringValue } from "@furo/open-models";
+import type { STRING, StringValue } from "@furo/open-models";
 
 import type { FatHandler } from "@/lib/open-models/FatHandler";
-import { type FuroFatString } from "@/models";
+import type { FuroFatString } from "@/models";
 
 /**
  * Generic readeer and writers for string like models

@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-multi-combobox to group suggestions into labelled 
 
 **Class:** `FuroUi5McbItemGroup`
 **Import:** `import "@furo/ui5/mcb-item-group"`
+**Import type:** `import type { FuroUi5McbItemGroup } from "@furo/ui5/mcb-item-group"`
 **Extends:** `MultiComboBoxItemGroup`
 **Category:** Form
 

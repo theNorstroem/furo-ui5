@@ -1,11 +1,12 @@
-import { STRING, type FieldConstraints } from "@furo/open-models";
+import type { STRING} from "@furo/open-models";
+import type { FieldConstraints } from "@furo/open-models";
 import DatePicker from "@ui5/webcomponents/dist/DatePicker.js";
 
 import { DateAndTimeReaderWriters } from "@/lib/open-models/DateAndTimeReaderWriter";
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
-import { XDate as FuroXDate } from "@/models/furo/type/Date";
+import type { XDate as FuroXDate } from "@/models/furo/type/Date";
 import { XDate } from "@/models/google/type/Date";
 
 /**

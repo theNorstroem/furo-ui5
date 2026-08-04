@@ -19,7 +19,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5RelativeTimeDisplay } from "./FuroUi5RelativeTimeDisplay";
+import type { FuroUi5RelativeTimeDisplay } from "./FuroUi5RelativeTimeDisplay";
 
 import { delay } from "@/util/test-helpers/delay";
 

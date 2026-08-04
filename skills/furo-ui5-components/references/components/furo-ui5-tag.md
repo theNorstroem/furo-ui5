@@ -11,6 +11,7 @@ use-when: Use to render a bound string value as a styled status tag.
 
 **Class:** `FuroUi5Tag`
 **Import:** `import "@furo/ui5/tag"`
+**Import type:** `import type { FuroUi5Tag } from "@furo/ui5/tag"`
 **Extends:** `Tag`
 **Category:** Display
 

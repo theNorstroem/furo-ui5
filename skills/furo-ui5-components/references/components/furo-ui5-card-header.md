@@ -11,6 +11,7 @@ use-when: Use in the header slot of furo-ui5-card to show a title, subtitle and 
 
 **Class:** `FuroUi5CardHeader`
 **Import:** `import "@furo/ui5/card-header"`
+**Import type:** `import type { FuroUi5CardHeader } from "@furo/ui5/card-header"`
 **Extends:** `CardHeader`
 **Category:** Container
 

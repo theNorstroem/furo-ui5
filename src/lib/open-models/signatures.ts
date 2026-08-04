@@ -1,4 +1,4 @@
-import { ARRAY, FieldNode, STRING } from "@furo/open-models";
+import type { ARRAY, FieldNode, STRING } from "@furo/open-models";
 
 /**
  * A list item which fits in to an option component

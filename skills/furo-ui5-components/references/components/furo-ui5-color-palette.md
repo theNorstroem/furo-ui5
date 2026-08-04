@@ -11,6 +11,7 @@ use-when: Use to let users pick a color from a predefined set stored as a string
 
 **Class:** `FuroUi5ColorPalette`
 **Import:** `import "@furo/ui5/color-palette"`
+**Import type:** `import type { FuroUi5ColorPalette } from "@furo/ui5/color-palette"`
 **Extends:** `ColorPalette`
 **Category:** Form
 

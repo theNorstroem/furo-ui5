@@ -6,7 +6,7 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
 
-import { FuroUi5Dialog } from "./FuroUi5Dialog";
+import type { FuroUi5Dialog } from "./FuroUi5Dialog";
 
 chai.use(chaiA11yAxe);
 

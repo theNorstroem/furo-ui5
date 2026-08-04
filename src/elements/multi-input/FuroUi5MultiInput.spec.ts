@@ -19,7 +19,7 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterEach, assert, beforeEach, chai, describe, it, test } from "vitest";
 
-import { FuroUi5MultiInput } from "./FuroUi5MultiInput";
+import type { FuroUi5MultiInput } from "./FuroUi5MultiInput";
 
 import { FuroFatString, type IFuroFatString } from "@/models";
 import { delay } from "@/util/test-helpers/delay";

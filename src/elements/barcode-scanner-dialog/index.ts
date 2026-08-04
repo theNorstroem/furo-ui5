@@ -1,5 +1,7 @@
 import { FuroUi5BarcodeScannerDialog } from "./FuroUi5BarcodeScannerDialog";
 
+export * from "./FuroUi5BarcodeScannerDialog";
+
 FuroUi5BarcodeScannerDialog.define();
 
 declare global {

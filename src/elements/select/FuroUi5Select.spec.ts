@@ -22,7 +22,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5Select } from "./FuroUi5Select";
+import type { FuroUi5Select } from "./FuroUi5Select";
 
 import type { SelectOption } from "@/lib/open-models/signatures";
 import { CubeOptions, type ICubeOptions } from "@/models/furoui5test/cube/CubeOptions";

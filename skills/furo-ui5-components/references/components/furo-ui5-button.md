@@ -11,6 +11,7 @@ use-when: Use for primary and secondary actions in forms, toolbars, and dialogs.
 
 **Class:** `FuroUi5Button`
 **Import:** `import "@furo/ui5/button"`
+**Import type:** `import type { FuroUi5Button } from "@furo/ui5/button"`
 **Extends:** `Button`
 **Category:** Button
 

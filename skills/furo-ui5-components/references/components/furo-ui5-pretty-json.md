@@ -11,6 +11,7 @@ use-when: Use to render JSON data in a readable, indented form.
 
 **Class:** `FuroUi5PrettyJson`
 **Import:** `import "@furo/ui5/pretty-json"`
+**Import type:** `import type { FuroUi5PrettyJson } from "@furo/ui5/pretty-json"`
 **Category:** Display
 
 **Related:** [`furo-ui5-markdown`](furo-ui5-markdown.md)

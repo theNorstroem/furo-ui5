@@ -11,6 +11,7 @@ use-when: Use as children of furo-ui5-segmented-button.
 
 **Class:** `FuroUi5SegmentedButtonItem`
 **Import:** `import "@furo/ui5/segmented-button-item"`
+**Import type:** `import type { FuroUi5SegmentedButtonItem } from "@furo/ui5/segmented-button-item"`
 **Extends:** `SegmentedButtonItem`
 **Category:** Button
 

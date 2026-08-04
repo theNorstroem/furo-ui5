@@ -11,6 +11,7 @@ use-when: Use to organize content into tabs; provide tabs as children.
 
 **Class:** `FuroUi5Tabcontainer`
 **Import:** `import "@furo/ui5/tabcontainer"`
+**Import type:** `import type { FuroUi5Tabcontainer } from "@furo/ui5/tabcontainer"`
 **Extends:** `TabContainer`
 **Category:** Container
 

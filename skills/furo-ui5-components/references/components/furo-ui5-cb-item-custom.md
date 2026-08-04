@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-combobox when a suggestion needs richer markup tha
 
 **Class:** `FuroUi5CbItemCustom`
 **Import:** `import "@furo/ui5/cb-item-custom"`
+**Import type:** `import type { FuroUi5CbItemCustom } from "@furo/ui5/cb-item-custom"`
 **Extends:** `ComboBoxItemCustom`
 **Category:** Form
 

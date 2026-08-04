@@ -11,6 +11,7 @@ use-when: Use to group actions above a table, list or form section.
 
 **Class:** `FuroUi5Toolbar`
 **Import:** `import "@furo/ui5/toolbar"`
+**Import type:** `import type { FuroUi5Toolbar } from "@furo/ui5/toolbar"`
 **Extends:** `Toolbar`
 **Category:** Layout
 

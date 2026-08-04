@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-side-navigation-item to add a second navigation le
 
 **Class:** `FuroUi5SideNavigationSubItem`
 **Import:** `import "@furo/ui5/side-navigation-sub-item"`
+**Import type:** `import type { FuroUi5SideNavigationSubItem } from "@furo/ui5/side-navigation-sub-item"`
 **Extends:** `SideNavigationSubItem`
 **Category:** Navigation
 

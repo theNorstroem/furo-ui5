@@ -32,7 +32,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5PrettyJson } from "./FuroUi5PrettyJson";
+import type { FuroUi5PrettyJson } from "./FuroUi5PrettyJson";
 
 import { delay } from "@/util/test-helpers/delay";
 

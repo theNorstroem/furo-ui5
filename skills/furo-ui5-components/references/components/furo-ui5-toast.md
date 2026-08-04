@@ -11,6 +11,7 @@ use-when: Use for non-blocking confirmations or status updates that auto-dismiss
 
 **Class:** `FuroUi5Toast`
 **Import:** `import "@furo/ui5/toast"`
+**Import type:** `import type { FuroUi5Toast } from "@furo/ui5/toast"`
 **Extends:** `Toast`
 **Category:** Feedback
 

@@ -1,7 +1,7 @@
 import { ValueState } from "@furo/open-models";
 import { Validators } from "@furo/open-models/dist/Validator";
 
-import { type XString as FuroFatString } from "@/models/furo/fat/String";
+import type { XString as FuroFatString } from "@/models/furo/fat/String";
 
 Validators.set("furo.fat.String", (node: FuroFatString) => {
   const fieldConstraints = node.__getConstraints();

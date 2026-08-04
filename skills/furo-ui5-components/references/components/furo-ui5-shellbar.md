@@ -11,6 +11,7 @@ use-when: Use as the main application header for branding and global navigation.
 
 **Class:** `FuroUi5ShellBar`
 **Import:** `import "@furo/ui5/shellbar"`
+**Import type:** `import type { FuroUi5ShellBar } from "@furo/ui5/shellbar"`
 **Extends:** `ShellBar`
 **Category:** PageStructure
 

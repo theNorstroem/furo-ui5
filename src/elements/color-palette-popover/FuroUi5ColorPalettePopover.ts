@@ -1,12 +1,13 @@
 import "@/elements/color-palette-item";
 
-import { type ARRAY, STRING, StringValue } from "@furo/open-models";
+import type { StringValue } from "@furo/open-models";
+import { type ARRAY, STRING } from "@furo/open-models";
 import ColorPalettePopover from "@ui5/webcomponents/dist/ColorPalettePopover.js";
 
 import type { FuroUi5ColorPaletteItem } from "@/elements/color-palette-item/FuroUi5ColorPaletteItem";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
-import { FuroFatString } from "@/models";
+import type { FuroFatString } from "@/models";
 
 /**
  * The furo-ui5-color-palette-popover shows a predefined set of color swatches in a popover and binds

@@ -13,7 +13,7 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, chai, describe, it, test } from "vitest";
 
-import { FuroUi5Breadcrumbs } from "./FuroUi5Breadcrumbs";
+import type { FuroUi5Breadcrumbs } from "./FuroUi5Breadcrumbs";
 
 import { delay } from "@/util/test-helpers/delay";
 

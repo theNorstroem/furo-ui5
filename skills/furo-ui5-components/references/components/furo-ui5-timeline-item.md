@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-timeline to describe one event.
 
 **Class:** `FuroUi5TimelineItem`
 **Import:** `import "@furo/ui5/timeline-item"`
+**Import type:** `import type { FuroUi5TimelineItem } from "@furo/ui5/timeline-item"`
 **Extends:** `TimelineItem`
 **Category:** Display
 

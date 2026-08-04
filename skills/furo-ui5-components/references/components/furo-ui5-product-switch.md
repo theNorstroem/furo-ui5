@@ -11,6 +11,7 @@ use-when: Use in the shellbar to let users jump to a sibling product or app.
 
 **Class:** `FuroUi5ProductSwitch`
 **Import:** `import "@furo/ui5/product-switch"`
+**Import type:** `import type { FuroUi5ProductSwitch } from "@furo/ui5/product-switch"`
 **Extends:** `ProductSwitch`
 **Category:** Navigation
 

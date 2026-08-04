@@ -4,7 +4,7 @@ import type { ARRAY, STRING } from "@furo/open-models/";
 import type { MultiComboBoxSelectionChangeEventDetail, MultiComboBoxValueStateChangeEventDetail } from "@ui5/webcomponents/dist/MultiComboBox.js";
 import type ComboBoxFilter from "@ui5/webcomponents/dist/types/ComboBoxFilter.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { IdentifiableList, McbItem, OptionLikeList } from "../index";
 

@@ -1,5 +1,7 @@
 import { FuroUi5RadioButton } from "./FuroUi5RadioButton";
 
+export * from "./FuroUi5RadioButton";
+
 FuroUi5RadioButton.define();
 
 declare global {

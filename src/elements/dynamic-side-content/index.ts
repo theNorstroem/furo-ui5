@@ -1,5 +1,7 @@
 import { FuroUi5DynamicSideContent } from "./FuroUi5DynamicSideContent";
 
+export * from "./FuroUi5DynamicSideContent";
+
 FuroUi5DynamicSideContent.define();
 
 declare global {

@@ -11,6 +11,7 @@ use-when: Use between furo-ui5-menu-item elements to visually separate action gr
 
 **Class:** `FuroUi5MenuSeparator`
 **Import:** `import "@furo/ui5/menu-separator"`
+**Import type:** `import type { FuroUi5MenuSeparator } from "@furo/ui5/menu-separator"`
 **Extends:** `MenuSeparator`
 **Category:** Navigation
 

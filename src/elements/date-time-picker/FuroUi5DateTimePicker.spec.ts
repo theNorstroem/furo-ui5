@@ -21,7 +21,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5DateTimePicker } from "./FuroUi5DateTimePicker";
+import type { FuroUi5DateTimePicker } from "./FuroUi5DateTimePicker";
 
 import { delay } from "@/util/test-helpers/delay";
 import { setInputValue } from "@/util/test-helpers/setInputValue";

@@ -11,6 +11,7 @@ use-when: Use for confirmations, forms, or content requiring user action before 
 
 **Class:** `FuroUi5Dialog`
 **Import:** `import "@furo/ui5/dialog"`
+**Import type:** `import type { FuroUi5Dialog } from "@furo/ui5/dialog"`
 **Extends:** `Dialog`
 **Category:** Container
 

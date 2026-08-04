@@ -11,6 +11,7 @@ use-when: Use as children of furo-ui5-combobox.
 
 **Class:** `FuroUi5CbItem`
 **Import:** `import "@furo/ui5/cb-item"`
+**Import type:** `import type { FuroUi5CbItem } from "@furo/ui5/cb-item"`
 **Extends:** `ComboBoxItem`
 **Category:** Form
 

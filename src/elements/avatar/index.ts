@@ -1,5 +1,7 @@
 import { FuroUi5Avatar } from "./FuroUi5Avatar";
 
+export * from "./FuroUi5Avatar";
+
 FuroUi5Avatar.define();
 
 declare global {

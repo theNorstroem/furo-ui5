@@ -1,6 +1,8 @@
-import { BOOLEAN, STRING, ValueState } from "@furo/open-models";
+import type { BOOLEAN, STRING} from "@furo/open-models";
+import { ValueState } from "@furo/open-models";
 
-import { type FuroFatBool, FuroFatDouble, FuroFatFloat, FuroFatInt32, FuroFatInt64, type FuroFatString, FuroFatUint32, FuroFatUint64 } from "@/models";
+import type { FuroFatDouble, FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
+import type { FuroFatBool, FuroFatString } from "@/models";
 
 export class FatHandler<T> {
   private target: T;

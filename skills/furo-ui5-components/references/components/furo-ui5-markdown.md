@@ -11,6 +11,7 @@ use-when: Use to display rich text authored in markdown from a data field.
 
 **Class:** `FuroUi5Markdown`
 **Import:** `import "@furo/ui5/markdown"`
+**Import type:** `import type { FuroUi5Markdown } from "@furo/ui5/markdown"`
 **Category:** Display
 
 **Related:** [`furo-ui5-text-input`](furo-ui5-text-input.md)

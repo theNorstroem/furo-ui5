@@ -11,6 +11,7 @@ use-when: Use standalone to display a removable set of tokens outside a multi-in
 
 **Class:** `FuroUi5Tokenizer`
 **Import:** `import "@furo/ui5/tokenizer"`
+**Import type:** `import type { FuroUi5Tokenizer } from "@furo/ui5/tokenizer"`
 **Extends:** `Tokenizer`
 **Category:** Form
 

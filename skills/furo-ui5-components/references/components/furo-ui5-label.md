@@ -11,6 +11,7 @@ use-when: Use to label form fields or display short descriptive text.
 
 **Class:** `FuroUi5Label`
 **Import:** `import "@furo/ui5/label"`
+**Import type:** `import type { FuroUi5Label } from "@furo/ui5/label"`
 **Extends:** `Label`
 **Category:** Display
 

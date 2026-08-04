@@ -6,7 +6,7 @@ import type AvatarColorScheme from "@ui5/webcomponents/dist/types/AvatarColorSch
 import type AvatarMode from "@ui5/webcomponents/dist/types/AvatarMode.js";
 import type AvatarShape from "@ui5/webcomponents/dist/types/AvatarShape.js";
 import type AvatarSize from "@ui5/webcomponents/dist/types/AvatarSize.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { FuroFatString } from "@/models/index.js";
 

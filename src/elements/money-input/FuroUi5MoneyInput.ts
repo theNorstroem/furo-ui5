@@ -1,7 +1,7 @@
 import "@ui5/webcomponents/dist/Input.js";
 import "@/elements/combobox";
 
-import { type FieldConstraints } from "@furo/open-models";
+import type { FieldConstraints } from "@furo/open-models";
 import { css, type CSSResult, html, LitElement, type PropertyValues } from "lit";
 
 import type { FuroUi5Combobox } from "@/elements/combobox/FuroUi5Combobox";
@@ -10,7 +10,7 @@ import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { MoneyReaderWriters } from "@/lib/open-models/MoneyReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import type { SelectOption } from "@/lib/open-models/signatures";
-import { Money as FuroMoney } from "@/models/furo/type/Money";
+import type { Money as FuroMoney } from "@/models/furo/type/Money";
 import { Money as GoogleMoney } from "@/models/google/type/Money";
 
 /**

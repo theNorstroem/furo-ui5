@@ -15,7 +15,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5ExpandableText } from "./FuroUi5ExpandableText";
+import type { FuroUi5ExpandableText } from "./FuroUi5ExpandableText";
 
 import { createFatString } from "@/util/test-helpers/createFatString";
 import { delay } from "@/util/test-helpers/delay";

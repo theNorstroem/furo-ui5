@@ -11,6 +11,7 @@ use-when: Use as the main container for forms with one or more form groups.
 
 **Class:** `FuroUi5FormLayout`
 **Import:** `import "@furo/ui5/form-layout"`
+**Import type:** `import type { FuroUi5FormLayout } from "@furo/ui5/form-layout"`
 **Category:** FormLayout
 
 **Related:** [`furo-ui5-form-group`](furo-ui5-form-group.md), [`furo-ui5-form-row`](furo-ui5-form-row.md)

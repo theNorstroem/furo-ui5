@@ -11,6 +11,7 @@ use-when: Use for collecting user ratings or displaying scores.
 
 **Class:** `FuroUi5RatingIndicator`
 **Import:** `import "@furo/ui5/rating-indicator"`
+**Import type:** `import type { FuroUi5RatingIndicator } from "@furo/ui5/rating-indicator"`
 **Extends:** `RatingIndicator`
 **Category:** Form
 

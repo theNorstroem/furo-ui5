@@ -11,6 +11,7 @@ use-when: Use for selecting time values without date.
 
 **Class:** `FuroUi5TimePicker`
 **Import:** `import "@furo/ui5/time-picker"`
+**Import type:** `import type { FuroUi5TimePicker } from "@furo/ui5/time-picker"`
 **Extends:** `TimePicker`
 **Category:** Form
 

@@ -27,7 +27,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5Textarea } from "./FuroUi5Textarea";
+import type { FuroUi5Textarea } from "./FuroUi5Textarea";
 
 import { createFatString } from "@/util/test-helpers/createFatString";
 import { delay } from "@/util/test-helpers/delay";

@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-text-input when a suggestion needs richer markup t
 
 **Class:** `FuroUi5SuggestionItemCustom`
 **Import:** `import "@furo/ui5/suggestion-item-custom"`
+**Import type:** `import type { FuroUi5SuggestionItemCustom } from "@furo/ui5/suggestion-item-custom"`
 **Extends:** `SuggestionItemCustom`
 **Category:** Form
 

@@ -11,6 +11,7 @@ use-when: Use to select a single value from an enum-typed field.
 
 **Class:** `FuroUi5SelectEnum`
 **Import:** `import "@furo/ui5/select-enum"`
+**Import type:** `import type { FuroUi5SelectEnum } from "@furo/ui5/select-enum"`
 **Extends:** `Select`
 **Category:** Form
 

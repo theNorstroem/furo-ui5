@@ -1,4 +1,5 @@
-import { INT32, INT64, STRING, Timestamp, type FieldConstraints } from "@furo/open-models";
+import type { INT32, INT64, STRING} from "@furo/open-models";
+import { Timestamp, type FieldConstraints } from "@furo/open-models";
 import DateTimePicker from "@ui5/webcomponents/dist/DateTimePicker.js";
 
 import { DateAndTimeReaderWriters } from "@/lib/open-models/DateAndTimeReaderWriter";

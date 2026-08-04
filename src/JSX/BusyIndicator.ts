@@ -3,7 +3,7 @@
 import type { BOOLEAN, BoolValue } from "@furo/open-models/";
 import type BusyIndicatorSize from "@ui5/webcomponents/dist/types/BusyIndicatorSize.js";
 import type BusyIndicatorTextPlacement from "@ui5/webcomponents/dist/types/BusyIndicatorTextPlacement.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { FuroFatBool } from "@/models/index.js";
 

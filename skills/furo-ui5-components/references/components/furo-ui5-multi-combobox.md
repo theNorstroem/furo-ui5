@@ -11,6 +11,7 @@ use-when: Use for selecting multiple items from a searchable list displayed as t
 
 **Class:** `FuroUi5MultiCombobox`
 **Import:** `import "@furo/ui5/multi-combobox"`
+**Import type:** `import type { FuroUi5MultiCombobox } from "@furo/ui5/multi-combobox"`
 **Extends:** `MultiComboBox`
 **Category:** Form
 

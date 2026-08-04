@@ -4,7 +4,7 @@ import type { ENUM } from "@furo/open-models/";
 import type { IOption, SelectChangeEventDetail, SelectLiveChangeEventDetail } from "@ui5/webcomponents/dist/Select.js";
 import type SelectTextSeparator from "@ui5/webcomponents/dist/types/SelectTextSeparator.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface SelectEnum extends React.HTMLAttributes<HTMLElement> {
   onchange?: (d: CustomEvent<SelectChangeEventDetail>) => void;

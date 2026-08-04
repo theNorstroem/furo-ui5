@@ -11,6 +11,7 @@ use-when: Use for compound fields like amount-currency or value-unit pairs.
 
 **Class:** `FuroUi5FormFieldSegmenter`
 **Import:** `import "@furo/ui5/form-field-segmenter"`
+**Import type:** `import type { FuroUi5FormFieldSegmenter } from "@furo/ui5/form-field-segmenter"`
 **Category:** FormLayout
 
 **Related:** [`furo-ui5-form-row`](furo-ui5-form-row.md)

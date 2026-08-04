@@ -1,4 +1,5 @@
-import { FieldNode, ValueState } from "@furo/open-models";
+import type { FieldNode} from "@furo/open-models";
+import { ValueState } from "@furo/open-models";
 
 interface ComponentWithValueState extends HTMLElement {
   valueState: string;

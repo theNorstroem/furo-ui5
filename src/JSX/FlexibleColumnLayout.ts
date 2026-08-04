@@ -8,7 +8,7 @@ import type {
   LayoutConfiguration,
 } from "@ui5/webcomponents-fiori/dist/FlexibleColumnLayout.js";
 import type FCLLayout from "@ui5/webcomponents-fiori/dist/types/FCLLayout.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface FlexibleColumnLayout extends React.HTMLAttributes<HTMLElement> {
   "onlayout-change"?: (d: CustomEvent<FlexibleColumnLayoutLayoutChangeEventDetail>) => void;

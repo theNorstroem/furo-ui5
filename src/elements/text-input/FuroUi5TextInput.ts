@@ -1,4 +1,5 @@
-import { type FieldConstraints, STRING, StringValue } from "@furo/open-models";
+import type { StringValue } from "@furo/open-models";
+import { type FieldConstraints, STRING } from "@furo/open-models";
 import Input from "@ui5/webcomponents/dist/Input.js";
 
 import { FatHandler } from "@/lib/open-models/FatHandler";
@@ -6,7 +7,7 @@ import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
 import { StringReaderWriters } from "@/lib/open-models/StringReaderWriters";
-import { FuroFatString } from "@/models";
+import type { FuroFatString } from "@/models";
 import DebounceBuilder from "@/util/Debounce";
 
 /**

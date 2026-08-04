@@ -1,9 +1,10 @@
-import { INT32, INT64, STRING, Timestamp } from "@furo/open-models";
+import type { INT32, INT64, STRING} from "@furo/open-models";
+import { Timestamp } from "@furo/open-models";
 import Text from "@ui5/webcomponents/dist/Text.js";
 
 import { DateAndTimeReaderWriters } from "@/lib/open-models/DateAndTimeReaderWriter";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
-import { XDate } from "@/models/google/type/Date";
+import type { XDate } from "@/models/google/type/Date";
 import { formatRelativeTime } from "@/util/formatRelativeTime";
 
 /**

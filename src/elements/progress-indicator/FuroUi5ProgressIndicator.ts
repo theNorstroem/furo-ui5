@@ -1,10 +1,11 @@
-import { DOUBLE, FLOAT, FloatValue, INT32, Int32Value, INT64, Int64Value, UINT32, UInt32Value, UINT64, UInt64Value } from "@furo/open-models";
+import type { DOUBLE, FloatValue, INT32, Int32Value, INT64, Int64Value, UINT32, UInt32Value, UINT64, UInt64Value } from "@furo/open-models";
+import { FLOAT } from "@furo/open-models";
 import ProgressIndicator from "@ui5/webcomponents/dist/ProgressIndicator.js";
 
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { NumericReaderWriters } from "@/lib/open-models/NumericReaderWriters";
-import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
+import type { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
 
 /**
  *

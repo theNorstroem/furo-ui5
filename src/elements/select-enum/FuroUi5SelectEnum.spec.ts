@@ -30,7 +30,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5SelectEnum } from "./FuroUi5SelectEnum";
+import type { FuroUi5SelectEnum } from "./FuroUi5SelectEnum";
 
 import { Materials } from "@/models/furoui5test/cube/Materials";
 import { delay } from "@/util/test-helpers/delay";

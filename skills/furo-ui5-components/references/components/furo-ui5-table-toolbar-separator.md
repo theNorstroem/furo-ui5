@@ -11,6 +11,7 @@ use-when: Use to separate groups of actions in table toolbar.
 
 **Class:** `FuroUi5TableToolbarSeparator`
 **Import:** `import "@furo/ui5/table-toolbar-separator"`
+**Import type:** `import type { FuroUi5TableToolbarSeparator } from "@furo/ui5/table-toolbar-separator"`
 **Category:** Table
 
 ## Overview

@@ -11,6 +11,7 @@ use-when: Use for entering numeric values such as quantities or measurements.
 
 **Class:** `FuroUi5NumberInput`
 **Import:** `import "@furo/ui5/number-input"`
+**Import type:** `import type { FuroUi5NumberInput } from "@furo/ui5/number-input"`
 **Extends:** `Input`
 **Category:** Form
 

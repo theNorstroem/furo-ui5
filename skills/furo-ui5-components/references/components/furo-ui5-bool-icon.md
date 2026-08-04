@@ -11,6 +11,7 @@ use-when: Use to visualize a boolean field as an icon (e.g. yes/no, on/off).
 
 **Class:** `FuroUi5BoolIcon`
 **Import:** `import "@furo/ui5/bool-icon"`
+**Import type:** `import type { FuroUi5BoolIcon } from "@furo/ui5/bool-icon"`
 **Category:** Display
 
 **Related:** [`furo-ui5-icon`](furo-ui5-icon.md), [`furo-ui5-checkbox`](furo-ui5-checkbox.md)

@@ -11,6 +11,7 @@ use-when: Use at the top of a launchpad or landing page to highlight one message
 
 **Class:** `FuroUi5HeroBanner`
 **Import:** `import "@furo/ui5/hero-banner"`
+**Import type:** `import type { FuroUi5HeroBanner } from "@furo/ui5/hero-banner"`
 **Extends:** `HeroBanner`
 **Category:** Display
 

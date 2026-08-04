@@ -11,6 +11,7 @@ use-when: Use on overview pages to group content about one topic into a tile.
 
 **Class:** `FuroUi5Card`
 **Import:** `import "@furo/ui5/card"`
+**Import type:** `import type { FuroUi5Card } from "@furo/ui5/card"`
 **Extends:** `Card`
 **Category:** Container
 

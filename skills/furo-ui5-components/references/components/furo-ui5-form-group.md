@@ -11,6 +11,7 @@ use-when: Use to group related form fields under a common heading.
 
 **Class:** `FuroUi5FormGroup`
 **Import:** `import "@furo/ui5/form-group"`
+**Import type:** `import type { FuroUi5FormGroup } from "@furo/ui5/form-group"`
 **Category:** FormLayout
 
 **Related:** [`furo-ui5-form-layout`](furo-ui5-form-layout.md), [`furo-ui5-form-row`](furo-ui5-form-row.md)

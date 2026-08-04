@@ -1,5 +1,7 @@
 import { FuroUi5Breadcrumbs } from "./FuroUi5Breadcrumbs";
 
+export * from "./FuroUi5Breadcrumbs";
+
 FuroUi5Breadcrumbs.define();
 
 declare global {

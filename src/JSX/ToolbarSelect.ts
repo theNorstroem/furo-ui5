@@ -3,7 +3,7 @@
 import type { ToolbarSelectChangeEventDetail } from "@ui5/webcomponents/dist/ToolbarSelect.js";
 import type ToolbarItemOverflowBehavior from "@ui5/webcomponents/dist/types/ToolbarItemOverflowBehavior.js";
 import type ValueState from "@ui5/webcomponents-base/dist/types/ValueState.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface ToolbarSelect extends React.HTMLAttributes<HTMLElement> {
   onchange?: (d: CustomEvent<ToolbarSelectChangeEventDetail>) => void;

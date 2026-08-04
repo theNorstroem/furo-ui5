@@ -28,7 +28,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5ShowHide } from "./FuroUi5ShowHide";
+import type { FuroUi5ShowHide } from "./FuroUi5ShowHide";
 
 import { createFatBool } from "@/util/test-helpers/createFatBool";
 import { delay } from "@/util/test-helpers/delay";

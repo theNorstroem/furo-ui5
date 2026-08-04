@@ -1,5 +1,7 @@
 import { FuroUi5SuggestionItem } from "./FuroUi5SuggestionItem";
 
+export * from "./FuroUi5SuggestionItem";
+
 FuroUi5SuggestionItem.define();
 
 declare global {

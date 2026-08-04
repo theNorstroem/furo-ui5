@@ -32,14 +32,20 @@ That is not a one-way door. For every element that wraps a UI5 counterpart — t
 npm i @furo/ui5
 ```
 
-Import the elements you use, or the whole set:
+Import the elements you use — one subpath per element:
 
 ```js
-import "@furo/ui5/text-input"; // a single element
-import {FuroUi5TextInput} from "@furo/ui5"; // get the class / type
+import "@furo/ui5/text-input"; // register the element
+import type { FuroUi5TextInput } from "@furo/ui5/text-input"; // its type, erased at compile time
+import { FuroUi5TextInput } from "@furo/ui5/text-input"; // the class, and registers the element
 ```
 
 Importing registers the custom element. There is nothing else to call.
+
+Prefer the per-element subpath over the root `@furo/ui5` barrel. The barrel re-exports every
+element, so pulling one name off it drags the whole set into your bundle; the subpath keeps
+that scoped to the one element you asked for. Note that `import type` is erased entirely, so it
+costs nothing and registers nothing — use it whenever you only need the type.
 
 ## Binding a model
 
@@ -116,3 +122,5 @@ The sidebar groups the components by purpose: **input**, **display**, **form**, 
 Each component page opens with its import path, a link to the original SAP component and to the Fiori design guideline, followed by the bindable types it accepts and a live example.
 
 If you want to render a field without picking a component yourself, start at **display/Typerenderer** — it resolves the right renderer for any field node at runtime.
+
+If your API returns `google.protobuf.Any` fields, read **how to's/Unpacking google.protobuf.Any** — those resolve by type name at runtime, which is the one case where an import you might think is unnecessary actually is not.

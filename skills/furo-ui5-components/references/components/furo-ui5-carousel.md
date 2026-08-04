@@ -11,6 +11,7 @@ use-when: Use to page through a small set of equally important items such as ima
 
 **Class:** `FuroUi5Carousel`
 **Import:** `import "@furo/ui5/carousel"`
+**Import type:** `import type { FuroUi5Carousel } from "@furo/ui5/carousel"`
 **Extends:** `Carousel`
 **Category:** Container
 

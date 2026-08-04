@@ -11,6 +11,7 @@ use-when: Use to guide the user through a long task split into ordered steps.
 
 **Class:** `FuroUi5Wizard`
 **Import:** `import "@furo/ui5/wizard"`
+**Import type:** `import type { FuroUi5Wizard } from "@furo/ui5/wizard"`
 **Extends:** `Wizard`
 **Category:** Container
 

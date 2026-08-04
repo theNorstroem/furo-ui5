@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-toolbar-select to offer one choice.
 
 **Class:** `FuroUi5ToolbarSelectOption`
 **Import:** `import "@furo/ui5/toolbar-select-option"`
+**Import type:** `import type { FuroUi5ToolbarSelectOption } from "@furo/ui5/toolbar-select-option"`
 **Extends:** `ToolbarSelectOption`
 **Category:** Layout
 

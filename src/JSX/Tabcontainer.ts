@@ -5,7 +5,7 @@ import type { TabContainerMoveEventDetail, TabContainerTabSelectEventDetail } fr
 import type BackgroundDesign from "@ui5/webcomponents/dist/types/BackgroundDesign.js";
 import type OverflowMode from "@ui5/webcomponents/dist/types/OverflowMode.js";
 import type TabLayout from "@ui5/webcomponents/dist/types/TabLayout.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Tabcontainer extends React.HTMLAttributes<HTMLElement> {
   onmove?: (d: CustomEvent<TabContainerMoveEventDetail>) => void;

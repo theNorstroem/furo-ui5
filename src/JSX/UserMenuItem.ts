@@ -6,7 +6,7 @@ import type { MenuBeforeCloseEventDetail, MenuBeforeOpenEventDetail } from "@ui5
 import type Highlight from "@ui5/webcomponents/dist/types/Highlight.js";
 import type ListItemAccessibleRole from "@ui5/webcomponents/dist/types/ListItemAccessibleRole.js";
 import type ListItemType from "@ui5/webcomponents/dist/types/ListItemType.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface UserMenuItem extends React.HTMLAttributes<HTMLElement> {
   "onbefore-close"?: (d: CustomEvent<MenuBeforeCloseEventDetail>) => void;

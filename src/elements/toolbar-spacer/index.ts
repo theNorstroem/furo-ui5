@@ -1,5 +1,7 @@
 import { FuroUi5ToolbarSpacer } from "./FuroUi5ToolbarSpacer";
 
+export * from "./FuroUi5ToolbarSpacer";
+
 FuroUi5ToolbarSpacer.define();
 
 declare global {

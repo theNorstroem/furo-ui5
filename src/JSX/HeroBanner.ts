@@ -3,7 +3,7 @@
 import type HeroBannerActionsPlacement from "@ui5/webcomponents-fiori/dist/types/HeroBannerActionsPlacement.js";
 import type HeroBannerColumnsRatio from "@ui5/webcomponents-fiori/dist/types/HeroBannerColumnsRatio.js";
 import type HeroBannerHeaderBlockPlacement from "@ui5/webcomponents-fiori/dist/types/HeroBannerHeaderBlockPlacement.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface HeroBanner extends React.HTMLAttributes<HTMLElement> {
   // no events defined.

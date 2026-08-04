@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-tabcontainer to represent one tab.
 
 **Class:** `FuroUi5Tab`
 **Import:** `import "@furo/ui5/tab"`
+**Import type:** `import type { FuroUi5Tab } from "@furo/ui5/tab"`
 **Extends:** `Tab`
 **Category:** Container
 

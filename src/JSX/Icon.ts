@@ -2,7 +2,7 @@
 
 import type IconDesign from "@ui5/webcomponents/dist/types/IconDesign.js";
 import type IconMode from "@ui5/webcomponents/dist/types/IconMode.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Icon extends React.HTMLAttributes<HTMLElement> {
   onclick?: (d: CustomEvent) => void;

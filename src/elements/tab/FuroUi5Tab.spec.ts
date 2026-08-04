@@ -13,7 +13,7 @@ import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { html } from "lit";
 import { afterAll, assert, beforeAll, describe, it } from "vitest";
 
-import { FuroUi5Tab } from "./FuroUi5Tab";
+import type { FuroUi5Tab } from "./FuroUi5Tab";
 
 describe("FuroUi5Tab", () => {
   describe("element identity [TEMPLATE]", () => {

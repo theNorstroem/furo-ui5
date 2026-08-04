@@ -1,5 +1,7 @@
 import { FuroUi5MenuItemGroup } from "./FuroUi5MenuItemGroup";
 
+export * from "./FuroUi5MenuItemGroup";
+
 FuroUi5MenuItemGroup.define();
 
 declare global {

@@ -10,7 +10,8 @@ import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 
-import { FuroUi5ContextMenu, type MenuItemSelectedEventDetail } from "./FuroUi5ContextMenu";
+import type { FuroUi5ContextMenu} from "./FuroUi5ContextMenu";
+import type { MenuItemSelectedEventDetail } from "./FuroUi5ContextMenu";
 
 import { type IMenuitem, Menuitem } from "@/models/furoui5/Menuitem";
 

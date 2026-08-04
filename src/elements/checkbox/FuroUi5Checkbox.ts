@@ -1,4 +1,5 @@
-import { BOOLEAN, BoolValue, type FieldConstraints } from "@furo/open-models";
+import type { BoolValue} from "@furo/open-models";
+import { BOOLEAN, type FieldConstraints } from "@furo/open-models";
 import CheckBox from "@ui5/webcomponents/dist/CheckBox.js";
 
 import { BoolReaderWriters } from "@/lib/open-models/BoolReaderWriters";

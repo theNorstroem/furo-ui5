@@ -5,7 +5,7 @@ import type { ListItemBaseClickEventDetail } from "@ui5/webcomponents/dist/ListI
 import type Highlight from "@ui5/webcomponents/dist/types/Highlight.js";
 import type ListItemAccessibleRole from "@ui5/webcomponents/dist/types/ListItemAccessibleRole.js";
 import type ListItemType from "@ui5/webcomponents/dist/types/ListItemType.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface LiCustom extends React.HTMLAttributes<HTMLElement> {
   onclick?: (d: CustomEvent<ListItemBaseClickEventDetail>) => void;

@@ -4,7 +4,7 @@ import type { INT32, INT64, STRING, Timestamp } from "@furo/open-models/";
 import type TagDesign from "@ui5/webcomponents/dist/types/TagDesign.js";
 import type TagSize from "@ui5/webcomponents/dist/types/TagSize.js";
 import type WrappingType from "@ui5/webcomponents/dist/types/WrappingType.js";
-import * as React from "react";
+import type * as React from "react";
 
 import type { XDate } from "@/models/google/type/Date";
 

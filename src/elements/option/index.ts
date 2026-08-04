@@ -1,5 +1,7 @@
 import { FuroUi5Option } from "./FuroUi5Option";
 
+export * from "./FuroUi5Option";
+
 FuroUi5Option.define();
 
 declare global {

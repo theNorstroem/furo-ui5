@@ -11,6 +11,7 @@ use-when: Use for mobile barcode/QR code scanning functionality.
 
 **Class:** `FuroUi5BarcodeScannerDialog`
 **Import:** `import "@furo/ui5/barcode-scanner-dialog"`
+**Import type:** `import type { FuroUi5BarcodeScannerDialog } from "@furo/ui5/barcode-scanner-dialog"`
 **Extends:** `BarcodeScannerDialog`
 **Category:** Form
 

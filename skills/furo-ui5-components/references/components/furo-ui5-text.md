@@ -11,6 +11,7 @@ use-when: Use to render a bound string value as read-only text.
 
 **Class:** `FuroUi5Text`
 **Import:** `import "@furo/ui5/text"`
+**Import type:** `import type { FuroUi5Text } from "@furo/ui5/text"`
 **Extends:** `Text`
 **Category:** Display
 

@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-user-menu to group related profile actions.
 
 **Class:** `FuroUi5UserMenuItemGroup`
 **Import:** `import "@furo/ui5/user-menu-item-group"`
+**Import type:** `import type { FuroUi5UserMenuItemGroup } from "@furo/ui5/user-menu-item-group"`
 **Extends:** `UserMenuItemGroup`
 **Category:** Navigation
 

@@ -14,7 +14,7 @@ import type ListAccessibleRole from "@ui5/webcomponents/dist/types/ListAccessibl
 import type ListGrowingMode from "@ui5/webcomponents/dist/types/ListGrowingMode.js";
 import type ListSelectionMode from "@ui5/webcomponents/dist/types/ListSelectionMode.js";
 import type ListSeparator from "@ui5/webcomponents/dist/types/ListSeparator.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface List extends React.HTMLAttributes<HTMLElement> {
   "onitem-click"?: (d: CustomEvent<ListItemClickEventDetail>) => void;

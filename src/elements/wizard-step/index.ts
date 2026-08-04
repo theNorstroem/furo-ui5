@@ -1,5 +1,7 @@
 import { FuroUi5WizardStep } from "./FuroUi5WizardStep";
 
+export * from "./FuroUi5WizardStep";
+
 FuroUi5WizardStep.define();
 
 declare global {

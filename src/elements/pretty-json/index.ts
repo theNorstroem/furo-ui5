@@ -1,5 +1,7 @@
 import { FuroUi5PrettyJson } from "./FuroUi5PrettyJson";
 
+export * from "./FuroUi5PrettyJson";
+
 window.customElements.define("furo-ui5-pretty-json", FuroUi5PrettyJson);
 
 declare global {

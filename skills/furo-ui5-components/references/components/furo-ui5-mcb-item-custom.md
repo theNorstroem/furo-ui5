@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-multi-combobox when a suggestion needs richer mark
 
 **Class:** `FuroUi5McbItemCustom`
 **Import:** `import "@furo/ui5/mcb-item-custom"`
+**Import type:** `import type { FuroUi5McbItemCustom } from "@furo/ui5/mcb-item-custom"`
 **Extends:** `MultiComboBoxItemCustom`
 **Category:** Form
 

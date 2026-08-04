@@ -11,6 +11,7 @@ use-when: Use as a child of furo-ui5-product-switch to link to one product.
 
 **Class:** `FuroUi5ProductSwitchItem`
 **Import:** `import "@furo/ui5/product-switch-item"`
+**Import type:** `import type { FuroUi5ProductSwitchItem } from "@furo/ui5/product-switch-item"`
 **Extends:** `ProductSwitchItem`
 **Category:** Navigation
 

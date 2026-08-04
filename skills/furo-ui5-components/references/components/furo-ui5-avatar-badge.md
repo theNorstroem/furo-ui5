@@ -11,6 +11,7 @@ use-when: Use as the badge slot of furo-ui5-avatar to show a status indicator.
 
 **Class:** `FuroUi5AvatarBadge`
 **Import:** `import "@furo/ui5/avatar-badge"`
+**Import type:** `import type { FuroUi5AvatarBadge } from "@furo/ui5/avatar-badge"`
 **Extends:** `AvatarBadge`
 **Category:** Display
 

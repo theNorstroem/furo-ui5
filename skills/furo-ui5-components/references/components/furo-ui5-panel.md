@@ -11,6 +11,7 @@ use-when: Use to group related content under a heading the user can collapse.
 
 **Class:** `FuroUi5Panel`
 **Import:** `import "@furo/ui5/panel"`
+**Import type:** `import type { FuroUi5Panel } from "@furo/ui5/panel"`
 **Extends:** `Panel`
 **Category:** Container
 

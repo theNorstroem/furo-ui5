@@ -1,7 +1,5 @@
-import {
+import type {
   DOUBLE,
-  type FieldConstraints,
-  FLOAT,
   FloatValue,
   INT32,
   Int32Value,
@@ -10,7 +8,10 @@ import {
   UINT32,
   UInt32Value,
   UINT64,
-  UInt64Value,
+  UInt64Value} from "@furo/open-models";
+import {
+  type FieldConstraints,
+  FLOAT
 } from "@furo/open-models";
 import Slider from "@ui5/webcomponents/dist/Slider.js";
 
@@ -18,7 +19,7 @@ import { FatHandler } from "@/lib/open-models/FatHandler";
 import { ModelReaderWriter } from "@/lib/open-models/ModelReaderWriter";
 import { NumericReaderWriters } from "@/lib/open-models/NumericReaderWriters";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
-import { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
+import type { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
 
 /**
  * The furo-ui5-slider component allows the user to enter and edit numbers with data binding.

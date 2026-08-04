@@ -1,5 +1,7 @@
 import { FuroUi5RelativeTimeDisplay } from "./FuroUi5RelativeTimeDisplay";
 
+export * from "./FuroUi5RelativeTimeDisplay";
+
 FuroUi5RelativeTimeDisplay.define();
 
 declare global {

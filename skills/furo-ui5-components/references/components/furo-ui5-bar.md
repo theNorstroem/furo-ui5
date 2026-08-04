@@ -11,10 +11,11 @@ use-when: Use as the header or footer of a page, dialog or card.
 
 **Class:** `FuroUi5Bar`
 **Import:** `import "@furo/ui5/bar"`
+**Import type:** `import type { FuroUi5Bar } from "@furo/ui5/bar"`
 **Extends:** `Bar`
 **Category:** PageStructure
 
-**Related:** [`furo-ui5-page`](furo-ui5-page.md), [`furo-ui5-toolbar`](furo-ui5-toolbar.md), [`furo-ui5-shellbar`](furo-ui5-shellbar.md)
+**Related:** [`furo-ui5-toolbar`](furo-ui5-toolbar.md), [`furo-ui5-shellbar`](furo-ui5-shellbar.md)
 
 ## Overview
 

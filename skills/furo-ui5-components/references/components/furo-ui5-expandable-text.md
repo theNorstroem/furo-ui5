@@ -11,6 +11,7 @@ use-when: Use to render a long bound string with a show-more / show-less toggle.
 
 **Class:** `FuroUi5ExpandableText`
 **Import:** `import "@furo/ui5/expandable-text"`
+**Import type:** `import type { FuroUi5ExpandableText } from "@furo/ui5/expandable-text"`
 **Extends:** `ExpandableText`
 **Category:** Display
 

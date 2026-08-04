@@ -1,5 +1,7 @@
 import { FuroUi5Markdown } from "./FuroUi5Markdown";
 
+export * from "./FuroUi5Markdown";
+
 window.customElements.define("furo-ui5-markdown", FuroUi5Markdown);
 
 declare global {

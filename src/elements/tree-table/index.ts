@@ -1,5 +1,7 @@
 import { FuroUi5TreeTable } from "./FuroUi5TreeTable";
 
+export * from "./FuroUi5TreeTable";
+
 if (!customElements.get("furo-ui5-tree-table")) {
   customElements.define("furo-ui5-tree-table", FuroUi5TreeTable);
 }

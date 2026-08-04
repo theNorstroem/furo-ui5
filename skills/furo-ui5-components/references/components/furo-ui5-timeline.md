@@ -11,6 +11,7 @@ use-when: Use to show the history of an object as an ordered list of events.
 
 **Class:** `FuroUi5Timeline`
 **Import:** `import "@furo/ui5/timeline"`
+**Import type:** `import type { FuroUi5Timeline } from "@furo/ui5/timeline"`
 **Extends:** `Timeline`
 **Category:** Display
 

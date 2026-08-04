@@ -4,7 +4,7 @@ import type { DynamicSideContentAccessibilityAttributes, DynamicSideContentLayou
 import type SideContentFallDown from "@ui5/webcomponents-fiori/dist/types/SideContentFallDown.js";
 import type SideContentPosition from "@ui5/webcomponents-fiori/dist/types/SideContentPosition.js";
 import type SideContentVisibility from "@ui5/webcomponents-fiori/dist/types/SideContentVisibility.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface DynamicSideContent extends React.HTMLAttributes<HTMLElement> {
   "onlayout-change"?: (d: CustomEvent<DynamicSideContentLayoutChangeEventDetail>) => void;

@@ -11,6 +11,7 @@ use-when: Use to display icons alongside text or as standalone indicators.
 
 **Class:** `FuroUi5Icon`
 **Import:** `import "@furo/ui5/icon"`
+**Import type:** `import type { FuroUi5Icon } from "@furo/ui5/icon"`
 **Extends:** `Icon`
 **Category:** Display
 

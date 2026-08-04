@@ -33,7 +33,7 @@ import { html } from "lit";
 import { afterAll, afterEach, assert, beforeAll, beforeEach, chai, describe, it, test } from "vitest";
 import { type LocatorSelectors, utils } from "vitest/browser";
 
-import { FuroUi5MultiCombobox } from "./FuroUi5MultiCombobox";
+import type { FuroUi5MultiCombobox } from "./FuroUi5MultiCombobox";
 
 import type { IdentifiableList, McbItem } from "@/lib/open-models/signatures";
 import { FuroFatString, type IFuroFatString } from "@/models";

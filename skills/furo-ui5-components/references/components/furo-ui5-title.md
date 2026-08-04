@@ -11,6 +11,7 @@ use-when: Use for page titles, section headers, and semantic headings.
 
 **Class:** `FuroUi5Title`
 **Import:** `import "@furo/ui5/title"`
+**Import type:** `import type { FuroUi5Title } from "@furo/ui5/title"`
 **Extends:** `Title`
 **Category:** Display
 

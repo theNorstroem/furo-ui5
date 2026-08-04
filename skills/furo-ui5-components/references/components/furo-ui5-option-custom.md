@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-select when an option needs richer markup than pla
 
 **Class:** `FuroUi5OptionCustom`
 **Import:** `import "@furo/ui5/option-custom"`
+**Import type:** `import type { FuroUi5OptionCustom } from "@furo/ui5/option-custom"`
 **Extends:** `OptionCustom`
 **Category:** Form
 

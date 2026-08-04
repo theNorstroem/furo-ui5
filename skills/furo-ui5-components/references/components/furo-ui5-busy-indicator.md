@@ -11,6 +11,7 @@ use-when: Use to indicate loading or processing state.
 
 **Class:** `FuroUi5BusyIndicator`
 **Import:** `import "@furo/ui5/busy-indicator"`
+**Import type:** `import type { FuroUi5BusyIndicator } from "@furo/ui5/busy-indicator"`
 **Extends:** `BusyIndicator`
 **Category:** Feedback
 

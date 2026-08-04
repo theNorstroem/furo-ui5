@@ -1,5 +1,5 @@
-import { Money as FuroMoney } from "@/models/furo/type/Money";
-import { Money as GoogleMoney } from "@/models/google/type/Money";
+import type { Money as FuroMoney } from "@/models/furo/type/Money";
+import type { Money as GoogleMoney } from "@/models/google/type/Money";
 
 /**
  * Generic readers and writers for the **amount** of money-like models.

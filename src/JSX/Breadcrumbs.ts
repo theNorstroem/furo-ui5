@@ -3,7 +3,7 @@
 import type { BreadcrumbsItemClickEventDetail } from "@ui5/webcomponents/dist/Breadcrumbs.js";
 import type BreadcrumbsDesign from "@ui5/webcomponents/dist/types/BreadcrumbsDesign.js";
 import type BreadcrumbsSeparator from "@ui5/webcomponents/dist/types/BreadcrumbsSeparator.js";
-import * as React from "react";
+import type * as React from "react";
 
 export interface Breadcrumbs extends React.HTMLAttributes<HTMLElement> {
   "onitem-click"?: (d: CustomEvent<BreadcrumbsItemClickEventDetail>) => void;

@@ -1,7 +1,7 @@
-import { DOUBLE, DoubleValue, FLOAT, FloatValue, INT32, Int32Value, INT64, Int64Value, UINT32, UInt32Value, UINT64, UInt64Value } from "@furo/open-models";
+import type { DOUBLE, DoubleValue, FLOAT, FloatValue, INT32, Int32Value, INT64, Int64Value, UINT32, UInt32Value, UINT64, UInt64Value } from "@furo/open-models";
 
 import type { FatHandler } from "@/lib/open-models/FatHandler";
-import { FuroFatDouble, FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
+import type { FuroFatDouble, FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUint64 } from "@/models";
 
 /**
  * Generic reader and writers for number like models

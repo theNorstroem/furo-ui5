@@ -1,10 +1,12 @@
-import { type FieldConstraints, ARRAY, type FieldNode, STRING, StringValue } from "@furo/open-models";
+import type { StringValue } from "@furo/open-models";
+import { type FieldConstraints, ARRAY, type FieldNode, STRING } from "@furo/open-models";
 import MultiInput, { type MultiInputTokenDeleteEventDetail } from "@ui5/webcomponents/dist/MultiInput.js";
 import Token from "@ui5/webcomponents/dist/Token.js";
 
 import { FieldNodeValueState } from "@/lib/open-models/FieldNodeValueState";
 import { ReadonlyState } from "@/lib/open-models/ReadonlyState";
-import { FuroFatString, type IFuroFatString } from "@/models";
+import type { FuroFatString} from "@/models";
+import type { IFuroFatString } from "@/models";
 
 /**
  *

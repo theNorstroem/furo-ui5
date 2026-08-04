@@ -1,5 +1,7 @@
 import { FuroUi5MenuSeparator } from "./FuroUi5MenuSeparator";
 
+export * from "./FuroUi5MenuSeparator";
+
 FuroUi5MenuSeparator.define();
 
 declare global {

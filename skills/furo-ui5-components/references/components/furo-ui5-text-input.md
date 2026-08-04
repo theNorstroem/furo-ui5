@@ -11,6 +11,7 @@ use-when: Use for single-line text entry like names, emails, or short values.
 
 **Class:** `FuroUi5TextInput`
 **Import:** `import "@furo/ui5/text-input"`
+**Import type:** `import type { FuroUi5TextInput } from "@furo/ui5/text-input"`
 **Extends:** `Input`
 **Category:** Form
 

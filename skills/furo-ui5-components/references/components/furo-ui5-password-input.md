@@ -11,6 +11,7 @@ use-when: Use for entering passwords or other sensitive masked values.
 
 **Class:** `FuroUi5PasswordInput`
 **Import:** `import "@furo/ui5/password-input"`
+**Import type:** `import type { FuroUi5PasswordInput } from "@furo/ui5/password-input"`
 **Extends:** `Input`
 **Category:** Form
 

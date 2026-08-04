@@ -11,6 +11,7 @@ use-when: Use inside furo-ui5-list as a standalone group heading between items.
 
 **Class:** `FuroUi5LiGroupHeader`
 **Import:** `import "@furo/ui5/li-group-header"`
+**Import type:** `import type { FuroUi5LiGroupHeader } from "@furo/ui5/li-group-header"`
 **Extends:** `ListItemGroupHeader`
 **Category:** List
 
