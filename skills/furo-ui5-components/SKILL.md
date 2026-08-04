@@ -45,7 +45,7 @@ npm run skills:update
 
 ## Flex Layout Attributes
 
-> ⚠️ **Important**: The `flex`, `scroll`, and `padding-inline` attributes only work on **direct children** of `furo-vertical-flex` or `furo-horizontal-flex` containers. These attributes have no effect when used on elements nested inside other components.
+> ⚠️ **Important**: The `flex` and `scroll` attributes only work on **direct children** of `furo-vertical-flex` or `furo-horizontal-flex` containers. These attributes have no effect when used on elements nested inside other components.
 
 **Correct usage:**
 ```html

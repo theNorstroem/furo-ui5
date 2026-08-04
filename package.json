@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
-  "version": "2.0.0-RC.17",
+  "version": "2.0.0-RC.18",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "type": "module",
   "files": [
     "./dist",
+    "./skills",
     "!dist/**/*.spec.*",
     "!dist/**/*.stories.*",
     "!dist/util/test-helpers/**",

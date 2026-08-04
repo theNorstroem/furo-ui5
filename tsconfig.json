@@ -26,7 +26,7 @@
         "name": "@jackolope/ts-lit-plugin",
         "strict": true,
         "customHtmlData": ["./dist/furo-ui5.html-data.json", "./node_modules/@furo/layout/dist/furo-layout.html-data.json"],
-        "globalAttributes": ["flex", "scroll", "padding-inline"],
+        "globalAttributes": ["flex", "scroll"],
         "rules": {
           "no-incompatible-type-binding": "warn",
           "no-incompatible-property-type": "error",
