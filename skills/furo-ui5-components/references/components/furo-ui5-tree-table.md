@@ -119,7 +119,7 @@ The user can use the following keyboard shortcuts in order to navigate through t
 
 ### Styling
 
-The tree table styles the consumer's light-DOM ``, so importing this element adopts a global
+The tree table styles the consumer's light-DOM `<table>`, so importing this element adopts a global
 stylesheet (`TreeTableCSS`) into `document`. If you render a `furo-ui5-tree-table` inside another
 web-component's shadow DOM, adopt `TreeTableCSS` into that shadow root as well.
 

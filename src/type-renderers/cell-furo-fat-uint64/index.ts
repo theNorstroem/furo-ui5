@@ -1,5 +1,7 @@
 import { CellFuroFatUint64 } from "./CellFuroFatUint64";
 
+export * from "./CellFuroFatUint64";
+
 window.customElements.define("cell-furo-fat-uint64", CellFuroFatUint64);
 
 declare global {

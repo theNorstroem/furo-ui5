@@ -36,7 +36,7 @@ slots) is inherited unchanged and no data binding is added.
 ### Overview
 
 An entry posted on the timeline.
-It is intented to represent a group of ``s.
+It is intented to represent a group of `<ui5-timeline-item>`s.
 
 **Note**: Please do not use empty groups in order to preserve the intended design.
 

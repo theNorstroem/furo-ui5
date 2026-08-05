@@ -65,8 +65,5 @@
   "include": [
     "src/**/*.ts",
     "global.d.ts"
-  ],
-  "exclude": [
-    "src/type-renderers-wip/**/*.ts"
   ]
 }

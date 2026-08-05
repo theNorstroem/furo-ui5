@@ -1,5 +1,7 @@
 import { FormFuroFatBool } from "./FormFuroFatBool";
 
+export * from "./FormFuroFatBool";
+
 declare global {
   interface HTMLElementTagNameMap {
     "form-furo-fat-bool": FormFuroFatBool;

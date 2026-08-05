@@ -1,5 +1,7 @@
 import { CelleditGoogleTypeDate } from "./CelleditGoogleTypeDate";
 
+export * from "./CelleditGoogleTypeDate";
+
 CelleditGoogleTypeDate.define();
 
 declare global {

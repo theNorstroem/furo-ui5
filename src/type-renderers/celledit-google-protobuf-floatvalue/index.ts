@@ -1,5 +1,7 @@
 import { CelleditGoogleProtobufFloatvalue } from "./CelleditGoogleProtobufFloatvalue";
 
+export * from "./CelleditGoogleProtobufFloatvalue";
+
 CelleditGoogleProtobufFloatvalue.define();
 
 declare global {

@@ -61,9 +61,9 @@ For the "business-suite" (SAP Business Suite) icon collection, import an icon fr
 Set the icon collection ("SAP-icons", "tnt" or "business-suite" - "SAP-icons" is the default icon collection and can be skipped)
 and the icon name to the `name` property.
 
-``
-``
-``
+`<ui5-icon name="employee"></ui5-icon>`
+`<ui5-icon name="tnt/antenna"></ui5-icon>`
+`<ui5-icon name="business-suite/ab-testing"></ui5-icon>`
 
 ### Keyboard Handling
 
@@ -96,7 +96,7 @@ and the icon name to the `name` property.
 Defines the font icon to be used as an icon.
 Intended for font-based icon libraries where
 the application loads the font and provides a slotted element with the unicode character.
-When this slot is used, the component renders a `` instead of an ``.
+When this slot is used, the component renders a `<span>` instead of an `<svg>`.
 Accessibility is fully delegated to the application — set `accessible-name` and `mode` explicitly.
 
 **Example:**

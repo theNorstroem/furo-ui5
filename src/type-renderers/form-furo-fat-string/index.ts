@@ -1,5 +1,7 @@
 import { FormFuroFatString } from "./FormFuroFatString";
 
+export * from "./FormFuroFatString";
+
 declare global {
   interface HTMLElementTagNameMap {
     "form-furo-fat-string": FormFuroFatString;

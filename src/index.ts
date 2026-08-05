@@ -97,8 +97,8 @@ export * from "@/elements/timeline-group-item/FuroUi5TimelineGroupItem";
 // side-effect-import a registering element index (form-string pulls form-row, label and
 // text-input), so re-exporting them made `import { FuroUi5Button } from "@furo/ui5"`
 // define a dozen unrelated tags and pull ~3 MB of renderers.
-// Import them from "@furo/ui5/type-renderers" (classes, registers nothing) or
-// "@furo/ui5/type-renderers/<slug>" (registers one renderer).
+// Import one at a time: `@furo/ui5/type-renderers/<slug>` registers that renderer and
+// re-exports its class. There is no renderer barrel — see scripts/gen-exports.mjs.
 export * from "@/settings";
 export type * from "./lib/open-models/signatures";
 // `export type { … }`, not `export { type … }`. The latter keeps the statement alive:

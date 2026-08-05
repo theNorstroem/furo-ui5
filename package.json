@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
-  "version": "2.0.0-RC.18",
+  "version": "2.0.0-RC.19",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": {
     "type": "git",
@@ -562,13 +562,501 @@
       "types": "./dist/elements/wizard-step/index.d.ts",
       "default": "./dist/elements/wizard-step/index.js"
     },
-    "./type-renderers": {
-      "types": "./dist/type-renderers/index.d.ts",
-      "default": "./dist/type-renderers/index.js"
+    "./type-renderers/cell-bool": {
+      "types": "./dist/type-renderers/cell-bool/index.d.ts",
+      "default": "./dist/type-renderers/cell-bool/index.js"
     },
-    "./type-renderers/*": {
-      "types": "./dist/type-renderers/*/index.d.ts",
-      "default": "./dist/type-renderers/*/index.js"
+    "./type-renderers/cell-double": {
+      "types": "./dist/type-renderers/cell-double/index.d.ts",
+      "default": "./dist/type-renderers/cell-double/index.js"
+    },
+    "./type-renderers/cell-float": {
+      "types": "./dist/type-renderers/cell-float/index.d.ts",
+      "default": "./dist/type-renderers/cell-float/index.js"
+    },
+    "./type-renderers/cell-furo-fat-bool": {
+      "types": "./dist/type-renderers/cell-furo-fat-bool/index.d.ts",
+      "default": "./dist/type-renderers/cell-furo-fat-bool/index.js"
+    },
+    "./type-renderers/cell-furo-fat-double": {
+      "types": "./dist/type-renderers/cell-furo-fat-double/index.d.ts",
+      "default": "./dist/type-renderers/cell-furo-fat-double/index.js"
+    },
+    "./type-renderers/cell-furo-fat-float": {
+      "types": "./dist/type-renderers/cell-furo-fat-float/index.d.ts",
+      "default": "./dist/type-renderers/cell-furo-fat-float/index.js"
+    },
+    "./type-renderers/cell-furo-fat-int32": {
+      "types": "./dist/type-renderers/cell-furo-fat-int32/index.d.ts",
+      "default": "./dist/type-renderers/cell-furo-fat-int32/index.js"
+    },
+    "./type-renderers/cell-furo-fat-int64": {
+      "types": "./dist/type-renderers/cell-furo-fat-int64/index.d.ts",
+      "default": "./dist/type-renderers/cell-furo-fat-int64/index.js"
+    },
+    "./type-renderers/cell-furo-fat-string": {
+      "types": "./dist/type-renderers/cell-furo-fat-string/index.d.ts",
+      "default": "./dist/type-renderers/cell-furo-fat-string/index.js"
+    },
+    "./type-renderers/cell-furo-fat-uint32": {
+      "types": "./dist/type-renderers/cell-furo-fat-uint32/index.d.ts",
+      "default": "./dist/type-renderers/cell-furo-fat-uint32/index.js"
+    },
+    "./type-renderers/cell-furo-fat-uint64": {
+      "types": "./dist/type-renderers/cell-furo-fat-uint64/index.d.ts",
+      "default": "./dist/type-renderers/cell-furo-fat-uint64/index.js"
+    },
+    "./type-renderers/cell-furo-type-date": {
+      "types": "./dist/type-renderers/cell-furo-type-date/index.d.ts",
+      "default": "./dist/type-renderers/cell-furo-type-date/index.js"
+    },
+    "./type-renderers/cell-furo-type-money": {
+      "types": "./dist/type-renderers/cell-furo-type-money/index.d.ts",
+      "default": "./dist/type-renderers/cell-furo-type-money/index.js"
+    },
+    "./type-renderers/cell-google-protobuf-any": {
+      "types": "./dist/type-renderers/cell-google-protobuf-any/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-protobuf-any/index.js"
+    },
+    "./type-renderers/cell-google-protobuf-boolvalue": {
+      "types": "./dist/type-renderers/cell-google-protobuf-boolvalue/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-protobuf-boolvalue/index.js"
+    },
+    "./type-renderers/cell-google-protobuf-doublevalue": {
+      "types": "./dist/type-renderers/cell-google-protobuf-doublevalue/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-protobuf-doublevalue/index.js"
+    },
+    "./type-renderers/cell-google-protobuf-floatvalue": {
+      "types": "./dist/type-renderers/cell-google-protobuf-floatvalue/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-protobuf-floatvalue/index.js"
+    },
+    "./type-renderers/cell-google-protobuf-int32value": {
+      "types": "./dist/type-renderers/cell-google-protobuf-int32value/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-protobuf-int32value/index.js"
+    },
+    "./type-renderers/cell-google-protobuf-int64value": {
+      "types": "./dist/type-renderers/cell-google-protobuf-int64value/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-protobuf-int64value/index.js"
+    },
+    "./type-renderers/cell-google-protobuf-stringvalue": {
+      "types": "./dist/type-renderers/cell-google-protobuf-stringvalue/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-protobuf-stringvalue/index.js"
+    },
+    "./type-renderers/cell-google-protobuf-timestamp": {
+      "types": "./dist/type-renderers/cell-google-protobuf-timestamp/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-protobuf-timestamp/index.js"
+    },
+    "./type-renderers/cell-google-protobuf-uint32value": {
+      "types": "./dist/type-renderers/cell-google-protobuf-uint32value/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-protobuf-uint32value/index.js"
+    },
+    "./type-renderers/cell-google-protobuf-uint64value": {
+      "types": "./dist/type-renderers/cell-google-protobuf-uint64value/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-protobuf-uint64value/index.js"
+    },
+    "./type-renderers/cell-google-type-date": {
+      "types": "./dist/type-renderers/cell-google-type-date/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-type-date/index.js"
+    },
+    "./type-renderers/cell-google-type-money": {
+      "types": "./dist/type-renderers/cell-google-type-money/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-type-money/index.js"
+    },
+    "./type-renderers/cell-google-type-timeofday": {
+      "types": "./dist/type-renderers/cell-google-type-timeofday/index.d.ts",
+      "default": "./dist/type-renderers/cell-google-type-timeofday/index.js"
+    },
+    "./type-renderers/cell-int32": {
+      "types": "./dist/type-renderers/cell-int32/index.d.ts",
+      "default": "./dist/type-renderers/cell-int32/index.js"
+    },
+    "./type-renderers/cell-int64": {
+      "types": "./dist/type-renderers/cell-int64/index.d.ts",
+      "default": "./dist/type-renderers/cell-int64/index.js"
+    },
+    "./type-renderers/cell-string": {
+      "types": "./dist/type-renderers/cell-string/index.d.ts",
+      "default": "./dist/type-renderers/cell-string/index.js"
+    },
+    "./type-renderers/cell-uint32": {
+      "types": "./dist/type-renderers/cell-uint32/index.d.ts",
+      "default": "./dist/type-renderers/cell-uint32/index.js"
+    },
+    "./type-renderers/cell-uint64": {
+      "types": "./dist/type-renderers/cell-uint64/index.d.ts",
+      "default": "./dist/type-renderers/cell-uint64/index.js"
+    },
+    "./type-renderers/celledit-bool": {
+      "types": "./dist/type-renderers/celledit-bool/index.d.ts",
+      "default": "./dist/type-renderers/celledit-bool/index.js"
+    },
+    "./type-renderers/celledit-double": {
+      "types": "./dist/type-renderers/celledit-double/index.d.ts",
+      "default": "./dist/type-renderers/celledit-double/index.js"
+    },
+    "./type-renderers/celledit-float": {
+      "types": "./dist/type-renderers/celledit-float/index.d.ts",
+      "default": "./dist/type-renderers/celledit-float/index.js"
+    },
+    "./type-renderers/celledit-furo-fat-bool": {
+      "types": "./dist/type-renderers/celledit-furo-fat-bool/index.d.ts",
+      "default": "./dist/type-renderers/celledit-furo-fat-bool/index.js"
+    },
+    "./type-renderers/celledit-furo-fat-double": {
+      "types": "./dist/type-renderers/celledit-furo-fat-double/index.d.ts",
+      "default": "./dist/type-renderers/celledit-furo-fat-double/index.js"
+    },
+    "./type-renderers/celledit-furo-fat-float": {
+      "types": "./dist/type-renderers/celledit-furo-fat-float/index.d.ts",
+      "default": "./dist/type-renderers/celledit-furo-fat-float/index.js"
+    },
+    "./type-renderers/celledit-furo-fat-int32": {
+      "types": "./dist/type-renderers/celledit-furo-fat-int32/index.d.ts",
+      "default": "./dist/type-renderers/celledit-furo-fat-int32/index.js"
+    },
+    "./type-renderers/celledit-furo-fat-int64": {
+      "types": "./dist/type-renderers/celledit-furo-fat-int64/index.d.ts",
+      "default": "./dist/type-renderers/celledit-furo-fat-int64/index.js"
+    },
+    "./type-renderers/celledit-furo-fat-string": {
+      "types": "./dist/type-renderers/celledit-furo-fat-string/index.d.ts",
+      "default": "./dist/type-renderers/celledit-furo-fat-string/index.js"
+    },
+    "./type-renderers/celledit-furo-fat-uint32": {
+      "types": "./dist/type-renderers/celledit-furo-fat-uint32/index.d.ts",
+      "default": "./dist/type-renderers/celledit-furo-fat-uint32/index.js"
+    },
+    "./type-renderers/celledit-furo-fat-uint64": {
+      "types": "./dist/type-renderers/celledit-furo-fat-uint64/index.d.ts",
+      "default": "./dist/type-renderers/celledit-furo-fat-uint64/index.js"
+    },
+    "./type-renderers/celledit-furo-type-date": {
+      "types": "./dist/type-renderers/celledit-furo-type-date/index.d.ts",
+      "default": "./dist/type-renderers/celledit-furo-type-date/index.js"
+    },
+    "./type-renderers/celledit-furo-type-money": {
+      "types": "./dist/type-renderers/celledit-furo-type-money/index.d.ts",
+      "default": "./dist/type-renderers/celledit-furo-type-money/index.js"
+    },
+    "./type-renderers/celledit-google-protobuf-any": {
+      "types": "./dist/type-renderers/celledit-google-protobuf-any/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-protobuf-any/index.js"
+    },
+    "./type-renderers/celledit-google-protobuf-boolvalue": {
+      "types": "./dist/type-renderers/celledit-google-protobuf-boolvalue/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-protobuf-boolvalue/index.js"
+    },
+    "./type-renderers/celledit-google-protobuf-doublevalue": {
+      "types": "./dist/type-renderers/celledit-google-protobuf-doublevalue/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-protobuf-doublevalue/index.js"
+    },
+    "./type-renderers/celledit-google-protobuf-floatvalue": {
+      "types": "./dist/type-renderers/celledit-google-protobuf-floatvalue/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-protobuf-floatvalue/index.js"
+    },
+    "./type-renderers/celledit-google-protobuf-int32value": {
+      "types": "./dist/type-renderers/celledit-google-protobuf-int32value/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-protobuf-int32value/index.js"
+    },
+    "./type-renderers/celledit-google-protobuf-int64value": {
+      "types": "./dist/type-renderers/celledit-google-protobuf-int64value/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-protobuf-int64value/index.js"
+    },
+    "./type-renderers/celledit-google-protobuf-stringvalue": {
+      "types": "./dist/type-renderers/celledit-google-protobuf-stringvalue/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-protobuf-stringvalue/index.js"
+    },
+    "./type-renderers/celledit-google-protobuf-timestamp": {
+      "types": "./dist/type-renderers/celledit-google-protobuf-timestamp/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-protobuf-timestamp/index.js"
+    },
+    "./type-renderers/celledit-google-protobuf-uint32value": {
+      "types": "./dist/type-renderers/celledit-google-protobuf-uint32value/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-protobuf-uint32value/index.js"
+    },
+    "./type-renderers/celledit-google-protobuf-uint64value": {
+      "types": "./dist/type-renderers/celledit-google-protobuf-uint64value/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-protobuf-uint64value/index.js"
+    },
+    "./type-renderers/celledit-google-type-date": {
+      "types": "./dist/type-renderers/celledit-google-type-date/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-type-date/index.js"
+    },
+    "./type-renderers/celledit-google-type-money": {
+      "types": "./dist/type-renderers/celledit-google-type-money/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-type-money/index.js"
+    },
+    "./type-renderers/celledit-google-type-timeofday": {
+      "types": "./dist/type-renderers/celledit-google-type-timeofday/index.d.ts",
+      "default": "./dist/type-renderers/celledit-google-type-timeofday/index.js"
+    },
+    "./type-renderers/celledit-int32": {
+      "types": "./dist/type-renderers/celledit-int32/index.d.ts",
+      "default": "./dist/type-renderers/celledit-int32/index.js"
+    },
+    "./type-renderers/celledit-int64": {
+      "types": "./dist/type-renderers/celledit-int64/index.d.ts",
+      "default": "./dist/type-renderers/celledit-int64/index.js"
+    },
+    "./type-renderers/celledit-string": {
+      "types": "./dist/type-renderers/celledit-string/index.d.ts",
+      "default": "./dist/type-renderers/celledit-string/index.js"
+    },
+    "./type-renderers/celledit-uint32": {
+      "types": "./dist/type-renderers/celledit-uint32/index.d.ts",
+      "default": "./dist/type-renderers/celledit-uint32/index.js"
+    },
+    "./type-renderers/celledit-uint64": {
+      "types": "./dist/type-renderers/celledit-uint64/index.d.ts",
+      "default": "./dist/type-renderers/celledit-uint64/index.js"
+    },
+    "./type-renderers/display-bool": {
+      "types": "./dist/type-renderers/display-bool/index.d.ts",
+      "default": "./dist/type-renderers/display-bool/index.js"
+    },
+    "./type-renderers/display-double": {
+      "types": "./dist/type-renderers/display-double/index.d.ts",
+      "default": "./dist/type-renderers/display-double/index.js"
+    },
+    "./type-renderers/display-float": {
+      "types": "./dist/type-renderers/display-float/index.d.ts",
+      "default": "./dist/type-renderers/display-float/index.js"
+    },
+    "./type-renderers/display-furo-fat-bool": {
+      "types": "./dist/type-renderers/display-furo-fat-bool/index.d.ts",
+      "default": "./dist/type-renderers/display-furo-fat-bool/index.js"
+    },
+    "./type-renderers/display-furo-fat-double": {
+      "types": "./dist/type-renderers/display-furo-fat-double/index.d.ts",
+      "default": "./dist/type-renderers/display-furo-fat-double/index.js"
+    },
+    "./type-renderers/display-furo-fat-float": {
+      "types": "./dist/type-renderers/display-furo-fat-float/index.d.ts",
+      "default": "./dist/type-renderers/display-furo-fat-float/index.js"
+    },
+    "./type-renderers/display-furo-fat-int32": {
+      "types": "./dist/type-renderers/display-furo-fat-int32/index.d.ts",
+      "default": "./dist/type-renderers/display-furo-fat-int32/index.js"
+    },
+    "./type-renderers/display-furo-fat-int64": {
+      "types": "./dist/type-renderers/display-furo-fat-int64/index.d.ts",
+      "default": "./dist/type-renderers/display-furo-fat-int64/index.js"
+    },
+    "./type-renderers/display-furo-fat-string": {
+      "types": "./dist/type-renderers/display-furo-fat-string/index.d.ts",
+      "default": "./dist/type-renderers/display-furo-fat-string/index.js"
+    },
+    "./type-renderers/display-furo-fat-uint32": {
+      "types": "./dist/type-renderers/display-furo-fat-uint32/index.d.ts",
+      "default": "./dist/type-renderers/display-furo-fat-uint32/index.js"
+    },
+    "./type-renderers/display-furo-fat-uint64": {
+      "types": "./dist/type-renderers/display-furo-fat-uint64/index.d.ts",
+      "default": "./dist/type-renderers/display-furo-fat-uint64/index.js"
+    },
+    "./type-renderers/display-furo-type-date": {
+      "types": "./dist/type-renderers/display-furo-type-date/index.d.ts",
+      "default": "./dist/type-renderers/display-furo-type-date/index.js"
+    },
+    "./type-renderers/display-furo-type-money": {
+      "types": "./dist/type-renderers/display-furo-type-money/index.d.ts",
+      "default": "./dist/type-renderers/display-furo-type-money/index.js"
+    },
+    "./type-renderers/display-google-protobuf-any": {
+      "types": "./dist/type-renderers/display-google-protobuf-any/index.d.ts",
+      "default": "./dist/type-renderers/display-google-protobuf-any/index.js"
+    },
+    "./type-renderers/display-google-protobuf-boolvalue": {
+      "types": "./dist/type-renderers/display-google-protobuf-boolvalue/index.d.ts",
+      "default": "./dist/type-renderers/display-google-protobuf-boolvalue/index.js"
+    },
+    "./type-renderers/display-google-protobuf-doublevalue": {
+      "types": "./dist/type-renderers/display-google-protobuf-doublevalue/index.d.ts",
+      "default": "./dist/type-renderers/display-google-protobuf-doublevalue/index.js"
+    },
+    "./type-renderers/display-google-protobuf-floatvalue": {
+      "types": "./dist/type-renderers/display-google-protobuf-floatvalue/index.d.ts",
+      "default": "./dist/type-renderers/display-google-protobuf-floatvalue/index.js"
+    },
+    "./type-renderers/display-google-protobuf-int32value": {
+      "types": "./dist/type-renderers/display-google-protobuf-int32value/index.d.ts",
+      "default": "./dist/type-renderers/display-google-protobuf-int32value/index.js"
+    },
+    "./type-renderers/display-google-protobuf-int64value": {
+      "types": "./dist/type-renderers/display-google-protobuf-int64value/index.d.ts",
+      "default": "./dist/type-renderers/display-google-protobuf-int64value/index.js"
+    },
+    "./type-renderers/display-google-protobuf-stringvalue": {
+      "types": "./dist/type-renderers/display-google-protobuf-stringvalue/index.d.ts",
+      "default": "./dist/type-renderers/display-google-protobuf-stringvalue/index.js"
+    },
+    "./type-renderers/display-google-protobuf-timestamp": {
+      "types": "./dist/type-renderers/display-google-protobuf-timestamp/index.d.ts",
+      "default": "./dist/type-renderers/display-google-protobuf-timestamp/index.js"
+    },
+    "./type-renderers/display-google-protobuf-uint32value": {
+      "types": "./dist/type-renderers/display-google-protobuf-uint32value/index.d.ts",
+      "default": "./dist/type-renderers/display-google-protobuf-uint32value/index.js"
+    },
+    "./type-renderers/display-google-protobuf-uint64value": {
+      "types": "./dist/type-renderers/display-google-protobuf-uint64value/index.d.ts",
+      "default": "./dist/type-renderers/display-google-protobuf-uint64value/index.js"
+    },
+    "./type-renderers/display-google-type-date": {
+      "types": "./dist/type-renderers/display-google-type-date/index.d.ts",
+      "default": "./dist/type-renderers/display-google-type-date/index.js"
+    },
+    "./type-renderers/display-google-type-money": {
+      "types": "./dist/type-renderers/display-google-type-money/index.d.ts",
+      "default": "./dist/type-renderers/display-google-type-money/index.js"
+    },
+    "./type-renderers/display-google-type-timeofday": {
+      "types": "./dist/type-renderers/display-google-type-timeofday/index.d.ts",
+      "default": "./dist/type-renderers/display-google-type-timeofday/index.js"
+    },
+    "./type-renderers/display-int32": {
+      "types": "./dist/type-renderers/display-int32/index.d.ts",
+      "default": "./dist/type-renderers/display-int32/index.js"
+    },
+    "./type-renderers/display-int64": {
+      "types": "./dist/type-renderers/display-int64/index.d.ts",
+      "default": "./dist/type-renderers/display-int64/index.js"
+    },
+    "./type-renderers/display-string": {
+      "types": "./dist/type-renderers/display-string/index.d.ts",
+      "default": "./dist/type-renderers/display-string/index.js"
+    },
+    "./type-renderers/display-uint32": {
+      "types": "./dist/type-renderers/display-uint32/index.d.ts",
+      "default": "./dist/type-renderers/display-uint32/index.js"
+    },
+    "./type-renderers/display-uint64": {
+      "types": "./dist/type-renderers/display-uint64/index.d.ts",
+      "default": "./dist/type-renderers/display-uint64/index.js"
+    },
+    "./type-renderers/form-bool": {
+      "types": "./dist/type-renderers/form-bool/index.d.ts",
+      "default": "./dist/type-renderers/form-bool/index.js"
+    },
+    "./type-renderers/form-double": {
+      "types": "./dist/type-renderers/form-double/index.d.ts",
+      "default": "./dist/type-renderers/form-double/index.js"
+    },
+    "./type-renderers/form-float": {
+      "types": "./dist/type-renderers/form-float/index.d.ts",
+      "default": "./dist/type-renderers/form-float/index.js"
+    },
+    "./type-renderers/form-furo-fat-bool": {
+      "types": "./dist/type-renderers/form-furo-fat-bool/index.d.ts",
+      "default": "./dist/type-renderers/form-furo-fat-bool/index.js"
+    },
+    "./type-renderers/form-furo-fat-double": {
+      "types": "./dist/type-renderers/form-furo-fat-double/index.d.ts",
+      "default": "./dist/type-renderers/form-furo-fat-double/index.js"
+    },
+    "./type-renderers/form-furo-fat-float": {
+      "types": "./dist/type-renderers/form-furo-fat-float/index.d.ts",
+      "default": "./dist/type-renderers/form-furo-fat-float/index.js"
+    },
+    "./type-renderers/form-furo-fat-int32": {
+      "types": "./dist/type-renderers/form-furo-fat-int32/index.d.ts",
+      "default": "./dist/type-renderers/form-furo-fat-int32/index.js"
+    },
+    "./type-renderers/form-furo-fat-int64": {
+      "types": "./dist/type-renderers/form-furo-fat-int64/index.d.ts",
+      "default": "./dist/type-renderers/form-furo-fat-int64/index.js"
+    },
+    "./type-renderers/form-furo-fat-string": {
+      "types": "./dist/type-renderers/form-furo-fat-string/index.d.ts",
+      "default": "./dist/type-renderers/form-furo-fat-string/index.js"
+    },
+    "./type-renderers/form-furo-fat-uint32": {
+      "types": "./dist/type-renderers/form-furo-fat-uint32/index.d.ts",
+      "default": "./dist/type-renderers/form-furo-fat-uint32/index.js"
+    },
+    "./type-renderers/form-furo-fat-uint64": {
+      "types": "./dist/type-renderers/form-furo-fat-uint64/index.d.ts",
+      "default": "./dist/type-renderers/form-furo-fat-uint64/index.js"
+    },
+    "./type-renderers/form-furo-type-date": {
+      "types": "./dist/type-renderers/form-furo-type-date/index.d.ts",
+      "default": "./dist/type-renderers/form-furo-type-date/index.js"
+    },
+    "./type-renderers/form-furo-type-money": {
+      "types": "./dist/type-renderers/form-furo-type-money/index.d.ts",
+      "default": "./dist/type-renderers/form-furo-type-money/index.js"
+    },
+    "./type-renderers/form-google-protobuf-any": {
+      "types": "./dist/type-renderers/form-google-protobuf-any/index.d.ts",
+      "default": "./dist/type-renderers/form-google-protobuf-any/index.js"
+    },
+    "./type-renderers/form-google-protobuf-boolvalue": {
+      "types": "./dist/type-renderers/form-google-protobuf-boolvalue/index.d.ts",
+      "default": "./dist/type-renderers/form-google-protobuf-boolvalue/index.js"
+    },
+    "./type-renderers/form-google-protobuf-doublevalue": {
+      "types": "./dist/type-renderers/form-google-protobuf-doublevalue/index.d.ts",
+      "default": "./dist/type-renderers/form-google-protobuf-doublevalue/index.js"
+    },
+    "./type-renderers/form-google-protobuf-floatvalue": {
+      "types": "./dist/type-renderers/form-google-protobuf-floatvalue/index.d.ts",
+      "default": "./dist/type-renderers/form-google-protobuf-floatvalue/index.js"
+    },
+    "./type-renderers/form-google-protobuf-int32value": {
+      "types": "./dist/type-renderers/form-google-protobuf-int32value/index.d.ts",
+      "default": "./dist/type-renderers/form-google-protobuf-int32value/index.js"
+    },
+    "./type-renderers/form-google-protobuf-int64value": {
+      "types": "./dist/type-renderers/form-google-protobuf-int64value/index.d.ts",
+      "default": "./dist/type-renderers/form-google-protobuf-int64value/index.js"
+    },
+    "./type-renderers/form-google-protobuf-stringvalue": {
+      "types": "./dist/type-renderers/form-google-protobuf-stringvalue/index.d.ts",
+      "default": "./dist/type-renderers/form-google-protobuf-stringvalue/index.js"
+    },
+    "./type-renderers/form-google-protobuf-timestamp": {
+      "types": "./dist/type-renderers/form-google-protobuf-timestamp/index.d.ts",
+      "default": "./dist/type-renderers/form-google-protobuf-timestamp/index.js"
+    },
+    "./type-renderers/form-google-protobuf-uint32value": {
+      "types": "./dist/type-renderers/form-google-protobuf-uint32value/index.d.ts",
+      "default": "./dist/type-renderers/form-google-protobuf-uint32value/index.js"
+    },
+    "./type-renderers/form-google-protobuf-uint64value": {
+      "types": "./dist/type-renderers/form-google-protobuf-uint64value/index.d.ts",
+      "default": "./dist/type-renderers/form-google-protobuf-uint64value/index.js"
+    },
+    "./type-renderers/form-google-type-date": {
+      "types": "./dist/type-renderers/form-google-type-date/index.d.ts",
+      "default": "./dist/type-renderers/form-google-type-date/index.js"
+    },
+    "./type-renderers/form-google-type-money": {
+      "types": "./dist/type-renderers/form-google-type-money/index.d.ts",
+      "default": "./dist/type-renderers/form-google-type-money/index.js"
+    },
+    "./type-renderers/form-google-type-timeofday": {
+      "types": "./dist/type-renderers/form-google-type-timeofday/index.d.ts",
+      "default": "./dist/type-renderers/form-google-type-timeofday/index.js"
+    },
+    "./type-renderers/form-int32": {
+      "types": "./dist/type-renderers/form-int32/index.d.ts",
+      "default": "./dist/type-renderers/form-int32/index.js"
+    },
+    "./type-renderers/form-int64": {
+      "types": "./dist/type-renderers/form-int64/index.d.ts",
+      "default": "./dist/type-renderers/form-int64/index.js"
+    },
+    "./type-renderers/form-string": {
+      "types": "./dist/type-renderers/form-string/index.d.ts",
+      "default": "./dist/type-renderers/form-string/index.js"
+    },
+    "./type-renderers/form-uint32": {
+      "types": "./dist/type-renderers/form-uint32/index.d.ts",
+      "default": "./dist/type-renderers/form-uint32/index.js"
+    },
+    "./type-renderers/form-uint64": {
+      "types": "./dist/type-renderers/form-uint64/index.d.ts",
+      "default": "./dist/type-renderers/form-uint64/index.js"
     },
     "./models": {
       "types": "./dist/models/index.d.ts",

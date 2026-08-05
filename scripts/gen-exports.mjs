@@ -10,6 +10,10 @@
  * Special folders `impl` and `subcomponents` are skipped (internal-only).
  * A leading `furo-ui5-` prefix is stripped from legacy folder names.
  *
+ * The same is done for src/type-renderers/, emitting one `./type-renderers/<slug>` key per
+ * renderer directory — see collectRendererEntries() for why these are enumerated rather than
+ * covered by a wildcard.
+ *
  * Usage:
  *   node scripts/gen-exports.mjs            # print full exports map to stdout
  *   node scripts/gen-exports.mjs --write    # splice into package.json in place
@@ -39,19 +43,8 @@ const STATIC_ENTRIES = {
     types: "./dist/JSX/*.d.ts",
     default: "./dist/JSX/*.js",
   },
-  // Type renderers. `./type-renderers/<slug>` is the side-effect import that
-  // registers one renderer (`import "@furo/ui5/type-renderers/display-string"`)
-  // — this is the form furo-ui5-typerenderer's docs tell consumers to use.
-  // `./type-renderers` is the barrel: it re-exports the renderer *classes* for
-  // typing only and registers nothing, so it is not a substitute for the above.
-  "./type-renderers": {
-    types: "./dist/type-renderers/index.d.ts",
-    default: "./dist/type-renderers/index.js",
-  },
-  "./type-renderers/*": {
-    types: "./dist/type-renderers/*/index.d.ts",
-    default: "./dist/type-renderers/*/index.js",
-  },
+  // Type renderers are not here — they are generated per renderer by collectRendererEntries().
+  //
   // Generated open-models types (from contracts/proto via `npm run gen:contracts`).
   // These names appear in the public signatures of component `model` accessors
   // (FuroFatString, IFuroFatString, NavigationNode, …), so consumers need to be
@@ -170,11 +163,53 @@ function collectComponentEntries(sourceDir) {
   return result;
 }
 
-function buildExportsMap(componentEntries) {
+/**
+ * One subpath per type renderer, generated from src/type-renderers/ exactly like the element
+ * entries above. There is deliberately no barrel:
+ * `import "@furo/ui5/type-renderers/display-string"` registers that one renderer and re-exports
+ * its class, so the same specifier serves both roles. This is the form furo-ui5-typerenderer's
+ * docs tell consumers to use.
+ *
+ * There used to be a `./type-renderers` barrel advertised as "classes for typing only, registers
+ * nothing". That contract was not achievable: all 30 `form-*` renderers import
+ * `@/elements/form-row`, `@/elements/label` and an input element in order to render, so importing
+ * the barrel reached 172 modules and defined 9 furo tags. Per-renderer subpaths cost 5 modules
+ * and register exactly the one renderer you asked for.
+ *
+ * Enumerated rather than a `./type-renderers/*` pattern — the one case where the reasoning behind
+ * the `./models` / `./types` barrels inverts. A subpath *pattern* does no existence check, so
+ * every conceivable slug "resolved": both `@furo/ui5/type-renderers/display-google-protobuf-any`
+ * (real, but unbuilt at the time) and `@furo/ui5/type-renderers/totally-made-up` mapped to a
+ * dist/ path that was not there, failing at load with ERR_MODULE_NOT_FOUND instead of a clean
+ * ERR_PACKAGE_PATH_NOT_EXPORTED. Enumerating freezes nothing that was not already public: a
+ * renderer's directory name *is* its tag name, which furo-ui5-typerenderer resolves by convention.
+ */
+function collectRendererEntries() {
+  const rendererDir = resolve(repoRoot, "src/type-renderers");
+  if (!existsSync(rendererDir)) return {};
+
+  const names = readdirSync(rendererDir, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name)
+    .filter((name) => !SKIP_FOLDERS.has(name))
+    .filter((name) => existsSync(resolve(rendererDir, name, "index.ts")))
+    .sort((a, b) => a.localeCompare(b));
+
+  const result = {};
+  for (const name of names) {
+    result[`./type-renderers/${name}`] = {
+      types: `./dist/type-renderers/${name}/index.d.ts`,
+      default: `./dist/type-renderers/${name}/index.js`,
+    };
+  }
+  return result;
+}
+
+function buildExportsMap(componentEntries, rendererEntries) {
   // Preserve a stable, readable order:
   //   1. root "."
   //   2. per-component entries (alphabetical)
-  //   3. type renderers (barrel + per-renderer wildcard)
+  //   3. type renderers (one key per renderer, alphabetical — no barrel)
   //   4. generated open-models types (barrel) + property enums (barrel)
   //   5. JSX intrinsic declarations
   //   6. assets, icons + adoptable stylesheets
@@ -186,8 +221,9 @@ function buildExportsMap(componentEntries) {
   for (const [key, val] of Object.entries(componentEntries)) {
     out[key] = val;
   }
-  out["./type-renderers"] = STATIC_ENTRIES["./type-renderers"];
-  out["./type-renderers/*"] = STATIC_ENTRIES["./type-renderers/*"];
+  for (const [key, val] of Object.entries(rendererEntries)) {
+    out[key] = val;
+  }
   out["./models"] = STATIC_ENTRIES["./models"];
   out["./types"] = STATIC_ENTRIES["./types"];
   out["./JSX"] = STATIC_ENTRIES["./JSX"];
@@ -258,14 +294,16 @@ function main() {
   }
 
   const componentEntries = collectComponentEntries(sourceDir);
-  const exportsMap = buildExportsMap(componentEntries);
+  const rendererEntries = collectRendererEntries();
+  const exportsMap = buildExportsMap(componentEntries, rendererEntries);
 
   const write = process.argv.includes("--write");
   if (write) {
     spliceIntoPackageJson(exportsMap);
     const count = Object.keys(componentEntries).length;
+    const rendererCount = Object.keys(rendererEntries).length;
     console.error(
-      `gen-exports: wrote ${count} per-component entries to package.json (source: ${sourceDir.replace(repoRoot + "/", "")})`,
+      `gen-exports: wrote ${count} per-component entries and ${rendererCount} type-renderer entries to package.json (source: ${sourceDir.replace(repoRoot + "/", "")})`,
     );
   } else {
     console.log(JSON.stringify(exportsMap, null, 2));

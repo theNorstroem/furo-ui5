@@ -109,7 +109,7 @@ Lower values will be hidden first.
 Defines the `ui5-shellbar` additional items.
 
 **Note:**
-You can use the ``.
+You can use the `<ui5-shellbar-item></ui5-shellbar-item>`.
 
 ### `logo`
 
@@ -120,7 +120,7 @@ For example, you can use `ui5-avatar` or `img` elements as logo.
 
 Defines the items displayed in menu after a click on a start button.
 
-**Note:** You can use the  `` and its ancestors.
+**Note:** You can use the  `<ui5-li></ui5-li>` and its ancestors.
 
 ### `profile`
 

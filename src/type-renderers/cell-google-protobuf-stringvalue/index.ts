@@ -1,5 +1,7 @@
 import { CellGoogleProtobufStringvalue } from "./CellGoogleProtobufStringvalue";
 
+export * from "./CellGoogleProtobufStringvalue";
+
 window.customElements.define("cell-google-protobuf-stringvalue", CellGoogleProtobufStringvalue);
 
 declare global {

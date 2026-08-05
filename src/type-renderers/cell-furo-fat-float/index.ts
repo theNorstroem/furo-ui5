@@ -1,5 +1,7 @@
 import { CellFuroFatFloat } from "./CellFuroFatFloat";
 
+export * from "./CellFuroFatFloat";
+
 window.customElements.define("cell-furo-fat-float", CellFuroFatFloat);
 
 declare global {

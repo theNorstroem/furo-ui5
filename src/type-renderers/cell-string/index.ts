@@ -1,5 +1,7 @@
 import { CellString } from "./CellString";
 
+export * from "./CellString";
+
 window.customElements.define("cell-string", CellString);
 
 declare global {

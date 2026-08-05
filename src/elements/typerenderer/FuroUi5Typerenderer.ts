@@ -145,6 +145,22 @@ interface NodeFieldDescriptor {
  * 3. neither            -> renderer-missing
  * ```
  *
+ * ## `google.protobuf.Any`
+ *
+ * An Any node reports `google.protobuf.Any` as its own type, so it resolves to the
+ * `<context>-google-protobuf-any` renderer. That renderer is an unwrapper: it waits for the
+ * payload to arrive, then hands `ANY.value` — the node carrying the *real* type — back to a
+ * nested typerenderer. An Any field therefore needs **two** imports, this renderer and whatever
+ * the payload turns out to be:
+ *
+ * ```js
+ * import "@furo/ui5/type-renderers/display-google-protobuf-any";
+ * import "@furo/ui5/type-renderers/display-furo-type-date"; // whatever arrives inside
+ * ```
+ *
+ * The payload type also has to be in the `@furo/open-models` Registry, or the model layer cannot
+ * unpack it at all — see the "Unpacking google.protobuf.Any" how-to in Storybook.
+ *
  * ## Overriding renderers
  *
  * `rendererOverrides` replaces individual renderers for one instance. The key is always the tag

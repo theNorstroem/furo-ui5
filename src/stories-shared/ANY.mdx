@@ -80,6 +80,40 @@ A useful assertion at boot, listing whatever your app expects to see inside `Any
   .forEach(t => console.warn(`[models] ${t} is not registered — Any payloads of this type will fail`));
 ```
 
+## Rendering an `Any` field
+
+Registration gets the payload into the model. Displaying it needs one more piece, because the
+concrete type is not known until data arrives.
+
+`furo-ui5-typerenderer` resolves a renderer from the node's own type name, and an `ANY` node always
+reports `google.protobuf.Any` — so it resolves to `<context>-google-protobuf-any`. That renderer is
+an unwrapper: it waits for the payload, then hands `ANY.value` (the node carrying the *real* type)
+to a nested typerenderer, which resolves the renderer for that type in the same context.
+
+So an `Any` field needs **two** renderer imports — the Any renderer, and whatever the payload
+turns out to be:
+
+```ts
+import "@furo/ui5/type-renderers/display-google-protobuf-any"; // the unwrapper
+import "@furo/ui5/type-renderers/display-furo-type-date";      // whatever arrives inside
+```
+
+```html
+<furo-ui5-typerenderer .model="${this.data.googleProtobufAny}"></furo-ui5-typerenderer>
+```
+
+All four contexts ship one: `display-`, `cell-`, `celledit-` and `form-google-protobuf-any`.
+
+Three failure modes, each with a distinct symptom:
+
+| Missing | Symptom |
+| --- | --- |
+| The payload type is not in the Registry | Console error from `__updateWithLiteral`, field stays empty — nothing renders |
+| The `*-google-protobuf-any` renderer was not imported | `renderer-missing="display-google-protobuf-any"` on the outer typerenderer |
+| The payload's own renderer was not imported | `renderer-missing="display-furo-type-date"` on the *inner* typerenderer |
+
+Nothing renders in any of the three cases, and the surrounding layout stays intact.
+
 ## Importing an element is not enough
 
 Furo elements name model types in their type annotations only — `FuroUi5DatePicker` declares

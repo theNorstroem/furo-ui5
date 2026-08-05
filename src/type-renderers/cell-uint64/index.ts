@@ -1,5 +1,7 @@
 import { CellUint64 } from "./CellUint64";
 
+export * from "./CellUint64";
+
 window.customElements.define("cell-uint64", CellUint64);
 
 declare global {

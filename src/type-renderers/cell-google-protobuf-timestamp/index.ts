@@ -1,5 +1,7 @@
 import { CellGoogleProtobufTimestamp } from "./CellGoogleProtobufTimestamp";
 
+export * from "./CellGoogleProtobufTimestamp";
+
 window.customElements.define("cell-google-protobuf-timestamp", CellGoogleProtobufTimestamp);
 
 declare global {

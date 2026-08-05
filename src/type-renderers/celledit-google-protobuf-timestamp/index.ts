@@ -1,5 +1,7 @@
 import { CelleditGoogleProtobufTimestamp } from "./CelleditGoogleProtobufTimestamp";
 
+export * from "./CelleditGoogleProtobufTimestamp";
+
 CelleditGoogleProtobufTimestamp.define();
 
 declare global {

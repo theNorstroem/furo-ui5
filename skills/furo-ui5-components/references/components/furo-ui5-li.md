@@ -89,7 +89,7 @@ Defines the custom formatted text of the component.
 
 **Note:** For optimal text wrapping and a consistent layout, it is strongly recommended to use the `text` property.
 
-Use the `default` slot only when custom formatting with HTML elements (e.g., ``, ``) is required.
+Use the `default` slot only when custom formatting with HTML elements (e.g., `<b>`, `<i>`) is required.
 Be aware that wrapping (via `wrappingType="Normal"`) may not function correctly with custom HTML content in the `default` slot.
 
 If both `text` and `default` slot are used, the `text` property takes precedence.

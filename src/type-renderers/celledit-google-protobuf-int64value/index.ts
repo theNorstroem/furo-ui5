@@ -1,5 +1,7 @@
 import { CelleditGoogleProtobufInt64value } from "./CelleditGoogleProtobufInt64value";
 
+export * from "./CelleditGoogleProtobufInt64value";
+
 CelleditGoogleProtobufInt64value.define();
 
 declare global {

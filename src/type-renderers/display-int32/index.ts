@@ -1,5 +1,7 @@
 import { DisplayInt32 } from "./DisplayInt32";
 
+export * from "./DisplayInt32";
+
 window.customElements.define("display-int32", DisplayInt32);
 
 declare global {

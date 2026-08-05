@@ -1,5 +1,7 @@
 import { CelleditBool } from "./CelleditBool";
 
+export * from "./CelleditBool";
+
 CelleditBool.define();
 
 declare global {

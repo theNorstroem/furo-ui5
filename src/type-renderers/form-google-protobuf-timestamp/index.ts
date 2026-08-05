@@ -1,5 +1,7 @@
 import { FormGoogleProtobufTimestamp } from "./FormGoogleProtobufTimestamp";
 
+export * from "./FormGoogleProtobufTimestamp";
+
 declare global {
   interface HTMLElementTagNameMap {
     "form-google-protobuf-timestamp": FormGoogleProtobufTimestamp;

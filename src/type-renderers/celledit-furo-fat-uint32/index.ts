@@ -1,5 +1,7 @@
 import { CelleditFuroFatUint32 } from "./CelleditFuroFatUint32";
 
+export * from "./CelleditFuroFatUint32";
+
 CelleditFuroFatUint32.define();
 
 declare global {

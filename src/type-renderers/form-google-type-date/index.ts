@@ -1,5 +1,7 @@
 import { FormGoogleTypeDate } from "./FormGoogleTypeDate";
 
+export * from "./FormGoogleTypeDate";
+
 declare global {
   interface HTMLElementTagNameMap {
     "form-google-type-date": FormGoogleTypeDate;

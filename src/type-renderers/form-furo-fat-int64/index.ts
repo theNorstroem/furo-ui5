@@ -1,5 +1,7 @@
 import { FormFuroFatInt64 } from "./FormFuroFatInt64";
 
+export * from "./FormFuroFatInt64";
+
 declare global {
   interface HTMLElementTagNameMap {
     "form-furo-fat-int64": FormFuroFatInt64;

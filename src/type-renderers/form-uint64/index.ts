@@ -1,5 +1,7 @@
 import { FormUint64 } from "./FormUint64";
 
+export * from "./FormUint64";
+
 declare global {
   interface HTMLElementTagNameMap {
     "form-uint64": FormUint64;

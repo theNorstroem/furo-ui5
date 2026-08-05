@@ -54,7 +54,7 @@ The recommended number of icons is between 5 and 7.
 ### Responsive Behavior
 You can change the size of the Rating Indicator by changing its `font-size` CSS property.
 
-Example: ``
+Example: `<ui5-rating-indicator style="font-size: 3rem;"></ui5-rating-indicator>`
 
 ### Keyboard Handling
 When the `furo-ui5-rating-indicator` is focused, the user can change the rating

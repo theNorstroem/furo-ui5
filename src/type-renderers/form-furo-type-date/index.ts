@@ -1,5 +1,7 @@
 import { FormFuroTypeDate } from "./FormFuroTypeDate";
 
+export * from "./FormFuroTypeDate";
+
 declare global {
   interface HTMLElementTagNameMap {
     "form-furo-type-date": FormFuroTypeDate;

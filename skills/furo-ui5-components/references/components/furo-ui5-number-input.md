@@ -120,7 +120,7 @@ Defines the suggestion items.
 **Note:** The suggestions would be displayed only if the `showSuggestions`
 property is set to `true`.
 
-**Note:** The ``, `` and `ui5-suggestion-item-custom` are recommended to be used as suggestion items.
+**Note:** The `<ui5-suggestion-item>`, `<ui5-suggestion-item-group>` and `ui5-suggestion-item-custom` are recommended to be used as suggestion items.
 
 **Note:** Input with type `Number` does not support suggestions.
 

@@ -1,5 +1,7 @@
 import { CellInt32 } from "./CellInt32";
 
+export * from "./CellInt32";
+
 window.customElements.define("cell-int32", CellInt32);
 
 declare global {

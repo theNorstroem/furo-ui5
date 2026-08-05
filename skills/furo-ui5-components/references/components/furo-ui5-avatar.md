@@ -96,7 +96,7 @@ the Fiori design, use the `ui5-avatar-badge` component.
 
 > **Usage:** Place content directly inside the component without a `slot` attribute.
 
-Receives the desired `` tag
+Receives the desired `<img>` tag
 
 **Note:** If you experience flickering of the provided image, you can hide the component until it is defined with the following CSS:
 

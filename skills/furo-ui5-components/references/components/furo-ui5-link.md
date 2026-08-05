@@ -35,7 +35,7 @@ To create a visual hierarchy in large lists of links, you can set the less impor
 by using the `design` property.
 
 If the `href` property is set, the link behaves as the HTML
-anchor tag (``) and opens the specified URL in the given target frame (`target` property).
+anchor tag (`<a></a>`) and opens the specified URL in the given target frame (`target` property).
 To specify where the linked content is opened, you can use the `target` property.
 
 ### Responsive behavior

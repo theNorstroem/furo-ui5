@@ -110,7 +110,7 @@ Defines the items of this component.
 
 ### `bindData(fieldNode: MenuModel | undefined): void`
 
-Connects your data model to this component. Accepts either an `ARRAY`
+Connects your data model to this component. Accepts either an `ARRAY<Menuitem, IMenuitem>`
 (typical case: the array of root items) or a single `Menuitem` whose `children`
 will be used as the root items.
 

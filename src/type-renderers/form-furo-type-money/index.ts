@@ -1,5 +1,7 @@
 import { FormFuroTypeMoney } from "./FormFuroTypeMoney";
 
+export * from "./FormFuroTypeMoney";
+
 declare global {
   interface HTMLElementTagNameMap {
     "form-furo-type-money": FormFuroTypeMoney;

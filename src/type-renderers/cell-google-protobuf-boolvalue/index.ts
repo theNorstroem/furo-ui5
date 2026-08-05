@@ -1,5 +1,7 @@
 import { CellGoogleProtobufBoolvalue } from "./CellGoogleProtobufBoolvalue";
 
+export * from "./CellGoogleProtobufBoolvalue";
+
 window.customElements.define("cell-google-protobuf-boolvalue", CellGoogleProtobufBoolvalue);
 
 declare global {

@@ -1,5 +1,7 @@
 import { CelleditFuroFatBool } from "./CelleditFuroFatBool";
 
+export * from "./CelleditFuroFatBool";
+
 CelleditFuroFatBool.define();
 
 declare global {

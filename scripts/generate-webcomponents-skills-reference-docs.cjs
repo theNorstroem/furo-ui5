@@ -183,6 +183,16 @@ function convertDescription(desc) {
     });
   });
 
+  // Protect inline code spans before stripping tags. Placeholder-style JSDoc such as
+  // `<context>-<type-slug>` is *markdown*, not HTML, and the catch-all below would eat it —
+  // that is how "A renderer tag is `<context>-<type-slug>`" used to render as "A renderer tag
+  // is `-`". Fenced blocks are already parked in codeBlocks; this covers the inline form.
+  const inlineCode = [];
+  result = result.replace(/`[^`\n]+`/g, (match) => {
+    inlineCode.push(match);
+    return `__INLINE_CODE_${inlineCode.length - 1}__`;
+  });
+
   // Remove remaining HTML tags (but not their content)
   result = result.replace(/<[^>]+>/g, '');
 
@@ -193,6 +203,11 @@ function convertDescription(desc) {
     .replace(/&amp;/g, '&')
     .replace(/&quot;/g, '"')
     .replace(/&nbsp;/g, ' ');
+
+  // Restore inline code spans
+  inlineCode.forEach((code, i) => {
+    result = result.replace(`__INLINE_CODE_${i}__`, code);
+  });
 
   // Restore code blocks
   codeBlocks.forEach((block, i) => {

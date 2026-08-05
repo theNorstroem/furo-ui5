@@ -25,7 +25,7 @@ not known at authoring time — generic tables, generated forms, `google.protobu
 
 ## Naming convention
 
-A renderer tag is `-`:
+A renderer tag is `<context>-<type-slug>`:
 
 ```text
 display  +  google.protobuf.Timestamp  ->  display-google-protobuf-timestamp
@@ -78,7 +78,7 @@ document.querySelector("furo-ui5-typerenderer").bindData(person.displayName);
 
 ## Repeated fields
 
-For an `ARRAY` the item type decides the tag and `-array` is appended. If that renderer
+For an `ARRAY<T, I>` the item type decides the tag and `-array` is appended. If that renderer
 does not exist, the plain item renderer is repeated once per item:
 
 ```text
@@ -94,7 +94,7 @@ ARRAY<STRING, string>, context="display"
 
 ## Map fields
 
-A `MAP` works the same way with a `-map` suffix on the **value** type. In the fallback
+A `MAP<K, T, I>` works the same way with a `-map` suffix on the **value** type. In the fallback
 the map key is put on each rendered element as a `map-key` attribute, so a renderer can display
 it:
 
@@ -104,6 +104,22 @@ MAP<string, STRING, string>, context="display"
 2. display-string     -> <display-string map-key="de">, <display-string map-key="en">, …
 3. neither            -> renderer-missing
 ```
+
+## `google.protobuf.Any`
+
+An Any node reports `google.protobuf.Any` as its own type, so it resolves to the
+`<context>-google-protobuf-any` renderer. That renderer is an unwrapper: it waits for the
+payload to arrive, then hands `ANY.value` — the node carrying the *real* type — back to a
+nested typerenderer. An Any field therefore needs **two** imports, this renderer and whatever
+the payload turns out to be:
+
+```js
+import "@furo/ui5/type-renderers/display-google-protobuf-any";
+import "@furo/ui5/type-renderers/display-furo-type-date"; // whatever arrives inside
+```
+
+The payload type also has to be in the `@furo/open-models` Registry, or the model layer cannot
+unpack it at all — see the "Unpacking google.protobuf.Any" how-to in Storybook.
 
 ## Overriding renderers
 

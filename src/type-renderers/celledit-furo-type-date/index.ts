@@ -1,5 +1,7 @@
 import { CelleditFuroTypeDate } from "./CelleditFuroTypeDate";
 
+export * from "./CelleditFuroTypeDate";
+
 CelleditFuroTypeDate.define();
 
 declare global {

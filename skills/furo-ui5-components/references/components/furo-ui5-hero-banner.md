@@ -98,7 +98,7 @@ quick access to relevant actions directly from the hero banner header.
 
 Defines the first (default) free content block of the hero banner.
 
-This is the default slot — content placed directly inside ``
+This is the default slot — content placed directly inside `<ui5-hero-banner>`
 without a slot attribute lands here.
 Can contain KPI cards, search input fields, text, buttons, and more.
 

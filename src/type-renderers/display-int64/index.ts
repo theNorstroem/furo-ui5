@@ -1,5 +1,7 @@
 import { DisplayInt64 } from "./DisplayInt64";
 
+export * from "./DisplayInt64";
+
 window.customElements.define("display-int64", DisplayInt64);
 
 declare global {

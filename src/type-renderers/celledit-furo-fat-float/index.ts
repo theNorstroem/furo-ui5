@@ -1,5 +1,7 @@
 import { CelleditFuroFatFloat } from "./CelleditFuroFatFloat";
 
+export * from "./CelleditFuroFatFloat";
+
 CelleditFuroFatFloat.define();
 
 declare global {

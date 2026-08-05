@@ -1,5 +1,7 @@
 import { DisplayFuroFatInt64 } from "./DisplayFuroFatInt64";
 
+export * from "./DisplayFuroFatInt64";
+
 window.customElements.define("display-furo-fat-int64", DisplayFuroFatInt64);
 
 declare global {

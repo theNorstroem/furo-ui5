@@ -1,5 +1,7 @@
 import { DisplayFuroFatDouble } from "./DisplayFuroFatDouble";
 
+export * from "./DisplayFuroFatDouble";
+
 window.customElements.define("display-furo-fat-double", DisplayFuroFatDouble);
 
 declare global {
