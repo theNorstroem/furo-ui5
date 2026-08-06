@@ -41,7 +41,7 @@ When adding a component, mirror an existing one (e.g. `src/elements/text-input/`
 - `dist/`, `custom-elements.json`, `web-types.json` — produced by `npm run build`.
 
 ### Type renderers
-`src/type-renderers/` ships one component per (context, type) pair — currently the full cross product of 4 contexts × 31 type slugs, 124 renderers. They are linted and typechecked like the rest of `src/`: there is no longer a `type-renderers-wip` exclusion in either `tsconfig.json` or `eslint.config.mjs`. They are **not** analyzed — both CEM configs exclude `./src/type-renderers/**/*.ts`, so no renderer appears in `custom-elements.json` (see *The per-component subpath is the public entry point* below).
+`src/type-renderers/` ships one component per (context, type) pair — currently the full cross product of 4 contexts × 32 type slugs, 128 renderers. They are linted and typechecked like the rest of `src/`: there is no longer a `type-renderers-wip` exclusion in either `tsconfig.json` or `eslint.config.mjs`. They are **not** analyzed — both CEM configs exclude `./src/type-renderers/**/*.ts`, so no renderer appears in `custom-elements.json` (see *The per-component subpath is the public entry point* below).
 
 The directory name *is* the tag name, and it follows a strict convention that `furo-ui5-typerenderer` depends on:
 
@@ -82,7 +82,7 @@ Note there is no way to get a class *without* side effects — every `FuroUi5*` 
 
 The root barrel `src/index.ts` deliberately does **not** re-export the type renderers — the 30 `form-*` renderers each side-effect-import a registering element index, so re-exporting them made a single `import { FuroUi5Button } from "@furo/ui5"` define a dozen unrelated tags. Use `@furo/ui5/type-renderers/<slug>`.
 
-**Type renderers follow the same subpath pattern**, and there is no renderer barrel. Each of the 120 `src/type-renderers/<slug>/index.ts` re-exports its class and registers its tag, so one specifier does both:
+**Type renderers follow the same subpath pattern**, and there is no renderer barrel. Each of the 128 `src/type-renderers/<slug>/index.ts` re-exports its class and registers its tag, so one specifier does both:
 
 ```ts
 import "@furo/ui5/type-renderers/display-int32";                              // register

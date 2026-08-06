@@ -80,8 +80,13 @@ interface NodeFieldDescriptor {
  * | ----------------------- | --------- | ----------------------------------- |
  * | `primitives.STRING`     | `display` | `display-string`                    |
  * | `primitives.BOOLEAN`    | `cell`    | `cell-bool`                         |
+ * | `primitives.ENUM`       | `display` | `display-enum`                      |
  * | `furo.fat.String`       | `celledit`| `celledit-furo-fat-string`          |
  * | `google.protobuf.Timestamp` | `form`| `form-google-protobuf-timestamp`    |
+ *
+ * Enums are type-erased: `ENUM.__meta.typeName` is always the constant `primitives.ENUM`, so
+ * *every* proto enum resolves to `<context>-enum`. The shipped enum renderers are generic and
+ * build themselves from the field node's own `enumArg` / `msg()`.
  *
  * ## Contexts
  *
@@ -92,7 +97,7 @@ interface NodeFieldDescriptor {
  * ## Importing the renderers is up to you
  *
  * This element never imports a renderer. It only resolves a tag name and binds the node to it, so
- * your bundle stays free of the ~120 renderers you do not use. Import what you need:
+ * your bundle stays free of the ~130 renderers you do not use. Import what you need:
  *
  * ```js
  * import "@furo/ui5/type-renderers/display-string";

@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
-  "version": "2.0.0-RC.19",
+  "version": "2.0.0-RC.20",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": {
     "type": "git",
@@ -570,6 +570,10 @@
       "types": "./dist/type-renderers/cell-double/index.d.ts",
       "default": "./dist/type-renderers/cell-double/index.js"
     },
+    "./type-renderers/cell-enum": {
+      "types": "./dist/type-renderers/cell-enum/index.d.ts",
+      "default": "./dist/type-renderers/cell-enum/index.js"
+    },
     "./type-renderers/cell-float": {
       "types": "./dist/type-renderers/cell-float/index.d.ts",
       "default": "./dist/type-renderers/cell-float/index.js"
@@ -693,6 +697,10 @@
     "./type-renderers/celledit-double": {
       "types": "./dist/type-renderers/celledit-double/index.d.ts",
       "default": "./dist/type-renderers/celledit-double/index.js"
+    },
+    "./type-renderers/celledit-enum": {
+      "types": "./dist/type-renderers/celledit-enum/index.d.ts",
+      "default": "./dist/type-renderers/celledit-enum/index.js"
     },
     "./type-renderers/celledit-float": {
       "types": "./dist/type-renderers/celledit-float/index.d.ts",
@@ -818,6 +826,10 @@
       "types": "./dist/type-renderers/display-double/index.d.ts",
       "default": "./dist/type-renderers/display-double/index.js"
     },
+    "./type-renderers/display-enum": {
+      "types": "./dist/type-renderers/display-enum/index.d.ts",
+      "default": "./dist/type-renderers/display-enum/index.js"
+    },
     "./type-renderers/display-float": {
       "types": "./dist/type-renderers/display-float/index.d.ts",
       "default": "./dist/type-renderers/display-float/index.js"
@@ -941,6 +953,10 @@
     "./type-renderers/form-double": {
       "types": "./dist/type-renderers/form-double/index.d.ts",
       "default": "./dist/type-renderers/form-double/index.js"
+    },
+    "./type-renderers/form-enum": {
+      "types": "./dist/type-renderers/form-enum/index.d.ts",
+      "default": "./dist/type-renderers/form-enum/index.js"
     },
     "./type-renderers/form-float": {
       "types": "./dist/type-renderers/form-float/index.d.ts",
