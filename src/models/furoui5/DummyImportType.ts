@@ -120,9 +120,9 @@ export class DummyImportType extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleTypeDate`
+   * The setter receives `IGoogleTypeDate | null`
    **/
-  public set date(v: IGoogleTypeDate) {
+  public set date(v: IGoogleTypeDate | null) {
     this.__TypeSetter(this._date, v);
   }
 
@@ -135,9 +135,9 @@ export class DummyImportType extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleTypeTimeOfDay`
+   * The setter receives `IGoogleTypeTimeOfDay | null`
    **/
-  public set timeOfDay(v: IGoogleTypeTimeOfDay) {
+  public set timeOfDay(v: IGoogleTypeTimeOfDay | null) {
     this.__TypeSetter(this._timeOfDay, v);
   }
 

@@ -142,9 +142,9 @@ export class ServiceDescriptorProto extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleProtobufMethodDescriptorProto[]`
+   * The setter receives `IGoogleProtobufMethodDescriptorProto[] | null`
    **/
-  public set method(v: IGoogleProtobufMethodDescriptorProto[]) {
+  public set method(v: IGoogleProtobufMethodDescriptorProto[] | null) {
     this.__TypeSetter(this._method, v);
   }
 
@@ -156,9 +156,9 @@ export class ServiceDescriptorProto extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleProtobufServiceOptions`
+   * The setter receives `IGoogleProtobufServiceOptions | null`
    **/
-  public set options(v: IGoogleProtobufServiceOptions) {
+  public set options(v: IGoogleProtobufServiceOptions | null) {
     this.__TypeSetter(this._options, v);
   }
 

@@ -347,9 +347,9 @@ export class NavigationNode extends FieldNode {
   }
 
   /**
-   * The setter receives `INavigationNode[]`
+   * The setter receives `INavigationNode[] | null`
    **/
-  public set children(v: INavigationNode[]) {
+  public set children(v: INavigationNode[] | null) {
     this.__TypeSetter(this._children, v);
   }
 

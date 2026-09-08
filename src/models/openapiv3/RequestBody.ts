@@ -151,9 +151,9 @@ export class RequestBody extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3MediaTypes`
+   * The setter receives `IOpenapiV3MediaTypes | null`
    **/
-  public set content(v: IOpenapiV3MediaTypes) {
+  public set content(v: IOpenapiV3MediaTypes | null) {
     this.__TypeSetter(this._content, v);
   }
 
@@ -179,9 +179,9 @@ export class RequestBody extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3NamedAny[]`
+   * The setter receives `IOpenapiV3NamedAny[] | null`
    **/
-  public set specificationExtension(v: IOpenapiV3NamedAny[]) {
+  public set specificationExtension(v: IOpenapiV3NamedAny[] | null) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 

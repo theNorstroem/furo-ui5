@@ -345,9 +345,9 @@ export class CubeDefinition extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroui5TestCubeColour`
+   * The setter receives `IFuroui5TestCubeColour | null`
    **/
-  public set colour(v: IFuroui5TestCubeColour) {
+  public set colour(v: IFuroui5TestCubeColour | null) {
     this.__TypeSetter(this._colour, v);
   }
 
@@ -415,9 +415,9 @@ export class CubeDefinition extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroFatString`
+   * The setter receives `IFuroFatString | null`
    **/
-  public set fatString(v: IFuroFatString) {
+  public set fatString(v: IFuroFatString | null) {
     this.__TypeSetter(this._fatString, v);
   }
 
@@ -471,9 +471,9 @@ export class CubeDefinition extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroui5TestCubeCubeOptions[]`
+   * The setter receives `IFuroui5TestCubeCubeOptions[] | null`
    **/
-  public set multipleCubeOptions(v: IFuroui5TestCubeCubeOptions[]) {
+  public set multipleCubeOptions(v: IFuroui5TestCubeCubeOptions[] | null) {
     this.__TypeSetter(this._multipleCubeOptions, v);
   }
 

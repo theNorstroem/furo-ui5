@@ -130,9 +130,9 @@ export class Responses extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3ResponseOrReference`
+   * The setter receives `IOpenapiV3ResponseOrReference | null`
    **/
-  public set default(v: IOpenapiV3ResponseOrReference) {
+  public set default(v: IOpenapiV3ResponseOrReference | null) {
     this.__TypeSetter(this._default, v);
   }
 
@@ -144,9 +144,9 @@ export class Responses extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3NamedResponseOrReference[]`
+   * The setter receives `IOpenapiV3NamedResponseOrReference[] | null`
    **/
-  public set responseOrReference(v: IOpenapiV3NamedResponseOrReference[]) {
+  public set responseOrReference(v: IOpenapiV3NamedResponseOrReference[] | null) {
     this.__TypeSetter(this._responseOrReference, v);
   }
 
@@ -158,9 +158,9 @@ export class Responses extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3NamedAny[]`
+   * The setter receives `IOpenapiV3NamedAny[] | null`
    **/
-  public set specificationExtension(v: IOpenapiV3NamedAny[]) {
+  public set specificationExtension(v: IOpenapiV3NamedAny[] | null) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 

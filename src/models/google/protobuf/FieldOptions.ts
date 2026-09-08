@@ -16,7 +16,8 @@ import {
 } from "./FieldOptions.EditionDefault";
 import { FieldOptionsJSType as GoogleProtobufFieldOptionsJSType } from "./FieldOptions.JSType";
 import { FieldOptionsOptionRetention as GoogleProtobufFieldOptionsOptionRetention } from "./FieldOptions.OptionRetention";
-import { FieldOptionsOptionTargetType as GoogleProtobufFieldOptionsOptionTargetType } from "./FieldOptions.OptionTargetType";
+import type { FieldOptionsOptionTargetType as GoogleProtobufFieldOptionsOptionTargetType } from "./FieldOptions.OptionTargetType";
+import { FieldOptionsOptionTargetTypeENUM as GoogleProtobufFieldOptionsOptionTargetTypeENUM } from "./FieldOptions.OptionTargetType";
 import {
   UninterpretedOption as GoogleProtobufUninterpretedOption,
   type IUninterpretedOption as IGoogleProtobufUninterpretedOption,
@@ -339,7 +340,7 @@ export class FieldOptions extends FieldNode {
 
   /**
    **/
-  private _targets: ENUM<GoogleProtobufFieldOptionsOptionTargetType>;
+  private _targets: ARRAY<GoogleProtobufFieldOptionsOptionTargetTypeENUM, GoogleProtobufFieldOptionsOptionTargetType>;
 
   /**
    **/
@@ -435,7 +436,7 @@ export class FieldOptions extends FieldNode {
       {
         fieldName: "targets",
         protoName: "targets",
-        FieldConstructor: ENUM<GoogleProtobufFieldOptionsOptionTargetType>,
+        FieldConstructor: GoogleProtobufFieldOptionsOptionTargetTypeENUM,
         constraints: {},
         description: "",
       },
@@ -579,13 +580,7 @@ export class FieldOptions extends FieldNode {
 
     /**
      **/
-    this._targets = new ENUM<GoogleProtobufFieldOptionsOptionTargetType>(
-      undefined,
-      GoogleProtobufFieldOptionsOptionTargetType,
-      GoogleProtobufFieldOptionsOptionTargetType.TARGET_TYPE_UNKNOWN,
-      this,
-      "targets"
-    );
+    this._targets = new ARRAY<GoogleProtobufFieldOptionsOptionTargetTypeENUM, GoogleProtobufFieldOptionsOptionTargetType>(undefined, this, "targets");
 
     /**
      **/
@@ -817,14 +812,14 @@ export class FieldOptions extends FieldNode {
   /**
    * The getter receives the FieldNode
    **/
-  public get targets(): ENUM<GoogleProtobufFieldOptionsOptionTargetType> {
+  public get targets(): ARRAY<GoogleProtobufFieldOptionsOptionTargetTypeENUM, GoogleProtobufFieldOptionsOptionTargetType> {
     return this._targets;
   }
 
   /**
-   * The setter receives `GoogleProtobufFieldOptionsOptionTargetType`
+   * The setter receives `GoogleProtobufFieldOptionsOptionTargetType[]`
    **/
-  public set targets(v: GoogleProtobufFieldOptionsOptionTargetType) {
+  public set targets(v: GoogleProtobufFieldOptionsOptionTargetType[]) {
     this.__TypeSetter(this._targets, v);
   }
 
@@ -836,9 +831,9 @@ export class FieldOptions extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleProtobufFieldOptionsEditionDefault[]`
+   * The setter receives `IGoogleProtobufFieldOptionsEditionDefault[] | null`
    **/
-  public set editionDefaults(v: IGoogleProtobufFieldOptionsEditionDefault[]) {
+  public set editionDefaults(v: IGoogleProtobufFieldOptionsEditionDefault[] | null) {
     this.__TypeSetter(this._editionDefaults, v);
   }
 
@@ -851,9 +846,9 @@ export class FieldOptions extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleProtobufFeatureSet`
+   * The setter receives `IGoogleProtobufFeatureSet | null`
    **/
-  public set features(v: IGoogleProtobufFeatureSet) {
+  public set features(v: IGoogleProtobufFeatureSet | null) {
     this.__TypeSetter(this._features, v);
   }
 
@@ -866,9 +861,9 @@ export class FieldOptions extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleProtobufUninterpretedOption[]`
+   * The setter receives `IGoogleProtobufUninterpretedOption[] | null`
    **/
-  public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[]) {
+  public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[] | null) {
     this.__TypeSetter(this._uninterpretedOption, v);
   }
 

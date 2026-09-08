@@ -86,9 +86,9 @@ export class CubeServiceGetListResponse extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroui5TestCubeCubeEntity[]`
+   * The setter receives `IFuroui5TestCubeCubeEntity[] | null`
    **/
-  public set entities(v: IFuroui5TestCubeCubeEntity[]) {
+  public set entities(v: IFuroui5TestCubeCubeEntity[] | null) {
     this.__TypeSetter(this._entities, v);
   }
 

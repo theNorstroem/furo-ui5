@@ -154,9 +154,9 @@ export class OauthFlows extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3OauthFlow`
+   * The setter receives `IOpenapiV3OauthFlow | null`
    **/
-  public set implicit(v: IOpenapiV3OauthFlow) {
+  public set implicit(v: IOpenapiV3OauthFlow | null) {
     this.__TypeSetter(this._implicit, v);
   }
 
@@ -168,9 +168,9 @@ export class OauthFlows extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3OauthFlow`
+   * The setter receives `IOpenapiV3OauthFlow | null`
    **/
-  public set password(v: IOpenapiV3OauthFlow) {
+  public set password(v: IOpenapiV3OauthFlow | null) {
     this.__TypeSetter(this._password, v);
   }
 
@@ -182,9 +182,9 @@ export class OauthFlows extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3OauthFlow`
+   * The setter receives `IOpenapiV3OauthFlow | null`
    **/
-  public set clientCredentials(v: IOpenapiV3OauthFlow) {
+  public set clientCredentials(v: IOpenapiV3OauthFlow | null) {
     this.__TypeSetter(this._clientCredentials, v);
   }
 
@@ -196,9 +196,9 @@ export class OauthFlows extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3OauthFlow`
+   * The setter receives `IOpenapiV3OauthFlow | null`
    **/
-  public set authorizationCode(v: IOpenapiV3OauthFlow) {
+  public set authorizationCode(v: IOpenapiV3OauthFlow | null) {
     this.__TypeSetter(this._authorizationCode, v);
   }
 
@@ -210,9 +210,9 @@ export class OauthFlows extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3NamedAny[]`
+   * The setter receives `IOpenapiV3NamedAny[] | null`
    **/
-  public set specificationExtension(v: IOpenapiV3NamedAny[]) {
+  public set specificationExtension(v: IOpenapiV3NamedAny[] | null) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 

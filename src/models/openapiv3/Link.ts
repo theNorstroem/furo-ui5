@@ -222,9 +222,9 @@ export class Link extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3AnyOrExpression`
+   * The setter receives `IOpenapiV3AnyOrExpression | null`
    **/
-  public set parameters(v: IOpenapiV3AnyOrExpression) {
+  public set parameters(v: IOpenapiV3AnyOrExpression | null) {
     this.__TypeSetter(this._parameters, v);
   }
 
@@ -236,9 +236,9 @@ export class Link extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3AnyOrExpression`
+   * The setter receives `IOpenapiV3AnyOrExpression | null`
    **/
-  public set requestBody(v: IOpenapiV3AnyOrExpression) {
+  public set requestBody(v: IOpenapiV3AnyOrExpression | null) {
     this.__TypeSetter(this._requestBody, v);
   }
 
@@ -264,9 +264,9 @@ export class Link extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3Server`
+   * The setter receives `IOpenapiV3Server | null`
    **/
-  public set server(v: IOpenapiV3Server) {
+  public set server(v: IOpenapiV3Server | null) {
     this.__TypeSetter(this._server, v);
   }
 
@@ -278,9 +278,9 @@ export class Link extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3NamedAny[]`
+   * The setter receives `IOpenapiV3NamedAny[] | null`
    **/
-  public set specificationExtension(v: IOpenapiV3NamedAny[]) {
+  public set specificationExtension(v: IOpenapiV3NamedAny[] | null) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 

@@ -322,9 +322,9 @@ export class Menuitem extends FieldNode {
   }
 
   /**
-   * The setter receives `IMenuitem[]`
+   * The setter receives `IMenuitem[] | null`
    **/
-  public set children(v: IMenuitem[]) {
+  public set children(v: IMenuitem[] | null) {
     this.__TypeSetter(this._children, v);
   }
 

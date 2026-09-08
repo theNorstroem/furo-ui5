@@ -104,9 +104,9 @@ export class ParameterOrReference extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3Parameter`
+   * The setter receives `IOpenapiV3Parameter | null`
    **/
-  public set parameter(v: IOpenapiV3Parameter) {
+  public set parameter(v: IOpenapiV3Parameter | null) {
     this.__TypeSetter(this._parameter, v);
   }
 
@@ -118,9 +118,9 @@ export class ParameterOrReference extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3Reference`
+   * The setter receives `IOpenapiV3Reference | null`
    **/
-  public set reference(v: IOpenapiV3Reference) {
+  public set reference(v: IOpenapiV3Reference | null) {
     this.__TypeSetter(this._reference, v);
   }
 

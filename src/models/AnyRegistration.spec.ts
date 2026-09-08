@@ -46,9 +46,7 @@ describe("Any type registration", () => {
 
   describe("unregistered types", () => {
     it("throws a named error, rather than failing silently", () => {
-      expect(() => Registry.createInstanceByTypeName("not.a.Real.Type")).toThrow(
-        /Cannot find type not\.a\.Real\.Type/
-      );
+      expect(() => Registry.createInstanceByTypeName("not.a.Real.Type")).toThrow(/Cannot find type not\.a\.Real\.Type/);
     });
   });
 });

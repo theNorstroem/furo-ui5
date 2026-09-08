@@ -163,9 +163,9 @@ export class ServiceOptions extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleProtobufFeatureSet`
+   * The setter receives `IGoogleProtobufFeatureSet | null`
    **/
-  public set features(v: IGoogleProtobufFeatureSet) {
+  public set features(v: IGoogleProtobufFeatureSet | null) {
     this.__TypeSetter(this._features, v);
   }
 
@@ -196,9 +196,9 @@ export class ServiceOptions extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleProtobufUninterpretedOption[]`
+   * The setter receives `IGoogleProtobufUninterpretedOption[] | null`
    **/
-  public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[]) {
+  public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[] | null) {
     this.__TypeSetter(this._uninterpretedOption, v);
   }
 

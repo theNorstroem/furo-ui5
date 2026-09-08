@@ -812,9 +812,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroFatBool`
+   * The setter receives `IFuroFatBool | null`
    **/
-  public set furoFatBool(v: IFuroFatBool) {
+  public set furoFatBool(v: IFuroFatBool | null) {
     this.__TypeSetter(this._furoFatBool, v);
   }
 
@@ -826,9 +826,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroFatDouble`
+   * The setter receives `IFuroFatDouble | null`
    **/
-  public set furoFatDouble(v: IFuroFatDouble) {
+  public set furoFatDouble(v: IFuroFatDouble | null) {
     this.__TypeSetter(this._furoFatDouble, v);
   }
 
@@ -840,9 +840,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroFatFloat`
+   * The setter receives `IFuroFatFloat | null`
    **/
-  public set furoFatFloat(v: IFuroFatFloat) {
+  public set furoFatFloat(v: IFuroFatFloat | null) {
     this.__TypeSetter(this._furoFatFloat, v);
   }
 
@@ -854,9 +854,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroFatInt32`
+   * The setter receives `IFuroFatInt32 | null`
    **/
-  public set furoFatInt32(v: IFuroFatInt32) {
+  public set furoFatInt32(v: IFuroFatInt32 | null) {
     this.__TypeSetter(this._furoFatInt32, v);
   }
 
@@ -868,9 +868,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroFatInt64`
+   * The setter receives `IFuroFatInt64 | null`
    **/
-  public set furoFatInt64(v: IFuroFatInt64) {
+  public set furoFatInt64(v: IFuroFatInt64 | null) {
     this.__TypeSetter(this._furoFatInt64, v);
   }
 
@@ -882,9 +882,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroFatString`
+   * The setter receives `IFuroFatString | null`
    **/
-  public set furoFatString(v: IFuroFatString) {
+  public set furoFatString(v: IFuroFatString | null) {
     this.__TypeSetter(this._furoFatString, v);
   }
 
@@ -896,9 +896,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroFatUint32`
+   * The setter receives `IFuroFatUint32 | null`
    **/
-  public set furoFatUint32(v: IFuroFatUint32) {
+  public set furoFatUint32(v: IFuroFatUint32 | null) {
     this.__TypeSetter(this._furoFatUint32, v);
   }
 
@@ -910,9 +910,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroFatUint64`
+   * The setter receives `IFuroFatUint64 | null`
    **/
-  public set furoFatUint64(v: IFuroFatUint64) {
+  public set furoFatUint64(v: IFuroFatUint64 | null) {
     this.__TypeSetter(this._furoFatUint64, v);
   }
 
@@ -925,9 +925,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroTypeDate`
+   * The setter receives `IFuroTypeDate | null`
    **/
-  public set furoTypeDate(v: IFuroTypeDate) {
+  public set furoTypeDate(v: IFuroTypeDate | null) {
     this.__TypeSetter(this._furoTypeDate, v);
   }
 
@@ -939,9 +939,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroTypeMoney`
+   * The setter receives `IFuroTypeMoney | null`
    **/
-  public set furoTypeMoney(v: IFuroTypeMoney) {
+  public set furoTypeMoney(v: IFuroTypeMoney | null) {
     this.__TypeSetter(this._furoTypeMoney, v);
   }
 
@@ -954,7 +954,7 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `boolean| null`
+   * The setter receives `boolean | null`
    **/
   public set googleProtobufBoolvalue(v: boolean | null) {
     this.__TypeSetter(this._googleProtobufBoolvalue, v);
@@ -968,7 +968,7 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `number| null`
+   * The setter receives `number | null`
    **/
   public set googleProtobufDoublevalue(v: number | null) {
     this.__TypeSetter(this._googleProtobufDoublevalue, v);
@@ -982,7 +982,7 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `number| null`
+   * The setter receives `number | null`
    **/
   public set googleProtobufFloatvalue(v: number | null) {
     this.__TypeSetter(this._googleProtobufFloatvalue, v);
@@ -996,7 +996,7 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `number| null`
+   * The setter receives `number | null`
    **/
   public set googleProtobufInt32value(v: number | null) {
     this.__TypeSetter(this._googleProtobufInt32value, v);
@@ -1010,7 +1010,7 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `bigint| null`
+   * The setter receives `bigint | null`
    **/
   public set googleProtobufInt64value(v: bigint | null) {
     this.__TypeSetter(this._googleProtobufInt64value, v);
@@ -1024,7 +1024,7 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `string| null`
+   * The setter receives `string | null`
    **/
   public set googleProtobufStringvalue(v: string | null) {
     this.__TypeSetter(this._googleProtobufStringvalue, v);
@@ -1038,7 +1038,7 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `number| null`
+   * The setter receives `number | null`
    **/
   public set googleProtobufUint32value(v: number | null) {
     this.__TypeSetter(this._googleProtobufUint32value, v);
@@ -1052,7 +1052,7 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `bigint| null`
+   * The setter receives `bigint | null`
    **/
   public set googleProtobufUint64value(v: bigint | null) {
     this.__TypeSetter(this._googleProtobufUint64value, v);
@@ -1067,9 +1067,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IAny`
+   * The setter receives `IAny | null`
    **/
-  public set googleProtobufAny(v: IAny) {
+  public set googleProtobufAny(v: IAny | null) {
     this.__TypeSetter(this._googleProtobufAny, v);
   }
 
@@ -1081,7 +1081,7 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `string| null`
+   * The setter receives `string | null`
    **/
   public set googleProtobufTimestamp(v: string | null) {
     this.__TypeSetter(this._googleProtobufTimestamp, v);
@@ -1096,9 +1096,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleTypeDate`
+   * The setter receives `IGoogleTypeDate | null`
    **/
-  public set googleTypeDate(v: IGoogleTypeDate) {
+  public set googleTypeDate(v: IGoogleTypeDate | null) {
     this.__TypeSetter(this._googleTypeDate, v);
   }
 
@@ -1110,9 +1110,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleTypeMoney`
+   * The setter receives `IGoogleTypeMoney | null`
    **/
-  public set googleTypeMoney(v: IGoogleTypeMoney) {
+  public set googleTypeMoney(v: IGoogleTypeMoney | null) {
     this.__TypeSetter(this._googleTypeMoney, v);
   }
 
@@ -1124,9 +1124,9 @@ export class AllTypesTest extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleTypeTimeOfDay`
+   * The setter receives `IGoogleTypeTimeOfDay | null`
    **/
-  public set googleTypeTimeofday(v: IGoogleTypeTimeOfDay) {
+  public set googleTypeTimeofday(v: IGoogleTypeTimeOfDay | null) {
     this.__TypeSetter(this._googleTypeTimeofday, v);
   }
 

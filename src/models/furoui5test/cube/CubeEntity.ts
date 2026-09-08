@@ -151,9 +151,9 @@ export class CubeEntity extends FieldNode {
   }
 
   /**
-   * The setter receives `IFuroui5TestCubeCubeDefinition`
+   * The setter receives `IFuroui5TestCubeCubeDefinition | null`
    **/
-  public set cube(v: IFuroui5TestCubeCubeDefinition) {
+  public set cube(v: IFuroui5TestCubeCubeDefinition | null) {
     this.__TypeSetter(this._cube, v);
   }
 

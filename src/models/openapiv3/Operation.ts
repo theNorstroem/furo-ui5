@@ -358,9 +358,9 @@ export class Operation extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3ExternalDocs`
+   * The setter receives `IOpenapiV3ExternalDocs | null`
    **/
-  public set externalDocs(v: IOpenapiV3ExternalDocs) {
+  public set externalDocs(v: IOpenapiV3ExternalDocs | null) {
     this.__TypeSetter(this._externalDocs, v);
   }
 
@@ -386,9 +386,9 @@ export class Operation extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3ParameterOrReference[]`
+   * The setter receives `IOpenapiV3ParameterOrReference[] | null`
    **/
-  public set parameters(v: IOpenapiV3ParameterOrReference[]) {
+  public set parameters(v: IOpenapiV3ParameterOrReference[] | null) {
     this.__TypeSetter(this._parameters, v);
   }
 
@@ -400,9 +400,9 @@ export class Operation extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3RequestBodyOrReference`
+   * The setter receives `IOpenapiV3RequestBodyOrReference | null`
    **/
-  public set requestBody(v: IOpenapiV3RequestBodyOrReference) {
+  public set requestBody(v: IOpenapiV3RequestBodyOrReference | null) {
     this.__TypeSetter(this._requestBody, v);
   }
 
@@ -414,9 +414,9 @@ export class Operation extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3Responses`
+   * The setter receives `IOpenapiV3Responses | null`
    **/
-  public set responses(v: IOpenapiV3Responses) {
+  public set responses(v: IOpenapiV3Responses | null) {
     this.__TypeSetter(this._responses, v);
   }
 
@@ -428,9 +428,9 @@ export class Operation extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3CallbacksOrReferences`
+   * The setter receives `IOpenapiV3CallbacksOrReferences | null`
    **/
-  public set callbacks(v: IOpenapiV3CallbacksOrReferences) {
+  public set callbacks(v: IOpenapiV3CallbacksOrReferences | null) {
     this.__TypeSetter(this._callbacks, v);
   }
 
@@ -456,9 +456,9 @@ export class Operation extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3SecurityRequirement[]`
+   * The setter receives `IOpenapiV3SecurityRequirement[] | null`
    **/
-  public set security(v: IOpenapiV3SecurityRequirement[]) {
+  public set security(v: IOpenapiV3SecurityRequirement[] | null) {
     this.__TypeSetter(this._security, v);
   }
 
@@ -470,9 +470,9 @@ export class Operation extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3Server[]`
+   * The setter receives `IOpenapiV3Server[] | null`
    **/
-  public set servers(v: IOpenapiV3Server[]) {
+  public set servers(v: IOpenapiV3Server[] | null) {
     this.__TypeSetter(this._servers, v);
   }
 
@@ -484,9 +484,9 @@ export class Operation extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3NamedAny[]`
+   * The setter receives `IOpenapiV3NamedAny[] | null`
    **/
-  public set specificationExtension(v: IOpenapiV3NamedAny[]) {
+  public set specificationExtension(v: IOpenapiV3NamedAny[] | null) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 

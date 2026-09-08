@@ -208,9 +208,9 @@ export class ExtensionRangeOptions extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleProtobufUninterpretedOption[]`
+   * The setter receives `IGoogleProtobufUninterpretedOption[] | null`
    **/
-  public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[]) {
+  public set uninterpretedOption(v: IGoogleProtobufUninterpretedOption[] | null) {
     this.__TypeSetter(this._uninterpretedOption, v);
   }
 
@@ -225,9 +225,9 @@ export class ExtensionRangeOptions extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleProtobufExtensionRangeOptionsDeclaration[]`
+   * The setter receives `IGoogleProtobufExtensionRangeOptionsDeclaration[] | null`
    **/
-  public set declaration(v: IGoogleProtobufExtensionRangeOptionsDeclaration[]) {
+  public set declaration(v: IGoogleProtobufExtensionRangeOptionsDeclaration[] | null) {
     this.__TypeSetter(this._declaration, v);
   }
 
@@ -240,9 +240,9 @@ export class ExtensionRangeOptions extends FieldNode {
   }
 
   /**
-   * The setter receives `IGoogleProtobufFeatureSet`
+   * The setter receives `IGoogleProtobufFeatureSet | null`
    **/
-  public set features(v: IGoogleProtobufFeatureSet) {
+  public set features(v: IGoogleProtobufFeatureSet | null) {
     this.__TypeSetter(this._features, v);
   }
 

@@ -173,9 +173,9 @@ export class RootNode extends FieldNode {
   }
 
   /**
-   * The setter receives `ITreeNavigationNode`
+   * The setter receives `ITreeNavigationNode | null`
    **/
-  public set root(v: ITreeNavigationNode) {
+  public set root(v: ITreeNavigationNode | null) {
     this.__TypeSetter(this._root, v);
   }
 

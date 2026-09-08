@@ -179,9 +179,9 @@ export class Response extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3HeadersOrReferences`
+   * The setter receives `IOpenapiV3HeadersOrReferences | null`
    **/
-  public set headers(v: IOpenapiV3HeadersOrReferences) {
+  public set headers(v: IOpenapiV3HeadersOrReferences | null) {
     this.__TypeSetter(this._headers, v);
   }
 
@@ -193,9 +193,9 @@ export class Response extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3MediaTypes`
+   * The setter receives `IOpenapiV3MediaTypes | null`
    **/
-  public set content(v: IOpenapiV3MediaTypes) {
+  public set content(v: IOpenapiV3MediaTypes | null) {
     this.__TypeSetter(this._content, v);
   }
 
@@ -207,9 +207,9 @@ export class Response extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3LinksOrReferences`
+   * The setter receives `IOpenapiV3LinksOrReferences | null`
    **/
-  public set links(v: IOpenapiV3LinksOrReferences) {
+  public set links(v: IOpenapiV3LinksOrReferences | null) {
     this.__TypeSetter(this._links, v);
   }
 
@@ -221,9 +221,9 @@ export class Response extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3NamedAny[]`
+   * The setter receives `IOpenapiV3NamedAny[] | null`
    **/
-  public set specificationExtension(v: IOpenapiV3NamedAny[]) {
+  public set specificationExtension(v: IOpenapiV3NamedAny[] | null) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 

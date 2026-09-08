@@ -284,9 +284,9 @@ export class Components extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3SchemasOrReferences`
+   * The setter receives `IOpenapiV3SchemasOrReferences | null`
    **/
-  public set schemas(v: IOpenapiV3SchemasOrReferences) {
+  public set schemas(v: IOpenapiV3SchemasOrReferences | null) {
     this.__TypeSetter(this._schemas, v);
   }
 
@@ -298,9 +298,9 @@ export class Components extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3ResponsesOrReferences`
+   * The setter receives `IOpenapiV3ResponsesOrReferences | null`
    **/
-  public set responses(v: IOpenapiV3ResponsesOrReferences) {
+  public set responses(v: IOpenapiV3ResponsesOrReferences | null) {
     this.__TypeSetter(this._responses, v);
   }
 
@@ -312,9 +312,9 @@ export class Components extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3ParametersOrReferences`
+   * The setter receives `IOpenapiV3ParametersOrReferences | null`
    **/
-  public set parameters(v: IOpenapiV3ParametersOrReferences) {
+  public set parameters(v: IOpenapiV3ParametersOrReferences | null) {
     this.__TypeSetter(this._parameters, v);
   }
 
@@ -326,9 +326,9 @@ export class Components extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3ExamplesOrReferences`
+   * The setter receives `IOpenapiV3ExamplesOrReferences | null`
    **/
-  public set examples(v: IOpenapiV3ExamplesOrReferences) {
+  public set examples(v: IOpenapiV3ExamplesOrReferences | null) {
     this.__TypeSetter(this._examples, v);
   }
 
@@ -340,9 +340,9 @@ export class Components extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3RequestBodiesOrReferences`
+   * The setter receives `IOpenapiV3RequestBodiesOrReferences | null`
    **/
-  public set requestBodies(v: IOpenapiV3RequestBodiesOrReferences) {
+  public set requestBodies(v: IOpenapiV3RequestBodiesOrReferences | null) {
     this.__TypeSetter(this._requestBodies, v);
   }
 
@@ -354,9 +354,9 @@ export class Components extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3HeadersOrReferences`
+   * The setter receives `IOpenapiV3HeadersOrReferences | null`
    **/
-  public set headers(v: IOpenapiV3HeadersOrReferences) {
+  public set headers(v: IOpenapiV3HeadersOrReferences | null) {
     this.__TypeSetter(this._headers, v);
   }
 
@@ -368,9 +368,9 @@ export class Components extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3SecuritySchemesOrReferences`
+   * The setter receives `IOpenapiV3SecuritySchemesOrReferences | null`
    **/
-  public set securitySchemes(v: IOpenapiV3SecuritySchemesOrReferences) {
+  public set securitySchemes(v: IOpenapiV3SecuritySchemesOrReferences | null) {
     this.__TypeSetter(this._securitySchemes, v);
   }
 
@@ -382,9 +382,9 @@ export class Components extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3LinksOrReferences`
+   * The setter receives `IOpenapiV3LinksOrReferences | null`
    **/
-  public set links(v: IOpenapiV3LinksOrReferences) {
+  public set links(v: IOpenapiV3LinksOrReferences | null) {
     this.__TypeSetter(this._links, v);
   }
 
@@ -396,9 +396,9 @@ export class Components extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3CallbacksOrReferences`
+   * The setter receives `IOpenapiV3CallbacksOrReferences | null`
    **/
-  public set callbacks(v: IOpenapiV3CallbacksOrReferences) {
+  public set callbacks(v: IOpenapiV3CallbacksOrReferences | null) {
     this.__TypeSetter(this._callbacks, v);
   }
 
@@ -410,9 +410,9 @@ export class Components extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3NamedAny[]`
+   * The setter receives `IOpenapiV3NamedAny[] | null`
    **/
-  public set specificationExtension(v: IOpenapiV3NamedAny[]) {
+  public set specificationExtension(v: IOpenapiV3NamedAny[] | null) {
     this.__TypeSetter(this._specificationExtension, v);
   }
 

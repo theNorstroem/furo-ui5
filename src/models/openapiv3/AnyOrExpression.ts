@@ -104,9 +104,9 @@ export class AnyOrExpression extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3Any`
+   * The setter receives `IOpenapiV3Any | null`
    **/
-  public set any(v: IOpenapiV3Any) {
+  public set any(v: IOpenapiV3Any | null) {
     this.__TypeSetter(this._any, v);
   }
 
@@ -118,9 +118,9 @@ export class AnyOrExpression extends FieldNode {
   }
 
   /**
-   * The setter receives `IOpenapiV3Expression`
+   * The setter receives `IOpenapiV3Expression | null`
    **/
-  public set expression(v: IOpenapiV3Expression) {
+  public set expression(v: IOpenapiV3Expression | null) {
     this.__TypeSetter(this._expression, v);
   }
 
