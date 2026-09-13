@@ -94,6 +94,17 @@ export interface Dialog extends React.HTMLAttributes<HTMLElement> {
   resizable?: boolean;
 
   /**
+   * Defines whether a fullscreen toggle button is shown in the dialog header.
+   * When pressed, it toggles the `stretch` property.
+   * The fullscreen button is not available on phone devices.
+   *
+   * **Note:** The fullscreen button is not available on phone devices,
+   * nor when a custom header slot is provided — the application is expected
+   * to render its own toggle inside the custom header in those cases.
+   */
+  showFullscreenButton?: boolean;
+
+  /**
    * Defines the state of the `Dialog`.
    *
    * **Note:** If `"Negative"` and `"Critical"` states is set, it will change the
@@ -175,6 +186,12 @@ declare module "react" {
        * - [Shift] + [Up] or [Down] - Decrease/Increase the height of the dialog.
        * - [Shift] + [Left] or [Right] - Decrease/Increase the width of the dialog.
        *
+       * #### Fullscreen
+       * When the `furo-ui5-dialog` has the `showFullscreenButton` property set to `true`, the user can toggle fullscreen mode
+       * with the following keyboard shortcut:
+       *
+       * - [Shift] + [Ctrl] + [F] - Toggle fullscreen mode.
+       *
        * ### ES6 Module Import
        *
        * `import "@furo/ui5/dist/Dialog";`
@@ -220,6 +237,12 @@ declare module "react" {
        *
        * - [Shift] + [Up] or [Down] - Decrease/Increase the height of the dialog.
        * - [Shift] + [Left] or [Right] - Decrease/Increase the width of the dialog.
+       *
+       * #### Fullscreen
+       * When the `furo-ui5-dialog` has the `showFullscreenButton` property set to `true`, the user can toggle fullscreen mode
+       * with the following keyboard shortcut:
+       *
+       * - [Shift] + [Ctrl] + [F] - Toggle fullscreen mode.
        *
        * ### ES6 Module Import
        *

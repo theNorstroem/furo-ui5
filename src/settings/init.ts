@@ -47,6 +47,16 @@ export const initUi5Config = (config: Ui5Config = buildUi5Config()): HTMLScriptE
 };
 
 const config = buildUi5Config();
+config.language = localStorage.getItem("FuroUi5_Language") ?? config.language;
+config.animationMode = localStorage.getItem("FuroUi5_AnimationMode") ?? config.animationMode;
+config.theme = localStorage.getItem("FuroUi5_Theme") ?? config.theme;
+config.calendarType = localStorage.getItem("FuroUi5_Calendar") ?? config.calendarType;
+config.secondaryCalendarType = localStorage.getItem("FuroUi5_SecondaryCalendar") ?? config.secondaryCalendarType;
+const storedFirstDay = localStorage.getItem("FuroUi5_FirstDayOfWeek");
+const firstDayIndex = storedFirstDay ? Number(storedFirstDay) : NaN;
+if (Number.isInteger(firstDayIndex) && firstDayIndex >= 0 && firstDayIndex <= 6) {
+  config.formatSettings.firstDayOfWeek = firstDayIndex;
+}
 
 initUi5Config(config);
 

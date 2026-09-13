@@ -71,10 +71,13 @@ export interface LiCustom extends React.HTMLAttributes<HTMLElement> {
 
   /**
    * Defines the visual indication and behavior of the list items.
-   * Available options are `Active` (by default), `Inactive`, `Detail` and `Navigation`.
+   * Available options are `Active` (by default), `Inactive`, `InactiveSelectable`, `Detail` and `Navigation`.
    *
    * **Note:** When set to `Active` or `Navigation`, the item will provide visual response upon press and hover,
-   * while with type `Inactive` and `Detail` - will not.
+   * while with type `Inactive`, `InactiveSelectable` and `Detail` - will not.
+   *
+   * **Note:** `InactiveSelectable` behaves like `Inactive` but allows selection (checkbox/radio) to be toggled
+   * when the list has a selection mode. The `item-click` event is not fired for this type.
    */
   type?: ListItemType | keyof typeof ListItemType;
 }
@@ -104,10 +107,52 @@ declare module "react" {
        *
        * The component accepts arbitrary HTML content to allow full customization.
        *
+       * ### Keyboard Handling
+       *
+       * Interactive elements placed in the default slot (buttons, links, inputs, etc.)
+       * are **not** reached by [Tab] from outside the list. This follows the SAP Fiori
+       * "Intentional Edit Pattern" and preserves fast keyboard navigation between items.
+       *
+       * To activate an interactive element inside a `furo-ui5-li-custom`:
+       *
+       * - [F2] on the focused item - moves focus to the first interactive element inside the item.
+       * Pressing [F2] again returns focus to the item level.
+       * - [F7] on the focused item - moves focus to the last remembered interactive element
+       * inside the item (or to the first interactive element if none is remembered).
+       * Pressing [F7] again saves the current position and returns focus to the item level.
+       * - [Tab] or [Shift] + [Tab] then walks through the interactive elements within the item
+       * and continues into the next/previous item.
+       * - [Up] or [Down] while focused on an interactive element moves focus to the element
+       * at the same index in the previous/next item; items with no interactive elements
+       * are skipped and `furo-ui5-li-group` boundaries are crossed.
+       *
+       * See the `furo-ui5-list` "Keyboard Handling" section for the full behavior.
+       *
        * A component to be used as custom list item within the `furo-ui5-list`
        * the same way as the standard `furo-ui5-li`.
        *
        * The component accepts arbitrary HTML content to allow full customization.
+       *
+       * ### Keyboard Handling
+       *
+       * Interactive elements placed in the default slot (buttons, links, inputs, etc.)
+       * are **not** reached by [Tab] from outside the list. This follows the SAP Fiori
+       * "Intentional Edit Pattern" and preserves fast keyboard navigation between items.
+       *
+       * To activate an interactive element inside a `furo-ui5-li-custom`:
+       *
+       * - [F2] on the focused item - moves focus to the first interactive element inside the item.
+       * Pressing [F2] again returns focus to the item level.
+       * - [F7] on the focused item - moves focus to the last remembered interactive element
+       * inside the item (or to the first interactive element if none is remembered).
+       * Pressing [F7] again saves the current position and returns focus to the item level.
+       * - [Tab] or [Shift] + [Tab] then walks through the interactive elements within the item
+       * and continues into the next/previous item.
+       * - [Up] or [Down] while focused on an interactive element moves focus to the element
+       * at the same index in the previous/next item; items with no interactive elements
+       * are skipped and `furo-ui5-li-group` boundaries are crossed.
+       *
+       * See the `furo-ui5-list` "Keyboard Handling" section for the full behavior.
        *
        * A class to serve as a base
        * for the `ListItemStandard` and `ListItemCustom` classes.

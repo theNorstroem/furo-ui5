@@ -106,6 +106,18 @@ describe("FuroUi5TreeTable", () => {
       await delay(100);
       await assert.isAccessible(el);
     });
+
+    it("honours the hidden attribute", () => {
+      // :host { display: block } outranks the UA rule for [hidden], so the host has to
+      // switch itself off explicitly - otherwise hiding the element does nothing.
+      assert.equal(getComputedStyle(el).display, "block");
+
+      el.hidden = true;
+      assert.equal(getComputedStyle(el).display, "none");
+
+      el.hidden = false;
+      assert.equal(getComputedStyle(el).display, "block");
+    });
   });
 
   // ───────────────────────────────────────────────────────────────────────

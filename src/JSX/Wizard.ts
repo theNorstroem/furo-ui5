@@ -10,6 +10,16 @@ export interface Wizard extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
+   * Defines the accessible ARIA name of the component.
+   */
+  accessibleName?: string | undefined;
+
+  /**
+   * Receives id(or many ids) of the elements that label the component.
+   */
+  accessibleNameRef?: string | undefined;
+
+  /**
    * Defines how the content of the `furo-ui5-wizard` would be visualized.
    */
   contentLayout?: WizardContentLayout | keyof typeof WizardContentLayout;

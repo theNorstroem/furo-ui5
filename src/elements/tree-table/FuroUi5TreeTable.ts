@@ -706,6 +706,10 @@ export class FuroUi5TreeTable extends LitElement {
       width: 100%;
     }
 
+    :host([hidden]) {
+      display: none;
+    }
+
     furo-ui5-busy-indicator {
       display: block;
     }

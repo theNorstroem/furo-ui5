@@ -11,6 +11,11 @@ export interface ToolbarSelectOption extends React.HTMLAttributes<HTMLElement> {
    * Defines the selected state of the component.
    */
   selected?: boolean;
+
+  /**
+   * Defines the value of the component.
+   */
+  value?: string | undefined;
 }
 
 declare module "react" {

@@ -58,6 +58,14 @@ export interface RatingIndicator extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
 
   /**
+   * Defines whether the component is in display-only mode.
+   *
+   * **Note:** A display-only component is visually identical to read-only
+   * but cannot receive focus and is not announced by screen readers.
+   */
+  displayOnly?: boolean;
+
+  /**
    * The number of displayed rating symbols.
    */
   max?: number;

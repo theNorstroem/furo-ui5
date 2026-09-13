@@ -45,7 +45,7 @@ export interface ToolbarSelect extends React.HTMLAttributes<HTMLElement> {
   /**
    * Defines the value of the component:
    */
-  value?: string | undefined;
+  value?: string;
 
   /**
    * Defines the value state of the component.

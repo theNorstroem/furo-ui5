@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
-  "version": "2.0.0-RC.20",
+  "version": "2.0.0-RC.24",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": {
     "type": "git",
@@ -1161,15 +1161,15 @@
   "peerDependencies": {
     "@furo/layout": "/Users/veith/Projects/theNorstroem/eclipsefuro-web/packages/furo-layout/furo-layout-3.0.0-RC.13.tgz",
     "@furo/open-models": "^1.21.2",
-    "@ui5/webcomponents": "2.24.2",
-    "@ui5/webcomponents-base": "2.24.2",
-    "@ui5/webcomponents-compat": "2.24.2",
-    "@ui5/webcomponents-fiori": "2.24.2",
-    "@ui5/webcomponents-icons": "2.24.2",
-    "@ui5/webcomponents-icons-business-suite": "2.24.2",
-    "@ui5/webcomponents-icons-tnt": "2.24.2",
-    "@ui5/webcomponents-localization": "2.24.2",
-    "@ui5/webcomponents-theming": "2.24.2",
+    "@ui5/webcomponents": "2.26.0",
+    "@ui5/webcomponents-base": "2.26.0",
+    "@ui5/webcomponents-compat": "2.26.0",
+    "@ui5/webcomponents-fiori": "2.26.0",
+    "@ui5/webcomponents-icons": "2.26.0",
+    "@ui5/webcomponents-icons-business-suite": "2.26.0",
+    "@ui5/webcomponents-icons-tnt": "2.26.0",
+    "@ui5/webcomponents-localization": "2.26.0",
+    "@ui5/webcomponents-theming": "2.26.0",
     "lit": "^3.3.1"
   },
   "dependencies": {
