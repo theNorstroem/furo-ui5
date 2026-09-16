@@ -37,7 +37,6 @@ The facets are arranged inline with a left float. Each facet adapts its size to 
 
 | Attribute | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `big-action` | `boolean` | false | Set this attribute to get a bigger action slot. |
 | `collapse-on-scroll` | `boolean` | true | Flag to disable/enable collapsing/expanding on scroll |
 | `collapsed` | `boolean` | false | Set the collapsed attribute to start in a collapsed state. Header which are pinned by the user in collapsed or expanded state, will override this attribute. |
 | `fixed` | `boolean` | false | Fixes the header as it is. This will remove the collapse and expand buttons. |
@@ -69,7 +68,7 @@ Place kpi tags here, do not use more than 3 if possible.
 ### `action`
 **Type:** `HTMLElement[]`
 
-Place action items here. If you need more space, set `big-action`.
+Place action items here.
 Use a `HorizontalFlex` to align the contents to the end.
 
 ### `summary`
@@ -110,3 +109,8 @@ This method will do nothing, if the header is "pinned".
 
 Expands the header content.
 This method will do nothing, if the header is "pinned".
+
+## CSS Parts
+
+- `action`: Use this to format the action container `div` inside the shadow root of the component, which surrounds the `action` slot.
+- `secondary`: Use this to format the secondary container `div` inside the shadow root of the component, which surrounds the `secondary` slot.

@@ -17,11 +17,6 @@ export interface HeaderPanel extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
-   * Set this attribute to get a bigger action slot.
-   */
-  bigAction?: boolean;
-
-  /**
    * Flag to disable/enable collapsing/expanding on scroll
    */
   collapseOnScroll?: boolean;

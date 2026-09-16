@@ -15201,6 +15201,16 @@
               "default": "--primary-dark"
             }
           ],
+          "cssParts": [
+            {
+              "description": "Use this to format the action container `div` inside the shadow root of the component, which surrounds the `action` slot.",
+              "name": "action"
+            },
+            {
+              "description": "Use this to format the secondary container `div` inside the shadow root of the component, which surrounds the `secondary` slot.",
+              "name": "secondary"
+            }
+          ],
           "slots": [
             {
               "type": {
@@ -15220,7 +15230,7 @@
               "type": {
                 "text": "HTMLElement[]"
               },
-              "description": "Place action items here. If you need more space, set `big-action`.<br>Use a `HorizontalFlex` to align the contents to the end.",
+              "description": "Place action items here.<br>Use a `HorizontalFlex` to align the contents to the end.",
               "name": "action"
             },
             {
@@ -15284,17 +15294,6 @@
                   "name": "e"
                 }
               ]
-            },
-            {
-              "kind": "field",
-              "name": "bigAction",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Set this attribute to get a bigger action slot.",
-              "privacy": "public",
-              "attribute": "big-action"
             },
             {
               "kind": "method",
@@ -15658,16 +15657,6 @@
             }
           ],
           "attributes": [
-            {
-              "name": "big-action",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Set this attribute to get a bigger action slot.",
-              "fieldName": "bigAction",
-              "attribute": "big-action"
-            },
             {
               "name": "collapse-on-scroll",
               "type": {

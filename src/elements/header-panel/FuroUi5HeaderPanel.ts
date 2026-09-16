@@ -1,6 +1,7 @@
 import "@ui5/webcomponents/dist/Icon.js";
 import "@ui5/webcomponents/dist/Avatar.js";
 import "@ui5/webcomponents/dist/Label.js";
+// not rendered by this component; registers the tag the default slot doc recommends
 import "@furo/layout/furo-responsive-layout";
 import "@furo/layout/furo-horizontal-flex";
 import "@furo/layout/furo-vertical-flex";
@@ -46,13 +47,15 @@ import Throttle from "@/util/Throttle";
  *
  * @slot {HTMLElement[]} search - Place your search input field here.
  * @slot {HTMLElement[]} kpi - Place kpi tags here, do not use more than 3 if possible.
- * @slot {HTMLElement[]} action - Place action items here. If you need more space, set `big-action`.<br>Use a `HorizontalFlex` to align the contents to the end.
+ * @slot {HTMLElement[]} action - Place action items here.<br>Use a `HorizontalFlex` to align the contents to the end.
  * @slot {HTMLElement[]} summary - Shows when the panel is collapsed.
  * @slot {HTMLElement[]} secondary - Only for special cases. Place additional content here. This slot is always visible (not part of the collapse area).
  * @slot {HTMLElement[]} badges - Place badges here.
  * @slot {HTMLElement[]} - Place your main header content here. Hint: use a ResponsiveLayout with 4 or 6.
  * @slot {HTMLElement[]}  - Place your main header content here. Hint: use a ResponsiveLayout with 4 or 6.
  * @cssprop [--sapBrandColor=--primary-dark] - the gradient-start color of the splitter
+ * @csspart action - Use this to format the action container `div` inside the shadow root of the component, which surrounds the `action` slot.
+ * @csspart secondary - Use this to format the secondary container `div` inside the shadow root of the component, which surrounds the `secondary` slot.
  * @event {CustomEvent} pinned - Fired when pin was set.
  * @event {CustomEvent} unpinned - Fired when pin was removed.
  * @event {CustomEvent<Boolean>} hid - hid will be fired when the header is collapsed.
@@ -175,15 +178,6 @@ export class FuroUi5HeaderPanel extends LitElement {
    */
   @property({ type: String, attribute: "object-icon" })
   objectIcon = "";
-
-  /**
-   * Set this attribute to get a bigger action slot.
-   *
-   * @public
-   * @attr {boolean} big-action
-   */
-  @property({ type: Boolean, attribute: "big-action" })
-  bigAction = false;
 
   /**
    * Set the collapsed attribute to start in a collapsed state. Header which are pinned by the user in collapsed or expanded state, will override
@@ -562,6 +556,49 @@ export class FuroUi5HeaderPanel extends LitElement {
       margin-inline-end: var(--furo-horizontal-flex-space, 0.5rem);
     }
 
+    .title-row {
+      display: flex;
+      align-items: start;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+    }
+
+    .actions {
+      display: flex;
+      flex: 1;
+      justify-content: end;
+      min-width: 200px;
+      flex-wrap: wrap;
+      column-gap: 0.5rem;
+      row-gap: 0.5rem;
+    }
+
+    .header-title {
+      display: inline-block;
+    }
+
+    .variant-button {
+      margin-left: -0.5rem;
+      height: 2rem;
+      --sapButton_Lite_Hover_Background: none;
+    }
+
+    .variant-title {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .variant-label {
+      display: flex;
+      align-items: center;
+    }
+
+    #variantIcon {
+      margin-left: 0.25rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
     .badges ::slotted(*) {
       margin-top: var(--MediaSizeIndentationBottom, 0.5rem);
       margin-inline-end: var(--MediaSizeIndentationBottom, 0.5rem);
@@ -678,30 +715,29 @@ export class FuroUi5HeaderPanel extends LitElement {
   override render() {
     // language=HTML
     return html`
-      <furo-responsive-layout layout="four" style="align-items: start">
-        <div data-sap-ui-fastnavgroup="${this.showDropdown ? "true" : "false"}" ?tripple="${!this.bigAction}" ?double="${this.bigAction}" id="titleblock">
+      <div class="title-row">
+        <div data-sap-ui-fastnavgroup="${this.showDropdown ? "true" : "false"}" id="titleblock">
           ${
             this.showDropdown
               ? html` <furo-ui5-button
                   @click="${this.fireVariantIconClicked}"
                   @keydown="${this.variantButtonKeyboardHandler}"
+                  class="variant-button"
                   design="Transparent"
-                  style="margin-left:-0.5rem;--sapButton_Lite_Hover_Background:none;height:2rem;"
                 >
-                  <furo-ui5-title level="${this.headerTextLevel}" wrapping-type="None" style="display: inline-block;cursor: pointer;">
-                    <span style="display: flex;align-items: center;"
+                  <furo-ui5-title class="variant-title" level="${this.headerTextLevel}" wrapping-type="None">
+                    <span class="variant-label"
                       >${this.headerText}
 
                       <furo-ui5-icon
                         id="variantIcon"
                         design="Default"
                         name="navigation-down-arrow"
-                        style="margin-left: 0.25rem; height: 1.5rem; width: 1.5rem"
                       ></furo-ui5-icon>
                     </span>
                   </furo-ui5-title>
                 </furo-ui5-button>`
-              : html` <furo-ui5-title wrapping-type="None" style="display: inline-block" level="${this.headerTextLevel}"> ${this.headerText} </furo-ui5-title> `
+              : html` <furo-ui5-title class="header-title" wrapping-type="None" level="${this.headerTextLevel}"> ${this.headerText} </furo-ui5-title> `
           }
           ${
             this.objectIcon !== ""
@@ -720,14 +756,13 @@ export class FuroUi5HeaderPanel extends LitElement {
           <slot name="search" id="search"></slot>
           <slot name="kpi" id="kpinav"></slot>
         </div>
-
-        <div end ?double="${this.bigAction}">
+        <div class="actions" part="action">
           <slot name="action"></slot>
         </div>
-      </furo-responsive-layout>
+      </div>
       ${this.secondaryText.trim().length ? html` <ui5-label>${this.secondaryText}</ui5-label>` : nothing}
 
-      <div>
+      <div part="secondary">
         <slot name="secondary"></slot>
       </div>
       <furo-ui5-show-hide id="summaryShowHide" ?is-hidden="${!this.collapsed}">
