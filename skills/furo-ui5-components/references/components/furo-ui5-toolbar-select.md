@@ -62,7 +62,7 @@ The items inside the `furo-ui5-toolbar-select` define the available options by u
 | `disabled` | `boolean` | Defines whether the component is in disabled state. |
 | `overflowPriority` | `ToolbarItemOverflowBehavior` | Property used to define the access of the item to the overflow Popover. If "NeverOverflow" option is set, the item never goes in the Popover, if "AlwaysOverflow" - it never comes out of it. |
 | `preventOverflowClosing` | `boolean` | Defines if the toolbar overflow popup should close upon interaction with the item. It will close by default. |
-| `value` | `string \| undefined` | Defines the value of the component: |
+| `value` | `string` | Defines the value of the component: |
 | `valueState` | `ValueState` | Defines the value state of the component. |
 | `width` | `string \| undefined` | Defines the width of the select. |
 

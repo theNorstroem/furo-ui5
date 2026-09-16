@@ -65,7 +65,7 @@ and each `furo-ui5-navigation-menu-item` is represented by a list item in that l
 | `target` | `string \| undefined` | undefined | Defines the component target. |
 | `text` | `string \| undefined` | undefined | Defines the text of the tree item. |
 | `tooltip` | `string \| undefined` | undefined | Defines the text of the tooltip for the menu item. |
-| `type` | `"Navigation" \| "Inactive" \| "Active" \| "Detail"` | "Active" | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `Detail` and `Navigation`. |
+| `type` | `"Navigation" \| "Inactive" \| "InactiveSelectable" \| "Active" \| "Detail"` | "Active" | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `InactiveSelectable`, `Detail` and `Navigation`. |
 
 ## Properties
 
@@ -87,7 +87,7 @@ and each `furo-ui5-navigation-menu-item` is represented by a list item in that l
 | `target` | `string \| undefined` | Defines the component target. |
 | `text` | `string \| undefined` | Defines the text of the tree item. |
 | `tooltip` | `string \| undefined` | Defines the text of the tooltip for the menu item. |
-| `type` | `ListItemType` | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `Detail` and `Navigation`. |
+| `type` | `ListItemType` | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `InactiveSelectable`, `Detail` and `Navigation`. |
 
 ## Slots
 

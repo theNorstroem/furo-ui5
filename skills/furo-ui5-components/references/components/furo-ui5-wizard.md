@@ -113,12 +113,16 @@ Tapping on them will show a popover to select the step to navigate to. On mobile
 
 | Attribute | Type | Default | Description |
 |-----------|------|---------|-------------|
+| `accessible-name` | `string \| undefined` | undefined | Defines the accessible ARIA name of the component. |
+| `accessible-name-ref` | `string \| undefined` | undefined | Receives id(or many ids) of the elements that label the component. |
 | `content-layout` | `"MultipleSteps" \| "SingleStep"` | "MultipleSteps" | Defines how the content of the `furo-ui5-wizard` would be visualized. |
 
 ## Properties
 
 | Property | Type | Description |
 |----------|------|-------------|
+| `accessibleName` | `string \| undefined` | Defines the accessible ARIA name of the component. |
+| `accessibleNameRef` | `string \| undefined` | Receives id(or many ids) of the elements that label the component. |
 | `contentLayout` | `WizardContentLayout` | Defines how the content of the `furo-ui5-wizard` would be visualized. |
 
 ## Slots

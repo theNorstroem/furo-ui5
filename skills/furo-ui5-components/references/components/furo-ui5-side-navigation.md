@@ -107,4 +107,5 @@ Defines the header of the `ui5-side-navigation`.
 | Event | Detail Type | Description |
 |-------|-------------|-------------|
 | `item-click` | `CustomEvent<SideNavigationItemClickEventDetail>` | Fired when an item is clicked. |
+| `item-toggle` | `CustomEvent<SideNavigationItemToggleEventDetail>` | Fired when a `furo-ui5-side-navigation-item` or `furo-ui5-side-navigation-group` is expanded or collapsed. |
 | `selection-change` | `CustomEvent<SideNavigationSelectionChangeEventDetail>` | Fired when the selection has changed via user interaction. |

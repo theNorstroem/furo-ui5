@@ -42,8 +42,9 @@ The items can be overflowing in a popover, when the space is not enough to show 
 ### Keyboard Handling
 The `furo-ui5-toolbar` provides advanced keyboard handling.
 
-- The control is not interactive, but can contain of interactive elements
-- [Tab] - iterates through elements
+- [Left]/[Right] - navigate among toolbar items
+- [Home]/[End] - move to first/last toolbar item
+- [Tab] / [Shift]+[Tab] - exit the toolbar
 
 ## Attributes
 
@@ -73,7 +74,7 @@ The `furo-ui5-toolbar` provides advanced keyboard handling.
 
 Defines the items of the component.
 
-**Note:** Currently only `ui5-toolbar-button`, `ui5-toolbar-select`, `ui5-toolbar-separator` and `ui5-toolbar-spacer` are allowed here.
+**Note:** Use `ui5-toolbar-button`, `ui5-toolbar-select`, `ui5-toolbar-separator` and `ui5-toolbar-spacer` for the most common toolbar actions. To place any other UI5 Web Component into the toolbar and have it participate in overflow handling, wrap it in a `ui5-toolbar-item`.
 
 ## Methods
 

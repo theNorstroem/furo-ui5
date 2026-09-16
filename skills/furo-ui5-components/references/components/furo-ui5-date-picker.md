@@ -23,9 +23,18 @@ The 'furo-ui5-date-picker' component lets the user select a date, with data bind
 
 It supports all features from the [SAP ui5 DatePicker element](https://ui5.github.io/webcomponents/components/DatePicker/).
 
-You can bind a `string` (ISO 8601, e.g. "2020-12-31"), a `google.type.Date` or a `furo.type.Date`.
-Because the UI5 DatePicker is date-only, the bindable value is always handled as an ISO
-`YYYY-MM-DD` string.
+You can bind a `string` (ISO 8601, e.g. "2020-12-31"), a `google.type.Date`, a `furo.type.Date`
+or a `google.protobuf.Timestamp`. Because the UI5 DatePicker is date-only, the bindable value is
+always handled as an ISO `YYYY-MM-DD` string.
+
+A `google.protobuf.Timestamp` is an instant, not a calendar day, so this component reads and
+writes it in **UTC**: it shows the UTC day of the stored instant, and picking a day stores that
+day at `T00:00:00.000Z`. Bind `furo-ui5-date-time-picker` instead when the time of day matters.
+
+The bound value and what the user sees are two different formats. `value` stays in the canonical
+machine format above, which is what the model round-trips through; the input renders it with
+`displayFormat`, which defaults to the `"medium"` locale style. Set `display-format` to any UI5
+style (`short` / `medium` / `long`) or pattern to change what is shown, without touching `value`.
 
 ## supported meta and constraints
 - **readonly: true** — set the element to readonly
@@ -142,7 +151,7 @@ Or, you can use the global configuration and set the `calendarType` key:
 | `hideWeekNumbers` | `boolean` | Defines the visibility of the week numbers column. |
 | `maxDate` | `string` | Determines the maximum date available for selection. |
 | `minDate` | `string` | Determines the minimum date available for selection. |
-| `model` | `STRING \| XDate \| FuroXDate` | Use this to bind a model field by attribute. |
+| `model` | `STRING \| XDate \| FuroXDate \| Timestamp` | Use this to bind a model field by attribute. |
 | `name` | `string \| undefined` | Determines the name by which the component will be identified upon submission in an HTML form. |
 | `open` | `boolean` | Defines the open or closed state of the popover. |
 | `placeholder` | `string \| undefined` | Defines a short hint, intended to aid the user with data entry when the component has no value. |
@@ -178,7 +187,7 @@ when the component is in `Information`, `Critical` or `Negative` value state.
 
 ## Methods
 
-### `bindData(fieldNode: STRING | XDate | FuroXDate | undefined): void`
+### `bindData(fieldNode: STRING | XDate | FuroXDate | Timestamp | undefined): void`
 
 Connects your data model to this component.
 

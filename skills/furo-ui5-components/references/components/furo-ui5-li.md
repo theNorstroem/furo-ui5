@@ -55,7 +55,7 @@ providing the most common use cases such as `text`,
 | `selected` | `boolean` | false | Defines the selected state of the component. |
 | `text` | `string \| undefined` | undefined | Defines the text of the component. |
 | `tooltip` | `string \| undefined` | undefined | Defines the text of the tooltip that would be displayed for the list item. |
-| `type` | `"Navigation" \| "Inactive" \| "Active" \| "Detail"` | "Active" | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `Detail` and `Navigation`. |
+| `type` | `"Navigation" \| "Inactive" \| "InactiveSelectable" \| "Active" \| "Detail"` | "Active" | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `InactiveSelectable`, `Detail` and `Navigation`. |
 | `wrapping-type` | `"None" \| "Normal"` | "None" | Defines if the text of the component should wrap when it's too long. When set to "Normal", the content (title, description) will be wrapped using the `furo-ui5-expandable-text` component. |
 
 ## Properties
@@ -76,7 +76,7 @@ providing the most common use cases such as `text`,
 | `selected` | `boolean` | Defines the selected state of the component. |
 | `text` | `string \| undefined` | Defines the text of the component. |
 | `tooltip` | `string \| undefined` | Defines the text of the tooltip that would be displayed for the list item. |
-| `type` | `ListItemType` | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `Detail` and `Navigation`. |
+| `type` | `ListItemType` | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `InactiveSelectable`, `Detail` and `Navigation`. |
 | `wrappingType` | `WrappingType` | Defines if the text of the component should wrap when it's too long. When set to "Normal", the content (title, description) will be wrapped using the `furo-ui5-expandable-text` component. |
 
 ## Slots

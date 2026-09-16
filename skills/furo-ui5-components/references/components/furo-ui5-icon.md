@@ -99,6 +99,8 @@ the application loads the font and provides a slotted element with the unicode c
 When this slot is used, the component renders a `<span>` instead of an `<svg>`.
 Accessibility is fully delegated to the application — set `accessible-name` and `mode` explicitly.
 
+**Note:** To control the glyph size, set `font-size` on the `ui5-icon` host element.
+
 **Example:**
 
 ```html

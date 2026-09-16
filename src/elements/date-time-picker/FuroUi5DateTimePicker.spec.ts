@@ -63,6 +63,11 @@ describe("FuroUi5DateTimePicker", () => {
       assert.equal(el.valueFormat, "yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
     });
 
+    it("defaults the display format to the medium locale style", () => {
+      // without this UI5 falls back to `_formatPattern` and shows the machine format to the user
+      assert.equal(el.displayFormat, "medium");
+    });
+
     test("a11y", async () => {
       await delay(100);
       await assert.isAccessible(el);

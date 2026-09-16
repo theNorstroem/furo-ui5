@@ -172,6 +172,11 @@ declare module "react" {
        * `google.protobuf.Timestamp`, or a unix-seconds `int32` / `int64`. The bound value is always
        * handled as a canonical RFC 3339 string; `int32` / `int64` are interpreted as seconds since epoch.
        *
+       * The bound value and what the user sees are two different formats. `value` stays in the canonical
+       * machine format above, which is what the model round-trips through; the input renders it with
+       * `displayFormat`, which defaults to the `"medium"` locale style. Set `display-format` to any UI5
+       * style (`short` / `medium` / `long`) or pattern to change what is shown, without touching `value`.
+       *
        * ## supported meta and constraints
        * - **readonly: true** — set the element to readonly
        * - **required: true** — mark the element as required

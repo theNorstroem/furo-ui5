@@ -74,6 +74,7 @@ with the following keyboard shortcuts:
 | `accessible-name` | `string \| undefined` | undefined | Defines the accessible ARIA name of the component. |
 | `accessible-name-ref` | `string \| undefined` | undefined | Receives id(or many ids) of the elements that label the component. |
 | `disabled` | `boolean` | false | Defines whether the component is disabled. |
+| `display-only` | `boolean` | false | Defines whether the component is in display-only mode. |
 | `max` | `number` | 5 | The number of displayed rating symbols. |
 | `rated-icon` | `string` | "favorite" | Defines the icon to be displayed for the selected (filled) rating symbol. |
 | `readonly` | `boolean` | false | Defines whether the component is read-only. |
@@ -91,6 +92,7 @@ with the following keyboard shortcuts:
 | `accessibleName` | `string \| undefined` | Defines the accessible ARIA name of the component. |
 | `accessibleNameRef` | `string \| undefined` | Receives id(or many ids) of the elements that label the component. |
 | `disabled` | `boolean` | Defines whether the component is disabled. |
+| `displayOnly` | `boolean` | Defines whether the component is in display-only mode. |
 | `max` | `number` | The number of displayed rating symbols. |
 | `model` | `\| INT32     \| INT64     \| UINT32     \| UINT64     \| DOUBLE     \| FLOAT     \| FuroFatFloat     \| FuroFatInt32     \| FuroFatInt64     \| FuroFatUint32     \| FuroFatUint64     \| FloatValue     \| Int32Value     \| Int64Value     \| UInt32Value     \| UInt64Value` | Use this to bind a model field by attribute. |
 | `ratedIcon` | `string` | Defines the icon to be displayed for the selected (filled) rating symbol. |

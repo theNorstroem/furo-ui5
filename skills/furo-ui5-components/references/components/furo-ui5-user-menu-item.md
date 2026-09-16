@@ -61,7 +61,7 @@ and each `furo-ui5-menu-item` is represented by a menu item in that menu. Theref
 | `show-selection` | `boolean` | false | When set, a second line appears below the menu item text showing the text of the currently selected sub-item. |
 | `text` | `string \| undefined` | undefined | Defines the text of the tree item. |
 | `tooltip` | `string \| undefined` | undefined | Defines the text of the tooltip for the menu item. |
-| `type` | `"Navigation" \| "Inactive" \| "Active" \| "Detail"` | "Active" | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `Detail` and `Navigation`. |
+| `type` | `"Navigation" \| "Inactive" \| "InactiveSelectable" \| "Active" \| "Detail"` | "Active" | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `InactiveSelectable`, `Detail` and `Navigation`. |
 
 ## Properties
 
@@ -82,7 +82,7 @@ and each `furo-ui5-menu-item` is represented by a menu item in that menu. Theref
 | `showSelection` | `boolean` | When set, a second line appears below the menu item text showing the text of the currently selected sub-item. |
 | `text` | `string \| undefined` | Defines the text of the tree item. |
 | `tooltip` | `string \| undefined` | Defines the text of the tooltip for the menu item. |
-| `type` | `ListItemType` | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `Detail` and `Navigation`. |
+| `type` | `ListItemType` | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `InactiveSelectable`, `Detail` and `Navigation`. |
 
 ## Slots
 

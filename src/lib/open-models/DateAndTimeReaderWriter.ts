@@ -9,7 +9,7 @@ import type { TimeOfDay } from "@/models/google/type/TimeOfDay";
  *
  * Supported model types (matched against `fieldNode.__meta.typeName`):
  *  - `primitives.STRING`             — pass-through ISO 8601 string
- *  - `google.protobuf.Timestamp`     — RFC 3339 string in `value`
+ *  - `google.protobuf.Timestamp`     — RFC 3339 string in `value`; shape depends on `precision`
  *  - `primitives.INT32`              — unix seconds (number); empty UI writes `0`
  *  - `primitives.INT64`              — unix seconds (bigint); empty UI writes `0n`
  *  - `google.type.Date` (`XDate`)    — `{year, month, day}` as INT32 children
@@ -19,6 +19,14 @@ import type { TimeOfDay } from "@/models/google/type/TimeOfDay";
  * The element-side `valueField` is a `string` carrying canonical ISO 8601:
  * full RFC 3339 (`YYYY-MM-DDTHH:mm:ss.sssZ`) for Timestamp/INT32/INT64/STRING,
  * calendar-only (`YYYY-MM-DD`) for XDate/FuroXDate, time-only (`HH:mm:ss`) for TimeOfDay.
+ *
+ * `precision` picks which of those shapes the Timestamp pair uses, because a Timestamp is the one
+ * model type bound by both an instant-valued element (`furo-ui5-date-time-picker`) and a date-only
+ * one (`furo-ui5-date-picker`):
+ *  - `"instant"` (default) — the full RFC 3339 string, unchanged in both directions.
+ *  - `"day"` — the **UTC** calendar day of the instant on read, and that day at `T00:00:00.000Z`
+ *    on write. UTC on both sides keeps the round-trip symmetric; reading the local day instead
+ *    would shift by one across a timezone boundary.
  */
 type StringKeys<T> = { [k in keyof T]: T[k] extends string ? k : never }[keyof T];
 
@@ -29,10 +37,18 @@ export class DateAndTimeReaderWriters<T> {
 
   private valueField: StringKeys<T>;
 
-  constructor(clazz: T, valueField: StringKeys<T>, modelField: STRING | Timestamp | INT32 | INT64 | XDate | FuroXDate | TimeOfDay) {
+  private precision: "instant" | "day";
+
+  constructor(
+    clazz: T,
+    valueField: StringKeys<T>,
+    modelField: STRING | Timestamp | INT32 | INT64 | XDate | FuroXDate | TimeOfDay,
+    precision: "instant" | "day" = "instant"
+  ) {
     this.clazz = clazz;
     this.modelField = modelField;
     this.valueField = valueField;
+    this.precision = precision;
   }
 
   getReaders(): Map<string, () => void> {
@@ -48,7 +64,14 @@ export class DateAndTimeReaderWriters<T> {
     readers.set("google.protobuf.Timestamp", () => {
       // `Timestamp.value` is `string | null`, where `null` means "not set". The bound properties are UI5
       // `String` properties which cannot carry it, so an unset timestamp reads as the empty string.
-      const v = (this.modelField as Timestamp).value ?? "";
+      const raw = (this.modelField as Timestamp).value ?? "";
+      // On "day" the instant is normalized through Date rather than sliced, so a value carrying an
+      // offset ("...+02:00") still yields the UTC day and not whatever the first ten characters say.
+      let v = raw;
+      if (this.precision === "day" && raw !== "") {
+        const date = new Date(raw);
+        v = Number.isNaN(date.getTime()) ? "" : date.toISOString().slice(0, 10);
+      }
       if (v !== this.clazz[this.valueField]) {
         (this.clazz[this.valueField] as string) = v;
       }
@@ -119,7 +142,9 @@ export class DateAndTimeReaderWriters<T> {
         (this.modelField as Timestamp).value = "";
         return;
       }
-      const date = new Date(ui);
+      // On "day" the element only ever holds `YYYY-MM-DD`; anchoring it at UTC midnight is what
+      // makes the pair symmetric with the reader above.
+      const date = new Date(this.precision === "day" ? `${ui}T00:00:00.000Z` : ui);
       if (Number.isNaN(date.getTime())) {
         (this.modelField as Timestamp).value = "";
       } else {

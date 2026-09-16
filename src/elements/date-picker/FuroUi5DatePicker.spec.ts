@@ -6,14 +6,15 @@
  * lifecycle, a11y). Blocks tagged `[element-specific]` cover the date picker's
  * own surface: `min`/`max` date constraints and `clear()`.
  *
- * The picker binds two date-only model types: `primitives.STRING` (ISO date) and
- * `google.type.Date` (`XDate`). Its value is always handled as ISO `YYYY-MM-DD`.
+ * The picker binds `primitives.STRING` (ISO date), `google.type.Date` (`XDate`) and
+ * `google.protobuf.Timestamp`. Its value is always handled as ISO `YYYY-MM-DD`; a Timestamp is an
+ * instant, so it is read as the UTC day and written back at UTC midnight.
  */
 import "@/Assets";
 import "@/Icons";
 import "./index";
 
-import { STRING, ValueState } from "@furo/open-models";
+import { STRING, Timestamp, ValueState } from "@furo/open-models";
 import { fixture, fixtureCleanup } from "@open-wc/testing-helpers";
 import { chaiA11yAxe } from "chai-a11y-axe";
 import { html } from "lit";
@@ -58,6 +59,11 @@ describe("FuroUi5DatePicker", () => {
 
     it("pins the value format to ISO so value/minDate/maxDate stay ISO", () => {
       assert.equal(el.valueFormat, "yyyy-MM-dd");
+    });
+
+    it("defaults the display format to the medium locale style", () => {
+      // without this UI5 falls back to `_formatPattern` and shows the machine format to the user
+      assert.equal(el.displayFormat, "medium");
     });
 
     test("a11y", async () => {
@@ -133,6 +139,33 @@ describe("FuroUi5DatePicker", () => {
       model.day = 15;
       assert.equal(el.value, "2021-06-15");
     });
+
+    it("renders the UTC day of a google.protobuf.Timestamp on bind", () => {
+      const model = new Timestamp("2026-06-01T15:19:44.000Z");
+      el.bindData(model);
+      assert.equal(el.value, "2026-06-01");
+    });
+
+    it("takes the UTC day of an offset-bearing Timestamp, not its first ten characters", () => {
+      // 2026-05-31T23:30+02:00 is 21:30Z on the 31st, so the UTC day is the 31st either way -
+      // but 2026-06-01T00:30+02:00 is 22:30Z on the 31st, where a naive slice would say the 1st
+      const model = new Timestamp("2026-06-01T00:30:00.000+02:00");
+      el.bindData(model);
+      assert.equal(el.value, "2026-05-31");
+    });
+
+    it("propagates google.protobuf.Timestamp changes to el.value", () => {
+      const model = new Timestamp();
+      el.bindData(model);
+      model.value = "2021-06-15T08:00:00.000Z";
+      assert.equal(el.value, "2021-06-15");
+    });
+
+    it("reads an unset Timestamp as an empty value", () => {
+      const model = new Timestamp();
+      el.bindData(model);
+      assert.equal(el.value, "");
+    });
   });
 
   // ───────────────────────────────────────────────────────────────────────
@@ -167,6 +200,24 @@ describe("FuroUi5DatePicker", () => {
       assert.equal(model.year.value, 2020);
       assert.equal(model.month.value, 12);
       assert.equal(model.day.value, 31);
+    });
+
+    it("writes UTC midnight to a google.protobuf.Timestamp model on user input", async () => {
+      const model = new Timestamp();
+      el.bindData(model);
+      setInputValue(el, "2020-12-31");
+      await delay(50);
+      assert.equal(model.value, "2020-12-31T00:00:00.000Z");
+    });
+
+    it("round-trips a Timestamp through the UI without shifting the day", async () => {
+      const model = new Timestamp("2026-06-01T15:19:44.000Z");
+      el.bindData(model);
+      const shown = el.value;
+      setInputValue(el, shown);
+      await delay(50);
+      assert.equal(model.value, "2026-06-01T00:00:00.000Z");
+      assert.equal(el.value, shown);
     });
 
     it("writes on a bare 'input' event", async () => {
@@ -339,6 +390,52 @@ describe("FuroUi5DatePicker", () => {
       setInputValue(el, "2020-12-31");
       await delay(50);
       assert.equal(model.value, "2020-12-31");
+    });
+  });
+
+  // ───────────────────────────────────────────────────────────────────────
+  // [element-specific] display format — what the user sees vs what the model gets
+  // ───────────────────────────────────────────────────────────────────────
+  describe("display format [element-specific]", () => {
+    let el: FuroUi5DatePicker;
+
+    beforeEach(async () => {
+      el = await fixture(html`<furo-ui5-date-picker></furo-ui5-date-picker>`);
+    });
+
+    afterEach(() => {
+      fixtureCleanup();
+    });
+
+    // The rendered text depends on the browser locale, so these assert the *relationship* between
+    // `value` and `displayValue` rather than pinning one locale's output.
+    it("shows a formatted value while el.value stays ISO", () => {
+      el.bindData(new STRING("2020-12-31"));
+      assert.equal(el.value, "2020-12-31");
+      assert.notEqual(el.displayValue, el.value, "displayValue still carries the machine format");
+      assert.isNotEmpty(el.displayValue);
+    });
+
+    it("the shown value still names the bound day", () => {
+      // asserted on substrings because "medium" is de "31.12.2020" and en-US "Dec 31, 2020" -
+      // the year and the day survive every locale, the month spelling does not
+      el.bindData(new STRING("2020-12-31"));
+      assert.include(el.displayValue, "2020");
+      assert.include(el.displayValue, "31");
+    });
+
+    it("display-format overrides the default without touching value", async () => {
+      const overridden: FuroUi5DatePicker = await fixture(
+        html`<furo-ui5-date-picker display-format="short"></furo-ui5-date-picker>`
+      );
+      overridden.bindData(new STRING("2020-12-31"));
+      assert.equal(overridden.displayFormat, "short");
+      assert.equal(overridden.value, "2020-12-31");
+    });
+
+    it("an empty model shows nothing", () => {
+      el.bindData(new STRING());
+      assert.equal(el.displayValue, "");
     });
   });
 

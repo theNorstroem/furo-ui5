@@ -79,6 +79,12 @@ with the following keyboard shortcuts:
 - [Shift] + [Up] or [Down] - Decrease/Increase the height of the dialog.
 - [Shift] + [Left] or [Right] - Decrease/Increase the width of the dialog.
 
+#### Fullscreen
+When the `furo-ui5-dialog` has the `showFullscreenButton` property set to `true`, the user can toggle fullscreen mode
+with the following keyboard shortcut:
+
+- [Shift] + [Ctrl] + [F] - Toggle fullscreen mode.
+
 ## Attributes
 
 | Attribute | Type | Default | Description |
@@ -95,6 +101,7 @@ with the following keyboard shortcuts:
 | `prevent-focus-restore` | `boolean` | false | Defines if the focus should be returned to the previously focused element, when the popup closes. |
 | `prevent-initial-focus` | `boolean` | false | Indicates whether initial focus should be prevented. |
 | `resizable` | `boolean` | false | Configures the component to be resizable. |
+| `show-fullscreen-button` | `boolean` | false | Defines whether a fullscreen toggle button is shown in the dialog header. When pressed, it toggles the `stretch` property. The fullscreen button is not available on phone devices. |
 | `state` | `"None" \| "Positive" \| "Critical" \| "Negative" \| "Information"` | "None" | Defines the state of the `Dialog`. |
 | `stretch` | `boolean` | false | Determines if the dialog will be stretched to full screen on mobile. On desktop, the dialog will be stretched to approximately 90% of the viewport. |
 
@@ -114,6 +121,7 @@ with the following keyboard shortcuts:
 | `preventFocusRestore` | `boolean` | Defines if the focus should be returned to the previously focused element, when the popup closes. |
 | `preventInitialFocus` | `boolean` | Indicates whether initial focus should be prevented. |
 | `resizable` | `boolean` | Configures the component to be resizable. |
+| `showFullscreenButton` | `boolean` | Defines whether a fullscreen toggle button is shown in the dialog header. When pressed, it toggles the `stretch` property. The fullscreen button is not available on phone devices. |
 | `state` | `ValueState` | Defines the state of the `Dialog`. |
 | `stretch` | `boolean` | Determines if the dialog will be stretched to full screen on mobile. On desktop, the dialog will be stretched to approximately 90% of the viewport. |
 

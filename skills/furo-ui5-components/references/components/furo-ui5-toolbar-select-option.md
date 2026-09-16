@@ -41,13 +41,15 @@ The `furo-ui5-toolbar-select-option` component defines the content of an option 
 
 | Attribute | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `selected` | `any` | false | Defines the selected state of the component. |
+| `selected` | `boolean` | false | Defines the selected state of the component. |
+| `value` | `string \| undefined` | undefined | Defines the value of the component. |
 
 ## Properties
 
 | Property | Type | Description |
 |----------|------|-------------|
 | `selected` | `boolean` | Defines the selected state of the component. |
+| `value` | `string \| undefined` | Defines the value of the component. |
 
 ## Slots
 

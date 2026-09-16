@@ -34,9 +34,3 @@ This is a pass-through wrapper around `furo-ui5-menu-separator`: the UI5 API (pr
 slots) is inherited unchanged and no data binding is added.
 
 The `furo-ui5-menu-separator` represents a horizontal line to separate menu items inside a `furo-ui5-menu`.
-
-## Events
-
-| Event | Detail Type | Description |
-|-------|-------------|-------------|
-| `click` | `CustomEvent<ListItemBaseClickEventDetail>` | Fired when the component is activated either with a mouse/tap or by using the Enter or Space key. |

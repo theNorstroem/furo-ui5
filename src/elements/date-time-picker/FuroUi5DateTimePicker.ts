@@ -27,6 +27,11 @@ interface DateFieldConstraints extends FieldConstraints {
  * `google.protobuf.Timestamp`, or a unix-seconds `int32` / `int64`. The bound value is always
  * handled as a canonical RFC 3339 string; `int32` / `int64` are interpreted as seconds since epoch.
  *
+ * The bound value and what the user sees are two different formats. `value` stays in the canonical
+ * machine format above, which is what the model round-trips through; the input renders it with
+ * `displayFormat`, which defaults to the `"medium"` locale style. Set `display-format` to any UI5
+ * style (`short` / `medium` / `long`) or pattern to change what is shown, without touching `value`.
+ *
  * ## supported meta and constraints
  * - **readonly: true** — set the element to readonly
  * - **required: true** — mark the element as required
@@ -55,6 +60,11 @@ export class FuroUi5DateTimePicker extends DateTimePicker {
     // Keep value / minDate / maxDate in canonical RFC 3339 so the ISO-based DateAndTimeReaderWriter
     // round-trips. `XXX` is timezone-aware (parses/formats the trailing "Z"), matching `toISOString()`.
     this.valueFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
+    // `displayFormat` is what the user sees and types; without it UI5 falls back to
+    // `_formatPattern` (= `formatPattern || valueFormat`) and shows the machine format instead.
+    // "medium" is a locale style, not a pattern, so each locale renders its own. Consumers
+    // override it per instance with `display-format`.
+    this.displayFormat = "medium";
   }
 
   private _model: STRING | Timestamp | INT32 | INT64 = new Timestamp();

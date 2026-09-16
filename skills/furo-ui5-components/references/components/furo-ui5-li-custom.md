@@ -40,6 +40,27 @@ the same way as the standard `furo-ui5-li`.
 
 The component accepts arbitrary HTML content to allow full customization.
 
+### Keyboard Handling
+
+Interactive elements placed in the default slot (buttons, links, inputs, etc.)
+are **not** reached by [Tab] from outside the list. This follows the SAP Fiori
+"Intentional Edit Pattern" and preserves fast keyboard navigation between items.
+
+To activate an interactive element inside a `furo-ui5-li-custom`:
+
+- [F2] on the focused item - moves focus to the first interactive element inside the item.
+  Pressing [F2] again returns focus to the item level.
+- [F7] on the focused item - moves focus to the last remembered interactive element
+  inside the item (or to the first interactive element if none is remembered).
+  Pressing [F7] again saves the current position and returns focus to the item level.
+- [Tab] or [Shift] + [Tab] then walks through the interactive elements within the item
+  and continues into the next/previous item.
+- [Up] or [Down] while focused on an interactive element moves focus to the element
+  at the same index in the previous/next item; items with no interactive elements
+  are skipped and `furo-ui5-li-group` boundaries are crossed.
+
+See the `furo-ui5-list` "Keyboard Handling" section for the full behavior.
+
 ## Attributes
 
 | Attribute | Type | Default | Description |
@@ -52,7 +73,7 @@ The component accepts arbitrary HTML content to allow full customization.
 | `navigated` | `boolean` | false | The navigated state of the list item. If set to `true`, a navigation indicator is displayed at the end of the list item. |
 | `selected` | `boolean` | false | Defines the selected state of the component. |
 | `tooltip` | `string \| undefined` | undefined | Defines the text of the tooltip that would be displayed for the list item. |
-| `type` | `"Navigation" \| "Inactive" \| "Active" \| "Detail"` | "Active" | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `Detail` and `Navigation`. |
+| `type` | `"Navigation" \| "Inactive" \| "InactiveSelectable" \| "Active" \| "Detail"` | "Active" | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `InactiveSelectable`, `Detail` and `Navigation`. |
 
 ## Properties
 
@@ -66,7 +87,7 @@ The component accepts arbitrary HTML content to allow full customization.
 | `navigated` | `boolean` | The navigated state of the list item. If set to `true`, a navigation indicator is displayed at the end of the list item. |
 | `selected` | `boolean` | Defines the selected state of the component. |
 | `tooltip` | `string \| undefined` | Defines the text of the tooltip that would be displayed for the list item. |
-| `type` | `ListItemType` | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `Detail` and `Navigation`. |
+| `type` | `ListItemType` | Defines the visual indication and behavior of the list items. Available options are `Active` (by default), `Inactive`, `InactiveSelectable`, `Detail` and `Navigation`. |
 
 ## Slots
 

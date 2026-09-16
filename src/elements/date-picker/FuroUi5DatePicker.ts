@@ -1,4 +1,4 @@
-import type { STRING} from "@furo/open-models";
+import type { STRING, Timestamp } from "@furo/open-models";
 import type { FieldConstraints } from "@furo/open-models";
 import DatePicker from "@ui5/webcomponents/dist/DatePicker.js";
 
@@ -25,9 +25,18 @@ interface DateFieldConstraints extends FieldConstraints {
  *
  * It supports all features from the [SAP ui5 DatePicker element](https://ui5.github.io/webcomponents/components/DatePicker/).
  *
- * You can bind a `string` (ISO 8601, e.g. "2020-12-31"), a `google.type.Date` or a `furo.type.Date`.
- * Because the UI5 DatePicker is date-only, the bindable value is always handled as an ISO
- * `YYYY-MM-DD` string.
+ * You can bind a `string` (ISO 8601, e.g. "2020-12-31"), a `google.type.Date`, a `furo.type.Date`
+ * or a `google.protobuf.Timestamp`. Because the UI5 DatePicker is date-only, the bindable value is
+ * always handled as an ISO `YYYY-MM-DD` string.
+ *
+ * A `google.protobuf.Timestamp` is an instant, not a calendar day, so this component reads and
+ * writes it in **UTC**: it shows the UTC day of the stored instant, and picking a day stores that
+ * day at `T00:00:00.000Z`. Bind `furo-ui5-date-time-picker` instead when the time of day matters.
+ *
+ * The bound value and what the user sees are two different formats. `value` stays in the canonical
+ * machine format above, which is what the model round-trips through; the input renders it with
+ * `displayFormat`, which defaults to the `"medium"` locale style. Set `display-format` to any UI5
+ * style (`short` / `medium` / `long`) or pattern to change what is shown, without touching `value`.
  *
  * ## supported meta and constraints
  * - **readonly: true** — set the element to readonly
@@ -58,11 +67,16 @@ export class FuroUi5DatePicker extends DatePicker {
     // `valueFormat` drives the `value` string format and (via `_formatPattern`) the minDate/maxDate
     // parsing; setting it to "yyyy-MM-dd" pins everything to ISO.
     this.valueFormat = "yyyy-MM-dd";
+    // `displayFormat` is what the user sees and types; without it UI5 falls back to
+    // `_formatPattern` (= `formatPattern || valueFormat`) and shows the machine format instead.
+    // "medium" is a locale style, not a pattern, so each locale renders its own. Consumers
+    // override it per instance with `display-format`.
+    this.displayFormat = "medium";
   }
 
-  private _model: STRING | XDate | FuroXDate = new XDate();
+  private _model: STRING | XDate | FuroXDate | Timestamp = new XDate();
 
-  public get model(): STRING | XDate | FuroXDate {
+  public get model(): STRING | XDate | FuroXDate | Timestamp {
     return this._model;
   }
 
@@ -72,9 +86,10 @@ export class FuroUi5DatePicker extends DatePicker {
    * @typeref STRING - "@furo/open-models/"
    * @typeref XDate - "@/models/google/type/Date"
    * @typeref XDate as FuroXDate - "@/models/furo/type/Date"
+   * @typeref Timestamp - "@furo/open-models/"
    * @public
    */
-  public set model(value: STRING | XDate | FuroXDate) {
+  public set model(value: STRING | XDate | FuroXDate | Timestamp) {
     this.bindData(value);
   }
 
@@ -83,9 +98,10 @@ export class FuroUi5DatePicker extends DatePicker {
    *
    * @paramref fieldNode - XDate - "@/models/google/type/Date"
    * @paramref fieldNode FuroXDate - "@/models/furo/type/Date"
+   * @paramref fieldNode Timestamp - "@furo/open-models/"
    * @public
    */
-  public bindData(fieldNode: STRING | XDate | FuroXDate | undefined) {
+  public bindData(fieldNode: STRING | XDate | FuroXDate | Timestamp | undefined) {
     if (fieldNode === undefined || fieldNode === this._model) {
       return;
     }
@@ -104,7 +120,7 @@ export class FuroUi5DatePicker extends DatePicker {
     // connect the model
     this._model = fieldNode;
     // init model
-    this.dateAndTimeReaderWriters = new DateAndTimeReaderWriters<FuroUi5DatePicker>(this, "isoValue", this._model);
+    this.dateAndTimeReaderWriters = new DateAndTimeReaderWriters<FuroUi5DatePicker>(this, "isoValue", this._model, "day");
     this.modelReaderWriter = new ModelReaderWriter(this._model, this.dateAndTimeReaderWriters.getWriters(), this.dateAndTimeReaderWriters.getReaders());
 
     // listen on state changes on the model
