@@ -154,6 +154,17 @@ describe("FuroUi5BoolIcon", () => {
       assert.equal(icon.getAttribute("name"), el.symboltrue);
     });
 
+    it("reads an unset BoolValue as false, not null", async () => {
+      // `BoolValue.value` is `boolean | null`; BoolReaderWriters coalesces the unset state, so an unset
+      // wrapper renders symbolfalse rather than leaving `value` holding a null.
+      const model = new BoolValue();
+      el.bindData(model);
+      await el.updateComplete;
+      assert.equal(el.value, false);
+      const icon = el.shadowRoot!.querySelector("ui5-icon")!;
+      assert.equal(icon.getAttribute("name"), el.symbolfalse);
+    });
+
     it("propagates BoolValue value changes to el.value and the rendered icon", async () => {
       const model = new BoolValue(false);
       el.bindData(model);

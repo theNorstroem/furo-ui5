@@ -46,7 +46,10 @@ export class StringReaderWriters<T> {
     });
 
     readers.set("google.protobuf.StringValue", () => {
-      const v = (this.modelField as StringValue).value;
+      // `StringValue.value` is `string | null`, where `null` means "not set". The bound properties are
+      // UI5 `String` properties which cannot carry it, so an unset wrapper reads as the empty string.
+      // A component that wants to tell "unset" from "" apart overrides this reader - see the class JSDoc.
+      const v = (this.modelField as StringValue).value ?? "";
       if (v !== this.clazz[this.valueField]) {
         (this.clazz[this.valueField] as string) = v;
       }

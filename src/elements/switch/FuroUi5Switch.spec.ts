@@ -145,6 +145,16 @@ describe("FuroUi5Switch", () => {
       assert.equal(el.checked, true);
     });
 
+    it("reads an unset BoolValue as false, not null", async () => {
+      // `BoolValue.value` is `boolean | null`. BoolReaderWriters coalesces the unset state, because UI5
+      // passes `checked` straight into `aria-checked` and a raw null drops the attribute entirely.
+      const model = new BoolValue();
+      el.bindData(model);
+      assert.equal(el.checked, false);
+      await delay(10);
+      assert.equal(el.shadowRoot!.querySelector('[role="switch"]')!.getAttribute("aria-checked"), "false");
+    });
+
     it("propagates BoolValue value changes to el.checked", () => {
       const model = new BoolValue();
       el.bindData(model);

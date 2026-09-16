@@ -159,6 +159,15 @@ describe("FuroUi5ShowHide", () => {
       assert.isTrue(el.hasAttribute("is-hidden"));
     });
 
+    it("reads an unset BoolValue as false, not null", async () => {
+      // `BoolValue.value` is `boolean | null`; BoolReaderWriters coalesces the unset state, so a null
+      // never reaches `_checkInversedState()` and the hidden flag stays a real boolean.
+      const model = new BoolValue();
+      el.bindData(model);
+      await delay(10);
+      assert.equal(el.value, false);
+    });
+
     it("propagates BoolValue value changes to el.value", async () => {
       const model = new BoolValue(false);
       el.bindData(model);

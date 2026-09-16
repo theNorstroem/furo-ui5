@@ -70,7 +70,11 @@ export class BoolReaderWriters<T> {
     });
 
     readers.set("google.protobuf.BoolValue", () => {
-      const v = (this.modelField as BoolValue).value;
+      // `BoolValue.value` is `boolean | null`, where `null` means "not set". None of the bound properties
+      // can carry that: `checked` / `pressed` / `active` are UI5 `Boolean` properties, and a raw null is
+      // passed through to `aria-checked` / `aria-pressed`, dropping the attribute instead of rendering
+      // "false". A component that wants a real third state overrides this reader - see the class JSDoc.
+      const v = (this.modelField as BoolValue).value ?? false;
       if (v !== this.clazz[this.valueField]) {
         (this.clazz[this.valueField] as boolean) = v;
       }

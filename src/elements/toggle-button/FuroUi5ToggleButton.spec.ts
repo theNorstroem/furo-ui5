@@ -150,6 +150,14 @@ describe("FuroUi5ToggleButton", () => {
       assert.equal(el.pressed, true);
     });
 
+    it("reads an unset BoolValue as false, not null", () => {
+      // `BoolValue.value` is `boolean | null`. BoolReaderWriters coalesces the unset state, because UI5
+      // passes `pressed` straight into `aria-pressed` and a raw null drops the attribute entirely.
+      const model = new BoolValue();
+      el.bindData(model);
+      assert.equal(el.pressed, false);
+    });
+
     it("propagates BoolValue value changes to el.pressed", () => {
       const model = new BoolValue();
       el.bindData(model);

@@ -376,7 +376,7 @@ export class NumericReaderWriters<T> {
 
     writers.set("google.protobuf.FloatValue", () => {
       const v = Number(this.clazz[this.valueField]);
-      if (Number.isNaN(v)) {
+      if (Number.isNaN(v) || this.clazz[this.valueField] === '') {
         (this.modelField as FloatValue).value = null;
       } else {
         (this.modelField as FloatValue).value = v;

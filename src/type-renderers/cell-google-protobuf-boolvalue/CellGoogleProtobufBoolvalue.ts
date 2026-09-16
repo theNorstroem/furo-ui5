@@ -2,9 +2,11 @@ import { BoolValue } from "@furo/open-models";
 import { LitElement, html, css } from "lit";
 import { state } from "lit/decorators.js";
 
-import "@ui5/webcomponents/dist/Icon.js";
+import "@/elements/icon";
+
 import "@ui5/webcomponents-icons/dist/accept.js";
 import "@ui5/webcomponents-icons/dist/border.js";
+import "@ui5/webcomponents-icons/dist/question-mark.js";
 
 /**
  * `cell-google-protobuf-boolvalue`
@@ -19,7 +21,7 @@ import "@ui5/webcomponents-icons/dist/border.js";
  */
 export class CellGoogleProtobufBoolvalue extends LitElement {
   @state()
-  private checked = false;
+  private checked: boolean | null = null;
 
   private _model: BoolValue = new BoolValue();
 
@@ -50,23 +52,6 @@ export class CellGoogleProtobufBoolvalue extends LitElement {
       :host([data-size*="size-l"]),
       :host([data-size*="size-xl"]) {
         padding-top: 0.5rem;
-      }
-
-      :host([value-state="Positive"]) ui5-icon,
-      :host([value-state="Success"]) ui5-icon {
-        color: var(--sapPositiveColor, #107e3e);
-      }
-      :host([value-state="Informative"]) ui5-icon,
-      :host([value-state="Information"]) ui5-icon {
-        color: var(--sapInformativeColor, #0a6ed1);
-      }
-      :host([value-state="Negative"]) ui5-icon,
-      :host([value-state="Error"]) ui5-icon {
-        color: var(--sapNegativeColor, #b00);
-      }
-      :host([value-state="Critical"]) ui5-icon,
-      :host([value-state="Warning"]) ui5-icon {
-        color: var(--sapCrticalColor, #e9730c);
       }
     `;
   }
@@ -108,6 +93,9 @@ export class CellGoogleProtobufBoolvalue extends LitElement {
    */
   override render() {
     // language=HTML
-    return html` ${this.checked ? html` <ui5-icon name="accept" value-state="Success"></ui5-icon> ` : html` <ui5-icon name="border"></ui5-icon> `} `;
+    if (this.checked === null) {
+      return html` <furo-ui5-icon name="question-mark" design="Information"></furo-ui5-icon> `;
+    }
+    return html` ${this.checked ? html` <furo-ui5-icon name="accept" design="Positive"></furo-ui5-icon> ` : html` <furo-ui5-icon name="border"></furo-ui5-icon> `} `;
   }
 }

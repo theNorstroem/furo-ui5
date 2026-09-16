@@ -46,7 +46,9 @@ export class DateAndTimeReaderWriters<T> {
     });
 
     readers.set("google.protobuf.Timestamp", () => {
-      const v = (this.modelField as Timestamp).value;
+      // `Timestamp.value` is `string | null`, where `null` means "not set". The bound properties are UI5
+      // `String` properties which cannot carry it, so an unset timestamp reads as the empty string.
+      const v = (this.modelField as Timestamp).value ?? "";
       if (v !== this.clazz[this.valueField]) {
         (this.clazz[this.valueField] as string) = v;
       }

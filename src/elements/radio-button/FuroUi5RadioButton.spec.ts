@@ -145,6 +145,14 @@ describe("FuroUi5RadioButton", () => {
       assert.equal(el.checked, true);
     });
 
+    it("reads an unset BoolValue as false, not null", () => {
+      // `BoolValue.value` is `boolean | null`; BoolReaderWriters coalesces the unset state so that
+      // `syncGroup()` can never round-trip a null back into the model.
+      const model = new BoolValue();
+      el.bindData(model);
+      assert.equal(el.checked, false);
+    });
+
     it("propagates BoolValue value changes to el.checked", () => {
       const model = new BoolValue();
       el.bindData(model);

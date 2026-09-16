@@ -146,6 +146,13 @@ describe("FuroUiBusyIndicator", () => {
       assert.equal(el.active, true);
     });
 
+    it("reads an unset BoolValue as false, not null", () => {
+      // `BoolValue.value` is `boolean | null`; BoolReaderWriters coalesces the unset state.
+      const model = new BoolValue();
+      el.bindData(model);
+      assert.equal(el.active, false);
+    });
+
     it("propagates BoolValue value changes to el.active", () => {
       const model = new BoolValue(false);
       el.bindData(model);

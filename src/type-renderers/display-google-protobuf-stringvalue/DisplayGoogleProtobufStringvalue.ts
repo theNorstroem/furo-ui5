@@ -99,7 +99,7 @@ export class DisplayGoogleProtobufStringvalue extends LitElement {
    * @private
    */
   private _readValue = (): void => {
-    this.displayValue = this._model.value;
+    this.displayValue = this._model.value ?? "";
   };
 
   /**
