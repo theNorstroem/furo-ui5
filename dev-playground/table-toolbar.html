@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,  initial-scale=1.0">
+  <title>Table Toolbar</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+
+  <script type="module">
+    import "@/Assets";
+    import "@/Icons";
+    import "@/elements/table-toolbar";
+    import "@/elements/table-toolbar-separator";
+    import "@/elements/title";
+    import "@/elements/text-input";
+    import "@/elements/icon";
+    import "@/elements/button";
+    import "@/elements/toolbar";
+    import "@/elements/toolbar-button";
+    import "@/elements/toolbar-separator";
+    import "@/stories-shared/view-resizer";
+  </script>
+
+  <style>
+    body {
+      background-color: var(--sapBackgroundColor);
+      padding: 1rem;
+    }
+
+    *:not(:defined) {
+      display: none;
+    }
+
+    /* drag the bottom right corner of a <view-resizer> to cross the 540px / 376px / 375px breakpoints */
+
+    view-resizer {
+      margin-block-end: 2rem;
+    }
+  </style>
+</head>
+<body class="sapUiSizeCompact">
+
+<main>
+  <h1>Table Toolbar</h1>
+
+  <h2>title + middle + action</h2>
+  <view-resizer show-width>
+    <furo-ui5-table-toolbar>
+      <furo-ui5-title level="H3">Positions (23)</furo-ui5-title>
+
+      <furo-ui5-text-input slot="middle" placeholder="ISIN, Valor, Ticker, Name">
+        <furo-ui5-icon slot="icon" name="search"></furo-ui5-icon>
+      </furo-ui5-text-input>
+
+      <furo-ui5-toolbar slot="action" design="Transparent">
+        <furo-ui5-toolbar-button text="Add Position" icon="add" design="Transparent"></furo-ui5-toolbar-button>
+        <furo-ui5-toolbar-button accessible-name="Collapse" icon="collapse-all" design="Transparent"
+                                 tooltip="Collapse all nodes"></furo-ui5-toolbar-button>
+        <furo-ui5-toolbar-button accessible-name="Expand" icon="expand-all" design="Transparent"
+                                 tooltip="Expand nodes"></furo-ui5-toolbar-button>
+        <furo-ui5-toolbar-separator></furo-ui5-toolbar-separator>
+        <furo-ui5-toolbar-button accessible-name="Indent" icon="indent" design="Transparent"></furo-ui5-toolbar-button>
+        <furo-ui5-toolbar-button accessible-name="Settings" icon="action-settings"
+                                 design="Transparent"></furo-ui5-toolbar-button>
+      </furo-ui5-toolbar>
+    </furo-ui5-table-toolbar>
+  </view-resizer>
+
+  <h2>title + action (no middle -- the start column hugs, the actions take the slack)</h2>
+  <view-resizer show-width>
+    <furo-ui5-table-toolbar>
+      <furo-ui5-title level="H3">Positions (23)</furo-ui5-title>
+
+      <furo-ui5-button slot="action" icon="add" design="Transparent">Add</furo-ui5-button>
+      <furo-ui5-button slot="action" icon="edit" design="Transparent">Edit</furo-ui5-button>
+      <furo-ui5-table-toolbar-separator slot="action"></furo-ui5-table-toolbar-separator>
+      <furo-ui5-button slot="action" icon="sort" design="Transparent">Sort</furo-ui5-button>
+      <furo-ui5-button slot="action" icon="filter" design="Transparent">Filter</furo-ui5-button>
+      <furo-ui5-table-toolbar-separator slot="action"></furo-ui5-table-toolbar-separator>
+      <furo-ui5-button slot="action" icon="excel-attachment" design="Transparent">Export</furo-ui5-button>
+    </furo-ui5-table-toolbar>
+  </view-resizer>
+
+  <h2>title only (both areas collapse -- no has-middle, no has-action on the host)</h2>
+  <view-resizer show-width>
+    <furo-ui5-table-toolbar id="collapsible">
+      <furo-ui5-title level="H3">Positions (23)</furo-ui5-title>
+    </furo-ui5-table-toolbar>
+  </view-resizer>
+
+  <p>
+    <furo-ui5-button id="toggle" design="Emphasized">toggle an action into the third toolbar</furo-ui5-button>
+  </p>
+</main>
+
+<script type="module">
+  // proves the slotchange tracking: adding/removing a light-DOM child flips has-action
+  const toolbar = document.getElementById("collapsible");
+  document.getElementById("toggle").addEventListener("click", () => {
+    const existing = toolbar.querySelector('[slot="action"]');
+    if (existing) {
+      existing.remove();
+      return;
+    }
+    const button = document.createElement("furo-ui5-button");
+    button.setAttribute("slot", "action");
+    button.setAttribute("icon", "add");
+    button.setAttribute("design", "Transparent");
+    button.textContent = "Add";
+    toolbar.appendChild(button);
+  });
+</script>
+
+</body>
+</html>

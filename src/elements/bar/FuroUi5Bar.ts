@@ -35,6 +35,34 @@ export class FuroUi5Bar extends Bar {
   /**
    * @private
    */
+  static override get styles() {
+    return [
+      super.styles,
+      // language=CSS
+      `
+        /* ui5-bar puts "margin: 0 .25rem" on every slotted child, which makes the
+           outermost item on each side hang .25rem off the bar's own padding. Drop the
+           outward margin of the first item in startContent and of the last one in
+           endContent -- whatever element it is.
+
+           ":nth-child(... of S)" is used instead of ":first-child" / ":last-child" so the
+           rules stay correct no matter in which order the slots are written in the light
+           DOM, and so a [hidden] item (display: none, takes no space) is skipped. */
+
+        ::slotted(:nth-child(1 of [slot="startContent"]:not([hidden]))) {
+          margin-inline-start: 0;
+        }
+
+        ::slotted(:nth-last-child(1 of [slot="endContent"]:not([hidden]))) {
+          margin-inline-end: 0;
+        }
+      `,
+    ];
+  }
+
+  /**
+   * @private
+   */
   static override get metadata() {
     return { ...super.metadata, tag: "furo-ui5-bar" };
   }

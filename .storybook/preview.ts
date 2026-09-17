@@ -1,5 +1,8 @@
 import  { type Preview, setCustomElementsManifest } from '@storybook/web-components-vite'
 import customElements from "../custom-elements.json";
+// repo-private story helper: <view-resizer> is registered for every story, so any story can wrap a
+// width-reactive component in one without importing it first.
+import "../src/stories-shared/view-resizer";
 import { setStorybookHelpersConfig, type StorybookHelpersOptions } from "@wc-toolkit/storybook-helpers";
 
 const options: StorybookHelpersOptions = { renderDefaultValues: true };

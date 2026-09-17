@@ -9,6 +9,7 @@ import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import "@ui5/webcomponents-fiori/dist/SearchItem.js";
 import "@ui5/webcomponents-fiori/dist/UserMenuItem.js";
 import "@ui5/webcomponents-fiori/dist/UserMenuAccount.js";
+import "@/stories-shared/view-resizer";
 
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { getStorybookHelpers } from "@wc-toolkit/storybook-helpers";
@@ -88,6 +89,62 @@ export const Default: StoryObj = {
     </furo-ui5-shellbar>
 
     <furo-ui5-user-menu id="app-user-menu" show-manage-account show-other-accounts>
+      <ui5-user-menu-account slot="accounts" selected avatar-initials="JD" title-text="Jane Doe" subtitle-text="jane.doe@example.com"></ui5-user-menu-account>
+      <ui5-user-menu-item icon="action-settings" text="Settings"></ui5-user-menu-item>
+      <ui5-user-menu-item icon="opportunity" text="Privacy Policy"></ui5-user-menu-item>
+    </furo-ui5-user-menu>
+  `,
+};
+
+/**
+ * The `Default` shellbar inside a `<view-resizer>`. The UI5 shellbar measures its own element, not the
+ * viewport, so dragging the handle in the bottom right corner moves the items and the search field into
+ * the overflow menu. The readout in the bottom left corner tells you at which width each step happens.
+ *
+ * `<view-resizer>` is a repo-private story helper from `@/stories-shared/view-resizer`, registered for
+ * every story in `.storybook/preview.ts`, so any story can wrap a width-reactive component in one.
+ */
+export const Resizable: StoryObj = {
+  args: {
+    primaryTitle: "Furo App",
+    secondaryTitle: "Demo",
+    notificationsCount: "2",
+    showNotifications: true,
+    showProductSwitch: true,
+    showSearchField: true,
+    shadow: true,
+  },
+  render: renderArgs => html`
+    <view-resizer show-width>
+      <furo-ui5-shellbar
+        primary-title="${ifDefined(renderArgs.primaryTitle)}"
+        secondary-title="${ifDefined(renderArgs.secondaryTitle)}"
+        notifications-count="${ifDefined(renderArgs.notificationsCount)}"
+        ?show-notifications="${renderArgs.showNotifications}"
+        ?show-product-switch="${renderArgs.showProductSwitch}"
+        ?show-search-field="${renderArgs.showSearchField}"
+        ?shadow="${renderArgs.shadow}"
+        @profile-click="${(e: Event) => {
+          const menu = document.getElementById("resizable-user-menu") as (HTMLElement & { showAt: (o: HTMLElement) => void }) | null;
+          menu?.showAt(e.target as HTMLElement);
+        }}"
+      >
+        <img slot="logo" src="${logo}" alt="Furo logo" />
+
+        <furo-ui5-shellbar-search slot="searchField" placeholder="Search...">
+          <ui5-search-item text="Dashboard"></ui5-search-item>
+          <ui5-search-item text="Reports"></ui5-search-item>
+          <ui5-search-item text="Settings"></ui5-search-item>
+        </furo-ui5-shellbar-search>
+
+        <furo-ui5-shellbar-item icon="add" text="Add"></furo-ui5-shellbar-item>
+        <furo-ui5-shellbar-item icon="settings" text="Settings"></furo-ui5-shellbar-item>
+
+        <ui5-avatar slot="profile" initials="JD" color-scheme="Accent6"></ui5-avatar>
+      </furo-ui5-shellbar>
+    </view-resizer>
+
+    <furo-ui5-user-menu id="resizable-user-menu" show-manage-account show-other-accounts>
       <ui5-user-menu-account slot="accounts" selected avatar-initials="JD" title-text="Jane Doe" subtitle-text="jane.doe@example.com"></ui5-user-menu-account>
       <ui5-user-menu-item icon="action-settings" text="Settings"></ui5-user-menu-item>
       <ui5-user-menu-item icon="opportunity" text="Privacy Policy"></ui5-user-menu-item>

@@ -1,7 +1,7 @@
 {
   "name": "@furo/ui5",
   "description": "SAP UI5 Web Components code completion and data bindings for @furo/open-models",
-  "version": "2.0.0-RC.28",
+  "version": "2.0.0-RC.31",
   "homepage": "https://github.com/eclipse/eclipsefuro-web/tree/main/packages/furo-ui5",
   "repository": {
     "type": "git",
@@ -12,11 +12,7 @@
     "email": "",
     "url": "https://github.com/theNorstroem/"
   },
-  "keywords": [
-    "web-components",
-    "flow based programming",
-    "fbp"
-  ],
+  "keywords": ["web-components", "flow based programming", "fbp"],
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",
@@ -449,6 +445,10 @@
     "./tabcontainer": {
       "types": "./dist/elements/tabcontainer/index.d.ts",
       "default": "./dist/elements/tabcontainer/index.js"
+    },
+    "./table-toolbar": {
+      "types": "./dist/elements/table-toolbar/index.d.ts",
+      "default": "./dist/elements/table-toolbar/index.js"
     },
     "./table-toolbar-separator": {
       "types": "./dist/elements/table-toolbar-separator/index.d.ts",

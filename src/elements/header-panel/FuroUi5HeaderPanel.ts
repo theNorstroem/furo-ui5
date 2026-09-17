@@ -489,7 +489,7 @@ export class FuroUi5HeaderPanel extends LitElement {
     }
 
     :host([fixed]) #showHide {
-      padding-bottom: calc(0.75 * var(--MediaSizeIndentationBottom, 0.5rem));
+      padding-bottom: calc(0.5 * var(--MediaSizeIndentationBottom, 0.5rem));
     }
 
     .splitter_bar {

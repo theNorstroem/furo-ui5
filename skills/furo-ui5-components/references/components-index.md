@@ -98,6 +98,7 @@
 
 ### Table
 
+- [`furo-ui5-table-toolbar`](components/furo-ui5-table-toolbar.md) *(table-toolbar, toolbar, actions, filter, sort, controls, table)* — Use above tables for table-specific actions like filter and sort.
 - [`furo-ui5-table-toolbar-separator`](components/furo-ui5-table-toolbar-separator.md) *(table-toolbar-separator, divider)* — Use to separate groups of actions in table toolbar.
 - [`furo-ui5-tree-table`](components/furo-ui5-tree-table.md) *(tree-table, hierarchical, nested, expandable, parent-child, table)* — Use when tabular data has parent-child relationships requiring expansion.
 

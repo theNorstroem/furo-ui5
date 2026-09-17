@@ -102,6 +102,7 @@ import "./TabSeparator";
 import "./Tab";
 import "./Tabcontainer";
 import "./TableToolbarSeparator";
+import "./TableToolbar";
 import "./Tag";
 import "./TextInput";
 import "./Text";

@@ -44096,6 +44096,144 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/elements/table-toolbar/FuroUi5TableToolbar.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "### Description\n\nThe table toolbar always appears above the table. The control is used for key actions that impact the entire table.\n\n> Hint: Use a `furo-ui5-toolbar` in the action slot to have the menu feature on small screens.\n\n### Usage\n\n#### Use the table toolbar if:\n- There are multiple objects on your page and you need to edit only a single table.\n- You want to show actions as close to their corresponding controls as possible.\n- You need a title for your table.\n\n#### Do not use the table toolbar if:\n- You are using single selection and have only one or two actions. In this case, place the actions on each line.\n\n### Components\nThe table toolbar can contain several components, including a title and several types of button. Actions are grouped by the following action types:\n\n- Finalizing actions, such as Save or Cancel. Finalizing actions are app-specific and are used only if the table is editable.\n- Business actions, such as Edit or Create. Business actions can be app-specific or general object management actions.\n- Actions for managing the content, such as Sort or Filter. These settings are also known as \"view settings\".\n- Generic actions, such as Export to Spreadsheet.\n\nBetween the groups, add a separator line (`furo-ui5-table-toolbar-separator`).\n\nThe following content can be part of the table toolbar. Use only the content your users really need. For the remaining content, keep the order shown below:\n\n- Title\n- Variant management or content switch (for example, as used to switch between multiple views in a list report)\n- Search\n- Finalizing actions:\n  - Save\n  - Cancel\n\n- Business actions: Use this action type for app-specific actions. This group contains:\n- App-specific business actions\n- Actions for object management\n  - Create (for new items) or Add (for existing items)\n  - Edit\n  - Delete (if the object itself is deleted) or Remove (if the reference to an item is removed)\n  - Paste\n\n The order of actions in this group is not \"fixed\". Place all the business actions, except for Paste, in the order of their importance for the use case. Always keep Paste as the last business action in the group.\n\n Try to keep Create/Add, Edit, and Delete/Remove together, but only if this is meaningful in your app.\n\n- Actions for content management (view settings)\n  - Show Details / Hide Details\n  - Sort\n  - Filter\n  - Group\n  - Column Settings\n- Generic actions\n  - Export to Spreadsheet\n  - Print\n- Maximize / Minimize\n- View switch (for example, to switch between table and chart view)\n\n### Empty areas collapse by themselves\n\nThe middle and the action area are removed from the layout when nothing is slotted into them, and the\nstart column stops claiming the free space when there is no middle area. The component tracks this on\n`slotchange` and mirrors it onto itself as the read-only `has-middle` / `has-action` attributes, which\nare what the internal stylesheet keys off. Do not set them by hand.\n\nThis is not doable in CSS alone: `:has()` is invalid inside `:host()`, and `:host:has(...)`, while it\nparses, never matches -- a selector in a shadow stylesheet cannot reach across the shadow boundary to\nthe host's light-DOM children.\n\n\n\n\n",
+          "name": "TableToolbar",
+          "cssProperties": [
+            {
+              "description": "the background of the toolbar",
+              "name": "--sapToolbar_Background",
+              "default": "--sapGroup_ContentBackground"
+            },
+            {
+              "description": "the color of the bottom border",
+              "name": "--sapToolbar_SeparatorColor"
+            },
+            {
+              "description": "the font size of a slotted `furo-ui5-title` or `ui5-title`",
+              "name": "--sapFontHeader5Size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Use this to format the start container `div` inside the shadow root of the component, which surrounds the default slot.",
+              "name": "default"
+            },
+            {
+              "description": "Use this to format the middle container `div` inside the shadow root of the component, which surrounds the `middle` slot.",
+              "name": "middle"
+            },
+            {
+              "description": "Use this to format the action container `div` inside the shadow root of the component, which surrounds the `action` slot.",
+              "name": "action"
+            }
+          ],
+          "slots": [
+            {
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "description": "Defines the content in the start column. Typically a `furo-ui5-title`.",
+              "name": ""
+            },
+            {
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "description": "Defines the content in the middle column, like a search field or a variant switch.",
+              "name": "middle"
+            },
+            {
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "description": "Defines the content in the action area (on the right).",
+              "name": "action"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "_checkActionSlotContent",
+              "type": {
+                "text": "(e: Event) => void"
+              },
+              "privacy": "private",
+              "readonly": true,
+              "description": "Mirrors \"the action slot has content\" onto the host as the `has-action` attribute."
+            },
+            {
+              "kind": "field",
+              "name": "_checkMiddleSlotContent",
+              "type": {
+                "text": "(e: Event) => void"
+              },
+              "privacy": "private",
+              "readonly": true,
+              "description": "Mirrors \"the middle slot has content\" onto the host as the `has-middle` attribute."
+            }
+          ],
+          "tagName": "furo-ui5-table-toolbar",
+          "customElement": true,
+          "summary": "Toolbar specifically designed for table actions and controls.",
+          "keywords": [
+            "table-toolbar",
+            "toolbar",
+            "actions",
+            "filter",
+            "sort",
+            "controls",
+            "table"
+          ],
+          "category": "Table",
+          "useCase": "Use above tables for table-specific actions like filter and sort.",
+          "relatedComponents": [
+            "furo-ui5-table-toolbar-separator",
+            "furo-ui5-toolbar",
+            "furo-ui5-toolbar-button",
+            "furo-ui5-title"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5TableToolbar",
+          "declaration": {
+            "name": "FuroUi5TableToolbar",
+            "module": "src/elements/table-toolbar/FuroUi5TableToolbar.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/table-toolbar/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/elements/table-toolbar/FuroUi5TableToolbar"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "furo-ui5-table-toolbar",
+          "declaration": {
+            "name": "FuroUi5TableToolbar",
+            "module": "/src/elements/table-toolbar/FuroUi5TableToolbar"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/elements/tag/FuroUi5Tag.js",
       "declarations": [
         {
