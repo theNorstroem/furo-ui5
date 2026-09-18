@@ -10,12 +10,12 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { ArgsTransormAll } from "@/stories-shared/ArgTypesTransormer";
 import DocumentationTemplate from "@/stories-shared/DocumentationTemplate";
 
-const component = "furo-ui5-tokenizer";
+const component = "furo-ui5-token";
 const { events, args, argTypes } = getStorybookHelpers(component);
 ArgsTransormAll(argTypes, args, []);
 
 const meta: Meta = {
-  title: "input/MultiInput/Tokenizer",
+  title: "input/MultiInput/Token",
   component,
   subcomponents: {},
   tags: ["autodocs"],
@@ -29,7 +29,7 @@ const meta: Meta = {
       page: DocumentationTemplate({
         component,
         since: "0.9.0",
-        originalComponent: "https://ui5.github.io/webcomponents/components/Tokenizer/",
+        originalComponent: "https://ui5.github.io/webcomponents/components/Token/",
       }),
     },
   },
@@ -37,20 +37,13 @@ const meta: Meta = {
 export default meta;
 
 export const Default: StoryObj = {
+  args: {
+    text: "Zurich",
+  },
   render: renderArgs => html`
-    <furo-ui5-tokenizer
-      accessible-name="${ifDefined(renderArgs.accessibleName)}"
-      accessible-name-ref="${ifDefined(renderArgs.accessibleNameRef)}"
-      ?disabled="${renderArgs.disabled}"
-      ?multi-line="${renderArgs.multiLine}"
-      name="${ifDefined(renderArgs.name)}"
-      ?readonly="${renderArgs.readonly}"
-      ?show-clear-all="${renderArgs.showClearAll}"
-      style="width:20rem"
-    >
-      <furo-ui5-token text="Zurich"></furo-ui5-token>
+    <furo-ui5-tokenizer style="width:20rem">
+      <furo-ui5-token ?selected="${renderArgs.selected}" text="${ifDefined(renderArgs.text)}"></furo-ui5-token>
       <furo-ui5-token text="Berlin"></furo-ui5-token>
-      <furo-ui5-token text="Tokyo"></furo-ui5-token>
     </furo-ui5-tokenizer>
   `,
 };

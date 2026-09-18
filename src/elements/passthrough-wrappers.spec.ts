@@ -24,6 +24,7 @@ import "@/elements/suggestion-item";
 import "@/elements/suggestion-item-custom";
 import "@/elements/suggestion-item-group";
 import "@/elements/tokenizer";
+import "@/elements/token";
 import "@/elements/tab-separator";
 import "@/elements/user-menu-item";
 import "@/elements/user-menu-item-group";
@@ -90,6 +91,7 @@ const WRAPPERS: { tag: string; marker: string }[] = [
   { tag: "furo-ui5-suggestion-item-custom", marker: "ui5-suggestion-item-custom" },
   { tag: "furo-ui5-suggestion-item-group", marker: "ui5-suggestion-item-group" },
   { tag: "furo-ui5-tokenizer", marker: "ui5-tokenizer" },
+  { tag: "furo-ui5-token", marker: "ui5-token" },
   { tag: "furo-ui5-tab-separator", marker: "ui5-tab-separator" },
   { tag: "furo-ui5-user-menu-item", marker: "ui5-user-menu-item" },
   { tag: "furo-ui5-user-menu-item-group", marker: "ui5-user-menu-item-group" },
@@ -193,6 +195,17 @@ describe("pass-through UI5 wrappers", () => {
       );
       await delay(50);
       assert.lengthOf(el.items, 2);
+    });
+
+    it("furo-ui5-tokenizer picks up furo-ui5-token children", async () => {
+      const el = await fixture<HTMLElement & { tokens: HTMLElement[] }>(
+        html`<furo-ui5-tokenizer style="width:20rem">
+          <furo-ui5-token text="Zurich"></furo-ui5-token>
+          <furo-ui5-token text="Berlin"></furo-ui5-token>
+        </furo-ui5-tokenizer>`
+      );
+      await delay(50);
+      assert.lengthOf(el.tokens, 2);
     });
 
     it("furo-ui5-timeline picks up furo-ui5-timeline-item children", async () => {

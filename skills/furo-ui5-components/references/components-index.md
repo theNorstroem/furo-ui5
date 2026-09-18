@@ -87,6 +87,7 @@
 - [`furo-ui5-text-input`](components/furo-ui5-text-input.md) *(input, text, field, form, textbox, entry, value)* — Use for single-line text entry like names, emails, or short values.
 - [`furo-ui5-textarea`](components/furo-ui5-textarea.md) *(textarea, multiline, text, input, form, description, notes)* — Use when users need to enter multiple lines of text like descriptions or comments.
 - [`furo-ui5-time-picker`](components/furo-ui5-time-picker.md) *(time, picker, hours, minutes, clock, input)* — Use for selecting time values without date.
+- [`furo-ui5-token`](components/furo-ui5-token.md) *(token, chip, tag, item, multi-input, tokenizer, removable)* — Use inside furo-ui5-tokenizer or furo-ui5-multi-input to display a selected value.
 - [`furo-ui5-tokenizer`](components/furo-ui5-tokenizer.md) *(tokenizer, tokens, chips, tags, overflow)* — Use standalone to display a removable set of tokens outside a multi-input.
 
 ### FormLayout

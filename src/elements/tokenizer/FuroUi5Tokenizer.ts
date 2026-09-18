@@ -5,9 +5,9 @@ import Tokenizer from "@ui5/webcomponents/dist/Tokenizer.js";
  *
  * ```html
  * <furo-ui5-tokenizer style="width:20rem">
- *   <ui5-token text="Zurich"></ui5-token>
- *   <ui5-token text="Berlin"></ui5-token>
- *   <ui5-token text="Tokyo"></ui5-token>
+ *   <furo-ui5-token text="Zurich"></furo-ui5-token>
+ *   <furo-ui5-token text="Berlin"></furo-ui5-token>
+ *   <furo-ui5-token text="Tokyo"></furo-ui5-token>
  * </furo-ui5-tokenizer>
  * ```
  *

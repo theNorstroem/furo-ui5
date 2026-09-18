@@ -49314,11 +49314,173 @@
     },
     {
       "kind": "javascript-module",
+      "path": "dist/elements/token/FuroUi5Token.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "A small, removable item of information (similar to a tag), mainly used to visualize previously\nselected values. Place tokens inside a `furo-ui5-tokenizer` or a `furo-ui5-multi-input`.\n\n```html\n<furo-ui5-tokenizer style=\"width:20rem\">\n  <furo-ui5-token text=\"Zurich\"></furo-ui5-token>\n  <furo-ui5-token text=\"Berlin\" selected></furo-ui5-token>\n</furo-ui5-tokenizer>\n```\n\nThis is a pass-through wrapper around `furo-ui5-token`: the UI5 API (properties, events,\nslots) is inherited unchanged and no data binding is added.\n\n### Overview\n\nTokens are small items of information (similar to tags) that mainly serve to visualize previously selected items.\n\n\n",
+          "name": "Token",
+          "members": [
+            {
+              "kind": "field",
+              "name": "metadata",
+              "static": true,
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Defines whether the component is selected or not.",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Token",
+                "module": "dist/Token.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Defines the text of the token.",
+              "default": "undefined",
+              "privacy": "public",
+              "inheritedFrom": {
+                "name": "Token",
+                "module": "dist/Token.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "Token",
+            "package": "@ui5/webcomponents",
+            "module": "dist/Token.js"
+          },
+          "tagName": "furo-ui5-token",
+          "customElement": true,
+          "summary": "Small removable item of information, displayed inside a tokenizer.",
+          "keywords": [
+            "token",
+            "chip",
+            "tag",
+            "item",
+            "multi-input",
+            "tokenizer",
+            "removable"
+          ],
+          "category": "Form",
+          "useCase": "Use inside furo-ui5-tokenizer or furo-ui5-multi-input to display a selected value.",
+          "relatedComponents": [
+            "furo-ui5-tokenizer",
+            "furo-ui5-multi-input",
+            "furo-ui5-multi-combobox",
+            "furo-ui5-tag"
+          ],
+          "slots": [
+            {
+              "name": "closeIcon",
+              "description": "Defines the close icon for the token. If nothing is provided to this slot, the default close icon will be used.\nAccepts `ui5-icon`.",
+              "inheritedFrom": {
+                "name": "Token",
+                "module": "dist/Token.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "description": "Determines whether the component should be rendered in RTL mode or not.\nReturns: \"rtl\", \"ltr\" or undefined",
+              "name": "effective-dir",
+              "default": "undefined",
+              "fieldName": "effectiveDir",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Used to duck-type UI5 elements without using instanceof",
+              "name": "is-ui5-element",
+              "default": "true",
+              "fieldName": "isUI5Element",
+              "type": {
+                "text": "any"
+              },
+              "inheritedFrom": {
+                "name": "UI5Element",
+                "module": "dist/UI5Element.js"
+              }
+            },
+            {
+              "description": "Defines whether the component is selected or not.",
+              "name": "selected",
+              "default": "false",
+              "fieldName": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "inheritedFrom": {
+                "name": "Token",
+                "module": "dist/Token.js"
+              }
+            },
+            {
+              "description": "Defines the text of the token.",
+              "name": "text",
+              "default": "undefined",
+              "fieldName": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "inheritedFrom": {
+                "name": "Token",
+                "module": "dist/Token.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FuroUi5Token",
+          "declaration": {
+            "name": "FuroUi5Token",
+            "module": "src/elements/token/FuroUi5Token.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/elements/token/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "module": "src/elements/token/FuroUi5Token"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "dist/elements/tokenizer/FuroUi5Tokenizer.js",
       "declarations": [
         {
           "kind": "class",
-          "description": "Lays out a set of tokens and moves the ones that do not fit into an overflow popover.\n\n```html\n<furo-ui5-tokenizer style=\"width:20rem\">\n  <ui5-token text=\"Zurich\"></ui5-token>\n  <ui5-token text=\"Berlin\"></ui5-token>\n  <ui5-token text=\"Tokyo\"></ui5-token>\n</furo-ui5-tokenizer>\n```\n\nThis is a pass-through wrapper around `furo-ui5-tokenizer`: the UI5 API (properties, events,\nslots) is inherited unchanged and no data binding is added.\n\n### Overview\n\nA `furo-ui5-tokenizer` is an invisible container for `furo-ui5-token`s that supports keyboard navigation and token selection.\n\nThe `furo-ui5-tokenizer` consists of two parts:\n- Tokens - displays the available tokens.\n- N-more indicator - contains the number of the remaining tokens that cannot be displayed due to the limited space.\n\n### Keyboard Handling\n\n#### Basic Navigation\nThe `furo-ui5-tokenizer` provides advanced keyboard handling.\nWhen a token is focused the user can use the following keyboard\nshortcuts in order to perform a navigation:\n\n- [Left] or [Right] / [Up] or [Down] - Navigates left and right through the tokens.\n- [Home] - Navigates to the first token.\n- [End] - Navigates to the last token.\n\nThe user can use the following keyboard shortcuts to perform actions (such as select, delete):\n\n- [Space] - Selects a token.\n- [Backspace] / [Delete] - Deletes a token.\n**Note:** The deletion of a token is handled by the application with the use of the `token-delete` event.\n\n\n",
+          "description": "Lays out a set of tokens and moves the ones that do not fit into an overflow popover.\n\n```html\n<furo-ui5-tokenizer style=\"width:20rem\">\n  <furo-ui5-token text=\"Zurich\"></furo-ui5-token>\n  <furo-ui5-token text=\"Berlin\"></furo-ui5-token>\n  <furo-ui5-token text=\"Tokyo\"></furo-ui5-token>\n</furo-ui5-tokenizer>\n```\n\nThis is a pass-through wrapper around `furo-ui5-tokenizer`: the UI5 API (properties, events,\nslots) is inherited unchanged and no data binding is added.\n\n### Overview\n\nA `furo-ui5-tokenizer` is an invisible container for `furo-ui5-token`s that supports keyboard navigation and token selection.\n\nThe `furo-ui5-tokenizer` consists of two parts:\n- Tokens - displays the available tokens.\n- N-more indicator - contains the number of the remaining tokens that cannot be displayed due to the limited space.\n\n### Keyboard Handling\n\n#### Basic Navigation\nThe `furo-ui5-tokenizer` provides advanced keyboard handling.\nWhen a token is focused the user can use the following keyboard\nshortcuts in order to perform a navigation:\n\n- [Left] or [Right] / [Up] or [Down] - Navigates left and right through the tokens.\n- [Home] - Navigates to the first token.\n- [End] - Navigates to the last token.\n\nThe user can use the following keyboard shortcuts to perform actions (such as select, delete):\n\n- [Space] - Selects a token.\n- [Backspace] / [Delete] - Deletes a token.\n**Note:** The deletion of a token is handled by the application with the use of the `token-delete` event.\n\n\n",
           "name": "Tokenizer",
           "members": [
             {

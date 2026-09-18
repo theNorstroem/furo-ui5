@@ -114,6 +114,7 @@ import "./Timeline";
 import "./Title";
 import "./Toast";
 import "./ToggleButton";
+import "./Token";
 import "./Tokenizer";
 import "./ToolbarButton";
 import "./ToolbarSelectOption";
