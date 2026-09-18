@@ -10,8 +10,6 @@ import "../button";
 import "../title";
 import "@ui5/webcomponents-icons/dist/slim-arrow-up.js";
 import "@ui5/webcomponents-icons/dist/slim-arrow-down.js";
-import "@ui5/webcomponents-icons/dist/pushpin-off.js";
-import "@ui5/webcomponents-icons/dist/pushpin-on.js";
 import "@ui5/webcomponents-icons/dist/favorite.js";
 import "@ui5/webcomponents-icons/dist/navigation-down-arrow.js";
 import "@ui5/webcomponents-icons/dist/share.js";
@@ -26,7 +24,6 @@ import type { FuroUi5ShowHide } from "@/elements/show-hide/FuroUi5ShowHide";
 import IconShape from "@/types/IconShape";
 import IconSize from "@/types/IconSize";
 import { NavigationGroup } from "@/util/NavigationGroup";
-import Throttle from "@/util/Throttle";
 
 /**
  *
@@ -56,8 +53,6 @@ import Throttle from "@/util/Throttle";
  * @cssprop [--sapBrandColor=--primary-dark] - the gradient-start color of the splitter
  * @csspart action - Use this to format the action container `div` inside the shadow root of the component, which surrounds the `action` slot.
  * @csspart secondary - Use this to format the secondary container `div` inside the shadow root of the component, which surrounds the `secondary` slot.
- * @event {CustomEvent} pinned - Fired when pin was set.
- * @event {CustomEvent} unpinned - Fired when pin was removed.
  * @event {CustomEvent<Boolean>} hid - hid will be fired when the header is collapsed.
  * @event {CustomEvent<Boolean>} showed - showed will be fired when the header is expanded.
  * @event {CustomEvent<HTMLElement>} variant-icon-clicked - fired when the variant dropdown is clicked or the [arrow down] key is pressed, sends the node ref of the icon.
@@ -180,8 +175,7 @@ export class FuroUi5HeaderPanel extends LitElement {
   objectIcon = "";
 
   /**
-   * Set the collapsed attribute to start in a collapsed state. Header which are pinned by the user in collapsed or expanded state, will override
-   * this attribute.
+   * Set the collapsed attribute to start in a collapsed state.
    *
    * @public
    */
@@ -198,23 +192,6 @@ export class FuroUi5HeaderPanel extends LitElement {
   secondaryText = "";
 
   /**
-   * Set the is-pinned attribute to disable collapse and expand before unpin.
-   *
-   * @public
-   */
-  @property({ type: Boolean, attribute: "is-pinned", reflect: true })
-  isPinned = false;
-
-  /**
-   * Flag to disable/enable collapsing/expanding on scroll
-   *
-   * @public
-   * @attr {boolean} collapse-on-scroll
-   */
-  @property({ type: Boolean, attribute: "collapse-on-scroll", reflect: true })
-  collapseOnScroll = true;
-
-  /**
    *
    * @private
    */
@@ -229,12 +206,6 @@ export class FuroUi5HeaderPanel extends LitElement {
   @query("#kpinav") private kpiNavEl?: HTMLElement;
 
   @query("#variantIcon") private variantIconEl?: FuroUi5Icon;
-
-  /**
-   *
-   * @private
-   */
-  private _bodyIsScrolling = false;
 
   /**
    * @private
@@ -292,14 +263,13 @@ export class FuroUi5HeaderPanel extends LitElement {
 
   /**
    * Collapses the header content.
-   * This method will do nothing, if the header is "pinned".
    *
    * @public
    * @method
    * @returns {void}
    */
   collapse() {
-    if (!this.collapsed && !this.isPinned) {
+    if (!this.collapsed) {
       this.summaryComponent?.show();
       this.showHideComponent?.hide();
       setTimeout(() => {
@@ -310,14 +280,13 @@ export class FuroUi5HeaderPanel extends LitElement {
 
   /**
    * Expands the header content.
-   * This method will do nothing, if the header is "pinned".
    *
    * @public
    * @method
    * @returns {void}
    */
   expand() {
-    if (this.collapsed && !this.isPinned) {
+    if (this.collapsed) {
       this.summaryComponent?.hide();
       this.showHideComponent?.show();
       setTimeout(() => {
@@ -353,62 +322,15 @@ export class FuroUi5HeaderPanel extends LitElement {
         ro.observe(this.contentSlotEl);
       }
 
-      document.addEventListener("scroll", this.scrollhandler, {
-        passive: true,
-      });
-
-      this.addEventListener("mousewheel", this._wheelhandler as EventListener, {
-        passive: true,
-      });
-
       NavigationGroup(this.kpiNavEl ?? null, "*");
     });
   }
 
-  override disconnectedCallback() {
-    super.disconnectedCallback();
-    document.removeEventListener("scroll", this.scrollhandler, true);
-    this.removeEventListener("mousewheel", this._wheelhandler as EventListener, true);
-  }
-
-  /**
-   * @private
-   * @param e
-   */
-  _wheelhandler = (e: WheelEvent) => {
-    if (!this.fixed && this.collapseOnScroll) {
-      if (!this.isPinned && !this._bodyIsScrolling && e.deltaY > 10) {
-        this.collapse();
-      }
-      if (e.deltaY < -10) {
-        this.expand();
-      }
-    }
-  };
-
-  /**
-   * // scrolling collapse and expand
-   * @private
-   */
-  _disableBIS = Throttle(() => {
-    this._bodyIsScrolling = false;
-  }, 1200);
-
-  /**
-   * @private
-   */
-  private scrollhandler = () => {
-    this._bodyIsScrolling = true;
-    this._disableBIS();
-  };
-
   private toggleCollapseExpand = () => {
-    if (!this.isPinned) {
-      if (this.collapsed) {
-        this.expand();
-      } else {
-        this.collapse();
-      }
+    if (this.collapsed) {
+      this.expand();
+    } else {
+      this.collapse();
     }
   };
 
@@ -436,37 +358,6 @@ export class FuroUi5HeaderPanel extends LitElement {
   override focus(options?: FocusOptions): Promise<void> {
     return this.variantIconEl?.focus(options) ?? Promise.resolve();
   }
-
-  /**
-   * @private
-   *
-   */
-  private pinClicked = (e: Event) => {
-    e.stopPropagation();
-
-    if (!this.isPinned) {
-      this.isPinned = true;
-
-      this.dispatchEvent(
-        new CustomEvent("pinned", {
-          detail: this,
-          bubbles: false,
-          composed: true,
-        })
-      );
-    } else {
-      this.isPinned = false;
-
-      this.dispatchEvent(
-        new CustomEvent("unpinned", {
-          detail: this,
-          bubbles: false,
-          composed: true,
-        })
-      );
-    }
-    this.requestUpdate();
-  };
 
   static override styles = css`
     :host {
@@ -613,8 +504,7 @@ export class FuroUi5HeaderPanel extends LitElement {
       display: none;
     }
 
-    .collapser-button,
-    .pin-button {
+    .collapser-button {
       width: 1.5rem;
       height: 1.5rem;
       min-width: 1.5rem;
@@ -641,15 +531,6 @@ export class FuroUi5HeaderPanel extends LitElement {
       background-image: linear-gradient(to left, var(--sapBrandColor), transparent);
     }
 
-    .mid {
-      width: 0.5rem;
-      height: 1.5rem;
-      background-size: 100% 0.0625rem;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: linear-gradient(to right, var(--sapBrandColor), var(--sapBrandColor));
-    }
-
     .splitter_bar:hover:has(.splitter:hover) > .collapser-button,
     .splitter_bar:hover:not(:has(*:hover)) > .collapser-button {
       border-radius: var(--sapButton_BorderCornerRadius);
@@ -658,12 +539,6 @@ export class FuroUi5HeaderPanel extends LitElement {
     }
 
     .collapser-button:hover {
-      border-radius: var(--sapButton_BorderCornerRadius);
-      border: 1px solid var(--sapButton_Lite_Hover_BorderColor, #0854a0);
-      box-sizing: border-box;
-    }
-
-    .pin-button:hover {
       border-radius: var(--sapButton_BorderCornerRadius);
       border: 1px solid var(--sapButton_Lite_Hover_BorderColor, #0854a0);
       box-sizing: border-box;
@@ -791,8 +666,6 @@ export class FuroUi5HeaderPanel extends LitElement {
       <div class="splitter_bar" @click="${this.toggleCollapseExpand}" @keyup="${this.toggleOnKeyup}">
         <div class="splitter before"></div>
         <furo-ui5-icon mode="Interactive" class="collapser-button" name="slim-arrow-up"></furo-ui5-icon>
-        <div class="mid"></div>
-        <furo-ui5-icon class="pin-button" mode="Interactive" @click="${this.pinClicked}" name="${this.isPinned ? "pushpin-on" : "pushpin-off"}"></furo-ui5-icon>
         <div class="splitter after"></div>
       </div>
     `;

@@ -8,22 +8,14 @@ export interface HeaderPanel extends React.HTMLAttributes<HTMLElement> {
   "onfavorite-icon-clicked"?: (d: CustomEvent<HTMLElement>) => void;
   onhid?: (d: CustomEvent<boolean>) => void;
   "onobject-icon-clicked"?: (d: CustomEvent<HTMLElement>) => void;
-  onpinned?: (d: CustomEvent) => void;
   onshowed?: (d: CustomEvent<boolean>) => void;
-  onunpinned?: (d: CustomEvent) => void;
   "onvariant-icon-clicked"?: (d: CustomEvent<HTMLElement>) => void;
   // properties
 
   // attributes
 
   /**
-   * Flag to disable/enable collapsing/expanding on scroll
-   */
-  collapseOnScroll?: boolean;
-
-  /**
-   * Set the collapsed attribute to start in a collapsed state. Header which are pinned by the user in collapsed or expanded state, will override
-   * this attribute.
+   * Set the collapsed attribute to start in a collapsed state.
    */
   collapsed?: boolean;
 
@@ -76,11 +68,6 @@ export interface HeaderPanel extends React.HTMLAttributes<HTMLElement> {
    * Shows the fovorite icon when set.
    */
   isFavorite?: boolean;
-
-  /**
-   * Set the is-pinned attribute to disable collapse and expand before unpin.
-   */
-  isPinned?: boolean;
 
   /**
    * Set this value to display an object icon.

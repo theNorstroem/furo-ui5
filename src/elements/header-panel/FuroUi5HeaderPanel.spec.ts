@@ -22,7 +22,6 @@ describe("DynamicHeader Component", async () => {
   let collapseExpandIcon: FuroUi5Icon;
   let favoriteIcon: FuroUi5Icon;
   let objectIcon: FuroUi5Icon;
-  let pinIcon: FuroUi5Icon;
 
   beforeAll(async () => {
     el = await fixture(html`
@@ -36,7 +35,6 @@ describe("DynamicHeader Component", async () => {
     collapseExpandIcon = el.shadowRoot!.querySelector("furo-ui5-icon.collapser-button")!;
     favoriteIcon = el.shadowRoot!.querySelector('furo-ui5-icon[name="favorite"]')!;
     objectIcon = el.shadowRoot!.querySelector('furo-ui5-icon[name="product"]')!;
-    pinIcon = el.shadowRoot!.querySelector("furo-ui5-icon.pin-button")!;
   });
 
   afterAll(() => {
@@ -66,10 +64,9 @@ describe("DynamicHeader Component", async () => {
     assert.equal(slottedContent.textContent, "CONTENT");
   });
 
-  it("should resolve the favorite, object and pin sub-icons in shadow", () => {
+  it("should resolve the favorite and object sub-icons in shadow", () => {
     assert.isNotNull(favoriteIcon, "favorite icon is rendered when is-favorite is set");
     assert.isNotNull(objectIcon, "object icon is rendered when object-icon is set");
-    assert.isNotNull(pinIcon, "pin icon is always rendered in the splitter bar");
   });
 
   it("should notify variant-icon-clicked on the header button click", () =>
@@ -150,43 +147,4 @@ describe("DynamicHeader Component", async () => {
     await delay(600);
     assert.equal(el.getAttribute("collapsed") === null, true);
   });
-
-  // pin tests run consecutively: first click sets pinned=true and fires "pinned",
-  // second click sets pinned=false and fires "unpinned". Order matters.
-  it("clicking the pin icon should fire pinned and set isPinned=true", () =>
-    new Promise(done => {
-      el.addEventListener(
-        "pinned",
-        () => {
-          assert.equal(el.isPinned, true);
-          done(1);
-        },
-        { once: true }
-      );
-      pinIcon.click();
-    }));
-
-  it("collapse() and expand() should be no-ops while pinned", async () => {
-    assert.equal(el.isPinned, true, "preceded by pin test");
-    const initial = el.collapsed;
-    el.collapse();
-    await delay(300);
-    assert.equal(el.collapsed, initial, "collapse() does nothing while pinned");
-    el.expand();
-    await delay(300);
-    assert.equal(el.collapsed, initial, "expand() does nothing while pinned");
-  });
-
-  it("clicking the pin icon again should fire unpinned and set isPinned=false", () =>
-    new Promise(done => {
-      el.addEventListener(
-        "unpinned",
-        () => {
-          assert.equal(el.isPinned, false);
-          done(1);
-        },
-        { once: true }
-      );
-      pinIcon.click();
-    }));
 });

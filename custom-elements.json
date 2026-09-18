@@ -15271,34 +15271,9 @@
           ],
           "members": [
             {
-              "kind": "field",
-              "name": "_bodyIsScrolling",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "_disableBIS",
-              "description": "// scrolling collapse and expand",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "_wheelhandler",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "e"
-                }
-              ]
-            },
-            {
               "kind": "method",
               "name": "collapse",
-              "description": "Collapses the header content.\nThis method will do nothing, if the header is \"pinned\".",
+              "description": "Collapses the header content.",
               "privacy": "public",
               "return": {
                 "type": {
@@ -15313,21 +15288,9 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Set the collapsed attribute to start in a collapsed state. Header which are pinned by the user in collapsed or expanded state, will override\nthis attribute.",
+              "description": "Set the collapsed attribute to start in a collapsed state.",
               "privacy": "public",
               "attribute": "collapsed",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "collapseOnScroll",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "true",
-              "description": "Flag to disable/enable collapsing/expanding on scroll",
-              "privacy": "public",
-              "attribute": "collapse-on-scroll",
               "reflects": true
             },
             {
@@ -15341,7 +15304,7 @@
             {
               "kind": "method",
               "name": "expand",
-              "description": "Expands the header content.\nThis method will do nothing, if the header is \"pinned\".",
+              "description": "Expands the header content.",
               "privacy": "public",
               "return": {
                 "type": {
@@ -15484,18 +15447,6 @@
             },
             {
               "kind": "field",
-              "name": "isPinned",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Set the is-pinned attribute to disable collapse and expand before unpin.",
-              "privacy": "public",
-              "attribute": "is-pinned",
-              "reflects": true
-            },
-            {
-              "kind": "field",
               "name": "kpiNavEl",
               "type": {
                 "text": "HTMLElement | undefined"
@@ -15512,16 +15463,6 @@
               "description": "Set this value to display an object icon.",
               "privacy": "public",
               "attribute": "object-icon"
-            },
-            {
-              "kind": "field",
-              "name": "pinClicked",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "scrollhandler",
-              "privacy": "private"
             },
             {
               "kind": "field",
@@ -15629,24 +15570,10 @@
             },
             {
               "type": {
-                "text": "CustomEvent"
-              },
-              "description": "Fired when pin was set.",
-              "name": "pinned"
-            },
-            {
-              "type": {
                 "text": "CustomEvent<Boolean>"
               },
               "description": "showed will be fired when the header is expanded.",
               "name": "showed"
-            },
-            {
-              "type": {
-                "text": "CustomEvent"
-              },
-              "description": "Fired when pin was removed.",
-              "name": "unpinned"
             },
             {
               "type": {
@@ -15658,22 +15585,12 @@
           ],
           "attributes": [
             {
-              "name": "collapse-on-scroll",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "true",
-              "description": "Flag to disable/enable collapsing/expanding on scroll",
-              "fieldName": "collapseOnScroll",
-              "attribute": "collapse-on-scroll"
-            },
-            {
               "name": "collapsed",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Set the collapsed attribute to start in a collapsed state. Header which are pinned by the user in collapsed or expanded state, will override\nthis attribute.",
+              "description": "Set the collapsed attribute to start in a collapsed state.",
               "fieldName": "collapsed"
             },
             {
@@ -15760,15 +15677,6 @@
               "description": "Shows the fovorite icon when set.",
               "fieldName": "isFavorite",
               "attribute": "is-favorite"
-            },
-            {
-              "name": "is-pinned",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Set the is-pinned attribute to disable collapse and expand before unpin.",
-              "fieldName": "isPinned"
             },
             {
               "name": "object-icon",

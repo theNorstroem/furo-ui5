@@ -37,8 +37,7 @@ The facets are arranged inline with a left float. Each facet adapts its size to 
 
 | Attribute | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `collapse-on-scroll` | `boolean` | true | Flag to disable/enable collapsing/expanding on scroll |
-| `collapsed` | `boolean` | false | Set the collapsed attribute to start in a collapsed state. Header which are pinned by the user in collapsed or expanded state, will override this attribute. |
+| `collapsed` | `boolean` | false | Set the collapsed attribute to start in a collapsed state. |
 | `fixed` | `boolean` | false | Fixes the header as it is. This will remove the collapse and expand buttons. |
 | `header-text` | `string` | "" | Defines the headerText of the component. |
 | `header-text-level` | `string` | "H2" | Defines the headerTextLevel of the component. |
@@ -47,7 +46,6 @@ The facets are arranged inline with a left float. Each facet adapts its size to 
 | `icon-size` | `"XS" \| "S" \| "M" \| "L" \| "XL"` | - | Defines the icon-size of the icon / image. |
 | `image` | `string` | - | Defines the image of the component. In the case that an image and an icon are set, only the icon is displayed. |
 | `is-favorite` | `boolean` | false | Shows the fovorite icon when set. |
-| `is-pinned` | `boolean` | false | Set the is-pinned attribute to disable collapse and expand before unpin. |
 | `object-icon` | `string` | "" | Set this value to display an object icon. |
 | `secondary-text` | `string` | "" | The secondary text is something like a subtitle, it is placed below the header text and KPI slot. If the secondary text is empty, the label is removed. |
 | `shadow` | `boolean` | false | Draw a shadow, this is useful when you do not have a `tab-container` after your `dynamic-header` |
@@ -93,9 +91,7 @@ Place badges here.
 | `favorite-icon-clicked` | `CustomEvent<HTMLElement>` | fired when the favorite icon is clicked, sends the node ref of the icon. |
 | `hid` | `CustomEvent<Boolean>` | hid will be fired when the header is collapsed. |
 | `object-icon-clicked` | `CustomEvent<HTMLElement>` | fired when the object icon is clicked, sends the node ref of the icon. |
-| `pinned` | `CustomEvent` | Fired when pin was set. |
 | `showed` | `CustomEvent<Boolean>` | showed will be fired when the header is expanded. |
-| `unpinned` | `CustomEvent` | Fired when pin was removed. |
 | `variant-icon-clicked` | `CustomEvent<HTMLElement>` | fired when the variant dropdown is clicked or the [arrow down] key is pressed, sends the node ref of the icon. |
 
 ## Methods
@@ -103,12 +99,10 @@ Place badges here.
 ### `collapse(): void`
 
 Collapses the header content.
-This method will do nothing, if the header is "pinned".
 
 ### `expand(): void`
 
 Expands the header content.
-This method will do nothing, if the header is "pinned".
 
 ## CSS Parts
 
