@@ -89,9 +89,9 @@ Place badges here.
 | Event | Detail Type | Description |
 |-------|-------------|-------------|
 | `favorite-icon-clicked` | `CustomEvent<HTMLElement>` | fired when the favorite icon is clicked, sends the node ref of the icon. |
-| `hid` | `CustomEvent<Boolean>` | hid will be fired when the header is collapsed. |
+| `hid` | `CustomEvent<Boolean>` | Fired once when the header collapses (after `collapsed` became `true`). The detail is the new `collapsed` value. |
 | `object-icon-clicked` | `CustomEvent<HTMLElement>` | fired when the object icon is clicked, sends the node ref of the icon. |
-| `showed` | `CustomEvent<Boolean>` | showed will be fired when the header is expanded. |
+| `showed` | `CustomEvent<Boolean>` | Fired once when the header expands (after `collapsed` became `false`). The detail is the new `collapsed` value. |
 | `variant-icon-clicked` | `CustomEvent<HTMLElement>` | fired when the variant dropdown is clicked or the [arrow down] key is pressed, sends the node ref of the icon. |
 
 ## Methods

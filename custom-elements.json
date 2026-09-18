@@ -15508,6 +15508,12 @@
             },
             {
               "kind": "field",
+              "name": "stopInternalShowHideEvent",
+              "privacy": "private",
+              "description": "The two internal show-hides fire their own composed `hid` / `showed` / `toggled`. Both run on\nevery toggle with opposite meanings (collapsing shows the summary), so they must not reach the\nhost, where they would impersonate the panel's own events."
+            },
+            {
+              "kind": "field",
               "name": "summaryComponent",
               "type": {
                 "text": "FuroUi5ShowHide | undefined"
@@ -15558,7 +15564,7 @@
               "type": {
                 "text": "CustomEvent<Boolean>"
               },
-              "description": "hid will be fired when the header is collapsed.",
+              "description": "Fired once when the header collapses (after `collapsed` became `true`). The detail is the new `collapsed` value.",
               "name": "hid"
             },
             {
@@ -15572,7 +15578,7 @@
               "type": {
                 "text": "CustomEvent<Boolean>"
               },
-              "description": "showed will be fired when the header is expanded.",
+              "description": "Fired once when the header expands (after `collapsed` became `false`). The detail is the new `collapsed` value.",
               "name": "showed"
             },
             {

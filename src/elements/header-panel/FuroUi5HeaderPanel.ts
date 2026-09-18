@@ -15,6 +15,7 @@ import "@ui5/webcomponents-icons/dist/navigation-down-arrow.js";
 import "@ui5/webcomponents-icons/dist/share.js";
 import "../icon";
 
+import type { PropertyValues } from "lit";
 import { css, LitElement, nothing } from "lit";
 import { property, query } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
@@ -53,8 +54,8 @@ import { NavigationGroup } from "@/util/NavigationGroup";
  * @cssprop [--sapBrandColor=--primary-dark] - the gradient-start color of the splitter
  * @csspart action - Use this to format the action container `div` inside the shadow root of the component, which surrounds the `action` slot.
  * @csspart secondary - Use this to format the secondary container `div` inside the shadow root of the component, which surrounds the `secondary` slot.
- * @event {CustomEvent<Boolean>} hid - hid will be fired when the header is collapsed.
- * @event {CustomEvent<Boolean>} showed - showed will be fired when the header is expanded.
+ * @event {CustomEvent<Boolean>} hid - Fired once when the header collapses (after `collapsed` became `true`). The detail is the new `collapsed` value.
+ * @event {CustomEvent<Boolean>} showed - Fired once when the header expands (after `collapsed` became `false`). The detail is the new `collapsed` value.
  * @event {CustomEvent<HTMLElement>} variant-icon-clicked - fired when the variant dropdown is clicked or the [arrow down] key is pressed, sends the node ref of the icon.
  * @event {CustomEvent<HTMLElement>} object-icon-clicked - fired when the object icon is clicked, sends the node ref of the icon.
  * @event {CustomEvent<HTMLElement>} favorite-icon-clicked - fired when the favorite icon is clicked, sends the node ref of the icon.
@@ -324,6 +325,27 @@ export class FuroUi5HeaderPanel extends LitElement {
 
       NavigationGroup(this.kpiNavEl ?? null, "*");
     });
+  }
+
+  /**
+   * The two internal show-hides fire their own composed `hid` / `showed` / `toggled`. Both run on
+   * every toggle with opposite meanings (collapsing shows the summary), so they must not reach the
+   * host, where they would impersonate the panel's own events.
+   * @private
+   */
+  // eslint-disable-next-line class-methods-use-this
+  private stopInternalShowHideEvent = (e: Event) => {
+    e.stopPropagation();
+  };
+
+  override updated(changed: PropertyValues<this>) {
+    super.updated(changed);
+    // skip the first render: `collapsed` set via attribute is an initial state, not a change
+    if (changed.has("collapsed") && changed.get("collapsed") !== undefined) {
+      // literal names, so the CEM analyzer attributes them to the documented events
+      const init = { composed: true, bubbles: true, detail: this.collapsed };
+      this.dispatchEvent(this.collapsed ? new CustomEvent("hid", init) : new CustomEvent("showed", init));
+    }
   }
 
   private toggleCollapseExpand = () => {
@@ -640,10 +662,22 @@ export class FuroUi5HeaderPanel extends LitElement {
       <div part="secondary">
         <slot name="secondary"></slot>
       </div>
-      <furo-ui5-show-hide id="summaryShowHide" ?is-hidden="${!this.collapsed}">
+      <furo-ui5-show-hide
+        id="summaryShowHide"
+        ?is-hidden="${!this.collapsed}"
+        @hid="${this.stopInternalShowHideEvent}"
+        @showed="${this.stopInternalShowHideEvent}"
+        @toggled="${this.stopInternalShowHideEvent}"
+      >
         <slot name="summary"></slot>
       </furo-ui5-show-hide>
-      <furo-ui5-show-hide id="showHide" ?is-hidden="${this.collapsed}">
+      <furo-ui5-show-hide
+        id="showHide"
+        ?is-hidden="${this.collapsed}"
+        @hid="${this.stopInternalShowHideEvent}"
+        @showed="${this.stopInternalShowHideEvent}"
+        @toggled="${this.stopInternalShowHideEvent}"
+      >
         <div class="wrapper">
           ${this.icon ? html` <ui5-avatar class="avatar" icon="${this.icon}" size="${this.iconSize}" shape="${this.iconShape}"></ui5-avatar> ` : nothing}
           ${

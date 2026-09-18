@@ -148,3 +148,67 @@ describe("DynamicHeader Component", async () => {
     assert.equal(el.getAttribute("collapsed") === null, true);
   });
 });
+
+// [element-specific] hid / showed are the panel's own events: exactly one per real change of
+// `collapsed`. The internal show-hides' composed hid/showed/toggled must not leak to the host.
+describe("header-panel collapse events", () => {
+  let el: FuroUi5HeaderPanel;
+  let events: CustomEvent<boolean>[];
+
+  const record = (e: Event) => {
+    events.push(e as CustomEvent<boolean>);
+  };
+
+  beforeAll(async () => {
+    el = await fixture(html`
+      <furo-ui5-header-panel header-text="Header">
+        <div>CONTENT</div>
+      </furo-ui5-header-panel>
+    `);
+    await delay(16);
+    for (const name of ["hid", "showed", "toggled"]) {
+      el.addEventListener(name, record);
+    }
+  });
+
+  afterAll(() => {
+    fixtureCleanup();
+  });
+
+  it("collapse() fires exactly one hid", async () => {
+    events = [];
+    el.collapse();
+    await delay(400);
+    assert.deepEqual(
+      events.map(e => [e.type, e.detail]),
+      [["hid", true]]
+    );
+  });
+
+  it("collapse() while collapsed fires nothing", async () => {
+    events = [];
+    el.collapse();
+    await delay(400);
+    assert.lengthOf(events, 0);
+  });
+
+  it("expand() fires exactly one showed", async () => {
+    events = [];
+    el.expand();
+    await delay(400);
+    assert.deepEqual(
+      events.map(e => [e.type, e.detail]),
+      [["showed", false]]
+    );
+  });
+
+  it("setting collapsed directly fires the matching event", async () => {
+    events = [];
+    el.collapsed = true;
+    await delay(50);
+    assert.deepEqual(
+      events.map(e => [e.type, e.detail]),
+      [["hid", true]]
+    );
+  });
+});
