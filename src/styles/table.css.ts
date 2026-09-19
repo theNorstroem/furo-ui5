@@ -54,7 +54,7 @@ const TableCss = css`
     text-align: start;
     vertical-align: middle;
     width: inherit;
-    min-height: var(--sapElement_LineHeight);
+    height: var(--ui5_table_header_row_height, 2.75rem);
   }
 
   thead tr {
@@ -86,7 +86,7 @@ const TableCss = css`
     padding: 0.25rem 0.5rem;
     box-sizing: border-box;
     color: var(--sapList_TextColor);
-    min-height: var(--ui5_table_row_height, 2.75rem);
+    height: var(--ui5_table_row_height, 2.75rem);
     vertical-align: middle;
     word-break: break-word;
   }
