@@ -157,7 +157,7 @@
 
 - [`furo-ui5-busy-indicator`](components/furo-ui5-busy-indicator.md) *(busy, loading, spinner, progress, wait, indicator)* — Use to indicate loading or processing state.
 - [`furo-ui5-illustrated-message`](components/furo-ui5-illustrated-message.md) *(illustration, empty, error, message, placeholder, no-data)* — Use to explain an empty list, a failed search or an error, with an optional recovery action.
-- [`furo-ui5-progress-indicator`](components/furo-ui5-progress-indicator.md) *(progress, bar, percentage, loading, completion, indicator)* — Use to show determinate progress of an operation.
+- [`furo-ui5-progress-indicator`](components/furo-ui5-progress-indicator.md) *(progress, bar, percentage, loading, completion, indicator, sparkline, mini)* — Use to show determinate progress of an operation.
 - [`furo-ui5-toast`](components/furo-ui5-toast.md) *(toast, notification, snackbar, message, alert, feedback, temporary)* — Use for non-blocking confirmations or status updates that auto-dismiss.
 
 ### TypeRenderers

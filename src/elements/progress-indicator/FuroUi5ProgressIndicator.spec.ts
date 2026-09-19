@@ -272,4 +272,70 @@ describe("FuroUi5ProgressIndicator", () => {
       assert.equal(el.value, 33);
     });
   });
+
+  // ───────────────────────────────────────────────────────────────────────
+  // [element-specific] sparkline mode (CSS-only, driven by the attribute)
+  // ───────────────────────────────────────────────────────────────────────
+  describe("sparkline [element-specific]", () => {
+    afterEach(() => {
+      fixtureCleanup();
+    });
+
+    const rootHeight = (el: FuroUi5ProgressIndicator): string => {
+      const root = el.shadowRoot?.querySelector(".ui5-progress-indicator-root");
+      assert.isOk(root, "shadow root element should exist");
+      return getComputedStyle(root).height;
+    };
+
+    const barHeight = (el: FuroUi5ProgressIndicator): string => {
+      const bar = el.shadowRoot?.querySelector('[part="bar"]');
+      assert.isOk(bar, "bar part should exist");
+      return getComputedStyle(bar).height;
+    };
+
+    it("renders a 6px bar by default in sparkline mode", async () => {
+      const el: FuroUi5ProgressIndicator = await fixture(
+        html`<furo-ui5-progress-indicator sparkline value="50"></furo-ui5-progress-indicator>`
+      );
+      await delay(50);
+      assert.equal(rootHeight(el), "6px");
+      assert.equal(barHeight(el), "6px");
+    });
+
+    it("hides the side dots in sparkline mode", async () => {
+      const el: FuroUi5ProgressIndicator = await fixture(
+        html`<furo-ui5-progress-indicator sparkline value="50"></furo-ui5-progress-indicator>`
+      );
+      await delay(50);
+      const remaining = el.shadowRoot?.querySelector(".ui5-progress-indicator-remaining-bar");
+      assert.isOk(remaining);
+      assert.equal(getComputedStyle(remaining, "::before").display, "none");
+      assert.equal(getComputedStyle(remaining, "::after").display, "none");
+    });
+
+    it("honours --progressIndicatorSparklineHeight", async () => {
+      const el: FuroUi5ProgressIndicator = await fixture(
+        html`<furo-ui5-progress-indicator
+          sparkline
+          value="50"
+          style="--progressIndicatorSparklineHeight: 3px"
+        ></furo-ui5-progress-indicator>`
+      );
+      await delay(50);
+      assert.equal(rootHeight(el), "3px");
+      assert.equal(barHeight(el), "3px");
+    });
+
+    it("is much smaller than the regular indicator", async () => {
+      const regular: FuroUi5ProgressIndicator = await fixture(
+        html`<furo-ui5-progress-indicator value="50"></furo-ui5-progress-indicator>`
+      );
+      const sparkline: FuroUi5ProgressIndicator = await fixture(
+        html`<furo-ui5-progress-indicator sparkline value="50"></furo-ui5-progress-indicator>`
+      );
+      await delay(50);
+      assert.equal(sparkline.getBoundingClientRect().height, 6);
+      assert.isAbove(regular.getBoundingClientRect().height, 6);
+    });
+  });
 });

@@ -18,8 +18,17 @@ import type { FuroFatFloat, FuroFatInt32, FuroFatInt64, FuroFatUint32, FuroFatUi
  * <furo-ui5-progress-indicator fn-bind-data="--dao(FIELDNODE)"></furo-ui5-progress-indicator>
  * ```
  *
+ * Set the `sparkline` attribute to render a very small bar, e.g. inside table cells or status bars.
+ *
+ * ```html
+ * <furo-ui5-progress-indicator sparkline></furo-ui5-progress-indicator>
+ * ```
+ *
+ * @attribute {Boolean} sparkline - Set this to render a very small progress indicator. This is useful for showing progress indicators in tables or status bars. The value text and the value-state icon are not shown in this mode.
+ * @cssprop {N/A} [--progressIndicatorSparklineHeight=6px] - height of the bar in sparkline mode
+ *
  * @summary Linear progress bar showing completion percentage.
- * @keywords progress, bar, percentage, loading, completion, indicator
+ * @keywords progress, bar, percentage, loading, completion, indicator, sparkline, mini
  * @category Feedback
  * @usecase Use to show determinate progress of an operation.
  * @related furo-ui5-busy-indicator
@@ -193,5 +202,43 @@ export class FuroUi5ProgressIndicator extends ProgressIndicator {
    */
   static override get metadata() {
     return { ...super.metadata, tag: "furo-ui5-progress-indicator" };
+  }
+
+  /**
+   * @private
+   */
+  static override get styles() {
+    return [
+      super.styles,
+      // language=CSS
+      `
+        /* removes the space reserved for the value text and the value-state icon */
+        :host(:not([hidden])[sparkline]) {
+          padding: 0;
+          min-height: 0;
+        }
+
+        :host([sparkline]) .ui5-progress-indicator-value,
+        :host([sparkline]) .ui5-progress-indicator-icon {
+          display: none;
+        }
+
+        /* removes the dots at the beginning and the end. */
+        :host([sparkline]) .ui5-progress-indicator-remaining-bar:before,
+        :host([sparkline]) .ui5-progress-indicator-remaining-bar:after {
+          display: none;
+        }
+
+        :host([sparkline]) .ui5-progress-indicator-root {
+          height: var(--progressIndicatorSparklineHeight, 6px);
+          min-height: var(--progressIndicatorSparklineHeight, 6px);
+        }
+
+        :host([sparkline]) .ui5-progress-indicator-bar {
+          /* UI5 does not have a style var for this value */
+          height: 100%;
+        }
+      `,
+    ];
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: furo-ui5-progress-indicator
-tags: [progress, bar, percentage, loading, completion, indicator]
+tags: [progress, bar, percentage, loading, completion, indicator, sparkline, mini]
 category: Feedback
 use-when: Use to show determinate progress of an operation.
 ---
@@ -28,6 +28,12 @@ Supported type: You can bind any `number` type, any `furo.fat.xxx` number type, 
 <furo-ui5-progress-indicator fn-bind-data="--dao(FIELDNODE)"></furo-ui5-progress-indicator>
 ```
 
+Set the `sparkline` attribute to render a very small bar, e.g. inside table cells or status bars.
+
+```html
+<furo-ui5-progress-indicator sparkline></furo-ui5-progress-indicator>
+```
+
 ### Overview
 Shows the progress of a process in a graphical way. To indicate the progress,
 the inside of the component is filled with a color.
@@ -42,6 +48,7 @@ You can change the size of the Progress Indicator by changing its `width` or `he
 | `accessible-name` | `string \| undefined` | undefined | Defines the accessible ARIA name of the component. |
 | `display-value` | `string \| undefined` | undefined | Specifies the text value to be displayed in the bar. |
 | `hide-value` | `boolean` | false | Defines whether the component value is shown. |
+| `sparkline` | `Boolean` | - | Set this to render a very small progress indicator. This is useful for showing progress indicators in tables or status bars. The value text and the value-state icon are not shown in this mode. |
 | `value` | `number` | 0 | Specifies the numerical value in percent for the length of the component. |
 | `value-state` | `"None" \| "Positive" \| "Critical" \| "Negative" \| "Information"` | "None" | Defines the value state of the component. |
 

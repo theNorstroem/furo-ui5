@@ -160,6 +160,55 @@ export const Minimal: StoryObj = {
   `,
 };
 
+// Sparkline mode: a very small bar without the side dots, meant for table
+// cells and status bars. The height can be tuned with
+// `--progressIndicatorSparklineHeight` (default 6px).
+export const Sparkline: StoryObj = {
+  args: {},
+  render: () => html`
+    <furo-ui5-form-layout form-title="Sparkline">
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label">FLOAT (25%)</furo-ui5-label>
+        <furo-ui5-progress-indicator sparkline .model="${lowFloat}"></furo-ui5-progress-indicator>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label">INT32 (60%)</furo-ui5-label>
+        <furo-ui5-progress-indicator sparkline .model="${midInt}"></furo-ui5-progress-indicator>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label">INT32 (100%)</furo-ui5-label>
+        <furo-ui5-progress-indicator sparkline .model="${fullInt}"></furo-ui5-progress-indicator>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label">Negative</furo-ui5-label>
+        <furo-ui5-progress-indicator sparkline .model="${negativeModel}"></furo-ui5-progress-indicator>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label">Critical</furo-ui5-label>
+        <furo-ui5-progress-indicator sparkline .model="${criticalModel}"></furo-ui5-progress-indicator>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label">Positive</furo-ui5-label>
+        <furo-ui5-progress-indicator sparkline .model="${positiveModel}"></furo-ui5-progress-indicator>
+      </furo-ui5-form-row>
+
+      <furo-ui5-form-row>
+        <furo-ui5-label slot="label">Custom height (3px)</furo-ui5-label>
+        <furo-ui5-progress-indicator
+          sparkline
+          style="--progressIndicatorSparklineHeight: 3px"
+          .model="${midInt}"
+        ></furo-ui5-progress-indicator>
+      </furo-ui5-form-row>
+    </furo-ui5-form-layout>
+  `,
+};
+
 // Interactive story: the controls panel drives the inherited UI5 surface,
 // including the `valueState` select wired up via ArgsSetEnum above.
 export const Playground: StoryObj = {
@@ -169,9 +218,11 @@ export const Playground: StoryObj = {
     displayValue: "",
     hideValue: false,
     accessibleName: "Progress",
+    sparkline: false,
   },
   render: renderArgs => html`
     <furo-ui5-progress-indicator
+      ?sparkline="${renderArgs.sparkline}"
       value="${ifDefined(renderArgs.value as number | undefined)}"
       value-state="${ifDefined(renderArgs.valueState as string | undefined)}"
       display-value="${ifDefined(renderArgs.displayValue as string | undefined)}"

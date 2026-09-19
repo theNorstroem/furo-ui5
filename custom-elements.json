@@ -29494,8 +29494,18 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "\nA furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..\nhttps://ui5.github.io/webcomponents/components/ProgressIndicator/\n\nSupported type: You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types\n\n```html\n<furo-ui5-progress-indicator fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-progress-indicator>\n```\n\n### Overview\nShows the progress of a process in a graphical way. To indicate the progress,\nthe inside of the component is filled with a color.\n\n### Responsive Behavior\nYou can change the size of the Progress Indicator by changing its `width` or `height` CSS properties.\n\n\n",
+          "description": "\nA furo-ui5-progress-indicator shows the progress of a process in a graphical way. To indicate the progress, the inside of the component is filled with a color..\nhttps://ui5.github.io/webcomponents/components/ProgressIndicator/\n\nSupported type: You can bind any `number` type, any `furo.fat.xxx` number type, `furo.BigDecimal` or the `google.wrapper.xxx` number types\n\n```html\n<furo-ui5-progress-indicator fn-bind-data=\"--dao(FIELDNODE)\"></furo-ui5-progress-indicator>\n```\n\nSet the `sparkline` attribute to render a very small bar, e.g. inside table cells or status bars.\n\n```html\n<furo-ui5-progress-indicator sparkline></furo-ui5-progress-indicator>\n```\n\n### Overview\nShows the progress of a process in a graphical way. To indicate the progress,\nthe inside of the component is filled with a color.\n\n### Responsive Behavior\nYou can change the size of the Progress Indicator by changing its `width` or `height` CSS properties.\n\n\n",
           "name": "ProgressIndicator",
+          "cssProperties": [
+            {
+              "type": {
+                "text": "N/A"
+              },
+              "description": "height of the bar in sparkline mode",
+              "name": "--progressIndicatorSparklineHeight",
+              "default": "6px"
+            }
+          ],
           "members": [
             {
               "kind": "field",
@@ -29734,45 +29744,6 @@
               "default": "new FieldNodeValueState(this)"
             }
           ],
-          "superclass": {
-            "name": "ProgressIndicator",
-            "package": "@ui5/webcomponents",
-            "module": "dist/ProgressIndicator.js"
-          },
-          "tagName": "furo-ui5-progress-indicator",
-          "customElement": true,
-          "summary": "Linear progress bar showing completion percentage.",
-          "keywords": [
-            "progress",
-            "bar",
-            "percentage",
-            "loading",
-            "completion",
-            "indicator"
-          ],
-          "category": "Feedback",
-          "useCase": "Use to show determinate progress of an operation.",
-          "relatedComponents": [
-            "furo-ui5-busy-indicator"
-          ],
-          "cssParts": [
-            {
-              "description": "Used to style the main bar of the `ui5-progress-indicator`",
-              "name": "bar",
-              "inheritedFrom": {
-                "name": "ProgressIndicator",
-                "module": "dist/ProgressIndicator.js"
-              }
-            },
-            {
-              "description": "Used to style the remaining bar of the `ui5-progress-indicator`",
-              "name": "remaining-bar",
-              "inheritedFrom": {
-                "name": "ProgressIndicator",
-                "module": "dist/ProgressIndicator.js"
-              }
-            }
-          ],
           "attributes": [
             {
               "description": "Defines the accessible ARIA name of the component.",
@@ -29840,6 +29811,13 @@
               }
             },
             {
+              "type": {
+                "text": "Boolean"
+              },
+              "description": "Set this to render a very small progress indicator. This is useful for showing progress indicators in tables or status bars. The value text and the value-state icon are not shown in this mode.",
+              "name": "sparkline"
+            },
+            {
               "description": "Specifies the numerical value in percent for the length of the component.\n\n**Note:**\nIf a value greater than 100 is provided, the percentValue is set to 100. In other cases of invalid value, percentValue is set to its default of 0.",
               "name": "value",
               "default": "0",
@@ -29860,6 +29838,47 @@
               "type": {
                 "text": "\"None\" | \"Positive\" | \"Critical\" | \"Negative\" | \"Information\""
               },
+              "inheritedFrom": {
+                "name": "ProgressIndicator",
+                "module": "dist/ProgressIndicator.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "ProgressIndicator",
+            "package": "@ui5/webcomponents",
+            "module": "dist/ProgressIndicator.js"
+          },
+          "tagName": "furo-ui5-progress-indicator",
+          "customElement": true,
+          "summary": "Linear progress bar showing completion percentage.",
+          "keywords": [
+            "progress",
+            "bar",
+            "percentage",
+            "loading",
+            "completion",
+            "indicator",
+            "sparkline",
+            "mini"
+          ],
+          "category": "Feedback",
+          "useCase": "Use to show determinate progress of an operation.",
+          "relatedComponents": [
+            "furo-ui5-busy-indicator"
+          ],
+          "cssParts": [
+            {
+              "description": "Used to style the main bar of the `ui5-progress-indicator`",
+              "name": "bar",
+              "inheritedFrom": {
+                "name": "ProgressIndicator",
+                "module": "dist/ProgressIndicator.js"
+              }
+            },
+            {
+              "description": "Used to style the remaining bar of the `ui5-progress-indicator`",
+              "name": "remaining-bar",
               "inheritedFrom": {
                 "name": "ProgressIndicator",
                 "module": "dist/ProgressIndicator.js"

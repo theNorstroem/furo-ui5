@@ -53,6 +53,11 @@ export interface ProgressIndicator extends React.HTMLAttributes<HTMLElement> {
   hideValue?: boolean;
 
   /**
+   * Set this to render a very small progress indicator. This is useful for showing progress indicators in tables or status bars. The value text and the value-state icon are not shown in this mode.
+   */
+  sparkline?: boolean;
+
+  /**
    * Specifies the numerical value in percent for the length of the component.
    *
    * **Note:**
@@ -78,6 +83,12 @@ declare module "react" {
        *
        * ```html
        * <furo-ui5-progress-indicator fn-bind-data="--dao(FIELDNODE)"></furo-ui5-progress-indicator>
+       * ```
+       *
+       * Set the `sparkline` attribute to render a very small bar, e.g. inside table cells or status bars.
+       *
+       * ```html
+       * <furo-ui5-progress-indicator sparkline></furo-ui5-progress-indicator>
        * ```
        *
        * ### Overview
