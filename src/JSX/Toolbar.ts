@@ -70,6 +70,14 @@ declare module "react" {
        * The `furo-ui5-toolbar` component is used to create a horizontal layout with items.
        * The items can be overflowing in a popover, when the space is not enough to show all of them.
        *
+       * ### Grouped Overflow
+       *
+       * Items that share the same non-empty `overflowGroup` string are treated as one atomic
+       * unit during overflow distribution: when any member must move into the overflow
+       * popover, all members move together. The visible bar always preserves slot order;
+       * the group becomes adjacent only inside the popover. See the `overflowGroup` property
+       * on `ToolbarItemBase` for the full contract.
+       *
        * ### Keyboard Handling
        * The `furo-ui5-toolbar` provides advanced keyboard handling.
        *
@@ -84,6 +92,14 @@ declare module "react" {
        *
        * The `furo-ui5-toolbar` component is used to create a horizontal layout with items.
        * The items can be overflowing in a popover, when the space is not enough to show all of them.
+       *
+       * ### Grouped Overflow
+       *
+       * Items that share the same non-empty `overflowGroup` string are treated as one atomic
+       * unit during overflow distribution: when any member must move into the overflow
+       * popover, all members move together. The visible bar always preserves slot order;
+       * the group becomes adjacent only inside the popover. See the `overflowGroup` property
+       * on `ToolbarItemBase` for the full contract.
        *
        * ### Keyboard Handling
        * The `furo-ui5-toolbar` provides advanced keyboard handling.

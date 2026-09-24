@@ -17,7 +17,7 @@ export interface SuggestionItemGroup extends React.HTMLAttributes<HTMLElement> {
   headerAccessibleName?: string | undefined;
 
   /**
-   * Defines the header text of the <code>furo-ui5-li-group</code>.
+   * Defines the header text of the group.
    */
   headerText?: string | undefined;
 
@@ -68,6 +68,14 @@ declare module "react" {
        *
        * ### ES6 Module Import
        * `import "@furo/ui5/dist/ListItemGroup.js";`
+       *
+       * ### Overview
+       *
+       * `ListItemGroupBase` is the abstract base for grouping components. It provides the minimal
+       * "group" contract shared by `furo-ui5-li-group` and `furo-ui5-option-group`: a header text, the default
+       * items slot, and the plumbing the internal `furo-ui5-list` relies on to flatten grouped items.
+       *
+       * Concrete group components extend this class and add only the public API that is relevant to them.
        *
        * Base class for all UI5 Web Components
        */

@@ -62,17 +62,12 @@ export interface StepInput extends React.HTMLAttributes<HTMLElement> {
 
   /**
    * Determines the name by which the component will be identified upon submission in an HTML form.
-   *
-   * **Note:** This property is only applicable within the context of an HTML Form element.
    */
   name?: string | undefined;
 
   /**
    * Defines a short hint, intended to aid the user with data entry when the
    * component has no value.
-   *
-   * **Note:** When no placeholder is set, the format pattern is displayed as a placeholder.
-   * Passing an empty string as the value of this property will make the component appear empty - without placeholder or format pattern.
    */
   placeholder?: string | undefined;
 

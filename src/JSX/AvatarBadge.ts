@@ -9,6 +9,16 @@ export interface AvatarBadge extends React.HTMLAttributes<HTMLElement> {
   // attributes
 
   /**
+   * Defines the color scheme of the badge using the indication color palette.
+   *
+   * Available options are `"1"` through `"10"`, matching the indication colors.
+   *
+   * **Note:** `state` takes precedence - when `state` is set to any value other than `None`,
+   * the semantic state styling applies and `colorScheme` is ignored.
+   */
+  colorScheme?: string | undefined;
+
+  /**
    * Defines the icon name to be displayed inside the badge.
    *
    * **Note:** You should import the desired icon first, then use its name as "icon".
@@ -26,6 +36,9 @@ export interface AvatarBadge extends React.HTMLAttributes<HTMLElement> {
    * - `Critical` - Orange, used for warning states
    * - `Negative` - Red, used for error/rejected states
    * - `Information` - Blue, used for informational states
+   *
+   * **Note:** `state` takes precedence over `colorScheme`. When `state` is set
+   * to any value other than `None`, the semantic styling applies and `colorScheme` is ignored.
    */
   state?: ValueState | keyof typeof ValueState;
 
